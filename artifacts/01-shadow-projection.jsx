@@ -1,0 +1,517 @@
+import { useRef, useEffect, useState, useCallback } from "react";
+
+const TAU = Math.PI * 2;
+
+// Project a 3D point onto 2D with perspective
+function project(x, y, z, rotX, rotY, fov = 500, camZ = 4) {
+  // Rotate around Y axis
+  const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+  let rx = x * cosY + z * sinY;
+  let ry = y;
+  let rz = -x * sinY + z * cosY;
+
+  // Rotate around X axis
+  const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+  let fx = rx;
+  let fy = ry * cosX - rz * sinX;
+  let fz = ry * sinX + rz * cosX;
+
+  const scale = fov / (fov + fz + camZ);
+  return { sx: fx * scale, sy: fy * scale, scale, depth: fz };
+}
+
+// Cube vertices and edges
+const CUBE_VERTS = [
+  [-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],
+  [-1,-1, 1],[1,-1, 1],[1,1, 1],[-1,1, 1],
+];
+const CUBE_EDGES = [
+  [0,1],[1,2],[2,3],[3,0], // back face
+  [4,5],[5,6],[6,7],[7,4], // front face
+  [0,4],[1,5],[2,6],[3,7], // connectors
+];
+const CUBE_FACES = [
+  [0,1,2,3],[4,5,6,7],[0,1,5,4],[2,3,7,6],[0,3,7,4],[1,2,6,5]
+];
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+export default function ShadowProjection() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({
+    rotX: 0.42,
+    rotY: 0.65,
+    autoRotate: true,
+    marble: { x: 0.0, y: 0.2, z: 0.4 },
+    showDepth: true,
+    time: 0,
+  });
+
+  const [autoRotate, setAutoRotate] = useState(true);
+  const [showDepth, setShowDepth] = useState(true);
+  const [marbleZ, setMarbleZ] = useState(40); // -100 to 100 percent of cube
+  const [phase, setPhase] = useState("both"); // "3d", "shadow", "both"
+  const dragging = useRef(false);
+  const lastMouse = useRef({ x: 0, y: 0 });
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width;
+    const H = canvas.height;
+    const s = stateRef.current;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Background
+    ctx.fillStyle = "#080c12";
+    ctx.fillRect(0, 0, W, H);
+
+    // Layout: 3D scene on left, shadow on right (or merged)
+    const sceneX = phase === "shadow" ? W / 2 : W * 0.38;
+    const sceneY = H * 0.48;
+    const shadowX = phase === "3d" ? W / 2 : W * 0.78;
+    const shadowY = H * 0.62;
+    const scale3d = Math.min(W, H) * 0.17;
+    const scaleShadow = Math.min(W, H) * 0.14;
+
+    // Marble z from slider
+    const mz = (marbleZ / 100) * 0.85;
+    s.marble.z = mz;
+    s.marble.x = Math.sin(s.time * 0.4) * 0.35;
+    s.marble.y = Math.sin(s.time * 0.27) * 0.3;
+
+    // Project cube verts
+    const projected = CUBE_VERTS.map(([x, y, z]) => {
+      const p = project(x, y, z, s.rotX, s.rotY);
+      return {
+        sx: sceneX + p.sx * scale3d,
+        sy: sceneY + p.sy * scale3d,
+        scale: p.scale,
+        depth: p.depth,
+      };
+    });
+
+    // ---- DRAW 3D SCENE ----
+    if (phase !== "shadow") {
+      // Draw cube faces (transparent)
+      CUBE_FACES.forEach(face => {
+        ctx.beginPath();
+        face.forEach((vi, i) => {
+          const p = projected[vi];
+          i === 0 ? ctx.moveTo(p.sx, p.sy) : ctx.lineTo(p.sx, p.sy);
+        });
+        ctx.closePath();
+        ctx.fillStyle = "rgba(30,60,100,0.07)";
+        ctx.fill();
+      });
+
+      // Draw cube edges
+      CUBE_EDGES.forEach(([a, b]) => {
+        const pa = projected[a], pb = projected[b];
+        const avgDepth = (pa.depth + pb.depth) / 2;
+        const alpha = lerp(0.2, 0.7, (avgDepth + 2) / 4);
+        ctx.beginPath();
+        ctx.moveTo(pa.sx, pa.sy);
+        ctx.lineTo(pb.sx, pb.sy);
+        ctx.strokeStyle = `rgba(80,160,255,${alpha})`;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+      });
+
+      // Draw "light source" lamp
+      const lampX = sceneX - scale3d * 2.1;
+      const lampY = sceneY - scale3d * 1.4;
+      const grad = ctx.createRadialGradient(lampX, lampY, 2, lampX, lampY, 28);
+      grad.addColorStop(0, "rgba(255,230,100,0.9)");
+      grad.addColorStop(1, "rgba(255,180,50,0)");
+      ctx.beginPath();
+      ctx.arc(lampX, lampY, 28, 0, TAU);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(lampX, lampY, 5, 0, TAU);
+      ctx.fillStyle = "#ffe066";
+      ctx.fill();
+
+      // Marble in 3D
+      const mp = project(s.marble.x, s.marble.y, s.marble.z, s.rotX, s.rotY);
+      const mx3d = sceneX + mp.sx * scale3d;
+      const my3d = sceneY + mp.sy * scale3d;
+      const mRadius = 10 * mp.scale;
+
+      // Draw z-axis indicator (the hidden dimension)
+      if (showDepth) {
+        // Show depth line
+        const mpFront = project(s.marble.x, s.marble.y, -1, s.rotX, s.rotY);
+        const mpBack = project(s.marble.x, s.marble.y, 1, s.rotX, s.rotY);
+        ctx.beginPath();
+        ctx.moveTo(sceneX + mpFront.sx * scale3d, sceneY + mpFront.sy * scale3d);
+        ctx.lineTo(sceneX + mpBack.sx * scale3d, sceneY + mpBack.sy * scale3d);
+        ctx.strokeStyle = "rgba(255,100,100,0.25)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Depth label
+        ctx.fillStyle = "rgba(255,100,100,0.7)";
+        ctx.font = "bold 11px 'Courier New'";
+        ctx.fillText("depth (z) hidden", sceneX + mpBack.sx * scale3d + 8, sceneY + mpBack.sy * scale3d);
+      }
+
+      // Marble glow
+      const mGrad = ctx.createRadialGradient(mx3d, my3d, 0, mx3d, my3d, mRadius * 2.5);
+      mGrad.addColorStop(0, "rgba(255,80,80,0.6)");
+      mGrad.addColorStop(1, "rgba(255,80,80,0)");
+      ctx.beginPath();
+      ctx.arc(mx3d, my3d, mRadius * 2.5, 0, TAU);
+      ctx.fillStyle = mGrad;
+      ctx.fill();
+
+      // Marble
+      const marbleGrad = ctx.createRadialGradient(mx3d - mRadius * 0.3, my3d - mRadius * 0.3, 0, mx3d, my3d, mRadius);
+      marbleGrad.addColorStop(0, "#ff8888");
+      marbleGrad.addColorStop(0.6, "#dd2222");
+      marbleGrad.addColorStop(1, "#880000");
+      ctx.beginPath();
+      ctx.arc(mx3d, my3d, mRadius, 0, TAU);
+      ctx.fillStyle = marbleGrad;
+      ctx.fill();
+
+      // 3D label
+      ctx.fillStyle = "rgba(80,160,255,0.8)";
+      ctx.font = "bold 13px 'Courier New'";
+      ctx.fillText("3D REALITY", sceneX - scale3d * 1.1, sceneY - scale3d * 1.35);
+      ctx.fillStyle = "rgba(80,160,255,0.4)";
+      ctx.font = "11px 'Courier New'";
+      ctx.fillText("(x, y, z)", sceneX - scale3d * 1.1, sceneY - scale3d * 1.18);
+    }
+
+    // ---- SHADOW PLANE ----
+    if (phase !== "3d") {
+      // Shadow wall/plane
+      const wallW = scaleShadow * 2.8;
+      const wallH = scaleShadow * 2.8;
+      ctx.fillStyle = "rgba(20,35,60,0.7)";
+      ctx.fillRect(shadowX - wallW / 2, shadowY - wallH / 2, wallW, wallH);
+      ctx.strokeStyle = "rgba(60,120,200,0.3)";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(shadowX - wallW / 2, shadowY - wallH / 2, wallW, wallH);
+
+      // Grid on shadow wall
+      ctx.strokeStyle = "rgba(40,80,140,0.25)";
+      ctx.lineWidth = 0.5;
+      for (let gi = -2; gi <= 2; gi++) {
+        ctx.beginPath();
+        ctx.moveTo(shadowX + (gi / 2) * scaleShadow, shadowY - wallH / 2);
+        ctx.lineTo(shadowX + (gi / 2) * scaleShadow, shadowY + wallH / 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(shadowX - wallW / 2, shadowY + (gi / 2) * scaleShadow);
+        ctx.lineTo(shadowX + wallW / 2, shadowY + (gi / 2) * scaleShadow);
+        ctx.stroke();
+      }
+
+      // Project cube onto shadow (orthographic, just x and y from 3D projection)
+      // But for shadow we use rotated x,y ignoring z
+      const shadowVerts = CUBE_VERTS.map(([x, y, z]) => {
+        const cosY2 = Math.cos(s.rotY), sinY2 = Math.sin(s.rotY);
+        const cosX2 = Math.cos(s.rotX), sinX2 = Math.sin(s.rotX);
+        let rx2 = x * cosY2 + z * sinY2;
+        let ry2 = y;
+        let rz2 = -x * sinY2 + z * cosY2;
+        let fx2 = rx2;
+        let fy2 = ry2 * cosX2 - rz2 * sinX2;
+        return { sx: shadowX + fx2 * scaleShadow * 0.85, sy: shadowY + fy2 * scaleShadow * 0.85 };
+      });
+
+      // Shadow cube outline
+      CUBE_EDGES.forEach(([a, b]) => {
+        ctx.beginPath();
+        ctx.moveTo(shadowVerts[a].sx, shadowVerts[a].sy);
+        ctx.lineTo(shadowVerts[b].sx, shadowVerts[b].sy);
+        ctx.strokeStyle = "rgba(60,120,200,0.5)";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      });
+
+      // Shadow of marble (z is lost!)
+      const cosY3 = Math.cos(s.rotY), sinY3 = Math.sin(s.rotY);
+      const cosX3 = Math.cos(s.rotX), sinX3 = Math.sin(s.rotX);
+      let rx3 = s.marble.x * cosY3 + s.marble.z * sinY3;
+      let ry3 = s.marble.y;
+      let rz3 = -s.marble.x * sinY3 + s.marble.z * cosY3;
+      let fx3 = rx3;
+      let fy3 = ry3 * cosX3 - rz3 * sinX3;
+
+      const smx = shadowX + fx3 * scaleShadow * 0.85;
+      const smy = shadowY + fy3 * scaleShadow * 0.85;
+
+      // Shadow marble glow
+      const smGrad = ctx.createRadialGradient(smx, smy, 0, smx, smy, 22);
+      smGrad.addColorStop(0, "rgba(255,80,80,0.5)");
+      smGrad.addColorStop(1, "rgba(255,80,80,0)");
+      ctx.beginPath();
+      ctx.arc(smx, smy, 22, 0, TAU);
+      ctx.fillStyle = smGrad;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(smx, smy, 8, 0, TAU);
+      ctx.fillStyle = "rgba(255,80,80,0.85)";
+      ctx.fill();
+
+      // "?" label on shadow marble showing z is unknown
+      if (showDepth && phase !== "3d") {
+        ctx.fillStyle = "rgba(255,200,80,0.95)";
+        ctx.font = "bold 11px 'Courier New'";
+        ctx.fillText("z=?", smx + 11, smy - 8);
+      }
+
+      // Shadow label
+      ctx.fillStyle = "rgba(60,140,255,0.7)";
+      ctx.font = "bold 13px 'Courier New'";
+      ctx.fillText("2D SHADOW", shadowX - scaleShadow * 0.95, shadowY - scaleShadow * 1.28);
+      ctx.fillStyle = "rgba(60,140,255,0.4)";
+      ctx.font = "11px 'Courier New'";
+      ctx.fillText("(x, y) only", shadowX - scaleShadow * 0.95, shadowY - scaleShadow * 1.1);
+
+      // Draw light rays from lamp to shadow (if both visible)
+      if (phase === "both") {
+        const lampX2 = sceneX - scale3d * 2.1;
+        const lampY2 = sceneY - scale3d * 1.4;
+        const mp2 = project(s.marble.x, s.marble.y, s.marble.z, s.rotX, s.rotY);
+        const mx3d2 = sceneX + mp2.sx * scale3d;
+        const my3d2 = sceneY + mp2.sy * scale3d;
+
+        // Ray from lamp through marble to shadow
+        ctx.beginPath();
+        ctx.moveTo(lampX2, lampY2);
+        ctx.lineTo(mx3d2, my3d2);
+        ctx.strokeStyle = "rgba(255,220,80,0.2)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([3, 6]);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(mx3d2, my3d2);
+        ctx.lineTo(smx, smy);
+        ctx.strokeStyle = "rgba(255,80,80,0.2)";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+
+    // ---- ANNOTATION ----
+    // Bottom text
+    ctx.fillStyle = "rgba(150,180,220,0.55)";
+    ctx.font = "12px 'Courier New'";
+    if (phase === "both") {
+      ctx.fillText("The marble has a definite z-position — but the shadow cannot reveal it.", W / 2 - 220, H - 22);
+    } else if (phase === "3d") {
+      ctx.fillText("The marble moves through all 3 dimensions.", W / 2 - 160, H - 22);
+    } else {
+      ctx.fillText("From the shadow, z is invisible. The marble's depth is lost.", W / 2 - 210, H - 22);
+    }
+
+    s.time += 0.016;
+    if (s.autoRotate) {
+      s.rotY += 0.004;
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [phase, showDepth, marbleZ]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    animRef.current = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animRef.current);
+      window.removeEventListener("resize", resize);
+    };
+  }, [draw]);
+
+  // Mouse drag to rotate
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const onDown = (e) => {
+      dragging.current = true;
+      lastMouse.current = { x: e.clientX, y: e.clientY };
+      stateRef.current.autoRotate = false;
+      setAutoRotate(false);
+    };
+    const onMove = (e) => {
+      if (!dragging.current) return;
+      const dx = e.clientX - lastMouse.current.x;
+      const dy = e.clientY - lastMouse.current.y;
+      stateRef.current.rotY += dx * 0.008;
+      stateRef.current.rotX += dy * 0.008;
+      lastMouse.current = { x: e.clientX, y: e.clientY };
+    };
+    const onUp = () => { dragging.current = false; };
+    canvas.addEventListener("mousedown", onDown);
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      canvas.removeEventListener("mousedown", onDown);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, []);
+
+  const toggleAuto = () => {
+    stateRef.current.autoRotate = !autoRotate;
+    setAutoRotate(v => !v);
+  };
+
+  return (
+    <div style={{
+      background: "#080c12",
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      fontFamily: "'Courier New', monospace",
+      color: "#a0c0e0",
+      userSelect: "none",
+    }}>
+      {/* Header */}
+      <div style={{
+        padding: "18px 28px 10px",
+        borderBottom: "1px solid rgba(60,120,200,0.2)",
+        display: "flex",
+        alignItems: "baseline",
+        gap: 16,
+      }}>
+        <span style={{
+          fontSize: 11,
+          letterSpacing: "0.18em",
+          color: "rgba(80,160,255,0.5)",
+          textTransform: "uppercase",
+        }}>Quantum Geometry in 5D</span>
+        <span style={{ color: "rgba(80,160,255,0.2)", fontSize: 11 }}>|</span>
+        <span style={{ fontSize: 13, color: "rgba(160,200,240,0.7)", letterSpacing: "0.05em" }}>
+          Visualization 01 — The Shadow Metaphor
+        </span>
+      </div>
+
+      {/* Canvas */}
+      <canvas
+        ref={canvasRef}
+        style={{
+          flex: 1,
+          width: "100%",
+          cursor: dragging.current ? "grabbing" : "grab",
+          display: "block",
+        }}
+      />
+
+      {/* Controls */}
+      <div style={{
+        padding: "14px 28px 20px",
+        borderTop: "1px solid rgba(60,120,200,0.15)",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "18px 32px",
+        alignItems: "center",
+        background: "rgba(8,12,20,0.95)",
+      }}>
+
+        {/* View mode */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <span style={{ fontSize: 10, letterSpacing: "0.15em", color: "rgba(100,160,220,0.5)", textTransform: "uppercase" }}>View</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            {[["3d", "3D Only"], ["both", "Both"], ["shadow", "Shadow Only"]].map(([val, label]) => (
+              <button
+                key={val}
+                onClick={() => setPhase(val)}
+                style={{
+                  padding: "5px 12px",
+                  fontSize: 11,
+                  letterSpacing: "0.08em",
+                  background: phase === val ? "rgba(60,120,200,0.35)" : "rgba(30,50,80,0.3)",
+                  border: `1px solid ${phase === val ? "rgba(80,160,255,0.6)" : "rgba(60,100,160,0.25)"}`,
+                  color: phase === val ? "#80c0ff" : "rgba(120,160,200,0.6)",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  transition: "all 0.15s",
+                }}
+              >{label}</button>
+            ))}
+          </div>
+        </div>
+
+        {/* Marble depth slider */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <span style={{ fontSize: 10, letterSpacing: "0.15em", color: "rgba(100,160,220,0.5)", textTransform: "uppercase" }}>
+            Marble Depth (z) — hidden from shadow
+          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: "rgba(255,100,100,0.6)", width: 30 }}>back</span>
+            <input
+              type="range" min={-100} max={100} value={marbleZ}
+              onChange={e => setMarbleZ(Number(e.target.value))}
+              style={{
+                width: 160,
+                accentColor: "#dd4444",
+                cursor: "pointer",
+              }}
+            />
+            <span style={{ fontSize: 11, color: "rgba(255,100,100,0.6)", width: 30 }}>front</span>
+            <span style={{
+              fontSize: 11,
+              color: "rgba(255,120,120,0.7)",
+              background: "rgba(80,0,0,0.3)",
+              border: "1px solid rgba(200,60,60,0.25)",
+              padding: "2px 8px",
+              borderRadius: 3,
+              minWidth: 40,
+              textAlign: "center",
+            }}>z={marbleZ > 0 ? "+" : ""}{marbleZ}%</span>
+          </div>
+        </div>
+
+        {/* Toggles */}
+        <div style={{ display: "flex", gap: 10 }}>
+          <button
+            onClick={() => { setShowDepth(v => !v); stateRef.current.showDepth = !showDepth; }}
+            style={{
+              padding: "5px 12px", fontSize: 11, letterSpacing: "0.06em",
+              background: showDepth ? "rgba(200,60,60,0.2)" : "rgba(30,50,80,0.3)",
+              border: `1px solid ${showDepth ? "rgba(220,80,80,0.5)" : "rgba(60,100,160,0.25)"}`,
+              color: showDepth ? "#ff8888" : "rgba(120,160,200,0.5)",
+              borderRadius: 4, cursor: "pointer",
+            }}
+          >Show z-axis</button>
+
+          <button
+            onClick={toggleAuto}
+            style={{
+              padding: "5px 12px", fontSize: 11, letterSpacing: "0.06em",
+              background: autoRotate ? "rgba(60,120,200,0.2)" : "rgba(30,50,80,0.3)",
+              border: `1px solid ${autoRotate ? "rgba(80,160,255,0.4)" : "rgba(60,100,160,0.25)"}`,
+              color: autoRotate ? "#80c0ff" : "rgba(120,160,200,0.5)",
+              borderRadius: 4, cursor: "pointer",
+            }}
+          >{autoRotate ? "⟳ Auto-rotating" : "▷ Start rotation"}</button>
+        </div>
+
+        {/* Drag hint */}
+        <span style={{ fontSize: 10, color: "rgba(80,120,160,0.45)", letterSpacing: "0.08em", marginLeft: "auto" }}>
+          drag to rotate cube
+        </span>
+      </div>
+    </div>
+  );
+}
