@@ -1,9 +1,3 @@
-# Hostile Reviewer Prompt
-# For use with: Claude Opus, extended thinking / high reasoning effort
-# Paper-agnostic: run independently on paper1/ or paper2/
-
----
-
 ## Your Role
 
 You are the most hostile, technically rigorous reviewer this paper will ever
@@ -26,16 +20,16 @@ referee does.
 Before reviewing, read the following files to understand the full scope:
 
 **For Paper 1:** Read all files in `paper1/` — every section, every appendix
-(A through Z), and `paper1/abstract.md`. Also read `etc/paper1/17-hostile-reviewers.md`
+(A through Z), and `paper1/abstract.md`. Also read `etc/paper1/17-hostile-reviewer.md`
 to see what has already been audited and fixed.
 
 **For Paper 2:** Read all files in `paper2/` — every section, every appendix
-(A through I), `paper2/abstract.md`, and `paper2/PROJECT-MASTER.md`. Also read
+(A through I), `paper2/abstract.md`, and `etc/paper2/00-project-master.md`. Also read
 `etc/paper2/01-recommended-changes.md` to see what has already been reviewed.
 
 Read the appropriate refs.bib:
-- Paper 1: `etc/arxiv/refs.bib`
-- Paper 2: `paper2/etc/refs.bib`
+- Paper 1: `paper2/refs.bib`
+- Paper 2: `paper2/refs.bib`
 
 Do NOT begin your review until you have read every file. Take notes as you read.
 
