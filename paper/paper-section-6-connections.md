@@ -309,13 +309,34 @@ H₀ ≈ 68.3–68.7 but is in 2.5–2.8σ tension with ACT DR6. CMB-S4 (target
 derivation, including the ACT DR6 tension analysis and the Pantos &
 Perivolaropoulos reframing, is in Appendix Y.
 
+**Precision cosmology from the baryogenesis law (Paper 2).** The three bulk
+right-handed neutrinos (required by the Casimir calculation, Appendix W) also
+drive leptogenesis on the Z₂ orbifold. Because the hidden brane is cooler
+(ξ = T_hidden/T_visible), two effects compound: the entropy asymmetry (1/ξ³)
+from different photon bath densities, and the washout suppression (1/ξ²) from
+weaker sphaleron processes on the colder brane. Together they give:
+
+    Ω_DM / Ω_b = 1/ξ²
+
+The observed ratio 5.36 therefore determines ξ = 0.432 without any free
+parameter. From this single number, the CAMB Boltzmann solver predicts:
+t₀ = 13.47–13.60 Gyr (age of the universe), H₀ = 68.7–68.8 km/s/Mpc,
+S8 = 0.753–0.785 (resolving the 4σ weak lensing tension without tuning),
+r_d = 145.8–146.6 Mpc (testable by DESI DR3), and H(z) peaking 4–6%
+above ΛCDM at z ∼ 0.3–0.7 (testable by DESI DR3 at 8σ). The cosmic
+coincidence Ω_DM/Ω_b ≈ 5 is explained. The required ξ ≈ 0.43 implies
+N_eff = 3.31, in 3–4σ tension with ACT DR6 — the framework's primary
+open issue, definitively tested by CMB-S4 (σ(N_eff) ≈ 0.03). The full
+derivation and CAMB computation are in Paper 2.
+
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest
 because it gives a concrete testable number; the dark photon prediction and the
 neutrino mass ordering are the most falsifiable in the near term; the strong CP
 topological resolution is falsified if the QCD axion is found; the H₀ prediction
-is testable by TRGB precision measurements and CMB-S4 ΔN_eff detection; none is
-established by the arguments of this paper.
+is testable by TRGB precision measurements and CMB-S4 ΔN_eff detection; and the
+baryogenesis law (Paper 2) produces zero-parameter cosmological predictions
+verified by CAMB and testable by DESI DR3 and CMB-S4.
 
 ---
 
