@@ -1,0 +1,351 @@
+import { useRef, useEffect, useState, useCallback } from "react";
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(6,8,14,0.97)",
+  grid: "rgba(20,35,65,0.3)",
+  boson: "#44aaff",
+  bosonGlow: "rgba(40,140,255,0.15)",
+  fermion: "#ff5555",
+  fermionGlow: "rgba(255,60,60,0.15)",
+  casimir: "#55ff99",
+  darkEnergy: "#ffaa33",
+  circle: "rgba(100,140,200,0.4)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(75,115,165,0.45)",
+};
+
+export default function CasimirDarkEnergy() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0 });
+
+  const [view, setView] = useState("modes"); // modes | casimir | spectrum
+  const [showBosons, setShowBosons] = useState(true);
+  const [showFermions, setShowFermions] = useState(true);
+  const [circleRadius, setCircleRadius] = useState(50);
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const cx = W / 2, cy = H / 2;
+    const st = stateRef.current;
+    st.time += 0.015;
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    const R = 60 + circleRadius * 1.2;
+
+    if (view === "modes") {
+      // Draw the e-circle
+      ctx.beginPath();
+      ctx.arc(cx, cy, R, 0, TAU);
+      ctx.strokeStyle = C.circle;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Labels
+      ctx.font = "12px monospace";
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("φ = 0", cx + R + 8, cy + 4);
+      ctx.fillText("φ = π", cx - R - 30, cy + 4);
+      ctx.fillText("φ = π/2", cx - 8, cy - R - 8);
+
+      // Draw standing wave modes on the circle
+      const maxN = 5;
+      for (let n = 1; n <= maxN; n++) {
+        const amp = 15 / n;
+
+        // Bosonic mode (periodic: n full wavelengths around circle)
+        if (showBosons) {
+          ctx.beginPath();
+          const steps = 200;
+          for (let i = 0; i <= steps; i++) {
+            const phi = (i / steps) * TAU;
+            const wave = amp * Math.sin(n * phi + st.time * n * 0.5);
+            const pr = R + wave;
+            const px = cx + pr * Math.cos(phi);
+            const py = cy + pr * Math.sin(phi);
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+          }
+          ctx.strokeStyle = `rgba(40,140,255,${0.2 + 0.15 * (maxN - n) / maxN})`;
+          ctx.lineWidth = 2.5 - n * 0.3;
+          ctx.stroke();
+        }
+
+        // Fermionic mode (anti-periodic: n+1/2 wavelengths)
+        if (showFermions) {
+          ctx.beginPath();
+          const steps = 200;
+          for (let i = 0; i <= steps; i++) {
+            const phi = (i / steps) * TAU;
+            const wave = amp * Math.sin((n + 0.5) * phi + st.time * (n + 0.5) * 0.5);
+            const pr = R - 2 - wave; // inside
+            const px = cx + pr * Math.cos(phi);
+            const py = cy + pr * Math.sin(phi);
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+          }
+          ctx.strokeStyle = `rgba(255,60,60,${0.2 + 0.15 * (maxN - n) / maxN})`;
+          ctx.lineWidth = 2.5 - n * 0.3;
+          ctx.stroke();
+        }
+      }
+
+      // Node markers for anti-periodicity
+      if (showFermions) {
+        ctx.fillStyle = C.fermion;
+        ctx.font = "11px monospace";
+        ctx.fillText("ψ(φ+2π) = −ψ(φ)  [fermions: anti-periodic]", cx - R - 30, cy + R + 30);
+      }
+      if (showBosons) {
+        ctx.fillStyle = C.boson;
+        ctx.font = "11px monospace";
+        ctx.fillText("ψ(φ+2π) = +ψ(φ)  [bosons: periodic]", cx - R - 30, cy + R + 48);
+      }
+    }
+
+    if (view === "casimir") {
+      // Show the energy level diagram
+      const leftX = cx - 160, rightX = cx + 80;
+      const topY = 60, botY = H - 120;
+      const rangeY = botY - topY;
+
+      // Title
+      ctx.font = "14px monospace";
+      ctx.fillStyle = C.text;
+      ctx.textAlign = "center";
+      ctx.fillText("Bosonic modes (periodic)", leftX + 60, topY - 8);
+      ctx.fillText("Fermionic modes (anti-periodic)", rightX + 80, topY - 8);
+      ctx.textAlign = "left";
+
+      // Energy levels
+      const maxMode = 6;
+      for (let n = 0; n <= maxMode; n++) {
+        // Boson: E_n = n * hbar / (Rc)
+        const bosonY = botY - (n / maxMode) * rangeY * 0.85;
+        const bosonW = 100;
+        ctx.beginPath();
+        ctx.moveTo(leftX, bosonY); ctx.lineTo(leftX + bosonW, bosonY);
+        ctx.strokeStyle = C.boson;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.font = "11px monospace";
+        ctx.fillStyle = C.boson;
+        ctx.fillText(`n=${n}`, leftX + bosonW + 6, bosonY + 4);
+
+        // Fermion: E_n = (n+1/2) * hbar / (Rc)
+        const fermionE = (n + 0.5) / (maxMode + 0.5);
+        const fermionY = botY - fermionE * rangeY * 0.85;
+        ctx.beginPath();
+        ctx.moveTo(rightX, fermionY); ctx.lineTo(rightX + bosonW, fermionY);
+        ctx.strokeStyle = C.fermion;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fillStyle = C.fermion;
+        ctx.fillText(`n+½=${n}.5`, rightX + bosonW + 6, fermionY + 4);
+      }
+
+      // Zero-point energy annotation
+      const zpBoson = botY + 10;
+      const zpFermion = botY + 10;
+      ctx.font = "12px monospace";
+      ctx.fillStyle = C.boson;
+      ctx.fillText("E₀ = Σ n/R", leftX, zpBoson + 20);
+      ctx.fillStyle = C.fermion;
+      ctx.fillText("E₀ = −(7/8) Σ (n+½)/R", rightX, zpFermion + 20);
+
+      // Net Casimir energy
+      ctx.fillStyle = C.casimir;
+      ctx.font = "14px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("Net: ρ_Λ = (π²/90) × |N_B − (7/8)N_F| × ℏc/L⁴", cx, botY + 55);
+      ctx.fillText("SM: N_B = 28, N_F = 90  →  positive energy  →  dark energy", cx, botY + 75);
+      ctx.textAlign = "left";
+
+      // Animated energy flow arrows
+      const arrowT = (st.time * 0.5) % 1;
+      ctx.strokeStyle = `rgba(80,255,150,${0.4 + 0.3 * Math.sin(st.time * 2)})`;
+      ctx.lineWidth = 2;
+      const arrowY = botY - arrowT * rangeY * 0.8;
+      ctx.beginPath();
+      ctx.moveTo(leftX + 50, arrowY);
+      ctx.lineTo(rightX + 50, arrowY);
+      ctx.stroke();
+      // Arrow head
+      ctx.beginPath();
+      ctx.moveTo(rightX + 50, arrowY);
+      ctx.lineTo(rightX + 42, arrowY - 5);
+      ctx.moveTo(rightX + 50, arrowY);
+      ctx.lineTo(rightX + 42, arrowY + 5);
+      ctx.stroke();
+    }
+
+    if (view === "spectrum") {
+      // Show the SM field content and the resulting dark energy
+      const barW = 28;
+      const startX = 40;
+      const barBottom = H - 130;
+      const barScale = 3;
+
+      // SM bosonic DOF
+      const bosons = [
+        { name: "γ", dof: 2, color: "#5599ff" },
+        { name: "W±", dof: 6, color: "#5599ff" },
+        { name: "Z", dof: 3, color: "#5599ff" },
+        { name: "g", dof: 16, color: "#5599ff" },
+        { name: "H", dof: 1, color: "#5599ff" },
+      ];
+      const fermions = [
+        { name: "e,μ,τ", dof: 12, color: "#ff5566" },
+        { name: "ν×3", dof: 6, color: "#ff5566" },
+        { name: "u,c,t", dof: 36, color: "#ff5566" },
+        { name: "d,s,b", dof: 36, color: "#ff5566" },
+      ];
+
+      ctx.font = "12px monospace";
+      ctx.fillStyle = C.text;
+      ctx.textAlign = "center";
+      ctx.fillText("Standard Model field content on the e-circle", cx, 30);
+
+      let xPos = startX;
+
+      // Bosons
+      ctx.fillStyle = C.boson;
+      ctx.fillText("Bosons (periodic)", startX + 80, 55);
+
+      for (const b of bosons) {
+        const barH = b.dof * barScale;
+        const pulse = 1 + 0.05 * Math.sin(st.time * 2 + xPos * 0.1);
+
+        ctx.fillStyle = `rgba(40,140,255,${0.6 * pulse})`;
+        ctx.fillRect(xPos, barBottom - barH, barW, barH);
+        ctx.strokeStyle = C.boson;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(xPos, barBottom - barH, barW, barH);
+
+        ctx.fillStyle = C.text;
+        ctx.font = "10px monospace";
+        ctx.fillText(b.name, xPos + barW / 2, barBottom + 14);
+        ctx.fillText(b.dof.toString(), xPos + barW / 2, barBottom - barH - 6);
+        xPos += barW + 8;
+      }
+
+      xPos += 30;
+      ctx.fillStyle = C.fermion;
+      ctx.font = "12px monospace";
+      ctx.fillText("Fermions (anti-periodic)", xPos + 90, 55);
+
+      for (const f of fermions) {
+        const barH = f.dof * barScale * (7 / 8);
+        const pulse = 1 + 0.05 * Math.sin(st.time * 2 + xPos * 0.1);
+
+        ctx.fillStyle = `rgba(255,60,60,${0.6 * pulse})`;
+        ctx.fillRect(xPos, barBottom - barH, barW, barH);
+        ctx.strokeStyle = C.fermion;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(xPos, barBottom - barH, barW, barH);
+
+        ctx.fillStyle = C.text;
+        ctx.font = "10px monospace";
+        ctx.fillText(f.name, xPos + barW / 2, barBottom + 14);
+        ctx.fillText((f.dof * 7 / 8).toFixed(1), xPos + barW / 2, barBottom - barH - 6);
+        xPos += barW + 8;
+      }
+
+      // Totals
+      const totalB = 28;
+      const totalF = 90 * 7 / 8;
+      ctx.textAlign = "left";
+      ctx.font = "13px monospace";
+      ctx.fillStyle = C.boson;
+      ctx.fillText(`N_B = ${totalB}`, 40, barBottom + 45);
+      ctx.fillStyle = C.fermion;
+      ctx.fillText(`(7/8)N_F = ${totalF.toFixed(2)}`, 200, barBottom + 45);
+      ctx.fillStyle = C.casimir;
+      ctx.fillText(`Net = |${totalB} − ${totalF.toFixed(1)}| = ${Math.abs(totalB - totalF).toFixed(2)}  →  POSITIVE  →  dark energy`, 40, barBottom + 68);
+
+      // Arrow to dark energy
+      const L = 50 + circleRadius * 2;
+      ctx.fillStyle = C.darkEnergy;
+      ctx.fillText(`L ≈ ${L.toFixed(0)} μm  →  ρ_Λ ≈ 5.4 × 10⁻¹⁰ J/m³`, 40, barBottom + 90);
+      ctx.textAlign = "left";
+    }
+
+    // Info panel
+    ctx.fillStyle = C.panelBg;
+    ctx.fillRect(12, H - 95, 400, 83);
+    ctx.font = "13px monospace";
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.text;
+
+    if (view === "modes") {
+      ctx.fillText("Standing waves on the e-circle: boundary conditions", 20, H - 75);
+      ctx.fillText("Bosons: periodic ψ(φ+2π) = +ψ(φ)", 20, H - 55);
+      ctx.fillStyle = C.fermion;
+      ctx.fillText("Fermions: anti-periodic ψ(φ+2π) = −ψ(φ)", 20, H - 37);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Different spectra → different zero-point energy → Casimir effect", 20, H - 19);
+    } else if (view === "casimir") {
+      ctx.fillText("Boson zero modes at n=0,1,2...; fermion at n+½", 20, H - 75);
+      ctx.fillText("Fermionic contribution is NEGATIVE (anti-commuting):", 20, H - 55);
+      ctx.fillStyle = C.casimir;
+      ctx.fillText("More fermions than bosons → positive net energy → Λ > 0", 20, H - 37);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("This IS the cosmological constant", 20, H - 19);
+    } else {
+      ctx.fillText("SM has 28 bosonic + 90 fermionic DOF on the e-circle", 20, H - 75);
+      ctx.fillText("The 7/8 factor: Fermi vs Bose statistics", 20, H - 55);
+      ctx.fillStyle = C.darkEnergy;
+      ctx.fillText("Net Casimir = positive → dark energy ✓", 20, H - 37);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Circle circumference L ~ 130 μm matches observed ρ_Λ", 20, H - 19);
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [view, showBosons, showFermions, circleRadius]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = 800 * dpr; canvas.height = 550 * dpr;
+    canvas.style.width = "800px"; canvas.style.height = "550px";
+    canvas.getContext("2d").scale(dpr, dpr);
+    animRef.current = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [draw]);
+
+  return (
+    <div style={{ background: C.bg, padding: 16, borderRadius: 12, display: "inline-block" }}>
+      <div style={{ color: C.text, fontFamily: "monospace", fontSize: 15, marginBottom: 8 }}>
+        <strong>14 — Casimir Dark Energy from the E-Circle</strong>
+        <span style={{ color: C.textDim, marginLeft: 12 }}>Section 6.6</span>
+      </div>
+      <canvas ref={canvasRef} style={{ borderRadius: 8 }} />
+      <div style={{ display: "flex", gap: 12, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+        {["modes", "casimir", "spectrum"].map(v => (
+          <button key={v} onClick={() => setView(v)}
+            style={{
+              background: view === v ? "rgba(60,120,200,0.3)" : "rgba(30,40,60,0.5)",
+              color: C.text, border: `1px solid ${view === v ? "rgba(100,160,255,0.5)" : "rgba(60,80,120,0.3)"}`,
+              borderRadius: 6, padding: "5px 14px", cursor: "pointer", fontFamily: "monospace", fontSize: 12,
+            }}>
+            {v === "modes" ? "Standing waves" : v === "casimir" ? "Energy levels" : "SM field content"}
+          </button>
+        ))}
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>
+          <input type="checkbox" checked={showBosons} onChange={e => setShowBosons(e.target.checked)} /> Bosons
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>
+          <input type="checkbox" checked={showFermions} onChange={e => setShowFermions(e.target.checked)} /> Fermions
+        </label>
+      </div>
+    </div>
+  );
+}
