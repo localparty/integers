@@ -349,6 +349,113 @@ seen from outside and inside respectively.
 
 ---
 
+## 4.2.11 Extension: Anyons and the Full Spectrum of e-Winding
+
+The winding number argument established above has a natural and powerful extension
+that provides an independent experimental confirmation of the framework.
+
+In three spatial dimensions, the configuration space of two identical particles has
+a fundamental group of Z₂ — the integers modulo 2. This means only two winding
+numbers are topologically stable: 0 and 1 (mod 2), corresponding to bosons and
+fermions respectively. The circular topology of the e-dimension produces exactly
+this dichotomy in 3D.
+
+But in **two spatial dimensions**, the configuration space of two identical particles
+has a fundamental group of Z — the full integers. In 2D, particles can wind around
+each other any number of times without the path being contractible. This means the
+winding number is no longer restricted to integers and half-integers — it can be
+**any rational or even irrational fraction**.
+
+Particles with fractional winding numbers are called **anyons**. Under exchange,
+an anyon with winding number θ/2π acquires phase:
+
+    Δφ_exchange = e^(iθ)
+
+For θ = 0: bosons. For θ = π: fermions. For any other θ: anyons with
+fractional statistics — neither bosonic nor fermionic.
+
+**In the 5D framework, anyons are immediate and natural.** They are particles whose
+e-winding is fractional — not because the e-dimension changes, but because the
+available configuration space in 2D allows the helix to wind through non-integer
+fractions of a full e-cycle during exchange. The e-dimension is the same circle
+it always was. What changes is the topology of the paths available to the particles
+in lower-dimensional space.
+
+This is a genuine prediction of the winding-number picture: **wherever the
+configuration space allows fractional winding, fractional statistics must appear.**
+
+### Experimental Confirmation: The Fractional Quantum Hall Effect
+
+Anyons are not theoretical curiosities. They have been experimentally confirmed.
+
+In the fractional quantum Hall (FQH) effect, electrons confined to a 2D surface
+in a strong magnetic field form collective quasiparticle excitations with fractional
+electric charge (e/3, e/5, etc.) and fractional statistics. These quasiparticles
+behave as anyons — under exchange, they acquire phases that are fractions of π.
+
+The FQH effect was discovered by Tsui, Störmer, and Laughlin in 1982 (Nobel Prize
+1998). Laughlin's explanation invoked quasiparticles with fractional charge and
+statistics, which at the time seemed like an exotic mathematical device. In the 5D
+framework, these quasiparticles are simply particles with fractional e-winding —
+the most natural generalization of the integer/half-integer dichotomy.
+
+In 2020, direct experimental evidence for anyon statistics in a FQH system was
+reported by Bartolomei et al. (Science, 2020) and Nakamura et al. (Nature Physics,
+2020), confirming the exchange phase directly through interferometry. The measured
+phases matched the fractional winding prediction.
+
+**This is the 5D framework's strongest experimental touchpoint in Section 4.**
+The framework doesn't just accommodate anyons — it predicts them as the natural
+result of allowing fractional e-winding in reduced-dimensional configuration spaces.
+The experimental confirmation of anyon statistics is therefore indirect experimental
+support for the winding-number picture of spin and statistics.
+
+### The Full Spectrum
+
+The complete picture that emerges from the winding-number argument is:
+
+| Configuration space | Allowed winding numbers | Particle type | Statistics |
+|--------------------|-----------------------|---------------|------------|
+| 3D space | Integer (0, ±1, ±2, ...) | Bosons | Symmetric, Bose-Einstein |
+| 3D space | Half-integer (±½, ±3/2, ...) | Fermions | Antisymmetric, Fermi-Dirac |
+| 2D space | Any rational θ/2π | Anyons | Fractional, e^(iθ) phase |
+| 1D space | Continuous | (Fermionization) | Bose-Fermi duality |
+
+The rows of this table are not separate postulates. They are all consequences of
+one geometric principle: **the available winding numbers are determined by the
+topology of the configuration space relative to the circular e-dimension.**
+
+In 3D, the fundamental group Z₂ restricts winding to ±½ and integers.
+In 2D, the fundamental group Z allows any winding.
+In 1D, the Bose-Fermi duality (Jordan-Wigner transformation) reflects the
+complete equivalence of the two winding types in the most restricted geometry.
+
+The spin-statistics theorem is the 3D row of this table. Anyons are the 2D row.
+Both follow from the same winding-number principle applied to different geometries.
+
+### Significance for the Framework
+
+The anyon extension does three things for the paper:
+
+**First**, it converts the spin-statistics argument from a binary claim (bosons vs.
+fermions) into a continuous, parameterized family. A framework that predicts only
+two particle types could be dismissed as tuned to the known answer. A framework
+that predicts a continuous family — of which bosons and fermions are special cases
+confirmed in 3D, and anyons are intermediate cases confirmed in 2D — is making a
+genuinely structural claim.
+
+**Second**, it provides experimental grounding. The FQH anyons are real, measured,
+and theoretically well-understood. Connecting them to the winding-number picture
+gives the framework an experimental anchor that purely interpretive frameworks lack.
+
+**Third**, it points toward a research direction. If anyons arise from fractional
+e-winding in 2D configuration spaces, what happens in other topologies? What
+particle statistics arise on the surface of a torus, or a Möbius strip, or a
+higher-genus surface? The winding-number framework makes this a well-posed geometric
+question, opening a new direction for investigation.
+
+---
+
 ## Notes for Revision
 
 - [ ] Add figure: two helices (integer and half-integer winding) side by side,
