@@ -57,7 +57,8 @@ All source files are Markdown at:
     ├── appendix-S-finiteness-theorem.md
     ├── appendix-T-rigorous-verification.md
     ├── appendix-U-goroff-sagnotti-verification.md
-    └── appendix-V-vertex-computation.md
+    ├── appendix-V-vertex-computation.md
+    └── appendix-W-orbifold-dark-sector.md
 ```
 
 ---
@@ -329,7 +330,7 @@ The LaTeX document should follow this structure exactly:
 \section{Spin-Statistics Derivation}
 [appendix-B]
 
-... etc through appendix-V ...
+... etc through appendix-W ...
 
 \end{document}
 ```
@@ -522,8 +523,19 @@ Run these checks before handing the output to the human:
    characters (ψ, φ, α, ∇, ∂, ℏ, etc.) that were missed in conversion.
    All math must be in LaTeX math mode.
 
-6. **Abstract word count:** arXiv abstract should be under 1,920
-   characters. Check with `wc -m`.
+6. **Abstract word count:** The file `paper/abstract.md` contains the
+   FULL abstract (~800 words) which is too long for arXiv. Produce TWO versions:
+
+   (a) Full abstract in the paper PDF (\begin{abstract}...\end{abstract}).
+
+   (b) Short abstract (~250 words, under 1,920 characters) for the arXiv
+       submission form. Condense: keep paragraphs 1-3 intact; paragraph 4
+       keep only the Goroff-Sagnotti sentence and two-parameter finiteness
+       claim; paragraph 5 reduce to two sentences (dark matter, dark photon,
+       alpha); paragraph 6 keep only the 19-phenomena and 7-predictions
+       sentences plus the honest disclaimer. Save as `etc/arxiv/abstract-short.txt`.
+
+   Check the short version with `wc -m abstract-short.txt` (target: under 1,920).
 
 ---
 
