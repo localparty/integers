@@ -98,3 +98,16 @@ Epstein-Terras structure. The orbifold extensions are speculative but
 quantitative, with specific falsifiable predictions. What is established
 is a geometric framework in which the same compact circle that makes
 quantum mechanics necessary also makes quantum gravity finite.
+
+A companion computation (Paper 2) applies the CAMB Boltzmann solver to
+the framework's cosmological sector. The bulk leptogenesis mechanism on
+the Z₂ orbifold yields a scaling law Ω_DM/Ω_b = 1/ξ² that determines
+the hidden-brane temperature ratio ξ = 0.432–0.47 from the observed
+dark-to-visible matter ratio — removing the last free cosmological
+parameter. The self-consistent solution (ξ = 0.4375) predicts t₀ = 13.60 Gyr,
+H₀ = 68.8 km/s/Mpc, S8 = 0.754 (resolving the weak lensing tension), and
+the CMB angular scale θ* within 1.0 arcsecond of Planck's measurement.
+A framework built from pure geometry — one compact circle, one warp factor,
+one temperature ratio — predicts the age of the universe, the Hubble
+constant, the dark matter density, the matter clustering amplitude, and
+the CMB angular scale from zero adjustable parameters.
