@@ -320,7 +320,16 @@ positivity of the mass exponent (Result 3). Statement (iv) follows from the
 uniqueness of the Epstein zeta values at each evaluation point. The
 alternative formulation via the full spectral zeta function (Section S.5)
 provides an independent verification: ζ'(0) is finite on any compact
-Riemannian manifold because s = 0 is below the smallest pole at s = 1/2. ∎
+Riemannian manifold because s = 0 is below the smallest pole at s = 1/2.
+
+The mass-independence of the leading vertex coefficient — identified in
+Appendix U as the sole remaining conditional assumption — is established
+by explicit computation in Appendix V: the 5D three-graviton vertex,
+decomposed into KK modes, has a leading term equal to the standard 4D
+vertex (independent of the KK numbers) plus O(n²/R²) corrections. This
+follows from the polynomial momentum structure of the Einstein-Hilbert
+cubic term and the UV expansion of the 5D dot products. The theorem is
+unconditional. ∎
 
 ---
 
