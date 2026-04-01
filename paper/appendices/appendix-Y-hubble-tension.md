@@ -237,13 +237,20 @@ bulk neutrino tower after intra-tower cascade dynamics (Gonzalo et al.
 **3. Thawing dilaton (if present).** If the dilaton is slowly rolling
 (the DESI-compatible scenario), the evolving equation of state
 w ≈ −0.8 modifies the late-time expansion. This effect goes in the
-OPPOSITE direction:
+OPPOSITE direction. The DESI DR2 combined fit with Planck CMB data
+(DESI Collaboration 2025, Table 3) finds that evolving dark energy
+(w₀ ≈ −0.75, wₐ ≈ −0.75) gives H₀ ≈ 66.9 km/s/Mpc — about
+0.5 km/s/Mpc BELOW the ΛCDM value:
 
     ΔH₀^{dilaton} ≈ **−0.5** km/s/Mpc
 
-(The thawing dilaton lowers H₀ because w > −1 means less dark energy
-at early times, slower late-time expansion, larger D_A, and therefore
-lower H₀ to preserve θ_s.)
+The sign is forced by the physics: w > −1 means the dark energy
+density was smaller in the past, so the expansion was slower at
+intermediate redshifts, D_A is larger, and H₀ must decrease to
+preserve the CMB angular scale θ_s. The magnitude is approximate —
+a precise value requires fitting the dilaton's specific potential
+V(φ) to CMB+BAO data, which has not been performed. For Scenario B
+below, we use −0.5 ± 0.3 km/s/Mpc as a representative range.
 
 ### Y.5.2 Combined Prediction
 
@@ -463,10 +470,11 @@ with O5+ will reach ~2% — sufficient to distinguish 70 from 73.
 ### Y.9.3 Tests of ΔN_eff
 
 **CMB-S4.** The CMB-S4 experiment targets σ(N_eff) ≈ 0.03. The
-framework's combined prediction N_eff ≈ 3.30–3.43 (mirror + tower)
-would be detected as a >5σ deviation from the SM value 3.046 if
-ξ > 0.42. CMB-S4 will either confirm or decisively rule out the
-mirror dark radiation at the level needed for the H₀ prediction.
+framework's combined prediction N_eff ≈ 3.35–3.48 (mirror + tower:
+3.046 + 0.25–0.38 + 0.05) would be detected as a >5σ deviation from
+the SM value 3.046 if ξ > 0.42. CMB-S4 will either confirm or
+decisively rule out the mirror dark radiation at the level needed
+for the H₀ prediction.
 
 **Planck + ACT + SPT combined.** The current combined constraint
 (N_eff = 2.81 ± 0.18) already constrains ΔN_eff^{total}. The
@@ -595,3 +603,8 @@ or falsified within 5–10 years.
 
 13. Bernal, J. L., Verde, L. & Riess, A. G. "The trouble with H₀."
     *JCAP* **10**, 019 (2016). — ΔH₀ ≈ 6 × ΔN_eff calibration.
+
+14. DESI Collaboration. "DESI DR2 Results II: Measurements of
+    Baryon Acoustic Oscillations and Cosmological Constraints."
+    arXiv:2503.14738 (2025). — Table 3: w₀wₐCDM fit with Planck
+    giving H₀ ≈ 66.9 km/s/Mpc for (w₀, wₐ) ≈ (−0.75, −0.75).
