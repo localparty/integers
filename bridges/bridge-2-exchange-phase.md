@@ -436,8 +436,14 @@ conditions determined by the rotation-e coupling:
     φᵢ(T) = φᵢ(0) + sπ + (dynamical terms)
 
 The topological e-shift sπ per particle is the parallel transport from
-Section B2.3. It contributes a phase factor to the path integral that is
-independent of the specific path taken (because it is topological):
+Section B2.3. The topological character of this phase — established in
+Section B2.5 as a holonomy of the e-connection around the exchange loop —
+guarantees that it is independent of the specific exchange path, depending
+only on the homotopy class. Any path in the exchange sector, regardless of
+its shape or traversal speed, accumulates the same e-shift sπ per particle,
+because all such paths are homotopic and holonomy is a homotopy invariant.
+The phase therefore factors out of the path integral uniformly across all
+paths in the exchange sector:
 
     Phase factor = e^(isπ) · e^(isπ) = e^(i·2sπ)
 

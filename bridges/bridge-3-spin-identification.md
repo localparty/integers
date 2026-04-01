@@ -62,7 +62,9 @@ with the Kaluza-Klein metric:
 
     ds₅² = δᵢⱼ dxⁱ dxʲ + R²(dφ + Aᵢ dxⁱ)²
 
-the non-relativistic Lagrangian is:
+the non-relativistic Lagrangian is the geodesic Lagrangian on the total space
+P(M³, U(1)) — i.e., the kinetic energy of a particle moving freely on the
+5D manifold with the Kaluza-Klein metric, taken in the non-relativistic limit:
 
     L = ½m [ẋ² + R²(φ̇ + Aᵢ ẋⁱ)²] − V(x)
 
@@ -134,9 +136,13 @@ The eigenstates are e^(inφ) with n ∈ Z + ½, and the eigenvalues are:
 These correspond to particles with half-integer spin.
 
 The anti-periodic boundary condition is not an arbitrary choice — it is forced
-by the spin structure. As established in Bridge 1, the representation of
-Spin(d) determines whether the section is tensorial or spinorial. The boundary
-condition on S¹ is a CONSEQUENCE of the representation theory, not an
+by the spin structure established in Bridge 1. For half-integer spin, the
+particle transforms under the non-trivial element of ker(p) = Z₂ ⊂ Spin(d),
+which acts as multiplication by −1 on the spinor representation. A 2π
+traversal of the e-circle corresponds to this kernel element (Bridge 1,
+Theorem B1.1, Step 1: R̃(2π) = −1 ∈ Spin(d)), and its action on the
+wavefunction gives ψ(φ + 2π) = −ψ(φ). The boundary condition is thus a
+direct CONSEQUENCE of Bridge 1's classification, not an
 independent postulate.
 
 ### B3.3.4 The Spin Projection Spectrum
@@ -229,11 +235,15 @@ of rotation in the e-fiber, parameterized by the three spatial rotation axes.
 For a spin-s particle, these operators act on the (2s + 1)-dimensional space
 of e-winding states {|−s⟩, |−s+1⟩, ..., |s⟩}.
 
-The commutation relations follow from the geometric fact that the three spatial
-rotations do not commute — the SU(2) algebra is the algebra of the rotation
-group, inherited by the e-fiber through the rotation-e coupling. This is not
-an additional assumption; it is a consequence of the e-dimension being coupled
-to three-dimensional spatial rotations.
+Since the rotation-e coupling makes Ŝᵢ the generators of the e-component of
+SU(2) rotations, they inherit the SU(2) Lie algebra by construction: the
+commutation relations [Ŝᵢ, Ŝⱼ] = iℏ εᵢⱼₖ Ŝₖ are the structure constants of
+the Lie algebra su(2), which is determined entirely by the group structure of
+three-dimensional rotations (see Sakurai & Napolitano, *Modern Quantum
+Mechanics*, Ch. 3, for the standard derivation). This is not an additional
+assumption of the framework; it is a consequence of the e-dimension being
+coupled to three-dimensional spatial rotations whose generators necessarily
+satisfy the so(3) ≅ su(2) algebra.
 
 The raising and lowering operators:
 

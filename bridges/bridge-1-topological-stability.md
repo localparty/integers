@@ -193,9 +193,17 @@ representation theory proved by the highest-weight classification of compact
 Lie group representations (see Fulton & Harris, *Representation Theory*, Ch. 11).
 
 For general Spin(d), d ≥ 3, representations with both integer and half-integer
-spin exist by the same classification theory. The integer-spin representations
-factor through SO(d) (they are "tensorial"); the half-integer-spin representations
-do not (they are "spinorial" and require the full double cover).
+spin exist. This follows from the fact that π₁(SO(d)) = Z₂ for all d ≥ 3 —
+proved via the long exact sequence of the fibration SO(d) → SO(d+1) → Sᵈ,
+since π₁(Sᵈ) = 0 for d ≥ 2 (see Hatcher, *Algebraic Topology*, §4.2, or
+Nakahara, *Geometry, Topology and Physics*, Ch. 4). The double cover
+Spin(d) → SO(d) therefore exists for all d ≥ 3, and its representations
+split into two classes: integer-spin representations that factor through SO(d)
+(tensorial) and half-integer-spin representations that do not (spinorial,
+requiring the full double cover). Note that while the specific groups differ —
+Spin(3) ≅ SU(2), Spin(4) ≅ SU(2) × SU(2), Spin(5) ≅ Sp(4), Spin(6) ≅ SU(4)
+— the Z₂ kernel structure is universal, and it is this structure alone that
+produces the integer/half-integer dichotomy.
 
 In the e-dimension picture: integer-spin particles have e-structures that return
 to themselves after a 2π spatial rotation. Half-integer-spin particles have
