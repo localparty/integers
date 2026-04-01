@@ -58,7 +58,9 @@ All source files are Markdown at:
     ├── appendix-T-rigorous-verification.md
     ├── appendix-U-goroff-sagnotti-verification.md
     ├── appendix-V-vertex-computation.md
-    └── appendix-W-orbifold-dark-sector.md
+    ├── appendix-W-orbifold-dark-sector.md
+    ├── appendix-X-strong-cp.md
+    └── appendix-Z-neutrino-mass-ordering.md
 ```
 
 ---
@@ -330,7 +332,7 @@ The LaTeX document should follow this structure exactly:
 \section{Spin-Statistics Derivation}
 [appendix-B]
 
-... etc through appendix-W ...
+... etc through appendix-Z (skip Y) ...
 
 \end{document}
 ```

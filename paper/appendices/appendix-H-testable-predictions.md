@@ -292,6 +292,8 @@ e-circle scenario predicts exactly zero variation.
 | 5 | Finite graviton scattering | No UV divergences | Indirect (cosmology, BH) | Not testable (current) | Far future |
 | 6 | Anyon statistics in 2D | θ = π/m for ν = 1/m FQH | FQH interferometry | **Confirmed** | Done |
 | 7 | Constant α | dα/dt = 0 | Quasar spectra, atomic clocks | **Consistent** | Ongoing |
+| 8 | Normal neutrino mass ordering | m₃ > m₂ > m₁ from Z₃ geometry | JUNO (data taking since Aug 2025) | Hinted at 2–3σ (NOvA, T2K, SK) | 3–6 years |
+| 9 | No QCD axion (strong CP topological) | θ = 0, π₄(SU(3)) = 0 | ADMX, ABRACADABRA, IAXO | Not yet excluded | Ongoing |
 
 ---
 
@@ -346,5 +348,16 @@ The entire framework would be falsified — the e-conservation constraint
 requires the quantum correlations. (This has not happened — Bell violations
 are thoroughly confirmed.)
 
-The framework is falsifiable at multiple levels. The most immediate test is
-Prediction 1: modified gravity at ~21 μm.
+**If JUNO finds inverted neutrino mass ordering (m₁ > m₃):**
+The simple Z₃ bulk seesaw geometry is falsified. (More complex bulk profiles
+could accommodate inverted ordering, so this would constrain but not
+decisively rule out the Z₃ scenario.)
+
+**If axion searches (ADMX, ABRACADABRA, IAXO) discover the QCD axion:**
+The topological strong CP resolution (π₄(SU(3)) = 0) is falsified. This
+would be a decisive falsification with no obvious rescue — the 5D homotopy
+argument either holds or it doesn't.
+
+The framework is falsifiable at multiple levels. The most immediate tests are
+Prediction 1 (modified gravity at ~21 μm), Prediction 8 (neutrino mass
+ordering from JUNO), and Prediction 9 (no QCD axion from ongoing searches).

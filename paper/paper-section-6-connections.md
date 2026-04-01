@@ -266,10 +266,35 @@ at the Planck scale. The full SM electroweak running from M_P to zero
 energy adds ~32, yielding 1/α(0) ≈ 137.0 ± 0.3 — within 0.12% of the
 experimental 137.036. The full treatment is given in Appendix W.
 
+**The strong CP problem from orbifold topology.** The Z₂ orbifold requires 5D
+gauge fields living on the full interval [0, πR]. The homotopy group that gives
+rise to the QCD theta parameter in 4D is π₃(SU(3)) = Z. In 5D, the relevant
+group is π₄(SU(3)) = 0 (Bott periodicity) — there are no topologically
+non-trivial gauge configurations. The theta parameter is absent, not small:
+θ = 0 topologically enforced. KK instanton contributions are suppressed by
+exp(−10³⁰) (Appendix J). The prediction is stark: no QCD axion. If ADMX,
+ABRACADABRA, or IAXO find the QCD axion, this mechanism is falsified. The full
+derivation is in Appendix X.
+
+**Neutrino mass ordering from the Z₃ geometry.** The three bulk right-handed
+neutrinos required by the Casimir calculation (Appendix W, §W.9.1) are
+naturally localized at the three Z₃ fixed points of the orbifold at
+different distances from the visible brane. The overlap with the brane-localized
+left-handed neutrinos generates a Dirac mass hierarchy: the right-handed
+neutrino closest to the brane produces the heaviest light neutrino, giving
+normal ordering m₃ > m₂ > m₁. The 5D fundamental scale M₅ = (M_P²/L)^{1/3}
+≈ 2.5 × 10¹⁴ GeV (the GUT scale, set geometrically by R = 12 μm) gives the
+neutrino mass scale v²/M₅ ≈ 0.24 eV — sub-eV, consistent with observation.
+JUNO began data taking in August 2025 and published first results in
+November 2025 (arXiv:2511.14593); the mass ordering determination is
+expected within its 6-year run. The full derivation is in Appendix Z.
+
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest
-because it gives a concrete testable number; the dark photon prediction is the
-most falsifiable in the near term; none is established by the arguments of this paper.
+because it gives a concrete testable number; the dark photon prediction and the
+neutrino mass ordering are the most falsifiable in the near term; the strong CP
+topological resolution is falsified if the QCD axion is found; none is established
+by the arguments of this paper.
 
 ---
 

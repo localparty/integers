@@ -69,22 +69,24 @@ torus area 1/α(M_P) = 4π²; three generations of SM running then give
 1/α(0) ≈ 137.
 
 The e-circle, Z₆-orbifolded and warped, provides a geometric account of
-nineteen phenomena: quantum mechanics, electromagnetism, gravity, the
+twenty-one phenomena: quantum mechanics, electromagnetism, gravity, the
 spin-statistics theorem, perturbative UV finiteness, dark energy, dark
 energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
 α stability, three fermion generations, the fermion mass hierarchy, neutrino
-masses, kinetic mixing with a dark photon, black hole entropy, the hydrogen
-spectrum, the Casimir force, baryon asymmetry (from the Z₂ chirality
-preference), and the CPT theorem. Seven testable predictions follow: two
-are already consistent with current data (observed α stability, and the
+masses, neutrino mass ordering (normal hierarchy from Z₃ geometry), kinetic
+mixing with a dark photon, the strong CP problem (topological resolution:
+π₄(SU(3)) = 0 eliminates the theta parameter in 5D), black hole entropy,
+the hydrogen spectrum, the Casimir force, baryon asymmetry (from the Z₂
+chirality preference), and the CPT theorem. Seven testable predictions follow:
+two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
 with static w = −1, resolvable via thawing dilaton quintessence). The N_eff
 prediction (ΔN_eff ≈ 0.57 from the dilaton) is in tension with combined
 ACT+SPT+Planck measurements (N_eff = 2.81 ± 0.18) and requires earlier
-dilaton decoupling for consistency. The remaining four — short-range gravitational
-deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻⁴, neutrino
-masses at the meV scale, and mirror dark matter — are within reach of
-experiments in the next 3–10 years.
+dilaton decoupling for consistency. The remaining four — short-range
+gravitational deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻⁴,
+neutrino masses and normal mass ordering (testable by JUNO within 6 years),
+and mirror dark matter — are within reach of experiments in the next 3–10 years.
 
 We do not claim to have solved quantum gravity or to have derived the full
 Standard Model. The perturbative finiteness result is established through
