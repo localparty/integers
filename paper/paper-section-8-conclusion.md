@@ -144,15 +144,19 @@ treatment via the 5D Dirac equation on the Lorentzian Kaluza-Klein manifold;
 the derivation of the gyromagnetic ratio g from the e-geometry; and the extension
 to spin-1 and higher-spin fields within the framework.
 
-**The two-loop quantum gravity calculation.** This is the primary open problem
-of the paper. The one-loop effective action for 5D gravity on M⁴ × S¹ is
-finite under zeta regularization of the KK sum (Appendix F). The critical
-test is the two-loop calculation — which in 4D gravity is where the
-non-renormalizability appears (Goroff & Sagnotti 1986). The two-loop KK
-sum requires the Epstein zeta function or its multidimensional generalization.
-If it is finite, the quantization bridge conjecture (Section 5.X) gains its
-strongest support. If it diverges irreducibly, something additional is needed.
-This is the calculation most worth doing.
+**All-orders and non-perturbative finiteness.** This is the primary open
+problem of the paper. The one-loop effective action for 5D gravity on
+M⁴ × S¹ is finite under zeta regularization (Appendix F). The two-loop
+calculation — where 4D gravity becomes non-renormalizable via the
+Goroff-Sagnotti R³ counterterm — is also finite in the 5D KK theory
+(Appendix G): the leading divergence vanishes identically because
+Σ_{n∈Z} 1 = 1 + 2ζ(0) = 0. The structural argument extends to every
+loop order. What remains is: (a) verifying the subleading Epstein zeta
+values at each loop order, (b) proving all-orders finiteness rigorously,
+and (c) addressing non-perturbative effects (gravitational instantons,
+topology change). If (a) and (b) succeed, the quantization bridge
+conjecture (Section 5.X) is established — and the problem of quantum
+gravity resolves into the geometry that quantum mechanics already requires.
 
 **Cassini fifth-force bound.** The Kaluza-Klein reduction of Section 5 and
 Appendix D produces a scalar field (the e-circle radius φ(x)) that introduces

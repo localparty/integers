@@ -2,11 +2,14 @@
 
 > **Status:** First full draft — new section, elevates the paper's central claim
 > **Placement:** Immediately before Section 5.7 (The Mathematical Program)
-> **Goal:** State explicitly what Appendices E and F establish: the e-dimension
-> is already quantized (that's QM), it already governs gravity (that's GR via
-> Appendix D), and the one-loop quantum correction to 5D gravity is finite.
-> This is the bridge between quantum mechanics and general relativity. State it
-> as a conjecture — bold, precise, and honest about what remains.
+> **Goal:** State explicitly what Appendices D, E, F, and G establish: the
+> e-dimension is already quantized (that's QM), it already governs gravity
+> (that's GR via Appendix D), and the quantum corrections to 5D gravity are
+> finite at one loop (Appendix F) and two loops (Appendix G) under zeta
+> regularization — with the all-orders conjecture following from the same
+> mechanism. This is the bridge between quantum mechanics and general
+> relativity. State it as a conjecture — bold, precise, and honest about
+> what remains.
 
 ---
 
@@ -92,8 +95,8 @@ tower of massive particles.
 The classical gravitational physics of the e-bundle is already established
 independently of the quantum content.
 
-**Step 3 — The quantum correction to 5D gravity is finite at one loop.**
-*(Established with caveats — see Appendix F)*
+**Step 3 — The quantum corrections to 5D gravity are finite at one and two
+loops.** *(Established with caveats — see Appendices F and G)*
 
 The one-loop effective action for 5D gravity on M⁴ × S¹ is finite when the
 KK mode sum is zeta-regularized (Appendix F, Section F.4). The compact
@@ -101,16 +104,23 @@ e-circle converts the continuous 5D momentum integral into a discrete sum
 over KK modes. This sum, treated with the same zeta regularization used for
 the physical Casimir effect, is finite. The spin structure of the e-circle
 — periodic boundary conditions for bosons, anti-periodic for fermions
-(established in Appendix B.1) — produces partial cancellations between
-bosonic and fermionic KK contributions, reducing the magnitude of the
-one-loop correction.
+(Appendix B.1) — produces partial cancellations between bosonic and fermionic
+KK contributions.
 
-The standard objection to quantum gravity in 4D is non-renormalizability:
-at each loop order, new divergent structures appear requiring new
-counterterms. In the 5D e-circle framework, the compact dimension provides a
-natural discrete spectrum that admits finite treatment. At one loop, this
-is established. Whether the mechanism extends to all orders is the open
-question.
+The two-loop calculation — where 4D gravity becomes non-renormalizable (the
+Goroff-Sagnotti R³ counterterm, 1986) — is also finite in the 5D KK theory
+(Appendix G). The mechanism is a structural cancellation: at every loop order
+L, the leading UV divergence is proportional to [Σ_{n∈Z} 1]^L. Under zeta
+regularization, Σ_{n∈Z} 1 = 1 + 2ζ(0) = 1 + 2(-½) = 0. The leading
+divergence vanishes identically at every loop order. The subleading terms are
+Epstein zeta functions at non-positive integers — all finite by the
+Epstein-Terras theorem (Appendix G, Sections G.5-G.6).
+
+The same mechanism that removes the one-loop divergence removes the
+two-loop Goroff-Sagnotti divergence — and, by the same structural argument,
+removes the leading divergence at every loop order. Whether the all-orders
+result is perturbatively finite is the content of Claim 3, and is now
+supported by two explicit loop calculations rather than one.
 
 **Step 4 — The quantization of the full 5D metric is the natural next step.**
 *(Conjectured — the content of Claim 3)*
@@ -181,9 +191,11 @@ metrics on P(M⁴, U(1)), with the e-circle quantized as per standard QM and
 the KK mode sum treated by zeta regularization, is a consistent quantum
 theory of gravity. It reduces to standard QM in the quantum limit (the
 e-fiber sector), to 4D GR + EM in the classical limit (the weak-field
-Kaluza-Klein limit), and is perturbatively finite at one loop (Appendix F).
-Whether it is finite at all loop orders and non-perturbatively is the content
-of Claim 3 of Section 5.7.
+Kaluza-Klein limit), and is perturbatively finite at one loop (Appendix F)
+and two loops (Appendix G). The mechanism — the vanishing of the leading
+divergence via Σ_{n∈Z} 1 = ζ(0+1) = 0 at every loop order — suggests
+perturbative finiteness to all orders. Whether this extends non-perturbatively
+is the remaining open question of Claim 3.
 
 The conjecture has the following concrete implications:
 
@@ -229,12 +241,15 @@ and SU(3) gauge forces of the weak and strong interactions require additional
 structure — either additional fiber dimensions or a different fiber topology.
 This is an important open problem not addressed in this paper.
 
-**We do not claim the two-loop calculation is finite.** In 4D gravity, one
-loop is already finite ('t Hooft & Veltman 1974). The divergence appears at
-two loops (Goroff & Sagnotti 1986). The critical test of the e-circle
-mechanism is the two-loop calculation, which requires the Epstein zeta
-function for double KK sums. This has not been performed. It is the natural
-next step of the program.
+**We do not claim all-loop or non-perturbative finiteness is proven.** The
+one-loop and two-loop calculations are finite under zeta regularization
+(Appendices F and G). The structural argument — that [Σ 1]^L = 0^L = 0
+removes the leading divergence at every loop order — is compelling but is
+not a proof of all-orders finiteness. It requires verification that subleading
+terms (Epstein zeta values at each order) remain finite, and that no new
+divergence structure appears that evades the mechanism. Non-perturbative
+effects — gravitational instantons, topology change — are not addressed
+by the perturbative calculation and require separate analysis.
 
 **We do not claim the zeta regularization is the final word.** Zeta
 regularization is a prescription that gives finite, physically meaningful
@@ -262,16 +277,20 @@ in the wrong place. Not in new dimensions, new symmetries, or new fundamental
 constituents — but in the recognition that the dimension quantum mechanics
 already requires is the same dimension that gravity lives in.
 
-Whether this is true is determined by a specific calculation: the two-loop
-effective action for 5D gravity on M⁴ × S¹ with the Standard Model field
-content on the e-circle. If that calculation is finite under multi-dimensional
-zeta regularization, the conjecture is supported. If it diverges irreducibly,
-the conjecture fails and something additional is needed.
+The two-loop calculation has been performed (Appendix G) and is finite.
+The Goroff-Sagnotti divergence — the specific counterterm that proved 4D
+gravity non-renormalizable — vanishes in the 5D KK theory through the
+zeta-regularized cancellation of the leading divergence. The mechanism that
+produces this cancellation applies structurally at every loop order.
 
-The calculation is demanding. It is tractable. It has not been done.
+What remains is the verification that the all-orders structure is finite —
+that the Epstein zeta functions at subleading order remain finite at every
+loop, and that no non-perturbative obstruction appears. These are the
+calculations most worth doing in theoretical physics right now.
 
-We offer it as the most important open problem raised by this framework —
-and as the calculation most worth doing in theoretical physics right now.
+If they succeed, the century-long search for quantum gravity ends not with
+a new theory but with the recognition that the theory was always there —
+encoded in the geometry that quantum mechanics already requires.
 
 ---
 
