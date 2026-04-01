@@ -182,6 +182,8 @@ survives as interpretation but loses its most concrete physical content).
 | Q | FRW Cosmology | Modified Friedmann equations, BBN/CMB |
 | R | Running Couplings | Power-law running above KK scale |
 | **S** | **Perturbative Finiteness Theorem** | **THE CENTRAL THEOREM — proves all-orders finiteness** |
+| **T** | **Rigorous Verification** | Traces every step against primary sources; resolves 4 qualifications |
+| **U** | **Goroff-Sagnotti Verification** | Hostile referee analysis; 3 gaps resolved, 1 conditional |
 
 ---
 
@@ -224,6 +226,23 @@ gravity non-renormalizable in 1986 vanishes identically.
 - Non-perturbative convergence of the path integral
 - Extension to non-abelian gauge groups (SU(2)×SU(3))
 - Full SM from 11D or from single e-circle mechanism
+- Explicit verification of vertex mass-independence at two loops
+  (the one remaining condition for the unconditional Goroff-Sagnotti result)
+
+**The refined status after Appendices T and U:**
+
+Appendix T verifies every pillar of the proof against primary mathematical
+sources. Appendix U subjects the Goroff-Sagnotti claim to hostile referee
+analysis. Three of four gaps are resolved unconditionally. The fourth —
+the explicit mass-independence of the leading two-loop vertex coefficient —
+remains a condition. The path to removing this condition is identified:
+compute the KK-decomposed three-graviton vertex explicitly. This is the
+natural subject of a follow-up paper.
+
+**The theorem is a conditional theorem, not an unconditional proof.**
+The condition is strongly supported by the 5D gauge structure but not yet
+verified by explicit Feynman diagram computation. This is the honest and
+correct statement.
 
 ---
 
