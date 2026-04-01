@@ -34,8 +34,8 @@ the e-circle converts the continuous UV momentum integrals of 4D quantum
 gravity into discrete Kaluza-Klein mode sums that admit zeta regularization.
 The leading UV divergence vanishes identically at every loop order:
 S₀^{(L)} = [1 + 2ζ(0)]^L = 0. The subleading terms are Epstein zeta
-functions evaluated at non-positive integers. For the two-loop R³
-counterterm — the Goroff-Sagnotti divergence that proved 4D Einstein
+functions evaluated at non-positive integers. For the two-loop R³ counterterm of linearized 5D gravity on M⁴ × S¹
+— corresponding to the Goroff-Sagnotti divergence that proved 4D Einstein
 gravity non-renormalizable in 1986 — the result under zeta regularization
 is stronger than expected: the R³ coefficient is **identically zero at
 every order in the mass expansion**, not just at leading order. The sunset
