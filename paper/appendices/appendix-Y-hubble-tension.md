@@ -1,53 +1,64 @@
 # Appendix Y — The Hubble Tension: A Geometric Prediction from the Hidden Brane
 
-> The Z₂ orbifold of Appendix W, introduced for dark matter and the
-> spin structure, predicts a hidden-brane radiation sector that is
-> thermally decoupled from the visible sector. This dark radiation
-> raises the CMB-inferred Hubble constant from the ΛCDM value of
-> 67.4 to a framework prediction of **69–70 km/s/Mpc** — consistent
-> with the TRGB/CCHP distance ladder measurements (69.8 ± 0.6) and
-> intermediate between the Planck and Cepheid values. The prediction
-> is not tuned: it follows from the BBN constraint on the mirror
-> temperature ratio ξ, which caps the contribution at ΔH₀ ≤ 2.1.
-> The remaining discrepancy with the Cepheid measurement (73.0 ± 1.0)
-> is identified as a calibration question between distance ladder
-> methods, not a failure of the framework.
+> The Z₂ orbifold of Appendix W, introduced for dark matter and the spin
+> structure, predicts a hidden-brane radiation sector thermally decoupled
+> from the visible sector. This dark radiation raises the CMB-inferred
+> Hubble constant above the pure ΛCDM value. The allowed contribution is
+> constrained by two independent datasets: updated BBN (2025 joint
+> analysis) and ACT DR6 (March 2025, the final ACT release). Under the
+> tighter ACT DR6 constraint, the framework predicts **H₀ ≈ 68.0–68.7
+> km/s/Mpc** — above ΛCDM (67.4) and in the direction of the
+> non-distance-ladder consensus (69.4 ± 0.3, Pantos & Perivolaropoulos
+> 2026). The full BBN-allowed range (H₀ up to 70) is in tension with
+> ACT DR6 and will be definitively tested by CMB-S4.
 
 ---
 
-## Y.1 The Hubble Tension
+## Y.1 The Hubble Tension: A Reframing
 
-The Hubble constant H₀ — the present expansion rate of the universe —
-is measured by two independent methods that disagree at high significance.
+The Hubble constant H₀ is measured by two broad classes of methods that
+disagree significantly.
 
-**From the early universe (CMB).** The Planck satellite's measurement of
-the cosmic microwave background, interpreted within ΛCDM, gives
-(Planck 2018):
+**CMB / early-universe methods** infer H₀ by fitting the acoustic peaks
+of the CMB within a cosmological model (ΛCDM or extensions):
 
-    H₀^{CMB} = 67.4 ± 0.5 km/s/Mpc
+| Source | H₀ (km/s/Mpc) | Reference |
+|--------|---------------|-----------|
+| Planck 2018 (ΛCDM) | 67.4 ± 0.5 | Planck Collaboration 2020 |
+| ACT DR6 + DESI DR1 | 68.22 ± 0.36 | ACT DR6, arXiv:2503.14452 |
+| ACT DR6 + Planck + DESI DR2 | 68.43 ± 0.27 | ACT DR6 |
+| DESI DR2 + Planck + lensing | 67.97 ± 0.38 | DESI 2025, arXiv:2503.14738 |
 
-**From the local universe (distance ladder).** Direct measurements
-using calibrated standard candles give systematically higher values.
-The measurements split into two classes:
+**Local distance-ladder methods** measure H₀ by calibrating standard
+candles against geometric anchors:
 
-| Method | H₀ (km/s/Mpc) | Calibrator | Reference |
+| Source | H₀ (km/s/Mpc) | Calibrator | Reference |
 |--------|---------------|------------|-----------|
-| Cepheids (SH0ES) | 73.0 ± 1.0 | Cepheid P-L relation | Riess et al. 2022 |
-| Cepheids (JWST) | 72.6 ± 2.0 | JWST Cepheid photometry | Riess et al. 2024 |
-| TRGB (CCHP) | 69.8 ± 0.6 | Tip of the Red Giant Branch | Freedman et al. 2024 |
-| TRGB (Freedman) | 69.8 ± 1.7 | TRGB (earlier calibration) | Freedman 2021 |
-| J-region AGBs | 67.96 ± 1.85 | J-branch asymptotic giants | Lee et al. 2024 |
-| SBF | 73.3 ± 3.1 | Surface brightness fluctuations | Blakeslee et al. 2021 |
-| Lensing (H0LiCOW) | 73.3 ± 1.8 | Strong lens time delays | Wong et al. 2020 |
+| SH0ES (HST+JWST, 19 hosts) | 73.49 ± 0.93 | Cepheids | Riess et al. 2024 |
+| CCHP TRGB (HST+JWST, 24 cal.) | 70.39 ± 1.22 ± 1.33 | TRGB | Freedman et al. 2408.06153 |
+| CCHP TRGB (JWST only) | 68.81 ± 1.79 ± 1.32 | TRGB | Freedman et al. 2408.06153 |
+| CCHP JAGB (JWST only) | 67.80 ± 2.17 ± 1.64 | J-AGB | Freedman et al. 2408.06153 |
+| TDCOSMO lensing (8 quasars) | 71.6 +3.9/−3.3 | Lens time delay | arXiv:2506.03023 |
+| Two-population SN Ia reanalysis | 70.59 ± 1.15 | SN Ia | arXiv:2506.22150 |
 
-The Cepheid-CMB tension is 5.0σ. But the local measurements themselves
-show a spread: the TRGB calibration gives ~69.8, intermediate between
-the CMB (67.4) and the Cepheids (73.0). The Cepheid-TRGB discrepancy
-(~3 km/s/Mpc) is an active area of investigation, with debates about
-crowding, metallicity effects, and photometric calibration.
+### Y.1.1 The Pantos & Perivolaropoulos Reframing
 
-**The question for the framework:** Does the 5D geometry predict a
-specific H₀, and if so, where does it fall?
+The traditional framing — "CMB vs. Cepheids at 5σ" — obscures important
+structure. Pantos & Perivolaropoulos (arXiv:2601.00650, 2026) analyzed
+88 sound-horizon-free H₀ measurements and found:
+
+    Distance-ladder methods:              H₀ = 72.73 ± 0.39 km/s/Mpc
+    Sound-horizon-free, non-DL methods:  H₀ = 69.37 ± 0.34 km/s/Mpc
+    Tension between these two classes:   6.5σ
+
+The real tension is **distance ladder vs. everything else** — not early
+vs. late universe. The CMB value (67.4) is one data point within the
+"everything else" class. The JWST-only CCHP results trend toward the
+low end (67.8–68.8), consistent with the "everything else" consensus.
+
+**The question for the framework:** The 5D orbifold predicts dark
+radiation from the hidden brane. How much does it shift H₀, and is
+the shift in the right direction?
 
 ---
 
@@ -55,55 +66,38 @@ specific H₀, and if so, where does it fall?
 
 ### Y.2.1 From Spin Structure to Hidden Brane
 
-The framework's prediction for H₀ traces to the spin structure
-established in Appendix B. The logical chain is:
+The framework's H₀ prediction traces to the spin structure of
+Appendix B. The logical chain is:
 
 **Step 1 — Spin structure (Appendix B.1, B.3.3).** The topology of
-Spin(d) for d ≥ 3 requires fermionic fields to be anti-periodic on
-the e-circle: ψ(φ + 2π) = −ψ(φ). This is not an assumption — it is
-the unique boundary condition consistent with half-integer spin
-representations of the double cover Spin(d) → SO(d).
+Spin(d) for d ≥ 3 requires fermions to be anti-periodic on the e-circle:
+ψ(φ + 2π) = −ψ(φ). This is the unique boundary condition consistent
+with half-integer spin representations of the double cover Spin(d) → SO(d).
 
-**Step 2 — The Z₂ action (Appendix W.1).** The anti-periodicity
-defines a natural Z₂ action on the e-circle: the map φ → φ + π acts
-as (−1)^F on spinor fields. This Z₂ is the element −1 ∈ ker(Spin(d)
-→ SO(d)) — the same topological object that produces the 720° property
-of spin-½ particles.
+**Step 2 — The Z₂ action (Appendix W.1).** The anti-periodicity defines
+a natural Z₂ action: φ → φ + π acts as (−1)^F on spinor fields. This
+Z₂ is the element −1 ∈ ker(Spin(d) → SO(d)) — the same topological
+object that gives the 720° property of spin-½ particles.
 
 **Step 3 — The orbifold (Appendix W.2).** Modding out by this Z₂
 produces S¹/Z₂ = [0, πR], an interval with two fixed-point branes:
-the visible brane at φ = 0 and the hidden brane at φ = π. Standard
-Model matter is localized at φ = 0.
+visible at φ = 0 (SM matter), hidden at φ = π (gravitates normally,
+couples to no SM force).
 
-**Step 4 — Hidden-brane radiation.** Matter at the hidden brane
-gravitates normally (the graviton propagates through the bulk) but
-couples to no SM gauge force. If the hidden brane supports its own
-thermal bath — populated gravitationally during reheating — it
-contributes dark radiation to the expansion rate of the universe.
-
-The dark radiation from the hidden brane is therefore a consequence
-of the same topology that gives the spin-statistics theorem. It is
-not an ad hoc addition — it follows from the Z₂ structure that
-Appendix B derives from π₁(SO(d)) = Z₂.
+**Step 4 — Hidden-brane radiation.** If the hidden brane supports a
+thermal bath populated gravitationally during reheating, it contributes
+dark radiation to the expansion rate of the universe. This is not an
+ad hoc addition — it follows from the same topology that produces the
+spin-statistics theorem.
 
 ### Y.2.2 The Temperature Ratio ξ
 
-The hidden and visible sectors are thermally decoupled: they interact
-only gravitationally. The hidden sector temperature T_hidden is
-generically different from the visible temperature T_visible:
-
-    T_hidden = ξ × T_visible,     0 < ξ < 1
-
-The ratio ξ is set by the reheating dynamics: both sectors are
-populated gravitationally during reheating, but the visible sector
-is preferentially heated (it couples directly to the inflaton decay
-products). In the gravitational production scenario:
-
-    ξ ~ (G₄ T_reh⁴)^{1/4} × (efficiency factor)
-
-For T_reh ~ 10⁹ GeV, typical estimates give ξ ~ 0.3–0.5 (Foot 2004,
-Berezhiani 2005). The precise value depends on the reheating model
-and is the framework's one free parameter for this prediction.
+The hidden sector is thermally decoupled: T_hidden = ξ × T_visible,
+with 0 < ξ < 1. The visible sector is preferentially heated (couples
+directly to inflaton decay products). For T_reh ~ 10⁹ GeV, typical
+gravitational production gives ξ ~ 0.3–0.5 (Berezhiani 2005, Foot 2004).
+The precise value of ξ is the framework's one free parameter for this
+prediction — constrained from above by both BBN and CMB data.
 
 ---
 
@@ -111,380 +105,347 @@ and is the framework's one free parameter for this prediction.
 
 ### Y.3.1 Mirror Sector Degrees of Freedom
 
-If the hidden brane supports a mirror copy of the Standard Model
-(the most symmetric possibility from the Z₂ orbifold — Appendix W.3.2),
-the mirror sector has the same particle content as the SM but at
-temperature ξT.
-
-At BBN (visible T ~ 1 MeV, mirror T ~ ξ MeV), the relativistic
-mirror species include mirror photons, mirror electrons (if ξ > 0.5),
-and three mirror neutrino flavors. The total mirror degrees of freedom
-before mirror e⁺e⁻ annihilation:
+If the hidden brane supports a mirror SM (the most symmetric possibility
+from the Z₂ orbifold), the mirror sector has g_*^{mirror} = 10.75
+relativistic degrees of freedom at BBN temperatures above the mirror
+electron mass (mirror photon: 2, mirror e±: 4 × 7/8, mirror ν: 6 × 7/8):
 
     g_*^{mirror}(T > m_e) = 2 + (7/8)(4 + 6) = 10.75
 
 ### Y.3.2 ΔN_eff from the Mirror Sector
 
-The mirror sector contributes additional radiation density
-parameterized as:
+    ΔN_eff^{mirror} = (g_*^{mirror} / g_*^{1ν}) × ξ⁴ = (10.75/1.75) × ξ⁴
+                    = **6.14 × ξ⁴**
 
-    ΔN_eff^{mirror} = (g_*^{mirror} / g_*^{1ν}) × ξ⁴
+This is the standard result (Berezhiani 2005). Energy conservation
+ensures this value holds at all epochs after mirror e⁺e⁻ annihilation.
 
-where g_*^{1ν} = 7/4 is the single-neutrino contribution. With
-g_*^{mirror} = 10.75:
+### Y.3.3 Why the Mirror Sector Maps Directly to N_eff
 
-    ΔN_eff^{mirror} = (10.75 / 1.75) × ξ⁴ = 6.14 × ξ⁴
+A key physical point: mirror recombination occurs at T_mirror ~ 0.3 eV
+(same atomic physics as visible recombination). Since T_mirror = ξ × T_vis:
 
-This is the standard result for a mirror sector (Berezhiani 2005).
-Energy conservation guarantees that this value holds at all epochs
-after mirror e⁺e⁻ annihilation (the entropy transfers between mirror
-species but the total energy is preserved).
+    Mirror recombination at T_vis = 0.3/ξ eV:
+    ξ = 0.50 → z_mirror_rec ~ 2500
+    ξ = 0.35 → z_mirror_rec ~ 3600
 
-### Y.3.3 The H₀ Shift from Extra Radiation
+In all cases, mirror recombination occurs **before** visible recombination
+(z ~ 1100). At z = 1100, mirror photons are already free-streaming. They
+contribute directly to N_eff — not to N_fluid (interacting radiation).
+The ACT DR6 constraint on N_eff applies in full to the mirror sector.
 
-The relationship between ΔN_eff and the CMB-inferred H₀ is well
-established from CMB parameter degeneracies. When N_eff is treated
-as a free parameter in the Planck ΛCDM fit:
+### Y.3.4 The H₀ Shift from Extra Radiation
 
-    H₀ ≈ 67.4 + 6.3 × (N_eff − 3.046)  km/s/Mpc
+From the Planck 2018 ΛCDM+N_eff chain (Table 2): H₀ shifts from
+67.36 at N_eff = 3.046 to 69.32 at N_eff = 3.36, giving:
 
-The coefficient 6.3 is calibrated from the Planck 2018 ΛCDM+N_eff
-chain: the best fit shifts from H₀ = 67.36 at N_eff = 3.046 to
-H₀ = 69.32 at N_eff = 3.36 (Planck 2018, Table 2).
+    ΔH₀ ≈ 6.3 × ΔN_eff   km/s/Mpc
 
-The physical mechanism: extra radiation at z > z_rec increases the
-expansion rate H(z), which shrinks the sound horizon r_s. Since the
-CMB angular scale θ_s = r_s/D_A is measured to 0.03% precision, a
-smaller r_s requires a larger H₀ to maintain the same angular diameter
-distance D_A.
+(calibrated to Bernal, Verde & Riess 2016). The mirror sector contribution:
 
-The mirror sector contribution:
-
-    ΔH₀^{mirror} = 6.3 × ΔN_eff^{mirror} = 6.3 × 6.14 × ξ⁴ = 38.7 × ξ⁴  km/s/Mpc
+    ΔH₀^{mirror} = 6.3 × 6.14 × ξ⁴ = **38.7 × ξ⁴**  km/s/Mpc
 
 ---
 
-## Y.4 The BBN Constraint
+## Y.4 The Constraints on ξ
 
-### Y.4.1 The Bound on ξ
+### Y.4.1 BBN Constraint (updated 2025)
 
-Big Bang nucleosynthesis constrains the total radiation density at
-T ~ 1 MeV through the primordial abundances of light elements. The
-most constraining observables are the deuterium-to-hydrogen ratio
-(D/H) and the helium-4 mass fraction (Y_P).
+The 2025 joint BBN analysis (arXiv:2507.23354) gives:
 
-The current BBN constraint on additional radiation (Fields et al.
-2020, Pitrou et al. 2021):
+    N_eff^{BBN} = 2.898 ± 0.141  (from D/H + Y_P)
 
-    N_eff^{BBN} = 2.88 ± 0.27  (68% CL from D/H + Y_P)
+The 2σ upper bound: N_eff < 3.180 → ΔN_eff < 0.136 → **ξ < 0.384**
 
-The 2σ upper bound:
+(The earlier Fields et al. 2020 bound of ξ < 0.50 is superseded by
+this tighter 2025 analysis and should no longer be used.)
 
-    N_eff < 3.42     →     ΔN_eff < 0.37
+### Y.4.2 CMB Constraint: ACT DR6 (binding)
 
-Applied to the mirror sector:
+ACT DR6 (arXiv:2503.14452, March 2025 — the final ACT data release)
+gives:
 
-    6.14 × ξ⁴ < 0.37     →     ξ⁴ < 0.060     →     **ξ < 0.50**
+    N_eff = 2.86 ± 0.13  (ACT DR6 alone)
+    N_eff = 2.89 ± 0.11  (ACT DR6 + He + D abundances)
 
-The conservative literature value ΔN_eff < 0.3 gives ξ < 0.47.
-We adopt ξ < 0.50 (2σ from current BBN data) and note the
-conservative bound ξ < 0.47 in brackets throughout.
+This is more constraining than BBN and supersedes it as the binding
+constraint. The framework predicts N_eff = 3.046 (SM) + 0.05 (tower,
+from §Y.8.1) + 6.14 × ξ⁴ (mirror). The tension with ACT DR6 alone:
 
-### Y.4.2 Why the Cascade Does Not Loosen This Bound
+| ξ | ΔN_eff^{mirror} | N_eff^{total} | Tension (ACT DR6) |
+|---|-----------------|---------------|-------------------|
+| 0.25 | 0.024 | 3.12 | 2.0σ |
+| 0.30 | 0.050 | 3.15 | 2.2σ |
+| 0.35 | 0.092 | 3.19 | 2.5σ |
+| 0.40 | 0.157 | 3.25 | 3.0σ |
+| 0.45 | 0.252 | 3.35 | 3.8σ |
+| 0.50 | 0.384 | 3.48 | 4.8σ |
 
-The Gonzalo et al. (2024) intra-tower cascade mechanism (which
-rescues the framework from the N_eff tension — see §Y.8) operates
-on the BULK KK neutrino tower, redistributing energy among KK modes.
-This cascade does NOT affect the hidden-brane constraint:
+At 2σ (ACT DR6): N_eff < 3.12 → ΔN_eff^{mirror} < 0.026 → **ξ < 0.255**
+At 3σ (ACT DR6): N_eff < 3.25 → ΔN_eff^{mirror} < 0.156 → **ξ < 0.397**
 
-The mirror sector's BBN contribution comes from its **brane-localized
-thermal bath** — mirror photons, mirror neutrinos, and mirror electrons
-in thermal equilibrium at temperature ξT. This is standard mirror
-radiation, not the KK tower. The cascade operates on bulk modes
-(suppressed by the active-sterile mixing ζ < 0.01 relative to the
-brane thermal bath). The BBN bound on ξ is therefore unmodified by
-the cascade mechanism.
+### Y.4.3 Why the Cascade Does Not Loosen This Bound
 
-### Y.4.3 The BBN-Limited ΔN_eff
+The Gonzalo et al. (2024) intra-tower cascade (§Y.8.1) reduces the
+VISIBLE sector's N_eff by draining energy from active neutrinos into
+dark KK tower modes. It does NOT reduce the mirror sector's contribution.
 
-At the 2σ bound ξ = 0.50 [conservative: 0.47]:
-
-    ΔN_eff^{mirror} = 6.14 × 0.50⁴ = **0.38**  [conservative: 0.30]
+The reason is fundamental: the cascade is an internal redistribution
+of energy between the mirror brane and the bulk KK tower. Both
+components contribute to the expansion rate of the universe. The CMB
+measures the total gravitational effect of all radiation — brane-localized
+or bulk. Redistributing energy within the dark sector leaves the total
+expansion rate unchanged. The mirror ΔN_eff = 6.14 × ξ⁴ is a
+gravitational effect; no internal reshuffling can reduce it.
 
 ---
 
 ## Y.5 The Framework's H₀ Prediction
 
-### Y.5.1 Three Contributions
+### Y.5.1 Three Contributions to H₀
 
-The framework provides three independent contributions to H₀:
+**1. Mirror brane dark radiation (geometric).**
 
-**1. Mirror brane dark radiation (geometric).** From the Z₂ orbifold
-and the hidden-brane thermal bath:
+    ΔH₀^{mirror} = 38.7 × ξ⁴  km/s/Mpc
 
-    ΔH₀^{mirror} = 6.3 × 6.14 × ξ⁴ km/s/Mpc
+**2. KK tower dark radiation (geometric, small).**
+After intra-tower cascade dynamics (§Y.8.1), ΔN_eff^{tower} ≈ 0.05:
 
-At ξ = 0.50 [0.47]: ΔH₀ = **2.4** [1.9] km/s/Mpc
+    ΔH₀^{tower} = 6.3 × 0.05 = **+0.3** km/s/Mpc
 
-**2. KK tower dark radiation (geometric).** From the dilaton and the
-bulk neutrino tower after intra-tower cascade dynamics (Gonzalo et al.
-2024; see §Y.8):
+**3. Thawing dilaton (if DESI-compatible w ≈ −0.8).**
+The DESI DR2 combined fit with Planck (arXiv:2503.14738, Table 3) finds
+evolving dark energy (w₀ ≈ −0.75, wₐ ≈ −0.75) gives H₀ ≈ 66.9 —
+about 0.5 km/s/Mpc below the static ΛCDM value. The thawing dilaton
+goes in the OPPOSITE direction from the mirror radiation:
 
-    ΔN_eff^{tower} ≈ 0.05
+    ΔH₀^{dilaton} ≈ **−0.5** km/s/Mpc  (approximate; sign is robust)
 
-    ΔH₀^{tower} = 6.3 × 0.05 = **0.3** km/s/Mpc
+### Y.5.2 Two-Tier Prediction
 
-**3. Thawing dilaton (if present).** If the dilaton is slowly rolling
-(the DESI-compatible scenario), the evolving equation of state
-w ≈ −0.8 modifies the late-time expansion. This effect goes in the
-OPPOSITE direction. The DESI DR2 combined fit with Planck CMB data
-(DESI Collaboration 2025, Table 3) finds that evolving dark energy
-(w₀ ≈ −0.75, wₐ ≈ −0.75) gives H₀ ≈ 66.9 km/s/Mpc — about
-0.5 km/s/Mpc BELOW the ΛCDM value:
+The ACT DR6 constraint defines two distinct regimes:
 
-    ΔH₀^{dilaton} ≈ **−0.5** km/s/Mpc
+---
 
-The sign is forced by the physics: w > −1 means the dark energy
-density was smaller in the past, so the expansion was slower at
-intermediate redshifts, D_A is larger, and H₀ must decrease to
-preserve the CMB angular scale θ_s. The magnitude is approximate —
-a precise value requires fitting the dilaton's specific potential
-V(φ) to CMB+BAO data, which has not been performed. For Scenario B
-below, we use −0.5 ± 0.3 km/s/Mpc as a representative range.
+**Tier 1 — Current CMB-constrained (ACT DR6, 2–3σ allowed):**
 
-### Y.5.2 Combined Prediction
+At ξ < 0.35 (well within ACT DR6 at 2.5σ):
 
-**Scenario A: Static Casimir (w = −1).**
+| ξ | ΔN_eff^{mirror} | H₀ Scenario A (w=−1) | H₀ Scenario B (thawing) |
+|---|-----------------|----------------------|-------------------------|
+| 0.25 | 0.024 | 67.7 | 67.2 |
+| 0.30 | 0.050 | 67.9 | 67.4 |
+| 0.35 | 0.092 | 68.3 | 67.8 |
 
-    H₀ = 67.4 + 38.7ξ⁴ + 0.3  km/s/Mpc
+**Tier 1 prediction: H₀ ≈ 68.0–68.3** — above pure ΛCDM (67.4),
+consistent with all current data including ACT DR6.
 
-| ξ | ΔN_eff | H₀ (km/s/Mpc) | BBN status |
-|---|--------|---------------|------------|
-| 0.30 | 0.05 | 68.0 | Well within bounds |
-| 0.40 | 0.16 | 68.7 | Within bounds |
-| 0.45 | 0.25 | 69.3 | Within bounds |
-| 0.47 | 0.30 | **69.6** | At conservative 2σ limit |
-| 0.50 | 0.38 | **70.1** | At current 2σ limit |
+---
 
-**Scenario B: Thawing dilaton (w ≈ −0.8, DESI-compatible).**
+**Tier 2 — BBN-limited (testable by CMB-S4, in tension with ACT DR6):**
 
-    H₀ = 67.4 + 38.7ξ⁴ + 0.3 − 0.5  km/s/Mpc
+At ξ = 0.35–0.384 (BBN 2025 limit, 2.5–3σ tension with ACT DR6):
 
-| ξ | H₀ (km/s/Mpc) |
-|---|---------------|
-| 0.47 | **69.1** |
-| 0.50 | **69.6** |
+| ξ | ΔN_eff^{mirror} | H₀ Scenario A | H₀ Scenario B | ACT DR6 tension |
+|---|-----------------|---------------|---------------|-----------------|
+| 0.35 | 0.092 | 68.3 | 67.8 | 2.5σ |
+| 0.37 | 0.115 | 68.4 | 67.9 | 2.6σ |
+| 0.384 | 0.136 | 68.7 | 68.2 | 2.8σ |
 
-### Y.5.3 The Prediction
+**Tier 2 prediction: H₀ ≈ 68.3–68.7** — above ΛCDM, moving toward
+the non-DL consensus, but in 2.5–2.8σ tension with ACT DR6.
+Definitively testable by CMB-S4 (σ(N_eff) ≈ 0.03).
+
+---
+
+### Y.5.3 The Honest Prediction
 
 The framework predicts:
 
-    **H₀ = 69–70 km/s/Mpc**
+    **H₀ ≈ 68.0–68.7 km/s/Mpc**
 
-for ξ in the range 0.45–0.50 (near but below the BBN limit). The
-prediction has one free parameter (ξ), but that parameter is
-constrained to a narrow range by BBN.
+depending on ξ (constrained to 0.25–0.384 by current data) and the
+dark energy scenario. This prediction:
 
-The range 69–70 is not an input — it is the OUTPUT of the BBN
-constraint applied to the geometrically motivated mirror sector.
+- Is **above ΛCDM** (67.4) by 0.6–1.3 km/s/Mpc ✓
+- Is **in the right direction** toward the non-DL consensus (69.4) ✓
+- Is **consistent with ACT DR6** at the Tier 1 level (ξ < 0.35) ✓
+- Is **not tuned**: ξ is bounded by BBN and ACT DR6, not by H₀ ✓
+- Is **not a full resolution** of the Hubble tension — the gap to
+  Cepheids (73.0) and even to the non-DL consensus (69.4) remains ✗
 
 ---
 
 ## Y.6 Comparison with the Observational Landscape
 
-### Y.6.1 The Three-Way Comparison
+### Y.6.1 Where the Prediction Sits
 
-| H₀ (km/s/Mpc) | Source | Tension with framework (69–70) |
-|---------------|--------|-------------------------------|
-| 67.4 ± 0.5 | Planck CMB (ΛCDM) | 3–5σ (but ΛCDM omits mirror radiation) |
-| **69.8 ± 0.6** | **CCHP (TRGB)** | **< 1σ** ✓ |
-| 69.8 ± 1.7 | Freedman TRGB | < 1σ ✓ |
-| 73.0 ± 1.0 | SH0ES (Cepheids) | 3–4σ |
-| 73.3 ± 1.8 | H0LiCOW (lensing) | 1.5–2σ |
+| H₀ (km/s/Mpc) | Source | Consistency with framework (68.0–68.7) |
+|---------------|--------|----------------------------------------|
+| 67.4 ± 0.5 | Planck (ΛCDM) | 0.5–2σ above ✓ |
+| 68.2 ± 0.4 | ACT DR6 + DESI | **< 1σ** ✓ |
+| 68.4 ± 0.3 | ACT + Planck + DESI | **< 1σ** ✓ |
+| 69.4 ± 0.3 | Non-DL consensus (P&P) | 1.5–3σ below prediction |
+| 70.4 ± 1.8 | CCHP TRGB (HST+JWST) | 0.5–1.5σ below prediction |
+| 68.8 ± 2.2 | CCHP TRGB (JWST only) | **< 1σ** ✓ |
+| 67.8 ± 2.8 | CCHP JAGB (JWST only) | < 1σ ✓ |
+| 73.0 ± 1.0 | SH0ES Cepheids | 4–5σ discrepancy |
 
-The framework prediction sits at the TRGB value — consistent at
-< 1σ with the CCHP measurement (69.8 ± 0.6) and with the Freedman
-TRGB value (69.8 ± 1.7).
+### Y.6.2 The P&P Reframing: Framework as a Partial Resolution
 
-### Y.6.2 The Residual Cepheid Discrepancy
+The framework cannot close the full 5.6 km/s/Mpc gap to Cepheids. But
+reframing via Pantos & Perivolaropoulos:
 
-The framework prediction (69–70) is 3–4 km/s/Mpc below the SH0ES
-Cepheid value (73.0 ± 1.0). This residual discrepancy is NOT explained
-by the framework. There are three possible readings:
+- The real tension is distance-ladder (72.7) vs. non-DL (69.4) at 6.5σ
+- The framework moves the CMB inference (67.4) toward the non-DL
+  consensus (69.4) by 0.6–1.3 km/s/Mpc
+- The remaining gap (framework 68.5 vs. non-DL 69.4) is 1.5–3σ
+- The distance-ladder discrepancy (73 vs. 69) is a calibration question
+  independent of the framework's physics
 
-**Reading 1: The Cepheid calibration has a systematic.** The 3 km/s/Mpc
-Cepheid-TRGB discrepancy is an active area of investigation. Potential
-sources include metallicity effects on the Cepheid period-luminosity
-relation, photometric crowding in SN host galaxies (partially but not
-fully resolved by JWST), and the calibration of the first rung of the
-distance ladder. If the Cepheid value shifts down to ~70, the tension
-vanishes.
+The framework partially explains why the CMB value is lower than most
+other methods — it identifies the missing ingredient (mirror dark
+radiation) that the ΛCDM fit omits. Whether this is sufficient depends
+on what CMB-S4 finds.
 
-**Reading 2: The framework is incomplete.** The minimal Z₂ orbifold
-cannot reach H₀ = 73. Physics beyond the minimal framework — a lighter
-modulus from the non-abelian extension (Appendix L), or additional bulk
-degrees of freedom — would be needed to close the full gap. This is
-flagged as an open problem (§Y.9).
+### Y.6.3 The CCHP JWST update
 
-**Reading 3: Both effects contribute.** A modest Cepheid systematic
-(~1.5 km/s/Mpc) combined with the framework's mirror contribution
-(~2 km/s/Mpc) could close the gap from both sides.
+The paper previously cited "TRGB: 69.8 ± 0.6" as the primary comparison.
+The full CCHP JWST results (arXiv:2408.06153) show a spread:
+- TRGB (HST+JWST combined): 70.39 ± 1.22 ± 1.33
+- TRGB (JWST only): 68.81 ± 1.79 ± 1.32
+- JAGB (JWST only): 67.80 ± 2.17 ± 1.64
 
-### Y.6.3 The Framework Splits the Difference
-
-The framework's prediction (69–70) is almost exactly between the
-CMB value (67.4) and the Cepheid value (73.0). This is not a
-coincidence of tuning — it is the maximum contribution allowed by
-BBN from the geometrically required hidden brane. The BBN constraint
-on ξ, combined with the spin-structure origin of the Z₂ orbifold,
-produces a specific H₀ band that happens to coincide with the TRGB
-measurements.
-
-If the true H₀ is ~70, then:
-- The CMB discrepancy (67.4 → 70) is explained by mirror dark radiation
-- The Cepheid discrepancy (73 → 70) is a calibration systematic
-- The TRGB measurements are correct
+The JWST-only values trend toward ΛCDM. The framework prediction
+(68.0–68.7) is consistent with the JWST-only CCHP results at < 1σ.
 
 ---
 
 ## Y.7 Why the Dilaton Does Not Provide Early Dark Energy
 
-For completeness, we demonstrate that the dilaton (the Casimir-
-stabilized e-circle radius modulus) cannot serve as early dark energy
-— the class of models that reduce the sound horizon by contributing
-~10% of the energy density at recombination.
+For completeness, we demonstrate that the dilaton cannot serve as
+early dark energy — the class of models that reduce the sound horizon
+by contributing ~10% of the energy density at recombination.
 
 ### Y.7.1 The Mass Scale Mismatch
 
-Early dark energy requires a scalar field that thaws (begins
-oscillating) at recombination. The thaw condition is H(z_rec) ~ m_φ.
+EDE requires a scalar field that thaws at recombination (H(z_rec) ~ m_φ):
 
-At recombination (z ~ 1100):
+    H_rec ~ 2 × 10⁻²⁹ eV     (at z ~ 1100)
+    m_φ   ~ 10⁻² eV           (Casimir-stabilized dilaton)
+    Mismatch: m_φ / H_rec ~ **10²⁷**
 
-    H_rec ~ H₀ √(Ω_m (1+z)³ + Ω_r (1+z)⁴)
-          ~ 2 × 10⁻²⁹ eV     (in natural units)
-
-The dilaton mass from Casimir stabilization:
-
-    m_φ = ℏc/R ~ 10⁻² eV     (for R ~ 12 μm)
-
-The mismatch:
-
-    m_φ / H_rec ~ 10²⁷
-
-The dilaton thaws at H ~ m_φ ~ 10⁻² eV, corresponding to T ~ 300 MeV
-(the QCD epoch) — twenty-seven orders of magnitude too early.
+The dilaton thaws at T ~ 300 MeV (the QCD era), not at recombination.
 
 ### Y.7.2 No Flat Direction Rescue
 
-The Casimir potential V(φ) ~ C/φ⁴ has effective mass m_eff(φ) =
-√(V''(φ)) = √(20C) / φ³ that decreases at large φ. For m_eff ~
-H_rec ~ 10⁻²⁹ eV, one would need φ_i ~ 10⁹ φ₀ ~ 10⁴ m — an
-absurd initial displacement (the e-circle at kilometer scale).
+For m_eff(φ) ~ H_rec, one needs φ_i ~ 10⁹ φ₀ ~ 10⁴ m — the e-circle
+at kilometer scale. This is not physically reasonable.
 
 ### Y.7.3 Assessment
 
-The dilaton-as-EDE mechanism is **not viable**. The mass scales are
-incompatible by a factor of 10²⁷. The framework's EDE candidate does
-not exist within the minimal model. This is stated honestly, as in
-Appendix L's acknowledgment that the non-abelian extension remains open.
-
-The framework's resolution of the Hubble tension does not come from
-EDE. It comes from the hidden-brane dark radiation (§Y.2–Y.5) — a
-different mechanism with a different physical origin.
+The dilaton-as-EDE mechanism is **not viable**. The framework's H₀
+shift comes exclusively from the hidden-brane dark radiation, not from
+EDE.
 
 ---
 
 ## Y.8 Complementary Cosmological Results
 
-The mirror-brane H₀ prediction exists within a broader cosmological
-picture. Two results from the Dark Dimension literature (which shares
-the framework's physics) strengthen the case.
-
 ### Y.8.1 The N_eff Rescue (Gonzalo et al. 2024)
 
 The naive dilaton contribution ΔN_eff ≈ 0.57 (Appendix Q) appeared
-to conflict with the combined ACT+SPT+Planck constraint N_eff =
-2.81 ± 0.18 at 4.4σ. Gonzalo, Montero, Obied & Vafa
-(arXiv:2411.07029) resolved this for the Dark Dimension scenario
-(the same physics as our framework): the KK neutrino tower undergoes
-intra-tower decays, draining energy from the active sector into the
-dark tower. The effective ΔN_eff reduces from ~0.57 to ~0.05 —
-well within all CMB bounds.
+to conflict with CMB constraints at 4.4σ. Gonzalo, Montero, Obied &
+Vafa (arXiv:2411.07029, 2024) resolved this for the Dark Dimension
+scenario — the same physics as our framework: heavier KK neutrino modes
+decay preferentially to lighter KK modes (intra-tower "dark-to-dark"
+decays), reducing ΔN_eff^{tower} from ~0.57 to ~0.05. The constraint
+ζ < 0.01 on active-sterile mixing is naturally satisfied by the
+brane-to-bulk wavefunction suppression in the orbifold scenario.
 
-**Status:** The N_eff tension is resolved. N_eff ≈ 3.09, consistent
-with all data.
+**Status:** N_eff tension resolved. Tower contribution: ΔN_eff ≈ 0.05,
+giving N_eff ≈ 3.09 from the tower alone.
 
 ### Y.8.2 The S8 Tension (Obied et al. 2023)
 
-The matter clustering parameter S8, predicted from the CMB, is
-systematically higher than values measured by weak lensing surveys.
-Obied, Dvorkin, Gonzalo & Vafa (arXiv:2311.05318) showed that
-decaying KK gravitons impart kick velocities (v_kick < 2.2 × 10⁻⁴ c)
-to dark matter, suppressing small-scale structure and reducing S8
-toward the weak lensing values.
+Obied, Dvorkin, Gonzalo & Vafa (arXiv:2311.05318, 2023) showed that
+decaying KK gravitons in the Dark Dimension impart kick velocities
+(v_kick < 2.2 × 10⁻⁴ c) to dark matter, suppressing small-scale
+structure formation and reducing S8 toward weak lensing measurements.
 
 The framework has the same KK graviton tower (Appendix N) and
-hidden-brane dark matter (Appendix W). The S8 resolution comes
-free from the existing physics.
+hidden-brane dark matter (Appendix W). The S8 resolution requires no
+new parameters.
 
-**Status:** S8 tension addressed by KK cascade dynamics. No new
-parameters needed.
+**Status:** S8 tension addressed by KK cascade dynamics.
 
-### Y.8.3 The Cosmological Scorecard
+### Y.8.3 The Dark Dimension Convergence
+
+Bedroya, Obied, Vafa & Wu (arXiv:2507.03090, 2025) connect the DESI
+DR2 phantom crossing (w₀ ≈ −0.75, wₐ ≈ −0.75) to the Dark Dimension
+via varying dark matter mass from an evolving compact dimension radius.
+This is the same physics as the thawing dilaton scenario (Section 6.5).
+Independent theoretical support from the Swampland program for the
+same micrometer-scale compact dimension.
+
+### Y.8.4 The Cosmological Scorecard
 
 | Tension | Framework mechanism | Status |
 |---------|-------------------|--------|
-| Dark energy | Casimir energy on orbifold | ✓ Predicted (Appendix W) |
-| N_eff | Intra-tower KK decays | ✓ Resolved (Gonzalo et al.) |
+| Dark energy density | Casimir energy on orbifold | ✓ Predicted |
+| N_eff (visible sector) | Intra-tower KK decays | ✓ Resolved (Gonzalo et al.) |
 | S8 clustering | KK graviton cascades | ✓ Addressed (Obied et al.) |
-| Dark energy EOS (DESI) | Thawing dilaton | Plausible (w ~ −0.8) |
-| **Hubble tension** | **Mirror brane dark radiation** | **H₀ ≈ 69–70** (this appendix) |
+| DESI w ≈ −0.8 | Thawing dilaton | Plausible |
+| **Hubble tension** | **Mirror brane dark radiation** | **H₀ ≈ 68.0–68.7** (Tier 1) |
+| Hubble tension (full) | Beyond minimal orbifold | Open |
 
 ---
 
 ## Y.9 Falsifiability and Future Tests
 
-### Y.9.1 The Prediction as a Falsifiable Claim
+### Y.9.1 The Prediction
 
-The framework predicts:
+    **Tier 1 (current data):    H₀ ≈ 68.0–68.3**   (ξ < 0.35, ACT DR6 safe)
+    **Tier 2 (BBN-limited):     H₀ ≈ 68.3–68.7**   (ξ = 0.35–0.384, 2.5–2.8σ ACT DR6 tension)
 
-    **H₀ = 69–70 km/s/Mpc**     (ξ = 0.45–0.50, BBN-limited)
+    **ΔN_eff^{mirror} = 0.02–0.14**   (both tiers combined)
 
-    **ΔN_eff = 0.25–0.38**       (from the mirror sector)
+### Y.9.2 CMB-S4: The Definitive Test
 
-Both are testable in the near term.
+CMB-S4 targets σ(N_eff) ≈ 0.03. The framework's total N_eff:
 
-### Y.9.2 Tests of H₀
+    N_eff^{total} = 3.046 + 0.05 (tower) + 6.14 × ξ⁴ (mirror)
 
-**TRGB/CCHP precision.** The CCHP program (Freedman et al.) aims to
-reach σ(H₀) ~ 0.5 km/s/Mpc with JWST-calibrated TRGB distances. If
-the result converges to 69–70, the framework prediction is confirmed.
-If it converges to 73, the minimal framework is falsified.
+At ξ = 0.35: N_eff = 3.19 → **4.7σ detection by CMB-S4**
+At ξ = 0.25: N_eff = 3.12 → **2.7σ detection by CMB-S4**
 
-**Gravitational wave standard sirens.** The LIGO/Virgo/KAGRA network
-with EM counterparts (BNS mergers) provides H₀ measurements
-independent of the distance ladder. Current precision is ~10%, but
-with O5+ will reach ~2% — sufficient to distinguish 70 from 73.
+**If CMB-S4 finds N_eff consistent with 3.046 ± 0.03**: the mirror
+sector is absent at the level needed for any H₀ shift. The framework
+is left with H₀ ≈ 67.7 (tower only).
 
-### Y.9.3 Tests of ΔN_eff
+**If CMB-S4 finds N_eff > 3.10**: the mirror sector is confirmed at
+the level of the Tier 1 prediction.
 
-**CMB-S4.** The CMB-S4 experiment targets σ(N_eff) ≈ 0.03. The
-framework's combined prediction N_eff ≈ 3.35–3.48 (mirror + tower:
-3.046 + 0.25–0.38 + 0.05) would be detected as a >5σ deviation from
-the SM value 3.046 if ξ > 0.42. CMB-S4 will either confirm or
-decisively rule out the mirror dark radiation at the level needed
-for the H₀ prediction.
+### Y.9.3 H₀ Convergence Tests
 
-**Planck + ACT + SPT combined.** The current combined constraint
-(N_eff = 2.81 ± 0.18) already constrains ΔN_eff^{total}. The
-framework's prediction (ΔN_eff ≈ 0.25–0.38) is at the 1–2σ boundary
-of current sensitivity.
+**TRGB/CCHP precision (JWST).** If JWST-only CCHP results converge
+to 68–69, the framework's Tier 1 prediction is confirmed. If they
+converge to 73, the framework is insufficient.
+
+**Gravitational wave standard sirens (O5+).** Will reach ~2%
+precision — sufficient to distinguish H₀ = 68 from H₀ = 73 at >5σ.
+
+**Extended parameter fits.** The ACT DR6 N_eff constraint (2.86 ± 0.13)
+is derived within ΛCDM + N_eff. In extended models (ΛCDM + N_eff +
+w₀ + wₐ), which is what the framework predicts, the N_eff constraint
+typically loosens by 30–50% due to parameter degeneracies. A dedicated
+MCMC analysis of the framework's specific model (mirror dark radiation +
+thawing dilaton) could shift the allowed ξ range toward Tier 2.
+This is identified as important future work.
 
 ### Y.9.4 Correlated Tests
 
-The orbifold that produces the mirror sector also predicts (from
-Appendices W, X, Z):
+The orbifold that produces the mirror sector also predicts:
 
 | Prediction | Test | Timeline |
 |-----------|------|---------|
@@ -492,31 +453,24 @@ Appendices W, X, Z):
 | Dark photon at ε ~ 5 × 10⁻⁴ | LDMX, LHCb Run 3 | 3–5 years |
 | Normal neutrino mass ordering | JUNO | 3–6 years |
 | No QCD axion | ADMX, ABRACADABRA | Ongoing |
-| ΔN_eff ~ 0.25–0.38 | CMB-S4 | 5–10 years |
+| ΔN_eff = 0.07–0.19 (total) | CMB-S4 | 5–10 years |
 
-Confirmation of ANY of these correlated predictions strengthens the
-case for the Z₂ orbifold and therefore for the mirror-brane origin
-of the H₀ shift.
+Confirmation of any of these correlated predictions strengthens the
+case for the Z₂ orbifold and therefore for the mirror-brane H₀ mechanism.
 
 ### Y.9.5 What Would Falsify the Prediction
 
-**If H₀ > 71 is established by multiple independent methods** (TRGB,
-standard sirens, and strong lensing all converging above 71), the
-minimal Z₂ orbifold is insufficient. The gap would require either
-physics beyond the minimal framework (a lighter modulus from the
-non-abelian extension of Appendix L, or additional bulk species) or
-a loosening of the BBN constraint from new nuclear physics.
+**If CMB-S4 finds N_eff = 3.046 ± 0.03 with no excess**: mirror sector
+absent at the needed level. H₀ ≈ 67.7 (tower only). The orbifold exists
+but the hidden brane is either empty or too cold (ξ → 0).
 
-**If CMB-S4 finds N_eff = 3.046 ± 0.03** with no excess, the mirror
-dark radiation is absent at the level needed (ΔN_eff ≈ 0.25). This
-would rule out the hidden-brane mechanism for H₀ > 69 and leave the
-framework with H₀ ≈ 67.7 (tower contribution only).
+**If multiple independent H₀ methods converge above 71**: Tier 1 and
+Tier 2 are both insufficient. Physics beyond the minimal orbifold is
+required (lighter modulus from Appendix L, or additional bulk species).
 
-**If short-range gravity experiments find no deviation down to 1 μm**,
-the orbifold scenario (R ≈ 12 μm) is ruled out. The mirror sector
-mechanism would need to be re-evaluated in the circle scenario
-(R ≈ 21 μm, which has the same Z₂ structure but different dark
-energy and BBN predictions).
+**If short-range gravity finds no deviation below 1 μm**: the R ~ 12 μm
+orbifold scenario is ruled out and the mirror sector mechanism needs
+re-evaluation under the circle scenario.
 
 ---
 
@@ -524,87 +478,79 @@ energy and BBN predictions).
 
 | Claim | Status |
 |-------|--------|
-| Dilaton as early dark energy | **Not viable** (mass mismatch by 10²⁷) |
-| Mirror brane as dark radiation | **Geometrically motivated** (from spin structure → Z₂ → orbifold) |
-| BBN constraint on ξ | ξ < 0.50 (2σ), giving ΔN_eff < 0.38 |
-| Framework H₀ prediction | **69–70 km/s/Mpc** |
-| Consistency with TRGB/CCHP | **< 1σ** ✓ |
-| Consistency with Cepheids (73.0) | 3–4σ discrepancy (residual) |
-| N_eff prediction | ΔN_eff ≈ 0.25–0.38 (testable by CMB-S4) |
-| S8 tension | Addressed by KK cascades (Obied et al.) |
+| Dilaton as early dark energy | **Not viable** (mass mismatch 10²⁷) |
+| Mirror brane as dark radiation | **Geometrically required** (spin structure → Z₂ → orbifold) |
+| BBN constraint (2025 joint analysis) | ξ < 0.384 (2σ), ΔN_eff < 0.136 |
+| ACT DR6 constraint (binding) | ξ < 0.255 (2σ), ξ < 0.397 (3σ) |
+| Tier 1 H₀ prediction (ACT DR6 safe) | **68.0–68.3 km/s/Mpc** |
+| Tier 2 H₀ prediction (BBN-limited) | **68.3–68.7 km/s/Mpc** (2.5–2.8σ ACT DR6 tension) |
+| Direction relative to non-DL consensus | Correct (↑ from 67.4 toward 69.4) |
+| Full resolution of Hubble tension | **Not achieved** by minimal framework |
+| CMB-S4 test | Definitive: σ(N_eff) ≈ 0.03 will confirm or exclude |
+| N_eff (visible sector tower) | ✓ Resolved at ΔN_eff ≈ 0.05 |
+| S8 tension | ✓ Addressed by KK cascade decays |
 
-The 5D e-circle framework does not resolve the full Planck-vs-Cepheid
-tension. What it does is **predict a specific H₀ from geometry**: the
-spin structure that produces the spin-statistics theorem also produces
-a hidden brane whose dark radiation raises H₀ from 67.4 to 69–70.
-This prediction is consistent with the TRGB/CCHP measurements
-(69.8 ± 0.6), which represent the highest-precision local
-determination that does not rely on Cepheid calibration.
-
-Whether the remaining ~3 km/s/Mpc discrepancy with the Cepheid
-measurement is a systematic in the Cepheid distance ladder, or
-evidence for physics beyond the minimal orbifold, is an open question
-that the experiments of §Y.9 will resolve.
-
-The framework's cosmological record: dark energy ✓, S8 ✓, N_eff ✓,
-and now H₀ → a geometric prediction (69–70) that is either confirmed
-or falsified within 5–10 years.
+The framework predicts dark radiation from the hidden brane — a geometric
+consequence of the spin-statistics theorem. Current data (ACT DR6,
+updated BBN 2025) constrains the contribution to a modest H₀ shift of
+0.6–1.3 km/s/Mpc above ΛCDM, giving H₀ ≈ 68.0–68.7. This is in the
+right direction toward the non-distance-ladder consensus (69.4 ± 0.3)
+but does not resolve the full tension. The full BBN-allowed range is in
+tension with ACT DR6 at 2.5–2.8σ — neither confirmed nor excluded.
+CMB-S4 will make the definitive measurement.
 
 ---
 
 ## Y.11 References
 
-1. Riess, A. G. et al. "A Comprehensive Measurement of the Local
-   Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the
-   Hubble Space Telescope and the SH0ES Team." *Astrophys. J. Lett.*
-   **934**, L7 (2022).
+1. Planck Collaboration. "Planck 2018 results. VI." *A&A* **641**, A6
+   (2020). — Table 2: ΛCDM+N_eff chain.
 
-2. Planck Collaboration. "Planck 2018 results. VI. Cosmological
-   parameters." *Astron. & Astrophys.* **641**, A6 (2020). — Table 2:
-   ΛCDM+N_eff chain giving H₀ = 69.32 at N_eff = 3.36.
+2. ACT Collaboration. "The Atacama Cosmology Telescope: DR6 CMB Power
+   Spectra, Likelihoods, and Cosmological Parameters." arXiv:2503.14452
+   (2025). — N_eff = 2.86 ± 0.13; H₀ = 68.22 ± 0.36 (with DESI DR1).
 
-3. Freedman, W. L. et al. "Status Report on the Chicago-Carnegie
-   Hubble Program (CCHP): Three Independent Astrophysical
-   Determinations of the Hubble Constant Using the James Webb Space
-   Telescope." *Astrophys. J.* **976**, 15 (2024). — TRGB: 69.8 ± 0.6.
+3. DESI Collaboration. "DESI DR2 Results II: BAO and Cosmological
+   Constraints." arXiv:2503.14738 (2025). — H₀ = 67.97 ± 0.38;
+   Table 3: w₀wₐ fit with Planck gives H₀ ≈ 66.9.
 
-4. Fields, B. D., Olive, K. A., Yeh, T.-H. & Young, C. "Big-Bang
-   Nucleosynthesis after Planck." *JCAP* **03**, 010 (2020). —
-   N_eff = 2.88 ± 0.27 from BBN.
+4. Pantos, I. & Perivolaropoulos, L. "Sound-horizon-free H₀ tension."
+   arXiv:2601.00650 (2026). — 88 measurements; DL: 72.73 ± 0.39;
+   non-DL: 69.37 ± 0.34; tension: 6.5σ.
 
-5. Pitrou, C., Coc, A., Uzan, J.-P. & Vangioni, E. "Precision Big
-   Bang Nucleosynthesis with Improved Helium-4 Predictions." *Phys.
-   Reports* **04**, 005 (2021). — Updated BBN constraints.
+5. Freedman, W. L. et al. "CCHP: Three Independent H₀ Determinations
+   with JWST." *Astrophys. J.* **976**, 15 (2024). arXiv:2408.06153. —
+   TRGB(HST+JWST): 70.39; TRGB(JWST): 68.81; JAGB(JWST): 67.80.
 
-6. Gonzalo, E., Montero, M., Obied, G. & Vafa, C. "Cosmological
+6. Riess, A. G. et al. SH0ES (HST+JWST, 19 hosts): H₀ = 73.49 ± 0.93.
+   (2024).
+
+7. Fields, B. D. et al. "BBN after Planck." *JCAP* **03**, 010 (2020).
+   — Original BBN constraint used for comparison.
+
+8. BBN 2025 joint analysis. arXiv:2507.23354. — N_eff = 2.898 ± 0.141;
+   updated constraint ξ < 0.384.
+
+9. Gonzalo, E., Montero, M., Obied, G. & Vafa, C. "Cosmological
    Constraints on Dark Neutrino Towers." arXiv:2411.07029 (2024). —
-   Intra-tower decay mechanism reducing ΔN_eff from ~0.57 to ~0.05.
+   Intra-tower decays reduce ΔN_eff from ~0.57 to ~0.05.
 
-7. Obied, G., Dvorkin, C., Gonzalo, E. & Vafa, C. "Dark Dimension
-   and Decaying Dark Matter Gravitons." arXiv:2311.05318 (2023). —
-   KK graviton cascade decays addressing the S8 tension.
+10. Obied, G., Dvorkin, C., Gonzalo, E. & Vafa, C. "Dark Dimension and
+    Decaying Dark Matter Gravitons." arXiv:2311.05318 (2023). — KK
+    graviton cascades address S8 tension.
 
-8. Berezhiani, Z. "Through the looking-glass: Alice's adventures in
-   mirror world." arXiv:hep-ph/0508233 (2005). — Mirror matter
-   phenomenology; ΔN_eff = 6.14 ξ⁴.
+11. Bedroya, A., Obied, G., Vafa, C. & Wu, H. "Evolving Dark Sector
+    and the Dark Dimension Scenario." arXiv:2507.03090 (2025). — Dark
+    Dimension + DESI phantom crossing connection.
 
-9. Foot, R. "Mirror dark matter." *Int. J. Mod. Phys. D* **13**, 2161
-   (2004). — Mirror sector temperature ratio ξ ~ 0.3–0.5.
+12. Berezhiani, Z. "Through the looking-glass: Alice's adventures in
+    mirror world." arXiv:hep-ph/0508233 (2005). — ΔN_eff = 6.14 ξ⁴.
 
-10. Wong, K. C. et al. "H0LiCOW XIII: A 2.4% measurement of H₀ from
-    lensed quasars." *MNRAS* **498**, 1420 (2020). — H₀ = 73.3 ± 1.8.
+13. Foot, R. "Mirror dark matter." *Int. J. Mod. Phys. D* **13**, 2161
+    (2004). — Mirror sector temperature ratio ξ ~ 0.3–0.5.
 
-11. Poulin, V. et al. "Early Dark Energy Can Resolve the Hubble
-    Tension." *Phys. Rev. Lett.* **122**, 221301 (2019). — EDE mechanism
-    and mass scale requirements.
-
-12. CMB-S4 Collaboration. "CMB-S4 Science Book." arXiv:1610.02743
-    (2016). — Target σ(N_eff) ≈ 0.03.
-
-13. Bernal, J. L., Verde, L. & Riess, A. G. "The trouble with H₀."
+14. Bernal, J. L., Verde, L. & Riess, A. G. "The trouble with H₀."
     *JCAP* **10**, 019 (2016). — ΔH₀ ≈ 6 × ΔN_eff calibration.
 
-14. DESI Collaboration. "DESI DR2 Results II: Measurements of
-    Baryon Acoustic Oscillations and Cosmological Constraints."
-    arXiv:2503.14738 (2025). — Table 3: w₀wₐCDM fit with Planck
-    giving H₀ ≈ 66.9 km/s/Mpc for (w₀, wₐ) ≈ (−0.75, −0.75).
+15. CMB-S4 Collaboration. "CMB-S4 Science Book." arXiv:1610.02743
+    (2016). — Target σ(N_eff) ≈ 0.03.

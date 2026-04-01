@@ -294,7 +294,7 @@ e-circle scenario predicts exactly zero variation.
 | 7 | Constant α | dα/dt = 0 | Quasar spectra, atomic clocks | **Consistent** | Ongoing |
 | 8 | Normal neutrino mass ordering | m₃ > m₂ > m₁ from Z₃ geometry | JUNO (data taking since Aug 2025) | Hinted at 2–3σ (NOvA, T2K, SK) | 3–6 years |
 | 9 | No QCD axion (strong CP topological) | θ = 0, π₄(SU(3)) = 0 | ADMX, ABRACADABRA, IAXO | Not yet excluded | Ongoing |
-| 10 | H₀ = 69–70 km/s/Mpc (hidden-brane dark radiation) | ΔN_eff = 0.25–0.38, ξ = 0.45–0.50 | TRGB/CCHP, CMB-S4, GW sirens | **< 1σ with TRGB/CCHP** (69.8±0.6) | 3–10 years |
+| 10 | H₀ ≈ 68.0–68.7 km/s/Mpc (hidden-brane dark radiation) | ΔN_eff = 0.02–0.14, ξ < 0.384 (BBN); ξ < 0.397 (ACT DR6 3σ) | CMB-S4, TRGB/JWST, GW sirens | Tier 1 **consistent** with ACT DR6+DESI (68.2–68.4); Tier 2 in 2.5–2.8σ tension with ACT DR6 | 5–10 years |
 
 ---
 
@@ -359,15 +359,21 @@ The topological strong CP resolution (π₄(SU(3)) = 0) is falsified. This
 would be a decisive falsification with no obvious rescue — the 5D homotopy
 argument either holds or it doesn't.
 
-**If multiple independent H₀ measurements converge above 71 km/s/Mpc** (TRGB,
-gravitational wave sirens, and strong lensing all agreeing), the minimal Z₂
-orbifold is insufficient. The hidden-brane mechanism is BBN-capped at H₀ ≈ 70.
+**If CMB-S4 finds N_eff consistent with 3.046 ± 0.03**: the mirror sector
+is absent at the needed level. The framework is left with H₀ ≈ 67.7 (tower
+only). This would also constrain ξ < 0.14, essentially ruling out any
+thermally populated hidden brane.
 
-**If CMB-S4 finds N_eff = 3.046 ± 0.03 with no excess**, the hidden-brane
-dark radiation is absent. This would rule out the mirror sector mechanism
-and leave the framework with H₀ ≈ 67.7 (tower contribution only).
+**If multiple independent H₀ methods converge above 71 km/s/Mpc**: both
+Tier 1 and Tier 2 of the framework's prediction are insufficient. Physics
+beyond the minimal orbifold is required (lighter modulus from Appendix L,
+or additional bulk species not present in the minimal model).
+
+**If ACT DR6 extended-parameter fits (ΛCDM + N_eff + w₀ + wₐ) tighten
+further**: the window for Tier 2 could close entirely, leaving only
+Tier 1 (H₀ ≈ 68.0–68.3) as the allowed prediction.
 
 The framework is falsifiable at multiple levels. The most immediate tests are
 Prediction 1 (modified gravity at ~21 μm), Prediction 8 (neutrino mass
-ordering from JUNO), Prediction 9 (no QCD axion), and Prediction 10 (H₀ = 69–70
-from TRGB precision and CMB-S4 ΔN_eff).
+ordering from JUNO), Prediction 9 (no QCD axion), and Prediction 10 (H₀ ≈
+68.0–68.7 from CMB-S4 N_eff detection and JWST-calibrated distance measurements).

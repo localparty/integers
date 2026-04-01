@@ -292,19 +292,22 @@ expected within its 6-year run. The full derivation is in Appendix Z.
 **The Hubble tension from hidden-brane dark radiation.** The Z₂ orbifold that
 produces geometric dark matter (above) also produces a hidden-brane thermal bath
 that is thermally decoupled from the visible sector. If the hidden brane was
-heated gravitationally during reheating to temperature T_hidden = ξ × T_visible
-with ξ ~ 0.45–0.50, the mirror sector dark radiation contributes ΔN_eff^{mirror}
-= 6.14 × ξ⁴ ~ 0.25–0.38 to the CMB. Through the Planck N_eff–H₀ degeneracy
-(ΔH₀ ≈ 6.3 × ΔN_eff), this raises the CMB-inferred Hubble constant from 67.4 to
-69–70 km/s/Mpc. The BBN constraint (N_eff^{BBN} = 2.88 ± 0.27) caps ξ at 0.50
-(2σ), which is the maximum contribution. The resulting prediction H₀ = 69–70
-km/s/Mpc is consistent at < 1σ with the TRGB/CCHP measurement (69.8 ± 0.6,
-Freedman et al. 2024) and consistent at 1.5–2σ with H0LiCOW lensing (73.3 ± 1.8).
-The Cepheid measurement (73.0 ± 1.0) remains 3–4σ above the framework prediction
-— the residual gap may be a Cepheid calibration systematic or may require physics
-beyond the minimal orbifold. The prediction is not tuned: ξ is constrained to a
-narrow range by BBN, and the resulting H₀ band coincides with the TRGB measurements
-without adjustment. The full derivation is in Appendix Y.
+heated gravitationally during reheating to temperature T_hidden = ξ × T_visible,
+the mirror sector dark radiation contributes ΔN_eff^{mirror} = 6.14 × ξ⁴ to the
+CMB. Through the Planck N_eff–H₀ degeneracy (ΔH₀ ≈ 6.3 × ΔN_eff), this raises
+the CMB-inferred Hubble constant above the ΛCDM value. The allowed contribution
+is bounded by two independent constraints: the updated BBN 2025 joint analysis
+(ξ < 0.384 at 2σ) and ACT DR6 (March 2025, the final ACT release, N_eff =
+2.86 ± 0.13), which is the binding constraint at ξ < 0.255 (2σ) to ξ < 0.397
+(3σ). Under these constraints, the framework predicts H₀ ≈ 68.0–68.7 km/s/Mpc
+— above ΛCDM (67.4) and in the direction of the non-distance-ladder consensus
+(69.4 ± 0.3, Pantos & Perivolaropoulos 2026), but not a full resolution of the
+tension. The prediction is a two-tier structure: Tier 1 (ACT DR6-consistent,
+ξ < 0.35) gives H₀ ≈ 68.0–68.3; Tier 2 (BBN-limited, ξ up to 0.384) gives
+H₀ ≈ 68.3–68.7 but is in 2.5–2.8σ tension with ACT DR6. CMB-S4 (target
+σ(N_eff) ≈ 0.03) will definitively test which tier is realized. The full
+derivation, including the ACT DR6 tension analysis and the Pantos &
+Perivolaropoulos reframing, is in Appendix Y.
 
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest

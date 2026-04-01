@@ -76,8 +76,9 @@ energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
 masses, neutrino mass ordering (normal hierarchy from Z₃ geometry), kinetic
 mixing with a dark photon, the strong CP problem (topological resolution:
 π₄(SU(3)) = 0 eliminates the theta parameter in 5D), the Hubble tension
-(H₀ = 69–70 km/s/Mpc from hidden-brane dark radiation, consistent with
-TRGB/CCHP at < 1σ), black hole entropy, the hydrogen spectrum, the Casimir
+(H₀ ≈ 68.0–68.7 km/s/Mpc from hidden-brane dark radiation, above ΛCDM
+and toward the non-distance-ladder consensus; full resolution requires
+physics beyond the minimal orbifold), black hole entropy, the hydrogen spectrum, the Casimir
 force, baryon asymmetry (from the Z₂ chirality preference), and the CPT theorem. Seven testable predictions follow:
 two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
