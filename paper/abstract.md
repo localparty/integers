@@ -77,8 +77,9 @@ masses, neutrino mass ordering (normal hierarchy from Z₃ geometry), kinetic
 mixing with a dark photon, the strong CP problem (topological resolution:
 π₄(SU(3)) = 0 eliminates the theta parameter in 5D), the Hubble tension
 (H₀ ≈ 68.0–68.7 km/s/Mpc from hidden-brane dark radiation, above ΛCDM
-and toward the non-distance-ladder consensus; full resolution requires
-physics beyond the minimal orbifold), black hole entropy, the hydrogen spectrum, the Casimir
+and toward the non-distance-ladder consensus; constrained by ACT DR6
+N_eff at the upper end; full resolution requires physics beyond the
+minimal orbifold), black hole entropy, the hydrogen spectrum, the Casimir
 force, baryon asymmetry (from the Z₂ chirality preference), and the CPT theorem. Seven testable predictions follow:
 two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
@@ -102,12 +103,13 @@ quantum mechanics necessary also makes quantum gravity finite.
 A companion computation (Paper 2) applies the CAMB Boltzmann solver to
 the framework's cosmological sector. The bulk leptogenesis mechanism on
 the Z₂ orbifold yields a scaling law Ω_DM/Ω_b = 1/ξ² that determines
-the hidden-brane temperature ratio ξ = 0.432–0.47 from the observed
+the hidden-brane temperature ratio ξ = 0.432 from the observed
 dark-to-visible matter ratio — removing the last free cosmological
-parameter. The self-consistent solution (ξ = 0.4375) predicts t₀ = 13.60 Gyr,
-H₀ = 68.8 km/s/Mpc, S8 = 0.754 (resolving the weak lensing tension), and
-the CMB angular scale θ* within 1.0 arcsecond of Planck's measurement.
-A framework built from pure geometry — one compact circle, one warp factor,
-one temperature ratio — predicts the age of the universe, the Hubble
-constant, the dark matter density, the matter clustering amplitude, and
-the CMB angular scale from zero adjustable parameters.
+parameter. Two scenarios bracket the prediction: the 1/ξ² law gives
+t₀ = 13.47 Gyr, H₀ = 68.7, S8 = 0.785 (θ* offset +6.6"); a
+θ*-matched variant with adjusted ω_b gives t₀ = 13.60, H₀ = 68.8,
+S8 = 0.754, θ* within 1.0". Both resolve the S8 weak lensing tension,
+and the cosmic coincidence Ω_DM/Ω_b ≈ 5 is explained geometrically.
+The required ξ ≈ 0.43 predicts N_eff = 3.31, in 3–4σ tension with
+ACT DR6 (N_eff = 2.86 ± 0.13) — the framework's most significant
+open issue, to be resolved definitively by CMB-S4 (σ(N_eff) ≈ 0.03).

@@ -200,23 +200,33 @@ The bulk leptogenesis mechanism on the Z₂ orbifold yields a scaling law:
 
 where ξ is the hidden-to-visible brane temperature ratio. Combined with
 the observed dark-to-visible matter ratio (5.36), this determines
-ξ = 0.432–0.47 from first principles — removing the last free
-cosmological parameter. Every remaining observable then follows:
+ξ = 0.432 from first principles — removing the last free cosmological
+parameter. Two scenarios bracket the prediction:
 
-    t₀ = 13.60 Gyr       (age of the universe)
-    H₀ = 68.8 km/s/Mpc   (Hubble constant)
-    S8 = 0.754           (resolves weak lensing tension)
-    θ* offset = +1.0"   (within Planck's 1σ = 1.1" uncertainty)
-    r_d = 146.6 Mpc      (sound horizon, testable by DESI DR3)
+    |                    | Scenario A (θ*-matched) | Scenario B (1/ξ² law) |
+    |--------------------|------------------------|-----------------------|
+    | ξ                  | 0.470                  | 0.432                 |
+    | t₀                 | 13.47 Gyr              | 13.47 Gyr             |
+    | H₀                 | 69.5 km/s/Mpc          | 68.7 km/s/Mpc         |
+    | S8                 | 0.753                  | 0.785                 |
+    | θ* offset          | −0.5"                  | +6.6"                 |
+    | Ω_DM/Ω_b          | 5.22 (input)           | 5.36 (derived)        |
+    | N_eff              | 3.39                   | 3.31                  |
 
-All five are CAMB outputs, not inputs. None are fitted. A framework
-built from pure geometry — one compact circle, one warp factor, one
-temperature ratio constrained by the observed matter abundance —
-predicts the age of the universe, the Hubble constant, the dark matter
-density, the matter clustering amplitude, and the CMB angular scale from
-zero adjustable parameters. The S8 tension dissolves. The cosmic
-coincidence Ω_DM/Ω_b ≈ 5 is explained. The full derivation is in
-Paper 2, whose central result is Appendix E.
+Both scenarios are in tension with ACT DR6's N_eff measurement
+(2.86 ± 0.13); the tension ranges from 3.5σ (Scenario B) to 4.1σ
+(Scenario A). This is the framework's most consequential open issue:
+it predicts more dark radiation than current CMB data support. The
+tension may be resolved if extended parameter fits (ΛCDM + N_eff + w₀
++ wₐ, which is the framework's actual model) loosen the N_eff bound,
+or it may indicate that the mirror sector is colder than the
+baryogenesis formula predicts. CMB-S4 (σ(N_eff) ≈ 0.03) will be
+definitive.
+
+Both scenarios resolve the S8 weak lensing tension (S8 = 0.75–0.79
+vs Planck ΛCDM 0.83) and explain the cosmic coincidence Ω_DM/Ω_b ≈ 5
+geometrically. The full derivation is in Paper 2, whose central
+result is Appendix E.
 
 ---
 

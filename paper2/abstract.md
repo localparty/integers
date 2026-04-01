@@ -44,6 +44,14 @@ measurement (6.6 arcseconds at ξ = 0.432; 0.5 arcseconds when ξ is
 set to 0.47 with ω_c h² adjusted to match θ*). The true scenario lies
 between these two limits, to be determined by a full MCMC analysis.
 
+The baryogenesis-derived ξ = 0.432 predicts N_eff = 3.31, in 3.5σ
+tension with ACT DR6 (N_eff = 2.86 ± 0.13). This is the framework's
+primary open issue. The ACT constraint assumes ΛCDM + N_eff; in the
+framework's extended model (+ w₀ + wₐ), the bound loosens and the
+tension may reduce to 2–3σ. CMB-S4 (σ(N_eff) ≈ 0.03) will resolve
+this definitively. If confirmed, the mirror sector is real. If
+excluded, the baryogenesis mechanism must be revised.
+
 CMB-S4 will confirm or exclude the mirror sector at > 10σ (N_eff = 3.31
 vs SM 3.046). DESI DR3 will test H(z) at 8σ. Euclid will test S8 at
 16σ relative to Planck ΛCDM. The decade 2025–2035 will decide.

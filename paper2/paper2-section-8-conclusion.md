@@ -23,15 +23,15 @@ geometrically.
 
 The complete prediction:
 
-| Observable | 5D Framework | Status |
-|-----------|-------------|--------|
-| t₀ = 13.470 Gyr | 327 Myr below Planck ΛCDM | Consistent with stellar ages |
-| θ* = 0.59640° | 0.5" from Planck | Within measurement uncertainty |
-| S8 = 0.753 | 4.6σ below Planck ΛCDM | < 1σ from all WL surveys |
-| H₀ = 69.5 km/s/Mpc | Between Planck and SH0ES | < 0.5σ from TRGB/CCHP |
-| r_d = 146.2 Mpc | 0.9 Mpc below Planck | Testable by DESI DR3 |
-| N_eff = 3.39 | +0.35 above SM | Testable by CMB-S4 at 11σ |
-| Ω_DM/Ω_b = 5.2 | 4% from observed 5.4 | Cosmic coincidence explained |
+| Observable | Scenario A (θ*-matched) | Scenario B (1/ξ² law) | Status |
+|-----------|------------------------|-----------------------|--------|
+| t₀ | 13.47 Gyr | 13.47 Gyr | Both 327 Myr below ΛCDM |
+| θ* offset | −0.5" from Planck | +6.6" from Planck | A matches; B has tension |
+| S8 | 0.753 | 0.785 | Both resolve WL tension |
+| H₀ | 69.5 km/s/Mpc | 68.7 km/s/Mpc | Both above ΛCDM |
+| r_d | 146.2 Mpc | 145.8 Mpc | Both testable by DESI DR3 |
+| N_eff | 3.39 | 3.31 | Both in 3–4σ tension with ACT DR6 |
+| Ω_DM/Ω_b | 5.22 (input) | 5.36 (derived) | B explains cosmic coincidence |
 
 ## 8.3 What Makes This Different
 
@@ -63,9 +63,19 @@ at z > 10. Whether mirror dark matter structure formation provides
 advantages for early galaxy formation requires dedicated N-body work
 (Appendix H).
 
-**The Hubble tension residual:** The framework predicts H₀ = 69.5,
-consistent with TRGB/CCHP but 3.5σ below SH0ES Cepheids. The
-Cepheid-TRGB calibration question is observational, not theoretical.
+**The N_eff tension with ACT DR6:** Both scenarios predict N_eff =
+3.31–3.39, in 3–4σ tension with ACT DR6 (2.86 ± 0.13). This is the
+framework's most significant open issue. The ACT constraint assumes
+ΛCDM + N_eff; a dedicated MCMC with the framework's full model
+(+ w₀ + wₐ) may loosen the bound. Alternatively, if the washout
+exponent in the baryogenesis formula differs from 2 (intermediate
+washout: α ~ 1.7), the required ξ drops to ~0.36, reducing N_eff
+to 3.14 (2.2σ from ACT). CMB-S4 will decide.
+
+**The Hubble tension residual:** Scenario A gives H₀ = 69.5 (< 0.5σ
+from TRGB/CCHP), Scenario B gives 68.7. Both are 3–4σ below SH0ES
+Cepheids. The Cepheid-TRGB calibration question is observational, not
+theoretical.
 
 ## 8.5 The Decisive Decade
 

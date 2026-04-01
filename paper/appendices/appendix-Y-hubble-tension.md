@@ -278,6 +278,60 @@ dark energy scenario. This prediction:
 - Is **not a full resolution** of the Hubble tension — the gap to
   Cepheids (73.0) and even to the non-DL consensus (69.4) remains ✗
 
+### Y.5.4 The Self-Consistent ω_b Solution
+
+The θ* tension between the 1/ξ² prediction and Planck's measurement
+can be partially resolved by allowing ω_b h² to shift from its ΛCDM
+value. In a non-ΛCDM cosmology with higher N_eff, the Planck data
+yields a different ω_b (Planck 2018, Table 5: ω_b decreases by
+1–3% when N_eff floats).
+
+Imposing both θ* = 1.04110 AND Ω_DM/Ω_b = 5.36 simultaneously at
+ξ = 0.4375, the self-consistent solution is:
+
+    ω_b h² = 0.02150  (−3.9% from ΛCDM)
+    ω_c h² = 0.11524
+    θ* offset = +1.0"  (within Planck 1σ)
+    t₀ = 13.60 Gyr
+    S8 = 0.754
+
+The ω_b shift is in the expected direction but creates a new tension:
+the predicted primordial deuterium abundance D/H ≈ 2.65 × 10⁻⁵ is
+1.5σ above the measurement (2.527 ± 0.030) × 10⁻⁵ (Cooke et al. 2018).
+This is a mild tension, not a falsification. A proper MCMC fit to the
+full Planck+ACT+DESI likelihood would determine whether this shift is
+viable within the framework's extended parameter space.
+
+### Y.5.5 The N_eff Tension: ACT DR6 vs the 1/ξ² Law
+
+The 1/ξ² baryogenesis law (Paper 2, Appendix E) requires ξ = 0.432 to
+match the observed Ω_DM/Ω_b = 5.36. This implies N_eff = 3.31, which
+is 3.5σ above ACT DR6's measurement (2.86 ± 0.13).
+
+This tension has three possible resolutions:
+
+**(a) Extended parameter fits.** The ACT DR6 N_eff constraint assumes
+ΛCDM + N_eff (a 7-parameter model). The framework predicts a different
+model: ΛCDM + N_eff + w₀ + wₐ (a 9-parameter model). In extended
+models, parameter degeneracies typically loosen the N_eff bound by
+30–50%. A dedicated MCMC analysis of the framework's specific model
+is needed to determine the actual constraint on ξ.
+
+**(b) The baryogenesis formula has corrections.** The 1/ξ² scaling
+assumes strong washout. In intermediate washout, the exponent shifts:
+Ω_DM/Ω_b = 1/ξ^α with α ≠ 2. If α = 1.7 (plausible for K ~ 5),
+then ξ = (5.36)^{−1/1.7} = 0.356, giving N_eff = 3.14 — within
+2.2σ of ACT DR6 and consistent with BBN 2025.
+
+**(c) The mirror sector is colder than expected.** If the gravitational
+reheating mechanism gives ξ < 0.35 (which is physically reasonable),
+the baryogenesis formula requires a compensating warp correction to
+reach Ω_DM/Ω_b = 5.36. This shifts the problem from N_eff to the
+bulk neutrino mass parameter c.
+
+None of these is currently favored. CMB-S4 (σ(N_eff) ≈ 0.03) will
+determine N_eff to the precision needed to distinguish all three.
+
 ---
 
 ## Y.6 Comparison with the Observational Landscape
@@ -401,6 +455,7 @@ same micrometer-scale compact dimension.
 | S8 clustering | KK graviton cascades | ✓ Addressed (Obied et al.) |
 | DESI w ≈ −0.8 | Thawing dilaton | Plausible |
 | **Hubble tension** | **Mirror brane dark radiation** | **H₀ ≈ 68.0–68.7** (Tier 1) |
+| N_eff (mirror sector) | Mirror brane dark radiation | **3.5σ tension with ACT DR6 at ξ = 0.432 (§Y.5.5)** |
 | Hubble tension (full) | Beyond minimal orbifold | Open |
 
 ---
@@ -487,8 +542,9 @@ re-evaluation under the circle scenario.
 | BBN constraint (2025 joint analysis) | ξ < 0.384 (2σ), ΔN_eff < 0.136 |
 | ACT DR6 constraint (binding) | ξ < 0.255 (2σ), ξ < 0.397 (3σ) |
 | Ω_DM/Ω_b constraint (1/ξ² law) | ξ = 0.432–0.47 (from observed 5.36) |
-| Self-consistent prediction (ξ = 0.4375) | H₀ = 68.8, t₀ = 13.60 Gyr, S8 = 0.754 |
+| Self-consistent prediction (ξ = 0.4375) | H₀ = 68.8, t₀ = 13.60 Gyr, S8 = 0.754 (§Y.5.4) |
 | θ* offset at ξ = 0.4375 | +1.0 arcsecond (within Planck 1σ = 1.1") |
+| **ACT DR6 vs 1/ξ² law** | **ξ = 0.432 required vs ξ < 0.397 allowed (3σ) — 3.5σ tension (§Y.5.5)** |
 | Tier 1 H₀ prediction (ACT DR6 safe) | **68.0–68.3 km/s/Mpc** |
 | Tier 2 H₀ prediction (BBN-limited) | **68.3–68.7 km/s/Mpc** (2.5–2.8σ ACT DR6 tension) |
 | Direction relative to non-DL consensus | Correct (↑ from 67.4 toward 69.4) |
