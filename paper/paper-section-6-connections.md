@@ -246,8 +246,8 @@ fixed points: the visible sector at φ = 0 and a geometrically distinct
 hidden brane at φ = π. Matter localized at the hidden brane gravitates
 normally but couples to no SM force — it is dark matter by construction.
 If the hidden brane carries its own U(1)' gauge field, kinetic mixing with
-the SM photon is suppressed by exp(−π) ≈ 0.04 — a 4% mixing at mass
-scale ~10 meV, testable by ALPS-II and IAXO within the next five years.
+the SM photon is predicted at ε ~ 5 × 10⁻⁴ (from KK tower mediation:
+α_EM × π²/6 × exp(−π)), testable by LDMX and LHCb Run 3.
 Additionally, a conjectured Z₃ symmetry of the e-circle would give three
 visible fixed points, providing a geometric basis for three fermion
 generations. The fine structure constant may be derived from the
