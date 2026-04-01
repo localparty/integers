@@ -112,6 +112,12 @@ For $M^7 = \mathbb{CP}^2 \times S^2 \times S^1$:
 
 Totaling 12 gauge bosons, matching the SM.
 
+(Note: the isometry group of $\mathbb{CP}^2$ is $SU(3)/\mathbb{Z}_3$ —
+the quotient of $SU(3)$ by its center — not $SU(3)$ itself. This
+distinction affects the global structure of the gauge group (and therefore
+the allowed representations and charge quantization of quarks) but not the
+Lie algebra, which determines the gauge bosons and their local interactions.)
+
 ---
 
 ## L.3 Three Possible Extensions of the E-Circle Framework

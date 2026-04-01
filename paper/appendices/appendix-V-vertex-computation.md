@@ -135,17 +135,33 @@ vertex decomposes as:
 where **V₃^{(4D)} is the standard 4D three-graviton vertex**, evaluated
 at the 4D momenta k_i alone, with NO dependence on the KK numbers n_i.
 
-**The propagator tensor structure is also n-independent.** In 5D de Donder
-gauge, the graviton propagator for KK mode n is:
+**The propagator tensor structure in the UV limit.** In 5D de Donder gauge,
+the graviton propagator for KK mode n is:
 
-    G_{AB,CD}^{(n)}(k) = P_{AB,CD} / (k² + n²/R²)
+    G_{AB,CD}^{(n)}(k) = P_{AB,CD}(k, n/R) / (k² + n²/R²)
 
-where P_{AB,CD} is the standard transverse-traceless projector — a fixed
-combination of 5D Kronecker deltas. The numerator tensor structure is
-IDENTICAL for every KK level n. Only the denominator carries n-dependence,
-through the mass term n²/R². This follows directly from the 5D de Donder
-gauge condition, which is n-independent: it imposes the same algebraic
-constraint on the graviton field at every KK level.
+The numerator P_{AB,CD}(k, p₅) depends on the full 5D momentum
+p_A = (k_μ, p₅ = n/R) through the gauge-fixing terms. The 5D de Donder
+gauge condition for mode n is ∂^A h_{AB} − ½∂_B h = 0, which involves
+p₅ = n/R in the mixed (μ,5) components. The exact propagator therefore
+has n-dependent terms in the off-diagonal (μν)-(μ5)-(55) mixing sectors.
+
+However, in the **UV limit** (k → ∞ with n fixed), the p₅-dependent
+terms in the numerator are suppressed by O(n²/(R²k²)):
+
+    P_{AB,CD}(k, n/R) = P_{AB,CD}^{(0)}(k) + O(n²/(R²k²))
+
+where P^{(0)}_{AB,CD} = ½[η_{AC}η_{BD} + η_{AD}η_{BC} − ⅔η_{AB}η_{CD}]
+is the standard massless 5D graviton projector in D = 5 de Donder gauge
+(the coefficient 2/(D−2) = 2/3 is standard; see Veltman 1976). This
+leading projector is n-independent — it is the same combination of 5D
+Kronecker deltas at every KK level.
+
+The n-dependent corrections O(n²/(R²k²)) in the numerator lower the UV
+degree by 2 when contracted with vertices, and therefore contribute only
+to subleading operators (R² type or lower). The leading UV divergence —
+which determines the R³ counterterm — depends only on P^{(0)}, which is
+n-independent.
 
 ### V.2.5 The Explicit Leading Term
 

@@ -241,9 +241,12 @@ Fractional quantum Hall interferometry.
 (Nature Physics, 2020) directly measured anyon braiding statistics in
 FQH systems. The measured exchange phases match the topological prediction.
 
-This is the framework's strongest experimental validation: the geometric
-reasoning that produces the boson-fermion dichotomy in 3D ALSO produces
-anyon statistics in 2D, and both are experimentally confirmed.
+This is the framework's strongest experimental consistency check: the
+geometric reasoning that produces the boson-fermion dichotomy in 3D also
+reproduces anyon statistics in 2D, and both are experimentally confirmed.
+The anyon prediction itself was made by Leinaas & Myrheim (1977) using the
+same topological logic; the framework reproduces their result within the
+e-dimension picture rather than predicting it independently.
 
 ---
 

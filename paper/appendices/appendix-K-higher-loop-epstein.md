@@ -216,7 +216,23 @@ and positive definiteness follows from diagonal dominance (confirmed by
 the Gershgorin theorem for L ≤ 3, and by explicit construction for L ≥ 4
 where the cross terms remain bounded by |1/2|).
 
-### K.5.2 Heat Kernel Coefficients
+### K.5.2 Overlapping Subdivergences
+
+The reduction of L-loop Feynman integrals to Epstein zeta functions requires
+that the 4D momentum integral and the KK mode sum can be separated at each
+order in the mass expansion. At one loop, this factorization is guaranteed
+by the heat kernel (which factorizes on product manifolds). At two loops,
+the factorization was verified for the sunset diagram (Appendix G, V) by
+the explicit UV expansion. For general L ≥ 3, the factorization in the
+presence of overlapping subdivergences — where the 4D momentum structure
+and the KK index structure are intertwined through nested loop integrals —
+has not been established. The BPHZ forest formula (Appendix T, §T.5.2)
+handles subdivergences at the Schwinger parameter boundary, but the
+factorization of the FINITE remainder into clean Epstein zeta terms at
+general L is an assumption based on the Seeley-DeWitt mass expansion
+structure. This is the key unproven step in the all-orders conjecture.
+
+### K.5.3 Heat Kernel Coefficients
 
 The Seeley-DeWitt coefficients a_k(D) are polynomial in the curvature
 R_{ABCD}, the KK masses m_n², and 1/R — all finite on M⁴ × S¹. No
@@ -286,8 +302,13 @@ The gap is narrow and specific: it concerns the structure of multi-loop
 Feynman integrals in the KK theory, not the analytic properties of
 Epstein zeta functions (which are rigorous mathematics).
 
-This is a structural theorem about the zeta function, not an empirical
-pattern.
+The pole-separation argument is a structural fact about Epstein zeta
+functions (rigorous mathematics). The reduction of subleading L-loop
+integrals to Epstein zeta values at non-positive integers is established
+at L = 1 and L = 2 by explicit computation, and assumed for general L based
+on the Seeley-DeWitt mass expansion structure. The all-orders extension is
+therefore a conjecture supported by two explicit calculations and a
+structural argument — not a theorem.
 
 ### K.6.3 Comparison with Known Results
 

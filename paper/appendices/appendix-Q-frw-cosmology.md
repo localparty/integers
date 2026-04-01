@@ -177,8 +177,8 @@ for the dilaton — and therefore for the e-dimension.
 ### Q.4.1 The Scalar Field During Recombination
 
 At recombination (T ~ 0.3 eV, t ~ 380,000 years), the dilaton mass
-m_φ ~ 10 meV is much larger than k_B T ~ 0.3 eV... wait, 10 meV < 0.3 eV,
-so the dilaton IS still relativistic at recombination.
+m_φ ~ 10 meV is well below k_B T ~ 0.3 eV, so the dilaton is still
+relativistic at recombination.
 
 The dilaton affects the CMB through:
 - Its contribution to the expansion rate (ΔN_eff, as above)
@@ -202,8 +202,17 @@ The stabilized e-circle produces the standard ΛCDM CMB power spectrum with:
 - A possible ΔN_eff ~ 0.57 from the dilaton
 - No additional modifications
 
-This is consistent with Planck 2018 observations to within current
-uncertainties.
+**Tension with current CMB data.** The combined ACT DR4 + SPT-3G + Planck
+analysis (2024–2025) constrains N_eff = 2.81 ± 0.18, placing the dilaton
+contribution ΔN_eff ≈ 0.57 in tension at approximately 4.4σ. This tension
+is resolved if the dilaton decouples above the neutrino decoupling
+temperature (~2 MeV), which requires m_dilaton ≳ few MeV — larger than the
+meV scale predicted by the Casimir stabilization. The tension is therefore
+an indication that either the dilaton mass is larger than the simple
+estimate, or the coupling between the dilaton and the thermal bath is
+weaker than gravitational strength, or the dilaton is absent from the
+low-energy spectrum (stabilized at a higher mass by non-perturbative
+effects). This is an open problem that constrains the orbifold scenario.
 
 ---
 
@@ -223,6 +232,17 @@ The late-time expansion is de Sitter:
 
 This matches the observed Hubble constant H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹ (67.4 km/s/Mpc)
 by construction — we determined L from ρ_Λ in Section 6.6.
+
+**DESI tension.** DESI DR2 (2025) reports 4.2σ evidence for evolving dark
+energy with w₀ ≈ −0.75, w_a ≈ −0.75 — in tension with the w = −1 prediction
+of the static Casimir scenario. A resolution is available: if the e-circle
+radius (dilaton) is slowly rolling near a shallow minimum of its potential
+(a "thawing" quintessence scenario), the equation of state evolves from
+w ≈ −1 in the past toward w ≈ −0.8 today, consistent with the DESI
+measurement. In this scenario, α remains constant if the electromagnetic
+coupling is topological rather than geometric — resolving the apparent
+tension with quasar α-stability bounds. This extension is speculative and
+identified as future work.
 
 ### Q.5.2 The Coincidence Problem
 
@@ -286,14 +306,20 @@ This is an open problem.
 
 | Epoch | Observable | Standard ΛCDM | 5D framework | Status |
 |-------|-----------|-------------|-------------|--------|
-| BBN | N_eff | 3.04 | **3.6 ± 0.3** (dilaton) | Testable (CMB-S4) |
+| BBN | N_eff | 3.04 | **3.6 ± 0.3** (dilaton) | **In tension** (ACT+SPT: 2.81±0.18) |
 | CMB | Power spectrum | Standard | Standard + ΔN_eff | Consistent (Planck) |
-| Late-time | w (dark energy) | −1 | **−1 exactly** (Casimir) | Consistent |
+| Late-time | w (dark energy) | −1 | −1 (Casimir) or ~−0.8 (thawing) | **DESI tension** (4.2σ vs w=−1) |
 | Late-time | H₀ | 67.4 km/s/Mpc | Consistent (by construction) | ✓ |
 | Inflation | Possible driver | Inflaton field | E-circle evolution (speculative) | Open |
 
-The framework's strongest cosmological prediction is **N_eff ~ 3.6**: the
-dilaton contributes ~0.57 to the effective neutrino number. This is testable
+The N_eff prediction (ΔN_eff ≈ 0.57 from the dilaton) is in tension with
+the combined ACT+SPT+Planck constraint N_eff = 2.81 ± 0.18 at ~4.4σ. This
+tension indicates either earlier dilaton decoupling, a heavier dilaton mass,
+or the absence of a light dilaton from the low-energy spectrum. The static
+Casimir prediction w = −1 is in tension with DESI DR2 (4.2σ preference for
+evolving dark energy), resolvable via the thawing dilaton alternative. Both
+tensions constrain the framework and are identified as open problems. The
+framework's cosmological predictions are testable
 by CMB-S4 (expected sensitivity σ(N_eff) ~ 0.03), making it a near-future
 experimental target.
 

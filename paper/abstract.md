@@ -36,11 +36,13 @@ The leading UV divergence vanishes identically at every loop order:
 S₀^{(L)} = [1 + 2ζ(0)]^L = 0. The subleading terms are Epstein zeta
 functions evaluated at non-positive integers — always finite by the
 Epstein-Terras theorem, whose unique pole lies at s = L/2 > 0, strictly
-above all evaluation points. In particular, the Goroff-Sagnotti R³
-counterterm — the two-loop divergence that proved 4D Einstein gravity
-non-renormalizable in 1986 — vanishes identically. The theory is
-perturbatively finite and predictive to all orders from two parameters:
-G₄ and the e-circle circumference L.
+above all evaluation points. In particular, the leading coefficient of the Goroff-Sagnotti R³
+counterterm, computed for linearized 5D gravity on M⁴ × S¹, vanishes
+identically under zeta regularization. Subleading counterterm coefficients
+are finite Epstein zeta values — determined, not free. Under zeta
+regularization of the KK mode sums, the theory is perturbatively predictive
+to all orders, with all counterterm coefficients uniquely determined from
+two parameters: G₄ and the e-circle circumference L.
 
 The spin structure of the e-circle (bosons periodic, fermions anti-periodic)
 implies a natural Z₂ orbifold with two fixed-point branes. The visible brane
@@ -66,9 +68,13 @@ energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
 α stability, three fermion generations, the fermion mass hierarchy, neutrino
 masses, kinetic mixing with a dark photon, black hole entropy, the hydrogen
 spectrum, the Casimir force, baryon asymmetry (from the Z₂ chirality
-preference), and the CPT theorem. Seven testable predictions follow: three
-are already consistent with current data (DESI w ≈ −1, observed α stability,
-N_eff from bulk neutrinos). The remaining four — short-range gravitational
+preference), and the CPT theorem. Seven testable predictions follow: two
+are already consistent with current data (observed α stability, and the
+dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
+with static w = −1, resolvable via thawing dilaton quintessence). The N_eff
+prediction (ΔN_eff ≈ 0.57 from the dilaton) is in tension with combined
+ACT+SPT+Planck measurements (N_eff = 2.81 ± 0.18) and requires earlier
+dilaton decoupling for consistency. The remaining four — short-range gravitational
 deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻⁴, neutrino
 masses at the meV scale, and mirror dark matter — are within reach of
 experiments in the next 3–10 years.

@@ -114,14 +114,21 @@ regularization, d = 4 − 2ε) is:
 
 where N_n is the number of degrees of freedom at KK level n and mₙ = |n|/R.
 
-For the graviton on S¹:
-- n = 0: N₀ = 2 (massless graviton has 2 helicities in 4D) + 2 (photon)
-  + 1 (scalar) − ghosts = effective count
-- n ≠ 0: N_n = 5 (massive spin-2) + 3 (massive vector) + 1 (massive scalar)
-  − ghosts = effective count
+For the 5D graviton on S¹ in de Donder gauge, the effective DOF count
+at each KK level is computed in 5D: the graviton ĥ_{AB} has 15 components
+(symmetric 5×5 tensor), the gauge condition removes 5, and the Faddeev-Popov
+ghosts (a 5D vector c^A with 5 components, minus a scalar ghost-for-ghost
+with 1 component) contribute −(5 − 1) = −4. The effective count is:
 
-The precise ghost structure depends on the gauge choice. In the de Donder
-gauge, the Faddeev-Popov ghosts contribute with opposite sign.
+    N_eff = 15 − 5 − 4 = **6** per KK level
+
+(This count is the SAME at every KK level — including n = 0 — because it
+is performed in 5D, where the graviton has the same number of field
+components regardless of the KK mass. In 4D language, the n = 0 level
+decomposes as 2 (graviton) + 2 (photon) + 1 (scalar) + 1 (ghost correction)
+= 6; the n ≠ 0 levels decompose as 5 (massive graviton) + 3 (massive vector)
++ 1 (massive scalar) − 3 (longitudinal ghost modes) = 6. The 5D and 4D
+counts agree.)
 
 ---
 

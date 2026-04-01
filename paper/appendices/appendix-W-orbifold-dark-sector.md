@@ -518,15 +518,40 @@ Every factor is derived:
 - 1/2 from the graviton polarization count (representation theory of spin-2)
 - 8/3 from the SM charge trace (representation theory of SU(3) × SU(2) × U(1))
 
-**No free parameters.** The bare electromagnetic coupling at the Planck
-scale is completely determined by the geometry of the e-circle and the
-representation content of one SM generation. The SM running (Section W.6,
-computed from the measured particle masses and the electroweak beta functions)
-then brings this to:
+The bare electromagnetic coupling at the Planck scale is determined by the
+geometry of the e-circle and the representation content of one SM generation.
+The SM running then brings this to:
 
     1/α_EM(0) = 32π²/3 + 31.7 = **137.0 ± 0.3**
 
 The experimental value is **137.036**.
+
+### W.6.6 Honest Caveats
+
+Two aspects of this derivation require honest qualification:
+
+**The g₅² = 2 identification.** The factor g₅² = 2 follows from matching
+the KK-reduced graviton-photon coupling to the 4D electromagnetic coupling.
+This matching is a normalization choice motivated by the two-polarization
+structure of the massless graviton. A rigorous derivation would require
+computing the overlap integral of the photon zero-mode wave function with
+the full 5D graviton-photon-photon vertex from the 5D action — a calculation
+not performed here. The prediction 1/α(0) ≈ 137 should be read as a
+motivated numerical observation, not as a closed-form derivation.
+
+**The factor 8/3 (one generation, not three).** In standard QFT, the bare
+coupling at a scale μ is renormalized by ALL particles with mass below μ.
+If all three generations exist at M_P (which they do), all three contribute:
+the standard-RG result would use Σ N_c Q² = 8, not 8/3. The use of 8/3
+would be justified if the Z₃ orbifold structure causes the three generations
+to be geometrically indistinguishable at M_P — that is, if the
+compactification scale 1/R ≫ M_P, making the individual generation positions
+on the orbifold unresolvable at the Planck energy. Whether this condition
+is satisfied is an open question. With 8 instead of 8/3, the formula gives
+1/α(M_P) = 32π² ≈ 316, and 1/α(0) ≈ 348 — inconsistent with observation.
+The numerical success of 8/3 is striking but may be coincidental. Readers
+should treat this result as a numerical observation requiring derivation
+rather than as a prediction.
 
 ---
 

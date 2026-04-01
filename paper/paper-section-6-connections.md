@@ -211,6 +211,15 @@ Two independent derivations, from completely different starting points,
 arrive at the same physical setup. The experimental tests (short-range
 gravity, X-ray line searches) will test both simultaneously.
 
+**Note on the e-circle radius.** Two values of R appear in this paper depending
+on the scenario. The CIRCLE scenario (S¹): L ≈ 50–200 μm, R ≈ 8–32 μm. All
+SM fields contribute to the bulk Casimir energy. The ORBIFOLD scenario
+(S¹/Z₂): R ≈ 12 μm. Only bulk fields (gravity + 3 right-handed neutrinos)
+contribute. Appendices A–V use the circle scenario unless otherwise noted.
+Appendix W uses the orbifold scenario. The predictions in Appendix H are
+stated under the circle scenario; the orbifold scenario shifts R downward
+and tightens the experimental bounds.
+
 **Dark energy as Casimir energy of the e-circle.** The e-dimension, being compact,
 generates a Casimir (vacuum) energy from quantum fluctuations of the Standard Model
 fields. The boundary conditions on the e-circle are determined by spin: bosons have

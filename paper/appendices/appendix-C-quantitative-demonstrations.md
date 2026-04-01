@@ -334,9 +334,17 @@ mechanics.
 
 **What it does do.**
 
-1. **Derives the Born rule.** Section C.1.1 shows that P(i) = |αᵢ|² follows
-   from the 5D density and the projection postulate. This is not a separate
-   axiom in the 5D framework — it is a geometric consequence.
+The calculation demonstrates that the 5D framework REPRODUCES the standard
+quantum mechanical result for entangled spin-½ particles; it does not
+derive it from purely geometric axioms independent of the QM formalism.
+The Born rule derivation (C.1.1) is a re-derivation within the framework
+using the e-density postulate, not an independent derivation from geometry
+alone. With this caveat:
+
+1. **Re-derives the Born rule.** Section C.1.1 shows that P(i) = |αᵢ|²
+   follows from the 5D density and the projection postulate. This is not a
+   separate axiom in the 5D framework — it is a geometric consequence of
+   the e-density postulate.
 
 2. **Provides the geometric mechanism.** The correlations arise from the
    e-conservation constraint (a Noether conservation law from e-translation

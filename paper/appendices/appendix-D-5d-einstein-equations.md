@@ -177,7 +177,12 @@ e-circle):
 
     ∇²(δφ) = −(σ/3) × 4πG₄ρ
 
-where σ is a dimensionless coupling constant of order unity. The solution:
+where σ is a dimensionless coupling constant determined by the matter-scalar
+coupling in the 5D action. For the minimal KK coupling (matter uniformly
+distributed on the e-circle with conformal coupling to the scalar sector),
+σ = 2/3 (see Overduin & Wesson 1997, §4.3). For brane-localized matter
+(the orbifold scenario of Appendix W), σ depends on the brane-scalar
+coupling and is left for future work. The solution:
 
     δφ(r) = (σ/3) × GM/(rc²) × φ₀
 

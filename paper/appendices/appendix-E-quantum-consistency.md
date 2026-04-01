@@ -238,8 +238,14 @@ structure from the framework might help?
 ### E.5.1 The Spin Structure
 
 The e-circle is not a bare S¹ — it carries a spin structure (established in
-Appendix B). Fermions have anti-periodic boundary conditions on the e-circle;
-bosons have periodic. This means the fermionic and bosonic KK towers have
+Appendix B). Fermions have anti-periodic boundary conditions on the e-circle
+(ψ(φ + 2π) = −ψ(φ)); bosons have periodic (ψ(φ + 2π) = ψ(φ)). The
+anti-periodicity follows directly from the spin structure: the lift
+R̃(2π) = −1 ∈ Spin(d) acts as −1 on spinor representations (Appendix B.1,
+Theorem B.1.1; Appendix B.3, §B.3.3). The exchange antisymmetry of fermions
+and the anti-periodic boundary condition on S¹ are two aspects of the same
+topological fact — the non-trivial element of ker(Spin(d) → SO(d)) — not
+independent assumptions. This means the fermionic and bosonic KK towers have
 different mass spectra:
 
     Bosonic modes: mₙ = n/R,       n ∈ Z

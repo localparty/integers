@@ -1,4 +1,4 @@
-# Appendix S — The Perturbative Finiteness Theorem
+# Appendix S — Perturbative Finiteness Under Zeta Regularization
 
 > This appendix converts the conjecture of Appendix K into a theorem. We
 > prove that the L-loop effective action for 5D gravity on M⁴ × S¹ is finite
@@ -192,7 +192,7 @@ zeta values.** ∎ (part c)
 
 ---
 
-## S.4 The Vanishing of Non-Renormalizable Counterterms
+## S.4 The Determination of Non-Renormalizable Counterterms
 
 ### S.4.1 The Critical Distinction
 
@@ -205,6 +205,11 @@ In the 5D KK theory: the counterterms of dimension 2L + 2 still appear at
 loop order L. But their coefficients are:
 
     coefficient = (1/ε) × E_L(−p; Q_L) × (coupling constants)
+
+The leading R³ coefficient vanishes (S₀ = 0). The subleading R³ coefficients
+are non-zero but finite — they are determined by the Epstein zeta values
+E_L(−j; Q_L) and require no free parameters. The theory is predictive to
+all orders (all counterterm coefficients determined), not counterterm-free.
 
 The 1/ε pole is absorbed by the counterterm (as in any renormalization).
 The Epstein zeta value E_L(−p; Q_L) is a SPECIFIC, CALCULABLE number — not
@@ -283,11 +288,14 @@ products of operators). The evaluation is still at s = 0, and the pole
 structure is determined by the dimension of the operator (which grows with
 L but the pole locations shift accordingly, always remaining above s = 0).
 
-The precise multi-loop generalization uses the framework of
+The multi-loop extension to all orders is conjectured based on the
+Epstein-Terras pole structure (Appendix K). A rigorous all-orders proof
+would require verifying that the symbol class conditions of
 Kontsevich-Vishik (1995) generalized zeta functions for pseudodifferential
-operators, which extends the Seeley theory to products of operators. The
-relevant values are still at s = 0, and the pole structure is still at
-positive half-integers.
+operators are satisfied for the L-loop gravitational kinetic operator —
+this verification is identified as future work. The conjecture is supported
+by explicit computation at L = 1 (Appendix F) and L = 2 (Appendix G),
+and by the structural pole-separation argument (Appendix K).
 
 ---
 
@@ -328,16 +336,46 @@ by explicit computation in Appendix V: the 5D three-graviton vertex,
 decomposed into KK modes, has a leading term equal to the standard 4D
 vertex (independent of the KK numbers) plus O(n²/R²) corrections. This
 follows from the polynomial momentum structure of the Einstein-Hilbert
-cubic term and the UV expansion of the 5D dot products. The theorem is
-unconditional. ∎
+cubic term and the UV expansion of the 5D dot products. ∎
 
 ---
 
-## S.7 What This Means
+## S.7 Scheme Dependence: The Central Open Question
 
-The perturbative finiteness theorem establishes that the compact e-circle
-resolves the ultraviolet divergence problem that has blocked quantum gravity
-since the 1960s. The resolution mechanism is:
+The finiteness established here is conditional on zeta regularization of
+the KK mode sums. Whether the result is scheme-independent — that is,
+whether S₀ = 0 holds in Pauli-Villars, dimensional, or hard-cutoff
+regularization — is an open question and the most important problem left
+open by this paper.
+
+In standard KK calculations (Appelquist & Chodos 1983, and extensively in
+string theory), zeta regularization produces the correct Casimir energy —
+a measurable, scheme-independent observable. The physical justification for
+zeta regularization in the Casimir context is that it is the unique
+regularization consistent with the symmetries of the problem (translation
+invariance on the compact dimension). Whether this uniqueness extends to
+multi-loop graviton self-energies — which are not directly observable —
+has not been established.
+
+A symmetry argument that uniquely selects zeta regularization for the KK
+gravity calculation (analogous to modular invariance in string theory, which
+uniquely selects the GSO projection and ensures UV finiteness at all orders)
+would convert the results of this appendix into a scheme-independent theorem.
+Without such an argument, the finiteness is a result within a specific
+regularization scheme — physically motivated by the compactness of the
+e-circle but not derived from a uniqueness principle.
+
+The result S₀ = 0 and the Epstein-Terras structure of the subleading terms
+are mathematical facts. Their physical interpretation as the finiteness of
+quantum gravity is the claim that requires the regularization to be correct.
+
+---
+
+## S.8 What This Means
+
+The perturbative finiteness result establishes that the compact e-circle,
+under zeta regularization, resolves the ultraviolet divergence problem that
+has blocked quantum gravity since the 1960s. The resolution mechanism is:
 
 1. **Compactness** converts continuous 5D momentum integrals into discrete
    KK mode sums.
