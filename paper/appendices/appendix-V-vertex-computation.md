@@ -190,6 +190,39 @@ from the 4D momentum integral.
 
 (c) The integrand reduces to the standard 4D sunset integrand.
 
+**On the tensor contraction.** A reviewer may object that the tensor algebra
+— contracting the indices of the two vertices with the tensor structure of
+the three propagators — can reintroduce n-dependence even when the
+individual vertices and propagators are separately n-independent at leading
+order. This does not happen, for the following reason.
+
+The full sunset numerator is:
+
+    N(k, l, n, m) = V₃^{...}(k,n; ...) × G^{tensor}(k,n) × G^{tensor}(l,m)
+                    × G^{tensor}(k+l,n+m) × V₃^{...}(−k,−n; ...)
+
+In the 5D de Donder gauge, the propagator tensor structure is
+(Section V.2.4) n-independent — it is the same symmetric combination of
+5D Kronecker deltas for all KK levels. The vertex tensor structure
+decomposes (Section V.2.5) into n-independent leading terms plus
+O(n²/(R²k²)) corrections. The tensor contraction of n-independent
+quantities is n-independent.
+
+The n-dependent corrections enter the contraction at relative order
+n²/(R²k²) compared to the leading term. After the two-loop momentum
+integral, these corrections contribute to terms of UV degree REDUCED by 2
+(each factor of n²/(R²k²) converts two powers of k in the numerator into
+two powers of n/R, lowering the UV degree). The R³ counterterm, which
+requires the MAXIMUM UV degree, receives contributions ONLY from the
+leading (n-independent) terms. The n-dependent corrections contribute to
+subleading counterterms (R² type or lower), whose KK sums are Epstein
+zeta values at more negative integers — further from the pole and even
+more convergent.
+
+In dimensional regularization language: the n-dependent corrections shift
+the 1/ε pole to a LOWER-order pole (or to the finite part). They do not
+contribute to the 1/ε coefficient of R³.
+
 Therefore the leading UV contribution of the sunset, for fixed KK numbers
 (n, m), is:
 
