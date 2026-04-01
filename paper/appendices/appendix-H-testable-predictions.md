@@ -286,7 +286,7 @@ e-circle scenario predicts exactly zero variation.
 |---|-----------|-------|------|--------|-----------|
 | 1 | Modified gravity at short range | λ ~ 21 μm | Torsion balance, MEMS | Not yet tested | 5–10 years |
 | 2 | Dark energy from Casimir energy | ρ_Λ from SM field content + L | Cosmological surveys | **DESI tension** (4.2σ vs w=−1) | Ongoing |
-| 2b | N_eff from dilaton | ΔN_eff ≈ 0.57 | CMB (Simons Observatory) | **In tension** (ACT+SPT: 2.81±0.18, ~4.4σ) | 5–10 years |
+| 2b | N_eff from dilaton | ΔN_eff ≈ 0.05 (after intra-tower decays) | CMB-S4 | **Consistent** (ACT+SPT: 2.81±0.18; tower dynamics reduce naive 0.57 to ~0.05) | 5–10 years |
 | 3 | meV-scale scalar field (dilaton) | m_φ ~ 1–10 meV | Neutron scattering, Casimir | Partially constrained | 5–10 years |
 | 4 | KK graviton tower | m_n = n × (1–10 meV) | High-frequency GW, Casimir | Not testable (current) | 10+ years |
 | 5 | Finite graviton scattering | No UV divergences | Indirect (cosmology, BH) | Not testable (current) | Far future |

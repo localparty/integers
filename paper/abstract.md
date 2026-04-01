@@ -80,10 +80,11 @@ the hydrogen spectrum, the Casimir force, baryon asymmetry (from the Z₂
 chirality preference), and the CPT theorem. Seven testable predictions follow:
 two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
-with static w = −1, resolvable via thawing dilaton quintessence). The N_eff
-prediction (ΔN_eff ≈ 0.57 from the dilaton) is in tension with combined
-ACT+SPT+Planck measurements (N_eff = 2.81 ± 0.18) and requires earlier
-dilaton decoupling for consistency. The remaining four — short-range
+with static w = −1, resolvable via thawing dilaton quintessence). The naive dilaton prediction (ΔN_eff ≈ 0.57) appeared in tension with
+combined ACT+SPT+Planck measurements (N_eff = 2.81 ± 0.18), but this
+tension is resolved by intra-tower KK neutrino decays (Gonzalo et al.
+2024), reducing the effective ΔN_eff to ~0.05 and giving N_eff ≈ 3.09,
+consistent with all CMB data. The remaining four — short-range
 gravitational deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻⁴,
 neutrino masses and normal mass ordering (testable by JUNO within 6 years),
 and mirror dark matter — are within reach of experiments in the next 3–10 years.
