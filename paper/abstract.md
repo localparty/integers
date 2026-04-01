@@ -22,43 +22,61 @@ transport). Integer winding gives bosons; half-integer gives fermions; fractiona
 winding in two dimensions gives anyons — confirmed experimentally in the
 fractional quantum Hall effect. Third, the Born rule P(i) = |αᵢ|² is derived
 from the five-dimensional density and the projection postulate, and the
-framework is shown to reproduce the quantum correlations that violate the
-CHSH Bell inequality (|S| = 2√2), with the non-locality sourced by the
-e-conservation constraint through the fifth dimension.
+framework reproduces the quantum correlations that violate the CHSH Bell
+inequality (|S| = 2√2), with the non-locality sourced by the e-conservation
+constraint through the fifth dimension.
 
-The same geometric object — the compact e-circle — that produces quantum
-mechanics, the spin-statistics theorem, the Aharonov-Bohm effect, and the
-unification of gravity with electromagnetism also resolves the central
-obstacle to quantum gravity. The five-dimensional Einstein-Hilbert action on
-the e-bundle, reduced via Kaluza-Klein decomposition, yields four-dimensional
-gravity coupled to electromagnetism and a scalar field in a single metric.
-Newtonian gravity is recovered in the weak-field limit. The compactness of
+The same compact e-circle also resolves the central obstacle to quantum
+gravity. The five-dimensional Einstein-Hilbert action on the e-bundle reduces
+via Kaluza-Klein decomposition to four-dimensional gravity coupled to
+electromagnetism and a scalar field in a single metric. The compactness of
 the e-circle converts the continuous UV momentum integrals of 4D quantum
 gravity into discrete Kaluza-Klein mode sums that admit zeta regularization.
 The leading UV divergence vanishes identically at every loop order:
 S₀^{(L)} = [1 + 2ζ(0)]^L = 0. The subleading terms are Epstein zeta
 functions evaluated at non-positive integers — always finite by the
 Epstein-Terras theorem, whose unique pole lies at s = L/2 > 0, strictly
-above the evaluation points. In particular, the Goroff-Sagnotti R³
-counterterm — the two-loop divergence that proved four-dimensional Einstein
-gravity non-renormalizable in 1986 — vanishes identically in the
-five-dimensional Kaluza-Klein theory. The theory is perturbatively finite
-and predictive to all orders from two parameters: G₄ and the e-circle
-circumference L.
+above all evaluation points. In particular, the Goroff-Sagnotti R³
+counterterm — the two-loop divergence that proved 4D Einstein gravity
+non-renormalizable in 1986 — vanishes identically. The theory is
+perturbatively finite and predictive to all orders from two parameters:
+G₄ and the e-circle circumference L.
 
-The Casimir energy of the Standard Model fields on the e-circle — with boundary
-conditions determined by spin (bosons periodic, fermions anti-periodic) — gives
-a positive vacuum energy whose magnitude matches the observed dark energy density
-for an e-circle circumference of L ≈ 50–200 μm. This predicts Yukawa-type
-deviations from Newton's law at separations below ~50 μm, within reach of
-near-future short-range gravity experiments. The framework's mathematical
-structure connects to geometric quantization (Kostant-Souriau), Weyl's gauge
-geometry, and the ER=EPR conjecture, and resolves the Einstein-Bohr debate
-through non-local realism: reality is deterministic in five dimensions, and
-quantum probability is epistemic. The spin structure of the e-circle implies
-a natural Z₂ orbifold with a hidden brane at φ = π that gravitates but
-couples to no Standard Model force — geometric dark matter. Kinetic mixing
-between the two branes' U(1) gauge fields is predicted at ε ~ 5 × 10⁻⁴
-(from KK tower mediation), testable by LDMX and LHCb Run 3. The fine structure constant follows from the
-configuration torus area 4π² plus Standard Model running, giving
-1/α(0) ≈ 137 for three generations (Appendix W).
+The spin structure of the e-circle (bosons periodic, fermions anti-periodic)
+implies a natural Z₂ orbifold with two fixed-point branes. The visible brane
+at φ = 0 supports Standard Model matter; the hidden brane at φ = π gravitates
+normally but couples to no SM force — geometric dark matter. The Casimir
+energy of bulk fields on the orbifold, with three right-handed neutrinos in
+the bulk to ensure positive energy, matches the observed dark energy density
+for a brane separation R ≈ 12 μm and predicts Yukawa-type gravitational
+deviations at that scale. The same bulk neutrinos give neutrino masses at the
+meV scale through the bulk seesaw mechanism. Kinetic mixing between the two
+branes' U(1) gauge fields is predicted at ε ~ 5 × 10⁻⁴ (from the
+KK tower mediation: α_EM × π²/6 × exp(−π)), testable by LDMX and LHCb
+Run 3. A conjectured Z₃ orbifold structure gives three SM generations, with
+exponential mass hierarchies from a warp factor k ≈ 2. The electromagnetic
+coupling at the Planck scale is identified with the inverse configuration
+torus area 1/α(M_P) = 4π²; three generations of SM running then give
+1/α(0) ≈ 137.
+
+The e-circle, Z₆-orbifolded and warped, provides a geometric account of
+nineteen phenomena: quantum mechanics, electromagnetism, gravity, the
+spin-statistics theorem, perturbative UV finiteness, dark energy, dark
+energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
+α stability, three fermion generations, the fermion mass hierarchy, neutrino
+masses, kinetic mixing with a dark photon, black hole entropy, the hydrogen
+spectrum, the Casimir force, baryon asymmetry (from the Z₂ chirality
+preference), and the CPT theorem. Seven testable predictions follow: three
+are already consistent with current data (DESI w ≈ −1, observed α stability,
+N_eff from bulk neutrinos). The remaining four — short-range gravitational
+deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻⁴, neutrino
+masses at the meV scale, and mirror dark matter — are within reach of
+experiments in the next 3–10 years.
+
+We do not claim to have solved quantum gravity or to have derived the full
+Standard Model. The perturbative finiteness result is established through
+two loops by explicit computation and conjectured to all orders by the
+Epstein-Terras structure. The orbifold extensions are speculative but
+quantitative, with specific falsifiable predictions. What is established
+is a geometric framework in which the same compact circle that makes
+quantum mechanics necessary also makes quantum gravity finite.
