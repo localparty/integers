@@ -1,0 +1,711 @@
+import { useRef, useEffect, useState, useCallback } from "react";
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(8,11,20,0.95)",
+  grid: "rgba(30,50,90,0.25)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(90,130,175,0.45)",
+  measure: "rgba(255,220,60,0.85)",
+  stateColors: [
+    "#4af",                        // blue   — state 0
+    "#f55",                        // red    — state 1
+    "#5e4",                        // green  — state 2
+    "#fa0",                        // orange — state 3
+  ],
+  stateRgb: [
+    [68, 170, 255],
+    [255, 85, 85],
+    [85, 238, 68],
+    [255, 170, 0],
+  ],
+  stateLabels: [
+    ["\u2191", "\u2193"],
+    ["\u2191", "\u2193", "\u21BB"],
+    ["\u2191", "\u2193", "\u21BB", "\u2194"],
+  ],
+};
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+function defaultWeights(n) {
+  if (n === 2) return [0.7, 0.3];
+  if (n === 3) return [0.5, 0.3, 0.2];
+  return [0.4, 0.3, 0.2, 0.1];
+}
+
+function normalizeWeights(w) {
+  const s = w.reduce((a, b) => a + b, 0);
+  return s > 0 ? w.map(v => v / s) : w.map(() => 1 / w.length);
+}
+
+export default function BornRuleESampling() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({
+    time: 0,
+    needleAngle: -1,
+    needleResult: -1,
+    needleAnim: 0,
+    flashAnim: 0,
+    counts: [0, 0],
+    totalN: 0,
+  });
+
+  const [nStates, setNStates] = useState(2);
+  const [weights, setWeights] = useState(defaultWeights(2));
+  const [counts, setCounts] = useState([0, 0]);
+  const [totalN, setTotalN] = useState(0);
+  const [autoMeasure, setAutoMeasure] = useState(false);
+  const [lastResult, setLastResult] = useState(-1);
+  const [, forceRender] = useState(0);
+
+  const autoRef = useRef(false);
+  autoRef.current = autoMeasure;
+  const weightsRef = useRef(weights);
+  weightsRef.current = weights;
+  const nStatesRef = useRef(nStates);
+  nStatesRef.current = nStates;
+  const countsRef = useRef([0, 0]);
+  const totalNRef = useRef(0);
+
+  const setAlpha2 = useCallback((val) => {
+    const v = clamp(val, 0, 100) / 100;
+    setWeights([v, 1 - v]);
+  }, []);
+
+  const changeNStates = useCallback((n) => {
+    setNStates(n);
+    nStatesRef.current = n;
+    setWeights(defaultWeights(n));
+    weightsRef.current = defaultWeights(n);
+    const empty = new Array(n).fill(0);
+    setCounts(empty);
+    countsRef.current = empty;
+    setTotalN(0);
+    totalNRef.current = 0;
+    setLastResult(-1);
+    stateRef.current.needleResult = -1;
+    stateRef.current.needleAnim = 0;
+    stateRef.current.flashAnim = 0;
+    stateRef.current.counts = empty;
+    stateRef.current.totalN = 0;
+  }, []);
+
+  const sampleOnce = useCallback(() => {
+    const w = normalizeWeights(weightsRef.current);
+    const r = Math.random();
+    let cumul = 0;
+    let result = w.length - 1;
+    for (let i = 0; i < w.length; i++) {
+      cumul += w[i];
+      if (r < cumul) { result = i; break; }
+    }
+    // Compute needle angle from cumulative position on the circle
+    let arcStart = 0;
+    for (let i = 0; i < result; i++) arcStart += w[i];
+    const pos = arcStart + Math.random() * w[result];
+    stateRef.current.needleAngle = pos * TAU - Math.PI / 2;
+    stateRef.current.needleResult = result;
+    stateRef.current.needleAnim = 0;
+    stateRef.current.flashAnim = 1.0;
+    // Update refs for the draw loop
+    countsRef.current = [...countsRef.current];
+    countsRef.current[result] = (countsRef.current[result] || 0) + 1;
+    totalNRef.current += 1;
+    stateRef.current.counts = countsRef.current;
+    stateRef.current.totalN = totalNRef.current;
+    // Trigger React re-render for control panel stats
+    forceRender(v => v + 1);
+  }, []);
+
+  const measureBatch = useCallback((n) => {
+    const w = normalizeWeights(weightsRef.current);
+    const newCounts = new Array(nStatesRef.current).fill(0);
+    let finalResult = 0;
+    for (let k = 0; k < n; k++) {
+      const r = Math.random();
+      let cumul = 0;
+      let result = w.length - 1;
+      for (let i = 0; i < w.length; i++) {
+        cumul += w[i];
+        if (r < cumul) { result = i; break; }
+      }
+      newCounts[result]++;
+      finalResult = result;
+    }
+    // Set needle to last result's arc region
+    let arcStart = 0;
+    for (let i = 0; i < finalResult; i++) arcStart += w[i];
+    stateRef.current.needleAngle = (arcStart + Math.random() * w[finalResult]) * TAU - Math.PI / 2;
+    stateRef.current.needleResult = finalResult;
+    stateRef.current.needleAnim = 0.5;
+    stateRef.current.flashAnim = 1.0;
+    // Update refs
+    countsRef.current = countsRef.current.map((c, i) => c + (newCounts[i] || 0));
+    totalNRef.current += n;
+    stateRef.current.counts = countsRef.current;
+    stateRef.current.totalN = totalNRef.current;
+    forceRender(v => v + 1);
+  }, []);
+
+  const resetHistogram = useCallback(() => {
+    const empty = new Array(nStatesRef.current).fill(0);
+    countsRef.current = empty;
+    totalNRef.current = 0;
+    stateRef.current.counts = empty;
+    stateRef.current.totalN = 0;
+    stateRef.current.needleResult = -1;
+    stateRef.current.needleAnim = 0;
+    stateRef.current.flashAnim = 0;
+    forceRender(v => v + 1);
+  }, []);
+
+  // Auto-measure timer
+  useEffect(() => {
+    if (!autoMeasure) return;
+    const id = setInterval(() => {
+      if (autoRef.current) sampleOnce();
+    }, 330);
+    return () => clearInterval(id);
+  }, [autoMeasure, sampleOnce]);
+
+  // ---- DRAW ----
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width;
+    const H = canvas.height;
+    const s = stateRef.current;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    s.time += 0.016;
+    if (s.needleAnim < 1) s.needleAnim = Math.min(1, s.needleAnim + 0.04);
+    if (s.flashAnim > 0) s.flashAnim = Math.max(0, s.flashAnim - 0.025);
+
+    const w = normalizeWeights(weightsRef.current);
+    const ns = nStatesRef.current;
+    const counts = stateRef.current.counts || new Array(ns).fill(0);
+    const tN = stateRef.current.totalN || 0;
+
+    // ---- LAYOUT: three panels ----
+    const panelGap = 20;
+    const leftW = Math.floor(W * 0.32);
+    const rightW = Math.floor(W * 0.30);
+    const centerW = W - leftW - rightW - panelGap * 2;
+    const centerX = leftW + panelGap;
+    const rightX = centerX + centerW + panelGap;
+
+    // Panel separators
+    ctx.strokeStyle = "rgba(40,80,140,0.15)";
+    ctx.lineWidth = 1;
+    [leftW, rightX - panelGap / 2].forEach(x => {
+      ctx.beginPath();
+      ctx.moveTo(x, 10);
+      ctx.lineTo(x, H - 10);
+      ctx.stroke();
+    });
+
+    // ======== LEFT PANEL: e-circle density ========
+    const lcx = leftW / 2;
+    const lcy = H * 0.42;
+    const R = Math.min(leftW, H * 0.7) * 0.34;
+
+    // Panel title
+    ctx.fillStyle = "rgba(80,220,160,0.7)";
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.fillText("5D DENSITY ON e-CIRCLE", 14, 22);
+
+    // Draw outer reference circle (faint)
+    ctx.beginPath();
+    ctx.arc(lcx, lcy, R + 14, 0, TAU);
+    ctx.strokeStyle = "rgba(60,100,160,0.12)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Draw colored arcs proportional to |alpha_i|^2
+    let arcOffset = -Math.PI / 2; // start at top
+    const arcThick = 22;
+    const arcGlow = 36;
+
+    for (let i = 0; i < ns; i++) {
+      const arcLen = w[i] * TAU;
+      const startA = arcOffset;
+      const endA = arcOffset + arcLen;
+      const rgb = C.stateRgb[i];
+
+      // Glow layer
+      ctx.beginPath();
+      ctx.arc(lcx, lcy, R + 6, startA, endA);
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.12)`;
+      ctx.lineWidth = arcGlow;
+      ctx.stroke();
+
+      // Main density arc — thickness encodes |alpha_i|^2
+      const thickness = arcThick * (0.4 + 0.6 * w[i] * ns);
+      ctx.beginPath();
+      ctx.arc(lcx, lcy, R, startA, endA);
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.85)`;
+      ctx.lineWidth = thickness;
+      ctx.lineCap = "butt";
+      ctx.stroke();
+
+      // Label at arc midpoint
+      const midA = startA + arcLen / 2;
+      const lR = R + arcThick + 14;
+      const lx = lcx + Math.cos(midA) * lR;
+      const ly = lcy + Math.sin(midA) * lR;
+      const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
+      ctx.fillStyle = C.stateColors[i];
+      ctx.font = "bold 14px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText(labels[i] || `|${i}\u27E9`, lx, ly + 5);
+      ctx.textAlign = "left";
+
+      // Percentage inside arc
+      if (arcLen > 0.25) {
+        const pR = R - 4;
+        const px = lcx + Math.cos(midA) * pR;
+        const py = lcy + Math.sin(midA) * pR;
+        ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.7)`;
+        ctx.font = "10px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText(`${(w[i] * 100).toFixed(0)}%`, px, py + 4);
+        ctx.textAlign = "left";
+      }
+
+      // Boundary tick
+      const bx1 = lcx + Math.cos(startA) * (R - arcThick * 0.6);
+      const by1 = lcy + Math.sin(startA) * (R - arcThick * 0.6);
+      const bx2 = lcx + Math.cos(startA) * (R + arcThick * 0.6);
+      const by2 = lcy + Math.sin(startA) * (R + arcThick * 0.6);
+      ctx.beginPath();
+      ctx.moveTo(bx1, by1);
+      ctx.lineTo(bx2, by2);
+      ctx.strokeStyle = "rgba(200,220,240,0.3)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      arcOffset = endA;
+    }
+
+    // Center dot
+    ctx.beginPath();
+    ctx.arc(lcx, lcy, 3, 0, TAU);
+    ctx.fillStyle = "rgba(160,200,240,0.4)";
+    ctx.fill();
+
+    // Probability readout below circle
+    const readY = lcy + R + arcThick + 36;
+    const stLabels = C.stateLabels[ns - 2] || C.stateLabels[0];
+    if (ns === 2) {
+      ctx.fillStyle = C.stateColors[0];
+      ctx.font = "11px 'Courier New'";
+      ctx.fillText(`|\u03B1|\u00B2 = ${w[0].toFixed(3)}  (${stLabels[0]})`, 14, readY);
+      ctx.fillStyle = C.stateColors[1];
+      ctx.fillText(`|\u03B2|\u00B2 = ${w[1].toFixed(3)}  (${stLabels[1]})`, 14, readY + 16);
+    } else {
+      for (let i = 0; i < ns; i++) {
+        ctx.fillStyle = C.stateColors[i];
+        ctx.font = "11px 'Courier New'";
+        const sub = String.fromCharCode(8321 + i);
+        ctx.fillText(`|\u03B1${sub}|\u00B2 = ${w[i].toFixed(3)}  (${stLabels[i]})`, 14, readY + i * 16);
+      }
+    }
+
+    // ======== CENTER PANEL: measurement animation ========
+    const ccx = centerX + centerW / 2;
+    const ccy = H * 0.40;
+    const cR = Math.min(centerW, H * 0.65) * 0.32;
+
+    ctx.fillStyle = "rgba(255,220,60,0.7)";
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.fillText("MEASUREMENT (e-SAMPLING)", centerX + 10, 22);
+
+    // Draw the same e-circle but smaller, with the needle
+    arcOffset = -Math.PI / 2;
+    for (let i = 0; i < ns; i++) {
+      const arcLen = w[i] * TAU;
+      const startA = arcOffset;
+      const endA = arcOffset + arcLen;
+      const rgb = C.stateRgb[i];
+
+      ctx.beginPath();
+      ctx.arc(ccx, ccy, cR, startA, endA);
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.5)`;
+      ctx.lineWidth = 14;
+      ctx.lineCap = "butt";
+      ctx.stroke();
+
+      arcOffset = endA;
+    }
+
+    // Needle / sampling indicator
+    if (s.needleResult >= 0) {
+      const na = s.needleAngle;
+      const anim = clamp(s.needleAnim, 0, 1);
+      const needleLen = cR + 28;
+      const nx = ccx + Math.cos(na) * needleLen * anim;
+      const ny = ccy + Math.sin(na) * needleLen * anim;
+
+      // Needle line
+      ctx.beginPath();
+      ctx.moveTo(ccx, ccy);
+      ctx.lineTo(nx, ny);
+      ctx.strokeStyle = `rgba(255,220,60,${0.9 * anim})`;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+
+      // Needle tip glow
+      ctx.beginPath();
+      ctx.arc(nx, ny, 6, 0, TAU);
+      ctx.fillStyle = `rgba(255,220,60,${0.6 * anim})`;
+      ctx.fill();
+
+      // Sampling point on arc
+      const sx = ccx + Math.cos(na) * cR;
+      const sy = ccy + Math.sin(na) * cR;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 5, 0, TAU);
+      const rgb = C.stateRgb[s.needleResult];
+      ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${anim})`;
+      ctx.fill();
+    }
+
+    // Center dot
+    ctx.beginPath();
+    ctx.arc(ccx, ccy, 3, 0, TAU);
+    ctx.fillStyle = "rgba(255,220,60,0.5)";
+    ctx.fill();
+
+    // Result flash
+    if (s.needleResult >= 0) {
+      const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
+      const resultLabel = labels[s.needleResult] || `|${s.needleResult}\u27E9`;
+      const flashAlpha = 0.5 + 0.5 * s.flashAnim;
+      const rgb = C.stateRgb[s.needleResult];
+
+      // Flash background
+      if (s.flashAnim > 0.1) {
+        ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${0.08 * s.flashAnim})`;
+        ctx.fillRect(centerX, ccy + cR + 20, centerW, 50);
+      }
+
+      ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${flashAlpha})`;
+      ctx.font = `bold ${28 + Math.round(s.flashAnim * 8)}px 'Courier New'`;
+      ctx.textAlign = "center";
+      ctx.fillText(resultLabel, ccx, ccy + cR + 56);
+      ctx.textAlign = "left";
+
+      ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.5)`;
+      ctx.font = "11px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText("outcome", ccx, ccy + cR + 74);
+      ctx.textAlign = "left";
+    } else {
+      ctx.fillStyle = C.textDim;
+      ctx.font = "12px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText("click Measure to sample", ccx, ccy + cR + 50);
+      ctx.textAlign = "left";
+    }
+
+    // Instruction text
+    ctx.fillStyle = "rgba(120,160,210,0.35)";
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("random point sampled on e-circle", ccx, ccy - cR - 22);
+    ctx.fillText("lands in region i with prob \u221D arc length", ccx, ccy - cR - 8);
+    ctx.textAlign = "left";
+
+    // ======== RIGHT PANEL: histogram ========
+    ctx.fillStyle = "rgba(192,255,160,0.7)";
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.fillText("HISTOGRAM", rightX + 10, 22);
+
+    const hPad = 16;
+    const hTop = 46;
+    const hBottom = H * 0.72;
+    const hH = hBottom - hTop;
+    const barGap = 10;
+    const barArea = rightW - hPad * 2;
+    const barW = (barArea - barGap * (ns - 1)) / ns;
+
+    const tN = counts.reduce((a, b) => a + b, 0);
+
+    // Find max for scaling
+    const maxCount = Math.max(1, ...counts);
+    const maxFrac = tN > 0 ? maxCount / tN : 1;
+    const scaleMax = Math.max(maxFrac, ...w) * 1.15;
+
+    // Y-axis (fraction scale)
+    ctx.strokeStyle = "rgba(80,120,180,0.25)";
+    ctx.lineWidth = 0.5;
+    for (let f = 0; f <= 1.0; f += 0.2) {
+      if (f > scaleMax) break;
+      const yy = hBottom - (f / scaleMax) * hH;
+      ctx.beginPath();
+      ctx.moveTo(rightX + hPad - 4, yy);
+      ctx.lineTo(rightX + rightW - hPad, yy);
+      ctx.stroke();
+      ctx.fillStyle = C.textDim;
+      ctx.font = "9px 'Courier New'";
+      ctx.textAlign = "right";
+      ctx.fillText(f.toFixed(1), rightX + hPad - 7, yy + 3);
+      ctx.textAlign = "left";
+    }
+
+    // Bars
+    for (let i = 0; i < ns; i++) {
+      const bx = rightX + hPad + i * (barW + barGap);
+      const frac = tN > 0 ? counts[i] / tN : 0;
+      const barH = (frac / scaleMax) * hH;
+      const rgb = C.stateRgb[i];
+
+      // Bar fill
+      ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.55)`;
+      ctx.fillRect(bx, hBottom - barH, barW, barH);
+
+      // Bar outline
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.7)`;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(bx, hBottom - barH, barW, barH);
+
+      // Label below
+      const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
+      ctx.fillStyle = C.stateColors[i];
+      ctx.font = "bold 13px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText(labels[i] || `|${i}\u27E9`, bx + barW / 2, hBottom + 18);
+      ctx.textAlign = "left";
+
+      // Count on top of bar
+      if (tN > 0) {
+        ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.8)`;
+        ctx.font = "9px 'Courier New'";
+        ctx.textAlign = "center";
+        ctx.fillText(`${counts[i]}`, bx + barW / 2, hBottom - barH - 5);
+        ctx.textAlign = "left";
+      }
+
+      // Theoretical dashed line at |alpha_i|^2
+      const thY = hBottom - (w[i] / scaleMax) * hH;
+      ctx.beginPath();
+      ctx.setLineDash([5, 3]);
+      ctx.moveTo(bx - 4, thY);
+      ctx.lineTo(bx + barW + 4, thY);
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.9)`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Theory label
+      ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.5)`;
+      ctx.font = "8px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText(`|\u03B1|${"\u00B2"}=${w[i].toFixed(2)}`, bx + barW / 2, thY - 4);
+      ctx.textAlign = "left";
+    }
+
+    // Measurement count and stats
+    const statsY = hBottom + 38;
+    ctx.fillStyle = "rgba(180,210,240,0.65)";
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.fillText(`N = ${tN} measurements`, rightX + hPad, statsY);
+
+    for (let i = 0; i < ns; i++) {
+      const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
+      const meas = tN > 0 ? (counts[i] / tN).toFixed(3) : "\u2014";
+      ctx.fillStyle = C.stateColors[i];
+      ctx.font = "10px 'Courier New'";
+      const line = `P(${labels[i]}) = ${meas}  (theory: ${w[i].toFixed(3)})`;
+      ctx.fillText(line, rightX + hPad, statsY + 18 + i * 14);
+    }
+
+    // Convergence indicator
+    if (tN >= 20) {
+      let maxErr = 0;
+      for (let i = 0; i < ns; i++) {
+        const err = Math.abs(counts[i] / tN - w[i]);
+        if (err > maxErr) maxErr = err;
+      }
+      const convergenceColor = maxErr < 0.03 ? "rgba(80,255,120,0.6)"
+        : maxErr < 0.08 ? "rgba(255,220,60,0.5)"
+        : "rgba(255,100,80,0.4)";
+      ctx.fillStyle = convergenceColor;
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(
+        maxErr < 0.03 ? "\u2713 converged" : maxErr < 0.08 ? "\u223C converging..." : "\u25CB collecting data...",
+        rightX + hPad, statsY + 18 + ns * 14 + 6
+      );
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, []);
+
+  // ---- LIFECYCLE ----
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    animRef.current = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animRef.current);
+      window.removeEventListener("resize", resize);
+    };
+  }, [draw]);
+
+  // ---- STYLES ----
+  const label = {
+    fontSize: 10, letterSpacing: "0.14em", color: "rgba(90,140,190,0.5)",
+    textTransform: "uppercase", fontFamily: "'Courier New', monospace",
+    display: "block", marginBottom: 5,
+  };
+  const btn = (active, col) => ({
+    padding: "5px 13px", fontSize: 11, letterSpacing: "0.06em",
+    fontFamily: "'Courier New', monospace",
+    background: active ? `rgba(${col},0.18)` : "rgba(16,28,52,0.6)",
+    border: `1px solid ${active ? `rgba(${col},0.55)` : "rgba(40,80,140,0.22)"}`,
+    color: active ? `rgba(${col},1)` : "rgba(110,150,195,0.5)",
+    borderRadius: 3, cursor: "pointer",
+  });
+
+  const annotation = "The Born rule P(i) = |\u03B1\u1D62|\u00B2 follows from the 5D density and measurement as e-sampling. "
+    + "The probability of outcome i is the fraction of the particle\u2019s 5D structure located in e-region i. "
+    + "This is not a postulate \u2014 it is a geometric consequence of sampling a 5D density distribution from a 4D perspective.";
+
+  return (
+    <div style={{
+      background: C.bg, minHeight: "100vh", display: "flex", flexDirection: "column",
+      fontFamily: "'Courier New', monospace", color: C.text, userSelect: "none",
+    }}>
+
+      {/* Header */}
+      <div style={{
+        padding: "15px 26px 9px",
+        borderBottom: "1px solid rgba(40,80,140,0.18)",
+        display: "flex", alignItems: "baseline", gap: 14,
+      }}>
+        <span style={{
+          fontSize: 11, letterSpacing: "0.18em",
+          color: "rgba(80,220,160,0.4)", textTransform: "uppercase",
+        }}>Quantum Geometry in 5D</span>
+        <span style={{ color: "rgba(60,100,160,0.3)" }}>|</span>
+        <span style={{
+          fontSize: 13, color: "rgba(190,215,240,0.65)", letterSpacing: "0.05em",
+        }}>Visualization 11 — Born Rule as e-Sampling</span>
+      </div>
+
+      {/* Canvas */}
+      <canvas ref={canvasRef} style={{ flex: 1, width: "100%", display: "block" }} />
+
+      {/* Control panel */}
+      <div style={{
+        padding: "13px 26px 10px",
+        borderTop: "1px solid rgba(40,80,140,0.15)",
+        display: "flex", flexWrap: "wrap", gap: "14px 28px",
+        alignItems: "flex-start", background: "rgba(6,8,16,0.97)",
+      }}>
+
+        {/* System selector */}
+        <div>
+          <span style={label}>System</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            {[2, 3, 4].map(n => (
+              <button key={n} onClick={() => changeNStates(n)}
+                style={btn(nStates === n, "80,220,160")}>
+                {n}-state
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Alpha slider (only for 2-state) */}
+        {nStates === 2 && (
+          <div>
+            <span style={label}>|\u03B1|\u00B2 (spin-up probability)</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: 11, color: "rgba(68,170,255,0.6)", width: 14 }}>\u2191</span>
+              <input type="range" min={1} max={99} step={1}
+                value={Math.round(weights[0] * 100)}
+                onChange={e => setAlpha2(Number(e.target.value))}
+                style={{ width: 160, cursor: "pointer", accentColor: "#4af" }} />
+              <span style={{ fontSize: 11, color: "rgba(255,85,85,0.6)", width: 14 }}>\u2193</span>
+              <span style={{
+                fontSize: 11, color: "rgba(180,210,240,0.6)",
+                background: "rgba(20,35,60,0.5)",
+                border: "1px solid rgba(60,100,160,0.25)",
+                padding: "2px 8px", borderRadius: 3, minWidth: 85, textAlign: "center",
+              }}>
+                {(weights[0] * 100).toFixed(0)}% / {(weights[1] * 100).toFixed(0)}%
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* Measure buttons */}
+        <div>
+          <span style={label}>Measurement</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            <button onClick={sampleOnce}
+              style={{ ...btn(true, "255,220,60"), fontWeight: "bold" }}>
+              Measure
+            </button>
+            <button onClick={() => measureBatch(10)}
+              style={btn(true, "255,200,60")}>
+              x10
+            </button>
+            <button onClick={() => measureBatch(100)}
+              style={btn(true, "255,180,60")}>
+              x100
+            </button>
+          </div>
+        </div>
+
+        {/* Auto-measure toggle */}
+        <div>
+          <span style={label}>Auto</span>
+          <button onClick={() => setAutoMeasure(v => !v)}
+            style={btn(autoMeasure, autoMeasure ? "80,255,120" : "120,160,220")}>
+            {autoMeasure ? "\u25A0 Stop" : "\u25B6 Auto-measure"}
+          </button>
+        </div>
+
+        {/* Reset */}
+        <div>
+          <span style={label}>Reset</span>
+          <button onClick={resetHistogram}
+            style={btn(false, "120,160,220")}>
+            \u21BA Reset histogram
+          </button>
+        </div>
+      </div>
+
+      {/* Annotation */}
+      <div style={{
+        padding: "10px 26px 14px",
+        borderTop: "1px solid rgba(40,80,140,0.1)",
+        background: "rgba(4,6,12,0.98)",
+      }}>
+        <p style={{
+          fontSize: 10, lineHeight: "17px", letterSpacing: "0.04em",
+          color: "rgba(120,160,210,0.45)", margin: 0, maxWidth: 960,
+        }}>
+          {annotation}
+        </p>
+      </div>
+    </div>
+  );
+}
