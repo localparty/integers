@@ -211,6 +211,26 @@ The Aharonov-Bohm phase is the holonomy of the e-connection around such a loop.
 The vector potential is not gauge-artifact — it is the connection itself, and the
 connection is as physical as the e-dimension it governs.
 
+The quantitative calculation (Appendix C.3) derives the full interference pattern
+from the 5D path integral:
+
+    I(y, Φ) = I₀ · cos²(πd sin θ/λ + eΦ/2ℏ)
+
+The fringe shift eΦ/2ℏ is periodic in the flux with period Φ₀ = h/e — the
+magnetic flux quantum. In the 5D framework, this periodicity has a geometric
+origin: Φ₀ is the flux required to wind the e-coordinate through one complete
+revolution of the e-circle (Δφ = 2π when (e/ℏ)Φ = 2π). The flux quantum is
+set by the circumference of the e-dimension. The superconducting flux quantum
+Φ₀/2 = h/(2e) follows from the doubled charge of Cooper pairs, which wind the
+e-circle twice as fast per unit flux.
+
+The Aharonov-Bohm solenoid is a *line* topological defect in e-space. The Dirac
+magnetic monopole (Dirac 1931) is a *point* defect — a location where the
+e-bundle is non-trivializable. The Dirac quantization condition eg = nℏc/2 is
+the requirement that the e-circle be consistently defined on the sphere
+surrounding the monopole (integer Chern number). The framework predicts this
+condition as a geometric necessity.
+
 ---
 
 ## 4.1.7 What This Resolves

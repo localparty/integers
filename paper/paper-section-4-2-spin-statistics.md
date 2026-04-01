@@ -124,6 +124,15 @@ These are the only topologically stable configurations because:
 Integer winding ↔ integer spin ↔ bosons.
 Half-integer winding ↔ half-integer spin ↔ fermions.
 
+The formal proof is given in Appendix B.1. The core argument is concise: a 4π
+spatial rotation is contractible in Spin(d) for d ≥ 3 (since π₁(SO(d)) = Z₂),
+so the e-phase over a 4π rotation must be a multiple of 2π: 4πs = 2πk, giving
+s = k/2 ∈ ½Z. The boson-fermion dichotomy (s mod 1 ∈ {0, ½}) is a topological
+invariant that cannot change under any continuous process. In d = 2 dimensions,
+π₁(SO(2)) = Z imposes no such constraint, and the winding number can be any
+real number — giving anyon statistics, confirmed experimentally in the
+fractional quantum Hall effect (Bartolomei et al. 2020, Nakamura et al. 2020).
+
 ---
 
 ## 4.2.4 Step 2 — Exchange Statistics from e-Space Path Phase
@@ -187,6 +196,15 @@ cannot occupy the same state because their combined wavefunction is forced to va
 the only way to satisfy both the antisymmetry of half-integer winding and the
 symmetry of identical positions.**
 
+The formal derivation (Appendix B.2) shows that this exchange phase is a
+holonomy — the parallel transport of the e-coordinate around the exchange loop
+in configuration space. Each particle's e-coordinate is transported by sπ along
+the exchange path; the total two-particle phase is e^(i·2sπ). This holonomy is
+topological: it depends only on the homotopy class of the exchange path, not on
+its shape or speed. The exchange phase is therefore the same geometric mechanism
+as the Aharonov-Bohm effect (Section 4.1) — one around an external defect, the
+other around the exchange loop.
+
 ---
 
 ## 4.2.5 Step 3 — Winding Number Is Spin
@@ -222,6 +240,14 @@ This is the geometric content of the spin-statistics theorem. The theorem is not
 a coincidence forced by relativistic quantum field theory axioms. It is a tautology
 once the 5D picture is in place: of course spin and statistics are linked — they
 are both the winding number.
+
+The formal identification (Appendix B.3) proceeds via the Noether theorem: the
+spin angular momentum Ŝz is the conserved charge associated with the coupling of
+spatial rotations to the e-coordinate, and equals the e-momentum operator p̂φ.
+The e-winding number n = mₛ is the spin projection quantum number. The exchange
+phase e^(i·2πmₛ) = (−1)^(2s) for all allowed projections, completing the chain.
+The Lagrangian from which this follows is uniquely determined by the Kaluza-Klein
+metric structure — no free parameters are tuned to produce the result.
 
 ---
 
@@ -260,37 +286,31 @@ within QFT; the other explains it geometrically from a deeper principle.
 
 ---
 
-## 4.2.8 What Needs Formal Completion
+## 4.2.8 Formal Derivation
 
-We flag three mathematical bridges that are established as conceptual arguments
-above but require full formalization for a rigorous second paper:
+The three-step argument above is formalized in Appendix B, which provides the
+complete mathematical derivation:
 
-**Bridge 1 — Topological stability of half-integer windings**
-The claim that only integer and half-integer winding numbers are stable requires
-a precise statement in the language of fiber bundles. Specifically: we need to
-show that the physical constraints of the theory (single-valuedness, Lorentz
-covariance) restrict the allowed representations of the structure group to
-integer and half-integer Chern classes. This is established in the mathematical
-physics literature (see Atiyah-Singer index theorem, spin structures on manifolds)
-but needs to be connected explicitly to the e-dimension picture.
+**Step 1 (Appendix B.1):** The topological classification is proved from
+π₁(SO(d)) = Z₂ for d ≥ 3, which forces winding numbers into ½Z. The proof
+uses only the contractibility of the 4π rotation in Spin(d) and the
+quantization of the e-phase. The anyon extension to d = 2 (where π₁(SO(2)) = Z
+removes the constraint) follows from the same argument.
 
-**Bridge 2 — The exchange phase computation via 5D path integral**
-The claim that exchange accumulates phase e^(i·2πn) requires a computation in
-the 5D path integral formalism. The standard path integral for exchange statistics
-(Leinaas & Myrheim 1977, Wilczek 1982 for anyons) needs to be extended to 5D
-spacetime with the e-coordinate included. This is tractable — it is essentially
-the 5D generalization of the anyon path integral — but requires explicit calculation.
+**Step 2 (Appendix B.2):** The exchange phase is derived as a holonomy of
+the e-connection around the exchange loop in configuration space. The key
+advance over the Leinaas-Myrheim (1977) formulation is that the representation
+χ of π₁(C₂) — which Leinaas-Myrheim left as a free parameter — is determined
+by the e-dimension geometry: χ(σ) = e^(i·2πs).
 
-**Bridge 3 — Identification of winding number with spin quantum number**
-The step s = n (mod 1) is argued physically above but needs to be derived from
-the 5D action principle — specifically, from how the e-winding contributes to
-the angular momentum of the particle's helical path. This requires writing down
-the 5D Lagrangian explicitly and computing the conserved Noether charge associated
-with e-rotations, which should give spin.
-
-These bridges are the content of the planned second technical paper. Their absence
-does not invalidate the geometric argument above — it flags it as a research program
-rather than a completed derivation, which is stated explicitly in our framing.
+**Step 3 (Appendix B.3):** The identification of the winding number with the
+spin quantum number is derived from the Noether theorem applied to the unique
+Kaluza-Klein Lagrangian on P(M³, U(1)). The spin operator Ŝz equals the
+e-momentum p̂φ, the e-winding number is the spin projection mₛ, and the
+exchange phase (−1)^(2s) is uniform across all projections. The non-relativistic
+treatment extends to the relativistic setting via the 5D Dirac equation on the
+Lorentzian Kaluza-Klein manifold, a known construction in the literature
+(Overduin & Wesson 1997).
 
 ---
 

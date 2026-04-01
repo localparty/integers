@@ -265,6 +265,19 @@ reality, and the relationship between observation and reality.
 **Section 8** concludes with a summary of what has been established, what has been
 proposed, and the open problems that the community is invited to pursue.
 
+**Appendix A** provides the complete quantum-geometry dictionary — a systematic
+translation between all standard QM concepts and their 5D geometric equivalents.
+
+**Appendix B** gives the formal spin-statistics derivation in three steps:
+topological classification of winding numbers, the exchange phase from e-space
+parallel transport, and the identification of winding number with spin via the
+Noether theorem.
+
+**Appendix C** demonstrates quantitatively that the framework reproduces three
+canonical results: the Born rule and Bell inequality violation (|S| = 2√2),
+the double-slit interference pattern, and the Aharonov-Bohm phase shift with
+flux quantization.
+
 ---
 
 ## Notes for Revision

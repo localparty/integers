@@ -113,7 +113,13 @@ both spatial paths are populated by different e-components. When the paths
 reconverge, e-components with the same e-value constructively interfere; components
 differing by π destructively interfere. The interference pattern is geometric
 overlap of a single particle's e-structure — not a mysterious wave property of
-a pointlike object.
+a pointlike object. The quantitative result (derived in Appendix C.2) reproduces
+the standard pattern exactly: I(θ) = I₀ cos²(πd sin θ/λ), where the e-phase
+difference Δφ = (2π/λ)·d sin θ between paths determines bright fringes (same
+e-coordinate) and dark fringes (antipodal e-coordinates). Introducing a
+which-path detector entangles the particle's e-coordinate with the detector,
+scrambling the phase relationship and destroying the interference — complementarity
+is geometric competition for the same e-structure.
 
 ---
 
@@ -195,6 +201,14 @@ hidden variables are precisely what Bell's theorem allows.
 **Why measurement here affects outcome there:** Resolved. It doesn't — not in any
 causal sense. Both outcomes were always correlated through the e-conservation law.
 Measurement reveals the correlation; it does not create it.
+
+**Quantitative verification.** For the singlet state of two spin-½ particles
+measured along axes â and b̂ at relative angle θ, the e-conservation constraint
+n₁ + n₂ = 0 combined with e-sampling reproduces the quantum mechanical
+correlation function E(â, b̂) = −cos θ exactly. The CHSH Bell inequality is
+violated: |S| = 2√2, saturating the Tsirelson bound. The violation is sourced
+by the non-local e-conservation constraint — the particles are connected through
+the e-dimension, not through space. The full calculation is given in Appendix C.1.
 
 ---
 
@@ -452,11 +466,14 @@ randomize the relative phases of different e-components, erasing the coherences.
 The density matrix becomes diagonal — a classical probability distribution over
 measurement outcomes. This is the mathematical description of e-scrambling.
 
-The Born rule — that the probability of outcome i is |αᵢ|² — is the statement
-that the probability of our observation intersecting e-region i is proportional
-to the particle's five-dimensional density at that e-region. It is not a separate
-postulate. It follows from the projection postulate (Section 2.3) and the
-normalization of the five-dimensional density.
+The Born rule — that the probability of outcome i is |αᵢ|² — is not a separate
+postulate. It is derived from the 5D density and the projection postulate
+(Appendix C.1). The derivation: the 5D density is |ψ(x, φ)|². Measurement
+samples the e-structure at a particular e-region Ωᵢ. The probability of outcome
+i is the fraction of 5D density in that region: P(i) = ∫_Ωᵢ |ψ|² dφ / ∫_{S¹}
+|ψ|² dφ. By orthonormality of the e-eigenstates, this reduces to P(i) = |αᵢ|².
+The Born rule follows from the geometry of the 5D density and the act of
+e-sampling — it is a consequence of the framework, not an axiom.
 
 ### What This Resolves
 

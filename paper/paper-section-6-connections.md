@@ -137,7 +137,44 @@ economy over the Bohmian approach.
 
 ---
 
-## 6.5 Speculative Extensions
+## 6.5 Connections to Established Mathematical Physics
+
+**Geometric quantization.** The mathematical structure of the framework — a U(1)
+principal bundle with wavefunctions as sections — is the central object of the
+geometric quantization program (Kostant 1970, Souriau 1970, Woodhouse 1992). In
+geometric quantization, the "prequantum bundle" is a U(1) bundle over classical
+phase space whose connection has curvature ω/ℏ (the symplectic form). Quantum
+states are sections of this bundle. The correspondence with our framework is exact:
+the prequantum bundle is the e-bundle, the connection is the e-connection, the
+phase of the section is the e-coordinate. The distinction is ontological: geometric
+quantization treats the fiber as a mathematical construction step; we treat it as
+a physical dimension. The mathematical foundations of our framework are therefore
+established — what is new is the physical interpretation.
+
+**Weyl's gauge geometry.** The framework completes a program initiated by Hermann
+Weyl in 1918. Weyl proposed that electromagnetism arises from local geometric
+transformations of a fiber — originally scale transformations (rejected by Einstein
+because they would make atomic spectra path-dependent), then phase transformations
+(Weyl 1929, the foundation of gauge theory). Our framework takes Weyl's 1929
+insight literally: the U(1) phase is not a gauge redundancy but a physical
+coordinate. Einstein's objection to Weyl's 1918 theory does not apply — absolute
+phase is unobservable (Postulate 2.2.2) — and the path-dependent phases that
+concerned Einstein are exactly the Aharonov-Bohm effect (Section 4.1), now a
+prediction rather than a problem.
+
+**Ryu-Takayanagi formula.** If the e-dimension is the holographic direction (as
+Section 6.2 suggests), the Ryu-Takayanagi formula S_A = Area(γ_A)/(4G_N) — which
+relates entanglement entropy to the area of a minimal bulk surface in AdS/CFT
+(Ryu & Takayanagi 2006) — should have a realization in the e-dimension framework.
+The e-conservation constraints linking region A to its complement define a
+geometric surface in (x, y, z, e)-space whose area, measured with the 5D metric,
+should be proportional to the entanglement entropy. This converts the vague
+holographic suggestion of Section 6.2 into a specific, falsifiable mathematical
+claim: derive the RT formula from the e-space geometry.
+
+---
+
+## 6.6 Speculative Extensions
 
 The following connections are flagged explicitly as speculative. They are presented
 not as claims but as directions in which the framework naturally points — open

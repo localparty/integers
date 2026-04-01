@@ -176,6 +176,19 @@ Quantum mechanics is not, at its foundation, a probabilistic theory. It is a
 deterministic five-dimensional theory whose five-dimensional detail is hidden
 from us. The probability is in our knowledge, not in the world.
 
+The claim that quantum probability is epistemic has a structural parallel in
+'t Hooft's cellular automaton interpretation ('t Hooft 2016), which likewise
+proposes that quantum mechanics describes a deterministic system observed with
+incomplete information. The two programs differ in their underlying substrate
+(continuous 5D geometry versus discrete automaton) and in their empirical
+grounding (the e-dimension connects directly to observed phenomena through
+spin, interference, and the Aharonov-Bohm effect), but they share the conviction
+that the randomness of quantum mechanics is not the final word. The 5D framework's
+Bell inequality calculation (Appendix C.1) demonstrates explicitly that the
+e-conservation constraint produces the quantum correlations |S| = 2√2 — showing
+that epistemic probability over non-local hidden variables can quantitatively
+reproduce what appears to be fundamental randomness.
+
 ---
 
 ## 7.6 What the Framework Does Not Claim

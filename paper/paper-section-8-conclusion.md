@@ -138,12 +138,11 @@ The following problems are open. We state them not as admissions of incompletene
 but as invitations. The framework is generative — it raises well-posed questions
 that did not exist before the geometric picture was in place.
 
-**Mathematical formalization of the spin-statistics derivation.** The winding
-number argument is conceptually complete but requires three mathematical bridges:
-the topological stability argument (fiber bundle theory), the exchange phase
-computation (5D path integral), and the identification of winding number with
-spin (5D Noether theorem for e-rotations). Each is a tractable calculation for
-researchers fluent in differential geometry and quantum field theory.
+**Extensions of the spin-statistics derivation.** The winding number derivation
+is formalized in Appendix B. Natural extensions include: the full relativistic
+treatment via the 5D Dirac equation on the Lorentzian Kaluza-Klein manifold;
+the derivation of the gyromagnetic ratio g from the e-geometry; and the extension
+to spin-1 and higher-spin fields within the framework.
 
 **Claim 1 of the gravity program.** Write down the 5D action coupling the
 e-fiber metric to the stress-energy tensor and show that the weak-field equations

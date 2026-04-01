@@ -218,6 +218,15 @@ this identification: it shows that the connection **A** is physically real (not
 merely a gauge artifact), which is precisely what the fiber bundle interpretation
 predicts.
 
+The mathematical structure proposed here — a U(1) principal bundle over spacetime
+with the wave function as a section — connects to the program of geometric
+quantization (Kostant 1970, Souriau 1970, Woodhouse 1992), which constructs
+quantum mechanics from symplectic geometry using precisely this bundle structure.
+The distinction is ontological: geometric quantization treats the U(1) fiber as
+a mathematical device for producing a quantum theory from a classical one; the
+e-dimension framework treats it as a literal physical dimension. The mathematical
+objects are the same. What is new is the claim that the fiber has geometric reality.
+
 For readers unfamiliar with fiber bundles: all that is required for what follows
 is the picture established in Sections 2.1-2.4. The fiber bundle language makes
 the mathematics precise but does not change the physical content.
