@@ -235,15 +235,32 @@ of rotation in the e-fiber, parameterized by the three spatial rotation axes.
 For a spin-s particle, these operators act on the (2s + 1)-dimensional space
 of e-winding states {|−s⟩, |−s+1⟩, ..., |s⟩}.
 
-Since the rotation-e coupling makes Ŝᵢ the generators of the e-component of
-SU(2) rotations, they inherit the SU(2) Lie algebra by construction: the
-commutation relations [Ŝᵢ, Ŝⱼ] = iℏ εᵢⱼₖ Ŝₖ are the structure constants of
-the Lie algebra su(2), which is determined entirely by the group structure of
-three-dimensional rotations (see Sakurai & Napolitano, *Modern Quantum
-Mechanics*, Ch. 3, for the standard derivation). This is not an additional
-assumption of the framework; it is a consequence of the e-dimension being
-coupled to three-dimensional spatial rotations whose generators necessarily
-satisfy the so(3) ≅ su(2) algebra.
+The commutation relations follow from the group structure of spatial rotations
+and the coupling of each rotation axis to the same e-circle. The argument is
+explicit:
+
+Each spatial rotation axis i ∈ {x, y, z} generates, through the rotation-e
+coupling, an operator Ŝᵢ that produces e-phase evolution under rotation about
+axis i. The COMPOSITION of rotations determines how these operators compose.
+Concretely: a rotation by δθ about x, followed by δθ about y, minus the
+reverse order, equals a rotation by δθ² about z (to leading order). This is
+the defining relation of the Lie algebra so(3):
+
+    [Rₓ, Rᵧ] = Rᵤ
+
+Since Ŝᵢ generates the e-phase response to rotation about axis i, the
+commutator [Ŝₓ, Ŝᵧ] generates the e-phase response to the commutator
+rotation — which is a rotation about z. Therefore:
+
+    [Ŝₓ, Ŝᵧ] = iℏ Ŝᵤ
+
+and cyclically. The factor iℏ is the standard quantum mechanical normalization
+of angular momentum generators (see Sakurai & Napolitano, *Modern Quantum
+Mechanics*, Ch. 3). The SU(2) algebra is not imposed on the e-fiber — it is
+inherited from the structure of three-dimensional rotations through the
+rotation-e coupling. Three independent rotation axes coupled to a single
+e-circle automatically produce generators satisfying so(3) ≅ su(2), because
+the composition of the rotations determines the composition of the e-responses.
 
 The raising and lowering operators:
 

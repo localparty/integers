@@ -128,12 +128,33 @@ Each particle accumulates an e-phase of sπ from the rotation-e coupling along
 the exchange path.
 
 **Note on independence.** The two particles contribute independently to the
-geometric phase. This is correct because the geometric phase is determined by
-the CONNECTION (a local property of the e-bundle), not by correlations between
-the particles. Even if the particles are entangled (correlated in their
-e-coordinates), the geometric phase from parallel transport along each path
-is determined solely by the connection and the path. This is the fundamental
-property of holonomy: it is a property of the geometry, not the state.
+geometric phase. This is correct even when the particles are entangled —
+i.e., when their e-coordinates are constrained by the conservation law
+e₁ + e₂ = C (Section 3.2 of the paper). The entanglement constraint and
+the parallel transport are different geometric objects acting at different
+levels:
+
+- The **e-conservation constraint** restricts which STATES are accessible:
+  it correlates the e-coordinate values of the two particles. This is a
+  property of the state (which points in the fiber are occupied).
+
+- The **parallel transport** determines how each state EVOLVES along a path:
+  it is a property of the connection on the e-bundle (how the fiber is
+  attached to the base manifold), not of which point in the fiber the
+  particle currently occupies.
+
+An analogy: two compass needles magnetically locked to point in opposite
+directions (an entanglement constraint on their states) still each precess
+independently according to the local geometry when carried along a curved
+surface. The constraint determines the relationship between their
+orientations; the geometry determines how each orientation transforms along
+the path. These are independent — the holonomy does not depend on the state.
+
+This independence is the fundamental property of holonomy: it is determined
+by the connection and the path, not by the section (state) being transported.
+A QFT reader will recognize this as the standard statement that Berry phases
+are kinematic — they depend on the parameter-space geometry, not on the
+dynamical state.
 
 ### B2.3.3 The Total Exchange Phase
 
