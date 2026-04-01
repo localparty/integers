@@ -271,64 +271,62 @@ To close the full 5.6 km/s/Mpc gap from the mirror sector alone:
 **The BBN constraint.** The standard bound is ΔN_eff^{BBN} < 0.3 at 95%
 CL (from observed light element abundances), giving ξ < 0.47.
 
-**The cascade loosening — an inference, not an established result.** Gonzalo
-et al. (arXiv:2411.07029, 2024) established that intra-tower KK neutrino
-decays reduce the visible sector's effective ΔN_eff by a factor of ~10.
-We INFER that the same mechanism operates in the mirror sector, since:
-(a) the mirror sector has the same gauge group by construction, (b) its
-KK neutrino tower has the same mass spectrum (same R), and (c) the
-cascade decay channels are identical by mirror symmetry.
+**Why the cascade does NOT loosen this bound.** The Gonzalo et al. (2024)
+cascade mechanism reduces the VISIBLE sector's ΔN_eff by preventing KK
+tower energy from entering the active neutrino bath. One might hope the
+same cascade loosens the BBN bound on the mirror sector. It does not,
+for a fundamental reason:
 
-**This inference is physically motivated but has not been computed.**
-Gonzalo et al. analyzed the visible sector only. The mirror sector cascade
-involves additional complications: the mirror sector has its own thermal
-bath at temperature ξT, the cascade rates depend on the mirror sector's
-temperature history, and the interplay between visible and mirror towers
-through the shared bulk geometry has not been studied. We flag this
-explicitly as an extrapolation requiring dedicated calculation.
+The mirror sector's BBN contribution comes from its BRANE-LOCALIZED
+thermal radiation — mirror photons, mirror active neutrinos, and mirror
+electrons in thermal equilibrium at temperature ξT. This is the standard
+mirror radiation, not the KK tower. The cascade operates on the BULK
+KK modes (redistributing energy among mirror KK neutrino levels), but
+the bulk KK contribution is a SEPARATE, SMALLER effect — suppressed by
+the active-sterile mixing ζ < 0.01 relative to the brane-localized
+thermal bath.
 
-If the cascade suppression factor for the mirror sector is similar to
-the visible sector (~10×), the effective BBN contribution becomes:
+The brane-localized mirror radiation gives ΔN_eff = 6.14 × ξ⁴ regardless
+of any cascade dynamics in the bulk tower. The BBN bound ξ < 0.47
+therefore stands, unmodified by the cascade mechanism.
 
-    ΔN_eff^{BBN,cascade} ≈ 6.14 × ξ⁴ × f_cascade
+**The maximum mirror contribution:**
 
-where f_cascade ~ 0.1 (cascade suppression). The bound loosens to:
+    ΔN_eff^{mirror}(ξ = 0.47) = 6.14 × 0.47⁴ = 6.14 × 0.049 = 0.30
 
-    0.614 × ξ⁴ < 0.3 → ξ < 0.84
+    ΔH₀^{mirror} = 6 × 0.30 = 1.8 km/s/Mpc
 
-At ξ ≈ 0.62 (with cascade): ΔN_eff^{BBN,cascade} ≈ 0.09 — well within
-the BBN bound. The H₀ shift would be ~4.8 km/s/Mpc from the mirror
-sector, plus ~1 from the thawing dilaton, totaling ~5.8 km/s/Mpc.
+**The combined H₀ shift from all framework mechanisms:**
 
-**The fragility of the combination.** The total ΔH₀ ~ 5.8 km/s/Mpc is
-assembled from three contributions (mirror: ~4.8, dilaton: ~1.0, tower:
-~0.5), each with substantial uncertainty:
+| Mechanism | ΔH₀ (km/s/Mpc) | Uncertainty |
+|-----------|----------------|------------|
+| Mirror brane (ξ = 0.47, BBN limit) | ≤ 1.8 | Depends on ξ (free parameter) |
+| Thawing dilaton (w ~ −0.8) | ~1.0 | Depends on thawing dynamics |
+| KK tower ΔN_eff ~ 0.05 | ~0.3 | Small, well-determined |
+| **Total** | **~3.1** | Combined uncertainty substantial |
 
-- The mirror contribution depends on ξ (free parameter), the cascade
-  factor (inferred, not computed), and the precise mirror thermal history
-  (not calculated)
-- The dilaton contribution depends on the thawing dynamics (§Y.3.6)
-- The tower contribution depends on the active-sterile mixing (bounded
-  but not precisely known)
+The observed gap is 5.6 km/s/Mpc. The framework bridges **~55%** of it
+— significant but insufficient.
 
-The agreement with the observed 5.6 km/s/Mpc gap should be read as
-**order-of-magnitude consistency** — the framework's physics points in
-the right direction with roughly the right magnitude — not as a precise
-prediction. A dedicated numerical analysis fitting all parameters
-simultaneously to CMB + BAO + SNe + BBN data would be needed to make
-a sharp prediction.
+**Honest assessment.** The mirror brane contributes in the right direction
+with a physically motivated mechanism (extra dark radiation from the
+thermally decoupled hidden sector). But the BBN constraint limits ξ to
+0.47, capping the contribution at ~1.8 km/s/Mpc. Combined with the
+thawing dilaton and tower ΔN_eff, the total is ~3.1 km/s/Mpc — about
+half the gap.
 
-**Honest assessment.** The mirror brane mechanism is the framework's most
-promising avenue for the Hubble tension. It uses existing orbifold physics
-(not new assumptions), the cascade loosening is physically motivated (if
-not yet computed for the mirror sector), and the required ξ ~ 0.6 is in
-the range of mirror dark matter models. But the calculation has three
-unverified steps (mirror cascade efficiency, precise mirror ΔN_eff
-coefficient, full CMB fit), and the combination of multiple uncertain
-contributions makes the total fragile. We label this a **speculative
-direction** — not a resolution, not a dead end, but a research program
-with a specific calculation (mirror sector cascade dynamics) that would
-promote or kill it.
+The remaining ~2.5 km/s/Mpc would require either:
+- Physics beyond the minimal orbifold (additional light species, a lighter
+  modulus from the non-abelian extension of Appendix L)
+- A loosening of the BBN constraint from new physics unrelated to the
+  cascade (e.g., modified nuclear reaction rates, non-standard BBN)
+- The Hubble tension being partially resolved by systematic errors in
+  the local distance ladder (some analyses suggest the true tension may
+  be 3-4σ rather than 5σ)
+
+We label this a **speculative direction that bridges ~55% of the gap** —
+not a resolution, but evidence that the framework's physics points in the
+right direction with the right order of magnitude.
 
 ## Y.6 Summary
 
@@ -339,18 +337,16 @@ promote or kill it.
 | Dilaton as EDE (Hubble tension) | **Not viable** (mass mismatch by 10²⁷) |
 | N_eff tension with ACT+SPT | **Rescued** by intra-tower decays (Gonzalo et al. 2024) |
 | S8 tension | **Addressed** by KK dark matter cascade decays |
-| H₀ tension | **Speculative direction** (mirror brane at ξ ~ 0.6 gives ~5 km/s/Mpc; requires unverified cascade dynamics) |
+| H₀ tension | **Partially addressed** (~55% of gap from mirror brane + dilaton + tower; BBN limits ξ < 0.47) |
 
 The framework's cosmological scorecard: dark energy ✓, S8 ✓ (KK cascades),
 N_eff ✓ (tower dynamics), DESI w ~ −0.8 ✓ (thawing dilaton), H₀ tension
-→ speculative direction (mirror brane with cascade loosening, order-of-
-magnitude consistent but not a sharp prediction).
+→ partially addressed (~3.1 of 5.6 km/s/Mpc from combined mechanisms,
+with mirror brane BBN-limited to ξ < 0.47).
 
-The mirror brane mechanism identifies a specific calculation — the cascade
-dynamics of the mirror sector's KK neutrino tower — that would either
-confirm or kill this approach. If the cascade suppression factor matches
-the visible sector (~10×), the framework can accommodate H₀ ~ 73 with
-ξ ~ 0.6. If not, the Hubble tension remains open.
+The framework points in the right direction with roughly half the required
+magnitude. Closing the full gap requires either physics beyond the minimal
+orbifold or a reduction in the observed tension from improved systematics.
 
 ## Y.7 References
 
