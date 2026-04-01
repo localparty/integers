@@ -462,7 +462,10 @@ Section B2.5 as a holonomy of the e-connection around the exchange loop —
 guarantees that it is independent of the specific exchange path, depending
 only on the homotopy class. Any path in the exchange sector, regardless of
 its shape or traversal speed, accumulates the same e-shift sπ per particle,
-because all such paths are homotopic and holonomy is a homotopy invariant.
+because all such paths are homotopic and holonomy is a homotopy invariant —
+this is not a derived property but the *defining* characteristic of holonomy
+on a fiber bundle: the parallel transport around a loop depends only on the
+loop's homotopy class, not on its parameterization (see Nakahara, Ch. 10).
 The phase therefore factors out of the path integral uniformly across all
 paths in the exchange sector:
 

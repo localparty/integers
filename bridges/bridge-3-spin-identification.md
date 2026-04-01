@@ -136,14 +136,29 @@ The eigenstates are e^(inφ) with n ∈ Z + ½, and the eigenvalues are:
 These correspond to particles with half-integer spin.
 
 The anti-periodic boundary condition is not an arbitrary choice — it is forced
-by the spin structure established in Bridge 1. For half-integer spin, the
-particle transforms under the non-trivial element of ker(p) = Z₂ ⊂ Spin(d),
-which acts as multiplication by −1 on the spinor representation. A 2π
-traversal of the e-circle corresponds to this kernel element (Bridge 1,
-Theorem B1.1, Step 1: R̃(2π) = −1 ∈ Spin(d)), and its action on the
-wavefunction gives ψ(φ + 2π) = −ψ(φ). The boundary condition is thus a
-direct CONSEQUENCE of Bridge 1's classification, not an
-independent postulate.
+by the spin structure established in Bridge 1. The mechanism is as follows.
+
+As φ advances from 0 to 2π, the particle completes one full traversal of the
+e-circle. In the frame bundle over the e-circle, this traversal is a closed
+loop. In SO(d), this loop is contractible — the frame returns to itself.
+But when lifted to the double cover Spin(d), the same loop maps to the
+non-trivial element of the kernel: R̃(2π) = −1 ∈ Spin(d) (Bridge 1,
+Theorem B1.1, Step 1). This is the same topological fact that underlies the
+Dirac belt trick — the loop is trivial in SO(d) but non-trivial in its
+double cover.
+
+For a spinorial wavefunction — one that transforms under a half-integer
+representation of Spin(d) — the action of this kernel element is
+multiplication by −1:
+
+    ψ(φ + 2π) = R̃(2π) · ψ(φ) = (−1) · ψ(φ) = −ψ(φ)
+
+For a tensorial wavefunction (integer representation), the kernel element
+acts trivially: ψ(φ + 2π) = (+1) · ψ(φ) = ψ(φ).
+
+The boundary condition is thus a direct CONSEQUENCE of Bridge 1's
+classification — specifically, of whether the representation is faithful to
+the Z₂ kernel of the double cover — not an independent postulate.
 
 ### B3.3.4 The Spin Projection Spectrum
 
