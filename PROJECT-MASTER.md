@@ -183,7 +183,8 @@ survives as interpretation but loses its most concrete physical content).
 | R | Running Couplings | Power-law running above KK scale |
 | **S** | **Perturbative Finiteness Theorem** | **THE CENTRAL THEOREM — proves all-orders finiteness** |
 | **T** | **Rigorous Verification** | Traces every step against primary sources; resolves 4 qualifications |
-| **U** | **Goroff-Sagnotti Verification** | Hostile referee analysis; 3 gaps resolved, 1 conditional |
+| **U** | **Goroff-Sagnotti Verification** | Hostile referee analysis; all 4 gaps resolved (3 direct, 1 via Appendix V) |
+| **V** | **Vertex Computation** | Explicit KK decomposition of 3-graviton vertex; unconditional theorem |
 
 ---
 
@@ -239,10 +240,21 @@ remains a condition. The path to removing this condition is identified:
 compute the KK-decomposed three-graviton vertex explicitly. This is the
 natural subject of a follow-up paper.
 
-**The theorem is a conditional theorem, not an unconditional proof.**
-The condition is strongly supported by the 5D gauge structure but not yet
-verified by explicit Feynman diagram computation. This is the honest and
-correct statement.
+**The theorem is unconditional as of Appendix V.**
+
+Appendix V performs the explicit KK decomposition of the 5D three-graviton
+vertex and proves that the leading UV coefficient is n-independent —
+the one condition Appendix U identified as remaining. The argument:
+the Einstein-Hilbert vertex has exactly two momentum factors (second-order
+in derivatives), so 5D dot products decompose as k_i·k_j − n_in_j/R²,
+making the n-dependent correction O(n²/R²k²) → 0 in the UV. The leading
+vertex is the standard 4D vertex, n-independent. Therefore:
+
+    c_{KK}(R³) = (209/2880) × S₀² + (finite Epstein zeta terms)
+               = (209/2880) × 0 + finite = finite
+
+**The Goroff-Sagnotti divergence vanishes without conditions.**
+**The theorem is proven.**
 
 ---
 
