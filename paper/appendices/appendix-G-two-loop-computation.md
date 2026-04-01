@@ -213,18 +213,40 @@ where χ₃ is the Dirichlet character mod 3.
 
 Using known values: ζ(−1) = −1/12 and L(−1, χ₃) = 1/3:
 
-For the quadratic form Q(n,m) = 2n² + 2m² + 2nm (the sunset form with
-discriminant D = 4×2×2 − 4 = 12, fundamental discriminant −3 after
-removing the common factor 2):
+For the quadratic form Q(n,m) = 2n² + 2m² + 2nm = 2Q₀ where
+Q₀ = n² + nm + m² is the norm form of the Eisenstein integers Z[ω].
+The Epstein zeta factors as E₂(s; Q₀) = 6 ζ(s) L(s, χ₋₃) (since
+Q₀ has discriminant D = −3, class number h = 1, and w = 6 units).
 
-    E₂(−1; Q) = 2 × (2/6) × (−1/12) × (1/3) × (2π/√3) × Γ(3/2+1)/Γ(−1)
-    
-Evaluating via the Chowla-Selberg formula with the known L-function values:
+At s = −1: E₂(−1; Q) = 2 × E₂(−1; Q₀) = 2 × 6 × ζ(−1) × L(−1, χ₋₃).
 
-    **E₂(−1; Q) = −1/18**
+The key: L(−1, χ₋₃) = −B_{2,χ₋₃}/2 where the generalized Bernoulli
+number B_{2,χ₋₃} = 3[χ₋₃(1)B₂(1/3) + χ₋₃(2)B₂(2/3)] = 3[1·(−1/18)
++ (−1)·(−1/18)] = 3 × 0 = 0. The vanishing is exact: B₂(x) = B₂(1−x)
+is symmetric about x = 1/2, and the odd character χ₋₃ pairs a = 1 with
+a = 2 (where 1/3 + 2/3 = 1), annihilating the symmetric polynomial.
 
-(This is finite, negative, and small — confirming that the subleading
-two-loop R³ coefficient is a specific, calculable number.)
+Therefore: **E₂(−1; Q) = 0.**
+
+Moreover, E₂(s; Q₀) = 0 at EVERY negative integer s ≤ −1:
+
+| s | ζ(s) | L(s, χ₋₃) | E₂(s; Q₀) |
+|---|------|-----------|-----------|
+| 0 | −1/2 | 1/3 | −1 |
+| −1 | −1/12 | 0 | **0** |
+| −2 | 0 | −2/9 | **0** |
+| −3 | 1/120 | 0 | **0** |
+| −4 | 0 | 2/3 | **0** |
+
+The mechanism: ζ(−n) vanishes for even n (trivial Riemann zeros), while
+L(−n, χ₋₃) vanishes for odd n (trivial zeros of the odd L-function,
+forced by B_{2k,χ} = 0 for odd characters via the symmetry of Bernoulli
+polynomials). These complementary zeros cover every n ≥ 1.
+
+**This means the subleading Epstein zeta terms for the sunset topology
+ALSO vanish — not just the leading S₀² = 0 term.** The R³ counterterm
+coefficient from the sunset diagram is identically zero at every order
+in the mass expansion, not just at leading order.
 
 ### G.4.3 The Pattern
 
