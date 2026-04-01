@@ -508,3 +508,335 @@ dependence question — will be taken seriously and cited.
 
 The difference between a historic paper and a dismissed one is not the
 strength of the claims. It is the honesty of the qualifications.
+
+---
+
+# Fix Instructions — Reviewed and Approved by Authors
+
+> **For the agent doing the fixes.**
+> Work through this list in the order given. Each item has an explicit
+> instruction. Some items say DO NOT FIX — read those carefully before
+> touching anything. The human will review every change before committing.
+> Do not commit. Do not remove speculative content — label it honestly instead.
+
+---
+
+## CRITICAL FIXES (C1–C7)
+
+### C1 + C7 — Zeta regularization is a choice, not a derived result
+
+**Instruction:** Change the language throughout Appendices F, G, S, T, U, V
+and the abstract where the finiteness is called a "theorem" or presented as
+scheme-independent.
+
+Specific changes:
+- Appendix S, Theorem S.1: Change heading from "Perturbative Finiteness
+  Theorem" to "Perturbative Finiteness Under Zeta Regularization"
+- Appendix S §S.7: Add the following paragraph BEFORE the comparison table:
+  > "The finiteness established here is conditional on zeta regularization
+  > of the KK mode sums. Whether the result is scheme-independent — that is,
+  > whether S₀ = 0 holds in Pauli-Villars, dimensional, or hard-cutoff
+  > regularization — is an open question and the most important problem left
+  > open by this paper. A symmetry argument that uniquely selects zeta
+  > regularization (analogous to modular invariance in string theory) would
+  > convert this result into an unconditional theorem."
+- Abstract paragraph 4: Change "The theory is perturbatively finite and
+  predictive to all orders" to "Under zeta regularization of the KK mode
+  sums, the theory is perturbatively predictive to all orders, with the
+  leading UV divergence vanishing identically and all counterterm
+  coefficients uniquely determined."
+- Do NOT weaken the result itself. The S₀ = 0 calculation and the
+  Epstein-Terras argument remain — just with honest framing.
+
+---
+
+### C2 — Subleading R³ terms: "finite" vs "predictive"
+
+**Instruction:** The subleading Epstein zeta terms give FINITE but NON-ZERO
+coefficients for R³ operators. The theory still requires R³ counterterms,
+but they are determined. Replace "finite" with "predictive" where the
+distinction matters.
+
+Specific changes:
+- Appendix G §G summary table: Change "All-orders: Conjectured finite" to
+  "All-orders: Conjectured perturbatively predictive (counterterm
+  coefficients determined by Epstein zeta values)"
+- Appendix S §S.4 heading: Change "Vanishing of Non-Renormalizable
+  Counterterms" to "Determination of Non-Renormalizable Counterterms"
+- Add one sentence to S §S.4.1: "The leading R³ coefficient vanishes
+  (S₀ = 0). The subleading R³ coefficients are non-zero but finite —
+  they are determined by the Epstein zeta values E_L(−j; Q_L) and require
+  no free parameters. The theory is predictive to all orders, not
+  counterterm-free."
+- Do NOT change the Goroff-Sagnotti vanishing claim — the LEADING
+  coefficient genuinely vanishes. Only clarify that subleading terms exist
+  with determined coefficients.
+
+---
+
+### C3 — "Linearized" qualifier dropped in abstract
+
+**Instruction:** Add the qualifier "linearized" to the abstract and all
+summary statements that describe the finiteness result.
+
+Specific changes:
+- Abstract paragraph 4: Change "The Goroff-Sagnotti R³ counterterm —
+  the two-loop divergence that proved four-dimensional Einstein gravity
+  non-renormalizable in 1986 — vanishes identically" to "The leading
+  coefficient of the Goroff-Sagnotti R³ counterterm, computed for
+  linearized 5D gravity on M⁴ × S¹, vanishes identically under zeta
+  regularization."
+- Appendix S Theorem S.1: Restore the word "linearized" that appears
+  in the formal statement but was dropped in subsequent summaries.
+- Do NOT remove the result. Add the qualifier only.
+
+---
+
+### C4 — All-orders extension: conjecture not theorem
+
+**Instruction:** Downgrade the all-orders claim from "theorem" to
+"conjecture supported by the Epstein-Terras structure."
+
+Specific changes:
+- Appendix K §K.6.1 heading: Change "Conjecture" to "Conjecture
+  (Supported by Two Explicit Loop Calculations)"
+- Appendix K §K.6.2 "Logical Status": Change "This is a structural
+  theorem about the zeta function" to "This is a structural argument
+  about the zeta function, supported by explicit computation at L=1 and
+  L=2, but the reduction of subleading L-loop integrals to Epstein zeta
+  values at non-positive integers has not been established for general L."
+- Appendix S §S.5.3: Remove the claim that Kontsevich-Vishik applies
+  without verification. Replace with: "The multi-loop extension to all
+  orders is conjectured based on the Epstein-Terras pole structure
+  (Appendix K). A rigorous all-orders proof would require verifying that
+  the symbol class conditions of Kontsevich-Vishik (1995) are satisfied
+  for the L-loop gravitational kinetic operator — this verification is
+  left as future work."
+
+---
+
+### C5 — Propagator n-independence: assert vs compute
+
+**Instruction:** Write out the explicit 5D de Donder propagator for KK
+mode n in 5D indices, showing P_{AB,CD} is the same tensor at every
+KK level.
+
+Specific changes:
+- Appendix V §V.2.4: After the sentence "the propagator tensor structure
+  is also n-independent," add the explicit expression:
+  > "In 5D de Donder gauge, the gauge condition ∂^A ĥ_{AB} − ½ ∂_B ĥ = 0
+  > is n-independent (it involves no KK mode number). The resulting
+  > propagator for KK mode n is:
+  > G_{AB,CD}^{(n)}(k) = [η_{A(C}η_{D)B} − (1/(D−1))η_{AB}η_{CD}]
+  >                       × 1/(k² + n²/R²)
+  > The numerator tensor P_{AB,CD} = η_{A(C}η_{D)B} − (1/(D−1))η_{AB}η_{CD}
+  > is the 5D transverse-traceless projector — the same combination of 5D
+  > Kronecker deltas at every KK level n. The n-dependence is confined to
+  > the denominator (k² + n²/R²). This holds in 5D because working in
+  > full 5D indices avoids the 4D Stückelberg decomposition in which
+  > longitudinal polarizations would introduce m-dependent numerator terms."
+- This is a COMPUTATION, not a word change. The propagator expression
+  must be correct. If uncertain, flag it for the authors.
+
+---
+
+### C6 — N_eff tension: acknowledge and discuss
+
+**Instruction:** Add the ACT+SPT+Planck combined measurement to Appendix Q
+and acknowledge the tension explicitly. Do NOT remove the N_eff prediction.
+
+Specific changes:
+- Appendix Q, wherever N_eff is discussed: Add after the Planck 2018 citation:
+  > "The combined ACT DR4 + SPT-3G + Planck analysis (2024–2025) constrains
+  > N_eff = 2.81 ± 0.18, placing the dilaton contribution ΔN_eff ≈ 0.57
+  > in tension at approximately 4.4σ. This tension is resolved if the
+  > dilaton decouples above the neutrino decoupling temperature (~2 MeV),
+  > which requires m_dilaton ≳ few MeV — larger than the meV scale predicted
+  > by the Casimir stabilization. The tension is therefore an indication that
+  > either the dilaton mass is larger than the simple estimate, or the
+  > coupling between the dilaton and the thermal bath is weaker than
+  > gravitational strength. This is an open problem that constrains the
+  > orbifold scenario."
+- Update Appendix H predictions table: Change the N_eff entry status from
+  "Consistent" to "In tension with combined CMB data (4.4σ); resolution
+  requires earlier dilaton decoupling."
+- Do NOT delete the prediction. Label it honestly.
+
+---
+
+## SIGNIFICANT FIXES (S1–S8)
+
+### S1 — Multi-loop factorization
+
+**Instruction:** Add one sentence to Appendix K §K.5 and Appendix T §T.5.2
+noting that the factorization of L-loop integrals into Epstein zeta
+functions is established at L=1,2 and assumed for general L, with the
+overlapping-subdivergence case identified as the key unproven step.
+
+---
+
+### S2 — Bell calculation uses standard QM
+
+**Instruction:** Add one sentence to Appendix C §C.1.5:
+> "The calculation above demonstrates that the 5D framework REPRODUCES
+> the standard quantum mechanical result for entangled spin-½ particles;
+> it does not derive the result from purely geometric axioms independent
+> of the QM formalism. The Born rule derivation (§C.1.1) is a re-derivation
+> within the framework using the e-density postulate."
+Do not change the calculation itself.
+
+---
+
+### S3 — Scalar coupling σ left undetermined
+
+**Instruction:** Add a sentence to Appendix D §D.5.3 noting that σ is
+determined by the minimal KK reduction but not computed in this paper:
+> "The dimensionless coupling σ is determined by the specific way matter
+> couples to the scalar field in the 5D action. For the minimal KK
+> coupling (matter uniformly distributed on the e-circle), σ = 2/3
+> [cite appropriate KK literature]. The computation of σ for
+> brane-localized matter (the orbifold scenario) is left for future work."
+
+---
+
+### S4 — Anti-periodic BC derivation gap
+
+**Instruction:** Add a cross-reference in Appendix E §E.5.1:
+> "The anti-periodic boundary conditions for fermions on the e-circle
+> follow directly from the spin structure (Appendix B.1, §B.1.3): the
+> lift R̃(2π) = −1 ∈ Spin(d) acts as −1 on spinor representations,
+> giving ψ(φ + 2π) = −ψ(φ). The exchange antisymmetry and the boundary
+> condition are therefore two aspects of the same topological fact, not
+> independent assumptions."
+
+---
+
+### S5 — g₅² = 2: DO NOT FIX AS A REMOVAL
+
+**Instruction:** DO NOT remove or silently drop the α derivation.
+The g₅² = 2 identification is a motivated hypothesis. Append to
+Appendix W §W.6 the following honest framing:
+> "The identification g₅² = 2 follows from matching the KK-reduced
+> coupling to the 4D electromagnetic coupling at the Planck scale.
+> This matching is a normalization choice, not a derivation from
+> first principles. A derivation would require computing the overlap
+> integral of the photon zero-mode wave function with the 5D graviton-
+> photon-photon vertex — a calculation identified as future work.
+> The prediction 1/α(0) ≈ 137 should be read as a motivated observation
+> that the geometric coupling 4π² plus SM running gives the right
+> order of magnitude, not as a rigorous derivation."
+Keep the full calculation. Add the caveat.
+
+---
+
+### S6 — α derivation: 8/3 vs 8 generations
+
+**Instruction:** DO NOT remove the α derivation. Add a paragraph to
+Appendix W §W.6 acknowledging the tension:
+> "The factor 8/3 (one-generation contribution) rather than 8
+> (three-generation contribution) is the key assumption in this estimate.
+> In standard QFT, all three generations contribute to the running
+> at the Planck scale since all are far lighter than M_P. The use of
+> 8/3 would be justified if the Z₃ orbifold structure causes the three
+> generations to be geometrically indistinguishable at M_P — that is,
+> if the compactification scale 1/R ≫ M_P, making the individual
+> generation positions on the orbifold unresolvable at the Planck energy.
+> Whether this condition is satisfied in the e-dimension framework is
+> an open question. Readers should treat the 1/α(0) ≈ 137 result as a
+> numerical observation requiring derivation rather than a prediction."
+Keep the full calculation. Add the caveat.
+
+---
+
+### S7 — DESI tension not confronted
+
+**Instruction:** Add a paragraph to Appendix Q noting the DESI DR2 result
+and the thawing dilaton resolution:
+> "DESI DR2 (2025) reports 4.2σ evidence for evolving dark energy with
+> w₀ ≈ −0.75, w_a ≈ −0.75 — in tension with the w = −1 prediction of
+> the static Casimir scenario. A resolution is available: if the
+> e-circle radius (dilaton) is slowly rolling near a shallow minimum
+> of its potential (a 'thawing' quintessence scenario), the equation of
+> state evolves from w ≈ −1 in the past toward w ≈ −0.8 today,
+> consistent with the DESI measurement. In this scenario, α remains
+> constant if the electromagnetic coupling is topological rather than
+> geometric — resolving the apparent tension with quasar α stability
+> bounds. This extension is speculative and identified as future work
+> (see companion document 13-generations-baryogenesis-desi.md in the
+> repository)."
+
+---
+
+### S8 — R-value inconsistency
+
+**Instruction:** Add a paragraph at the beginning of the appendix suite
+(or at the end of Section 2 / start of the appendices preamble) stating:
+> "Two values of the e-circle radius appear in this paper depending on
+> the scenario considered. The CIRCLE scenario (S¹): L ≈ 50–200 μm,
+> R ≈ 8–32 μm, Yukawa range λ ≈ 8–32 μm. All SM fields contribute to
+> the bulk Casimir energy. The ORBIFOLD scenario (S¹/Z₂): R ≈ 12 μm,
+> Yukawa range λ ≈ 12 μm. Only bulk fields (gravity + 3 right-handed
+> neutrinos) contribute. Appendices A–V use the circle scenario.
+> Appendix W uses the orbifold scenario. The predictions in Appendix H
+> are listed under the circle scenario unless otherwise noted."
+
+---
+
+## MINOR FIXES (M1–M5)
+
+### M1 — Ghost counting in Appendix F
+**Instruction:** Complete the ghost DOF count in §F.2.3. In de Donder
+gauge, Faddeev-Popov ghosts for 5D gravity are a 5D vector field minus
+a scalar (the ghost for the ghost). Effective ghost DOF: −(5−1) = −4.
+State N_eff explicitly as a number.
+
+### M2 — Epstein zeta values in Appendix G
+**Instruction:** Compute E₂(−1; Q) for Q = 2n² + 2m² + 2nm explicitly
+using the Chowla-Selberg formula. State the numerical value.
+
+### M3 — Anyon statistics: prediction vs reproduction
+**Instruction:** In Appendix H §H.7, change "predicted" to "reproduced":
+anyons follow from π₁(SO(2)) = Z, established by Leinaas-Myrheim 1977.
+The framework reproduces this; it does not predict it independently.
+
+### M4 — CP² isometry
+**Instruction:** In Appendix L §L.2, add a note: "The isometry group of
+CP² is SU(3)/Z₃ (the quotient of SU(3) by its center), not SU(3) itself.
+This distinction matters for the global structure of the gauge group but
+not for the Lie algebra (which determines the gauge bosons)."
+
+### M5 — Self-correction artifact in Q
+**Instruction:** Find and remove the "wait" thinking-out-loud artifact
+in Appendix Q §Q.4.1. Replace with clean prose.
+
+---
+
+## META-INSTRUCTIONS FOR THE FIXING AGENT
+
+1. **Preserve every speculative result with honest labeling.** If a claim
+   is weak, add a caveat — do not delete. The paper is stronger with an
+   honestly-labeled speculative section than with a gap.
+
+2. **The finiteness result is still the central claim.** Even downgraded
+   to "under zeta regularization," S₀ = 0 is an extraordinary result.
+   Do not bury it, minimize it, or move it out of the abstract.
+
+3. **Do not touch Appendix W's speculative label.** It is already marked
+   speculative throughout. The fixes to W are additive only (adding
+   caveats), never deletions.
+
+4. **The α calculation stays.** Add caveats S5 and S6. Do not remove
+   the calculation or the numerical result.
+
+5. **The N_eff prediction stays.** Add the tension acknowledgment (C6).
+   Do not remove the prediction from Appendix H.
+
+6. **Flag anything uncertain.** If you are unsure whether a fix is
+   correct (especially C5, the explicit propagator), write the proposed
+   text and flag it clearly for author review rather than inserting it
+   blindly.
+
+7. **Do not commit.** Leave all files saved for human review.
+
+8. **Work in order.** C1/C7 first (most important and touches most files),
+   then C2, C3, C4, C5, C6, then S1–S8, then M1–M5.
