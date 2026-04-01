@@ -202,6 +202,15 @@ chirality. A slight asymmetry in the e-dimension — a preferred chirality baked
 into the geometry of the fifth dimension — would produce a matter-dominated
 universe. The universe exists because e-space is slightly right-handed.
 
+**The Dark Dimension convergence.** Vafa et al. (2022) derive, from the
+Swampland Distance Conjecture and the species bound, that quantum gravity
+requires a single large compact dimension at the micrometer scale — with
+KK gravitons as dark matter and Casimir energy as dark energy. Their
+predicted scale (1–30 μm) overlaps with our Casimir prediction (8–32 μm).
+Two independent derivations, from completely different starting points,
+arrive at the same physical setup. The experimental tests (short-range
+gravity, X-ray line searches) will test both simultaneously.
+
 **Dark energy as Casimir energy of the e-circle.** The e-dimension, being compact,
 generates a Casimir (vacuum) energy from quantum fluctuations of the Standard Model
 fields. The boundary conditions on the e-circle are determined by spin: bosons have
@@ -230,10 +239,26 @@ cosmological constant. This scenario is constrained by quasar spectra bounds on
 ~10⁻⁵ of the Hubble rate — too slow to explain dark energy alone unless a symmetry
 protects α while R_e changes.
 
+**The Z₂ orbifold: dark matter, generations, and a testable dark photon.**
+The spin structure of the e-circle (Appendix B) implies a natural Z₂ action
+φ → φ + π. Modding out by this Z₂ produces an orbifold S¹/Z₂ with two
+fixed points: the visible sector at φ = 0 and a geometrically distinct
+hidden brane at φ = π. Matter localized at the hidden brane gravitates
+normally but couples to no SM force — it is dark matter by construction.
+If the hidden brane carries its own U(1)' gauge field, kinetic mixing with
+the SM photon is suppressed by exp(−π) ≈ 0.04 — a 4% mixing at mass
+scale ~10 meV, testable by ALPS-II and IAXO within the next five years.
+Additionally, a conjectured Z₃ symmetry of the e-circle would give three
+visible fixed points, providing a geometric basis for three fermion
+generations. The fine structure constant may be derived from the
+configuration torus area 4π² plus Standard Model running: starting from
+1/α(M_P) = 4π² ≈ 39.5, the three-generation SM running adds ~95,
+giving 1/α(0) ≈ 137. The full treatment is given in Appendix W.
+
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest
-because it gives a concrete testable number; none is established by the arguments
-of this paper.
+because it gives a concrete testable number; the dark photon prediction is the
+most falsifiable in the near term; none is established by the arguments of this paper.
 
 ---
 

@@ -55,4 +55,10 @@ near-future short-range gravity experiments. The framework's mathematical
 structure connects to geometric quantization (Kostant-Souriau), Weyl's gauge
 geometry, and the ER=EPR conjecture, and resolves the Einstein-Bohr debate
 through non-local realism: reality is deterministic in five dimensions, and
-quantum probability is epistemic.
+quantum probability is epistemic. The spin structure of the e-circle implies
+a natural Z₂ orbifold with a hidden brane at φ = π that gravitates but
+couples to no Standard Model force — geometric dark matter. Kinetic mixing
+between the two branes' U(1) gauge fields is predicted at ε ≈ exp(−π) ≈ 0.04,
+testable by ALPS-II and IAXO. The fine structure constant follows from the
+configuration torus area 4π² plus Standard Model running, giving
+1/α(0) ≈ 137 for three generations (Appendix W).
