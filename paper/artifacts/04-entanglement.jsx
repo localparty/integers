@@ -1,0 +1,586 @@
+import { useRef, useEffect, useState, useCallback } from "react";
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#06080f",
+  panelBg: "rgba(7,10,18,0.97)",
+  grid: "rgba(25,45,85,0.3)",
+  particle1: "#ff6090",
+  particle1Glow: "rgba(255,80,130,0.2)",
+  particle2: "#50d4ff",
+  particle2Glow: "rgba(50,200,255,0.2)",
+  eLink: "rgba(180,255,120,0.7)",
+  eLinkGlow: "rgba(160,255,100,0.12)",
+  conserved: "rgba(255,220,60,0.85)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(80,120,170,0.45)",
+  signal: "rgba(255,80,80,0.7)",
+};
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+// Bell state: e1 + e2 = C (constant)
+const E_TOTAL = 0.0; // conserved sum
+
+export default function EntanglementConservation() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({
+    time: 0,
+    e1: 0.5,           // current e-coord of particle 1
+    e2: -0.5,          // current e-coord of particle 2 (= E_TOTAL - e1)
+    measured: false,
+    measureAnim: 0,
+    signalAnim: -1,    // -1 = not showing, 0..1 = animating
+    showSignal: false,
+    separation: 0.35,  // 0..1, how far apart spatially
+  });
+
+  const [e1Val, setE1Val] = useState(50);         // slider: e1 from -100 to 100
+  const [measured, setMeasured] = useState(false);
+  const [separation, setSeparation] = useState(35);
+  const [mode, setMode] = useState("entangled");  // entangled | product | signal
+  const [showESpace, setShowESpace] = useState(true);
+  const [pairType, setPairType] = useState("singlet"); // singlet | triplet
+
+  const e1 = e1Val / 100;
+  const e2 = pairType === "singlet" ? (E_TOTAL - e1) : e1; // singlet: anti-corr, triplet: corr
+
+  const doMeasure = useCallback(() => {
+    const result = (Math.random() - 0.5) * 1.8;
+    setE1Val(Math.round(result * 100));
+    setMeasured(true);
+    stateRef.current.measured = true;
+    stateRef.current.measureAnim = 0;
+    stateRef.current.signalAnim = 0;
+  }, []);
+
+  const reset = () => {
+    setMeasured(false);
+    setE1Val(50);
+    stateRef.current.measured = false;
+    stateRef.current.measureAnim = 0;
+    stateRef.current.signalAnim = -1;
+  };
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width;
+    const H = canvas.height;
+    const s = stateRef.current;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // Animate
+    if (s.measured && s.measureAnim < 1) s.measureAnim = Math.min(1, s.measureAnim + 0.02);
+    if (s.signalAnim >= 0 && s.signalAnim < 1) s.signalAnim = Math.min(1, s.signalAnim + 0.008);
+
+    // ---- LAYOUT ----
+    const infoW = W * 0.25;
+    const mainX = infoW + 8;
+    const mainW = W - mainX - 16;
+    const midY = H * 0.44;
+
+    // Particle positions in screen space
+    const sep = separation / 100; // 0..1
+    const p1x = mainX + mainW * (0.5 - sep * 0.42);
+    const p2x = mainX + mainW * (0.5 + sep * 0.42);
+    const pY = midY;
+
+    // E-axis: draw vertically at each particle's location
+    const eScale = H * 0.22;
+    const eAxisY = pY;
+
+    // ---- BACKGROUND: spacetime ----
+    // Stars/field lines suggesting deep space
+    ctx.save();
+    for (let i = 0; i < 60; i++) {
+      const sx = mainX + ((i * 137.5) % mainW);
+      const sy = ((i * 97.3) % (H * 0.85)) + H * 0.05;
+      const brightness = 0.08 + (Math.sin(i * 2.3 + s.time * 0.2) + 1) * 0.06;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 0.8, 0, TAU);
+      ctx.fillStyle = `rgba(150,180,255,${brightness})`;
+      ctx.fill();
+    }
+    ctx.restore();
+
+    // Spacetime divider label
+    ctx.fillStyle = "rgba(80,120,180,0.2)";
+    ctx.font = "10px 'Courier New'";
+    ctx.fillText("← spatial separation (x,y,z) →", mainX + mainW / 2 - 90, pY + eScale * 1.55);
+
+    // Spatial axis
+    ctx.beginPath();
+    ctx.moveTo(mainX + 20, pY);
+    ctx.lineTo(mainX + mainW - 20, pY);
+    ctx.strokeStyle = "rgba(80,120,180,0.18)";
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 6]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // ---- E-DIMENSION CONNECTION ----
+    // In e-space, even though particles are separated in x,
+    // their e-coordinates are constrained. Show this as a curved arc
+    // connecting them THROUGH the e-dimension (above the spatial plane)
+
+    if (mode === "entangled" && showESpace) {
+      // Draw e-dimension "bridge" as an arc above
+      const arcH = eScale * 1.1 + sep * eScale * 0.8;
+      const arcMidY = pY - arcH;
+
+      // Glow
+      ctx.beginPath();
+      ctx.moveTo(p1x, pY - Math.abs(e1) * eScale);
+      ctx.quadraticCurveTo(
+        (p1x + p2x) / 2, arcMidY - 20,
+        p2x, pY - Math.abs(pairType === "singlet" ? e2 : -e2) * eScale * (e2 > 0 ? 1 : -1) * (e2 < 0 ? -1 : 1)
+      );
+      ctx.strokeStyle = C.eLinkGlow;
+      ctx.lineWidth = 12;
+      ctx.stroke();
+
+      // Main arc
+      ctx.beginPath();
+      ctx.moveTo(p1x, pY - e1 * eScale);
+      ctx.quadraticCurveTo(
+        (p1x + p2x) / 2, arcMidY,
+        p2x, pY - e2 * eScale
+      );
+      ctx.strokeStyle = C.eLink;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([5, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Label on bridge
+      ctx.fillStyle = "rgba(180,255,120,0.65)";
+      ctx.font = "bold 11px 'Courier New'";
+      ctx.fillText(
+        pairType === "singlet" ? "e₁ + e₂ = 0  (conserved)" : "e₁ = e₂  (correlated)",
+        (p1x + p2x) / 2 - 80, arcMidY - 14
+      );
+      ctx.fillStyle = "rgba(140,220,90,0.4)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("connected through e-dimension", (p1x + p2x) / 2 - 75, arcMidY - 1);
+    }
+
+    // ---- E-AXES at each particle ----
+    [
+      { px: p1x, eVal: e1, color: C.particle1, glow: C.particle1Glow, label: "P₁", eLabel: "e₁" },
+      { px: p2x, eVal: e2, color: C.particle2, glow: C.particle2Glow, label: "P₂", eLabel: "e₂" },
+    ].forEach(({ px, eVal, color, glow, label, eLabel }, idx) => {
+      // E-axis line
+      ctx.beginPath();
+      ctx.moveTo(px, eAxisY - eScale * 1.25);
+      ctx.lineTo(px, eAxisY + eScale * 1.25);
+      ctx.strokeStyle = color.replace(")", ",0.3)").replace("rgb(", "rgba(")
+        .replace("#ff6090", "rgba(255,96,144,0.3)")
+        .replace("#50d4ff", "rgba(80,212,255,0.3)");
+      ctx.strokeStyle = idx === 0 ? "rgba(255,96,144,0.3)" : "rgba(80,212,255,0.3)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // E-axis arrow top
+      ctx.beginPath();
+      ctx.moveTo(px, eAxisY - eScale * 1.25);
+      ctx.lineTo(px - 4, eAxisY - eScale * 1.25 + 8);
+      ctx.lineTo(px + 4, eAxisY - eScale * 1.25 + 8);
+      ctx.closePath();
+      ctx.fillStyle = idx === 0 ? "rgba(255,96,144,0.4)" : "rgba(80,212,255,0.4)";
+      ctx.fill();
+
+      // e-axis label
+      ctx.fillStyle = idx === 0 ? "rgba(255,96,144,0.5)" : "rgba(80,212,255,0.5)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("e", px + 6, eAxisY - eScale * 1.2);
+
+      // Zero line
+      ctx.beginPath();
+      ctx.moveTo(px - 12, eAxisY);
+      ctx.lineTo(px + 12, eAxisY);
+      ctx.strokeStyle = "rgba(100,140,200,0.2)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Tick marks
+      [-1, -0.5, 0.5, 1].forEach(tick => {
+        ctx.beginPath();
+        ctx.moveTo(px - 5, eAxisY - tick * eScale);
+        ctx.lineTo(px + 5, eAxisY - tick * eScale);
+        ctx.strokeStyle = "rgba(100,140,200,0.18)";
+        ctx.stroke();
+      });
+
+      // E-coord indicator line
+      const ePy = eAxisY - eVal * eScale;
+      ctx.beginPath();
+      ctx.moveTo(px - 14, ePy);
+      ctx.lineTo(px + 14, ePy);
+      ctx.strokeStyle = idx === 0 ? C.particle1 : C.particle2;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // E value label
+      ctx.fillStyle = idx === 0 ? C.particle1 : C.particle2;
+      ctx.font = "bold 11px 'Courier New'";
+      ctx.fillText(`${eLabel} = ${eVal.toFixed(2)}`, px + 18, ePy + 4);
+
+      // Particle glow
+      const gr = ctx.createRadialGradient(px, pY, 0, px, pY, 30);
+      gr.addColorStop(0, idx === 0 ? "rgba(255,96,144,0.35)" : "rgba(80,212,255,0.35)");
+      gr.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.beginPath();
+      ctx.arc(px, pY, 30, 0, TAU);
+      ctx.fillStyle = gr;
+      ctx.fill();
+
+      // Particle dot
+      ctx.beginPath();
+      ctx.arc(px, pY, 9, 0, TAU);
+      ctx.fillStyle = idx === 0 ? C.particle1 : C.particle2;
+      ctx.fill();
+
+      // Particle label
+      ctx.fillStyle = idx === 0 ? C.particle1 : C.particle2;
+      ctx.font = "bold 13px 'Courier New'";
+      ctx.fillText(label, px - 8, pY + 26);
+
+      // Distance label
+      ctx.fillStyle = "rgba(120,160,210,0.4)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(idx === 0 ? "light-years away →" : "← light-years away", px + (idx === 0 ? -110 : 10), pY + 44);
+    });
+
+    // ---- MEASUREMENT ANIMATION ----
+    if (s.measured && s.measureAnim > 0) {
+      const ma = s.measureAnim;
+
+      // Flash at P1 (measured)
+      const flashR = 40 * ma * (1 - ma) * 4;
+      const flashGr = ctx.createRadialGradient(p1x, pY, 0, p1x, pY, flashR + 20);
+      flashGr.addColorStop(0, `rgba(255,220,60,${0.7 * (1 - ma * 0.6)})`);
+      flashGr.addColorStop(1, "rgba(255,220,60,0)");
+      ctx.beginPath();
+      ctx.arc(p1x, pY, flashR + 20, 0, TAU);
+      ctx.fillStyle = flashGr;
+      ctx.fill();
+
+      // Measurement label at P1
+      if (ma > 0.2) {
+        ctx.globalAlpha = Math.min(1, (ma - 0.2) / 0.3);
+        ctx.fillStyle = C.conserved;
+        ctx.font = "bold 12px 'Courier New'";
+        ctx.fillText(`measured! e₁ = ${e1.toFixed(2)}`, p1x - 60, pY - eScale * 0.4 - 10);
+        ctx.globalAlpha = 1;
+      }
+
+      // Ripple at P2 (instant knowledge, not signal)
+      if (ma > 0.5) {
+        const ma2 = (ma - 0.5) / 0.5;
+        const r2 = 20 + ma2 * 25;
+        const gr2 = ctx.createRadialGradient(p2x, pY, 0, p2x, pY, r2);
+        gr2.addColorStop(0, `rgba(80,212,255,${0.4 * (1 - ma2 * 0.5)})`);
+        gr2.addColorStop(1, "rgba(80,212,255,0)");
+        ctx.beginPath();
+        ctx.arc(p2x, pY, r2, 0, TAU);
+        ctx.fillStyle = gr2;
+        ctx.fill();
+
+        ctx.globalAlpha = ma2;
+        ctx.fillStyle = C.particle2;
+        ctx.font = "bold 12px 'Courier New'";
+        ctx.fillText(`therefore e₂ = ${e2.toFixed(2)}`, p2x - 55, pY - eScale * 0.4 - 10);
+        ctx.globalAlpha = 1;
+      }
+
+      // "No signal traveled" annotation
+      if (ma > 0.85) {
+        ctx.globalAlpha = (ma - 0.85) / 0.15;
+        ctx.fillStyle = "rgba(140,220,100,0.8)";
+        ctx.font = "bold 11px 'Courier New'";
+        const midX = (p1x + p2x) / 2;
+        ctx.fillText("no signal traveled", midX - 55, pY + eScale * 0.6);
+        ctx.fillStyle = "rgba(140,220,100,0.45)";
+        ctx.font = "10px 'Courier New'";
+        ctx.fillText("arithmetic on a conserved quantity", midX - 88, pY + eScale * 0.6 + 16);
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    // ---- SIGNAL comparison (mode === signal) ----
+    if (mode === "signal") {
+      // Draw a "signal" traveling from P1 to P2 to show the difference
+      const signalProgress = ((s.time * 0.18) % 1.4) - 0.2;
+      const sigX = lerp(p1x, p2x, Math.max(0, Math.min(1, signalProgress)));
+      const sigAlpha = signalProgress > 0 && signalProgress < 1.2 ? 0.8 : 0;
+
+      if (sigAlpha > 0) {
+        // Signal dot
+        ctx.beginPath();
+        ctx.arc(sigX, pY - 18, 5, 0, TAU);
+        ctx.fillStyle = `rgba(255,80,80,${sigAlpha})`;
+        ctx.fill();
+
+        // Trail
+        for (let t = 1; t <= 8; t++) {
+          const trailX = sigX - t * (p2x - p1x) / 300;
+          ctx.beginPath();
+          ctx.arc(trailX, pY - 18, 3 - t * 0.3, 0, TAU);
+          ctx.fillStyle = `rgba(255,80,80,${sigAlpha * (1 - t / 9) * 0.4})`;
+          ctx.fill();
+        }
+      }
+
+      // Label
+      ctx.fillStyle = "rgba(255,80,80,0.7)";
+      ctx.font = "bold 12px 'Courier New'";
+      ctx.fillText("⚠  hypothetical signal  ⚠", (p1x + p2x) / 2 - 80, pY - 36);
+      ctx.fillStyle = "rgba(255,80,80,0.4)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("entanglement doesn't work this way — no signal travels", (p1x + p2x) / 2 - 140, pY - 22);
+    }
+
+    // ---- PRODUCT STATE visual ----
+    if (mode === "product") {
+      // No link between them — independent e-values
+      ctx.fillStyle = "rgba(180,160,100,0.5)";
+      ctx.font = "bold 12px 'Courier New'";
+      ctx.fillText("PRODUCT STATE — no e-constraint", mainX + mainW / 2 - 120, pY - eScale * 1.35);
+      ctx.fillStyle = "rgba(160,140,80,0.35)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("e₁ and e₂ are independent. Measuring one tells you nothing about the other.", mainX + mainW / 2 - 180, pY - eScale * 1.18);
+
+      // Strike through the arc
+      ctx.beginPath();
+      ctx.moveTo((p1x + p2x) / 2 - 30, pY - eScale * 0.9);
+      ctx.lineTo((p1x + p2x) / 2 + 30, pY - eScale * 0.6);
+      ctx.strokeStyle = "rgba(255,100,100,0.5)";
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+    }
+
+    // ---- CONSERVATION EQUATION (bottom bar) ----
+    const eqY = H - 44;
+    ctx.fillStyle = "rgba(10,16,30,0.8)";
+    ctx.fillRect(mainX, eqY - 14, mainW, 40);
+    ctx.strokeStyle = "rgba(40,80,140,0.2)";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(mainX, eqY - 14, mainW, 40);
+
+    const eqCx = mainX + mainW / 2;
+    ctx.textAlign = "center";
+
+    if (mode === "entangled") {
+      ctx.fillStyle = "rgba(160,200,240,0.5)";
+      ctx.font = "12px 'Courier New'";
+      ctx.fillText("Conservation law:", eqCx - 160, eqY + 6);
+
+      ctx.fillStyle = C.particle1;
+      ctx.font = "bold 14px 'Courier New'";
+      ctx.fillText(`e₁ = ${e1.toFixed(2)}`, eqCx - 70, eqY + 7);
+
+      ctx.fillStyle = "rgba(180,255,120,0.8)";
+      ctx.font = "bold 14px 'Courier New'";
+      ctx.fillText(pairType === "singlet" ? "+" : "−", eqCx - 16, eqY + 7);
+
+      ctx.fillStyle = C.particle2;
+      ctx.font = "bold 14px 'Courier New'";
+      ctx.fillText(`e₂ = ${e2.toFixed(2)}`, eqCx + 4, eqY + 7);
+
+      ctx.fillStyle = "rgba(180,255,120,0.8)";
+      ctx.font = "bold 14px 'Courier New'";
+      ctx.fillText(`= ${(pairType === "singlet" ? e1 + e2 : e1 - e2).toFixed(2)}  ✓`, eqCx + 72, eqY + 7);
+
+      ctx.fillStyle = "rgba(140,220,90,0.4)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("(Noether: e-translation symmetry → e-conservation)", eqCx + 180, eqY + 7);
+    } else if (mode === "product") {
+      ctx.fillStyle = "rgba(160,140,80,0.6)";
+      ctx.font = "12px 'Courier New'";
+      ctx.fillText("No constraint:  e₁ = anything,  e₂ = anything  —  independent", eqCx, eqY + 7);
+    } else {
+      ctx.fillStyle = "rgba(255,80,80,0.5)";
+      ctx.font = "12px 'Courier New'";
+      ctx.fillText("⚠  A real signal would take time to travel. Entanglement correlations are instant — it's not a signal.", eqCx, eqY + 7);
+    }
+    ctx.textAlign = "left";
+
+    // ---- INFO PANEL ----
+    ctx.fillStyle = C.panelBg;
+    ctx.fillRect(0, 0, infoW, H);
+    ctx.strokeStyle = "rgba(40,80,140,0.2)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(infoW, 0);
+    ctx.lineTo(infoW, H);
+    ctx.stroke();
+
+    const ip = { x: 14, y: 18 };
+
+    ctx.fillStyle = "rgba(180,255,120,0.85)";
+    ctx.font = "bold 13px 'Courier New'";
+    ctx.fillText("ENTANGLEMENT", ip.x, ip.y + 14);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    ctx.fillText("= e-conservation law", ip.x, ip.y + 28);
+
+    // Analogy
+    const anaY = ip.y + 52;
+    ctx.fillStyle = "rgba(140,180,230,0.55)";
+    ctx.font = "bold 10px 'Courier New'";
+    ctx.fillText("ANALOGY:", ip.x, anaY);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    const anaLines = [
+      "Momentum conserved:",
+      "p₁ + p₂ = const",
+      "Measure p₁ → know p₂.",
+      "No signal needed.",
+      "",
+      "E-coord conserved:",
+      "e₁ + e₂ = const",
+      "Measure e₁ → know e₂.",
+      "No signal needed.",
+    ];
+    anaLines.forEach((l, i) => ctx.fillText(l, ip.x, anaY + 14 + i * 14));
+
+    // Key insight
+    const kiY = anaY + 160;
+    ctx.fillStyle = "rgba(180,255,120,0.6)";
+    ctx.font = "bold 10px 'Courier New'";
+    ctx.fillText("KEY INSIGHT:", ip.x, kiY);
+    const kiLines = [
+      "Separated in (x,y,z).",
+      "Still overlapping in e.",
+      "",
+      "They were never truly",
+      "separated in full 5D.",
+      "",
+      "No spookiness.",
+      "Just geometry.",
+    ];
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    kiLines.forEach((l, i) => ctx.fillText(l, ip.x, kiY + 14 + i * 14));
+
+    // Bell note
+    const bellY = kiY + 140;
+    ctx.fillStyle = "rgba(120,160,220,0.4)";
+    ctx.font = "10px 'Courier New'";
+    const bellLines = [
+      "Bell's theorem:",
+      "rules out local",
+      "hidden variables.",
+      "",
+      "e-coord is a",
+      "non-local hidden",
+      "variable → allowed.",
+    ];
+    bellLines.forEach((l, i) => ctx.fillText(l, ip.x, bellY + i * 14));
+
+    s.time += 0.016;
+    animRef.current = requestAnimationFrame(draw);
+  }, [e1, e2, mode, showESpace, measured, pairType, separation]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
+    resize();
+    window.addEventListener("resize", resize);
+    animRef.current = requestAnimationFrame(draw);
+    return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); };
+  }, [draw]);
+
+  const label = {
+    fontSize: 10, letterSpacing: "0.14em", color: "rgba(80,130,180,0.5)",
+    textTransform: "uppercase", fontFamily: "'Courier New', monospace",
+    display: "block", marginBottom: 5,
+  };
+  const btn = (active, col) => ({
+    padding: "5px 12px", fontSize: 11, letterSpacing: "0.06em",
+    fontFamily: "'Courier New', monospace",
+    background: active ? `rgba(${col},0.18)` : "rgba(14,24,46,0.7)",
+    border: `1px solid ${active ? `rgba(${col},0.55)` : "rgba(35,70,130,0.22)"}`,
+    color: active ? `rgba(${col},1)` : "rgba(100,145,195,0.5)",
+    borderRadius: 3, cursor: "pointer",
+  });
+
+  return (
+    <div style={{ background: C.bg, minHeight: "100vh", display: "flex", flexDirection: "column", fontFamily: "'Courier New', monospace", color: C.text, userSelect: "none" }}>
+
+      <div style={{ padding: "15px 26px 9px", borderBottom: "1px solid rgba(35,70,130,0.18)", display: "flex", alignItems: "baseline", gap: 14 }}>
+        <span style={{ fontSize: 11, letterSpacing: "0.18em", color: "rgba(180,255,120,0.4)", textTransform: "uppercase" }}>Quantum Geometry in 5D</span>
+        <span style={{ color: "rgba(50,90,150,0.3)" }}>|</span>
+        <span style={{ fontSize: 13, color: "rgba(185,215,245,0.65)", letterSpacing: "0.05em" }}>Visualization 04 — Entanglement as e-Conservation</span>
+      </div>
+
+      <canvas ref={canvasRef} style={{ flex: 1, width: "100%", display: "block" }} />
+
+      <div style={{ padding: "13px 26px 17px", borderTop: "1px solid rgba(35,70,130,0.15)", display: "flex", flexWrap: "wrap", gap: "15px 30px", alignItems: "flex-start", background: "rgba(6,8,15,0.98)" }}>
+
+        {/* e1 slider */}
+        <div>
+          <span style={label}>e₁ coordinate (drag to set)</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: "rgba(255,96,144,0.5)", width: 24 }}>-1</span>
+            <input type="range" min={-100} max={100} step={1} value={e1Val}
+              onChange={e => { setE1Val(Number(e.target.value)); reset(); }}
+              style={{ width: 160, accentColor: "#ff6090", cursor: "pointer" }} />
+            <span style={{ fontSize: 11, color: "rgba(255,96,144,0.5)", width: 24 }}>+1</span>
+            <span style={{ fontSize: 11, fontFamily: "'Courier New', monospace", background: "rgba(40,10,20,0.4)", border: "1px solid rgba(200,60,100,0.2)", padding: "2px 8px", borderRadius: 3, minWidth: 90, textAlign: "center", color: "rgba(255,130,160,0.8)" }}>
+              e₁={e1.toFixed(2)}, e₂={e2.toFixed(2)}
+            </span>
+          </div>
+        </div>
+
+        {/* Separation */}
+        <div>
+          <span style={label}>Spatial separation</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: C.textDim, width: 28 }}>near</span>
+            <input type="range" min={10} max={80} step={1} value={separation}
+              onChange={e => setSeparation(Number(e.target.value))}
+              style={{ width: 130, accentColor: "#80c0ff", cursor: "pointer" }} />
+            <span style={{ fontSize: 11, color: C.textDim, width: 36 }}>far</span>
+          </div>
+        </div>
+
+        {/* Mode */}
+        <div>
+          <span style={label}>Mode</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            <button onClick={() => setMode("entangled")} style={btn(mode === "entangled", "180,255,120")}>Entangled</button>
+            <button onClick={() => setMode("product")} style={btn(mode === "product", "200,180,80")}>Product state</button>
+            <button onClick={() => setMode("signal")} style={btn(mode === "signal", "255,80,80")}>Signal myth</button>
+          </div>
+        </div>
+
+        {/* Pair type */}
+        <div>
+          <span style={label}>Correlation type</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            <button onClick={() => { setPairType("singlet"); reset(); }} style={btn(pairType === "singlet", "180,255,120")}>Singlet (anti-corr)</button>
+            <button onClick={() => { setPairType("triplet"); reset(); }} style={btn(pairType === "triplet", "80,212,255")}>Triplet (corr)</button>
+          </div>
+        </div>
+
+        {/* Measure */}
+        <div style={{ display: "flex", gap: 8, alignItems: "flex-end", paddingBottom: 1 }}>
+          <button onClick={doMeasure} disabled={measured}
+            style={{ ...btn(!measured, "255,220,60"), opacity: measured ? 0.4 : 1, fontWeight: "bold" }}>
+            ⚡ Measure P₁
+          </button>
+          <button onClick={reset} style={btn(false, "100,150,220")}>↺ Reset</button>
+        </div>
+      </div>
+    </div>
+  );
+}
