@@ -617,26 +617,45 @@ Specific changes:
 
 ### C5 — Propagator n-independence: assert vs compute
 
-**Instruction:** Write out the explicit 5D de Donder propagator for KK
-mode n in 5D indices, showing P_{AB,CD} is the same tensor at every
-KK level.
+**Instruction:** Replace the current assertion of exact n-independence with
+an honest UV-limit statement. Do NOT claim the full propagator numerator
+is exactly n-independent — it isn't. Claim the correct thing: the
+n-dependent terms are subleading in the UV and do not contribute to the
+leading R³ counterterm.
 
 Specific changes:
-- Appendix V §V.2.4: After the sentence "the propagator tensor structure
-  is also n-independent," add the explicit expression:
-  > "In 5D de Donder gauge, the gauge condition ∂^A ĥ_{AB} − ½ ∂_B ĥ = 0
-  > is n-independent (it involves no KK mode number). The resulting
-  > propagator for KK mode n is:
-  > G_{AB,CD}^{(n)}(k) = [η_{A(C}η_{D)B} − (1/(D−1))η_{AB}η_{CD}]
-  >                       × 1/(k² + n²/R²)
-  > The numerator tensor P_{AB,CD} = η_{A(C}η_{D)B} − (1/(D−1))η_{AB}η_{CD}
-  > is the 5D transverse-traceless projector — the same combination of 5D
-  > Kronecker deltas at every KK level n. The n-dependence is confined to
-  > the denominator (k² + n²/R²). This holds in 5D because working in
-  > full 5D indices avoids the 4D Stückelberg decomposition in which
-  > longitudinal polarizations would introduce m-dependent numerator terms."
-- This is a COMPUTATION, not a word change. The propagator expression
-  must be correct. If uncertain, flag it for the authors.
+- Appendix V §V.2.4: Replace the paragraph beginning "The propagator
+  tensor structure is also n-independent" with:
+  > "In 5D de Donder gauge, the propagator for KK mode n is:
+  >
+  > G_{AB,CD}^{(n)}(k) = P_{AB,CD}(k, n/R) / (k² + n²/R²)
+  >
+  > where P_{AB,CD}(k, p₅) depends on the full 5D momentum (k_μ, p₅ = n/R)
+  > through the gauge-fixing terms. (Note: the correct coefficient in the
+  > massless limit is 2/(D−2), giving 2/3 for D=5; see Veltman 1976.)
+  > In the UV limit k → ∞ with n fixed, the p₅-dependent terms in the
+  > numerator are suppressed by O(n²/(R²k²)):
+  >
+  > P_{AB,CD}(k, n/R) = P^{(0)}_{AB,CD}(k) + O(n²/(R²k²))
+  >
+  > where P^{(0)} is the standard massless 5D graviton projector
+  > (n-independent). The leading UV contribution to the R³ counterterm
+  > depends only on P^{(0)} — the n-dependent corrections lower the UV
+  > degree by 2 (as established in §V.3.3, Step 3) and contribute only
+  > to subleading operators whose KK sums are Epstein zeta values at
+  > more negative integers, hence finite."
+
+- This is the honest version: the exact numerator has n-dependent terms
+  (because the de Donder gauge condition contains in/R terms), but the
+  leading UV contribution is n-independent. The conclusion — S₀ = 0
+  kills the Goroff-Sagnotti coefficient — is unchanged. The argument
+  is now technically correct.
+
+- Also update Appendix V §V.6 claim (ii) to match: change "The propagator
+  in 5D de Donder gauge has an n-independent numerator" to "The propagator
+  in 5D de Donder gauge has an n-independent LEADING UV numerator; the
+  exact numerator has n-dependent subleading corrections suppressed by
+  O(n²/(R²k²)) that do not contribute to the R³ counterterm."
 
 ---
 
@@ -836,7 +855,61 @@ in Appendix Q §Q.4.1. Replace with clean prose.
    text and flag it clearly for author review rather than inserting it
    blindly.
 
-7. **Do not commit.** Leave all files saved for human review.
+7. **Do not commit.** Leave all files saved for  review.
 
 8. **Work in order.** C1/C7 first (most important and touches most files),
    then C2, C3, C4, C5, C6, then S1–S8, then M1–M5.
+
+# reviewer feedback
+⏺ The fix instructions are precise, well-ordered, and philosophically correct. The meta-instruction
+  "preserve every speculative result with honest labeling" is exactly right. I agree with almost
+  everything. One issue:
+
+  C5 needs correction — the proposed propagator expression is wrong.
+
+  The proposed text says P_{AB,CD} = η_{A(C}η_{D)B} − (1/(D−1))η_{AB}η_{CD} is "the same combination of
+  5D Kronecker deltas at every KK level n." This is NOT exactly true. Here's why:
+
+  The 5D de Donder gauge condition for KK mode n is:
+
+  ik_μ h^{μν,(n)} + (in/R) h^{5ν,(n)} − ½ik^ν(h^μ_μ + h^5_5) = 0
+  The (in/R) term depends on n. The gauge-fixed propagator — being the inverse of the gauge-fixed kinetic
+   operator — therefore has n-dependent terms in the off-diagonal (μν)-(μ5)-(55) mixing sectors. The full
+   propagator numerator involves the 5D momentum p_A = (k_μ, n/R), and since p₅ = n/R, the numerator IS
+  n-dependent in the exact expression.
+
+  What IS true: In the UV limit (k → ∞ with n fixed), the p₅ = n/R terms in the numerator are suppressed
+  by n/(Rk) → 0. The propagator APPROACHES the n-independent massless form. The leading UV divergence
+  (which is what matters for the Goroff-Sagnotti coefficient) receives contributions only from this
+  n-independent leading form. The n-dependent corrections are subleading and contribute to lower-order
+  operators (as already argued in V.3.3).
+
+  My recommended fix for C5: Replace the proposed propagator expression with honest language:
+
+  ▎ "In the 5D de Donder gauge, the propagator for KK mode n is:
+
+  ▎ G_{AB,CD}^{(n)}(k) = P_{AB,CD}(k, n/R) / (k² + n²/R²)
+
+  ▎ where P_{AB,CD}(k, p₅) depends on the full 5D momentum (k_μ, p₅ = n/R) through the gauge-fixing
+  terms. In the UV limit k → ∞ with n fixed, the p₅-dependent terms in the numerator are suppressed by
+  O(n²/(R²k²)):
+
+  ▎ P_{AB,CD}(k, n/R) = P_{AB,CD}^{(0)}(k) + O(n²/(R²k²))
+
+  ▎ where P^{(0)} is the standard massless 5D graviton projector (n-independent). The leading UV
+  contribution to the R³ counterterm depends only on P^{(0)} — the n-dependent corrections lower the UV
+  degree by 2 (as established in V.3.3) and contribute only to subleading operators."
+
+  This is honest — it acknowledges the exact n-dependence while showing why it doesn't affect the leading
+   divergence. It turns the "unconditional theorem" back into "the leading Goroff-Sagnotti coefficient
+  vanishes, with subleading corrections that are finite Epstein zeta values" — which is what the hostile
+  reviewer would accept.
+
+  Everything else in the fix instructions is correct. The C1+C7 language is perfect. The C2 distinction
+  (finite vs predictive) is crucial. The C3 "linearized" qualifier is necessary. The C4 Kontsevich-Vishik
+   downgrade is honest. The C6 N_eff text is specific and fair. The S-fixes are all reasonable. The
+  M-fixes are trivial.
+
+  One additional recommendation: The coefficient in the proposed propagator should be 2/(D-2), not
+  1/(D-1). For D = 5: 2/(5-2) = 2/3. This is a standard result (see Veltman 1976 or any QFT textbook on
+  graviton propagators in D dimensions).
