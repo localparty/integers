@@ -206,10 +206,26 @@ loop order L. But their coefficients are:
 
     coefficient = (1/ε) × E_L(−p; Q_L) × (coupling constants)
 
-The leading R³ coefficient vanishes (S₀ = 0). The subleading R³ coefficients
-are non-zero but finite — they are determined by the Epstein zeta values
-E_L(−j; Q_L) and require no free parameters. The theory is predictive to
-all orders (all counterterm coefficients determined), not counterterm-free.
+At two loops, the result is stronger than initially expected: the R³
+coefficient is identically zero at every order in the mass expansion — not
+just at leading order (S₀² = 0) but at all subleading orders as well. This
+is because the Epstein zeta values E₂(−j; Q₀) = 6ζ(−j)L(−j, χ₋₃) vanish
+at every j ≥ 1 through the complementary trivial zeros of ζ(s) and
+L(s, χ₋₃) (Appendix G, §G.5). No R³ counterterm is needed at two loops.
+
+At higher loops (L ≥ 3), the epistemic structure is:
+
+- **The leading term S₀^L = 0:** Established at every L (arithmetic:
+  [1 + 2ζ(0)]^L = 0^L = 0).
+- **The subleading Epstein zeta values E_L(−j; Q_L):** Conjectured to be
+  finite at every L (from the Epstein-Terras pole separation, Appendix K),
+  but not computed for L ≥ 3. Whether they vanish (as at L = 2, through
+  complementary trivial zeros) or are merely finite and non-zero is an
+  open question specific to the lattice structure of the L-loop quadratic
+  forms Q_L.
+- **If non-zero:** The counterterm coefficients are uniquely determined by
+  the Epstein zeta values — fixed, not free. The theory is predictive to
+  all orders even if some counterterms are non-zero beyond two loops.
 
 The 1/ε pole is absorbed by the counterterm (as in any renormalization).
 The Epstein zeta value E_L(−p; Q_L) is a SPECIFIC, CALCULABLE number — not

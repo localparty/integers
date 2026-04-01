@@ -34,15 +34,22 @@ the e-circle converts the continuous UV momentum integrals of 4D quantum
 gravity into discrete Kaluza-Klein mode sums that admit zeta regularization.
 The leading UV divergence vanishes identically at every loop order:
 S₀^{(L)} = [1 + 2ζ(0)]^L = 0. The subleading terms are Epstein zeta
-functions evaluated at non-positive integers — always finite by the
-Epstein-Terras theorem, whose unique pole lies at s = L/2 > 0, strictly
-above all evaluation points. In particular, the leading coefficient of the Goroff-Sagnotti R³
-counterterm, computed for linearized 5D gravity on M⁴ × S¹, vanishes
-identically under zeta regularization. Subleading counterterm coefficients
-are finite Epstein zeta values — determined, not free. Under zeta
-regularization of the KK mode sums, the theory is perturbatively predictive
-to all orders, with all counterterm coefficients uniquely determined from
-two parameters: G₄ and the e-circle circumference L.
+functions evaluated at non-positive integers. For the two-loop R³
+counterterm — the Goroff-Sagnotti divergence that proved 4D Einstein
+gravity non-renormalizable in 1986 — the result under zeta regularization
+is stronger than expected: the R³ coefficient is **identically zero at
+every order in the mass expansion**, not just at leading order. The sunset
+topology produces the Epstein zeta of the Eisenstein lattice,
+E₂(s; n²+nm+m²) = 6ζ(s)L(s,χ₋₃), which vanishes at every negative
+integer through complementary trivial zeros of ζ(s) and L(s,χ₋₃). The
+figure-eight and vertex correction topologies vanish independently through
+the trivial zeros of the Riemann zeta at even negative integers (forced
+by the perfect-square structure of KK masses). Ghost contributions, carrying the same
+Eisenstein quadratic form through KK number conservation, vanish by the
+same mechanisms. Under zeta regularization of the KK mode sums,
+the theory is perturbatively predictive to all orders, with counterterm
+coefficients determined from two parameters: G₄ and the e-circle
+circumference L.
 
 The spin structure of the e-circle (bosons periodic, fermions anti-periodic)
 implies a natural Z₂ orbifold with two fixed-point branes. The visible brane

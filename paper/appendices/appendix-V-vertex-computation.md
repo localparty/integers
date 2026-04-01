@@ -377,13 +377,22 @@ For the subleading terms:
 The Goroff-Sagnotti coefficient 209/2880, when computed in the KK theory,
 becomes:
 
-    c_{KK}(R³) = (209/2880) × S₀² + (finite Epstein zeta corrections)
-               = (209/2880) × 0 + (finite)
-               = **finite**
+    c_{KK}(R³) = (209/2880) × S₀² + Σ_j c_j × E₂(−j; Q₀) / R^{2j}
+               = (209/2880) × 0  + Σ_j c_j × 0
+               = **0**
 
-The 1/ε pole proportional to R³ that plagues 4D gravity is ABSENT in the
-KK theory. The R³ counterterm has a finite coefficient (from the subleading
-Epstein zeta terms), not a divergent one.
+The R³ counterterm coefficient is identically zero — not just at leading
+order (S₀² = 0) but at EVERY order in the mass expansion. The subleading
+Epstein zeta values E₂(−j; Q₀) vanish at every j ≥ 1 through the
+complementary trivial zeros of ζ(s) and L(s, χ₋₃) (see Appendix G, §G.4.3
+for the explicit computation). The figure-eight and vertex correction
+topologies also produce zero at every order (from the even-power structure
+of KK masses and the trivial Riemann zeros at ζ(−2j) = 0). Ghost
+contributions vanish by the same mechanisms (same KK spectrum, same
+quadratic form, same zeros).
+
+No R³ counterterm is needed. The Goroff-Sagnotti divergence is not merely
+regulated — it is absent.
 
 ### V.5.3 Why This Is Not the Same as "One-Loop Finite"
 
@@ -420,17 +429,23 @@ from Appendix U. We have shown:
 4. The subleading terms are Epstein zeta values at non-positive integers,
    hence finite. (Section V.3.5)
 
-**Theorem V.1 (Unconditional Vanishing of the Goroff-Sagnotti Divergence).**
+**Theorem V.1 (Complete Vanishing of the Two-Loop R³ Counterterm).**
 
-*The R³ counterterm coefficient in the two-loop effective action of 5D
-gravity on M⁴ × S¹, computed with the 5D background field method in
-de Donder gauge and with KK mode sums regularized by zeta functions, has
-the form:*
+*Under zeta regularization of the KK mode sums, the R³ counterterm
+coefficient in the two-loop effective action of linearized 5D gravity on
+M⁴ × S¹ is identically zero:*
 
-    c_{KK}(R³) = (209/2880) × 0 + Σ_j c_j E₂(−j; Q_j) / R^{2j}
+    c_{KK}(R³) = 0
 
-*The leading Goroff-Sagnotti divergence vanishes (S₀² = 0). The subleading
-terms are finite Epstein zeta values. The R³ counterterm is not needed.*
+*at every order in the mass expansion, from every diagram topology
+(sunset, figure-eight, vertex corrections), for every field type
+(graviton, ghost, graviphoton, dilaton). The vanishing is not a
+cancellation between topologies — each topology independently produces
+zero. The mechanisms are:*
+
+- *Sunset: E₂(−j; Q₀) = 6ζ(−j)L(−j, χ₋₃) = 0 at every j ≥ 1 (complementary trivial zeros)*
+- *Figure-eight: Σ_n n^{2j} = 2ζ(−2j) = 0 at every j ≥ 1 (trivial Riemann zeros at even negative integers)*
+- *Leading term: S₀² = [1 + 2ζ(0)]² = 0 (at j = 0)*
 
 **Proof.** Sections V.2–V.5. Four claims:
 
@@ -448,24 +463,30 @@ terms are finite Epstein zeta values. The R³ counterterm is not needed.*
     n-dependent correction lowers the UV degree by 2, so R³ receives
     contributions only from the n-independent leading terms (V.3.3).
 
-(iv) KK sum: Σ_{n,m} 1 = S₀² = 0. Subleading terms are E₂(−j; Q) at
-    j ≥ 1, finite by the Epstein-Terras theorem (V.3.4–5, Appendix T). ∎
+(iv) KK sum: Σ_{n,m} 1 = S₀² = 0 at j = 0. Subleading terms E₂(−j; Q₀)
+    = 6ζ(−j)L(−j,χ₋₃) = 0 at every j ≥ 1 (complementary trivial zeros
+    of ζ and L; Appendix G, §G.4.3). Figure-eight and vertex corrections:
+    Σ_n n^{2j} = 2ζ(−2j) = 0 at every j ≥ 1 (trivial Riemann zeros).
+    Ghost contributions: same mechanisms (same spectrum, same Q₀). ∎
 
 ---
 
 ## V.7 Updating Appendix S
 
-With the computation of this appendix, the conditional theorem (Appendix S,
-Theorem S.1) becomes unconditional. The statement should be updated to:
+With the computation of this appendix and the verification of the Epstein
+zeta values (Appendix G, §G.4.3), the two-loop result is established:
 
-*"The L-loop effective action for 5D gravity on M⁴ × S¹ is perturbatively
-finite at every order, as established by:*
-- *Explicit vertex computation at two loops (this appendix, Theorem V.1)*
-- *Structural extension to all loops via the Epstein-Terras theorem
-  (Appendix K)*
-- *Rigorous verification of each proof step (Appendix T)"*
+*"Under zeta regularization, the two-loop R³ counterterm coefficient of
+linearized 5D gravity on M⁴ × S¹ is identically zero (Theorem V.1). The
+vanishing is complete — it holds at every order in the mass expansion,
+from every diagram topology, for every field type including ghosts. The
+extension to all loop orders (L ≥ 3) is conjectured based on the
+Epstein-Terras pole structure (Appendix K). The leading term S₀^L = 0
+is established at all L; the subleading terms at L ≥ 3 are conjectured
+finite but have not been computed."*
 
-The word "conditional" is removed. The theorem is unconditional.
+The two-loop result is a theorem (under zeta regularization). The
+all-orders extension is a conjecture.
 
 ---
 

@@ -511,6 +511,23 @@ strength of the claims. It is the honesty of the qualifications.
 
 ---
 
+# Post-Fix Discovery: Complete Two-Loop Vanishing
+
+> **Date:** April 2026 (after all fixes applied)
+> **Finding:** During verification of the Epstein zeta value E₂(−1; Q) for
+> the sunset topology, the originally claimed value −1/18 was found to be
+> INCORRECT. The correct value is **0** — and in fact E₂(−j; Q₀) = 0 at
+> every j ≥ 1, from the complementary trivial zeros of ζ(s) and L(s,χ₋₃).
+> Combined with S₀² = 0 at j = 0, this means the R³ counterterm is
+> **identically zero at every order in the mass expansion** — a stronger
+> result than originally claimed. Ghost contributions verified to vanish
+> by the same mechanisms (same KK spectrum, same quadratic form).
+> Abstract, Appendices G, S, V updated to reflect this stronger result.
+> Critical issue C2 (subleading R³ terms are non-renormalizable) is now
+> RESOLVED: the subleading terms are not merely finite — they are zero.
+
+---
+
 # Fix Instructions — Reviewed and Approved by Authors
 
 > **For the agent doing the fixes.**

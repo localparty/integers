@@ -259,65 +259,96 @@ d = 2, so the pole is at s = 1).
 For the values we need (s = 0, −1, −2, ...), the Epstein zeta function
 is FINITE and takes explicit computable values.
 
-**Therefore, every term in the mass expansion of the two-loop KK sum is
-finite under Epstein zeta regularization.**
+**Therefore, every term in the mass expansion of the two-loop KK sum
+evaluates to zero under Epstein zeta regularization** — not merely finite,
+but identically zero, through the complementary trivial zeros mechanism.
 
 ---
 
-## G.5 The Two-Loop Result
+## G.5 The Two-Loop Result: Complete Vanishing
 
-### G.5.1 Combining the Pieces
+### G.5.1 The R³ Counterterm Is Identically Zero
 
-The two-loop effective action in the KK theory is:
+The two-loop R³ counterterm coefficient in the KK theory is:
 
-    Γ^{(2)}_{KK} = (G₅²/ε²) × [S₀ × c₀ + S₂ × c₂/R² + S₄ × c₄/R⁴ + ...]
-                    × ∫ d⁴x √(−g) R³
+    c(R³) = Σ_{all topologies} Σ_{n,m} [leading + subleading terms]
 
-where each Sₖ is a zeta-regularized double KK sum (finite) and the cₖ are
-the mass expansion coefficients from the 4D momentum integral.
+We have shown that EVERY term vanishes, from EVERY topology:
 
-The 1/ε² pole from the 4D momentum integral remains. But it multiplies a
-FINITE KK sum. In dimensional regularization, the product (1/ε²) × (finite)
-is absorbed by a finite renormalization — it is a RENORMALIZABLE divergence,
-not a non-renormalizable one.
+**Sunset topology (graviton and ghost variants).** The double KK sum produces
+E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃) evaluated at negative integers s = −j (j ≥ 0).
+
+- j = 0 (leading): S₀² = [1 + 2ζ(0)]² = 0. ✓
+- j ≥ 1 odd: L(−j, χ₋₃) = 0 (trivial zeros of odd Dirichlet L-function). ✓
+- j ≥ 2 even: ζ(−j) = 0 (trivial zeros of Riemann zeta). ✓
+
+The complementary zeros cover EVERY j ≥ 0. The sunset contribution is
+identically zero at every order in the mass expansion.
+
+**Figure-eight topology.** Factorizes into products of single KK sums
+Σ_n n^{2j}. Only even powers of n appear (KK masses are n²/R²). These give
+2ζ(−2j), which vanishes for all j ≥ 1 (trivial Riemann zeros at even
+negative integers). The j = 0 term gives S₀ = 0. Every factor is zero;
+the product is zero at every order.
+
+**Vertex corrections.** Single KK sum with the same zero structure as each
+figure-eight factor. Zero at every order.
+
+**Ghost contributions.** The Faddeev-Popov ghosts c^A in 5D de Donder gauge
+are vector fields (integer spin), hence periodic on S¹ with KK masses
+m_n = |n|/R — the same spectrum as the graviton. The ghost-ghost-graviton
+vertex conserves KK number (n₁ + n₂ + n₃ = 0) because it derives from
+the gauge variation of the de Donder condition, which is built from
+covariant derivatives on S¹ — the same U(1) isometry that enforces KK
+conservation at all vertices. In the ghost-graviton sunset, the three
+internal lines carry KK numbers n, m, −(n+m) with masses |n|/R, |m|/R,
+|n+m|/R — producing the same quadratic form Q = 2(n² + nm + m²) = 2Q₀
+as the pure graviton sunset (because the form depends only on the KK
+number assignment from conservation, not on which field type propagates
+on each line). The ghost Epstein zeta is therefore the same
+E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃), which vanishes at every negative integer.
+The (−1) sign from the Grassmann functional integral multiplies zero.
 
 ### G.5.2 Comparison with 4D
 
-In 4D (no compactification), the two-loop divergence is:
+| | 4D Einstein gravity | 5D KK gravity (under zeta reg.) |
+|---|---|---|
+| Two-loop R³ coefficient | 209/2880 ≠ 0 | **0 (identically, all orders)** |
+| Mechanism | No cancellation | Complementary trivial zeros |
+| Counterterm needed? | Yes (non-renormalizable) | **No** |
 
-    Γ^{(2)}_{4D} = (G₄²/ε) × (209/2880) × ∫ R³
+In 4D gravity, the Goroff-Sagnotti coefficient 209/2880 is non-zero — it
+requires an R³ counterterm that cannot be absorbed into the Einstein-Hilbert
+action, proving non-renormalizability.
 
-This requires an R³ counterterm — non-renormalizable.
+In the 5D KK theory under zeta regularization, the coefficient is zero —
+not approximately, not at leading order only, but identically zero at every
+order in the mass expansion, from every diagram topology, for every field
+type (graviton, ghost, graviphoton, dilaton). No R³ counterterm is needed.
 
-In the 5D KK theory, the corresponding expression is:
+### G.5.3 Why the Vanishing Is Complete
 
-    Γ^{(2)}_{KK} = (G₅²/ε²) × [0 × c₀ + E(−1) × c₂/R² + ...] × ∫ R³
+The complete vanishing rests on three independent structural facts:
 
-The LEADING term (the one that gives the Goroff-Sagnotti divergence)
-vanishes because S₀ = 0. The remaining terms are suppressed by powers of
-1/R² and multiplied by finite Epstein zeta values.
+1. **S₀ = 0:** The zeta-regularized KK mode count vanishes. This kills the
+   leading (mass-independent) term at every loop order.
 
-**The Goroff-Sagnotti divergence is ABSENT in the KK theory** (its
-coefficient vanishes under zeta regularization). The surviving divergences
-are subleading (suppressed by KK masses) and finite in number (the mass
-expansion terminates by dimensional analysis at finite order).
+2. **Perfect-square mass structure:** KK masses are m_n² = n²/R², so only
+   EVEN powers of n appear in the mass expansion. The single KK sums are
+   ζ(−2j) = 0 for all j ≥ 1 (trivial Riemann zeros at negative even
+   integers). This kills the figure-eight and vertex correction subleading
+   terms.
 
-### G.5.3 The Result
+3. **Complementary L-function zeros:** For the sunset topology, the double
+   KK sum factorizes through the Eisenstein lattice into ζ(s) × L(s, χ₋₃).
+   The trivial zeros of ζ (at even negative integers) and L (at odd negative
+   integers) are COMPLEMENTARY — together they cover every negative integer.
+   This kills the sunset subleading terms.
 
-**The two-loop effective action for 5D gravity on M⁴ × S¹ is finite under
-combined dimensional and Epstein zeta regularization.** The specific
-mechanism:
-
-1. The leading Goroff-Sagnotti term has coefficient S₀ = [ζ(0)]² = 0
-   (it vanishes because the KK sum of a constant is zero under zeta
-   regularization).
-
-2. The subleading terms have coefficients given by Epstein zeta functions
-   at non-positive integers, all of which are finite.
-
-3. The 4D momentum divergences (1/ε poles) multiply finite KK sums,
-   producing renormalizable (absorbable) divergences rather than the
-   non-renormalizable R³ counterterm of 4D gravity.
+**The vanishing is not a cancellation.** Each individual diagram, each field
+combination, each order in the mass expansion independently produces zero.
+No fine-tuning or delicate balance between different contributions is
+required.
 
 ---
 
@@ -437,12 +468,12 @@ compactness of the e-dimension.
 
 ## G.8 Summary
 
-| Loop order | 4D gravity | 5D KK gravity (this paper) |
+| Loop order | 4D gravity | 5D KK gravity (under zeta reg.) |
 |-----------|-----------|---------------------------|
 | 1-loop | Finite (on-shell) | Finite (zeta regularization) |
-| 2-loop | **Divergent** (Goroff-Sagnotti R³) | **Finite** (S₀ = 0; Epstein zeta) |
-| L-loop | Increasingly divergent (R^{L+1} terms) | **Conjectured finite** (S₀^L = 0; Epstein zeta) |
-| All orders | Non-renormalizable | **Conjectured perturbatively finite** |
+| 2-loop | **Divergent** (Goroff-Sagnotti R³) | **R³ coefficient = 0** (all orders in mass expansion) |
+| L-loop | Increasingly divergent (R^{L+1} terms) | **Conjectured predictive** (S₀^L = 0; Epstein zeta) |
+| All orders | Non-renormalizable | **Conjectured perturbatively predictive** |
 
 The compact e-circle — the same geometric object that produces quantum
 mechanics (Sections 3-4), the spin-statistics theorem (Appendix B), and
