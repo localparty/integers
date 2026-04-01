@@ -2,7 +2,7 @@
 
 > **For the agent doing the LaTeX conversion.**
 > Read this file completely before writing a single line of LaTeX.
-> The human will review all output before submitting to arXiv.
+> G will review all output before submitting to arXiv.
 
 ---
 
