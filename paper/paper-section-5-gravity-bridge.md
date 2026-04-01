@@ -1,16 +1,5 @@
 # Section 5 — Toward Quantum Gravity: The e-Space Bridge
 
-> **Status:** First full draft
-> **Audience:** Advanced undergraduates, graduate students, theoretical physicists
-> **Goal:** Propose a specific, geometrically-motivated approach to quantum gravity
-> that emerges naturally from the 5D framework. Frame it explicitly as a research
-> program — not a completed theory. Show the first concrete correspondences.
-> Make the case that this entry point is genuinely new and has not been explored.
->
-> **Tone:** Bold but honest. Every claim is labeled: derived, proposed, or speculative.
-> The section ends with a clear statement of what needs to be shown — an open
-> invitation, not an overclaim.
-
 ---
 
 ## 5.1 The Problem With Every Previous Approach
@@ -474,47 +463,3 @@ geometric object — the e-bundle P(M⁴, U(1)) — that both quantum mechanics
 and general relativity describe, and to have shown that its quantum theory
 is one-loop finite. The two-loop calculation is the door. What lies on the
 other side is the work ahead.**
-
----
-
-## Notes for Revision
-
-- [ ] Section 5.3 comparison table with Kaluza-Klein needs one more column:
-      "Standard Model" — to note that our framework, unlike KK, does not yet
-      address the SU(2) × SU(3) gauge structure of the strong and weak forces.
-      Be honest about this gap.
-
-- [ ] Section 5.5 (equivalence principle) is the weakest section — the argument
-      that "e-curvature from mass and e-tilt from acceleration are locally identical"
-      needs to be made more precise. What is the mathematical statement of this
-      identity? This needs work before submission.
-
-- [ ] Section 5.6 (ER=EPR) should cite: Maldacena & Susskind (2013) "Cool horizons
-      for entangled black holes"; Van Raamsdonk (2010) "Building up spacetime with
-      quantum entanglement" — the latter is essential background.
-
-- [ ] Add a paragraph to Section 5.8 on **dark energy**: if the e-dimension is
-      expanding (its circumference growing with cosmic time), this would produce
-      an accelerating expansion of the universe — dark energy as e-space expansion.
-      This is speculative but too compelling to leave out entirely. Flag clearly.
-
-- [ ] The three Claims in Section 5.7 should each have an estimated mathematical
-      difficulty level, so a reader knows which to attempt first. Suggested:
-      Claim 1 = hard but tractable (6-12 months), Claim 2 = follows from Claim 1,
-      Claim 3 = very hard, requires new ideas.
-
-- [ ] Cross-reference back to the Aharonov-Bohm section: the gravitational field
-      equations we are looking for are the gravitational analog of Maxwell's
-      equations, which in our framework are the e-bundle curvature equations.
-      The parallel structure should be made explicit.
-
-- [ ] Consider a figure: the e-fiber as a circle attached to every spacetime point,
-      tilted and curved near a massive object, with a particle's helical path
-      bending in response — this is the visual analog of the shadow metaphor
-      for gravity.
-
----
-
-*Word count (draft): ~3,100 words*
-*Target for final section: ~2,000 words (tighten 5.1 history, condense 5.4-5.5,
-keep 5.7 claims in full detail, keep 5.9 summary)*

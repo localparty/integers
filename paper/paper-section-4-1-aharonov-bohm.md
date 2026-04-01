@@ -1,12 +1,5 @@
 # Section 4.1 — The Aharonov-Bohm Effect as e-Space Topology
 
-> **Status:** First full draft
-> **Audience:** Advanced undergraduates, graduate students, foundations of physics researchers
-> **Goal:** Show that the Aharonov-Bohm effect is not mysterious — it is the direct
-> geometric signature of e-space topology cast onto 4D. This is the first place the
-> framework makes a claim stronger than reinterpretation: it explains *why* the
-> vector potential is physically real, which standard QM asserts but cannot explain.
-
 ---
 
 ## 4.1.1 The Problem: A Field That Isn't There
@@ -264,23 +257,3 @@ geometric postulate that the e-dimension is a circle. The Aharonov-Bohm effect
 and the Pauli exclusion principle are cousins — different manifestations of the
 same underlying e-space topology.
 
----
-
-## Notes for Revision
-
-- [ ] Add experimental references: Chambers (1960), Tonomura et al. (1986)
-- [ ] Add one figure: schematic showing solenoid as topological defect in e-space,
-      with the two electron paths winding around it
-- [ ] Section 4.1.5 (generalization to all gauge fields) may be too ambitious for
-      the first paper — consider moving to Section 6 (Connections to Modern Physics)
-      or flagging explicitly as speculative extension
-- [ ] The formal statement in 4.1.6 uses fiber bundle language — ensure Section 2
-      has introduced U(1) bundles sufficiently that this is not the first encounter
-- [ ] Cross-reference to visualization 01 (shadow/projection) for the holonomy
-      intuition, and potentially build a 6th visualization showing the solenoid
-      as topological defect
-
----
-
-*Word count (draft): ~1,850 words*
-*Target for final section: ~1,000 words (condense 4.1.1–4.1.5, keep 4.1.6 formal statement, keep 4.1.7 table)*

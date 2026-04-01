@@ -1,11 +1,5 @@
 # Section 8 — Conclusion
 
-> **Status:** First full draft
-> **Goal:** Close cleanly. Summarize what was established versus proposed versus
-> speculative. State the open problems as invitations, not admissions of failure.
-> End with the sentence the paper will be remembered by. No new claims here —
-> just the honest accounting of what was built.
-
 ---
 
 ## 8.1 What This Paper Has Established
@@ -225,8 +219,3 @@ mathematics of quantum mechanics feel, for the first time, inevitable.
 Einstein wanted the universe to be comprehensible. The five-dimensional
 framework suggests that it is — just one dimension deeper than we thought.
 
----
-
-*Word count (draft): ~1,200 words*
-*Target for final section: ~1,000 words — this is close to final length already.
-Trim 8.1 summary bullets slightly in revision; keep 8.4 closing verbatim.*

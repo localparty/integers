@@ -1,16 +1,5 @@
 # Section 5.X — The Quantization Bridge: Why Quantum Mechanics Is Already 5D Gravity
 
-> **Status:** First full draft — new section, elevates the paper's central claim
-> **Placement:** Immediately before Section 5.7 (The Mathematical Program)
-> **Goal:** State explicitly what Appendices D, E, F, and G establish: the
-> e-dimension is already quantized (that's QM), it already governs gravity
-> (that's GR via Appendix D), and the quantum corrections to 5D gravity are
-> finite at one loop (Appendix F) and two loops (Appendix G) under zeta
-> regularization — with the all-orders conjecture following from the same
-> mechanism. This is the bridge between quantum mechanics and general
-> relativity. State it as a conjecture — bold, precise, and honest about
-> what remains.
-
 ---
 
 ## 5.X The Quantization Bridge
@@ -304,36 +293,3 @@ geometric object: the e-bundle P(M⁴, U(1)). The equation connecting them
 is the 5D Einstein equation on this bundle. What remains is showing that
 its quantization is finite.*
 
----
-
-## Notes for Integration
-
-- [ ] This section should be placed as Section 5.X immediately before
-      Section 5.7 (The Mathematical Program). It motivates why Section 5.7's
-      claims matter.
-
-- [ ] The four-step argument (5.X.2) should be cross-referenced in the
-      abstract and conclusion — this is the paper's most important claim and
-      should appear in all summary-level writing.
-
-- [ ] Section 5.X.5 (what we do NOT claim) is essential. Do not remove it
-      under any pressure to make the paper sound more decisive. The honesty
-      is what makes the bold claim credible.
-
-- [ ] The closing paragraph of 5.X.6 ("the calculation most worth doing
-      in theoretical physics right now") is deliberately bold. It is earned
-      by everything that precedes it. Keep it.
-
-- [ ] Update Section 5.9 summary to reflect that the quantization bridge
-      is now a named conjecture with one-loop support, not just a speculative
-      direction.
-
-- [ ] Update Section 8 conclusion to name the two-loop calculation as the
-      primary open problem of the paper — more prominent than the Casimir
-      bound or Claim 2.
-
----
-
-*Word count: ~2,200 words*
-*This section is complete as written. It does not need condensing —
-every paragraph is load-bearing.*

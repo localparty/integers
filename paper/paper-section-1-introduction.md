@@ -1,11 +1,5 @@
 # Section 1 — Introduction
 
-> **Status:** First full draft
-> **Goal:** Establish the problem, motivate the framework, state the claims,
-> and give the reader a roadmap. By the end of this section, a physicist should
-> know exactly what the paper argues, why it matters, and whether to keep reading.
-> The shadow metaphor appears here for the first time — it must land immediately.
-
 ---
 
 ## 1.1 The Calculation Problem
@@ -34,7 +28,7 @@ This response is pragmatically successful and intellectually unsatisfying in equ
 measure. It has produced a century of correct predictions and a century of
 unresolved confusion about what those predictions are telling us about reality.
 
-The present paper takes a different approach. We propose that quantum mechanics is
+We take a different approach. We propose that quantum mechanics is
 not mysterious. Its apparent strangeness is a consequence of observing a
 five-dimensional reality from a four-dimensional perspective. When the missing
 dimension is restored, every quantum phenomenon becomes ordinary geometry.
@@ -284,49 +278,3 @@ limit, that mass distorts the local e-circle radius, and that gravity, electroma
 and a scalar field unify in the single 5D metric. Claim 1 of Section 5.7 is
 confirmed by explicit calculation.
 
----
-
-## Notes for Revision
-
-- [ ] Section 1.1 opening — consider whether "shut up and calculate" attribution
-      should be footnoted. The phrase is commonly attributed to Feynman but likely
-      originated with Mermin (1989). Either way, the sentiment is accurately
-      attributed to the Copenhagen tradition.
-
-- [ ] Section 1.3 (previous interpretations) — the treatment of Many Worlds,
-      Bohmian mechanics, and Copenhagen needs to be scrupulously fair. Current
-      draft may be slightly too dismissive of Bohmian mechanics — its non-locality
-      is a feature, not a bug, for many of its proponents. Soften slightly.
-
-- [ ] Section 1.5 — the three-level structure (established / proposed / speculative)
-      should use consistent language throughout the paper. Choose the exact three
-      terms and use them without variation. Current candidates:
-      "established within the framework" / "proposed" / "speculative" — good,
-      keep these.
-
-- [ ] Section 1.6 (pedagogy and truth) — this is unusual for a physics paper and
-      may read as hedging to some reviewers. Consider whether it belongs in the
-      introduction or should be moved to the conclusion. Argument for keeping it
-      here: it sets honest expectations from the start and pre-empts the objection
-      "this is just interpretation." Argument for moving it: it slows the pace of
-      a section that should build momentum. Decision: keep it, but tighten.
-
-- [ ] The Bell's theorem paragraph in Section 1.3 needs citations: Bell (1964)
-      original paper, Aspect, Grangier & Roger (1982) first loophole-free test,
-      Hensen et al. (2015) definitive loophole-free Bell test. These are essential.
-
-- [ ] Consider adding one sentence in Section 1.4 connecting to existing
-      mathematical literature: "The mathematical structure we propose — a U(1)
-      principal bundle over four-dimensional spacetime — is well-established in
-      differential geometry and gauge theory; what is new is the physical
-      interpretation we assign to it." This preempts the objection that we are
-      simply redescribing standard gauge theory.
-
-- [ ] The roadmap in Section 1.7 should exactly match the final section structure.
-      Update after all sections are drafted.
-
----
-
-*Word count (draft): ~2,300 words*
-*Target for final section: ~1,800 words (tighten 1.3 history, condense 1.5 claims
-list — detailed claims belong in each section, introduction just needs the headlines)*

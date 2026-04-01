@@ -1,12 +1,5 @@
 # Section 2 — The Five-Dimensional Framework
 
-> **Status:** First full draft
-> **Goal:** Establish the formal structure of the framework precisely enough that
-> Sections 3, 4, and 5 can reference it without re-explanation. Introduce the
-> e-dimension's properties, the projection postulate, and the wave function as
-> geometry. Connect to existing mathematical structures (U(1) fiber bundles) without
-> requiring the reader to know that theory. Short, precise, load-bearing.
-
 ---
 
 ## 2.1 Five Coordinates
@@ -324,46 +317,3 @@ framework. Sections 3 through 5 derive their content from these postulates alone
 
 ---
 
-## Notes for Revision
-
-- [ ] Section 2.5 (fiber bundles) is currently written as an optional aside for
-      technically sophisticated readers. Consider whether it should be more
-      integrated into the main text, or kept as a clearly-marked technical box.
-      Current approach (main text accessible, technical paragraph clearly flagged)
-      is probably correct for the target journal — keep.
-
-- [ ] Section 2.6 (why five dimensions) addresses string theory explicitly.
-      This comparison needs to be careful — string theory has a much more
-      elaborate justification than we have space to engage with. The key
-      distinction (our e-dimension is observable at all scales vs. Planck-scale
-      compactification) is correct and should be kept, but we should not be
-      dismissive. Add one sentence acknowledging string theory's different goals.
-
-- [ ] The four postulates in Section 2.7 are the most important writing in this
-      section — they should be in a clearly formatted box or numbered list so
-      they are impossible to miss. In the final typeset version, these should
-      be visually distinct.
-
-- [ ] Section 2.4 — the identification of the wave function's phase with the
-      e-coordinate is the central mathematical claim of the framework. It needs
-      one more sentence connecting to the standard quantum mechanics literature:
-      specifically, the path integral formulation (Feynman) already treats the
-      phase as a geometric quantity (the action along a path). Our framework
-      extends this by treating the phase as a coordinate rather than an
-      accumulated quantity along a path.
-
-- [ ] Add a small table at the end of Section 2.4 mapping between standard QM
-      language and 5D geometric language — a mini-version of the full dictionary
-      in Appendix A. This helps readers track the translation as they read
-      Sections 3-5.
-
-- [ ] Cross-reference: Section 2.2.2 (observable only through relationships)
-      should explicitly forward-reference Section 4.1 (Aharonov-Bohm) as the
-      place where "observable through relationships" gets its strongest
-      experimental grounding.
-
----
-
-*Word count (draft): ~1,900 words*
-*Target for final section: ~1,500 words (tighten 2.2 properties, condense 2.5
-fiber bundle paragraph, keep 2.7 postulates in full)*

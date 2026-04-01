@@ -1,13 +1,5 @@
 # Section 3 — Five Quantum Phenomena Reinterpreted
 
-> **Status:** First full draft
-> **Goal:** Apply the 5D framework systematically to five quantum phenomena.
-> Each subsection follows the same structure: (1) the phenomenon as standard QM
-> states it, (2) the 5D geometric picture, (3) the mathematical correspondence,
-> (4) what this resolves. By the end of this section, the reader should feel that
-> quantum mechanics is not weird — it is simply geometry seen from the wrong
-> dimensionality.
-
 ---
 
 ## Preamble
@@ -522,48 +514,3 @@ in Sections 2.4 and the individual subsections above.
 
 The complete translation between standard quantum mechanics and the 5D geometric
 framework is given in Appendix A.
-
----
-
-## Notes for Revision
-
-- [ ] Each subsection currently ends with a "What This Resolves" block. This
-      structure is deliberate — it makes explicit for each phenomenon what the
-      5D picture adds over the standard account. Keep this structure in final
-      draft; it will be appreciated by both pedagogically-oriented readers and
-      by reviewers who want to know precisely what the paper claims.
-
-- [ ] Section 3.3 (momentum) — the tunneling and zero-point energy paragraphs
-      are a bonus that flows naturally from the helix picture. Consider whether
-      these should be their own subsections (3.3a, 3.3b) or remain embedded.
-      Current treatment as part of the mathematical correspondence paragraph
-      is probably right — they are corollaries, not new phenomena.
-
-- [ ] Section 3.5 (measurement) — the statement "The Born rule follows from
-      the projection postulate and normalization" is made but not derived.
-      This should either be derived explicitly (a few lines) or flagged more
-      carefully as a claim rather than a result. For the first paper, flagging
-      is probably appropriate; derivation goes in the technical second paper.
-
-- [ ] The summary table in Section 3.6 is essentially a condensed version of
-      Appendix A (the full quantum-geometry dictionary from your original
-      document 07). The appendix should be the full version; Section 3.6 keeps
-      the most important rows. Make sure the two are consistent.
-
-- [ ] Cross-references to Sections 4.1, 4.2, and 5 should be added where
-      phenomena previewed here are treated more rigorously later:
-      - End of 3.2 (entanglement): "The topological structure of this connection
-        is developed in Section 4.1 (Aharonov-Bohm) and Section 5.6 (ER=EPR)"
-      - End of 3.4 (spin): "The winding number picture of spin is formalized
-        and used to derive the spin-statistics theorem in Section 4.2"
-
-- [ ] Consider adding one sentence at the start of the preamble naming the
-      five phenomena explicitly, so a reader can see the structure at a glance
-      before reading the subsections.
-
----
-
-*Word count (draft): ~3,400 words*
-*Target for final section: ~2,500 words (tighten each subsection by removing
-any remaining informality from the source documents, condense mathematical
-correspondence paragraphs, keep all four structural elements per subsection)*

@@ -1,13 +1,5 @@
 # Section 7 — Philosophical Resolution
 
-> **Status:** First full draft
-> **Goal:** Show that the 5D framework resolves the century-old Einstein-Bohr
-> debate — not by picking a side, but by showing that both sides were right about
-> different things. Establish the framework's philosophical position precisely:
-> non-local realism, epistemic probability, determinism at the 5D level.
-> Keep this section tight and substantive — philosophy earns its place here
-> by resolving specific technical debates, not by adding vague reflection.
-
 ---
 
 ## 7.1 The Einstein-Bohr Debate Revisited
@@ -242,9 +234,3 @@ are genuinely limited to four-dimensional observations of it. The universe is no
 playing tricks on us. We have simply been watching shadows and mistaking them for
 the whole.
 
----
-
-*Word count (draft): ~1,700 words*
-*Target for final section: ~1,400 words (tighten 7.2 and 7.3 by condensing
-the parallel four-point structures, keep 7.4 synthesis and 7.5 probability
-sections in full)*

@@ -1,12 +1,5 @@
 # Section 6 — Connections to Modern Theoretical Physics
 
-> **Status:** First full draft
-> **Goal:** Show that the 5D framework is not isolated — it connects naturally
-> to several of the most active research areas in theoretical physics. Each
-> connection is labeled by confidence level: natural consequence, consistent
-> with, or speculative. This section positions the framework within the landscape
-> of modern physics and identifies potential collaborators and critics.
-
 ---
 
 ## 6.1 ER=EPR: The e-Dimension as Wormhole
@@ -265,8 +258,3 @@ framework proposes one universe with five dimensions. Different measurement
 outcomes correspond to different e-slices of one five-dimensional reality —
 not to parallel four-dimensional realities. The ontology is radically different.
 
----
-
-*Word count (draft): ~1,500 words*
-*Target for final section: ~1,200 words (tighten 6.3, condense 6.5 speculative
-list to four items, keep 6.4 Bell discussion in full)*

@@ -1,12 +1,5 @@
 # Section 4.2 — The Spin-Statistics Theorem from Winding Number Topology
 
-> **Status:** First full draft
-> **Audience:** Advanced undergraduates, graduate students, foundations of physics researchers
-> **Goal:** Derive — not postulate — the connection between spin and statistics from
-> a single geometric fact about the e-dimension. Show that Feynman's "freshman level"
-> proof exists, and that it lives in 5D topology. This is the paper's central
-> original claim.
-
 ---
 
 ## 4.2.1 The Problem: A Theorem Nobody Can Explain
@@ -474,31 +467,3 @@ particle statistics arise on the surface of a torus, or a Möbius strip, or a
 higher-genus surface? The winding-number framework makes this a well-posed geometric
 question, opening a new direction for investigation.
 
----
-
-## Notes for Revision
-
-- [ ] Add figure: two helices (integer and half-integer winding) side by side,
-      with exchange path shown in e-space — the key visual for this section
-- [ ] Section 4.2.3 invokes representation theory of SU(2) — ensure this is
-      introduced gently enough for the target audience; consider a one-paragraph
-      non-technical version followed by the formal statement
-- [ ] The "one paragraph" summary in 4.2.6 should become the abstract-level
-      statement that gets quoted — worth refining carefully
-- [ ] 4.2.8 (Bridge 2) reference to Leinaas & Myrheim (1977) on anyons is
-      important — their paper is the closest existing work to what we're doing
-      and should be cited and distinguished carefully
-- [ ] Consider adding a subsection on **anyons** — particles in 2D space can have
-      any winding number (not just integer/half-integer), giving fractional statistics.
-      This is experimentally confirmed in the fractional quantum Hall effect.
-      In the 5D framework: anyons arise when the topology of the available
-      configuration space allows non-integer windings. This would be a powerful
-      confirmation that the winding-number picture is correct.
-- [ ] Cross-reference visualization 05 (spin as chirality) and consider building
-      visualization 06 showing the exchange path in e-space
-
----
-
-*Word count (draft): ~2,400 words*
-*Target for final section: ~1,500 words (condense 4.2.3-4.2.5 into tighter prose,
-keep 4.2.6 one-paragraph summary, keep 4.2.7 comparison table, trim implications)*
