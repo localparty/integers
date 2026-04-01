@@ -341,16 +341,18 @@ The following are working well and should be preserved:
 
 ## 6. Priority Order for Implementation
 
-| # | Priority | Document | Change | Impact |
-|---|----------|----------|--------|--------|
-| 1 | **HIGH** | P1 Abstract lines 102-113 | Replace Paper 2 summary (§3.1) | Credibility |
-| 2 | **HIGH** | P2 Abstract | Add ACT DR6 tension sentence (§3.4) | Credibility |
-| 3 | **HIGH** | P1 Abstract lines 78-80 | Add ACT constraint note (§3.2) | Consistency |
-| 4 | **HIGH** | P1 §8.3.5 | Add two-scenario table + ACT note (§3.3) | Consistency |
-| 5 | **MED** | App Y | Add §Y.5.4 self-consistent ω_b (§3.6) | Completeness |
-| 6 | **MED** | App Y | Add §Y.5.5 ACT vs 1/ξ² (§3.7) | Honesty |
-| 7 | **MED** | P2 §8.2 | Two-scenario table (§3.5) | Consistency |
-| 8 | **MED** | App Y §Y.10 | Flag N_eff tension in summary (§4.4) | Completeness |
-| 9 | **LOW** | P2 §2.3 | Add Scenario C (§4.1) | Completeness |
-| 10 | **LOW** | P2 PROJECT | Label scenario sources (§4.2) | Clarity |
-| 11 | **LOW** | App Y §Y.8.4 | Add N_eff row to scorecard (§4.3) | Completeness |
+| # | Priority | Document | Change | Impact | Status |
+|---|----------|----------|--------|--------|--------|
+| 1 | **HIGH** | P1 Abstract lines 102-113 | Replace Paper 2 summary (§3.1) | Credibility | **DONE** |
+| 2 | **HIGH** | P2 Abstract | Add ACT DR6 tension sentence (§3.4) | Credibility | **DONE** |
+| 3 | **HIGH** | P1 Abstract lines 78-80 | Add ACT constraint note (§3.2) | Consistency | **DONE** |
+| 4 | **HIGH** | P1 §8.3.5 | Add two-scenario table + ACT note (§3.3) | Consistency | **DONE** |
+| 5 | **MED** | App Y | Add §Y.5.4 self-consistent ω_b (§3.6) | Completeness | **DONE** |
+| 6 | **MED** | App Y | Add §Y.5.5 ACT vs 1/ξ² (§3.7) | Honesty | **DONE** |
+| 7 | **MED** | P2 §8.2 | Two-scenario table (§3.5) | Consistency | **DONE** |
+| 8 | **MED** | App Y §Y.10 | Flag N_eff tension in summary (§4.4) | Completeness | **DONE** |
+| 9 | **LOW** | P2 §2.3 | Add Scenario C (§4.1) | Completeness | **DONE** |
+| 10 | **LOW** | P2 PROJECT | Label scenario sources (§4.2) | Clarity | **DONE** |
+| 11 | **LOW** | App Y §Y.8.4 | Add N_eff row to scorecard (§4.3) | Completeness | **DONE** |
+
+All 11 items implemented. No commits made — ready for author review.

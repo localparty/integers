@@ -39,23 +39,58 @@ Inverting with the observed ratio 5.36:
 
 All subsequent calculations use ξ = 0.432 as the primary value
 (Scenario B), with ξ = 0.47 (Scenario A, where ξ is tuned to match
-θ*) as a cross-check. The two scenarios bracket the true answer.
+θ*) as a cross-check. A third scenario (C) allows ω_b h² to float
+for self-consistent θ* matching. The three scenarios bracket the
+true answer.
 
 ### 2.3 The Complete Parameter Set for CAMB
 
-**Scenario B (ξ from 1/ξ² law — zero free parameters):**
+**Scenario A (θ*-matched, ξ from Appendix Y):**
+
+| CAMB parameter | Value | Source |
+|---------------|-------|--------|
+| H₀ | 69.5 km/s/Mpc | 67.4 + 6.3 × ΔN_eff |
+| ω_b h² | 0.02237 | SM baryons (Planck ΛCDM) |
+| ω_c h² | 0.1170 | Adjusted to match θ* |
+| N_eff | 3.39 | 3.046 + 0.05 + 6.14×(0.47)⁴ |
+| ξ | 0.470 | From θ* matching |
+
+**Scenario B (1/ξ² law — zero free parameters):**
 
 | CAMB parameter | Value | Source |
 |---------------|-------|--------|
 | H₀ | 68.7 km/s/Mpc | 67.4 + 6.3 × ΔN_eff |
-| ω_b h² | 0.02237 | SM baryons (unchanged) |
+| ω_b h² | 0.02237 | SM baryons (Planck ΛCDM) |
 | ω_c h² | 0.1199 | ω_b h² / ξ² |
-| N_eff | 3.31 | 3.046 + 0.05 + 6.14ξ⁴ |
+| N_eff | 3.31 | 3.046 + 0.05 + 6.14×(0.432)⁴ |
+| ξ | 0.432 | From Ω_DM/Ω_b = 1/ξ² |
+
+**Scenario C (self-consistent ω_b — θ* AND Ω_DM/Ω_b matched):**
+
+| CAMB parameter | Value | Source |
+|---------------|-------|--------|
+| H₀ | 68.8 km/s/Mpc | 67.4 + 6.3 × ΔN_eff |
+| ω_b h² | **0.02150** | Self-consistent fit (−3.9% from ΛCDM) |
+| ω_c h² | 0.11524 | 5.36 × ω_b h² |
+| N_eff | 3.32 | 3.046 + 0.05 + 6.14×(0.4375)⁴ |
+| ξ | 0.4375 | From θ* zero-crossing |
+
+Scenario C resolves the θ* tension (offset +1.0") at the cost of a
+−3.9% shift in ω_b h², which creates a mild 1.5σ tension with
+primordial D/H measurements (predicted D/H ≈ 2.65×10⁻⁵ vs observed
+2.527 ± 0.030×10⁻⁵). A proper MCMC analysis would determine whether
+this shift is viable. All three scenarios use the same dilaton parameters:
+
+| Shared parameter | Value | Source |
+|-----------------|-------|--------|
 | w₀ | −0.85 | Thawing dilaton |
 | w_a | −0.23 | Thawing dilaton |
 | Σm_ν | 0.06 eV | Bulk seesaw |
 | A_s | 2.215×10⁻⁹ | Inflation (unchanged) |
 | n_s | 0.9649 | Inflation (unchanged) |
+
+**Note:** All three scenarios predict N_eff = 3.31–3.39, in 3–4σ
+tension with ACT DR6 (N_eff = 2.86 ± 0.13). See Appendix Y, §Y.5.5.
 
 ---
 
