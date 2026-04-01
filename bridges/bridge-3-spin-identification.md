@@ -55,16 +55,51 @@ quantum number s (Bridge 1).
 
 ## B3.2 The 5D Action and Its Symmetries
 
+### B3.2.0 Uniqueness of the Lagrangian
+
+Before writing down the Lagrangian, we establish that it is FORCED by the
+geometry — not chosen to produce a desired result. This is critical for the
+non-circularity of the spin-statistics derivation.
+
+The total space of the e-bundle P(M³, U(1)) admits a metric. The most general
+metric consistent with two symmetry requirements is the Kaluza-Klein metric:
+
+    ds₅² = gᵢⱼ(x) dxⁱ dxʲ + R²(dφ + Aᵢ(x) dxⁱ)²
+
+The two requirements that uniquely determine this form are:
+
+**Requirement 1 — Base covariance.** The metric must be invariant under
+diffeomorphisms of the base manifold M³. This forces the metric to decompose
+into a base component gᵢⱼ(x) and a fiber component, with no cross-terms
+beyond those mediated by the connection Aᵢ.
+
+**Requirement 2 — Fiber U(1) invariance.** The metric must be invariant under
+the structure group U(1) acting on the fiber: φ → φ + ε. This forces the
+fiber component to depend on dφ only through the combination dφ + Aᵢ dxⁱ
+(the connection 1-form), because only this combination is U(1)-covariant.
+
+These two requirements together leave no free functional form — only the
+parameters gᵢⱼ, Aᵢ, and R, all of which have independent physical meaning
+(the spatial metric, the electromagnetic potential, and the e-circle radius).
+The metric is the unique Riemannian metric on P(M³, U(1)) compatible with
+the bundle structure. (See Bleecker, *Gauge Theory and Variational Principles*,
+Ch. 9, or Nakahara, Ch. 11.)
+
+The Lagrangian for a particle on this manifold is then uniquely determined:
+it is the geodesic Lagrangian — the kinetic energy defined by the metric.
+There are no free parameters to tune. Spin will emerge from this Lagrangian
+(Section B3.4), and the emergence is a PREDICTION of the geometry, not an
+artifact of a chosen parameterization.
+
 ### B3.2.1 The Lagrangian
 
-For a particle of mass m on the total space of the U(1) bundle P(M³, U(1)),
-with the Kaluza-Klein metric:
+For a particle of mass m on the total space P(M³, U(1)) with the Kaluza-Klein
+metric (taking flat spatial metric gᵢⱼ = δᵢⱼ for simplicity):
 
     ds₅² = δᵢⱼ dxⁱ dxʲ + R²(dφ + Aᵢ dxⁱ)²
 
-the non-relativistic Lagrangian is the geodesic Lagrangian on the total space
-P(M³, U(1)) — i.e., the kinetic energy of a particle moving freely on the
-5D manifold with the Kaluza-Klein metric, taken in the non-relativistic limit:
+the non-relativistic Lagrangian is the geodesic Lagrangian — the kinetic
+energy defined by this metric, taken in the non-relativistic limit:
 
     L = ½m [ẋ² + R²(φ̇ + Aᵢ ẋⁱ)²] − V(x)
 
@@ -530,9 +565,27 @@ The angular momentum decomposition J = L + S, the magnetic moment, spin-orbit
 coupling, and the Pauli equation all emerge naturally from the 5D framework
 with Ŝ = p̂φ.
 
+**On Lorentz invariance.** The Lagrangian in B3.2.1 is non-relativistic,
+chosen for clarity. The relativistic generalization is the geodesic action
+on a Lorentzian 5-manifold P(M⁴, U(1)) with metric:
+
+    ds₅² = gμν dxᵘdxᵛ + R²(dφ + Aμ dxᵘ)²
+
+where gμν is the Lorentzian spacetime metric. The 5D Dirac equation on this
+manifold — a known construction in Kaluza-Klein theory — reduces upon
+dimensional reduction to the standard 4D Dirac equation with minimal
+electromagnetic coupling (see Overduin & Wesson, *Phys. Reports* 283, 303,
+1997; Bailin & Love, *Rep. Prog. Phys.* 50, 1087, 1987). The spin
+identification Ŝz = p̂φ carries over to the relativistic setting because the
+fiber structure and the Noether theorem are independent of whether the base
+metric is Riemannian or Lorentzian. The non-relativistic treatment in this
+bridge is therefore a specialization of a Lorentz-covariant framework, not a
+limitation of it.
+
 **What Bridge 3 does NOT establish (noted for future work):**
 - The value of the gyromagnetic ratio g from the 5D geometry
-- The full 5D Dirac equation and its dimensional reduction
+- The explicit dimensional reduction of the 5D Dirac equation (known in the
+  KK literature but not rederived here)
 - The extension to spin-1 and higher-spin fields within the 5D framework
 - The precise metric structure of the e-dimension (needed for Section 5,
   the gravity program)

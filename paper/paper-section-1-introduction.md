@@ -128,6 +128,9 @@ variables; ours are non-local, and therefore allowed.
 We propose that spacetime is five-dimensional: (x, y, z, t, e). The fifth dimension
 e is circular — periodic from 0 to 2π, like an angle — and corresponds mathematically
 to the U(1) fiber in a principal fiber bundle over four-dimensional spacetime.
+(This mathematical structure is shared with Kaluza-Klein theory, but the physical
+coupling — to quantum phase rather than electric charge — and the scope — quantum
+mechanics itself, not just electromagnetism — are entirely different; see Section 2.5.)
 Particles are not point objects but extended geometric structures in this five-
 dimensional space: helices whose pitch is momentum, whose chirality is spin, and
 whose extent in the e-direction is what we call superposition. The wave function

@@ -92,6 +92,44 @@ entry point — grounded in experimentally established phenomena — from which 
 quantum theory of gravity might be derived. The entry point is new. Whether it
 leads to the door is the question that defines the next phase of this work.
 
+### On Predictions and Falsifiability
+
+In its current form, the framework reproduces all predictions of standard quantum
+mechanics without modification. This is by construction: the mathematical structures
+are the same (Hilbert space, unitary evolution, projective measurement), and the
+framework provides geometric interpretation, not calculational revision. We
+acknowledge this honestly and address it on three levels.
+
+*Structural prediction power.* The framework does not merely accommodate known
+results; it predicts structural relationships between them. The winding-number
+argument (Section 4.2) predicts that in any system where the effective spatial
+dimension is reduced to two, fractional exchange statistics must appear — because
+the topology of the configuration space (π₁ = Z instead of Z₂) allows fractional
+e-winding. This prediction, which follows from the geometry alone, was made by
+Leinaas and Myrheim in 1977 using the same topological logic. The fractional
+quantum Hall effect, discovered in 1982, confirmed it. The framework's geometric
+reasoning, had it been available in 1977, would have produced the same prediction
+— anyon statistics as a geometric necessity — before its experimental discovery.
+A framework that predicts the existence of anyons from pure geometry has genuine
+predictive structure, even if it was constructed after the fact.
+
+*The gravity program.* If the three claims of Section 5.7 are established, the
+framework produces a theory of quantum gravity with predictions that differ from
+both general relativity and standard quantum mechanics at the Planck scale. These
+predictions include: modified gravitational behavior at quantum scales (from
+e-fiber quantization), a natural ultraviolet cutoff (from the e-dimension's
+minimum geometric scale), and a specific relationship between entanglement entropy
+and e-space geometry (connecting to the Ryu-Takayanagi formula). The gravity
+program is the path from interpretation to distinct theory.
+
+*Pedagogical value.* Even if the framework makes no predictions distinguishable
+from standard quantum mechanics, it provides something no existing interpretation
+provides: a complete geometric picture that makes every quantum phenomenon
+visualizable and every quantum "mystery" a consequence of dimensional projection.
+This pedagogical value is real, substantial, and independent of the physical
+question. We regard it as sufficient justification for the paper on its own terms,
+while pursuing the research program that may produce distinguishing predictions.
+
 ---
 
 ## 8.3 Open Problems: An Invitation

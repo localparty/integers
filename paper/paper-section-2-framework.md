@@ -222,6 +222,37 @@ For readers unfamiliar with fiber bundles: all that is required for what follows
 is the picture established in Sections 2.1-2.4. The fiber bundle language makes
 the mathematics precise but does not change the physical content.
 
+### Distinction from Kaluza-Klein Theory
+
+The mathematical structure of the framework — a U(1) principal bundle over
+spacetime — is shared with Kaluza-Klein theory (Kaluza 1921, Klein 1926). The
+physical content is entirely different, in three respects that we state explicitly
+because the superficial resemblance will invite the comparison.
+
+First, the coupling. Kaluza-Klein couples the fifth dimension to *electric charge*.
+A particle's momentum in the compact dimension is proportional to its charge. The
+framework proposed here couples the e-dimension to *quantum phase* — a property of
+every particle, charged or not. A neutron has zero electric charge but has definite
+spin, participates in interference experiments, and can be entangled. Kaluza-Klein
+has nothing to say about the neutron's quantum properties. The e-dimension framework
+accounts for all of them.
+
+Second, the observability. Kaluza-Klein compactifies the fifth dimension at the
+Planck scale (~10⁻³⁵ m), rendering it inaccessible to any foreseeable experiment.
+The e-dimension is accessible at *all* scales — in every interference pattern, every
+entanglement correlation, every spin measurement ever performed. It is not hidden at
+the Planck scale. It is hidden in the quantum phase, which was interpreted as an
+abstract amplitude rather than a geometric coordinate.
+
+Third, the scope. Kaluza-Klein provides a geometric account of electromagnetism
+(and, in its modern extensions, the gauge forces). The e-dimension framework provides
+a geometric account of *quantum mechanics itself* — superposition, entanglement,
+spin, measurement, the uncertainty principle, and the spin-statistics theorem. These
+are not electromagnetic phenomena. They are the phenomena that Kaluza-Klein takes as
+given and does not explain.
+
+The mathematical tools overlap. The physical questions do not.
+
 ---
 
 ## 2.6 Why Exactly Five Dimensions?

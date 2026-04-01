@@ -400,6 +400,23 @@ which requires that physics look the same in all inertial frames. Standard Kaluz
 Klein handles this through compactification. We need an analogous argument for
 the e-dimension's circular structure.
 
+*The Kaluza-Klein obstacle.* In standard Kaluza-Klein theory, a U(1) fiber coupled
+to the stress-energy tensor produces electromagnetism, not gravity. The gravitational
+field emerges from the 4D base metric gμν, not from the fiber geometry. Our proposal
+— that mass curves the e-fiber and that this curvature IS gravity — requires a coupling
+between the fiber metric and the stress-energy tensor that differs from the standard
+Kaluza-Klein decomposition. Specifically, we need the e-fiber curvature to source the
+geodesic deviation that we observe as gravitational attraction, without simultaneously
+producing spurious electromagnetic-like forces that are not observed. This is a
+well-posed mathematical question: does there exist a 5D action S[gμν, gφφ, Aμ, matter]
+whose variation with respect to the fiber metric gφφ produces field equations that
+reduce to Poisson's equation (∇²Φ = 4πGρ) in the weak-field limit, while the variation
+with respect to Aμ reproduces Maxwell's equations? If such an action exists, the
+gravity proposal is viable. If not, it fails at the first hurdle. We do not know the
+answer. The claim of Section 5 is not that we have derived quantum gravity — it is
+that this question is well-posed, tractable, and has not previously been asked in
+this form.
+
 *The three bridges from Section 4.2.8 are prerequisites.* The mathematical
 program of Section 5.7 presupposes that Bridges 1, 2, and 3 from Section 4.2.8
 have been completed — particularly Bridge 3 (e-space metric). We cannot write down

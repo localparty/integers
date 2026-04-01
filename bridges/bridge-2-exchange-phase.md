@@ -559,8 +559,15 @@ These are the content of Bridge 3.
   spin, statistics and the geometric phase." *Proc. R. Soc. Lond. A* 453,
   1771–1790 (1997). — Showed that a geometric construction (a transported
   spin basis) naturally assigns the correct exchange phase to spin-s
-  particles. Our derivation provides the physical mechanism: the Berry-Robbins
-  construction is the parallel transport of the e-coordinate.
+  particles. The relationship to our derivation is precise: Berry-Robbins
+  is a mathematical existence proof that a geometric construction WORKS —
+  that transporting the spin basis in a specific way produces the right phase.
+  Our framework identifies the physical object being transported: it is the
+  e-coordinate of the particle's helix through the fifth dimension.
+  Berry-Robbins is what the 5D exchange phase looks like when projected to 4D
+  and the physical carrier (the e-coordinate) is abstracted into a
+  mathematical basis choice. The constructions are consistent; ours provides
+  the geometric interpretation that theirs deliberately leaves open.
 
 **On the topological origin of spin-statistics:**
 - Finkelstein, D. & Rubinstein, J. "Connection between Spin, Statistics,
