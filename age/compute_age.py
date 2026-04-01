@@ -206,14 +206,11 @@ def run_scenario(name, params):
     # Comoving distance to last scattering
     DA_star = results.angular_diameter_distance(z_star)
 
-    # Lookback times at various redshifts (useful for JWST)
-    # Age at redshift z = age_of_universe - lookback_time(z)
-    # CAMB gives the age of the universe and we can compute ages at z
+    # Physical time since Big Bang at various redshifts (useful for JWST)
     z_test = [0, 2, 6, 10, 12, 14, 20]
     ages_at_z = {}
     for z in z_test:
-        # Time since big bang at redshift z
-        t_z = results.age_of_universe(z)  # Gyr (this is conformal time-based)
+        t_z = results.physical_time(z)  # Gyr
         ages_at_z[z] = t_z
 
     # Hubble parameter at various redshifts

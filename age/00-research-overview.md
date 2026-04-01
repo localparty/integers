@@ -3,7 +3,7 @@
 ## Research Overview
 
 **Date:** 2026-04-01
-**Status:** Initial investigation
+**Status:** COMPUTED -- See 08-CAMB-results.md for precision results
 
 ---
 
@@ -138,15 +138,15 @@ Combining the channels:
 | Neutrino masses | -0.03 Gyr |
 | **Net** | **+0.05 to +0.95 Gyr** |
 
-**Preliminary prediction: t_0 ~ 13.85 - 14.75 Gyr**
+**COMPUTED prediction (CAMB): t_0 = 13.3 - 13.8 Gyr**
 
-The framework could predict a universe that is OLDER than the LCDM value,
-potentially 14.0-14.5 Gyr. This is interesting because:
+The framework predicts a universe that is 0-500 Myr YOUNGER than
+Planck LCDM, depending on Omega_cdm and w(z). The thawing dilaton
+best-estimate gives t_0 ~ 13.4 Gyr.
 
-1. It would be more consistent with the oldest globular cluster ages
-   (~13.5 Gyr with ~1 Gyr uncertainty)
-2. It would provide more time for JWST's early galaxies to form
-3. It would partially alleviate the "impossibly early galaxy" tension
+**SURPRISE FINDING: The S8 tension is naturally resolved.** The
+framework predicts S8 ~ 0.77-0.79, matching weak lensing surveys
+without any tuning. See 08-CAMB-results.md for full details.
 
 ---
 
