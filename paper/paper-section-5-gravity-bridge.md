@@ -459,10 +459,21 @@ fail is more credible than one that claims no weaknesses.
 - The unification of QM and GR is not a problem of new physics — it is a
   problem of recognizing the geometry already present in quantum phase
 
-**We do not claim to have quantized gravity. We claim to have identified a
-geometric entry point — grounded in experimentally established phenomena — from
-which a quantum theory of gravity might be derived. The door is open. We have
-shown what lies on the other side. Walking through it is the work ahead.**
+**The Quantization Bridge Conjecture (Section 5.X):** Standard quantum mechanics
+is the quantum theory of the e-circle. The 5D Einstein equations govern the same
+e-circle classically. The one-loop quantum correction to 5D gravity on M⁴ × S¹
+is finite under zeta regularization of the KK sum (Appendix F). We conjecture
+that this finiteness extends to all loop orders — that the 5D path integral on
+P(M⁴, U(1)) is a consistent quantum theory of gravity. The two-loop calculation
+is the critical test. If it is finite, the problem of quantum gravity is not
+solved by new physics — it was always encoded in the geometry that quantum
+mechanics already requires.
+
+**We do not claim to have quantized gravity. We claim to have identified the
+geometric object — the e-bundle P(M⁴, U(1)) — that both quantum mechanics
+and general relativity describe, and to have shown that its quantum theory
+is one-loop finite. The two-loop calculation is the door. What lies on the
+other side is the work ahead.**
 
 ---
 

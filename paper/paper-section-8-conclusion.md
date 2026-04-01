@@ -144,13 +144,23 @@ treatment via the 5D Dirac equation on the Lorentzian Kaluza-Klein manifold;
 the derivation of the gyromagnetic ratio g from the e-geometry; and the extension
 to spin-1 and higher-spin fields within the framework.
 
+**The two-loop quantum gravity calculation.** This is the primary open problem
+of the paper. The one-loop effective action for 5D gravity on M⁴ × S¹ is
+finite under zeta regularization of the KK sum (Appendix F). The critical
+test is the two-loop calculation — which in 4D gravity is where the
+non-renormalizability appears (Goroff & Sagnotti 1986). The two-loop KK
+sum requires the Epstein zeta function or its multidimensional generalization.
+If it is finite, the quantization bridge conjecture (Section 5.X) gains its
+strongest support. If it diverges irreducibly, something additional is needed.
+This is the calculation most worth doing.
+
 **Cassini fifth-force bound.** The Kaluza-Klein reduction of Section 5 and
 Appendix D produces a scalar field (the e-circle radius φ(x)) that introduces
 a fifth force. This must be shown consistent with solar system constraints,
 particularly the Cassini bound on post-Newtonian parameters. If the scalar
 field is sufficiently massive or the coupling sufficiently weak, the fifth
 force is negligible at solar system scales. This calculation is tractable and
-should be the next concrete step.
+should follow the two-loop result.
 
 **Claim 2 of the gravity program.** The g₀₀ component of the 5D metric gives
 the correct gravitational time dilation dτ/dt = √(1 − 2GM/rc²) (partially
