@@ -3,7 +3,7 @@
 > **Purpose:** A first-person narrative record of how this framework developed,
 > when, and in what order. This document exists alongside the git history and
 > the source conversation files to establish the intellectual provenance of the
-> ideas. The source files referenced below are in `/paper/sources/` and are
+> ideas. The source files referenced below are in `/sources/` and are
 > committed to the repository with their original dates.
 
 ---
@@ -14,19 +14,19 @@ The core ideas emerged in a series of conversations with an AI assistant
 (ChatGPT) in October 2024, while I was exploring quantum mechanics and
 cosmology for personal understanding.
 
-**October 2, 2024** (`paper/sources/2024-10-02 time dilation and gravity.md`)
+**October 2, 2024** (`sources/2024-10-02 time dilation and gravity.md`)
 I was reasoning about gravitational time dilation — what it would take for
 1 second near Jupiter to correspond to 1 year on Earth. This was background
 exploration of GR and the nature of time.
 
-**October 4, 2024** (`paper/sources/2024-10-04 holographic principles of black holes.md`)
+**October 4, 2024** (`sources/2024-10-04 holographic principles of black holes.md`)
 I was learning about the holographic principle and black hole entropy. The
 idea that information is encoded on a surface rather than a volume was new
 to me and striking. I was beginning to understand that dimensionality is
 not fixed — that information can be represented at different dimensional
 levels.
 
-**October 5, 2024** (`paper/sources/2024-10-05 entanglement at higher dimensions.md`)
+**October 5, 2024** (`sources/2024-10-05 entanglement at higher dimensions.md`)
 **This is where the framework crystallized.** In my own words, in this
 conversation, I articulated:
 
@@ -49,15 +49,15 @@ geometric intuition stated clearly in plain language.
 
 ## The Return: 2025
 
-**April 11, 2025** (`paper/sources/2025-04-11 event horizon dimensions.md`)
+**April 11, 2025** (`sources/2025-04-11 event horizon dimensions.md`)
 Returning to the ideas, exploring event horizons in the context of the
 dimensional framework.
 
-**May 20, 2025** (`paper/sources/2025-05-20 epoch of reonization exmplained.md`)
+**May 20, 2025** (`sources/2025-05-20 epoch of reonization exmplained.md`)
 Exploring the epoch of reionization — continuing to build cosmological
 context.
 
-**September 12, 2025** (`paper/sources/2025-09-12 entanglement and additional dimensions.md`)
+**September 12, 2025** (`sources/2025-09-12 entanglement and additional dimensions.md`)
 A significant return to the core framework. I reconnected with the
 entanglement-as-dimension idea and began asking whether my "e" dimension
 might be one of the 11 dimensions of M-theory. This was the moment where
@@ -68,7 +68,7 @@ than remaining purely intuitive.
 
 ## The Formalization: January 2026
 
-**January 27, 2026** (`paper/sources/2026-01-27.md`)
+**January 27, 2026** (`sources/2026-01-27.md`)
 The conversation where the framework was named and formalized. Working with
 Claude (Sonnet), I:
 - Articulated the shadow metaphor precisely
@@ -77,7 +77,7 @@ Claude (Sonnet), I:
 - Named the project: **Quantum Geometry in 5D**
 - Created the first `.md` files in the repository directory
 
-**January 28, 2026** (`paper/sources/2026-01-28.md`)
+**January 28, 2026** (`sources/2026-01-28.md`)
 Continued the formalization session. Explored the black hole information
 paradox from the perspective of the 5D framework — arriving at the geometric
 resolution now documented in Appendix O.
@@ -128,7 +128,7 @@ ideas. The conceptual core — the question being asked, the geometric
 intuition, the recognition of what was significant — was mine throughout.
 
 The git history of this repository (30+ commits from March–April 2026)
-documents the development of the paper. The source files in `/paper/sources/`
+documents the development of the paper. The source files in `/sources/`
 document the development of the ideas, predating the paper by 15+ months.
 
 Together, they constitute a complete and verifiable record of intellectual
@@ -139,7 +139,7 @@ priority.
 ## A Note on AI Collaboration
 
 This project was developed in collaboration with AI assistants throughout.
-The ChatGPT conversations in `/paper/sources/` are where the ideas first
+The ChatGPT conversations in `/sources/` are where the ideas first
 appeared. The Claude conversations (this repository's development) are where
 they were formalized into a paper.
 
