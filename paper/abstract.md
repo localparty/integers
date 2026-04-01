@@ -69,15 +69,16 @@ torus area 1/α(M_P) = 4π²; three generations of SM running then give
 1/α(0) ≈ 137.
 
 The e-circle, Z₆-orbifolded and warped, provides a geometric account of
-twenty-one phenomena: quantum mechanics, electromagnetism, gravity, the
+twenty-two phenomena: quantum mechanics, electromagnetism, gravity, the
 spin-statistics theorem, perturbative UV finiteness, dark energy, dark
 energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
 α stability, three fermion generations, the fermion mass hierarchy, neutrino
 masses, neutrino mass ordering (normal hierarchy from Z₃ geometry), kinetic
 mixing with a dark photon, the strong CP problem (topological resolution:
-π₄(SU(3)) = 0 eliminates the theta parameter in 5D), black hole entropy,
-the hydrogen spectrum, the Casimir force, baryon asymmetry (from the Z₂
-chirality preference), and the CPT theorem. Seven testable predictions follow:
+π₄(SU(3)) = 0 eliminates the theta parameter in 5D), the Hubble tension
+(H₀ = 69–70 km/s/Mpc from hidden-brane dark radiation, consistent with
+TRGB/CCHP at < 1σ), black hole entropy, the hydrogen spectrum, the Casimir
+force, baryon asymmetry (from the Z₂ chirality preference), and the CPT theorem. Seven testable predictions follow:
 two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
 with static w = −1, resolvable via thawing dilaton quintessence). The naive dilaton prediction (ΔN_eff ≈ 0.57) appeared in tension with

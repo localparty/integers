@@ -289,12 +289,30 @@ JUNO began data taking in August 2025 and published first results in
 November 2025 (arXiv:2511.14593); the mass ordering determination is
 expected within its 6-year run. The full derivation is in Appendix Z.
 
+**The Hubble tension from hidden-brane dark radiation.** The Z₂ orbifold that
+produces geometric dark matter (above) also produces a hidden-brane thermal bath
+that is thermally decoupled from the visible sector. If the hidden brane was
+heated gravitationally during reheating to temperature T_hidden = ξ × T_visible
+with ξ ~ 0.45–0.50, the mirror sector dark radiation contributes ΔN_eff^{mirror}
+= 6.14 × ξ⁴ ~ 0.25–0.38 to the CMB. Through the Planck N_eff–H₀ degeneracy
+(ΔH₀ ≈ 6.3 × ΔN_eff), this raises the CMB-inferred Hubble constant from 67.4 to
+69–70 km/s/Mpc. The BBN constraint (N_eff^{BBN} = 2.88 ± 0.27) caps ξ at 0.50
+(2σ), which is the maximum contribution. The resulting prediction H₀ = 69–70
+km/s/Mpc is consistent at < 1σ with the TRGB/CCHP measurement (69.8 ± 0.6,
+Freedman et al. 2024) and consistent at 1.5–2σ with H0LiCOW lensing (73.3 ± 1.8).
+The Cepheid measurement (73.0 ± 1.0) remains 3–4σ above the framework prediction
+— the residual gap may be a Cepheid calibration systematic or may require physics
+beyond the minimal orbifold. The prediction is not tuned: ξ is constrained to a
+narrow range by BBN, and the resulting H₀ band coincides with the TRGB measurements
+without adjustment. The full derivation is in Appendix Y.
+
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest
 because it gives a concrete testable number; the dark photon prediction and the
 neutrino mass ordering are the most falsifiable in the near term; the strong CP
-topological resolution is falsified if the QCD axion is found; none is established
-by the arguments of this paper.
+topological resolution is falsified if the QCD axion is found; the H₀ prediction
+is testable by TRGB precision measurements and CMB-S4 ΔN_eff detection; none is
+established by the arguments of this paper.
 
 ---
 

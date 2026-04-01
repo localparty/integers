@@ -294,6 +294,7 @@ e-circle scenario predicts exactly zero variation.
 | 7 | Constant α | dα/dt = 0 | Quasar spectra, atomic clocks | **Consistent** | Ongoing |
 | 8 | Normal neutrino mass ordering | m₃ > m₂ > m₁ from Z₃ geometry | JUNO (data taking since Aug 2025) | Hinted at 2–3σ (NOvA, T2K, SK) | 3–6 years |
 | 9 | No QCD axion (strong CP topological) | θ = 0, π₄(SU(3)) = 0 | ADMX, ABRACADABRA, IAXO | Not yet excluded | Ongoing |
+| 10 | H₀ = 69–70 km/s/Mpc (hidden-brane dark radiation) | ΔN_eff = 0.25–0.38, ξ = 0.45–0.50 | TRGB/CCHP, CMB-S4, GW sirens | **< 1σ with TRGB/CCHP** (69.8±0.6) | 3–10 years |
 
 ---
 
@@ -358,6 +359,15 @@ The topological strong CP resolution (π₄(SU(3)) = 0) is falsified. This
 would be a decisive falsification with no obvious rescue — the 5D homotopy
 argument either holds or it doesn't.
 
+**If multiple independent H₀ measurements converge above 71 km/s/Mpc** (TRGB,
+gravitational wave sirens, and strong lensing all agreeing), the minimal Z₂
+orbifold is insufficient. The hidden-brane mechanism is BBN-capped at H₀ ≈ 70.
+
+**If CMB-S4 finds N_eff = 3.046 ± 0.03 with no excess**, the hidden-brane
+dark radiation is absent. This would rule out the mirror sector mechanism
+and leave the framework with H₀ ≈ 67.7 (tower contribution only).
+
 The framework is falsifiable at multiple levels. The most immediate tests are
 Prediction 1 (modified gravity at ~21 μm), Prediction 8 (neutrino mass
-ordering from JUNO), and Prediction 9 (no QCD axion from ongoing searches).
+ordering from JUNO), Prediction 9 (no QCD axion), and Prediction 10 (H₀ = 69–70
+from TRGB precision and CMB-S4 ΔN_eff).
