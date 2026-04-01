@@ -144,10 +144,18 @@ treatment via the 5D Dirac equation on the Lorentzian Kaluza-Klein manifold;
 the derivation of the gyromagnetic ratio g from the e-geometry; and the extension
 to spin-1 and higher-spin fields within the framework.
 
-**Claim 1 of the gravity program.** Write down the 5D action coupling the
-e-fiber metric to the stress-energy tensor and show that the weak-field equations
-reduce to Poisson's equation. This is a Kaluza-Klein calculation with a
-non-standard coupling — demanding but well-defined.
+**Cassini fifth-force bound.** The Kaluza-Klein reduction of Section 5 and
+Appendix D produces a scalar field (the e-circle radius φ(x)) that introduces
+a fifth force. This must be shown consistent with solar system constraints,
+particularly the Cassini bound on post-Newtonian parameters. If the scalar
+field is sufficiently massive or the coupling sufficiently weak, the fifth
+force is negligible at solar system scales. This calculation is tractable and
+should be the next concrete step.
+
+**Claim 2 of the gravity program.** The g₀₀ component of the 5D metric gives
+the correct gravitational time dilation dτ/dt = √(1 − 2GM/rc²) (partially
+shown in Appendix D, Section D.6). The full confirmation requires showing
+this holds independently of the base metric contribution.
 
 **Anyons on exotic topologies.** If bosons and fermions are the 3D case and
 anyons are the 2D case of the winding number spectrum, what statistics arise

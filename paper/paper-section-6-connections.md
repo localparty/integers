@@ -209,16 +209,37 @@ chirality. A slight asymmetry in the e-dimension — a preferred chirality baked
 into the geometry of the fifth dimension — would produce a matter-dominated
 universe. The universe exists because e-space is slightly right-handed.
 
-**Dark energy as e-dimension expansion.** The accelerating expansion of the
-universe is attributed to dark energy — a mysterious component with negative
-pressure that constitutes approximately 68% of the universe's energy content.
-If the e-dimension has a circumference that grows with cosmic time, this expansion
-would manifest in four-dimensional physics as an additional energy term with
-exactly the properties of dark energy. The cosmological constant is the rate of
-e-circle expansion.
+**Dark energy as Casimir energy of the e-circle.** The e-dimension, being compact,
+generates a Casimir (vacuum) energy from quantum fluctuations of the Standard Model
+fields. The boundary conditions on the e-circle are determined by spin: bosons have
+periodic boundary conditions, fermions anti-periodic (established in Appendix B.1).
+The Standard Model contains more fermionic than bosonic degrees of freedom (weighted
+by the 7/8 factor from quantum statistics), giving a positive net Casimir energy —
+the correct sign for dark energy. Setting this energy equal to the observed dark
+energy density ρ_Λ ≈ 5.4 × 10⁻¹⁰ J/m³ gives a predicted e-circle circumference:
+
+    L ~ 130 μm  (range: 50–200 μm from field content uncertainty)
+
+corresponding to a Yukawa-type correction to gravitational force at the scale
+λ = L/(2π) ~ 21 μm. Current experiments (Lee et al. 2020) have tested the
+inverse-square law down to ~52 μm; the predicted scale is within reach of
+near-future short-range gravity experiments. This is the framework's first
+quantitative, falsifiable prediction that distinguishes it from a pure
+interpretation of quantum mechanics. The calculation is developed in the
+companion document §08-casimir-dark-energy.md; caveats include the radius
+stabilization problem and the tension between this scale and the KK estimate
+of R_e from the fine structure constant.
+
+**Dark energy as e-dimension expansion.** Alternatively, if the e-circle's
+circumference grows with cosmic time, the expansion contributes an effective
+cosmological constant. This scenario is constrained by quasar spectra bounds on
+α variation (|Δα/α| < 10⁻⁵, Webb et al. 2011), which limit the expansion rate to
+~10⁻⁵ of the Hubble rate — too slow to explain dark energy alone unless a symmetry
+protects α while R_e changes.
 
 These extensions are presented to illustrate the framework's generative potential.
-Each represents a genuine open question. None is established by the arguments
+Each represents a genuine open question. The Casimir scenario is the strongest
+because it gives a concrete testable number; none is established by the arguments
 of this paper.
 
 ---

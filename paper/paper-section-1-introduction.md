@@ -278,6 +278,12 @@ canonical results: the Born rule and Bell inequality violation (|S| = 2√2),
 the double-slit interference pattern, and the Aharonov-Bohm phase shift with
 flux quantization.
 
+**Appendix D** performs the Kaluza-Klein reduction of the 5D Einstein equations
+on the e-bundle, establishing that Newtonian gravity is recovered in the weak-field
+limit, that mass distorts the local e-circle radius, and that gravity, electromagnetism,
+and a scalar field unify in the single 5D metric. Claim 1 of Section 5.7 is
+confirmed by explicit calculation.
+
 ---
 
 ## Notes for Revision

@@ -28,7 +28,6 @@ const C = {
   ],
 };
 
-function lerp(a, b, t) { return a + (b - a) * t; }
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
 function defaultWeights(n) {
@@ -57,10 +56,7 @@ export default function BornRuleESampling() {
 
   const [nStates, setNStates] = useState(2);
   const [weights, setWeights] = useState(defaultWeights(2));
-  const [counts, setCounts] = useState([0, 0]);
-  const [totalN, setTotalN] = useState(0);
   const [autoMeasure, setAutoMeasure] = useState(false);
-  const [lastResult, setLastResult] = useState(-1);
   const [, forceRender] = useState(0);
 
   const autoRef = useRef(false);
@@ -83,16 +79,14 @@ export default function BornRuleESampling() {
     setWeights(defaultWeights(n));
     weightsRef.current = defaultWeights(n);
     const empty = new Array(n).fill(0);
-    setCounts(empty);
     countsRef.current = empty;
-    setTotalN(0);
     totalNRef.current = 0;
-    setLastResult(-1);
     stateRef.current.needleResult = -1;
     stateRef.current.needleAnim = 0;
     stateRef.current.flashAnim = 0;
     stateRef.current.counts = empty;
     stateRef.current.totalN = 0;
+    forceRender(v => v + 1);
   }, []);
 
   const sampleOnce = useCallback(() => {
@@ -437,8 +431,6 @@ export default function BornRuleESampling() {
     const barGap = 10;
     const barArea = rightW - hPad * 2;
     const barW = (barArea - barGap * (ns - 1)) / ns;
-
-    const tN = counts.reduce((a, b) => a + b, 0);
 
     // Find max for scaling
     const maxCount = Math.max(1, ...counts);
