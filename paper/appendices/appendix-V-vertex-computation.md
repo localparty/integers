@@ -135,6 +135,18 @@ vertex decomposes as:
 where **V₃^{(4D)} is the standard 4D three-graviton vertex**, evaluated
 at the 4D momenta k_i alone, with NO dependence on the KK numbers n_i.
 
+**The propagator tensor structure is also n-independent.** In 5D de Donder
+gauge, the graviton propagator for KK mode n is:
+
+    G_{AB,CD}^{(n)}(k) = P_{AB,CD} / (k² + n²/R²)
+
+where P_{AB,CD} is the standard transverse-traceless projector — a fixed
+combination of 5D Kronecker deltas. The numerator tensor structure is
+IDENTICAL for every KK level n. Only the denominator carries n-dependence,
+through the mass term n²/R². This follows directly from the 5D de Donder
+gauge condition, which is n-independent: it imposes the same algebraic
+constraint on the graviton field at every KK level.
+
 ### V.2.5 The Explicit Leading Term
 
 For the pure spin-2 sector (all external indices μ, ν), the leading vertex
@@ -190,38 +202,45 @@ from the 4D momentum integral.
 
 (c) The integrand reduces to the standard 4D sunset integrand.
 
-**On the tensor contraction.** A reviewer may object that the tensor algebra
-— contracting the indices of the two vertices with the tensor structure of
-the three propagators — can reintroduce n-dependence even when the
-individual vertices and propagators are separately n-independent at leading
-order. This does not happen, for the following reason.
-
-The full sunset numerator is:
+**On the tensor contraction — closing the last implicit step.** The full
+sunset numerator involves contracting the tensor indices of two vertices
+with the tensor structure of three propagators:
 
     N(k, l, n, m) = V₃^{...}(k,n; ...) × G^{tensor}(k,n) × G^{tensor}(l,m)
                     × G^{tensor}(k+l,n+m) × V₃^{...}(−k,−n; ...)
 
-In the 5D de Donder gauge, the propagator tensor structure is
-(Section V.2.4) n-independent — it is the same symmetric combination of
-5D Kronecker deltas for all KK levels. The vertex tensor structure
-decomposes (Section V.2.5) into n-independent leading terms plus
-O(n²/(R²k²)) corrections. The tensor contraction of n-independent
-quantities is n-independent.
+This tensor contraction does NOT reintroduce n-dependence at leading order.
+The argument has three explicit steps:
 
-The n-dependent corrections enter the contraction at relative order
-n²/(R²k²) compared to the leading term. After the two-loop momentum
-integral, these corrections contribute to terms of UV degree REDUCED by 2
-(each factor of n²/(R²k²) converts two powers of k in the numerator into
-two powers of n/R, lowering the UV degree). The R³ counterterm, which
-requires the MAXIMUM UV degree, receives contributions ONLY from the
-leading (n-independent) terms. The n-dependent corrections contribute to
-subleading counterterms (R² type or lower), whose KK sums are Epstein
-zeta values at more negative integers — further from the pole and even
-more convergent.
+**Step 1 — Propagator tensor structure is n-independent.**
+In 5D de Donder gauge, the propagator numerator P_{AB,CD} is the same
+combination of 5D Kronecker deltas at every KK level (Section V.2.4).
+Only the denominator (k² + n²/R²) carries n-dependence. This is an
+algebraic consequence of the gauge condition, which is n-independent.
 
-In dimensional regularization language: the n-dependent corrections shift
-the 1/ε pole to a LOWER-order pole (or to the finite part). They do not
-contribute to the 1/ε coefficient of R³.
+**Step 2 — Contraction of n-independent quantities is n-independent.**
+At leading UV order, both the vertex (V.2.5) and the propagator numerator
+(Step 1) are n-independent tensors in the 5D index space. The tensor
+contraction of n-independent objects — any sequence of index contractions
+using fixed Kronecker delta combinations and 4D momenta k, l — yields an
+n-independent result. This is an algebraic identity: f(k) × g(k) is
+independent of n when neither f nor g depends on n.
+
+**Step 3 — n-dependent corrections lower the UV degree by 2.**
+The n-dependent corrections to the vertex are O(n²/(R²k²)) relative to
+the leading term (V.2.4). In the tensor contraction, each such factor
+replaces two powers of k in the numerator with two powers of n/R, reducing
+the superficial degree of UV divergence by exactly 2. The R³ counterterm
+requires the MAXIMUM superficial UV degree. Contributions to R³ can only
+come from the leading (n-independent) terms. The n-dependent corrections
+contribute to R²-type counterterms or lower — whose KK sums are Epstein
+zeta values at more negative integers s, placing them further from the
+Epstein pole at s = L/2 and making them MORE convergent, not less.
+
+In dimensional regularization: the n-dependent corrections do not
+contribute to the 1/ε coefficient of R³. They appear only in finite parts
+or in lower-dimensional operator coefficients whose KK sums are already
+controlled by the Epstein-Terras theorem.
 
 Therefore the leading UV contribution of the sunset, for fixed KK numbers
 (n, m), is:
@@ -397,11 +416,24 @@ the form:*
 *The leading Goroff-Sagnotti divergence vanishes (S₀² = 0). The subleading
 terms are finite Epstein zeta values. The R³ counterterm is not needed.*
 
-**Proof.** Sections V.2 (vertex n-independence), V.3 (sunset computation),
-V.4 (all topologies), V.5 (assembly). Each step uses only: the polynomial
-momentum structure of the 5D vertex (Section V.1.3), the UV expansion of
-5D dot products (Section V.2.4), and the Epstein-Terras theorem
-(Appendix T, Pillar 1). ∎
+**Proof.** Sections V.2–V.5. Four claims:
+
+(i) Vertex: V₃^{(5D)} = V₃^{(4D)}(k) + O(n²/R²). The EH action is
+    second-order, so each vertex term has exactly two momentum factors.
+    5D dot products decompose as k_i·k_j − n_in_j/R², making the
+    n-correction O(n²/(R²k²)) in the UV (V.2.4–5).
+
+(ii) Propagator: the tensor numerator P_{AB,CD} is n-independent in 5D
+    de Donder gauge — the same Kronecker delta combination at every KK
+    level. Only the denominator (k² + n²/R²) carries n-dependence (V.2.4).
+
+(iii) Tensor contraction: the contraction of n-independent vertex and
+    propagator numerators is n-independent (algebraic identity). Each
+    n-dependent correction lowers the UV degree by 2, so R³ receives
+    contributions only from the n-independent leading terms (V.3.3).
+
+(iv) KK sum: Σ_{n,m} 1 = S₀² = 0. Subleading terms are E₂(−j; Q) at
+    j ≥ 1, finite by the Epstein-Terras theorem (V.3.4–5, Appendix T). ∎
 
 ---
 
