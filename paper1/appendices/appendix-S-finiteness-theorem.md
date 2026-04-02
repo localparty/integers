@@ -444,6 +444,22 @@ Rejecting hard cutoffs in favor of symmetry-preserving regularizations is
 not a new principle — it is the standard practice of QFT since
 't Hooft and Veltman (1972).
 
+**The symmetry selection principle.** The physical content of the
+regularization choice can be stated precisely: any regularization that
+preserves the U(1) translation symmetry of the e-circle (Postulate 3)
+produces the analytic continuation values ζ(−2j) and ζ(0) = −1/2. This
+is because the sum Σ_{n∈Z} n^{2j} is the unique translation-invariant
+extension of the absolutely convergent series to the divergent case —
+the analytic continuation IS the translation-invariant assignment
+(Dienes 1995, "String theory and the path to unification," *Phys. Rep.*
+287, 447; §4.2 on modular-invariant KK regularization). Hard cutoffs
+violate this symmetry by imposing a preferred mode truncation; they are
+rejected on the same physical grounds that cutoff regularization is
+rejected in gauge theories — both break the symmetry that defines the
+theory. In this sense, the choice of zeta regularization is not
+arbitrary: it is the unique regularization consistent with the e-circle's
+defining symmetry.
+
 ### S.7.5 The Narrowed Open Question
 
 The complete vanishing narrows the scheme-dependence question dramatically:

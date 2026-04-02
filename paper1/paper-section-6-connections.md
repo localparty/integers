@@ -6,7 +6,7 @@
 
 In 2013, Maldacena and Susskind proposed the ER=EPR conjecture: that quantum
 entanglement (Einstein-Podolsky-Rosen pairs) and wormholes (Einstein-Rosen bridges)
-are the same physical phenomenon [CITE: Maldacena & Susskind 2013]. An entangled
+are the same physical phenomenon (Maldacena & Susskind 2013, *Fortschr. Phys.* **61**, 781). An entangled
 pair of particles, viewed from the gravitational side of the AdS/CFT correspondence,
 is connected by a non-traversable wormhole through spacetime. The quantum correlation
 and the geometric connection are not merely analogous — they are identified.
@@ -74,7 +74,7 @@ that appears lower-dimensional when projected.
 
 A growing body of work in quantum gravity — including tensor network approaches
 (MERA, HaPPY codes), van Raamsdonk's proposal that spacetime is built from
-entanglement [CITE: Van Raamsdonk 2010], and the work of Swingle connecting
+entanglement (Van Raamsdonk 2010, *Gen. Rel. Grav.* **42**, 2323), and the work of Swingle connecting
 tensor networks to holography — suggests that spacetime geometry is not fundamental.
 Instead, it *emerges* from the entanglement structure of an underlying quantum theory.
 The slogan is "it from qubit": geometry arises from information.
@@ -211,14 +211,11 @@ Two independent derivations, from completely different starting points,
 arrive at the same physical setup. The experimental tests (short-range
 gravity, X-ray line searches) will test both simultaneously.
 
-**Note on the e-circle radius.** Two values of R appear in this paper depending
-on the scenario. The CIRCLE scenario (S¹): L ≈ 50–200 μm, R ≈ 8–32 μm. All
-SM fields contribute to the bulk Casimir energy. The ORBIFOLD scenario
-(S¹/Z₂): R ≈ 12 μm. Only bulk fields (gravity + 3 right-handed neutrinos)
-contribute. Appendices A–V use the circle scenario unless otherwise noted.
-Appendix W uses the orbifold scenario. The predictions in Appendix H are
-stated under the circle scenario; the orbifold scenario shifts R downward
-and tightens the experimental bounds.
+**Note on the e-circle radius.** Two configurations of the e-circle —
+the circle scenario (S¹, L ~ 130 μm) and the orbifold scenario (S¹/Z₂,
+R ~ 12 μm) — are defined in Section 2.7.2. The predictions below use
+the circle scenario; the orbifold scenario shifts R downward and tightens
+the experimental bounds.
 
 **Dark energy as Casimir energy of the e-circle.** The e-dimension, being compact,
 generates a Casimir (vacuum) energy from quantum fluctuations of the Standard Model
@@ -328,6 +325,22 @@ coincidence Ω_DM/Ω_b ≈ 5 is explained. The required ξ ≈ 0.43 implies
 N_eff = 3.31, in 3–4σ tension with ACT DR6 — the framework's primary
 open issue, definitively tested by CMB-S4 (σ(N_eff) ≈ 0.03). The full
 derivation and CAMB computation are in Paper 2.
+
+**Field content in the circle scenario.** The circle scenario counts
+N_B = 28 bosonic and N_F = 90 fermionic degrees of freedom (the full
+Standard Model). This requires all SM fields to propagate on the
+e-circle — as in universal extra dimension (UED) models where the Higgs
+mechanism operates as a brane-localized effect, giving mass to the 4D
+zero modes while leaving the 5D bulk fields effectively massless for the
+Casimir computation (Appelquist, Cheng & Dobrescu 2001, *Phys. Rev. D*
+**64**, 035002). In that setup, the Casimir energy on S¹ includes the
+full SM field content because the KK tower contribution dominates the
+Casimir sum regardless of zero-mode mass. In the orbifold scenario (Appendix W),
+SM fields are brane-localized by the Z₂ projection and only bulk fields
+(gravity + 3ν_R) contribute. The two scenarios represent physically distinct
+configurations of the framework: the circle scenario corresponds to a UED
+setup (L ~ 130 μm); the orbifold is the phenomenologically richer one
+(R ~ 12 μm, with dark sector and baryogenesis predictions).
 
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest

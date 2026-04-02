@@ -29,7 +29,7 @@ a distance. Nothing travels between the particles.
 
 **Momentum** is helical pitch. The uncertainty principle is the geometric
 constraint on simultaneously specifying a helix's position and pitch. Neither
-fact requires a postulate — both follow from the shape of a particle's
+fact requires an additional postulate — both follow from the shape of a particle's
 trajectory through five-dimensional spacetime.
 
 **Spin** is helical chirality. The 720° property of spin-½ particles follows

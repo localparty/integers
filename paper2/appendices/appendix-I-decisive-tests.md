@@ -10,22 +10,26 @@
 
 ## I.1 The Complete Prediction Set
 
-From the CAMB computation (Appendix A):
+From the CAMB computation (Appendix A). Three scenarios bracket the
+framework's prediction; the table shows both Scenario A (θ*-matched,
+ξ = 0.47) and Scenario B (1/ξ² law, ξ = 0.432). Values shared by
+both scenarios are listed once.
 
-| Observable | 5D Framework | Planck ΛCDM | Difference | Experiment |
-|-----------|-------------|-------------|------------|------------|
-| t₀ (Gyr) | **13.470** | 13.797 | −327 Myr | Stellar ages (JWST) |
-| H₀ (km/s/Mpc) | **69.5** | 67.4 | +2.1 | TRGB, GW sirens |
-| N_eff | **3.39** | 3.044 | +0.35 | CMB-S4 |
-| w₀ | **−0.85** | −1.0 | +0.15 | DESI DR3, Euclid |
-| w_a | **−0.23** | 0.0 | −0.23 | DESI DR3, Euclid |
-| S8 | **0.753** | 0.832 | −0.079 | Euclid, Rubin |
-| σ₈ | **0.766** | 0.811 | −0.045 | CMB lensing |
-| Ω_m | **0.290** | 0.315 | −0.025 | BAO + CMB |
-| r_d (Mpc) | **146.2** | 147.1 | −0.93 | DESI DR3 |
-| θ* (arcsec offset) | **−0.5"** | 0 | −0.5" | CMB-S4 |
-| Σm_ν (eV) | **0.060** | < 0.12 | predicted | CMB-S4, KATRIN |
-| Mass ordering | **Normal** | unknown | predicted | JUNO |
+| Observable | Scenario A (ξ=0.47) | Scenario B (ξ=0.432) | Planck ΛCDM | Experiment |
+|-----------|--------------------|--------------------|-------------|------------|
+| t₀ (Gyr) | **13.47** | **13.47** | 13.797 | Stellar ages (JWST) |
+| H₀ (km/s/Mpc) | **69.5** | **68.7** | 67.4 | TRGB, GW sirens |
+| N_eff | **3.39** | **3.31** | 3.044 | CMB-S4 |
+| w₀ | **−0.85** | **−0.85** | −1.0 | DESI DR3, Euclid |
+| w_a | **−0.23** | **−0.23** | 0.0 | DESI DR3, Euclid |
+| S8 | **0.753** | **0.785** | 0.832 | Euclid, Rubin |
+| σ₈ | **0.766** | **0.782** | 0.811 | CMB lensing |
+| Ω_m | **0.290** | **0.302** | 0.315 | BAO + CMB |
+| r_d (Mpc) | **146.2** | **145.8** | 147.1 | DESI DR3 |
+| θ* offset | **−0.5"** | **+6.6"** | 0 | CMB-S4 |
+| Ω_DM/Ω_b | 5.22 (input) | **5.36 (derived)** | — | — |
+| Σm_ν (eV) | **0.060** | **0.060** | < 0.12 | CMB-S4, KATRIN |
+| Mass ordering | **Normal** | **Normal** | unknown | JUNO |
 
 ---
 
@@ -33,13 +37,13 @@ From the CAMB computation (Appendix A):
 
 **Target:** σ(N_eff) ≈ 0.03, σ(θ*) ≈ 0.03 arcsec
 **Expected:** 2030
-**Framework prediction:** N_eff = 3.39
+**Framework prediction:** N_eff = 3.31–3.39 (Scenario B–A)
 
 At CMB-S4 precision:
-- N_eff = 3.39 is a **11.5σ detection** above the SM value (3.046)
-- N_eff = 3.39 vs N_eff = 3.09 (tower-only) is **10σ** — distinguishes
+- N_eff = 3.31–3.39 is a **9–11.5σ detection** above the SM value (3.046)
+- N_eff = 3.31–3.39 vs N_eff = 3.09 (tower-only) is **7–10σ** — distinguishes
   whether the mirror sector exists
-- θ* offset of −0.5" is a **17σ detection** at CMB-S4 precision
+- θ* offset of −0.5" (Scenario A) is a **17σ detection** at CMB-S4 precision
 
 **If CMB-S4 measures N_eff = 3.046 ± 0.03:** The mirror sector is
 absent at the needed level. The framework's cosmological sector

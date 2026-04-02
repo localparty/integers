@@ -32,19 +32,19 @@ mass m_φ ~ 10 meV.
 ## F.2 The Thawing Scenario
 
 If the dilaton is displaced slightly from its minimum at φ = 1,
-it remains frozen (Hubble friction dominates: H >> m_φ/ℏ) until
-the present epoch, when H ~ H₀ ~ 2.2 × 10⁻¹⁸ s⁻¹ approaches
-m_φ/ℏ ~ m_φ c²/ℏ ~ (9.4 meV) × c²/ℏ ~ 1.4 × 10¹⁰ s⁻¹.
+it remains frozen by Hubble friction at early times. The dilaton
+mass at the minimum (m_φ ~ 10 meV) is 28 orders of magnitude above
+the current Hubble rate (H₀ ~ 2.2 × 10⁻¹⁸ s⁻¹), so the dilaton
+is NOT thawing in the standard sense of H dropping below m_φ (that
+transition occurred at T ~ 300 MeV, well before the present epoch).
 
-Wait — these scales differ by 28 orders of magnitude. The dilaton
-is NOT thawing due to H dropping below m_φ in the standard sense
-(that happens at T ~ 300 MeV, Paper 1, Appendix Y §Y.7.1).
-
-The thawing occurs through a DIFFERENT mechanism: if the dilaton
-was displaced during inflation and the potential has a very flat
-region at large φ, the effective mass at the initial displacement
-can be much lighter than m_φ at the minimum. The dilaton slowly
-rolls across the flat region and is now approaching the minimum.
+The thawing occurs through a different mechanism: the dilaton was
+displaced during inflation to a region of the potential where the
+effective mass is much lighter than m_φ at the minimum. The Casimir
+potential V = V₀/φ⁴ has a very flat slope at large φ, so the dilaton
+rolls slowly across this flat region and is now approaching the
+minimum. The thawing is driven by the FLATNESS of the potential at
+large displacement, not by the Hubble rate crossing the mass scale.
 
 **The slow-roll condition today:**
 
@@ -135,18 +135,26 @@ universe:
 
 The e-circle radius has changed by ~67% over cosmic time.
 
-**This appears to conflict with bounds on α variation** — since
-α ∝ R (in Kaluza-Klein theory). However, if the electromagnetic
-coupling is set topologically (by the winding number of the
-gauge field around the e-circle, Appendix W of Paper 1) rather
-than geometrically (by R itself), then α remains fixed even as
-R changes. This is the "topological coupling" scenario mentioned
-in Paper 1, Section 6.6.
+**Consistency with other calculations.** The CPL parameterization
+(w₀ = −0.85, w_a = −0.23) used in the CAMB computation IS the
+linearized approximation to the full variable-R dilaton dynamics.
+The CAMB computation therefore correctly captures the cosmological
+effects of the rolling dilaton, including the modified expansion
+history and dark energy evolution. The constant-R calculations in
+Paper 1 (hydrogen atom, 5D Einstein equations) describe PRESENT-DAY
+physics at R = R₀ and are not affected by the cosmological evolution
+of R over the age of the universe.
 
-The constraint |Δα/α| < 10⁻⁵ from quasar spectra is satisfied
-if the topological coupling is the relevant one, which it is
-when the gauge field has a definite winding number around the
-e-circle — exactly what the framework predicts.
+**Consistency with α stability.** The 67% change in R appears to
+conflict with α ∝ R in Kaluza-Klein theory. However, the
+electromagnetic coupling in the framework is set topologically (by
+the winding number of the gauge field around the e-circle, Paper 1
+Appendix W §W.6) rather than geometrically (by R itself). The
+topological coupling makes α independent of R — it is fixed by the
+discrete winding number, which does not change as R evolves
+continuously. The constraint |Δα/α| < 10⁻⁵ from quasar spectra is
+automatically satisfied because Δα = 0 exactly under topological
+coupling.
 
 ---
 

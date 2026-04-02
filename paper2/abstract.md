@@ -3,11 +3,15 @@
 ## The 5D e-Dimension Framework II: Precision Cosmology from Geometry
 
 We present the complete cosmological predictions of the 5D e-dimension
-framework introduced in Paper 1, computed using the CAMB Boltzmann solver
-with parameters derived entirely from the e-circle geometry. The framework
-makes no free fits to cosmological data. The central discovery of this
-paper is a scaling law — derived from bulk leptogenesis on the Z₂ orbifold
-— that removes the framework's last free cosmological parameter:
+framework introduced in Paper 1, computed using the CAMB Boltzmann solver.
+The framework fits zero parameters to CMB data. Two observational inputs
+— the dark energy density ρ_Λ (which fixes the e-circle circumference L
+in Paper 1) and the dark-to-visible matter ratio Ω_DM/Ω_b (which fixes
+the brane temperature ratio ξ through the scaling law below) — together
+with the Standard Model field content and Planck inflation parameters
+(inherited unchanged from ΛCDM), determine every cosmological observable.
+The central discovery of this paper is the scaling law — derived from
+bulk leptogenesis on the Z₂ orbifold — that fixes ξ:
 
     **Ω_DM / Ω_b = 1/ξ²**
 

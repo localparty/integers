@@ -89,10 +89,12 @@ requiring consistency with Planck's CMB angular scale measurement.
 
 | ω_c h² | θ* (°) | Offset from Planck (arcsec) |
 |---------|--------|----------------------------|
-| 0.1280 | 0.59520 | −4.9" |
+| 0.1280 | 0.60268 | +22.1" |
 | 0.1200 | 0.59818 | +5.9" |
+| 0.1185 | 0.59730 | +2.7" |
 | 0.1170 | 0.59640 | **−0.5"** |
-| 0.1140 | 0.58875 | −28.1" |
+| 0.1155 | 0.59550 | −3.8" |
+| 0.1140 | 0.59458 | −7.1" |
 
 **ω_c h² = 0.117** matches θ* to 0.5 arcseconds — within Planck's
 1σ measurement uncertainty. This is the adopted value.
@@ -128,6 +130,19 @@ The universe TODAY is younger by 327 Myr. At high redshift (z > 6),
 the difference is negligible — the two cosmologies converge in the
 radiation-dominated era (the physical radiation density, set by
 T_CMB = 2.725 K, is H₀-independent).
+
+**The z ~ 1 crossover.** The sign flip between z = 0 (−327 Myr) and
+z = 1 (+41 Myr) reflects the competing effects of §A.2. At late times
+(z < 1), the framework's higher H₀ dominates: faster expansion means
+less time accumulates between z = 1 and today, so t₀ is younger. At
+intermediate redshifts (z ~ 1–3), the thawing dilaton (w₀ = −0.85 > −1)
+provides less dark energy than a cosmological constant, slowing the
+expansion relative to ΛCDM. Combined with lower Ω_m = 0.290, the
+framework's H(z) is actually lower than ΛCDM's H(z) in the z ~ 1–3
+window, so more time accumulates at those epochs. The net result:
+the framework universe reaches z = 1 slightly OLDER than ΛCDM (by
+41 Myr), but the rapid late-time expansion then compresses the final
+stretch, making today 327 Myr younger.
 
 ---
 

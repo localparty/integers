@@ -76,10 +76,13 @@ true answer.
 | ξ | 0.4375 | From θ* zero-crossing |
 
 Scenario C resolves the θ* tension (offset +1.0") at the cost of a
-−3.9% shift in ω_b h², which creates a mild 1.5σ tension with
-primordial D/H measurements (predicted D/H ≈ 2.65×10⁻⁵ vs observed
-2.527 ± 0.030×10⁻⁵). A proper MCMC analysis would determine whether
-this shift is viable. All three scenarios use the same dilaton parameters:
+−3.9% shift in ω_b h², which creates a significant tension with
+primordial D/H measurements: predicted D/H ≈ 2.65×10⁻⁵ vs observed
+2.527 ± 0.030×10⁻⁵ (Cooke et al. 2018), a 4.1σ discrepancy against
+observational uncertainty alone. Including BBN theoretical uncertainty
+from nuclear reaction rates (~±0.04×10⁻⁵), the combined tension is
+~2.5σ. This D/H tension is Scenario C's primary cost; a full MCMC
+analysis would determine whether the θ* improvement justifies it. All three scenarios use the same dilaton parameters:
 
 | Shared parameter | Value | Source |
 |-----------------|-------|--------|
@@ -91,6 +94,16 @@ this shift is viable. All three scenarios use the same dilaton parameters:
 
 **Note:** All three scenarios predict N_eff = 3.31–3.39, in 3–4σ
 tension with ACT DR6 (N_eff = 2.86 ± 0.13). See Appendix Y, §Y.5.5.
+
+**N_eff footnote:** The naive formula ΔN_eff^{mirror} = 6.14 × ξ⁴
+assumes all mirror species are fully relativistic. At BBN (T ~ 1 MeV),
+the mirror sector temperature is T' = ξT ≈ 0.43–0.47 MeV, comparable
+to m_e = 0.511 MeV. Mirror e± are therefore partially Boltzmann-
+suppressed, reducing the effective g_*(mirror) from 10.75 to ~9.5–9.9
+and ΔN_eff by ~10%. For ξ = 0.432: N_eff ≈ 3.29 (vs naive 3.31);
+for ξ = 0.47: N_eff ≈ 3.37 (vs naive 3.39). This correction slightly
+eases the ACT DR6 tension but does not resolve it. A proper treatment
+requires tracking the mirror-sector thermal history through e± freeze-out.
 
 ---
 

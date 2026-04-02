@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Generate plots comparing 5D framework cosmological predictions vs Planck LCDM.
+
+Updated to show the Paper 2 final scenarios (A, B, C).
 """
 
 import numpy as np
@@ -19,12 +21,16 @@ outdir = os.path.dirname(os.path.abspath(__file__))
 # ============================================================
 colors = {
     "Planck_LCDM":     "#2c3e50",  # dark blue-gray
-    "5D_stabilized":   "#e74c3c",  # red
-    "5D_thawing":      "#e67e22",  # orange
-    "5D_DESI":         "#f39c12",  # gold
     "5D_minimal":      "#95a5a6",  # gray
-    "5D_low_omega":    "#27ae60",  # green
+    "Paper2_A":        "#e67e22",  # orange
+    "Paper2_B":        "#2980b9",  # blue
+    "Paper2_C":        "#27ae60",  # green
     "TRGB_centered":   "#8e44ad",  # purple
+    # Legacy (kept for H(z) comparison)
+    "5D_stabilized":   "#e74c3c",
+    "5D_thawing":      "#e67e22",
+    "5D_DESI":         "#f39c12",
+    "5D_low_omega":    "#27ae60",
 }
 
 # ============================================================
@@ -33,16 +39,13 @@ colors = {
 def plot_ages():
     fig, ax = plt.subplots(figsize=(12, 6))
 
-    names = ["Planck_LCDM", "5D_minimal", "5D_stabilized", "5D_thawing",
-             "5D_DESI", "TRGB_centered", "5D_low_omega"]
+    names = ["Planck_LCDM", "5D_minimal", "Paper2_A", "Paper2_B", "Paper2_C"]
     labels = [
         "Planck LCDM\n(baseline)",
-        "5D Minimal\n(tower only)",
-        "5D Stabilized\n(w=-1, mirror)",
-        "5D Thawing\n(w=-0.85)",
-        "5D DESI\n(w=-0.80)",
-        "5D TRGB\n(H0=69.8)",
-        "5D Low-Omega\n(less mirror DM)",
+        "5D Minimal\n(tower only, no mirror)",
+        "Scenario A\n(xi=0.47, theta*-matched)",
+        "Scenario B\n(xi=0.432, 1/xi² law)",
+        "Scenario C\n(xi=0.4375, self-consistent)",
     ]
 
     with open(os.path.join(outdir, "results.json")) as f:
@@ -61,18 +64,21 @@ def plot_ages():
     ax.set_yticks(range(len(names)))
     ax.set_yticklabels(labels, fontsize=10)
     ax.set_xlabel("Age of Universe (Gyr)", fontsize=12)
-    ax.set_title("Age of the Universe: 5D Framework vs Planck LCDM", fontsize=14, fontweight='bold')
+    ax.set_title("Age of the Universe: 5D Framework Scenarios vs Planck LCDM",
+                 fontsize=14, fontweight='bold')
 
-    # Add reference lines
-    ax.axvline(x=13.797, color='#2c3e50', linestyle='--', alpha=0.5, label='Planck LCDM = 13.80 Gyr')
-    ax.axvline(x=12.5, color='gray', linestyle=':', alpha=0.3, label='Oldest globular clusters ~12.5 Gyr')
+    # Reference lines
+    ax.axvline(x=13.797, color='#2c3e50', linestyle='--', alpha=0.5,
+               label='Planck LCDM = 13.80 Gyr')
+    ax.axvline(x=12.5, color='gray', linestyle=':', alpha=0.3,
+               label='Oldest globular clusters ~12.5 Gyr')
 
     ax.set_xlim(12.5, 14.2)
     ax.legend(loc='lower right', fontsize=9)
     ax.invert_yaxis()
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "plot_ages.png"), dpi=150)
+    plt.savefig(os.path.join(outdir, "plot_ages.png"), dpi=300)
     print("  Saved: plot_ages.png")
 
 
@@ -80,7 +86,7 @@ def plot_ages():
 # Plot 2: S8 tension diagram
 # ============================================================
 def plot_s8():
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(10, 7))
 
     with open(os.path.join(outdir, "results.json")) as f:
         results = json.load(f)
@@ -98,78 +104,105 @@ def plot_s8():
         ax.errorbar(val, i, xerr=err, fmt='o', color=col, markersize=10,
                     capsize=5, label=name, zorder=10)
 
-    # Framework predictions
+    # Framework predictions — Paper 2 scenarios
     y_offset = len(obs) + 0.5
-    fw_scenarios = ["5D_stabilized", "5D_thawing", "5D_DESI", "5D_low_omega"]
-    fw_labels = ["5D Stabilized", "5D Thawing (w=-0.85)", "5D DESI (w=-0.80)", "5D Low Omega_m"]
+    fw_scenarios = ["Paper2_A", "Paper2_B", "Paper2_C"]
+    fw_labels = [
+        "Scenario A (xi=0.47)",
+        "Scenario B (xi=0.432)",
+        "Scenario C (xi=0.4375)",
+    ]
+    fw_markers = ['D', 's', '^']
 
-    for i, (scen, label) in enumerate(zip(fw_scenarios, fw_labels)):
+    for i, (scen, label, marker) in enumerate(zip(fw_scenarios, fw_labels, fw_markers)):
         s8 = results[scen]["S8"]
-        ax.plot(s8, y_offset + i, 's', color=colors.get(scen, 'red'),
-                markersize=12, zorder=10, label=f"{label}: S8={s8:.3f}")
+        ax.plot(s8, y_offset + i, marker, color=colors.get(scen, 'red'),
+                markersize=14, zorder=10, label=f"{label}: S8={s8:.3f}")
 
     ax.set_yticks(list(range(len(obs))) + [y_offset + i for i in range(len(fw_scenarios))])
     ax.set_yticklabels([o[0] for o in obs] + fw_labels, fontsize=9)
     ax.set_xlabel("S8 = sigma_8 * sqrt(Omega_m / 0.3)", fontsize=12)
-    ax.set_title("S8 Tension: 5D Framework Predictions vs Observations", fontsize=14, fontweight='bold')
+    ax.set_title("S8 Tension: Paper 2 Scenarios vs Observations",
+                 fontsize=14, fontweight='bold')
 
     # Planck band
-    ax.axvspan(0.832 - 0.013, 0.832 + 0.013, alpha=0.1, color='#2c3e50', label='Planck 1-sigma')
+    ax.axvspan(0.832 - 0.013, 0.832 + 0.013, alpha=0.1, color='#2c3e50',
+               label='Planck 1-sigma')
     # WL band
-    ax.axvspan(0.759 - 0.024, 0.776 + 0.017, alpha=0.1, color='#2ecc71', label='Weak lensing range')
+    ax.axvspan(0.759 - 0.024, 0.776 + 0.017, alpha=0.1, color='#2ecc71',
+               label='Weak lensing range')
 
-    ax.set_xlim(0.65, 0.90)
+    ax.set_xlim(0.70, 0.88)
     ax.invert_yaxis()
-    ax.legend(loc='lower left', fontsize=7, ncol=2)
+    ax.legend(loc='lower right', fontsize=8, ncol=1)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "plot_s8.png"), dpi=150)
+    plt.savefig(os.path.join(outdir, "plot_s8.png"), dpi=300)
     print("  Saved: plot_s8.png")
 
 
 # ============================================================
-# Plot 3: Expansion history H(z)
+# Plot 3: Expansion history H(z) — Paper 2 scenarios
 # ============================================================
 def plot_Hz():
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
+    with open(os.path.join(outdir, "results.json")) as f:
+        results = json.load(f)
+
     scenarios_to_plot = {
-        "Planck_LCDM": {"H0": 67.36, "ombh2": 0.02237, "omch2": 0.1200,
-                        "mnu": 0.06, "nnu": 3.044, "w": -1.0, "wa": 0.0},
-        "5D_thawing": {"H0": 69.5, "ombh2": 0.02237, "omch2": 0.1200,
-                       "mnu": 0.06, "nnu": 3.39, "w": -0.85, "wa": -0.23},
-        "5D_DESI": {"H0": 69.5, "ombh2": 0.02237, "omch2": 0.1200,
-                    "mnu": 0.06, "nnu": 3.39, "w": -0.80, "wa": -0.30},
-        "5D_low_omega": {"H0": 69.5, "ombh2": 0.02237, "omch2": 0.1050,
-                         "mnu": 0.06, "nnu": 3.39, "w": -0.85, "wa": -0.23},
+        "Planck_LCDM": results["Planck_LCDM"],
+        "Paper2_A": results["Paper2_A"],
+        "Paper2_B": results["Paper2_B"],
+        "Paper2_C": results["Paper2_C"],
+    }
+
+    plot_colors = {
+        "Planck_LCDM": "#2c3e50",
+        "Paper2_A": "#e67e22",
+        "Paper2_B": "#2980b9",
+        "Paper2_C": "#27ae60",
+    }
+
+    plot_labels = {
+        "Planck_LCDM": "Planck LCDM",
+        "Paper2_A": "Scenario A (xi=0.47)",
+        "Paper2_B": "Scenario B (xi=0.432)",
+        "Paper2_C": "Scenario C (xi=0.4375)",
     }
 
     z_arr = np.linspace(0, 3, 200)
 
-    for name, params in scenarios_to_plot.items():
+    H_curves = {}
+    for name, res in scenarios_to_plot.items():
+        # Recompute H(z) from CAMB
         pars = camb.CAMBparams()
-        pars.set_cosmology(H0=params["H0"], ombh2=params["ombh2"],
-                          omch2=params["omch2"], mnu=params["mnu"],
-                          nnu=params["nnu"], tau=0.054)
-        if params["wa"] != 0:
-            pars.set_dark_energy(w=params["w"], wa=params["wa"], dark_energy_model='ppf')
+        pars.set_cosmology(H0=res["H0"], ombh2=res.get("ombh2", 0.02237),
+                          omch2=res.get("omch2", 0.1200), mnu=0.06,
+                          nnu=res["nnu"], tau=0.054)
+        if res["wa"] != 0:
+            pars.set_dark_energy(w=res["w0"], wa=res["wa"], dark_energy_model='ppf')
         else:
-            pars.set_dark_energy(w=params["w"])
+            pars.set_dark_energy(w=res["w0"])
         pars.InitPower.set_params(As=2.1e-9, ns=0.9649)
-        results = camb.get_results(pars)
+        camb_res = camb.get_results(pars)
 
-        H_values = [results.hubble_parameter(z) for z in z_arr]
-        col = colors.get(name, '#333')
+        H_values = [camb_res.hubble_parameter(z) for z in z_arr]
+        H_curves[name] = np.array(H_values)
+        col = plot_colors[name]
 
         # Absolute H(z)
-        ax1.plot(z_arr, H_values, color=col, linewidth=2, label=name.replace('_', ' '))
+        lw = 3 if name == "Planck_LCDM" else 2
+        ls = '--' if name == "Planck_LCDM" else '-'
+        ax1.plot(z_arr, H_values, color=col, linewidth=lw, linestyle=ls,
+                 label=plot_labels[name])
 
-        # Ratio to LCDM
-        if name == "Planck_LCDM":
-            H_lcdm = np.array(H_values)
-        else:
-            ratio = np.array(H_values) / H_lcdm
-            ax2.plot(z_arr, ratio, color=col, linewidth=2, label=name.replace('_', ' '))
+    # Ratio to LCDM
+    H_lcdm = H_curves["Planck_LCDM"]
+    for name in ["Paper2_A", "Paper2_B", "Paper2_C"]:
+        ratio = H_curves[name] / H_lcdm
+        col = plot_colors[name]
+        ax2.plot(z_arr, ratio, color=col, linewidth=2, label=plot_labels[name])
 
     ax1.set_xlabel("Redshift z", fontsize=12)
     ax1.set_ylabel("H(z) [km/s/Mpc]", fontsize=12)
@@ -186,7 +219,7 @@ def plot_Hz():
     ax2.set_ylim(0.97, 1.08)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "plot_Hz.png"), dpi=150)
+    plt.savefig(os.path.join(outdir, "plot_Hz.png"), dpi=300)
     print("  Saved: plot_Hz.png")
 
 
@@ -217,13 +250,14 @@ def plot_wz():
 
     ax.set_xlabel("Redshift z", fontsize=12)
     ax.set_ylabel("w(z) = P/rho", fontsize=12)
-    ax.set_title("Dark Energy Equation of State: 5D Dilaton vs DESI", fontsize=14, fontweight='bold')
+    ax.set_title("Dark Energy Equation of State: 5D Dilaton vs DESI",
+                 fontsize=14, fontweight='bold')
     ax.legend(fontsize=10, loc='lower left')
     ax.set_xlim(0, 5)
     ax.set_ylim(-2.0, -0.2)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "plot_wz.png"), dpi=150)
+    plt.savefig(os.path.join(outdir, "plot_wz.png"), dpi=300)
     print("  Saved: plot_wz.png")
 
 
@@ -236,9 +270,8 @@ def plot_summary():
     with open(os.path.join(outdir, "results.json")) as f:
         results = json.load(f)
 
-    scenarios = ["Planck_LCDM", "5D_minimal", "5D_stabilized", "5D_thawing",
-                 "5D_DESI", "TRGB_centered"]
-    short_labels = ["Planck", "5D Min", "5D Stab", "5D Thaw", "5D DESI", "5D TRGB"]
+    scenarios = ["Planck_LCDM", "5D_minimal", "Paper2_A", "Paper2_B", "Paper2_C"]
+    short_labels = ["Planck", "5D Min", "Scen A", "Scen B", "Scen C"]
     cols = [colors.get(s, '#333') for s in scenarios]
 
     params = [
@@ -256,7 +289,7 @@ def plot_summary():
 
         bars = ax.bar(range(len(scenarios)), values, color=cols, alpha=0.85)
         ax.set_xticks(range(len(scenarios)))
-        ax.set_xticklabels(short_labels, fontsize=8, rotation=30)
+        ax.set_xticklabels(short_labels, fontsize=9, rotation=20)
         ax.set_title(title, fontsize=11, fontweight='bold')
 
         # Reference lines
@@ -267,12 +300,12 @@ def plot_summary():
         # Add value labels on bars
         for bar, val in zip(bars, values):
             ax.text(bar.get_x() + bar.get_width()/2, bar.get_height(),
-                    f'{val:.2f}', ha='center', va='bottom', fontsize=7)
+                    f'{val:.2f}', ha='center', va='bottom', fontsize=8)
 
-    plt.suptitle("5D Framework Cosmological Predictions: Summary",
+    plt.suptitle("5D Framework Cosmological Predictions: Paper 2 Scenarios",
                  fontsize=16, fontweight='bold', y=1.02)
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "plot_summary.png"), dpi=150, bbox_inches='tight')
+    plt.savefig(os.path.join(outdir, "plot_summary.png"), dpi=300, bbox_inches='tight')
     print("  Saved: plot_summary.png")
 
 

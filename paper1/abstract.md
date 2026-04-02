@@ -20,8 +20,8 @@ number of a particle's helix through the circular e-dimension determines both
 its spin (via the Noether theorem) and its exchange statistics (via parallel
 transport). Integer winding gives bosons; half-integer gives fermions; fractional
 winding in two dimensions gives anyons — confirmed experimentally in the
-fractional quantum Hall effect. Third, the Born rule P(i) = |αᵢ|² is derived
-from the five-dimensional density and the projection postulate, and the
+fractional quantum Hall effect. Third, the Born rule P(i) = |αᵢ|² is reproduced within
+the five-dimensional density interpretation and the projection postulate, and the
 framework reproduces the quantum correlations that violate the CHSH Bell
 inequality (|S| = 2√2), with the non-locality sourced by the e-conservation
 constraint through the fifth dimension.
@@ -32,7 +32,8 @@ via Kaluza-Klein decomposition to four-dimensional gravity coupled to
 electromagnetism and a scalar field in a single metric. The compactness of
 the e-circle converts the continuous UV momentum integrals of 4D quantum
 gravity into discrete Kaluza-Klein mode sums that admit zeta regularization.
-The leading UV divergence vanishes identically at every loop order:
+Under zeta regularization of the KK mode sums, the leading UV divergence
+vanishes identically at every loop order:
 S₀^{(L)} = [1 + 2ζ(0)]^L = 0. The subleading terms are Epstein zeta
 functions evaluated at non-positive integers. For the two-loop R³ counterterm of linearized 5D gravity on M⁴ × S¹
 — corresponding to the Goroff-Sagnotti divergence that proved 4D Einstein
@@ -47,7 +48,7 @@ the trivial zeros of the Riemann zeta at even negative integers (forced
 by the perfect-square structure of KK masses). Ghost contributions, carrying the same
 Eisenstein quadratic form through KK number conservation, vanish by the
 same mechanisms. Under zeta regularization of the KK mode sums,
-the theory is perturbatively predictive to all orders, with counterterm
+linearized 5D gravity on M⁴ × S¹ is perturbatively predictive to all orders, with counterterm
 coefficients determined from two parameters: G₄ and the e-circle
 circumference L.
 
@@ -101,7 +102,7 @@ is a geometric framework in which the same compact circle that makes
 quantum mechanics necessary also makes quantum gravity finite.
 
 A companion computation (Paper 2) applies the CAMB Boltzmann solver to
-the framework's cosmological sector with parameters derived entirely from
+the framework's cosmological sector (to appear separately) with parameters derived entirely from
 the e-circle geometry — no free fits to data. The central result is a
 scaling law from bulk leptogenesis on the Z₂ orbifold: the three bulk
 right-handed neutrinos deposit baryon asymmetries on both branes, but the

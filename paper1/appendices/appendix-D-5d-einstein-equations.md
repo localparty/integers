@@ -297,9 +297,9 @@ potential V(φ) = V₀(φ − φ₀)² with V₀ large enough to make the scalar
 massive. The scalar then has a Compton wavelength λ_scalar = ℏ/(m_scalar c),
 and its effects are suppressed at distances r >> λ_scalar.
 
-If λ_scalar ∼ 85 μm (the Casimir dark energy scale from the speculative
-discussion), the scalar force would be detectable at submillimeter distances
-but suppressed at larger scales — consistent with current constraints.
+If λ_scalar ∼ L/2 ≈ 65 μm (the Casimir dark energy scale from Section 6.6,
+where L ~ 130 μm), the scalar force would be detectable at submillimeter
+distances but suppressed at larger scales — consistent with current constraints.
 
 ---
 

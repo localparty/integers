@@ -63,19 +63,32 @@ and lower Ω_m gives S8 = 0.753.
 
 ## C.3 The Breakdown
 
-| Effect | Contribution to ΔS8 (vs Planck) |
-|--------|----------------------------------|
-| N_eff = 3.39 (suppresses σ₈) | −0.030 |
-| w(z) evolution (modifies growth) | +0.008 |
-| Lower Ω_m = 0.290 (direct) | −0.034 |
-| KK cascade decays (mirror DM) | −0.023 |
-| **Total** | **−0.079** |
+The CAMB computation gives σ₈ = 0.766 and S8 = 0.753 for Scenario A.
+The total ΔS8 = −0.079 (from Planck ΛCDM's 0.832) arises from the
+non-linear interplay of three effects:
 
-The KK cascade decay contribution (from Obied et al. 2023, same
-physics as Paper 1, Appendix Q §Y.8.2) provides an additional
-suppression: decaying KK gravitons impart kick velocities
-v_kick < 2.2 × 10⁻⁴ c to dark matter particles, further damping
-small-scale structure.
+| Effect | Approximate individual contribution |
+|--------|-------------------------------------|
+| Elevated N_eff = 3.39 (suppresses σ₈) | ~−0.030 |
+| Evolving w(z) (modifies growth rate) | ~+0.008 |
+| Lower Ω_m = 0.290 (direct S8 reduction) | ~−0.034 |
+| **Non-linear coupling between effects** | **~−0.023** |
+| **Total (from CAMB)** | **−0.079** |
+
+Note: the individual contributions are APPROXIMATE (estimated by varying
+one parameter at a time). They do not add linearly to the CAMB total
+because the effects are coupled through the Friedmann equation and the
+growth function. The CAMB value S8 = 0.753 is the definitive number.
+
+An additional suppression from KK cascade decays (Obied et al. 2023,
+same physics as Paper 1 §Y.5.2) is NOT included in the CAMB computation
+(CAMB does not model KK decays). The cascade effect — decaying KK
+gravitons imparting kick velocities v_kick < 2.2 × 10⁻⁴ c to dark
+matter particles — would further dampen small-scale structure, lowering
+S8 below 0.753. The cascade can only push S8 lower — further into
+the weak lensing range, not back toward Planck. Quantifying this
+requires N-body simulations with the mirror sector physics
+(identified as future work, §C.5).
 
 ---
 

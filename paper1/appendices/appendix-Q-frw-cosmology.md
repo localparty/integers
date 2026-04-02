@@ -40,9 +40,7 @@ metric, give three independent equations:
 
 **The (ij) equation (acceleration equation):**
 
-    2(ä/a) + (ȧ/a)² + 2(ȧ/a)(ḃ/b) + (ä/a)(ḃ/b)... 
-
-Let me write these more carefully. For the diagonal 5D FRW metric with scale
+For the diagonal 5D FRW metric with scale
 factors a(t) and b(t), the 5D Friedmann equations reduce to (see Overduin &
 Wesson 1997, Ch. 8):
 
@@ -179,6 +177,19 @@ contribution to N_eff. The active-sterile mixing parameter required is
 the mixing is suppressed by the brane-to-bulk wavefunction overlap. With
 intra-tower decays accounted for, the effective ΔN_eff contributed to the
 CMB can be as small as ~0.05 — well within all current bounds.
+
+**Applicability to the e-circle framework.** The Gonzalo et al. result
+applies directly because the two models share the same physical structure:
+(1) a compact extra dimension at the micron scale (R ~ 12–21 μm here vs
+R ~ 1–30 μm in the Dark Dimension), giving the same KK mass spacing
+m_n = nℏ/(Rc); (2) bulk right-handed neutrinos with the same tower of KK
+excitations; (3) active-sterile mixing suppressed by the brane-to-bulk
+wavefunction overlap, naturally satisfying ζ < 0.01 in both frameworks
+(the orbifold wavefunction overlap at the brane is f(0) = 1/√(πR), giving
+ζ ~ (v/M₅)² ≈ 10⁻²⁰ ≪ 0.01). The decay channels (KK level n → n−1 +
+ν_active or n → n−1 + dark radiation) have the same kinematics and rates
+because the KK spectrum is identical. The quantitative result ΔN_eff → 0.05
+therefore transfers without modification.
 
 **Corrected prediction:** N_eff ≈ 3.04 + 0.05 = 3.09, consistent with
 the combined ACT+SPT+Planck measurement N_eff = 2.81 ± 0.18. A precise

@@ -21,20 +21,27 @@ observables.
 
 ## 1.2 The Central Claim
 
-**Every cosmological parameter in this paper is a prediction, not a
-fit.** The four geometric inputs:
+**The framework fits zero parameters to the CMB.** Two observational
+inputs — ρ_Λ (which fixes L ~ 130 μm via the Casimir energy, Paper 1
+§6.6) and Ω_DM/Ω_b = 5.36 (which fixes ξ = 0.432 via the 1/ξ² law,
+Appendix E) — together with quantities derived from the e-circle
+geometry in Paper 1:
 
-    {L, ξ, V(φ), SM field content}
+| Quantity | Value | Derivation chain (Paper 1) |
+|----------|-------|---------------------------|
+| L | ~130 μm | Casimir energy = ρ_Λ (§6.6) |
+| w₀, w_a | −0.85, −0.23 | Dilaton potential from L (Appendix Q/F) |
+| Σm_ν | 0.06 eV | Bulk seesaw from M₅ = (M_P²/L)^{1/3} (Appendix Z) |
+| N_eff^{tower} | 0.05 | Intra-tower decays (Appendix Y, Gonzalo et al.) |
+| ΔN_eff^{mirror} | 6.14 × ξ⁴ | Hidden-brane dark radiation (Appendix Y) |
 
-where L ~ 130 μm is the e-circle circumference, ξ ~ 0.47 is the
-hidden-to-visible brane temperature ratio (BBN-constrained), V(φ)
-is the Casimir + Goldberger-Wise dilaton potential, and the SM field
-content is fixed by the Standard Model — determine every
-cosmological observable computed here.
+and inherited SM/Planck parameters (ω_b h², A_s, n_s — unchanged from
+ΛCDM) determine every cosmological observable computed here.
 
-This is a qualitatively different situation from ΛCDM parameter
-fitting. The framework either works or it doesn't. The tests
-described in this paper will show which.
+In ΛCDM, six parameters are fitted to the CMB. In this framework,
+zero CMB parameters are fitted; H₀, ω_c h², t₀, S8, θ*, r_d, N_eff,
+and H(z) are all predictions. The framework either works or it
+doesn't.
 
 ## 1.3 The Key Results (Preview)
 

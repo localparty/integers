@@ -315,5 +315,52 @@ These four postulates, together with the standard laws of quantum mechanics and
 general relativity as they apply in four dimensions, constitute the complete
 framework. Sections 3 through 5 derive their content from these postulates alone.
 
+### 2.7.1 Derived Assumptions
+
+Several assumptions used in the paper's technical appendices are not
+independent postulates — they follow from the four postulates above
+combined with standard physics:
+
+**The rotation-e coupling** (used in Appendix B): the e-coordinate's
+coupling to spatial rotations follows from identifying spin with
+e-angular momentum via the Noether theorem applied to Postulate 3.
+
+**The 5D density rule** (used in Appendix C): the probability density
+|ψ|² is the 5D density projected onto 4D, consistent with Postulate 4.
+This reproduces the Born rule but does not derive it independently of
+the projection postulate.
+
+**The gravitational action** (used in Appendix D): the 5D Einstein-
+Hilbert action on P(M⁴, U(1)) is the unique generally covariant
+two-derivative action on the bundle — not an additional postulate but
+the standard gravitational action applied to the framework's geometry.
+
+**Zeta regularization** (used in Appendices F, G, S): the regularization
+of KK mode sums by spectral zeta functions. This is the unique
+prescription consistent with the U(1) translation symmetry of the
+e-circle (Postulate 3); see Appendix S, §S.7.4.
+
+Two additional assumptions are used in the speculative extensions:
+
+**The Z₂ orbifold** (Appendix W): modding out S¹ by the fermion parity
+(−1)^F. Geometrically motivated by the spin structure but not forced
+by it — a physical hypothesis.
+
+**The Z₃ symmetry** (Appendix W, §W.4): a three-fold rotation of the
+e-circle, producing three generations. Speculative.
+
+### 2.7.2 A Note on Two Scenarios
+
+Two configurations of the e-circle appear in this paper. The **circle
+scenario** (S¹) has circumference L ≈ 50–200 μm (R ≈ 8–32 μm), with
+all Standard Model fields propagating on the circle. The **orbifold
+scenario** (S¹/Z₂) has brane separation R ≈ 12 μm, with only bulk
+fields (gravity and three right-handed neutrinos) propagating between
+the branes. The circle scenario is used in Appendices A–V (unless
+noted); the orbifold scenario is used in Appendix W and the abstract.
+The two scenarios make different predictions for the Yukawa gravitational
+deviation scale (21 μm vs 12 μm) and are experimentally distinguishable.
+See Section 6.6 for the full comparison.
+
 ---
 

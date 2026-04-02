@@ -933,3 +933,219 @@ earlier review round. **SKIP this fix.**
 | 14 | strong | paper-section-2-framework.md + 6-connections.md | New subsection + cross-ref | 5 min |
 | 15 | strong | — | SKIP (already fixed) | 0 |
 | **Total** | | **9 files** | **10 actual changes** | **~40 min** |
+
+---
+
+# AGENT EXECUTION INSTRUCTIONS
+
+> You are an autonomous agent. Read this section carefully before doing anything.
+> Your job is to implement every fix in the table above, working through them
+> in tier order (arXiv first, then PRL, then strong). Do NOT ask for confirmation
+> on individual edits — the fixes are fully specified. Do ask if you find a
+> genuine ambiguity in the source file (e.g. the target text is not found).
+
+## Working directory
+`/Users/gsix/quantum-geometry-in-5d/paper1/`
+
+## Files you will edit (all paths relative to paper1/)
+- `abstract.md`
+- `paper-section-5x-quantization-bridge.md`
+- `paper-section-6-connections.md`
+- `paper-section-8-conclusion.md`
+- `paper-section-2-framework.md`
+- `appendices/appendix-Q-frw-cosmology.md`
+- `appendices/appendix-S-finiteness-theorem.md`
+- `appendices/appendix-D-5d-einstein-equations.md`
+
+## What has already been done (DO NOT redo)
+Fix 1, 2, 3, 4 (partial — field content paragraph added), 5 (citations),
+and 6 (artifact removed) were applied in an earlier session.
+Verify each is present before skipping; if absent, apply it.
+
+## What still needs doing
+
+### CHECK FIRST — verify these are already applied
+
+**Fix 1 check:** In `abstract.md`, line beginning "The leading UV divergence"
+should now read "Under zeta regularization of the KK mode sums, the leading
+UV divergence vanishes...". If not, apply.
+
+**Fix 2 check:** In `abstract.md`, "linearized 5D gravity on M⁴ × S¹ is
+perturbatively predictive" should appear. If not, apply.
+
+**Fix 3 check:** In `abstract.md`, "reproduced within the five-dimensional
+density interpretation" should appear (not "derived from"). If not, apply.
+
+**Fix 6 check:** In `appendix-Q-frw-cosmology.md`, the line
+"Let me write these more carefully." should be gone. If not, remove it
+along with the incomplete equation ending in "..." on the line above it.
+
+### APPLY NOW — these still need doing
+
+**Fix 7 — Gonzalo applicability paragraph (CRITICAL — HIGH risk if absent):**
+
+In `appendix-Q-frw-cosmology.md`, find the paragraph that ends with
+"well within all current bounds." in section Q.3.4 (it's the paragraph
+that ends the discussion of the active-sterile mixing ζ < 0.01).
+Immediately after it, insert:
+
+```
+**Applicability to the e-circle framework.** The Gonzalo et al. (2024)
+result applies directly here because the two models share identical
+physical structure: (1) a compact extra dimension at the micron scale
+(R ~ 12–21 μm here vs ~1–30 μm in the Dark Dimension), giving the same
+KK mass spacing m_n = nℏc/R; (2) bulk right-handed neutrinos with the
+same KK tower structure and intra-tower decay channels; (3) active-sterile
+mixing suppressed by the brane-to-bulk wavefunction overlap, giving
+ζ ~ (v/M₅)² ~ (100 GeV / 2.5×10¹⁴ GeV)² ~ 10⁻²⁴ ≪ 0.01, satisfying
+the mixing bound naturally. The KK decay kinematics (level n → n−1 +
+light species) depend only on the KK mass spacing, which is identical in
+both frameworks. The quantitative result ΔN_eff → 0.05 therefore transfers
+without modification to the e-circle framework.
+```
+
+**Fix 8 — Symmetry selection principle for zeta regularization (PRL tier):**
+
+In `appendix-S-finiteness-theorem.md`, find section §S.7.4 (the paragraph
+on hard cutoffs breaking U(1) symmetry). After that paragraph, insert:
+
+```
+**The symmetry selection principle.** The choice of zeta regularization
+can be stated as a physical necessity rather than a mathematical convention:
+any regularization scheme that preserves the U(1) translation symmetry of
+the e-circle (Postulate 3) uniquely assigns the values ζ(0) = −1/2 and
+ζ(−2j) = 0 (j ≥ 1) to the mode sums. This is because Σ_{n∈Z} n^{2j} has
+a unique translation-invariant extension to the domain where the sum
+diverges — the analytic continuation IS the translation-invariant
+assignment. Hard cutoffs assign a preferred maximum mode |n| ≤ N, breaking
+the Z (integer shift) symmetry of the circle; they are rejected on the
+same physical grounds that cutoff regularization is rejected in gauge
+theories — both break the defining symmetry of the theory. In this sense,
+zeta regularization is not a choice among equivalent schemes: it is the
+unique scheme consistent with the e-circle geometry. See Dienes (1995,
+*Phys. Rep.* 287, 447, §4.2) for the same argument in the context of
+modular-invariant KK regularization in string theory.
+```
+
+**Fix 9 — "(to appear separately)" in abstract (PRL tier):**
+
+In `abstract.md`, find the Paper 2 paragraph beginning "A companion
+computation (Paper 2) applies the CAMB Boltzmann solver to the framework's
+cosmological sector". Check whether "(to appear separately)" is already
+present after "cosmological sector". If not, insert it:
+
+Change: `the framework's cosmological sector with parameters`
+To: `the framework's cosmological sector (to appear separately) with parameters`
+
+**Fix 10 — §2.7.1 derived assumptions list (PRL tier):**
+
+In `paper-section-2-framework.md`, find the end of §2.7 (the section
+containing the four postulates). After the last postulate and before the
+next section heading, insert the following new subsection:
+
+```
+### 2.7.1 Derived Assumptions and Speculative Extensions
+
+Several assumptions used in the technical appendices are not independent
+postulates — they follow from the four postulates above combined with
+standard physics:
+
+**Rotation-e coupling** (Appendix B): The coupling Δφ = s·θ between
+spatial rotation and e-revolution follows from identifying spin with
+e-angular momentum via the Noether theorem applied to Postulate 3
+(e-translation invariance). It is not an additional postulate.
+
+**5D density rule** (Appendix C): The probability density |ψ|² is the
+5D density projected onto 4D, consistent with the projection postulate
+(Postulate 4). This reproduces the Born rule but does not derive it
+independently — the projection postulate is the operative assumption.
+
+**Gravitational action** (Appendix D): The 5D Einstein-Hilbert action on
+P(M⁴, U(1)) is the unique generally covariant two-derivative action on
+the bundle — not a new postulate, but the standard gravitational action
+applied to the framework's geometry.
+
+**Zeta regularization** (Appendices F, G, S): The regularization of KK
+mode sums by spectral zeta functions is the unique prescription preserving
+the e-circle's U(1) translation symmetry (Postulate 3); see Appendix S,
+§S.7.4 for the detailed argument.
+
+Two additional assumptions underlie the speculative extensions of Section
+6.6 and Appendix W:
+
+**Z₂ orbifold projection**: Modding S¹ out by fermion parity (−1)^F is
+geometrically motivated by the spin structure but not forced by the four
+postulates — it is a physical hypothesis with testable consequences.
+
+**Z₃ symmetry**: A three-fold rotation of the e-circle generating three
+fermion generations. Speculative; falsified if the generation structure
+has a different explanation.
+
+For the core QM results (Sections 2–4), the four stated postulates are
+sufficient. For the gravity and dark sector extensions, the additional
+assumptions above are required and are labeled accordingly.
+```
+
+**Fix 12 — "additional" in Section 8 conclusion:**
+
+In `paper-section-8-conclusion.md`, find:
+```
+Neither fact requires a postulate — both follow from
+```
+Change to:
+```
+Neither fact requires an additional postulate — both follow from
+```
+
+**Fix 13 — λ_scalar ~ 85 μm in Appendix D:**
+
+In `appendix-D-5d-einstein-equations.md`, search for "85 μm" or "85μm".
+If found, change the value to "L/2 ≈ 65 μm" and update the surrounding
+sentence accordingly. If the sentence uses the value to estimate when the
+scalar force is detectable, the corrected sentence should read:
+"If λ_scalar ~ L/2 ≈ 65 μm (where L ~ 130 μm is the e-circle
+circumference from the Casimir calculation), the scalar force would
+be detectable at submillimeter distances."
+
+**Fix 14 — R-value note moved to Section 2:**
+
+In `paper-section-2-framework.md`, find the end of the last subsection
+before §2.7 (or before §2.7.1 if you've already added it). Add the
+following subsection:
+
+```
+### 2.6.1 Note on Two e-Circle Scenarios
+
+Two configurations of the e-circle appear in this paper and should be
+kept distinct throughout:
+
+**The circle scenario (S¹):** Circumference L ≈ 50–200 μm (radius
+R ≈ 8–32 μm). All Standard Model fields propagate on the circle
+(universal extra dimension setup). Used in Appendices A–V unless
+notherwise noted. Yukawa gravitational deviation at λ ~ 21 μm.
+
+**The orbifold scenario (S¹/Z₂):** Brane separation R ≈ 12 μm. Only
+bulk fields (gravity + 3 right-handed neutrinos) propagate between
+branes. Used in Appendix W and the dark sector predictions. Yukawa
+deviation at λ ~ 12 μm.
+
+The two scenarios are physically distinct and make experimentally
+distinguishable predictions. Section 6.6 compares them in detail.
+```
+
+Then in `paper-section-6-connections.md`, find the existing "Note on the
+e-circle radius" block (which starts "Two values of R appear in this
+paper") and replace it with a shorter cross-reference:
+```
+**Note on the e-circle radius.** Two scenarios are used in this paper —
+the circle scenario (L ≈ 130 μm, R ≈ 21 μm) and the orbifold scenario
+(R ≈ 12 μm). See §2.6.1 for the distinction and which appendices use
+which scenario.
+```
+
+## After all fixes are applied
+
+1. Run `git diff --stat` from the repo root to confirm which files changed.
+2. Do NOT commit — leave for author review.
+3. Report which fixes were applied, which were already present, and any
+   files where the target text was not found.

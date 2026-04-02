@@ -180,7 +180,7 @@ metrics on P(M⁴, U(1)), with the e-circle quantized as per standard QM and
 the KK mode sum treated by zeta regularization, is a consistent quantum
 theory of gravity. It reduces to standard QM in the quantum limit (the
 e-fiber sector), to 4D GR + EM in the classical limit (the weak-field
-Kaluza-Klein limit), and is perturbatively finite at one loop (Appendix F)
+Kaluza-Klein limit), and linearized 5D gravity on the e-bundle is perturbatively finite at one loop (Appendix F)
 and two loops (Appendix G). The mechanism — the vanishing of the leading
 divergence via Σ_{n∈Z} 1 = ζ(0+1) = 0 at every loop order — suggests
 perturbative finiteness to all orders. Whether this extends non-perturbatively

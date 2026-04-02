@@ -130,6 +130,50 @@ scenarios["TRGB_centered"] = {
     "label": "5D at TRGB H0=69.8 (Freedman et al. 2024)",
 }
 
+# ============================================================
+# PAPER 2 FINAL SCENARIOS (A, B, C)
+# These are the definitive scenarios used in the paper text.
+# ============================================================
+
+# --- Scenario A: theta*-matched (xi = 0.47) ---
+# omega_c h² = 0.117 chosen to match Planck theta* within 0.5"
+scenarios["Paper2_A"] = {
+    "H0": 69.5,
+    "ombh2": 0.02237,
+    "omch2": 0.1170,          # theta*-matched value
+    "mnu": 0.06,
+    "nnu": 3.39,              # 3.044 + 0.05 + 6.14*(0.47)^4
+    "w": -0.85,
+    "wa": -0.23,
+    "label": "Scenario A (xi=0.47, theta*-matched)",
+}
+
+# --- Scenario B: 1/xi² law (xi = 0.432) ---
+# omega_c h² = omega_b h² / xi² = 0.02237 / 0.187 = 0.1199
+scenarios["Paper2_B"] = {
+    "H0": 68.7,
+    "ombh2": 0.02237,
+    "omch2": 0.1199,          # from 1/xi² law
+    "mnu": 0.06,
+    "nnu": 3.31,              # 3.044 + 0.05 + 6.14*(0.432)^4
+    "w": -0.85,
+    "wa": -0.23,
+    "label": "Scenario B (xi=0.432, 1/xi² law)",
+}
+
+# --- Scenario C: self-consistent omega_b (xi = 0.4375) ---
+# omega_b h² lowered to 0.02150; omega_c = 5.36 * omega_b
+scenarios["Paper2_C"] = {
+    "H0": 68.8,
+    "ombh2": 0.02150,
+    "omch2": 0.11524,         # 5.36 * 0.02150
+    "mnu": 0.06,
+    "nnu": 3.32,              # 3.044 + 0.05 + 6.14*(0.4375)^4
+    "w": -0.85,
+    "wa": -0.23,
+    "label": "Scenario C (xi=0.4375, self-consistent omega_b)",
+}
+
 
 def run_scenario(name, params):
     """Run CAMB for a given parameter set and return key observables."""
@@ -207,7 +251,7 @@ def run_scenario(name, params):
     DA_star = results.angular_diameter_distance(z_star)
 
     # Physical time since Big Bang at various redshifts (useful for JWST)
-    z_test = [0, 2, 6, 10, 12, 14, 20]
+    z_test = [0, 1, 3, 6, 10, 12, 14, 20]
     ages_at_z = {}
     for z in z_test:
         t_z = results.physical_time(z)  # Gyr
