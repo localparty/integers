@@ -48,9 +48,10 @@ the trivial zeros of the Riemann zeta at even negative integers (forced
 by the perfect-square structure of KK masses). Ghost contributions, carrying the same
 Eisenstein quadratic form through KK number conservation, vanish by the
 same mechanisms. Under zeta regularization of the KK mode sums,
-linearized 5D gravity on M⁴ × S¹ is perturbatively predictive to all orders, with counterterm
-coefficients determined from two parameters: G₄ and the e-circle
-circumference L.
+linearized 5D gravity on M⁴ × S¹ is perturbatively predictive — established
+through two loops by explicit computation, and conjectured to all orders
+by the Epstein-Terras structure — with counterterm coefficients determined
+from two parameters: G₄ and the e-circle circumference L.
 
 The spin structure of the e-circle (bosons periodic, fermions anti-periodic)
 implies a natural Z₂ orbifold with two fixed-point branes. The visible brane
@@ -64,24 +65,28 @@ meV scale through the bulk seesaw mechanism. Kinetic mixing between the two
 branes' U(1) gauge fields is predicted at ε ~ 5 × 10⁻⁴ (from the
 KK tower mediation: α_EM × π²/6 × exp(−π)), testable by LDMX and LHCb
 Run 3. A conjectured Z₃ orbifold structure gives three SM generations, with
-exponential mass hierarchies from a warp factor k ≈ 2. The electromagnetic
-coupling at the Planck scale is identified with the inverse configuration
-torus area 1/α(M_P) = 4π²; three generations of SM running then give
-1/α(0) ≈ 137.
+conjectured exponential mass hierarchies from a warp factor k ≈ 2. A
+speculative identification of the Planck-scale electromagnetic coupling with
+the inverse configuration torus area, 1/α(M_P) = 4π², combined with three
+generations of SM running, gives 1/α(0) ≈ 137.
 
 The e-circle, Z₆-orbifolded and warped, provides a geometric account of
-twenty-two phenomena: quantum mechanics, electromagnetism, gravity, the
-spin-statistics theorem, perturbative UV finiteness, dark energy, dark
-energy equation of state, dark matter, the fine structure constant α ≈ 1/137,
-α stability, three fermion generations, the fermion mass hierarchy, neutrino
-masses, neutrino mass ordering (normal hierarchy from Z₃ geometry), kinetic
-mixing with a dark photon, the strong CP problem (topological resolution:
-π₄(SU(3)) = 0 eliminates the theta parameter in 5D), the Hubble tension
-(H₀ ≈ 68.0–68.7 km/s/Mpc from hidden-brane dark radiation, above ΛCDM
-and toward the non-distance-ladder consensus; constrained by ACT DR6
-N_eff at the upper end; full resolution requires physics beyond the
-minimal orbifold), black hole entropy, the hydrogen spectrum, the Casimir
-force, baryon asymmetry (from the Z₂ chirality preference), and the CPT theorem. Seven testable predictions follow:
+twenty-two phenomena at three levels of rigor. Eight are derived from the
+basic e-circle (M⁴ × S¹): quantum mechanics, electromagnetism, gravity,
+the spin-statistics theorem, perturbative UV finiteness, the hydrogen
+spectrum, black hole entropy, and the CPT theorem. Eight more follow from
+the Z₂ orbifold extension: dark energy (Casimir energy), dark matter
+(hidden-brane matter), neutrino masses (bulk seesaw), kinetic mixing
+with a dark photon (ε ~ 5 × 10⁻⁴), the strong CP problem (topological
+resolution: π₄(SU(3)) = 0 in 5D), the Hubble tension (H₀ ≈ 68.7–69.5
+km/s/Mpc from hidden-brane dark radiation; in 3–4σ tension with ACT DR6
+N_eff = 2.86 ± 0.13), the Casimir effect, and baryon asymmetry (derived
+in Paper 2 via bulk leptogenesis). Six are conjectured: the dark energy
+equation of state (thawing dilaton, derived quantitatively in Paper 2),
+the fine structure constant α ≈ 1/137 (from the configuration torus
+area), α stability, three fermion generations (Z₃ orbifold), the fermion
+mass hierarchy (warp factor k ≈ 2), and normal neutrino mass ordering
+(from Z₃ geometry, testable by JUNO). Seven testable predictions follow:
 two are already consistent with current data (observed α stability, and the
 dark energy equation of state w ≈ −1 — though DESI DR2 shows 4.2σ tension
 with static w = −1, resolvable via thawing dilaton quintessence). The naive dilaton prediction (ΔN_eff ≈ 0.57) appeared in tension with
@@ -94,33 +99,33 @@ neutrino masses and normal mass ordering (testable by JUNO within 6 years),
 and mirror dark matter — are within reach of experiments in the next 3–10 years.
 
 We do not claim to have solved quantum gravity or to have derived the full
-Standard Model. The perturbative finiteness result is established through
-two loops by explicit computation and conjectured to all orders by the
-Epstein-Terras structure. The orbifold extensions are speculative but
-quantitative, with specific falsifiable predictions. What is established
-is a geometric framework in which the same compact circle that makes
-quantum mechanics necessary also makes quantum gravity finite.
+Standard Model. The orbifold extensions are speculative but quantitative,
+with specific falsifiable predictions. What is established is a geometric
+framework in which the same compact circle that makes quantum mechanics
+necessary also makes quantum gravity finite.
 
 A companion computation (Paper 2) applies the CAMB Boltzmann solver to
-the framework's cosmological sector (to appear separately) with parameters derived entirely from
-the e-circle geometry — no free fits to data. The central result is a
-scaling law from bulk leptogenesis on the Z₂ orbifold: the three bulk
-right-handed neutrinos deposit baryon asymmetries on both branes, but the
-hidden brane is colder (ξ = T_hidden/T_visible). The entropy asymmetry
-(1/ξ³) and washout suppression (1/ξ²) combine to give:
+the framework's cosmological sector (to appear separately) with parameters
+derived entirely from the e-circle geometry — fitting zero parameters to
+CMB data. The central result is a scaling law from bulk leptogenesis on
+the Z₂ orbifold: the three bulk right-handed neutrinos deposit baryon
+asymmetries on both branes, but the hidden brane is colder
+(ξ = T_hidden/T_visible). The entropy asymmetry (1/ξ³) and washout
+suppression (1/ξ²) combine to give:
 
     Ω_DM / Ω_b = 1/ξ²
 
-Inverting against the observed ratio 5.36 determines ξ = 0.432 —
-removing the last free cosmological parameter. The CAMB-computed
-predictions (zero adjustable parameters): t₀ = 13.47–13.60 Gyr, H₀ =
-68.7–68.8 km/s/Mpc, S8 = 0.753–0.785 (resolving the 4σ weak lensing
-tension without tuning), r_d = 145.8–146.6 Mpc (testable by DESI DR3),
-and the CMB angular scale θ* matched to within 1.0–6.6 arcseconds of
-Planck's measurement. The expansion history H(z) peaks 4–6% above ΛCDM
-at z ∼ 0.3–0.7 — a specific fingerprint testable by DESI DR3 at 8σ.
-The cosmic coincidence Ω_DM/Ω_b ≈ 5 is not a coincidence: it is 1/ξ²,
-where ξ is fixed by geometry and baryogenesis. The required ξ ≈ 0.43
-predicts N_eff = 3.31, in 3–4σ tension with ACT DR6 (N_eff = 2.86 ±
-0.13) — the framework's primary open issue, definitively resolved by
-CMB-S4 (σ(N_eff) ≈ 0.03).
+Inverting against the observed ratio 5.36 determines ξ = 0.432 at leading
+order; the washout correction shifts this to ξ ≈ 0.49, converging with
+the independently θ*-matched value ξ = 0.47. Three scenarios bracket
+the prediction. The CAMB-computed results: t₀ = 13.47–13.60 Gyr, H₀ =
+68.7–69.5 km/s/Mpc, S8 = 0.753–0.785 (resolving the 4σ weak lensing
+tension without tuning), r_d = 145.8–148.0 Mpc, and the CMB angular
+scale θ* matched to within 0.5–6.6 arcseconds of Planck's measurement.
+The thawing dilaton (w₀ = −0.85, w_a = −0.23) drives the expansion
+history H(z) to peak 4–6% above ΛCDM at z ~ 0.3–0.7 — a specific
+fingerprint testable by DESI DR3 at 8σ. The cosmic coincidence
+Ω_DM/Ω_b ≈ 5 is not a coincidence: it is 1/ξ², where ξ is fixed by
+geometry and baryogenesis. All three scenarios predict N_eff = 3.31–3.39,
+in 3–4σ tension with ACT DR6 (N_eff = 2.86 ± 0.13) — the framework's
+primary open issue, definitively resolved by CMB-S4 (σ(N_eff) ≈ 0.03).

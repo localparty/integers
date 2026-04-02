@@ -355,6 +355,20 @@ presented in another's context.
 **6.3 Tensions acknowledged:**
 Is the ACT DR6 tension mentioned at every point where N_eff or H₀ appears?
 
+**6.4 Abstract completeness:**
+Does the abstract mention every major CAMB input parameter and every
+major prediction? Cross-check against the §4 results table — any
+observable in the table but absent from the abstract is a gap. Specifically
+verify:
+- All three scenarios (A, B, C) are represented, with ranges not single values
+- Key CAMB inputs: w₀, w_a, N_eff, ξ, Σm_ν
+- Key predictions: t₀, H₀, S8, r_d, θ*, Ω_m, H(z) shape
+- The baryogenesis mechanism and washout correction
+- The thawing dilaton / DESI comparison
+- Neutrino mass and ordering predictions
+- The S8 resolution mechanism (not just the number)
+- Every decisive test mentioned in §7 (CMB-S4, DESI, Euclid, JUNO)
+
 ---
 
 ## Phase 7: The Killer Questions

@@ -328,6 +328,22 @@ point where R values or field content appear?
 Is every open tension (ACT DR6 N_eff, SH0ES Hubble, DESI w ≠ -1)
 acknowledged where the relevant prediction is stated?
 
+**6.4 Abstract completeness:**
+Paper 1's abstract is long (~900 words) and claims twenty-two phenomena.
+Verify that every one of those twenty-two is actually derived or discussed
+in the body or appendices. Cross-check against the "twenty-two phenomena"
+list in the abstract — any item named there but not substantiated in the
+paper is an overclaim. Conversely, check for major results in the body
+that the abstract omits. Specifically verify:
+- All 22 listed phenomena have a corresponding section or appendix
+- Every testable prediction named in the abstract appears in Appendix H
+- The Paper 2 summary (lines 104–126) uses numbers consistent with
+  Paper 2's current abstract and results tables
+- Every speculative extension (Z₃ generations, α ≈ 1/137, strong CP)
+  is labeled as speculative in the abstract, not just in the body
+- The finiteness claim scope is stated precisely (linearized, zeta
+  regularization, two-loop explicit + all-order conjecture)
+
 ---
 
 ## Phase 7: The Killer Questions

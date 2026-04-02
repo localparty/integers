@@ -4,20 +4,22 @@
 Same as Paper 1 with subtitle:
 "The 5D e-Dimension Framework II: Precision Cosmology from Geometry"
 
-## Short abstract (for arXiv, ≤ 150 words)
+## Short abstract (for arXiv submission form, ≤ 1920 characters)
 
-We compute the complete cosmological predictions of the 5D e-dimension
-framework using the CAMB Boltzmann solver with parameters derived
-entirely from the e-circle geometry — fitting zero parameters to CMB
-data. Two observational inputs (the dark energy density and the
-dark-to-visible matter ratio) together with the Standard Model field
-content determine every observable. The results: t₀ = 13.47 Gyr;
-S8 = 0.753–0.785 (resolving the 4σ clustering tension); H₀ =
-68.7–69.5 km/s/Mpc; r_d = 145.8–146.2 Mpc. The scaling law
-Ω_DM/Ω_b = 1/ξ², derived from bulk leptogenesis on the Z₂ orbifold,
-explains the cosmic coincidence. The expansion history H(z) peaks
-4–6% above ΛCDM at z ~ 0.3–0.7, testable by DESI DR3. CMB-S4 will
-confirm or exclude the mirror sector at > 9σ (N_eff = 3.31–3.39).
+We compute the cosmological predictions of the 5D e-dimension framework
+using CAMB v1.6.6, fitting zero parameters to CMB data. Two observational
+inputs ($\rho_\Lambda$, $\Omega_{DM}/\Omega_b$) plus a thawing dilaton
+($w_0=-0.85$, $w_a=-0.23$) determine every observable. The central result:
+$\Omega_{DM}/\Omega_b = 1/\xi^2$ from bulk leptogenesis on the $Z_2$
+orbifold, where $\xi = T_{hidden}/T_{visible}$. Three scenarios bracket
+the prediction ($\xi = 0.432$--$0.47$): $t_0 = 13.47$--$13.60$ Gyr;
+$S_8 = 0.753$--$0.785$ (resolving the $4\sigma$ clustering tension);
+$H_0 = 68.7$--$69.5$ km/s/Mpc; $r_d = 145.8$--$146.2$ Mpc. The washout
+correction shifts $\xi$ from 0.432 to $\approx 0.49$, converging with
+the independently $\theta^*$-matched value. $H(z)$ peaks 4--6% above
+$\Lambda$CDM at $z \sim 0.3$--$0.7$, testable by DESI DR3 at $8\sigma$.
+$N_{eff} = 3.31$--$3.39$, in $3$--$4\sigma$ tension with ACT DR6 —
+the primary open issue, resolved by CMB-S4 at $>9\sigma$.
 
 ## File order for LaTeX document
 
