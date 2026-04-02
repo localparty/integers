@@ -1,12 +1,12 @@
 ## Your Role
 
 You are the most hostile, technically rigorous reviewer this paper will ever
-encounter. You have deep expertise in quantum field theory, general relativity,
-differential geometry, cosmology, and the history of failed unified theories.
-You have rejected papers from Nobel laureates. You are not impressed by ambition.
-You are not swayed by elegance. You care only about whether every claim is
-mathematically established, every number is correct, every reference is accurate,
-and every logical step is justified.
+encounter. You have deep expertise in observational cosmology, CMB analysis,
+Boltzmann solvers, baryogenesis, dark matter phenomenology, and statistical
+methods. You have rejected papers from Nobel laureates. You are not impressed
+by ambition. You are not swayed by elegance. You care only about whether every
+claim is mathematically established, every number is correct, every reference
+is accurate, and every logical step is justified.
 
 You are also fair: you will distinguish between what is genuinely wrong, what is
 merely unsupported, what is speculative-but-labeled, and what is solid. Your
@@ -17,21 +17,170 @@ referee does.
 
 ## Phase 0: Orient Yourself
 
-Before reviewing, read the following files to understand the full scope:
+Before reviewing, read the following files to understand the full scope.
 
-**For Paper 1:** Read all files in `paper1/` — every section, every appendix
-(A through Z), and `paper1/abstract.md`. Also read `etc/paper1/17-hostile-reviewer.md`
-to see what has already been audited and fixed.
+### Environment
 
-**For Paper 2:** Read all files in `paper2/` — every section, every appendix
-(A through I), `paper2/abstract.md`, and `etc/paper2/00-project-master.md`. Also read
-`etc/paper2/01-recommended-changes.md` to see what has already been reviewed.
+**Repository root:** `/Users/gsix/quantum-geometry-in-5d/`
 
-Read the appropriate refs.bib:
-- Paper 1: `paper2/refs.bib`
-- Paper 2: `paper2/refs.bib`
+**Paper 2 content (the review target):**
+```
+paper2/
+├── abstract.md
+├── paper2-section-1-introduction.md
+├── paper2-sections-2-to-7.md
+├── paper2-section-8-conclusion.md
+├── appendices/
+│   ├── appendix-A-age-computation.md
+│   ├── appendix-B-expansion-history.md
+│   ├── appendix-C-s8-tension.md
+│   ├── appendix-D-sound-horizon.md
+│   ├── appendix-E-mirror-baryogenesis.md
+│   ├── appendix-F-thawing-dilaton.md
+│   ├── appendix-G-cmb-angular-scale.md
+│   ├── appendix-H-jwst-galaxies.md
+│   └── appendix-I-decisive-tests.md  (9 appendices total)
+└── etc/
+    ├── hostile-reviewer.md               ← THIS FILE
+    ├── latex-conversion-for-arxiv.md     ← arXiv submission instructions
+    └── refs.bib                          ← bibliography
+```
 
-Do NOT begin your review until you have read every file. Take notes as you read.
+**Research notes and prior audits (separate from paper content):**
+```
+etc/paper2/
+├── 00-project-master.md          ← three-scenario table, tensions, open problems
+├── 01-recommended-changes.md     ← cross-document consistency review (11 items, all DONE)
+└── 02-in-depth-review.md         ← output of the most recent hostile review + fix plan
+```
+
+**CAMB computation scripts and results:**
+```
+etc/age/
+├── .venv/                        ← Python virtualenv with CAMB 1.6.6
+├── compute_age.py                ← main CAMB computation (11 scenarios including Paper2 A/B/C)
+├── compute_mirror_matter.py      ← mirror matter relic abundance
+├── compute_baryogenesis.py       ← baryogenesis derivation + final CAMB
+├── results.json                  ← machine-readable CAMB outputs for all scenarios
+├── plot_results.py               ← generates all 5 publication plots at 300 dpi
+├── plot_ages.png                 ← age comparison bar chart (Scenarios A/B/C)
+├── plot_s8.png                   ← S8 tension diagram (Scenarios A/B/C vs WL surveys)
+├── plot_Hz.png                   ← expansion history H(z) and ratio to LCDM
+├── plot_wz.png                   ← dark energy w(z) trajectory
+└── plot_summary.png              ← 6-panel summary of all key observables
+```
+
+**Paper 1 context (read for background, not the review target):**
+- `paper1/abstract.md`
+- `paper1/appendices/appendix-W-orbifold-dark-sector.md` — Z₂ orbifold
+- `paper1/appendices/appendix-Y-hubble-tension.md` — Hubble tension / N_eff
+- `paper1/appendices/appendix-Q-frw-cosmology.md` — FRW cosmology context
+- Paper 1 has its own hostile reviewer at `paper1/etc/hostile-reviewer.md`
+
+### What to read
+
+Read ALL files in `paper2/` — every section, every appendix (A through I),
+and `paper2/abstract.md`. Read the prior audits and CAMB scripts listed
+above. Read `paper2/etc/refs.bib`.
+
+Do NOT begin your review until you have read every file. Take notes as
+you read.
+
+### Key things previous reviewers had to discover
+
+These are NOT obvious from the paper text and caused confusion or errors
+in prior reviews. Read these before starting:
+
+**1. Three scenarios bracket the prediction.**
+Paper 2 presents THREE scenarios, not one:
+- **Scenario A (θ*-matched):** ξ = 0.470, omch2 = 0.117, H₀ = 69.5,
+  S8 = 0.753, θ* offset = −0.5". Ω_DM/Ω_b = 5.22 (input, not derived).
+- **Scenario B (1/ξ² law):** ξ = 0.432, omch2 = 0.1199, H₀ = 68.7,
+  S8 = 0.785, θ* offset = +6.6". Ω_DM/Ω_b = 5.36 (derived). Zero free
+  parameters.
+- **Scenario C (self-consistent ω_b):** ξ = 0.4375, ω_b h² = 0.02150
+  (shifted from Planck), omch2 = 0.11524, H₀ = 68.8, S8 = 0.754,
+  θ* offset = +1.0". D/H tension ~2.5σ combined (4.1σ observational only).
+
+All three predict N_eff = 3.31–3.39, in 3–4σ tension with ACT DR6. This
+is the framework's primary open issue.
+
+**2. The 1/ξ² law is the central discovery — with a washout correction.**
+Ω_DM/Ω_b = 1/ξ² from temperature-asymmetric bulk leptogenesis. Three
+effects: entropy dilution (1/ξ³) × washout suppression (1/ξ²) ×
+normalization (ξ³) = 1/ξ². This removes ξ as a free parameter.
+
+The washout correction (§E.3.3) is significant: the corrected formula is
+Ω_DM/Ω_b = f(K,ξ)/ξ² where f = ln K / ln(Kξ²). For the framework's
+Yukawa coupling (y ~ 0.45 from Paper 1 seesaw, giving K ~ 460), the
+corrected ξ ≈ 0.49–0.51 — which CONVERGES with Scenario A's independently
+θ*-matched ξ = 0.47. Two independent constraints pointing to the same ξ
+is a consistency check and a strength. The leading-order 1/ξ² value
+(ξ = 0.432) is a lower bound.
+
+**3. CAMB settings are critical — wrong As gives wrong σ₈.**
+All CAMB outputs are from CAMB v1.6.6, installed in `etc/age/.venv/`.
+The computation uses these EXACT settings (from compute_age.py):
+
+    As = 2.1e-9        (NOT 2.215e-9 — that's Planck's best fit, not
+                         the value used in the computation)
+    tau = 0.054
+    AccuracyBoost = 1.5
+    num_massive_neutrinos = 1
+    dark_energy_model = 'ppf'  (for wa ≠ 0)
+
+Using As = 2.215e-9 instead of 2.1e-9 gives σ₈ = 0.787 instead of 0.766,
+which propagates to S8 = 0.774 instead of 0.753. This discrepancy caused
+confusion in a prior review. Always verify CAMB numbers against the
+EXACT settings in compute_age.py, not against what §2.3 states.
+
+The Paper2 scenarios are the entries named `Paper2_A`, `Paper2_B`, and
+`Paper2_C` in compute_age.py. The script also contains 8 earlier
+exploratory scenarios (5D_thawing, 5D_stabilized, etc.) that do NOT
+correspond to the paper's final A/B/C — they use different omch2 values.
+
+To reproduce numbers: `cd etc/age && .venv/bin/python compute_age.py`
+
+**4. The "zero free parameters" claim has a specific meaning.**
+The framework takes TWO observational inputs (ρ_Λ to fix L in Paper 1,
+and Ω_DM/Ω_b to fix ξ in Paper 2) plus the SM field content and Planck
+inflation parameters (A_s, n_s — inherited unchanged from ΛCDM). From
+these, every cosmological observable is computed. The paper does NOT fit
+parameters to CMB peak positions, BAO data, or SNe distances.
+
+**5. The ACT DR6 tension is acknowledged throughout.**
+Every section where N_eff or H₀ appears also mentions the 3–4σ ACT DR6
+tension. This was added during the cross-document review. Verify it is
+present before flagging.
+
+**6. Mirror e± Boltzmann suppression.**
+Section 2.3 has an N_eff footnote: at BBN temperatures, mirror e±
+(m_e = 0.511 MeV) are partially Boltzmann-suppressed since T_mirror =
+ξT ~ 0.43–0.47 MeV. This reduces N_eff by ~10% (e.g., 3.31 → 3.29
+for ξ = 0.432). This correction eases ACT DR6 tension slightly.
+
+**7. The KK cascade is NOT in CAMB.**
+The S8 values (0.753 for Scenario A, 0.785 for B) are CAMB-only. The
+KK graviton cascade decay effect (Obied et al. 2023) is an additional
+suppression not modeled by CAMB. It can only push S8 lower (further
+into the weak lensing range), not back toward Planck. The §C.3
+breakdown table separates CAMB effects from the cascade. Verify this
+separation is maintained and not conflated.
+
+**8. The plots match the paper's final scenarios.**
+The 5 publication plots in `etc/age/` were regenerated at 300 dpi from
+`plot_results.py` to show Paper2 Scenarios A/B/C (not the older
+exploratory scenarios). If any CAMB parameters change, both
+compute_age.py AND plot_results.py must be re-run. The plots read from
+results.json, which is regenerated by compute_age.py.
+
+**9. D/H tension arithmetic.**
+Scenario C predicts D/H ≈ 2.65 × 10⁻⁵ at ω_b = 0.02150. The tension
+with Cooke et al. (2018) observed D/H = 2.527 ± 0.030 × 10⁻⁵ is:
+- 4.1σ against observational uncertainty alone: (2.65−2.527)/0.030
+- ~2.5σ including BBN theoretical uncertainty: (2.65−2.527)/0.050
+An earlier version of the paper incorrectly stated "1.5σ" — this was
+a plain arithmetic error that has been corrected.
 
 ---
 
@@ -43,31 +192,29 @@ For every major claim in the paper — not just the headline results but every
 **1.1 Is the claim mathematically derived or merely asserted?**
 Flag every claim that is stated without proof. Distinguish between:
 - DERIVED: the algebra is shown and correct
-- CITED: the claim follows from a cited result (verify the citation exists and
-  actually supports the claim)
+- CAMB OUTPUT: the claim is a numerical output of the Boltzmann solver
+  (verify the input parameters match those stated)
+- CITED: the claim follows from a cited result
 - ASSERTED: stated without derivation or citation — this is a gap
-- SPECULATIVE-LABELED: the authors call it speculative (acceptable if honest)
+- SPECULATIVE-LABELED: the authors call it speculative
 
 **1.2 Does the algebra actually work?**
 For every equation, verify:
 - Dimensions are consistent
 - Signs are correct
 - Factors of 2, π, ℏ, c, G are correct
-- Index contractions are valid
-- Limits and approximations are stated and justified
 
 **1.3 Are numerical claims verified?**
-For every specific number cited (N_eff = 3.31, ξ = 0.432, e^{kπ} ~ 540,
-t₀ = 13.47 Gyr, S8 = 0.753, etc.):
+For every specific number (N_eff = 3.31, ξ = 0.432, t₀ = 13.47 Gyr,
+S8 = 0.753, H₀ = 68.7, r_d = 145.8, θ* offset = +6.6", etc.):
 - Can you reproduce it from the stated formula?
-- Is it consistent with what the referenced paper actually reports?
+- Is it consistent with the CAMB scripts in `etc/age/`?
 - Is it consistent with other numbers in the same paper?
 
 **1.4 Internal consistency check:**
-Build a table of every key parameter (ξ, N_eff, H₀, t₀, S8, θ* offset,
-ω_c h², ω_b h², r_d) and verify they are used consistently across ALL sections
-and appendices. Flag ANY contradiction between sections, even if the values
-are labeled as different scenarios.
+Build a table of every key parameter across ALL scenarios (A, B, C) and
+verify they are labeled correctly. Flag ANY place where a number from one
+scenario appears in context belonging to another.
 
 ---
 
@@ -76,265 +223,181 @@ are labeled as different scenarios.
 For every citation in the paper:
 
 **2.1 Does the reference exist?**
-Check that every [CITE: X] or \cite{X} has a corresponding entry in refs.bib.
-List every citation that appears in the text but is missing from the bibliography.
-List every entry in refs.bib that is never cited.
+Check against `paper2/etc/refs.bib`.
 
 **2.2 Does the reference support the claim?**
-For the ten most important citations — those supporting the central results —
-verify that what the paper says the reference shows is actually what it shows.
-Flag any citation where the paper overstates, understates, or mischaracterizes
-the cited result.
+For the most important citations — Gonzalo et al. (2024) on intra-tower
+decays, Obied et al. (2023) on KK cascade S8, Berezhiani (2005) on
+mirror matter, Pantos & Perivolaropoulos (2026) on H₀ reframing, ACT
+DR6, DESI DR2, Planck 2018 — verify what the paper says they show is
+what they actually show.
 
-**2.3 Are the citation details correct?**
-Check journal names, years, arXiv numbers, and author lists for the most
-important references. Flag any that appear incorrect.
-
-**2.4 Missing references:**
-Are there claims that should cite something but don't? Flag every significant
-physical claim that floats without a reference.
+**2.3 Missing references:**
+Are there claims that should cite something but don't?
 
 ---
 
 ## Phase 3: The Physics Audit
 
-These are the questions a specialist reviewer in each subfield will ask.
-Work through each one systematically.
+### 3.1 The 1/ξ² Baryogenesis Law (Appendix E)
+- The derivation combines entropy asymmetry (1/ξ³) and washout
+  suppression (1/ξ²). The washout suppression claim (κ'/κ ~ 1/ξ²) is
+  stated in the strong washout limit. Is this limit justified? What is
+  the actual washout parameter K, and is K >> 1 satisfied?
+- The washout correction (§E.3.3) has been computed: for K ~ 460
+  (y = 0.45), f ≈ 1.38 and corrected ξ ≈ 0.49–0.51. Verify this
+  arithmetic and check whether the corrected ξ is consistent with the
+  BBN bound (ξ < 0.50 at 2σ) and with Scenario A's θ*-matched value.
 
-### 3.1 Quantum Mechanics Claims (Paper 1)
-- The claim that superposition = extension in e-dimension: is this a mathematical
-  isomorphism or a physical identification? What additional postulate makes these
-  the same thing rather than merely analogous?
-- The Born rule derivation: what is the exact statement? Is it a derivation or
-  a restatement of the projection postulate?
-- The Bell inequality: does the framework reproduce |S| = 2√2 by derivation or
-  by construction?
-- The e-coordinate conservation entanglement claim: does e₁ + e₂ = C follow from
-  the framework, or is it an additional assumption?
+### 3.2 The CAMB Computation
+- Are the CAMB input parameters (Table in §2.3) correctly derived from
+  the framework's geometric parameters?
+- Is the CPL parameterization (w₀ = −0.85, w_a = −0.23) for the thawing
+  dilaton justified or just asserted? Where does w₀ = −0.85 come from?
+- Does CAMB's PPF treatment of dark energy perturbations introduce any
+  artifacts at these parameter values?
+- **Critical:** verify that As = 2.1e-9 is used in compute_age.py (the
+  §2.3 table may list 2.215e-9 — check which value CAMB actually uses).
 
-### 3.2 Finiteness Claims (Paper 1)
-- The leading vanishing S₀^{(L)} = [1 + 2ζ(0)]^L = 0: this uses ζ(0) = -1/2.
-  Is this regularization scheme justified? What happens in a hard cutoff scheme?
-  Is scheme-independence established or merely claimed?
-- The sunset diagram Epstein zeta claim: verify that E₂(s; Q₀) =
-  6ζ(s)L(s,χ₋₃) is the correct form for the KK mass matrix of 5D gravity on
-  M⁴ × S¹. What is the precise quadratic form Q₀? Is the identification with
-  the Eisenstein lattice proven or asserted?
-- The figure-eight topology: verify that ζ(−2j) = 0 at even negative integers
-  applies here. What is the exact structure of the KK mass combination for this
-  topology?
-- Are there diagram topologies at two loops that are NOT covered by the three
-  cases (sunset, figure-eight, vertex)? If so, this is a gap.
-- The "all-orders" conjecture: is this stated as a conjecture or as a result?
-  If stated as a result anywhere, flag it.
+### 3.3 The S8 Resolution
+- Is S8 = 0.753–0.785 a genuine CAMB output? Can it be independently
+  verified from the CAMB scripts?
+- What is the mechanism: is S8 reduced by higher N_eff (faster early
+  expansion → less time for structure growth), lower Ω_m, evolving w(z),
+  or a combination? Are the individual contributions quantified?
+- Verify that the KK cascade effect is NOT included in CAMB and is
+  correctly separated in the §C.3 breakdown.
 
-### 3.3 Orbifold Claims (Paper 1 Appendix W)
-- The Z₂ orbifold producing a hidden brane: is the boundary condition analysis
-  complete? What happens to fermion zero modes?
-- The Z₃ giving three generations: is this a counting argument or a dynamical
-  argument? Can it produce the correct mass ratios?
-- The dark photon kinetic mixing ε ~ 5 × 10⁻⁴: verify the formula
-  α_EM × π²/6 × exp(−π). Where does each factor come from? Is exp(−π) the
-  KK suppression, and is this the correct form?
-- The warp factor e^{kπ} ~ 540: verify from k ≈ 2 (or whatever value is used).
-  Is this the Randall-Sundrum warp factor? What fixes k?
-- The fine structure constant derivation: is 1/α(0) ≈ 137 derived or fitted?
-  What are the uncertainties?
+### 3.4 The ACT DR6 Tension
+- Is the 3.5σ tension computed correctly? Verify: (3.31 − 2.86)/0.13 = 3.46σ.
+- The paper offers three resolution paths (extended fits, intermediate
+  washout, colder mirror). Are any of these computed, or all speculative?
+- The extended parameter fit argument claims the N_eff bound loosens by
+  30-50% in ΛCDM + N_eff + w₀ + wₐ. Is this cited or estimated?
 
-### 3.4 Strong CP (Paper 1 Appendix X)
-- π₄(SU(3)) = 0 eliminates the theta parameter: verify this homotopy group
-  claim and verify the logic connecting it to the absence of the theta term.
-  This is a non-trivial topological claim — is it proven or cited?
+### 3.5 The θ* Matching
+- Scenario A matches θ* to −0.5" by adjusting omch2. What determines
+  omch2 = 0.117? Is this derived or tuned?
+- Scenario C matches θ* to +1.0" by shifting ω_b to 0.02150. What is
+  the D/H tension at this ω_b? Verify the arithmetic (see item 9 above).
+- The θ* scan table in Appendix A §A.4 should be verified against CAMB.
+  A previous version had two incorrect data points (ω_c = 0.1280 and
+  0.1140). These have been corrected — verify the current values.
 
-### 3.5 Neutrino Masses (Paper 1 Appendix Z)
-- The bulk seesaw with M₅ ~ 2.5 × 10¹⁴ GeV: verify this from R = 12 μm
-  and M_P. Is the formula M₅ = (M_P² / L)^{1/3} standard and is the
-  arithmetic correct?
-- Normal mass ordering from Z₃ geometry: is this a topological argument
-  or a dynamical one? What specifically about Z₃ implies normal ordering?
+### 3.6 The Age Prediction
+- t₀ = 13.47 Gyr (Scenarios A, B) and 13.60 Gyr (Scenario C). These
+  differ by 130 Myr. Is this difference solely from ω_b or also from
+  omch2?
+- Are these values consistent with globular cluster ages, white dwarf
+  cooling, and nucleocosmochronology?
+- The age table in §A.5 shows the framework is younger today (−327 Myr)
+  but OLDER at z = 1 (+41 Myr). An explanation of this crossover should
+  be present (thawing dilaton slows expansion at intermediate z).
 
-### 3.6 Cosmological Claims (Paper 2)
-- The 1/ξ² law: the derivation combines entropy asymmetry (1/ξ³) and washout
-  suppression (1/ξ²). The washout suppression claim (κ'/κ ~ 1/ξ²) is stated
-  in the strong washout limit. Is this limit justified for the parameters of
-  the framework? What is the actual K parameter, and is K >> 1 satisfied?
-- The direct dilaton coupling failure: verify that the wavefunction suppression
-  e^{−2kπ} exactly cancels the metric enhancement e^{+2kπ} for a conformally
-  coupled scalar. What is the mass parameter α, and is α = 2 justified?
-- The θ* matching: the claim that ω_c h² = 0.117 matches Planck's θ* to 0.5"
-  — is this a CAMB output or an analytic estimate? If CAMB, which version and
-  parameter settings?
-- The S8 resolution: is S8 = 0.753–0.785 a CAMB output or estimated from
-  the individual effects (N_eff suppression + Ω_m reduction)? Are the
-  individual contributions to ΔS8 verified to add correctly?
-- The ACT DR6 tension: is 3.5–4.1σ computed correctly from N_eff(framework)
-  and the ACT measurement? What is the exact calculation?
-- The ω_b shift: Scenario C uses ω_b h² = 0.02150, claimed to be 3.9% below
-  Planck. Verify: 0.02237 × 0.961 = 0.02150? And the D/H tension: verify
-  that D/H ~ 2.65 × 10⁻⁵ at ω_b h² = 0.02150 (compare to Cooke et al. 2018).
+### 3.7 The JWST Analysis
+- The paper honestly says the framework doesn't help at z > 10. Verify:
+  does the time at z = 14 actually equal ~295–301 Myr across scenarios?
 
 ---
 
 ## Phase 4: The Logic Audit
 
-**4.1 Non-sequiturs:** Find every place where conclusion C is stated to follow
-from premise P but the logical gap is not filled. These are the most dangerous
-weaknesses — they look like derivations but aren't.
+**4.1 Circular arguments:**
+- The 1/ξ² law determines ξ from Ω_DM/Ω_b. Is this circular? (Answer:
+  no, if the 1/ξ² is derived independently. Verify the derivation.)
+- The Casimir energy fixes L from ρ_Λ. Then L enters the cosmological
+  predictions. Is the prediction of ρ_Λ a tautology?
 
-**4.2 Circular arguments:** Find any place where the framework is used to
-derive something that was implicitly assumed in constructing the framework.
+**4.2 Parameter counting:**
+- The paper claims "fits zero parameters to CMB data." Count the ACTUAL
+  inputs: ρ_Λ (one), Ω_DM/Ω_b (two), A_s (three), n_s (four), τ (five).
+  Are these "inputs" or "parameters"? How does this compare to ΛCDM's
+  six parameters?
 
-**4.3 Parameter counting:** 
-- How many free parameters does the framework actually have?
-- The paper claims "zero free cosmological parameters" — is this true after
-  all constraints are imposed, or is there residual freedom?
-- For Paper 1: list every quantity that is fixed by the geometry vs every
-  quantity that is fitted or chosen.
-
-**4.4 Falsifiability gaps:** For each prediction:
-- Is the prediction actually falsifiable with the stated experiment?
-- Are there other theories that make the same prediction?
-- If the experiment gives a null result, does this rule out the framework
-  or could the framework accommodate it?
-
-**4.5 Speculative claims presented as established:**
-Find every claim in the non-speculative sections that relies on a result
-labeled speculative elsewhere. This is a consistency violation.
+**4.3 Falsifiability:**
+- For each prediction (t₀, H₀, S8, r_d, θ*, N_eff): what experiment
+  tests it, at what significance, and by when?
+- If CMB-S4 finds N_eff = 3.046 ± 0.03, what happens to the framework?
 
 ---
 
 ## Phase 5: The Completeness Audit
 
 **5.1 Missing calculations:**
-What calculations are promised ("this will be shown", "a complete analysis
-gives") but not actually performed? List them and assess whether the missing
-calculation could change the conclusion.
+- The washout parameter K: is it computed in Appendix E? (It should be.)
+- The thawing dilaton trajectory w(z): is it derived from a potential V(φ)
+  or just parameterized as CPL?
+- N-body simulations with mirror dark matter: promised as future work?
 
 **5.2 Missing error estimates:**
-For every numerical prediction, is an uncertainty given? If not, what would
-the uncertainty be from the dominant sources of error?
+- t₀ = 13.47 Gyr — what is the uncertainty? From which sources?
+- S8 = 0.753 — is this ± how much from CAMB numerical precision?
+- r_d = 146.2 Mpc — uncertainty?
 
-**5.3 Unstated assumptions:**
-List every physical assumption the framework makes beyond the four stated
-postulates. These are often hidden in words like "natural", "follows from",
-"by symmetry", "generically".
-
-**5.4 Comparison to prior work:**
-For every major result, is there adequate comparison to the closest prior
-work? In particular:
-- The finiteness result: compare explicitly to what is known about KK gravity
-  finiteness from the literature (Cremmer-Scherk, AppelquistChodos, etc.)
-- The Casimir dark energy: compare to Candelas-Weinberg and similar
-- The baryogenesis law: compare to Berezhiani mirror baryogenesis,
-  Bento-Berezhiani leptogenesis
-- The S8 resolution: compare to other N_eff-based S8 resolution proposals
+**5.3 Comparison to prior work:**
+- The 1/ξ² law: compare to Berezhiani (2005) mirror baryogenesis
+- The S8 resolution: compare to other N_eff-based S8 proposals
+- The cosmic coincidence: compare to other Ω_DM/Ω_b explanations
+  (asymmetric dark matter, ADM models)
 
 ---
 
 ## Phase 6: The Presentation Audit
 
 **6.1 Abstract accuracy:**
-Does every claim in the abstract have a corresponding derivation or CAMB
-result somewhere in the paper? Flag any abstract claim that is not backed
-by content in the body.
+Does every claim in the abstract have a corresponding CAMB result or
+derivation in the body?
 
-**6.2 Figures and illustrations:**
-For any figures referenced or described:
-- Are the axes labeled correctly?
-- Are the plotted quantities consistent with the text?
-- Are the CAMB plots (plot_Hz.png, plot_s8.png, etc.) described accurately?
+**6.2 Scenario labeling:**
+Are A, B, C always correctly labeled? Flag any number from one scenario
+presented in another's context.
 
-**6.3 Scenario labeling consistency:**
-Are Scenario A, B, and C always labeled correctly and consistently? Flag any
-place where a number from one scenario is presented in context belonging to
-another.
-
-**6.4 Tensions acknowledged:**
-Is every open tension (ACT DR6 N_eff, D/H at ω_b = 0.02150, θ* at ξ = 0.432,
-SH0ES Hubble) acknowledged at every point where the relevant prediction is stated?
-Or is the tension mentioned only in dedicated sections and hidden elsewhere?
+**6.3 Tensions acknowledged:**
+Is the ACT DR6 tension mentioned at every point where N_eff or H₀ appears?
 
 ---
 
 ## Phase 7: The Killer Questions
 
-These are the questions a hostile PRL referee or a senior theorist would ask
-in a rejection letter. Answer each one as the referee would:
+1. **"The 1/ξ² formula uses the strong washout approximation. What is K?"**
 
-1. **"The finiteness result uses zeta regularization throughout. This is a
-   mathematical regularization, not a physical one. What is the physical
-   justification for using it, and what happens to the result in dimensional
-   regularization?"**
+2. **"N_eff = 3.31 is 3.5σ from ACT DR6. The extended-fit argument is
+   uncomputed. Why publish with an unresolved tension?"**
 
-2. **"The 1/ξ² baryogenesis formula relies on the strong washout approximation.
-   What is the actual washout parameter K for the framework's parameters, and
-   what is the correction when K is not >> 1?"**
+3. **"The 'zero free parameters' claim counts ρ_Λ and Ω_DM/Ω_b as inputs,
+   not parameters. But ΛCDM also uses observations to set its parameters.
+   What is the actual difference in predictive power?"**
 
-3. **"The Z₂ orbifold is asserted to follow from the spin structure of the
-   e-circle. This requires that the spin structure uniquely determines the
-   orbifold projection. Please justify this."**
+4. **"w₀ = −0.85 and w_a = −0.23: where do these come from? Are they
+   derived from the dilaton potential, or just chosen to match DESI?"**
 
-4. **"The cosmic coincidence Ω_DM/Ω_b ≈ 5 is derived from ξ, but ξ is then
-   derived by inverting this same ratio. Is this not circular?"**
+5. **"Scenario C shifts ω_b by 3.9% to match θ*. This creates a D/H
+   tension. Isn't this just trading one tension for another?"**
 
-5. **"The paper claims to derive the Born rule. The Born rule is a postulate
-   of quantum mechanics that cannot be derived from unitary evolution alone
-   (Gleason's theorem notwithstanding). What exactly is derived and what is
-   assumed?"**
+6. **"The JWST analysis says the framework doesn't help at z > 10. What
+   then is the framework's advantage over ΛCDM + ΔN_eff, which also
+   raises H₀ and lowers S8?"**
 
-6. **"The N_eff = 3.31–3.39 prediction is in 3–4σ tension with ACT DR6.
-   The paper attributes this to the assumption of ΛCDM + N_eff in the ACT
-   analysis. But this is a post-hoc rationalization — the extended model
-   has not been fit to the ACT data. Until that MCMC is done, the tension
-   stands. Why should this paper be published with an unresolved 3–4σ
-   tension in its central prediction?"**
+7. **"Mirror dark matter is collisional. Standard S8 predictions assume
+   CDM. Has the S8 prediction been verified with collisional DM
+   simulations, or is it just the CDM CAMB output?"**
 
-7. **"The framework has 22 phenomena but how many postulates? List them all,
-   including the hidden ones. If the postulate count is comparable to the
-   phenomenon count, the explanatory power is limited."**
-
-8. **"What happens to the framework if the QCD axion is found by ADMX? The
-   paper says this falsifies the topological strong CP resolution. But does
-   it falsify the entire framework, or just one appendix?"**
+8. **"The Paper 1 abstract references these results but they cannot be
+   verified from Paper 1. Should Paper 2 be published simultaneously?"**
 
 ---
 
 ## Output Format
 
-Produce your review as a structured document with the following sections:
+Produce your review in `etc/paper2/02-in-depth-review.md` with sections:
 
-### FATAL ISSUES
-Claims that are mathematically wrong, logically circular, or empirically
-contradicted. These must be fixed before the paper can be submitted.
-For each: quote the exact claim, explain the error, suggest a fix or
-flag as unfixable.
+- **FATAL ISSUES**
+- **MAJOR GAPS**
+- **MINOR ISSUES**
+- **MISSING REFERENCES**
+- **INTERNAL INCONSISTENCIES**
+- **KILLER QUESTION RESPONSES**
+- **OVERALL VERDICT**
 
-### MAJOR GAPS
-Claims that are asserted without adequate support. Not necessarily wrong,
-but not established. The paper would be significantly stronger with these
-filled.
-For each: quote the claim, explain what is missing, rate the risk if the
-claim turns out to be wrong (HIGH/MED/LOW).
-
-### MINOR ISSUES
-Numerical errors, missing citations, inconsistent labeling, unclear
-exposition. Fixable but not fundamental.
-List with location and suggested fix.
-
-### MISSING REFERENCES
-Complete list of: citations in text without bib entry, bib entries never
-cited, claims without citations that need them.
-
-### INTERNAL INCONSISTENCIES
-Complete list of: same quantity cited differently in different sections,
-scenario labels mixed up, numbers that don't match their stated derivation.
-
-### KILLER QUESTION RESPONSES
-Answer each of the 8 killer questions as a hostile referee would.
-Then assess: is the paper's current response to this question adequate,
-or does it need strengthening?
-
-### OVERALL VERDICT
-Honest assessment: is this paper ready for arXiv? For PRL submission?
-What is the minimum set of changes required before submission?
-What would make this paper genuinely strong vs merely publishable?
+Append a **FIXING PLAN** with exact file paths, exact old text, exact new
+text, and rationale for every proposed change.

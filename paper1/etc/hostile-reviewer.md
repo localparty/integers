@@ -17,21 +17,122 @@ referee does.
 
 ## Phase 0: Orient Yourself
 
-Before reviewing, read the following files to understand the full scope:
+Before reviewing, read the following files to understand the full scope.
 
-**For Paper 1:** Read all files in `paper1/` — every section, every appendix
-(A through Z), and `paper1/abstract.md`. Also read `etc/paper1/17-hostile-reviewer.md`
-to see what has already been audited and fixed.
+### Environment
 
-**For Paper 2:** Read all files in `paper2/` — every section, every appendix
-(A through I), `paper2/abstract.md`, and `etc/paper2/00-project-master.md`. Also read
-`etc/paper2/01-recommended-changes.md` to see what has already been reviewed.
+**Repository root:** `/Users/gsix/quantum-geometry-in-5d/`
 
-Read the appropriate refs.bib:
-- Paper 1: `paper2/refs.bib`
-- Paper 2: `paper2/refs.bib`
+**Paper 1 structure:**
+```
+paper1/
+├── abstract.md
+├── paper-section-1-introduction.md
+├── paper-section-2-framework.md
+├── paper-section-3-five-phenomena.md
+├── paper-section-4-1-aharonov-bohm.md
+├── paper-section-4-2-spin-statistics.md
+├── paper-section-5-gravity-bridge.md
+├── paper-section-5x-quantization-bridge.md
+├── paper-section-6-connections.md
+├── paper-section-7-philosophy.md
+├── paper-section-8-conclusion.md
+├── appendices/
+│   ├── appendix-A-quantum-dictionary.md
+│   ├── appendix-B-spin-statistics-derivation.md
+│   ├── appendix-C-quantitative-demonstrations.md
+│   ├── appendix-D-5d-einstein-equations.md
+│   ├── appendix-E-quantum-consistency.md
+│   ├── appendix-F-one-loop-computation.md
+│   ├── appendix-G-two-loop-computation.md
+│   ├── appendix-H-testable-predictions.md
+│   ├── appendix-I-cassini-fifth-force.md
+│   ├── appendix-J-non-perturbative-stability.md
+│   ├── appendix-K-higher-loop-epstein.md
+│   ├── appendix-L-non-abelian-extension.md
+│   ├── appendix-M-hydrogen-atom.md
+│   ├── appendix-N-gravitational-waves.md
+│   ├── appendix-O-black-hole-entropy.md
+│   ├── appendix-P-cpt-theorem.md
+│   ├── appendix-Q-frw-cosmology.md
+│   ├── appendix-R-running-couplings.md
+│   ├── appendix-S-finiteness-theorem.md
+│   ├── appendix-T-rigorous-verification.md
+│   ├── appendix-U-goroff-sagnotti-verification.md
+│   ├── appendix-V-vertex-computation.md
+│   ├── appendix-W-orbifold-dark-sector.md
+│   ├── appendix-X-strong-cp.md
+│   ├── appendix-Y-hubble-tension.md
+│   └── appendix-Z-neutrino-mass-ordering.md  (26 appendices total)
+├── figures/
+└── etc/
+    ├── hostile-reviewer.md          ← THIS FILE
+    ├── in-depth-review.md           ← Output of a prior hostile review
+    ├── latex-conversion-for-arxiv.md
+    └── refs.bib
+```
 
-Do NOT begin your review until you have read every file. Take notes as you read.
+**Prior audits (read before starting):**
+- `paper1/etc/in-depth-review.md` — the most recent hostile review with
+  fixing plan (all fixes now applied)
+- `etc/paper1/17-hostile-reviewer.md` — the original hostile review
+  (7 critical issues found; 3 fully fixed, 3 partially fixed)
+- `etc/paper1/00-project-master.md` — project master document with
+  claims hierarchy and session history
+
+### What to read
+
+Read ALL files in `paper1/` — every section, every appendix (A through Z),
+and `paper1/abstract.md`. Read the prior audits listed above. Read
+`paper1/etc/refs.bib`.
+
+Do NOT begin your review until you have read every file. Take notes as
+you read.
+
+### Key things previous reviewers had to discover
+
+These are NOT obvious from the paper text and caused confusion in prior
+reviews. Read these before starting:
+
+**1. Two scenarios with different R values.**
+The paper uses TWO configurations of the e-circle. The CIRCLE scenario
+(S¹, L ~ 130 μm, R ~ 21 μm) uses all SM fields on the circle. The
+ORBIFOLD scenario (S¹/Z₂, R ~ 12 μm) uses only bulk fields. The
+abstract uses the orbifold value; most appendices (A–V) use the circle
+value. Section 2.7.2 explains the distinction. If numbers seem
+inconsistent across appendices, check which scenario is being used.
+
+**2. SM field content: N_B = 28, N_F = 90.**
+Bosonic DOF: photon (2) + W± (6) + Z (3) + gluons (16) + Higgs (1) = 28.
+Fermionic DOF (Weyl neutrinos): 3 generations × (u: 12 + d: 12 + e: 4 +
+ν: 2) = 90. This count assumes Weyl neutrinos (minimal SM). The Casimir
+calculation in the circle scenario uses these numbers; in the orbifold
+scenario, only bulk fields contribute (gravity + 3 ν_R).
+
+**3. N_eff has FIVE different values in different contexts.**
+Each is correct for its assumptions — don't flag them as contradictions:
+- 3.044: SM baseline
+- 3.09: tower dynamics only (ΔN_eff = 0.05 from dilaton cascade)
+- 3.12–3.19: Tier 1 mirror sector (ξ < 0.35, ACT DR6-safe)
+- 3.31: 1/ξ² baryogenesis law (ξ = 0.432) — Paper 2 result
+- 3.39: Scenario A (ξ = 0.47) — Paper 2 result
+
+**4. The abstract references Paper 2 results.**
+Lines 104-126 of the abstract summarize a companion computation (Paper 2)
+including the 1/ξ² baryogenesis law, CAMB predictions, and ACT DR6
+tension. These results are NOT derived in Paper 1 — they're cited from
+Paper 2. A referee cannot verify them from Paper 1 alone. This is
+intentional and flagged with "(to appear separately)."
+
+**5. The finiteness theorem (Appendix S) has specific qualifiers.**
+It is for LINEARIZED 5D gravity, under ZETA REGULARIZATION. The abstract
+now correctly states both qualifiers. Prior reviews found these qualifiers
+missing; they have been added. Verify they are present before flagging.
+
+**6. Several fixes have already been applied from prior reviews.**
+Before flagging an issue, check `paper1/etc/in-depth-review.md` to see
+if it was already identified and fixed. The "FIXING PLAN" section at the
+bottom lists all 15 items and their status.
 
 ---
 
@@ -57,17 +158,17 @@ For every equation, verify:
 - Limits and approximations are stated and justified
 
 **1.3 Are numerical claims verified?**
-For every specific number cited (N_eff = 3.31, ξ = 0.432, e^{kπ} ~ 540,
-t₀ = 13.47 Gyr, S8 = 0.753, etc.):
+For every specific number cited (m_KK = 9.4 meV, M₅ = 2.5 × 10¹⁴ GeV,
+e^{kπ} ~ 540, 32π²/3 ≈ 105.3, etc.):
 - Can you reproduce it from the stated formula?
 - Is it consistent with what the referenced paper actually reports?
 - Is it consistent with other numbers in the same paper?
 
 **1.4 Internal consistency check:**
-Build a table of every key parameter (ξ, N_eff, H₀, t₀, S8, θ* offset,
-ω_c h², ω_b h², r_d) and verify they are used consistently across ALL sections
-and appendices. Flag ANY contradiction between sections, even if the values
-are labeled as different scenarios.
+Build a table of every key parameter (R, L, m_KK, M₅, k, σ, N_B, N_F)
+and verify they are used consistently across ALL sections and appendices.
+Flag ANY contradiction, noting which scenario (circle vs orbifold) each
+value belongs to.
 
 ---
 
@@ -76,7 +177,7 @@ are labeled as different scenarios.
 For every citation in the paper:
 
 **2.1 Does the reference exist?**
-Check that every [CITE: X] or \cite{X} has a corresponding entry in refs.bib.
+Check that every citation has a corresponding entry in `paper1/etc/refs.bib`.
 List every citation that appears in the text but is missing from the bibliography.
 List every entry in refs.bib that is never cited.
 
@@ -101,21 +202,23 @@ physical claim that floats without a reference.
 These are the questions a specialist reviewer in each subfield will ask.
 Work through each one systematically.
 
-### 3.1 Quantum Mechanics Claims (Paper 1)
+### 3.1 Quantum Mechanics Claims
 - The claim that superposition = extension in e-dimension: is this a mathematical
   isomorphism or a physical identification? What additional postulate makes these
   the same thing rather than merely analogous?
-- The Born rule derivation: what is the exact statement? Is it a derivation or
-  a restatement of the projection postulate?
+- The Born rule: what is the exact statement? Is it a derivation or
+  a restatement of the projection postulate? (Note: the abstract now says
+  "reproduced within" not "derived" — verify this wording is consistent
+  throughout.)
 - The Bell inequality: does the framework reproduce |S| = 2√2 by derivation or
   by construction?
 - The e-coordinate conservation entanglement claim: does e₁ + e₂ = C follow from
   the framework, or is it an additional assumption?
 
-### 3.2 Finiteness Claims (Paper 1)
+### 3.2 Finiteness Claims
 - The leading vanishing S₀^{(L)} = [1 + 2ζ(0)]^L = 0: this uses ζ(0) = -1/2.
-  Is this regularization scheme justified? What happens in a hard cutoff scheme?
-  Is scheme-independence established or merely claimed?
+  Is this regularization scheme justified? The paper now has a symmetry
+  selection argument in §S.7.4 — assess whether it is adequate.
 - The sunset diagram Epstein zeta claim: verify that E₂(s; Q₀) =
   6ζ(s)L(s,χ₋₃) is the correct form for the KK mass matrix of 5D gravity on
   M⁴ × S¹. What is the precise quadratic form Q₀? Is the identification with
@@ -127,69 +230,56 @@ Work through each one systematically.
   cases (sunset, figure-eight, vertex)? If so, this is a gap.
 - The "all-orders" conjecture: is this stated as a conjecture or as a result?
   If stated as a result anywhere, flag it.
+- Does the "linearized" qualifier appear in every statement of the finiteness
+  result (abstract, Section 5.X, Appendix S)?
 
-### 3.3 Orbifold Claims (Paper 1 Appendix W)
+### 3.3 Orbifold Claims (Appendix W)
 - The Z₂ orbifold producing a hidden brane: is the boundary condition analysis
   complete? What happens to fermion zero modes?
 - The Z₃ giving three generations: is this a counting argument or a dynamical
   argument? Can it produce the correct mass ratios?
 - The dark photon kinetic mixing ε ~ 5 × 10⁻⁴: verify the formula
-  α_EM × π²/6 × exp(−π). Where does each factor come from? Is exp(−π) the
-  KK suppression, and is this the correct form?
-- The warp factor e^{kπ} ~ 540: verify from k ≈ 2 (or whatever value is used).
-  Is this the Randall-Sundrum warp factor? What fixes k?
+  α_EM × π²/6 × exp(−π). Where does each factor come from?
+- The warp factor e^{kπ} ~ 540: verify from k ≈ 2. What fixes k?
 - The fine structure constant derivation: is 1/α(0) ≈ 137 derived or fitted?
-  What are the uncertainties?
+  Is the 8/3 (one generation, not three) justified?
 
-### 3.4 Strong CP (Paper 1 Appendix X)
+### 3.4 Strong CP (Appendix X)
 - π₄(SU(3)) = 0 eliminates the theta parameter: verify this homotopy group
   claim and verify the logic connecting it to the absence of the theta term.
-  This is a non-trivial topological claim — is it proven or cited?
 
-### 3.5 Neutrino Masses (Paper 1 Appendix Z)
+### 3.5 Neutrino Masses (Appendix Z)
 - The bulk seesaw with M₅ ~ 2.5 × 10¹⁴ GeV: verify this from R = 12 μm
-  and M_P. Is the formula M₅ = (M_P² / L)^{1/3} standard and is the
-  arithmetic correct?
+  and M_P. Is the formula M₅ = (M_P² / L)^{1/3} standard?
 - Normal mass ordering from Z₃ geometry: is this a topological argument
-  or a dynamical one? What specifically about Z₃ implies normal ordering?
+  or a dynamical one?
 
-### 3.6 Cosmological Claims (Paper 2)
-- The 1/ξ² law: the derivation combines entropy asymmetry (1/ξ³) and washout
-  suppression (1/ξ²). The washout suppression claim (κ'/κ ~ 1/ξ²) is stated
-  in the strong washout limit. Is this limit justified for the parameters of
-  the framework? What is the actual K parameter, and is K >> 1 satisfied?
-- The direct dilaton coupling failure: verify that the wavefunction suppression
-  e^{−2kπ} exactly cancels the metric enhancement e^{+2kπ} for a conformally
-  coupled scalar. What is the mass parameter α, and is α = 2 justified?
-- The θ* matching: the claim that ω_c h² = 0.117 matches Planck's θ* to 0.5"
-  — is this a CAMB output or an analytic estimate? If CAMB, which version and
-  parameter settings?
-- The S8 resolution: is S8 = 0.753–0.785 a CAMB output or estimated from
-  the individual effects (N_eff suppression + Ω_m reduction)? Are the
-  individual contributions to ΔS8 verified to add correctly?
-- The ACT DR6 tension: is 3.5–4.1σ computed correctly from N_eff(framework)
-  and the ACT measurement? What is the exact calculation?
-- The ω_b shift: Scenario C uses ω_b h² = 0.02150, claimed to be 3.9% below
-  Planck. Verify: 0.02237 × 0.961 = 0.02150? And the D/H tension: verify
-  that D/H ~ 2.65 × 10⁻⁵ at ω_b h² = 0.02150 (compare to Cooke et al. 2018).
+### 3.6 Cosmological Claims (referenced from Paper 2)
+- The Hubble tension appendix (Y) makes quantitative predictions.
+  Verify: is ΔH₀ ≈ 6.3 × ΔN_eff a standard calibration? Is the ACT DR6
+  constraint (N_eff = 2.86 ± 0.13) correctly cited? Are the two-tier
+  predictions (Tier 1: H₀ ~ 68.0-68.3; Tier 2: 68.3-68.7) arithmetically
+  consistent with the ΔN_eff formula?
+- The Gonzalo et al. (2024) applicability paragraph (§Q.3.4): does it
+  adequately demonstrate that the Dark Dimension result transfers to this
+  framework?
 
 ---
 
 ## Phase 4: The Logic Audit
 
 **4.1 Non-sequiturs:** Find every place where conclusion C is stated to follow
-from premise P but the logical gap is not filled. These are the most dangerous
-weaknesses — they look like derivations but aren't.
+from premise P but the logical gap is not filled.
 
 **4.2 Circular arguments:** Find any place where the framework is used to
 derive something that was implicitly assumed in constructing the framework.
 
-**4.3 Parameter counting:** 
+**4.3 Parameter counting:**
 - How many free parameters does the framework actually have?
-- The paper claims "zero free cosmological parameters" — is this true after
-  all constraints are imposed, or is there residual freedom?
-- For Paper 1: list every quantity that is fixed by the geometry vs every
-  quantity that is fitted or chosen.
+- Section 2.7.1 now lists "derived assumptions" — verify each one actually
+  follows from the four postulates as claimed.
+- List every quantity that is fixed by the geometry vs every quantity that
+  is fitted or chosen.
 
 **4.4 Falsifiability gaps:** For each prediction:
 - Is the prediction actually falsifiable with the stated experiment?
@@ -206,135 +296,81 @@ labeled speculative elsewhere. This is a consistency violation.
 ## Phase 5: The Completeness Audit
 
 **5.1 Missing calculations:**
-What calculations are promised ("this will be shown", "a complete analysis
-gives") but not actually performed? List them and assess whether the missing
-calculation could change the conclusion.
+What calculations are promised but not performed?
 
 **5.2 Missing error estimates:**
-For every numerical prediction, is an uncertainty given? If not, what would
-the uncertainty be from the dominant sources of error?
+For every numerical prediction, is an uncertainty given?
 
 **5.3 Unstated assumptions:**
-List every physical assumption the framework makes beyond the four stated
-postulates. These are often hidden in words like "natural", "follows from",
-"by symmetry", "generically".
+List every physical assumption beyond the four stated postulates and the
+derived assumptions in §2.7.1.
 
 **5.4 Comparison to prior work:**
 For every major result, is there adequate comparison to the closest prior
 work? In particular:
-- The finiteness result: compare explicitly to what is known about KK gravity
-  finiteness from the literature (Cremmer-Scherk, AppelquistChodos, etc.)
-- The Casimir dark energy: compare to Candelas-Weinberg and similar
-- The baryogenesis law: compare to Berezhiani mirror baryogenesis,
-  Bento-Berezhiani leptogenesis
-- The S8 resolution: compare to other N_eff-based S8 resolution proposals
+- The finiteness result: compare to Cremmer-Scherk, Appelquist-Chodos
+- The Casimir dark energy: compare to Candelas-Weinberg
+- The spin-statistics derivation: compare to Leinaas-Myrheim, Duck-Sudarshan
 
 ---
 
 ## Phase 6: The Presentation Audit
 
 **6.1 Abstract accuracy:**
-Does every claim in the abstract have a corresponding derivation or CAMB
-result somewhere in the paper? Flag any abstract claim that is not backed
-by content in the body.
+Does every claim in the abstract have a corresponding derivation somewhere
+in the paper? Flag any abstract claim not backed by body content.
 
-**6.2 Figures and illustrations:**
-For any figures referenced or described:
-- Are the axes labeled correctly?
-- Are the plotted quantities consistent with the text?
-- Are the CAMB plots (plot_Hz.png, plot_s8.png, etc.) described accurately?
+**6.2 Scenario labeling consistency:**
+Does the paper correctly distinguish circle vs orbifold scenario at every
+point where R values or field content appear?
 
-**6.3 Scenario labeling consistency:**
-Are Scenario A, B, and C always labeled correctly and consistently? Flag any
-place where a number from one scenario is presented in context belonging to
-another.
-
-**6.4 Tensions acknowledged:**
-Is every open tension (ACT DR6 N_eff, D/H at ω_b = 0.02150, θ* at ξ = 0.432,
-SH0ES Hubble) acknowledged at every point where the relevant prediction is stated?
-Or is the tension mentioned only in dedicated sections and hidden elsewhere?
+**6.3 Tensions acknowledged:**
+Is every open tension (ACT DR6 N_eff, SH0ES Hubble, DESI w ≠ -1)
+acknowledged where the relevant prediction is stated?
 
 ---
 
 ## Phase 7: The Killer Questions
 
-These are the questions a hostile PRL referee or a senior theorist would ask
-in a rejection letter. Answer each one as the referee would:
+These are the questions a hostile PRL referee would ask. Answer each one
+as the referee would:
 
-1. **"The finiteness result uses zeta regularization throughout. This is a
-   mathematical regularization, not a physical one. What is the physical
-   justification for using it, and what happens to the result in dimensional
-   regularization?"**
+1. **"The finiteness result uses zeta regularization. What is the physical
+   justification, and what happens in dimensional regularization?"**
 
-2. **"The 1/ξ² baryogenesis formula relies on the strong washout approximation.
-   What is the actual washout parameter K for the framework's parameters, and
-   what is the correction when K is not >> 1?"**
+2. **"The Z₂ orbifold is asserted to follow from the spin structure.
+   Please justify this — does the spin structure FORCE the orbifold?"**
 
-3. **"The Z₂ orbifold is asserted to follow from the spin structure of the
-   e-circle. This requires that the spin structure uniquely determines the
-   orbifold projection. Please justify this."**
+3. **"The paper claims to reproduce the Born rule. What exactly is
+   derived and what is assumed?"**
 
-4. **"The cosmic coincidence Ω_DM/Ω_b ≈ 5 is derived from ξ, but ξ is then
-   derived by inverting this same ratio. Is this not circular?"**
+4. **"The framework has 22 phenomena but how many postulates? List them
+   all, including the hidden ones."** (Note: §2.7.1 now addresses this.)
 
-5. **"The paper claims to derive the Born rule. The Born rule is a postulate
-   of quantum mechanics that cannot be derived from unitary evolution alone
-   (Gleason's theorem notwithstanding). What exactly is derived and what is
-   assumed?"**
+5. **"What happens to the framework if the QCD axion is found by ADMX?"**
 
-6. **"The N_eff = 3.31–3.39 prediction is in 3–4σ tension with ACT DR6.
-   The paper attributes this to the assumption of ΛCDM + N_eff in the ACT
-   analysis. But this is a post-hoc rationalization — the extended model
-   has not been fit to the ACT data. Until that MCMC is done, the tension
-   stands. Why should this paper be published with an unresolved 3–4σ
-   tension in its central prediction?"**
+6. **"The abstract references Paper 2 results that cannot be verified
+   from Paper 1. Should these be removed?"**
 
-7. **"The framework has 22 phenomena but how many postulates? List them all,
-   including the hidden ones. If the postulate count is comparable to the
-   phenomenon count, the explanatory power is limited."**
+7. **"What is genuinely new here vs standard Kaluza-Klein theory?"**
 
-8. **"What happens to the framework if the QCD axion is found by ADMX? The
-   paper says this falsifies the topological strong CP resolution. But does
-   it falsify the entire framework, or just one appendix?"**
+8. **"The Casimir dark energy calculation uses N_B = 28, N_F = 90 on S¹,
+   but Appendix R says SM fields don't propagate on S¹. Explain."**
+   (Note: §6.6 now has a field content paragraph addressing this.)
 
 ---
 
 ## Output Format
 
-Produce your review as a structured document with the following sections:
+Produce your review in `paper1/etc/in-depth-review.md` with sections:
 
-### FATAL ISSUES
-Claims that are mathematically wrong, logically circular, or empirically
-contradicted. These must be fixed before the paper can be submitted.
-For each: quote the exact claim, explain the error, suggest a fix or
-flag as unfixable.
+- **FATAL ISSUES** — mathematically wrong, circular, or empirically contradicted
+- **MAJOR GAPS** — asserted without adequate support
+- **MINOR ISSUES** — fixable but not fundamental
+- **MISSING REFERENCES**
+- **INTERNAL INCONSISTENCIES**
+- **KILLER QUESTION RESPONSES**
+- **OVERALL VERDICT** — ready for arXiv? For PRL? Minimum changes needed?
 
-### MAJOR GAPS
-Claims that are asserted without adequate support. Not necessarily wrong,
-but not established. The paper would be significantly stronger with these
-filled.
-For each: quote the claim, explain what is missing, rate the risk if the
-claim turns out to be wrong (HIGH/MED/LOW).
-
-### MINOR ISSUES
-Numerical errors, missing citations, inconsistent labeling, unclear
-exposition. Fixable but not fundamental.
-List with location and suggested fix.
-
-### MISSING REFERENCES
-Complete list of: citations in text without bib entry, bib entries never
-cited, claims without citations that need them.
-
-### INTERNAL INCONSISTENCIES
-Complete list of: same quantity cited differently in different sections,
-scenario labels mixed up, numbers that don't match their stated derivation.
-
-### KILLER QUESTION RESPONSES
-Answer each of the 8 killer questions as a hostile referee would.
-Then assess: is the paper's current response to this question adequate,
-or does it need strengthening?
-
-### OVERALL VERDICT
-Honest assessment: is this paper ready for arXiv? For PRL submission?
-What is the minimum set of changes required before submission?
-What would make this paper genuinely strong vs merely publishable?
+Append a **FIXING PLAN** with exact file paths, exact old text, exact new
+text, and rationale for every proposed change.
