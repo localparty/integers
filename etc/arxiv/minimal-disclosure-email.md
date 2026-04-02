@@ -37,10 +37,13 @@ Omega_DM/Omega_b ~ 5. Key CAMB outputs:
 Your work on KK cascade decays (Obied et al. 2023) is cited in the
 S8 analysis.
 
-I can provide the full manuscripts once you confirm you are willing to
-review for endorsement. The arXiv endorsement code is: [CODE]
+If you are willing to consider endorsement, I am happy to provide 
+the full manuscripts for review. The arXiv endorsement code is: [CODE]
 
 Thank you for your time and consideration.
+
+These manuscripts are not yet public and I request they be treated 
+as confidential review materials.
 
 Best regards,
 G. Six
