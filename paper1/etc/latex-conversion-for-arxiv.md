@@ -23,7 +23,7 @@ Target journal after arXiv: Physical Review Letters.
 All source files are Markdown at:
 
 ```
-/Users/gsix/quantum-geometry-in-5d/paper/
+/Users/gsix/quantum-geometry-in-5d/paper1/
 ├── abstract.md
 ├── paper-section-1-introduction.md
 ├── paper-section-2-framework.md
@@ -71,13 +71,13 @@ All source files are Markdown at:
 Produce a single self-contained LaTeX file:
 
 ```
-/Users/gsix/quantum-geometry-in-5d/etc/arxiv/main.tex
+/Users/gsix/quantum-geometry-in-5d/paper1/etc/arxiv/main.tex
 ```
 
 Plus a bibliography file:
 
 ```
-/Users/gsix/quantum-geometry-in-5d/etc/arxiv/refs.bib
+/Users/gsix/quantum-geometry-in-5d/paper1/etc/arxiv/refs.bib
 ```
 
 Create the directory if it doesn't exist.
@@ -306,19 +306,21 @@ The LaTeX document should follow this structure exactly:
 \section{Toward Quantum Gravity: The E-Space Bridge}
 [paper-section-5-gravity-bridge.md]
 
-% Section 5X (insert between 5 and 6)
+% Section 6: The Quantization Bridge
+% (source file is named "5x" but it becomes Section 6 in LaTeX;
+%  all subsequent sections shift by one: 6→7, 7→8, 8→9)
 \section{The Quantization Bridge}
 [paper-section-5x-quantization-bridge.md]
 
-% Section 6
+% Section 7
 \section{Connections to Modern Physics}
 [paper-section-6-connections.md]
 
-% Section 7
+% Section 8
 \section{Philosophical Resolution}
 [paper-section-7-philosophy.md]
 
-% Section 8
+% Section 9
 \section{Conclusion}
 [paper-section-8-conclusion.md]
 
@@ -545,13 +547,14 @@ Run these checks before handing the output to the human:
 ## File Structure to Produce
 
 ```
-/Users/gsix/quantum-geometry-in-5d/etc/arxiv/
+/Users/gsix/quantum-geometry-in-5d/paper1/etc/arxiv/
 ├── main.tex        ← the complete paper
 └── refs.bib        ← all bibliography entries
 ```
 
-No figures are needed for the initial arXiv submission — the paper
-contains no figures (only tables and equations).
+No figures are included in this submission — the paper contains only
+tables and equations. The JSX files in `paper1/figures/` are conceptual
+sketches for reference only; they are not part of the arXiv submission.
 
 ---
 
@@ -577,3 +580,66 @@ contains no figures (only tables and equations).
 
 The human will check the output, make any corrections, then commit
 and submit to arXiv.
+
+---
+
+## Cross-references to Paper 2
+
+Paper 1's abstract and Section 6 (Connections) reference Paper 2's
+cosmological results. In the LaTeX:
+
+- "Paper~II" for the companion cosmology paper
+- If submitting both simultaneously, arXiv allows cross-referencing
+  between papers in the same submission batch. Use a placeholder
+  `eprint = {YYMM.NNNNN}` in refs.bib and update after the first
+  paper's ID is assigned.
+- If Paper 2 is already on arXiv, cite by arXiv ID.
+
+Key Paper 2 results referenced from Paper 1:
+- $t_0 = 13.47$~Gyr, $S_8 = 0.753$--$0.785$
+- $H_0 = 68.7$--$69.5$~km/s/Mpc
+- $\Omega_{\rm DM}/\Omega_b = 1/\xi^2$ (cosmic coincidence)
+- $N_{\rm eff} = 3.31$--$3.39$
+
+---
+
+## arXiv Submission
+
+### What to upload
+
+Pack into a single `.tar.gz`:
+
+```
+main.tex            — the complete paper
+refs.bib            — bibliography (from paper1/etc/refs.bib)
+```
+
+No subdirectories. No .aux, .log, or .out files.
+
+You have two options for the bibliography:
+(a) Include `refs.bib` and let arXiv run BibTeX.
+(b) Pre-build the `.bbl` locally and include it instead of `.bib`.
+
+### Categories
+
+- **Primary:** hep-th (High Energy Physics - Theory)
+- **Cross-list:** quant-ph, gr-qc
+
+### First-time gotchas
+
+- **BibTeX:** arXiv runs `pdflatex → bibtex → pdflatex → pdflatex`.
+  If you use `\bibliography{refs}`, the file must be `refs.bib`.
+- **revtex4-2:** Already on arXiv's TeX Live. No need to upload.
+- **`\bibliographystyle`:** revtex4-2 sets this automatically. Do NOT
+  add a `\bibliographystyle{}` command.
+- **Compilation timeout:** arXiv has a ~5 minute compile limit. With
+  26 appendices this paper is large — should still be fine, but if
+  it times out, switch to the pre-built `.bbl` approach.
+- **Abstract field:** arXiv has a separate plain-text abstract field
+  on the submission form. Use `$...$` for inline math (arXiv renders
+  it). The full abstract (~800 words) may exceed the character limit
+  (~1920 chars) — use the short version from `abstract-short.txt`.
+- **Moderation hold:** First-time authors sometimes get held for
+  manual review (~1-2 days). Normal — just wait.
+- **Paper 2 cross-reference:** If submitting both simultaneously,
+  arXiv lets you cross-reference between papers in the same batch.
