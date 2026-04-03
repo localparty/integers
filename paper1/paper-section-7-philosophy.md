@@ -38,7 +38,7 @@ reality from a four-dimensional perspective.
 
 **On incompleteness:** Standard quantum mechanics in four dimensions is incomplete.
 There is additional reality: the e-dimension and the e-coordinates of particles.
-The wave function ψ(x, y, z, t) is a four-dimensional projection of the full
+The wave function `ψ(x, y, z, t)` is a four-dimensional projection of the full
 five-dimensional state — it is the best description available to four-dimensional
 observers, but it is not the complete description of the particle's state.
 Einstein was right that something was missing. He was right about the nature
@@ -53,7 +53,7 @@ by the geometry. Einstein was right that hidden variables exist. He was wrong
 only about their being local.
 
 **On determinism:** At the five-dimensional level, reality is fully deterministic.
-Particles follow definite trajectories through (x, y, z, t, e)-spacetime. The
+Particles follow definite trajectories through `(x, y, z, t, e)`-spacetime. The
 Schrödinger equation governs the deterministic evolution of the five-dimensional
 structure. There is no fundamental randomness. The apparent randomness of quantum
 mechanics is our ignorance of the e-coordinate — our inability to observe which
@@ -121,7 +121,7 @@ looks — it is in a definite five-dimensional configuration that we simply are 
 observing. Measurement reveals which part of this configuration we contact; it
 does not create the configuration.
 
-**Non-locality:** Particles separated in (x, y, z) can be connected through the
+**Non-locality:** Particles separated in `(x, y, z)` can be connected through the
 e-dimension. The non-locality is geometric — a connection through a fifth dimension
 orthogonal to space, not a mysterious influence propagating across space.
 Correlations between distant particles are not mysterious action at a distance
@@ -153,7 +153,7 @@ distribution of e-density — the five-dimensional structure of the particle,
 described by the wave function — but we do not know which e-value our measurement
 will intersect. The wave function gives us the probability distribution for this
 intersection: the probability of outcome i is proportional to the five-dimensional
-density at e-region i, which is |αᵢ|² — the Born rule.
+density at e-region i, which is `|αᵢ|²` — the Born rule.
 
 This is precisely analogous to classical statistical mechanics, where probability
 arises not from fundamental indeterminism but from ignorance of the microstate.
@@ -177,7 +177,7 @@ grounding (the e-dimension connects directly to observed phenomena through
 spin, interference, and the Aharonov-Bohm effect), but they share the conviction
 that the randomness of quantum mechanics is not the final word. The 5D framework's
 Bell inequality calculation (Appendix C.1) demonstrates explicitly that the
-e-conservation constraint produces the quantum correlations |S| = 2√2 — showing
+e-conservation constraint produces the quantum correlations `|S| = 2√2` — showing
 that epistemic probability over non-local hidden variables can quantitatively
 reproduce what appears to be fundamental randomness.
 

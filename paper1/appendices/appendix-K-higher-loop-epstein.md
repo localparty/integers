@@ -3,9 +3,9 @@
 > This appendix extends the finiteness results of Appendices F (one loop)
 > and G (two loops) to arbitrary loop order. The key insight is structural:
 > at L loops, the KK sums reduce to L-dimensional Epstein zeta functions
-> E_L(s; Q) evaluated at non-positive integers s = 0, -1, -2, ..., while
-> the unique pole of E_L lies at s = L/2 > 0. The needed values and the
-> pole are on opposite sides of s = 0 for every L. Finiteness at all loop
+> `E_L(s; Q)` evaluated at non-positive integers `s = 0, -1, -2, ...`, while
+> the unique pole of `E_L` lies at `s = L/2 > 0`. The needed values and the
+> pole are on opposite sides of `s = 0` for every `L`. Finiteness at all loop
 > orders is therefore not an empirical extrapolation — it is a structural
 > consequence of the analytic properties of Epstein zeta functions on
 > positive definite quadratic forms.
@@ -17,15 +17,15 @@
 ### K.1.1 One Loop (Appendix F)
 
 At one loop, KK sums reduce to the Riemann zeta function at non-positive
-integers. The key values — ζ(0) = -1/2, ζ(-1) = -1/12, ζ(-2k) = 0 for
-k ≥ 1, and ζ(-(2k+1)) = -B_{2k+2}/(2k+2) — are all finite. The leading
+integers. The key values — `ζ(0) = -1/2`, `ζ(-1) = -1/12`, `ζ(-2k) = 0` for
+`k ≥ 1`, and `ζ(-(2k+1)) = -B_{2k+2}/(2k+2)` — are all finite. The leading
 UV divergence vanishes:
 
     S₀ = 1 + 2ζ(0) = 1 + 2(-1/2) = 0
 
 The zero-mode contribution (1) is exactly cancelled by the analytic
-continuation of the KK tower (2ζ(0) = -1). Every subleading term is
-finite because ζ(s) has its unique pole at s = 1, far from s ≤ 0.
+continuation of the KK tower (`2ζ(0) = -1`). Every subleading term is
+finite because `ζ(s)` has its unique pole at `s = 1`, far from `s ≤ 0`.
 
 ### K.1.2 Two Loops (Appendix G)
 
@@ -33,11 +33,11 @@ At two loops, double KK sums organize into 2D Epstein zeta functions:
 
     E₂(s; Q₂) = Σ'_{(n₁,n₂) ∈ Z²} [Q₂(n₁,n₂)]^{-s}
 
-where Q₂ is a binary quadratic form from the diagram topology (e.g.,
-Q₂ = n₁² + n₂² + n₁n₂ for the sunset diagram, with det = 3/4). The
-leading divergence vanishes: S₀² = 0² = 0. The subleading terms are
-finite because E₂ has its single pole at s = d/2 = 1, and the needed
-values at s = 0, -1, -2, ... are distinct from s = 1.
+where `Q₂` is a binary quadratic form from the diagram topology (e.g.,
+`Q₂ = n₁² + n₂² + n₁n₂` for the sunset diagram, with `det = 3/4`). The
+leading divergence vanishes: `S₀² = 0² = 0`. The subleading terms are
+finite because `E₂` has its single pole at `s = d/2 = 1`, and the needed
+values at `s = 0, -1, -2, ...` are distinct from `s = 1`.
 
 ---
 
@@ -56,7 +56,7 @@ factorizing into one-loop contributions).
 
 ### K.2.2 Leading and Subleading Terms
 
-The leading divergence vanishes: S₀³ = [1 + 2ζ(0)]³ = 0³ = 0.
+The leading divergence vanishes: `S₀³ = [1 + 2ζ(0)]³ = 0³ = 0`.
 
 The subleading terms reduce to three-dimensional Epstein zeta functions:
 
@@ -72,16 +72,16 @@ The associated Gram matrix is:
     A₃ = ⎜ 1/2   1   1/2 ⎟
          ⎝ 1/2  1/2   1  ⎠
 
-with det(A₃) = 1/2, eigenvalues 1/2, 1/2, 2 — positive definite.
+with `det(A₃) = 1/2`, eigenvalues `1/2, 1/2, 2` — positive definite.
 
-### K.2.3 Analytic Continuation of E₃
+### K.2.3 Analytic Continuation of `E₃`
 
-By the Epstein-Terras theory, E₃(s; Q₃) has analytic continuation to all
-s ∈ C with a single simple pole at s = d/2 = 3/2, with residue:
+By the Epstein-Terras theory, `E₃(s; Q₃)` has analytic continuation to all
+`s ∈ C` with a single simple pole at `s = d/2 = 3/2`, with residue:
 
     Res_{s=3/2} E₃(s; Q₃) = π^{3/2} / [Γ(3/2) det(A₃)^{1/2}] = 2√2 π
 
-The needed values at s = 0, -1, -2, ... are strictly left of s = 3/2:
+The needed values at `s = 0, -1, -2, ...` are strictly left of `s = 3/2`:
 
     E₃(0; Q₃), E₃(-1; Q₃), E₃(-2; Q₃), ... — all FINITE
 
@@ -93,34 +93,34 @@ The three-loop effective action is finite.
 
 ### K.3.1 General L-Loop Structure
 
-At L loops, the effective action generates L-fold KK sums that, after
+At `L` loops, the effective action generates L-fold KK sums that, after
 momentum integration and Schwinger parametrization, reduce to:
 
-**Leading term:** S₀^L = [1 + 2ζ(0)]^L = 0^L = 0 for all L ≥ 1.
+**Leading term:** `S₀^L = [1 + 2ζ(0)]^L = 0^L = 0` for all `L ≥ 1`.
 
 **Subleading terms:** L-dimensional Epstein zeta functions:
 
     E_L(s; Q_L) = Σ'_{n ∈ Z^L} [Q_L(n)]^{-s}
 
-where Q_L is a positive definite quadratic form in L variables determined
+where `Q_L` is a positive definite quadratic form in `L` variables determined
 by the diagram topology.
 
-### K.3.2 The Pole Structure of E_L
+### K.3.2 The Pole Structure of `E_L`
 
-The Epstein zeta function E_L(s; Q_L) on a positive definite quadratic
-form of dimension L has a single simple pole at:
+The Epstein zeta function `E_L(s; Q_L)` on a positive definite quadratic
+form of dimension `L` has a single simple pole at:
 
     s_pole = L/2
 
 This is a theorem of Epstein (1903), generalized by Terras (1985). The
-proof proceeds by writing E_L as the Mellin transform of the theta
-function θ_L(t; Q_L) = Σ_{n ∈ Z^L} exp(-πt Q_L(n)). The Jacobi
-inversion formula introduces a term proportional to t^{-L/2}, which
-generates the pole at s = L/2.
+proof proceeds by writing `E_L` as the Mellin transform of the theta
+function `θ_L(t; Q_L) = Σ_{n ∈ Zᴸ} exp(-πt Q_L(n))`. The Jacobi
+inversion formula introduces a term proportional to `t^(-L/2)`, which
+generates the pole at `s = L/2`.
 
 ### K.3.3 The Separation Theorem
 
-At L loops, the effective action requires E_L evaluated at:
+At `L` loops, the effective action requires `E_L` evaluated at:
 
     s_needed = 0, -1, -2, -3, ...        (non-positive integers)
 
@@ -132,14 +132,14 @@ The separation is:
 
     s_pole - s_needed ≥ L/2 > 0
 
-for all L ≥ 1 and all non-positive integers s_needed. The needed values
+for all `L ≥ 1` and all non-positive integers `s_needed`. The needed values
 and the pole are ALWAYS on opposite sides of the origin.
 
 This is the central structural fact. It does not depend on the specific
-quadratic form Q_L (only on its being positive definite and L-dimensional).
+quadratic form `Q_L` (only on its being positive definite and L-dimensional).
 It does not depend on the diagram topology (only on the number of
 independent KK sums). It does not depend on the loop order (except that
-L ≥ 1). The finiteness follows from the analytic structure of the Epstein
+`L ≥ 1`). The finiteness follows from the analytic structure of the Epstein
 zeta function alone.
 
 ### K.3.4 Why This Is Not Empirical
@@ -166,41 +166,41 @@ The Epstein zeta function satisfies:
 
     π^{-s} Γ(s) E_L(s; Q_L) = (det Q_L)^{-1/2} π^{-(L/2-s)} Γ(L/2-s) E_L(L/2-s; Q_L⁻¹)
 
-where Q_L⁻¹ denotes the quadratic form associated to the inverse Gram
-matrix A_L⁻¹. This relates values at s to values at L/2 - s.
+where `Q_L⁻¹` denotes the quadratic form associated to the inverse Gram
+matrix `A_L⁻¹`. This relates values at `s` to values at `L/2 - s`.
 
-### K.4.2 Behavior at s = 0
+### K.4.2 Behavior at `s = 0`
 
-Setting s = 0, the left side has a pole from Γ(0), while the right side
-has a pole from E_L(L/2; Q_L⁻¹). Expanding both sides in Laurent series:
+Setting `s = 0`, the left side has a pole from `Γ(0)`, while the right side
+has a pole from `E_L(L/2; Q_L⁻¹)`. Expanding both sides in Laurent series:
 
     Γ(s) = 1/s - γ + O(s)
     E_L(s; Q_L) = E_L(0; Q_L) + E_L'(0; Q_L) s + O(s²)
 
-The pole residues match, determining E_L(0; Q_L):
+The pole residues match, determining `E_L(0; Q_L)`:
 
     E_L(0; Q_L) = -(det Q_L)^{-1/2} π^{-L/2} Γ(L/2) × Res_{s=L/2} E_L(s; Q_L⁻¹)
 
-This is FINITE: the residue of E_L at its pole is a known constant
-(proportional to π^{L/2} / Γ(L/2)), and det(Q_L) > 0 for positive
+This is FINITE: the residue of `E_L` at its pole is a known constant
+(proportional to `π^(L/2) / Γ(L/2)`), and `det(Q_L) > 0` for positive
 definite forms. For any positive definite L-dimensional form:
 
     E_L(0; Q_L) = -1 + (correction terms depending on Q_L)
 
-### K.4.3 Behavior at s = -k for k > 0
+### K.4.3 Behavior at `s = -k` for `k > 0`
 
-At s = -k, the functional equation gives:
+At `s = -k`, the functional equation gives:
 
     π^{k} Γ(-k) E_L(-k; Q_L) = (det Q_L)^{-1/2} π^{-(L/2+k)} Γ(L/2+k) E_L(L/2+k; Q_L⁻¹)
 
-The pole of Γ(-k) is compensated by the vanishing behavior of E_L(-k; Q_L)
+The pole of `Γ(-k)` is compensated by the vanishing behavior of `E_L(-k; Q_L)`
 near the non-positive integer. The regularized value is:
 
     E_L(-k; Q_L) = [(-1)^k / k!] × (det Q_L)^{-1/2} π^{-(L/2+k)} Γ(L/2+k) E_L(L/2+k; Q_L⁻¹)
 
-Each factor on the right is finite: E_L(L/2+k; Q_L⁻¹) is an absolutely
-convergent sum (since L/2 + k > L/2), and the remaining factors are
-standard. The result is a well-defined finite number for every k ≥ 1.
+Each factor on the right is finite: `E_L(L/2+k; Q_L⁻¹)` is an absolutely
+convergent sum (since `L/2 + k > L/2`), and the remaining factors are
+standard. The result is a well-defined finite number for every `k ≥ 1`.
 
 ---
 
@@ -208,13 +208,13 @@ standard. The result is a well-defined finite number for every k ≥ 1.
 
 ### K.5.1 Degenerate Quadratic Forms
 
-If det(Q_L) = 0, the Epstein zeta function would develop additional
+If `det(Q_L) = 0`, the Epstein zeta function would develop additional
 singularities and finiteness could fail. This does not occur: KK masses
-m_n = |n|/R > 0 ensure that Q_L is positive definite. The Gram matrix
-satisfies (A_L)_{ii} = 1 with off-diagonal entries |(A_L)_{ij}| ≤ 1/2,
+`m_n = |n|/R > 0` ensure that `Q_L` is positive definite. The Gram matrix
+satisfies `(A_L)_{ii} = 1` with off-diagonal entries `|(A_L)_{ij}| ≤ 1/2`,
 and positive definiteness follows from diagonal dominance (confirmed by
-the Gershgorin theorem for L ≤ 3, and by explicit construction for L ≥ 4
-where the cross terms remain bounded by |1/2|).
+the Gershgorin theorem for `L ≤ 3`, and by explicit construction for `L ≥ 4`
+where the cross terms remain bounded by `|1/2|`).
 
 ### K.5.2 Overlapping Subdivergences
 
@@ -229,27 +229,27 @@ and the KK index structure are intertwined through nested loop integrals —
 has not been established. The BPHZ forest formula (Appendix T, §T.5.2)
 handles subdivergences at the Schwinger parameter boundary, but the
 factorization of the FINITE remainder into clean Epstein zeta terms at
-general L is an assumption based on the Seeley-DeWitt mass expansion
+general `L` is an assumption based on the Seeley-DeWitt mass expansion
 structure. This is the key unproven step in the all-orders conjecture.
 
 ### K.5.3 Heat Kernel Coefficients
 
-The Seeley-DeWitt coefficients a_k(D) are polynomial in the curvature
-R_{ABCD}, the KK masses m_n², and 1/R — all finite on M⁴ × S¹. No
+The Seeley-DeWitt coefficients `a_k(D)` are polynomial in the curvature
+`R_{ABCD}`, the KK masses `m_n²`, and `1/R` — all finite on `M⁴ × S¹`. No
 coefficient diverges. The only potential source of divergence is the
 discrete KK sum, controlled by the Epstein zeta function.
 
 ### K.5.3 Pole Collision
 
-A pole collision would require L/2 = -k for some k ≥ 0, i.e., L = -2k.
-Since L is a positive integer, L/2 > 0 always. The gap between the pole
-and the nearest needed value is at least L/2 ≥ 1/2. No value of L can
+A pole collision would require `L/2 = -k` for some `k ≥ 0`, i.e., `L = -2k`.
+Since `L` is a positive integer, `L/2 > 0` always. The gap between the pole
+and the nearest needed value is at least `L/2 ≥ 1/2`. No value of `L` can
 close this gap.
 
 ### K.5.4 Non-Planar Diagrams
 
-Non-planar topologies change Q_L but not its dimension L. The Epstein
-pole at s = L/2 depends only on L, not on the specific form. Non-planar
+Non-planar topologies change `Q_L` but not its dimension `L`. The Epstein
+pole at `s = L/2` depends only on `L`, not on the specific form. Non-planar
 diagrams are therefore irrelevant to the finiteness argument.
 
 ### K.5.5 Summary
@@ -258,8 +258,8 @@ diagrams are therefore irrelevant to the finiteness argument.
 |----------------------|--------|--------|
 | Degenerate quadratic form | Excluded | KK masses ensure positive definiteness |
 | Singular heat kernel coefficients | Excluded | Polynomial in curvature and masses |
-| Pole collision (s = L/2 meets s ≤ 0) | Impossible | L/2 > 0 for all positive L |
-| Non-planar topologies | Irrelevant | Pole depends on dimension L only |
+| Pole collision (`s = L/2` meets `s ≤ 0`) | Impossible | `L/2 > 0` for all positive `L` |
+| Non-planar topologies | Irrelevant | Pole depends on dimension `L` only |
 | Infrared divergences | Separate issue | Not addressed by this argument |
 
 No known obstruction to the all-orders finiteness conjecture exists.
@@ -271,32 +271,32 @@ No known obstruction to the all-orders finiteness conjecture exists.
 ### K.6.1 Statement
 
 **Conjecture (Higher-Loop Finiteness).** The L-loop effective action for
-5D pure gravity on M⁴ × S¹, computed in zeta function regularization,
-is finite at every perturbative order L ≥ 1. Specifically:
+5D pure gravity on `M⁴ × S¹`, computed in zeta function regularization,
+is finite at every perturbative order `L ≥ 1`. Specifically:
 
-(i) The leading UV divergence vanishes: S₀^L = [1 + 2ζ(0)]^L = 0 for
-    all L ≥ 1.
+(i) The leading UV divergence vanishes: `S₀^L = [1 + 2ζ(0)]^L = 0` for
+    all `L ≥ 1`.
 
 (ii) Every subleading contribution is expressible as a finite linear
-     combination of L-dimensional Epstein zeta functions E_L(s_k; Q_L^{(α)})
-     where each s_k is a non-positive integer, each Q_L^{(α)} is a positive
-     definite form on Z^L, and α labels the diagram topologies at L loops.
+     combination of L-dimensional Epstein zeta functions E_L(s_k; Q_L^(α))
+     where each s_k is a non-positive integer, each Q_L^(α) is a positive
+     definite form on Zᴸ, and α labels the diagram topologies at L loops.
 
-(iii) Each such value is finite, because the unique pole of E_L at
+(iii) Each such value is finite, because the unique pole of `E_L` at
       s = L/2 > 0 is separated from the needed s_k ≤ 0.
 
 ### K.6.2 Logical Status
 
 **Proven components:**
-- Part (i): follows from S₀ = 1 + 2ζ(0) = 0 (Appendix F).
+- Part (i): follows from `S₀ = 1 + 2ζ(0) = 0` (Appendix F).
 - Part (iii): theorem about Epstein zeta functions (Epstein 1903, Terras
   1985).
-- Finiteness at L = 1 (Appendix F) and L = 2 (Appendix G).
+- Finiteness at `L = 1` (Appendix F) and `L = 2` (Appendix G).
 
 **Unproven component:**
 - Part (ii): that subleading terms always reduce to Epstein zeta values
-  at non-positive integers. Established at L = 1, 2 by explicit
-  computation; unproven for general L.
+  at non-positive integers. Established at `L = 1, 2` by explicit
+  computation; unproven for general `L`.
 
 The gap is narrow and specific: it concerns the structure of multi-loop
 Feynman integrals in the KK theory, not the analytic properties of
@@ -305,7 +305,7 @@ Epstein zeta functions (which are rigorous mathematics).
 The pole-separation argument is a structural fact about Epstein zeta
 functions (rigorous mathematics). The reduction of subleading L-loop
 integrals to Epstein zeta values at non-positive integers is established
-at L = 1 and L = 2 by explicit computation, and assumed for general L based
+at `L = 1` and `L = 2` by explicit computation, and assumed for general `L` based
 on the Seeley-DeWitt mass expansion structure. The all-orders extension is
 therefore a conjecture supported by two explicit calculations and a
 structural argument — not a theorem.
@@ -328,17 +328,17 @@ finite.
 
 ## K.7 Summary
 
-The finiteness of the L-loop effective action rests on three results:
+The finiteness of the `L`-loop effective action rests on three results:
 
-1. **Leading divergence:** S₀^L = 0 for all L, because S₀ = 1 + 2ζ(0) = 0.
+1. **Leading divergence:** `S₀^L = 0` for all `L`, because `S₀ = 1 + 2ζ(0) = 0`.
    This is proven.
 
 2. **Subleading structure:** Subleading terms reduce to Epstein zeta
-   functions E_L(s; Q_L) at non-positive integers s. Established at
-   L = 1, 2; conjectured for general L.
+   functions `E_L(s; Q_L)` at non-positive integers `s`. Established at
+   `L = 1, 2`; conjectured for general `L`.
 
-3. **Epstein zeta finiteness:** E_L(s; Q_L) is finite at all non-positive
-   integers, because its unique pole is at s = L/2 > 0. This is a theorem.
+3. **Epstein zeta finiteness:** `E_L(s; Q_L)` is finite at all non-positive
+   integers, because its unique pole is at `s = L/2 > 0`. This is a theorem.
 
 The conjunction — one proven, one conjectured, one proven — yields the
 all-orders finiteness conjecture. The compact e-circle, introduced to

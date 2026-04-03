@@ -16,64 +16,64 @@ determine ten cosmological observables simultaneously.
 
 ## 8.2 The Results
 
-**The headline:** A universe 327 Myr younger than Planck ΛCDM,
-with the CMB angular scale reproduced to 0.5 arcseconds, the S8
-tension dissolved, and the cosmic coincidence Ω_DM/Ω_b explained
+**The headline:** A universe 327 Myr younger than Planck `ΛCDM`,
+with the CMB angular scale reproduced to 0.5 arcseconds, the `S8`
+tension dissolved, and the cosmic coincidence `Ω_DM/Ω_b` explained
 geometrically.
 
 The complete prediction:
 
-| Observable | Scenario A (θ*-matched) | Scenario B (1/ξ² law) | Status |
+| Observable | Scenario A (`θ*`-matched) | Scenario B (`1/ξ²` law) | Status |
 |-----------|------------------------|-----------------------|--------|
-| t₀ | 13.47 Gyr | 13.47 Gyr | Both 327 Myr below ΛCDM |
-| θ* offset | −0.5" from Planck | +6.6" from Planck | A matches; B has tension |
-| S8 | 0.753 | 0.785 | Both resolve WL tension |
-| H₀ | 69.5 km/s/Mpc | 68.7 km/s/Mpc | Both above ΛCDM |
-| r_d | 146.2 Mpc | 145.8 Mpc | Both testable by DESI DR3 |
-| N_eff | 3.39 | 3.31 | Both in 3–4σ tension with ACT DR6 |
-| Ω_DM/Ω_b | 5.22 (input) | 5.36 (derived) | B explains cosmic coincidence |
+| `t₀` | 13.47 Gyr | 13.47 Gyr | Both 327 Myr below `ΛCDM` |
+| `θ*` offset | −0.5" from Planck | +6.6" from Planck | A matches; B has tension |
+| `S8` | 0.753 | 0.785 | Both resolve WL tension |
+| `H₀` | 69.5 km/s/Mpc | 68.7 km/s/Mpc | Both above `ΛCDM` |
+| `r_d` | 146.2 Mpc | 145.8 Mpc | Both testable by DESI DR3 |
+| `N_eff` | 3.39 | 3.31 | Both in `3–4σ` tension with ACT DR6 |
+| `Ω_DM/Ω_b` | 5.22 (input) | 5.36 (derived) | B explains cosmic coincidence |
 
 ## 8.3 What Makes This Different
 
-In ΛCDM, six parameters are fitted to data and the age is derived.
+In `ΛCDM`, six parameters are fitted to data and the age is derived.
 In the 5D framework, the parameters are derived from geometry and
 the age is a prediction. The framework either passes or fails
 simultaneously across all ten observables — it cannot pass some
 and fail others by adjusting free parameters, because there are none.
 
 That it passes as well as it does — matching the most precisely
-measured number in cosmology (θ*) to within half an arcsecond,
-resolving the S8 tension without tuning, explaining the cosmic
+measured number in cosmology (`θ*`) to within half an arcsecond,
+resolving the `S8` tension without tuning, explaining the cosmic
 coincidence — is not guaranteed by the construction. It could have
 failed, and would have told us so clearly.
 
 ## 8.4 What Remains Open
 
-**The mirror baryogenesis calculation:** η_ratio ~ 50 is required
-by the θ* constraint and is naturally produced by the warp-factor
+**The mirror baryogenesis calculation:** `η_ratio ~ 50` is required
+by the `θ*` constraint and is naturally produced by the warp-factor
 mechanism (Appendix E), but a precise computation awaits.
 
 **The mirror dark matter N-body simulation:** Collisional mirror
 dark matter modifies structure formation in ways not captured by
 linear perturbation theory (Appendix C). Full N-body simulations
-are needed for S8, halo mass functions, and early galaxy formation.
+are needed for `S8`, halo mass functions, and early galaxy formation.
 
 **The JWST early galaxy tension:** The framework cannot add time
-at z > 10. Whether mirror dark matter structure formation provides
+at `z > 10`. Whether mirror dark matter structure formation provides
 advantages for early galaxy formation requires dedicated N-body work
 (Appendix H).
 
-**The N_eff tension with ACT DR6:** Both scenarios predict N_eff =
-3.31–3.39, in 3–4σ tension with ACT DR6 (2.86 ± 0.13). This is the
+**The `N_eff` tension with ACT DR6:** Both scenarios predict `N_eff` =
+`3.31–3.39`, in `3–4σ` tension with ACT DR6 (`2.86 ± 0.13`). This is the
 framework's most significant open issue. The ACT constraint assumes
-ΛCDM + N_eff; a dedicated MCMC with the framework's full model
-(+ w₀ + wₐ) may loosen the bound. Alternatively, if the washout
+`ΛCDM` + `N_eff`; a dedicated MCMC with the framework's full model
+(+ `w₀` + `wₐ`) may loosen the bound. Alternatively, if the washout
 exponent in the baryogenesis formula differs from 2 (intermediate
-washout: α ~ 1.7), the required ξ drops to ~0.36, reducing N_eff
-to 3.14 (2.2σ from ACT). CMB-S4 will decide.
+washout: `α ~ 1.7`), the required `ξ` drops to ~0.36, reducing `N_eff`
+to 3.14 (`2.2σ` from ACT). CMB-S4 will decide.
 
-**The Hubble tension residual:** Scenario A gives H₀ = 69.5 (< 0.5σ
-from TRGB/CCHP), Scenario B gives 68.7. Both are 3–4σ below SH0ES
+**The Hubble tension residual:** Scenario A gives `H₀ = 69.5` (< `0.5σ`
+from TRGB/CCHP), Scenario B gives 68.7. Both are `3–4σ` below SH0ES
 Cepheids. The Cepheid-TRGB calibration question is observational, not
 theoretical.
 
@@ -81,11 +81,11 @@ theoretical.
 
 Every prediction in this paper will be tested within 10 years:
 
-- **CMB-S4 (2030):** N_eff at 11σ sensitivity — the make-or-break test
-- **DESI DR3 (2027):** H(z) shape at 8σ sensitivity
-- **Euclid (2027+):** S8 at 16σ sensitivity (vs ΛCDM)
+- **CMB-S4 (2030):** `N_eff` at `11σ` sensitivity — the make-or-break test
+- **DESI DR3 (2027):** `H(z)` shape at `8σ` sensitivity
+- **Euclid (2027+):** `S8` at `16σ` sensitivity (vs `ΛCDM`)
 - **JUNO (2028–2031):** Neutrino mass ordering
-- **MEMS gravity (2028–2030):** Short-range gravity at λ ~ 12 μm
+- **MEMS gravity (2028–2030):** Short-range gravity at `λ ~ 12 μm`
 
 The framework makes no room to hide. By 2035, we will know whether
 the e-circle is real.
@@ -101,9 +101,9 @@ phenomena from one circle.
 
 Paper 2 shows that the same circle also:
 - Predicts a specific age of the universe (13.47 Gyr)
-- Resolves the S8 tension without tuning
+- Resolves the `S8` tension without tuning
 - Explains why dark matter is five times more abundant than visible matter
-- Leaves a characteristic fingerprint on the expansion history H(z)
+- Leaves a characteristic fingerprint on the expansion history `H(z)`
   that upcoming surveys will either find or rule out
 
 This is what a physical theory looks like: a single geometric object

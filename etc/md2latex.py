@@ -113,9 +113,11 @@ MATH_UNICODE = {
     "\u220E": r"\blacksquare", # tombstone ∎
     "\u2713": r"\checkmark",   # ✓
     "\u2717": r"\times",       # ✗ (ballot X)
-    "\u2609": r"_{\odot}",     # ☉ (sun)
+    "\u2609": r"\odot",         # ☉ (sun) — used as M_☉ where _ is already in source
     "\u25CB": r"\circ",        # ○
     "\u2154": r"\tfrac{2}{3}", # ⅔
+    "\u2282": r"\subset",      # ⊂
+    "\u2223": r"\mid",          # ∣ (divides / mid)
     "\u2283": r"\supset",      # ⊃
     "\u226A": r"\ll",          # ≪ much less than
     "\u226B": r"\gg",          # ≫ much greater than
@@ -141,7 +143,6 @@ MATH_UNICODE = {
     "\u1E21": r"\bar{g}",     # ḡ
     "\u0100": r"\bar{A}",     # Ā
     "\u0101": r"\bar{a}",     # ā
-    "\u00FD": r"\'{y}",       # ý (y acute — author names)
     "\u00F4": r"\^{o}",       # ô (o circumflex — author names)
     # Blackboard bold
     "\u2124": r"\mathbb{Z}",
@@ -188,6 +189,13 @@ SUPERSCRIPT_MAP_EXTRA = {
     "\u1D40": "T",   # ᵀ (superscript T — transpose)
     "\u1D45": r"\alpha",  # ᵅ (superscript alpha)
     "\u1D5D": r"\beta",   # ᵝ (superscript beta)
+    "\u1D48": "d",   # ᵈ (superscript d)
+    "\u1D4F": "k",   # ᵏ (superscript k)
+    "\u02B0": "h",   # ʰ (superscript h)
+    "\u02E2": "s",   # ˢ (superscript s)
+    "\u1D38": "L",   # ᴸ (superscript L)
+    "\u2071": "i",   # ⁱ (superscript i)
+    "\u02B2": "j",   # ʲ (superscript j)
 }
 
 # Unicode superscript characters → LaTeX superscript
@@ -337,209 +345,113 @@ CITATION_MAP = [
 # ─────────────────────────────────────────────────────────────
 
 def final_unicode_pass(text: str) -> str:
-    """Comprehensive final pass to convert ALL remaining Unicode to LaTeX.
+    """Final pass: only text-mode replacements (dashes, accented chars, box drawing).
 
-    Strategy: wrap each math symbol in $...$, then aggressively merge
-    adjacent $...$ groups so expressions like $\partial$e/$\partial$x
-    become $\partial e/\partial x$.
+    Math Unicode is handled earlier by convert_unicode_in_math (inside
+    backtick expressions and equation blocks). This pass only cleans up
+    text-mode characters that appear in prose.
     """
-    # 1. Text-mode replacements (em/en dashes, accented chars)
+    # Text-mode replacements (em/en dashes, accented chars)
     for uni, latex in TEXT_UNICODE.items():
         text = text.replace(uni, latex)
 
-    # 2. Box drawing / bracket characters → remove
+    # Box drawing / bracket characters → remove
     for c in BOX_DRAWING:
         text = text.replace(c, "")
     for c in "\u239B\u239C\u239D\u239E\u239F\u23A0\u239A":
         text = text.replace(c, "")
 
-    # 3. Pre-composed hat characters
-    for uni, latex in HAT_CHARS.items():
-        if uni in text:
-            text = text.replace(uni, f"${latex}$")
+    # Unicode minus → ASCII minus (safe in both text and math)
+    text = text.replace("\u2212", "-")
 
-    # 4. Combining diacritics
-    for combining, cmd in COMBINING_DIACRITICS.items():
-        pattern = re.compile(r'([a-zA-Z])' + re.escape(combining))
-        text = pattern.sub(lambda m: f"${cmd}{{{m.group(1)}}}$", text)
-    # Fix combining diacritics after $...$: $\varphi$̇ → $\dot{\varphi}$
-    for combining, cmd in COMBINING_DIACRITICS.items():
-        text = re.sub(
-            r'\$([^$]+)\$' + re.escape(combining),
-            lambda m: f"${cmd}{{{m.group(1)}}}$",
-            text
-        )
+    # QED marker — convert directly to \end{proof}
+    text = text.replace("\u220E", "\\end{proof}")  # ∎
 
-    # 5. Subscript sequences
-    sub_pattern = re.compile(
-        '([' + ''.join(re.escape(k) for k in SUBSCRIPT_MAP) + ']+)'
-    )
-    text = sub_pattern.sub(
-        lambda m: "$_{" + "".join(SUBSCRIPT_MAP.get(c, c) for c in m.group(1)) + "}$",
-        text
-    )
+    # Prose-safe math symbols: wrap in $...$ so LaTeX doesn't choke.
+    # These appear in prose (tables, list items, descriptions) outside
+    # backtick fencing — not ideal, but pragmatic.
+    _PROSE_MATH = {
+        "→": r"$\to$",
+        "←": r"$\leftarrow$",
+        "↔": r"$\leftrightarrow$",
+        "⟹": r"$\Longrightarrow$",
+        "↑": r"$\uparrow$",
+        "↓": r"$\downarrow$",
+        "↻": r"$\circlearrowright$",
+        "↺": r"$\circlearrowleft$",
+        "×": r"$\times$",
+        "±": r"$\pm$",
+        "≥": r"$\geq$",
+        "≤": r"$\leq$",
+        "≈": r"$\approx$",
+        "∝": r"$\propto$",
+        "√": r"$\sqrt{}$",
+        "✓": r"$\checkmark$",
+        "✗": r"$\times$",
+        "○": r"$\circ$",
+        "≠": r"$\neq$",
+        "≫": r"$\gg$",
+        "≪": r"$\ll$",
+        "∞": r"$\infty$",
+        "∼": r"$\sim$",
+        "⊂": r"$\subset$",
+        "⊃": r"$\supset$",
+        "∫": r"$\int$",
+        "ℤ": r"$\mathbb{Z}$",
+        "ℝ": r"$\mathbb{R}$",
+        "ℂ": r"$\mathbb{C}$",
+        "ℕ": r"$\mathbb{N}$",
+    }
+    for uni, latex in _PROSE_MATH.items():
+        text = text.replace(uni, latex)
 
-    # 6. Superscript sequences
-    all_sups = {**SUPERSCRIPT_MAP, **SUPERSCRIPT_MAP_EXTRA}
-    sup_pattern = re.compile(
-        '([' + ''.join(re.escape(k) for k in all_sups) + ']+)'
-    )
-    text = sup_pattern.sub(
-        lambda m: "$^{" + "".join(all_sups.get(c, c) for c in m.group(1)) + "}$",
-        text
-    )
+    # Greek letters in prose — wrap in $...$
+    _PROSE_GREEK = {
+        "α": r"$\alpha$", "β": r"$\beta$", "γ": r"$\gamma$",
+        "δ": r"$\delta$", "ε": r"$\varepsilon$", "θ": r"$\theta$",
+        "λ": r"$\lambda$", "μ": r"$\mu$", "ν": r"$\nu$",
+        "π": r"$\pi$", "ξ": r"$\xi$", "ρ": r"$\rho$",
+        "σ": r"$\sigma$", "τ": r"$\tau$", "φ": r"$\varphi$",
+        "χ": r"$\chi$", "ψ": r"$\psi$", "ω": r"$\omega$",
+        "η": r"$\eta$", "κ": r"$\kappa$", "ι": r"$\iota$",
+        "Γ": r"$\Gamma$", "Δ": r"$\Delta$", "Θ": r"$\Theta$",
+        "Λ": r"$\Lambda$", "Π": r"$\Pi$", "Σ": r"$\Sigma$",
+        "Φ": r"$\Phi$", "Ψ": r"$\Psi$", "Ω": r"$\Omega$",
+    }
+    for uni, latex in _PROSE_GREEK.items():
+        text = text.replace(uni, latex)
 
-    # 7. Math-mode Unicode symbols
-    for uni, latex in MATH_UNICODE.items():
-        if uni in text:
-            if uni == "\u2212":
-                text = text.replace(uni, "-")
-            else:
-                text = text.replace(uni, f"${latex}$")
+    # Unicode sub/superscripts in prose
+    _PROSE_SUP = {
+        "⁰": r"$^{0}$", "¹": r"$^{1}$", "²": r"$^{2}$", "³": r"$^{3}$",
+        "⁴": r"$^{4}$", "⁵": r"$^{5}$", "⁶": r"$^{6}$", "⁷": r"$^{7}$",
+        "⁸": r"$^{8}$", "⁹": r"$^{9}$", "⁺": r"$^{+}$", "⁻": r"$^{-}$",
+        "ⁿ": r"$^{n}$", "ⁱ": r"$^{i}$", "ʲ": r"$^{j}$", "ᵈ": r"$^{d}$",
+    }
+    _PROSE_SUB = {
+        "₀": r"$_{0}$", "₁": r"$_{1}$", "₂": r"$_{2}$", "₃": r"$_{3}$",
+        "₄": r"$_{4}$", "₅": r"$_{5}$", "₆": r"$_{6}$", "₇": r"$_{7}$",
+        "₈": r"$_{8}$", "₉": r"$_{9}$",
+    }
+    for uni, latex in _PROSE_SUP.items():
+        text = text.replace(uni, latex)
+    for uni, latex in _PROSE_SUB.items():
+        text = text.replace(uni, latex)
 
-    # 8. AGGRESSIVE merge of adjacent $...$ groups
-    # This is the key step: merge $X$<bridge>$Y$ → $X bridge Y$
-    # where <bridge> is short math-compatible text (letters, digits, =, +, -, /, etc.)
-    text = _merge_adjacent_math(text)
-
-    # 9. Fix bare _ and ^ in text mode
-    text = _fix_bare_sub_super(text)
-
-    # 10. Targeted fixes for known broken patterns
-    text = _fix_known_patterns(text)
-
-    return text
-
-
-def _fix_known_patterns(text: str) -> str:
-    """Fix specific known broken LaTeX patterns from the conversion."""
-
-    # Pattern 1: e^{i$\cmd$} → $e^{i\cmd}$ ($ inside exponent braces)
-    text = re.sub(
-        r'e\^\{([^$]*)\$([^$]+)\$([^}]*)\}',
-        lambda m: f'$e^{{{m.group(1)}{m.group(2)}{m.group(3)}}}$',
-        text
-    )
-
-    # Pattern 6: \textbf{X_Y} → \textbf{$X_Y$} (bare _ inside \textbf)
-    text = re.sub(
-        r'\\textbf\{([A-Za-z]+)_([A-Za-z0-9]+)\}',
-        r'\\textbf{$\1_{\2}$}',
-        text
-    )
-
-    # Pattern 10: } instead of ) for common text patterns
-    text = re.sub(r'\((Section [^)}]{1,20})\}', r'(\1)', text)
-    text = re.sub(r'\((Appendix [^)}]{1,20})\}', r'(\1)', text)
-
-    return text
-
-
-def _merge_adjacent_math(text: str) -> str:
-    """Merge adjacent $...$ groups separated by short math-compatible bridges.
-
-    $\partial$e/$\partial$x → $\partial e/\partial x$
-    $\alpha$_{EM} → $\alpha_{EM}$
-    |$S$| = 2$\sqrt{}$2 → $|S| = 2\sqrt{2}$
-    """
-    # Pattern: $...$ followed by short bridge then $...$
-    # Bridge: very short math-compatible content (NO spaces — spaces usually mean prose)
-    # Allow: single letters/digits, =, +, -, /, |, (, ), _, ^, {, }
-    bridge = r'[a-zA-Z0-9=+\-*/().|,^_{}]{0,8}'
-
-    # Merge $A$bridge$B$ → $A bridge B$
-    merge_pat = re.compile(r'\$([^$]+)\$(' + bridge + r')\$([^$]+)\$')
-
-    # Iterate because merging creates new adjacent pairs
-    for _ in range(10):
-        new_text = merge_pat.sub(r'$\1 \2 \3$', text)
-        if new_text == text:
-            break
-        text = new_text
-
-    # Also merge $X$_{a} → $X_{a}$ and $X$^{b} → $X^{b}$
-    for _ in range(3):
-        text = re.sub(r'\$([^$]+)\$([_^]\{[^}]*\})', r'$\1\2$', text)
-
-    # Clean up double spaces inside $...$
-    text = re.sub(r'\$([^$]*)\$', lambda m: '$' + re.sub(r'  +', ' ', m.group(1)).strip() + '$', text)
-
-    # Remove empty math: $$
-    text = text.replace("$$", "")
+    # Combining diacritics in prose (e.g., K̄ p̄ H̄ ḡ)
+    import re as _re
+    for combining, cmd in {
+        "\u0302": "hat", "\u0304": "bar", "\u0303": "tilde",
+        "\u0307": "dot",
+    }.items():
+        text = _re.sub(r'([a-zA-Z])' + _re.escape(combining),
+                        lambda m: f"$\\{cmd}{{{m.group(1)}}}$", text)
 
     return text
 
 
-def _fix_bare_sub_super(text: str) -> str:
-    """Wrap bare subscript/superscript expressions in math mode.
-
-    Processes only text-mode lines (not inside equation environments).
-    """
-    lines = text.split('\n')
-    in_math_env = False
-    result = []
-
-    math_envs = {'equation', 'align', 'gather', 'multline',
-                 'equation*', 'align*', 'gather*', 'multline*'}
-
-    for line in lines:
-        stripped = line.strip()
-
-        for env in math_envs:
-            if f'\\begin{{{env}}}' in stripped:
-                in_math_env = True
-            if f'\\end{{{env}}}' in stripped:
-                in_math_env = False
-
-        if in_math_env:
-            result.append(line)
-            continue
-
-        # Merge fragmented math: $\cmd$_{x} → $\cmd_{x}$
-        for _ in range(3):
-            line = re.sub(r'\$([^$]+)\$([_^]\{[^}]*\})', r'$\1\2$', line)
-
-        # Wrap bare word_{...} or word^{...} NOT inside $...$
-        line = _wrap_bare_in_line(line)
-
-        result.append(line)
-
-    return '\n'.join(result)
-
-
-def _wrap_bare_in_line(line: str) -> str:
-    """Find bare subscript/superscript in text portions of a line and wrap in $."""
-    parts = re.split(r'(\$[^$]*\$)', line)
-    result = []
-    for i, part in enumerate(parts):
-        if i % 2 == 1:
-            result.append(part)
-        else:
-            # Wrap: Word_{stuff} or Word^{stuff} with braces (not after \)
-            part = re.sub(
-                r'(?<!\\)([A-Za-z][A-Za-z0-9]*)([_^]\{[^}]*\}(?:[_^]\{[^}]*\})*)',
-                lambda m: f'${m.group(1)}{m.group(2)}$',
-                part
-            )
-            # Bare _{...} not preceded by letter or $
-            part = re.sub(
-                r'(?<![A-Za-z\\$])([_^]\{[^}]*\}(?:[_^]\{[^}]*\})*)',
-                lambda m: f'${m.group(1)}$',
-                part
-            )
-            # Bare word_word or word^word WITHOUT braces (e.g., N_eff, M_P, w_a)
-            part = re.sub(
-                r'(?<!\\)([A-Za-z][A-Za-z0-9]*)_([A-Za-z][A-Za-z0-9]*)',
-                lambda m: f'${m.group(1)}_{{{m.group(2)}}}$',
-                part
-            )
-            part = re.sub(
-                r'(?<!\\)([A-Za-z][A-Za-z0-9]*)\^([A-Za-z0-9]+)',
-                lambda m: f'${m.group(1)}^{{{m.group(2)}}}$',
-                part
-            )
-            result.append(part)
-    return ''.join(result)
+def _map_chars(s, mapping):
+    return "".join(mapping.get(c, c) for c in s)
 
 
 def convert_unicode_in_math(text: str) -> str:
@@ -550,7 +462,24 @@ def convert_unicode_in_math(text: str) -> str:
     for uni, latex in HAT_CHARS.items():
         text = text.replace(uni, latex)
 
-    # Combining diacritics
+    # Combining diacritics on Greek letters (must be done BEFORE Greek → \cmd conversion)
+    # e.g., φ̈ → \ddot{\varphi}, φ̇ → \dot{\varphi}
+    greek_map = {
+        "α": r"\alpha", "β": r"\beta", "γ": r"\gamma", "δ": r"\delta",
+        "ε": r"\varepsilon", "ζ": r"\zeta", "η": r"\eta", "θ": r"\theta",
+        "κ": r"\kappa", "λ": r"\lambda", "μ": r"\mu", "ν": r"\nu",
+        "ξ": r"\xi", "π": r"\pi", "ρ": r"\rho", "σ": r"\sigma",
+        "τ": r"\tau", "φ": r"\varphi", "χ": r"\chi", "ψ": r"\psi", "ω": r"\omega",
+    }
+    combining_cmd = {
+        "\u0302": "hat", "\u0304": "bar", "\u0307": "dot",
+        "\u0303": "tilde", "\u0308": "ddot", "\u030C": "check",
+    }
+    for greek, gcmd in greek_map.items():
+        for comb, dcmd in combining_cmd.items():
+            text = text.replace(greek + comb, f"\\{dcmd}{{{gcmd}}}")
+
+    # Combining diacritics on Latin letters
     for combining, cmd in COMBINING_DIACRITICS.items():
         pattern = re.compile(r'([a-zA-Z])' + re.escape(combining))
         text = pattern.sub(lambda m: f"{cmd}{{{m.group(1)}}}", text)
@@ -574,13 +503,147 @@ def convert_unicode_in_math(text: str) -> str:
         text
     )
 
+    # Σ followed by subscript/superscript → \sum (summation, not Greek letter)
+    text = re.sub(r'Σ(?=[_^{])', r'\\sum', text)
+
     # Math symbols (no $ wrapping needed — we're already in math)
     for uni, latex in MATH_UNICODE.items():
         text = text.replace(uni, latex)
 
+    # Degree sign inside math → ^{\circ}
+    text = text.replace("°", "^{\\circ}")
+
+    # Fix e^(...) → e^{...} and similar ^(...) → ^{...}
+    text = re.sub(r'\^\(([^)]+)\)', r'^{\1}', text)
+    # Also fix (-1)^(2s) style
+    text = re.sub(r'\)\^\(([^)]+)\)', r')^{\1}', text)
+
+    # Auto-convert bare trig/math function names to LaTeX commands
+    # Protect \text{...} and \textbf{...} etc. from conversion
+    _protected = {}
+    def _protect(m):
+        key = f"\x00PROT{len(_protected)}\x00"
+        _protected[key] = m.group(0)
+        return key
+    text = re.sub(r'\\text(?:bf|it|rm|sf|tt)?\{[^}]*\}', _protect, text)
+    for func in ('arcsin', 'arccos', 'arctan', 'sinh', 'cosh', 'tanh',
+                 'sin', 'cos', 'tan', 'exp', 'log', 'ln', 'det', 'dim',
+                 'ker', 'deg', 'max', 'min', 'sup', 'inf', 'lim', 'mod'):
+        text = re.sub(r'(?<!\\)(?<![a-zA-Z_])' + func + r'(?=[^a-zA-Z]|$)',
+                       '\\\\' + func, text)
+    for key, val in _protected.items():
+        text = text.replace(key, val)
+
+    # Fix √X → \sqrt{X} (not \sqrt{}X)
+    # Handle: \sqrt followed by a single char or group
+    i = 0
+    while True:
+        pos = text.find('\\sqrt', i)
+        if pos == -1:
+            break
+        end = pos + 5  # after \sqrt
+        if end < len(text) and text[end] == '{':
+            i = end + 1
+            continue  # already has braces
+        if end < len(text) and text[end] in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ':
+            text = text[:end] + '{' + text[end] + '}' + text[end+1:]
+            i = end + 3
+        else:
+            i = end + 1
+
     # Text-mode replacements that also apply in math
     text = text.replace("\u2014", "---")
     text = text.replace("\u2013", "--")
+
+    # ASCII tilde ~ → \sim in math context (equation blocks)
+    # But not inside \text{...} and not ~= (already handled)
+    text = re.sub(r'(?<!\\)~(?!=)', r'\\sim ', text)
+
+    # Fix missing spaces after known math commands followed by a letter
+    # e.g., \partiale → \partial e, \DeltaN → \Delta N, \mum → \mu m
+    _math_cmds = (
+        r'\alpha', r'\beta', r'\gamma', r'\delta', r'\varepsilon', r'\zeta',
+        r'\eta', r'\theta', r'\iota', r'\kappa', r'\lambda', r'\mu', r'\nu',
+        r'\xi', r'\pi', r'\rho', r'\sigma', r'\tau', r'\varphi', r'\chi',
+        r'\psi', r'\omega',
+        r'\Gamma', r'\Delta', r'\Theta', r'\Lambda', r'\Pi', r'\Sigma',
+        r'\Phi', r'\Psi', r'\Omega',
+        r'\partial', r'\nabla', r'\int', r'\infty', r'\hbar', r'\dagger',
+        r'\sqrt', r'\times', r'\cdot', r'\approx', r'\neq', r'\leq', r'\geq',
+        r'\equiv', r'\in', r'\propto', r'\pm', r'\mp', r'\otimes', r'\oplus',
+        r'\to', r'\leftarrow', r'\leftrightarrow', r'\uparrow', r'\downarrow',
+        r'\langle', r'\rangle', r'\ll', r'\gg', r'\gtrsim', r'\lesssim',
+        r'\sim', r'\cong', r'\supset', r'\oint', r'\square', r'\blacksquare',
+        r'\checkmark', r'\tfrac',
+    )
+    # LaTeX commands that share prefixes with math commands but shouldn't be split
+    _LATEX_LONG_CMDS = {
+        '\\toprule', '\\topmargin', '\\tolerance',
+        '\\simulate', '\\signature', '\\simplify',
+        '\\cosine', '\\coset', '\\colspan',
+        '\\tangle', '\\tangent',
+        '\\exponential', '\\expandafter', '\\expand',
+        '\\logarithm', '\\loglike',
+        '\\dimension', '\\diminish',
+        '\\modular', '\\modify', '\\model',
+        '\\determinant', '\\detect',
+        '\\supset', '\\superscript', '\\supplement',
+        '\\infinity', '\\input', '\\include', '\\indent',
+        '\\limited', '\\linewidth', '\\limits',
+        '\\midrule', '\\midpoint',
+        '\\bottomrule',
+    }
+    # Sort longest first so \int is checked before \in, etc.
+    _math_cmds_sorted = sorted(_math_cmds, key=len, reverse=True)
+    _math_cmds_set = set(_math_cmds)
+    for cmd in _math_cmds_sorted:
+        # Find cmd immediately followed by a letter, insert space
+        i = 0
+        while True:
+            pos = text.find(cmd, i)
+            if pos == -1:
+                break
+            end = pos + len(cmd)
+            if end < len(text) and text[end].isalpha():
+                # Check we're not inside a longer known command
+                # e.g., \in inside \int or \infty, \to inside \toprule
+                longer_match = False
+                # Check against known math commands
+                for longer_cmd in _math_cmds_set:
+                    if len(longer_cmd) > len(cmd) and longer_cmd.startswith(cmd):
+                        candidate = text[pos:pos+len(longer_cmd)]
+                        if candidate == longer_cmd:
+                            longer_match = True
+                            break
+                # Also check against common LaTeX commands that share prefixes
+                if not longer_match:
+                    # Read ahead to see if this forms a known LaTeX command
+                    j = end
+                    while j < len(text) and text[j].isalpha():
+                        j += 1
+                    full_cmd = text[pos:j]
+                    if full_cmd in _LATEX_LONG_CMDS:
+                        longer_match = True
+                if not longer_match:
+                    text = text[:end] + ' ' + text[end:]
+            i = end + 1
+
+    # Brace multi-token subscripts/superscripts: _\cmd{x} → _{\cmd{x}}
+    # Without braces, LaTeX only grabs \cmd as the subscript, not {x}.
+    text = re.sub(r'([_^])(\\[a-zA-Z]+\{[^}]*\})', r'\1{\2}', text)
+
+    # Brace multi-letter ASCII subscripts: _eff → _{eff}, _max → _{max}
+    # Only when _ is followed by 2+ letters not already braced
+    text = re.sub(r'_([a-zA-Z]{2,})(?![{a-zA-Z])', r'_{\1}', text)
+
+    # Same for superscripts: ^SC → ^{SC}
+    text = re.sub(r'\^([a-zA-Z]{2,})(?![{a-zA-Z])', r'^{\1}', text)
+
+    # Fix double subscripts: _\Omega_{i} → _{\Omega_{i}}
+    # Pattern: _ followed by \cmd then _{...} — wrap whole thing in braces
+    text = re.sub(r'_(\\[a-zA-Z]+)_(\{[^}]*\})', r'_{\1_\2}', text)
+    # Same for superscripts
+    text = re.sub(r'\^(\\[a-zA-Z]+)\^(\{[^}]*\})', r'^{\1^\2}', text)
 
     return text
 
@@ -588,6 +651,21 @@ def convert_unicode_in_math(text: str) -> str:
 # ─────────────────────────────────────────────────────────────
 # Markdown → LaTeX conversion functions
 # ─────────────────────────────────────────────────────────────
+
+def has_any_math_unicode(text: str) -> bool:
+    """Check if text contains any Unicode math characters (Greek, symbols, sub/superscripts)."""
+    for c in text:
+        if c in _MATH_UNICODE_SET:
+            return True
+    return False
+
+_MATH_UNICODE_SET = set(
+    "αβγδεζηθικλμνξπρστφχψω"
+    "ΓΔΘΛΠΣΦΨΩ"
+    "∂∇∫∮∞ℏ†√×·≈≠≤≥≡∈∝±∓⊗⊕⟨⟩≪≫≳≲∼≅⊃□∎✓✗"
+    "₀₁₂₃₄₅₆₇₈₉ₐₑₒₓₖₗₘₙₚₛₜ₋₊"
+) | set("ᵢⱼᵣᵤᵥᵧ") | set("⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺⁽⁾ⁿᵀᵅᵝᵘᵛ") | set("ĜĝĥŜŝÂâêẋẊḢḣȧḃṘṙĠġḡĀā")
+
 
 def is_math_line(line: str) -> bool:
     """Heuristic: does this indented line look like a math equation?"""
@@ -635,8 +713,19 @@ def convert_equation_block(block_lines: list[str]) -> str:
         align_lines = []
         for line in non_empty:
             stripped = line.strip()
-            if "=" in stripped and not stripped.startswith("where") and not stripped.startswith("with"):
-                parts = stripped.split("=", 1)
+            # Find first = not inside {}: track brace depth
+            eq_pos = -1
+            depth = 0
+            for ci, ch in enumerate(stripped):
+                if ch == '{':
+                    depth += 1
+                elif ch == '}':
+                    depth -= 1
+                elif ch == '=' and depth == 0:
+                    eq_pos = ci
+                    break
+            if eq_pos > 0 and not stripped.startswith("where") and not stripped.startswith("with"):
+                parts = [stripped[:eq_pos], stripped[eq_pos+1:]]
                 align_lines.append(f"    {parts[0].rstrip()} &= {parts[1].lstrip()}")
             else:
                 align_lines.append(f"    & {stripped}")
@@ -671,7 +760,7 @@ def convert_table(lines: list[str]) -> str:
     for i, row in enumerate(rows):
         while len(row) < ncols:
             row.append("")
-        cells = [convert_inline_formatting(cell) for cell in row]
+        cells = [convert_inline_formatting(cell.replace('#', '\\#')) for cell in row]
         result.append(" & ".join(cells) + " \\\\")
         if i == 0:
             result.append("\\midrule")
@@ -688,13 +777,23 @@ def convert_inline_formatting(text: str) -> str:
     text = re.sub(r'\*\*(.+?)\*\*', r'\\textbf{\1}', text)
     # Italic: *text* → \textit{text}
     text = re.sub(r'(?<!\w)\*([^*]+?)\*(?!\w)', r'\\textit{\1}', text)
-    # Inline code: `text` → $text$ (if math) or \texttt{text}
+    # Inline code: `text` → $LaTeX$ (math) or \texttt{text} (code)
+    # After Phase 0 fencing, all backtick content with math Unicode IS math.
     def code_replace(m):
         content = m.group(1)
-        if is_math_line(content) or re.search(r'[=+*/^_αβγδεζηθλμνρστφψωΛΣΔΓ∂∇∫ℏ\-]', content):
+        # Filenames and paths → always texttt, never math
+        if re.search(r'\.py$|\.json$|\.txt$|\.sh$', content):
+            return f"\\texttt{{{content.replace('_', '\\_')}}}"
+        # Check for any Unicode math character — if present, it's math
+        if has_any_math_unicode(content) or is_math_line(content):
             converted = convert_unicode_in_math(content)
             return f"${converted}$"
-        return f"\\texttt{{{content}}}"
+        # Also treat as math if it has _ or ^ (subscript/superscript notation)
+        # But not filenames (contain / or file extensions)
+        if re.search(r'[_^=]', content) and not content.startswith('http') and not re.search(r'[/]|\.py|\.json|\.txt|\.md|\.sh', content):
+            converted = convert_unicode_in_math(content)
+            return f"${converted}$"
+        return f"\\texttt{{{content.replace('_', '\\_')}}}"
     text = re.sub(r'`([^`]+)`', code_replace, text)
     return text
 
@@ -767,24 +866,71 @@ def convert_theorem_block(text: str) -> str:
         text
     )
 
-    # Proof blocks: **Proof.** ... ∎ or **Proof:**
+    # Proof blocks: **Proof.** ... ∎ or **Proof:** or **Proof (description).**
     text = re.sub(r'\\textbf\{Proof\.\}', r'\\begin{proof}', text)
     text = re.sub(r'\\textbf\{Proof:\}', r'\\begin{proof}', text)
+    text = re.sub(r'\\textbf\{Proof\s*\([^)]*\)\.\}', r'\\begin{proof}', text)
     text = re.sub(r'\*\*Proof\.\*\*', r'\\begin{proof}', text)
     text = re.sub(r'\*\*Proof:\*\*', r'\\begin{proof}', text)
+    text = re.sub(r'\*\*Proof\s*\([^)]*\)\.\*\*', r'\\begin{proof}', text)
 
     # Close theorem-like environments: insert \end before the next \subsection, \section, or \begin{theorem/lemma/...}
     # Also close proofs: insert \end{proof} before the next section/theorem or at QED marker
-    # Handle QED marker (blacksquare) → \end{proof}
+    # Handle QED marker (blacksquare / ∎) → \end{proof}
     text = text.replace('$\\blacksquare$', '\\end{proof}')
+    text = text.replace('\u220E', '\\end{proof}')
     text = re.sub(r'\s*\\qed\b', '\n\\\\end{proof}', text)
+    # Handle bare "QED" at end of line → \end{proof}
+    text = re.sub(r'\bQED\s*$', r'\\end{proof}', text, flags=re.MULTILINE)
 
     # For each unclosed \begin{env}, find where it should close and insert \end{env}
-    for env in ['theorem', 'lemma', 'proposition', 'corollary', 'definition']:
-        text = _close_environments(text, env)
+    # Auto-close theorem-like envs: after \end{proof}, close the enclosing
+    # theorem/corollary/lemma if one is open.
+    # Strategy: scan for \begin{env} ... \begin{proof} ... \end{proof}
+    # and insert \end{env} right after \end{proof}.
+    for env in ['theorem', 'corollary', 'lemma', 'proposition', 'definition']:
+        begin_env = f'\\begin{{{env}}}'
+        end_env = f'\\end{{{env}}}'
+        end_proof = '\\end{proof}'
 
-    # Close any remaining unclosed proofs before section breaks
-    text = _close_environments(text, 'proof')
+        result = text
+        search_start = 0
+        while True:
+            beg = result.find(begin_env, search_start)
+            if beg == -1:
+                break
+            # Check if there's already an \end{env}
+            existing_end = result.find(end_env, beg + len(begin_env))
+            # Find next \end{proof} after this \begin{env}
+            proof_end = result.find(end_proof, beg + len(begin_env))
+
+            if existing_end >= 0 and (proof_end < 0 or existing_end < proof_end):
+                # Already has an explicit \end{env} before any proof end — skip
+                search_start = existing_end + len(end_env)
+            elif proof_end >= 0:
+                # Insert \end{env} right after \end{proof}
+                insert_pos = proof_end + len(end_proof)
+                result = result[:insert_pos] + f'\n{end_env}\n' + result[insert_pos:]
+                search_start = insert_pos + len(end_env) + 2
+            else:
+                # No proof end found — let _close_environments handle it
+                search_start = beg + len(begin_env)
+        text = result
+
+    # Remove orphaned \end{env} that have no matching \begin{env}
+    for env in ['theorem', 'corollary', 'lemma', 'proposition', 'definition', 'proof']:
+        begin_tag = f'\\begin{{{env}}}'
+        end_tag = f'\\end{{{env}}}'
+        begin_count = text.count(begin_tag)
+        end_count = text.count(end_tag)
+        # Remove excess \end tags from the end of the document
+        while end_count > begin_count:
+            last = text.rfind(end_tag)
+            if last >= 0:
+                text = text[:last] + text[last+len(end_tag):]
+                end_count -= 1
+            else:
+                break
 
     return text
 
@@ -810,7 +956,12 @@ def _close_environments(text: str, env: str) -> str:
         # Find where this environment should end
         # Candidates: next \subsection, \section, next \begin{same env}, or explicit \end{env}
         close_candidates = []
-        for marker in [f'\\subsection{{', f'\\section{{', begin_tag]:
+        # Close before section breaks or other theorem-like environments
+        structural_breaks = [f'\\subsection{{', f'\\section{{', begin_tag]
+        for other_env in ['theorem', 'lemma', 'proposition', 'corollary', 'definition']:
+            if other_env != env:
+                structural_breaks.append(f'\\begin{{{other_env}}}')
+        for marker in structural_breaks:
             pos = after_begin.find(marker)
             if pos >= 0:
                 close_candidates.append(pos)
@@ -968,6 +1119,21 @@ def process_markdown_file(filepath: Path, header_offset: int = 0,
             output.append(convert_table(table_lines))
             continue
 
+        # $$...$$ display math blocks
+        if stripped == '$$':
+            math_lines = []
+            i += 1
+            while i < len(lines) and lines[i].strip() != '$$':
+                math_lines.append(lines[i])
+                i += 1
+            i += 1  # skip closing $$
+            if math_lines:
+                content = "\n".join(l.strip() for l in math_lines if l.strip())
+                content = convert_unicode_in_math(content)
+                output.append("")
+                output.append(f"\\begin{{equation}}\n    {content}\n\\end{{equation}}")
+            continue
+
         # Indented block (potential equation)
         if line.startswith("    ") and stripped:
             block_lines = []
@@ -1065,6 +1231,11 @@ def process_markdown_file(filepath: Path, header_offset: int = 0,
 
     # Escape bare % (not already escaped)
     result = re.sub(r'(?<!\\)%', r'\\%', result)
+
+    # Escape bare & in prose (not in tabular where & is column separator)
+    # Escape A&A (no spaces) and "Author & Author" (with spaces) in list items
+    result = re.sub(r'([A-Za-z])&([A-Za-z])', r'\1\\&\2', result)
+    result = re.sub(r'([A-Za-z.,])\s+&\s+([A-Z])', r'\1 \\& \2', result)
 
     # Fix e^(iθ) patterns → e^{iθ}
     result = result.replace("e^(i", r"e^{i")
@@ -1408,8 +1579,8 @@ def build_paper1():
     parts.append(PAPER1_PREAMBLE)
     parts.append("\\begin{document}\n")
 
-    parts.append("\\title{The 5D e-Dimension Framework: Quantum Mechanics as Geometry}")
-    parts.append("\\author{G.~Six}")
+    parts.append("\\title{Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry}")
+    parts.append("\\author{G~Six}")
     parts.append("\\affiliation{Independent researcher}")
     parts.append("\\date{\\today}\n")
 
@@ -1500,7 +1671,7 @@ PAPER2_PREAMBLE = r"""\documentclass[prd,twocolumn,nofootinbib,superscriptaddres
 \usepackage{bm}
 
 % Convenience macros
-\newcommand{\LCDM}{\Lambda\text{CDM}}
+\newcommand{\LCDM}{$\Lambda$CDM}
 \newcommand{\Neff}{N_{\rm eff}}
 \newcommand{\Omegab}{\Omega_b}
 \newcommand{\OmegaDM}{\Omega_{\rm DM}}
@@ -1594,8 +1765,8 @@ def build_paper2():
     parts.append(PAPER2_PREAMBLE)
     parts.append("\\begin{document}\n")
 
-    parts.append("\\title{The 5D e-Dimension Framework II: Precision Cosmology from Geometry}")
-    parts.append("\\author{G.~Six}")
+    parts.append("\\title{The Dark Matter-Baryon Ratio, Hubble and Clustering Tensions, and Thirteen Observables from Kaluza-Klein Geometry}")
+    parts.append("\\author{G~Six}")
     parts.append("\\affiliation{Independent researcher}")
     parts.append("\\date{\\today}\n")
 

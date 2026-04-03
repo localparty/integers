@@ -120,8 +120,8 @@ variables; ours are non-local, and therefore allowed.
 ## 1.4 The Framework in One Paragraph
 
 We propose that spacetime is five-dimensional: (x, y, z, t, e). The fifth dimension
-e is circular — periodic from 0 to 2π, like an angle — and corresponds mathematically
-to the U(1) fiber in a principal fiber bundle over four-dimensional spacetime.
+e is circular — periodic from 0 to `2π`, like an angle — and corresponds mathematically
+to the `U(1)` fiber in a principal fiber bundle over four-dimensional spacetime.
 (This mathematical structure is shared with Kaluza-Klein theory, but the physical
 coupling — to quantum phase rather than electric charge — and the scope — quantum
 mechanics itself, not just electromagnetism — are entirely different; see Section 2.5.)
@@ -132,7 +132,7 @@ is not an abstract probability amplitude — it is the literal shape of the part
 in (x, y, z, t, e)-space. Measurement is not collapse but sampling: our
 four-dimensional observations intersect the five-dimensional structure at a
 particular e-value, and we see the corresponding slice. Entanglement is not spooky
-action but conservation: interacting particles establish a constraint e₁ + e₂ = C,
+action but conservation: interacting particles establish a constraint `e₁ + e₂ = C`,
 and measuring one determines the other by arithmetic. Every quantum phenomenon —
 superposition, entanglement, uncertainty, spin, wave-particle duality — is a
 geometric consequence of five-dimensional structure projected onto four-dimensional
@@ -230,7 +230,7 @@ The paper is structured as follows.
 
 **Section 2** introduces the five-dimensional framework formally: the properties
 of the e-dimension, the projection postulate, and the interpretation of the wave
-function as five-dimensional geometry. We establish the connection to U(1) fiber
+function as five-dimensional geometry. We establish the connection to `U(1)` fiber
 bundle theory and to the existing mathematical structures of quantum mechanics.
 
 **Section 3** applies the framework to five quantum phenomena — superposition,
@@ -268,7 +268,7 @@ parallel transport, and the identification of winding number with spin via the
 Noether theorem.
 
 **Appendix C** demonstrates quantitatively that the framework reproduces three
-canonical results: the Born rule and Bell inequality violation (|S| = 2√2),
+canonical results: the Born rule and Bell inequality violation (`|S| = 2√2`),
 the double-slit interference pattern, and the Aharonov-Bohm phase shift with
 flux quantization.
 
@@ -277,4 +277,3 @@ on the e-bundle, establishing that Newtonian gravity is recovered in the weak-fi
 limit, that mass distorts the local e-circle radius, and that gravity, electromagnetism,
 and a scalar field unify in the single 5D metric. Claim 1 of Section 5.7 is
 confirmed by explicit calculation.
-

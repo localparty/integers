@@ -49,10 +49,10 @@ they are the same thing seen from two different angles.
 ## 4.2.2 Setup: Particles as Helices in e-Space
 
 We recall from Section 3.3 and 3.4 that in the 5D framework, a moving particle
-traces a helical path through (x, y, z, t, e)-spacetime. Two properties of this
+traces a helical path through `(x, y, z, t, e)`-spacetime. Two properties of this
 helix are physically significant:
 
-**Helical pitch** (∂e/∂x = p/ℏ): the rate at which the e-coordinate rotates per
+**Helical pitch** (`∂e/∂x = p/ℏ`): the rate at which the e-coordinate rotates per
 unit distance traveled. This is what we observe as momentum.
 
 **Helical chirality**: the handedness of the rotation — right-handed or left-handed.
@@ -61,7 +61,7 @@ This is what we observe as spin.
 To these we now add a third property, which will be central to what follows:
 
 **Helical winding number**: the number of complete e-cycles the helix completes per
-spatial wavelength. For a particle with de Broglie wavelength λ, the winding number n
+spatial wavelength. For a particle with de Broglie wavelength `λ`, the winding number `n`
 counts how many full revolutions the e-coordinate makes over one spatial period.
 
 The winding number is an integer or half-integer. We will show that this is not an
@@ -73,35 +73,35 @@ fermions from bosons.
 ## 4.2.3 Step 1 — Topological Stability of Integer and Half-Integer Windings
 
 Consider a helix winding through the circular e-dimension as a particle completes
-one spatial wavelength λ. The e-coordinate traces a closed path on the e-circle:
-it starts at some value e₀, rotates continuously, and must return to e₀ after
-traveling distance λ (since the particle's state must be single-valued in space).
+one spatial wavelength `λ`. The e-coordinate traces a closed path on the e-circle:
+it starts at some value `e₀`, rotates continuously, and must return to `e₀` after
+traveling distance `λ` (since the particle's state must be single-valued in space).
 
 The number of times the e-coordinate winds around the circle during one wavelength
-is the winding number n. Since the e-circle is closed (periodic), n must be an
+is the winding number `n`. Since the e-circle is closed (periodic), `n` must be an
 integer or, as we will see, a half-integer.
 
 **Why only integer and half-integer?**
 
 This follows from the representation theory of the rotation group, which is the
-symmetry group relevant to spin. The rotation group SO(3) — rotations in 3D space
-— has a double cover SU(2). Representations of SU(2) come in two types:
+symmetry group relevant to spin. The rotation group `SO(3)` — rotations in 3D space
+— has a double cover `SU(2)`. Representations of `SU(2)` come in two types:
 
-- **Integer-spin representations** (spin 0, 1, 2, ...): a full 360° rotation
+- **Integer-spin representations** (spin 0, 1, 2, ...): a full `360°` rotation
   returns the state to itself. Under one spatial wavelength, the e-coordinate
-  winds an integer number of times. Winding number n = 0, ±1, ±2, ...
+  winds an integer number of times. Winding number `n = 0, ±1, ±2, ...`
 
-- **Half-integer-spin representations** (spin 1/2, 3/2, ...): a 360° rotation
-  returns the state to its *negative*. A full 720° rotation is needed to return
+- **Half-integer-spin representations** (spin 1/2, 3/2, ...): a `360°` rotation
+  returns the state to its *negative*. A full `720°` rotation is needed to return
   to the original state. Under one spatial wavelength, the e-coordinate winds
-  a half-integer number of times. Winding number n = ±1/2, ±3/2, ...
+  a half-integer number of times. Winding number `n = ±1/2, ±3/2, ...`
 
 In the 5D picture, this has a clean geometric interpretation. The e-dimension is
-a circle S¹. A particle's wavefunction is a section of the associated line bundle
+a circle `S¹`. A particle's wavefunction is a section of the associated line bundle
 over spacetime. For integer-spin particles, this bundle is orientable — going around
 a full spatial period leaves the section unchanged. For half-integer-spin particles,
 the bundle has a twist — going around a full spatial period multiplies the section
-by -1. The winding number captures this twist.
+by `-1`. The winding number captures this twist.
 
 These are the only topologically stable configurations because:
 
@@ -114,15 +114,15 @@ These are the only topologically stable configurations because:
    (high-energy) processes.
 
 **This establishes a fundamental dichotomy from topology alone:**
-Integer winding ↔ integer spin ↔ bosons.
-Half-integer winding ↔ half-integer spin ↔ fermions.
+`Integer winding ↔ integer spin ↔ bosons`.
+`Half-integer winding ↔ half-integer spin ↔ fermions`.
 
-The formal proof is given in Appendix B.1. The core argument is concise: a 4π
-spatial rotation is contractible in Spin(d) for d ≥ 3 (since π₁(SO(d)) = Z₂),
-so the e-phase over a 4π rotation must be a multiple of 2π: 4πs = 2πk, giving
-s = k/2 ∈ ½Z. The boson-fermion dichotomy (s mod 1 ∈ {0, ½}) is a topological
-invariant that cannot change under any continuous process. In d = 2 dimensions,
-π₁(SO(2)) = Z imposes no such constraint, and the winding number can be any
+The formal proof is given in Appendix B.1. The core argument is concise: a `4π`
+spatial rotation is contractible in `Spin(d)` for `d ≥ 3` (since `π₁(SO(d)) = ℤ₂`),
+so the e-phase over a `4π` rotation must be a multiple of `2π`: `4πs = 2πk`, giving
+`s = k/2 ∈ ½ℤ`. The boson-fermion dichotomy (`s mod 1 ∈ \{0, ½\}`) is a topological
+invariant that cannot change under any continuous process. In `d = 2` dimensions,
+`π₁(SO(2)) = Z` imposes no such constraint, and the winding number can be any
 real number — giving anyon statistics, confirmed experimentally in the
 fractional quantum Hall effect (Bartolomei et al. 2020, Nakamura et al. 2020).
 
@@ -134,11 +134,11 @@ Now we ask: what happens to the combined wavefunction of two identical particles
 when they are exchanged?
 
 In 3D space, exchanging two identical particles means moving particle 1 from position
-**r**₁ to position **r**₂, while simultaneously moving particle 2 from **r**₂ to **r**₁.
+`r₁` to position `r₂`, while simultaneously moving particle 2 from `r₂` to `r₁`.
 The combined path traces a closed loop in the configuration space of the two-particle
 system.
 
-In 5D, this exchange corresponds to a specific path in (x, y, z, t, e)-space for
+In 5D, this exchange corresponds to a specific path in `(x, y, z, t, e)`-space for
 each particle. The key question is: **what phase does each particle's e-coordinate
 accumulate during this exchange?**
 
@@ -153,7 +153,7 @@ path. The phase accumulated is:
 
     Δφ_exchange = e^(i · 2π · n) = +1     (n integer)
 
-The combined two-particle wavefunction picks up a factor of (+1)² = +1 under
+The combined two-particle wavefunction picks up a factor of `(+1)² = +1` under
 exchange. The wavefunction is **symmetric**:
 
     ψ(r₁, r₂) = ψ(r₂, r₁)
@@ -168,7 +168,7 @@ The phase accumulated is:
 
     Δφ_exchange = e^(i · 2π · n) = e^(i · π) = -1     (n half-integer)
 
-The combined two-particle wavefunction picks up a factor of (-1) under exchange.
+The combined two-particle wavefunction picks up a factor of `(-1)` under exchange.
 The wavefunction is **antisymmetric**:
 
     ψ(r₁, r₂) = -ψ(r₂, r₁)
@@ -176,13 +176,13 @@ The wavefunction is **antisymmetric**:
 This is the defining property of fermions. And from this, Pauli exclusion follows
 immediately as a geometric corollary:
 
-If the two particles are in the same quantum state, then r₁ = r₂ (same position)
+If the two particles are in the same quantum state, then `r₁ = r₂` (same position)
 and all other quantum numbers are identical. The wavefunction satisfies both:
 
     ψ(r₁, r₂) = -ψ(r₂, r₁)    (antisymmetry)
     ψ(r₁, r₂) = ψ(r₂, r₁)     (identical positions)
 
-These two conditions are simultaneously satisfiable only if ψ = 0. Two fermions
+These two conditions are simultaneously satisfiable only if `ψ = 0`. Two fermions
 cannot occupy the same state because their combined wavefunction is forced to vanish.
 
 **The Pauli exclusion principle is not a postulate. It is a geometric necessity —
@@ -191,8 +191,8 @@ symmetry of identical positions.**
 
 The formal derivation (Appendix B.2) shows that this exchange phase is a
 holonomy — the parallel transport of the e-coordinate around the exchange loop
-in configuration space. Each particle's e-coordinate is transported by sπ along
-the exchange path; the total two-particle phase is e^(i·2sπ). This holonomy is
+in configuration space. Each particle's e-coordinate is transported by `sπ` along
+the exchange path; the total two-particle phase is `e^(i·2sπ)`. This holonomy is
 topological: it depends only on the homotopy class of the exchange path, not on
 its shape or speed. The exchange phase is therefore the same geometric mechanism
 as the Aharonov-Bohm effect (Section 4.1) — one around an external defect, the
@@ -206,17 +206,17 @@ The final step connects the mathematical winding number to the physical observab
 we call spin.
 
 Spin is measured by how a particle's state transforms under spatial rotations. A
-particle with spin s transforms under the (2s+1)-dimensional representation of SU(2).
-The key property: under a 2π rotation, a spin-s state acquires a phase e^(i·2πs).
+particle with spin `s` transforms under the `(2s+1)`-dimensional representation of `SU(2)`.
+The key property: under a `2π` rotation, a spin-`s` state acquires a phase `e^(i·2πs)`.
 
-For integer s: e^(i·2πs) = +1. The state is unchanged by a full rotation.
-For half-integer s: e^(i·2πs) = -1. The state is negated by a full rotation.
+For integer `s`: `e^(i·2πs) = +1`. The state is unchanged by a full rotation.
+For half-integer `s`: `e^(i·2πs) = -1`. The state is negated by a full rotation.
 
 In the 5D framework:
 
-A 2π spatial rotation corresponds to moving once around the spatial period of the
-particle's helix. During this motion, the e-coordinate winds through n complete
-revolutions, accumulating phase e^(i·2πn).
+A `2π` spatial rotation corresponds to moving once around the spatial period of the
+particle's helix. During this motion, the e-coordinate winds through `n` complete
+revolutions, accumulating phase `e^(i·2πn)`.
 
 Setting these equal:
 
@@ -235,10 +235,10 @@ once the 5D picture is in place: of course spin and statistics are linked — th
 are both the winding number.
 
 The formal identification (Appendix B.3) proceeds via the Noether theorem: the
-spin angular momentum Ŝz is the conserved charge associated with the coupling of
-spatial rotations to the e-coordinate, and equals the e-momentum operator p̂φ.
-The e-winding number n = mₛ is the spin projection quantum number. The exchange
-phase e^(i·2πmₛ) = (−1)^(2s) for all allowed projections, completing the chain.
+spin angular momentum `Ŝz` is the conserved charge associated with the coupling of
+spatial rotations to the e-coordinate, and equals the e-momentum operator `p̂φ`.
+The e-winding number `n = mₛ` is the spin projection quantum number. The exchange
+phase `e^(i·2πmₛ) = (−1)^(2s)` for all allowed projections, completing the chain.
 The Lagrangian from which this follows is uniquely determined by the Kaluza-Klein
 metric structure — no free parameters are tuned to produce the result.
 
@@ -246,14 +246,14 @@ metric structure — no free parameters are tuned to produce the result.
 
 ## 4.2.6 The Full Argument in One Paragraph
 
-A particle's helix through the circular e-dimension has a winding number n —
+A particle's helix through the circular e-dimension has a winding number `n` —
 an integer or half-integer, the only topologically stable options given the
 single-valuedness requirements on the wavefunction. This winding number is what
-we measure as spin when we rotate the particle through 2π in space. When two
-identical particles exchange positions, their e-coordinates each wind through n
-revolutions, accumulating phase e^(i·2πn). For integer n (bosons) this phase is
-+1, giving symmetric wavefunctions. For half-integer n (fermions) this phase is
--1, giving antisymmetric wavefunctions and, as an immediate corollary, the Pauli
+we measure as spin when we rotate the particle through `2π` in space. When two
+identical particles exchange positions, their e-coordinates each wind through `n`
+revolutions, accumulating phase `e^(i·2πn)`. For integer `n` (bosons) this phase is
+`+1`, giving symmetric wavefunctions. For half-integer `n` (fermions) this phase is
+`-1`, giving antisymmetric wavefunctions and, as an immediate corollary, the Pauli
 exclusion principle. Spin and statistics are both the winding number — the
 spin-statistics theorem is not a theorem, it is a definition.
 
@@ -285,22 +285,22 @@ The three-step argument above is formalized in Appendix B, which provides the
 complete mathematical derivation:
 
 **Step 1 (Appendix B.1):** The topological classification is proved from
-π₁(SO(d)) = Z₂ for d ≥ 3, which forces winding numbers into ½Z. The proof
-uses only the contractibility of the 4π rotation in Spin(d) and the
-quantization of the e-phase. The anyon extension to d = 2 (where π₁(SO(2)) = Z
+`π₁(SO(d)) = Z₂` for `d ≥ 3`, which forces winding numbers into `½Z`. The proof
+uses only the contractibility of the `4π` rotation in `Spin(d)` and the
+quantization of the e-phase. The anyon extension to `d = 2` (where `π₁(SO(2)) = Z`
 removes the constraint) follows from the same argument.
 
 **Step 2 (Appendix B.2):** The exchange phase is derived as a holonomy of
 the e-connection around the exchange loop in configuration space. The key
 advance over the Leinaas-Myrheim (1977) formulation is that the representation
-χ of π₁(C₂) — which Leinaas-Myrheim left as a free parameter — is determined
-by the e-dimension geometry: χ(σ) = e^(i·2πs).
+`χ` of `π₁(C₂)` — which Leinaas-Myrheim left as a free parameter — is determined
+by the e-dimension geometry: `χ(σ) = e^(i·2πs)`.
 
 **Step 3 (Appendix B.3):** The identification of the winding number with the
 spin quantum number is derived from the Noether theorem applied to the unique
-Kaluza-Klein Lagrangian on P(M³, U(1)). The spin operator Ŝz equals the
-e-momentum p̂φ, the e-winding number is the spin projection mₛ, and the
-exchange phase (−1)^(2s) is uniform across all projections. The non-relativistic
+Kaluza-Klein Lagrangian on `P(M³, U(1))`. The spin operator `Ŝz` equals the
+e-momentum `p̂φ`, the e-winding number is the spin projection `mₛ`, and the
+exchange phase `(−1)^(2s)` is uniform across all projections. The non-relativistic
 treatment extends to the relativistic setting via the 5D Dirac equation on the
 Lorentzian Kaluza-Klein manifold, a known construction in the literature
 (Overduin & Wesson 1997).
@@ -346,9 +346,9 @@ deformations of the path.
 The difference is what does the winding:
 
 - In Aharonov-Bohm: the particle's *path* winds around an external topological
-  defect (the solenoid). Phase = (e/ℏ)Φ.
+  defect (the solenoid). Phase = `(e/ℏ)Φ`.
 - In spin-statistics: the particle's *internal e-structure* (its helix) winds with
-  number n. Phase = e^(i·2πn) under exchange.
+  number `n`. Phase = `e^(i·2πn)` under exchange.
 
 Both effects are shadows of the same underlying geometry: the circular topology of
 the e-dimension produces discrete, path-dependent phases whenever anything winds
@@ -368,23 +368,23 @@ The winding number argument established above has a natural and powerful extensi
 that provides an independent experimental confirmation of the framework.
 
 In three spatial dimensions, the configuration space of two identical particles has
-a fundamental group of Z₂ — the integers modulo 2. This means only two winding
-numbers are topologically stable: 0 and 1 (mod 2), corresponding to bosons and
+a fundamental group of `Z₂` — the integers modulo 2. This means only two winding
+numbers are topologically stable: `0` and `1` (mod 2), corresponding to bosons and
 fermions respectively. The circular topology of the e-dimension produces exactly
 this dichotomy in 3D.
 
 But in **two spatial dimensions**, the configuration space of two identical particles
-has a fundamental group of Z — the full integers. In 2D, particles can wind around
+has a fundamental group of `Z` — the full integers. In 2D, particles can wind around
 each other any number of times without the path being contractible. This means the
 winding number is no longer restricted to integers and half-integers — it can be
 **any rational or even irrational fraction**.
 
 Particles with fractional winding numbers are called **anyons**. Under exchange,
-an anyon with winding number θ/2π acquires phase:
+an anyon with winding number `θ/2π` acquires phase:
 
     Δφ_exchange = e^(iθ)
 
-For θ = 0: bosons. For θ = π: fermions. For any other θ: anyons with
+For `θ = 0`: bosons. For `θ = π`: fermions. For any other `θ`: anyons with
 fractional statistics — neither bosonic nor fermionic.
 
 **In the 5D framework, anyons are immediate and natural.** They are particles whose
@@ -403,8 +403,8 @@ Anyons are not theoretical curiosities. They have been experimentally confirmed.
 
 In the fractional quantum Hall (FQH) effect, electrons confined to a 2D surface
 in a strong magnetic field form collective quasiparticle excitations with fractional
-electric charge (e/3, e/5, etc.) and fractional statistics. These quasiparticles
-behave as anyons — under exchange, they acquire phases that are fractions of π.
+electric charge (`e/3`, `e/5`, etc.) and fractional statistics. These quasiparticles
+behave as anyons — under exchange, they acquire phases that are fractions of `π`.
 
 The FQH effect was discovered by Tsui, Störmer, and Laughlin in 1982 (Nobel Prize
 1998). Laughlin's explanation invoked quasiparticles with fractional charge and
@@ -430,16 +430,16 @@ The complete picture that emerges from the winding-number argument is:
 | Configuration space | Allowed winding numbers | Particle type | Statistics |
 |--------------------|-----------------------|---------------|------------|
 | 3D space | Integer (0, ±1, ±2, ...) | Bosons | Symmetric, Bose-Einstein |
-| 3D space | Half-integer (±½, ±3/2, ...) | Fermions | Antisymmetric, Fermi-Dirac |
-| 2D space | Any rational θ/2π | Anyons | Fractional, e^(iθ) phase |
+| 3D space | Half-integer (±`½`, ±3/2, ...) | Fermions | Antisymmetric, Fermi-Dirac |
+| 2D space | Any rational `θ/2π` | Anyons | Fractional, `e^(iθ)` phase |
 | 1D space | Continuous | (Fermionization) | Bose-Fermi duality |
 
 The rows of this table are not separate postulates. They are all consequences of
 one geometric principle: **the available winding numbers are determined by the
 topology of the configuration space relative to the circular e-dimension.**
 
-In 3D, the fundamental group Z₂ restricts winding to ±½ and integers.
-In 2D, the fundamental group Z allows any winding.
+In 3D, the fundamental group `Z₂` restricts winding to `±½` and integers.
+In 2D, the fundamental group `Z` allows any winding.
 In 1D, the Bose-Fermi duality (Jordan-Wigner transformation) reflects the
 complete equivalence of the two winding types in the most restricted geometry.
 

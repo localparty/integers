@@ -1,10 +1,10 @@
 # Appendix X — The Strong CP Problem: Topological Resolution from the Orbifold
 
-> The Z₂ orbifold of Appendix W, introduced for dark matter and generation
+> The `Z₂` orbifold of Appendix W, introduced for dark matter and generation
 > structure, automatically solves the strong CP problem — one of the oldest
 > unsolved problems in particle physics. The mechanism is topological: the
 > orbifold compactification trivializes the homotopy group that gives rise
-> to the theta parameter. No axion is needed.
+> to the `θ` parameter. No axion is needed.
 
 ---
 
@@ -14,104 +14,104 @@ The QCD Lagrangian admits a CP-violating term:
 
     L_θ = (θ g²/32π²) F̃^{aμν} F^a_{μν}
 
-where θ is a dimensionless parameter, F is the gluon field strength, and
-F̃ is its dual. This term violates CP (charge-parity) symmetry and would
+where `θ` is a dimensionless parameter, `F` is the gluon field strength, and
+`F̃` is its dual. This term violates CP (charge-parity) symmetry and would
 produce a neutron electric dipole moment:
 
     d_n ≈ θ × 3.6 × 10⁻¹⁶ e·cm
 
-The experimental bound (Abel et al. 2020) is d_n < 1.8 × 10⁻²⁶ e·cm,
+The experimental bound (Abel et al. 2020) is `d_n < 1.8 × 10⁻²⁶ e·cm`,
 requiring:
 
     **θ < 5 × 10⁻¹¹**
 
-Why is θ so extraordinarily small? In the Standard Model, θ is a free
+Why is `θ` so extraordinarily small? In the Standard Model, `θ` is a free
 parameter — there is no symmetry or mechanism that sets it to zero. This
 is the strong CP problem, open since 1976 ('t Hooft).
 
 ## X.2 The Standard Solution: The Axion
 
-The Peccei-Quinn mechanism (1977) promotes θ to a dynamical field — the
-axion a(x) = f_a θ(x) — with a potential that has its minimum at θ = 0.
-The axion is a light pseudoscalar particle with mass m_a ∝ 1/f_a. Despite
+The Peccei-Quinn mechanism (1977) promotes `θ` to a dynamical field — the
+axion `a(x) = f_a θ(x)` — with a potential that has its minimum at `θ = 0`.
+The axion is a light pseudoscalar particle with mass `m_a ∝ 1/f_a`. Despite
 decades of experimental searches (ADMX, ABRACADABRA, CASPEr, IAXO), no
 axion has been detected.
 
-## X.3 The Topological Resolution from the Z₂ Orbifold
+## X.3 The Topological Resolution from the `Z₂` Orbifold
 
-### X.3.1 Why θ Exists in 4D
+### X.3.1 Why `θ` Exists in 4D
 
 The theta parameter exists because the gauge field configurations on
 4D spacetime have non-trivial topology. Specifically, the space of
-gauge-inequivalent SU(3) configurations on S³ (the boundary of
+gauge-inequivalent `SU(3)` configurations on `S³` (the boundary of
 compactified 4D Euclidean space) is classified by:
 
     π₃(SU(3)) = Z
 
-The integer labeling each topological sector is the instanton number n.
+The integer labeling each topological sector is the instanton number `n`.
 The theta parameter weights the contribution of each sector in the path
-integral: Σ_n e^{inθ} × Z_n. Setting θ = 0 requires choosing all sectors
+integral: `Σ_n e^{inθ} × Z_n`. Setting `θ = 0` requires choosing all sectors
 to contribute with equal weight — a choice with no physical justification
 in 4D.
 
-### X.3.2 Why θ Vanishes on S¹/Z₂
+### X.3.2 Why `θ` Vanishes on `S¹/Z₂`
 
-On the orbifold S¹/Z₂ = [0, πR], the gauge field configurations live in
+On the orbifold `S¹/Z₂ = [0, πR]`, the gauge field configurations live in
 FIVE-dimensional spacetime, not four. The relevant topological
-classification of SU(3) gauge configurations on the 5D boundary is:
+classification of `SU(3)` gauge configurations on the 5D boundary is:
 
     π₄(SU(3)) = 0
 
 This is the TRIVIAL group — there are NO topologically non-trivial
-gauge configurations in 5D for SU(3). The instanton sectors that
+gauge configurations in 5D for `SU(3)`. The instanton sectors that
 generate the theta term in 4D simply DO NOT EXIST in the 5D theory.
 
 The result is immediate:
 
     **θ = 0 (topologically enforced)**
 
-There is no theta parameter because there are no instantons. The
+There is no `θ` parameter because there are no instantons. The
 strong CP problem is solved by the topology of the orbifold.
 
 ### X.3.3 The Mathematical Detail
 
-The key mathematical fact: π₄(SU(N)) = 0 for all N ≥ 3 (Bott
+The key mathematical fact: `π₄(SU(N)) = 0` for all `N ≥ 3` (Bott
 periodicity; see Nakahara, *Geometry, Topology and Physics*, Ch. 11).
 This means:
 
-- In 4D: gauge instantons exist (π₃(SU(3)) = Z) → θ parameter exists
-- In 5D: gauge instantons do not exist (π₄(SU(3)) = 0) → no θ parameter
-- In 6D: would have π₅(SU(3)) = Z → instantons return
+- In 4D: gauge instantons exist (`π₃(SU(3)) = Z`) → `θ` parameter exists
+- In 5D: gauge instantons do not exist (`π₄(SU(3)) = 0`) → no `θ` parameter
+- In 6D: would have `π₅(SU(3)) = Z` → instantons return
 
 The 5D theory is the UNIQUE dimensionality (beyond 4D) where the theta
-term is absent for SU(3). This is not a coincidence — it is a
-consequence of Bott periodicity (π_{n+2}(SU(N)) = π_n(SU(N)) for N
-sufficiently large), which gives π₄ = 0 as a special case.
+term is absent for `SU(3)`. This is not a coincidence — it is a
+consequence of Bott periodicity (`π_{n+2}(SU(N)) = π_n(SU(N))` for `N`
+sufficiently large), which gives `π₄ = 0` as a special case.
 
 ### X.3.4 What About the 4D Effective Theory?
 
-The 5D gauge theory on S¹/Z₂ reduces to a 4D theory at energies below
-the KK scale E_KK ~ 1/R ~ 10 meV. In the 4D effective theory, the theta
+The 5D gauge theory on `S¹/Z₂` reduces to a 4D theory at energies below
+the KK scale `E_KK ~ 1/R ~ 10 meV`. In the 4D effective theory, the theta
 parameter COULD in principle be generated by non-perturbative effects
 (instantons localized on the branes, or KK instanton effects).
 
-**Brane instantons.** On the Z₂ orbifold, the branes at ψ = 0 and ψ = π
+**Brane instantons.** On the `Z₂` orbifold, the branes at `ψ = 0` and `ψ = π`
 are 4-dimensional — they DO support 4D instantons. However, these
 instantons are exponentially suppressed by the brane tension:
 
     e^{-S_{brane instanton}} ~ e^{-8π²/g²(M_KK)} ~ e^{-8π²/α_s(10 meV)}
 
-Since α_s(10 meV) is in the non-perturbative regime (α_s → ∞ at low
+Since `α_s(10 meV)` is in the non-perturbative regime (`α_s → ∞` at low
 energies due to confinement), this requires careful treatment. In the
 confined phase, the instanton gas is replaced by the topological
-susceptibility of QCD, which gives θ_eff ~ 0 to the extent that the
+susceptibility of QCD, which gives `θ_eff ~ 0` to the extent that the
 5D topology suppresses the theta parameter.
 
 **KK instantons.** These are Euclidean solutions wrapping the compact
-dimension. Their action is S_KK ~ R/l_P ~ 10³⁰ (Appendix J), so their
-contribution is e^{-10³⁰} ≈ 0. KK instantons do not regenerate θ.
+dimension. Their action is `S_KK ~ R/l_P ~ 10³⁰` (Appendix J), so their
+contribution is `e^{-10³⁰} ≈ 0`. KK instantons do not regenerate `θ`.
 
-The net result: θ is topologically zero in the 5D theory and is not
+The net result: `θ` is topologically zero in the 5D theory and is not
 regenerated by any known non-perturbative effect in the 4D effective
 theory.
 
@@ -122,9 +122,9 @@ Peccei-Quinn axion does NOT exist. This is a falsifiable prediction:
 
 | Experiment | Target | If found | If not found |
 |-----------|--------|----------|-------------|
-| ADMX | QCD axion at 1-100 μeV | Orbifold solution falsified | Consistent |
-| ABRACADABRA | Axion at 10⁻¹²-10⁻⁶ eV | Orbifold solution falsified | Consistent |
-| CASPEr | Axion at 10⁻¹⁴-10⁻⁶ eV | Orbifold solution falsified | Consistent |
+| ADMX | QCD axion at `1-100 μeV` | Orbifold solution falsified | Consistent |
+| ABRACADABRA | Axion at `10⁻¹²-10⁻⁶ eV` | Orbifold solution falsified | Consistent |
+| CASPEr | Axion at `10⁻¹⁴-10⁻⁶ eV` | Orbifold solution falsified | Consistent |
 | IAXO | Solar axion | Orbifold solution falsified | Consistent |
 
 The prediction is stark: if axion searches find the QCD axion, the
@@ -134,9 +134,9 @@ likely explanation.
 
 ## X.5 Connection to the Framework
 
-The Z₂ orbifold was introduced in Appendix W for three reasons:
-1. Dark matter (hidden brane at ψ = π)
-2. Three generations (Z₃ structure)
+The `Z₂` orbifold was introduced in Appendix W for three reasons:
+1. Dark matter (hidden brane at `ψ = π`)
+2. Three generations (`Z₃` structure)
 3. Positive Casimir energy (bulk right-handed neutrinos)
 
 The strong CP resolution is a FOURTH consequence of the same geometry —
@@ -146,7 +146,7 @@ strong CP problem through its topology.
 
 This is the kind of unification that gives a framework credibility:
 a single geometric structure, introduced for one reason, turns out to
-solve an apparently unrelated problem. The Z₂ orbifold was not designed
+solve an apparently unrelated problem. The `Z₂` orbifold was not designed
 to solve the strong CP problem. It solves it anyway.
 
 ## X.6 References
@@ -158,7 +158,7 @@ to solve the strong CP problem. It solves it anyway.
 - Abel, C. et al. "Measurement of the Permanent Electric Dipole Moment
   of the Neutron." *Phys. Rev. Lett.* 124, 081803 (2020).
 - Cheng, H.-C. & Dobrescu, B. A. "Extra dimensions and the strong CP
-  problem." arXiv:0811.1163 (2008). — The mechanism: π₄(SU(3)) = 0
+  problem." arXiv:0811.1163 (2008). — The mechanism: `π₄(SU(3)) = 0`
   eliminates the theta term in 5D.
 - Kim, H. D. & Raby, S. "A natural solution to the strong CP problem
   in extra dimensions." arXiv:hep-ph/0104158 (2001).

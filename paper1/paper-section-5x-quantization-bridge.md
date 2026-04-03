@@ -24,16 +24,16 @@ Exchange statistics are e-winding numbers (Appendix B).
 
 Every structure of quantum mechanics corresponds to a geometric structure of
 the e-circle. Standard QM, in its entirety, is the quantum theory of the
-e-coordinate φ on the compact dimension S¹.
+e-coordinate `φ` on the compact dimension `S¹`.
 
 **The 5D Einstein equations govern the same e-circle.**
 
-The natural gravitational action on the e-bundle P(M⁴, U(1)) — the 5D
+The natural gravitational action on the e-bundle `P(M⁴, U(1))` — the 5D
 Einstein-Hilbert action — decomposes via Kaluza-Klein reduction into 4D
 gravity, electromagnetism, and a scalar field (Appendix D). The e-connection
-Aμ, which Section 4.1 identifies as physically real from the Aharonov-Bohm
+`Aμ`, which Section 4.1 identifies as physically real from the Aharonov-Bohm
 effect, is the electromagnetic field in the KK decomposition. The e-circle
-radius φ(x) varies near massive objects (Appendix D, Section D.5). Newtonian
+radius `φ(x)` varies near massive objects (Appendix D, Section D.5). Newtonian
 gravity is recovered in the weak-field limit (Appendix D, Section D.5).
 
 Every structure of the classical gravitational sector — the field equations,
@@ -43,7 +43,7 @@ that governs the e-circle.
 **Both describe the same geometric object.**
 
 The e-circle is not two different things for quantum mechanics and for
-gravity. It is one thing: a compact U(1) fiber attached to every point in
+gravity. It is one thing: a compact `U(1)` fiber attached to every point in
 4D spacetime. Standard QM is its quantum description at small scales.
 Classical GR (+ EM + scalar) is its classical description at large scales.
 Both are limits of the same underlying 5D geometry.
@@ -72,12 +72,12 @@ framework postulates exists.
 
 **Step 2 — The same e-dimension produces classical gravity.** *(Established)*
 
-The 5D Einstein equations on P(M⁴, U(1)) produce, in the classical limit,
+The 5D Einstein equations on `P(M⁴, U(1))` produce, in the classical limit,
 exactly 4D general relativity plus electromagnetism plus a scalar field
 (Appendix D). This is the Kaluza-Klein miracle — a mathematical theorem,
 not a conjecture (Kaluza 1921, Klein 1926, Cho 1975). The same e-connection
-Aμ that governs quantum phase (Section 4.1) is the electromagnetic field of
-the KK decomposition. The same compact circle S¹ that provides the e-winding
+`Aμ` that governs quantum phase (Section 4.1) is the electromagnetic field of
+the KK decomposition. The same compact circle `S¹` that provides the e-winding
 numbers for spin (Appendix B) is the fifth dimension that produces the KK
 tower of massive particles.
 
@@ -87,7 +87,7 @@ independently of the quantum content.
 **Step 3 — The quantum corrections to 5D gravity are finite at one and two
 loops.** *(Established with caveats — see Appendices F and G)*
 
-The one-loop effective action for 5D gravity on M⁴ × S¹ is finite when the
+The one-loop effective action for 5D gravity on `M⁴ × S¹` is finite when the
 KK mode sum is zeta-regularized (Appendix F, Section F.4). The compact
 e-circle converts the continuous 5D momentum integral into a discrete sum
 over KK modes. This sum, treated with the same zeta regularization used for
@@ -97,10 +97,10 @@ the physical Casimir effect, is finite. The spin structure of the e-circle
 KK contributions.
 
 The two-loop calculation — where 4D gravity becomes non-renormalizable (the
-Goroff-Sagnotti R³ counterterm, 1986) — is also finite in the 5D KK theory
+Goroff-Sagnotti `R³` counterterm, 1986) — is also finite in the 5D KK theory
 (Appendix G). The mechanism is a structural cancellation: at every loop order
-L, the leading UV divergence is proportional to [Σ_{n∈Z} 1]^L. Under zeta
-regularization, Σ_{n∈Z} 1 = 1 + 2ζ(0) = 1 + 2(-½) = 0. The leading
+`L`, the leading UV divergence is proportional to `[Σ_{n∈Z} 1]^L`. Under zeta
+regularization, `Σ_{n∈Z} 1 = 1 + 2ζ(0) = 1 + 2(-`½`) = 0`. The leading
 divergence vanishes identically at every loop order. The subleading terms are
 Epstein zeta functions at non-positive integers — all finite by the
 Epstein-Terras theorem (Appendix G, Sections G.5-G.6).
@@ -116,8 +116,8 @@ supported by two explicit loop calculations rather than one.
 
 If Steps 1-3 are correct, the quantization of gravity is not a new problem
 requiring new physics. It is the application of the existing quantum mechanics
-of the e-dimension to the full 5D metric — including the base metric gμν,
-not just the fiber. The 5D path integral over all metrics on P(M⁴, U(1)),
+of the e-dimension to the full 5D metric — including the base metric `gμν`,
+not just the fiber. The 5D path integral over all metrics on `P(M⁴, U(1))`,
 with the e-circle already quantized as per QM, should give a consistent
 quantum theory of gravity, electromagnetism, and the scalar field.
 
@@ -156,7 +156,7 @@ are not separate theories. They are both descriptions of the same 5D geometric
 object — the e-bundle — in different limits.**
 
 Standard QM is what the quantum theory of the e-fiber looks like when you
-ignore the base metric gμν (or treat it as fixed background). Classical GR is
+ignore the base metric `gμν` (or treat it as fixed background). Classical GR is
 what the dynamics of the full 5D metric looks like when you treat the e-fiber
 classically and project onto 4D. Both are shadows — projections of the full
 5D theory onto different subsets of its degrees of freedom.
@@ -176,26 +176,26 @@ sharper, more tractable question — and the one-loop answer is encouraging.
 ### 5.X.4 The Precise Conjecture
 
 **Conjecture (The Quantization Bridge):** The 5D path integral over all
-metrics on P(M⁴, U(1)), with the e-circle quantized as per standard QM and
+metrics on `P(M⁴, U(1))`, with the e-circle quantized as per standard QM and
 the KK mode sum treated by zeta regularization, is a consistent quantum
 theory of gravity. It reduces to standard QM in the quantum limit (the
 e-fiber sector), to 4D GR + EM in the classical limit (the weak-field
 Kaluza-Klein limit), and linearized 5D gravity on the e-bundle is perturbatively finite at one loop (Appendix F)
 and two loops (Appendix G). The mechanism — the vanishing of the leading
-divergence via Σ_{n∈Z} 1 = ζ(0+1) = 0 at every loop order — suggests
+divergence via `Σ_{n∈Z} 1 = ζ(0+1) = 0` at every loop order — suggests
 perturbative finiteness to all orders. Whether this extends non-perturbatively
 is the remaining open question of Claim 3.
 
 The conjecture has the following concrete implications:
 
-**1. The graviton is a KK mode.** The massless n = 0 mode of the 5D metric
-perturbation ĥ_{μν} is the 4D graviton. It is a quantum of the base metric
+**1. The graviton is a KK mode.** The massless `n = 0` mode of the 5D metric
+perturbation `ĥ_{μν}` is the 4D graviton. It is a quantum of the base metric
 fluctuation — the same kind of quantum as the photon (which is a quantum of
-the e-connection fluctuation). Both emerge from the single 5D metric Ĝ_{AB}.
+the e-connection fluctuation). Both emerge from the single 5D metric `Ĝ_{AB}`.
 
 **2. The UV cutoff is the e-circle.** If the e-circle has minimum
-circumference ~l_P (the Planck length), the KK tower has a maximum mode
-n_max ~ 2πR/l_P. Modes with KK mass above the Planck energy do not exist.
+circumference `∼ l_P` (the Planck length), the KK tower has a maximum mode
+`n_{max} ∼ 2πR/l_P`. Modes with KK mass above the Planck energy do not exist.
 This provides a physical, geometric UV cutoff — not imposed by hand but
 arising from the minimum geometric scale of the e-dimension.
 
@@ -225,14 +225,14 @@ conjecture. The one-loop result is finite but the all-loop and non-perturbative
 status is open.
 
 **We do not claim to reproduce the full Standard Model.** The framework
-handles U(1) — electromagnetism — naturally through the e-bundle. The SU(2)
-and SU(3) gauge forces of the weak and strong interactions require additional
+handles `U(1)` — electromagnetism — naturally through the e-bundle. The `SU(2)`
+and `SU(3)` gauge forces of the weak and strong interactions require additional
 structure — either additional fiber dimensions or a different fiber topology.
 This is an important open problem not addressed in this paper.
 
 **We do not claim all-loop or non-perturbative finiteness is proven.** The
 one-loop and two-loop calculations are finite under zeta regularization
-(Appendices F and G). The structural argument — that [Σ 1]^L = 0^L = 0
+(Appendices F and G). The structural argument — that `[Σ 1]^L = 0^L = 0`
 removes the leading divergence at every loop order — is compelling but is
 not a proof of all-orders finiteness. It requires verification that subleading
 terms (Epstein zeta values at each order) remain finite, and that no new
@@ -250,7 +250,7 @@ principle justifying it — is an open foundational question.
 
 ### 5.X.6 The Significance
 
-If the conjecture is correct — if the 5D path integral on P(M⁴, U(1)) is
+If the conjecture is correct — if the 5D path integral on `P(M⁴, U(1))` is
 a consistent quantum theory of gravity — the implications are profound.
 
 The problem of quantum gravity would be resolved not by discovering a new
@@ -289,7 +289,7 @@ are the same equation, written in different variables."*
 — paraphrasing the spirit of the unification program
 
 *In the 5D framework, both are already written. They describe the same
-geometric object: the e-bundle P(M⁴, U(1)). The equation connecting them
+geometric object: the e-bundle `P(M⁴, U(1))`. The equation connecting them
 is the 5D Einstein equation on this bundle. What remains is showing that
 its quantization is finite.*
 

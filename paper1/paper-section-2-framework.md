@@ -8,9 +8,9 @@ In this framework, every event in reality is characterized by five coordinates:
 
     (x, y, z, t, e)
 
-The first four — spatial position (x, y, z) and time (t) — are the coordinates of
+The first four — spatial position `(x, y, z)` and time `(t)` — are the coordinates of
 standard four-dimensional spacetime, familiar from special and general relativity.
-The fifth — e — is new. We call it the *phase dimension* or *e-dimension*.
+The fifth — `e` — is new. We call it the *phase dimension* or *e-dimension*.
 
 These five coordinates are proposed as equally fundamental degrees of freedom. Just
 as it is meaningful to ask "where is this particle in space?" or "when does this
@@ -36,29 +36,29 @@ explains, which we develop fully in Section 3.
 
 ### 2.2.1 Circular and Periodic
 
-The e-dimension is not a line stretching from -∞ to +∞, as the spatial dimensions
+The e-dimension is not a line stretching from `-∞` to `+∞`, as the spatial dimensions
 are. It is a *circle* — periodic, like an angle, wrapping continuously from 0 to
-2π and back to 0. A particle whose e-coordinate increases continuously will
+`2π` and back to 0. A particle whose e-coordinate increases continuously will
 eventually return to its starting e-value after one full revolution.
 
 This circularity has immediate consequences:
 
-- It explains why quantum phase is periodic: the phase factor e^(iθ) in the
-  wave function is periodic in θ with period 2π, because θ *is* the e-coordinate
+- It explains why quantum phase is periodic: the phase factor `e^(iθ)` in the
+  wave function is periodic in `θ` with period `2π`, because `θ` *is* the e-coordinate
   and the e-coordinate lives on a circle.
 
-- It explains why spin-½ particles require a 720° spatial rotation to return
-  to their original state (rather than 360°): a 360° rotation in space corresponds
+- It explains why spin-`½` particles require a `720°` spatial rotation to return
+  to their original state (rather than `360°`): a `360°` rotation in space corresponds
   to a half-revolution in e-space — the particle is at the antipodal point of the
-  e-circle. A full 720° rotation completes one e-revolution and returns the
+  e-circle. A full `720°` rotation completes one e-revolution and returns the
   particle to its starting e-value (Section 3.4).
 
 - It provides the topological structure underlying the spin-statistics theorem:
   winding numbers on the e-circle are integers or half-integers, and these are
   precisely the allowed spin values (Section 4.2).
 
-Mathematically, the e-dimension is parameterized by an angle φ ∈ [0, 2π), and
-the structure group of the e-circle is U(1) — the group of complex numbers of
+Mathematically, the e-dimension is parameterized by an angle `φ ∈ [0, 2π)`, and
+the structure group of the e-circle is `U(1)` — the group of complex numbers of
 unit modulus.
 
 ### 2.2.2 Observable Only Through Relationships
@@ -73,12 +73,12 @@ observe are:
 
 - **Conservation constraints**: when two particles interact, their e-coordinates
   become correlated through a conservation law (Section 2.3). The constraint
-  e₁ + e₂ = C is what we observe as quantum entanglement.
+  `e₁ + e₂ = C` is what we observe as quantum entanglement.
 
 - **Gradients with respect to space**: the rate at which the e-coordinate changes
-  per unit distance (∂e/∂x) is what we observe as momentum. The rate of change
-  per unit time (∂e/∂t) is related to energy. These are the helical pitch of
-  the particle's trajectory through (x, e)-space (Section 3.3).
+  per unit distance (`∂e/∂x`) is what we observe as momentum. The rate of change
+  per unit time (`∂e/∂t`) is related to energy. These are the helical pitch of
+  the particle's trajectory through `(x, e)`-space (Section 3.3).
 
 This observability structure is not a limitation imposed by experimental technology.
 It is a fundamental geometric constraint: just as we cannot measure "absolute position
@@ -142,10 +142,10 @@ apparent paradox of "collapse" disappears when the e-dimension is made explicit.
 
 ## 2.4 The Wave Function as Geometry
 
-In standard quantum mechanics, the wave function ψ(x, y, z, t) is a complex-valued
+In standard quantum mechanics, the wave function `ψ(x, y, z, t)` is a complex-valued
 function — a mathematical object that encodes probabilities. Its modulus squared
-|ψ|² gives the probability density for finding the particle at a given location.
-The phase of ψ — the angle of the complex number — affects interference but is
+`|ψ|²` gives the probability density for finding the particle at a given location.
+The phase of `ψ` — the angle of the complex number — affects interference but is
 not directly observable. The wave function is, in this standard view, an abstract
 calculational tool rather than a description of physical reality.
 
@@ -156,22 +156,22 @@ Consider the standard form of a quantum wave function:
 
     ψ(x, y, z, t) = A(x, y, z, t) · e^(iθ(x,y,z,t))
 
-where A is the amplitude and θ is the phase. In the 5D framework:
+where `A` is the amplitude and `θ` is the phase. In the 5D framework:
 
-- The amplitude A(x, y, z, t) describes how much of the particle's five-dimensional
+- The amplitude `A(x, y, z, t)` describes how much of the particle's five-dimensional
   structure is present at each spacetime point, integrated over the e-direction —
   it is the four-dimensional "shadow" density of the five-dimensional object.
 
-- The phase θ(x, y, z, t) *is* the e-coordinate. It is not a property of an
-  abstract mathematical object. It is a physical coordinate, as real as x or t.
+- The phase `θ(x, y, z, t)` *is* the e-coordinate. It is not a property of an
+  abstract mathematical object. It is a physical coordinate, as real as `x` or `t`.
 
-- The complex plane — the space of values A·e^(iθ) — is the e-circle. The real
-  and imaginary parts of ψ are the projections of the e-coordinate onto two
+- The complex plane — the space of values `A·e^(iθ)` — is the e-circle. The real
+  and imaginary parts of `ψ` are the projections of the e-coordinate onto two
   orthogonal axes.
 
-- The Schrödinger equation, which governs the time evolution of ψ, is the
+- The Schrödinger equation, which governs the time evolution of `ψ`, is the
   equation of motion for the particle's five-dimensional geometric structure —
-  the law describing how the shape evolves through (x, y, z, t, e)-space.
+  the law describing how the shape evolves through `(x, y, z, t, e)`-space.
 
 The wave function is therefore not mysterious. It is a geometric object — the
 five-dimensional shape of the particle — described in terms of its four-dimensional
@@ -188,9 +188,9 @@ The five-dimensional spacetime of the framework is a principal fiber bundle:
 
     P(M⁴, U(1))
 
-where M⁴ is four-dimensional spacetime (the base manifold) and U(1) is the
-structure group — the group of rotations of the e-circle. At every point in M⁴,
-a copy of the e-circle U(1) is attached as a fiber. The full five-dimensional
+where `M⁴` is four-dimensional spacetime (the base manifold) and `U(1)` is the
+structure group — the group of rotations of the e-circle. At every point in `M⁴`,
+a copy of the e-circle `U(1)` is attached as a fiber. The full five-dimensional
 space is the total space of this bundle.
 
 The connection on this bundle — the geometric object that describes how e-coordinates
@@ -200,9 +200,9 @@ electromagnetic field tensor **F** = d**A**, whose spatial components are the
 magnetic field **B** and mixed space-time components are the electric field **E**.
 
 This identification is not new — it is the standard geometric formulation of
-electromagnetism as a U(1) gauge theory, developed by Weyl, Yang, Mills, and
+electromagnetism as a `U(1)` gauge theory, developed by Weyl, Yang, Mills, and
 others in the mid-twentieth century. What *is* new in our framework is the
-physical interpretation: we identify the U(1) fiber not as a mathematical gauge
+physical interpretation: we identify the `U(1)` fiber not as a mathematical gauge
 redundancy but as a literal physical dimension — the e-dimension — whose geometry
 is directly observable through quantum phenomena.
 
@@ -211,11 +211,11 @@ this identification: it shows that the connection **A** is physically real (not
 merely a gauge artifact), which is precisely what the fiber bundle interpretation
 predicts.
 
-The mathematical structure proposed here — a U(1) principal bundle over spacetime
+The mathematical structure proposed here — a `U(1)` principal bundle over spacetime
 with the wave function as a section — connects to the program of geometric
 quantization (Kostant 1970, Souriau 1970, Woodhouse 1992), which constructs
 quantum mechanics from symplectic geometry using precisely this bundle structure.
-The distinction is ontological: geometric quantization treats the U(1) fiber as
+The distinction is ontological: geometric quantization treats the `U(1)` fiber as
 a mathematical device for producing a quantum theory from a classical one; the
 e-dimension framework treats it as a literal physical dimension. The mathematical
 objects are the same. What is new is the claim that the fiber has geometric reality.
@@ -226,7 +226,7 @@ the mathematics precise but does not change the physical content.
 
 ### Distinction from Kaluza-Klein Theory
 
-The mathematical structure of the framework — a U(1) principal bundle over
+The mathematical structure of the framework — a `U(1)` principal bundle over
 spacetime — is shared with Kaluza-Klein theory (Kaluza 1921, Klein 1926). The
 physical content is entirely different, in three respects that we state explicitly
 because the superficial resemblance will invite the comparison.
@@ -240,7 +240,7 @@ has nothing to say about the neutron's quantum properties. The e-dimension frame
 accounts for all of them.
 
 Second, the observability. Kaluza-Klein compactifies the fifth dimension at the
-Planck scale (~10⁻³⁵ m), rendering it inaccessible to any foreseeable experiment.
+Planck scale (`~10⁻³⁵ m`), rendering it inaccessible to any foreseeable experiment.
 The e-dimension is accessible at *all* scales — in every interference pattern, every
 entanglement correlation, every spin measurement ever performed. It is not hidden at
 the Planck scale. It is hidden in the quantum phase, which was interpreted as an
@@ -263,7 +263,7 @@ A natural question: why one additional dimension? Why not two, or seven, or elev
 as in string theory?
 
 The answer is empirical and minimal. Quantum mechanics, as it stands, requires
-exactly one additional degree of freedom beyond (x, y, z, t) to account for:
+exactly one additional degree of freedom beyond `(x, y, z, t)` to account for:
 
 - The periodicity of quantum phase
 - The conservation law underlying entanglement
@@ -295,16 +295,16 @@ For clarity, we state the complete set of postulates of the 5D geometric framewo
 Everything in this paper is derived from these four statements.
 
 **Postulate 1 — Five-dimensional spacetime:**
-Physical reality has five dimensions: (x, y, z, t, e). All five are equally
+Physical reality has five dimensions: `(x, y, z, t, e)`. All five are equally
 fundamental degrees of freedom.
 
 **Postulate 2 — The e-dimension is a circle:**
-The e-coordinate is periodic, parameterized by an angle φ ∈ [0, 2π). The structure
-group of the e-dimension is U(1).
+The e-coordinate is periodic, parameterized by an angle `φ ∈ [0, 2π)`. The structure
+group of the e-dimension is `U(1)`.
 
 **Postulate 3 — E-translation invariance:**
 The laws of physics are symmetric under uniform translation of all e-coordinates.
-By Noether's theorem, this symmetry implies the conservation law e₁ + e₂ + ... = C.
+By Noether's theorem, this symmetry implies the conservation law `e₁ + e₂ + ... = C`.
 
 **Postulate 4 — The projection postulate:**
 Our observations are four-dimensional intersections of five-dimensional reality.
@@ -326,41 +326,40 @@ coupling to spatial rotations follows from identifying spin with
 e-angular momentum via the Noether theorem applied to Postulate 3.
 
 **The 5D density rule** (used in Appendix C): the probability density
-|ψ|² is the 5D density projected onto 4D, consistent with Postulate 4.
+`|ψ|²` is the 5D density projected onto 4D, consistent with Postulate 4.
 This reproduces the Born rule but does not derive it independently of
 the projection postulate.
 
 **The gravitational action** (used in Appendix D): the 5D Einstein-
-Hilbert action on P(M⁴, U(1)) is the unique generally covariant
+Hilbert action on `P(M⁴, U(1))` is the unique generally covariant
 two-derivative action on the bundle — not an additional postulate but
 the standard gravitational action applied to the framework's geometry.
 
 **Zeta regularization** (used in Appendices F, G, S): the regularization
 of KK mode sums by spectral zeta functions. This is the unique
-prescription consistent with the U(1) translation symmetry of the
+prescription consistent with the `U(1)` translation symmetry of the
 e-circle (Postulate 3); see Appendix S, §S.7.4.
 
 Two additional assumptions are used in the speculative extensions:
 
-**The Z₂ orbifold** (Appendix W): modding out S¹ by the fermion parity
-(−1)^F. Geometrically motivated by the spin structure but not forced
+**The `Z₂` orbifold** (Appendix W): modding out `S¹` by the fermion parity
+`(−1)^F`. Geometrically motivated by the spin structure but not forced
 by it — a physical hypothesis.
 
-**The Z₃ symmetry** (Appendix W, §W.4): a three-fold rotation of the
+**The `Z₃` symmetry** (Appendix W, §W.4): a three-fold rotation of the
 e-circle, producing three generations. Speculative.
 
 ### 2.7.2 A Note on Two Scenarios
 
 Two configurations of the e-circle appear in this paper. The **circle
-scenario** (S¹) has circumference L ≈ 50–200 μm (R ≈ 8–32 μm), with
+scenario** (`S¹`) has circumference `L ≈ 50–200 μm` (`R ≈ 8–32 μm`), with
 all Standard Model fields propagating on the circle. The **orbifold
-scenario** (S¹/Z₂) has brane separation R ≈ 12 μm, with only bulk
+scenario** (`S¹/Z₂`) has brane separation `R ≈ 12 μm`, with only bulk
 fields (gravity and three right-handed neutrinos) propagating between
 the branes. The circle scenario is used in Appendices A–V (unless
 noted); the orbifold scenario is used in Appendix W and the abstract.
 The two scenarios make different predictions for the Yukawa gravitational
-deviation scale (21 μm vs 12 μm) and are experimentally distinguishable.
+deviation scale (21 `μm` vs 12 `μm`) and are experimentally distinguishable.
 See Section 6.6 for the full comparison.
 
 ---
-

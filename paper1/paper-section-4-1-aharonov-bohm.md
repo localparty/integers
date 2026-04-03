@@ -13,8 +13,8 @@ The experimental setup is precise. A long, tightly-wound solenoid confines a mag
 field **B** entirely to its interior. Outside the solenoid, **B** = 0 exactly. A beam
 of electrons is split, sent around both sides of the solenoid, and recombined. An
 interference pattern forms on a detector screen. When the current through the solenoid
-is varied — changing the enclosed magnetic flux Φ — the interference pattern shifts,
-even though the electrons never enter the region where **B** ≠ 0.
+is varied — changing the enclosed magnetic flux `Φ` — the interference pattern shifts,
+even though the electrons never enter the region where `B ≠ 0`.
 
 The measured phase difference between the two paths is:
 
@@ -28,12 +28,12 @@ This was confirmed experimentally by Chambers (1960) and definitively by Tonomur
 magnetic field at the electron's location is zero throughout.
 
 The discomfort is immediate and well-founded. Classical electromagnetism holds that
-only the fields **E** and **B** are physical — the potentials φ and **A** are
+only the fields **E** and **B** are physical — the potentials `φ` and **A** are
 mathematical conveniences, defined only up to a gauge transformation. If the fields
 are zero where the particle travels, the particle should be unaffected. Yet it isn't.
 
 The standard quantum mechanical response is to promote the vector potential **A** to
-physical status: since the phase shift depends on **A** and not just on **B** = ∇ × **A**,
+physical status: since the phase shift depends on **A** and not just on `**B** = ∇ × **A**`,
 the potential must be real. This is correct as far as it goes, but it is essentially
 a *redefinition* in response to experimental pressure. It does not explain *why* **A**
 is physical, or what physical thing it represents, or why the phase shift takes the
@@ -45,16 +45,16 @@ The 5D geometric framework answers all three questions from a single principle.
 
 ## 4.1.2 The 5D Picture: Topology in e-Space
 
-Recall the structure of the e-dimension. It is circular — periodic from 0 to 2π —
-and it corresponds mathematically to the U(1) fiber in a principal fiber bundle over
+Recall the structure of the e-dimension. It is circular — periodic from 0 to `2π` —
+and it corresponds mathematically to the `U(1)` fiber in a principal fiber bundle over
 4D spacetime. A particle moving through spacetime carries an e-coordinate that rotates
 as it moves. The rate of this rotation is what we observe as momentum and phase.
 
 Now consider what a solenoid actually is in this picture.
 
-A solenoid carrying magnetic flux Φ is a localized region where the electromagnetic
+A solenoid carrying magnetic flux `Φ` is a localized region where the electromagnetic
 gauge field has a specific structure. In the language of fiber bundles, the solenoid
-is a **topological defect in e-space** — specifically, it is a region where the U(1)
+is a **topological defect in e-space** — specifically, it is a region where the `U(1)`
 bundle has nonzero holonomy. The e-dimension, which normally returns to the same value
 after traveling a closed loop in spacetime, fails to do so when that loop encloses the
 solenoid.
@@ -86,7 +86,7 @@ This geometric picture immediately resolves the philosophical puzzle about **A**
 
 The vector potential **A** is not a mathematical convenience. It is the local
 description of how the e-dimension tilts as you move through spacetime — formally,
-it is the **connection** on the U(1) fiber bundle. The magnetic field **B** = ∇ × **A**
+it is the **connection** on the `U(1)` fiber bundle. The magnetic field `**B** = ∇ × **A**`
 describes the *curvature* of this bundle — how much the e-circle rotates per unit area
 of spacetime.
 
@@ -99,10 +99,10 @@ An analogy: the surface of a cylinder has zero Gaussian curvature — it can be 
 flat. But it is topologically distinct from a flat plane — you cannot continuously
 deform one into the other. A particle traveling around a cylinder picks up a winding
 number even though the local geometry is flat. The solenoid creates exactly this
-situation in e-space: locally flat (B = 0) but globally twisted (A ≠ 0).
+situation in e-space: locally flat (`B = 0`) but globally twisted (`A ≠ 0`).
 
 The 5D framework therefore predicts — not merely accommodates — that **A** must be
-physically real. Any framework in which the e-dimension has the structure of a U(1)
+physically real. Any framework in which the e-dimension has the structure of a `U(1)`
 fiber bundle is *forced* to assign physical reality to the connection, because the
 connection is what determines how e-coordinates evolve as particles move. The
 Aharonov-Bohm effect is not a surprise: it is the experimental detection of the
@@ -112,26 +112,26 @@ e-bundle's connection.
 
 ## 4.1.4 Why the Phase Is Quantized
 
-The Aharonov-Bohm phase Δφ = (e/ℏ)Φ is proportional to the enclosed flux Φ.
-A natural question: why does the interference pattern repeat periodically as Φ increases?
-The pattern returns to its original configuration whenever Φ = nΦ₀, where
-Φ₀ = h/e is the magnetic flux quantum (~2.07 × 10⁻¹⁵ Wb).
+The Aharonov-Bohm phase `Δφ = (e/ℏ)Φ` is proportional to the enclosed flux `Φ`.
+A natural question: why does the interference pattern repeat periodically as `Φ` increases?
+The pattern returns to its original configuration whenever `Φ = nΦ₀`, where
+`Φ₀ = h/e` is the magnetic flux quantum (`~2.07 × 10⁻¹⁵ Wb`).
 
 In the 5D framework this is immediate. The e-dimension is a circle. A phase shift
-of exactly 2π returns the e-coordinate to its starting value — the particle's 5D
+of exactly `2π` returns the e-coordinate to its starting value — the particle's 5D
 state is identical to what it was before. The condition for full periodicity is:
 
     Δe = 2π  →  (e/ℏ) · Φ = 2π  →  Φ = h/e = Φ₀
 
-The flux quantum Φ₀ = h/e is the amount of magnetic flux required to wind the
+The flux quantum `Φ₀ = h/e` is the amount of magnetic flux required to wind the
 e-circle through exactly one full revolution. It is set by the circumference of the
 e-dimension (encoded in h) and the coupling strength between the electromagnetic
 field and the e-coordinate (encoded in the charge e).
 
 This gives the 5D framework a small but genuine predictive statement: the flux quantum
 is not an independent experimental fact to be memorized. It is determined by the
-geometry of e-space. If the e-dimension has circumference 2π (in natural units),
-the flux quantum must be h/e. This is consistent — but it means the flux quantum
+geometry of e-space. If the e-dimension has circumference `2π` (in natural units),
+the flux quantum must be `h/e`. This is consistent — but it means the flux quantum
 and Planck's constant are connected through the e-geometry, which is a relationship
 standard QM states but does not explain.
 
@@ -142,8 +142,8 @@ standard QM states but does not explain.
 The Aharonov-Bohm effect is the simplest instance of a profound general principle
 that the 5D framework makes explicit.
 
-In standard quantum field theory, the electromagnetic field is a U(1) gauge theory.
-The gauge freedom — the ability to redefine **A** → **A** + ∇χ without changing
+In standard quantum field theory, the electromagnetic field is a `U(1)` gauge theory.
+The gauge freedom — the ability to redefine `**A** → **A** + ∇χ` without changing
 physical predictions — is treated as a mathematical redundancy, an artifact of our
 description.
 
@@ -159,13 +159,13 @@ This means:
   the e-circle — only on how it *actually rotates* as particles move.
 - **Gauge fields** (photons, W/Z bosons, gluons) are the connections on the
   e-bundle and analogous bundles for the other forces.
-- **Minimal coupling** (the rule that replaces ∂μ with ∂μ + ieAμ in the Lagrangian)
+- **Minimal coupling** (the rule that replaces `∂μ` with `∂μ + ieAμ` in the Lagrangian)
   is just the statement that particles carry e-coordinates that rotate in response
   to the connection.
 
 The Aharonov-Bohm effect, in this reading, is not an anomaly requiring explanation.
 It is the *direct experimental proof* that the e-dimension exists and has the structure
-of a U(1) fiber bundle. Aharonov and Bohm did not discover a puzzle — they discovered
+of a `U(1)` fiber bundle. Aharonov and Bohm did not discover a puzzle — they discovered
 the fifth dimension.
 
 ---
@@ -175,26 +175,26 @@ the fifth dimension.
 For completeness, we state the 5D geometric account of the Aharonov-Bohm effect
 in compact form suitable for a technically-trained reader.
 
-Let M⁴ be 4-dimensional spacetime and let e parameterize a U(1) fiber attached to
-each point of M⁴, forming a principal U(1) bundle P(M⁴, U(1)). The electromagnetic
+Let `M⁴` be 4-dimensional spacetime and let e parameterize a `U(1)` fiber attached to
+each point of `M⁴`, forming a principal `U(1)` bundle `P(M⁴, U(1))`. The electromagnetic
 vector potential **A** is a connection 1-form on P. The magnetic field **B** = dA
 is the curvature 2-form of this connection.
 
-A charged particle with charge q and reduced Planck constant ℏ carries a section of
-an associated line bundle. As the particle traverses a path γ in M⁴, its e-coordinate
+A charged particle with charge `q` and reduced Planck constant `ℏ` carries a section of
+an associated line bundle. As the particle traverses a path `γ` in `M⁴`, its e-coordinate
 undergoes parallel transport according to the connection:
 
     Δe[γ] = (q/ℏ) ∫_γ A
 
-For a closed loop γ encircling a region Σ:
+For a closed loop `γ` encircling a region `Σ`:
 
     Δe[γ] = (q/ℏ) ∮_γ A = (q/ℏ) ∫_Σ dA = (q/ℏ) ∫_Σ B = (q/ℏ) · Φ_Σ
 
-where Φ_Σ is the magnetic flux through Σ. Outside the solenoid, dA = B = 0
-pointwise, but ∮ A = Φ ≠ 0 because the loop is not contractible in the complement
+where `Φ_Σ` is the magnetic flux through `Σ`. Outside the solenoid, `dA = B = 0`
+pointwise, but `∮ A = Φ ≠ 0` because the loop is not contractible in the complement
 of the solenoid. The bundle has nonzero holonomy on non-contractible loops.
 
-The phase shift Δφ = Δe = (q/ℏ)Φ is therefore a topological invariant of the loop
+The phase shift `Δφ = Δe = (q/ℏ)Φ` is therefore a topological invariant of the loop
 relative to the solenoid — it depends only on the winding number of the path around
 the defect, not on the local field values along the path.
 
@@ -209,17 +209,17 @@ from the 5D path integral:
 
     I(y, Φ) = I₀ · cos²(πd sin θ/λ + eΦ/2ℏ)
 
-The fringe shift eΦ/2ℏ is periodic in the flux with period Φ₀ = h/e — the
+The fringe shift `eΦ/2ℏ` is periodic in the flux with period `Φ₀ = h/e` — the
 magnetic flux quantum. In the 5D framework, this periodicity has a geometric
-origin: Φ₀ is the flux required to wind the e-coordinate through one complete
-revolution of the e-circle (Δφ = 2π when (e/ℏ)Φ = 2π). The flux quantum is
+origin: `Φ₀` is the flux required to wind the e-coordinate through one complete
+revolution of the e-circle (`Δφ = 2π` when `(e/ℏ)Φ = 2π`). The flux quantum is
 set by the circumference of the e-dimension. The superconducting flux quantum
-Φ₀/2 = h/(2e) follows from the doubled charge of Cooper pairs, which wind the
+`Φ₀/2 = h/(2e)` follows from the doubled charge of Cooper pairs, which wind the
 e-circle twice as fast per unit flux.
 
 The Aharonov-Bohm solenoid is a *line* topological defect in e-space. The Dirac
 magnetic monopole (Dirac 1931) is a *point* defect — a location where the
-e-bundle is non-trivializable. The Dirac quantization condition eg = nℏc/2 is
+e-bundle is non-trivializable. The Dirac quantization condition `eg = nℏc/2` is
 the requirement that the e-circle be consistently defined on the sphere
 surrounding the monopole (integer Chern number). The framework predicts this
 condition as a geometric necessity.
@@ -232,9 +232,9 @@ condition as a geometric necessity.
 |----------------------|---------------------------|
 | Why is **A** physical if it's not gauge-invariant? | **A** is the connection on the e-bundle. It *is* physical. Gauge freedom is coordinate freedom on the e-circle. |
 | Why does a zero-field region affect particle phase? | The region has zero curvature but nonzero holonomy — locally flat, globally twisted. |
-| Why is the flux quantum Φ₀ = h/e? | It is the flux needed to wind the e-circle through 2π — set by e-space geometry. |
-| What does the Aharonov-Bohm experiment actually measure? | The holonomy of the U(1) e-bundle around a non-contractible loop — direct evidence for the e-dimension's topology. |
-| Why does the effect generalize to all gauge theories? | All gauge theories are connections on fiber bundles. The e-dimension is the U(1) fiber. Other forces involve SU(2) and SU(3) fibers. |
+| Why is the flux quantum `Φ₀ = h/e`? | It is the flux needed to wind the e-circle through `2π` — set by e-space geometry. |
+| What does the Aharonov-Bohm experiment actually measure? | The holonomy of the `U(1)` e-bundle around a non-contractible loop — direct evidence for the e-dimension's topology. |
+| Why does the effect generalize to all gauge theories? | All gauge theories are connections on fiber bundles. The e-dimension is the `U(1)` fiber. Other forces involve `SU(2)` and `SU(3)` fibers. |
 
 ---
 
@@ -256,4 +256,3 @@ Both effects are topological. Both are quantized. Both follow from the single
 geometric postulate that the e-dimension is a circle. The Aharonov-Bohm effect
 and the Pauli exclusion principle are cousins — different manifestations of the
 same underlying e-space topology.
-

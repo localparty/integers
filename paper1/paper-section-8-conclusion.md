@@ -32,9 +32,9 @@ constraint on simultaneously specifying a helix's position and pitch. Neither
 fact requires an additional postulate — both follow from the shape of a particle's
 trajectory through five-dimensional spacetime.
 
-**Spin** is helical chirality. The 720° property of spin-½ particles follows
+**Spin** is helical chirality. The `720°` property of spin-`½` particles follows
 from the 2:1 ratio between spatial rotation and e-revolution. Magnetic moments
-arise from helical circulation in (space, e)-space.
+arise from helical circulation in `(space, e)`-space.
 
 **Measurement** is e-space sampling. Wave function collapse is an epistemic
 update, not a physical process. The Born rule follows from the normalization
@@ -98,7 +98,7 @@ acknowledge this honestly and address it on three levels.
 results; it predicts structural relationships between them. The winding-number
 argument (Section 4.2) predicts that in any system where the effective spatial
 dimension is reduced to two, fractional exchange statistics must appear — because
-the topology of the configuration space (π₁ = Z instead of Z₂) allows fractional
+the topology of the configuration space (`π₁ = Z` instead of `Z₂`) allows fractional
 e-winding. This prediction, which follows from the geometry alone, was made by
 Leinaas and Myrheim in 1977 using the same topological logic. The fractional
 quantum Hall effect, discovered in 1982, confirmed it. The framework's geometric
@@ -135,16 +135,16 @@ that did not exist before the geometric picture was in place.
 **Extensions of the spin-statistics derivation.** The winding number derivation
 is formalized in Appendix B. Natural extensions include: the full relativistic
 treatment via the 5D Dirac equation on the Lorentzian Kaluza-Klein manifold;
-the derivation of the gyromagnetic ratio g from the e-geometry; and the extension
+the derivation of the gyromagnetic ratio `g` from the e-geometry; and the extension
 to spin-1 and higher-spin fields within the framework.
 
 **All-orders and non-perturbative finiteness.** This is the primary open
 problem of the paper. The one-loop effective action for 5D gravity on
-M⁴ × S¹ is finite under zeta regularization (Appendix F). The two-loop
+`M⁴ × S¹` is finite under zeta regularization (Appendix F). The two-loop
 calculation — where 4D gravity becomes non-renormalizable via the
-Goroff-Sagnotti R³ counterterm — is also finite in the 5D KK theory
+Goroff-Sagnotti `R³` counterterm — is also finite in the 5D KK theory
 (Appendix G): the leading divergence vanishes identically because
-Σ_{n∈Z} 1 = 1 + 2ζ(0) = 0. The structural argument extends to every
+`Σ_{n∈Z} 1 = 1 + 2ζ(0) = 0`. The structural argument extends to every
 loop order. What remains is: (a) verifying the subleading Epstein zeta
 values at each loop order, (b) proving all-orders finiteness rigorously,
 and (c) addressing non-perturbative effects (gravitational instantons,
@@ -153,15 +153,15 @@ conjecture (Section 5.X) is established — and the problem of quantum
 gravity resolves into the geometry that quantum mechanics already requires.
 
 **Cassini fifth-force bound.** The Kaluza-Klein reduction of Section 5 and
-Appendix D produces a scalar field (the e-circle radius φ(x)) that introduces
+Appendix D produces a scalar field (the e-circle radius `φ(x)`) that introduces
 a fifth force. This must be shown consistent with solar system constraints,
 particularly the Cassini bound on post-Newtonian parameters. If the scalar
 field is sufficiently massive or the coupling sufficiently weak, the fifth
 force is negligible at solar system scales. This calculation is tractable and
 should follow the two-loop result.
 
-**Claim 2 of the gravity program.** The g₀₀ component of the 5D metric gives
-the correct gravitational time dilation dτ/dt = √(1 − 2GM/rc²) (partially
+**Claim 2 of the gravity program.** The `g₀₀` component of the 5D metric gives
+the correct gravitational time dilation `dτ/dt = √(1 − 2GM/rc²)` (partially
 shown in Appendix D, Section D.6). The full confirmation requires showing
 this holds independently of the base metric contribution.
 
@@ -194,37 +194,36 @@ cosmological sector with parameters derived entirely from the e-circle
 geometry. The result is worth stating here because it crystallizes what
 the framework achieves.
 
-The bulk leptogenesis mechanism on the Z₂ orbifold yields a scaling law:
+The bulk leptogenesis mechanism on the `Z₂` orbifold yields a scaling law:
 
     Ω_DM / Ω_b = 1/ξ²
 
-where ξ is the hidden-to-visible brane temperature ratio. Combined with
+where `ξ` is the hidden-to-visible brane temperature ratio. Combined with
 the observed dark-to-visible matter ratio (5.36), this determines
-ξ = 0.432 from first principles — removing the last free cosmological
+`ξ = 0.432` from first principles — removing the last free cosmological
 parameter. Two scenarios bracket the prediction:
 
-    |                    | Scenario A (θ*-matched) | Scenario B (1/ξ² law) |
-    |--------------------|------------------------|-----------------------|
-    | ξ                  | 0.470                  | 0.432                 |
-    | t₀                 | 13.47 Gyr              | 13.47 Gyr             |
-    | H₀                 | 69.5 km/s/Mpc          | 68.7 km/s/Mpc         |
-    | S8                 | 0.753                  | 0.785                 |
-    | θ* offset          | −0.5"                  | +6.6"                 |
-    | Ω_DM/Ω_b          | 5.22 (input)           | 5.36 (derived)        |
-    | N_eff              | 3.39                   | 3.31                  |
+|                    | Scenario A (`θ*`-matched) | Scenario B (`1/ξ²` law) |
+|--------------------|------------------------|-----------------------|
+| `ξ`                | 0.470                  | 0.432                 |
+| `t₀`              | 13.47 Gyr              | 13.47 Gyr             |
+| `H₀`              | 69.5 km/s/Mpc         | 68.7 km/s/Mpc        |
+| `S8`               | 0.753                  | 0.785                 |
+| `θ*` offset        | −0.5"                  | +6.6"                 |
+| `Ω_DM/Ω_b`        | 5.22 (input)           | 5.36 (derived)        |
+| `N_{eff}`          | 3.39                   | 3.31                  |
 
-Both scenarios are in tension with ACT DR6's N_eff measurement
-(2.86 ± 0.13); the tension ranges from 3.5σ (Scenario B) to 4.1σ
+Both scenarios are in tension with ACT DR6's `N_eff` measurement
+(`2.86 ± 0.13`); the tension ranges from `3.5σ` (Scenario B) to `4.1σ`
 (Scenario A). This is the framework's most consequential open issue:
 it predicts more dark radiation than current CMB data support. The
-tension may be resolved if extended parameter fits (ΛCDM + N_eff + w₀
-+ wₐ, which is the framework's actual model) loosen the N_eff bound,
+tension may be resolved if extended parameter fits (`ΛCDM + N_{eff} + w₀ + w_a`, which is the framework's actual model) loosen the `N_eff` bound,
 or it may indicate that the mirror sector is colder than the
-baryogenesis formula predicts. CMB-S4 (σ(N_eff) ≈ 0.03) will be
+baryogenesis formula predicts. CMB-S4 (`σ(N_{eff}) ≈ 0.03`) will be
 definitive.
 
-Both scenarios resolve the S8 weak lensing tension (S8 = 0.75–0.79
-vs Planck ΛCDM 0.83) and explain the cosmic coincidence Ω_DM/Ω_b ≈ 5
+Both scenarios resolve the S8 weak lensing tension (`S8 = 0.75–0.79`
+vs Planck `ΛCDM` `0.83`) and explain the cosmic coincidence `Ω_DM/Ω_b ≈ 5`
 geometrically. The full derivation is in Paper 2, whose central
 result is Appendix E.
 

@@ -4,7 +4,7 @@
 > Kaluza-Klein reduction of the 5D metric is consistent with the Cassini
 > spacecraft's precision measurement of the post-Newtonian parameter gamma.
 > The key result is that the Casimir-stabilized e-circle gives the scalar a
-> mass of order 10 meV, suppressing its effects by a factor of exp(-7 x 10^15)
+> mass of order `10 meV`, suppressing its effects by a factor of `exp(-7 x 10^15)`
 > at solar-system scales. No fine-tuning or screening mechanism is required.
 
 ---
@@ -12,14 +12,14 @@
 ## I.1 The Problem
 
 The Kaluza-Klein reduction of the 5D Einstein action (Appendix D) decomposes
-the 5D metric into a 4D metric g_mu_nu, a gauge field A_mu (identified with
-the electromagnetic potential), and a scalar field phi(x) that encodes the
+the 5D metric into a 4D metric `g_{μν}`, a gauge field `A_μ` (identified with
+the electromagnetic potential), and a scalar field `φ(x)` that encodes the
 local circumference of the e-circle:
 
-    g_AB^(5D) --> { g_mu_nu(x),  A_mu(x),  phi(x) }
+    g_{AB}^{(5D)} → { g_{μν}(x),  A_μ(x),  φ(x) }
 
-The scalar phi(x) measures deviations of the extra-dimensional radius from
-its stabilized value R_0. In the 4D effective theory it couples universally
+The scalar `φ(x)` measures deviations of the extra-dimensional radius from
+its stabilized value `R₀`. In the 4D effective theory it couples universally
 to matter through the 4D gravitational sector — it is a Brans-Dicke-type
 scalar. Any such scalar mediates a "fifth force" between massive bodies.
 
@@ -27,18 +27,18 @@ The best constraint on long-range scalar-mediated modifications of gravity
 comes from the Cassini spacecraft's measurement of the Shapiro time delay
 during its 2002 solar conjunction (Bertotti, Iess, & Tortora, Nature 425,
 374, 2003). The result constrains the parameterized post-Newtonian (PPN)
-parameter gamma:
+parameter `γ`:
 
-    |gamma - 1| < 2.3 x 10^{-5}     (2 sigma)
+    |γ − 1| < 2.3 × 10^{−5}     (2σ)
 
 A massless scalar field with gravitational-strength coupling predicts
 
-    gamma = (1 + omega) / (2 + omega)
+    γ = (1 + ω) / (2 + ω)
 
-where omega is the Brans-Dicke parameter. For the canonical KK reduction,
-omega = 0, giving
+where `ω` is the Brans-Dicke parameter. For the canonical KK reduction,
+`ω = 0`, giving
 
-    gamma_BD = 1/2
+    γ_{BD} = 1/2
 
 This is excluded by more than four orders of magnitude. The question is
 therefore unavoidable: does the scalar field in our framework violate the
@@ -51,37 +51,37 @@ The answer is no, and the reason is simple: the scalar is not massless.
 ## I.2 The Massive Scalar
 
 The Casimir stabilization of the e-circle (Section 6.6, Appendix F) fixes
-the extra-dimensional radius at a value R_0 determined by the balance between
+the extra-dimensional radius at a value `R₀` determined by the balance between
 Casimir energy and the curvature of the compactification potential. Small
-fluctuations of the radius about R_0 define the physical scalar field:
+fluctuations of the radius about `R₀` define the physical scalar field:
 
-    phi(x) = R(x) - R_0
+    φ(x) = R(x) − R₀
 
 These fluctuations see a potential with a nonzero second derivative — the
 scalar acquires a mass:
 
-    m_phi^2 = V''(R_0)
+    m_φ² = V''(R₀)
 
-For the Casimir-stabilized e-circle with circumference L ~ 130 um
-(R_0 = L / 2pi ~ 21 um), the characteristic energy scale is:
+For the Casimir-stabilized e-circle with circumference `L ~ 130 μm`
+(`R₀ = L / 2π ~ 21 μm`), the characteristic energy scale is:
 
-    m_phi = hbar c / R_0
+    m_φ = ℏc / R₀
 
 Numerically:
 
-    m_phi = (1.973 x 10^{-7} eV m) / (2.1 x 10^{-5} m)
-          = 9.4 x 10^{-3} eV
-          = 9.4 meV
+    m_φ = (1.973 × 10^{−7} eV·m) / (2.1 × 10^{−5} m)
+        = 9.4 × 10^{−3} eV
+        = 9.4 meV
 
 The corresponding Compton wavelength — which sets the Yukawa range of the
 scalar-mediated force — is:
 
-    lambda_phi = hbar / (m_phi c) = R_0 ~ 21 um
+    λ_φ = ℏ / (m_φ c) = R₀ ~ 21 μm
 
 This is the critical result. The scalar does not propagate over macroscopic
 distances. Its influence is confined to a Yukawa envelope of range ~21 um,
 identical to the compactification radius. At distances large compared to
-lambda_phi, the scalar decouples exponentially.
+`λ_φ`, the scalar decouples exponentially.
 
 ---
 
@@ -90,40 +90,40 @@ lambda_phi, the scalar decouples exponentially.
 The Cassini measurement probes gravitational physics at length scales of
 order the Earth-Sun distance:
 
-    r_AU = 1 AU = 1.496 x 10^{11} m
+    r_{AU} = 1 AU = 1.496 × 10^{11} m
 
-The scalar-mediated force between two masses at separation r takes the
+The scalar-mediated force between two masses at separation `r` takes the
 Yukawa form:
 
-    F_scalar(r) = -alpha_phi (G M m / r^2) exp(-r / lambda_phi)
+    F_{scalar}(r) = −α_φ (G M m / r²) exp(−r / λ_φ)
 
-where alpha_phi is a dimensionless coupling of order unity (for a KK scalar,
-alpha_phi ~ 1). The ratio of the scalar force to the Newtonian force is:
+where `α_φ` is a dimensionless coupling of order unity (for a KK scalar,
+`α_φ ~ 1`). The ratio of the scalar force to the Newtonian force is:
 
-    F_scalar / F_Newton = alpha_phi exp(-r / lambda_phi)
+    F_{scalar} / F_{Newton} = α_φ exp(−r / λ_φ)
 
-At r = 1 AU:
+At `r = 1` AU:
 
-    r / lambda_phi = (1.496 x 10^{11} m) / (2.1 x 10^{-5} m)
-                   = 7.1 x 10^{15}
+    r / λ_φ = (1.496 × 10^{11} m) / (2.1 × 10^{−5} m)
+            = 7.1 × 10^{15}
 
 Therefore:
 
-    F_scalar / F_Newton = alpha_phi x exp(-7.1 x 10^{15})
+    F_{scalar} / F_{Newton} = α_φ × exp(−7.1 × 10^{15})
 
 This number is not merely small — it is identically zero for all practical
-purposes. To appreciate the suppression: exp(-7.1 x 10^{15}) is a number
-with approximately 3.1 x 10^{15} zeros after the decimal point before the
+purposes. To appreciate the suppression: `exp(−7.1 × 10¹⁵)` is a number
+with approximately `3.1 × 10¹⁵` zeros after the decimal point before the
 first nonzero digit. No measurement, present or conceivable, could detect
 a deviation of this magnitude.
 
-The effective PPN parameter gamma is:
+The effective PPN parameter `γ` is:
 
-    gamma_eff = 1 - 2 alpha_phi^2 / (1 + alpha_phi^2) x exp(-r / lambda_phi)
-              = 1 + O(exp(-7.1 x 10^{15}))
-              = 1    (to all measurable precision)
+    γ_{eff} = 1 − 2 α_φ² / (1 + α_φ²) × exp(−r / λ_φ)
+            = 1 + O(exp(−7.1 × 10^{15}))
+            = 1    (to all measurable precision)
 
-The Cassini bound |gamma - 1| < 2.3 x 10^{-5} is satisfied by a margin of
+The Cassini bound `|γ − 1| < 2.3 × 10⁻⁵` is satisfied by a margin of
 ten trillion orders of magnitude.
 
 ---
@@ -133,7 +133,7 @@ ten trillion orders of magnitude.
 The scalar field is not inert — it is merely short-ranged. At separations
 comparable to the Yukawa range:
 
-    r ~ lambda_phi ~ 21 um
+    r ~ λ_φ ~ 21 μm
 
 the scalar force is unsuppressed and contributes a Yukawa modification to
 gravity with coupling strength of order unity. This is precisely the regime
@@ -142,12 +142,12 @@ Prediction 1.
 
 The scalar therefore plays a dual role in the framework:
 
-1. **At r >> lambda_phi (solar-system scales):** The scalar decouples
+1. **At r >> `λ_φ` (solar-system scales):** The scalar decouples
    exponentially. Gravity is described by pure 4D GR to extraordinary
    precision. All solar-system tests — Shapiro delay, perihelion precession,
    Nordtvedt effect, lunar laser ranging — are satisfied trivially.
 
-2. **At r ~ lambda_phi (submillimeter scales):** The scalar contributes a
+2. **At r ~ `λ_φ` (submillimeter scales):** The scalar contributes a
    detectable Yukawa correction. This is the regime of Prediction 1 and
    the target of current short-range gravity experiments (Adelberger et al.,
    Lee et al.).
@@ -190,9 +190,9 @@ theories containing gravitational scalars.
 
 Key observations:
 
-- **Brans-Dicke:** A massless scalar requires omega > 40,000 to satisfy
+- **Brans-Dicke:** A massless scalar requires `ω > 40,000` to satisfy
   Cassini. This is a fine-tuning problem — nothing in the theory explains
-  why omega should be so large.
+  why `ω` should be so large.
 
 - **f(R) gravity:** The scalar (scalaron) is effectively massless in vacuum
   but acquires an environment-dependent mass through the chameleon mechanism.
@@ -223,7 +223,7 @@ The central point of this appendix deserves emphasis. In most theories
 with extra dimensions or gravitational scalars, consistency with solar-
 system tests requires one of the following:
 
-1. **Fine-tuning a coupling constant** (Brans-Dicke with large omega).
+1. **Fine-tuning a coupling constant** (Brans-Dicke with large `ω`).
 2. **Invoking a screening mechanism** (chameleon, symmetron, Vainshtein).
 3. **Assuming moduli stabilization** from unspecified UV physics (string
    compactifications).
@@ -237,14 +237,14 @@ from the same Casimir energy that:
 
 The mass is not an additional input. It is a derived quantity:
 
-    m_phi = hbar c / R_0   where R_0 is fixed by Lambda_obs
+    m_φ = ℏc / R₀       (where R₀ is fixed by Λ_{obs})
 
-Given the observed dark energy density Lambda_obs ~ 10^{-122} M_Pl^4, the
-Casimir calculation yields R_0 ~ 21 um, which gives m_phi ~ 9.4 meV, which
-gives a Yukawa range of ~21 um, which is exponentially smaller than any
+Given the observed dark energy density `Λ_{obs} ~ 10⁻¹²² M_{Pl}⁴`, the
+Casimir calculation yields `R₀ ~ 21 μm`, which gives `m_φ ~ 9.4 meV`, which
+gives a Yukawa range of `~ 21 μm`, which is exponentially smaller than any
 solar-system scale. The chain of reasoning is:
 
-    Lambda_obs --> R_0 --> m_phi --> lambda_phi << 1 AU --> gamma = 1
+    Λ_{obs} → R₀ → m_φ → λ_φ ≪ 1 AU → γ = 1
 
 Every link is determined. There is no freedom to adjust. The framework
 either passes the Cassini test or it does not — and it passes, by an
@@ -252,70 +252,68 @@ absurd margin.
 
 ---
 
-## I.7 Formal Derivation of gamma_eff
+## I.7 Formal Derivation of `γ_{eff}`
 
 For completeness, we sketch the derivation of the effective PPN parameter
 in the presence of a massive scalar.
 
 Starting from the 4D effective action after KK reduction (Appendix D):
 
-    S = integral d^4x sqrt(-g) [ (1/16piG) R - (1/2)(d phi)^2
-        - (1/2) m_phi^2 phi^2 + L_matter(g_mu_nu, phi) ]
+    S = ∫ d⁴x √(−g) [ (1/16πG) R − (1/2)(∂φ)² − (1/2) m_φ² φ² + L_{matter}(g_{μν}, φ) ]
 
-The linearized field equations around flat space (g_mu_nu = eta_mu_nu + h_mu_nu,
-phi = phi_0 + delta_phi) give, for a static point source of mass M:
+The linearized field equations around flat space (`g_{μν} = η_{μν} + h_{μν}`,
+`φ = φ₀ + δφ`) give, for a static point source of mass M:
 
-    h_00 = 2GM/r + 2 alpha_phi^2 (GM/r) exp(-m_phi r)
-    h_ij = delta_ij [ 2GM/r - 2 alpha_phi^2 (GM/r) exp(-m_phi r) ]
+    h₀₀ = 2GM/r + 2 α_φ² (GM/r) exp(−m_φ r)
+    h_{ij} = δ_{ij} [ 2GM/r − 2 α_φ² (GM/r) exp(−m_φ r) ]
 
-where alpha_phi characterizes the scalar-matter coupling strength
-(alpha_phi ~ 1 for a KK scalar).
+where `α_φ` characterizes the scalar-matter coupling strength
+(`α_φ ~ 1` for a KK scalar).
 
-The PPN parameter gamma is defined by the ratio of spatial curvature to
+The PPN parameter `γ` is defined by the ratio of spatial curvature to
 time curvature in the metric of a point mass:
 
-    gamma = - h_ij / (delta_ij h_00)
+    γ = − h_{ij} / (δ_{ij} h₀₀)
 
-For a massless scalar (m_phi = 0):
+For a massless scalar (`m_φ = 0`):
 
-    gamma = (1 - alpha_phi^2) / (1 + alpha_phi^2) = 1/2   (alpha_phi = 1)
+    γ = (1 − α_φ²) / (1 + α_φ²) = 1/2   (α_φ = 1)
 
-For a massive scalar at r >> 1/m_phi:
+For a massive scalar at `r ≫ 1/m_φ`:
 
-    gamma_eff = [1 - alpha_phi^2 exp(-m_phi r)] / [1 + alpha_phi^2 exp(-m_phi r)]
-              --> 1   as   m_phi r --> infinity
+    γ_{eff} = [1 − α_φ² exp(−m_φ r)] / [1 + α_φ² exp(−m_φ r)]
+            → 1   as   m_φ r → ∞
 
-At r = 1 AU:
+At `r = 1` AU:
 
-    m_phi r = r / lambda_phi = 7.1 x 10^{15}
+    m_φ r = r / λ_φ = 7.1 × 10^{15}
 
-and gamma_eff = 1 to all digits that could ever be measured.
+and `γ_{eff} = 1` to all digits that could ever be measured.
 
 ---
 
 ## I.8 Additional Solar-System Tests
 
-The Cassini bound is the tightest constraint on gamma, but it is not the
+The Cassini bound is the tightest constraint on `γ`, but it is not the
 only solar-system test. We briefly confirm consistency with other tests.
 
 **Perihelion precession of Mercury.** The anomalous precession depends on
-the PPN parameters beta and gamma. A massive scalar with m_phi r >> 1
+the PPN parameters `β` and `γ`. A massive scalar with `m_φ r ≫ 1`
 contributes zero correction to both. The framework predicts the standard
 GR value of 42.98 arcsec/century.
 
 **Nordtvedt effect.** Lunar laser ranging constrains violations of the
-strong equivalence principle via the Nordtvedt parameter eta = 4(beta - 1)
-- (gamma - 1). With gamma = beta = 1, eta = 0 identically.
+strong equivalence principle via the Nordtvedt parameter `η = 4(β − 1) − (γ − 1)`. With `γ = β = 1`, `η = 0` identically.
 
 **Gravitational redshift.** Tested by Gravity Probe A and atomic clock
-comparisons. The scalar does not modify the redshift at distances r >> lambda_phi.
+comparisons. The scalar does not modify the redshift at distances `r ≫ λ_φ`.
 
 **Frame dragging.** Measured by Gravity Probe B and LAGEOS/LARES. These
 probe the gravitomagnetic sector, which is controlled by the vector part
-of the KK decomposition (the gauge field A_mu), not the scalar. The scalar
+of the KK decomposition (the gauge field `A_μ`), not the scalar. The scalar
 mass is irrelevant here.
 
-In every case, the exponential suppression exp(-m_phi r) renders the scalar
+In every case, the exponential suppression `exp(−m_φ r)` renders the scalar
 undetectable at solar-system scales. The framework is consistent with the
 full suite of precision gravitational tests.
 
@@ -353,9 +351,9 @@ full suite of precision gravitational tests.
 
 *This appendix confirms that the 5D e-circle framework is trivially
 consistent with the most precise solar-system test of gravity. The scalar
-field is naturally massive, with a Yukawa range of ~21 um set by the
+field is naturally massive, with a Yukawa range of `~21` um set by the
 Casimir stabilization. At solar-system scales, its effects are suppressed
-by a factor of exp(-7 x 10^{15}), which is zero to any conceivable
+by a factor of `exp(−7 × 10¹⁵)`, which is zero to any conceivable
 measurement precision. The framework passes the Cassini test — and every
 other solar-system test — without fine-tuning, screening mechanisms, or
 additional assumptions.*

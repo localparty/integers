@@ -20,7 +20,7 @@ by entanglement.
 It is a direct consequence of the geometry.**
 
 We established in Section 3.2 that entanglement is a conservation constraint on
-e-coordinates: e₁ + e₂ = C. Two entangled particles share an e-constraint. In
+e-coordinates: `e₁ + e₂ = C`. Two entangled particles share an e-constraint. In
 the full five-dimensional space, they are connected through the e-dimension even
 when separated in (x, y, z). The e-dimension provides the geometric connection
 that ER=EPR identifies as a wormhole.
@@ -28,7 +28,7 @@ that ER=EPR identifies as a wormhole.
 The identification is precise: the Einstein-Rosen bridge is the e-dimension tube
 connecting the two particles. The wormhole is not a feature of four-dimensional
 spacetime. It is a path through the e-dimension along which the conservation
-constraint e₁ + e₂ = C propagates. From our four-dimensional perspective, this
+constraint `e₁ + e₂ = C` propagates. From our four-dimensional perspective, this
 path is invisible — we see only two particles with correlated measurements and
 no visible connection, exactly as the ER=EPR conjecture describes.
 
@@ -132,11 +132,11 @@ economy over the Bohmian approach.
 
 ## 6.5 Connections to Established Mathematical Physics
 
-**Geometric quantization.** The mathematical structure of the framework — a U(1)
+**Geometric quantization.** The mathematical structure of the framework — a `U(1)`
 principal bundle with wavefunctions as sections — is the central object of the
 geometric quantization program (Kostant 1970, Souriau 1970, Woodhouse 1992). In
-geometric quantization, the "prequantum bundle" is a U(1) bundle over classical
-phase space whose connection has curvature ω/ℏ (the symplectic form). Quantum
+geometric quantization, the "prequantum bundle" is a `U(1)` bundle over classical
+phase space whose connection has curvature `ω/ℏ` (the symplectic form). Quantum
 states are sections of this bundle. The correspondence with our framework is exact:
 the prequantum bundle is the e-bundle, the connection is the e-connection, the
 phase of the section is the e-coordinate. The distinction is ontological: geometric
@@ -149,14 +149,14 @@ Weyl in 1918. Weyl proposed that electromagnetism arises from local geometric
 transformations of a fiber — originally scale transformations (rejected by Einstein
 because they would make atomic spectra path-dependent), then phase transformations
 (Weyl 1929, the foundation of gauge theory). Our framework takes Weyl's 1929
-insight literally: the U(1) phase is not a gauge redundancy but a physical
+insight literally: the `U(1)` phase is not a gauge redundancy but a physical
 coordinate. Einstein's objection to Weyl's 1918 theory does not apply — absolute
 phase is unobservable (Postulate 2.2.2) — and the path-dependent phases that
 concerned Einstein are exactly the Aharonov-Bohm effect (Section 4.1), now a
 prediction rather than a problem.
 
 **Ryu-Takayanagi formula.** If the e-dimension is the holographic direction (as
-Section 6.2 suggests), the Ryu-Takayanagi formula S_A = Area(γ_A)/(4G_N) — which
+Section 6.2 suggests), the Ryu-Takayanagi formula `S_A = Area(γ_A)/(4G_N)` — which
 relates entanglement entropy to the area of a minimal bulk surface in AdS/CFT
 (Ryu & Takayanagi 2006) — should have a realization in the e-dimension framework.
 The e-conservation constraints linking region A to its complement define a
@@ -181,11 +181,11 @@ If the e-dimension has three stable topological regions — three valleys in a c
 potential — then three generations follow naturally. Each generation is the same
 particle species occupying a different stable e-region.
 
-**The fine structure constant.** The fine structure constant α ≈ 1/137 is a
+**The fine structure constant.** The fine structure constant `α ≈ 1/137` is a
 dimensionless number that sets the strength of electromagnetic interactions. Its
 value is measured but not derived from any deeper principle. In the 5D framework,
-α may be related to the geometric ratio between the e-dimension's circumference
-and some natural length scale of the theory. If e-space geometry determines α,
+`α` may be related to the geometric ratio between the e-dimension's circumference
+and some natural length scale of the theory. If e-space geometry determines `α`,
 that would be one of the most profound results in theoretical physics.
 
 **Dark matter as e-orthogonal matter.** Dark matter interacts gravitationally
@@ -206,15 +206,15 @@ universe. The universe exists because e-space is slightly right-handed.
 Swampland Distance Conjecture and the species bound, that quantum gravity
 requires a single large compact dimension at the micrometer scale — with
 KK gravitons as dark matter and Casimir energy as dark energy. Their
-predicted scale (1–30 μm) overlaps with our Casimir prediction (8–32 μm).
+predicted scale (1–30 `μm`) overlaps with our Casimir prediction (8–32 `μm`).
 Two independent derivations, from completely different starting points,
 arrive at the same physical setup. The experimental tests (short-range
 gravity, X-ray line searches) will test both simultaneously.
 
 **Note on the e-circle radius.** Two configurations of the e-circle —
-the circle scenario (S¹, L ~ 130 μm) and the orbifold scenario (S¹/Z₂,
-R ~ 12 μm) — are defined in Section 2.7.2. The predictions below use
-the circle scenario; the orbifold scenario shifts R downward and tightens
+the circle scenario (`S¹`, `L ~ 130 μm`) and the orbifold scenario (`S¹/Z₂`,
+`R ~ 12 μm`) — are defined in Section 2.7.2. The predictions below use
+the circle scenario; the orbifold scenario shifts `R` downward and tightens
 the experimental bounds.
 
 **Dark energy as Casimir energy of the e-circle.** The e-dimension, being compact,
@@ -224,110 +224,108 @@ periodic boundary conditions, fermions anti-periodic (established in Appendix B.
 The Standard Model contains more fermionic than bosonic degrees of freedom (weighted
 by the 7/8 factor from quantum statistics), giving a positive net Casimir energy —
 the correct sign for dark energy. Setting this energy equal to the observed dark
-energy density ρ_Λ ≈ 5.4 × 10⁻¹⁰ J/m³ gives a predicted e-circle circumference:
+energy density `ρ_Λ ≈ 5.4 × 10⁻¹⁰ J/m³` gives a predicted e-circle circumference:
 
     L ~ 130 μm  (range: 50–200 μm from field content uncertainty)
 
 corresponding to a Yukawa-type correction to gravitational force at the scale
-λ = L/(2π) ~ 21 μm. Current experiments (Lee et al. 2020) have tested the
-inverse-square law down to ~52 μm; the predicted scale is within reach of
+`λ = L/(2π) ~ 21 μm`. Current experiments (Lee et al. 2020) have tested the
+inverse-square law down to `~52 μm`; the predicted scale is within reach of
 near-future short-range gravity experiments. This is the framework's first
 quantitative, falsifiable prediction that distinguishes it from a pure
 interpretation of quantum mechanics. The calculation is developed in the
 companion document §08-casimir-dark-energy.md; caveats include the radius
 stabilization problem and the tension between this scale and the KK estimate
-of R_e from the fine structure constant.
+of `R_e` from the fine structure constant.
 
 **Dark energy as e-dimension expansion.** Alternatively, if the e-circle's
 circumference grows with cosmic time, the expansion contributes an effective
 cosmological constant. This scenario is constrained by quasar spectra bounds on
-α variation (|Δα/α| < 10⁻⁵, Webb et al. 2011), which limit the expansion rate to
-~10⁻⁵ of the Hubble rate — too slow to explain dark energy alone unless a symmetry
-protects α while R_e changes.
+`α` variation (`|Δα/α| < 10⁻⁵`, Webb et al. 2011), which limit the expansion rate to
+`~10⁻⁵` of the Hubble rate — too slow to explain dark energy alone unless a symmetry
+protects `α` while `R_e` changes.
 
-**The Z₂ orbifold: dark matter, generations, and a testable dark photon.**
-The spin structure of the e-circle (Appendix B) implies a natural Z₂ action
-φ → φ + π. Modding out by this Z₂ produces an orbifold S¹/Z₂ with two
-fixed points: the visible sector at φ = 0 and a geometrically distinct
-hidden brane at φ = π. Matter localized at the hidden brane gravitates
+**The `Z₂` orbifold: dark matter, generations, and a testable dark photon.**
+The spin structure of the e-circle (Appendix B) implies a natural `Z₂` action
+`φ → φ + π`. Modding out by this `Z₂` produces an orbifold `S¹/Z₂` with two
+fixed points: the visible sector at `φ = 0` and a geometrically distinct
+hidden brane at `φ = π`. Matter localized at the hidden brane gravitates
 normally but couples to no SM force — it is dark matter by construction.
-If the hidden brane carries its own U(1)' gauge field, kinetic mixing with
-the SM photon is predicted at ε ~ 5 × 10⁻⁴ (from KK tower mediation:
-α_EM × π²/6 × exp(−π)), testable by LDMX and LHCb Run 3.
-Additionally, a conjectured Z₃ symmetry of the e-circle would give three
+If the hidden brane carries its own `U(1)'` gauge field, kinetic mixing with
+the SM photon is predicted at `ε ~ 5 × 10⁻⁴` (from KK tower mediation:
+`α_EM × π²/6 × exp(−π)`), testable by LDMX and LHCb Run 3.
+Additionally, a conjectured `Z₃` symmetry of the e-circle would give three
 visible fixed points, providing a geometric basis for three fermion
 generations. The fine structure constant may be derived from the
-configuration torus area 4π² weighted by the per-generation charged fermion
-content Σ N_c Q² = 8/3, giving a bare coupling 1/α(M_P) = 32π²/3 ≈ 105.3
-at the Planck scale. The full SM electroweak running from M_P to zero
-energy adds ~32, yielding 1/α(0) ≈ 137.0 ± 0.3 — within 0.12% of the
+configuration torus area `4π²` weighted by the per-generation charged fermion
+content `Σ N_c Q² = 8/3`, giving a bare coupling `1/α(M_P) = 32π²/3 ≈ 105.3`
+at the Planck scale. The full SM electroweak running from `M_P` to zero
+energy adds ~32, yielding `1/α(0) ≈ 137.0 ± 0.3` — within 0.12% of the
 experimental 137.036. The full treatment is given in Appendix W.
 
-**The strong CP problem from orbifold topology.** The Z₂ orbifold requires 5D
-gauge fields living on the full interval [0, πR]. The homotopy group that gives
-rise to the QCD theta parameter in 4D is π₃(SU(3)) = Z. In 5D, the relevant
-group is π₄(SU(3)) = 0 (Bott periodicity) — there are no topologically
+**The strong CP problem from orbifold topology.** The `Z₂` orbifold requires 5D
+gauge fields living on the full interval `[0, πR]`. The homotopy group that gives
+rise to the QCD theta parameter in 4D is `π₃(SU(3)) = Z`. In 5D, the relevant
+group is `π₄(SU(3)) = 0` (Bott periodicity) — there are no topologically
 non-trivial gauge configurations. The theta parameter is absent, not small:
-θ = 0 topologically enforced. KK instanton contributions are suppressed by
-exp(−10³⁰) (Appendix J). The prediction is stark: no QCD axion. If ADMX,
+`θ = 0` topologically enforced. KK instanton contributions are suppressed by
+`exp(−10³⁰)` (Appendix J). The prediction is stark: no QCD axion. If ADMX,
 ABRACADABRA, or IAXO find the QCD axion, this mechanism is falsified. The full
 derivation is in Appendix X.
 
-**Neutrino mass ordering from the Z₃ geometry.** The three bulk right-handed
+**Neutrino mass ordering from the `Z₃` geometry.** The three bulk right-handed
 neutrinos required by the Casimir calculation (Appendix W, §W.9.1) are
-naturally localized at the three Z₃ fixed points of the orbifold at
+naturally localized at the three `Z₃` fixed points of the orbifold at
 different distances from the visible brane. The overlap with the brane-localized
 left-handed neutrinos generates a Dirac mass hierarchy: the right-handed
 neutrino closest to the brane produces the heaviest light neutrino, giving
-normal ordering m₃ > m₂ > m₁. The 5D fundamental scale M₅ = (M_P²/L)^{1/3}
-≈ 2.5 × 10¹⁴ GeV (the GUT scale, set geometrically by R = 12 μm) gives the
-neutrino mass scale v²/M₅ ≈ 0.24 eV — sub-eV, consistent with observation.
+normal ordering `m₃ > m₂ > m₁`. The 5D fundamental scale `M₅ = (M_P²/L)^{1/3} ≈ 2.5 × 10¹⁴` GeV (the GUT scale, set geometrically by `R = 12 μm`) gives the
+neutrino mass scale `v²/M₅ ≈ 0.24` eV — sub-eV, consistent with observation.
 JUNO began data taking in August 2025 and published first results in
 November 2025 (arXiv:2511.14593); the mass ordering determination is
 expected within its 6-year run. The full derivation is in Appendix Z.
 
-**The Hubble tension from hidden-brane dark radiation.** The Z₂ orbifold that
+**The Hubble tension from hidden-brane dark radiation.** The `Z₂` orbifold that
 produces geometric dark matter (above) also produces a hidden-brane thermal bath
 that is thermally decoupled from the visible sector. If the hidden brane was
-heated gravitationally during reheating to temperature T_hidden = ξ × T_visible,
-the mirror sector dark radiation contributes ΔN_eff^{mirror} = 6.14 × ξ⁴ to the
-CMB. Through the Planck N_eff–H₀ degeneracy (ΔH₀ ≈ 6.3 × ΔN_eff), this raises
-the CMB-inferred Hubble constant above the ΛCDM value. The allowed contribution
+heated gravitationally during reheating to temperature `T_{hidden} = ξ × T_{visible}`,
+the mirror sector dark radiation contributes `ΔN_{eff}^{mirror} = 6.14 × ξ⁴` to the
+CMB. Through the Planck `N_{eff}–H₀` degeneracy (`ΔH₀ ≈ 6.3 × ΔN_{eff}`), this raises
+the CMB-inferred Hubble constant above the `ΛCDM` value. The allowed contribution
 is bounded by two independent constraints: the updated BBN 2025 joint analysis
-(ξ < 0.384 at 2σ) and ACT DR6 (March 2025, the final ACT release, N_eff =
-2.86 ± 0.13), which is the binding constraint at ξ < 0.255 (2σ) to ξ < 0.397
-(3σ). Under these constraints, the framework predicts H₀ ≈ 68.0–68.7 km/s/Mpc
-— above ΛCDM (67.4) and in the direction of the non-distance-ladder consensus
-(69.4 ± 0.3, Pantos & Perivolaropoulos 2026), but not a full resolution of the
+(`ξ < 0.384` at `2σ`) and ACT DR6 (March 2025, the final ACT release, `N_{eff} = 2.86 ± 0.13`), which is the binding constraint at `ξ < 0.255` (`2σ`) to `ξ < 0.397`
+(`3σ`). Under these constraints, the framework predicts `H₀ ≈ 68.0–68.7` km/s/Mpc
+— above `ΛCDM` (67.4) and in the direction of the non-distance-ladder consensus
+(`69.4 ± 0.3`, Pantos & Perivolaropoulos 2026), but not a full resolution of the
 tension. The prediction is a two-tier structure: Tier 1 (ACT DR6-consistent,
-ξ < 0.35) gives H₀ ≈ 68.0–68.3; Tier 2 (BBN-limited, ξ up to 0.384) gives
-H₀ ≈ 68.3–68.7 but is in 2.5–2.8σ tension with ACT DR6. CMB-S4 (target
-σ(N_eff) ≈ 0.03) will definitively test which tier is realized. The full
+`ξ < 0.35`) gives `H₀ ≈ 68.0–68.3`; Tier 2 (BBN-limited, `ξ` up to 0.384) gives
+`H₀ ≈ 68.3–68.7` but is in `2.5–2.8σ` tension with ACT DR6. CMB-S4 (target
+`σ(N_{eff}) ≈ 0.03`) will definitively test which tier is realized. The full
 derivation, including the ACT DR6 tension analysis and the Pantos &
 Perivolaropoulos reframing, is in Appendix Y.
 
 **Precision cosmology from the baryogenesis law (Paper 2).** The three bulk
 right-handed neutrinos (required by the Casimir calculation, Appendix W) also
-drive leptogenesis on the Z₂ orbifold. Because the hidden brane is cooler
-(ξ = T_hidden/T_visible), two effects compound: the entropy asymmetry (1/ξ³)
-from different photon bath densities, and the washout suppression (1/ξ²) from
+drive leptogenesis on the `Z₂` orbifold. Because the hidden brane is cooler
+(`ξ = T_{hidden}/T_{visible}`), two effects compound: the entropy asymmetry (`1/ξ³`)
+from different photon bath densities, and the washout suppression (`1/ξ²`) from
 weaker sphaleron processes on the colder brane. Together they give:
 
     Ω_DM / Ω_b = 1/ξ²
 
-The observed ratio 5.36 therefore determines ξ = 0.432 without any free
+The observed ratio 5.36 therefore determines `ξ` = 0.432 without any free
 parameter. From this single number, the CAMB Boltzmann solver predicts:
-t₀ = 13.47–13.60 Gyr (age of the universe), H₀ = 68.7–68.8 km/s/Mpc,
-S8 = 0.753–0.785 (resolving the 4σ weak lensing tension without tuning),
-r_d = 145.8–146.6 Mpc (testable by DESI DR3), and H(z) peaking 4–6%
-above ΛCDM at z ∼ 0.3–0.7 (testable by DESI DR3 at 8σ). The cosmic
-coincidence Ω_DM/Ω_b ≈ 5 is explained. The required ξ ≈ 0.43 implies
-N_eff = 3.31, in 3–4σ tension with ACT DR6 — the framework's primary
-open issue, definitively tested by CMB-S4 (σ(N_eff) ≈ 0.03). The full
+`t₀` = 13.47–13.60 Gyr (age of the universe), `H₀` = 68.7–68.8 km/s/Mpc,
+S8 = 0.753–0.785 (resolving the `4σ` weak lensing tension without tuning),
+`r_d` = 145.8–146.6 Mpc (testable by DESI DR3), and H(z) peaking 4–6%
+above `ΛCDM` at z ∼ 0.3–0.7 (testable by DESI DR3 at `8σ`). The cosmic
+coincidence `Ω_DM/Ω_b ≈ 5` is explained. The required `ξ ≈ 0.43` implies
+`N_{eff} = 3.31`, in `3–4σ` tension with ACT DR6 — the framework's primary
+open issue, definitively tested by CMB-S4 (`σ(N_{eff}) ≈ 0.03`). The full
 derivation and CAMB computation are in Paper 2.
 
 **Field content in the circle scenario.** The circle scenario counts
-N_B = 28 bosonic and N_F = 90 fermionic degrees of freedom (the full
+`N_B` = 28 bosonic and `N_F` = 90 fermionic degrees of freedom (the full
 Standard Model). This requires all SM fields to propagate on the
 e-circle — as in universal extra dimension (UED) models where the Higgs
 mechanism operates as a brane-localized effect, giving mass to the 4D
@@ -336,18 +334,18 @@ Casimir computation (Appelquist, Cheng & Dobrescu 2001, *Phys. Rev. D*
 **64**, 035002). In that setup, the Casimir energy on S¹ includes the
 full SM field content because the KK tower contribution dominates the
 Casimir sum regardless of zero-mode mass. In the orbifold scenario (Appendix W),
-SM fields are brane-localized by the Z₂ projection and only bulk fields
-(gravity + 3ν_R) contribute. The two scenarios represent physically distinct
+SM fields are brane-localized by the `Z₂` projection and only bulk fields
+(gravity + `3ν_R`) contribute. The two scenarios represent physically distinct
 configurations of the framework: the circle scenario corresponds to a UED
-setup (L ~ 130 μm); the orbifold is the phenomenologically richer one
-(R ~ 12 μm, with dark sector and baryogenesis predictions).
+setup (L ~ 130 `μm`); the orbifold is the phenomenologically richer one
+(R ~ 12 `μm`, with dark sector and baryogenesis predictions).
 
 These extensions are presented to illustrate the framework's generative potential.
 Each represents a genuine open question. The Casimir scenario is the strongest
 because it gives a concrete testable number; the dark photon prediction and the
 neutrino mass ordering are the most falsifiable in the near term; the strong CP
-topological resolution is falsified if the QCD axion is found; the H₀ prediction
-is testable by TRGB precision measurements and CMB-S4 ΔN_eff detection; and the
+topological resolution is falsified if the QCD axion is found; the `H₀` prediction
+is testable by TRGB precision measurements and CMB-S4 `ΔN_eff` detection; and the
 baryogenesis law (Paper 2) produces zero-parameter cosmological predictions
 verified by CAMB and testable by DESI DR3 and CMB-S4.
 

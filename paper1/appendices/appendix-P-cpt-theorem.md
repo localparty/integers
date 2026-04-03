@@ -15,8 +15,8 @@ local quantum field theory with a Hermitian Hamiltonian is invariant under
 the combined operation of:
 
 - **C** (charge conjugation): particle ↔ antiparticle
-- **P** (parity): spatial inversion r → −r
-- **T** (time reversal): t → −t
+- **P** (parity): spatial inversion `r → −r`
+- **T** (time reversal): `t → −t`
 
 Individual C, P, or T symmetries may be violated (and ARE violated in the
 weak interaction), but the combined CPT is exact. The theorem is proved in
@@ -36,9 +36,9 @@ involving the e-coordinate:
 
 Charge conjugation maps a particle to its antiparticle. In the e-dimension
 framework:
-- A particle with e-winding number n has charge proportional to n
+- A particle with e-winding number `n` has charge proportional to `n`
   (from the KK identification of charge with e-momentum, Appendix D)
-- The antiparticle has e-winding −n (opposite winding direction)
+- The antiparticle has e-winding `−n` (opposite winding direction)
 - Charge conjugation is therefore the reversal of the e-coordinate:
 
     C: ψ → e-reversal → n → −n
@@ -53,7 +53,7 @@ Parity inverts the spatial coordinates:
 
     P: (x, y, z) → (−x, −y, −z)
 
-In the 5D framework, parity acts on the spatial base manifold M³ and
+In the 5D framework, parity acts on the spatial base manifold `M³` and
 does NOT act on the e-coordinate. The helix reverses its spatial handedness
 but keeps its e-winding direction. Since spin is helical chirality
 (Section 3.4), parity flips the spin orientation relative to momentum —
@@ -66,7 +66,7 @@ Time reversal inverts the time coordinate:
     T: t → −t
 
 In the 5D framework, time reversal reverses the direction of e-evolution:
-since ∂e/∂t = −E/ℏ (Section 3.3), reversing t reverses the sign of the
+since `∂e/∂t = −E/ℏ` (Section 3.3), reversing `t` reverses the sign of the
 energy contribution to the e-advance. Combined with complex conjugation
 (anti-unitary nature of T), this gives the standard time-reversal
 transformation.
@@ -81,13 +81,13 @@ This is the **total inversion** of the 5D spacetime: all spatial coordinates
 inverted, time inverted, and e-coordinate inverted. In the 5D geometry, CPT
 is the composition of:
 
-1. Spatial inversion (P): x → −x
-2. Temporal inversion (T): t → −t
-3. E-reversal (C): e → −e (equivalently, ψ → 2π − ψ on the e-circle)
+1. Spatial inversion (P): `x → −x`
+2. Temporal inversion (T): `t → −t`
+3. E-reversal (C): `e → −e` (equivalently, `ψ → 2π − ψ` on the e-circle)
 
-The combined operation (x, t, ψ) → (−x, −t, 2π − ψ) is an orientation-
+The combined operation `(x, t, ψ) → (−x, −t, 2π − ψ)` is an orientation-
 reversing isometry of the 5D spacetime — it reverses the orientation of the
-full 5D manifold M⁴ × S¹.
+full 5D manifold `M⁴ × S¹`.
 
 ---
 
@@ -95,9 +95,9 @@ full 5D manifold M⁴ × S¹.
 
 ### P.3.1 The Theorem
 
-**Theorem P.1 (CPT Invariance).** *The 5D Einstein-Hilbert action on
-P(M⁴, U(1)) is invariant under the combined CPT operation
-(x, t, ψ) → (−x, −t, 2π − ψ).*
+**Theorem P.1** *(CPT Invariance).* *The 5D Einstein-Hilbert action on
+`P(M⁴, U(1))` is invariant under the combined CPT operation
+`(x, t, ψ) → (−x, −t, 2π − ψ)`.*
 
 ### P.3.2 Proof
 
@@ -106,13 +106,13 @@ The 5D Einstein-Hilbert action is:
     S = (1/16πG₅) ∫ d⁵x √(−Ĝ) R̂
 
 Under CPT: each coordinate is inverted, so the Jacobian of the
-transformation is det(∂x'/∂x) = (−1)⁵ = −1 (five inversions in 5
+transformation is `det(∂x'/∂x) = (−1)⁵ = −1` (five inversions in 5
 dimensions). The metric transforms as:
 
     Ĝ_{AB}(x') = Ĝ_{AB}(−x)
 
-For a metric that depends on x only through x² (as for any
-rotationally/Lorentz invariant configuration): Ĝ_{AB}(−x) = Ĝ_{AB}(x).
+For a metric that depends on `x` only through `x²` (as for any
+rotationally/Lorentz invariant configuration): `Ĝ_{AB}(−x) = Ĝ_{AB}(x)`.
 
 The Ricci scalar is a scalar under coordinate transformations:
 
@@ -129,7 +129,7 @@ Therefore:
     S[Ĝ'] = (1/16πG₅) ∫ d⁵x' √(−Ĝ(x')) R̂(x')
            = (1/16πG₅) ∫ d⁵x √(−Ĝ(x)) R̂(x) = S[Ĝ]
 
-The action is invariant. ∎
+The action is invariant.
 
 ### P.3.3 Extension to Matter
 
@@ -154,7 +154,7 @@ independent results proved from overlapping axioms. In the 5D framework,
 they are two aspects of a single geometric structure:
 
 **Spin-statistics** (Appendix B): follows from the topology of the
-e-circle (π₁(SO(d)) = Z₂ restricts winding numbers to ½Z, and the exchange
+e-circle (`π₁(SO(d)) = Z₂` restricts winding numbers to `½Z`, and the exchange
 phase is the holonomy of the e-connection).
 
 **CPT invariance** (this appendix): follows from the geometry of the
@@ -162,8 +162,8 @@ e-circle (the total inversion of 5D spacetime is a symmetry of the action).
 
 Both emerge from the same object — the compact, circular e-dimension —
 through different aspects of its structure:
-- Its **topology** (S¹ has π₁ = Z) gives spin-statistics
-- Its **geometry** (S¹ admits the reversal ψ → 2π − ψ) gives CPT
+- Its **topology** (`S¹` has `π₁ = Z`) gives spin-statistics
+- Its **geometry** (`S¹` admits the reversal `ψ → 2π − ψ`) gives CPT
 
 The CPT-spin-statistics connection — the deep relationship between the two
 theorems that Streater-Wightman proved from axioms — is here a geometric
@@ -178,9 +178,9 @@ relationship between topology and isometry of the same manifold.
 C (charge conjugation) alone is violated in the weak interaction: neutrinos
 are left-handed, antineutrinos right-handed. In the e-dimension framework,
 C-violation means the e-circle has a preferred winding direction for certain
-couplings — the weak interaction couples differently to n and −n e-winding
+couplings — the weak interaction couples differently to `n` and `−n` e-winding
 states. This requires a chiral coupling to the e-circle, which breaks the
-ψ → 2π − ψ symmetry for the weak sector alone.
+`ψ → 2π − ψ` symmetry for the weak sector alone.
 
 ### P.5.2 P Violation
 
@@ -220,10 +220,10 @@ CPT invariance has been tested to extraordinary precision:
 
 | Test | System | Bound on CPT violation | Status |
 |------|--------|----------------------|--------|
-| Mass equality | K⁰ vs K̄⁰ | |m − m̄|/m < 10⁻¹⁸ | Consistent |
-| Magnetic moment | e⁻ vs e⁺ | |g − ḡ|/g < 10⁻¹² | Consistent |
-| Charge-to-mass | p vs p̄ | |q/m − q̄/m̄| < 10⁻¹² | Consistent (BASE) |
-| Hydrogen spectroscopy | H vs H̄ | |1S-2S| < 10⁻¹² | Consistent (ALPHA) |
+| Mass equality | `K⁰` vs `K̄⁰` | `(m − m̄)/m < 10⁻¹⁸` | Consistent |
+| Magnetic moment | `e⁻` vs `e⁺` | `(g − ḡ)/g < 10⁻¹²` | Consistent |
+| Charge-to-mass | p vs `p̄` | `(q/m − q̄/m̄) < 10⁻¹²` | Consistent (BASE) |
+| Hydrogen spectroscopy | H vs `H̄` | 1S-2S `< 10⁻¹²` | Consistent (ALPHA) |
 
 All tests are consistent with exact CPT invariance — as the 5D framework
 predicts from general covariance.
@@ -233,19 +233,14 @@ predicts from general covariance.
 ## P.7 What This Establishes
 
 **CPT invariance is derived from 5D general covariance.** The combined
-inversion (x, t, ψ) → (−x, −t, 2π − ψ) is an isometry of the 5D
+inversion `(x, t, ψ) → (−x, −t, 2π − ψ)` is an isometry of the 5D
 spacetime that leaves the action invariant. No additional axioms are needed.
 
 **The CPT-spin-statistics connection is geometric.** Both theorems follow
 from the e-circle: spin-statistics from its topology (winding numbers),
 CPT from its geometry (reversal isometry). The deep connection between them,
 proved axiomatically by Streater-Wightman, is here a consequence of the
-relationship between the topology and geometry of S¹.
-
-**Individual symmetry violations are accommodated.** C, P, and CP violations
-arise from specific coupling structures in the e-dimension (chiral couplings,
-orientation-dependent terms). CPT is preserved because these structures are
-all covariant under the TOTAL 5D inversion.
+relationship between the topology and geometry of `S¹`.
 
 ---
 

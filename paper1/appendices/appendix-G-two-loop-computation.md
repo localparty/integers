@@ -22,20 +22,20 @@ is two-loop divergent. The counterterm is:
 This is a cubic curvature invariant — the Gauss-Bonnet-like contraction of
 three Riemann tensors. It cannot be absorbed into the Einstein-Hilbert action
 (which contains at most linear curvature terms). Therefore, renormalizing the
-two-loop divergence requires adding an R³ counterterm to the action, which
+two-loop divergence requires adding an `R³` counterterm to the action, which
 generates new divergences at three loops requiring further counterterms, ad
 infinitum. This is the non-renormalizability of 4D quantum gravity.
 
-The coefficient 209/2880 was computed by evaluating all two-loop vacuum
+The coefficient `209/2880` was computed by evaluating all two-loop vacuum
 diagrams for the graviton — primarily the sunset (three-propagator) and
 figure-eight topologies.
 
 ### G.1.2 Why One Loop Was Fine
 
 At one loop, 't Hooft and Veltman (1974) showed that pure gravity is
-actually FINITE — the potential R² counterterms vanish on-shell (by the
+actually FINITE — the potential `R²` counterterms vanish on-shell (by the
 Gauss-Bonnet identity in 4D). The first genuine divergence appears at two
-loops because it involves R³, which is not topological.
+loops because it involves `R³`, which is not topological.
 
 The KK result of Appendix F (one-loop finiteness) is therefore consistent
 with — but not more powerful than — the 4D result at one loop. The critical
@@ -63,25 +63,25 @@ vertex, inserted into a one-loop diagram.
 ### G.2.2 KK Mode Conservation
 
 At each graviton vertex in the KK theory, the total KK number is conserved
-(a consequence of the U(1) symmetry of the e-circle):
+(a consequence of the `U(1)` symmetry of the e-circle):
 
     Vertex (3-graviton): n₁ + n₂ = n₃
 
-where n₁, n₂ are incoming and n₃ is outgoing (or any permutation).
+where `n₁`, `n₂` are incoming and `n₃` is outgoing (or any permutation).
 
-For the sunset diagram with external KK number n_ext = 0 (we compute the
+For the sunset diagram with external KK number `n_ext = 0` (we compute the
 correction to the massless graviton):
 
-- Line 1 carries KK number n
-- Line 2 carries KK number m
-- Line 3 carries KK number −(n + m) (by conservation at both vertices)
+- Line 1 carries KK number `n`
+- Line 2 carries KK number `m`
+- Line 3 carries KK number `−(n + m)` (by conservation at both vertices)
 
 The sunset contribution is therefore a double sum:
 
     Γ^{(2)}_{sunset} ∝ Σ_{n,m ∈ Z} I_{sunset}(n, m, R; p)
 
-where I_{sunset} is the 4D loop integral with three massive propagators of
-masses |n|/R, |m|/R, and |n+m|/R.
+where `I_{sunset}` is the 4D loop integral with three massive propagators of
+masses `|n|/R`, `|m|/R`, and `|n+m|/R`.
 
 ### G.2.3 The Figure-Eight: Automatically Finite
 
@@ -89,7 +89,7 @@ The figure-eight factorizes:
 
     Γ^{(2)}_{fig8} = [Γ^{(1)}]² × (coupling factor)
 
-Since Γ^{(1)} is finite (Appendix F), the square is finite. The figure-eight
+Since `Γ^{(1)}` is finite (Appendix F), the square is finite. The figure-eight
 contribution to the two-loop effective action is therefore **automatically
 finite** from the one-loop result.
 
@@ -101,12 +101,12 @@ This leaves the sunset as the critical computation.
 
 ### G.3.1 The 4D Momentum Integral
 
-For fixed KK numbers (n, m), the sunset integral in 4D Euclidean space is:
+For fixed KK numbers `(n, m)`, the sunset integral in 4D Euclidean space is:
 
     I_{sunset}(n, m) = ∫ d⁴k_E d⁴l_E ×
         N(k, l, p) / [(k² + μ_n²)(l² + μ_m²)((k+l+p)² + μ_{n+m}²)]
 
-where μ_n = |n|/R is the KK mass and N(k, l, p) is the numerator from the
+where `μ_n = |n|/R` is the KK mass and `N(k, l, p)` is the numerator from the
 graviton vertex structure.
 
 By power counting, the integral has superficial degree of divergence:
@@ -114,44 +114,44 @@ By power counting, the integral has superficial degree of divergence:
     D = 2 × 4 (loop momenta) − 3 × 2 (propagators) + V (vertex momenta)
     = 8 − 6 + V
 
-For the R³ counterterm: V = 6 (six derivatives at two vertices), giving
-D = 8. The integral diverges as Λ⁸ in a hard cutoff, or as 1/ε in
+For the `R³` counterterm: `V = 6` (six derivatives at two vertices), giving
+`D = 8`. The integral diverges as `Λ⁸` in a hard cutoff, or as `1/ε` in
 dimensional regularization.
 
 ### G.3.2 Dimensional Regularization of the 4D Integral
 
-In dimensional regularization (d = 4 − 2ε), the sunset integral evaluates
+In dimensional regularization (`d = 4 − 2ε`), the sunset integral evaluates
 to:
 
     I_{sunset}(n, m) = C(ε) × F(μ_n, μ_m, μ_{n+m}, p)
 
-where C(ε) contains the pole:
+where `C(ε)` contains the pole:
 
     C(ε) = 1/ε² + (finite terms in ε)
 
-and F is a function of the KK masses and external momentum.
+and `F` is a function of the KK masses and external momentum.
 
-The DIVERGENT part (the 1/ε² pole) is:
+The DIVERGENT part (the `1/ε²` pole) is:
 
     I_{sunset}^{div}(n, m) ∝ (1/ε²) × P(μ_n², μ_m², μ_{n+m}²)
 
-where P is a polynomial in the squared KK masses, determined by the
+where `P` is a polynomial in the squared KK masses, determined by the
 Seeley-DeWitt coefficients.
 
-For the R³ counterterm specifically, the mass dependence has been computed
+For the `R³` counterterm specifically, the mass dependence has been computed
 in the literature for general massive fields (Barvinsky & Vilkovisky 1990).
 The leading behavior for large KK masses is:
 
     I_{sunset}^{div}(n, m) → (1/ε²) × c₀     (mass-independent constant)
 
-for |n|, |m| >> 1. The KK masses drop out at leading order because the
+for `|n|`, `|m|` >> 1. The KK masses drop out at leading order because the
 divergence is UV (short-distance), where masses are irrelevant.
 
-For moderate KK numbers (|n|, |m| ~ 1), the mass corrections are:
+For moderate KK numbers (`|n|`, `|m|` ~ 1), the mass corrections are:
 
     I_{sunset}^{div}(n, m) = (1/ε²) [c₀ + c₂(μ_n² + μ_m² + μ_{n+m}²)/Λ² + ...]
 
-where Λ is the UV scale and c₂ is a computable coefficient.
+where `Λ` is the UV scale and `c₂` is a computable coefficient.
 
 ---
 
@@ -171,7 +171,7 @@ Under zeta regularization:
 
     Σ_{n=-∞}^{∞} 1 = 2ζ(0) + 1 = 2(−1/2) + 1 = 0
 
-Wait — this requires care. The sum Σ_{n=-∞}^{∞} 1 includes n = 0:
+Wait — this requires care. The sum `Σ_{n=-∞}^{∞} 1` includes `n = 0`:
 
     Σ_{n=-∞}^{∞} 1 = 1 + 2Σ_{n=1}^{∞} 1 = 1 + 2ζ(0) = 1 + 2(−1/2) = 0
 
@@ -191,60 +191,59 @@ The subleading terms involve the KK masses:
        = Σ_{n,m} (2n² + 2m² + 2nm) / R²
        = (2/R²) Σ_{n,m} (n² + m² + nm)
 
-This is an Epstein zeta function evaluated at s = −1:
+This is an Epstein zeta function evaluated at `s = −1`:
 
     E(s) = Σ'_{(n,m) ∈ Z²} (n² + m² + nm)^{−s}
 
-The quadratic form Q(n,m) = n² + m² + nm is positive definite (its
-discriminant is 4·1·1 − 1² = 3 > 0) and has determinant 3/4.
+The quadratic form `Q(n,m) = n² + m² + nm` is positive definite (its
+discriminant is `4·1·1 − 1² = 3 > 0`) and has determinant `3/4`.
 
 The Epstein zeta function for this form is related to the Dedekind zeta
-function of Q(√(−3)):
+function of `Q(√(−3))`:
 
     E(s) = (2/w) × (2π)^s × (3/4)^{−s/2} × ζ_{Q(√(−3))}(s) / Γ(s)
 
-where w = 6 is the number of units in Z[ω] (ω = e^{2πi/3}).
+where `w = 6` is the number of units in `Z[ω]` (`ω = e^{2πi/3}`).
 
-At s = −1:
+At `s = −1`:
 
     ζ_{Q(√(−3))}(−1) is related to ζ(−1) × L(−1, χ₃)
 
-where χ₃ is the Dirichlet character mod 3.
+where `χ₃` is the Dirichlet character mod 3.
 
-Using known values: ζ(−1) = −1/12 and L(−1, χ₃) = 1/3:
+Using known values: `ζ(−1) = −1/12` and `L(−1, χ₃) = 1/3`:
 
-For the quadratic form Q(n,m) = 2n² + 2m² + 2nm = 2Q₀ where
-Q₀ = n² + nm + m² is the norm form of the Eisenstein integers Z[ω].
-The Epstein zeta factors as E₂(s; Q₀) = 6 ζ(s) L(s, χ₋₃) (since
-Q₀ has discriminant D = −3, class number h = 1, and w = 6 units).
+For the quadratic form `Q(n,m) = 2n² + 2m² + 2nm = 2Q₀` where
+`Q₀ = n² + nm + m²` is the norm form of the Eisenstein integers `Z[ω]`.
+The Epstein zeta factors as `E₂(s; Q₀) = 6 ζ(s) L(s, χ₋₃)` (since
+`Q₀` has discriminant `D = −3`, class number `h = 1`, and `w = 6` units).
 
-At s = −1: E₂(−1; Q) = 2 × E₂(−1; Q₀) = 2 × 6 × ζ(−1) × L(−1, χ₋₃).
+At `s = −1`: `E₂(−1; Q) = 2 × E₂(−1; Q₀) = 2 × 6 × ζ(−1) × L(−1, χ₋₃)`.
 
-The key: L(−1, χ₋₃) = −B_{2,χ₋₃}/2 where the generalized Bernoulli
-number B_{2,χ₋₃} = 3[χ₋₃(1)B₂(1/3) + χ₋₃(2)B₂(2/3)] = 3[1·(−1/18)
-+ (−1)·(−1/18)] = 3 × 0 = 0. The vanishing is exact: B₂(x) = B₂(1−x)
-is symmetric about x = 1/2, and the odd character χ₋₃ pairs a = 1 with
-a = 2 (where 1/3 + 2/3 = 1), annihilating the symmetric polynomial.
+The key: `L(−1, χ₋₃) = −B_{2,χ₋₃}/2` where the generalized Bernoulli
+number `B_{2,χ₋₃} = 3[χ₋₃(1)B₂(1/3) + χ₋₃(2)B₂(2/3)] = 3[1·(−1/18) + (−1)·(−1/18)] = 3 × 0 = 0`. The vanishing is exact: `B₂(x) = B₂(1−x)`
+is symmetric about `x = 1/2`, and the odd character `χ₋₃` pairs `a = 1` with
+`a = 2` (where `1/3 + 2/3 = 1`), annihilating the symmetric polynomial.
 
-Therefore: **E₂(−1; Q) = 0.**
+Therefore: **`E₂(−1; Q) = 0`.**
 
-Moreover, E₂(s; Q₀) = 0 at EVERY negative integer s ≤ −1:
+Moreover, `E₂(s; Q₀) = 0` at EVERY negative integer `s ≤ −1`:
 
-| s | ζ(s) | L(s, χ₋₃) | E₂(s; Q₀) |
+| s | `ζ(s)` | `L(s, χ₋₃)` | `E₂(s; Q₀)` |
 |---|------|-----------|-----------|
-| 0 | −1/2 | 1/3 | −1 |
-| −1 | −1/12 | 0 | **0** |
-| −2 | 0 | −2/9 | **0** |
-| −3 | 1/120 | 0 | **0** |
-| −4 | 0 | 2/3 | **0** |
+| 0 | `−1/2` | `1/3` | `−1` |
+| −1 | `−1/12` | `0` | **`0`** |
+| −2 | `0` | `−2/9` | **`0`** |
+| −3 | `1/120` | `0` | **`0`** |
+| −4 | `0` | `2/3` | **`0`** |
 
-The mechanism: ζ(−n) vanishes for even n (trivial Riemann zeros), while
-L(−n, χ₋₃) vanishes for odd n (trivial zeros of the odd L-function,
-forced by B_{2k,χ} = 0 for odd characters via the symmetry of Bernoulli
-polynomials). These complementary zeros cover every n ≥ 1.
+The mechanism: `ζ(−n)` vanishes for even `n` (trivial Riemann zeros), while
+`L(−n, χ₋₃)` vanishes for odd `n` (trivial zeros of the odd L-function,
+forced by `B_{2k,χ} = 0` for odd characters via the symmetry of Bernoulli
+polynomials). These complementary zeros cover every `n ≥ 1`.
 
 **This means the subleading Epstein zeta terms for the sunset topology
-ALSO vanish — not just the leading S₀² = 0 term.** The R³ counterterm
+ALSO vanish — not just the leading `S₀² = 0` term.** The `R³` counterterm
 coefficient from the sunset diagram is identically zero at every order
 in the mass expansion, not just at leading order.
 
@@ -252,11 +251,11 @@ in the mass expansion, not just at leading order.
 
 At each order in the mass expansion, the double KK sum reduces to an
 Epstein zeta function evaluated at a non-positive integer. The Epstein
-zeta function has analytic continuation to all of C, with a single pole
-at s = d/2 (where d is the dimension of the lattice sum — in our case
-d = 2, so the pole is at s = 1).
+zeta function has analytic continuation to all of `C`, with a single pole
+at `s = d/2` (where `d` is the dimension of the lattice sum — in our case
+`d = 2`, so the pole is at `s = 1`).
 
-For the values we need (s = 0, −1, −2, ...), the Epstein zeta function
+For the values we need (`s = 0, −1, −2, ...`), the Epstein zeta function
 is FINITE and takes explicit computable values.
 
 **Therefore, every term in the mass expansion of the two-loop KK sum
@@ -267,81 +266,81 @@ but identically zero, through the complementary trivial zeros mechanism.
 
 ## G.5 The Two-Loop Result: Complete Vanishing
 
-### G.5.1 The R³ Counterterm Is Identically Zero
+### G.5.1 The `R³` Counterterm Is Identically Zero
 
-The two-loop R³ counterterm coefficient in the KK theory is:
+The two-loop `R³` counterterm coefficient in the KK theory is:
 
     c(R³) = Σ_{all topologies} Σ_{n,m} [leading + subleading terms]
 
 We have shown that EVERY term vanishes, from EVERY topology:
 
 **Sunset topology (graviton and ghost variants).** The double KK sum produces
-E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃) evaluated at negative integers s = −j (j ≥ 0).
+`E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃)` evaluated at negative integers `s = −j` (`j ≥ 0`).
 
-- j = 0 (leading): S₀² = [1 + 2ζ(0)]² = 0. ✓
-- j ≥ 1 odd: L(−j, χ₋₃) = 0 (trivial zeros of odd Dirichlet L-function). ✓
-- j ≥ 2 even: ζ(−j) = 0 (trivial zeros of Riemann zeta). ✓
+- `j = 0` (leading): `S₀² = [1 + 2ζ(0)]² = 0`. `✓`
+- `j ≥ 1` odd: `L(−j, χ₋₃) = 0` (trivial zeros of odd Dirichlet L-function). `✓`
+- `j ≥ 2` even: `ζ(−j) = 0` (trivial zeros of Riemann zeta). `✓`
 
-The complementary zeros cover EVERY j ≥ 0. The sunset contribution is
+The complementary zeros cover EVERY `j ≥ 0`. The sunset contribution is
 identically zero at every order in the mass expansion.
 
 **Figure-eight topology.** Factorizes into products of single KK sums
-Σ_n n^{2j}. Only even powers of n appear (KK masses are n²/R²). These give
-2ζ(−2j), which vanishes for all j ≥ 1 (trivial Riemann zeros at even
-negative integers). The j = 0 term gives S₀ = 0. Every factor is zero;
+`Σ_n n^{2j}`. Only even powers of `n` appear (KK masses are `n²/R²`). These give
+`2ζ(−2j)`, which vanishes for all `j ≥ 1` (trivial Riemann zeros at even
+negative integers). The `j = 0` term gives `S₀ = 0`. Every factor is zero;
 the product is zero at every order.
 
 **Vertex corrections.** Single KK sum with the same zero structure as each
 figure-eight factor. Zero at every order.
 
-**Ghost contributions.** The Faddeev-Popov ghosts c^A in 5D de Donder gauge
-are vector fields (integer spin), hence periodic on S¹ with KK masses
-m_n = |n|/R — the same spectrum as the graviton. The ghost-ghost-graviton
-vertex conserves KK number (n₁ + n₂ + n₃ = 0) because it derives from
+**Ghost contributions.** The Faddeev-Popov ghosts `c^A` in 5D de Donder gauge
+are vector fields (integer spin), hence periodic on `S¹` with KK masses
+`m_n = |n|/R` — the same spectrum as the graviton. The ghost-ghost-graviton
+vertex conserves KK number (`n₁ + n₂ + n₃ = 0`) because it derives from
 the gauge variation of the de Donder condition, which is built from
-covariant derivatives on S¹ — the same U(1) isometry that enforces KK
+covariant derivatives on `S¹` — the same `U(1)` isometry that enforces KK
 conservation at all vertices. In the ghost-graviton sunset, the three
-internal lines carry KK numbers n, m, −(n+m) with masses |n|/R, |m|/R,
-|n+m|/R — producing the same quadratic form Q = 2(n² + nm + m²) = 2Q₀
+internal lines carry KK numbers `n`, `m`, `−(n+m)` with masses `|n|/R`, `|m|/R`,
+`|n+m|/R` — producing the same quadratic form `Q = 2(n² + nm + m²) = 2Q₀`
 as the pure graviton sunset (because the form depends only on the KK
 number assignment from conservation, not on which field type propagates
 on each line). The ghost Epstein zeta is therefore the same
-E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃), which vanishes at every negative integer.
-The (−1) sign from the Grassmann functional integral multiplies zero.
+`E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃)`, which vanishes at every negative integer.
+The `(−1)` sign from the Grassmann functional integral multiplies zero.
 
 ### G.5.2 Comparison with 4D
 
 | | 4D Einstein gravity | 5D KK gravity (under zeta reg.) |
 |---|---|---|
-| Two-loop R³ coefficient | 209/2880 ≠ 0 | **0 (identically, all orders)** |
+| Two-loop `R³` coefficient | `209/2880 ≠ 0` | **0 (identically, all orders)** |
 | Mechanism | No cancellation | Complementary trivial zeros |
 | Counterterm needed? | Yes (non-renormalizable) | **No** |
 
-In 4D gravity, the Goroff-Sagnotti coefficient 209/2880 is non-zero — it
-requires an R³ counterterm that cannot be absorbed into the Einstein-Hilbert
+In 4D gravity, the Goroff-Sagnotti coefficient `209/2880` is non-zero — it
+requires an `R³` counterterm that cannot be absorbed into the Einstein-Hilbert
 action, proving non-renormalizability.
 
 In the 5D KK theory under zeta regularization, the coefficient is zero —
 not approximately, not at leading order only, but identically zero at every
 order in the mass expansion, from every diagram topology, for every field
-type (graviton, ghost, graviphoton, dilaton). No R³ counterterm is needed.
+type (graviton, ghost, graviphoton, dilaton). No `R³` counterterm is needed.
 
 ### G.5.3 Why the Vanishing Is Complete
 
 The complete vanishing rests on three independent structural facts:
 
-1. **S₀ = 0:** The zeta-regularized KK mode count vanishes. This kills the
+1. **`S₀ = 0`:** The zeta-regularized KK mode count vanishes. This kills the
    leading (mass-independent) term at every loop order.
 
-2. **Perfect-square mass structure:** KK masses are m_n² = n²/R², so only
-   EVEN powers of n appear in the mass expansion. The single KK sums are
-   ζ(−2j) = 0 for all j ≥ 1 (trivial Riemann zeros at negative even
+2. **Perfect-square mass structure:** KK masses are `m_n² = n²/R²`, so only
+   EVEN powers of `n` appear in the mass expansion. The single KK sums are
+   `ζ(−2j) = 0` for all `j ≥ 1` (trivial Riemann zeros at negative even
    integers). This kills the figure-eight and vertex correction subleading
    terms.
 
 3. **Complementary L-function zeros:** For the sunset topology, the double
-   KK sum factorizes through the Eisenstein lattice into ζ(s) × L(s, χ₋₃).
-   The trivial zeros of ζ (at even negative integers) and L (at odd negative
+   KK sum factorizes through the Eisenstein lattice into `ζ(s) × L(s, χ₋₃)`.
+   The trivial zeros of `ζ` (at even negative integers) and `L` (at odd negative
    integers) are COMPLEMENTARY — together they cover every negative integer.
    This kills the sunset subleading terms.
 
@@ -360,14 +359,14 @@ At L loops, the effective action involves an L-fold sum over KK modes:
 
     Γ^{(L)} ∝ Σ_{n₁,...,n_L ∈ Z} I^{(L)}(n₁,...,n_L; R)
 
-where I^{(L)} is the L-loop 4D integral with KK-mass-dependent propagators.
+where `I^{(L)}` is the L-loop 4D integral with KK-mass-dependent propagators.
 
 The leading term (mass-independent) gives:
 
     S₀^{(L)} = [Σ_{n ∈ Z} 1]^L = [2ζ(0) + 1]^L = 0^L = 0
 
 **The leading divergence vanishes at EVERY loop order.** This is because
-ζ(0) = −1/2, and the total sum (including n = 0) gives 1 + 2(−1/2) = 0.
+`ζ(0) = −1/2`, and the total sum (including `n = 0`) gives `1 + 2(−1/2) = 0`.
 
 ### G.6.2 The Subleading Terms
 
@@ -376,12 +375,12 @@ functions:
 
     E_L(s; Q) = Σ'_{n ∈ Z^L} Q(n₁,...,n_L)^{−s}
 
-where Q is a positive-definite quadratic form determined by the KK mass
+where `Q` is a positive-definite quadratic form determined by the KK mass
 structure of the diagram.
 
-**Theorem (Epstein 1903, Terras 1985):** The Epstein zeta function E_L(s; Q)
-has meromorphic continuation to all s ∈ C, with a single simple pole at
-s = L/2. For L ≥ 2, the values at s = 0, −1, −2, ... are all finite.
+**Theorem (Epstein 1903, Terras 1985):** The Epstein zeta function `E_L(s; Q)`
+has meromorphic continuation to all `s ∈ C`, with a single simple pole at
+`s = L/2`. For `L ≥ 2`, the values at `s = 0, −1, −2, ...` are all finite.
 
 Therefore: at L loops, every term in the mass expansion of the KK sum is
 finite under Epstein zeta regularization.
@@ -390,7 +389,7 @@ finite under Epstein zeta regularization.
 
 **Conjecture (Perturbative Finiteness of KK Gravity):**
 
-*The L-loop effective action for 5D gravity on M⁴ × S¹, with KK mode sums
+*The L-loop effective action for 5D gravity on `M⁴ × S¹`, with KK mode sums
 regularized by multi-dimensional Epstein zeta functions, is finite at every
 order in perturbation theory.*
 
@@ -400,10 +399,10 @@ order in perturbation theory.*
    functions at non-positive integers — all finite.
 
 2. At two loops: confirmed (this appendix). The leading Goroff-Sagnotti
-   divergence vanishes (S₀ = 0), and subleading terms are Epstein zeta
+   divergence vanishes (`S₀ = 0`), and subleading terms are Epstein zeta
    functions at non-positive integers — all finite.
 
-3. At L loops: the leading term vanishes (S₀^{(L)} = 0^L = 0), and
+3. At L loops: the leading term vanishes (`S₀^{(L)} = 0^L = 0`), and
    subleading terms are L-dimensional Epstein zeta functions at non-positive
    integers — all finite by the Epstein-Terras theorem.
 
@@ -425,9 +424,9 @@ order in perturbation theory.*
 
 3. The conjecture requires that the Epstein zeta values at the specific
    points needed (determined by the diagram topology and power counting)
-   are all finite — i.e., that none of them hit the pole at s = L/2.
+   are all finite — i.e., that none of them hit the pole at `s = L/2`.
    This needs verification for each diagram topology at each loop order.
-   For the cases computed here (L = 1, 2), the needed values are safely
+   For the cases computed here (`L = 1, 2`), the needed values are safely
    away from the pole.
 
 ---
@@ -451,7 +450,7 @@ In the KK theory, the sum over KK modes gives:
 
 **The leading divergence vanishes identically.**
 
-This vanishing has a physical interpretation. The sum Σ 1 = 0 means that
+This vanishing has a physical interpretation. The sum `Σ 1 = 0` means that
 the TOTAL number of KK modes, zeta-regularized, is zero. The positive
 contributions from each mode (each adds +1 to the count) are exactly
 cancelled by the zeta regularization. In physical terms: the compact
@@ -471,8 +470,8 @@ compactness of the e-dimension.
 | Loop order | 4D gravity | 5D KK gravity (under zeta reg.) |
 |-----------|-----------|---------------------------|
 | 1-loop | Finite (on-shell) | Finite (zeta regularization) |
-| 2-loop | **Divergent** (Goroff-Sagnotti R³) | **R³ coefficient = 0** (all orders in mass expansion) |
-| L-loop | Increasingly divergent (R^{L+1} terms) | **Conjectured predictive** (S₀^L = 0; Epstein zeta) |
+| 2-loop | **Divergent** (Goroff-Sagnotti `R³`) | **`R³` coefficient = 0** (all orders in mass expansion) |
+| L-loop | Increasingly divergent (`R^{L+1}` terms) | **Conjectured predictive** (`S₀^L = 0`; Epstein zeta) |
 | All orders | Non-renormalizable | **Conjectured perturbatively predictive** |
 
 The compact e-circle — the same geometric object that produces quantum

@@ -15,7 +15,7 @@ curved but not quantized. QM treats physical quantities as operators on a Hilber
 space — inherently discrete, probabilistic, and noncommutative. When you try to apply
 quantum field theory to gravity, you get infinities that cannot be renormalized by
 any known method. When you try to apply GR to quantum systems, the smooth geometry
-assumption breaks down at the Planck scale (~10⁻³⁵ meters).
+assumption breaks down at the Planck scale (`~10⁻³⁵` meters).
 
 The history of attempts to bridge this gap is long and largely unsuccessful:
 
@@ -50,7 +50,7 @@ these in what follows.
 
 ## 5.2 The Core Proposal: Mass as e-Space Curvature
 
-In the 5D framework, the e-dimension is a circle — a U(1) fiber — attached to every
+In the 5D framework, the e-dimension is a circle — a `U(1)` fiber — attached to every
 point in 4D spacetime. In Section 4, we established that this fiber has a connection
 (the electromagnetic vector potential) and that the curvature of this connection is
 the magnetic field. Particles moving through spacetime undergo parallel transport of
@@ -63,7 +63,7 @@ e-fiber — and geodesic motion through this curved 5D geometry unifies gravity,
 electromagnetism, and quantum phase in a single geometric structure.**
 
 This is not merely an analogy. The 5D Einstein-Hilbert action on the e-bundle
-P(M⁴, U(1)) — the natural gravitational action on this space — decomposes via
+`P(M⁴, U(1))` — the natural gravitational action on this space — decomposes via
 Kaluza-Klein reduction into exactly the Einstein-Maxwell action: general relativity
 coupled to electromagnetism, plus a scalar field governing the local e-circle radius
 (Appendix D). This is the Kaluza-Klein miracle, now carrying a new physical
@@ -71,8 +71,8 @@ interpretation: the electromagnetic field IS the e-connection, and the scalar fi
 IS the local e-circle radius. All three emerge from one 5D metric.
 
 More precisely: a massive object curves the full 5D spacetime. The 4D base metric
-gμν describes the gravitational curvature we already know from GR. The e-fiber
-metric φ(x) — the local e-circle radius — is distorted near the mass (Appendix D,
+`gμν` describes the gravitational curvature we already know from GR. The e-fiber
+metric `φ(x)` — the local e-circle radius — is distorted near the mass (Appendix D,
 Section D.4). A particle follows a geodesic through the full 5D curved geometry;
 the 4D projection of this geodesic gives gravitational attraction, electromagnetic
 deflection, and scalar field effects simultaneously.
@@ -137,11 +137,11 @@ and the frequency shifts accordingly. Quantitatively:
 
     Δf/f = gh/c²
 
-where g is gravitational acceleration, h is height, and c is the speed of light.
+where `g` is gravitational acceleration, `h` is height, and `c` is the speed of light.
 
 **5D e-space explanation:** In the 5D framework, a photon is a helix through
 (x, y, z, t, e)-spacetime. Its energy is related to its helical pitch — the rate
-at which the e-coordinate rotates per unit distance or time (∂e/∂t = -E/ℏ from
+at which the e-coordinate rotates per unit distance or time (`∂e/∂t = -E/ℏ` from
 Section 3.3).
 
 Near a massive object, the e-dimension is curved — tilted toward the mass. As the
@@ -152,7 +152,7 @@ more slowly per unit time at higher potential than at lower potential.
 Slower e-rotation rate = lower energy = lower frequency = redshift.
 
 **The correspondence:** For this picture to be quantitatively correct, the e-curvature
-produced by a mass M must generate a pitch change:
+produced by a mass `M` must generate a pitch change:
 
     Δ(∂e/∂t) / (∂e/∂t) = -GM/rc²
 
@@ -195,12 +195,12 @@ potential describes the orientation of the e-fiber in gauge theory (Section 4.1)
 The parallel is striking:
 
 - **Electromagnetism:** e-fiber orientation governed by vector potential **A**.
-  Curvature of this orientation is **B** = ∇ × **A**.
+  Curvature of this orientation is **B** = `∇ ×` **A**.
 - **Gravity (proposed):** e-fiber curvature governed by a gravitational potential.
   The mass-energy distribution is the source of this curvature.
 
-In standard GR, the gravitational potential is the metric tensor gμν. The 5D
-proposal is that gμν encodes the e-fiber geometry — that the metric tensor is
+In standard GR, the gravitational potential is the metric tensor `gμν`. The 5D
+proposal is that `gμν` encodes the e-fiber geometry — that the metric tensor is
 not merely a description of spacetime curvature, but of e-space curvature projected
 onto 4D. Gravity and electromagnetism are then both descriptions of the e-fiber's
 geometry, differing in which aspect of that geometry they measure.
@@ -225,7 +225,7 @@ geometrically connected they are. Removing entanglement tears spacetime apart.
 **In the 5D framework, ER=EPR is not a conjecture — it is a consequence.**
 
 We established in Section 3.2 that entanglement is a conservation constraint on
-e-coordinates: e₁ + e₂ = C. Two entangled particles share an e-coordinate
+e-coordinates: `e₁ + e₂ = C`. Two entangled particles share an e-coordinate
 constraint, which means they are connected through the e-dimension even when
 separated in (x, y, z). The e-dimension bridge between them is the geometric
 connection that ER=EPR identifies as a wormhole.
@@ -239,7 +239,7 @@ This suggests a specific version of ER=EPR: **the Einstein-Rosen bridge is the
 e-space connection between entangled particles.** The wormhole geometry, when
 projected onto 4D, appears as quantum entanglement. When analyzed in full 5D,
 it is a tube through the e-dimension along which the conservation constraint
-e₁ + e₂ = C propagates.
+`e₁ + e₂ = C` propagates.
 
 If this is correct, it has a profound implication for the origin of spacetime itself.
 Spacetime geometry — the metric tensor, the curvature, gravity itself — may emerge
@@ -266,7 +266,7 @@ established.
 
 **Claim 1 — E-space curvature from mass reproduces Newtonian gravity**
 
-*Status: Established.* The 5D Einstein equations on P(M⁴, U(1)), reduced via
+*Status: Established.* The 5D Einstein equations on `P(M⁴, U(1))`, reduced via
 Kaluza-Klein decomposition, yield the 4D Einstein-Maxwell field equations with
 a scalar dilaton. In the weak-field, slow-motion limit with constant e-circle
 radius, these reduce to Poisson's equation (Appendix D, Section D.5):
@@ -278,12 +278,12 @@ and the geodesic equation for a test particle reduces to:
     d²x/dt² = -∇Φ
 
 This is Newton's second law with gravitational force. The 4D Newton's constant
-is identified as G₄ = Ĝ₅/(2πφ₀), where Ĝ₅ is the 5D gravitational constant
-and φ₀ is the background e-circle radius. Claim 1 is satisfied by the standard
+is identified as `G₄ = Ĝ₅/(2πφ₀)`, where `Ĝ₅` is the 5D gravitational constant
+and `φ₀` is the background e-circle radius. Claim 1 is satisfied by the standard
 Kaluza-Klein reduction of the 5D Einstein equations — no new assumptions required
 beyond Postulates 1 and 2 of the framework and the equivalence principle.
 
-*What remains open:* The e-circle radius φ(x) satisfies its own field equation
+*What remains open:* The e-circle radius `φ(x)` satisfies its own field equation
 (Appendix D, Section D.4.3) and varies near massive objects. The full coupled
 system — gravity, EM, and scalar — needs to be shown consistent with solar system
 tests of GR (perihelion precession, light deflection). The scalar field introduces
@@ -320,11 +320,11 @@ formula, completing the correspondence begun there.
 **Claim 3 — Quantization of the e-dimension gives a natural Planck scale**
 
 *What must be shown:* If the e-dimension has a minimum geometric scale — a
-"Planck e-length" l_e below which its structure cannot be resolved — show that
-this scale is related to the Planck length l_P = √(ℏG/c³) ≈ 1.6 × 10⁻³⁵ m.
+"Planck e-length" `l_e` below which its structure cannot be resolved — show that
+this scale is related to the Planck length `l_P = √(ℏG/c³) ≈ 1.6 × 10⁻³⁵ m`.
 
 Specifically: if the e-circle has a minimum circumference set by some combination
-of ℏ, G, and c, show that this circumference is l_P (or a simple multiple thereof),
+of `ℏ`, `G`, and `c`, show that this circumference is `l_P` (or a simple multiple thereof),
 and that the quantization of e-space at this scale produces:
 
 (a) A finite minimum length, removing the ultraviolet divergences that plague
@@ -389,18 +389,18 @@ which requires that physics look the same in all inertial frames. Standard Kaluz
 Klein handles this through compactification. We need an analogous argument for
 the e-dimension's circular structure.
 
-*The Kaluza-Klein obstacle.* In standard Kaluza-Klein theory, a U(1) fiber coupled
+*The Kaluza-Klein obstacle.* In standard Kaluza-Klein theory, a `U(1)` fiber coupled
 to the stress-energy tensor produces electromagnetism, not gravity. The gravitational
-field emerges from the 4D base metric gμν, not from the fiber geometry. Our proposal
+field emerges from the 4D base metric `gμν`, not from the fiber geometry. Our proposal
 — that mass curves the e-fiber and that this curvature IS gravity — requires a coupling
 between the fiber metric and the stress-energy tensor that differs from the standard
 Kaluza-Klein decomposition. Specifically, we need the e-fiber curvature to source the
 geodesic deviation that we observe as gravitational attraction, without simultaneously
 producing spurious electromagnetic-like forces that are not observed. This is a
-well-posed mathematical question: does there exist a 5D action S[gμν, gφφ, Aμ, matter]
-whose variation with respect to the fiber metric gφφ produces field equations that
-reduce to Poisson's equation (∇²Φ = 4πGρ) in the weak-field limit, while the variation
-with respect to Aμ reproduces Maxwell's equations? If such an action exists, the
+well-posed mathematical question: does there exist a 5D action `S[gμν, gφφ, Aμ, matter]`
+whose variation with respect to the fiber metric `gφφ` produces field equations that
+reduce to Poisson's equation (`∇²Φ = 4πGρ`) in the weak-field limit, while the variation
+with respect to `Aμ` reproduces Maxwell's equations? If such an action exists, the
 gravity proposal is viable. If not, it fails at the first hurdle. We do not know the
 answer. The claim of Section 5 is not that we have derived quantum gravity — it is
 that this question is well-posed, tractable, and has not previously been asked in
@@ -428,8 +428,8 @@ fail is more credible than one that claims no weaknesses.
 
 **Established by explicit calculation (Appendix D):**
 - The 5D Einstein equations on the e-bundle reproduce Newtonian gravity in
-  the weak-field limit: ∇²Φ = 4πGρ (Claim 1 confirmed)
-- Mass distorts the local e-circle radius φ(x) near massive objects (the
+  the weak-field limit: `∇²Φ = 4πGρ` (Claim 1 confirmed)
+- Mass distorts the local e-circle radius `φ(x)` near massive objects (the
   scalar field of the KK decomposition)
 - The 5D geometry unifies gravity, electromagnetism, and a scalar field in
   a single metric structure
@@ -438,7 +438,7 @@ fail is more credible than one that claims no weaknesses.
 - The scalar field (e-circle distortion) is consistent with solar system tests
   of GR — fifth-force bounds from Cassini must be satisfied
 - E-space curvature gives correct gravitational time dilation independently
-  of the base metric (Claim 2 — partially confirmed by the g₀₀ component)
+  of the base metric (Claim 2 — partially confirmed by the `g₀₀` component)
 - E-dimension quantization gives the Planck scale (Claim 3)
 
 **Speculative (flagged explicitly):**
@@ -450,16 +450,16 @@ fail is more credible than one that claims no weaknesses.
 
 **The Quantization Bridge Conjecture (Section 5.X):** Standard quantum mechanics
 is the quantum theory of the e-circle. The 5D Einstein equations govern the same
-e-circle classically. The one-loop quantum correction to 5D gravity on M⁴ × S¹
+e-circle classically. The one-loop quantum correction to 5D gravity on `M⁴ × S¹`
 is finite under zeta regularization of the KK sum (Appendix F). We conjecture
 that this finiteness extends to all loop orders — that the 5D path integral on
-P(M⁴, U(1)) is a consistent quantum theory of gravity. The two-loop calculation
+`P(M⁴, U(1))` is a consistent quantum theory of gravity. The two-loop calculation
 is the critical test. If it is finite, the problem of quantum gravity is not
 solved by new physics — it was always encoded in the geometry that quantum
 mechanics already requires.
 
 **We do not claim to have quantized gravity. We claim to have identified the
-geometric object — the e-bundle P(M⁴, U(1)) — that both quantum mechanics
+geometric object — the e-bundle `P(M⁴, U(1))` — that both quantum mechanics
 and general relativity describe, and to have shown that its quantum theory
 is one-loop finite. The two-loop calculation is the door. What lies on the
 other side is the work ahead.**
