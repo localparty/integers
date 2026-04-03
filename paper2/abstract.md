@@ -1,4 +1,4 @@
-Baryon Ratio, The Clustering Tension, and Ten Observables from Kaluza-Klein Geometry
+The Dark Matter-Baryon Ratio, Hubble and Clustering Tensions, and Thirteen Observables from Kaluza-Klein Geometry
 
 ## Abstract
 
