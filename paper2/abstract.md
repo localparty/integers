@@ -1,6 +1,6 @@
-# Abstract — Paper 2
+Baryon Ratio, The Clustering Tension, and Ten Observables from from Kaluza-Klein Geometry
 
-## The 5D e-Dimension Framework II: Precision Cosmology from Geometry
+## Abstract
 
 We present the complete cosmological predictions of the 5D e-dimension
 framework introduced in Paper 1, computed using the CAMB Boltzmann solver

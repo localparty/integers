@@ -1,4 +1,6 @@
-# Abstract
+# Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry
+
+## Abstract
 
 We propose that spacetime is five-dimensional — (x, y, z, t, e) — where the
 fifth dimension e is circular, periodic, and corresponds to the U(1) fiber in
@@ -98,11 +100,7 @@ gravitational deviations at ~12 μm, the dark photon signal at ε ~ 5 × 10⁻�
 neutrino masses and normal mass ordering (testable by JUNO within 6 years),
 and mirror dark matter — are within reach of experiments in the next 3–10 years.
 
-We do not claim to have solved quantum gravity or to have derived the full
-Standard Model. The orbifold extensions are speculative but quantitative,
-with specific falsifiable predictions. What is established is a geometric
-framework in which the same compact circle that makes quantum mechanics
-necessary also makes quantum gravity finite.
+The orbifold extensions are speculative but quantitative, with specific falsifiable predictions. What is established is a geometric framework in which the same compact circle that makes quantum mechanics necessary also makes perturbative quantum gravity finite.
 
 A companion computation (Paper 2) applies the CAMB Boltzmann solver to
 the framework's cosmological sector (to appear separately) with parameters
