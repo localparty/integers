@@ -1,5 +1,7 @@
 # Paper 2 — Section 8: Conclusion
 
+\clearpage
+
 ## 8.1 What Was Computed
 
 Using the CAMB Boltzmann solver with parameters determined entirely
@@ -7,10 +9,10 @@ by the 5D e-circle geometry, we computed the complete cosmological
 parameter set of the framework introduced in Paper 1. The four
 geometric inputs:
 
-    L ~ 130 μm  (e-circle circumference, from Casimir = dark energy)
-    ξ = 0.47    (hidden-to-visible temperature ratio, from BBN)
-    V(φ)        (dilaton potential: Casimir + Goldberger-Wise)
-    SM content  (Standard Model fields, fixed)
+1. `L ~ 130 μm` — e-circle circumference, from Casimir dark energy
+2. `ξ = 0.47` — hidden-to-visible temperature ratio, from BBN
+3. `V(φ)` — dilaton potential: Casimir + Goldberger-Wise
+4. SM content — Standard Model fields, fixed
 
 determine ten cosmological observables simultaneously.
 

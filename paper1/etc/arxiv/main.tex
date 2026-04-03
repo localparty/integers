@@ -1,4 +1,4 @@
-\documentclass[aps,prd,preprint,superscriptaddress,longbibliography]{revtex4-2}
+\documentclass[aps,prd,preprint,superscriptaddress,longbibliography,floatfix]{revtex4-2}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -6,12 +6,11 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{physics}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
-\usepackage{array}
+\usepackage{float}
 \usepackage{graphicx}
-\usepackage{dcolumn}
 \usepackage{bm}
 
 % Theorem environments
@@ -702,30 +701,29 @@ The Born rule --- that the probability of outcome i is $|\alpha_{i}|^{2}$ --- is
 The table below collects the five translations established in this section. The left column states the standard quantum mechanical phenomenon. The right column gives its 5D geometric equivalent. Each translation is not an analogy --- it is a precise correspondence, with the mathematical identification established in Sections 2.4 and the individual subsections above.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Quantum Phenomenon & 5D Geometric Equivalent \\
-\midrule
-Superposition \& Extension across multiple e-regions \\
-Wave function collapse \& Epistemic update on which e-slice was sampled \\
-Entanglement \& Conservation law: $e_{1} + e_{2} = C$ \\
-Spooky action at a distance \& Arithmetic on a conserved quantity \\
-Momentum \& Helical pitch: $\partial e/\partial x = p/\hbar$ \\
-Energy \& Helical time-advance: $\partial e/\partial t = -E/\hbar$ \\
-Uncertainty principle \& Geometric constraint: position and pitch of helix \\
+\hline
+Superposition & Extension across multiple e-regions \\
+Wave function collapse & Epistemic update on which e-slice was sampled \\
+Entanglement & Conservation law: $e_{1} + e_{2} = C$ \\
+Spooky action at a distance & Arithmetic on a conserved quantity \\
+Momentum & Helical pitch: $\partial e/\partial x = p/\hbar$ \\
+Energy & Helical time-advance: $\partial e/\partial t = -E/\hbar$ \\
+Uncertainty principle & Geometric constraint: position and pitch of helix \\
 Wave-particle duality & 5D structure sampled differently depending on measurement \\
-Spin \& Helical chirality: right-handed or left-handed winding \\
+Spin & Helical chirality: right-handed or left-handed winding \\
 \texttt{720$^{\circ}$} spin-\texttt{½} property & 2:1 ratio of spatial rotation to e-revolution \\
-Magnetic moment \& Circulation in (space, e)-dimensions \\
-Stern-Gerlach deflection \& Two chiralities $\to$ two deflection directions \\
-Decoherence \& E-scrambling through environmental entanglement \\
+Magnetic moment & Circulation in (space, e)-dimensions \\
+Stern-Gerlach deflection & Two chiralities $\to$ two deflection directions \\
+Decoherence & E-scrambling through environmental entanglement \\
 Born rule probability & 5D density at the sampled e-region \\
-Quantum tunneling \& Helical e-structure extends beyond classical boundary \\
-Zero-point energy \& Irreducible e-motion: $\partial e/\partial t \neq 0$ always \\
-\bottomrule
+Quantum tunneling & Helical e-structure extends beyond classical boundary \\
+Zero-point energy & Irreducible e-motion: $\partial e/\partial t \neq 0$ always \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The complete translation between standard quantum mechanics and the 5D geometric framework is given in Appendix A.
@@ -871,19 +869,18 @@ The Aharonov-Bohm solenoid is a \textit{line} topological defect in e-space. The
 \subsection{What This Resolves}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Puzzle in standard QM \& Resolution in 5D framework \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Puzzle in standard QM & Resolution in 5D framework \\
+\hline
 Why is \textbf{A} physical if it's not gauge-invariant? & \textbf{A} is the connection on the e-bundle. It \textit{is} physical. Gauge freedom is coordinate freedom on the e-circle. \\
 Why does a zero-field region affect particle phase? & The region has zero curvature but nonzero holonomy --- locally flat, globally twisted. \\
 Why is the flux quantum $\Phi_{0} = h/e$? & It is the flux needed to wind the e-circle through $2\pi$ --- set by e-space geometry. \\
 What does the Aharonov-Bohm experiment actually measure? & The holonomy of the \texttt{U(1)} e-bundle around a non-contractible loop --- direct evidence for the e-dimension's topology. \\
 Why does the effect generalize to all gauge theories? & All gauge theories are connections on fiber bundles. The e-dimension is the \texttt{U(1)} fiber. Other forces involve \texttt{SU(2)} and \texttt{SU(3)} fibers. \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -1079,21 +1076,20 @@ A particle's helix through the circular e-dimension has a winding number \texttt
 \subsection{Comparison with the Standard Proof}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Property \& Standard proof \cite{Pauli1940} & 5D geometric derivation \\
-\midrule
-\textbf{Method} & Proof by contradiction \& Direct geometric construction \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Property & Standard proof \cite{Pauli1940} & 5D geometric derivation \\
+\hline
+\textbf{Method} & Proof by contradiction & Direct geometric construction \\
 \textbf{Axioms required} & 4 (Lorentz, locality, positive energy, microcausality) & 1 (e-dimension is a circle) \\
-\textbf{What it shows} & Wrong statistics leads to contradiction \& Spin IS statistics (same winding number) \\
-\textbf{Why the connection exists} & Not explained --- forced by consistency \& Explained --- same topological quantity \\
-\textbf{Feynman's "freshman level" proof} & Does not exist \& This is it \\
-\textbf{Pauli exclusion} & Separate postulate \& Immediate geometric corollary \\
-\textbf{Intuitive picture} & None \& Helix winding number \\
-\bottomrule
+\textbf{What it shows} & Wrong statistics leads to contradiction & Spin IS statistics (same winding number) \\
+\textbf{Why the connection exists} & Not explained --- forced by consistency & Explained --- same topological quantity \\
+\textbf{Feynman's "freshman level" proof} & Does not exist & This is it \\
+\textbf{Pauli exclusion} & Separate postulate & Immediate geometric corollary \\
+\textbf{Intuitive picture} & None & Helix winding number \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The 5D derivation does not replace the standard proof --- the standard proof remains valid and complete within its framework. What the 5D derivation provides is the geometric reason \textit{why} the connection holds, which the standard proof explicitly does not provide. These are complementary: one establishes the result rigorously within QFT; the other explains it geometrically from a deeper principle.
@@ -1183,18 +1179,17 @@ In 2020, direct experimental evidence for anyon statistics in a FQH system was r
 The complete picture that emerges from the winding-number argument is:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Configuration space \& Allowed winding numbers \& Particle type \& Statistics \\
-\midrule
-3D space \& Integer (0, $\pm$1, $\pm$2, ...) & Bosons \& Symmetric, Bose-Einstein \\
-3D space \& Half-integer ($\pm$\texttt{½}, $\pm$3/2, ...) & Fermions \& Antisymmetric, Fermi-Dirac \\
-2D space \& Any rational $\theta/2\pi$ & Anyons \& Fractional, $e^{i\theta}$ phase \\
-1D space \& Continuous & (Fermionization) & Bose-Fermi duality \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Configuration space & Allowed winding numbers & Particle type & Statistics \\
+\hline
+3D space & Integer (0, $\pm$1, $\pm$2, ...) & Bosons & Symmetric, Bose-Einstein \\
+3D space & Half-integer ($\pm$\texttt{½}, $\pm$3/2, ...) & Fermions & Antisymmetric, Fermi-Dirac \\
+2D space & Any rational $\theta/2\pi$ & Anyons & Fractional, $e^{i\theta}$ phase \\
+1D space & Continuous & (Fermionization) & Bose-Fermi duality \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The rows of this table are not separate postulates. They are all consequences of one geometric principle: \textbf{the available winding numbers are determined by the topology of the configuration space relative to the circular e-dimension.}
@@ -1271,19 +1266,18 @@ Before developing the proposal, it is worth being precise about how it differs f
 \textbf{How our framework differs:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Property \& Kaluza-Klein & 5D e-dimension framework \\
-\midrule
-Fifth dimension couples to \& Electromagnetic charge \& Quantum phase (all particles) \\
-Primary phenomenon explained \& Electromagnetism \& Quantum mechanics \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Property & Kaluza-Klein & 5D e-dimension framework \\
+\hline
+Fifth dimension couples to & Electromagnetic charge & Quantum phase (all particles) \\
+Primary phenomenon explained & Electromagnetism & Quantum mechanics \\
 Gravity arises from & 4D metric as usual & e-space curvature (proposed) \\
-Scale of fifth dimension \& Planck scale (tiny, curled) & Accessible via quantum phase \\
-Relationship to QM \& Separate \& Central \\
-\bottomrule
+Scale of fifth dimension & Planck scale (tiny, curled) & Accessible via quantum phase \\
+Relationship to QM & Separate & Central \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The key difference: Kaluza-Klein uses the fifth dimension to explain a classical field (electromagnetism). Our framework uses the e-dimension to explain quantum mechanics, and then asks whether the same e-geometry also produces gravity.
@@ -1946,11 +1940,11 @@ The bulk leptogenesis mechanism on the $Z_{2}$ orbifold yields a scaling law:
 where $\xi$ is the hidden-to-visible brane temperature ratio. Combined with the observed dark-to-visible matter ratio (5.36), this determines $\xi = 0.432$ from first principles --- removing the last free cosmological parameter. Two scenarios bracket the prediction:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule \& Scenario A ($\theta*$-matched) & Scenario B ($1/\xi^{2}$ law) \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+ & Scenario A ($\theta*$-matched) & Scenario B ($1/\xi^{2}$ law) \\
+\hline
 $\xi$ & 0.470 & 0.432 \\
 $t_{0}$ & 13.47 Gyr & 13.47 Gyr \\
 $H_{0}$ & 69.5 km/s/Mpc & 68.7 km/s/Mpc \\
@@ -1958,8 +1952,8 @@ $H_{0}$ & 69.5 km/s/Mpc & 68.7 km/s/Mpc \\
 $\theta*$ offset & -0.5" & +6.6" \\
 $\Omega_{DM}/\Omega_b$ & 5.22 (input) & 5.36 (derived) \\
 $N_{eff}$ & 3.39 & 3.31 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Both scenarios are in tension with ACT DR6's $N_{eff}$ measurement ($2.86 \pm 0.13$); the tension ranges from $3.5\sigma$ (Scenario B) to $4.1\sigma$ (Scenario A). This is the framework's most consequential open issue: it predicts more dark radiation than current CMB data support. The tension may be resolved if extended parameter fits ($\Lambda CDM + N_{eff} + w_{0} + w_a$, which is the framework's actual model) loosen the $N_{eff}$ bound, or it may indicate that the mirror sector is colder than the baryogenesis formula predicts. CMB-S4 ($\sigma(N_{eff}) \approx 0.03$) will be definitive.
@@ -1995,31 +1989,29 @@ This appendix provides the complete translation between standard quantum mechani
 \subsection{Fundamental Concepts}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Quantum Concept & 5D Geometric Interpretation \\
-\midrule
+\hline
 \textbf{Wave function $\psi$} & The actual geometric shape/structure of the particle in 5D \texttt{(x,y,z,t,e)} space \\
 \textbf{Quantum state} & A definite 5D configuration \\
 \textbf{Amplitude} & Density/extent of the 5D structure at a given e-value \\
 \textbf{Phase $\theta$} & The e-coordinate value \\
 \textbf{Complex plane} & The circular e-dimension (periodic from \texttt{0} to $2\pi$) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Quantum Phenomena}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Quantum Phenomenon & 5D Geometric Explanation \\
-\midrule
+\hline
 \textbf{Superposition} & Geometric extension in the e-dimension \\
 \textbf{Entanglement} & Conservation constraint: $e_{1} + e_{2} = constant$ \\
 \textbf{Measurement} & Interaction that couples e-coordinates; observation of a 4D slice through 5D structure \\
@@ -2027,45 +2019,43 @@ Quantum Phenomenon & 5D Geometric Explanation \\
 \textbf{Interference} & Geometric overlap of e-structures (same e $\to$ constructive, e differing by $\pi$ $\to$ destructive) \\
 \textbf{Decoherence} & Entanglement with environment scrambles e-coordinates \\
 \textbf{Tunneling} & 5D structure extends beyond classical boundaries \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Properties and Observables}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Observable & 5D Geometric Property \\
-\midrule
+\hline
 \textbf{Position \texttt{(x,y,z)}} & Spatial coordinates (directly observable) \\
 \textbf{Time \texttt{(t)}} & Temporal coordinate (directly observable) \\
 \textbf{Momentum \texttt{(p)}} & Helical pitch: $\partial e/\partial x$ (rate of e-rotation per unit distance) \\
 \textbf{Energy \texttt{(E)}} & Temporal pitch: $-\partial e/\partial t$ (rate of e-advance per unit time) \\
 \textbf{Spin} & Chirality (handedness) of the helix: right-handed \texttt{($\circlearrowright$)} or left-handed \texttt{($\circlearrowleft$)} \\
 \textbf{Angular momentum \texttt{(L)}} & Rotation in \texttt{(x,y,z)} space \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Uncertainty Relations}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Uncertainty Principle \& Geometric Constraint \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Uncertainty Principle & Geometric Constraint \\
+\hline
 \textbf{$\Delta x\cdot\Delta p \geq \hbar/2$} & Can't simultaneously specify helix position and pitch from limited observation \\
 \textbf{$\Delta E\cdot\Delta t \geq \hbar/2$} & Can't simultaneously specify energy and time localization \\
 \textbf{$\Delta L\cdot\Delta\theta \geq \hbar/2$} & Angular position-momentum trade-off \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 These aren't fundamental limits on reality --- they are \textbf{geometric constraints on observation} of 5D structures from a 4D perspective.
@@ -2074,55 +2064,52 @@ These aren't fundamental limits on reality --- they are \textbf{geometric constr
 \subsection{Quantum Operations}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Quantum Operation & 5D Geometric Action \\
-\midrule
+\hline
 \textbf{Unitary evolution} & Smooth deformation of the 5D structure \\
 \textbf{Rotation operator} & Rotation in \texttt{(x,y,z)} space and/or e-dimension \\
 \textbf{Translation operator} & Shift in spatial position or e-coordinate \\
 \textbf{Fourier transform} & Change of basis from position to helical-pitch (momentum) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Multi-Particle Systems}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Multi-Particle Concept & 5D Geometric Description \\
-\midrule
+\hline
 \textbf{Product state} & Particles with independent e-coordinates \\
 \textbf{Entangled state} & Particles with constrained e-coordinates ($e_{1} + e_{2} = C$) \\
 \textbf{Identical particles} & Structures that can't be distinguished in full 5D configuration \\
 \textbf{Fermions} & Must have different \texttt{(x,y,z,t,e,chirality)} configurations \\
 \textbf{Bosons} & Can have identical \texttt{(x,y,z,t,e,chirality)} configurations \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{QFT Concepts}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 QFT Concept & 5D Geometric Hint \\
-\midrule
+\hline
 \textbf{Field} & Distribution of possible 5D structures throughout spacetime \\
 \textbf{Particle creation/annihilation} & Geometric topology change in 5D \\
 \textbf{Virtual particles} & Temporary 5D structures in interaction regions \\
 \textbf{Vacuum fluctuations} & Inherent geometric structure of "empty" 5D spacetime \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textit{Note: Full QFT translation requires extending this framework, which is beyond the current scope.}
@@ -2131,56 +2118,53 @@ QFT Concept & 5D Geometric Hint \\
 \subsection{Mathematical Structures}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Mathematical Structure & 5D Interpretation \\
-\midrule
+\hline
 \textbf{Hilbert space} & Space of all possible 5D geometric configurations \\
 \textbf{Inner product $\langle\psi_{1} \mid \psi_{2}\rangle$} & Geometric overlap of two 5D structures \\
 \textbf{Hermitian operators} & Geometric measurements that preserve probability \\
 \textbf{Eigenstates} & 5D structures with definite values in a particular basis \\
 \textbf{Commutators \texttt{[A,B]}} & Geometric incompatibility of simultaneous specification \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Conservation Laws}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Symmetry \& Conserved Quantity & 5D Geometric Meaning \\
-\midrule
-\textbf{Time translation} & Energy \& Rate of advance in e-dimension with time \\
-\textbf{Space translation} & Momentum \& Rate of rotation in e-dimension with position \\
-\textbf{Rotation} & Angular momentum \& Rotation in spatial dimensions \\
-\textbf{E-translation} & E-coordinate \& Total e-coordinate of system (basis of entanglement) \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Symmetry & Conserved Quantity & 5D Geometric Meaning \\
+\hline
+\textbf{Time translation} & Energy & Rate of advance in e-dimension with time \\
+\textbf{Space translation} & Momentum & Rate of rotation in e-dimension with position \\
+\textbf{Rotation} & Angular momentum & Rotation in spatial dimensions \\
+\textbf{E-translation} & E-coordinate & Total e-coordinate of system (basis of entanglement) \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
 \subsection{Common Misconceptions}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
 Misconception & 5D Geometric Reality \\
-\midrule
+\hline
 "Particles are probability clouds" & Particles are definite 5D structures; probability describes our 4D sampling \\
 "Observation creates reality" & Observation reveals which part of 5D reality we interact with \\
 "Quantum mechanics is non-deterministic" & 5D evolution is deterministic; 4D sampling appears probabilistic \\
 "Entanglement requires hidden signals" & Entanglement is geometric connection via conserved e-coordinate \\
 "Superposition means multiple realities" & Superposition is extension in one reality (5D) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -2198,18 +2182,17 @@ This appendix provides the complete formal derivation of the spin-statistics the
 The group of spatial rotations in d dimensions is \texttt{SO(d)}. Its topological properties depend critically on d:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-d \& SO(d) & $\pi_{1}(SO(d))$ & Universal cover \& Physical consequence \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+d & SO(d) & $\pi_{1}(SO(d))$ & Universal cover & Physical consequence \\
+\hline
 1 & \texttt{\{e\}} (trivial) & \texttt{0} & \texttt{\{e\}} & No rotation constraint \\
 2 & $SO(2) = U(1)$ & \textbf{\texttt{$\mathbb{Z}$}} & \textbf{\texttt{$\mathbb{R}$}} & Continuous winding: anyons \\
 3 & \texttt{SO(3)} & \textbf{$\mathbb{Z}_{2}$} & \textbf{\texttt{SU(2)}} & Two options: bosons/fermions \\
 $\geq 3$ & \texttt{SO(d)} & \textbf{$\mathbb{Z}_{2}$} & \textbf{\texttt{Spin(d)}} & Two options: bosons/fermions \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The fundamental group $\pi_{1}(SO(d))$ is the key object. It classifies the topologically distinct types of closed loops in the rotation group --- and therefore the topologically distinct types of winding that a particle's e-coordinate can perform under spatial rotation.
@@ -2418,17 +2401,16 @@ In $d = 2$ spatial dimensions, the rotation-e coupling \texttt{s} is an unconstr
 The configuration-space perspective corroborates this result. The fundamental group of the configuration space of two identical particles in \texttt{$\mathbb{R}$$^{d}$} determines the allowed exchange statistics:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 d & $\pi_{1}(C_{2}(\mathbb{R}^{d}))$ & Allowed statistics \\
-\midrule
-1 & trivial \& Bose-Fermi equivalence (Jordan-Wigner) \\
+\hline
+1 & trivial & Bose-Fermi equivalence (Jordan-Wigner) \\
 2 & \textbf{\texttt{$\mathbb{Z}$}} (the integers) & \textbf{Anyons} --- continuous phase parameter \\
 $\geq 3$ & \textbf{$\mathbb{Z}_{2}$} & \textbf{Bosons or fermions} --- exactly two options \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 For $d \geq 3$: $\pi_{1}(C_{2}(\mathbb{R}^{d})) = \mathbb{Z}_{2}$. The one-dimensional representations of $\mathbb{Z}_{2}$ are the trivial representation (phase $+1$, bosons) and the sign representation (phase \texttt{-1}, fermions). Exactly two options.
@@ -2443,17 +2425,16 @@ The rotation-group argument (Theorems B.1.1 and B.1.3) and the configuration-spa
 Collecting all results, we obtain the full spectrum of allowed statistics as a function of spatial dimension:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Spatial dimension & $\pi_{1}(SO(d))$ & Allowed winding numbers \& Statistics \& Physical examples \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Spatial dimension & $\pi_{1}(SO(d))$ & Allowed winding numbers & Statistics & Physical examples \\
+\hline
 $d = 1$ & \texttt{0} (trivial) & Any (degenerate) & Bose-Fermi equivalent & 1D quantum wires \\
-$d = 2$ & \textbf{\texttt{$\mathbb{Z}$}} & Any real number \& Anyons (continuous phase) & FQH quasiparticles \\
+$d = 2$ & \textbf{\texttt{$\mathbb{Z}$}} & Any real number & Anyons (continuous phase) & FQH quasiparticles \\
 $d \geq 3$ & \textbf{$\mathbb{Z}_{2}$} & Half-integers: $s \in (1/2)\mathbb{Z}$ & Bosons ($s \in \mathbb{Z}$) or Fermions ($s \in \mathbb{Z}+1/2$) & All 3D matter \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Every row follows from a single principle: \textbf{the fundamental group of the rotation group determines the allowed winding numbers of the e-dimension helix.} The rows are not separate postulates --- they are the same topological principle applied to different spatial geometries.
@@ -2579,19 +2560,18 @@ A consistency check: the DOUBLE exchange $X^{2}$ corresponds to a full $2\pi$ re
 \subsubsection{Evaluation Table}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Winding number \texttt{s} & $e^{i2\pi s}$ & Symmetry \& Statistics \\
-\midrule
-\texttt{0} & $+1$ & Symmetric \& Boson \\
-\texttt{1/2} & \texttt{-1} & Antisymmetric \& Fermion \\
-\texttt{1} & $+1$ & Symmetric \& Boson \\
-\texttt{3/2} & \texttt{-1} & Antisymmetric \& Fermion \\
-\texttt{2} & $+1$ & Symmetric \& Boson \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Winding number \texttt{s} & $e^{i2\pi s}$ & Symmetry & Statistics \\
+\hline
+\texttt{0} & $+1$ & Symmetric & Boson \\
+\texttt{1/2} & \texttt{-1} & Antisymmetric & Fermion \\
+\texttt{1} & $+1$ & Symmetric & Boson \\
+\texttt{3/2} & \texttt{-1} & Antisymmetric & Fermion \\
+\texttt{2} & $+1$ & Symmetric & Boson \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The pattern is exact and universal: integer winding gives bosons, half-integer winding gives fermions. No exceptions.
@@ -2622,20 +2602,19 @@ where $\gamma$ is the exchange loop and $A_e$ is the Berry connection on the e-b
 \textbf{Comparison with the Aharonov-Bohm effect:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Property \& Aharonov-Bohm \& Spin-Statistics \\
-\midrule
-Loop \& Spatial loop around solenoid \& Exchange loop in configuration space \\
-Connection \& EM vector potential $A_\mu$ & Rotation-e coupling (Berry connection) \\
-Source of phase \& External topological defect (solenoid) & Intrinsic particle structure (winding number \texttt{s}) \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Property & Aharonov-Bohm & Spin-Statistics \\
+\hline
+Loop & Spatial loop around solenoid & Exchange loop in configuration space \\
+Connection & EM vector potential $A_\mu$ & Rotation-e coupling (Berry connection) \\
+Source of phase & External topological defect (solenoid) & Intrinsic particle structure (winding number \texttt{s}) \\
 Holonomy & $(e/\hbar) \cdot \Phi_{enclosed}$ & $2\pi s$ \\
-Topological? & Yes --- depends only on enclosed flux \& Yes --- depends only on winding number \\
-Quantization \& Flux quantum $\Phi_{0} = h/e$ & Phase in $\{+1, -1\}$ ($d \geq 3$) \\
-\bottomrule
+Topological? & Yes --- depends only on enclosed flux & Yes --- depends only on winding number \\
+Quantization & Flux quantum $\Phi_{0} = h/e$ & Phase in $\{+1, -1\}$ ($d \geq 3$) \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Both effects are holonomies of the e-connection around non-contractible loops. The Aharonov-Bohm holonomy is sourced by an EXTERNAL field (the solenoid). The spin-statistics holonomy is sourced by the particle's INTRINSIC structure (the winding number). In both cases, the phase is topological --- it depends only on the topology of the loop, not on its shape or the speed of traversal.
@@ -3386,18 +3365,17 @@ Therefore:
 \paragraph{Comparison with Bounds}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Bound \& Value \& Source \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Bound & Value & Source \\
+\hline
 Local hidden variable (CHSH) & $\lvert S \rvert \leq 2$ & \cite{Bell1964}, \cite{CHSH1969} \\
 \textbf{5D framework prediction} & \textbf{$\lvert S \rvert = 2\sqrt{}2 \approx 2.83$} & \textbf{This calculation} \\
 Quantum mechanics (Tsirelson) & $\lvert S \rvert \leq 2\sqrt{}2$ & \cite{Tsirelson1980} \\
 Experiment (Hensen et al.) & $\lvert S \rvert = 2.42 \pm 0.20$ & \cite{Hensenetal2015} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The 5D framework:
@@ -3943,20 +3921,19 @@ The interference term oscillates with the AB phase $(e/\hbar)\Phi$, producing th
 \subsubsection{Comparison of Standard and 5D Derivations}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Step \& Standard QM derivation & 5D framework derivation \\
-\midrule
-Vector potential \& Mathematical object, gauge-ambiguous \& Connection on the e-bundle, physically real \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Step & Standard QM derivation & 5D framework derivation \\
+\hline
+Vector potential & Mathematical object, gauge-ambiguous & Connection on the e-bundle, physically real \\
 Phase shift origin & "The potential is physical" (asserted) & Holonomy of e-connection (derived from geometry) \\
-Why B = 0 yet effect occurs \& Potential has physical content beyond field \& Locally flat but globally twisted e-bundle \\
-Flux quantization \& Experimental fact \& Circumference of the e-circle: $\Phi_{0}$ = $2\pi\hbar/e$ \\
-Path independence \& Gauge invariance of the phase difference \& Holonomy is a topological invariant \\
-Connection to spin-statistics \& None apparent \& Same mechanism: holonomy of e-connection \\
-\bottomrule
+Why B = 0 yet effect occurs & Potential has physical content beyond field & Locally flat but globally twisted e-bundle \\
+Flux quantization & Experimental fact & Circumference of the e-circle: $\Phi_{0}$ = $2\pi\hbar/e$ \\
+Path independence & Gauge invariance of the phase difference & Holonomy is a topological invariant \\
+Connection to spin-statistics & None apparent & Same mechanism: holonomy of e-connection \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The 5D derivation reproduces every quantitative result of the standard treatment. What it adds is the geometric reason: the vector potential is the connection on a physical fifth dimension, the phase shift is the holonomy of this connection, and the flux quantum is set by the geometry of the e-circle.
@@ -4344,18 +4321,17 @@ This is Claim 3 of Section 5.7. It remains open and is the most speculative part
 The 5D Einstein equations on $P(M^{4}$, U(1)) give:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-5D component & 4D field \& Physical content \\
-\midrule
-Base metric $g\mu\nu$ & Gravitational field \& Spacetime curvature $\to$ gravity \\
-Connection $A\mu$ & Electromagnetic field \& E-fiber twist $\to$ EM forces \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+5D component & 4D field & Physical content \\
+\hline
+Base metric $g\mu\nu$ & Gravitational field & Spacetime curvature $\to$ gravity \\
+Connection $A\mu$ & Electromagnetic field & E-fiber twist $\to$ EM forces \\
 Fiber metric $\varphi$ & Scalar field (dilaton) & E-circle radius $\to$ fifth force \\
-Geodesic equation \& Particle trajectory \& Unified motion through 5D \\
-\bottomrule
+Geodesic equation & Particle trajectory & Unified motion through 5D \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 All three fields emerge from a single 5D geometric object --- the metric $\hat{G}_{AB}$. The separation into gravity, EM, and scalar is the KK decomposition. The reunification is the 5D picture.
@@ -4376,17 +4352,16 @@ One geometric structure --- the 5D metric on $P(M^{4}, U(1))$ --- unifies all of
 \subsection{Status of the Three Claims}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Claim \& Status \& Evidence \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Claim & Status & Evidence \\
+\hline
 1. E-space curvature reproduces Newtonian gravity & \textbf{Confirmed} & The 4D projection of the 5D Einstein equations gives $\nabla^{2}\Phi = 4\pi G\rho$ in the weak-field limit (Section D.5) \\
 2. E-space curvature gives gravitational time dilation & \textbf{Partially confirmed} & The $g_{00}$ component gives the correct $d\tau/dt = \sqrt{}(1-2GM/rc^{2})$; the e-fiber provides a correction, not the primary effect (Section D.6) \\
 3. E-dimension quantization gives the Planck scale & \textbf{Open} & Requires quantizing the 5D metric; the e-circle may provide a natural UV cutoff (Section D.8.3) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -4426,37 +4401,35 @@ The e-dimension framework contains a remarkable structural fact that deserves ex
 \textbf{The e-fiber is already quantized.} Standard quantum mechanics IS the quantum theory of the e-coordinate:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-QM structure \& E-fiber interpretation \& Status \\
-\midrule
-Wave function $\psi$ & Section of the e-bundle \& Standard QM \\
-Schr\"{o}dinger equation \& Evolution on the e-fiber \& Standard QM \\
-Quantum phase \& E-coordinate value \& Framework postulate \\
-Spin \& E-angular momentum (Appendix B.3) & Derived \\
-Born rule \& E-density sampling (Appendix C.1) & Derived \\
-Measurement \& E-fiber interaction (Section 3.5) & Framework postulate \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+QM structure & E-fiber interpretation & Status \\
+\hline
+Wave function $\psi$ & Section of the e-bundle & Standard QM \\
+Schr\"{o}dinger equation & Evolution on the e-fiber & Standard QM \\
+Quantum phase & E-coordinate value & Framework postulate \\
+Spin & E-angular momentum (Appendix B.3) & Derived \\
+Born rule & E-density sampling (Appendix C.1) & Derived \\
+Measurement & E-fiber interaction (Section 3.5) & Framework postulate \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The e-connection is already quantized.} Quantum electrodynamics IS the quantum theory of the connection $A_\mu$ on the e-bundle:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-QED structure \& E-bundle interpretation \& Status \\
-\midrule
-Photon field $A_\mu$ & Connection on \texttt{U(1)} fiber \& KK identification \\
-Minimal coupling \& E-parallel transport \& Section 4.1 \\
-Charge quantization \& E-winding number \& Bridge 1 \\
-QED Lagrangian \& KK reduction of 5D action \& Appendix D \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+QED structure & E-bundle interpretation & Status \\
+\hline
+Photon field $A_\mu$ & Connection on \texttt{U(1)} fiber & KK identification \\
+Minimal coupling & E-parallel transport & Section 4.1 \\
+Charge quantization & E-winding number & Bridge 1 \\
+QED Lagrangian & KK reduction of 5D action & Appendix D \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{What is NOT yet quantized:} The base metric $g_{\mu\nu}$ --- the gravitational field. This is the part that, in standard 4D, produces non-renormalizable divergences when quantized.
@@ -4792,17 +4765,16 @@ The 5D graviton $\hat{h}_{AB}$ has 15 independent components. On $S^{1}$, each d
 For each mode \texttt{n}, the 15 components reorganize into 4D fields:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-5D component & 4D field at mode \texttt{n} & Spin \& Count \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+5D component & 4D field at mode \texttt{n} & Spin & Count \\
+\hline
 $\hat{h}_{\mu\nu}^{(n)}$ & Massive spin-2 tensor & 2 & 10 \\
 $\hat{h}_{\mu5}^{(n)}$ & Massive vector & 1 & 4 \\
 $\hat{h}_{55}^{(n)}$ & Massive scalar & 0 & 1 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 For $n = 0$: the spin-2 is massless (the 4D graviton), the vector is the photon, and the scalar is the dilaton. For $n \neq 0$: all fields are massive with mass $m_n = |n|/R$.
@@ -5123,20 +5095,19 @@ The double zeta regularization of this sum requires the Epstein zeta function or
 \subsection{Comparison with Other Approaches}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Approach \& UV behavior \& Mechanism \& Status \\
-\midrule
-4D Einstein gravity \& Non-renormalizable (2-loop divergence) & None \& Proven divergent \\
-5D KK on $S^{1}$ (this paper) & One-loop finite (zeta regularized) & Compact e-circle discretizes KK spectrum \& Established here \\
-Supergravity ($N=8$, 4D) & Finite through at least 4 loops \& SUSY cancellations \& Proven to 4 loops; all-orders status unknown \\
-String theory \& UV finite (all orders) & Extended objects + modular invariance \& Established \\
-Loop quantum gravity \& Finite (discrete spectra) & Spin foam discreteness \& Claimed; debated \\
-Asymptotic safety \& Finite (non-perturbatively) & UV fixed point \& Evidence from functional RG; not proven \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Approach & UV behavior & Mechanism & Status \\
+\hline
+4D Einstein gravity & Non-renormalizable (2-loop divergence) & None & Proven divergent \\
+5D KK on $S^{1}$ (this paper) & One-loop finite (zeta regularized) & Compact e-circle discretizes KK spectrum & Established here \\
+Supergravity ($N=8$, 4D) & Finite through at least 4 loops & SUSY cancellations & Proven to 4 loops; all-orders status unknown \\
+String theory & UV finite (all orders) & Extended objects + modular invariance & Established \\
+Loop quantum gravity & Finite (discrete spectra) & Spin foam discreteness & Claimed; debated \\
+Asymptotic safety & Finite (non-perturbatively) & UV fixed point & Evidence from functional RG; not proven \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The e-circle approach is closest in spirit to string theory (compact dimension providing UV structure) and to loop quantum gravity (discrete spectra providing cutoff). It is less powerful than either --- it does not achieve the all-orders finiteness of string theory or the non-perturbative finiteness claimed by asymptotic safety. But it achieves one-loop finiteness from a MINIMAL structure (a single compact dimension with spin structure) that is already required by the quantum mechanical content of the framework.
@@ -5430,19 +5401,18 @@ Therefore: \textbf{$E_{2}(-1; Q) = 0$.}
 Moreover, $E_{2}(s; Q_{0}) = 0$ at EVERY negative integer $s \leq -1$:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 s & $\zeta(s)$ & $L(s, \chi_{-3})$ & $E_{2}(s; Q_{0})$ \\
-\midrule
+\hline
 0 & \texttt{-1/2} & \texttt{1/3} & \texttt{-1} \\
 -1 & \texttt{-1/12} & \texttt{0} & \textbf{\texttt{0}} \\
 -2 & \texttt{0} & \texttt{-2/9} & \textbf{\texttt{0}} \\
 -3 & \texttt{1/120} & \texttt{0} & \textbf{\texttt{0}} \\
 -4 & \texttt{0} & \texttt{2/3} & \textbf{\texttt{0}} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The mechanism: $\zeta(-n)$ vanishes for even \texttt{n} (trivial Riemann zeros), while $L(-n, \chi_{-3})$ vanishes for odd \texttt{n} (trivial zeros of the odd L-function, forced by $B_{2k,\chi} = 0$ for odd characters via the symmetry of Bernoulli polynomials). These complementary zeros cover every $n \geq 1$.
@@ -5494,17 +5464,16 @@ The complementary zeros cover EVERY $j \geq 0$. The sunset contribution is ident
 \subsubsection{Comparison with 4D}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
  & 4D Einstein gravity & 5D KK gravity (under zeta reg.) \\
-\midrule
+\hline
 Two-loop $R^{3}$ coefficient & $209/2880 \neq 0$ & \textbf{0 (identically, all orders)} \\
-Mechanism \& No cancellation \& Complementary trivial zeros \\
+Mechanism & No cancellation & Complementary trivial zeros \\
 Counterterm needed? & Yes (non-renormalizable) & \textbf{No} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 In 4D gravity, the Goroff-Sagnotti coefficient \texttt{209/2880} is non-zero --- it requires an $R^{3}$ counterterm that cannot be absorbed into the Einstein-Hilbert action, proving non-renormalizability.
@@ -5620,18 +5589,17 @@ This is reminiscent of SUSY, where the boson-fermion cancellation sets the leadi
 \subsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 Loop order & 4D gravity & 5D KK gravity (under zeta reg.) \\
-\midrule
-1-loop \& Finite (on-shell) & Finite (zeta regularization) \\
+\hline
+1-loop & Finite (on-shell) & Finite (zeta regularization) \\
 2-loop & \textbf{Divergent} (Goroff-Sagnotti $R^{3}$) & \textbf{$R^{3}$ coefficient = 0} (all orders in mass expansion) \\
-L-loop \& Increasingly divergent ($R^{L+1}$ terms) & \textbf{Conjectured predictive} ($S_{0}^L = 0$; Epstein zeta) \\
-All orders \& Non-renormalizable & \textbf{Conjectured perturbatively predictive} \\
-\bottomrule
+L-loop & Increasingly divergent ($R^{L+1}$ terms) & \textbf{Conjectured predictive} ($S_{0}^L = 0$; Epstein zeta) \\
+All orders & Non-renormalizable & \textbf{Conjectured perturbatively predictive} \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The compact e-circle --- the same geometric object that produces quantum mechanics (Sections 3-4), the spin-statistics theorem (Appendix B), and the unification of gravity and electromagnetism (Appendix D) --- also removes the UV divergences that have blocked quantum gravity for fifty years. It does so through a single mechanism: the discreteness of the KK spectrum, combined with the analytic continuation of the discrete sums via zeta functions.
@@ -5717,18 +5685,17 @@ Torsion balance and MEMS cantilever experiments measuring gravitational force at
 \subsubsection{Current Status}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Experiment \& Scale reached \& Result \& Our prediction \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Experiment & Scale reached & Result & Our prediction \\
+\hline
 \cite{Leeetal2020} & 52 $\mu m$ & No deviation & $\lambda \sim  21 \mu m$: not yet probed \\
-\cite{Kapneretal2007} & 56 $\mu m$ & No deviation \& Consistent \\
-Westphal et al. (2021) & ~100 $\mu m$ & No deviation \& Consistent \\
-Near-future MEMS & 1--10 $\mu m$ target \& In development & \textbf{Will test} \\
-\bottomrule
+\cite{Kapneretal2007} & 56 $\mu m$ & No deviation & Consistent \\
+Westphal et al. (2021) & ~100 $\mu m$ & No deviation & Consistent \\
+Near-future MEMS & 1--10 $\mu m$ target & In development & \textbf{Will test} \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Assessment:} Not yet tested. Within reach of next-generation experiments (5--10 year timescale).
@@ -5943,25 +5910,24 @@ Quasar absorption spectra, atomic clock comparisons, the Oklo natural reactor co
 \subsection{Summary Table}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llllll}
-\toprule
-\# & Prediction \& Value \& Test \& Status \& Timescale \\
-\midrule
-1 & Modified gravity at short range & $\lambda \sim  21 \mu m$ & Torsion balance, MEMS \& Not yet tested & 5--10 years \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+\# & Prediction & Value & Test & Status & Timescale \\
+\hline
+1 & Modified gravity at short range & $\lambda \sim  21 \mu m$ & Torsion balance, MEMS & Not yet tested & 5--10 years \\
 2 & Dark energy from Casimir energy & $\rho_\Lambda$ from SM field content + \texttt{L} & Cosmological surveys & \textbf{DESI tension} ($4.2\sigma$ vs $w=-1$) & Ongoing \\
 2b & $N_{eff}$ from dilaton & $\Delta N_{eff} \approx 0.05$ (after intra-tower decays) & CMB-S4 & \textbf{Consistent} (ACT+SPT: $2.81\pm0.18$; tower dynamics reduce naive \texttt{0.57} to \texttt{~0.05}) & 5--10 years \\
-3 & meV-scale scalar field (dilaton) & $m_\varphi \sim  1--10 meV$ & Neutron scattering, Casimir \& Partially constrained & 5--10 years \\
-4 & KK graviton tower & $m_n = n \times (1--10 meV)$ & High-frequency GW, Casimir \& Not testable (current) & 10+ years \\
-5 & Finite graviton scattering \& No UV divergences \& Indirect (cosmology, BH) & Not testable (current) & Far future \\
-6 & Anyon statistics in 2D & $\theta = \pi/m$ for $\nu = 1/m$ FQH \& FQH interferometry & \textbf{Confirmed} & Done \\
+3 & meV-scale scalar field (dilaton) & $m_\varphi \sim  1--10 meV$ & Neutron scattering, Casimir & Partially constrained & 5--10 years \\
+4 & KK graviton tower & $m_n = n \times (1--10 meV)$ & High-frequency GW, Casimir & Not testable (current) & 10+ years \\
+5 & Finite graviton scattering & No UV divergences & Indirect (cosmology, BH) & Not testable (current) & Far future \\
+6 & Anyon statistics in 2D & $\theta = \pi/m$ for $\nu = 1/m$ FQH & FQH interferometry & \textbf{Confirmed} & Done \\
 7 & Constant $\alpha$ & $d\alpha/dt = 0$ & Quasar spectra, atomic clocks & \textbf{Consistent} & Ongoing \\
-8 & Normal neutrino mass ordering & $m_{3} > m_{2} > m_{1}$ from $Z_{3}$ geometry \& JUNO (data taking since Aug 2025) & Hinted at $2--3\sigma$ (NOvA, T2K, SK) & 3--6 years \\
-9 & No QCD axion (strong CP topological) & $\theta = 0$, $\pi_{4}(SU(3)) = 0$ & ADMX, ABRACADABRA, IAXO \& Not yet excluded \& Ongoing \\
-10 & $H_{0} \approx 68.0--68.7 km/s/Mpc$ (hidden-brane dark radiation) & $\Delta N_{eff} = 0.02--0.14$, $\xi < 0.384$ (BBN); $\xi < 0.397$ (ACT DR6 $3\sigma$) & CMB-S4, TRGB/JWST, GW sirens \& Tier 1 \textbf{consistent} with ACT DR6+DESI (\texttt{68.2--68.4}); Tier 2 in $2.5--2.8\sigma$ tension with ACT DR6 & 5--10 years \\
-\bottomrule
+8 & Normal neutrino mass ordering & $m_{3} > m_{2} > m_{1}$ from $Z_{3}$ geometry & JUNO (data taking since Aug 2025) & Hinted at $2--3\sigma$ (NOvA, T2K, SK) & 3--6 years \\
+9 & No QCD axion (strong CP topological) & $\theta = 0$, $\pi_{4}(SU(3)) = 0$ & ADMX, ABRACADABRA, IAXO & Not yet excluded & Ongoing \\
+10 & $H_{0} \approx 68.0--68.7 km/s/Mpc$ (hidden-brane dark radiation) & $\Delta N_{eff} = 0.02--0.14$, $\xi < 0.384$ (BBN); $\xi < 0.397$ (ACT DR6 $3\sigma$) & CMB-S4, TRGB/JWST, GW sirens & Tier 1 \textbf{consistent} with ACT DR6+DESI (\texttt{68.2--68.4}); Tier 2 in $2.5--2.8\sigma$ tension with ACT DR6 & 5--10 years \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -6595,18 +6561,17 @@ For $R >> l_P$ (which is satisfied by thirty orders of magnitude in the present 
 The following table collects the four classes of non-perturbative effects and their status in the stabilized Kaluza-Klein framework:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Non-perturbative effect \& Suppression mechanism \& Suppression factor \& Status \\
-\midrule
-Witten bubble of nothing \& Casimir stabilization barrier & $\exp(-S_{CDL}) \sim  \exp(-10^{30})$ & Controlled if stabilized \\
-Gravitational instantons \& Large action in Planck units & $\exp(-10^{30})$ & Completely negligible \\
-KK monopole production \& Enormous monopole mass & $M \sim  10^{22} kg$ & Stable; too heavy to produce \\
-Topology change \& KK monopole mass + instanton action & $\exp(-10^{30})$ & Suppressed by both mechanisms \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Non-perturbative effect & Suppression mechanism & Suppression factor & Status \\
+\hline
+Witten bubble of nothing & Casimir stabilization barrier & $\exp(-S_{CDL}) \sim  \exp(-10^{30})$ & Controlled if stabilized \\
+Gravitational instantons & Large action in Planck units & $\exp(-10^{30})$ & Completely negligible \\
+KK monopole production & Enormous monopole mass & $M \sim  10^{22} kg$ & Stable; too heavy to produce \\
+Topology change & KK monopole mass + instanton action & $\exp(-10^{30})$ & Suppressed by both mechanisms \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Several structural observations are in order:
@@ -6905,19 +6870,18 @@ Non-planar topologies change $Q_L$ but not its dimension \texttt{L}. The Epstein
 \subsubsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Potential obstruction \& Status \& Reason \\
-\midrule
-Degenerate quadratic form \& Excluded \& KK masses ensure positive definiteness \\
-Singular heat kernel coefficients \& Excluded \& Polynomial in curvature and masses \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Potential obstruction & Status & Reason \\
+\hline
+Degenerate quadratic form & Excluded & KK masses ensure positive definiteness \\
+Singular heat kernel coefficients & Excluded & Polynomial in curvature and masses \\
 Pole collision ($s = L/2$ meets $s \leq 0$) & Impossible & $L/2 > 0$ for all positive \texttt{L} \\
-Non-planar topologies \& Irrelevant \& Pole depends on dimension \texttt{L} only \\
-Infrared divergences \& Separate issue \& Not addressed by this argument \\
-\bottomrule
+Non-planar topologies & Irrelevant & Pole depends on dimension \texttt{L} only \\
+Infrared divergences & Separate issue & Not addressed by this argument \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 No known obstruction to the all-orders finiteness conjecture exists.
@@ -6973,17 +6937,16 @@ The pole-separation argument is a structural fact about Epstein zeta functions (
 \subsubsection{Comparison with Known Results}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Theory \& Finiteness \& Mechanism \\
-\midrule
-N = 8 SUGRA, 4D \& Proven through 4 loops \& SUSY cancellations \\
-5D KK gravity (this paper) & Proven through 2 loops, conjectured all orders \& Zeta regularization of KK sums \\
-Topological gravity, 3D \& Trivially finite \& No propagating degrees of freedom \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Theory & Finiteness & Mechanism \\
+\hline
+N = 8 SUGRA, 4D & Proven through 4 loops & SUSY cancellations \\
+5D KK gravity (this paper) & Proven through 2 loops, conjectured all orders & Zeta regularization of KK sums \\
+Topological gravity, 3D & Trivially finite & No propagating degrees of freedom \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The mechanism here is distinct from supersymmetry: no fermions appear, and the cancellation is between discrete KK modes rather than between bosons and fermions. The closest analogue is the Casimir effect, where zeta regularization renders the vacuum energy of a compact dimension finite.
@@ -7036,20 +6999,19 @@ strategies, and states honestly what works and what does not.
 The framework developed in the main text and in Appendices A--H uses a single compact extra dimension -- the e-circle $S^1$ with circumference $L$ -- to provide a geometric account of:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Feature \& Geometric origin \\
-\midrule
-Quantum phase \& Position on the e-circle \\
-Electromagnetism \& KK connection $A_\mu$ (Appendix D) \\
-Spin and statistics \& Winding number / e-momentum topology \\
-Gravity \& Base metric $g_{\mu\nu}$ \\
-Dilaton / scalar field \& Local radius of the e-circle \\
-UV regulation \& Compact spectrum (Appendices F--G) \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Feature & Geometric origin \\
+\hline
+Quantum phase & Position on the e-circle \\
+Electromagnetism & KK connection $A_\mu$ (Appendix D) \\
+Spin and statistics & Winding number / e-momentum topology \\
+Gravity & Base metric $g_{\mu\nu}$ \\
+Dilaton / scalar field & Local radius of the e-circle \\
+UV regulation & Compact spectrum (Appendices F--G) \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 All of this follows from a single U(1) fiber.
@@ -7079,19 +7041,18 @@ In Kaluza--Klein theory, a $d$-dimensional compact internal manifold $M^d$ contr
 The correspondence:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Gauge group \& Minimal internal manifold \& Dimension \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Gauge group & Minimal internal manifold & Dimension \\
+\hline
 $U(1)$ & $S^1$ & 1 \\
 $SU(2)$ & $S^3 \cong SU(2)$ & 3 \\
 $SU(3)$ & $\mathbb{CP}^2$ & 4 \\
 $SU(2) \times U(1)$ & $S^3 \times S^1$ & 4 \\
 $SU(3) \times SU(2) \times U(1)$ & $\mathbb{CP}^2 \times S^2 \times S^1$ & 7 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The last row is the critical one. The \textbf{minimum} number of internal dimensions required to accommodate the full Standard Model gauge group is
@@ -7202,17 +7163,16 @@ The conceptual economy. The claim "one extra dimension explains quantum mechanic
 Keep the idea that each gauge force corresponds to a \textbf{separate} fiber, but with vastly different sizes reflecting the hierarchy of coupling constants.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Force \& Fiber \& Dimension \& Characteristic size \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Force & Fiber & Dimension & Characteristic size \\
+\hline
 Electromagnetism & $S^1$ & 1 & $L \sim 130\;\mu\text{m}$ \\
 Weak force & $S^3$ & 3 & $\ell_W \sim 10^{-18}$ m \\
 Strong force & $\mathbb{CP}^2$ & 4 & $\ell_s \sim 10^{-15}$ m \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The total fiber is $S^1 \times S^3 \times \mathbb{CP}^2$, dimension $1 + 3 + 4 = 8$, giving $D = 4 + 8 = 12$ total dimensions. (This exceeds the KK minimum of 11 because we are not using the most compact coset representation for $SU(2)$.)
@@ -7349,21 +7309,20 @@ The compact e-circle discretizes the spectrum of e-momenta: $p_5 = n / R$, $n \i
 \subsubsection{Summary of coverage}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Standard Model sector \& Covered by e-circle? \\
-\midrule
-Gravity \& Yes \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Standard Model sector & Covered by e-circle? \\
+\hline
+Gravity & Yes \\
 Electromagnetism ($U(1)_{\text{EM}}$) & Yes \\
 Quantum mechanics (phase, spin, Born rule) & Yes \\
 Weak force ($SU(2)_L$) & \textbf{No} \\
 Strong force ($SU(3)_c$) & \textbf{No} \\
 Fermion generations (3 families) & \textbf{No} \\
 Higgs mechanism & \textbf{No} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework accounts for gravity, electromagnetism, and the quantum formalism. The weak force, strong force, fermion family structure, and the Higgs mechanism remain outside its scope.
@@ -7450,22 +7409,21 @@ In the e-circle framework, the single $S^1$ has $\chi(S^1) = 0$, so it predicts 
 \subsection{A Comparison of the Three Strategies}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Criterion \& A: Full $M^7$ & B: Hierarchical fibers \& C: Emergent symmetry \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Criterion & A: Full $M^7$ & B: Hierarchical fibers & C: Emergent symmetry \\
+\hline
 Total dimensions & 11 & 12 & 5 \\
-SM gauge group \& Yes \& Yes \& Unknown \\
-Fermion generations \& Yes (topology) & Possible \& Unknown \\
-E-circle QM survives \& Yes ($S^1$ factor) & Yes ($S^1$ factor) & Yes \\
-Mathematical status \& Well-developed \& Standard KK \& No construction \\
-Connection to M-theory \& Direct \& Indirect \& None \\
-Conceptual economy \& Low (7 extra dims) & Low (8 extra dims) & High (1 extra dim) \\
-Falsifiability \& Inherited from M-theory \& KK tower predictions \& Not yet defined \\
-\bottomrule
+SM gauge group & Yes & Yes & Unknown \\
+Fermion generations & Yes (topology) & Possible & Unknown \\
+E-circle QM survives & Yes ($S^1$ factor) & Yes ($S^1$ factor) & Yes \\
+Mathematical status & Well-developed & Standard KK & No construction \\
+Connection to M-theory & Direct & Indirect & None \\
+Conceptual economy & Low (7 extra dims) & Low (8 extra dims) & High (1 extra dim) \\
+Falsifiability & Inherited from M-theory & KK tower predictions & Not yet defined \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The tradeoff is clear:} mathematical security increases with the number of extra dimensions, while conceptual economy decreases.
@@ -7774,19 +7732,18 @@ The 5D framework makes NO modification to the massless graviton. Standard gravit
 Each massive KK mode has additional polarizations compared to the massless graviton. A massive spin-2 particle in 4D has \textbf{5 polarization states} (compared to 2 for massless):
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Polarization \& Helicity \& Present in GR? & Present in KK? \\
-\midrule
-Tensor + & $\pm$2 & Yes \& Yes \\
-Tensor $\times$ & $\pm$2 & Yes \& Yes \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Polarization & Helicity & Present in GR? & Present in KK? \\
+\hline
+Tensor + & $\pm$2 & Yes & Yes \\
+Tensor $\times$ & $\pm$2 & Yes & Yes \\
 Vector x & $\pm$1 & No & \textbf{Yes} \\
 Vector y & $\pm$1 & No & \textbf{Yes} \\
 Scalar (breathing) & 0 & No & \textbf{Yes} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The 3 additional polarizations (two vector + one scalar) are the signature of massive gravitons. They arise because the massive spin-2 field has more degrees of freedom than the massless one (5 vs 2).
@@ -7808,19 +7765,18 @@ Total degrees of freedom per KK level: $5 + 3 + 1 = 9$.
 \subsubsection{Frequency Comparison}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Detector \& Frequency band \& KK frequency \& Detectable? \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Detector & Frequency band & KK frequency & Detectable? \\
+\hline
 LIGO/Virgo & $10 -- 10^{4} Hz$ & $2.3 \times 10^{12} Hz$ & \textbf{No} ($10^{8}\times$ too high) \\
 LISA & $10^{-4} -- 1 Hz$ & $2.3 \times 10^{12} Hz$ & \textbf{No} ($10^{12}\times$ too high) \\
 Pulsar timing & $10^{-9} -- 10^{-7} Hz$ & $2.3 \times 10^{12} Hz$ & \textbf{No} \\
 CMB B-modes & $\sim 10^{-18} Hz$ & $2.3 \times 10^{12} Hz$ & \textbf{No} \\
 \textbf{THz spectroscopy} & \textbf{$10^{11} -- 10^{13} Hz$} & \textbf{$2.3 \times 10^{12} Hz$} & \textbf{In band} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The KK graviton frequency falls in the THz (far-infrared) band. No current gravitational wave detector operates at this frequency. However, THz spectroscopy and photonics are active experimental fields --- the frequency is accessible to table-top experiments, even if the gravitational coupling is extremely weak.
@@ -7896,19 +7852,18 @@ The KK framework satisfies this trivially: the massless graviton propagates on t
 \subsection{Summary of Gravitational Wave Predictions}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Observable \& GR prediction & 5D framework prediction \& Status \\
-\midrule
-GW polarizations (LIGO band) & 2 (tensor +, $\times$) & 2 (tensor +, $\times$) --- identical \& Consistent \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Observable & GR prediction & 5D framework prediction & Status \\
+\hline
+GW polarizations (LIGO band) & 2 (tensor +, $\times$) & 2 (tensor +, $\times$) --- identical & Consistent \\
 GW speed & \texttt{c} exactly & \texttt{c} exactly ($n=0$ mode) & Consistent \\
 Graviton mass & 0 & 0 ($n=0$); \texttt{9.4n} meV ($n\geq1$) & Consistent \\
-Additional polarizations \& None & 5 per KK mode, at THz \& Not yet testable \\
-Yukawa gravity correction \& None & $\alpha_G e^{-r/21\mu m}$ at $r < 100 \mu m$ & Testable (Prediction 1) \\
-\bottomrule
+Additional polarizations & None & 5 per KK mode, at THz & Not yet testable \\
+Yukawa gravity correction & None & $\alpha_G e^{-r/21\mu m}$ at $r < 100 \mu m$ & Testable (Prediction 1) \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The framework is fully consistent with all gravitational wave observations.} It predicts no deviations from GR in the LIGO/LISA frequency band. The KK graviton signatures are at THz frequencies --- currently inaccessible to GW detectors but in principle within reach of far-infrared technology.
@@ -8175,18 +8130,17 @@ This connects directly to the Ryu-Takayanagi picture (Section 6.5): the horizon 
 \subsection{Comparison with Other Approaches}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Approach \& Derives $S = A/(4l_P^{2})$? & Microstates identified? & Free parameters? \\
-\midrule
-\cite{Hawking1975} & Yes (semiclassical) & No \& None \\
-String theory (Strominger-Vafa 1996) & Yes (extremal BH) & D-brane states \& None (for extremal) \\
-Loop quantum gravity \& Yes \& Spin network punctures \& Immirzi parameter ($\gamma$) \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Approach & Derives $S = A/(4l_P^{2})$? & Microstates identified? & Free parameters? \\
+\hline
+\cite{Hawking1975} & Yes (semiclassical) & No & None \\
+String theory (Strominger-Vafa 1996) & Yes (extremal BH) & D-brane states & None (for extremal) \\
+Loop quantum gravity & Yes & Spin network punctures & Immirzi parameter ($\gamma$) \\
 \textbf{5D e-dimension} & \textbf{Yes} (with G renormalization) & \textbf{E-circle configurations on horizon} & \textbf{None} (R from Casimir) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The e-dimension approach shares the renormalization strategy with the standard QFT entanglement entropy calculation (Susskind \& Uglum 1994). Its distinguishing feature is the geometric identification of the microstates as e-circle configurations --- which provides a physical picture absent from the standard entanglement entropy calculation.
@@ -8433,18 +8387,17 @@ Despite individual C, P, and CP violations, the COMBINED CPT is conserved --- be
 CPT invariance has been tested to extraordinary precision:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Test \& System \& Bound on CPT violation \& Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Test & System & Bound on CPT violation & Status \\
+\hline
 Mass equality & $K^{0}$ vs $\bar{K}^{0}$ & $(m - \bar{m})/m < 10^{-18}$ & Consistent \\
 Magnetic moment & $e^{-}$ vs $e^{+}$ & $(g - \bar{g})/g < 10^{-12}$ & Consistent \\
 Charge-to-mass & p vs \texttt{$\bar{p}$} & $(q/m - \bar{q}/\bar{m}) < 10^{-12}$ & Consistent (BASE) \\
-Hydrogen spectroscopy \& H vs \texttt{$\bar{H}$} & 1S-2S $< 10^{-12}$ & Consistent (ALPHA) \\
-\bottomrule
+Hydrogen spectroscopy & H vs \texttt{$\bar{H}$} & 1S-2S $< 10^{-12}$ & Consistent (ALPHA) \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 All tests are consistent with exact CPT invariance --- as the 5D framework predicts from general covariance.
@@ -8763,19 +8716,18 @@ Whether the Casimir potential \texttt{V(b)} has the right shape for slow-roll in
 \subsection{Summary of Cosmological Predictions}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Epoch \& Observable \& Standard $\Lambda CDM$ & 5D framework \& Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Epoch & Observable & Standard $\Lambda CDM$ & 5D framework & Status \\
+\hline
 BBN & $N_{eff}$ & 3.04 & \textbf{3.09} (dilaton + intra-tower decays) & \textbf{Consistent} (ACT+SPT: $2.81\pm0.18$; naive 3.61 reduced to 3.09 by tower dynamics) \\
-CMB \& Power spectrum \& Standard \& Standard + $\Delta N_{eff}$ & Consistent (Planck) \\
+CMB & Power spectrum & Standard & Standard + $\Delta N_{eff}$ & Consistent (Planck) \\
 Late-time & w (dark energy) & -1 & -1 (Casimir) or ~-0.8 (thawing) & \textbf{DESI tension} ($4.2\sigma$ vs w=-1) \\
-Late-time & $H_{0}$ & 67.4 km/s/Mpc \& Consistent (by construction) & $\checkmark$ \\
-Inflation \& Possible driver \& Inflaton field \& E-circle evolution (speculative) & Open \\
-\bottomrule
+Late-time & $H_{0}$ & 67.4 km/s/Mpc & Consistent (by construction) & $\checkmark$ \\
+Inflation & Possible driver & Inflaton field & E-circle evolution (speculative) & Open \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The $N_{eff}$ tension (which appeared as a $4.4\sigma$ problem with the naive prediction) is resolved by the intra-tower decay mechanism established by \cite{GonzaloNeutrinoTowers2024} for the Dark Dimension scenario --- the same physics as our framework. The corrected prediction $N_{eff} \approx 3.09$ is consistent with all current CMB data. The \texttt{S8} (matter clustering) tension between CMB predictions and weak lensing surveys is separately addressed by KK graviton cascade decays (Obied, Dvorkin, Gonzalo \& Vafa, arXiv:2311.05318, 2023): decaying KK gravitons impart kick velocities ($v_{kick} < 2.2 \times 10^{-4} c$) to dark matter particles, suppressing small-scale structure formation toward the weak lensing measurements. Both mechanisms arise from the existing KK tower physics --- no new parameters are needed.
@@ -8965,17 +8917,16 @@ Wait --- the photon's KK excitations are massive spin-1 bosons. Do they carry el
 \subsubsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Gauge coupling \& KK modes on e-circle? & Running modified? \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Gauge coupling & KK modes on e-circle? & Running modified? \\
+\hline
 $\alpha_{EM}$ (U(1)) & Massive neutral photons & \textbf{No} (neutral, don't renormalize charge) \\
 $\alpha_{weak}$ (SU(2)) & \textbf{No} (W/Z not on e-circle) & \textbf{No} \\
 $\alpha_{strong}$ (SU(3)) & \textbf{No} (gluons not on e-circle) & \textbf{No} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{All three SM gauge coupling constants run with the standard 4D logarithmic running.} The e-circle does not modify the gauge coupling running at any energy scale.
@@ -9411,18 +9362,17 @@ The complete vanishing narrows the scheme-dependence question dramatically:
 \subsubsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Term \& Vanishing mechanism \& Scheme-dependent? & Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Term & Vanishing mechanism & Scheme-dependent? & Status \\
+\hline
 j = 0 (leading) & $\zeta(0$) = -1/2 $\to$ $S_{0}$ = 0 & Yes (hard cutoff gives $\infty$) & Resolved by dim reg + U(1) symmetry \\
 j $\geq$ 1 odd (sunset) & L(-j, $\chi_{-3}$) = 0 & \textbf{No} (number-theoretic theorem) & \textbf{Established} \\
 j $\geq$ 2 even (sunset) & $\zeta(-2j$) = 0 & \textbf{No} (number-theoretic theorem) & \textbf{Established} \\
 j $\geq$ 1 (figure-eight) & $\zeta(-2j$) = 0 & \textbf{No} (number-theoretic theorem) & \textbf{Established} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The complete vanishing is robust: 100\% of the subleading vanishing is scheme-independent (it follows from theorems about $\zeta$ and L), and the leading vanishing is established in the standard QFT regularization (dim reg) and in any regularization that preserves the U(1) symmetry of the e-circle. The only way to avoid the vanishing is to use a regularization that explicitly breaks the symmetry of the compact dimension --- which is rejected on the same grounds that hard cutoffs are rejected in gauge theories.
@@ -9453,20 +9403,19 @@ If the e-circle is a mathematical fiction, the zeta regularization is a prescrip
 \subsection{Comparison}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Approach \& UV finite? & Mechanism \& Predictive? & Status \\
-\midrule
-4D Einstein gravity & \textbf{No} (2-loop divergent) & None \& No (above Planck) & Proven divergent \\
-N=8 supergravity \& Unknown (finite through 4 loops) & SUSY cancellations \& Partially \& Open beyond 4 loops \\
-String theory & \textbf{Yes} (all orders) & Extended objects + modular invariance \& Yes (in principle) & Established \\
-Loop quantum gravity & \textbf{Yes} (claimed) & Discrete spin foam \& Partially \& Debated \\
-Asymptotic safety & \textbf{Yes} (non-perturbatively) & UV fixed point \& Yes (near fixed point) & Evidence, not proof \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Approach & UV finite? & Mechanism & Predictive? & Status \\
+\hline
+4D Einstein gravity & \textbf{No} (2-loop divergent) & None & No (above Planck) & Proven divergent \\
+N=8 supergravity & Unknown (finite through 4 loops) & SUSY cancellations & Partially & Open beyond 4 loops \\
+String theory & \textbf{Yes} (all orders) & Extended objects + modular invariance & Yes (in principle) & Established \\
+Loop quantum gravity & \textbf{Yes} (claimed) & Discrete spin foam & Partially & Debated \\
+Asymptotic safety & \textbf{Yes} (non-perturbatively) & UV fixed point & Yes (near fixed point) & Evidence, not proof \\
 \textbf{5D e-dimension} & \textbf{Yes} (Theorem S.1) & Compact e-circle + Epstein-Terras & \textbf{Yes} (all orders) & \textbf{Proved (this appendix)} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -9830,18 +9779,17 @@ The theory is \textbf{perturbatively predictive}: at every loop order, the quant
 \textbf{The distinction from 4D gravity:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
  & 4D gravity & 5D KK gravity \\
-\midrule
-$1/\varepsilon$ poles in dim reg \& Present \& Present \\
+\hline
+$1/\varepsilon$ poles in dim reg & Present & Present \\
 Counterterm coefficients & \textbf{Divergent} (undetermined) & \textbf{Finite} (Epstein zeta values) \\
-New parameters at each order \& Yes (non-renormalizable) & \textbf{No} (all determined) \\
-Predictive above Planck scale \& No & \textbf{Yes} \\
-\bottomrule
+New parameters at each order & Yes (non-renormalizable) & \textbf{No} (all determined) \\
+Predictive above Planck scale & No & \textbf{Yes} \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Status:} Clarified. "Finite" means the KK mode sums are finite, making the counterterm coefficients uniquely determined. Standard renormalization (absorption of $1/\varepsilon$ poles) is still required, but with no free parameters.
@@ -10384,18 +10332,17 @@ This computation is demanding (it involves the tensor algebra of the three-gravi
 \subsection{Comparison: What Other Approaches Achieve}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Approach \& Two-loop $R^{3}$ status \& Method \& Explicit computation? \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Approach & Two-loop $R^{3}$ status & Method & Explicit computation? \\
+\hline
 4D Einstein gravity & \textbf{Divergent} (\texttt{209/2880}) & Goroff-Sagnotti (1986) & \textbf{Yes} \\
-$N=8$ SUGRA, 4D \& Finite at 2 loops \& SUSY cancellations & \textbf{Yes} (Bern et al.) \\
-String theory \& Finite at all orders \& Modular invariance \& Structural argument \\
+$N=8$ SUGRA, 4D & Finite at 2 loops & SUSY cancellations & \textbf{Yes} (Bern et al.) \\
+String theory & Finite at all orders & Modular invariance & Structural argument \\
 \textbf{5D KK (this paper)} & \textbf{$S_{0}^{2} = 0$ (conditional)} & Zeta regularization & \textbf{Structural + partial} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The $S_{0} = 0$ mechanism is structurally analogous to SUSY cancellation in $N=8$ SUGRA: both kill the leading divergence through a symmetry-based argument (SUSY for $N=8$; compact dimension + zeta regularization for KK). The difference is that $N=8$ SUGRA has been verified by explicit multi-loop computation (through 4 loops), while the KK mechanism has not.
@@ -10407,18 +10354,17 @@ The $S_{0} = 0$ mechanism is structurally analogous to SUSY cancellation in $N=8
 The hostile referee analysis identified four gaps. Three are resolved:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Gap \& Issue \& Resolution \& Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Gap & Issue & Resolution & Status \\
+\hline
 1 & Vertex mass-independence & 5D gauge $\Longrightarrow$ n-independent propagator numerator + polynomial vertex & \textbf{Resolved} (in 5D formulation) \\
 2 & DOF counting at $n = 0$ vs $n \neq 0$ & 5D counting: 5 effective DOF at every KK level & \textbf{Resolved} \\
-3 & Product regularization \& Independent loops $\Longrightarrow$ independent zeta regularizations & \textbf{Resolved} \\
-4 & No explicit two-loop computation \& Sunset verified structurally; full computation is open & \textbf{Partially resolved} \\
-\bottomrule
+3 & Product regularization & Independent loops $\Longrightarrow$ independent zeta regularizations & \textbf{Resolved} \\
+4 & No explicit two-loop computation & Sunset verified structurally; full computation is open & \textbf{Partially resolved} \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The claim is a \textbf{conditional theorem}: the Goroff-Sagnotti divergence vanishes in the KK theory, conditional on the mass-independence of the leading vertex coefficient --- an assumption strongly supported by the gauge structure but not yet verified by explicit computation.
@@ -10959,16 +10905,15 @@ The two endpoints of the interval --- $\varphi = 0$ and $\varphi = \pi$ --- are 
 The $Z_{2}$ orbifold gives the e-interval two distinguished endpoints. In the language of extra-dimensional physics, these are "branes" --- lower-dimensional hypersurfaces where fields can be localized.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Fixed point \& Name \& Content \\
-\midrule
-$\varphi = 0$ & Visible brane \& Standard Model matter and forces \\
-$\varphi = \pi$ & Hidden brane \& Dark sector \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Fixed point & Name & Content \\
+\hline
+$\varphi = 0$ & Visible brane & Standard Model matter and forces \\
+$\varphi = \pi$ & Hidden brane & Dark sector \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Gravity propagates through the bulk.} The graviton is the $n = 0$ mode of the 5D metric --- it is $Z_{2}$-even and propagates everywhere on the interval. Matter localized at either brane gravitates normally. The gravitational coupling $G_{4}$ is the same for both sectors.
@@ -11069,20 +11014,19 @@ This $Z_{3}$ is motivated by the \texttt{SU(3)} gauge structure of QCD --- the s
 \textbf{The $Z_{6}$ orbifold.} If both the $Z_{2}$ and $Z_{3}$ act on the e-circle, the combined symmetry group is $Z_{2} \times Z_{3} \cong Z_{6}$ (since $gcd(2,3) = 1$). The $S^{1}/Z_{6}$ orbifold has 6 fixed points dividing the circle into sixths.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 Fixed point & $\varphi$ & Sector \\
-\midrule
+\hline
 0 & \texttt{0} & 1st generation (visible) \\
 1 & $2\pi/3$ & 2nd generation (visible) \\
 2 & $4\pi/3$ & 3rd generation (visible) \\
 3 & $\pi$ & Hidden 1st generation (dark) \\
 4 & $\pi + 2\pi/3 = 5\pi/3$ & Hidden 2nd generation (dark) \\
 5 & $\pi + 4\pi/3 = 7\pi/3 = \pi/3$ & Hidden 3rd generation (dark) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The three SM generations at $\varphi = 0, 2\pi/3, 4\pi/3$ are geometrically distinguished by their location on the e-interval. They have identical gauge charges (same brane, same gauge group) but different masses because they sit at different points along the orbifold.
@@ -11181,17 +11125,16 @@ Experimental: $127.95 \pm 0.02$. Discrepancy: 0.12\%. $\checkmark$
 \textbf{The generation count matters.} The bare coupling $32\pi^{2}/3$ is independent of the number of generations --- it is set by the per-generation content \texttt{8/3} and the geometry $4\pi^{2}$. But the RUNNING depends on $N_{gen}$:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
 $N_{gen}$ & $1/\alpha(M_P)$ & $\Delta_{running}$ & $1/\alpha(0)$ & Match? \\
-\midrule
+\hline
 2 & 105.3 & 21.3 & 126.6 & No \\
 \textbf{3} & \textbf{105.3} & \textbf{31.7} & \textbf{137.0} & \textbf{Yes} $\checkmark$ \\
 4 & 105.3 & 42.2 & 147.5 & No \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Only $N_{gen} = 3$ gives $1/\alpha$ close to 137.
@@ -11292,18 +11235,17 @@ Combining:
 The derivation has three steps, each with a clear physical origin:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Step \& Factor \& Origin \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Step & Factor & Origin \\
+\hline
 Zero-mode normalization & $8\pi^{2}$ & $L^{2}$ norm of photon on $S^{1}$ \\
 Graviton-gauge vertex & \texttt{1/2} & Two-polarization coupling normalization \\
 Charge trace & \texttt{8/3} & $\Sigma N_c Q^{2}$ for one SM generation \\
 \textbf{Combined} & \textbf{$32\pi^{2}/3$} & \textbf{$8\pi^{2} \times (1/2) \times (8/3) = 105.3$} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The SM running then adds 31.7, giving $1/\alpha(0) = 137.0 \pm 0.3$.
@@ -11420,18 +11362,17 @@ Comparing with the explicit result:
 Assembling all four factors:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Factor \& Value \& Origin \& Derivation \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Factor & Value & Origin & Derivation \\
+\hline
 Zero-mode normalization & $8\pi^{2}$ & $L^{2}$ norm of photon on $S^{1}$ & Section W.6.1 \\
 Graviton polarizations & 1/2 & Polarization sum gives factor 2 & Section W.6.4 \\
 Charge trace per generation & 8/3 & $\sum N_c Q^{2} = 3(4/9) + 3(1/9) + 1 = 8/3$ & Section W.6.2 \\
 \textbf{Product: $1/\alpha_{EM}(M_P)$} & \textbf{$32\pi^{2}/3$} & \textbf{= $8\pi^{2} \times (1/2) \times (8/3) = 105.28$} & All above \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Every factor is derived:
@@ -11484,18 +11425,17 @@ The geometric prediction of $\varepsilon \approx 0.04$ is independent of $m_{A'}
 \textbf{Experimental reach:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Experiment \& Sensitivity \& Mass range \& Status \\
-\midrule
-ALPS-II (DESY) & $\varepsilon$ ~ $10^{-4}$ & $10^{-6}--10^{-2}$ eV \& Running \\
-IAXO & $\varepsilon$ ~ $10^{-4}$ & $10^{-6}--10^{-1}$ eV \& In development \\
-BaBar/LHCb & $\varepsilon$ ~ $10^{-3}$ & 1 MeV--10 GeV \& Existing data \\
-LDMX & $\varepsilon$ ~ $10^{-4}$ & 1 MeV--1 GeV \& Proposed \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Experiment & Sensitivity & Mass range & Status \\
+\hline
+ALPS-II (DESY) & $\varepsilon$ ~ $10^{-4}$ & $10^{-6}--10^{-2}$ eV & Running \\
+IAXO & $\varepsilon$ ~ $10^{-4}$ & $10^{-6}--10^{-1}$ eV & In development \\
+BaBar/LHCb & $\varepsilon$ ~ $10^{-3}$ & 1 MeV--10 GeV & Existing data \\
+LDMX & $\varepsilon$ ~ $10^{-4}$ & 1 MeV--1 GeV & Proposed \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The prediction:}
@@ -11515,24 +11455,23 @@ At $\varepsilon \sim  5 \times 10^{-4}$, the dark photon is in the sensitivity r
 The table below summarizes what the e-circle --- with its $Z_{2}$ spin structure and conjectured $Z_{3}$ generation structure --- accounts for. The epistemic status of each entry is shown explicitly.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Physics \& E-circle mechanism \& Status \\
-\midrule
-Quantum mechanics \& Quantum theory of the e-coordinate \& Established (Sections 2--4) \\
-Electromagnetism \& KK connection $A\mu$ & Established (Appendix D) \\
-Gravity \& Base metric $g\mu\nu$ & Established (Appendix D) \\
-Spin-statistics \& Winding number topology on $S^{1}$ & Established (Appendix B) \\
-Dark energy \& Casimir energy of SM on $S^{1}$ & Predictive (Section 6.6) \\
-Dark matter \& Hidden brane at $\varphi$ = $\pi$ & Speculative (this appendix) \\
-Three generations & $Z_{3}$ orbifold: 3 visible fixed points \& Speculative (Section W.4) \\
-Mass hierarchy \& Warp factor $e^{-k\varphi}$ & Speculative (Section W.5) \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Physics & E-circle mechanism & Status \\
+\hline
+Quantum mechanics & Quantum theory of the e-coordinate & Established (Sections 2--4) \\
+Electromagnetism & KK connection $A\mu$ & Established (Appendix D) \\
+Gravity & Base metric $g\mu\nu$ & Established (Appendix D) \\
+Spin-statistics & Winding number topology on $S^{1}$ & Established (Appendix B) \\
+Dark energy & Casimir energy of SM on $S^{1}$ & Predictive (Section 6.6) \\
+Dark matter & Hidden brane at $\varphi$ = $\pi$ & Speculative (this appendix) \\
+Three generations & $Z_{3}$ orbifold: 3 visible fixed points & Speculative (Section W.4) \\
+Mass hierarchy & Warp factor $e^{-k\varphi}$ & Speculative (Section W.5) \\
 $\alpha \approx 1/137$ & $32\pi^{2}/3$ + SM running = 137.0 & Speculative (Section W.6) \\
-Dark photon \& Kinetic mixing $\varepsilon \approx 0.04$ & \textbf{Testable (Section W.7)} \\
-\bottomrule
+Dark photon & Kinetic mixing $\varepsilon \approx 0.04$ & \textbf{Testable (Section W.7)} \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 One geometric object. The established entries are proven within the framework and consistent with all observations. The speculative entries are research directions with quantitative predictions. The dark photon entry is near-term experimentally falsifiable.
@@ -11705,18 +11644,17 @@ The net result: $\theta$ is topologically zero in the 5D theory and is not regen
 If the strong CP problem is solved by the orbifold topology, the Peccei-Quinn axion does NOT exist. This is a falsifiable prediction:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Experiment \& Target \& If found \& If not found \\
-\midrule
-ADMX \& QCD axion at $1-100 \mu eV$ & Orbifold solution falsified \& Consistent \\
-ABRACADABRA \& Axion at $10^{-12}-10^{-6} eV$ & Orbifold solution falsified \& Consistent \\
-CASPEr \& Axion at $10^{-14}-10^{-6} eV$ & Orbifold solution falsified \& Consistent \\
-IAXO \& Solar axion \& Orbifold solution falsified \& Consistent \\
-\bottomrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Experiment & Target & If found & If not found \\
+\hline
+ADMX & QCD axion at $1-100 \mu eV$ & Orbifold solution falsified & Consistent \\
+ABRACADABRA & Axion at $10^{-12}-10^{-6} eV$ & Orbifold solution falsified & Consistent \\
+CASPEr & Axion at $10^{-14}-10^{-6} eV$ & Orbifold solution falsified & Consistent \\
+IAXO & Solar axion & Orbifold solution falsified & Consistent \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The prediction is stark: if axion searches find the QCD axion, the topological resolution is wrong. If they don't (after reaching the sensitivity needed for the QCD axion), the orbifold topology is the likely explanation.
@@ -11769,37 +11707,35 @@ The Hubble constant $H_{0}$ is measured by two broad classes of methods that dis
 \textbf{CMB / early-universe methods} infer $H_{0}$ by fitting the acoustic peaks of the CMB within a cosmological model ($\Lambda CDM$ or extensions):
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 Source & $H_{0}$ (km/s/Mpc) & Reference \\
-\midrule
+\hline
 \cite{Planck2018_VI} ($\Lambda CDM$) & $67.4 \pm 0.5$ & Planck Collaboration 2020 \\
 ACT DR6 + DESI DR1 & $68.22 \pm 0.36$ & ACT DR6, arXiv:2503.14452 \\
 ACT DR6 + Planck + DESI DR2 & $68.43 \pm 0.27$ & ACT DR6 \\
 DESI DR2 + Planck + lensing & $67.97 \pm 0.38$ & DESI 2025, arXiv:2503.14738 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Local distance-ladder methods} measure $H_{0}$ by calibrating standard candles against geometric anchors:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Source & $H_{0}$ (km/s/Mpc) & Calibrator \& Reference \\
-\midrule
-SH0ES (HST+JWST, 19 hosts) & $73.49 \pm 0.93$ & Cepheids \& Riess et al. 2024 \\
-CCHP TRGB (HST+JWST, 24 cal.) & $70.39 \pm 1.22 \pm 1.33$ & TRGB \& Freedman et al. 2408.06153 \\
-CCHP TRGB (JWST only) & $68.81 \pm 1.79 \pm 1.32$ & TRGB \& Freedman et al. 2408.06153 \\
-CCHP JAGB (JWST only) & $67.80 \pm 2.17 \pm 1.64$ & J-AGB \& Freedman et al. 2408.06153 \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Source & $H_{0}$ (km/s/Mpc) & Calibrator & Reference \\
+\hline
+SH0ES (HST+JWST, 19 hosts) & $73.49 \pm 0.93$ & Cepheids & Riess et al. 2024 \\
+CCHP TRGB (HST+JWST, 24 cal.) & $70.39 \pm 1.22 \pm 1.33$ & TRGB & Freedman et al. 2408.06153 \\
+CCHP TRGB (JWST only) & $68.81 \pm 1.79 \pm 1.32$ & TRGB & Freedman et al. 2408.06153 \\
+CCHP JAGB (JWST only) & $67.80 \pm 2.17 \pm 1.64$ & J-AGB & Freedman et al. 2408.06153 \\
 TDCOSMO lensing (8 quasars) & $71.6 +3.9/-3.3$ & Lens time delay & arXiv:2506.03023 \\
 Two-population SN Ia reanalysis & $70.59 \pm 1.15$ & SN Ia & arXiv:2506.22150 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -11920,20 +11856,19 @@ ACT DR6 (arXiv:2503.14452, March 2025 --- the final ACT data release) gives:
 This is more constraining than BBN and supersedes it as the binding constraint. The framework predicts $N_{eff} = 3.046$ (SM) $+ 0.05$ (tower, from \S{}Y.8.1) $+ 6.14 \times \xi^{4}$ (mirror). The tension with ACT DR6 alone:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 $\xi$ & $\Delta N_{eff}^{mirror}$ & $N_{eff}^{total}$ & Tension (ACT DR6) \\
-\midrule
+\hline
 \texttt{0.25} & \texttt{0.024} & \texttt{3.12} & $2.0\sigma$ \\
 \texttt{0.30} & \texttt{0.050} & \texttt{3.15} & $2.2\sigma$ \\
 \texttt{0.35} & \texttt{0.092} & \texttt{3.19} & $2.5\sigma$ \\
 \texttt{0.40} & \texttt{0.157} & \texttt{3.25} & $3.0\sigma$ \\
 \texttt{0.45} & \texttt{0.252} & \texttt{3.35} & $3.8\sigma$ \\
 \texttt{0.50} & \texttt{0.384} & \texttt{3.48} & $4.8\sigma$ \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 At $2\sigma$ (ACT DR6): $N_{eff} < 3.12 \to \Delta N_{eff}^{mirror} < 0.026$ $\to$ \textbf{$\xi < 0.255$} At $3\sigma$ (ACT DR6): $N_{eff} < 3.25 \to \Delta N_{eff}^{mirror} < 0.156$ $\to$ \textbf{$\xi < 0.397$}
@@ -11981,17 +11916,16 @@ The ACT DR6 constraint defines two distinct regimes:
 At $\xi < 0.35$ (well within ACT DR6 at $2.5\sigma$):
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 $\xi$ & $\Delta N_{eff}^{mirror}$ & $H_{0}$ Scenario A ($w=-1$) & $H_{0}$ Scenario B (thawing) \\
-\midrule
+\hline
 \texttt{0.25} & \texttt{0.024} & \texttt{67.7} & \texttt{67.2} \\
 \texttt{0.30} & \texttt{0.050} & \texttt{67.9} & \texttt{67.4} \\
 \texttt{0.35} & \texttt{0.092} & \texttt{68.3} & \texttt{67.8} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Tier 1 prediction: $H_{0} \approx 68.0--68.3$} --- above pure $\Lambda CDM$ (67.4), consistent with all current data including ACT DR6.
@@ -12002,17 +11936,16 @@ $\xi$ & $\Delta N_{eff}^{mirror}$ & $H_{0}$ Scenario A ($w=-1$) & $H_{0}$ Scenar
 At $\xi = 0.35--0.384$ (BBN 2025 limit, $2.5--3\sigma$ tension with ACT DR6):
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-$\xi$ & $\Delta N_{eff}^{mirror}$ & $H_{0}$ Scenario A & $H_{0}$ Scenario B \& ACT DR6 tension \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+$\xi$ & $\Delta N_{eff}^{mirror}$ & $H_{0}$ Scenario A & $H_{0}$ Scenario B & ACT DR6 tension \\
+\hline
 \texttt{0.35} & \texttt{0.092} & \texttt{68.3} & \texttt{67.8} & $2.5\sigma$ \\
 \texttt{0.37} & \texttt{0.115} & \texttt{68.4} & \texttt{67.9} & $2.6\sigma$ \\
 \texttt{0.384} & \texttt{0.136} & \texttt{68.7} & \texttt{68.2} & $2.8\sigma$ \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Tier 2 prediction: $H_{0} \approx 68.3--68.7$} --- above $\Lambda CDM$, moving toward the non-DL consensus, but in $2.5--2.8\sigma$ tension with ACT DR6. Definitively testable by CMB-S4 ($\sigma(N_{eff}) \approx 0.03$).
@@ -12078,12 +12011,11 @@ None of these is currently favored. CMB-S4 ($\sigma(N_{eff}) \approx 0.03$) will
 \subsubsection{Where the Prediction Sits}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-$H_{0}$ (km/s/Mpc) & Source \& Consistency with framework (68.0--68.7) \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+$H_{0}$ (km/s/Mpc) & Source & Consistency with framework (68.0--68.7) \\
+\hline
 $67.4 \pm 0.5$ & Planck ($\Lambda CDM$) & $0.5--2\sigma$ above $\checkmark$ \\
 $68.2 \pm 0.4$ & ACT DR6 + DESI & \textbf{$< 1\sigma$} $\checkmark$ \\
 $68.4 \pm 0.3$ & ACT + Planck + DESI & \textbf{$< 1\sigma$} $\checkmark$ \\
@@ -12092,8 +12024,8 @@ $70.4 \pm 1.8$ & CCHP TRGB (HST+JWST) & $0.5--1.5\sigma$ below prediction \\
 $68.8 \pm 2.2$ & CCHP TRGB (JWST only) & \textbf{$< 1\sigma$} $\checkmark$ \\
 $67.8 \pm 2.8$ & CCHP JAGB (JWST only) & $< 1\sigma$ $\checkmark$ \\
 $73.0 \pm 1.0$ & SH0ES Cepheids & $4--5\sigma$ discrepancy \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -12182,21 +12114,20 @@ Bedroya, Obied, Vafa \& Wu (arXiv:2507.03090, 2025) connect the DESI DR2 phantom
 \subsubsection{The Cosmological Scorecard}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Tension \& Framework mechanism \& Status \\
-\midrule
-Dark energy density \& Casimir energy on orbifold & $\checkmark$ Predicted \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Tension & Framework mechanism & Status \\
+\hline
+Dark energy density & Casimir energy on orbifold & $\checkmark$ Predicted \\
 $N_{eff}$ (visible sector) & Intra-tower KK decays & $\checkmark$ Resolved (Gonzalo et al.) \\
-\texttt{S8} clustering \& KK graviton cascades & $\checkmark$ Addressed (Obied et al.) \\
-DESI $w \approx -0.8$ & Thawing dilaton \& Plausible \\
+\texttt{S8} clustering & KK graviton cascades & $\checkmark$ Addressed (Obied et al.) \\
+DESI $w \approx -0.8$ & Thawing dilaton & Plausible \\
 \textbf{Hubble tension} & \textbf{Mirror brane dark radiation} & \textbf{$H_{0} \approx 68.0--68.7$} (Tier 1) \\
 $N_{eff}$ (mirror sector) & Mirror brane dark radiation & \textbf{$3.5\sigma$ tension with ACT DR6 at $\xi = 0.432$ (\S{}Y.5.5)} \\
-Hubble tension (full) & Beyond minimal orbifold \& Open \\
-\bottomrule
+Hubble tension (full) & Beyond minimal orbifold & Open \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -12242,19 +12173,18 @@ At $\xi = 0.35$: $N_{eff} = 3.19$ $\to$ \textbf{$4.7\sigma$ detection by CMB-S4}
 The orbifold that produces the mirror sector also predicts:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Prediction \& Test \& Timeline \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Prediction & Test & Timeline \\
+\hline
 Short-range gravity at $\lambda \sim  12 \mu m$ & MEMS cantilever & 3--5 years \\
 Dark photon at $\varepsilon \sim  5 \times 10^{-4}$ & LDMX, LHCb Run 3 & 3--5 years \\
-Normal neutrino mass ordering \& JUNO & 3--6 years \\
-No QCD axion \& ADMX, ABRACADABRA \& Ongoing \\
+Normal neutrino mass ordering & JUNO & 3--6 years \\
+No QCD axion & ADMX, ABRACADABRA & Ongoing \\
 $\Delta N_{eff} = 0.07--0.19$ (total) & CMB-S4 & 5--10 years \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Confirmation of any of these correlated predictions strengthens the case for the $Z_{2}$ orbifold and therefore for the mirror-brane $H_{0}$ mechanism.
@@ -12273,12 +12203,11 @@ Confirmation of any of these correlated predictions strengthens the case for the
 \subsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Claim \& Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Claim & Status \\
+\hline
 Dilaton as early dark energy & \textbf{Not viable} (mass mismatch $10^{27}$) \\
 Mirror brane as dark radiation & \textbf{Geometrically required} (spin structure $\to$ $Z_{2}$ $\to$ orbifold) \\
 BBN constraint (2025 joint analysis) & $\xi$ < 0.384 ($2\sigma$), $\Delta N_{eff}$ < 0.136 \\
@@ -12289,14 +12218,14 @@ $\theta$* offset at $\xi$ = 0.4375 & +1.0 arcsecond (within Planck $1\sigma$ = 1
 \textbf{ACT DR6 vs $1/\xi^{2}$ law} & \textbf{$\xi$ = 0.432 required vs $\xi$ < 0.397 allowed ($3\sigma$) --- $3.5\sigma$ tension (\S{}Y.5.5)} \\
 Tier 1 $H_{0}$ prediction (ACT DR6 safe) & \textbf{68.0--68.3 km/s/Mpc} \\
 Tier 2 $H_{0}$ prediction (BBN-limited) & \textbf{68.3--68.7 km/s/Mpc} ($2.5--2.8\sigma$ ACT DR6 tension) \\
-Direction relative to non-DL consensus \& Correct ($\uparrow$ from 67.4 toward 69.4) \\
+Direction relative to non-DL consensus & Correct ($\uparrow$ from 67.4 toward 69.4) \\
 Full resolution of Hubble tension & \textbf{Not achieved} by minimal framework \\
-CMB-S4 test \& Definitive: $\sigma(N_{eff}) \approx 0.03$ will confirm or exclude \\
+CMB-S4 test & Definitive: $\sigma(N_{eff}) \approx 0.03$ will confirm or exclude \\
 $\omega_b$ h$^{2}$ at self-consistent solution & 0.02150 (3.9\% below $\Lambda CDM$; mild $1.5\sigma$ D/H tension) \\
 $N_{eff}$ (visible sector tower) & $\checkmark$ Resolved at $\Delta N_{eff} \approx 0.05$ \\
 S8 tension & $\checkmark$ Addressed by KK cascade decays \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework predicts dark radiation from the hidden brane --- a geometric consequence of the spin-statistics theorem. Current data (ACT DR6, updated BBN 2025) constrains the contribution to a modest $H_{0}$ shift of 0.6--1.3 km/s/Mpc above $\Lambda CDM$, giving $H_{0} \approx 68.0--68.7$. This is in the right direction toward the non-distance-ladder consensus ($69.4 \pm 0.3$) but does not resolve the full tension. The full BBN-allowed range is in tension with ACT DR6 at $2.5--2.8\sigma$ --- neither confirmed nor excluded. CMB-S4 will make the definitive measurement.
@@ -12411,17 +12340,16 @@ For $y = 1$: $m_\nu = 0.24 eV$ --- within a factor of 5 of the observed atmosphe
 \textbf{What is determined vs. what is free:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Quantity \& Origin \& Status \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Quantity & Origin & Status \\
+\hline
 $M_{5} = 2.5 \times 10^{14} GeV$ & From $R = 12 \mu m$ via $M_P^{2} = M_{5}^{3} L$ & \textbf{Determined} \\
 $m_\nu \sim  v^{2}/M_{5} \sim  0.24 eV$ & Standard seesaw with $M_R = M_{5}$ & \textbf{Predicted (scale)} \\
-\texttt{y ~ 0.45} for $m_\nu = 50 meV$ & Yukawa coupling \& Free parameter \\
-\bottomrule
+\texttt{y ~ 0.45} for $m_\nu = 50 meV$ & Yukawa coupling & Free parameter \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework determines the SCALE of neutrino masses (sub-eV) but not the EXACT values (which require the Yukawa couplings). This is the same situation as the standard seesaw --- the e-circle contribution is to determine $M_{5}$ geometrically, replacing it as a free parameter.
@@ -12510,18 +12438,17 @@ The geometric unification of the GUT scale with the e-circle radius is a non-tri
 \subsection{Summary}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Prediction \& Value \& Test \& Timeline \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Prediction & Value & Test & Timeline \\
+\hline
 Neutrino mass scale & $m_\nu \sim  50 meV$ & KATRIN, PTOLEMY & 5-10 years \\
 Mass ordering & \textbf{Normal} ($m_{3} > m_{2} > m_{1}$) & JUNO & 3-6 years \\
-Lightest mass & $m_{1} \sim  few meV$ (from $Z_{3}$ suppression) & Cosmological bounds \& Ongoing \\
-KK-neutrino coincidence & $m_{KK} \sim  m_\nu$ within 5x \& Short-range gravity & 3-5 years \\
-\bottomrule
+Lightest mass & $m_{1} \sim  few meV$ (from $Z_{3}$ suppression) & Cosmological bounds & Ongoing \\
+KK-neutrino coincidence & $m_{KK} \sim  m_\nu$ within 5x & Short-range gravity & 3-5 years \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 

@@ -749,24 +749,25 @@ def convert_table(lines: list[str]) -> str:
         return ""
 
     ncols = len(rows[0])
-    col_spec = "l" * ncols
+    # Use p{} columns inside ruledtabular for text wrapping
+    col_cm = round(15.0 / ncols, 1)
+    col_spec = f"p{{{col_cm}cm}}" * ncols
 
     result = []
-    result.append("\\begin{table}[h]")
-    result.append("\\centering")
+    result.append("\\begin{table}[H]")
+    result.append("\\begin{ruledtabular}")
     result.append(f"\\begin{{tabular}}{{{col_spec}}}")
-    result.append("\\toprule")
 
     for i, row in enumerate(rows):
         while len(row) < ncols:
             row.append("")
-        cells = [convert_inline_formatting(cell.replace('#', '\\#')) for cell in row]
+        cells = [convert_inline_formatting(cell.replace('#', '\\#').replace('&', '\\&')) for cell in row]
         result.append(" & ".join(cells) + " \\\\")
         if i == 0:
-            result.append("\\midrule")
+            result.append("\\hline")
 
-    result.append("\\bottomrule")
     result.append("\\end{tabular}")
+    result.append("\\end{ruledtabular}")
     result.append("\\end{table}")
     return "\n".join(result)
 
@@ -1233,9 +1234,18 @@ def process_markdown_file(filepath: Path, header_offset: int = 0,
     result = re.sub(r'(?<!\\)%', r'\\%', result)
 
     # Escape bare & in prose (not in tabular where & is column separator)
-    # Escape A&A (no spaces) and "Author & Author" (with spaces) in list items
-    result = re.sub(r'([A-Za-z])&([A-Za-z])', r'\1\\&\2', result)
-    result = re.sub(r'([A-Za-z.,])\s+&\s+([A-Z])', r'\1 \\& \2', result)
+    # Only escape & that are clearly in prose: inside \item, \textbf, etc.
+    # but NOT the & that serve as tabular column separators
+    # Strategy: escape & only in lines that don't look like tabular rows
+    lines = result.split('\n')
+    for li in range(len(lines)):
+        line = lines[li]
+        # Skip lines inside tabular (they have \\ at the end or are tabular commands)
+        if line.rstrip().endswith('\\\\') or 'tabular' in line or 'ruledtabular' in line or line.strip().startswith('\\hline') or line.strip().startswith('\\toprule') or line.strip().startswith('\\midrule') or line.strip().startswith('\\bottomrule'):
+            continue
+        lines[li] = re.sub(r'([A-Za-z])&([A-Za-z])', r'\1\\&\2', line)
+        lines[li] = re.sub(r'([A-Za-z.,])\s+&\s+([A-Z])', r'\1 \\& \2', lines[li])
+    result = '\n'.join(lines)
 
     # Fix e^(iθ) patterns → e^{iθ}
     result = result.replace("e^(i", r"e^{i")
@@ -1481,7 +1491,7 @@ EXTRA_BIB_PAPER2 = r"""
 # Paper 1 assembly
 # ─────────────────────────────────────────────────────────────
 
-PAPER1_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbibliography]{revtex4-2}
+PAPER1_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbibliography,floatfix]{revtex4-2}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -1489,12 +1499,11 @@ PAPER1_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbib
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{physics}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
-\usepackage{array}
+\usepackage{float}
 \usepackage{graphicx}
-\usepackage{dcolumn}
 \usepackage{bm}
 
 % Theorem environments
@@ -1659,15 +1668,15 @@ def generate_short_abstract(abstract_path: Path, out_path: Path):
 # Paper 2 assembly
 # ─────────────────────────────────────────────────────────────
 
-PAPER2_PREAMBLE = r"""\documentclass[prd,twocolumn,nofootinbib,superscriptaddress]{revtex4-2}
+PAPER2_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbibliography]{revtex4-2}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
-\usepackage{array}
+\usepackage{float}
 \usepackage{bm}
 
 % Convenience macros

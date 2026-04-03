@@ -1,12 +1,12 @@
-\documentclass[prd,twocolumn,nofootinbib,superscriptaddress]{revtex4-2}
+\documentclass[aps,prd,preprint,superscriptaddress,longbibliography]{revtex4-2}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
-\usepackage{array}
+\usepackage{float}
 \usepackage{bm}
 
 % Convenience macros
@@ -91,19 +91,18 @@ Paper 2 makes these quantitative. Using the CAMB Boltzmann solver with parameter
 \textbf{The framework fits zero parameters to the CMB.} Two observational inputs --- $\rho_\Lambda$ (which fixes $L \sim  130 \mu m$ via the Casimir energy, Paper 1 \S{}6.6) and $\Omega_{DM}/\Omega_b = 5.36$ (which fixes $\xi = 0.432$ via the $1/\xi^{2}$ law, Appendix E) --- together with quantities derived from the e-circle geometry in Paper 1:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Quantity \& Value \& Derivation chain (Paper 1) \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Quantity & Value & Derivation chain (Paper 1) \\
+\hline
 \texttt{L} & ~130 $\mu m$ & Casimir energy = $\rho_\Lambda$ (\S{}6.6) \\
 $w_{0}$, $w_a$ & -0.85, -0.23 & Dilaton potential from \texttt{L} (Appendix Q/F) \\
-$\Sigma m_\nu$ & 0.06 eV \& Bulk seesaw from $M_{5} = (M_P^{2}/L)^{1/3}$ (Appendix Z) \\
+$\Sigma m_\nu$ & 0.06 eV & Bulk seesaw from $M_{5} = (M_P^{2}/L)^{1/3}$ (Appendix Z) \\
 $N_{eff}^{tower}$ & 0.05 & Intra-tower decays (Appendix Y, Gonzalo et al.) \\
 $\Delta N_{eff}^{mirror}$ & $6.14 \times \xi^{4}$ & Hidden-brane dark radiation (Appendix Y) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 and inherited SM/Planck parameters ($\omega_b h^{2}$, $A_s$, $n_s$ --- unchanged from $\Lambda CDM$) determine every cosmological observable computed here.
@@ -128,23 +127,22 @@ The five headline results, derived in the appendices:
 \subsection{Organization}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Appendix \& Content \\
-\midrule
-A \& The age computation: modified Friedmann equation and CAMB results \\
-B \& The expansion history \texttt{H(z)} and DESI predictions \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Appendix & Content \\
+\hline
+A & The age computation: modified Friedmann equation and CAMB results \\
+B & The expansion history \texttt{H(z)} and DESI predictions \\
 C & \texttt{S8} resolution: $N_{eff}$ + evolving \texttt{w(z)} mechanism \\
-D \& The sound horizon $r_d$ and BAO predictions \\
-E \& Mirror baryogenesis and the cosmic coincidence $\Omega_{DM}/\Omega_b$ \\
-F \& The thawing dilaton: \texttt{w(z)} trajectory and DESI DR2 comparison \\
-G \& CMB angular scale $\theta*$ consistency check \\
-H \& JWST early galaxies: what the framework addresses and what it doesn't \\
-I \& Decisive tests: CMB-S4, DESI DR3, GW sirens, Euclid \\
-\bottomrule
+D & The sound horizon $r_d$ and BAO predictions \\
+E & Mirror baryogenesis and the cosmic coincidence $\Omega_{DM}/\Omega_b$ \\
+F & The thawing dilaton: \texttt{w(z)} trajectory and DESI DR2 comparison \\
+G & CMB angular scale $\theta*$ consistency check \\
+H & JWST early galaxies: what the framework addresses and what it doesn't \\
+I & Decisive tests: CMB-S4, DESI DR3, GW sirens, Euclid \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -173,18 +171,17 @@ Paper 2 is self-contained but references Paper 1 throughout. The key results inh
 The 5D framework derives cosmological parameters from four geometric inputs. All are established in Paper 1:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Input \& Value \& Source (Paper 1) \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Input & Value & Source (Paper 1) \\
+\hline
 \texttt{L} (e-circle circumference) & ~130 $\mu m$ & Casimir energy = $\rho_\Lambda$ (Section 6.6) \\
-SM field content \& Fixed (Standard Model) & $N_B = 28$, $N_F = 90$ \\
-$V(\varphi)$ (dilaton potential) & Casimir + Goldberger-Wise \& Appendix Q \S{}Q.5 \\
+SM field content & Fixed (Standard Model) & $N_B = 28$, $N_F = 90$ \\
+$V(\varphi)$ (dilaton potential) & Casimir + Goldberger-Wise & Appendix Q \S{}Q.5 \\
 Orbifold structure & $Z_{2} \times Z_{3}$ & Appendix W \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 From these, Paper 1 derives the key quantities used here:
@@ -222,73 +219,69 @@ All subsequent calculations use $\xi = 0.432$ as the primary value (Scenario B),
 \textbf{Scenario A ($\theta*$-matched, $\xi$ from Appendix Y):}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-CAMB parameter \& Value \& Source \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+CAMB parameter & Value & Source \\
+\hline
 $H_{0}$ & 69.5 km/s/Mpc & $67.4 + 6.3 \times \Delta N_{eff}$ \\
 $\omega_b h^{2}$ & 0.02237 & SM baryons (Planck $\Lambda CDM$) \\
 $\omega_c h^{2}$ & 0.1170 & Adjusted to match $\theta*$ \\
 $N_{eff}$ & 3.39 & $3.046 + 0.05 + 6.14\times(0.47)^{4}$ \\
 $\xi$ & 0.470 & From $\theta*$ matching \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Scenario B ($1/\xi^{2}$ law --- zero free parameters):}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-CAMB parameter \& Value \& Source \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+CAMB parameter & Value & Source \\
+\hline
 $H_{0}$ & 68.7 km/s/Mpc & $67.4 + 6.3 \times \Delta N_{eff}$ \\
 $\omega_b h^{2}$ & 0.02237 & SM baryons (Planck $\Lambda CDM$) \\
 $\omega_c h^{2}$ & 0.1199 & $\omega_b h^{2} / \xi^{2}$ \\
 $N_{eff}$ & 3.31 & $3.046 + 0.05 + 6.14\times(0.432)^{4}$ \\
 $\xi$ & 0.432 & From $\Omega_{DM}/\Omega_b = 1/\xi^{2}$ \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Scenario C (self-consistent $\omega_b$ --- $\theta*$ AND $\Omega_{DM}/\Omega_b$ matched):}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-CAMB parameter \& Value \& Source \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+CAMB parameter & Value & Source \\
+\hline
 $H_{0}$ & 68.8 km/s/Mpc & $67.4 + 6.3 \times \Delta N_{eff}$ \\
 $\omega_b h^{2}$ & \textbf{0.02150} & Self-consistent fit (-3.9\% from $\Lambda CDM$) \\
 $\omega_c h^{2}$ & 0.11524 & $5.36 \times \omega_b h^{2}$ \\
 $N_{eff}$ & 3.32 & $3.046 + 0.05 + 6.14\times(0.4375)^{4}$ \\
 $\xi$ & 0.4375 & From $\theta*$ zero-crossing \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Scenario C resolves the $\theta*$ tension (offset +1.0") at the cost of a -3.9\% shift in $\omega_b h^{2}$, which creates a significant tension with primordial D/H measurements: predicted $D/H \approx 2.65\times10^{-5}$ vs observed $2.527 \pm 0.030\times10^{-5}$ \cite{Cooke2018_DH}, a $4.1\sigma$ discrepancy against observational uncertainty alone. Including BBN theoretical uncertainty from nuclear reaction rates ($\sim \pm0.04\times10^{-5}$), the combined tension is $\sim 2.5\sigma$. This D/H tension is Scenario C's primary cost; a full MCMC analysis would determine whether the $\theta*$ improvement justifies it. All three scenarios use the same dilaton parameters:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Shared parameter \& Value \& Source \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Shared parameter & Value & Source \\
+\hline
 $w_{0}$ & -0.85 & Thawing dilaton \\
 $w_a$ & -0.23 & Thawing dilaton \\
-$\Sigma m_\nu$ & 0.06 eV \& Bulk seesaw \\
+$\Sigma m_\nu$ & 0.06 eV & Bulk seesaw \\
 $A_s$ & $2.215\times10^{-9}$ & Inflation (unchanged) \\
 $n_s$ & 0.9649 & Inflation (unchanged) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Note:} All three scenarios predict $N_{eff} = 3.31--3.39$, in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$). See Appendix Y, \S{}Y.5.5.
@@ -317,12 +310,11 @@ The Planck $\Lambda CDM$ baseline was reproduced to better than 0.01\% on all ob
 Eight parameter sets were run, spanning the range from minimal (tower-only, no mirror sector) to DESI-compatible ($w_{0} = -0.80$):
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
 Scenario & $H_{0}$ & $\xi$ & $w_{0}$ & Purpose \\
-\midrule
+\hline
 Planck $\Lambda CDM$ & 67.4 & --- & -1.0 & Baseline \\
 5D Minimal & 67.7 & 0 & -1.0 & Tower-only \\
 5D Stabilized & 69.5 & 0.47 & -1.0 & No dilaton \\
@@ -331,8 +323,8 @@ Planck $\Lambda CDM$ & 67.4 & --- & -1.0 & Baseline \\
 5D TRGB & 69.8 & 0.47 & -0.85 & $H_{0}$ = TRGB \\
 5D $Low-\Omega$ & 68.7 & 0.432 & -0.85 & \textbf{$1/\xi^{2}$ law (B)} \\
 5D $Low-\Omega$ static & 68.7 & 0.432 & -1.0 & Cross-check \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -342,12 +334,11 @@ Planck $\Lambda CDM$ & 67.4 & --- & -1.0 & Baseline \\
 The complete cosmological predictions from both scenarios:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Observable \& Scenario A ($\xi=0.47$) & Scenario B ($\xi=0.432$) & Planck $\Lambda CDM$ & Data \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Observable & Scenario A ($\xi=0.47$) & Scenario B ($\xi=0.432$) & Planck $\Lambda CDM$ & Data \\
+\hline
 $t_{0}$ (Gyr) & \textbf{13.47} & \textbf{13.47} & 13.80 & 12.5--14.5 (stellar) \\
 $H_{0}$ (km/s/Mpc) & 69.5 & \textbf{68.7} & 67.4 & 69.8 (TRGB) \\
 $\theta*$ offset (") & -0.5 & +6.6 & 0 & $\pm$1.1 ($1\sigma$) \\
@@ -357,8 +348,8 @@ $\sigma_{8}$ & 0.766 & \textbf{0.782} & 0.811 & 0.811 (CMB) \\
 $\Omega_m$ & 0.290 & \textbf{0.302} & 0.315 & 0.315 (CMB) \\
 $N_{eff}$ & 3.39 & \textbf{3.31} & 3.044 & $2.86\pm0.13$ (ACT DR6) \\
 $\Omega_{DM}/\Omega_b$ & 5.22 & \textbf{5.36} & --- & 5.36 (observed) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Both scenarios predict $t_{0} \approx 13.47 Gyr$ and resolve the \texttt{S8} tension. Scenario B additionally explains $\Omega_{DM}/\Omega_b$ from first principles.
@@ -493,18 +484,21 @@ Eight experiments in the next decade test every prediction simultaneously. Full 
 
 \section{Conclusion}
 
+\clearpage
+
 
 \subsection{What Was Computed}
 
 Using the CAMB Boltzmann solver with parameters determined entirely by the 5D e-circle geometry, we computed the complete cosmological parameter set of the framework introduced in Paper 1. The four geometric inputs:
 
 
-\begin{align}
-    L \sim  130 \mu m  (e-circle circumference, from Casimir &= dark energy) \\
-    \xi &= 0.47    (hidden-to-visible temperature ratio, from BBN) \\
-    & V(\varphi)        (dilaton potential: Casimir + Goldberger-Wise) \\
-    & SM content  (Standard Model fields, fixed)
-\end{align}
+\begin{enumerate}
+  \item $L \sim  130 \mu m$ --- e-circle circumference, from Casimir dark energy
+  \item $\xi = 0.47$ --- hidden-to-visible temperature ratio, from BBN
+  \item $V(\varphi)$ --- dilaton potential: Casimir + Goldberger-Wise
+  \item SM content --- Standard Model fields, fixed
+\end{enumerate}
+
 determine ten cosmological observables simultaneously.
 
 
@@ -515,21 +509,20 @@ determine ten cosmological observables simultaneously.
 The complete prediction:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Observable \& Scenario A ($\theta*$-matched) & Scenario B ($1/\xi^{2}$ law) & Status \\
-\midrule
-$t_{0}$ & 13.47 Gyr & 13.47 Gyr \& Both 327 Myr below $\Lambda CDM$ \\
-$\theta*$ offset & -0.5" from Planck & +6.6" from Planck \& A matches; B has tension \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Observable & Scenario A ($\theta*$-matched) & Scenario B ($1/\xi^{2}$ law) & Status \\
+\hline
+$t_{0}$ & 13.47 Gyr & 13.47 Gyr & Both 327 Myr below $\Lambda CDM$ \\
+$\theta*$ offset & -0.5" from Planck & +6.6" from Planck & A matches; B has tension \\
 \texttt{S8} & 0.753 & 0.785 & Both resolve WL tension \\
-$H_{0}$ & 69.5 km/s/Mpc & 68.7 km/s/Mpc \& Both above $\Lambda CDM$ \\
-$r_d$ & 146.2 Mpc & 145.8 Mpc \& Both testable by DESI DR3 \\
+$H_{0}$ & 69.5 km/s/Mpc & 68.7 km/s/Mpc & Both above $\Lambda CDM$ \\
+$r_d$ & 146.2 Mpc & 145.8 Mpc & Both testable by DESI DR3 \\
 $N_{eff}$ & 3.39 & 3.31 & Both in $3--4\sigma$ tension with ACT DR6 \\
 $\Omega_{DM}/\Omega_b$ & 5.22 (input) & 5.36 (derived) & B explains cosmic coincidence \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -655,23 +648,22 @@ $\Sigma m_\nu$ = 0.06 eV (bulk seesaw, Paper 1, Appendix Z). Effect: -30 Myr.
 The CAMB computation uses the following inputs, all derived from e-circle geometry:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Parameter \& Value \& Source \\
-\midrule
-$H_{0}$ & 69.5 km/s/Mpc \& Hidden-brane $\Delta N_{eff}$ (Paper 1, App. Y) \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Parameter & Value & Source \\
+\hline
+$H_{0}$ & 69.5 km/s/Mpc & Hidden-brane $\Delta N_{eff}$ (Paper 1, App. Y) \\
 $\omega_b h^{2}$ & 0.02237 & SM baryonic physics (unchanged) \\
 $\omega_c h^{2}$ & 0.1170 & From $\theta*$ consistency (see \S{}A.4) \\
 $N_{eff}$ & 3.39 & Tower (0.05) + mirror ($6.14\times\xi^{4}$) \\
 $w_{0}$ & -0.85 & Thawing dilaton (Appendix F) \\
 $w_a$ & -0.23 & Thawing dilaton (Appendix F) \\
-$\Sigma m_\nu$ & 0.06 eV \& Bulk seesaw, normal ordering \\
+$\Sigma m_\nu$ & 0.06 eV & Bulk seesaw, normal ordering \\
 $A_s$ & $2.215\times10^{-9}$ & Inflation (unchanged) \\
 $n_s$ & 0.9649 & Inflation (unchanged) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -685,20 +677,19 @@ The single undetermined geometric input is $\omega_c h^{2}$ --- the cold dark ma
 \textbf{CAMB scan over $\omega_c h^{2}$:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 $\omega_c h^{2}$ & $\theta*$ ($^{\circ}$) & Offset from Planck (arcsec) \\
-\midrule
+\hline
 0.1280 & 0.60268 & +22.1" \\
 0.1200 & 0.59818 & +5.9" \\
 0.1185 & 0.59730 & +2.7" \\
 0.1170 & 0.59640 & \textbf{-0.5"} \\
 0.1155 & 0.59550 & -3.8" \\
 0.1140 & 0.59458 & -7.1" \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{$\omega_c h^{2}$ = 0.117} matches $\theta*$ to 0.5 arcseconds --- within Planck's $1\sigma$ measurement uncertainty. This is the adopted value.
@@ -719,12 +710,11 @@ This is 327 Myr younger than Planck $\Lambda CDM$ (13.797 Gyr).
 \subsubsection{Age at key redshifts:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 Redshift & 5D Framework (Myr) & Planck $\Lambda CDM$ (Myr) & Difference \\
-\midrule
+\hline
 z = 0 (today) & 13,470 & 13,797 & -327 Myr \\
 z = 1 & 7,932 & 7,891 & +41 Myr \\
 z = 3 & 2,268 & 2,170 & +98 Myr \\
@@ -732,8 +722,8 @@ z = 6 & 937 & 927 & +10 Myr \\
 z = 10 & 475 & 470 & +5 Myr \\
 z = 14 (JWST) & 298 & 295 & +3 Myr \\
 z = 20 & 180 & 178 & +2 Myr \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The universe TODAY is younger by 327 Myr. At high redshift (z > 6), the difference is negligible --- the two cosmologies converge in the radiation-dominated era (the physical radiation density, set by $T_{CMB}$ = 2.725 K, is $H_{0}$-independent).
@@ -747,18 +737,17 @@ The universe TODAY is younger by 327 Myr. At high redshift (z > 6), the differen
 The predicted age $t_{0}$ = 13.47 Gyr must be consistent with direct stellar age measurements:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Method \& Age constraint \& Consistent with 13.47 Gyr? \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Method & Age constraint & Consistent with 13.47 Gyr? \\
+\hline
 Oldest globular clusters & 12.5--13.5 Gyr ($\pm$1 Gyr) & $\checkmark$ \\
 White dwarf cooling sequences & ~12--13 Gyr ($\pm$1 Gyr) & $\checkmark$ \\
 Nucleocosmochronology (Th/U) & 12.5 $\pm$ 3 Gyr & $\checkmark$ \\
 $\Lambda CDM$ + Planck CMB & 13.797 $\pm$ 0.023 Gyr & $1.3\sigma$ below \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework's predicted age is consistent with all direct stellar age measurements and lies $1.3\sigma$ below the Planck $\Lambda CDM$ value. Given that the Planck value is model-dependent (assumes $\Lambda CDM$), this is not a tension --- it is a prediction of a different but observationally consistent cosmological model.
@@ -770,12 +759,11 @@ As stellar age measurements improve (JWST spectroscopy of the oldest stars in gl
 \subsection{The Full Cosmological Parameter Set}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Observable & 5D Framework \& Planck $\Lambda CDM$ & Difference \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Observable & 5D Framework & Planck $\Lambda CDM$ & Difference \\
+\hline
 \textbf{$t_{0}$ (Gyr)} & \textbf{13.470} & 13.797 & -327 Myr \\
 \textbf{$\theta*$ ($^{\circ}$)} & \textbf{0.59640} & 0.59655 & -0.5" \\
 $r_d$ (Mpc) & 146.2 & 147.10 & -0.93 Mpc \\
@@ -788,8 +776,8 @@ $N_{eff}$ & 3.39 & 3.044 & +0.35 \\
 $w_{0}$ & -0.85 & -1.0 & +0.15 \\
 $w_a$ & -0.23 & 0 & -0.23 \\
 $\Sigma m_\nu$ (eV) & 0.06 & < 0.12 & (predicted) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -799,19 +787,18 @@ $\Sigma m_\nu$ (eV) & 0.06 & < 0.12 & (predicted) \\
 The single most important uncertainty is $\omega_c h^{2}$:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Change \& Effect on $t_{0}$ \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Change & Effect on $t_{0}$ \\
+\hline
 $\omega_c h^{2}$ = 0.120 (standard CDM) & +200 Myr $\to$ $t_{0}$ = 13.67 Gyr \\
 $\omega_c h^{2}$ = 0.117 ($\theta*$ matched) & $t_{0}$ = 13.47 Gyr (adopted) \\
 $\omega_c h^{2}$ = 0.110 (low mirror DM) & -200 Myr $\to$ $t_{0}$ = 13.27 Gyr \\
 $w_{0}$ = -1.0 (static Casimir) & +120 Myr $\to$ $t_{0}$ = 13.59 Gyr \\
 $w_{0}$ = -0.80 (DESI best-fit) & -80 Myr $\to$ $t_{0}$ = 13.39 Gyr \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The age spans 13.3--13.8 Gyr across the range of physically motivated scenarios. The $\theta*$-constrained value (13.47 Gyr) is the definitive prediction under the assumption that the mirror matter abundance is determined by the baryogenesis mechanism of Appendix E.
@@ -859,12 +846,11 @@ The framework's \texttt{H(z)} differs from $\Lambda CDM$ through three channels:
 \subsection{CAMB-Computed H(z) Values}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Redshift & $H_5D$ (km/s/Mpc) & $H_{LCDM}$ (km/s/Mpc) & Ratio \& DESI precision \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Redshift & $H_5D$ (km/s/Mpc) & $H_{LCDM}$ (km/s/Mpc) & Ratio & DESI precision \\
+\hline
 0.0 & 69.50 & 67.36 & 1.032 & --- \\
 0.3 & 82.1 & 79.1 & 1.038 & ~1\% (DR2) \\
 0.5 & 95.6 & 91.9 & 1.040 & ~1\% (DR2) \\
@@ -873,8 +859,8 @@ Redshift & $H_5D$ (km/s/Mpc) & $H_{LCDM}$ (km/s/Mpc) & Ratio \& DESI precision \
 1.5 & 196.2 & 195.4 & 1.004 & ~2\% (DR2) \\
 2.0 & 262.0 & 263.3 & 0.995 & ~2\% (DR2) \\
 2.5 & 340.8 & 342.5 & 0.995 & ~3\% (DR2) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The maximum deviation (4.0\%) occurs at z ~ 0.5}, right in DESI's highest-precision measurement bin. The crossing point ($H_5D$ = $H_{LCDM}$) occurs at z ~ 1.5.
@@ -913,19 +899,18 @@ The framework predicts $r_d$ = 146.2 Mpc (vs Planck's 147.1 Mpc), a 0.6\% reduct
 \textbf{Predicted H(z) $\times$ $r_d$ values:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 Redshift & $H_5D$ $\times$ $r_d$ & $H_{LCDM}$ $\times$ $r_d$ & Difference \\
-\midrule
+\hline
 z = 0.51 & 14,050 km/s & 13,610 km/s & +3.2\% \\
 z = 0.71 & 16,290 km/s & 15,760 km/s & +3.4\% \\
 z = 0.93 & 19,540 km/s & 18,910 km/s & +3.3\% \\
 z = 1.32 & 26,530 km/s & 25,950 km/s & +2.2\% \\
 z = 2.33 & 56,110 km/s & 56,440 km/s & -0.6\% \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework predicts H(z) $\times$ $r_d$ systematically 2--3\% above $\Lambda CDM$ at z < 1.5, falling slightly below at z > 2. DESI DR2 measures these to ~1\% precision. DESI DR3 (full 5-year dataset, expected 2027) will measure them to ~0.5\% precision --- sufficient to detect a 3\% deviation at $6\sigma$.
@@ -970,19 +955,18 @@ that are fixed by the e-circle geometry.
 The matter clustering parameter $S8 = \sigma_{8} \sqrt{}(\Omega_m/0.3)$ is predicted from CMB observations and measured directly by weak gravitational lensing surveys. The disagreement is persistent and significant:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 Source & \texttt{S8} & Reference \\
-\midrule
+\hline
 \cite{Planck2018_VI} (CMB) & $0.832 \pm 0.013$ & Planck Collaboration 2020 \\
 DES Y3 (weak lensing) & $0.776 \pm 0.017$ & Abbott et al. 2022 \\
 KiDS-1000 (weak lensing) & $0.759 \pm 0.024$ & \cite{Heymansetal2021} \\
 HSC Y3 (weak lensing) & $0.763 \pm 0.020$ & \cite{Dalaletal2023} \\
 \textbf{5D Framework} & \textbf{0.753} & \textbf{This work} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The Planck $\Lambda CDM$ value is $4\sigma$ above the weak lensing measurements. The framework's prediction sits below all three lensing surveys --- in fact, it is the lower bound consistent with the KiDS-1000 data at $0.4\sigma$. The tension dissolves.
@@ -1023,19 +1007,18 @@ The framework's $\Omega_m = 0.290$ (vs Planck's 0.315) directly lowers $S8 = \si
 The CAMB computation gives $\sigma_{8} = 0.766$ and $S8 = 0.753$ for Scenario A. The total $\Delta S8 = -0.079$ (from Planck $\Lambda CDM$'s 0.832) arises from the non-linear interplay of three effects:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ll}
-\toprule
-Effect \& Approximate individual contribution \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{7.5cm}p{7.5cm}}
+Effect & Approximate individual contribution \\
+\hline
 Elevated $N_{eff} = 3.39$ (suppresses $\sigma_{8}$) & ~-0.030 \\
 Evolving \texttt{w(z)} (modifies growth rate) & ~+0.008 \\
 Lower $\Omega_m = 0.290$ (direct \texttt{S8} reduction) & ~-0.034 \\
 \textbf{Non-linear coupling between effects} & \textbf{~-0.023} \\
 \textbf{Total (from CAMB)} & \textbf{-0.079} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 Note: the individual contributions are APPROXIMATE (estimated by varying one parameter at a time). They do not add linearly to the CAMB total because the effects are coupled through the Friedmann equation and the growth function. The CAMB value $S8 = 0.753$ is the definitive number.
@@ -1083,17 +1066,16 @@ These effects further suppress the matter power spectrum at small scales ($k > 0
 \subsection{Predictions for Future Surveys}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Survey & \texttt{S8} precision \& Test \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Survey & \texttt{S8} precision & Test \\
+\hline
 Euclid (2027+) & $\pm$0.005 & Distinguishes 0.753 from 0.776 at $4\sigma$ \\
 Rubin LSST (2027+) & $\pm$0.005 & Independent confirmation \\
 CMB-S4 lensing (2030+) & $\pm$0.003 & Most precise \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework predicts $S8 = 0.753$. If Euclid measures \texttt{S8} in the range 0.74--0.77, this constitutes a confirmation. If Euclid measures $S8 > 0.80$, the framework's \texttt{S8} mechanism is disfavored.
@@ -1158,18 +1140,17 @@ DESI DR2 measures $D_V(z)/r_d$ and $H(z) \times r_d$ at multiple redshifts. The 
 \textbf{Framework prediction for $D_V/r_d$ at key DESI redshifts:}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 Redshift & $D_V^{5D}/r_d^{5D}$ & $D_V^{LCDM}/r_d^{LCDM}$ & DESI DR2 measurement \\
-\midrule
+\hline
 z = 0.51 & 13.41 & 13.22 & 13.62 $\pm$ 0.25 \\
 z = 0.71 & 17.76 & 17.54 & 17.91 $\pm$ 0.27 \\
 z = 0.93 & 21.89 & 21.63 & 21.94 $\pm$ 0.33 \\
 z = 1.32 & 28.44 & 28.25 & 28.57 $\pm$ 0.42 \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The framework values are within DESI DR2 uncertainties at all measured redshifts.
@@ -1336,20 +1317,19 @@ where $\kappa$ is the washout efficiency. The hidden brane is cooler ($T' = \xi 
 \textbf{The logarithmic correction:} For finite \texttt{K}, the factor $f(K,\xi) = \ln K / \ln(K\xi^{2})$ differs from unity:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
 K & f(K, $\xi=0.43$) & Corrected $\xi$ from $\Omega_{DM}/\Omega_b$ = $f/\xi^{2}$ = 5.36 \\
-\midrule
+\hline
 10 & 3.67 & 0.828 (violates BBN) \\
 100 & 1.57 & 0.541 (marginal BBN) \\
 500 & 1.25 & 0.483 (within BBN) \\
 1000 & 1.18 & 0.469 (within BBN) \\
 $10^{4}$ & 1.08 & 0.449 (within BBN) \\
 $\infty$ & 1.00 & 0.432 (the $1/\xi^{2}$ law value) \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The consistency condition:} For $\xi$ to satisfy the BBN bound ($\xi < 0.50$), the washout parameter must satisfy $K \gtrsim 200$. The framework's parameters give $K = \Gamma_D / H|_{T=M_N}$, where:
@@ -1462,12 +1442,11 @@ The framework has zero free cosmological parameters. All inputs are determined b
 Two scenarios bracket the framework's prediction:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lll}
-\toprule
-Parameter \& Scenario A ($\xi$ from BBN midpoint) & Scenario B ($\xi$ from $1/\xi^{2}$ law) \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{5.0cm}p{5.0cm}p{5.0cm}}
+Parameter & Scenario A ($\xi$ from BBN midpoint) & Scenario B ($\xi$ from $1/\xi^{2}$ law) \\
+\hline
 $\xi$ & 0.470 & \textbf{0.432} \\
 $\omega_c h^{2}$ & 0.117 ($\theta$* matched) & 0.1199 \\
 $\Delta N_{eff}$ & 0.305 & 0.214 \\
@@ -1476,8 +1455,8 @@ $t_{0}$ (Gyr) & 13.47 & \textbf{13.47} \\
 $\theta*$ offset (arcsec) & -0.5 & +6.6 \\
 \texttt{S8} & 0.753 & \textbf{0.785} \\
 $\Omega_{DM}/\Omega_b$ & 5.22 (input) & \textbf{5.36 (derived)} \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{Scenario A} ($\xi = 0.47$, $\omega_c h^{2}$ adjusted to match $\theta*$) passes the CMB angular scale test but uses the $\theta*$ measurement to fix one parameter.
@@ -1731,18 +1710,17 @@ Planck measures $\theta* = 1.04110 \pm 0.00031^{\circ} = 0.59655 \pm 0.00018^{\c
 The framework changes FOUR parameters simultaneously, each shifting $\theta*$ in a different direction:
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 Change from $\Lambda CDM$ & Effect on $r_s$ & Effect on $D_A$ & Effect on $\theta*$ \\
-\midrule
-$H_{0}$: 67.4 $\to$ 69.5 & Decreases (faster early expansion) & Decreases \& Net: decreases \\
-$N_{eff}$: 3.044 $\to$ 3.39 & Decreases (more radiation) & Minimal \& Decreases \\
-$w_{0}$: -1 $\to$ -0.85 & Minimal (DE only at late z) & Decreases \& Net: increases \\
-$\Omega_m$: 0.315 $\to$ 0.290 & Minimal \& Increases (less matter) & Increases \\
-\bottomrule
+\hline
+$H_{0}$: 67.4 $\to$ 69.5 & Decreases (faster early expansion) & Decreases & Net: decreases \\
+$N_{eff}$: 3.044 $\to$ 3.39 & Decreases (more radiation) & Minimal & Decreases \\
+$w_{0}$: -1 $\to$ -0.85 & Minimal (DE only at late z) & Decreases & Net: increases \\
+$\Omega_m$: 0.315 $\to$ 0.290 & Minimal & Increases (less matter) & Increases \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The net effect of these four competing shifts --- computed by CAMB --- is a $\theta*$ change of -0.5 arcseconds from the Planck value.
@@ -1756,19 +1734,18 @@ The framework is highly overdetermined. That it can simultaneously satisfy all o
 \subsection{The CAMB Scan}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llllll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
 $\omega_c h^{2}$ & $H_{0}$ & $N_{eff}$ & $w_{0}$ & $\theta*$ ($^{\circ}$) & Offset from Planck \\
-\midrule
+\hline
 0.1200 & 69.5 & 3.39 & -0.85 & 0.59818 & +5.9" \\
 0.1185 & 69.5 & 3.39 & -0.85 & 0.59750 & +3.4" \\
 0.1170 & 69.5 & 3.39 & -0.85 & \textbf{0.59640} & \textbf{-0.5"} \\
 0.1155 & 69.5 & 3.39 & -0.85 & 0.59530 & -4.5" \\
 0.1140 & 69.5 & 3.39 & -0.85 & 0.58875 & -28.1" \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 The adopted value $\omega_c h^{2} = 0.117$ minimizes the $\theta*$ offset.
@@ -1842,18 +1819,17 @@ The $\Lambda CDM$ challenge: how did galaxies become so massive so quickly?
 The CAMB computation confirms the analytic expectation from file 03-jwst-early-galaxies.md: the time available at high z is virtually unchanged by the framework's cosmological modifications.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
 Redshift & $t_5D$ (Myr) & $t_\Lambda CDM$ (Myr) & Difference \\
-\midrule
+\hline
 $z = 10$ & 475 & 470 & +5 Myr \\
 $z = 12$ & 351 & 348 & +3 Myr \\
 $z = 14$ & 298 & 295 & +3 Myr \\
 $z = 20$ & 180 & 178 & +2 Myr \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The reason:} At $z > 10$, the universe is radiation-dominated. $H(z) \sim  H_{0} \sqrt{}(\Omega_r) (1+z)^{2}$. Since $\Omega_r = \rho_r/\rho_{crit} \propto 1/H_{0}^{2}$, the $H_{0}$ dependence cancels. The physical radiation density (set by $T_{CMB} = 2.725 K$) is the same in both cosmologies.
@@ -1956,12 +1932,11 @@ sector. This appendix provides the full experimental roadmap.
 From the CAMB computation (Appendix A). Three scenarios bracket the framework's prediction; the table shows both Scenario A ($\theta*$-matched, $\xi = 0.47$) and Scenario B ($1/\xi^{2}$ law, $\xi = 0.432$). Values shared by both scenarios are listed once.
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lllll}
-\toprule
-Observable \& Scenario A ($\xi=0.47$) & Scenario B ($\xi=0.432$) & Planck $\Lambda CDM$ & Experiment \\
-\midrule
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+Observable & Scenario A ($\xi=0.47$) & Scenario B ($\xi=0.432$) & Planck $\Lambda CDM$ & Experiment \\
+\hline
 $t_{0}$ (Gyr) & \textbf{13.47} & \textbf{13.47} & 13.797 & Stellar ages (JWST) \\
 $H_{0}$ (km/s/Mpc) & \textbf{69.5} & \textbf{68.7} & 67.4 & TRGB, GW sirens \\
 $N_{eff}$ & \textbf{3.39} & \textbf{3.31} & 3.044 & CMB-S4 \\
@@ -1974,9 +1949,9 @@ $r_d$ (Mpc) & \textbf{146.2} & \textbf{145.8} & 147.1 & DESI DR3 \\
 $\theta*$ offset & \textbf{-0.5"} & \textbf{+6.6"} & 0 & CMB-S4 \\
 $\Omega_{DM}/\Omega_b$ & 5.22 (input) & \textbf{5.36 (derived)} & --- & --- \\
 $\Sigma m_\nu$ (eV) & \textbf{0.060} & \textbf{0.060} & < 0.12 & CMB-S4, KATRIN \\
-Mass ordering & \textbf{Normal} & \textbf{Normal} & unknown \& JUNO \\
-\bottomrule
+Mass ordering & \textbf{Normal} & \textbf{Normal} & unknown & JUNO \\
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 
@@ -2090,23 +2065,22 @@ The framework is either right in a correlated way or wrong in a correlated way. 
 \subsection{Summary Timeline}
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-\toprule
-Year \& Experiment \& Framework test \& Decision \\
-\midrule
-2025--2028 & JUNO \& Neutrino mass ordering \& Normal vs inverted \\
+\begin{table}[H]
+\begin{ruledtabular}
+\begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+Year & Experiment & Framework test & Decision \\
+\hline
+2025--2028 & JUNO & Neutrino mass ordering & Normal vs inverted \\
 2027 & DESI DR3 & \texttt{H(z)} shape, \texttt{w(z)} & $8\sigma$ test of \texttt{H(z)} peak \\
-2027--2028 & LDMX/LHCb \& Dark photon $\varepsilon \sim  5\times10^{-4}$ & Detection or exclusion \\
+2027--2028 & LDMX/LHCb & Dark photon $\varepsilon \sim  5\times10^{-4}$ & Detection or exclusion \\
 2027--2028 & Euclid & \texttt{S8} & $16\sigma$ test (vs $\Lambda CDM$) \\
 2027--2028 & GW O5 & $H_{0}$ to 2\% & $3\sigma$ vs $\Lambda CDM$, $5\sigma$ vs SH0ES \\
-2028--2030 & MEMS gravity \& Yukawa at $\lambda\sim 12 \mu m$ & Detection or exclusion \\
+2028--2030 & MEMS gravity & Yukawa at $\lambda\sim 12 \mu m$ & Detection or exclusion \\
 2030 & CMB-S4 & $N_{eff} = 3.39$ & $11\sigma$ confirmation or $3\sigma$ exclusion \\
 2030 & CMB-S4 & $\theta*$ shift & $17\sigma$ test \\
 2030+ & Stellar ages (JWST) & $t_{0} = 13.47 Gyr$ & 100 Myr precision \\
-\bottomrule
 \end{tabular}
+\end{ruledtabular}
 \end{table}
 
 \textbf{The decade 2025--2035 will definitively test every prediction in this paper.} The framework makes no room to hide.
