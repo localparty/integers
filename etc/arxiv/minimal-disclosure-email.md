@@ -15,35 +15,22 @@ Subject: arXiv endorsement request (hep-th) — 5D Kaluza-Klein framework
 
 Dear Dr. Obied,
 
-I am an independent researcher requesting arXiv endorsement for hep-th.
-I am preparing two papers on a 5D Kaluza-Klein framework which independently
-converge with aspects of the Dark Dimension scenario you have worked on.
+I am an independent researcher requesting arXiv endorsement for hep-th. I am preparing two papers on a 5D Kaluza-Klein framework which arrive independently at the same physical prediction — a single micron-scale compact dimension with Casimir dark energy and KK dark matter — from a completely different starting point.
 
-**Paper 1** establishes the framework and presents three results: a
-geometric derivation of the spin-statistics theorem, a geometric
-derivation of the Aharonov-Bohm effect, and a perturbative finiteness
-result for linearized 5D gravity at two loops under zeta regularization
-of KK mode sums (the Goroff-Sagnotti R^3 counterterm vanishes). An
-orbifold extension addresses dark matter, dark energy, and neutrino
-masses. Twenty-two phenomena are treated across 26 appendices (A-Z).
+**Paper 1** establishes the framework and presents three results: a geometric derivation of the spin-statistics theorem, a geometric derivation of the Aharonov-Bohm effect, and a perturbative finiteness result for linearized 5D gravity at two loops under zeta regularization of KK mode sums (the Goroff-Sagnotti R^3 counterterm vanishes). An orbifold extension addresses dark matter, dark energy, and neutrino masses. Twenty-two phenomena are treated across 26 appendices (A-Z).
 
-**Paper 2** computes precision cosmological predictions using CAMB
-v1.6.6, with a scaling law that explains the cosmic coincidence
-Omega_DM/Omega_b ~ 5. Key CAMB outputs:
+**Paper 2** computes precision cosmological predictions using CAMB v1.6.6, with a scaling law that explains the cosmic coincidence Omega_DM/Omega_b ~ 5. Key CAMB outputs:
 - H_0 = 68.7-69.5 km/s/Mpc
 - S_8 = 0.753-0.785 (resolving the 4-sigma weak lensing tension)
 - A specific H(z) fingerprint testable by DESI DR3
 
-Your work on KK cascade decays (Obied et al. 2023) is cited in the
-S8 analysis.
+Your paper Dark Dimension and Decaying Dark Matter Gravitons (arXiv:2311.05318, 2023) is cited directly in the S8 analysis.
 
-If you are willing to consider endorsement, I am happy to provide 
-the full manuscripts for review. The arXiv endorsement code is: [CODE]
+If you are willing to endorse, my arXiv endorsement code is **7DDADZ**. I am also happy to provide the full manuscripts for your review before committing.
 
 Thank you for your time and consideration.
 
-These manuscripts are not yet public and I request they be treated 
-as confidential review materials.
+These manuscripts are not yet public and I request they be treated as confidential review materials.
 
 Best regards,
 G. Six
@@ -62,3 +49,12 @@ Independent researcher
 - Keep a copy of this email with timestamp as a record of prior art
 - The email timestamp plus the arXiv submission timestamp (once posted)
   establish priority
+
+---
+
+## Submission Log
+
+- **Apr 2, 2026, 8:19 PM PDT** — arXiv endorsement code 7DDADZ generated
+- **Apr 2, 2026, ~8:45 PM PDT** — Email sent to georges.obied@physics.ox.ac.uk (bounced: recipient unknown)
+- **Apr 2, 2026, ~9:00 PM PDT** — Email sent to luis.anchordoqui@lehman.cuny.edu ✅ delivered
+- Awaiting endorsement response
