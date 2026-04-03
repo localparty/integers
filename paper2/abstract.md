@@ -1,4 +1,4 @@
-Baryon Ratio, The Clustering Tension, and Ten Observables from from Kaluza-Klein Geometry
+Baryon Ratio, The Clustering Tension, and Ten Observables from Kaluza-Klein Geometry
 
 ## Abstract
 
