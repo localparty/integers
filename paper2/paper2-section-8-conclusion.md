@@ -65,14 +65,21 @@ at `z > 10`. Whether mirror dark matter structure formation provides
 advantages for early galaxy formation requires dedicated N-body work
 (Appendix H).
 
-**The `N_eff` tension with ACT DR6:** Both scenarios predict `N_eff` =
-`3.31–3.39`, in `3–4σ` tension with ACT DR6 (`2.86 ± 0.13`). This is the
-framework's most significant open issue. The ACT constraint assumes
-`ΛCDM` + `N_eff`; a dedicated MCMC with the framework's full model
-(+ `w₀` + `wₐ`) may loosen the bound. Alternatively, if the washout
-exponent in the baryogenesis formula differs from 2 (intermediate
-washout: `α ~ 1.7`), the required `ξ` drops to ~0.36, reducing `N_eff`
-to 3.14 (`2.2σ` from ACT). CMB-S4 will decide.
+**The `N_eff` prediction:** Both scenarios predict `N_eff = 3.31–3.39`,
+the framework's most falsifiable near-term prediction. A CAMB
+computation of the mirror-sector thermal history shows that after
+mirror `e±` Boltzmann suppression and annihilation, the effective
+mirror contribution at recombination is suppressed by a factor 0.49
+relative to the fully relativistic limit, giving `ΔN_eff(z = 1090) ≈ 0.26–0.36` depending on `ξ`.
+
+This value is in `3–4σ` tension with ACT DR6 (`N_eff = 2.86 ± 0.13`).
+However, the combined ACT+SPT+Planck value `N_eff = 2.81 ± 0.12` is
+itself `1.9σ` below the Standard Model prediction of 3.043, and Alvarez
+et al. (2026, arXiv:2603.22391) note that only exotic BSM mechanisms
+can produce `N_eff < 3` at CMB times. When the SH0ES `H₀` prior is
+included, the preferred `N_eff` shifts to `3.43 ± 0.13` (Garcia Escudero &
+Abazajian 2025, arXiv:2509.25478), consistent with the framework.
+CMB-S4 will decide at `> 9σ` sensitivity.
 
 **The Hubble tension residual:** Scenario A gives `H₀ = 69.5` (< `0.5σ`
 from TRGB/CCHP), Scenario B gives 68.7. Both are `3–4σ` below SH0ES

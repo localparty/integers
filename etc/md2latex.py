@@ -395,6 +395,8 @@ def final_unicode_pass(text: str) -> str:
         "∞": r"$\infty$",
         "∼": r"$\sim$",
         "⊂": r"$\subset$",
+        "ℏ": r"$\hbar$",
+        "ℓ": r"$\ell$",
         "⊃": r"$\supset$",
         "∫": r"$\int$",
         "ℤ": r"$\mathbb{Z}$",

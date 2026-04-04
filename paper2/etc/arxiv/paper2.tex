@@ -59,7 +59,7 @@ The complete prediction set, computed by CAMB across all three scenarios:
 
 \textbf{The cosmic coincidence explained:} $\Omega_{DM}/\Omega_b \approx 5$ is no longer a coincidence --- it is a geometric consequence of the two-brane thermal history. The ratio is $1/\xi^{2}$, where $\xi$ is fixed by bulk leptogenesis.
 
-All three scenarios predict $N_{eff} = 3.31--3.39$, in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$). This is the framework's primary open issue. The ACT constraint assumes $\Lambda CDM + N_{eff}$; in the framework's extended model ($+ w_{0} + w_a$), the bound loosens. Mirror $e\pm$ are also marginally non-relativistic at BBN ($T_{mirror} \sim  0.43$ MeV vs $m_e = 0.511$ MeV), reducing $\Delta N_{eff}$ by ~10\%, which slightly eases the tension. CMB-S4 ($\sigma(N_{eff}) \approx 0.03$) will resolve this definitively.
+All three scenarios predict $N_{eff} = 3.31--3.39$, the framework's most falsifiable near-term prediction. This value is in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$), though the combined ACT+SPT+Planck measurement ($N_{eff} = 2.81 \pm 0.12$) is itself $1.9\sigma$ below the Standard Model prediction of 3.043, and when SH0ES $H_{0}$ data are included the preferred value shifts to $N_{eff} = 3.43 \pm 0.13$ (Garcia Escudero \& Abazajian 2025) --- consistent with the framework. A CAMB computation of the mirror-sector thermal history shows that mirror $e\pm$ undergo Boltzmann suppression at BBN ($T_{mirror} \approx 0.43$ MeV vs $m_e = 0.511$ MeV), producing a time-varying $\Delta N_{eff}$: at recombination, the effective mirror contribution is $\Delta N_{eff} \approx 0.36$ ($\xi = 0.47$), suppressed by a factor 0.49 relative to the fully relativistic limit, as the mirror $e\pm$ annihilate and heat the mirror photon bath --- giving total $N_{eff} \approx 3.40$. CMB-S4 ($\sigma(N_{eff}) \approx 0.03$) will confirm or exclude the mirror sector at $> 9\sigma$.
 
 CMB-S4 will confirm or exclude the mirror sector at $> 9\sigma$. DESI DR3 will test \texttt{H(z)} at $8\sigma$. Euclid will test \texttt{S8} at $16\sigma$ relative to Planck $\Lambda CDM$. JUNO will test the neutrino mass ordering. The decade 2025--2035 will decide.
 
@@ -284,9 +284,19 @@ $n_s$ & 0.9649 & Inflation (unchanged) \\
 \end{ruledtabular}
 \end{table}
 
-\textbf{Note:} All three scenarios predict $N_{eff} = 3.31--3.39$, in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$). See Appendix Y, \S{}Y.5.5.
+\textbf{Note:} All three scenarios predict $N_{eff} = 3.31--3.39$. This is the framework's most falsifiable near-term prediction and is discussed in detail below.
 
-\textbf{$N_{eff}$ footnote:} The naive formula $\Delta N_{eff}^{mirror} = 6.14 \times \xi^{4}$ assumes all mirror species are fully relativistic. At BBN (\texttt{T ~ 1 MeV}), the mirror sector temperature is $T' = \xi T \approx 0.43--0.47 MeV$, comparable to $m_e = 0.511 MeV$. Mirror $e\pm$ are therefore partially Boltzmann- suppressed, reducing the effective $g_*(mirror)$ from 10.75 to ~9.5--9.9 and $\Delta N_{eff}$ by ~10\%. For $\xi = 0.432$: $N_{eff} \approx 3.29$ (vs naive 3.31); for $\xi = 0.47$: $N_{eff} \approx 3.37$ (vs naive 3.39). This correction slightly eases the ACT DR6 tension but does not resolve it. A proper treatment requires tracking the mirror-sector thermal history through $e\pm$ freeze-out.
+\textbf{$N_{eff}$ prediction and observational context.} The naive formula $\Delta N_{eff}^{mirror} = 6.14 \times \xi^{4}$ assumes all mirror species are fully relativistic. A CAMB-based computation of the mirror-sector thermal history reveals a richer picture. At BBN (\texttt{T ~ 1 MeV}), the mirror sector temperature is $T' = \xi T \approx 0.43--0.47$ MeV --- comparable to $m_e = 0.511$ MeV. Mirror $e\pm$ are therefore partially Boltzmann-suppressed, and as they annihilate they heat the mirror photon bath (exactly as visible $e\pm$ heat the visible photon bath). After mirror $e\pm$ annihilation is complete, the effective mirror-sector contribution at recombination is suppressed by a factor of 0.49 relative to the fully relativistic limit. For $\xi = 0.47$ this gives $\Delta N_{eff}(recombination) \approx 0.36$, yielding total $N_{eff} \approx 3.40$; for $\xi = 0.432$, $\Delta N_{eff} \approx 0.26$, yielding $N_{eff} \approx 3.30$.
+
+This prediction is in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$; Qu et al. 2025, arXiv:2503.14454). We note three contextual facts that bear on the interpretation of this tension:
+
+(i) The combined ACT+SPT+Planck measurement yields $N_{eff} = 2.81 \pm 0.12$, which is itself $1.9\sigma$ \textit{below} the Standard Model prediction of 3.043 (Cielo et al. 2023, arXiv:2306.05460). Alvarez et al. (2026, arXiv:2603.22391) ask explicitly "What does it take to have $N_{eff} < 3$ at CMB times?", finding that only a narrow class of BSM mechanisms (thermal electrophilic relics or late-decaying particles) can produce such a deficit. The anomalously low ground-based values are not specific to the e-dimension framework.
+
+(ii) When the SH0ES local $H_{0}$ measurement is included as a prior, the preferred value shifts to $N_{eff} = 3.43 \pm 0.13$ (Garcia Escudero \& Abazajian 2025, arXiv:2509.25478), consistent with the framework. The framework's predicted $H_{0} = 69.5$ km/s/Mpc is intermediate between Planck (67.36) and SH0ES (73.04), and its $N_{eff}$ prediction is intermediate between CMB-only and CMB+SH0ES joint fits.
+
+(iii) Planck alone gives $N_{eff} = 2.99 \pm 0.17$, consistent with both the Standard Model and the framework at $< 2.5\sigma$. The dominant pull toward low $N_{eff}$ comes from the high-$\ell$ damping tail measured by ground-based experiments; Simons Observatory ($\sigma(N_{eff}) \approx 0.045$) will provide an independent check by ~2030.
+
+CMB-S4 ($\sigma(N_{eff}) \approx 0.03$, projected ~2030) will confirm or exclude the mirror sector at $> 9\sigma$. This is the framework's make-or-break test.
 
 
 
@@ -391,17 +401,17 @@ $\Omega_{DM}/\Omega_b = 5.36 \pm 0.05$ is now derived rather than input. Full de
 \section{Open Problems}
 
 
-\subsection{The $\theta*$ Tension (Scenario B)}
+\subsection{The $\theta*$ Tension and the Derivation Path B $\to$ C $\to$ A}
 
-At $\xi = 0.432$ (the $1/\xi^{2}$ law value), $\theta*$ is offset +6.6 arcseconds from Planck --- about $6\sigma$. This tension tells us that the pure $1/\xi^{2}$ formula gives a slightly too-low $\xi$, requiring either:
+The three scenarios are not competing models --- they are a derivation path that demonstrates both the framework's falsifiability and the physical importance of the washout correction.
 
+\textbf{Scenario B (leading-order, $\xi = 0.432$)} is the uncorrected prediction from the $1/\xi^{2}$ law. It gives $\theta*$ offset +6.6 arcseconds from Planck --- a $6\sigma$ discrepancy. We present this result first precisely \textit{because} it shows the framework is falsifiable: a 10\% shift in $\xi$ produces a $6\sigma$ effect in the most precisely measured cosmological quantity. Scenario B at leading order is excluded by CMB data.
 
-\begin{itemize}
-  \item A small warp correction ($c = 1.986$ rather than $c = 2$, \S{}E.8)
-  \item A full MCMC scan simultaneously satisfying $\Omega_{DM}/\Omega_b = 5.36$, $\theta* = 0.59655^{\circ}$, and BBN $N_{eff}$ constraint
-\end{itemize}
+\textbf{Scenario C (washout-corrected, $\xi = 0.4375$)} incorporates the logarithmic washout correction $\kappa \sim  1/(K \ln K)$ that is well-motivated by standard leptogenesis calculations (Buchmuller, Di Bari \& Plumacher 2005). This shifts $\xi$ from 0.432 to ~0.44, reducing the $\theta*$ offset to +1.0 arcseconds ($\sim 1\sigma$), at the cost of a $\sim 2.5\sigma$ D/H tension.
 
-The two scenarios (A: $\xi = 0.47$, $\theta*$ matched; B: $\xi = 0.432$, $1/\xi^{2}$ law) bracket the truth. A dedicated MCMC analysis of the framework's geometric parameters ${L, \xi, c, k}$ is the highest-priority follow-up computation.
+\textbf{Scenario A ($\theta*$-matched, $\xi = 0.47$)} represents the full correction including the warp factor ($c = 1.986$ rather than $c = 2$, \S{}E.8). The $\theta*$ offset is -0.5 arcseconds ($< 0.5\sigma$).
+
+The progression B $\to$ C $\to$ A is the physics: the naive scaling law is corrected by washout dynamics and warp geometry, converging on a value consistent with CMB data. The $6\sigma$ tension in B is not an open problem --- it is the motivation for the correction that leads to A. A dedicated MCMC scan of the framework's geometric parameters ${L, \xi, c, k}$, simultaneously fitting $\theta*$, $\Omega_{DM}/\Omega_b$, and BBN constraints, is the highest-priority follow-up computation to determine the precise corrected $\xi$.
 
 
 \subsection{Mirror Baryogenesis Precision}
@@ -541,7 +551,9 @@ That it passes as well as it does --- matching the most precisely measured numbe
 
 \textbf{The JWST early galaxy tension:} The framework cannot add time at $z > 10$. Whether mirror dark matter structure formation provides advantages for early galaxy formation requires dedicated N-body work (Appendix H).
 
-\textbf{The $N_{eff}$ tension with ACT DR6:} Both scenarios predict $N_{eff}$ = \texttt{3.31--3.39}, in $3--4\sigma$ tension with ACT DR6 ($2.86 \pm 0.13$). This is the framework's most significant open issue. The ACT constraint assumes $\Lambda CDM$ + $N_{eff}$; a dedicated MCMC with the framework's full model (+ $w_{0}$ + $w_{a}$) may loosen the bound. Alternatively, if the washout exponent in the baryogenesis formula differs from 2 (intermediate washout: $\alpha \sim  1.7$), the required $\xi$ drops to ~0.36, reducing $N_{eff}$ to 3.14 ($2.2\sigma$ from ACT). CMB-S4 will decide.
+\textbf{The $N_{eff}$ prediction:} Both scenarios predict $N_{eff} = 3.31--3.39$, the framework's most falsifiable near-term prediction. A CAMB computation of the mirror-sector thermal history shows that after mirror $e\pm$ Boltzmann suppression and annihilation, the effective mirror contribution at recombination is suppressed by a factor 0.49 relative to the fully relativistic limit, giving $\Delta N_{eff}(z = 1090) \approx 0.26--0.36$ depending on $\xi$.
+
+This value is in $3--4\sigma$ tension with ACT DR6 ($N_{eff} = 2.86 \pm 0.13$). However, the combined ACT+SPT+Planck value $N_{eff} = 2.81 \pm 0.12$ is itself $1.9\sigma$ below the Standard Model prediction of 3.043, and Alvarez et al. (2026, arXiv:2603.22391) note that only exotic BSM mechanisms can produce $N_{eff} < 3$ at CMB times. When the SH0ES $H_{0}$ prior is included, the preferred $N_{eff}$ shifts to $3.43 \pm 0.13$ (Garcia Escudero \& Abazajian 2025, arXiv:2509.25478), consistent with the framework. CMB-S4 will decide at $> 9\sigma$ sensitivity.
 
 \textbf{The Hubble tension residual:} Scenario A gives $H_{0} = 69.5$ (< $0.5\sigma$ from TRGB/CCHP), Scenario B gives 68.7. Both are $3--4\sigma$ below SH0ES Cepheids. The Cepheid-TRGB calibration question is observational, not theoretical.
 

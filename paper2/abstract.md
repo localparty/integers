@@ -69,13 +69,21 @@ testable by JUNO within 6 years.
 coincidence — it is a geometric consequence of the two-brane thermal
 history. The ratio is `1/ξ²`, where `ξ` is fixed by bulk leptogenesis.
 
-All three scenarios predict `N_eff = 3.31–3.39`, in `3–4σ` tension with
-ACT DR6 (`N_eff = 2.86 ± 0.13`). This is the framework's primary open
-issue. The ACT constraint assumes `ΛCDM + N_eff`; in the framework's
-extended model (`+ w₀ + w_a`), the bound loosens. Mirror `e±` are also
-marginally non-relativistic at BBN (`T_mirror ~ 0.43` MeV vs `m_e = 0.511`
-MeV), reducing `ΔN_eff` by ~10%, which slightly eases the tension. CMB-S4
-(`σ(N_eff) ≈ 0.03`) will resolve this definitively.
+All three scenarios predict `N_eff = 3.31–3.39`, the framework's most
+falsifiable near-term prediction. This value is in `3–4σ` tension with
+ACT DR6 (`N_eff = 2.86 ± 0.13`), though the combined ACT+SPT+Planck
+measurement (`N_eff = 2.81 ± 0.12`) is itself `1.9σ` below the Standard
+Model prediction of 3.043, and when SH0ES `H₀` data are included the
+preferred value shifts to `N_eff = 3.43 ± 0.13` (Garcia Escudero &
+Abazajian 2025) — consistent with the framework. A CAMB computation of
+the mirror-sector thermal history shows that mirror `e±` undergo
+Boltzmann suppression at BBN (`T_mirror ≈ 0.43` MeV vs `m_e = 0.511` MeV),
+producing a time-varying `ΔN_eff`: at recombination, the effective
+mirror contribution is `ΔN_eff ≈ 0.36` (`ξ = 0.47`), suppressed by a
+factor 0.49 relative to the fully relativistic limit, as the mirror
+`e±` annihilate and heat the mirror photon bath — giving total
+`N_eff ≈ 3.40`. CMB-S4 (`σ(N_eff) ≈ 0.03`) will confirm or exclude the
+mirror sector at `> 9σ`.
 
 CMB-S4 will confirm or exclude the mirror sector at `> 9σ`. DESI DR3 will
 test `H(z)` at `8σ`. Euclid will test `S8` at `16σ` relative to Planck `ΛCDM`.

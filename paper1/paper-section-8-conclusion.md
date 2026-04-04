@@ -37,8 +37,10 @@ from the 2:1 ratio between spatial rotation and e-revolution. Magnetic moments
 arise from helical circulation in `(space, e)`-space.
 
 **Measurement** is e-space sampling. Wave function collapse is an epistemic
-update, not a physical process. The Born rule follows from the normalization
-of the five-dimensional density at the sampled e-region.
+update, not a physical process. The Born rule is geometrically motivated and
+uniquely selected by the Haar measure on the e-circle (the unique measure
+consistent with e-translation invariance) and by causal consistency (Torres
+Alegre 2026).
 
 **The Aharonov-Bohm effect** is the direct experimental signature of e-space
 topology. The solenoid is a topological defect in the e-bundle. The phase shift
