@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gravity ecurve</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(6,8,14,0.97)",
+  grid: "rgba(20,35,65,0.3)",
+  mass: "#ff9944",
+  massGlow: "rgba(255,150,60,0.25)",
+  fiber: "#44aaff",
+  fiberDim: "rgba(40,140,255,0.15)",
+  photon: "#ffee55",
+  photonGlow: "rgba(255,240,80,0.25)",
+  geodesic: "#55ff99",
+  axis: "rgba(100,140,200,0.5)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(75,115,165,0.45)",
+  accent: "rgba(255,160,60,0.7)",
+};
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function GravityECurvature() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0, rotY: 0.3, rotX: 0.15 });
+
+  const [massStrength, setMassStrength] = useState(60);
+  const [view, setView] = useState("curvature"); // curvature | photon | equivalence
+  const [showFibers, setShowFibers] = useState(true);
+  const [autoRotate, setAutoRotate] = useState(true);
+  const dragging = useRef(false);
+  const lastMouse = useRef({ x: 0, y: 0 });
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const cx = W / 2, cy = H / 2;
+    const st = stateRef.current;
+
+    st.time += 0.012;
+    if (autoRotate) st.rotY += 0.003;
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    const M = massStrength / 100;
+    const rY = st.rotY, rX = st.rotX;
+
+    // 3D rotation helpers
+    const rot = (x, y, z) => {
+      let x1 = x * Math.cos(rY) + z * Math.sin(rY);
+      let z1 = -x * Math.sin(rY) + z * Math.cos(rY);
+      let y1 = y * Math.cos(rX) - z1 * Math.sin(rX);
+      let z2 = y * Math.sin(rX) + z1 * Math.cos(rX);
+      return [x1, y1, z2];
+    };
+    const proj = (x, y, z) => {
+      const fov = 500, cam = 5;
+      const s = fov / (fov + z + cam);
+      return { px: cx + x * s * 160, py: cy + y * s * 160, s, z };
+    };
+    const p3 = (x, y, z) => proj(...rot(x, y, z));
+
+    // Draw the spacetime grid (base manifold)
+    const gridN = 20;
+    const gridR = 2.2;
+    ctx.lineWidth = 0.5;
+
+    for (let i = -gridN; i <= gridN; i++) {
+      ctx.beginPath();
+      let first = true;
+      for (let j = -gridN; j <= gridN; j++) {
+        const gx = (i / gridN) * gridR;
+        const gz = (j / gridN) * gridR;
+        const r = Math.sqrt(gx * gx + gz * gz) + 0.01;
+        // Gravitational well depression
+        const gy = -M * 0.5 / (r + 0.3);
+        const { px, py } = p3(gx, gy, gz);
+        if (first) { ctx.moveTo(px, py); first = false; }
+        else ctx.lineTo(px, py);
+      }
+      ctx.strokeStyle = C.grid;
+      ctx.stroke();
+    }
+    for (let j = -gridN; j <= gridN; j++) {
+      ctx.beginPath();
+      let first = true;
+      for (let i = -gridN; i <= gridN; i++) {
+        const gx = (i / gridN) * gridR;
+        const gz = (j / gridN) * gridR;
+        const r = Math.sqrt(gx * gx + gz * gz) + 0.01;
+        const gy = -M * 0.5 / (r + 0.3);
+        const { px, py } = p3(gx, gy, gz);
+        if (first) { ctx.moveTo(px, py); first = false; }
+        else ctx.lineTo(px, py);
+      }
+      ctx.strokeStyle = C.grid;
+      ctx.stroke();
+    }
+
+    // Draw e-circle fibers at sample points
+    if (showFibers) {
+      const fiberPositions = [
+        [0, 0], [0.8, 0], [-0.8, 0], [0, 0.8], [0, -0.8],
+        [1.4, 0], [-1.4, 0], [0, 1.4], [0, -1.4],
+        [0.6, 0.6], [-0.6, 0.6], [0.6, -0.6], [-0.6, -0.6],
+      ];
+
+      for (const [fx, fz] of fiberPositions) {
+        const r = Math.sqrt(fx * fx + fz * fz) + 0.01;
+        const baseY = -M * 0.5 / (r + 0.3);
+        // E-circle radius: distorted near mass (phi(r) from Appendix D)
+        const fiberRadius = 0.15 * (1 + M * 0.15 / (r + 0.2));
+        const fiberH = 0.5;
+        const steps = 32;
+
+        ctx.beginPath();
+        for (let k = 0; k <= steps; k++) {
+          const angle = (k / steps) * TAU;
+          const ex = fx + fiberRadius * Math.cos(angle);
+          const ey = baseY + fiberH * Math.sin(angle) * 0.5;
+          const ez = fz + fiberRadius * Math.sin(angle) * 0.3;
+          const { px, py, s } = p3(ex, ey, ez);
+          if (k === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        const distAlpha = Math.min(1, 0.3 + 0.7 / (r * 0.8 + 0.3));
+        ctx.strokeStyle = r < 0.5
+          ? `rgba(255,150,60,${distAlpha * 0.6})`
+          : `rgba(40,140,255,${distAlpha * 0.5})`;
+        ctx.lineWidth = r < 0.5 ? 2.5 : 1.5;
+        ctx.stroke();
+      }
+    }
+
+    // Mass at center (glowing sphere)
+    {
+      const { px, py, s } = p3(0, -M * 0.5 / 0.31, 0);
+      const rad = 14 * s;
+      const grd = ctx.createRadialGradient(px, py, 0, px, py, rad * 5);
+      grd.addColorStop(0, C.massGlow);
+      grd.addColorStop(1, "transparent");
+      ctx.fillStyle = grd;
+      ctx.fillRect(px - rad * 5, py - rad * 5, rad * 10, rad * 10);
+      ctx.beginPath();
+      ctx.arc(px, py, rad, 0, TAU);
+      ctx.fillStyle = C.mass;
+      ctx.fill();
+    }
+
+    // Photon helix (view: photon) — shows redshift
+    if (view === "photon") {
+      const steps = 200;
+      ctx.beginPath();
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        const px_ = -2 + t * 4;
+        const r = Math.abs(px_) + 0.01;
+        const baseY = -M * 0.5 / (r + 0.3);
+        // Pitch decreases (redshift) as photon climbs out of well
+        const pitch = 0.12 + M * 0.08 / (r + 0.5);
+        const angle = t * TAU * 8 + st.time * 3;
+        const ey = baseY + pitch * Math.sin(angle);
+        const ez = pitch * Math.cos(angle) * 0.3;
+        const { px, py } = p3(px_, ey, ez);
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.strokeStyle = C.photon;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Glow
+      ctx.strokeStyle = C.photonGlow;
+      ctx.lineWidth = 6;
+      ctx.stroke();
+    }
+
+    // Geodesic (view: equivalence) — test particle falling
+    if (view === "equivalence") {
+      const t = (st.time * 0.3) % 4 - 2;
+      const r = Math.abs(t) + 0.3;
+      const gy = -M * 0.5 / (r + 0.3);
+      const { px, py, s } = p3(t, gy, 0);
+
+      // Trail
+      ctx.beginPath();
+      for (let i = 0; i < 60; i++) {
+        const tt = t - i * 0.04;
+        const rr = Math.abs(tt) + 0.3;
+        const yy = -M * 0.5 / (rr + 0.3);
+        const pp = p3(tt, yy, 0);
+        if (i === 0) ctx.moveTo(pp.px, pp.py);
+        else ctx.lineTo(pp.px, pp.py);
+      }
+      ctx.strokeStyle = `rgba(80,255,150,0.4)`;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(px, py, 6 * s, 0, TAU);
+      ctx.fillStyle = C.geodesic;
+      ctx.fill();
+    }
+
+    // Info panel
+    ctx.fillStyle = C.panelBg;
+    ctx.fillRect(12, H - 95, 360, 83);
+    ctx.font = "13px monospace";
+    ctx.fillStyle = C.text;
+
+    if (view === "curvature") {
+      ctx.fillText("Mass curves the full 5D spacetime", 20, H - 75);
+      ctx.fillText("E-circle fibers are distorted near mass:", 20, H - 57);
+      ctx.fillStyle = C.accent;
+      ctx.fillText(`φ(r) = φ₀ [1 + σGM/(3rc²)]`, 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Orange fibers = distorted by mass  Blue = far-field", 20, H - 21);
+    } else if (view === "photon") {
+      ctx.fillText("Photon helix through curved 5D spacetime", 20, H - 75);
+      ctx.fillText("Pitch slows as photon climbs → redshift:", 20, H - 57);
+      ctx.fillStyle = C.photon;
+      ctx.fillText("∂e/∂t = −E/ℏ  →  slower rotation = lower energy", 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Gravitational redshift from e-curvature", 20, H - 21);
+    } else {
+      ctx.fillText("Equivalence principle: gravity = e-fiber tilt", 20, H - 75);
+      ctx.fillText("Free-fall geodesic through curved 5D:", 20, H - 57);
+      ctx.fillStyle = C.geodesic;
+      ctx.fillText("d²x/dt² = −∇Φ  (Newton from 5D geometry)", 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Mass curves e-fiber → attraction", 20, H - 21);
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [massStrength, view, showFibers, autoRotate]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = 800 * dpr; canvas.height = 550 * dpr;
+    canvas.style.width = "800px"; canvas.style.height = "550px";
+    canvas.getContext("2d").scale(dpr, dpr);
+    animRef.current = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [draw]);
+
+  const onDown = (e) => { dragging.current = true; lastMouse.current = { x: e.clientX, y: e.clientY }; };
+  const onMove = (e) => {
+    if (!dragging.current) return;
+    stateRef.current.rotY += (e.clientX - lastMouse.current.x) * 0.006;
+    stateRef.current.rotX += (e.clientY - lastMouse.current.y) * 0.006;
+    lastMouse.current = { x: e.clientX, y: e.clientY };
+  };
+  const onUp = () => { dragging.current = false; };
+
+  return (
+    <div style={{ background: C.bg, padding: 16, borderRadius: 12, display: "inline-block" }}>
+      <div style={{ color: C.text, fontFamily: "monospace", fontSize: 15, marginBottom: 8 }}>
+        <strong>12 — E-Curvature Near a Massive Object</strong>
+        <span style={{ color: C.textDim, marginLeft: 12 }}>Section 5 / Appendix D</span>
+      </div>
+      <canvas
+        ref={canvasRef}
+        style={{ borderRadius: 8, cursor: "grab" }}
+        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
+      />
+      <div style={{ display: "flex", gap: 12, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+        {["curvature", "photon", "equivalence"].map(v => (
+          <button key={v} onClick={() => setView(v)}
+            style={{
+              background: view === v ? "rgba(60,120,200,0.3)" : "rgba(30,40,60,0.5)",
+              color: C.text, border: `1px solid ${view === v ? "rgba(100,160,255,0.5)" : "rgba(60,80,120,0.3)"}`,
+              borderRadius: 6, padding: "5px 14px", cursor: "pointer", fontFamily: "monospace", fontSize: 12,
+            }}>
+            {v === "curvature" ? "E-fiber distortion" : v === "photon" ? "Photon redshift" : "Equivalence principle"}
+          </button>
+        ))}
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12, display: "flex", alignItems: "center", gap: 6 }}>
+          Mass: <input type="range" min={0} max={100} value={massStrength} onChange={e => setMassStrength(+e.target.value)}
+            style={{ width: 80 }} />
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>
+          <input type="checkbox" checked={showFibers} onChange={e => setShowFibers(e.target.checked)} /> Fibers
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>
+          <input type="checkbox" checked={autoRotate} onChange={e => setAutoRotate(e.target.checked)} /> Rotate
+        </label>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(GravityECurvature));
+</script>
+</body>
+</html>

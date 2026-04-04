@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>helix momentum</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+
+// Color theme — warm amber/gold vs cool teal, on near-black
+const C = {
+  bg: "#07090e",
+  bgPanel: "#0b0f18",
+  grid: "rgba(40,60,100,0.35)",
+  helix: "#f0a030",
+  helixGlow: "rgba(240,160,40,0.18)",
+  particle: "#40e0c0",
+  particleGlow: "rgba(40,220,190,0.25)",
+  eAxis: "rgba(180,80,255,0.7)",
+  eAxisGlow: "rgba(180,80,255,0.12)",
+  xAxis: "rgba(80,180,255,0.6)",
+  uncertainty: "rgba(255,80,80,0.18)",
+  uncertaintyBorder: "rgba(255,100,100,0.5)",
+  text: "rgba(180,210,240,0.75)",
+  textDim: "rgba(100,140,180,0.45)",
+  accent: "#f0a030",
+  accentCool: "#40e0c0",
+};
+
+function drawArrow(ctx, x1, y1, x2, y2, color, label, labelSide = "end") {
+  const dx = x2 - x1, dy = y2 - y1;
+  const len = Math.sqrt(dx * dx + dy * dy);
+  const ux = dx / len, uy = dy / len;
+  const arrowSize = 8;
+
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  // Arrowhead
+  ctx.beginPath();
+  ctx.moveTo(x2, y2);
+  ctx.lineTo(x2 - ux * arrowSize - uy * arrowSize * 0.5, y2 - uy * arrowSize + ux * arrowSize * 0.5);
+  ctx.lineTo(x2 - ux * arrowSize + uy * arrowSize * 0.5, y2 - uy * arrowSize - ux * arrowSize * 0.5);
+  ctx.closePath();
+  ctx.fillStyle = color;
+  ctx.fill();
+
+  if (label) {
+    ctx.fillStyle = color;
+    ctx.font = "bold 12px 'Courier New'";
+    if (labelSide === "end") ctx.fillText(label, x2 + 6, y2 + 4);
+    else ctx.fillText(label, x1 - 20, y1 - 8);
+  }
+}
+
+function HelixMomentum() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0 });
+
+  const [momentum, setMomentum] = useState(3.0);   // helical pitch: turns per unit length
+  const [localize, setLocalize] = useState(0);      // 0=delocalized, 100=fully localized
+  const [mode, setMode] = useState("free");         // free | localized | uncertainty
+  const [showProjection, setShowProjection] = useState(true);
+  const [animating, setAnimating] = useState(true);
+
+  // Derived
+  const pitch = momentum;                           // turns per unit x
+  const wavelength = pitch > 0.01 ? 1 / pitch : 999;
+  const posUncertainty = localize / 100;            // 0..1
+  const momUncertainty = posUncertainty > 0.01 ? (1 - posUncertainty) : 0;
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width;
+    const H = canvas.height;
+    const s = stateRef.current;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // ---- LAYOUT ----
+    // Main helix panel: left 65%
+    // Info panel: right 35%
+    const mainW = W * 0.65;
+    const infoX = mainW + 20;
+
+    // Axes origin
+    const ox = 60;
+    const oy = H * 0.52;
+    const axisLen = mainW - 90;
+    const eScale = H * 0.21;   // amplitude of e oscillation in px
+    const xScale = axisLen;    // full x range in px
+    const xRange = 8.0;        // x units shown
+
+    // ---- BACKGROUND GRID ----
+    ctx.strokeStyle = C.grid;
+    ctx.lineWidth = 0.5;
+    // Horizontal
+    for (let yi = -3; yi <= 3; yi++) {
+      ctx.beginPath();
+      ctx.moveTo(ox, oy + yi * eScale * 0.5);
+      ctx.lineTo(ox + axisLen, oy + yi * eScale * 0.5);
+      ctx.stroke();
+    }
+    // Vertical (wavelength guides)
+    for (let xi = 0; xi <= xRange; xi++) {
+      const px = ox + (xi / xRange) * xScale;
+      ctx.beginPath();
+      ctx.moveTo(px, oy - eScale * 1.6);
+      ctx.lineTo(px, oy + eScale * 1.6);
+      ctx.stroke();
+    }
+
+    // ---- AXES ----
+    drawArrow(ctx, ox - 10, oy, ox + axisLen + 20, oy, C.xAxis, "x (position)", "end");
+    drawArrow(ctx, ox, oy + eScale * 1.5, ox, oy - eScale * 1.5, C.eAxis, "e", "end");
+
+    // Axis labels
+    ctx.fillStyle = C.xAxis;
+    ctx.font = "11px 'Courier New'";
+    ctx.fillText("(space)", ox + axisLen - 20, oy + 22);
+    ctx.fillStyle = C.eAxis;
+    ctx.fillText("(phase dim)", ox + 6, oy - eScale * 1.5 - 6);
+
+    // ---- ENVELOPE for localization ----
+    // Gaussian envelope centered at x = 4 (middle)
+    const centerX = xRange / 2;
+    const sigma = localize < 2 ? 999 : (1 - posUncertainty) * xRange * 0.7 + 0.3;
+
+    // Draw uncertainty region
+    if (localize > 2 && mode !== "free") {
+      const sigPx = (sigma / xRange) * xScale;
+      const envCX = ox + (centerX / xRange) * xScale;
+      const grad = ctx.createRadialGradient(envCX, oy, 0, envCX, oy, sigPx * 1.2);
+      grad.addColorStop(0, "rgba(255,80,80,0.12)");
+      grad.addColorStop(1, "rgba(255,80,80,0)");
+      ctx.beginPath();
+      ctx.ellipse(envCX, oy, sigPx * 1.2, eScale * 1.3, 0, 0, TAU);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.ellipse(envCX, oy, sigPx * 1.2, eScale * 1.3, 0, 0, TAU);
+      ctx.strokeStyle = C.uncertaintyBorder;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 5]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Δx label
+      ctx.fillStyle = "rgba(255,120,120,0.8)";
+      ctx.font = "bold 12px 'Courier New'";
+      ctx.fillText("Δx", envCX - sigPx * 1.2 - 2, oy - eScale * 1.4);
+      // brackets
+      ctx.beginPath();
+      ctx.moveTo(envCX - sigPx * 1.2, oy - eScale * 1.3);
+      ctx.lineTo(envCX - sigPx * 1.2, oy + eScale * 1.3);
+      ctx.moveTo(envCX + sigPx * 1.2, oy - eScale * 1.3);
+      ctx.lineTo(envCX + sigPx * 1.2, oy + eScale * 1.3);
+      ctx.strokeStyle = "rgba(255,100,100,0.4)";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // ---- HELIX PATH ----
+    // Draw as 3D helix projected: x along canvas x, e as y, "depth" as brightness
+    const steps = 600;
+    const tOffset = animating ? s.time * 0.5 : 0;
+
+    // First pass: glow
+    ctx.lineWidth = 6;
+    ctx.globalAlpha = 0.18;
+    for (let i = 0; i < steps - 1; i++) {
+      const t0 = (i / steps) * xRange;
+      const t1 = ((i + 1) / steps) * xRange;
+      const px0 = ox + (t0 / xRange) * xScale;
+      const px1 = ox + (t1 / xRange) * xScale;
+      const angle0 = TAU * pitch * t0 + tOffset;
+      const angle1 = TAU * pitch * t1 + tOffset;
+      const eSin0 = Math.sin(angle0);
+      const eSin1 = Math.sin(angle1);
+      const eCos0 = Math.cos(angle0); // depth
+      const eCos1 = Math.cos(angle1);
+
+      // Gaussian envelope
+      const env0 = sigma < 900 ? Math.exp(-0.5 * ((t0 - centerX) / sigma) ** 2) : 1;
+      const env1 = sigma < 900 ? Math.exp(-0.5 * ((t1 - centerX) / sigma) ** 2) : 1;
+      const envAvg = (env0 + env1) / 2;
+      if (envAvg < 0.02) continue;
+
+      const py0 = oy - eSin0 * eScale * env0;
+      const py1 = oy - eSin1 * eScale * env1;
+      const alpha = ((eCos0 + eCos1) / 2 + 1) / 2;
+
+      ctx.beginPath();
+      ctx.moveTo(px0, py0);
+      ctx.lineTo(px1, py1);
+      ctx.strokeStyle = C.helix;
+      ctx.globalAlpha = alpha * 0.15 * envAvg;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    // Main helix line
+    ctx.lineWidth = 2;
+    let prevPx = null, prevPy = null;
+    for (let i = 0; i < steps; i++) {
+      const t = (i / steps) * xRange;
+      const px = ox + (t / xRange) * xScale;
+      const angle = TAU * pitch * t + tOffset;
+      const eSin = Math.sin(angle);
+      const eCos = Math.cos(angle);
+      const env = sigma < 900 ? Math.exp(-0.5 * ((t - centerX) / sigma) ** 2) : 1;
+      if (env < 0.015) { prevPx = null; continue; }
+      const py = oy - eSin * eScale * env;
+      const depth = (eCos + 1) / 2; // 0..1
+      const alpha = (0.3 + 0.7 * depth) * env;
+
+      if (prevPx !== null) {
+        ctx.beginPath();
+        ctx.moveTo(prevPx, prevPy);
+        ctx.lineTo(px, py);
+        ctx.strokeStyle = C.helix;
+        ctx.globalAlpha = alpha;
+        ctx.stroke();
+      }
+      prevPx = px;
+      prevPy = py;
+    }
+    ctx.globalAlpha = 1;
+
+    // ---- WAVELENGTH ANNOTATION ----
+    if (pitch > 0.2 && mode !== "localized") {
+      const wlPx = (wavelength / xRange) * xScale;
+      if (wlPx > 20 && wlPx < xScale) {
+        const annotY = oy + eScale * 1.15;
+        const startX = ox + wlPx * 0.5;
+        // Double-headed arrow
+        ctx.beginPath();
+        ctx.moveTo(startX, annotY);
+        ctx.lineTo(startX + wlPx, annotY);
+        ctx.strokeStyle = "rgba(240,160,40,0.5)";
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+        // Ticks
+        [startX, startX + wlPx].forEach(tx => {
+          ctx.beginPath();
+          ctx.moveTo(tx, annotY - 5);
+          ctx.lineTo(tx, annotY + 5);
+          ctx.stroke();
+        });
+        ctx.fillStyle = "rgba(240,160,40,0.75)";
+        ctx.font = "11px 'Courier New'";
+        ctx.fillText(`λ = h/p`, startX + wlPx * 0.25, annotY + 16);
+      }
+    }
+
+    // ---- MOVING PARTICLE DOT ----
+    if (animating) {
+      const tParticle = ((s.time * 0.3) % xRange);
+      const pxP = ox + (tParticle / xRange) * xScale;
+      const angleP = TAU * pitch * tParticle + tOffset;
+      const env = sigma < 900 ? Math.exp(-0.5 * ((tParticle - centerX) / sigma) ** 2) : 1;
+      const pyP = oy - Math.sin(angleP) * eScale * env;
+
+      // Glow
+      const grd = ctx.createRadialGradient(pxP, pyP, 0, pxP, pyP, 18);
+      grd.addColorStop(0, "rgba(40,220,190,0.5)");
+      grd.addColorStop(1, "rgba(40,220,190,0)");
+      ctx.beginPath();
+      ctx.arc(pxP, pyP, 18, 0, TAU);
+      ctx.fillStyle = grd;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(pxP, pyP, 5, 0, TAU);
+      ctx.fillStyle = C.accentCool;
+      ctx.fill();
+
+      // Projection onto x axis (what 4D observer sees)
+      if (showProjection) {
+        ctx.beginPath();
+        ctx.moveTo(pxP, pyP);
+        ctx.lineTo(pxP, oy);
+        ctx.strokeStyle = "rgba(40,220,190,0.3)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([3, 4]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Dot on x axis
+        ctx.beginPath();
+        ctx.arc(pxP, oy, 4, 0, TAU);
+        ctx.fillStyle = "rgba(40,220,190,0.6)";
+        ctx.fill();
+      }
+    }
+
+    // ---- INFO PANEL ----
+    const ip = { x: infoX, y: 28, w: W - infoX - 16 };
+
+    // Panel bg
+    ctx.fillStyle = "rgba(11,15,24,0.85)";
+    ctx.fillRect(ip.x - 8, 0, ip.w + 16, H);
+    ctx.strokeStyle = "rgba(40,80,140,0.25)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(ip.x - 8, 0);
+    ctx.lineTo(ip.x - 8, H);
+    ctx.stroke();
+
+    // Title
+    ctx.fillStyle = "rgba(240,160,40,0.9)";
+    ctx.font = "bold 13px 'Courier New'";
+    ctx.fillText("MOMENTUM = PITCH", ip.x, ip.y + 14);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    ctx.fillText("of the helix through 5D space", ip.x, ip.y + 30);
+
+    // Metrics
+    const metrics = [
+      { label: "momentum (p)", value: momentum.toFixed(2), unit: "ℏ/λ", color: C.accent },
+      { label: "wavelength (λ)", value: wavelength < 50 ? wavelength.toFixed(2) : "∞", unit: "h/p", color: C.accent },
+      { label: "turns/unit x", value: pitch.toFixed(2), unit: "", color: "rgba(180,120,255,0.8)" },
+    ];
+
+    metrics.forEach((m, i) => {
+      const my = ip.y + 58 + i * 38;
+      ctx.fillStyle = C.textDim;
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(m.label, ip.x, my);
+      ctx.fillStyle = m.color;
+      ctx.font = "bold 16px 'Courier New'";
+      ctx.fillText(m.value, ip.x, my + 16);
+      ctx.fillStyle = C.textDim;
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(m.unit, ip.x + 50, my + 16);
+    });
+
+    // Uncertainty principle display
+    if (mode === "uncertainty") {
+      const upy = ip.y + 180;
+      ctx.fillStyle = "rgba(255,100,100,0.8)";
+      ctx.font = "bold 12px 'Courier New'";
+      ctx.fillText("UNCERTAINTY PRINCIPLE", ip.x, upy);
+      ctx.fillStyle = C.textDim;
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText("Δx · Δp ≥ ℏ/2", ip.x, upy + 16);
+
+      // Visual bars
+      const barW = ip.w - 10;
+      const barH = 10;
+      const barX = ip.x;
+
+      // Δx bar
+      ctx.fillStyle = "rgba(255,100,100,0.15)";
+      ctx.fillRect(barX, upy + 32, barW, barH);
+      ctx.fillStyle = "rgba(255,100,100,0.7)";
+      ctx.fillRect(barX, upy + 32, barW * posUncertainty, barH);
+      ctx.fillStyle = "rgba(200,120,120,0.8)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(`Δx = ${(posUncertainty * 100).toFixed(0)}%`, barX, upy + 56);
+
+      // Δp bar (inverse)
+      ctx.fillStyle = "rgba(180,80,255,0.15)";
+      ctx.fillRect(barX, upy + 66, barW, barH);
+      ctx.fillStyle = "rgba(180,80,255,0.7)";
+      ctx.fillRect(barX, upy + 66, barW * (1 - posUncertainty), barH);
+      ctx.fillStyle = "rgba(160,100,220,0.8)";
+      ctx.font = "10px 'Courier New'";
+      ctx.fillText(`Δp = ${((1 - posUncertainty) * 100).toFixed(0)}%`, barX, upy + 90);
+
+      // Product
+      const product = posUncertainty * (1 - posUncertainty);
+      ctx.fillStyle = product > 0.22 ? "rgba(80,220,120,0.8)" : "rgba(255,180,40,0.8)";
+      ctx.font = "bold 11px 'Courier New'";
+      ctx.fillText(`Δx·Δp ≈ ${(product * 4).toFixed(2)} × ℏ/2`, barX, upy + 108);
+    }
+
+    // Explanation text
+    const expY = mode === "uncertainty" ? ip.y + 310 : ip.y + 196;
+    const lines = mode === "free"
+      ? [
+          "A free particle with definite",
+          "momentum traces a perfect",
+          "helix — constant pitch.",
+          "",
+          "High momentum → tight coils",
+          "Low momentum → loose coils",
+          "",
+          "The particle is delocalized:",
+          "it extends through all space.",
+        ]
+      : mode === "localized"
+      ? [
+          "Squeeze the particle into a",
+          "small region of space.",
+          "",
+          "The helix can't maintain",
+          "constant pitch — it blurs.",
+          "",
+          "Position known → momentum",
+          "becomes uncertain.",
+        ]
+      : [
+          "Drag the slider to trade",
+          "position certainty for",
+          "momentum certainty.",
+          "",
+          "This isn't a limit of our",
+          "instruments — it's geometry.",
+          "",
+          "You can't specify where on",
+          "a helix you are AND what",
+          "its pitch is simultaneously.",
+        ];
+
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px 'Courier New'";
+    lines.forEach((line, i) => {
+      ctx.fillText(line, ip.x, expY + i * 17);
+    });
+
+    // ---- BOTTOM LABEL ----
+    ctx.fillStyle = "rgba(100,140,180,0.35)";
+    ctx.font = "11px 'Courier New'";
+    ctx.fillText("momentum = ∂e/∂x  (rate of e-rotation per unit distance)", ox, H - 14);
+
+    s.time += 0.016;
+    animRef.current = requestAnimationFrame(draw);
+  }, [momentum, localize, mode, showProjection, animating, pitch, wavelength, posUncertainty]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    animRef.current = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animRef.current);
+      window.removeEventListener("resize", resize);
+    };
+  }, [draw]);
+
+  const labelStyle = {
+    fontSize: 10,
+    letterSpacing: "0.15em",
+    color: "rgba(100,160,220,0.5)",
+    textTransform: "uppercase",
+    fontFamily: "'Courier New', monospace",
+    display: "block",
+    marginBottom: 6,
+  };
+
+  const btnStyle = (active, accent) => ({
+    padding: "5px 13px",
+    fontSize: 11,
+    letterSpacing: "0.07em",
+    fontFamily: "'Courier New', monospace",
+    background: active ? `rgba(${accent},0.2)` : "rgba(20,35,60,0.5)",
+    border: `1px solid ${active ? `rgba(${accent},0.6)` : "rgba(50,90,150,0.25)"}`,
+    color: active ? `rgba(${accent},1)` : "rgba(120,160,200,0.5)",
+    borderRadius: 3,
+    cursor: "pointer",
+  });
+
+  return (
+    <div style={{
+      background: C.bg,
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      fontFamily: "'Courier New', monospace",
+      color: C.text,
+      userSelect: "none",
+    }}>
+      {/* Header */}
+      <div style={{
+        padding: "16px 28px 10px",
+        borderBottom: "1px solid rgba(60,100,180,0.18)",
+        display: "flex",
+        alignItems: "baseline",
+        gap: 14,
+      }}>
+        <span style={{ fontSize: 11, letterSpacing: "0.18em", color: "rgba(240,160,40,0.45)", textTransform: "uppercase" }}>
+          Quantum Geometry in 5D
+        </span>
+        <span style={{ color: "rgba(80,120,180,0.3)", fontSize: 11 }}>|</span>
+        <span style={{ fontSize: 13, color: "rgba(200,210,230,0.65)", letterSpacing: "0.05em" }}>
+          Visualization 02 — Momentum as Helical Pitch
+        </span>
+      </div>
+
+      {/* Canvas */}
+      <canvas ref={canvasRef} style={{ flex: 1, width: "100%", display: "block" }} />
+
+      {/* Controls */}
+      <div style={{
+        padding: "14px 28px 18px",
+        borderTop: "1px solid rgba(60,100,180,0.15)",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "16px 36px",
+        alignItems: "flex-start",
+        background: "rgba(7,9,14,0.97)",
+      }}>
+
+        {/* Momentum slider */}
+        <div>
+          <span style={labelStyle}>Momentum (helical pitch)</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: "rgba(240,160,40,0.5)", width: 28 }}>low</span>
+            <input type="range" min={0.3} max={6} step={0.1} value={momentum}
+              onChange={e => setMomentum(Number(e.target.value))}
+              style={{ width: 180, accentColor: "#f0a030", cursor: "pointer" }} />
+            <span style={{ fontSize: 11, color: "rgba(240,160,40,0.5)", width: 28 }}>high</span>
+            <span style={{
+              fontSize: 11, color: "rgba(240,160,40,0.8)",
+              background: "rgba(80,40,0,0.35)",
+              border: "1px solid rgba(200,120,40,0.25)",
+              padding: "2px 8px", borderRadius: 3, minWidth: 42, textAlign: "center",
+            }}>p={momentum.toFixed(1)}</span>
+          </div>
+        </div>
+
+        {/* Mode */}
+        <div>
+          <span style={labelStyle}>Mode</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            {[
+              ["free", "Free Particle", "240,160,40"],
+              ["localized", "Localize", "255,100,100"],
+              ["uncertainty", "Uncertainty", "180,80,255"],
+            ].map(([val, label, col]) => (
+              <button key={val} onClick={() => { setMode(val); if (val === "free") setLocalize(0); }}
+                style={btnStyle(mode === val, col)}>{label}</button>
+            ))}
+          </div>
+        </div>
+
+        {/* Localization slider (shown in localized/uncertainty mode) */}
+        {mode !== "free" && (
+          <div>
+            <span style={labelStyle}>Position certainty (Δx tightness)</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: 11, color: "rgba(255,100,100,0.5)", width: 36 }}>spread</span>
+              <input type="range" min={0} max={95} step={1} value={localize}
+                onChange={e => setLocalize(Number(e.target.value))}
+                style={{ width: 160, accentColor: "#ff6060", cursor: "pointer" }} />
+              <span style={{ fontSize: 11, color: "rgba(255,100,100,0.5)", width: 36 }}>tight</span>
+            </div>
+          </div>
+        )}
+
+        {/* Toggles */}
+        <div style={{ display: "flex", gap: 8, alignItems: "flex-end", paddingBottom: 2 }}>
+          <button onClick={() => setShowProjection(v => !v)}
+            style={btnStyle(showProjection, "40,220,190")}>
+            {showProjection ? "Hide" : "Show"} 4D projection
+          </button>
+          <button onClick={() => setAnimating(v => !v)}
+            style={btnStyle(animating, "80,160,255")}>
+            {animating ? "⏸ Pause" : "▷ Animate"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(HelixMomentum));
+</script>
+</body>
+</html>

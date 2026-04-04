@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>z2 orbifold</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(6,8,14,0.97)",
+  visible: "#44aaff",
+  visibleGlow: "rgba(40,140,255,0.2)",
+  hidden: "#ff5555",
+  hiddenGlow: "rgba(255,60,60,0.2)",
+  bulk: "rgba(100,140,200,0.15)",
+  graviton: "#ffcc44",
+  darkPhoton: "#ff88ff",
+  neutrino: "#55ff99",
+  interval: "rgba(100,140,200,0.5)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(75,115,165,0.45)",
+};
+
+function Z2Orbifold() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0 });
+
+  const [view, setView] = useState("orbifold"); // orbifold | darkMatter | darkPhoton | baryogenesis
+  const [showGraviton, setShowGraviton] = useState(true);
+  const [showNeutrinos, setShowNeutrinos] = useState(true);
+  const [xi, setXi] = useState(43); // temperature ratio * 100
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const st = stateRef.current;
+    st.time += 0.012;
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    const cx = W / 2, cy = H / 2;
+    const braneW = 280, braneH = 220;
+    const separation = 200;
+    const visX = cx - separation / 2, hidX = cx + separation / 2;
+
+    // Draw the bulk (the interval between branes)
+    ctx.fillStyle = C.bulk;
+    ctx.fillRect(visX - 10, cy - braneH / 2, separation + 20, braneH);
+
+    // Draw the interval line with phi labels
+    ctx.strokeStyle = C.interval;
+    ctx.lineWidth = 2;
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(visX, cy + braneH / 2 + 20);
+    ctx.lineTo(hidX, cy + braneH / 2 + 20);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.font = "12px monospace";
+    ctx.fillStyle = C.visible;
+    ctx.textAlign = "center";
+    ctx.fillText("φ = 0", visX, cy + braneH / 2 + 40);
+    ctx.fillStyle = C.hidden;
+    ctx.fillText("φ = π", hidX, cy + braneH / 2 + 40);
+    ctx.fillStyle = C.textDim;
+    ctx.fillText("S¹/Z₂ = [0, πR]", cx, cy + braneH / 2 + 58);
+
+    // Visible brane
+    ctx.fillStyle = C.visibleGlow;
+    ctx.fillRect(visX - braneW / 2, cy - braneH / 2, braneW / 2, braneH);
+    ctx.strokeStyle = C.visible;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(visX, cy - braneH / 2);
+    ctx.lineTo(visX, cy + braneH / 2);
+    ctx.stroke();
+    ctx.fillStyle = C.visible;
+    ctx.font = "14px monospace";
+    ctx.textAlign = "right";
+    ctx.fillText("VISIBLE BRANE", visX - 15, cy - braneH / 2 + 20);
+    ctx.font = "11px monospace";
+    ctx.fillText("SU(3)×SU(2)×U(1)", visX - 15, cy - braneH / 2 + 38);
+    ctx.fillText("3 generations", visX - 15, cy - braneH / 2 + 54);
+
+    // Visible sector particles
+    const visParticles = ["e⁻", "u", "d", "γ", "g", "W", "Z", "H", "ν"];
+    for (let i = 0; i < visParticles.length; i++) {
+      const py = cy - 60 + (i % 5) * 28;
+      const px = visX - 40 - Math.floor(i / 5) * 45;
+      const pulse = 1 + 0.2 * Math.sin(st.time * 2 + i);
+      ctx.beginPath();
+      ctx.arc(px, py, 8 * pulse, 0, TAU);
+      ctx.fillStyle = `rgba(40,140,255,${0.3 + 0.2 * Math.sin(st.time + i)})`;
+      ctx.fill();
+      ctx.fillStyle = C.visible;
+      ctx.font = "10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(visParticles[i], px, py + 3);
+    }
+
+    // Hidden brane
+    ctx.fillStyle = C.hiddenGlow;
+    ctx.fillRect(hidX, cy - braneH / 2, braneW / 2, braneH);
+    ctx.strokeStyle = C.hidden;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(hidX, cy - braneH / 2);
+    ctx.lineTo(hidX, cy + braneH / 2);
+    ctx.stroke();
+    ctx.fillStyle = C.hidden;
+    ctx.font = "14px monospace";
+    ctx.textAlign = "left";
+    ctx.fillText("HIDDEN BRANE", hidX + 15, cy - braneH / 2 + 20);
+    ctx.font = "11px monospace";
+    ctx.fillText("SU(3)'×SU(2)'×U(1)'", hidX + 15, cy - braneH / 2 + 38);
+    ctx.fillText("Mirror SM", hidX + 15, cy - braneH / 2 + 54);
+
+    // Hidden sector particles (dimmer, at temperature xi*T)
+    const xiVal = xi / 100;
+    const hidParticles = ["e'", "u'", "d'", "γ'", "g'", "W'", "Z'", "H'", "ν'"];
+    for (let i = 0; i < hidParticles.length; i++) {
+      const py = cy - 60 + (i % 5) * 28;
+      const px = hidX + 40 + Math.floor(i / 5) * 45;
+      const pulse = 1 + 0.15 * xiVal * Math.sin(st.time * 2 * xiVal + i);
+      ctx.beginPath();
+      ctx.arc(px, py, 7 * pulse, 0, TAU);
+      ctx.fillStyle = `rgba(255,60,60,${(0.15 + 0.2 * xiVal) * (0.5 + 0.5 * Math.sin(st.time * xiVal + i))})`;
+      ctx.fill();
+      ctx.fillStyle = `rgba(255,100,100,${0.4 + 0.3 * xiVal})`;
+      ctx.font = "10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(hidParticles[i], px, py + 3);
+    }
+
+    // Temperature labels
+    ctx.font = "12px monospace";
+    ctx.fillStyle = C.visible;
+    ctx.textAlign = "center";
+    ctx.fillText("T_vis = T", visX - 80, cy + braneH / 2 - 10);
+    ctx.fillStyle = C.hidden;
+    ctx.fillText(`T_hid = ${xiVal.toFixed(2)}T`, hidX + 80, cy + braneH / 2 - 10);
+
+    // Graviton propagating through bulk
+    if (showGraviton) {
+      const gt = (st.time * 0.8) % 1;
+      const gx = visX + gt * separation;
+      const gy = cy - 30 + 15 * Math.sin(gt * TAU * 3);
+      ctx.beginPath();
+      ctx.arc(gx, gy, 6, 0, TAU);
+      const gGrd = ctx.createRadialGradient(gx, gy, 0, gx, gy, 15);
+      gGrd.addColorStop(0, C.graviton);
+      gGrd.addColorStop(1, "transparent");
+      ctx.fillStyle = gGrd;
+      ctx.fillRect(gx - 15, gy - 15, 30, 30);
+      ctx.beginPath();
+      ctx.arc(gx, gy, 4, 0, TAU);
+      ctx.fillStyle = C.graviton;
+      ctx.fill();
+      ctx.fillStyle = C.graviton;
+      ctx.font = "10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("graviton", gx, gy - 12);
+    }
+
+    // Bulk neutrinos
+    if (showNeutrinos) {
+      for (let i = 0; i < 3; i++) {
+        const nt = ((st.time * 0.3 + i * 0.33) % 1);
+        const nx = visX + nt * separation;
+        const ny = cy + 40 + i * 25;
+        ctx.beginPath();
+        ctx.arc(nx, ny, 4, 0, TAU);
+        ctx.fillStyle = C.neutrino;
+        ctx.fill();
+        if (i === 0) {
+          ctx.fillStyle = C.neutrino;
+          ctx.font = "10px monospace";
+          ctx.fillText("ν_R (bulk)", nx, ny - 10);
+        }
+      }
+    }
+
+    // View-specific overlays
+    if (view === "darkMatter") {
+      ctx.fillStyle = "rgba(255,60,60,0.08)";
+      ctx.fillRect(hidX + 5, cy - braneH / 2 + 5, braneW / 2 - 10, braneH - 10);
+      ctx.strokeStyle = C.hidden;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 3]);
+      ctx.strokeRect(hidX + 5, cy - braneH / 2 + 5, braneW / 2 - 10, braneH - 10);
+      ctx.setLineDash([]);
+      ctx.fillStyle = C.hidden;
+      ctx.font = "13px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("DARK MATTER", hidX + braneW / 4, cy - braneH / 2 + 75);
+      ctx.font = "11px monospace";
+      ctx.fillText("Gravitates normally", hidX + braneW / 4, cy - braneH / 2 + 93);
+      ctx.fillText("No SM force coupling", hidX + braneW / 4, cy - braneH / 2 + 109);
+      ctx.fillText(`Ω_DM/Ω_b = 1/ξ² = ${(1 / xiVal ** 2).toFixed(1)}`, hidX + braneW / 4, cy - braneH / 2 + 127);
+    }
+
+    if (view === "darkPhoton") {
+      // Kinetic mixing line between the two U(1) gauge fields
+      ctx.strokeStyle = C.darkPhoton;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      const dpY = cy + 50;
+      ctx.beginPath();
+      ctx.moveTo(visX - 30, dpY);
+      ctx.lineTo(hidX + 30, dpY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Photon on visible side
+      ctx.beginPath();
+      ctx.arc(visX - 30, dpY, 6, 0, TAU);
+      ctx.fillStyle = C.visible;
+      ctx.fill();
+      ctx.fillStyle = C.visible;
+      ctx.font = "10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("γ", visX - 30, dpY - 12);
+
+      // Dark photon on hidden side
+      ctx.beginPath();
+      ctx.arc(hidX + 30, dpY, 6, 0, TAU);
+      ctx.fillStyle = C.darkPhoton;
+      ctx.fill();
+      ctx.fillStyle = C.darkPhoton;
+      ctx.fillText("γ'", hidX + 30, dpY - 12);
+
+      ctx.fillStyle = C.darkPhoton;
+      ctx.font = "13px monospace";
+      ctx.fillText("ε ~ α × π²/6 × e^{−π} ≈ 5×10⁻⁴", cx, dpY + 22);
+      ctx.font = "11px monospace";
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Testable by LDMX, LHCb Run 3", cx, dpY + 40);
+    }
+
+    if (view === "baryogenesis") {
+      // Show asymmetric leptogenesis
+      const leptY = cy - 10;
+
+      // Bulk neutrino decay arrows to both branes
+      const decayCx = cx;
+      ctx.strokeStyle = C.neutrino;
+      ctx.lineWidth = 2;
+      // To visible
+      ctx.beginPath();
+      ctx.moveTo(decayCx, leptY);
+      ctx.lineTo(visX + 20, leptY - 20);
+      ctx.stroke();
+      ctx.fillStyle = C.visible;
+      ctx.font = "11px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText("η_B", visX + 15, leptY - 25);
+
+      // To hidden (thicker = more asymmetry)
+      ctx.beginPath();
+      ctx.moveTo(decayCx, leptY);
+      ctx.lineTo(hidX - 20, leptY + 20);
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = C.hidden;
+      ctx.stroke();
+      ctx.fillStyle = C.hidden;
+      ctx.font = "11px monospace";
+      ctx.textAlign = "left";
+      ctx.fillText(`η_B' = η_B/ξ² ≈ ${(1 / xiVal ** 2).toFixed(0)}×η_B`, hidX - 15, leptY + 35);
+
+      // Bulk N_R label
+      ctx.fillStyle = C.neutrino;
+      ctx.font = "12px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("N_R decay", decayCx, leptY - 15);
+      ctx.font = "11px monospace";
+      ctx.fillText("(bulk leptogenesis)", decayCx, leptY + 55);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Weaker washout on colder brane → more asymmetry preserved", cx, leptY + 75);
+    }
+
+    // Info panel
+    ctx.fillStyle = C.panelBg;
+    ctx.fillRect(12, H - 82, 420, 70);
+    ctx.font = "13px monospace";
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.text;
+
+    if (view === "orbifold") {
+      ctx.fillText("Z₂ orbifold: S¹/Z₂ from spin structure (Appendix B)", 20, H - 62);
+      ctx.fillText("Visible brane (SM) at φ=0, hidden brane at φ=π", 20, H - 42);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Gravity propagates in bulk; SM forces stay on visible brane", 20, H - 22);
+    } else if (view === "darkMatter") {
+      ctx.fillText("Hidden-brane matter: gravitates but no SM forces", 20, H - 62);
+      ctx.fillStyle = C.hidden;
+      ctx.fillText(`Ω_DM/Ω_b = 1/ξ² = 1/${xiVal.toFixed(2)}² = ${(1/xiVal**2).toFixed(1)}`, 20, H - 42);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Mirror matter IS the dark matter — geometric prediction", 20, H - 22);
+    } else if (view === "darkPhoton") {
+      ctx.fillText("Kinetic mixing: visible γ ↔ hidden γ' via KK tower", 20, H - 62);
+      ctx.fillStyle = C.darkPhoton;
+      ctx.fillText("ε ~ 5×10⁻⁴ — testable by LDMX and LHCb Run 3", 20, H - 42);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("If found: confirms the two-brane orbifold structure", 20, H - 22);
+    } else {
+      ctx.fillText("Bulk N_R decays to both branes → leptogenesis", 20, H - 62);
+      ctx.fillStyle = C.neutrino;
+      ctx.fillText("Colder hidden brane → weaker washout → more baryons", 20, H - 42);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Result: Ω_DM/Ω_b = 1/ξ² ≈ 5 — the cosmic coincidence explained", 20, H - 22);
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [view, showGraviton, showNeutrinos, xi]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = 800 * dpr; canvas.height = 550 * dpr;
+    canvas.style.width = "800px"; canvas.style.height = "550px";
+    canvas.getContext("2d").scale(dpr, dpr);
+    animRef.current = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [draw]);
+
+  return (
+    <div style={{ background: C.bg, padding: 16, borderRadius: 12, display: "inline-block" }}>
+      <div style={{ color: C.text, fontFamily: "monospace", fontSize: 15, marginBottom: 8 }}>
+        <strong>16 — The Z₂ Orbifold: Two Branes, One Circle</strong>
+        <span style={{ color: C.textDim, marginLeft: 12 }}>Appendix W / Paper 2</span>
+      </div>
+      <canvas ref={canvasRef} style={{ borderRadius: 8 }} />
+      <div style={{ display: "flex", gap: 10, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+        {["orbifold", "darkMatter", "darkPhoton", "baryogenesis"].map(v => (
+          <button key={v} onClick={() => setView(v)}
+            style={{
+              background: view === v ? "rgba(60,120,200,0.3)" : "rgba(30,40,60,0.5)",
+              color: C.text, border: `1px solid ${view === v ? "rgba(100,160,255,0.5)" : "rgba(60,80,120,0.3)"}`,
+              borderRadius: 6, padding: "5px 12px", cursor: "pointer", fontFamily: "monospace", fontSize: 11,
+            }}>
+            {v === "orbifold" ? "Orbifold structure" : v === "darkMatter" ? "Dark matter" :
+             v === "darkPhoton" ? "Dark photon" : "Baryogenesis"}
+          </button>
+        ))}
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 11, display: "flex", alignItems: "center", gap: 5 }}>
+          ξ: <input type="range" min={25} max={50} value={xi} onChange={e => setXi(+e.target.value)}
+            style={{ width: 70 }} /> {(xi/100).toFixed(2)}
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 11 }}>
+          <input type="checkbox" checked={showGraviton} onChange={e => setShowGraviton(e.target.checked)} /> Graviton
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 11 }}>
+          <input type="checkbox" checked={showNeutrinos} onChange={e => setShowNeutrinos(e.target.checked)} /> ν_R bulk
+        </label>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Z2Orbifold));
+</script>
+</body>
+</html>

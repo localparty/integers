@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>entropy counting</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  planck: "#44aaff",
+  planckGlow: "rgba(68,170,255,0.1)",
+  ePhase: "#ffcc44",
+  ePhaseGlow: "rgba(255,204,68,0.1)",
+  horizon: "#ff5555",
+  result: "#55ff99",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(75,115,165,0.45)",
+  grid: "rgba(30,50,90,0.15)",
+};
+
+function EntropyCounting() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0 });
+  const [gridSize, setGridSize] = useState(6);
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const st = stateRef.current;
+    st.time += 0.012;
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // Title
+    ctx.font = "bold 15px monospace";
+    ctx.fillStyle = C.text;
+    ctx.textAlign = "center";
+    ctx.fillText("Bekenstein-Hawking Entropy: S = A/4 from e-Circle State Counting", W / 2, 28);
+    ctx.font = "11px monospace";
+    ctx.fillStyle = C.textDim;
+    ctx.fillText("Each Planck pixel on S² carries one e-circle — each e-circle carries one bit", W / 2, 46);
+
+    // LEFT: The horizon grid (Planck pixels on S^2)
+    const gx = 100, gy = 90;
+    const cellSize = Math.min(40, 280 / gridSize);
+    const gridW = gridSize * cellSize;
+    const gridH = gridSize * cellSize;
+
+    ctx.fillStyle = C.textDim;
+    ctx.font = "12px monospace";
+    ctx.textAlign = "center";
+    ctx.fillText("Horizon surface (S²)", gx + gridW / 2, gy - 10);
+    ctx.fillText(`${gridSize}×${gridSize} = ${gridSize * gridSize} Planck pixels`, gx + gridW / 2, gy + gridH + 18);
+
+    // Draw grid of Planck pixels, each with a phase indicator
+    for (let row = 0; row < gridSize; row++) {
+      for (let col = 0; col < gridSize; col++) {
+        const px = gx + col * cellSize;
+        const py = gy + row * cellSize;
+        const idx = row * gridSize + col;
+
+        // Planck pixel
+        ctx.strokeStyle = C.planck;
+        ctx.lineWidth = 0.8;
+        ctx.strokeRect(px, py, cellSize, cellSize);
+
+        // e-circle inside each pixel
+        const ecx = px + cellSize / 2;
+        const ecy = py + cellSize / 2;
+        const eR = cellSize * 0.3;
+
+        ctx.strokeStyle = C.ePhase;
+        ctx.lineWidth = 0.8;
+        ctx.globalAlpha = 0.5;
+        ctx.beginPath();
+        ctx.arc(ecx, ecy, eR, 0, TAU);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+
+        // Phase marker (the information bit)
+        const phi = Math.sin(idx * 1.7 + st.time * 0.5) * Math.PI;
+        const mx = ecx + eR * 0.7 * Math.cos(phi);
+        const my = ecy + eR * 0.7 * Math.sin(phi);
+
+        ctx.fillStyle = C.ePhase;
+        ctx.beginPath();
+        ctx.arc(mx, my, 2, 0, TAU);
+        ctx.fill();
+      }
+    }
+
+    // Area label
+    ctx.fillStyle = C.planck;
+    ctx.font = "12px monospace";
+    ctx.textAlign = "center";
+    const areaText = `A = ${gridSize * gridSize} lₚ²`;
+    ctx.fillText(areaText, gx + gridW / 2, gy + gridH + 36);
+
+    // RIGHT: The counting argument
+    const rx = 480, ry = 90;
+
+    ctx.fillStyle = C.text;
+    ctx.font = "bold 13px monospace";
+    ctx.textAlign = "left";
+    ctx.fillText("The counting argument:", rx, ry);
+
+    ctx.font = "12px monospace";
+    ctx.fillStyle = C.planck;
+    ctx.fillText("1. Horizon area = N Planck pixels", rx, ry + 30);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px monospace";
+    ctx.fillText(`   N = A / lₚ² = ${gridSize * gridSize}`, rx, ry + 48);
+
+    ctx.fillStyle = C.ePhase;
+    ctx.font = "12px monospace";
+    ctx.fillText("2. Each pixel carries one e-circle S¹", rx, ry + 78);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px monospace";
+    ctx.fillText("   horizon topology: S² × S¹", rx, ry + 96);
+
+    ctx.fillStyle = C.ePhase;
+    ctx.font = "12px monospace";
+    ctx.fillText("3. Each e-circle encodes one bit", rx, ry + 126);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px monospace";
+    ctx.fillText("   φ ∈ {0, π} after decoherence", rx, ry + 144);
+    ctx.fillText("   (binary: up or down on e-circle)", rx, ry + 160);
+
+    ctx.fillStyle = C.text;
+    ctx.font = "12px monospace";
+    ctx.fillText("4. Total information capacity:", rx, ry + 195);
+
+    // The big result
+    ctx.fillStyle = C.result;
+    ctx.font = "bold 20px monospace";
+    ctx.fillText("S = N bits = A / lₚ²", rx, ry + 225);
+
+    ctx.font = "14px monospace";
+    ctx.fillText("= A / 4  (in Planck units)", rx, ry + 252);
+
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px monospace";
+    ctx.fillText("The factor 1/4 arises from the definition", rx, ry + 280);
+    ctx.fillText("lₚ² = 4Gℏ/c³ in the Planck area", rx, ry + 296);
+
+    // Arrow connecting grid to formula
+    ctx.strokeStyle = C.textDim;
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(gx + gridW + 10, gy + gridH / 2);
+    ctx.lineTo(rx - 15, gy + gridH / 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Bottom comparison
+    ctx.fillStyle = C.text;
+    ctx.font = "12px monospace";
+    ctx.textAlign = "center";
+
+    const by = H - 80;
+    ctx.fillText("Standard derivation: S = A/4 from Euclidean path integral (Gibbons-Hawking 1977)", W / 2, by);
+    ctx.fillStyle = C.result;
+    ctx.fillText("e-dimension: S = A/4 because information IS the e-coordinate at each Planck pixel", W / 2, by + 20);
+    ctx.fillStyle = C.textDim;
+    ctx.font = "11px monospace";
+    ctx.fillText("The Bekenstein-Hawking formula counts something physical: the number of e-circle states on the horizon surface", W / 2, by + 44);
+
+  }, [gridSize]);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(function loop() {
+      draw();
+      animRef.current = requestAnimationFrame(loop);
+    });
+    return () => cancelAnimationFrame(animRef.current || id);
+  }, [draw]);
+
+  const btn = (active) => ({
+    background: active ? "rgba(68,170,255,0.2)" : "transparent",
+    color: active ? C.planck : C.textDim,
+    border: `1px solid ${active ? C.planck : "rgba(100,140,200,0.2)"}`,
+    padding: "4px 12px", fontSize: 12, fontFamily: "monospace",
+    borderRadius: 3, cursor: "pointer",
+  });
+
+  return (
+    <div style={{ background: C.bg, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", padding: 20 }}>
+      <canvas ref={canvasRef} width={900} height={520} style={{ borderRadius: 8 }} />
+      <div style={{ display: "flex", gap: 8, marginTop: 12, alignItems: "center" }}>
+        <span style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>Horizon size:</span>
+        {[4, 6, 8, 10].map(n => (
+          <button key={n} style={btn(gridSize === n)} onClick={() => setGridSize(n)}>
+            {n}×{n}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(EntropyCounting));
+</script>
+</body>
+</html>

@@ -278,3 +278,22 @@ limit, that mass distorts the local e-circle radius, and that gravity, electroma
 and a scalar field unify in the single 5D metric. Claim 1 of Section 5.7 is
 confirmed by explicit calculation.
 
+---
+
+## 1.8 Interactive Visualizations
+
+Nineteen interactive figures accompany this paper as supplementary files,
+available in the Zenodo repository alongside this PDF. Each figure is a
+self-contained HTML file that runs in any modern web browser — no installation
+required. They are designed to make the geometric concepts of the framework
+directly manipulable and observable, not merely described.
+
+The figures are referenced at their natural point of introduction throughout
+the paper (e.g., *Figure 01*, *Figure 03*). A complete list with descriptions
+is provided in the file `figures-list.md` in the supplementary materials.
+
+Readers accessing this paper on arXiv or in print can find all interactive
+figures at the Zenodo repository DOI listed on the cover page. Each figure
+file is named by number and topic (e.g., `03-superposition.html`) and
+corresponds directly to the section where it is referenced.
+

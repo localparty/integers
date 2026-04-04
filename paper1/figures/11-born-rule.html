@@ -1,4 +1,23 @@
-import { useRef, useEffect, useState, useCallback } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>born rule</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
 
 const TAU = Math.PI * 2;
 
@@ -22,9 +41,9 @@ const C = {
     [255, 170, 0],
   ],
   stateLabels: [
-    ["\u2191", "\u2193"],
-    ["\u2191", "\u2193", "\u21BB"],
-    ["\u2191", "\u2193", "\u21BB", "\u2194"],
+    ["↑", "↓"],
+    ["↑", "↓", "↻"],
+    ["↑", "↓", "↻", "↔"],
   ],
 };
 
@@ -41,7 +60,7 @@ function normalizeWeights(w) {
   return s > 0 ? w.map(v => v / s) : w.map(() => 1 / w.length);
 }
 
-export default function BornRuleESampling() {
+function BornRuleESampling() {
   const canvasRef = useRef(null);
   const animRef = useRef(null);
   const stateRef = useRef({
@@ -260,7 +279,7 @@ export default function BornRuleESampling() {
       ctx.fillStyle = C.stateColors[i];
       ctx.font = "bold 14px 'Courier New'";
       ctx.textAlign = "center";
-      ctx.fillText(labels[i] || `|${i}\u27E9`, lx, ly + 5);
+      ctx.fillText(labels[i] || `|${i}⟩`, lx, ly + 5);
       ctx.textAlign = "left";
 
       // Percentage inside arc
@@ -302,15 +321,15 @@ export default function BornRuleESampling() {
     if (ns === 2) {
       ctx.fillStyle = C.stateColors[0];
       ctx.font = "11px 'Courier New'";
-      ctx.fillText(`|\u03B1|\u00B2 = ${w[0].toFixed(3)}  (${stLabels[0]})`, 14, readY);
+      ctx.fillText(`|α|² = ${w[0].toFixed(3)}  (${stLabels[0]})`, 14, readY);
       ctx.fillStyle = C.stateColors[1];
-      ctx.fillText(`|\u03B2|\u00B2 = ${w[1].toFixed(3)}  (${stLabels[1]})`, 14, readY + 16);
+      ctx.fillText(`|β|² = ${w[1].toFixed(3)}  (${stLabels[1]})`, 14, readY + 16);
     } else {
       for (let i = 0; i < ns; i++) {
         ctx.fillStyle = C.stateColors[i];
         ctx.font = "11px 'Courier New'";
         const sub = String.fromCharCode(8321 + i);
-        ctx.fillText(`|\u03B1${sub}|\u00B2 = ${w[i].toFixed(3)}  (${stLabels[i]})`, 14, readY + i * 16);
+        ctx.fillText(`|α${sub}|² = ${w[i].toFixed(3)}  (${stLabels[i]})`, 14, readY + i * 16);
       }
     }
 
@@ -382,7 +401,7 @@ export default function BornRuleESampling() {
     // Result flash
     if (s.needleResult >= 0) {
       const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
-      const resultLabel = labels[s.needleResult] || `|${s.needleResult}\u27E9`;
+      const resultLabel = labels[s.needleResult] || `|${s.needleResult}⟩`;
       const flashAlpha = 0.5 + 0.5 * s.flashAnim;
       const rgb = C.stateRgb[s.needleResult];
 
@@ -416,7 +435,7 @@ export default function BornRuleESampling() {
     ctx.font = "10px 'Courier New'";
     ctx.textAlign = "center";
     ctx.fillText("random point sampled on e-circle", ccx, ccy - cR - 22);
-    ctx.fillText("lands in region i with prob \u221D arc length", ccx, ccy - cR - 8);
+    ctx.fillText("lands in region i with prob ∝ arc length", ccx, ccy - cR - 8);
     ctx.textAlign = "left";
 
     // ======== RIGHT PANEL: histogram ========
@@ -475,7 +494,7 @@ export default function BornRuleESampling() {
       ctx.fillStyle = C.stateColors[i];
       ctx.font = "bold 13px 'Courier New'";
       ctx.textAlign = "center";
-      ctx.fillText(labels[i] || `|${i}\u27E9`, bx + barW / 2, hBottom + 18);
+      ctx.fillText(labels[i] || `|${i}⟩`, bx + barW / 2, hBottom + 18);
       ctx.textAlign = "left";
 
       // Count on top of bar
@@ -502,7 +521,7 @@ export default function BornRuleESampling() {
       ctx.fillStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.5)`;
       ctx.font = "8px 'Courier New'";
       ctx.textAlign = "center";
-      ctx.fillText(`|\u03B1|${"\u00B2"}=${w[i].toFixed(2)}`, bx + barW / 2, thY - 4);
+      ctx.fillText(`|α|${"²"}=${w[i].toFixed(2)}`, bx + barW / 2, thY - 4);
       ctx.textAlign = "left";
     }
 
@@ -514,7 +533,7 @@ export default function BornRuleESampling() {
 
     for (let i = 0; i < ns; i++) {
       const labels = C.stateLabels[ns - 2] || C.stateLabels[0];
-      const meas = tN > 0 ? (counts[i] / tN).toFixed(3) : "\u2014";
+      const meas = tN > 0 ? (counts[i] / tN).toFixed(3) : "—";
       ctx.fillStyle = C.stateColors[i];
       ctx.font = "10px 'Courier New'";
       const line = `P(${labels[i]}) = ${meas}  (theory: ${w[i].toFixed(3)})`;
@@ -534,7 +553,7 @@ export default function BornRuleESampling() {
       ctx.fillStyle = convergenceColor;
       ctx.font = "10px 'Courier New'";
       ctx.fillText(
-        maxErr < 0.03 ? "\u2713 converged" : maxErr < 0.08 ? "\u223C converging..." : "\u25CB collecting data...",
+        maxErr < 0.03 ? "✓ converged" : maxErr < 0.08 ? "∼ converging..." : "○ collecting data...",
         rightX + hPad, statsY + 18 + ns * 14 + 6
       );
     }
@@ -574,9 +593,9 @@ export default function BornRuleESampling() {
     borderRadius: 3, cursor: "pointer",
   });
 
-  const annotation = "The Born rule P(i) = |\u03B1\u1D62|\u00B2 is geometrically motivated and uniquely selected. "
-    + "The probability of outcome i is the fraction of the particle\u2019s 5D structure located in e-region i, "
-    + "computed using the Haar measure on the e-circle \u2014 the unique measure consistent with e-translation invariance. "
+  const annotation = "The Born rule P(i) = |αᵢ|² is geometrically motivated and uniquely selected. "
+    + "The probability of outcome i is the fraction of the particle’s 5D structure located in e-region i, "
+    + "computed using the Haar measure on the e-circle — the unique measure consistent with e-translation invariance. "
     + "Causal consistency independently selects the same rule (Torres Alegre 2026).";
 
   return (
@@ -628,14 +647,14 @@ export default function BornRuleESampling() {
         {/* Alpha slider (only for 2-state) */}
         {nStates === 2 && (
           <div>
-            <span style={label}>|\u03B1|\u00B2 (spin-up probability)</span>
+            <span style={label}>|α|² (spin-up probability)</span>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <span style={{ fontSize: 11, color: "rgba(68,170,255,0.6)", width: 14 }}>\u2191</span>
+              <span style={{ fontSize: 11, color: "rgba(68,170,255,0.6)", width: 14 }}>↑</span>
               <input type="range" min={1} max={99} step={1}
                 value={Math.round(weights[0] * 100)}
                 onChange={e => setAlpha2(Number(e.target.value))}
                 style={{ width: 160, cursor: "pointer", accentColor: "#4af" }} />
-              <span style={{ fontSize: 11, color: "rgba(255,85,85,0.6)", width: 14 }}>\u2193</span>
+              <span style={{ fontSize: 11, color: "rgba(255,85,85,0.6)", width: 14 }}>↓</span>
               <span style={{
                 fontSize: 11, color: "rgba(180,210,240,0.6)",
                 background: "rgba(20,35,60,0.5)",
@@ -672,7 +691,7 @@ export default function BornRuleESampling() {
           <span style={label}>Auto</span>
           <button onClick={() => setAutoMeasure(v => !v)}
             style={btn(autoMeasure, autoMeasure ? "80,255,120" : "120,160,220")}>
-            {autoMeasure ? "\u25A0 Stop" : "\u25B6 Auto-measure"}
+            {autoMeasure ? "■ Stop" : "▶ Auto-measure"}
           </button>
         </div>
 
@@ -681,7 +700,7 @@ export default function BornRuleESampling() {
           <span style={label}>Reset</span>
           <button onClick={resetHistogram}
             style={btn(false, "120,160,220")}>
-            \u21BA Reset histogram
+            ↺ Reset histogram
           </button>
         </div>
       </div>
@@ -702,3 +721,9 @@ export default function BornRuleESampling() {
     </div>
   );
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(BornRuleESampling));
+</script>
+</body>
+</html>
