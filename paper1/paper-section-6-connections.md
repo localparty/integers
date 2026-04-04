@@ -374,3 +374,56 @@ framework proposes one universe with five dimensions. Different measurement
 outcomes correspond to different e-slices of one five-dimensional reality —
 not to parallel four-dimensional realities. The ontology is radically different.
 
+---
+
+## 6.8 The Non-Abelian Extension
+
+The e-dimension framework handles U(1) — the simplest gauge group. A theory
+of "quantum mechanics from geometry" that accounts only for electromagnetism
+and gravity is incomplete. The extension to the full Standard Model gauge
+group SU(3) × SU(2) × U(1) is the natural next step, and three established
+programs achieve it geometrically:
+
+(i) Baptista (2024) shows that Kaluza-Klein theory on M⁴ × G, where G is
+the SU(3) group manifold (8-dimensional), produces exactly the Standard
+Model gauge group (SU(3) × SU(2) × U(1))/Z₆ through Einstein metric
+instabilities — and a single 12D spinor decomposes into one complete
+generation of SM fermions with correct chiral representations.¹ This work
+takes the same ontological position as the present framework: extra
+dimensions are physical, not gauge redundancies.
+
+(ii) Hosotani et al. (2023) achieve the Standard Model through gauge-Higgs
+unification on a warped S¹/Z₂ orbifold, where the Higgs boson is identified
+with the extra-dimensional component of the gauge field. This program
+predicts KK W' and Z' bosons at the 13–22 TeV scale, testable at the LHC.
+
+(iii) Connes, Chamseddine, and van Suijlekom derive the full Standard Model
+— including the Higgs mechanism, fermion representations, and hypercharge
+assignments — from noncommutative spectral geometry, where the inner
+fluctuations of a Dirac operator on an "almost-commutative" space reconstruct
+the complete gauge-Higgs sector.
+
+Each of these programs is compatible with the e-dimension framework's core
+postulate that geometric dimensions are physical. The full unification —
+S¹_e × K_SM, where the e-circle handles quantum phase and K encodes the
+non-abelian forces — is the subject of future work (see Appendix L for the
+mathematical details of three candidate strategies).
+
+The minimal geometric extension of the e-circle to accommodate the full
+Standard Model gauge group is M⁴ × S¹ × S² × CP², where S¹ → U(1),
+S² → SU(2), and CP² → SU(3) (Appendix L, §L.2). This has total dimension
+4 + 1 + 2 + 4 = 11, coinciding with the dimensionality of M-theory — arrived
+at here from a completely different direction (minimally extending the
+e-circle to accommodate the observed gauge symmetries, rather than from
+supergravity or string dualities). We note this as a suggestive structural
+coincidence requiring further investigation, not as a claim of equivalence.
+
+---
+
+¹ Szangolies (2025, arXiv:2512.17328) arrives at the same gauge group from
+yet another direction: three entangled qubits in a 10-dimensional space
+reduce to 4D with residual SU(3) × SU(2) × U(1)/Z₆ symmetry. In the
+e-dimension framework, where entanglement *is* e-dimension geometry, this
+suggests a deep connection between qubit entanglement structure and the
+non-abelian gauge dimensions — an idea we intend to develop separately.
+

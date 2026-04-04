@@ -458,14 +458,27 @@ randomize the relative phases of different e-components, erasing the coherences.
 The density matrix becomes diagonal — a classical probability distribution over
 measurement outcomes. This is the mathematical description of e-scrambling.
 
-The Born rule — that the probability of outcome i is |αᵢ|² — is not a separate
-postulate. It is derived from the 5D density and the projection postulate
-(Appendix C.1). The derivation: the 5D density is |ψ(x, φ)|². Measurement
-samples the e-structure at a particular e-region Ωᵢ. The probability of outcome
-i is the fraction of 5D density in that region: P(i) = ∫_Ωᵢ |ψ|² dφ / ∫_{S¹}
-|ψ|² dφ. By orthonormality of the e-eigenstates, this reduces to P(i) = |αᵢ|².
-The Born rule follows from the geometry of the 5D density and the act of
-e-sampling — it is a consequence of the framework, not an axiom.
+The Born rule — that the probability of outcome i is |αᵢ|² — is not a
+separate postulate in the 5D framework. It is geometrically motivated and
+uniquely selected by two independent arguments (Appendix C.1):
+
+First, the *Haar measure argument*. The e-dimension is a circle (U(1)).
+The unique translation-invariant measure on U(1) is the Haar measure
+dφ/2π — forced by e-translation invariance (Postulate 3). The 5D density
+is |ψ(x, φ)|². Integrating over any e-region Ωᵢ with this measure gives
+P(i) = ∫_Ωᵢ |ψ|² dφ / ∫_{S¹} |ψ|² dφ = |αᵢ|², by orthonormality of
+the e-eigenstates. The Born rule follows from the *uniqueness of Haar
+measure on compact groups* combined with *e-translation invariance* —
+the measure comes from the symmetry, not from a probability postulate.
+
+Second, the *causal consistency argument*. Torres Alegre (2026,
+arXiv:2512.12636) proves within the framework of generalized
+probabilistic theories that |⟨φ|ψ⟩|² is the *unique* causally consistent
+probability assignment — any nonlinear deviation enables superluminal
+signaling. In the 5D framework, causal signals propagate along the 4D
+base manifold, not along the e-fiber. The framework's causal structure
+geometrically enforces the condition that Torres Alegre's theorem
+requires.
 
 ### What This Resolves
 
@@ -477,8 +490,10 @@ our observation samples it at a particular e-value.
 structure at a specific e-value. Definiteness is the natural result of sampling
 a structure at a point.
 
-**The Born rule:** Explained (not merely postulated). The probability of outcome i
-is proportional to the five-dimensional density at e-region i, which is |αᵢ|².
+**The Born rule:** Geometrically motivated and uniquely selected. The probability
+of outcome i is |αᵢ|², following from the Haar measure on the e-circle (the
+unique measure consistent with e-translation invariance) and from causal
+consistency (Torres Alegre 2026).
 
 **The quantum-to-classical transition:** Resolved. Decoherence is e-scrambling.
 Classical behavior is the limit of thoroughly e-scrambled systems.

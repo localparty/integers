@@ -416,12 +416,30 @@ order in perturbation theory.*
 1. This is perturbative. Non-perturbative effects (gravitational instantons,
    topology change, black hole pair creation) are not addressed.
 
-2. The zeta regularization must be physically justified. In the e-dimension
-   framework, the justification is that the e-circle is a REAL compact
-   dimension with a PHYSICAL discrete spectrum (the KK modes are real
-   particles). The zeta values are the physical finite answers for sums
-   over real discrete states, just as the Casimir energy is the physical
-   finite answer for the sum over photon modes in a cavity.
+2. The zeta regularization must be physically justified — not merely
+   convenient. Three results establish this:
+
+   (a) Lin and Zhai (2014, arXiv:1412.0807) prove that zeta function
+   regularization of KK mode sums is mathematically equivalent to
+   Abel-Plana regularization — a physically transparent subtraction of
+   the flat-space (decompactified) vacuum contribution. The Epstein zeta
+   values are not convenient fictions; they are shorthand for the
+   physically meaningful vacuum subtraction.
+
+   (b) Kolomeisky et al. (2010, arXiv:1002.1762) show that zeta
+   regularization is physically reliable when the Weyl (cutoff-dependent)
+   terms can be cleanly separated from the intrinsic (geometry-dependent)
+   terms. On M⁴ × S¹, the KK spectrum is exact and the Weyl-Casimir
+   separation is clean — the criterion is satisfied.
+
+   (c) This IS a Casimir calculation. The e-circle is a compact geometry
+   whose boundary condition creates the discrete KK spectrum, and the
+   zeta-regularized energy is the Casimir energy of that geometry —
+   experimentally validated in the planar case to sub-percent precision
+   (Lamoreaux 1997, Bressi et al. 2002). The two-loop vanishing is not
+   an artifact of the regularization scheme; it is the physical statement
+   that the Casimir contribution of the 5D graviton to the R³ counterterm
+   vanishes.
 
 3. The conjecture requires that the Epstein zeta values at the specific
    points needed (determined by the diagram topology and power counting)
@@ -485,8 +503,9 @@ with the analytic continuation of the discrete sums via zeta functions.
 Whether this constitutes a complete resolution of the quantum gravity problem
 depends on two open questions:
 
-1. Is the zeta regularization physically justified? (The framework says yes —
-   the e-circle is real.)
+1. Is the zeta regularization physically justified? (Yes — Lin and Zhai
+   prove it is equivalent to the physically transparent Abel-Plana vacuum
+   subtraction; see §G.6 point 2 above.)
 
 2. Is the perturbative finiteness sufficient, or are there non-perturbative
    obstacles? (Unknown — requires separate analysis.)

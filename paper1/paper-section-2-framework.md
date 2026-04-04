@@ -255,6 +255,43 @@ given and does not explain.
 
 The mathematical tools overlap. The physical questions do not.
 
+### The Neutral-Particle Test
+
+The distinction between the e-dimension and Kaluza-Klein can be stated as a
+sharp empirical claim. In Kaluza-Klein theory, a particle's momentum in the
+compact dimension is proportional to its electric charge: p₅ = eQ/ℏ. A
+particle with zero electric charge (Q = 0) has zero fifth-dimensional
+dynamics — no compact momentum, no coupling to the gauge connection, no
+quantum behavior attributable to the fifth dimension.
+
+Neutrons have zero electric charge. Yet neutrons interfere (Rauch et al. 1974),
+have spin ½ (requiring 720° rotation for identity), and participate in
+entanglement (Hasegawa et al. 2003). These are precisely the phenomena that
+the e-dimension framework attributes to the fifth dimension.
+
+**The distinguishing claim:** Kaluza-Klein predicts no fifth-dimensional
+dynamics for electrically neutral particles. The e-dimension framework
+predicts that *every* quantum system — charged or neutral — couples to the
+e-dimension through quantum phase. Observation sides unambiguously with the
+e-dimension framework.
+
+### Distinguishing Predictions
+
+Beyond the neutral-particle test, the frameworks make different gravitational
+predictions. If the e-dimension is a physical dimension (not a gauge
+redundancy), the gravitational sector must couple to it, producing a
+Kaluza-Klein tower of massive graviton modes at masses m_n = nℏ/Rc, where
+R is the e-circle radius. Standard gauge theory with U(1) as a fiber bundle
+predicts no such gravitational KK tower. The mass scale is set by the
+e-circle circumference L ≈ 130 μm (Paper 2), giving m₁ ≈ 10 meV — within
+reach of next-generation short-range gravity experiments (Appendix D).
+
+The framework's ontological claim — that the U(1) fiber is a literal
+physical dimension, not a gauge redundancy — is supported by Baptista (2024,
+arXiv:2306.01049), who takes the same position for higher-dimensional
+internal spaces and derives the Standard Model gauge group from metric
+instabilities on the SU(3) group manifold.
+
 ---
 
 ## 2.6 Why Exactly Five Dimensions?
@@ -326,9 +363,12 @@ coupling to spatial rotations follows from identifying spin with
 e-angular momentum via the Noether theorem applied to Postulate 3.
 
 **The 5D density rule** (used in Appendix C): the probability density
-|ψ|² is the 5D density projected onto 4D, consistent with Postulate 4.
-This reproduces the Born rule but does not derive it independently of
-the projection postulate.
+|ψ|² is the 5D density projected onto 4D using the Haar measure on the
+e-circle — the unique measure consistent with Postulate 3 (e-translation
+invariance). The Born rule P(i) = |αᵢ|² follows from this measure and the
+orthonormality of e-eigenstates (Appendix C.1). The measure is not chosen
+to reproduce the Born rule; it is forced by the symmetry. Causal consistency
+independently selects the same rule (Torres Alegre 2026).
 
 **The gravitational action** (used in Appendix D): the 5D Einstein-
 Hilbert action on P(M⁴, U(1)) is the unique generally covariant

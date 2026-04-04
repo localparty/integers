@@ -58,10 +58,29 @@ using the normalization ∫|fᵢ|² dx = 1 and Σⱼ|αⱼ|² = 1.
 
     P(i) = |αᵢ|²
 
-This is the Born rule. It is not a separate postulate — it follows from:
+This is the Born rule. It is geometrically motivated and uniquely selected
+by the framework, following from:
 (a) the identification of |ψ|² as the 5D density,
-(b) the projection postulate (Postulate 4), and
+(b) the Haar measure dφ/2π on the e-circle — the *unique*
+    translation-invariant measure on U(1), forced by Postulate 3
+    (e-translation invariance), and
 (c) the orthonormality of e-eigenstates.
+
+Note that the Haar measure argument breaks the circularity that would
+arise from simply postulating |ψ|² as a probability density. The
+measure is not chosen to reproduce the Born rule — it is the *only*
+measure consistent with the e-circle's symmetry. The Born rule is
+then a theorem, not an assumption.
+
+This result is independently supported by Torres Alegre (2026,
+arXiv:2512.12636), who proves that |⟨φ|ψ⟩|² is the unique probability
+assignment consistent with causal consistency (no superluminal
+signaling) in any generalized probabilistic theory. In the 5D
+framework, where causal signals propagate along the 4D base and not
+along the e-fiber, this condition is geometrically enforced. See also
+Brenig and Vincke (2026, arXiv:2601.12092), who derive the Born rule
+from invariance properties of a "new space-like dimension" —
+conceptually parallel to the e-dimension.
 
 ### C.1.2 The Singlet State in the E-Dimension
 
