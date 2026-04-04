@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kk black hole</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(6,8,14,0.97)",
+  grid: "rgba(20,35,65,0.3)",
+  horizon: "#ff4444",
+  horizonGlow: "rgba(255,40,40,0.2)",
+  fiber: "#44aaff",
+  fiberShrunk: "#ff8844",
+  hawking: "#ffee55",
+  hawkingGlow: "rgba(255,240,80,0.15)",
+  entropy: "#55ff99",
+  axis: "rgba(100,140,200,0.5)",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(75,115,165,0.45)",
+};
+
+function KKBlackHole() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({ time: 0, rotY: 0.5, rotX: 0.25 });
+
+  const [bhMass, setBhMass] = useState(50);
+  const [view, setView] = useState("ecircle"); // ecircle | entropy | hawking
+  const [autoRotate, setAutoRotate] = useState(true);
+  const dragging = useRef(false);
+  const lastMouse = useRef({ x: 0, y: 0 });
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const cx = W / 2, cy = H / 2;
+    const st = stateRef.current;
+    st.time += 0.01;
+    if (autoRotate) st.rotY += 0.002;
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    const M = bhMass / 100;
+    const rY = st.rotY, rX = st.rotX;
+    const rot = (x, y, z) => {
+      let x1 = x * Math.cos(rY) + z * Math.sin(rY);
+      let z1 = -x * Math.sin(rY) + z * Math.cos(rY);
+      let y1 = y * Math.cos(rX) - z1 * Math.sin(rX);
+      let z2 = y * Math.sin(rX) + z1 * Math.cos(rX);
+      return [x1, y1, z2];
+    };
+    const proj = (x, y, z) => {
+      const fov = 480, cam = 5;
+      const [rx, ry, rz] = rot(x, y, z);
+      const s = fov / (fov + rz + cam);
+      return { px: cx + rx * s * 140, py: cy + ry * s * 140, s, z: rz };
+    };
+
+    // Schwarzschild radius
+    const rs = M * 0.8;
+
+    // Draw radial slices showing e-circle at each radius
+    const nRadii = 14;
+    const nCirc = 40;
+
+    for (let i = 1; i <= nRadii; i++) {
+      const r = (i / nRadii) * 2.5;
+      if (r < rs * 0.3) continue;
+
+      // E-circle radius at this distance: phi(r) = phi0 * (1 + sigma*GM/3rc^2)
+      // Near horizon: e-circle shrinks dramatically
+      const horizonProximity = Math.max(0, 1 - rs / (r + 0.01));
+      const eRadius = 0.25 * (0.1 + 0.9 * Math.pow(horizonProximity, 0.5));
+
+      // Time dilation factor: sqrt(1 - rs/r)
+      const timeDilation = Math.sqrt(Math.max(0.01, 1 - rs / Math.max(r, rs + 0.01)));
+
+      ctx.beginPath();
+      for (let j = 0; j <= nCirc; j++) {
+        const a = (j / nCirc) * TAU;
+        // E-circle in the plane perpendicular to the radial direction
+        const baseAngle = (i * 0.5) + st.time * timeDilation;
+        const ex = r * Math.cos(baseAngle) + eRadius * Math.cos(a) * Math.cos(baseAngle);
+        const ey = eRadius * Math.sin(a);
+        const ez = r * Math.sin(baseAngle) + eRadius * Math.cos(a) * Math.sin(baseAngle);
+        const { px, py } = proj(ex, ey, ez);
+        if (j === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+
+      const t = horizonProximity;
+      const red = Math.floor(255 * (1 - t) + 68 * t);
+      const green = Math.floor(68 * (1 - t) + 140 * t);
+      const blue = Math.floor(68 * (1 - t) + 255 * t);
+      ctx.strokeStyle = `rgba(${red},${green},${blue},${0.3 + 0.5 * t})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // Draw the horizon sphere
+    {
+      const { px, py, s } = proj(0, 0, 0);
+      const hRad = rs * 140 * s;
+
+      const grd = ctx.createRadialGradient(px, py, hRad * 0.3, px, py, hRad * 2);
+      grd.addColorStop(0, "rgba(40,0,0,0.9)");
+      grd.addColorStop(0.5, C.horizonGlow);
+      grd.addColorStop(1, "transparent");
+      ctx.fillStyle = grd;
+      ctx.fillRect(px - hRad * 2, py - hRad * 2, hRad * 4, hRad * 4);
+
+      ctx.beginPath();
+      ctx.arc(px, py, hRad, 0, TAU);
+      ctx.fillStyle = "rgba(10,0,0,0.95)";
+      ctx.fill();
+      ctx.strokeStyle = C.horizon;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // Entropy view: show Planck cells on the horizon
+    if (view === "entropy") {
+      const nCells = 30;
+      for (let i = 0; i < nCells; i++) {
+        for (let j = 0; j < nCells / 2; j++) {
+          const theta = (i / nCells) * TAU;
+          const phi = (j / (nCells / 2)) * Math.PI;
+          const sx = rs * Math.sin(phi) * Math.cos(theta);
+          const sy = rs * Math.cos(phi);
+          const sz = rs * Math.sin(phi) * Math.sin(theta);
+          const { px, py, s, z: dz } = proj(sx, sy, sz);
+          if (dz > 0) continue; // only draw front-facing cells
+          const cellR = 3 * s;
+          const flicker = 0.5 + 0.5 * Math.sin(st.time * 4 + i * 2.1 + j * 3.7);
+          ctx.beginPath();
+          ctx.arc(px, py, cellR, 0, TAU);
+          ctx.fillStyle = `rgba(80,255,150,${0.15 + 0.35 * flicker})`;
+          ctx.fill();
+        }
+      }
+    }
+
+    // Hawking radiation view: particle pairs at horizon
+    if (view === "hawking") {
+      const nPairs = 8;
+      for (let i = 0; i < nPairs; i++) {
+        const baseAngle = (i / nPairs) * TAU + st.time * 0.3;
+        const t = ((st.time * 0.5 + i * 0.4) % 2);
+
+        // Outgoing particle
+        const outR = rs + t * 0.5;
+        const ox = outR * Math.cos(baseAngle);
+        const oy = outR * Math.sin(baseAngle) * 0.6;
+        const oz = 0;
+        const { px: opx, py: opy, s: os } = proj(ox, oy, oz);
+
+        if (t < 1.8) {
+          ctx.beginPath();
+          ctx.arc(opx, opy, 3 * os, 0, TAU);
+          ctx.fillStyle = `rgba(255,240,80,${1 - t / 2})`;
+          ctx.fill();
+
+          // E-coordinate arrow (information carried out)
+          const eAngle = st.time * 3 + i;
+          ctx.beginPath();
+          ctx.arc(opx, opy, 8 * os, eAngle, eAngle + Math.PI);
+          ctx.strokeStyle = `rgba(80,255,150,${0.4 * (1 - t / 2)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+
+        // Infalling partner
+        const inR = Math.max(0, rs - t * 0.3);
+        const ix = inR * Math.cos(baseAngle + Math.PI);
+        const iy = inR * Math.sin(baseAngle + Math.PI) * 0.6;
+        const { px: ipx, py: ipy, s: is_ } = proj(ix, iy, oz);
+        if (t < 1) {
+          ctx.beginPath();
+          ctx.arc(ipx, ipy, 3 * is_, 0, TAU);
+          ctx.fillStyle = `rgba(255,80,80,${1 - t})`;
+          ctx.fill();
+        }
+      }
+    }
+
+    // Info panel
+    ctx.fillStyle = C.panelBg;
+    ctx.fillRect(12, H - 95, 380, 83);
+    ctx.font = "13px monospace";
+    ctx.fillStyle = C.text;
+
+    if (view === "ecircle") {
+      ctx.fillText("Horizon topology: S² × S¹ (sphere × e-circle)", 20, H - 75);
+      ctx.fillText("E-circle shrinks near the horizon:", 20, H - 57);
+      ctx.fillStyle = C.fiberShrunk;
+      ctx.fillText("φ(r) → 0 as r → r_s  (time dilation → freeze)", 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Orange = near horizon  Blue = far field", 20, H - 21);
+    } else if (view === "entropy") {
+      ctx.fillText("Black hole entropy = e-circle configurations", 20, H - 75);
+      ctx.fillText("Each Planck cell × e-circle = one microstate:", 20, H - 57);
+      ctx.fillStyle = C.entropy;
+      ctx.fillText("S_BH = A / (4 l_P²)  (Bekenstein-Hawking)", 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Green dots = independent e-circle configurations on horizon", 20, H - 21);
+    } else {
+      ctx.fillText("Hawking radiation carries e-coordinates out", 20, H - 75);
+      ctx.fillText("Information stored in the e-structure of horizon:", 20, H - 57);
+      ctx.fillStyle = C.hawking;
+      ctx.fillText("Outgoing quanta carry e-phase → unitarity preserved", 20, H - 39);
+      ctx.fillStyle = C.textDim;
+      ctx.fillText("Yellow = outgoing  Red = infalling partner", 20, H - 21);
+    }
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [bhMass, view, autoRotate]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = 800 * dpr; canvas.height = 550 * dpr;
+    canvas.style.width = "800px"; canvas.style.height = "550px";
+    canvas.getContext("2d").scale(dpr, dpr);
+    animRef.current = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [draw]);
+
+  const onDown = (e) => { dragging.current = true; lastMouse.current = { x: e.clientX, y: e.clientY }; };
+  const onMove = (e) => {
+    if (!dragging.current) return;
+    stateRef.current.rotY += (e.clientX - lastMouse.current.x) * 0.006;
+    stateRef.current.rotX += (e.clientY - lastMouse.current.y) * 0.006;
+    lastMouse.current = { x: e.clientX, y: e.clientY };
+  };
+  const onUp = () => { dragging.current = false; };
+
+  return (
+    <div style={{ background: C.bg, padding: 16, borderRadius: 12, display: "inline-block" }}>
+      <div style={{ color: C.text, fontFamily: "monospace", fontSize: 15, marginBottom: 8 }}>
+        <strong>13 — KK Black Hole: E-Circle at the Horizon</strong>
+        <span style={{ color: C.textDim, marginLeft: 12 }}>Appendix O</span>
+      </div>
+      <canvas ref={canvasRef} style={{ borderRadius: 8, cursor: "grab" }}
+        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp} />
+      <div style={{ display: "flex", gap: 12, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+        {["ecircle", "entropy", "hawking"].map(v => (
+          <button key={v} onClick={() => setView(v)}
+            style={{
+              background: view === v ? "rgba(60,120,200,0.3)" : "rgba(30,40,60,0.5)",
+              color: C.text, border: `1px solid ${view === v ? "rgba(100,160,255,0.5)" : "rgba(60,80,120,0.3)"}`,
+              borderRadius: 6, padding: "5px 14px", cursor: "pointer", fontFamily: "monospace", fontSize: 12,
+            }}>
+            {v === "ecircle" ? "E-circle shrinkage" : v === "entropy" ? "Entropy counting" : "Hawking radiation"}
+          </button>
+        ))}
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12, display: "flex", alignItems: "center", gap: 6 }}>
+          Mass: <input type="range" min={10} max={90} value={bhMass} onChange={e => setBhMass(+e.target.value)}
+            style={{ width: 80 }} />
+        </label>
+        <label style={{ color: C.textDim, fontFamily: "monospace", fontSize: 12 }}>
+          <input type="checkbox" checked={autoRotate} onChange={e => setAutoRotate(e.target.checked)} /> Rotate
+        </label>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(KKBlackHole));
+</script>
+</body>
+</html>

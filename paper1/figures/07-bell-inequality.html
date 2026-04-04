@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bell inequality</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f8f9fa; font-family: system-ui, -apple-system, sans-serif; }
+  #root { width: 100%; max-width: 900px; padding: 20px; }
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useRef, useEffect, useState, useCallback, useMemo } = React;
+
+
+const TAU = Math.PI * 2;
+const PI = Math.PI;
+const SQRT2 = Math.sqrt(2);
+
+const C = {
+  bg: "#050709",
+  panelBg: "rgba(7,10,18,0.97)",
+  grid: "rgba(25,45,85,0.3)",
+  quantum: "#44aaff",
+  quantumGlow: "rgba(68,170,255,0.25)",
+  local: "#ff6644",
+  localDim: "rgba(255,102,68,0.35)",
+  particle1: "#ff6090",
+  particle2: "#50d4ff",
+  conserved: "rgba(180,255,120,0.8)",
+  violation: "#ff4444",
+  violationGlow: "rgba(255,68,68,0.3)",
+  classical: "#ff3333",
+  tsirelson: "#44aaff",
+  gauge: "rgba(30,50,80,0.6)",
+  gaugeFill: "#ff8822",
+  gaugeFillViolation: "#ff4422",
+  text: "rgba(170,200,235,0.75)",
+  textDim: "rgba(80,120,170,0.45)",
+  accent: "rgba(180,255,120,0.85)",
+};
+
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+function normAngle(a) { return ((a % TAU) + TAU) % TAU; }
+
+function chshValue(a1, a2, b1, b2) {
+  const E = (a, b) => -Math.cos(a - b);
+  return Math.abs(E(a1, b1) - E(a1, b2) + E(a2, b1) + E(a2, b2));
+}
+
+function BellInequality() {
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({
+    time: 0,
+    dragging: null, // "a" | "b" | null
+    mouseX: 0,
+    mouseY: 0,
+  });
+
+  const [angleA, setAngleA] = useState(0);
+  const [angleB, setAngleB] = useState(PI / 4);
+  const [showLocal, setShowLocal] = useState(true);
+
+  const anglePrimeA = angleA + PI / 2;
+  const anglePrimeB = angleB + PI / 2;
+  const theta = normAngle(angleB - angleA);
+  const correlation = -Math.cos(theta);
+  const sVal = chshValue(angleA, anglePrimeA, angleB, anglePrimeB);
+
+  const snapOptimal = () => {
+    setAngleA(0);
+    setAngleB(PI / 4);
+  };
+
+  const randomAxes = () => {
+    setAngleA(Math.random() * TAU);
+    setAngleB(Math.random() * TAU);
+  };
+
+  const draw = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width;
+    const H = canvas.height;
+    const s = stateRef.current;
+    s.time += 0.016;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // Background stars
+    for (let i = 0; i < 50; i++) {
+      const sx = (i * 137.5) % W;
+      const sy = (i * 97.3) % (H * 0.78) + H * 0.04;
+      const brightness = 0.06 + (Math.sin(i * 2.3 + s.time * 0.15) + 1) * 0.04;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 0.7, 0, TAU);
+      ctx.fillStyle = `rgba(150,180,255,${brightness})`;
+      ctx.fill();
+    }
+
+    // Layout: three panels
+    const panelGap = 12;
+    const topY = 50;
+    const bottomY = H - 100;
+    const panelH = bottomY - topY;
+    const leftW = W * 0.3;
+    const centerW = W * 0.38;
+    const rightW = W - leftW - centerW - panelGap * 2;
+    const leftX = 0;
+    const centerX = leftW + panelGap;
+    const rightX = centerX + centerW + panelGap;
+
+    // Panel separators
+    ctx.strokeStyle = "rgba(40,80,140,0.15)";
+    ctx.lineWidth = 1;
+    [centerX - panelGap / 2, rightX - panelGap / 2].forEach(px => {
+      ctx.beginPath();
+      ctx.moveTo(px, topY);
+      ctx.lineTo(px, bottomY);
+      ctx.stroke();
+    });
+
+    // Panel labels
+    ctx.fillStyle = "rgba(100,150,210,0.35)";
+    ctx.font = "bold 10px 'Courier New'";
+    ctx.fillText("MEASUREMENT SETUP", leftX + 14, topY + 16);
+    ctx.fillText("CORRELATION E(θ)", centerX + 14, topY + 16);
+    ctx.fillText("CHSH METER", rightX + 14, topY + 16);
+
+    // ============================================================
+    // LEFT PANEL: Measurement setup
+    // ============================================================
+    const lpCx = leftX + leftW / 2;
+    const lpCy = topY + panelH * 0.38;
+    const pRadius = 22;
+    const arrowLen = 58;
+    const pSep = leftW * 0.28;
+
+    const p1x = lpCx - pSep;
+    const p2x = lpCx + pSep;
+
+    // Dashed line connecting particles
+    ctx.beginPath();
+    ctx.moveTo(p1x + pRadius + 4, lpCy);
+    ctx.lineTo(p2x - pRadius - 4, lpCy);
+    ctx.strokeStyle = "rgba(180,255,120,0.35)";
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([5, 4]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Conservation label on dashed line
+    ctx.fillStyle = "rgba(180,255,120,0.55)";
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("e₁ + e₂ = 0", lpCx, lpCy - 8);
+    ctx.textAlign = "left";
+
+    // Draw particles and measurement arrows
+    const particles = [
+      { x: p1x, angle: angleA, color: C.particle1, glow: "rgba(255,96,144,0.2)", label: "P₁", axisLabel: "â" },
+      { x: p2x, angle: angleB, color: C.particle2, glow: "rgba(80,212,255,0.2)", label: "P₂", axisLabel: "b̂" },
+    ];
+
+    particles.forEach(({ x, angle, color, glow, label, axisLabel }) => {
+      // Particle glow
+      const gr = ctx.createRadialGradient(x, lpCy, 0, x, lpCy, pRadius + 16);
+      gr.addColorStop(0, glow);
+      gr.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.beginPath();
+      ctx.arc(x, lpCy, pRadius + 16, 0, TAU);
+      ctx.fillStyle = gr;
+      ctx.fill();
+
+      // Particle circle
+      ctx.beginPath();
+      ctx.arc(x, lpCy, pRadius, 0, TAU);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.fillStyle = color.replace(")", ",0.15)").replace("#ff6090", "rgba(255,96,144,0.15)").replace("#50d4ff", "rgba(80,212,255,0.15)");
+      ctx.fillStyle = axisLabel === "â" ? "rgba(255,96,144,0.15)" : "rgba(80,212,255,0.15)";
+      ctx.fill();
+
+      // Particle label
+      ctx.fillStyle = color;
+      ctx.font = "bold 12px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText(label, x, lpCy + pRadius + 18);
+      ctx.textAlign = "left";
+
+      // Measurement arrow
+      const ax = x + Math.cos(angle) * arrowLen;
+      const ay = lpCy - Math.sin(angle) * arrowLen;
+
+      ctx.beginPath();
+      ctx.moveTo(x, lpCy);
+      ctx.lineTo(ax, ay);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+
+      // Arrowhead
+      const headLen = 10;
+      const headAngle = 0.4;
+      ctx.beginPath();
+      ctx.moveTo(ax, ay);
+      ctx.lineTo(
+        ax - headLen * Math.cos(angle - headAngle),
+        ay + headLen * Math.sin(angle - headAngle)
+      );
+      ctx.moveTo(ax, ay);
+      ctx.lineTo(
+        ax - headLen * Math.cos(angle + headAngle),
+        ay + headLen * Math.sin(angle + headAngle)
+      );
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Axis label at arrow tip
+      ctx.fillStyle = color;
+      ctx.font = "bold 13px 'Courier New'";
+      ctx.textAlign = "center";
+      const labelOff = 14;
+      ctx.fillText(axisLabel, ax + Math.cos(angle) * labelOff, ay - Math.sin(angle) * labelOff + 4);
+      ctx.textAlign = "left";
+
+      // Drag handle circle at arrow tip
+      ctx.beginPath();
+      ctx.arc(ax, ay, 8, 0, TAU);
+      ctx.fillStyle = `${color}33`;
+      ctx.fill();
+    });
+
+    // Angle arc between arrows
+    const arcR = 32;
+    const startA = -angleA;
+    const endA = -angleB;
+    ctx.beginPath();
+    if (Math.abs(startA - endA) > 0.01) {
+      ctx.arc(lpCx, lpCy, arcR, Math.min(startA, endA), Math.max(startA, endA));
+      ctx.strokeStyle = "rgba(255,220,60,0.5)";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // Theta label
+    const thetaDeg = (theta * 180 / PI).toFixed(1);
+    ctx.fillStyle = "rgba(255,220,60,0.8)";
+    ctx.font = "bold 12px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText(`θ = ${thetaDeg}°`, lpCx, lpCy + pRadius + 44);
+    ctx.textAlign = "left";
+
+    // Drag instructions
+    ctx.fillStyle = "rgba(100,150,210,0.3)";
+    ctx.font = "9px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("drag arrows to change angles", lpCx, lpCy + pRadius + 60);
+    ctx.textAlign = "left";
+
+    // Correlation annotation
+    const corrY = topY + panelH * 0.72;
+    ctx.fillStyle = C.quantum;
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText(`E(â,b̂) = -cos θ = ${correlation.toFixed(3)}`, lpCx, corrY);
+    ctx.textAlign = "left";
+
+    // Prime axes info
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText(`â' = ${((anglePrimeA * 180 / PI) % 360).toFixed(1)}°   b̂' = ${((anglePrimeB * 180 / PI) % 360).toFixed(1)}°`, lpCx, corrY + 18);
+    ctx.fillStyle = "rgba(80,120,170,0.3)";
+    ctx.fillText("(primes = base + 90°)", lpCx, corrY + 32);
+    ctx.textAlign = "left";
+
+    // ============================================================
+    // CENTER PANEL: Correlation plot
+    // ============================================================
+    const plotPad = { l: 50, r: 20, t: 40, b: 45 };
+    const plotX = centerX + plotPad.l;
+    const plotY = topY + plotPad.t;
+    const plotW = centerW - plotPad.l - plotPad.r;
+    const plotH = panelH - plotPad.t - plotPad.b;
+
+    // Plot background
+    ctx.fillStyle = "rgba(8,12,22,0.6)";
+    ctx.fillRect(plotX, plotY, plotW, plotH);
+
+    // Grid lines
+    ctx.strokeStyle = "rgba(30,55,100,0.25)";
+    ctx.lineWidth = 0.5;
+    for (let i = 0; i <= 4; i++) {
+      const gy = plotY + (plotH * i) / 4;
+      ctx.beginPath();
+      ctx.moveTo(plotX, gy);
+      ctx.lineTo(plotX + plotW, gy);
+      ctx.stroke();
+    }
+    for (let i = 0; i <= 8; i++) {
+      const gx = plotX + (plotW * i) / 8;
+      ctx.beginPath();
+      ctx.moveTo(gx, plotY);
+      ctx.lineTo(gx, plotY + plotH);
+      ctx.stroke();
+    }
+
+    // Axes
+    ctx.strokeStyle = "rgba(60,100,160,0.4)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(plotX, plotY);
+    ctx.lineTo(plotX, plotY + plotH);
+    ctx.lineTo(plotX + plotW, plotY + plotH);
+    ctx.stroke();
+
+    // Y-axis labels
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "right";
+    [1, 0.5, 0, -0.5, -1].forEach((v, i) => {
+      const yy = plotY + (plotH * i) / 4;
+      ctx.fillText(v.toFixed(1), plotX - 6, yy + 4);
+    });
+    ctx.textAlign = "left";
+
+    // X-axis labels
+    ctx.textAlign = "center";
+    for (let i = 0; i <= 8; i++) {
+      const xx = plotX + (plotW * i) / 8;
+      const deg = i * 45;
+      ctx.fillText(`${deg}°`, xx, plotY + plotH + 16);
+    }
+    ctx.textAlign = "left";
+
+    // Axis titles
+    ctx.fillStyle = "rgba(100,150,210,0.5)";
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("angle θ", plotX + plotW / 2, plotY + plotH + 32);
+    ctx.textAlign = "left";
+
+    ctx.save();
+    ctx.translate(centerX + 14, plotY + plotH / 2);
+    ctx.rotate(-PI / 2);
+    ctx.fillStyle = "rgba(100,150,210,0.5)";
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("correlation E(θ)", 0, 0);
+    ctx.textAlign = "left";
+    ctx.restore();
+
+    // Local hidden variable bound (zigzag)
+    if (showLocal) {
+      ctx.beginPath();
+      const localPts = [
+        [0, -1], [PI, 1], [TAU, -1]
+      ];
+      localPts.forEach(([t, e], i) => {
+        const sx = plotX + (t / TAU) * plotW;
+        const sy = plotY + plotH / 2 - (e * plotH) / 2;
+        if (i === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      });
+      ctx.strokeStyle = C.localDim;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([6, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Label
+      ctx.fillStyle = C.local;
+      ctx.font = "10px 'Courier New'";
+      ctx.globalAlpha = 0.7;
+      ctx.fillText("Local HV bound", plotX + plotW * 0.6, plotY + 18);
+      ctx.globalAlpha = 1;
+    }
+
+    // Quantum / 5D prediction: E = -cos(theta)
+    ctx.beginPath();
+    const steps = 200;
+    for (let i = 0; i <= steps; i++) {
+      const t = (i / steps) * TAU;
+      const e = -Math.cos(t);
+      const sx = plotX + (t / TAU) * plotW;
+      const sy = plotY + plotH / 2 - (e * plotH) / 2;
+      if (i === 0) ctx.moveTo(sx, sy);
+      else ctx.lineTo(sx, sy);
+    }
+    ctx.strokeStyle = C.quantum;
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    // Glow for quantum curve
+    ctx.strokeStyle = C.quantumGlow;
+    ctx.lineWidth = 8;
+    ctx.beginPath();
+    for (let i = 0; i <= steps; i++) {
+      const t = (i / steps) * TAU;
+      const e = -Math.cos(t);
+      const sx = plotX + (t / TAU) * plotW;
+      const sy = plotY + plotH / 2 - (e * plotH) / 2;
+      if (i === 0) ctx.moveTo(sx, sy);
+      else ctx.lineTo(sx, sy);
+    }
+    ctx.stroke();
+
+    // Quantum label
+    ctx.fillStyle = C.quantum;
+    ctx.font = "10px 'Courier New'";
+    ctx.fillText("Quantum/5D prediction", plotX + 6, plotY + 18);
+
+    // Current angle vertical line
+    const curX = plotX + (theta / TAU) * plotW;
+    const curE = -Math.cos(theta);
+    const curEy = plotY + plotH / 2 - (curE * plotH) / 2;
+
+    ctx.beginPath();
+    ctx.moveTo(curX, plotY);
+    ctx.lineTo(curX, plotY + plotH);
+    ctx.strokeStyle = "rgba(255,220,60,0.4)";
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Dot on quantum curve at current theta
+    ctx.beginPath();
+    ctx.arc(curX, curEy, 6, 0, TAU);
+    ctx.fillStyle = C.quantum;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(curX, curEy, 10, 0, TAU);
+    ctx.fillStyle = C.quantumGlow;
+    ctx.fill();
+
+    // If local bound visible, show local value dot too
+    if (showLocal) {
+      const localE = theta <= PI ? -1 + (2 * theta / PI) : 1 - (2 * (theta - PI) / PI);
+      const localEy = plotY + plotH / 2 - (localE * plotH) / 2;
+      ctx.beginPath();
+      ctx.arc(curX, localEy, 4, 0, TAU);
+      ctx.fillStyle = C.local;
+      ctx.globalAlpha = 0.6;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      // Show violation region shading
+      ctx.save();
+      ctx.globalAlpha = 0.06;
+      ctx.beginPath();
+      for (let i = 0; i <= steps; i++) {
+        const t = (i / steps) * TAU;
+        const eq = -Math.cos(t);
+        const sx = plotX + (t / TAU) * plotW;
+        const sy = plotY + plotH / 2 - (eq * plotH) / 2;
+        if (i === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      }
+      // Close along local bound
+      const localClose = [
+        [TAU, -1], [PI, 1], [0, -1]
+      ];
+      localClose.forEach(([t, e]) => {
+        const sx = plotX + (t / TAU) * plotW;
+        const sy = plotY + plotH / 2 - (e * plotH) / 2;
+        ctx.lineTo(sx, sy);
+      });
+      ctx.closePath();
+      ctx.fillStyle = "#ff4444";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    // ============================================================
+    // RIGHT PANEL: CHSH meter
+    // ============================================================
+    const gaugeX = rightX + rightW * 0.3;
+    const gaugeW = rightW * 0.35;
+    const gaugeTop = topY + 50;
+    const gaugeBot = bottomY - 50;
+    const gaugeH = gaugeBot - gaugeTop;
+    const maxS = 3.0;
+
+    // Gauge background
+    ctx.fillStyle = C.gauge;
+    ctx.fillRect(gaugeX, gaugeTop, gaugeW, gaugeH);
+    ctx.strokeStyle = "rgba(50,90,150,0.3)";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(gaugeX, gaugeTop, gaugeW, gaugeH);
+
+    // Gauge fill
+    const fillFrac = clamp(sVal / maxS, 0, 1);
+    const fillH = fillFrac * gaugeH;
+    const isViolation = sVal > 2;
+
+    // Gradient fill for the gauge
+    const gGrad = ctx.createLinearGradient(gaugeX, gaugeBot, gaugeX, gaugeBot - fillH);
+    if (isViolation) {
+      gGrad.addColorStop(0, "rgba(255,100,30,0.6)");
+      gGrad.addColorStop(0.5, "rgba(255,60,30,0.8)");
+      gGrad.addColorStop(1, "rgba(255,40,20,0.95)");
+    } else {
+      gGrad.addColorStop(0, "rgba(60,90,140,0.4)");
+      gGrad.addColorStop(1, "rgba(80,120,180,0.6)");
+    }
+    ctx.fillStyle = gGrad;
+    ctx.fillRect(gaugeX, gaugeBot - fillH, gaugeW, fillH);
+
+    // Pulsing glow when violating
+    if (isViolation) {
+      const pulse = 0.3 + Math.sin(s.time * 3) * 0.15;
+      ctx.fillStyle = `rgba(255,60,30,${pulse})`;
+      ctx.fillRect(gaugeX - 4, gaugeBot - fillH - 2, gaugeW + 8, 6);
+    }
+
+    // Scale markings on gauge
+    ctx.fillStyle = C.textDim;
+    ctx.font = "10px 'Courier New'";
+    ctx.textAlign = "right";
+    for (let v = 0; v <= 3; v += 0.5) {
+      const yy = gaugeBot - (v / maxS) * gaugeH;
+      ctx.beginPath();
+      ctx.moveTo(gaugeX - 4, yy);
+      ctx.lineTo(gaugeX, yy);
+      ctx.strokeStyle = "rgba(80,120,170,0.4)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.fillText(v.toFixed(1), gaugeX - 8, yy + 4);
+    }
+    ctx.textAlign = "left";
+
+    // Classical limit line at |S| = 2
+    const classicalY = gaugeBot - (2 / maxS) * gaugeH;
+    ctx.beginPath();
+    ctx.moveTo(gaugeX - 12, classicalY);
+    ctx.lineTo(gaugeX + gaugeW + 12, classicalY);
+    ctx.strokeStyle = C.classical;
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = C.classical;
+    ctx.font = "bold 10px 'Courier New'";
+    ctx.fillText("Classical", gaugeX + gaugeW + 16, classicalY - 6);
+    ctx.fillText("limit |S|=2", gaugeX + gaugeW + 16, classicalY + 6);
+
+    // Tsirelson bound at |S| = 2sqrt2
+    const tsirelsonY = gaugeBot - (2 * SQRT2 / maxS) * gaugeH;
+    ctx.beginPath();
+    ctx.moveTo(gaugeX - 12, tsirelsonY);
+    ctx.lineTo(gaugeX + gaugeW + 12, tsirelsonY);
+    ctx.strokeStyle = C.tsirelson;
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = C.tsirelson;
+    ctx.font = "bold 10px 'Courier New'";
+    ctx.fillText("Quantum", gaugeX + gaugeW + 16, tsirelsonY - 6);
+    ctx.fillText("limit 2√2", gaugeX + gaugeW + 16, tsirelsonY + 6);
+
+    // Current |S| value display
+    const sColor = isViolation ? "#ff4422" : "rgba(140,180,220,0.8)";
+    ctx.fillStyle = sColor;
+    ctx.font = "bold 18px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText(`|S| = ${sVal.toFixed(3)}`, rightX + rightW / 2, gaugeBot + 30);
+    ctx.textAlign = "left";
+
+    // Violation label
+    if (isViolation) {
+      ctx.fillStyle = "#ff4422";
+      ctx.font = "bold 11px 'Courier New'";
+      ctx.textAlign = "center";
+      const violFlicker = 0.7 + Math.sin(s.time * 4) * 0.3;
+      ctx.globalAlpha = violFlicker;
+      ctx.fillText("VIOLATION", rightX + rightW / 2, gaugeBot + 46);
+      ctx.globalAlpha = 1;
+      ctx.textAlign = "left";
+    } else {
+      ctx.fillStyle = "rgba(100,150,200,0.4)";
+      ctx.font = "10px 'Courier New'";
+      ctx.textAlign = "center";
+      ctx.fillText("within classical bound", rightX + rightW / 2, gaugeBot + 46);
+      ctx.textAlign = "left";
+    }
+
+    // CHSH formula display
+    ctx.fillStyle = "rgba(100,150,210,0.4)";
+    ctx.font = "9px 'Courier New'";
+    ctx.textAlign = "center";
+    ctx.fillText("S = E(â,b̂) - E(â,b̂') + E(â',b̂) + E(â',b̂')", rightX + rightW / 2, gaugeTop - 12);
+    ctx.textAlign = "left";
+
+    // ============================================================
+    // BOTTOM ANNOTATION
+    // ============================================================
+    const annY = bottomY + 8;
+    ctx.fillStyle = "rgba(10,16,30,0.9)";
+    ctx.fillRect(0, annY - 4, W, H - annY + 4);
+    ctx.strokeStyle = "rgba(40,80,140,0.15)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(0, annY - 4);
+    ctx.lineTo(W, annY - 4);
+    ctx.stroke();
+
+    // CHSH value with color
+    ctx.font = "bold 11px 'Courier New'";
+    ctx.fillStyle = isViolation ? "#44dd66" : "rgba(160,190,220,0.7)";
+    ctx.textAlign = "center";
+    ctx.fillText(
+      `CHSH value |S| = ${sVal.toFixed(3)}${isViolation ? "  >  2  —  Bell inequality VIOLATED" : "  ≤  2  —  within classical bound"}`,
+      W / 2, annY + 14
+    );
+
+    ctx.fillStyle = "rgba(140,180,220,0.45)";
+    ctx.font = "10px 'Courier New'";
+    ctx.fillText(
+      "The e-conservation constraint e₁ + e₂ = 0 produces correlations that exceed the classical bound |S| ≤ 2.",
+      W / 2, annY + 32
+    );
+    ctx.fillText(
+      "The violation reaches |S| = 2√2 — the maximum allowed by quantum mechanics.",
+      W / 2, annY + 46
+    );
+    ctx.textAlign = "left";
+
+    animRef.current = requestAnimationFrame(draw);
+  }, [angleA, angleB, theta, correlation, sVal, showLocal, anglePrimeA, anglePrimeB]);
+
+  // Mouse interaction for dragging arrows
+  const handleMouseDown = useCallback((e) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+    const W = canvas.width;
+    const H = canvas.height;
+    const topY = 50;
+    const panelH = H - 100 - topY;
+    const leftW = W * 0.3;
+    const lpCx = leftW / 2;
+    const lpCy = topY + panelH * 0.38;
+    const pSep = leftW * 0.28;
+    const arrowLen = 58;
+
+    const p1x = lpCx - pSep;
+    const p2x = lpCx + pSep;
+
+    const a1x = p1x + Math.cos(angleA) * arrowLen;
+    const a1y = lpCy - Math.sin(angleA) * arrowLen;
+    const a2x = p2x + Math.cos(angleB) * arrowLen;
+    const a2y = lpCy - Math.sin(angleB) * arrowLen;
+
+    const d1 = Math.hypot(mx - a1x, my - a1y);
+    const d2 = Math.hypot(mx - a2x, my - a2y);
+
+    if (d1 < 24) stateRef.current.dragging = "a";
+    else if (d2 < 24) stateRef.current.dragging = "b";
+  }, [angleA, angleB]);
+
+  const handleMouseMove = useCallback((e) => {
+    const s = stateRef.current;
+    if (!s.dragging) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+    const W = canvas.width;
+    const H = canvas.height;
+    const topY = 50;
+    const panelH = H - 100 - topY;
+    const leftW = W * 0.3;
+    const lpCx = leftW / 2;
+    const lpCy = topY + panelH * 0.38;
+    const pSep = leftW * 0.28;
+
+    const p1x = lpCx - pSep;
+    const p2x = lpCx + pSep;
+
+    if (s.dragging === "a") {
+      const angle = Math.atan2(-(my - lpCy), mx - p1x);
+      setAngleA(normAngle(angle));
+    } else if (s.dragging === "b") {
+      const angle = Math.atan2(-(my - lpCy), mx - p2x);
+      setAngleB(normAngle(angle));
+    }
+  }, []);
+
+  const handleMouseUp = useCallback(() => {
+    stateRef.current.dragging = null;
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    animRef.current = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animRef.current);
+      window.removeEventListener("resize", resize);
+    };
+  }, [draw]);
+
+  const label = {
+    fontSize: 10, letterSpacing: "0.14em", color: "rgba(80,130,180,0.5)",
+    textTransform: "uppercase", fontFamily: "'Courier New', monospace",
+    display: "block", marginBottom: 5,
+  };
+  const btn = (active, col) => ({
+    padding: "5px 12px", fontSize: 11, letterSpacing: "0.06em",
+    fontFamily: "'Courier New', monospace",
+    background: active ? `rgba(${col},0.18)` : "rgba(14,24,46,0.7)",
+    border: `1px solid ${active ? `rgba(${col},0.55)` : "rgba(35,70,130,0.22)"}`,
+    color: active ? `rgba(${col},1)` : "rgba(100,145,195,0.5)",
+    borderRadius: 3, cursor: "pointer",
+  });
+
+  return (
+    <div style={{
+      background: C.bg, minHeight: "100vh", display: "flex", flexDirection: "column",
+      fontFamily: "'Courier New', monospace", color: C.text, userSelect: "none",
+    }}>
+      {/* Header */}
+      <div style={{
+        padding: "15px 26px 9px", borderBottom: "1px solid rgba(35,70,130,0.18)",
+        display: "flex", alignItems: "baseline", gap: 14,
+      }}>
+        <span style={{
+          fontSize: 11, letterSpacing: "0.18em", color: "rgba(180,255,120,0.4)",
+          textTransform: "uppercase",
+        }}>Quantum Geometry in 5D</span>
+        <span style={{ color: "rgba(50,90,150,0.3)" }}>|</span>
+        <span style={{
+          fontSize: 13, color: "rgba(185,215,245,0.65)", letterSpacing: "0.05em",
+        }}>Visualization 07 — Bell Inequality Violation</span>
+      </div>
+
+      {/* Canvas */}
+      <canvas
+        ref={canvasRef}
+        style={{ flex: 1, width: "100%", display: "block", cursor: stateRef.current.dragging ? "grabbing" : "default" }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      />
+
+      {/* Controls */}
+      <div style={{
+        padding: "13px 26px 17px", borderTop: "1px solid rgba(35,70,130,0.15)",
+        display: "flex", flexWrap: "wrap", gap: "15px 30px", alignItems: "flex-start",
+        background: "rgba(6,8,15,0.98)",
+      }}>
+        {/* Angle A slider */}
+        <div>
+          <span style={label}>angle a (particle 1)</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: "rgba(255,96,144,0.5)", width: 20 }}>0</span>
+            <input type="range" min={0} max={360} step={1}
+              value={Math.round(angleA * 180 / PI) % 360}
+              onChange={e => setAngleA(Number(e.target.value) * PI / 180)}
+              style={{ width: 130, accentColor: "#ff6090", cursor: "pointer" }} />
+            <span style={{ fontSize: 11, color: "rgba(255,96,144,0.5)", width: 30 }}>360</span>
+            <span style={{
+              fontSize: 11, fontFamily: "'Courier New', monospace",
+              background: "rgba(40,10,20,0.4)", border: "1px solid rgba(200,60,100,0.2)",
+              padding: "2px 8px", borderRadius: 3, minWidth: 60, textAlign: "center",
+              color: "rgba(255,130,160,0.8)",
+            }}>
+              {((angleA * 180 / PI) % 360).toFixed(1)}&deg;
+            </span>
+          </div>
+        </div>
+
+        {/* Angle B slider */}
+        <div>
+          <span style={label}>angle b (particle 2)</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 11, color: "rgba(80,212,255,0.5)", width: 20 }}>0</span>
+            <input type="range" min={0} max={360} step={1}
+              value={Math.round(angleB * 180 / PI) % 360}
+              onChange={e => setAngleB(Number(e.target.value) * PI / 180)}
+              style={{ width: 130, accentColor: "#50d4ff", cursor: "pointer" }} />
+            <span style={{ fontSize: 11, color: "rgba(80,212,255,0.5)", width: 30 }}>360</span>
+            <span style={{
+              fontSize: 11, fontFamily: "'Courier New', monospace",
+              background: "rgba(10,20,40,0.4)", border: "1px solid rgba(60,150,200,0.2)",
+              padding: "2px 8px", borderRadius: 3, minWidth: 60, textAlign: "center",
+              color: "rgba(100,200,255,0.8)",
+            }}>
+              {((angleB * 180 / PI) % 360).toFixed(1)}&deg;
+            </span>
+          </div>
+        </div>
+
+        {/* Preset buttons */}
+        <div>
+          <span style={label}>presets</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            <button onClick={snapOptimal} style={btn(false, "180,255,120")}>Optimal axes</button>
+            <button onClick={randomAxes} style={btn(false, "200,180,80")}>Random axes</button>
+          </div>
+        </div>
+
+        {/* Toggle */}
+        <div>
+          <span style={label}>display</span>
+          <div style={{ display: "flex", gap: 6 }}>
+            <button onClick={() => setShowLocal(!showLocal)}
+              style={btn(showLocal, "255,102,68")}>
+              {showLocal ? "Hide" : "Show"} local bound
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(BellInequality));
+</script>
+</body>
+</html>

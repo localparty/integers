@@ -94,3 +94,24 @@ key results inherited from Paper 1:
 - The warp factor `e^{kπ} ~ 540` on the hidden brane (Paper 1, Appendix W)
 - The bulk seesaw giving `Σm_ν ~ 0.06 eV` with normal ordering
   (Paper 1, Appendix Z)
+
+---
+
+## 1.6 Interactive Visualizations
+
+Four interactive figures accompany this paper as supplementary files,
+available in the Zenodo repository alongside this PDF. Each figure is a
+self-contained HTML file that runs in any modern web browser — no
+installation required.
+
+| Figure | File | Description |
+|--------|------|-------------|
+| 17 | `17-expansion-history.html` | Expansion history H(z) — thawing dilaton fingerprint vs ΛCDM, DESI DR2 overlay |
+| 18 | `18-s8-resolution.html` | S8 tension resolution — framework vs Planck ΛCDM vs weak lensing surveys |
+| 19 | `19-cosmic-coincidence.html` | The cosmic coincidence `Ω_DM/Ω_b = 1/ξ²` — baryogenesis mechanism visualized |
+| 20 | `20-scenario-dashboard.html` | Complete scenario dashboard — all three scenarios vs Planck ΛCDM and data |
+
+Readers accessing this paper on arXiv or in print can find all interactive
+figures at the Zenodo repository DOI listed on the cover page. Full
+descriptions of all figures from both papers are in `figures-list.md`
+in the supplementary materials.
