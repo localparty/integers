@@ -97,7 +97,36 @@ key results inherited from Paper 1:
 
 ---
 
-## 1.6 Interactive Visualizations
+## 1.6 Relationship to the Full 11-Dimensional Framework
+
+This paper and Paper 1 develop the cosmological predictions of the `M⁴ × S¹`
+sector. Companion papers extend the framework to 11 dimensions (`M⁴ × CP² × S² × S¹`)
+and derive results directly relevant to this paper's predictions:
+
+- **The baryon asymmetry mechanism** is deepened in Paper 5: `η_B ~ 1.5 × 10⁻¹⁰`
+  is derived from the CP² Chern-Simons structure and the Z₃ CP phases
+  `δ_CP = −90°`, consistent with the `1/ξ²` law established here.
+- **The dilaton as inflaton** is derived in Paper 6: the same Casimir + GW
+  potential that produces `w₀ = −0.85` here drove inflation at early times
+  with `n_s ≈ 0.967` and `r ≈ 0.033`.
+- **The dark matter particle** is identified in Paper 5 as the mirror proton
+  with mass `m_{DM} = m_p = 938 MeV` — a consequence of the Z₂ symmetry forcing
+  mirror QCD = visible QCD.
+- **The cosmological constant** is addressed in Paper 7: `ρ_Λ ~ (2 meV)⁴` arises
+  from simultaneous stabilization of all three compact moduli.
+- **N_eff at 9σ** will be tested by CMB-S4; the prediction `N_eff = 3.31–3.39`
+  is robust across all papers in the series.
+
+The `1/ξ²` scaling law derived here is the cosmological signature of the
+brane temperature asymmetry set during inflationary reheating (Paper 6).
+The dark energy density `ρ_Λ` fixed the e-circle radius in Paper 1, which
+fixed the Casimir inflation potential in Paper 6, which set the reheating
+asymmetry `ξ`, which determines the dark matter abundance here. The chain
+is closed and consistent across all papers.
+
+---
+
+## 1.7 Interactive Visualizations
 
 Four interactive figures accompany this paper as supplementary files,
 available in the Zenodo repository alongside this PDF. Each figure is a

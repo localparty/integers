@@ -280,7 +280,44 @@ confirmed by explicit calculation.
 
 ---
 
-## 1.8 Interactive Visualizations
+## 1.8 Relationship to the Full 11-Dimensional Framework
+
+This paper develops the `M⁴ × S¹` sector of a larger geometric framework.
+The e-circle `S¹` established here is one factor of a 7-dimensional internal
+manifold `CP² × S² × S¹` whose isometries produce the complete Standard Model
+gauge group `SU(3) × SU(2) × U(1)` in an 11-dimensional spacetime
+(`M⁴ × CP² × S² × S¹`).
+
+The 5D results of this paper are complete and exact within their scope: the
+e-circle alone accounts for quantum mechanics, electromagnetism, gravity,
+the spin-statistics theorem, UV finiteness, the hydrogen spectrum, black hole
+entropy, and the CPT theorem. These results are the `U(1)` sector of the full
+11D theory — neither approximate nor superseded by the extension.
+
+The extension to 11D, developed in companion papers, derives:
+- **The Higgs mechanism** — the SU(2) holonomy on `S²` produces electroweak
+  symmetry breaking with `m_H ≈ 125 GeV` from the Casimir potential (Paper 4)
+- **Color confinement** — the SU(3) holonomy on `CP²` produces quark
+  confinement with string tension `√σ ≈ 437 MeV` (Paper 5)
+- **Inflation** — the dilaton (e-circle modulus) drives inflation with
+  `n_s ≈ 0.967` and `r ≈ 0.033` (Paper 6)
+- **Three fermion generations** — from `χ(CP²) = 3` via the Atiyah-Singer
+  index theorem (Paper 4)
+- **The black hole information paradox** — resolved by the e-circle as
+  internal clock; information preserved in e-coordinates (Paper 3)
+
+The Aharonov-Bohm effect (this paper), the Higgs mechanism (Paper 4), and
+dark energy (this paper, §6.6) are three manifestations of one geometric
+principle: the Casimir energy of quantum fields on compact dimensions
+determines the holonomy, and the holonomy determines the physics.
+
+Readers of this paper should understand its title — "Twenty-Two Derivations
+from Kaluza-Klein Geometry" — as referring to the `M⁴ × S¹` sector.
+The full framework derives substantially more.
+
+---
+
+## 1.9 Interactive Visualizations
 
 Nineteen interactive figures accompany this paper as supplementary files,
 available in the Zenodo repository alongside this PDF. Each figure is a
