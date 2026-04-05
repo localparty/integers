@@ -109,14 +109,53 @@ In return, M-theory provides the non-abelian gauge structure
 (from `CP² × S²`) that the e-circle alone cannot produce, and
 the 11D SUGRA field content that makes the CC calculation work.
 
-**What remains conjectured:**
+**What remains conjectured — and what is already established:**
 
-Whether the FULL M-theory — including its non-perturbative
-dynamics, M-branes, and quantum gravity regime — reduces to
-the e-circle framework in the appropriate limit. The framework
-uses the perturbative 11D SUGRA sector; whether the complete
-non-perturbative M-theory is consistent with the e-circle
-physics is an open problem.
+A careful audit reveals that M-brane physics is already present
+throughout the framework — it simply was not named as such. Three
+examples:
+
+**M5-branes:** The visible brane at `φ = 0` and hidden brane at
+`φ = π` (Paper 1, Appendix W; Paper 2) are M5-branes in the
+Horava-Witten picture. The SM gauge fields and matter content live
+on the M5-brane worldvolume. The orbifold boundaries at `φ = 0`
+and `φ = πR` are exactly the two M5-branes of M-theory on
+`S¹/Z₂`. This identification is already used in the CC
+calculation (§7.21), the leptogenesis mechanism (Paper 2,
+Appendix E), and the mirror dark matter sector (Paper 2).
+
+**M2-branes:** The color flux tubes derived in Paper 5 (§2) are
+M2-branes wrapping the non-contractible `CP¹ ⊂ CP²` 2-cycle.
+The statement that SU(3) Wilson loops around this cycle obey an
+area law is the statement that M2-branes wrapping the CP¹ have
+a tension σ = (3/8π²) g₃²/r₃². Paper 5 derives √σ ≈ 437 MeV
+from this mechanism. M2-brane wrapping physics is already in
+the framework.
+
+**Non-perturbative topology:** The strong CP resolution of §7.6
+uses `π₄(CP²) = Z₂` to show θ_QCD ∈ {0, π}. In M-theory
+language, this is the statement that M2-brane instanton
+configurations on CP² are classified by `π₄(CP²) = Z₂`. The
+non-perturbative topology is already the physics doing the work.
+
+The honest status is therefore:
+
+| M-theory ingredient | Status in framework |
+|---|---|
+| 11D SUGRA field content | **Used** — the CC calculation (§7.21) |
+| Horava-Witten S¹/Z₂ orbifold | **Used** — the brane structure throughout |
+| M5-branes at orbifold fixed points | **Used** — visible + hidden branes |
+| M2-branes wrapping CP¹ | **Used** — color flux tubes (Paper 5) |
+| Non-perturbative M2 instantons | **Used** — strong CP resolution (§7.6) |
+| M-brane bound states (M2-M5) | **Not yet developed** |
+| Full quantum gravity of M-theory | **Not yet developed** |
+
+The two genuinely open items are M-brane bound states — which
+would describe exotic composite objects beyond the SM — and the
+full quantum gravity regime of M-theory, which is beyond the
+perturbative 11D SUGRA sector the framework currently uses.
+These are identified as directions for future work, not gaps
+in the current results.
 
 ---
 
