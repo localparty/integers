@@ -29,7 +29,7 @@ from scipy.optimize import brentq, fsolve
 # SPECTRAL DATA
 # =============================================================================
 B_S = 8.0/315.0          # Z_S2(-2) = 8/315
-B_C = 313.0/5040.0       # Z_CP2(-2) = 313/5040
+B_C = 103.0/5040.0       # Z_CP2(-2) = 103/5040  (corrected; was 313/5040)
 A_S = 0.0407366640        # Z'_S2(-2)
 A_C = 0.1488836780        # Z'_CP2(-2)
 Z_S0 = -2.0/3.0          # Z_S2(0)
@@ -257,10 +257,10 @@ print(f"  (4/3)*rho^2 = {(4.0/3.0)*rho_log**2:.6f}")
 print(f"  (3/(2pi))*r2^2/r3^4 = {(3.0/(2.0*np.pi))*r2_log**2/r3_log**4:.6f}")
 
 # Baseline: Z(-2) ratio only
-rho4_base = 128.0/313.0
+rho4_base = 128.0/103.0
 rho_base = rho4_base**0.25
 print(f"\nBaseline (Z(-2) ratio only, etc/14c):")
-print(f"  (r_2/r_3)^4 = 128/313 = {rho4_base:.6f}")
+print(f"  (r_2/r_3)^4 = 128/103 = {rho4_base:.6f}")
 print(f"  rho = {rho_base:.6f}")
 print(f"  (4/3)*rho^2 = {(4.0/3.0)*rho_base**2:.6f}")
 
@@ -306,7 +306,7 @@ the correct one for the gauge coupling ratio in the KK framework
 the absolute scale.
 
 For the (4/3)*rho^2 formula, the baseline prediction is:
-  Baseline (no log, Z(-2) only):  alpha_3/alpha_2 = 0.853
+  Baseline (no log, Z(-2) only):  alpha_3/alpha_2 = 1.486
   Pure log (Model B):              alpha_3/alpha_2 = {(4.0/3.0)*rho_log**2:.3f}
   Full Model A:                    alpha_3/alpha_2 = {(4.0/3.0)*R0**0.5:.3f}
 
@@ -317,9 +317,9 @@ For alpha_3/alpha_2 = 1.0, we need rho^2 = 3/4 = 0.75, i.e., rho = {np.sqrt(0.75
 This requires r_2 < r_3, which occurs when the one-loop log dominates
 (since the log stabilization gives r_2 < r_3 for the spectral data of S^2 vs CP^2).
 
-HOWEVER: The baseline formula (4/3)*sqrt(128/313) = 0.853 actually gives
-rho = (128/313)^{{1/4}} = {(128.0/313.0)**0.25:.6f} < 1, meaning r_2 < r_3.
-The coupled system consistently gives rho > 1 (r_2 > r_3).
+NOTE: The baseline formula (4/3)*sqrt(128/103) = 1.486 gives
+rho = (128/103)^{{1/4}} = {(128.0/103.0)**0.25:.6f} > 1, meaning r_2 > r_3.
+This gives the correct hierarchy (weak scale below GUT scale).
 
 The discrepancy is because the baseline uses a DIFFERENT stabilization model
 (r^4 ~ c_1 from one-loop, without the log) while the coupled system
@@ -332,22 +332,22 @@ print("INTERPOLATION (etc/15 Section 4.2)")
 print("=" * 80)
 print("""
 From etc/15, the interpolation between baseline and Model A:
-  rho^4 = (128/313)^(1-lambda) * R0^lambda
+  rho^4 = (128/103)^(1-lambda) * R0^lambda
 
 For alpha_3/alpha_2 = (4/3)*rho^2 = 1, need rho^2 = 3/4, rho^4 = 9/16.
 """)
 
-# Solve: (128/313)^(1-lam) * R0^lam = 9/16
-# ln(128/313)*(1-lam) + ln(R0)*lam = ln(9/16)
-# ln(128/313) + [ln(R0) - ln(128/313)]*lam = ln(9/16)
-# lam = [ln(9/16) - ln(128/313)] / [ln(R0) - ln(128/313)]
+# Solve: (128/103)^(1-lam) * R0^lam = 9/16
+# ln(128/103)*(1-lam) + ln(R0)*lam = ln(9/16)
+# ln(128/103) + [ln(R0) - ln(128/103)]*lam = ln(9/16)
+# lam = [ln(9/16) - ln(128/103)] / [ln(R0) - ln(128/103)]
 
-ln_base = np.log(128.0/313.0)
+ln_base = np.log(128.0/103.0)
 ln_R0 = np.log(R0)
 ln_target = np.log(9.0/16.0)
 
 lam_interp = (ln_target - ln_base) / (ln_R0 - ln_base)
-rho4_check = (128.0/313.0)**(1-lam_interp) * R0**lam_interp
+rho4_check = (128.0/103.0)**(1-lam_interp) * R0**lam_interp
 alpha_check = (4.0/3.0) * rho4_check**0.5
 
 print(f"lambda_interp = {lam_interp:.10f}")

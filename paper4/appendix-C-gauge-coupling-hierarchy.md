@@ -60,7 +60,7 @@ sum via `Σ l^k = ζ(−k)`:
 | Degeneracy | `2` | `2l+1` | `(k+1)³` |
 | `Z(0)` | `−1` | `−2/3` | `−119/120` |
 | `Z(−1)` | `0` | `−1/15` | `−31/2520` |
-| `Z(−2)` | `0` | `8/315` | `313/5040` |
+| `Z(−2)` | `0` | `8/315` | `103/5040` |
 | `Z(−3)` | `0` | `−2/105` | `−149/3696` |
 | Fate of modulus | Frozen | Stabilized | Stabilized |
 
@@ -197,12 +197,12 @@ independent spectral quantities:
 
 **(i) The one-loop ratio** (from `c₁`):
 
-    Z_{S²}(−2) / Z_{CP²}(−2) = (8/315) / (313/5040) = 128/313
+    Z_{S²}(−2) / Z_{CP²}(−2) = (8/315) / (103/5040) = 128/103
 
 This is the ratio of one-loop Casimir coefficients. A larger
 coefficient means a steeper attractive potential and a smaller
-stabilized radius. Since `128/313 < 1`, the S² modulus has a
-weaker one-loop potential, stabilizing at a larger radius than CP².
+stabilized radius. Since `128/103 > 1`, the S² modulus has a
+stronger one-loop potential, stabilizing at a smaller radius than CP².
 
 **(ii) The two-loop ratio** (from `c₂`):
 
@@ -226,41 +226,41 @@ interpolation bracket the experimental value:
 **Baseline (one-loop dominance):** When the stabilization is driven
 by the Z(−2) ratio alone:
 
-    (r₂/r₃)⁴ = Z_{S²}(−2)/Z_{CP²}(−2) = 128/313
-    (r₂/r₃)² = (128/313)^{1/2} = 0.640
-    α₃/α₂ = (4/3) × 0.640 = **0.853**
+    (r₂/r₃)⁴ = Z_{S²}(−2)/Z_{CP²}(−2) = 128/103
+    (r₂/r₃)² = (128/103)^{1/2} = 1.115
+    α₃/α₂ = (4/3) × 1.115 = **1.486**
 
 **Full two-loop model:** When both one-loop and two-loop
 coefficients are included self-consistently via
 `r⁴ = 2c₂/c₁`:
 
     (r₂/r₃)⁴ = [Z_{S²}(0)/Z_{CP²}(0)]² × (ΔN_{CP²}/ΔN_{S²}) × Z_{CP²}(−2)/Z_{S²}(−2)
-              = 0.4519 × 1.019 × 2.445 = 1.126
-    α₃/α₂ = (4/3) × (1.126)^{1/2} = **1.414**
+              = 0.4519 × 1.019 × 0.804 = 0.371
+    α₃/α₂ = (4/3) × (0.371)^{1/2} = **0.812**
 
 **Interpolated:** Define `λ ∈ [0,1]` parameterizing the two-loop
 contribution to the stabilization:
 
-    (r₂/r₃)⁴ = (128/313)^{1−λ} × (1.126)^λ
+    (r₂/r₃)⁴ = (128/103)^{1−λ} × (0.371)^λ
 
 The condition `α₃/α₂ = 1` requires `(r₂/r₃)² = 3/4`, hence
 `(r₂/r₃)⁴ = 9/16 = 0.5625`. Solving:
 
-    (1−λ) ln(128/313) + λ ln(1.126) = ln(9/16)
-    −0.894(1−λ) + 0.119λ = −0.576
-    **λ = 0.314**
+    (1−λ) ln(128/103) + λ ln(0.371) = ln(9/16)
+    0.217(1−λ) − 0.991λ = −0.576
+    **λ = 0.656**
 
 The exact GUT unification `α₃/α₂ = 1` is achieved when the
-two-loop correction contributes 31% to the stabilization potential.
-This is squarely in the perturbative regime.
+two-loop correction contributes 66% to the stabilization potential.
+This is in the regime where both loops contribute comparably.
 
 ### C.4.4 Summary of predictions
 
 | Model | `(r₂/r₃)⁴` | `α₃/α₂` |
 |-------|-------------|----------|
-| Baseline (one-loop Z(−2)) | `128/313 = 0.409` | 0.85 |
-| Self-consistent (λ = 0.314) | `9/16 = 0.5625` | **1.00** |
-| Full two-loop (Model A) | `1.126` | 1.41 |
+| Baseline (one-loop Z(−2)) | `128/103 = 1.243` | 1.49 |
+| Self-consistent (λ = 0.656) | `9/16 = 0.5625` | **1.00** |
+| Full two-loop (Model A) | `0.371` | 0.81 |
 
 At the interpolated point: `r₂/r₃ = (9/16)^{1/4} = 0.866`, so the
 two compactification scales differ by only 13%, consistent with
@@ -272,7 +272,7 @@ approximate GUT unification.
 
 All spectral quantities entering the prediction are exact:
 
-    Z_{S²}(−2) = 8/315,    Z_{CP²}(−2) = 313/5040
+    Z_{S²}(−2) = 8/315,    Z_{CP²}(−2) = 103/5040
     Z_{S²}(0) = −2/3,      Z_{CP²}(0) = −119/120
     Z'_{S²}(−2) = 4ζ'(−5) + 8ζ'(−3)
     Z'_{CP²}(−2) = 2ζ'(−7) + 38ζ'(−5) + 32ζ'(−3)
@@ -287,7 +287,7 @@ simultaneously for `r₂` and `r₃`, with the two-loop coefficient
 `c₂` computed from the Goroff-Sagnotti diagrams on each factor
 (including the sunset, figure-eight, and vertex topologies). This
 determines `λ` self-consistently. The prediction `α₃/α₂ = 1` at
-the GUT scale is equivalent to the statement that `λ = 0.314` —
+the GUT scale is equivalent to the statement that `λ = 0.656` —
 a well-posed numerical question with no free parameters.
 
 Three subleading effects may shift `λ` at the few-percent level:
@@ -308,7 +308,7 @@ Three subleading effects may shift `λ` at the few-percent level:
 
 ## C.6 Implications
 
-If the self-consistent solution gives `λ ≈ 0.31`, three consequences
+If the self-consistent solution gives `λ ≈ 0.66`, three consequences
 follow:
 
 **(1) The gauge coupling hierarchy is derived.** The hierarchy
@@ -321,7 +321,7 @@ eigenvalues on `CP²` produce a stronger Casimir attraction (larger
 
 **(2) The SM gauge structure is encoded in rational spectral data.**
 The specific rational numbers from the spectral zeta functions —
-`128/313`, `80/119`, `6400/14161`, `168/31` — are determined by
+`128/103`, `80/119`, `6400/14161`, `168/31` — are determined by
 Bernoulli numbers through the identity `ζ(−k) = −B_{k+1}/(k+1)`.
 The gauge coupling hierarchy is, at bottom, a statement about
 Bernoulli numbers and the dimensions of SU(3) representations.

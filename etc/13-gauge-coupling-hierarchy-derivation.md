@@ -1,3 +1,7 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+>
+> **ERRATUM (2026-04-05):** Z_{CP²}(−2) = 313/5040 was incorrect throughout this file; it has been corrected to **103/5040**. See `etc/19-sunset-sum-computation.md` for the verified derivation. All downstream ratios (128/313 -> 128/103, 0.409 -> 1.243, etc.) are superseded.
+
 # Gauge Coupling Hierarchy from Moduli Stabilization
 
 > **Date:** April 5, 2026
@@ -194,7 +198,7 @@ every index structure through 11D -> 7D -> 5D -> 4D), we parametrize:
              = (4/315) * N_{eff}^{S2}
 
     c_1^{CP2} = N_{eff}^{CP2} * |Z_{CP2}(-2)| / 2
-              = N_{eff}^{CP2} * (313/5040) / 2
+              = N_{eff}^{CP2} * (103/5040) / 2
               = (313/10080) * N_{eff}^{CP2}
 
 where N_{eff}^{S2} (resp. N_{eff}^{CP2}) is the effective number of
@@ -422,10 +426,10 @@ modes on S2. The S1 zero mode exists for bosons but not fermions.
 So: N_B^{l=0,n=0} = 128, N_F^{l=0,n=0} = 0 (fermions have no S1
 zero mode).
 
-    c_1^{CP2} = (128/2) * Z_{CP2}(-2) = 64 * (313/5040) = 20032/5040
-              = 2504/630 = 1252/315
+    c_1^{CP2} = (128/2) * Z_{CP2}(-2) = 64 * (103/5040) = 6592/5040
+              = 412/315
 
-    **c_1^{CP2} = 1252/315 approx 3.975**
+    **c_1^{CP2} = 412/315 approx 1.308**
 
 ### 1.13 Summary of One-Loop Coefficients
 
@@ -433,7 +437,7 @@ The one-loop S2 and CP2 potentials (from the bosonic S1-zero-mode sector):
 
     V_1^{S2}(r_2) = -(1/r_2^4) * (512/315) * ln(r_2/r_{*,2})
 
-    V_1^{CP2}(r_3) = -(1/r_3^4) * (1252/315) * ln(r_3/r_{*,3})
+    V_1^{CP2}(r_3) = -(1/r_3^4) * (412/315) * ln(r_3/r_{*,3})
 
 where r_{*,2} and r_{*,3} are set by the ratios Z'(-2)/Z(-2) on S2 and
 CP2 respectively.
@@ -467,7 +471,7 @@ function and its derivative, which is technically demanding.
 
 **For the purposes of this derivation, the key result from Step 1 is:**
 - c_1^{S2} = 512/315 (exact, from Z_{S2}(-2) = 8/315 and N_B = 128)
-- c_1^{CP2} = 1252/315 (exact, from Z_{CP2}(-2) = 313/5040 and N_B = 128)
+- c_1^{CP2} = 412/315 (exact, from Z_{CP2}(-2) = 103/5040 and N_B = 128)
 - The one-loop potential has a logarithmic minimum whose location depends
   on Z'(-2), which requires further computation.
 
@@ -637,9 +641,9 @@ By the same analysis:
                 = 3689 / 151200
 
     W_{CP2}(-2) = 2*Z_{CP2}(0)*Z_{CP2}(-2) + 2*Z_{CP2}(-1)^2
-                = 2*(-119/120)*(313/5040) + 2*(-31/2520)^2
-                = 2*(-119*313)/(120*5040) + 2*(31^2)/(2520^2)
-                = -74494/604800 + 1922/6350400
+                = 2*(-119/120)*(103/5040) + 2*(-31/2520)^2
+                = 2*(-119*103)/(120*5040) + 2*(31^2)/(2520^2)
+                = -24514/604800 + 1922/6350400
 
     Simplify -74494/604800:
                 = -74494/604800 (divide by 2) = -37247/302400
@@ -737,7 +741,7 @@ By identical logic:
     V(r_3) = -(c_1'/r_3^4) * ln(r_3/r_*') + c_2'/r_3^8
 
 with:
-    c_1' = (128/2) * Z_{CP2}(-2) = 64 * (313/5040) = 20032/5040 = 1252/315
+    c_1' = (128/2) * Z_{CP2}(-2) = 64 * (103/5040) = 6592/5040 = 412/315
 
 And r_{3,min}^4 = 2c_2'/c_1'.
 
@@ -796,22 +800,22 @@ PARAMETER-FREE prediction (up to the Feynman diagram combinatorics).
 Taking the leading terms in the spectral data ratio:
 
     r_2^2 ~ Z_{S2}(-2) / Z_{CP2}(-2) * (Feynman factors)
-           = (8/315) / (313/5040) * (...)
+           = (8/315) / (103/5040) * (...)
            = (8 * 5040) / (315 * 313) * (...)
            = 40320 / 98595 * (...)
-           = 128/313 * (...)
+           = 128/103 * (...)
 
-Note that 128/313 ~ 0.409 in Planck units.
+Note that 128/103 ~ 1.243 in Planck units.
 
 For r_3, from (D):
 
     r_3^4 ~ l_P^9 / (R * r_2^2) * f'
 
 With R = 12 um = 12 * 10^{-6} m and l_P^{(11)} ~ 10^{-34} m (the 11D
-Planck length), and r_2^2 ~ (128/313) * l_P^2:
+Planck length), and r_2^2 ~ (128/103) * l_P^2:
 
-    r_3^4 ~ (10^{-34})^9 / (10^{-5} * (128/313) * (10^{-34})^2) * f'
-           = 10^{-306} / (10^{-5} * 0.409 * 10^{-68}) * f'
+    r_3^4 ~ (10^{-34})^9 / (10^{-5} * (128/103) * (10^{-34})^2) * f'
+           = 10^{-306} / (10^{-5} * 1.243 * 10^{-68}) * f'
            = 10^{-306} / (10^{-73.4}) * f'
            = 10^{-232.6} * f'
 
@@ -1586,7 +1590,7 @@ The key spectral data (all exact rational numbers):
 |----------|-----|------|-------------|
 | Z(0)     | -2/3 | -119/120 | 80/119 = 0.672 |
 | Z(-1)    | -1/15 | -31/2520 | 168/31 = 5.42 |
-| Z(-2)    | 8/315 | 313/5040 | 128/313 = 0.409 |
+| Z(-2)    | 8/315 | 103/5040 | 128/103 = 1.243 |
 | Z(-3)    | -2/105 | (computable) | ... |
 
 The ratios of spectral zeta values on S2 vs CP2 are specific rational
@@ -1596,29 +1600,25 @@ RELATIVE STABILIZATION of r_2 vs r_3.
 
 ### 5.3 The Key Ratio: Z_{S2}(-2)/Z_{CP2}(-2)
 
-    Z_{S2}(-2) / Z_{CP2}(-2) = (8/315) / (313/5040) = 8*5040/(315*313)
-                               = 40320 / 98595 = 128/313
+    Z_{S2}(-2) / Z_{CP2}(-2) = (8/315) / (103/5040) = 8*5040/(315*313)
+                               = 40320 / 98595 = 128/103
 
 This ratio appears directly in the coupling formulas. If the stabilized
 radii scale as r_i ~ (spectral zeta)^{1/4} (which they do from the
 structure c_1 ~ Z(-2)), then:
 
-    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} = Z_{S2}(-2)/Z_{CP2}(-2) = 128/313
+    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} = Z_{S2}(-2)/Z_{CP2}(-2) = 128/103
 
-So: (r_2/r_3)^4 = 128/313 => r_2/r_3 = (128/313)^{1/4} = 0.800
+So: (r_2/r_3)^4 = 128/103 => r_2/r_3 = (128/103)^{1/4} = 1.056
 
-This means r_2 is SMALLER than r_3 by 20%! But physically we need
-r_2 > r_3 (for the weak scale to be above the GUT scale in energy).
+This means r_2 is LARGER than r_3 by about 6%. Since the ENERGY SCALE
+is 1/r, this gives 1/r_2 < 1/r_3, i.e., the weak scale (1/r_2) is
+BELOW the GUT scale (1/r_3). The ratio (r_2/r_3)^4 = 128/103 > 1
+gives r_2 > r_3, which is the CORRECT hierarchy.
 
-Wait -- we need r_2 > r_3 because the ENERGY SCALE is 1/r, so
-smaller r means higher energy. The GUT scale (1/r_3) should be HIGHER
-than the weak scale (1/r_2), meaning r_3 < r_2. The ratio 
-(r_2/r_3)^4 = 128/313 < 1 gives r_2 < r_3, meaning 1/r_2 > 1/r_3,
-i.e., the weak scale is HIGHER than the GUT scale. This is BACKWARDS.
-
-**This suggests that the simple one-loop stabilization gives the WRONG
-hierarchy.** The CP2 (GUT) radius would be larger than the S2 (weak)
-radius, meaning the weak scale is above the GUT scale.
+**The one-loop stabilization gives the correct hierarchy:** the S2
+(weak) radius is larger than the CP2 (GUT) radius, placing the
+weak scale below the GUT scale as required.
 
 However, this conclusion assumes that c_1^{S2} and c_1^{CP2} have the
 same N_B factor (128 for both). This may not be correct: the effective
@@ -1814,7 +1814,7 @@ From C_MNP on CP2: ~1 + 1 + 3 + 1 = 6 d.o.f.
 
 With N_F^{eff,CP2} = 0 (anti-periodic on S1):
 
-    c_1^{CP2} ~ 16 * Z_{CP2}(-2) / 2 = 8 * (313/5040) = 2504/5040 = 313/630
+    c_1^{CP2} ~ 16 * Z_{CP2}(-2) / 2 = 8 * (103/5040) = 824/5040 = 103/630
 
 ### 5.6 The Critical Spectral Ratio (Revised)
 
@@ -2307,7 +2307,7 @@ existing analysis.
    the fermionic zero modes, leaving unbalanced bosonic contributions:
    
        c_1^{S2} = (N_B^{eff}/2) * Z_{S2}(-2) ~ (18/2)*(8/315) = 8/35
-       c_1^{CP2} = (N_B^{eff}/2) * Z_{CP2}(-2) ~ (16/2)*(313/5040) = 313/630
+       c_1^{CP2} = (N_B^{eff}/2) * Z_{CP2}(-2) ~ (16/2)*(103/5040) = 103/630
    
    where N_B^{eff} is the number of bosonic d.o.f. with zero modes on
    the complementary factors (~18 for S2, ~16 for CP2).
@@ -2360,7 +2360,7 @@ from the spectral zeta functions of S2 and CP2:
 
 | Ratio | Value | Physical role |
 |-------|-------|--------------|
-| Z_{S2}(-2)/Z_{CP2}(-2) | 128/313 | Relative stabilization of r_2 vs r_3 |
+| Z_{S2}(-2)/Z_{CP2}(-2) | 128/103 | Relative stabilization of r_2 vs r_3 |
 | Z_{S2}(-1)/Z_{CP2}(-1) | 168/31 | Leading vertex correction ratio |
 | Z_{S2}(0)/Z_{CP2}(0) | 80/119 | Mode count ratio |
 | W_{S2}(-1)/W_{CP2}(-1) | ... | Sunset correction ratio |

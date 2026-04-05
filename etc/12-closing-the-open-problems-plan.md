@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Superseded — all five problems addressed on April 5, 2026. Reference the paper sections for current content.
+
 # Closing the Open Problems: A Development Plan
 
 *Story document. Five open problems, what's needed to close each,

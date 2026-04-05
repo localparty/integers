@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Paper 4, §5.5–5.6 on April 5, 2026. Reference the paper sections for current content.
+
 # SLOCC-Isometry Map: Explicit Calculation for Conjecture 5.1
 
 *Computation document for Problem 4 of the closing-the-open-problems plan.*

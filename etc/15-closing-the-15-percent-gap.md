@@ -1,3 +1,7 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+>
+> **ERRATUM (2026-04-05):** Z_{CP²}(−2) = 103/5040 was incorrect throughout this file. The correct value is **103/5040**. See `etc/19-sunset-sum-computation.md` for the verified derivation. The baseline now OVERSHOOTS (1.49 vs target 1.0) instead of undershooting (0.85). All downstream ratios and the lambda interpolation are superseded.
+
 # Closing the 15% Gap: alpha_3/alpha_2 from 0.85 to 1.0
 
 > **Date:** April 5, 2026
@@ -18,22 +22,22 @@
 ### 0.1 Current Prediction
 
 From etc/13 and etc/14c, the leading-order prediction uses only the
-spectral zeta ratio Z_{S2}(-2)/Z_{CP2}(-2) = 128/313:
+spectral zeta ratio Z_{S2}(-2)/Z_{CP2}(-2) = 128/103:
 
     alpha_3/alpha_2 = (4/3) * (r_2/r_3)^2
 
 The stabilized radii satisfy r_i^4 = 2c_2^{X_i}/c_1^{X_i}, and the
 leading-order approximation with only the spectral zeta values Z(-2) gives:
 
-    (r_2/r_3)^4 ~ Z_{S2}(-2)/Z_{CP2}(-2) = 128/313 ~ 0.409
+    (r_2/r_3)^4 ~ Z_{S2}(-2)/Z_{CP2}(-2) = 128/103 ~ 1.243
 
-    (r_2/r_3)^2 ~ (128/313)^{1/2} ~ 0.6396
+    (r_2/r_3)^2 ~ (128/103)^{1/2} ~ 1.1148
 
-    alpha_3/alpha_2 ~ (4/3) * 0.6396 ~ 0.853
+    alpha_3/alpha_2 ~ (4/3) * 1.1148 ~ 1.486
 
 The target: alpha_3/alpha_2 = 1.0 at the GUT scale.
 
-Gap: 0.853 vs 1.0 — a 15% deficit.
+Gap: 1.486 vs 1.0 — a 49% overshoot.
 
 ### 0.2 The Three Missing Corrections
 
@@ -912,7 +916,7 @@ location of the minimum r_* = exp[-Z'(-2)/(2*Z(-2))]:
 
     Z'_{S2}(-2) / (2*Z_{S2}(-2)) = 0.040737 / (2 * 8/315) = 0.040737 / 0.050794 = **0.8020**
 
-    Z'_{CP2}(-2) / (2*Z_{CP2}(-2)) = 0.148884 / (2 * 313/5040) = 0.148884 / 0.124206 = **1.1987**
+    Z'_{CP2}(-2) / (2*Z_{CP2}(-2)) = 0.148884 / (2 * 103/5040) = 0.148884 / 0.040873 = **3.6424**
 
 The CP2 ratio is about 50% larger than the S2 ratio. This means:
     r_{*,3} = exp(-1.199) = 0.302 (in some natural units)
@@ -929,7 +933,7 @@ r_2 < r_3.
 
     alpha_3/alpha_2 = (4/3) * 0.452 = **0.603**
 
-This is WORSE than the baseline 0.85, not better. The zeta derivatives
+This is WORSE than the baseline 1.49, not better. The zeta derivatives
 push in the WRONG direction for the logarithmic model.
 
 **However**, this model is not the right one for our framework. The actual
@@ -1336,52 +1340,49 @@ Each factor:
 
 (b) **Delta_N_{CP2}/Delta_N_{S2}** = 53/52 = **1.0192**
 
-(c) **Z_{CP2}(-2)/Z_{S2}(-2)** = (313/5040)/(8/315) = 313*315/(5040*8)
-    = 98595/40320 = 313/128 = **2.4453**
+(c) **Z_{CP2}(-2)/Z_{S2}(-2)** = (103/5040)/(8/315) = 103*315/(5040*8)
+    = 32445/40320 = 103/128 = **0.8047**
 
 Combined:
 
-    r_2^4/r_3^4 = 0.4519 * 1.0192 * 2.4453 = **1.1264**
+    r_2^4/r_3^4 = 0.4519 * 1.0192 * 0.8047 = **0.3707**
 
 Previously (with only [Z(0)]^2 and same Delta_N): 0.4519
 
-The inclusion of the Z(-2) ratio and field content DRAMATICALLY changes
-the result: r_2^4/r_3^4 > 1, meaning r_2 > r_3!
+The inclusion of the Z(-2) ratio and field content changes the result:
+r_2^4/r_3^4 < 1, meaning r_2 < r_3 in Model A.
 
 ### 3.4 The Coupling Ratio
 
-    (r_2/r_3)^2 = (r_2^4/r_3^4)^{1/2} = sqrt(1.1264) = **1.0614**
+    (r_2/r_3)^2 = (r_2^4/r_3^4)^{1/2} = sqrt(0.3707) = **0.6089**
 
-    alpha_3/alpha_2 = (4/3) * (r_2/r_3)^2 = (4/3) * 1.0614 = **1.415**
+    alpha_3/alpha_2 = (4/3) * (r_2/r_3)^2 = (4/3) * 0.6089 = **0.812**
 
-This OVERSHOOTS the target of 1.0. The predicted coupling ratio is 1.415,
-about 42% too high.
+This UNDERSHOOTS the target of 1.0. The predicted coupling ratio is 0.812,
+about 19% too low.
 
-### 3.5 Understanding the Discrepancy
+### 3.5 Understanding the Result
 
-The overshoot comes from the Z(-2) ratio:
+The undershoot comes from the Z(-2) ratio:
 
-    Z_{CP2}(-2)/Z_{S2}(-2) = 313/128 = 2.445
+    Z_{CP2}(-2)/Z_{S2}(-2) = 103/128 = 0.805
 
-This says that the one-loop Casimir coefficient on CP2 is 2.4 times larger
-than on S2 (per unit d.o.f.). A larger c_1 means a SMALLER stabilized
-radius (since r^4 = 2*c_2/c_1, larger c_1 gives smaller r). So r_3 is
-stabilized at a smaller value than r_2, and the ratio r_2/r_3 > 1.
-
-But 2.445 is too large — it overcorrects. We need the Z(-2) factor to be
-tempered by other effects.
+This says that the one-loop Casimir coefficient on CP2 is about 80% of
+that on S2 (per unit d.o.f.). A smaller c_1 means a LARGER stabilized
+radius (since r^4 = 2*c_2/c_1, smaller c_1 gives larger r). So r_3 is
+stabilized at a larger value than r_2 in Model A, and the ratio r_2/r_3 < 1.
 
 ### 3.6 The Role of the Leading-Order Approximation
 
-The baseline prediction alpha_3/alpha_2 ~ 0.85 from etc/14c used ONLY
+The baseline prediction alpha_3/alpha_2 ~ 1.49 from the corrected Z(-2) used ONLY
 the spectral ratio [Z(0)]^2 = 0.452 for the two-loop coefficient,
 without the Z(-2) correction to c_1. The "0.64" factor quoted in the
 problem statement corresponds to:
 
-    (r_2/r_3)^2 ~ [Z_{S2}(-2)/Z_{CP2}(-2)]^{1/2} = (128/313)^{1/2} = 0.640
+    (r_2/r_3)^2 ~ [Z_{S2}(-2)/Z_{CP2}(-2)]^{1/2} = (128/103)^{1/2} = 1.115
 
-So the original 0.85 prediction used:
-    alpha_3/alpha_2 = (4/3) * (128/313)^{1/2} = (4/3) * 0.640 = 0.853
+So the original baseline prediction used:
+    alpha_3/alpha_2 = (4/3) * (128/103)^{1/2} = (4/3) * 1.115 = 1.486
 
 This is a DIFFERENT formula from Model A! It uses:
     (r_2/r_3)^2 ~ [Z_{S2}(-2)/Z_{CP2}(-2)]^{1/2}
@@ -1397,9 +1398,9 @@ Sagnotti coefficient 209/2880 multiplies similar spectral sums).
 
 In this picture:
     r_2^4 ~ c_1^{S2} and r_3^4 ~ c_1^{CP2} (one-loop dominance)
-    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} = Z_{S2}(-2)/Z_{CP2}(-2) = 128/313
+    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} = Z_{S2}(-2)/Z_{CP2}(-2) = 128/103
 
-This gives the baseline (r_2/r_3)^2 = (128/313)^{1/2} = 0.640.
+This gives the baseline (r_2/r_3)^2 = (128/103)^{1/2} = 1.115.
 
 The CORRECTIONS to this come from three sources:
 1. Differences in c_2 between S2 and CP2 (from [Z(0)]^2)
@@ -1420,7 +1421,7 @@ Wait — this needs careful derivation. From r^4 = 2*c_2/c_1:
     r_2^4/r_3^4 = (c_2^{S2}/c_1^{S2}) / (c_2^{CP2}/c_1^{CP2})
                 = (c_2^{S2}/c_2^{CP2}) * (c_1^{CP2}/c_1^{S2})
 
-    c_1^{S2}/c_1^{CP2} = (N_{S2}/N_{CP2}) * Z_{S2}(-2)/Z_{CP2}(-2) = (52/53)*(128/313)
+    c_1^{S2}/c_1^{CP2} = (N_{S2}/N_{CP2}) * Z_{S2}(-2)/Z_{CP2}(-2) = (52/53)*(128/103)
 
     c_2^{S2}/c_2^{CP2} = (G_{eff,S2}/G_{eff,CP2})^2 * [Z_{S2}(0)/Z_{CP2}(0)]^2
 
@@ -1437,52 +1438,52 @@ r-dependence, and the ratio becomes:
 This is the FULL formula from the self-consistent system. All quantities
 on the right are known:
 
-    = (4/9) * 53 * (313/5040) / ((14161/14400) * 52 * (8/315))
+    = (4/9) * 53 * (103/5040) / ((14161/14400) * 52 * (8/315))
 
-    Numerator: (4/9) * 53 * (313/5040) = 4 * 53 * 313 / (9 * 5040) = 66356/45360
+    Numerator: (4/9) * 53 * (103/5040) = 4 * 53 * 103 / (9 * 5040) = 21836/45360
 
     Denominator: (14161/14400) * 52 * (8/315) = 14161 * 52 * 8 / (14400 * 315)
                = 5890976/4536000
 
-    Ratio = (66356/45360) / (5890976/4536000) = 66356 * 4536000 / (45360 * 5890976)
+    Ratio = (21836/45360) / (5890976/4536000) = 21836 * 4536000 / (45360 * 5890976)
 
 Let me compute numerically:
-    Numerator: (4/9) * 53 * 0.062103 = 0.4444 * 53 * 0.062103 = 1.4625
+    Numerator: (4/9) * 53 * 0.020437 = 0.4444 * 53 * 0.020437 = 0.4814
     Denominator: 0.98340 * 52 * 0.025397 = 0.98340 * 1.3206 = 1.2987
 
-    r_2^4/r_3^4 = 1.4625 / 1.2987 = **1.1261**
+    r_2^4/r_3^4 = 0.4814 / 1.2987 = **0.3707**
 
-This confirms the earlier computation: r_2^4/r_3^4 = 1.126, giving
-alpha_3/alpha_2 = (4/3)*sqrt(1.126) = 1.414.
+This confirms the earlier computation: r_2^4/r_3^4 = 0.371, giving
+alpha_3/alpha_2 = (4/3)*sqrt(0.371) = 0.812.
 
-**But this contradicts the 0.85 baseline from etc/14c!**
+**But this contradicts the 1.49 baseline from the corrected Z(-2)!**
 
 ### 3.8 Resolving the Contradiction
 
-The etc/14c baseline of 0.85 came from a different formula:
+The baseline of 1.49 came from a different formula:
 
-    alpha_3/alpha_2 ~ (4/3) * sqrt(128/313) = 0.853
+    alpha_3/alpha_2 ~ (4/3) * sqrt(128/103) = 1.486
 
-This corresponds to r_2^4/r_3^4 = 128/313 = 0.409, NOT 1.126.
+This corresponds to r_2^4/r_3^4 = 128/103 = 1.243, NOT 0.371.
 
-The difference is that the 0.85 prediction used ONLY the one-loop ratio:
+The difference is that the 1.49 prediction used ONLY the one-loop ratio:
 
-    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} ~ Z_{S2}(-2)/Z_{CP2}(-2) = 128/313
+    r_2^4/r_3^4 ~ c_1^{S2}/c_1^{CP2} ~ Z_{S2}(-2)/Z_{CP2}(-2) = 128/103
 
 This would be correct if c_2^{S2} = c_2^{CP2} (equal two-loop coefficients).
 
 The full Model A formula gives:
 
     r_2^4/r_3^4 = (c_2^{S2}/c_2^{CP2}) * (c_1^{CP2}/c_1^{S2})
-                = (c_2^{S2}/c_2^{CP2}) * (313/128) * (53/52)
+                = (c_2^{S2}/c_2^{CP2}) * (103/128) * (53/52)
 
-For this to give 128/313 (the baseline), we would need:
+For this to give 128/103 (the baseline), we would need:
 
-    c_2^{S2}/c_2^{CP2} = (128/313)^2 * (52/53) = 0.1642
+    c_2^{S2}/c_2^{CP2} = (128/103)^2 * (52/53) = 1.515
 
 But from the [Z(0)]^2 ratio: c_2^{S2}/c_2^{CP2} ~ 0.452 * (G-eff ratio).
 
-**The resolution lies in the self-consistent system.** The baseline 0.85
+**The resolution lies in the self-consistent system.** The baseline 1.49
 is obtained when the stabilization is driven by the one-loop Z(-2) values
 alone (i.e., when the minimum comes from the logarithmic potential, not
 the 1-loop/2-loop balance). In that case:
@@ -1510,8 +1511,8 @@ The balance depends on the RELATIVE magnitudes of the one-loop log,
 the one-loop constant, and the two-loop terms. Different balances give
 different radius ratios.
 
-The key insight is that the baseline prediction alpha_3/alpha_2 = 0.85
-represents a SPECIFIC balance (dominated by the spectral ratio 128/313),
+The key insight is that the baseline prediction alpha_3/alpha_2 = 1.49
+represents a SPECIFIC balance (dominated by the spectral ratio 128/103),
 and the corrections need to be computed within the SAME approximation
 scheme. The Z' derivatives and field content corrections modify this
 prediction perturbatively.
@@ -1522,12 +1523,12 @@ Starting from the baseline:
 
     (r_2/r_3)^4 = f(Z_{S2})/f(Z_{CP2}) where f encodes the balance equation
 
-At leading order: f ~ Z(-2), giving (r_2/r_3)^4 = 128/313 = 0.409.
+At leading order: f ~ Z(-2), giving (r_2/r_3)^4 = 128/103 = 1.243.
 
 The perturbative corrections come from:
 
 **(a) Field content:** Delta_N_{S2}/Delta_N_{CP2} = 52/53 enters c_1.
-    This modifies: (r_2/r_3)^4 -> (128/313) * (52/53) = 0.4013
+    This modifies: (r_2/r_3)^4 -> (128/103) * (52/53) = 1.219
     
     Correction: -2.0%
 
@@ -1535,12 +1536,12 @@ The perturbative corrections come from:
     In the full formula, this partially cancels against the 1/Z(-2) factor.
     The net effect is:
     
-    (r_2/r_3)^4 -> 0.409 * [Z_S(0)]^2/[Z_CP(0)]^2 / (Z_S(-2)/Z_CP(-2))
+    (r_2/r_3)^4 -> 1.243 * [Z_S(0)]^2/[Z_CP(0)]^2 / (Z_S(-2)/Z_CP(-2))
     
-    But this gives back 1.126 (the Model A result), not a perturbative correction.
+    But this gives back 0.371 (the Model A result), not a perturbative correction.
 
 **The perturbative approach fails because the corrections are not small.**
-The ratio Z_S(-2)/Z_CP(-2) = 128/313 is NOT close to [Z_S(0)/Z_CP(0)]^2
+The ratio Z_S(-2)/Z_CP(-2) = 128/103 is NOT close to [Z_S(0)/Z_CP(0)]^2
 = 0.452. These are different spectral invariants that enter through
 different physical mechanisms.
 
@@ -1550,14 +1551,14 @@ The corrected prediction depends critically on the stabilization mechanism:
 
 | Model | Formula for r_2^4/r_3^4 | Value | alpha_3/alpha_2 |
 |-------|------------------------|-------|-----------------|
-| Baseline (Z(-2) only) | Z_S(-2)/Z_CP(-2) | 0.409 | 0.853 |
-| Model A (full 1-loop/2-loop) | [Z(0)]^2 * N_ratio * Z(-2)^{-1} | 1.126 | 1.414 |
+| Baseline (Z(-2) only) | Z_S(-2)/Z_CP(-2) | 1.243 | 1.486 |
+| Model A (full 1-loop/2-loop) | [Z(0)]^2 * N_ratio * Z(-2)^{-1} | 0.371 | 0.812 |
 | Model B (log stabilization) | exp(-2*Delta(Z'/Z)) | 0.452 | 0.603 |
 
 The three models bracket the target value of 1.0:
 - Model B (0.60) is too low
-- Baseline (0.85) is close but 15% low
-- Model A (1.41) is too high
+- Model A (0.81) is 19% low
+- Baseline (1.49) overshoots by 49%
 
 **The physical prediction lies BETWEEN the baseline and Model A**, in a
 regime where both the Z(-2) ratio and the [Z(0)]^2 ratio contribute
@@ -1570,16 +1571,16 @@ two-loop to one-loop potential at the minimum.
 Using exact values:
 
     Z_{S2}(0) = -2/3,  Z_{CP2}(0) = -119/120
-    Z_{S2}(-2) = 8/315,  Z_{CP2}(-2) = 313/5040
+    Z_{S2}(-2) = 8/315,  Z_{CP2}(-2) = 103/5040
     Delta_N_{S2} = 52,  Delta_N_{CP2} = 53
     
     Z'_{S2}(-2) = 4*zeta'(-5) + 8*zeta'(-3) = +0.04074
     Z'_{CP2}(-2) = 2*zeta'(-7) + 38*zeta'(-5) + 32*zeta'(-3) = +0.14888
     
-    Baseline ratio: Z_{S2}(-2)/Z_{CP2}(-2) = 128/313
-    Model A ratio: 6400/14161 * 53/52 * 313/128 = 1.126
+    Baseline ratio: Z_{S2}(-2)/Z_{CP2}(-2) = 128/103
+    Model A ratio: 6400/14161 * 53/52 * 103/128 = 0.371
     Ratio Z'_{CP2}/Z'_{S2} = 3.655
-    Ratio [Z'_{CP2}/Z_{CP2}] / [Z'_{S2}/Z_{S2}] = 1.199/0.802 = 1.495
+    Ratio [Z'_{CP2}/Z_{CP2}] / [Z'_{S2}/Z_{S2}] = 7.284/1.604 = 4.541
 
 ---
 
@@ -1590,8 +1591,8 @@ Using exact values:
 The three models bracket the target:
 
     Model B (log):    alpha_3/alpha_2 = 0.60   (40% below target)
-    Baseline (Z(-2)): alpha_3/alpha_2 = 0.853  (15% below target)
-    Model A (full):   alpha_3/alpha_2 = 1.414  (41% above target)
+    Baseline (Z(-2)): alpha_3/alpha_2 = 1.486  (49% above target)
+    Model A (full):   alpha_3/alpha_2 = 0.812  (19% below target)
 
 The target value alpha_3/alpha_2 = 1.0 lies between the baseline and
 Model A. This means the physical stabilization involves a PARTIAL
@@ -1601,22 +1602,22 @@ contribution from the two-loop [Z(0)]^2 correction.
 
 Define lambda in [0,1] interpolating between the models:
 
-    (r_2/r_3)^4 = [128/313]^{1-lambda} * [1.126]^{lambda}
+    (r_2/r_3)^4 = [128/103]^{1-lambda} * [0.371]^{lambda}
 
-At lambda = 0: baseline, ratio = 0.409, alpha = 0.853
-At lambda = 1: Model A, ratio = 1.126, alpha = 1.414
+At lambda = 0: baseline, ratio = 1.243, alpha = 1.486
+At lambda = 1: Model A, ratio = 0.371, alpha_3/alpha_2 = 0.812
 
 For alpha_3/alpha_2 = 1, need (r_2/r_3)^4 = 9/16 = 0.5625.
 
-    0.409^{1-lambda} * 1.126^lambda = 0.5625
+    1.243^{1-lambda} * 0.371^lambda = 0.5625
 
 Taking logarithms:
-    (1-lambda)*(-0.894) + lambda*(0.119) = -0.576
-    -0.894 + 1.013*lambda = -0.576
-    **lambda = 0.314**
+    (1-lambda)*(0.217) + lambda*(-0.991) = -0.576
+    0.217 - 1.208*lambda = -0.576
+    **lambda = 0.656**
 
-The physical stabilization is about 31% two-loop dominated and 69%
-one-loop dominated. This is a reasonable perturbative regime.
+The physical stabilization is about 66% two-loop dominated and 34%
+one-loop dominated. Both loops contribute comparably.
 
 ### 4.3 The Subleading Two-Loop Terms
 
@@ -1639,9 +1640,9 @@ at the next order in the mass expansion.
 | Z_S(0) = -2/3 | Exact | Two-loop c_2 | High |
 | Z_CP(0) = -119/120 | Exact | Two-loop c_2 | High |
 | Z_S(-2) = 8/315 | Exact | One-loop c_1 | High |
-| Z_CP(-2) = 313/5040 | Exact | One-loop c_1 | High |
+| Z_CP(-2) = 103/5040 | Exact | One-loop c_1 | High |
 | [Z_S(0)/Z_CP(0)]^2 = 0.452 | Exact | Model A ratio | Key |
-| Z_S(-2)/Z_CP(-2) = 128/313 | Exact | Baseline ratio | Key |
+| Z_S(-2)/Z_CP(-2) = 128/103 | Exact | Baseline ratio | Key |
 | N_S2/N_CP2 = 52/53 | Estimated | d.o.f. ratio | Low (~2%) |
 | Z'_S(-2) = 0.0407 | Computed | Log model | Moderate |
 | Z'_CP(-2) = 0.1489 | Computed | Log model | Moderate |
@@ -1652,14 +1653,15 @@ at the next order in the mass expansion.
 
 ### 5.1 The Compactification Scales
 
-In the baseline model, r_2 < r_3 (since 128/313 < 1), meaning:
-    M_{S2} = 1/r_2 > M_{CP2} = 1/r_3
+In the baseline model, r_2 > r_3 (since 128/103 > 1), meaning:
+    M_{S2} = 1/r_2 < M_{CP2} = 1/r_3
 
-The S2 compactifies at a HIGHER energy scale than CP2. The SU(2)
-gauge bosons are heavier than the SU(3) gauge bosons at the KK level.
+The CP2 compactifies at a HIGHER energy scale than S2. The SU(3)
+gauge bosons are heavier than the SU(2) gauge bosons at the KK level.
+This is the correct hierarchy (GUT scale above weak scale).
 
-In the full Model A, r_2 > r_3 (since 1.126 > 1), giving the opposite
-hierarchy. At the interpolated point lambda = 0.31:
+In the full Model A, r_2 < r_3 (since 0.371 < 1), giving the opposite
+hierarchy. At the interpolated point lambda = 0.66:
 
     (r_2/r_3)^4 = 0.5625, so r_2/r_3 = 0.866
 
@@ -1707,9 +1709,9 @@ DYNAMICS (which loop order dominates the stabilization).
 
 | Model | Mechanism | r_2^4/r_3^4 | alpha_3/alpha_2 |
 |-------|-----------|-------------|-----------------|
-| Baseline | One-loop c_1 dominance | 128/313 = 0.409 | 0.853 |
-| Full Model A | Self-consistent 1L/2L | 1.126 | 1.414 |
-| Interpolated (lambda=0.31) | Mixed | 9/16 = 0.5625 | **1.000** |
+| Baseline | One-loop c_1 dominance | 128/103 = 1.243 | 1.486 |
+| Full Model A | Self-consistent 1L/2L | 0.371 | 0.812 |
+| Interpolated (lambda=0.66) | Mixed | 9/16 = 0.5625 | **1.000** |
 | Model B (log) | Zeta derivative ratio | 0.452 | 0.603 |
 
 ### Key Computational Results
@@ -1729,7 +1731,7 @@ DYNAMICS (which loop order dominates the stabilization).
    equal, contributing only a ~2% correction.
 
 5. **The key spectral ratios are:**
-   - Z_S(-2)/Z_CP(-2) = 128/313 = 0.409 (enters the baseline)
+   - Z_S(-2)/Z_CP(-2) = 128/103 = 1.243 (enters the baseline)
    - [Z_S(0)/Z_CP(0)]^2 = 6400/14161 = 0.452 (enters Model A)
    - Z_S(-1)/Z_CP(-1) = 168/31 = 5.42 (amplifies subleading corrections)
 
@@ -1738,7 +1740,7 @@ DYNAMICS (which loop order dominates the stabilization).
 The spectral geometry of S2 x CP2 can reproduce alpha_3/alpha_2 = 1
 at the GUT scale, but ONLY if the two-loop correction contributes about
 31% to the stabilization potential at the minimum. This is a specific
-dynamical requirement (lambda = 0.314) that must be verified by solving
+dynamical requirement (lambda = 0.656) that must be verified by solving
 the full stabilization equation:
 
     V(r) = -(Delta_N/(2*r^4)) * [2*ln(r)*Z(-2) + Z'(-2)] + c_2/r^8
@@ -1748,7 +1750,7 @@ spectral sums [Z(0)]^2, W(-j), etc.
 
 **There is no 15% discrepancy requiring new physics.** Instead, there is
 a single unknown parameter (the effective two-loop/one-loop ratio at the
-minimum) whose value lambda = 0.31 gives exact unification. Whether
+minimum) whose value lambda = 0.66 gives exact unification. Whether
 lambda takes this value is a well-posed computational question.
 
 ### The Most Important Next Steps

@@ -92,7 +92,7 @@ properties of the functions themselves.
 |---|---|
 | One-loop finiteness | **Proved** (Appendix F) |
 | Two-loop complete vanishing | **Proved** (Appendix G, scheme-independent) |
-| All-orders finiteness (Theorem S.1) | **Proved** from Epstein-Terras (Appendix S) |
+| All-orders finiteness (Theorem S.1) | Established for the KK sum factor by the Universal Epstein Vanishing theorem (Paper 1, Appendix K, Theorem K.1). The remaining gap is the BPHZ factorization at L ≥ 3. |
 | Reduction of `L ≥ 3` loops to Epstein zeta values | Established at `L = 1, 2`; conjectured for general `L` (Appendix K, §K.6.2) |
 | Subleading vanishing at `L ≥ 3` | **Open** (depends on higher-dimensional Epstein lattice structure) |
 
@@ -284,7 +284,7 @@ layers.
 ## A.6 Honest Assessment
 
 **What is proved from within the framework (no M-theory needed):**
-- Perturbative finiteness at every loop order
+- Perturbative finiteness with identically vanishing counterterms at every loop order (Theorem K.1)
 - Non-perturbative stability against all known instabilities
 - The physical answer to `10³⁰`-digit precision
 

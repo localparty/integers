@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+
 # 11D SUGRA Field Content Decomposition on CP² x S² x S¹/Z₂
 
 > **Date:** April 5, 2026

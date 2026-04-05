@@ -58,7 +58,7 @@ stabilized:
 Key values computed:
 - Z_{S¹}(−2) = 0 (trivial zeros) → V(R) = −c/R⁴ exact → dilaton frozen
 - Z_{S²}(−2) = 8/315 ≠ 0 → S² modulus has dynamical minimum
-- Z_{CP²}(−2) = 313/5040 ≠ 0 → CP² modulus has dynamical minimum
+- Z_{CP²}(−2) = 103/5040 ≠ 0 → CP² modulus has dynamical minimum
 - Z_{S²}(−j) ≠ 0 for j = 0, 1, 2, 3 (all computed explicitly)
 - Z_{CP²}(−j) ≠ 0 for j = 0, 1, 2 (all computed explicitly)
 
@@ -111,7 +111,7 @@ an open number theory question.
 These files contain:
 - **`13`**: Derivation of the gauge coupling hierarchy α₃ > α₂ > α₁
   from the Casimir stabilization of CP² and S². The ratio α₃/α₂ at
-  leading order gives ~0.85 vs target 1.0 (15% gap).
+  leading order gives ~1.49 vs target 1.0 (49% overshoot).
 - **`14a–c`**: Full 11D SUGRA field content decomposition, 3-form
   KK reduction on CP² × S² × S¹, two-loop vertex on curved spaces.
   These provide the one-loop and two-loop Casimir coefficients c₁ and c₂
@@ -258,14 +258,14 @@ Include the spectral zeta table:
 |---------|------------|-------|------|
 | S¹ | n² | 0 (trivial zeros) | Frozen by Hubble friction |
 | S² | l(l+1) | 8/315 ≠ 0 | Dynamically stabilized |
-| CP² | k(k+2) | 313/5040 ≠ 0 | Dynamically stabilized |
+| CP² | k(k+2) | 103/5040 ≠ 0 | Dynamically stabilized |
 
 **§7.22.2 — Gauge Coupling Hierarchy from Spectral Geometry**
 
 Present the leading-order prediction from `13`:
 - From the gauge coupling–volume relation (Witten 1981): α₃/α₂ depends
   on (r₂/r₃)², and the stabilized radius ratio depends on Z(−2) values.
-- Leading order: α₃/α₂ ≈ 0.85 at GUT scale (15% gap from the target 1.0).
+- Leading order: α₃/α₂ ≈ 1.49 at GUT scale (49% overshoot from the target 1.0).
 - State the three corrections from `15`: spectral zeta derivatives,
   field content weighting, two-loop sunset sums.
 - Be honest: the full computation of the two-loop S² sunset sum and

@@ -1,12 +1,12 @@
 # Appendix S — Perturbative Finiteness Under Zeta Regularization
 
-> This appendix converts the conjecture of Appendix K into a theorem. We
-> prove that the `L`-loop effective action for 5D gravity on `M⁴ × S¹` is finite
-> at every order in perturbation theory, under spectral zeta function
-> regularization. The proof uses three established mathematical results
-> (the Epstein-Terras analytic continuation, the Seeley-DeWitt heat kernel
-> expansion, and the positivity of the mass exponent from power counting)
-> and requires no additional physical assumptions beyond the framework's
+> This appendix states and proves the perturbative finiteness theorem for
+> 5D gravity on `M⁴ × S¹` under spectral zeta function regularization. The
+> proof uses three established mathematical results (the Epstein-Terras
+> analytic continuation, the Seeley-DeWitt heat kernel expansion, and the
+> positivity of the mass exponent from power counting) together with the
+> Universal Epstein Vanishing theorem (Appendix K, Theorem K.1), and
+> requires no additional physical assumptions beyond the framework's
 > postulates.
 
 ---
@@ -217,12 +217,11 @@ At higher loops (`L ≥ 3`), the epistemic structure is:
 
 - **The leading term `S₀^L = 0`:** Established at every `L` (arithmetic:
   `[1 + 2ζ(0)]^L = 0^L = 0`).
-- **The subleading Epstein zeta values `E_L(−j; Q_L)`:** Conjectured to be
-  finite at every `L` (from the Epstein-Terras pole separation, Appendix K),
-  but not computed for `L ≥ 3`. Whether they vanish (as at `L = 2`, through
-  complementary trivial zeros) or are merely finite and non-zero is an
-  open question specific to the lattice structure of the `L`-loop quadratic
-  forms `Q_L`.
+- **The subleading Epstein zeta values `E_L(−j; Q_L)`:** **Established to
+  vanish at every `L`** by the Universal Epstein Vanishing theorem
+  (Appendix K, Theorem K.1): `E_L(-j; Q_L) = 0` for all `j ≥ 1` and any
+  positive-definite `Q_L`. The `L = 2` complementary trivial zeros are now
+  recognized as a special instance of this universal mechanism.
 - **If non-zero:** The counterterm coefficients are uniquely determined by
   the Epstein zeta values — fixed, not free. The theory is predictive to
   all orders even if some counterterms are non-zero beyond two loops.
@@ -303,14 +302,16 @@ products of operators). The evaluation is still at `s = 0`, and the pole
 structure is determined by the dimension of the operator (which grows with
 `L` but the pole locations shift accordingly, always remaining above `s = 0`).
 
-The multi-loop extension to all orders is conjectured based on the
-Epstein-Terras pole structure (Appendix K). A rigorous all-orders proof
-would require verifying that the symbol class conditions of
-Kontsevich-Vishik (1995) generalized zeta functions for pseudodifferential
-operators are satisfied for the L-loop gravitational kinetic operator —
-this verification is identified as future work. The conjecture is supported
-by explicit computation at `L = 1` (Appendix F) and `L = 2` (Appendix G),
-and by the structural pole-separation argument (Appendix K).
+The multi-loop extension to all orders is established for the KK sum factor
+by Theorem K.1 (Appendix K, §K.7b): `E_L(-j; Q_L) = 0` for all `j ≥ 1`
+and any positive-definite `Q_L`. The remaining gap is the factorization of
+the BPHZ-subtracted amplitude into `(4D part) × E_L(-j; Q_L)` at `L ≥ 3`
+— verifying that the KK sum factor separates from the 4D momentum structure
+in the presence of overlapping subdivergences. Closing this gap via the
+Kontsevich-Vishik (1995) symbol class conditions for pseudodifferential
+operators is identified as future work. The result is supported by explicit
+computation at `L = 1` (Appendix F) and `L = 2` (Appendix G), and by the
+universal vanishing theorem (Appendix K).
 
 ---
 
@@ -551,7 +552,7 @@ then the zeta regularization is physical, and the finiteness is a theorem.
 | String theory | **Yes** (all orders) | Extended objects + modular invariance | Yes (in principle) | Established |
 | Loop quantum gravity | **Yes** (claimed) | Discrete spin foam | Partially | Debated |
 | Asymptotic safety | **Yes** (non-perturbatively) | UV fixed point | Yes (near fixed point) | Evidence, not proof |
-| **5D e-dimension** | **Yes** (Theorem S.1) | Compact e-circle + Epstein-Terras | **Yes** (all orders) | **Proved (this appendix)** |
+| **5D e-dimension** | **Yes** (Theorem S.1 + Theorem K.1) | Compact e-circle + Universal Epstein Vanishing | **Yes** (all orders) | **KK sum factor proved; factorization gap open** |
 
 ---
 

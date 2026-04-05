@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Paper 1, Appendix K §K.5–K.6 on April 5, 2026. Reference the paper sections for current content.
+
 # Investigation: Three Routes to an All-Orders Proof of Perturbative Finiteness
 
 *Investigation document for Problem 5 of the closing-the-open-problems plan.*

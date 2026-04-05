@@ -1,3 +1,7 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+>
+> **ERRATUM (2026-04-05):** Z_{CP²}(−2) = 103/5040 was incorrect throughout this file. The correct value is **103/5040**. See `etc/19-sunset-sum-computation.md` for the verified derivation. All downstream quantities (W_{CP²}(−2), tables, ratios) are superseded.
+
 # Two-Loop Graviton Vertex Corrections on S² and CP²
 
 > **Date:** April 5, 2026
@@ -45,7 +49,7 @@ evaluation):
 |---|-----------|-----------|------------|
 | 0 | 0 | -2/3 | -119/120 |
 | 1 | 0 | -1/15 | -31/2520 |
-| 2 | 0 | 8/315 | 313/5040 |
+| 2 | 0 | 8/315 | 103/5040 |
 | 3 | 0 | -2/105 | (computed below) |
 
 The S¹ column is identically zero for all j >= 0: Z_{S¹}(-j) = 2ζ(-2j) = 0
@@ -512,7 +516,7 @@ Values from §0.2 and §0.3:
 |---|------------|
 | 0 | -119/120 |
 | 1 | -31/2520 |
-| 2 | 313/5040 |
+| 2 | 103/5040 |
 | 3 | -149/3696 |
 
 All nonzero, confirming the absence of the zero mechanism on CP².
@@ -553,9 +557,9 @@ No, let me just compute directly:
 
     W_{CP²}(-2) = C(2,0) Z(0) Z(-2) + C(2,1) Z(-1)² + C(2,2) Z(-2) Z(0)
 
-    = (-119/120)(313/5040) + 2(-31/2520)² + (313/5040)(-119/120)
+    = (-119/120)(103/5040) + 2(-31/2520)² + (103/5040)(-119/120)
 
-    = 2 × (-119/120)(313/5040) + 2 × (31/2520)²
+    = 2 × (-119/120)(103/5040) + 2 × (31/2520)²
 
 First term: 2 × (-119 × 313)/(120 × 5040) = 2 × (-37247/604800) = -74494/604800
 
@@ -617,7 +621,7 @@ This is getting tedious. Let me just leave it in a simpler form.
 
 Actually, let me recompute more carefully from the start:
 
-    W_{CP²}(-2) = 2 × (-119/120)(313/5040) + 2 × (31/2520)²
+    W_{CP²}(-2) = 2 × (-119/120)(103/5040) + 2 × (31/2520)²
 
 Term 1: 2 × (-119)(313) / (120 × 5040)
        = 2 × (-37247) / 604800
@@ -679,7 +683,7 @@ factorized version of the sunset at zeroth order in the mass expansion.
 |---------|----|----|-----|
 | Figure-eight [Z(0)]² | 0 | 4/9 | 14161/14400 |
 | Vertex Z(-1) | 0 | -1/15 | -31/2520 |
-| Vertex Z(-2) | 0 | 8/315 | 313/5040 |
+| Vertex Z(-2) | 0 | 8/315 | 103/5040 |
 | Sunset W(-1) | 0 | 4/45 | 527/21600 |
 | Sunset W(-2) | 0 | -118/4725 | -156053/1270080 |
 
@@ -1131,7 +1135,7 @@ to a follow-up computation.
 |----------|----------|-----------|
 | Z(0) | -2/3 | -119/120 |
 | Z(-1) | -1/15 | -31/2520 |
-| Z(-2) | 8/315 | 313/5040 |
+| Z(-2) | 8/315 | 103/5040 |
 | Z(-3) | -2/105 | -149/3696 |
 | W(-1) (sunset) | 4/45 | 527/21600 |
 | W(-2) (sunset) | -118/4725 | -156053/1270080 |
@@ -1236,7 +1240,7 @@ from perturbative corrections by the arithmetic of its spectrum.**
 |---|------------|---------|
 | 0 | -119/120 | -0.9917 |
 | 1 | -31/2520 | -0.0123 |
-| 2 | 313/5040 | +0.0621 |
+| 2 | 103/5040 | +0.0204 |
 | 3 | -149/3696 | -0.0403 |
 
 **S² sunset values:**

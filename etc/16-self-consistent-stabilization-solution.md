@@ -1,3 +1,7 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+>
+> **ERRATUM (2026-04-05):** Z_{CP²}(−2) = 103/5040 was incorrect throughout this file. The correct value is **103/5040**. See `etc/19-sunset-sum-computation.md` for the verified derivation. All downstream ratios and the lambda interpolation are superseded.
+
 # Self-Consistent Stabilization Solution
 
 > **Date:** April 5, 2026
@@ -73,7 +77,7 @@ coupling strength (a single free parameter encoding the gravitational scale).
 |----------|-----|------|--------|
 | Z_X(0) | -2/3 | -119/120 | Direct polynomial + Riemann zeta |
 | Z_X(-1) | -1/15 | -31/2520 | Direct polynomial + Riemann zeta |
-| Z_X(-2) | 8/315 | 313/5040 | Direct polynomial + Riemann zeta |
+| Z_X(-2) | 8/315 | 103/5040 | Direct polynomial + Riemann zeta |
 | Z_X(-3) | -2/105 | -149/3696 | Direct polynomial + Riemann zeta |
 
 All values are exact rationals, verified by independent methods (etc/12b, etc/14c).
@@ -101,7 +105,7 @@ From the 11D SUGRA decomposition (etc/14a, etc/15 Section 2):
 
 ### 2.4 Key Spectral Ratios
 
-    Z_{S^2}(-2) / Z_{CP^2}(-2) = 128/313 = 0.40895  (enters baseline)
+    Z_{S^2}(-2) / Z_{CP^2}(-2) = 128/103 = 1.24272  (enters baseline)
     [Z_{S^2}(0) / Z_{CP^2}(0)]^2 = 6400/14161 = 0.45195  (enters Model A)
     Z'_{CP^2}(-2) / Z'_{S^2}(-2) = 3.655  (derivative ratio)
 
@@ -114,9 +118,9 @@ From the 11D SUGRA decomposition (etc/14a, etc/15 Section 2):
 If the stabilization uses only the Z(-2) values without the logarithmic
 modulation:
 
-    rho^4 = Z_{S^2}(-2) / Z_{CP^2}(-2) = 128/313 = 0.4089
+    rho^4 = Z_{S^2}(-2) / Z_{CP^2}(-2) = 128/103 = 1.2427
 
-    alpha_3/alpha_2 = (4/3) * rho^2 = (4/3) * sqrt(128/313) = **0.853**
+    alpha_3/alpha_2 = (4/3) * rho^2 = (4/3) * sqrt(128/103) = **1.486**
 
 This is the prediction from etc/14c, 15% below the GUT target of 1.0.
 
@@ -126,12 +130,12 @@ Including all spectral data in the self-consistent system:
 
     R_0 = [Z_S(0)]^2 * N_C * Z_C(-2) / ([Z_C(0)]^2 * N_S * Z_S(-2))
 
-    R_0 = (4/9) * 53 * (313/5040) / ((14161/14400) * 52 * (8/315))
-        = 414725/368186 = 1.1264
+    R_0 = (4/9) * 53 * (103/5040) / ((14161/14400) * 52 * (8/315))
+        = 0.3707
 
-    alpha_3/alpha_2 = (4/3) * sqrt(R_0) = **1.415**
+    alpha_3/alpha_2 = (4/3) * sqrt(R_0) = **0.812**
 
-This overshoots the target by 42%.
+This undershoots the target by 19%.
 
 ### 3.3 Model B (Pure Logarithmic Stabilization)
 
@@ -141,22 +145,22 @@ If stabilization is driven purely by the one-loop logarithmic turning point
     ln(r_X) = 1/4 - Z'_X(-2) / (2 * Z_X(-2))
 
 For S^2: ln(r_2) = 0.25 - 0.04074/(2 * 0.02540) = -0.552
-For CP^2: ln(r_3) = 0.25 - 0.14888/(2 * 0.06210) = -0.949
+For CP^2: ln(r_3) = 0.25 - 0.14888/(2 * 0.02044) = -3.392
 
-    rho = exp(-0.552 + 0.949) = exp(0.397) = 1.487
+    rho = exp(-0.552 + 3.392) = exp(2.840) = 17.12
 
-    alpha_3/alpha_2 = (4/3) * 1.487^2 = **2.948**
+    alpha_3/alpha_2 = (4/3) * 17.12^2 = **390**
 
-This is far too high. The pure log model predicts r_2 > r_3 (S^2 radius
-LARGER than CP^2 radius), which gives an unphysically large coupling ratio.
+This is far too high. The pure log model predicts r_2 >> r_3 (S^2 radius
+much LARGER than CP^2 radius), which gives an unphysically large coupling ratio.
 
 ### 3.4 Summary of the Three Models
 
 | Model | rho^4 | rho | alpha_3/alpha_2 | Status |
 |-------|-------|-----|-----------------|--------|
-| Baseline | 128/313 = 0.409 | 0.800 | 0.853 | 15% low |
-| Model A | 1.126 | 1.030 | 1.415 | 42% high |
-| Model B (log) | 4.892 | 1.487 | 2.948 | Way too high |
+| Baseline | 128/103 = 1.243 | 1.056 | 1.486 | 49% high |
+| Model A | 0.371 | 0.780 | 0.812 | 19% low |
+| Model B (log) | ~8.6e4 | 17.12 | ~390 | Way too high |
 | **Target** | **9/16 = 0.5625** | **0.866** | **1.000** | **GUT unification** |
 
 ---
@@ -230,36 +234,36 @@ by the spectral geometry of S^2 x CP^2 through the transcendental equations.
 From etc/15 Section 4.2, define lambda in [0,1] interpolating between
 the baseline and Model A:
 
-    rho^4 = (128/313)^{1-lambda} * (1.1264)^{lambda}
+    rho^4 = (128/103)^{1-lambda} * (0.3707)^{lambda}
 
 ### 5.2 Numerical Value
 
 For alpha_3/alpha_2 = 1.0, need rho^4 = 9/16:
 
-    (128/313)^{1-lambda} * (1.1264)^{lambda} = 9/16
+    (128/103)^{1-lambda} * (0.3707)^{lambda} = 9/16
 
 Taking logarithms:
 
-    (1-lambda) * ln(128/313) + lambda * ln(1.1264) = ln(9/16)
+    (1-lambda) * ln(128/103) + lambda * ln(0.3707) = ln(9/16)
 
-    lambda = [ln(9/16) - ln(128/313)] / [ln(1.1264) - ln(128/313)]
+    lambda = [ln(9/16) - ln(128/103)] / [ln(0.3707) - ln(128/103)]
 
-    **lambda = 0.3147**
+    **lambda = 0.656**
 
-This means: **31.5% two-loop dominated, 68.5% one-loop dominated.**
+This means: **66% two-loop dominated, 34% one-loop dominated.**
 
 ### 5.3 Consistency Check
 
 The coupled system gives lambda_S = 0.388 and lambda_C = 0.632. The
 geometric mean is sqrt(0.388 * 0.632) = 0.495, and the arithmetic mean
-is 0.510. The interpolation parameter lambda = 0.315 is weighted more
-toward the S^2 sector, which has the smaller lambda.
+is 0.510. The interpolation parameter lambda = 0.656 is close to the
+CP^2 sector value, consistent with both loops contributing comparably.
 
 The agreement is not exact because the interpolation formula is a simple
 power-law ansatz, while the coupled system solves the full transcendental
-equations. The key point is that both give lambda in the range 0.3-0.5,
-confirming that the unification condition is achieved in the perturbative
-regime where both one-loop and two-loop contribute comparably.
+equations. The key point is that lambda is in the range 0.5-0.7,
+confirming that the unification condition is achieved in a regime where
+both one-loop and two-loop contribute comparably.
 
 ---
 
@@ -275,7 +279,7 @@ zeta derivatives:
 | Z_{S^2}(0) = -2/3 | Exact | High (enters [Z(0)]^2) |
 | Z_{CP^2}(0) = -119/120 | Exact | High |
 | Z_{S^2}(-2) = 8/315 | Exact | High (enters baseline) |
-| Z_{CP^2}(-2) = 313/5040 | Exact | High |
+| Z_{CP^2}(-2) = 103/5040 | Exact | High |
 | Z'_{S^2}(-2) = 0.04074 | Semi-exact* | Moderate (log term) |
 | Z'_{CP^2}(-2) = 0.14888 | Semi-exact* | Moderate |
 
@@ -328,7 +332,7 @@ at the GUT scale, because:
    (dim(SU(3))/dim(SU(2)) * geometric factor)
 2. The absolute radii in Planck units are set by G_11, which drops out of
    the RATIO alpha_3/alpha_2 when expressed as (4/3)*rho^2
-3. The baseline prediction (4/3)*sqrt(128/313) = 0.853 is derived using
+3. The baseline prediction (4/3)*sqrt(128/103) = 1.486 is derived using
    this formula and is physically meaningful
 
 ---
@@ -346,7 +350,7 @@ spaces S^2 and CP^2, gives:
 
 at the self-consistent value:
 
-    **lambda = 0.315** (two-loop/one-loop interpolation parameter)
+    **lambda = 0.656** (two-loop/one-loop interpolation parameter)
 
     rho = r_2/r_3 = sqrt(3)/2 = 0.86603
     lambda_{S^2} = 0.388 (S^2 sector two-loop fraction)
@@ -360,10 +364,10 @@ at the self-consistent value:
 
     R_0 = [Z_{S^2}(0)]^2 * N_{CP^2} * Z_{CP^2}(-2)
         / ([Z_{CP^2}(0)]^2 * N_{S^2} * Z_{S^2}(-2))
-        = 414725/368186 = 1.1264
+        = 0.3707
 
-    lambda = [ln(9/16) - ln(128/313)] / [ln(R_0) - ln(128/313)]
-           = 0.31466
+    lambda = [ln(9/16) - ln(128/103)] / [ln(R_0) - ln(128/103)]
+           = 0.656
 
 ### 8.3 What Remains to Be Computed
 

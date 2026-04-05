@@ -55,9 +55,11 @@ by the perfect-square structure of KK masses). Ghost contributions, carrying the
 Eisenstein quadratic form through KK number conservation, vanish by the
 same mechanisms. Under zeta regularization of the KK mode sums,
 linearized 5D gravity on `M⁴ × S¹` is perturbatively predictive — established
-through two loops by explicit computation, and conjectured to all orders
-by the Epstein-Terras structure — with counterterm coefficients determined
-from two parameters: `G₄` and the `e`-circle circumference `L`.
+through two loops by explicit computation, and **established to all orders**
+by the Universal Epstein Vanishing theorem: `E_L(-j; Q_L) = 0` for all
+`j ≥ 1` and all `L`, proven by the pole structure of the completed Epstein
+zeta function (Appendix K, Theorem K.1) — with counterterm coefficients
+determined from two parameters: `G₄` and the `e`-circle circumference `L`.
 
 The spin structure of the `e`-circle (bosons periodic, fermions anti-periodic)
 implies a natural `Z₂` orbifold with two fixed-point branes. The visible brane

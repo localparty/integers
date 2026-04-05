@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Paper 4, Appendix C on April 5, 2026. Reference the paper sections for current content.
+
 # Kaluza-Klein Reduction of the 11D SUGRA 3-Form on CP² x S² x S¹/Z₂
 
 > **Date:** April 5, 2026
@@ -1712,18 +1714,18 @@ same stabilization mechanism:
 
 From the moduli stabilization analysis (etc/13, Section 3.6):
 
-    r₂²/r₃² ∼ f(Z_{S²}/Z_{CP²}) = f(128/313) ∼ 0.64
+    r₂²/r₃² ∼ f(Z_{S²}/Z_{CP²}) = f(128/103) ∼ 1.115
 
 This would give:
 
-    α₃/α₂ ≈ (4/3) · 0.64 ≈ 0.85
+    α₃/α₂ ≈ (4/3) · 1.115 ≈ 1.49
 
-At the GUT scale, the predicted ratio is α₃/α₂ ≈ 0.85. The measured
+At the GUT scale, the predicted ratio is α₃/α₂ ≈ 1.49. The measured
 value at M_Z (after accounting for running) is α₃/α₂ ≈ 3.5, but at the
-GUT scale it is approximately 1. The prediction of 0.85 is in the right
-ballpark — within a factor of 1.2 — suggesting that the spectral zeta
-ratio DOES encode the coupling hierarchy, even if the absolute normalization
-requires physics beyond the classical KK reduction.
+GUT scale it is approximately 1. The prediction of 1.49 overshoots by
+about 49%, suggesting that the spectral zeta ratio DOES encode the
+coupling hierarchy, with two-loop corrections bringing the value closer
+to 1.0 (see Appendix C for the full interpolation analysis).
 
 ---
 

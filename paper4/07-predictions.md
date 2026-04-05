@@ -2005,3 +2005,129 @@ prediction is confirmed.**
 
 ---
 
+### 7.23 Moduli Stabilization: The Curvature Principle
+
+The three internal moduli — `R` (S¹ radius), `r₂` (S² radius),
+`r₃` (CP² radius) — have qualitatively different fates under
+quantum corrections. The distinction is arithmetic: the Laplacian
+eigenvalues on flat spaces are perfect squares, while those on
+curved spaces are shifted squares. This one fact determines which
+moduli freeze and which stabilize.
+
+#### 7.23.1 The Flat/Curved Dichotomy
+
+The spectral zeta function `Z_X(s) = Σ (deg) × (eigenvalue)^{−s}`
+encodes the one-loop Casimir potential on each factor `X`. Whether
+`Z_X(−j)` vanishes or not at negative integers `j ≥ 1` determines
+whether perturbative corrections generate a potential for the
+corresponding modulus.
+
+On `S¹`, the eigenvalues are `n²` (perfect squares) and the
+spectral zeta reduces to `Z_{S¹}(s) = 2ζ(2s)`. At negative
+integers this evaluates to `2ζ(−2j) = 0` — the trivial zeros of
+the Riemann zeta function. On `S²` and `CP²`, the eigenvalues
+`l(l+1)` and `k(k+2)` are shifted squares: `(l+½)² − ¼` and
+`(k+1)² − 1`. The shift mixes Riemann zeta values at different
+arguments, and the trivial zeros no longer cancel everything.
+
+The spectral data:
+
+| Factor | Eigenvalues | Degeneracy | `Z(0)` | `Z(−1)` | `Z(−2)` | `Z(−3)` | Modulus fate |
+|--------|------------|------------|--------|---------|---------|---------|-------------|
+| `S¹` | `n²` | `2` | `−1` | `0` | `0` | `0` | Frozen |
+| `S²` | `l(l+1)` | `2l+1` | `−2/3` | `−1/15` | `8/315` | `−2/105` | Stabilized |
+| `CP²` | `k(k+2)` | `(k+1)³` | `−119/120` | `−31/2520` | `103/5040` | `−149/3696` | Stabilized |
+
+The `S¹` column vanishes identically for `j ≥ 1` because only
+trivial zeros `ζ(−2j) = 0` appear. The `S²` and `CP²` columns are
+nonzero because the shifted-square eigenvalues produce linear
+combinations of Riemann zeta values at different negative integers,
+and the trivial zeros do not kill every term.
+
+**Theorem (Moduli Stabilization by Curvature).** In the
+`M⁴ × CP² × S² × S¹` compactification, the Casimir potential of
+each modulus is:
+
+- **`R` (S¹):** `V(R) = −c/R⁴`, exact to all perturbative orders.
+  `R` is frozen by Hubble friction (`w₀ = −1` to `10⁻⁵²` precision).
+- **`r₂` (S²):** `V(r₂) = −c₁/r₂⁴ + c₂/r₂⁸ + ...`, dynamically
+  stabilized at a minimum. `r₂` is determined by the ratio `c₂/c₁`.
+- **`r₃` (CP²):** Same structure. `r₃` dynamically stabilized.
+
+The dichotomy follows from the arithmetic of Laplacian eigenvalues:
+`n²` (perfect square) vs `l(l+1)`, `k(k+2)` (shifted squares).
+**Flat dimensions freeze, curved dimensions stabilize.**
+
+#### 7.23.2 Gauge Coupling Hierarchy from Spectral Geometry
+
+The gauge couplings are set by the internal volumes (Witten 1981):
+`α₃ ∝ 1/r₃⁴`, `α₂ ∝ 1/r₂²`, `α₁ ∝ 1/R`. The crucial ratio for
+GUT unification is:
+
+    α₃/α₂ = (4/3)(r₂/r₃)²
+
+which depends only on the stabilized radius ratio — a pure
+geometric quantity determined by the spectral data of `S²` and
+`CP²`.
+
+**Leading-order prediction.** When the stabilization is driven by
+the one-loop Casimir coefficients `Z(−2)` alone:
+
+    (r₂/r₃)⁴ = Z_{S²}(−2) / Z_{CP²}(−2) = (8/315) / (103/5040)
+              = 128/103 = 1.243
+
+    α₃/α₂ = (4/3) × (128/103)^{1/2} ≈ **1.49**
+
+This is 49% above the target value of 1.0 at the GUT scale. Three
+corrections narrow the gap:
+
+1. **Spectral zeta derivatives** `Z'(−2)`, which enter the
+   logarithmic stabilization potential `V₁(r) ∝ [2 ln(r) Z(−2) + Z'(−2)] / r⁴`.
+2. **Field content weighting** `ΔN_{S²}/ΔN_{CP²} = 52/53 ≈ 0.98`,
+   a sub-2% effect from the effective bosonic degrees of freedom on
+   each factor.
+3. **Two-loop Goroff-Sagnotti contributions** `c₂ ∝ [Z(0)]²`,
+   which provide the repulsive `1/r⁸` term that competes with the
+   attractive `1/r⁴` to create a minimum.
+
+With both one-loop and two-loop terms included self-consistently,
+exact GUT unification `α₃/α₂ = 1` requires a two-loop contribution
+parameter `λ = 0.656` — squarely in the perturbative regime. The
+full computation, including all spectral quantities and the
+interpolation analysis, is presented in Appendix C.
+
+The remaining open calculation is the two-loop sunset sum on `S²`,
+which determines the stabilized radii numerically and fixes `λ`
+with no free parameters (see §9.5, Open Problems).
+
+#### 7.23.3 What Sets the Hierarchy R ≫ r₂ ≫ r₃
+
+The Casimir stabilization fixes the RATIOS `r₂/r₃` and `r₂/R`
+through the spectral zeta values. The OVERALL scale `R` is set by
+`ρ_Λ` — the observed dark energy density — consistent with the
+cosmological constant derivation of §7.21. The hierarchy:
+
+    R ~ 10 μm,    r₂ ~ 10⁻¹⁸ m,    r₃ ~ 10⁻³¹ m
+
+follows from the compactification dynamics:
+
+- **`R` (S¹):** Macroscopic (~10 μm). Frozen at whatever initial
+  condition inflation sets, with `V(R) = −c/R⁴` providing the
+  observed dark energy. The freezing is exact because `Z_{S¹}(−j) = 0`
+  for all `j ≥ 1`.
+- **`r₂` (S²):** Weak scale (~10⁻¹⁸ m). Stabilized by the
+  competition between the attractive one-loop Casimir (`∝ Z_{S²}(−2)/r₂⁴`)
+  and the repulsive two-loop contribution (`∝ [Z_{S²}(0)]²/r₂⁸`).
+- **`r₃` (CP²):** GUT scale (~10⁻³¹ m). Stabilized by the same
+  mechanism. The stronger Casimir attraction on CP² (larger `Z(−2)`
+  per unit volume) pulls `r₃` to a smaller value than `r₂`.
+
+The ordering `r₃ < r₂ < R` is geometrically natural: the curved
+factors collapse under the Casimir, while the flat `S¹` is frozen.
+The hierarchy of physical scales IS the hierarchy of curvatures of
+the internal manifold. The gauge coupling ordering `g₃ > g₂ > g₁`
+at low energies is a direct consequence: smaller radius means
+stronger coupling.
+
+---
+

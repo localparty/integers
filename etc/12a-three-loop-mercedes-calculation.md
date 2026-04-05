@@ -1,3 +1,5 @@
+> **STATUS:** Content absorbed into Paper 1, Appendix K §K.6–K.7b on April 5, 2026. Reference the paper sections for current content.
+
 # Three-Loop Mercedes Diagram: Explicit Calculation
 
 *Computation document for Problem 1 of the closing-the-open-problems plan.*

@@ -1,3 +1,7 @@
+> **STATUS:** Content absorbed into Paper 4, §7.22 and §9.1 on April 5, 2026. Reference the paper sections for current content.
+>
+> **ERRATUM (2026-04-05):** Z_{CP²}(−2) = 313/5040 was incorrect throughout this file; it has been corrected to **103/5040**. See `etc/19-sunset-sum-computation.md` for the verified derivation. All downstream ratios (128/313 -> 128/103, 0.409 -> 1.243, etc.) are superseded.
+
 # Moduli Freezing Analysis: CP² × S² × S¹
 
 > **Date:** April 5, 2026
@@ -422,17 +426,17 @@ Using Bernoulli number values:
 
 Therefore:
 
-    Z_{CP²}(−2) = 1/240 + 0 − 19/252 + 0 + 16/120 + 0
-                 = 1/240 − 19/252 + 2/15
+    Z_{CP²}(−2) = ζ(−7) − 2ζ(−5) + ζ(−3)
+                 = 1/240 + 1/126 + 1/120
 
-Common denominator 5040 (= LCM(240, 252, 15)):
+Common denominator 5040 (= LCM(240, 126, 120)):
 
-    = 21/5040 − 380/5040 + 672/5040
-    = 313/5040
+    = 21/5040 + 40/5040 + 42/5040
+    = 103/5040
 
-**Z_{CP²}(−2) = 313/5040 ≠ 0.**
+**Z_{CP²}(−2) = 103/5040 ≠ 0.**
 
-(313 is prime, so this fraction is already in lowest terms.)
+(103 is prime, so this fraction is already in lowest terms.)
 
 ### 2.4 Summary of CP² Spectral Data
 
@@ -441,7 +445,7 @@ Common denominator 5040 (= LCM(240, 252, 15)):
 | Eigenvalues | n²/R² | l(l+1)/r₂² | k(k+2)/r₃² |
 | Degeneracy | 2 | 2l+1 | (k+1)³ |
 | ζ(0) | −1 | −2/3 | −119/120 |
-| ζ(−2) | 2ζ(−5)+ζ(−2)=−1/126 ... | 8/315 | 313/5040 |
+| ζ(−2) | 2ζ(−5)+ζ(−2)=−1/126 ... | 8/315 | 103/5040 |
 | Structure | n² (perfect square) | l(l+1) (shifted square) | k(k+2) (shifted square) |
 
 Actually, let me recompute the S¹ case for comparison. On S¹:
@@ -530,7 +534,7 @@ With Z_{S²}(−2) = 8/315 ≠ 0, this has a logarithmic modulation.
 
     V_C = −(c_C / r₃⁴) × {Z'_{CP²}(−2) + 2 ln(r₃) Z_{CP²}(−2)}
 
-With Z_{CP²}(−2) = 313/5040 ≠ 0, this also has a logarithmic modulation.
+With Z_{CP²}(−2) = 103/5040 ≠ 0, this also has a logarithmic modulation.
 
 **Sector D: Mixed modes (two or more quantum numbers nonzero).**
 
@@ -951,7 +955,7 @@ Z_{S²}(−j) are nonzero at every negative integer (explicitly: −2/3,
 and nonzero. The potential has a dynamical minimum. r₂ is stabilized.
 
 **CP² (curved):** Eigenvalues k(k+2) are shifted squares. Power sums
-Z_{CP²}(−j) are nonzero (explicitly: −119/120, −31/2520, 313/5040, ...).
+Z_{CP²}(−j) are nonzero (explicitly: −119/120, −31/2520, 103/5040, ...).
 Same conclusion as S². r₃ is stabilized.
 
 ### Open Calculations
@@ -973,7 +977,7 @@ Same conclusion as S². r₃ is stabilized.
 |-------------------|-------|-------------|
 | Z_{S¹}(−2) | 0 | Exact Casimir, frozen dilaton |
 | Z_{S²}(−2) | 8/315 | Nonzero → S² modulus stabilized |
-| Z_{CP²}(−2) | 313/5040 | Nonzero → CP² modulus stabilized |
+| Z_{CP²}(−2) | 103/5040 | Nonzero → CP² modulus stabilized |
 | Z_{S²}(0) | −2/3 | Regularized mode count on S² |
 | Z_{CP²}(0) | −119/120 | Regularized mode count on CP² |
 | Z_{S²}(−1) | −1/15 | Leading vertex correction on S² |

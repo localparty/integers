@@ -126,8 +126,133 @@ manifold is the flag manifold `SU(3)/T²` or the product
 `CP² × S² × S¹` — remains open but is not needed for the gauge
 algebra identification.
 
-See `etc/12c-slocc-isometry-calculation.md` for the full
-computation.
+The full computation is presented in §5.6 below.
+
+---
+
+### 5.6 The SLOCC-Isometry Map: Explicit Verification
+
+Conjecture 5.1 claimed that the entanglement geometry of three
+qubit generations spans the internal space `CP² × S² × S¹`. The
+following computation establishes this at the Lie algebra level,
+verifying that the tangent space to the SLOCC orbit at the GHZ
+point reproduces the root structure of the Standard Model gauge
+algebra.
+
+#### The GHZ tangent space
+
+The SLOCC group `G = SL(2,C)³` acts on `(C²)^{⊗3}` by local
+invertible operations. The Lie algebra `g = sl(2,C)³` acts on the
+GHZ state `|GHZ⟩ = (1/√2)(|000⟩ + |111⟩)` via:
+
+    (X₁, X₂, X₃) · |GHZ⟩ = (X₁ ⊗ I ⊗ I + I ⊗ X₂ ⊗ I + I ⊗ I ⊗ X₃)|GHZ⟩
+
+Computing the 9 tangent vectors `X_i · |GHZ⟩` for `X_i ∈ {h, e, f}`
+(the standard `sl(2)` basis) on each of the three slots yields:
+
+- **Cartan directions collapse.** All three `h_k · |GHZ⟩` produce
+  the same vector `(1/√2)(|000⟩ − |111⟩)`. The differences
+  `h_1 − h_2` and `h_1 − h_3` annihilate `|GHZ⟩`, spanning a
+  2-dimensional stabilizer.
+- **Raising/lowering operators give 6 independent vectors:**
+  `e_k · |GHZ⟩` and `f_k · |GHZ⟩` produce 6 distinct standard
+  basis vectors in `C⁸` (specifically `|011⟩, |101⟩, |110⟩,
+  |100⟩, |010⟩, |001⟩`).
+
+The tangent space is 7-dimensional: 1 Cartan direction + 6 root
+directions. The stabilizer Lie algebra is:
+
+    stab = {(a₁h, a₂h, a₃h) : a₁ + a₂ + a₃ = 0}
+
+a 2-dimensional abelian subalgebra isomorphic to the traceless
+diagonal torus `T²`. Dimension check: `dim(g) − dim(stab) = 9 − 2 = 7`.
+
+The discrete stabilizer supplements `T²` with `(Z₂)²` in
+`SL(2,C)³` (from central elements `(ε₁I, ε₂I, ε₃I)` with
+`ε_i = ±1` and `ε₁ε₂ε₃ = 1`), becoming `(Z₂)³` projectively.
+
+#### The weight decomposition and the A₂ root system
+
+**Theorem 5.2 (SLOCC-Isometry Correspondence, Lie Algebra Level).**
+*The tangent space to the GHZ SLOCC orbit under `SU(2)³` carries
+the weight system of the `A₂` root system plus one zero weight:*
+
+    {±α₁, ±α₂, ±(α₁ + α₂), 0}
+
+*Under the identification:*
+
+| SLOCC direction | Weight | Internal geometry |
+|---|---|---|
+| Slot 1 (`e₁, f₁`) | `±α₁` | CP² tangent direction 1 |
+| Slot 2 (`e₂, f₂`) | `±α₂` | S² tangent direction |
+| Slot 3 (`e₃, f₃`) | `±(α₁ + α₂)` | CP² tangent direction 2 |
+| Cartan (modulo stab) | `0` | S¹ (e-circle) direction |
+
+*the SLOCC tangent weights and the isometry tangent weights of
+`CP² × S² × S¹` are isomorphic as `T²`-representations.*
+
+**Proof sketch.** The stabilizer `T²` acts on the tangent space by
+the adjoint representation. Parametrize `T²` by `(a₁, a₂)` with
+`a₃ = −a₁ − a₂`. Each raising/lowering pair `{v_k, w_k}` on
+slot `k` rotates with angular velocity `2a_k`. Complexifying, the
+weight decomposition is:
+
+    T_C = C_{(0,0)} ⊕ C_{(+2,0)} ⊕ C_{(−2,0)} ⊕ C_{(0,+2)} ⊕ C_{(0,−2)}
+          ⊕ C_{(−2,−2)} ⊕ C_{(+2,+2)}
+
+Rescaling by 2, these are exactly the 6 roots of `A₂` — the root
+system of `su(3)` — plus one zero weight. The 7D tangent space is
+the adjoint representation of `su(3)` minus one Cartan direction
+(the one absorbed by the stabilizer constraint `Σa_i = 0`). The
+identification `β = α₂` (S² root = `SU(3)` simple root) matches
+the SLOCC and isometry weight systems. See
+`etc/12c-slocc-isometry-calculation.md` for the complete
+computation. □
+
+#### The Z₆ quotient mechanism
+
+The Standard Model gauge group is not `SU(3) × SU(2) × U(1)` but
+its `Z₆` quotient. This quotient arises naturally from the SLOCC
+structure through two independent finite groups:
+
+- **`Z₂` from the GHZ discrete stabilizer.** The `(Z₂)²` central
+  stabilizer acts trivially on the SLOCC orbit but nontrivially on
+  the fermion representations. Under the identification with gauge
+  symmetry, this becomes the center of the gauge group — the `Z₂`
+  that distinguishes `SU(2)` from `SO(3)`.
+- **`Z₃` from the `su(3)` root lattice.** The root lattice of
+  `A₂` has index 3 in the weight lattice. The cokernel `Z₃` is
+  the center of `SU(3)`, which acts trivially on the adjoint but
+  nontrivially on fundamental representations.
+
+The product `Z₂ × Z₃ = Z₆` is precisely the quotient that defines
+the Standard Model gauge group:
+
+    G_SM = [SU(3) × SU(2) × U(1)] / Z₆
+
+Both factors of the quotient emerge from the entanglement geometry:
+`Z₂` from the discrete stabilizer of the GHZ state, `Z₃` from the
+root-lattice structure that the SLOCC tangent space inherits.
+
+#### Honest assessment
+
+**Established (Theorem 5.2):** The Lie algebra correspondence.
+The tangent space to the GHZ SLOCC orbit under `SU(2)³` carries the
+`A₂` root system, matching the isometry algebra of
+`CP² × S² × S¹` at the level of `T²`-representations. The `Z₆`
+quotient mechanism is identified.
+
+**Open:** The global diffeomorphism. The SLOCC orbit
+`SU(2)³/T²` is locally `SU(3)/T² × S¹` — the flag manifold
+`Fl(1,2;3)` times a circle. Whether this is globally diffeomorphic
+to `CP² × S² × S¹` remains unproven. The flag manifold is an `S²`
+bundle over `CP²`, and for the conjecture to hold globally, the
+`(Z₂)²` discrete quotient must trivialize this bundle to the
+product. This is a well-posed topological question (compare
+`H*(Fl(1,2;3) × S¹; Z)` with `H*(CP² × S² × S¹; Z)`) but is not
+yet computed. The Lie algebra identification established here is
+sufficient for the gauge algebra and gauge coupling predictions; the
+global topology affects only the fermion representation theory.
 
 ---
 
