@@ -262,6 +262,167 @@ the UV finiteness of the 5D theory near the horizon
 (Paper 1, Appendix S). This dependence is explicitly
 acknowledged.
 
+#### 9.3.2 Closing the Three Gaps
+
+Section 9.3.1 established Properties 1–3 for the free theory.
+Three gaps remain before the derivation is complete:
+
+**Gap 1: Virtual KK modes in loops.**
+**Gap 2: e-conservation in curved spacetime near the horizon.**
+**Gap 3: Q_e well-defined in the black hole background.**
+
+We close each in turn.
+
+---
+
+**Gap 1 closed: Virtual KK modes do not violate Property 2.**
+
+At loop level, massive KK modes (n ≠ 0) propagate as virtual
+particles inside Feynman diagrams contributing to 4D observables.
+These modes carry KK charge n and transform under e-translation
+as:
+
+    Φ_n(x, φ) → e^{inα} Φ_n(x, φ)
+
+Could these virtual modes allow Q_e to connect different sectors
+and violate Property 2?
+
+The answer is no, from charge conservation at every vertex.
+
+In the 5D theory, every interaction vertex conserves e-charge
+(by the U(1) symmetry of the action). At a vertex where KK
+modes n₁, n₂, ... meet, the sum of incoming KK charges equals
+the sum of outgoing KK charges:
+
+    Σ n_in = Σ n_out    (at every vertex)
+
+A loop diagram is a sequence of vertices connected by internal
+propagators. The net KK charge flowing AROUND any closed loop
+is zero — because charge is conserved at each vertex and the
+loop begins and ends at the same point. Therefore:
+
+    Q_e(loop diagram) = 0    for any loop topology
+
+Every loop correction to a 4D observable carries zero net
+e-charge. The loop corrections cannot distinguish states
+differing in e-charge. Property 2 holds in the full interacting
+theory:
+
+    [Q̂_e, Ô₄D]_{interacting} = 0    ✓
+
+This is the 5D analog of the standard result in QED: gauge-
+invariant observables (zero electric charge) remain gauge-
+invariant under renormalization, because charge is conserved
+at every vertex.
+
+---
+
+**Gap 2 closed: e-conservation holds in the black hole background.**
+
+We need to show that ∇_μ J^μ_e = 0 in the curved 5D spacetime
+of a black hole.
+
+The 5D Schwarzschild metric is (from §3.4):
+
+    ds² = f(r) c²dt² − f(r)⁻¹ dr² − r² dΩ² + R₀² dφ²
+
+where f(r) = 1 − r_s/r and φ is the e-coordinate. The key
+observation: **no metric component depends on φ**.
+
+Therefore k^μ = (∂/∂φ)^μ = (0, 0, 0, 0, 1) is an exact
+Killing vector of the full 5D Schwarzschild metric:
+
+    £_k g_{μν} = 0    (Lie derivative vanishes)
+
+By the Killing vector theorem (Wald 1984, §3.1), for any
+Killing vector k^μ of a metric satisfying the Einstein
+equations, the current:
+
+    J^μ_e = T^{μν} k_ν
+
+is conserved:
+
+    ∇_μ J^μ_e = ∇_μ (T^{μν} k_ν)
+               = k_ν ∇_μ T^{μν} + T^{μν} ∇_μ k_ν
+               = 0 + 0 = 0
+
+The first term vanishes by the Einstein equation
+(∇_μ T^{μν} = 0). The second term vanishes because k^μ
+is a Killing vector (∇_(μ k_ν) = 0 by Killing's equation).
+
+The e-conservation law ∇_μ J^μ_e = 0 holds exactly in the
+curved 5D black hole spacetime — including at and near the
+horizon — because ∂/∂φ is an exact Killing vector of the
+metric.    ✓
+
+**This is a derived result, not an assumption.** The key
+fact is purely geometric: the e-circle enters the metric
+only as a direct product factor R₀² dφ², so ∂/∂φ is
+always a Killing vector regardless of the 4D geometry.
+This remains true for any 5D metric of the form:
+
+    ds²₅D = g_{μν}(x) dx^μ dx^ν + R(x)² dφ²
+
+as long as R(x) does not depend on φ — which is guaranteed
+by the Z₂ orbifold symmetry of the e-circle (Paper 1, §2.1).
+
+---
+
+**Gap 3 closed: Q_e is well-defined in the black hole background.**
+
+The conserved charge associated with the Killing vector
+k^μ = (∂/∂φ)^μ is:
+
+    Q_e = ∫_Σ J^μ_e dΣ_μ = ∫_Σ T^{μν} k_ν dΣ_μ
+
+where Σ is any spacelike hypersurface. By the divergence
+theorem in curved spacetime and the conservation
+∇_μ J^μ_e = 0 (Gap 2), Q_e is independent of the choice
+of Σ. It is a conserved, well-defined global charge.
+
+Near the horizon, does Q_e remain well-defined? The horizon
+of a Schwarzschild black hole is a Killing horizon of the
+timelike Killing vector ∂/∂t — it is NOT a Killing horizon
+of ∂/∂φ. The e-Killing vector ∂/∂φ is spacelike everywhere
+(including at the horizon), and its associated charge Q_e
+has no pathology at the horizon.
+
+More precisely: the surface gravity κ is defined with respect
+to the horizon-generating Killing vector χ^μ = (∂/∂t)^μ
+(in the static case). The e-Killing vector k^μ = (∂/∂φ)^μ
+is orthogonal to χ^μ everywhere and has constant norm
+|k|² = R₀² > 0 throughout the spacetime, including at the
+horizon. There is no enhancement or degeneracy of k^μ at
+the horizon.
+
+Therefore Q_e is a globally well-defined, conserved, finite
+charge in the black hole background — before, during, and
+after Hawking evaporation.    ✓
+
+---
+
+**Summary: All three gaps are closed.**
+
+| Gap | Claim | Closed by |
+|---|---|---|
+| 1 | Virtual KK loops preserve [Q_e, O_4D] = 0 | Charge conservation at every vertex |
+| 2 | e-conservation holds near the horizon | ∂/∂φ is an exact Killing vector of the 5D Schwarzschild metric |
+| 3 | Q_e well-defined in black hole background | ∂/∂φ is spacelike everywhere; no Killing horizon pathology |
+
+With all three gaps closed, the derivation of §9.3.1 is
+complete in the full interacting 5D theory in the black hole
+curved spacetime background.
+
+**Theorem 9.1 is now established under one remaining
+assumption:** that the e-conservation law at the horizon
+INTERACTION VERTEX (§4.3) — where the infalling quantum
+is absorbed into the horizon — holds with the same vertex
+factor as in flat space. This is a statement about the
+strong-field, Planck-scale physics at the horizon and
+requires the UV finiteness of the 5D theory (Paper 1,
+Appendix S) to be applicable there. This dependence is
+explicitly acknowledged as the one remaining assumption.
+
 ### 9.4 The Infalling Observer
 
 The infalling observer crosses a smooth horizon. The e-imprint on
