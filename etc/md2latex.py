@@ -1531,51 +1531,51 @@ PAPER1_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbib
 """
 
 PAPER1_SECTIONS = [
-    ("paper-section-1-introduction.md", "Introduction"),
-    ("paper-section-2-framework.md", "The Five-Dimensional Framework"),
-    ("paper-section-3-five-phenomena.md", "Five Quantum Phenomena Reinterpreted"),
+    ("01-introduction.md", "Introduction"),
+    ("02-framework.md", "The Five-Dimensional Framework"),
+    ("03-five-phenomena.md", "Five Quantum Phenomena Reinterpreted"),
 ]
 
 PAPER1_SECTION4 = [
-    ("paper-section-4-1-aharonov-bohm.md", "The Aharonov--Bohm Effect"),
-    ("paper-section-4-2-spin-statistics.md", "The Spin--Statistics Theorem"),
+    ("04-aharonov-bohm.md", "The Aharonov--Bohm Effect"),
+    ("05-spin-statistics.md", "The Spin--Statistics Theorem"),
 ]
 
 PAPER1_SECTIONS_AFTER4 = [
-    ("paper-section-5-gravity-bridge.md", "Toward Quantum Gravity: The E-Space Bridge"),
-    ("paper-section-5x-quantization-bridge.md", "The Quantization Bridge"),
-    ("paper-section-6-connections.md", "Connections to Modern Physics"),
-    ("paper-section-7-philosophy.md", "Philosophical Resolution"),
-    ("paper-section-8-conclusion.md", "Conclusion"),
+    ("06-gravity-bridge.md", "Toward Quantum Gravity: The E-Space Bridge"),
+    ("07-quantization-bridge.md", "The Quantization Bridge"),
+    ("08-connections.md", "Connections to Modern Physics"),
+    ("09-philosophy.md", "Philosophical Resolution"),
+    ("10-conclusion.md", "Conclusion"),
 ]
 
 PAPER1_APPENDICES = [
-    ("appendix-A-quantum-dictionary.md", "Quantum Dictionary"),
-    ("appendix-B-spin-statistics-derivation.md", "Spin--Statistics Derivation"),
-    ("appendix-C-quantitative-demonstrations.md", "Quantitative Demonstrations"),
-    ("appendix-D-5d-einstein-equations.md", "5D Einstein Equations"),
-    ("appendix-E-quantum-consistency.md", "Quantum Consistency"),
-    ("appendix-F-one-loop-computation.md", r"One-Loop Effective Action for 5D Gravity on $M^4 \times S^1$"),
-    ("appendix-G-two-loop-computation.md", "Two-Loop Computation"),
-    ("appendix-H-testable-predictions.md", "Testable Predictions"),
-    ("appendix-I-cassini-fifth-force.md", "Cassini Fifth-Force Constraint"),
-    ("appendix-J-non-perturbative-stability.md", "Non-Perturbative Stability"),
-    ("appendix-K-higher-loop-epstein.md", "Higher-Loop Epstein Zeta Analysis"),
-    ("appendix-L-non-abelian-extension.md", "Non-Abelian Extension"),
-    ("appendix-M-hydrogen-atom.md", "Hydrogen Atom"),
-    ("appendix-N-gravitational-waves.md", "Gravitational Waves"),
-    ("appendix-O-black-hole-entropy.md", "Black Hole Entropy"),
-    ("appendix-P-cpt-theorem.md", "CPT Theorem"),
-    ("appendix-Q-frw-cosmology.md", "FRW Cosmology"),
-    ("appendix-R-running-couplings.md", "Running Couplings"),
-    ("appendix-S-finiteness-theorem.md", "Perturbative Finiteness Under Zeta Regularization"),
-    ("appendix-T-rigorous-verification.md", "Rigorous Verification"),
-    ("appendix-U-goroff-sagnotti-verification.md", "Goroff--Sagnotti Verification"),
-    ("appendix-V-vertex-computation.md", "Vertex Computation"),
-    ("appendix-W-orbifold-dark-sector.md", "Orbifold Dark Sector"),
-    ("appendix-X-strong-cp.md", "Strong CP"),
-    ("appendix-Y-hubble-tension.md", "Hubble Tension"),
-    ("appendix-Z-neutrino-mass-ordering.md", "Neutrino Mass Ordering"),
+    ("12-appendix-a-quantum-dictionary.md", "Quantum Dictionary"),
+    ("13-appendix-b-spin-statistics-derivation.md", "Spin--Statistics Derivation"),
+    ("14-appendix-c-quantitative-demonstrations.md", "Quantitative Demonstrations"),
+    ("15-appendix-d-5d-einstein-equations.md", "5D Einstein Equations"),
+    ("16-appendix-e-quantum-consistency.md", "Quantum Consistency"),
+    ("17-appendix-f-one-loop-computation.md", r"One-Loop Effective Action for 5D Gravity on $M^4 \times S^1$"),
+    ("18-appendix-g-two-loop-computation.md", "Two-Loop Computation"),
+    ("19-appendix-h-testable-predictions.md", "Testable Predictions"),
+    ("20-appendix-i-cassini-fifth-force.md", "Cassini Fifth-Force Constraint"),
+    ("21-appendix-j-non-perturbative-stability.md", "Non-Perturbative Stability"),
+    ("22-appendix-k-higher-loop-epstein.md", "Higher-Loop Epstein Zeta Analysis"),
+    ("23-appendix-l-non-abelian-extension.md", "Non-Abelian Extension"),
+    ("24-appendix-m-hydrogen-atom.md", "Hydrogen Atom"),
+    ("25-appendix-n-gravitational-waves.md", "Gravitational Waves"),
+    ("26-appendix-o-black-hole-entropy.md", "Black Hole Entropy"),
+    ("27-appendix-p-cpt-theorem.md", "CPT Theorem"),
+    ("28-appendix-q-frw-cosmology.md", "FRW Cosmology"),
+    ("29-appendix-r-running-couplings.md", "Running Couplings"),
+    ("30-appendix-s-finiteness-theorem.md", "Perturbative Finiteness Under Zeta Regularization"),
+    ("31-appendix-t-rigorous-verification.md", "Rigorous Verification"),
+    ("32-appendix-u-goroff-sagnotti-verification.md", "Goroff--Sagnotti Verification"),
+    ("33-appendix-v-vertex-computation.md", "Vertex Computation"),
+    ("34-appendix-w-orbifold-dark-sector.md", "Orbifold Dark Sector"),
+    ("35-appendix-x-strong-cp.md", "Strong CP"),
+    ("36-appendix-y-hubble-tension.md", "Hubble Tension"),
+    ("37-appendix-z-neutrino-mass-ordering.md", "Neutrino Mass Ordering"),
 ]
 
 
@@ -1596,7 +1596,7 @@ def build_paper1():
     parts.append("\\date{\\today}\n")
 
     # Abstract
-    abstract_text = process_markdown_file(paper_dir / "abstract.md")
+    abstract_text = process_markdown_file(paper_dir / "00-abstract.md")
     parts.append("\\begin{abstract}")
     parts.append(abstract_text)
     parts.append("\\end{abstract}\n")
@@ -1643,7 +1643,7 @@ def build_paper1():
     # Preserve existing short abstract if present (may be hand-edited)
     short_abs = out_dir / "abstract-short.txt"
     if not short_abs.exists():
-        generate_short_abstract(paper_dir / "abstract.md", short_abs)
+        generate_short_abstract(paper_dir / "00-abstract.md", short_abs)
 
     line_count = tex_content.count("\n") + 1
     print(f"Paper 1: wrote {out_dir / 'main.tex'} ({line_count} lines)")
@@ -1689,15 +1689,15 @@ PAPER2_PREAMBLE = r"""\documentclass[aps,prd,preprint,superscriptaddress,longbib
 """
 
 PAPER2_APPENDICES = [
-    ("appendix-A-age-computation.md", "Age of the Universe"),
-    ("appendix-B-expansion-history.md", r"Expansion History $H(z)$"),
-    ("appendix-C-s8-tension.md", r"$S_8$ Tension Resolution"),
-    ("appendix-D-sound-horizon.md", "Sound Horizon"),
-    ("appendix-E-mirror-baryogenesis.md", "Mirror Baryogenesis and Cosmic Coincidence"),
-    ("appendix-F-thawing-dilaton.md", "Thawing Dilaton"),
-    ("appendix-G-cmb-angular-scale.md", "CMB Angular Scale"),
-    ("appendix-H-jwst-galaxies.md", "JWST Early Galaxies"),
-    ("appendix-I-decisive-tests.md", "Decisive Tests"),
+    ("05-appendix-a-age-computation.md", "Age of the Universe"),
+    ("06-appendix-b-expansion-history.md", r"Expansion History $H(z)$"),
+    ("07-appendix-c-s8-tension.md", r"$S_8$ Tension Resolution"),
+    ("08-appendix-d-sound-horizon.md", "Sound Horizon"),
+    ("09-appendix-e-mirror-baryogenesis.md", "Mirror Baryogenesis and Cosmic Coincidence"),
+    ("10-appendix-f-thawing-dilaton.md", "Thawing Dilaton"),
+    ("11-appendix-g-cmb-angular-scale.md", "CMB Angular Scale"),
+    ("12-appendix-h-jwst-galaxies.md", "JWST Early Galaxies"),
+    ("13-appendix-i-decisive-tests.md", "Decisive Tests"),
 ]
 
 PAPER2_FIGURES = {
@@ -1782,7 +1782,7 @@ def build_paper2():
     parts.append("\\date{\\today}\n")
 
     # Abstract — skip both # and ## headers in abstract.md
-    abstract_text = process_markdown_file(paper_dir / "abstract.md", skip_top_header=True)
+    abstract_text = process_markdown_file(paper_dir / "00-abstract.md", skip_top_header=True)
     # Also strip any remaining \subsection from inside the abstract
     abstract_text = re.sub(r'\\subsection\{[^}]*\}\s*', '', abstract_text)
     # Remove any \section that crept in
@@ -1794,11 +1794,11 @@ def build_paper2():
 
     # Section 1: Introduction
     parts.append("\\section{Introduction}")
-    parts.append(process_markdown_file(paper_dir / "paper2-section-1-introduction.md"))
+    parts.append(process_markdown_file(paper_dir / "01-introduction.md"))
 
     # Sections 2-7: combined file — use header_offset=-1 to promote ## to \section
     parts.append(process_markdown_file(
-        paper_dir / "paper2-sections-2-to-7.md",
+        paper_dir / "02-sections-2-to-7.md",
         header_offset=-1
     ))
 
@@ -1811,7 +1811,7 @@ def build_paper2():
 
     # Section 8: Conclusion
     parts.append("\\section{Conclusion}")
-    parts.append(process_markdown_file(paper_dir / "paper2-section-8-conclusion.md"))
+    parts.append(process_markdown_file(paper_dir / "03-conclusion.md"))
 
     # Appendices
     parts.append("\n\\appendix\n")
