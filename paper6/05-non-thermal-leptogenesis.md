@@ -108,7 +108,8 @@ pathway through dilaton decay.
 
 The two pathways give the same answer because:
 - Both use the same CP phases (from the Z₃ geometry)
-- Both use the same washout dynamics (K ~ 460)
+- Both use the same washout dynamics (K under revision with
+  corrected seesaw parameters — see `etc/06-appendix-z-issues.md`)
 - The `1/ξ²` law applies to the brane asymmetry RATIO regardless
   of whether production is thermal or non-thermal
 

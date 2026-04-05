@@ -100,8 +100,11 @@ which is non-perturbative.
 N_eff — all depend on ξ as an input, not on how ξ is derived.
 The observational fits still hold.
 
-**Status:** Open. The 1/ξ² mechanism is real but the quantitative
-K ~ 460 derivation needs to be corrected or replaced.
+**Status:** RESOLVED. K depends on m_ν, not M_R (the M_R cancels
+in the seesaw × Hubble combination). K ≈ 5 for m_ν = 50 meV.
+The 1/ξ² law holds at K = 5 because κ(K) ∝ K^{-1.16} gives
+κ(Kξ²)/κ(K) ≈ ξ^{-2.3} ≈ 1/ξ². The old K = 460 was wrong but
+the ξ ≈ 0.43 answer was right. See `etc/07-k-resolution.md`.
 
 ---
 

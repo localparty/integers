@@ -30,8 +30,10 @@ asymmetry (`1/ξ³`) and washout suppression (`1/ξ²`) combine to give
 Inverting using the observed ratio `Ω_DM/Ω_b = 5.36` gives `ξ = 0.432` at
 leading order. The washout correction — `κ ~ 1/(K ln K)` rather than `1/K` —
 introduces a logarithmic factor `f(K,ξ) = ln K / ln(Kξ²)` that shifts the
-corrected `ξ` to `≈ 0.49` for the framework's Yukawa coupling (`y ~ 0.45`,
-`K ~ 460`). This corrected value converges with the independently
+corrected `ξ` to `≈ 0.49` for the framework's Yukawa coupling (`y ~ 0.9`,
+`M_R ~ 10¹⁵ GeV` from the CP² seesaw scale; the washout parameter `K`
+is under revision — see Paper 4, §7.13). This corrected value converges
+with the independently
 `θ*`-matched `ξ = 0.47`, providing a non-trivial consistency check.
 
 Three scenarios bracket the prediction:

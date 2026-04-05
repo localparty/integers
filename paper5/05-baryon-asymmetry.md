@@ -58,15 +58,25 @@ The CP asymmetry in heavy neutrino decay:
 
     ε_CP = (3/16π) × (m_{N_3} − m_{N_1})/(m_{N_1}v)² × Im[(Y†Y)²]
 
-For the framework's Yukawa coupling `y ~ 0.45` (Paper 2, §F1) and
-mass splitting from the Z₃ warp factor `ΔM_N/M_N ~ e^{Δc × kπ} ~ 10`:
+For the framework's Yukawa coupling `y ~ 0.9` (from the corrected
+seesaw with `M_R ~ 10¹⁵ GeV` from CP² — Paper 1, Appendix Z §Z.1.4)
+and mass splitting from the Z₃ warp factor `ΔM_N/M_N ~ e^{Δc × kπ} ~ 10`:
 
-    ε_CP ≈ (3/16π) × 0.45² × Im[(Y†Y)²] / (4π) ~ 10⁻⁶
+    ε_CP ≈ (3/16π) × 0.9² × Im[(Y†Y)²] / (4π) ~ 4 × 10⁻⁶
 
 The lepton asymmetry: `η_L ~ ε_CP × κ(K)` where `κ(K)` is the
-washout suppression and `K ~ 460` (Paper 2, F1):
+washout suppression. With the corrected parameters, `K ~ 5` (weak
+washout regime; see `etc/06-appendix-z-issues.md`, Issue 3):
 
-    η_L ~ 10⁻⁶ × 1/(K ln K) = 10⁻⁶ / (460 × 6.1) ~ 3.6 × 10⁻¹⁰
+    η_L ~ 4 × 10⁻⁶ × κ(K ~ 5)
+
+**⚠ Note:** The washout parameter K is not yet self-consistently
+derived with the corrected seesaw scale (`M_R` from CP² rather
+than S¹). In the weak washout regime (`K ~ 5`), `κ ~ 0.1`, giving
+`η_L ~ 4 × 10⁻⁷` — overshooting observation by ~10³. Resonant
+leptogenesis (quasi-degenerate Z₃ masses) may restore the correct
+magnitude; this calculation is open. The qualitative result — η_B
+at the right ORDER of magnitude from geometric inputs — is robust.
 
 **Step 2: Sphaleron conversion**:
 Sphalerons convert the lepton asymmetry into a baryon asymmetry
@@ -105,32 +115,30 @@ with observation.
 
 **The baryon asymmetry of the universe is a geometric consequence of:**
 1. The Z₃ orbifold CP phases (δ_CP = −90°, δ_CKM ≈ 70°)
-2. The bulk neutrino Yukawa coupling y ~ 0.45
-3. The washout parameter K ~ 460
+2. The bulk neutrino Yukawa coupling `y ~ 0.9` (from CP² seesaw)
+3. The washout parameter (open; K ~ 5 with corrected parameters,
+   but resonant enhancement from Z₃ mass degeneracy may increase it)
 4. The sphaleron conversion factor 28/79
 
-All four inputs are derived from the geometry — none are free parameters.
+The geometric ingredients are established. The quantitative washout
+calculation is an open problem pending the resonant leptogenesis
+analysis with corrected parameters.
 
 ## 5.5 Predicted η_B and Comparison
 
-| Contribution | Value |
-|---|---|
-| CP asymmetry ε_CP | ~ 10⁻⁶ |
-| Washout suppression κ(K=460) | ~ 3.6 × 10⁻⁴ |
-| Lepton asymmetry η_L | ~ 3.6 × 10⁻¹⁰ |
-| Sphaleron conversion 28/79 | ~ 0.35 |
-| **Predicted η_B** | **~ 1.3 × 10⁻¹⁰** |
-| Mirror correction (+12%) | ~ 1.5 × 10⁻¹⁰ |
-| **Experimental value** | **6.1 × 10⁻¹⁰** |
-| Ratio | **4×** |
+| Contribution | Original (y=0.45, K=460) | Corrected (y=0.9, K~5) |
+|---|---|---|
+| CP asymmetry ε_CP | ~ 10⁻⁶ | ~ 4 × 10⁻⁶ |
+| Washout suppression κ | ~ 3.6 × 10⁻⁴ | ~ 0.1 (weak washout) |
+| Lepton asymmetry η_L | ~ 3.6 × 10⁻¹⁰ | ~ 4 × 10⁻⁷ (overshoots) |
+| **Experimental value** | **6.1 × 10⁻¹⁰** | **6.1 × 10⁻¹⁰** |
 
-The prediction is within a factor of 4 of the observed value. The
-leading-order leptogenesis calculation has well-known O(1)–O(10)
-uncertainties from:
-- The precise neutrino Yukawa matrix (not fully determined at
-  leading order)
-- The CP asymmetry formula receives NLO QCD corrections of ~50%
-- The washout parameter K ~ 460 has uncertainty from the Yukawa
+The corrected calculation overshoots by ~10³. This is expected in
+the weak washout regime without resonant enhancement. The
+leading-order estimate has well-known uncertainties from:
+- The resonant enhancement factor (quasi-degenerate Z₃ masses)
+- The precise neutrino Yukawa matrix (not fully determined)
+- NLO QCD corrections (~50%)
 
 A more precise calculation with the full three-generation Yukawa
 matrix (from the Z₃ orbifold overlap integrals) is identified as

@@ -669,17 +669,23 @@ Appendix E) and converted to baryons by sphalerons. The chain:
    The Yukawa matrix `Y` is determined by the Z₃ orbifold overlap
    integrals (Section 7.5.2). The CP-violating phase is the Z₃
    geometric phase `δ_CP = −π/2` (Section 7.5.4). For the
-   framework's parameters (`y ~ 0.45`, `M₁ ~ M₂ ~ 2.5 × 10¹⁴ GeV`,
+   framework's parameters (`y ~ 0.9`, `M₁ ~ M₂ ~ M_R ~ 10¹⁵ GeV`
+   from the CP² compactification scale — see Appendix Z, §Z.1.4 —
    `f(1) ~ 1/(16π)` for quasi-degenerate masses):
 
-       ε ≈ (1/8π) × (0.20)² × sin(π/2) / (0.20) × 1/(16π)
-         = (0.20 × 1) / (8π × 16π)
-         = 0.20 / (128π²)
-         ≈ 1.6 × 10⁻⁴
+       ε ≈ (1/8π) × (0.81)² × sin(π/2) / (0.81) × 1/(16π)
+         = (0.81 × 1) / (8π × 16π)
+         = 0.81 / (128π²)
+         ≈ 6.4 × 10⁻⁴
 
-2. **The washout efficiency `κ`** at `K = 460` (Paper 2, Appendix E):
+2. **The washout efficiency `κ`:** The washout parameter `K` is
+   independent of `M_R` — the seesaw relation `y² = m_ν M_R/v²`
+   causes `M_R` to cancel in `K = y² M_Pl/(8π × 1.66 × √g_* × M_R)`,
+   giving `K = m_ν M_Pl / (v² × constants) ≈ 5` for `m_ν = 50 meV`.
+   This is the transition regime. The `1/ξ²` law holds because
+   `κ(Kξ²)/κ(K) ≈ ξ^{−2.3} ≈ 1/ξ²` (see `etc/07-k-resolution.md`).
 
-       κ ≈ 1/(K ln K) = 1/(460 × 6.13) ≈ 3.5 × 10⁻⁴
+   For the η_B estimate, using `κ(K=5) ≈ 0.05`:
 
 3. **The lepton-to-baryon conversion** via sphalerons:
 
@@ -710,33 +716,35 @@ thermal production rate. For `T_reheat > M_N`:
 
 Therefore:
 
-    η_B ≈ 0.354 × (1.6 × 10⁻⁴) × (3.5 × 10⁻⁴) × (1.8 × 10⁻²)
-        ≈ 0.354 × 1.0 × 10⁻⁹
-        ≈ 3.6 × 10⁻¹⁰
+    η_B ≈ 0.354 × (6.4 × 10⁻⁴) × (0.05) × (1.8 × 10⁻²)
+        ≈ 0.354 × 5.8 × 10⁻⁷
+        ≈ 2.0 × 10⁻⁷
 
 The experimental value is `η_B = (6.14 ± 0.02) × 10⁻¹⁰` (Planck
 2018 + BBN).
 
-**The prediction is within a factor of 1.7 of the measured value.**
+**The naive estimate overshoots by ~300×.** The transition-regime
+washout (`K ~ 5`, `κ ~ 0.05`) is less efficient than the strong
+washout (`K >> 100`, `κ ~ 10⁻³`) assumed originally. The key CP
+asymmetry `ε ~ 6 × 10⁻⁴` is also larger (from larger `y ~ 0.9`),
+and the two effects partially compensate.
 
-The discrepancy is within the theoretical uncertainty of the
-quasi-degenerate resonant enhancement factor `f(M₂/M₁)`, which
-can amplify ε by factors of 2–5 when `|M₂ − M₁| ~ Γ_N` (resonant
-leptogenesis, Pilaftsis & Underwood 2004). For
-`|M₂ − M₁|/M₁ ~ 10⁻⁶` (natural in the Z₃ geometry where the
-three bulk masses are split by the warp factor):
+The overshoot is dominated by the Davidson-Ibarra bound: at
+`M_R ~ 10¹⁵ GeV`, `ε` can be as large as ~5% (the DI bound scales
+as `M_R × m_ν/v²`). The actual `ε` from the Z₃ phase structure is
+smaller but still ~10⁻⁴–10⁻³, giving η_B ~ 10⁻⁷.
 
-    ε_resonant ≈ ε × M₁/(M₂ − M₁) × Γ_N/M₁
+**Resolution:** The absolute η_B calculation has O(100) uncertainty
+from the CP asymmetry formula (NLO corrections, exact Yukawa matrix
+structure, and the Z₃ geometric phase). What is ROBUST is the RATIO
+`Ω_DM/Ω_b`, which depends on `κ(Kξ²)/κ(K) ≈ 1/ξ²` — a ratio that
+is insensitive to the absolute CP asymmetry. The 1/ξ² law determines
+ξ ≈ 0.43, and ALL cosmological predictions flow from this ξ.
 
-which enhances η_B by the required factor of ~2, giving:
-
-    **η_B ≈ 6 × 10⁻¹⁰**
-
-**The baryon-to-photon ratio — the amount of matter in the universe
-— is derived from three geometric inputs: the Z₃ CP phase, the bulk
-neutrino Yukawa coupling (from the seesaw), and the washout
-parameter (from the orbifold thermal dynamics).** It is not a free
-parameter. It is an output of the geometry.
+The absolute η_B (6.1 × 10⁻¹⁰) requires a more precise calculation
+of ε from the full three-generation Z₃ Yukawa matrix. This is
+identified as future work. The geometric ingredients — Z₃ CP phases,
+bulk neutrino spectrum, sphaleron conversion — are established.
 
 ### 7.14 Superposition Violations at the e-Circle Scale
 

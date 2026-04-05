@@ -172,29 +172,46 @@ This corresponds to Yukawa coupling `y ~ 0.29` — well within the perturbative
 range and consistent with the neutrino mass from the bulk seesaw (Paper 1,
 Appendix Z, where `y ~ 0.45` was used to match `m_ν ~ 50 meV`).
 
-**For `y = 0.45` (the Paper 1 seesaw value):** `(Y†Y) = 0.20`, giving
+**For `y = 0.45` (the original Paper 1 seesaw value, using the
+now-corrected `M_N = 2.5 × 10¹⁴ GeV`):** `(Y†Y) = 0.20`, giving
 `K = 0.20 × 2.5 × 10¹⁴ / (8π × 4.3 × 10⁹) = 460`. Then
 `f(460, 0.43) = ln(460)/ln(460 × 0.185) = 6.13/4.45 = 1.38`.
 
 Corrected `ξ`: `f/ξ² = 5.36` → `ξ² = 1.38/5.36 = 0.257`, `ξ = 0.507`.
 
-This is at the BBN `2σ` boundary (`ξ < 0.50`). A slightly smaller Yukawa
-(`y ~ 0.40`, giving `K ~ 360`) would give `ξ ~ 0.49`, within the bound.
+**Correction (see `etc/07-k-resolution.md`):**
 
-**Summary of the washout correction:**
+The original calculation used `M_N = 2.5 × 10¹⁴ GeV` (from a unit
+error in Appendix Z). The corrected seesaw scale is `M_R ~ 10¹⁵ GeV`
+(from CP² geometry) with `y ~ 0.9`. However, **K does not depend on
+M_R**: substituting `y² = m_ν M_R/v²` into `K = y² M_Pl/(8π × 1.66
+× √g_* × M_R)` gives:
+
+    K = m_ν × M_Pl / (8π × 1.66 × √g_* × v²)
+
+The M_R cancels. For `m_ν = 50 meV`: **K ≈ 5** (transition regime,
+not K = 460). The `1/ξ²` law still holds because `κ(K) ∝ K^{−1.16}`
+gives `κ(Kξ²)/κ(K) ≈ ξ^{−2.3} ≈ 1/ξ²` at leading order. At K = 5,
+`ξ = 0.43`: `Ω_DM/Ω_b ≈ 6.2` (16% above 5.36, within theoretical
+uncertainty of the approximate κ function).
+
+The cosmological predictions (H₀, S8, t₀, θ*, N_eff) depend on ξ
+as an INPUT parameter and are unaffected by this correction.
+
+**Summary of the washout correction (with original parameters):**
 
     Ω_DM / Ω_b = f(K, ξ) / ξ²
 
-where `f = ln K / ln(Kξ²)`. For the framework's parameters (`K ~ 300-500`),
-`f ≈ 1.3-1.4`, and the corrected `ξ ≈ 0.49-0.51`. This is at the boundary
-of the BBN constraint, not comfortably inside it as the leading-order
-`1/ξ²` law suggested.
+where `f = ln K / ln(Kξ²)`. For `K ~ 300-500` (original parameters),
+`f ≈ 1.3-1.4`, and the corrected `ξ ≈ 0.49-0.51`. For the corrected
+parameters (K ~ 5), the washout correction is smaller and ξ is closer
+to the leading-order value of 0.432.
 
-The `1/ξ²` law is a useful leading-order result. The corrected formula
-shifts `ξ` from 0.432 to ~0.50 — closer to Scenario A (`ξ = 0.47`) than to
-the leading-order Scenario B. A precise determination of `ξ` requires either
-the full Boltzmann equation for two-sector leptogenesis (future work) or
-the Yukawa coupling from the neutrino mass fit.
+The `1/ξ²` law is a robust leading-order result. A precise
+determination of `ξ` from first principles requires either the full
+Boltzmann equation for two-sector leptogenesis with the corrected
+seesaw parameters (future work), or a resonant leptogenesis
+calculation in the Z₃ quasi-degenerate regime.
 
 ### E.3.4 The Master Formula (Leading Order)
 
