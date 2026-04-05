@@ -50,22 +50,73 @@ Five independent arguments, same number. Either this is a numerical
 coincidence, or it is telling us something structural about the
 geometry of physical law.
 
-### 2.3 The e-Circle as M-Theory Circle
+### 2.3 The e-Circle as the M-Theory Circle
 
-If the identification holds, the e-circle is the M-theory circle —
-the 11th dimension whose radius controls the string coupling
-(`g_s = (R/l_s)^{3/2}`). This gives the e-circle framework a
-specific relationship to M-theory:
+The e-circle `S¹` of the framework and the M-theory circle `S¹_{M}`
+are identified as the same geometric object. This identification
+is not a conjecture — it is implicit in every calculation in the
+framework that uses 11D SUGRA field content. We state it explicitly
+here and distinguish what is established from what is conjectured.
 
-- M-theory has the 11th dimension but does not assign it a direct
-  quantum-mechanical role
-- The e-circle framework assigns it a precise role: quantum phase
-- The e-dimension gives M-theory's 11th dimension a physical
-  interpretation it currently lacks
+**What is established:**
 
-In return, M-theory provides the non-abelian gauge structure that
-the e-circle alone cannot produce. The relationship is symbiotic,
-not competitive.
+The 11D SUGRA field content — graviton (44 d.o.f.) + 3-form
+`C₃` (84 d.o.f.) + gravitino (128 d.o.f.) — is used in §7.21
+to compute `ΔN = 8` and derive `ρ_Λ`. That calculation assumes:
+1. The framework embeds in 11D SUGRA
+2. The Scherk-Schwarz breaking operates on `S¹` with the 11D
+   spin structure (bosons periodic, fermions anti-periodic)
+3. The compact dimension is the `S¹/Z₂` orbifold of Horava-Witten
+   M-theory
+
+All three assumptions are exactly the defining properties of
+M-theory compactified on `S¹/Z₂`. The CC calculation is therefore
+already a calculation IN M-theory, whether or not we call it that.
+The identification `S¹_e = S¹_M` is used implicitly throughout.
+
+**The specific relationship:**
+
+In M-theory, the string coupling is:
+
+    g_s = (R_{11}/l_s)^{3/2}
+
+where `R_{11}` is the 11th dimension radius and `l_s` is the string
+length. In the framework, `R` is fixed by `ρ_Λ = ΔN × 3ζ(5)/(64π⁶R⁴)`
+to be `R ≈ 12.4 μm`. Therefore the string coupling at the dark
+energy scale is:
+
+    g_s = (R_{11}/l_s)^{3/2} = (12.4 μm / l_s)^{3/2}
+
+With `l_s ~ l_P = 1.6 × 10⁻³⁵ m`: `g_s = (7.8 × 10³⁰)^{3/2} ≫ 1`.
+
+This means the e-circle radius is in the STRONGLY COUPLED regime
+of string theory — which is precisely why M-theory (not perturbative
+string theory) is the correct description. The e-circle framework
+naturally lives in the strongly-coupled limit.
+
+**What the identification adds:**
+
+M-theory has the 11th dimension but does not assign it a direct
+quantum-mechanical role — it is a geometric modulus.
+
+The e-circle framework assigns it a precise physical interpretation:
+the e-coordinate `φ` is the quantum phase of particles. The
+wave function `Ψ(x, φ)` is the literal shape of a particle in
+5D. Measurement is e-space sampling. This is new — M-theory
+does not have this interpretation of the 11th dimension.
+
+In return, M-theory provides the non-abelian gauge structure
+(from `CP² × S²`) that the e-circle alone cannot produce, and
+the 11D SUGRA field content that makes the CC calculation work.
+
+**What remains conjectured:**
+
+Whether the FULL M-theory — including its non-perturbative
+dynamics, M-branes, and quantum gravity regime — reduces to
+the e-circle framework in the appropriate limit. The framework
+uses the perturbative 11D SUGRA sector; whether the complete
+non-perturbative M-theory is consistent with the e-circle
+physics is an open problem.
 
 ---
 
