@@ -338,6 +338,61 @@ The CC at the inflection point:
 on S¹/Z₂ (the framework already has the 2-loop computation in
 Appendix G!). Then R_infl and ρ_Λ are BOTH predicted.
 
+### The c₂ = 0 Discovery (computed April 5)
+
+**Extracting c₂ from Appendix G reveals c₂ = 0.**
+
+The same Epstein zeta zeros that kill the UV divergences (the
+complementary trivial zeros of ζ(s) and L(s, χ₋₃)) also kill
+ALL perturbative corrections to the Casimir:
+
+    At 1 loop: V^(1) = −ΔN c₁/R⁴  (nonzero — the Casimir)
+    At 2 loops: V^(2) = 0  (E₂(−j; Q₀) = 0 for all j ≥ 1)
+    At L loops: V^(L) = 0  (S₀^L = 0 and Epstein zeros)
+
+**V(R) = −c₁/R⁴ is the EXACT perturbative potential.**
+
+**PERTURBATIVE FINITENESS ↔ NO PERTURBATIVE STABILIZATION**
+
+The von Gersdorff-Hebecker 2-loop stabilization mechanism requires
+c₂ ≠ 0. In gauge theories (their context), c₂ ≠ 0 because the
+gauge KK sums don't have the same Epstein zeta structure. In our
+gravitational framework, the Eisenstein lattice Q₀ = n² + nm + m²
+produces complementary zeros that kill c₂.
+
+**The inflection-point scenario (R = 6.7 μm) is ruled out by
+the perturbative calculation.** No GW-like term exists at any
+perturbative order. The inflection point requires non-perturbative
+physics.
+
+### The w₀ = −1 Prediction (computed April 5)
+
+With V = −c/R⁴ and the physical-field kinetic term L ∝ M₅³/R²(∂R)²:
+
+    ε_physical = 8/M₅³ = 8/(M_Pl²/(πR)) = 8πR/M_Pl² ≈ 2 × 10⁻⁵²
+
+    **w₀ = −1 + 2ε/3 = −1.000...000  (52 zeros)**
+
+The dilaton is frozen to 10⁻⁵² precision. It IS a cosmological
+constant. The V ∝ 1/R⁴ potential is so flat in the physical field
+that the dilaton moves by ~10⁻²⁶ Planck lengths per Hubble time.
+
+**This contradicts Paper 6's w₀ = −0.85.** Paper 6 uses the
+inflaton field φ (not the physical radion R) with V = C/φ⁴ during
+inflation. The late-time quintessence with w₀ = −0.85 requires
+a DIFFERENT dynamical variable or a non-perturbative modification
+of the potential. With the exact perturbative potential V = c/R⁴,
+the late-time equation of state is w = −1 to extraordinary precision.
+
+**If DESI confirms w = −1 ± 0.05:** The frozen-dilaton picture is
+confirmed. R is set by inflationary initial conditions. ρ_Λ is a
+true cosmological constant whose value is ΔN × c/R⁴.
+
+**If DESI finds w₀ ≠ −1 (e.g., w₀ = −0.85):** Non-perturbative
+physics modifies the dilaton potential, potentially creating the
+inflection point. The independent R determination then follows
+from the inflection-point condition R = 5/(2μπ).
+
 ### References (from the research)
 
 - Ponton & Poppitz, hep-ph/0105021 (2001) — Casimir stabilization
