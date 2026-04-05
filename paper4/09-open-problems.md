@@ -95,61 +95,33 @@ is a technical gap in the all-orders proof, not a threat to
 finiteness — the number-theoretic zeros that kill the leading
 divergence are present at every loop order.
 
-### 9.4 Global Topology of the SLOCC-Isometry Correspondence
+### 9.4 Global Topology of the SLOCC-Isometry Correspondence — RESOLVED
 
-Theorem 5.2 establishes the SLOCC-isometry correspondence at the Lie
-algebra level: the tangent space to the GHZ SLOCC orbit under `SU(2)³`
-carries the weight system of the `A₂` root system, matching the
-isometry tangent weights of `CP² × S² × S¹` under the identification
-Slot k ↔ root α_k.
+**Status: RESOLVED.** See `etc/24-flag-manifold-cohomology.md` for the
+full computation.
 
-What remains open is the global topology. The SLOCC orbit is
-`SU(2)³ / T²` (where `T²` is the 2D stabilizer torus), which locally
-looks like `SU(3)/T² × S¹` — the complete flag manifold of `C³` times
-a circle. The flag manifold `Fl(1,2;3) = SU(3)/T²` is an S²-bundle
-over CP², but the bundle is **non-trivial** (it is the projectivization
-of the tautological rank-2 bundle over CP², not the trivial product).
+**Result.** The SLOCC orbit of the GHZ state under `SU(2)³` in
+projective Hilbert space is **6-dimensional**, not 7-dimensional. The
+stabilizer is `T²` (continuous) plus `(Z₂)²` (discrete), giving a
+7-dimensional orbit in Hilbert space, but the diagonal `U(1)` (the
+common Cartan direction `h₁ = h₂ = h₃`) acts as overall phase and is
+trivial on the projective state. The physical (projective) orbit has
+dimension `9 − 2 − 1 = 6`.
 
-The product `CP² × S² × S¹`, by contrast, is the trivial S²-bundle
-over `CP²` times `S¹`.
+The tangent space weight decomposition at the GHZ point yields the
+`A₂` root system `{±α₁, ±α₂, ±(α₁ + α₂)}`, identifying the orbit
+geometry with the flag manifold `Fl(1,2;3) = SU(3)/T²` at the Lie
+algebra level. Both spaces are 6-dimensional and simply connected
+(`b₁ = 0`), which distinguishes them from `CP² × S² × S¹` (which
+has `b₁ = 1`).
 
-**What would close this problem:**
-1. Compute `H*(SU(2)³/T²; Z)` and compare with `H*(CP² × S² × S¹; Z)`
-   and `H*(Fl(1,2;3) × S¹; Z)`.
-2. Determine whether the `(Z₂)²` discrete quotient (from the GHZ
-   stabilizer) trivializes the S²-bundle over CP².
-3. If it does: `SU(2)³/(T² × (Z₂)²) ≅ CP² × S² × S¹` globally.
-4. If not: the correspondence holds at the Lie algebra level; the
-   global topology of the internal manifold must be taken as CP² × S²
-   × S¹ (as an independent physical input), with the SLOCC structure
-   explaining the gauge algebra but not the fiber bundle geometry.
-
-**Physical significance:** This distinction affects the allowed fermion
-representations (zero-mode spectrum depends on the spin structure of the
-internal space), but not the gauge group or coupling predictions.
-
-**The resolution via cohomology.** The two candidate manifolds have
-different cohomology rings:
-
-    H*(CP² × S² × S¹; ℤ) = ℤ[x,y,z] / (x³, y², z²)
-        with |x| = 2, |y| = 2, |z| = 1. Product structure is trivial.
-
-    H*(Fl(1,2;3) × S¹; ℤ) = H*(Fl(1,2;3)) ⊗ H*(S¹)
-        where H*(Fl(1,2;3)) has a non-trivial cup product structure
-        from the fibration S² → Fl(1,2;3) → CP².
-
-The flag manifold satisfies: `x₁ + x₂ + x₃ = 0` (from the Borel
-presentation), making `H*(Fl)` NOT a polynomial ring — it is a
-truncated polynomial ring with relations. This distinguishes it
-from the product `CP² × S²`.
-
-**Computation:** Compute `H*(SU(2)³/T²; ℤ)` using the Eilenberg-Moore
-spectral sequence for the fibration `T² → SU(2)³ → SU(2)³/T²`. If
-the result matches `H*(CP² × S² × S¹)`, Conjecture 5.1 is globally
-true. If it matches `H*(Fl(1,2;3) × S¹)`, the correspondence is
-Lie-algebraic only (which is still sufficient for the gauge algebra
-derivation). This is a finite computation in algebraic topology —
-to be developed in `etc/24-flag-manifold-cohomology.md`.
+**Corrected picture:** The SLOCC orbit is 6-dimensional `Fl(1,2;3)`.
+The `S¹` direction in the earlier identification corresponds to the
+`U(1)` Cartan within `SU(3)`, not a geometric circle factor. The
+full internal space `CP² × S² × S¹` has its `S¹` from the e-dimension
+(Paper 1), not from the SLOCC orbit. The gauge algebra
+`su(3) ⊕ su(2) ⊕ u(1)` is established in either geometric realization
+(Theorem 5.2, corrected).
 
 ### 9.5 Gauge Coupling Unification and the Moduli Potential
 

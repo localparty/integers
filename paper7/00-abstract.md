@@ -23,16 +23,19 @@ curved 4-cycles (CP² and CP¹ × S²) but not to the flat S¹, cleanly
 decoupling the flux stabilization of CP²/S² from the Casimir
 stabilization of S¹ (which sets the dark energy density, Paper 1).
 
-**First result:** The flux potential V(r₂, r₃) from G₄ flux quanta
-n₁ (on CP²) and n₂ (on CP¹ × S²) has a minimum at
+**First result:** The torsion-corrected House-Micu superpotential
+on CP² × S² × S¹/Z₂ yields `W_total = n₁r₃² + n₂r₂² +
+cR(6r₃²r₂² − 2r₃⁴)`, where n₁, n₂ are the integer flux quanta
+on CP² and CP¹ × S² respectively, and cR encodes the scalar
+torsion of the G₂ structure. The F-flatness conditions give the
+radius ratio `ρ² = r₂²/r₃² = −2n₁/[3(n₁ + n₂)]` — independent
+of cR. The GUT unification condition `r₂/r₃ = √3/2` (Paper 4,
+Appendix C) requires the flux ratio
 
-    r₂/r₃ = F(n₁/n₂)
+    n₂/n₁ = −17/9     (n₁ = 9, n₂ = −17)
 
-where F is a calculable function of the flux ratio. **We find that
-F(n₁/n₂) = √3/2 for a specific rational flux ratio** — the exact
-condition for gauge coupling unification α₃/α₂ = 1 at the GUT scale
-(Paper 4, Appendix C). GUT unification is thus a consequence of
-flux quantization: the ratio of two integers.
+Gauge coupling unification `α₃/α₂ = 1` is thus a consequence of
+flux quantization: two coprime integers, not a continuous tuning.
 
 **Second result:** The G₄ tadpole condition
 

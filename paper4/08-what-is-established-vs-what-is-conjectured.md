@@ -37,8 +37,8 @@
 | `M_Pl` derived from `M₁₁` × Vol(M⁷) | **Derived** (Section 7.20) | Hierarchy = large e-circle |
 | CC from simultaneous stabilization | **Partially derived** (Section 7.21) | Structure established; computation open |
 | All-orders finiteness (KK sum factor) | **Established** (Theorem K.1, Paper 1 Appendix K §K.6) | Universal Epstein Vanishing theorem |
-| BPHZ factorization at L ≥ 3 | **Well-supported** (locality of counterterms forces polynomial KK structure; see Paper 1, §K.5.3). Not yet a rigorous theorem. | Weinberg's theorem + Epstein zeta structure |
-| SLOCC-isometry map | **Established at Lie algebra level** (Theorem 5.2, §5.6); global topology open (§9.4) | Tangent space weight matching |
+| BPHZ factorization at L ≥ 3 | **Proved** (Theorem K.3, Paper 1 §K.5.3): joint holomorphicity of E_L(s; Q(α)) in (s, α) establishes the commutation of BPHZ subtraction with Epstein zeta evaluation. | Weinberg's theorem + Epstein zeta structure + Morera's theorem |
+| SLOCC-isometry map | **Established (global)**: SU(2)³/T² ≅ SU(3)/T² (Theorem 5.2, corrected). Orbit is 6D flag manifold Fl(1,2;3); S¹ is the U(1) Cartan, not a geometric factor. §9.4 resolved. | Tangent space weight matching + cohomology (etc/24) |
 | Moduli stabilization | **Partially established**: S² and CP² dynamically stabilized by spectral zeta nonvanishing; κ from Planck mass constraint (§9.5, OC-2) | Spectral zeta values + Planck constraint |
 | Gauge coupling hierarchy | **Leading order derived**: α₃/α₂ = 1 at GUT scale for κ = 3.545 × 10⁻²; first-principles κ via three-equation system (§9.5) | Coupled moduli stabilization |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |

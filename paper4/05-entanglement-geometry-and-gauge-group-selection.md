@@ -173,23 +173,25 @@ The discrete stabilizer supplements `T²` with `(Z₂)²` in
 
 #### The weight decomposition and the A₂ root system
 
-**Theorem 5.2 (SLOCC-Isometry Correspondence, Lie Algebra Level).**
-*The tangent space to the GHZ SLOCC orbit under `SU(2)³` carries
-the weight system of the `A₂` root system plus one zero weight:*
+**Theorem 5.2 (SLOCC-Isometry Correspondence, Corrected).**
+*The GHZ SLOCC orbit under `SU(2)³` in projective Hilbert space is
+a 6-dimensional simply connected manifold whose tangent space carries
+the weight system of the `A₂` root system:*
 
-    {±α₁, ±α₂, ±(α₁ + α₂), 0}
+    {±α₁, ±α₂, ±(α₁ + α₂)}
 
 *Under the identification:*
 
 | SLOCC direction | Weight | Internal geometry |
 |---|---|---|
 | Slot 1 (`e₁, f₁`) | `±α₁` | CP² tangent direction 1 |
-| Slot 2 (`e₂, f₂`) | `±α₂` | S² tangent direction |
+| Slot 2 (`e₂, f₂`) | `±α₂` | S² = CP¹ direction within SU(3)/T² |
 | Slot 3 (`e₃, f₃`) | `±(α₁ + α₂)` | CP² tangent direction 2 |
-| Cartan (modulo stab) | `0` | S¹ (e-circle) direction |
 
-*the SLOCC tangent weights and the isometry tangent weights of
-`CP² × S² × S¹` are isomorphic as `T²`-representations.*
+*the SLOCC tangent weights match the root system of `SU(3)`, identifying
+the orbit with the flag manifold `Fl(1,2;3) = SU(3)/T²`.  The single
+Cartan direction `h₁ = h₂ = h₃` that acts on `|GHZ⟩` corresponds to
+the `U(1)` Cartan within `SU(3)`, not a geometric `S¹` factor.*
 
 **Proof sketch.** The stabilizer `T²` acts on the tangent space by
 the adjoint representation. Parametrize `T²` by `(a₁, a₂)` with
@@ -236,23 +238,24 @@ root-lattice structure that the SLOCC tangent space inherits.
 
 #### Honest assessment
 
-**Established (Theorem 5.2):** The Lie algebra correspondence.
-The tangent space to the GHZ SLOCC orbit under `SU(2)³` carries the
-`A₂` root system, matching the isometry algebra of
-`CP² × S² × S¹` at the level of `T²`-representations. The `Z₆`
-quotient mechanism is identified.
+**Established (Theorem 5.2, corrected):** The SLOCC orbit under
+`SU(2)³` in projective Hilbert space is 6-dimensional (not 7). Its
+tangent space carries the `A₂` root system, identifying it with the
+flag manifold `Fl(1,2;3) = SU(3)/T²`. The `S¹` direction in the
+earlier identification corresponds to the `U(1)` Cartan within
+`SU(3)`, not a geometric circle factor. The `Z₆` quotient mechanism
+is identified. See `etc/24-flag-manifold-cohomology.md` for the
+cohomology computation.
 
-**Open:** The global diffeomorphism. The SLOCC orbit
-`SU(2)³/T²` is locally `SU(3)/T² × S¹` — the flag manifold
-`Fl(1,2;3)` times a circle. Whether this is globally diffeomorphic
-to `CP² × S² × S¹` remains unproven. The flag manifold is an `S²`
-bundle over `CP²`, and for the conjecture to hold globally, the
-`(Z₂)²` discrete quotient must trivialize this bundle to the
-product. This is a well-posed topological question (compare
-`H*(Fl(1,2;3) × S¹; Z)` with `H*(CP² × S² × S¹; Z)`) but is not
-yet computed. The Lie algebra identification established here is
-sufficient for the gauge algebra and gauge coupling predictions; the
-global topology affects only the fermion representation theory.
+**Clarified:** The internal manifold `CP² × S² × S¹` is NOT the
+SLOCC orbit itself. The SLOCC orbit is the 6-dimensional flag
+manifold. The `S¹` (e-circle) is an independent geometric input
+from Papers 1–3. The gauge algebra `su(3) ⊕ su(2) ⊕ u(1)` is
+established in either geometric realization — from
+`Fl(1,2;3)` via its fibration structure, or from `CP² × S²` via
+direct isometries, plus `u(1)` from `S¹`. The global topology
+question (§9.4, now resolved) does not affect the gauge algebra or
+coupling predictions.
 
 ---
 
