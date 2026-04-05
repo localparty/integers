@@ -1,72 +1,72 @@
-# Paper 6 — Section 2: The Dilaton Potential
+# 2. The Dilaton Potential
 
-## 2.1 Derivation from the 5D Action
+## 2.1 The Two Terms
 
-The 5D Einstein-Hilbert action on `M⁴ × S¹/Z₂` reduces (Paper 1,
-Appendix D) to a 4D effective action containing the dilaton `φ`:
+The dilaton potential is the sum of two contributions, both
+derived in Paper 1:
 
-    S_4D = ∫ d⁴x √(−g) [M_Pl²/2 × R₄ − (1/2)(∂φ)² − V(φ)]
+**The Casimir term** (Paper 1, §6.6):
 
-where the dilaton kinetic term is canonically normalized by the field
-redefinition `φ = M_Pl × ln(R/R_Pl)` (R = e-circle radius).
+    V_Casimir(φ) = V₀/φ⁴
 
-## 2.2 The Casimir Contribution
+This is the vacuum energy of bulk fields (graviton + 3 bulk
+right-handed neutrinos) on the e-circle of radius `R = R₀φ`.
+It scales as `1/R⁴ ∝ 1/φ⁴` — a steep, repulsive potential that
+dominates at small `φ` (small e-circle radius).
 
-The Casimir energy of bulk fields on `S¹/Z₂` (Paper 1 Appendix W,
-§W.9.2) gives:
+**The Goldberger-Wise term** (Paper 1, §6.6; Goldberger & Wise 1999):
 
-    V_Cas(R) = −π²/(768(πR)⁴) × (ℏc)³
+    V_GW(φ) = A φ⁴ (ln φ)²
 
-In terms of the canonically normalized dilaton `φ`:
+This is the stabilization potential from a bulk scalar with boundary
+conditions on the Z₂ orbifold fixed points. It grows at large `φ`
+(large radius), providing the restoring force that prevents the
+e-circle from expanding indefinitely.
 
-    V_Cas(φ) = −C × e^{−4φ/M_Pl}    (for φ/M_Pl ≫ 1)
-             ≈ −C/φ⁴                  (approximate form for slow-roll)
+**The full potential:**
 
-where `C = π²/(768π⁴) × M_Pl⁴` in natural units.
+    V(φ) = V₀/φ⁴ + A φ⁴ (ln φ)²
 
-This potential is:
-- **Negative at large φ**: attractive, pulling φ toward smaller values
-- **Flat at large φ**: the `1/φ⁴` decay makes it an excellent inflation plateau
-- **Diverges at φ = 0**: prevents the e-circle from collapsing
+## 2.2 The Minimum
 
-## 2.3 The Goldberger-Wise Contribution
+The minimum at `φ = φ_min = 1` (by normalization convention)
+satisfies `V'(φ_min) = 0`:
 
-A bulk scalar field `Φ(x, φ)` with brane-localized potentials
-(Goldberger & Wise 1999) generates an additional dilaton potential:
+    −4V₀/φ_min⁵ + 4Aφ_min³(ln φ_min)² + 2Aφ_min³ ln φ_min = 0
 
-    V_GW(φ) = m_φ²/2 × (φ − φ_min)² + λ_4(φ − φ_min)⁴ + ...
+At `φ_min = 1`: `ln(1) = 0`, so the equation reduces to
+`V₀ = 0` — which means we need `φ_min` slightly away from 1.
+The exact location depends on the ratio `V₀/A`. The minimum is
+at `φ_min` where the Casimir repulsion balances the GW attraction.
 
-where:
-- `φ_min = M_Pl × ln(R_min/R_Pl)` is the stabilization point
-- `m_φ = V_GW''(φ_min)^{1/2}` is the dilaton mass
-- The parameters are fixed by the dark energy condition:
-  `V(φ_min) = ρ_Λ = (2 meV)⁴`
+The mass at the minimum:
 
-## 2.4 The Combined Potential
+    m_φ² = V''(φ_min) ~ V₀/φ_min⁶ ~ ℏc/R₀⁴ × (R₀/l_Pl)²
 
-    V(φ) = −C/φ⁴ + m_φ²(φ − φ_min)²/2
+For `R₀ ≈ 10 μm`: `m_φ ~ 10–20 meV` (Paper 1, Appendix I).
 
-**Regions:**
+## 2.3 The Three Regimes — Mapped onto Cosmology
 
-| φ range | Dominant term | Physics |
-|---------|---------------|---------|
-| `φ ≪ φ_min` | `−C/φ⁴` (Casimir) | Inflation plateau |
-| `φ ≈ φ_min` | `m_φ²(Δφ)²/2` | Stable minimum |
-| `φ slightly > φ_min` | Thawing | Dark energy `w → −0.85` |
+**Regime I: The Casimir plateau** (`φ ≪ φ_min`)
 
-## 2.5 The Dilaton Mass
+For `φ → 0`, the potential approaches `V → V₀/φ⁴ → ∞`. But for
+moderate `φ ≪ φ_min`, the potential is nearly flat: `V ≈ V₀ ×`
+(slowly varying function). This flat plateau supports slow-roll
+inflation. The e-circle is LARGE during inflation — the fifth
+dimension is macroscopic.
 
-From the stabilization condition `V'(φ_min) = 0` and `V(φ_min) = ρ_Λ`:
+**Regime II: The oscillation basin** (`φ ≈ φ_min`)
 
-    m_φ² = 4C/φ_min⁵ = 4ρ_Λ/φ_min ~ (H_0 M_Pl)
+After inflation, the dilaton rolls into the potential minimum and
+oscillates. These oscillations are the reheating phase — the
+dilaton's kinetic energy is converted to particle production
+through its gravitational coupling to the Standard Model. The
+e-circle settles to its equilibrium size `R₀ ≈ 10 μm`.
 
-    m_φ ~ √(H_0 M_Pl) ~ √(10⁻³³ eV × 10²⁸ eV) ~ 10⁻³ eV ~ meV
+**Regime III: The thawing slope** (`φ > φ_min`)
 
-The dilaton mass is at the **meV scale** — exactly the dark energy
-scale. This is the same scale as the neutrino mass (Paper 2, Appendix Z)
-and the Casimir energy scale (Paper 1, §6.6). One radius, three
-manifestations of the same scale.
-
-This mass is far below current laboratory constraints on new light
-scalars (`m > few meV` from fifth-force experiments at the e-circle
-scale `R ~ 8.5 μm`). The dilaton is light enough to roll today.
+At late times (the current epoch), the dilaton has rolled slightly
+past the minimum and is slowly climbing the GW potential on the
+other side. This slow roll produces the dark energy equation of
+state `w₀ = −0.85`, `w_a = −0.23` (Paper 2, Appendix F). The
+e-circle is slowly growing — the fifth dimension is expanding.

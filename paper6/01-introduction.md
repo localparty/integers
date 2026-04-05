@@ -1,57 +1,58 @@
-# Paper 6 — Section 1: Introduction
+# 1. Introduction: One Field, One History
 
-## 1.1 The Two Great Mysteries of Cosmological History
+Papers 1–4 of this series derive the laws of physics from the
+geometry of an 11-dimensional spacetime `M⁴ × CP² × S² × S¹/Z₂`.
+Paper 1 establishes quantum mechanics, gravity, and electromagnetism
+from the e-circle `S¹`. Paper 2 derives the cosmological observables
+from the orbifold dark sector. Paper 3 resolves the black hole
+information paradox and the problem of time. Paper 4 derives the
+Standard Model gauge group, the Higgs mechanism, and twenty-one
+quantitative predictions — including the cosmological constant.
 
-Modern cosmology has two great unexplained accelerated expansion phases:
+What no single paper provides is the **temporal narrative**: how
+the universe evolves, epoch by epoch, from the initial quantum
+fluctuation to the distant future, all driven by one geometric
+object.
 
-**Inflation** (early universe, `t ~ 10⁻³⁶ s`): The universe expanded
-exponentially for ~60 e-folds, solving the horizon and flatness problems.
-The inflaton field is unknown. Its potential must be extremely flat
-(`ε, η ≪ 1`), naturally UV-protected, and produce the observed CMB
-perturbation spectrum `n_s ≈ 0.965`.
+This paper fills that gap.
 
-**Dark energy** (late universe, `t ~ 10¹⁰ yr`): The universe is currently
-undergoing accelerated expansion, driven by an energy density of
-`ρ_Λ ~ (2 meV)⁴`. The dark energy field — if it exists as quintessence
-rather than a cosmological constant — must be slowly rolling today with
-`w₀ ≈ −0.85` (Paper 2).
+## 1.1 The Central Object
 
-No Standard Model field can play either role. No known symmetry protects
-the inflaton from large quantum corrections. The coincidence between the
-dark energy scale `(2 meV)⁴` and the neutrino mass scale `(50 meV)⁴`
-is unexplained.
+The dilaton `φ(t)` measures the e-circle radius at cosmic time `t`:
 
-In the e-dimension framework: both mysteries have the same answer.
+    R(t) = R₀ × φ(t)
 
-## 1.2 The Dilaton as the Universal Scalar
+where `R₀ ≈ 10 μm` is the stabilized radius (Paper 1, Appendix W;
+Paper 4, §7.21). The dilaton evolves in the potential:
 
-The dilaton `φ(x)` is the radion — the modulus of the e-circle radius
-`R(x) = φ(x)/M_Pl`. It appears in the KK reduction of the 5D metric
-(Paper 1, Appendix D) and has a potential determined by two contributions:
+    V(φ) = V₀/φ⁴ + Aφ⁴(ln φ)²
 
-**The Casimir contribution** (Paper 1, §6.6):
-`V_Cas(φ) = −C/φ⁴` where C is fixed by the bulk field content.
-This provides the attractive force stabilizing the e-circle.
+derived from the Casimir energy of bulk fields (`V₀/φ⁴`) plus the
+Goldberger-Wise stabilization (`Aφ⁴(ln φ)²`). This potential has
+been established in Paper 1 (§6.6) and Paper 2 (Appendix F).
 
-**The Goldberger-Wise contribution** (Goldberger & Wise 1999):
-`V_GW(φ) = λ_φ(φ² − φ_min²)²` where `φ_min` is the stabilization point.
-This provides the restoring force at the minimum.
+The dilaton's trajectory through this potential IS the thermal
+history of the universe.
 
-The full potential `V(φ) = V_Cas + V_GW` has:
-- A flat direction at small `φ` (Casimir-dominated → inflation)
-- A minimum at `φ_min` (stabilized e-circle → today's physics)
-- A slowly rolling regime near `φ_min` (thawing → dark energy)
+## 1.2 The Three Regimes
 
-**One potential. Three epochs. One field.**
+| Regime | Dilaton | Potential | Epoch |
+|---|---|---|---|
+| Casimir plateau | `φ ≪ φ_min` | `V ≈ V₀` (flat) | Inflation |
+| Oscillation basin | `φ ~ φ_min` | `V ≈ ½m_φ²(φ−φ_min)²` | Reheating → BBN |
+| Thawing slope | `φ > φ_min` | `V` slowly decreasing | Dark energy |
 
-## 1.3 Organization
+Every epoch of cosmic history maps onto a segment of the dilaton
+trajectory. This paper walks through each in sequence.
 
-| Section | Content |
-|---------|---------|
-| 2 | The dilaton potential: derivation and properties |
-| 3 | Inflation: slow-roll parameters, n_s, r |
-| 4 | Reheating: T_reh, baryogenesis window |
-| 5 | The thermal history: BBN through recombination |
-| 6 | Dark energy: thawing trajectory and DESI |
-| 7 | The inflaton-quintessence unification |
-| 8 | Predictions for CMB-S4 and LiteBIRD |
+## 1.3 What Is New in This Paper
+
+This paper presents no new formalism. It presents the complete
+timeline — assembling results from Papers 1–4 into a single
+chronological narrative, and computing four quantities that require
+the temporal context:
+
+1. The reheating temperature (§4)
+2. The non-thermal leptogenesis pathway (§5)
+3. The origin of the brane temperature asymmetry ξ (§6)
+4. The far future of the dilaton (§11)
