@@ -50,10 +50,15 @@ forced into flux tubes — the CP² with its non-contractible 2-cycle
 forces the SU(3) field lines to form confined strings.
 
 **The three phases of gauge theory are the three topological
-possibilities for gauge field configurations on compact 2-spaces.**
-The first (S¹ = CP¹) gives Coulomb. The second (S²) gives Higgs.
-The third (CP² proper) gives confinement. The framework contains
-all three, simultaneously, as different sectors of the 11D geometry.
+possibilities for gauge field configurations on the compact internal
+spaces.** The circle S¹ (with `H¹(S¹) = Z`) gives Coulomb. The
+2-sphere S² ≅ CP¹ (with `π₂(S²) = Z`) gives Higgs. The complex
+projective plane CP² (with `H₂(CP²) = Z` and non-trivial fundamental
+group action) gives confinement. Note that CP¹ ≅ S², not S¹ — these
+are topologically distinct: S¹ is 1-dimensional (a circle), while
+CP¹ ≅ S² is 2-dimensional (a sphere). The framework contains all
+three compact spaces, simultaneously, as different sectors of the
+11D geometry.
 
 ## 8.3 The Most Beautiful Statement
 

@@ -5,15 +5,17 @@
 | Observable | Geometric prediction | Experiment | Match |
 |---|---|---|---|
 | `Λ_QCD` | 190 MeV (Paper 4) | 213 ± 8 MeV | 12% |
-| String tension `√σ` | 437 MeV | 440 MeV | **0.7%** |
-| Proton mass `m_p` | 946 MeV | 938.3 MeV | **0.8%** |
+| String tension `√σ` | 437 MeV | 440 MeV | 0.7%* |
+| Proton mass `m_p` | 946 MeV | 938.3 MeV | ~1%* |
 | Neutron-proton Δm | ~1.3 MeV | 1.293 MeV | ~0.5% |
 | Deconfinement T_c | ~200 MeV | 155 MeV | 30% |
 | Lightest glueball | ~880 MeV | ~1500 MeV (mixed) | factor 1.7 |
-| Baryon asymmetry η_B | ~1.5 × 10⁻¹⁰ | 6.1 × 10⁻¹⁰ | factor 4 |
+| Baryon asymmetry η_B | ~10⁻¹⁰–10⁻⁷ | 6.1 × 10⁻¹⁰ | order-of-magnitude |
 
-The string tension and proton mass are the cleanest geometric
-predictions — both within 1% at leading order.
+*The sub-1% numerical matches for `√σ` and `m_p` are leading-order
+estimates with intrinsic ~10% uncertainty from the instanton coefficient
+and MIT bag model respectively. The close agreement should be treated
+as consistent at leading order, not as precision predictions.
 
 The 30% discrepancy in `T_c` and factor-1.7 in the glueball mass are
 expected at leading order: both require knowing the numerical coefficient

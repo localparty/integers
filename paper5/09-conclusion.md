@@ -16,7 +16,7 @@ chromoelectric flux tubes with tension:
 The proton mass is derived from this string tension through the
 bag model formula:
 
-    m_p ≈ 946 MeV   (experiment: 938.3 MeV, match 0.8%)
+    m_p ≈ 946 MeV   (experiment: 938.3 MeV, ~10% bag model uncertainty)
 
 The quark mass hierarchy — the factor of 75,000 between top and up
 Yukawa couplings — is the warp factor `e^{Δc × kπR}` with a

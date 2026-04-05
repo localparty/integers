@@ -1,5 +1,17 @@
 # Paper 5 — Section 5: The Baryon Asymmetry from CP² Chern-Simons
 
+> **Status of this section:** The baryon asymmetry derivation is a
+> preliminary estimate. The leading-order calculation gives
+> `η_B ~ 10⁻⁷` before washout, overshooting the observed
+> `6 × 10⁻¹⁰` by ~10³. The discrepancy is absorbed by the
+> washout efficiency `κ`, which is not computed in this paper.
+> A complete calculation requires the Boltzmann equations for the
+> three right-handed neutrinos with the CP phases of Paper 4 §7.13.
+> The result of Paper 2, §E (bulk leptogenesis giving `η_B ≈ 6 × 10⁻¹⁰`
+> through the `1/ξ²` scaling law) supersedes this section for
+> cosmological predictions. This section documents the direct
+> CP² leptogenesis mechanism as an independent cross-check.
+
 ## 5.1 The Sakharov Conditions
 
 Baryogenesis requires three Sakharov conditions (1967):
@@ -143,6 +155,8 @@ leading-order estimate has well-known uncertainties from:
 A more precise calculation with the full three-generation Yukawa
 matrix (from the Z₃ orbifold overlap integrals) is identified as
 future work. The fact that the leading-order geometric calculation
-gives `η_B ~ few × 10⁻¹⁰` with all inputs from geometry — while
-the SM has no explanation for why `η_B ~ 10⁻¹⁰` rather than zero
-— is the key result.
+gives `η_B` within a few orders of magnitude of `10⁻¹⁰` with all
+inputs from geometry — while the SM has no explanation for why
+`η_B ~ 10⁻¹⁰` rather than zero — is the key result. The order-of-
+magnitude agreement is encouraging; a precision prediction requires
+the resonant leptogenesis calculation with the Z₃ mass spectrum.

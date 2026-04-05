@@ -95,5 +95,71 @@ is a technical gap in the all-orders proof, not a threat to
 finiteness — the number-theoretic zeros that kill the leading
 divergence are present at every loop order.
 
+### 9.4 Global Topology of the SLOCC-Isometry Correspondence
+
+Theorem 5.2 establishes the SLOCC-isometry correspondence at the Lie
+algebra level: the tangent space to the GHZ SLOCC orbit under `SU(2)³`
+carries the weight system of the `A₂` root system, matching the
+isometry tangent weights of `CP² × S² × S¹` under the identification
+Slot k ↔ root α_k.
+
+What remains open is the global topology. The SLOCC orbit is
+`SU(2)³ / T²` (where `T²` is the 2D stabilizer torus), which locally
+looks like `SU(3)/T² × S¹` — the complete flag manifold of `C³` times
+a circle. The flag manifold `Fl(1,2;3) = SU(3)/T²` is an S²-bundle
+over CP², but the bundle is **non-trivial** (it is the projectivization
+of the tautological rank-2 bundle over CP², not the trivial product).
+
+The product `CP² × S² × S¹`, by contrast, is the trivial S²-bundle
+over `CP²` times `S¹`.
+
+**What would close this problem:**
+1. Compute `H*(SU(2)³/T²; Z)` and compare with `H*(CP² × S² × S¹; Z)`
+   and `H*(Fl(1,2;3) × S¹; Z)`.
+2. Determine whether the `(Z₂)²` discrete quotient (from the GHZ
+   stabilizer) trivializes the S²-bundle over CP².
+3. If it does: `SU(2)³/(T² × (Z₂)²) ≅ CP² × S² × S¹` globally.
+4. If not: the correspondence holds at the Lie algebra level; the
+   global topology of the internal manifold must be taken as CP² × S²
+   × S¹ (as an independent physical input), with the SLOCC structure
+   explaining the gauge algebra but not the fiber bundle geometry.
+
+**Physical significance:** This distinction affects the allowed fermion
+representations (zero-mode spectrum depends on the spin structure of the
+internal space), but not the gauge group or coupling predictions.
+
+### 9.5 The Two-Loop Gauge Coupling Amplitude
+
+Appendix C derives that exact GUT unification `α₃/α₂ = 1` at the
+compactification scale requires an interpolation parameter `λ = 0.6552`
+between the pure one-loop log stabilization and the coupled two-loop
+self-consistent solution. The λ value is determined from the unification
+condition — it is not yet derived from first principles.
+
+**The open calculation:** Compute the two-loop Goroff-Sagnotti amplitude
+on `S² × CP²` including the cross-coupling between sectors (the two-loop
+coefficient for the S² modulus depends on `r₃` through the complementary
+CP² volume, and vice versa). Specifically:
+
+    c₂^{S²}(r₃) = α_GS × G_{eff,S²}²(r₃) × [Z_{S²}(0)]²
+    c₂^{CP²}(r₂) = α_GS × G_{eff,CP²}²(r₂) × [Z_{CP²}(0)]²
+
+where `G_{eff,X}` depends on the volume of the complementary space.
+The coupled stabilization equations then determine `r₂` and `r₃` (and
+hence `λ`) self-consistently.
+
+**What would close this problem:**
+- Compute `G_{eff,S²}` from `G₁₁` and `Vol(CP²) = 8π²r₃⁴/3`.
+- Substitute into the coupled stabilization equations.
+- Solve numerically for `(r₂, r₃)` as a function of `M₁₁` and `R`.
+- Verify that the self-consistent solution gives `λ ≈ 0.6552` and
+  hence `α₃/α₂ ≈ 1.000`.
+
+If the first-principles `λ` matches 0.6552, the gauge coupling
+hierarchy is fully derived with no free parameters (beyond `G₄` and
+`R`). If `λ` differs significantly from 0.6552, the framework
+overshoots or undershoots GUT unification, and the discrepancy
+identifies where the two-loop cross-coupling approximation breaks down.
+
 ---
 

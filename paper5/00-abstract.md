@@ -44,10 +44,14 @@ two geometric sources: the leptonic `δ_CP = −90°` from the Z₃ orbifold
 (Paper 4) feeding sphaleron transitions, and the CP² Chern-Simons
 number providing the Sakharov CP-violation condition. The result:
 
-    η_B ~ J_CKM × (sphaleron rate) / H|_{T_c} ~ 4 × 10⁻¹⁰
+    η_B ~ J_CKM × (sphaleron rate) / H|_{T_c}
 
-within a factor of 1.5 of the observed value, with all inputs from
-geometry.
+as an order-of-magnitude estimate, with all inputs from geometry. The
+leading-order calculation overshoots the observed `η_B = 6 × 10⁻¹⁰`
+by ~10³ before washout corrections; the washout efficiency and resonant
+leptogenesis enhancement (from the Z₃ mass degeneracy) are identified
+as open calculations. The bulk leptogenesis result of Paper 2, §E
+provides the precision prediction.
 
 Fourth, we show that the proton mass is a derived quantity:
 
