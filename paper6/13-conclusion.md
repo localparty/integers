@@ -30,11 +30,17 @@ energy (thawing past the minimum), and the far future
    matter abundance `Ω_DM/Ω_b = 1/ξ² ≈ 5` is determined at the
    birth of the thermal universe.
 
-4. **The far future** — the e-circle slowly decompactifies as the
-   dilaton rolls up the GW potential. No Big Rip (the potential is
-   bounded). The universe asymptotes to a runaway de Sitter phase
-   with `H` increasing logarithmically. The fifth dimension
-   re-emerges on timescales of `~10⁵⁰` years.
+4. **The far future** *(speculative extrapolation)* — if the dilaton
+   continues rolling up the GW potential on timescales of `~10⁵⁰`
+   years, the e-circle would slowly decompactify. No Big Rip (the
+   potential is bounded). The universe would asymptote to a runaway
+   de Sitter phase with `H` increasing logarithmically, and the fifth
+   dimension would re-emerge at macroscopic scales. This extrapolation
+   assumes the dilaton potential remains the dominant physics on these
+   timescales — non-perturbative corrections, quantum gravity effects,
+   and other physics not modeled here could alter or prevent this
+   outcome. It is included as a consequence of the potential shape,
+   not as a derived prediction at the same level as results 1–3.
 
 The framework provides a complete, self-consistent account of
 cosmic evolution from the initial compactification to the distant
@@ -42,8 +48,9 @@ future. Every epoch is governed by the same geometry. Every
 transition is driven by the same field. Every prediction is
 quantitative and falsifiable.
 
-The universe began as a quantum fluctuation of the e-circle and
-will end — if "end" is the right word — as the e-circle opens up
-and the fifth dimension returns to macroscopic visibility.
+The universe began as a quantum fluctuation of the e-circle. Whether
+it ends — if "end" is the right word — as the e-circle opens up and
+the fifth dimension returns to macroscopic visibility is a speculation
+following from the potential shape, not a derived prediction.
 
 One compact dimension. One field. One history.
