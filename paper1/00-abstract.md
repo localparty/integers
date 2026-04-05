@@ -6,7 +6,10 @@ We propose that spacetime is five-dimensional — `(x, y, z, t, e)` — where th
 fifth dimension `e` is circular, periodic, and corresponds to the `U(1)` fiber in
 a principal bundle over four-dimensional spacetime. Our four-dimensional
 experience is a projection of this five-dimensional reality, and every quantum
-phenomenon is a geometric consequence of the projection.
+phenomenon is a geometric consequence of the projection. This paper develops
+the `M⁴ × S¹` sector — a 5D truncation capturing quantum mechanics and
+electromagnetism — which embeds naturally into a full 11-dimensional framework
+(`M⁴ × CP² × S² × S¹`) developed in companion papers.
 
 Within this framework, superposition is extension in the `e`-dimension,
 entanglement is conservation of the `e`-coordinate (`e₁ + e₂ = C`), momentum is

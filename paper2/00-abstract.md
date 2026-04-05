@@ -4,7 +4,10 @@
 
 We present the complete cosmological predictions of the 5D e-dimension
 framework introduced in Paper 1, computed using the CAMB Boltzmann solver
-(v1.6.6). The framework fits no free parameters to CMB data. Two observational
+(v1.6.6). Papers 1 and 2 develop the `M⁴ × S¹` sector — a 5D truncation
+capturing quantum mechanics, electromagnetism, and cosmology — which embeds
+naturally into a full 11-dimensional framework developed in companion papers.
+The framework fits no free parameters to CMB data. Two observational
 inputs — the dark energy density `ρ_Λ` (which fixes the e-circle circumference
 `L` in Paper 1) and the dark-to-visible matter ratio `Ω_DM/Ω_b` (which fixes
 the brane temperature ratio `ξ` through the scaling law below) — together
