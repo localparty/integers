@@ -93,6 +93,30 @@ They are different aspects of a single geometric conservation law
 operating in a dimension orthogonal to the 4D Hilbert space where
 monogamy applies.
 
+**Open problem — honest statement:** The claim that e-correlations
+are not subject to monogamy rests on the assertion that they are
+not Hilbert space entanglement but geometric constraints. This
+distinction requires a precise mathematical formulation of the
+full 5D Hilbert space H₅D and the relationship between the
+e-conservation constraint and the standard entanglement structure
+of H₅D.
+
+Specifically, the following needs to be shown rigorously:
+1. The operator `Q_e = Σ_i φ̂_i` is a superselection charge —
+   it commutes with all observables in the 4D sector.
+2. The e-conservation constraint acts as a Gauss law — it
+   eliminates unphysical degrees of freedom rather than
+   restricting physical entanglement.
+3. The resulting physical Hilbert space, after imposing the
+   constraint, decouples the e-correlations from the 4D
+   entanglement structure.
+
+If these three properties hold, the monogamy argument does not
+apply to e-correlations. The perturbative finiteness of the 5D
+theory (Paper 1, Appendix S) provides the evidence that the 5D
+Hilbert space is well-defined, but the full constraint analysis
+is identified as the key open problem for future work.
+
 ### 9.4 The Infalling Observer
 
 The infalling observer crosses a smooth horizon. The e-imprint on

@@ -35,22 +35,41 @@ the infalling observer) and encoded on the horizon (for the exterior
 observer). The 5D framework provides the geometric mechanism for
 the exterior encoding.
 
-### 4.3 The e-Coordinate of the Horizon
+### 4.3 The e-Coordinate of the Horizon — Derivation
 
 When the horizon grows by one Planck pixel to incorporate a bit of
 infalling information, the growth manifests as a change in the
-e-coordinate of the horizon surface at that location:
+e-coordinate of the horizon surface at that location. We derive
+this from the e-conservation law explicitly.
 
-    φ_horizon(x) → φ_horizon(x) + δφ
+The e-conservation law (Paper 1, §2.2.3) states that for any
+interaction vertex in the 5D theory, the sum of incoming
+e-coordinates equals the sum of outgoing e-coordinates:
 
-where `δφ` is determined by the e-coordinate of the infalling quantum:
+    Σ φ_in = Σ φ_out    (Noether charge of U(1) e-translation)
 
-    δφ = φ_infalling  (by e-conservation)
+At the horizon interaction vertex, the infalling quantum (with
+e-coordinate `φ_infalling`) is absorbed into the horizon surface
+(with current e-coordinate `φ_horizon`). The outgoing state is the
+modified horizon surface. By e-conservation:
 
-The e-conservation law (Section 2.2) ensures this: the infalling
-quantum's e-coordinate is transferred to the horizon surface.
-The infalling quantum's e-coordinate is not lost — it is imprinted
-on the surface geometry.
+    φ_infalling + φ_horizon = φ_horizon_new
+
+    φ_horizon_new = φ_horizon + δφ    where δφ = φ_infalling
+
+This is not an assumption — it is the direct application of the
+Noether conservation law from Paper 1, Theorem 2.1. The infalling
+quantum's e-coordinate is transferred to the horizon surface
+because e-charge is conserved at every interaction vertex, just
+as electric charge is conserved at every QED vertex.
+
+**What is derived:** The mapping δφ = φ_infalling follows from
+e-conservation alone. No additional assumption is required.
+
+**What is argued:** That the e-conservation law applies at the
+horizon vertex in the same way it applies in flat space. This
+requires the 5D theory to remain well-defined near the horizon —
+established by the UV finiteness result (Paper 1, Appendix S).
 
 ---
 

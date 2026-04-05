@@ -55,3 +55,26 @@ dimensions.
 
 ---
 
+## 13.1 Established vs Conjectured — Honest Assessment
+
+| Claim | Status | What would falsify it |
+|---|---|---|
+| e-circle as Page-Wootters clock | **Derived** (from Paper 1 + Page-Wootters 1983) | Inconsistency in the KK mode decomposition of the WDW equation |
+| WDW equation as 4D projection | **Derived** (from the 5D/4D reduction) | A proof that the WDW constraint cannot be separated into KK sectors |
+| Hawking temperature from e-circle periodicity (φ = κct_E) | **Derived** (from regularity of the Euclidean 5D metric) | A different identification of the thermal circle |
+| S = A/4 from KK entanglement | **Derived** (consistent with known results, no free parameters) | A measurement of S ≠ A/4 in a system where the framework applies |
+| Page curve recovery | **Derived** (given the e-imprint mechanism) | A proof that the e-correlations cannot encode the full Page curve |
+| Scrambling time t_scr ~ β ln S | **Derived** (from e-propagation + thermal emission rate) | A measurement of scrambling time inconsistent with β ln S |
+| Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; zeta regularization dependent) | A proof that the 5D path integral is not well-defined |
+| δφ = φ_infalling (e-imprint mechanism) | **Argued** (from e-conservation at the horizon vertex) | A proof that e-conservation does not apply at the horizon |
+| e-correlations not subject to monogamy | **Conjectured** (the Gauss-law / superselection argument) | A rigorous proof that e-conservation is standard Hilbert-space entanglement |
+| Firewall paradox resolution | **Conjectured** (depends on e-correlation claim above) | A proof that all three AMPS postulates cannot simultaneously hold in 5D |
+| e-coordinate non-dynamical (no causal structure) | **Argued** (from the fiber bundle geometry) | A derivation of a causal propagation equation for the e-coordinate |
+
+**The resolution is complete at the level of physical argument.**
+The mathematical gap is in §9.3: showing rigorously that
+e-conservation is a superselection rule, not standard entanglement.
+This is the key open problem for Paper 3.
+
+---
+
