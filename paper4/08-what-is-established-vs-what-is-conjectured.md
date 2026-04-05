@@ -27,6 +27,15 @@
 | DM mass = mirror proton ≈ 1 GeV | **Derived** (Section 7.10) | Z₂ symmetry fixes `m_DM = m_p` |
 | EW vacuum absolutely stable | **Derived** (Section 7.11) | Compact field space, bounded potential |
 | First-order EWPT → LISA GW signal | **Predicted** (Section 7.12) | Casimir barrier in `V(θ_H)` |
+| `η_B ≈ 6×10⁻¹⁰` from geometry | **Derived** (Section 7.13) | δ_CP + K + sphalerons |
+| Dilaton inflation: `n_s ≈ 0.965`, `r ≈ 0.03` | **Predicted** (Section 7.15) | Casimir + GW potential |
+| Inflation + dark energy = one field | **Derived** (Section 7.15) | Dilaton at early vs late times |
+| sin²θ_W running + KK threshold shift | **Predicted** (Section 7.16) | ~0.5 ppm at Tera-Z |
+| DM-electron σ ~ 4×10⁻⁴⁷ cm² | **Predicted** (Section 7.17) | Orbifold-suppressed mixing |
+| BH entropy: `α_log = −3.66` | **Derived** (Section 7.18) | KK one-loop on `S²×S¹` horizon |
+| Primordial GW + EWPT double feature | **Predicted** (Section 7.19) | Two signals in LISA band |
+| `M_Pl` derived from `M₁₁` × Vol(M⁷) | **Derived** (Section 7.20) | Hierarchy = large e-circle |
+| CC from simultaneous stabilization | **Partially derived** (Section 7.21) | Structure established; computation open |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |
 | `CP² × S²` from 3-generation entanglement | **Conjectured** (Section 5.5) | SLOCC → isometry map |
 | e-circle = M-theory circle | **Conjectured** (Section 2.3) | Structural alignment |

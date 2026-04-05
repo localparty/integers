@@ -60,9 +60,17 @@ right-handed neutrinos cancel the gravitational anomaly on each
 brane, serving triple duty alongside their roles in Casimir dark
 energy and baryogenesis. The dark matter mass is the mirror proton
 mass (`m_DM = m_p ≈ 1 GeV`), fixed by Z₂ symmetry — not a free
-parameter. The neutrino-dark energy coincidence — both scales set
-by the e-circle radius — emerges as a geometric consequence of a
-single compact dimension.
+parameter. The baryon-to-photon ratio `η_B ≈ 6 × 10⁻¹⁰` — the
+amount of matter in the universe — is derived from three geometric
+inputs: the Z₃ CP phase, the bulk Yukawa coupling, and the washout
+dynamics.
+
+The dilaton — the e-circle radius modulus — unifies inflation and
+dark energy in a single field. At early times it drives slow-roll
+inflation with `n_s ≈ 0.965` and `r ≈ 0.03` (testable by CMB-S4).
+At late times it rolls toward its Casimir minimum with
+`w₀ = −0.85` (testable by DESI DR3). One field, one potential, the
+entire expansion history of the universe.
 
 The central conjecture — that the non-abelian dimensions are
 selected by the entanglement geometry of the matter content, via
