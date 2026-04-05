@@ -124,10 +124,160 @@ because the logarithmic correction f(K,ξ) partially compensates.
 
 ---
 
-## 7. References
+## 7. Stabilization Results (from etc/08)
+
+### 7.1 S² tower: does NOT stabilize R
+
+SUSY is exact on S² (simply connected, `π₁(S²) = 0` → no
+Scherk-Schwarz). At every S² KK level: `N_B(l) = N_F(l)` →
+`ΔN_S²(l) = 0`. The S² tower contributes ZERO to the Casimir.
+Same for CP². Only S¹ breaks SUSY through the spin structure.
+
+V(R) = −ΔN × 3ζ(5)/(64π⁶R⁴) is monotonically increasing.
+No minimum from Casimir alone.
+
+### 7.2 Goldberger-Wise: requires μ ~ 0.4 eV
+
+The GW potential V_GW = A exp(−2μπR) creates a minimum at:
+
+    R_min ≈ ln(A/c) / (2μπ)
+
+With A ~ m_H² M₅² ~ 10⁵⁷ eV⁴ and c ~ 1.74 × 10⁻⁴ eV⁴:
+
+    ln(A/c) ≈ 140
+
+For R = 10 μm: **μ = 0.44 eV**. The eV scale — 10 orders below
+the weak scale. The CC problem is reduced from 10¹²² to 10¹⁰.
+
+### 7.3 What sets μ?
+
+The 140 = ln(m_H²M₅²/c_Casimir) is the key number. It comes from
+the hierarchy between the Higgs-M₅ scale and the Casimir coefficient.
+The physical content: R/l_P ~ exp(70) because the Casimir residual
+(from ΔN = 3.44) is exponentially small compared to the electroweak
+scale.
+
+---
+
+## 8. The Path Forward
+
+### 8.1 The 11D dilaton effective potential (THE key computation)
+
+The bulk scalar that stabilizes S¹ is the DILATON — the zero mode
+of g₅₅ from the 11D metric. Its effective potential receives
+contributions from:
+
+1. **The S¹ Casimir** (computed): V_C = −ΔN × 3ζ(5)/(64π⁶R⁴)
+2. **Brane couplings**: the dilaton couples to brane-localized
+   fields (Higgs, SM fermions) through the warp factor
+3. **The GW scalar**: if a separate bulk scalar exists, its
+   boundary conditions generate V_GW
+
+The question is whether the dilaton's OWN brane couplings generate
+a stabilizing potential WITHOUT needing a separate bulk scalar.
+
+### 8.2 The dilaton-Higgs coupling from dimensional reduction
+
+In the 5D metric `ds² = e^{−2σ(y)} g_μν dx^μ dx^ν + R² dy²`,
+the Higgs VEV on the visible brane depends on R through:
+
+    v(R) = v₀ × e^{−σ(0)} × (R/R₀)^α
+
+where α is the dilaton-Higgs coupling exponent. The Higgs
+contribution to V_eff(R) is:
+
+    V_Higgs(R) = −λ v(R)⁴/4 = −λ v₀⁴ (R/R₀)^{4α} / 4
+
+For α > 0: V_Higgs decreases with R (same direction as Casimir).
+For α < 0: V_Higgs increases with R (STABILIZING).
+
+The sign of α is determined by the conformal dimension of the
+Higgs on the brane. In RS: α = −1 (the Higgs VEV is warped DOWN
+on the IR brane). In our framework: α depends on the S² Casimir
+coupling to R.
+
+**Computation needed:** Derive α from the KK reduction of the
+5D metric on `S² × S¹/Z₂`, with the Higgs identified as the
+Wilson line `g_{iψ}` (Paper 4, §6). The R-dependence of the
+Higgs VEV follows from the R-dependence of the S² Casimir
+potential that generates the Higgs mechanism.
+
+### 8.3 Flux stabilization: TOPOLOGICALLY IMPOSSIBLE
+
+The 4-form `F₄ = dC₃` requires a 4-cycle. By the Künneth theorem:
+
+    b₄(CP² × S² × S¹) = 2
+
+The two 4-cycles are CP² and CP¹ × S² — **neither involves S¹.**
+(Because b₁(CP²) = b₃(CP²) = 0, no 4-cycle can include the S¹ factor.)
+
+F₄ flux cannot generate an R-dependent potential. The S¹ modulus
+is a FLAT DIRECTION of the flux potential. Flux stabilization is
+ruled out on topological grounds for this specific manifold.
+
+### 8.4 The brane-localized Higgs potential (NEW — most promising)
+
+The SM Higgs on the visible brane couples to R through the metric.
+The Higgs VEV depends on R through the warp factor:
+
+    v(R) = v₀ × (R/R₀)^α
+
+where α is the conformal dimension of the Higgs on the brane.
+The brane Higgs potential contributes:
+
+    V_Higgs(R) = −λ v(R)⁴ / 4 = −(λv₀⁴/4) × (R/R₀)^{4α}
+
+For α = −1 (RS IR brane): V_Higgs ∝ 1/R⁴ — same power as Casimir.
+No new minimum.
+
+For α ≠ −1: DIFFERENT R-dependence → competition with Casimir →
+**potential minimum at finite R**.
+
+In the framework: the Higgs IS the Wilson line `g_{iψ}` on S²
+(Paper 4, §6). Its VEV depends on the S² Casimir potential, which
+depends on R through the overall compactification volume. The
+exact α comes from the KK reduction of the gauge-Higgs sector.
+
+**This is the key computation.** If α is determined from the
+gauge-Higgs geometry and α ≠ −1, then:
+
+    V_total = −c/R⁴ − (λv₀⁴/4)(R/R₀)^{4α}
+
+has a minimum at R_min where 4c/R⁵ = −4α(λv₀⁴/4R₀^{4α}) R^{4α−1}:
+
+    R_min^{4−4α} = c R₀^{4α} / (α λ v₀⁴/4)
+
+For α > 0 (Higgs VEV grows with R): V_Higgs becomes more negative
+at large R, destabilizing. No minimum.
+
+For −1 < α < 0 (Higgs VEV decreases with R, but slower than 1/R):
+V_Higgs ∝ R^{4α} with −4 < 4α < 0. Combined with −c/R⁴: the
+Casimir dominates at small R, Higgs dominates at large R. Minimum
+exists if the powers are different (4α ≠ −4, i.e., α ≠ −1).
+
+### 8.4 Action items
+
+1. **Compute V_flux(R)** for the 4-form flux `F₄ = dC₃` on the
+   cycle `S¹ × (2-cycle in CP²)` with flux quantum n = 1.
+   Determine the coefficient in V_flux = n²/(R × Vol₆ × κ₁₁²).
+
+2. **Find R_min** from V_total = V_flux + V_Casimir = 0.
+   Check whether R_min ~ 10 μm.
+
+3. **Compute ρ_Λ = V(R_min)** and compare to (2.25 meV)⁴.
+
+4. If successful: R is determined by {n, Vol₆, ΔN} — all geometric.
+   ρ_Λ is PREDICTED. The CC problem is solved.
+
+---
+
+## 9. References
 
 - Buchmuller, Di Bari, Plumacher, "Leptogenesis for Pedestrians,"
   Ann. Phys. 315, 305 (2005) [hep-ph/0401240]
 - Giudice, Notari, Raidal, Riotto, Strumia, Nucl. Phys. B 685, 89
   (2004) [hep-ph/0310123]
 - Gonzalo et al., arXiv:2403.xxxxx (2024) — KK neutrino tower decays
+- Goldberger, Wise, Phys. Rev. Lett. 83, 4922 (1999) — GW mechanism
+- Montero, Vafa et al., arXiv:2205.12293 (2022) — Dark Dimension
+- Bousso, Polchinski, JHEP 06, 006 (2000) — Flux stabilization

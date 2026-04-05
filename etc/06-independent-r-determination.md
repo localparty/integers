@@ -392,38 +392,149 @@ and M₅ = 2.5 × 10⁸ GeV:
 This is non-perturbative! The naive Higgs-dilaton coupling is too
 large. A different mechanism for V_GW is needed.
 
-### 8.3 Alternative: Casimir stabilization from the S² tower
+### 8.3 S² tower Casimir: RULED OUT (computed)
 
-Instead of GW, the stabilizing term may come from the MASSIVE KK
-modes on S² that contribute a different R-dependence:
+**Result:** The S² KK tower contributes ZERO to the S¹ Casimir.
 
-    V_{S²}(R) ~ N_{S²} × f(R/r₂) / R⁴
+SUSY is exact on S² (simply connected, `π₁(S²) = 0` → no
+Scherk-Schwarz). At every S² level: `N_B(l) = N_F(l)` → `ΔN = 0`.
+The S² and CP² towers are SUSY-protected — their Casimir vanishes
+identically. Only S¹ breaks SUSY through the spin structure.
 
-where f(R/r₂) captures the transition between the R >> r₂ regime
-(where S² modes decouple) and the R ~ r₂ regime (where they
-contribute). This creates a feature at R ~ r₂ that could serve
-as a stabilization mechanism WITHOUT GW.
+Even without SUSY protection, the tower contribution has the SAME
+SIGN as the zero-mode Casimir (both negative/attractive) and
+decays exponentially for R >> r₂. No minimum is possible.
 
-### 8.4 What to compute
+### 8.4 Flux stabilization: RULED OUT (topology)
 
-1. The Casimir energy of the S² KK tower on S¹, as a function of
-   R at fixed r₂ ~ 1/TeV
-2. Whether the resulting V(R) = V_{S¹}(R) + V_{S²→S¹}(R) has a minimum
-3. If so: the value of R_min and V(R_min)
+F₄ flux requires a 4-cycle. By the Künneth theorem:
 
-This is a specific, computable integral involving the S² spectrum
-(spherical harmonics) and the S¹ Casimir (Epstein zeta functions).
+    b₄(CP² × S² × S¹) = 2
+
+The two 4-cycles are CP² and CP¹ × S² — **neither involves S¹.**
+(Because b₁(CP²) = b₃(CP²) = 0.) F₄ flux cannot generate an
+R-dependent potential. R is a flat direction of the flux potential.
+
+### 8.5 Higgs-dilaton coupling: WRONG SIGN (computed)
+
+From the volume relation M_Pl² = M₁₁⁹ Vol₆ πR with M₁₁, r₃ fixed:
+
+    r₂ ∝ 1/√R   →   v = sin(θ₀)/(g₂ r₂) ∝ √R
+
+The Higgs potential at its minimum: V_Higgs = −λv⁴/4 ∝ −R².
+
+This is NEGATIVE and GROWS more negative with R — it pushes
+toward R → ∞ (decompactification), not toward a finite minimum.
+Same direction as the S¹ Casimir. No stabilization.
+
+### 8.6 Why all Casimir routes fail: the sign theorem
+
+**Every Casimir contribution from SUSY-breaking on S¹ is negative**
+(for net bosonic ΔN > 0 from Scherk-Schwarz). Every contribution
+from other compact spaces is either zero (SUSY-protected) or
+negative (same sign). No combination of Casimir energies can create
+a minimum for R.
+
+For a minimum, we need a POSITIVE term that INCREASES with R.
+No Casimir can provide this. The stabilization of R requires
+**non-Casimir physics**: brane tensions, GW mechanism, or
+Swampland constraints.
 
 ---
 
-## 9. The Sentence
+## 9. What the Framework Achieves (Honest Assessment)
 
-R cannot be determined by the S¹ Casimir potential alone — it has no
-minimum. The independent determination requires either:
-- The GW stabilization from the Higgs-dilaton coupling (Route C), or
-- The species bound from black hole entropy (Route E), or
-- A Casimir stabilization from the S² KK tower crossing (§8.3)
+### 9.1 What IS determined from geometry
 
-All three routes are well-defined computations within the framework.
-The most tractable is the S² tower Casimir (§8.3), which requires
-only the known S² spectrum and standard Epstein zeta methods.
+Given R (from observation or stabilization), the framework derives:
+
+| Quantity | Formula | Value | Status |
+|---|---|---|---|
+| ΔN | 11D SUGRA + spin structure | 3.44 (or 8) | **Derived** |
+| ρ_Λ | ΔN × 3ζ(5)/(64π⁶R⁴) | (2.25 meV)⁴ | **Derived (given R)** |
+| M₅ | (M_Pl²/(πR))^{1/3} | 2.5 × 10⁸ GeV | **Derived (given R)** |
+| m_KK | 1/R | 20 meV | **Derived (given R)** |
+| K | m_ν/m_star | 46 | **Derived (from m_ν)** |
+| ξ | from 1/ξ² law | 0.43–0.51 | **Derived (from Ω_DM/Ω_b)** |
+| All CAMB predictions | from ξ, ρ_Λ | H₀, S8, t₀, θ* | **Derived** |
+
+### 9.2 What is NOT determined
+
+R itself. The Casimir formula is ONE equation in TWO unknowns
+(ρ_Λ and R). The framework uses ρ_Λ (observed) to fix R. An
+independent determination of R requires non-Casimir stabilization.
+
+### 9.3 The CC problem: reduced, not solved
+
+| | Standard Model | This framework |
+|---|---|---|
+| ρ_Λ from theory | M_Pl⁴ (wrong by 10¹²²) | ΔN × c/R⁴ (correct, given R) |
+| Free parameters for ρ_Λ | 1 (fine-tuned to 10⁻¹²²) | 1 (R, determined by stabilization) |
+| What remains | Why the 10¹²² cancellation? | What stabilizes R at 10 μm? |
+| Residual gap | 10¹²² orders | ~10¹⁰ orders (why μ ~ eV?) |
+
+The framework reduces the CC problem from a 122-order fine-tuning
+to a 10-order hierarchy question (why is the GW bulk scalar mass
+μ ~ eV rather than TeV?). This is a genuine advance.
+
+### 9.4 The GW stabilization: the remaining computation
+
+The GW mechanism gives R_min = ln(A/c)/(2μπ) with ln(A/c) ≈ 140
+(from the ratio of the Higgs-M₅ scale to the Casimir coefficient).
+
+For R = 10 μm: μ = 0.44 eV.
+
+The question "what sets μ?" is the REMAINING open problem. If μ
+can be derived from the 11D dilaton effective potential (including
+all brane couplings and the Hosotani potential), the CC is solved.
+
+This is a specific, well-defined computation in 5D supergravity
+on S¹/Z₂ with brane-localized SM fields.
+
+---
+
+## 10. The Path Forward
+
+### 10.1 For the papers (immediate)
+
+State the result honestly:
+- The Casimir formula with ΔN from 11D SUGRA + spin structure
+  determines ρ_Λ given R (or R given ρ_Λ)
+- The independent R determination is an open problem
+- The GW stabilization reduces the CC problem from 10¹²² to ~10¹⁰
+- The remaining gap (μ ~ eV) is a well-defined target for future work
+
+### 10.2 For the computation (next session)
+
+1. Compute the 11D dilaton effective potential V_eff(R) on S¹/Z₂,
+   including:
+   - The Casimir (done: ΔN × c/R⁴)
+   - The brane-localized SM contribution (Hosotani potential on S²)
+   - The gravitino condensate (if present)
+   - Any R-dependent correction from the CP² sector
+
+2. Identify the source of the bulk scalar mass μ
+
+3. If μ is determinable: R is predicted, ρ_Λ follows, CC solved.
+   If not: state the open problem precisely.
+
+### 10.3 For the long term
+
+The species bound (Route E) may provide a complementary constraint
+from black hole physics. The computation: derive Λ_species from
+the framework's BH entropy (Paper 3, §8) and check whether
+Λ_species⁴ constrains R independently.
+
+---
+
+## 11. The Sentence
+
+The same topological fact — π₁(SO(d)) = Z₂ — that makes electrons
+fermions also makes the Casimir residual small (ΔN = N_B/16). The
+spin structure determines the 122-order hierarchy between M_Pl⁴ and
+ρ_Λ. What it does not determine is R — the radius of the compact
+dimension where this spin structure lives. That radius must come
+from stabilization, and stabilization is the last open problem.
+
+**The framework answers "why is ρ_Λ small?" with "because ΔN is
+small." The remaining question is "why is R large?"**
