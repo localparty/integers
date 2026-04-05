@@ -42,6 +42,8 @@ CP² is the strong dimension. M⁴ is spacetime. Everything else follows.
 
 ## 9.3 References
 
+### Foundational
+
 - Regge, T. "Introduction to complex orbital momenta." *Nuovo Cim.*
   14, 951 (1959). — Regge trajectories.
 - Nambu, Y. "Duality and hadrodynamics." Lecture notes, Copenhagen
@@ -50,16 +52,55 @@ CP² is the strong dimension. M⁴ is spacetime. Everything else follows.
   confinement." *Nucl. Phys. B* 138, 1 (1978). — 't Hooft loop.
 - Chodos, A. et al. "New extended model of hadrons." *Phys. Rev. D*
   9, 3471 (1974). — MIT bag model.
-- Luscher, M. "Symmetry breaking aspects of the roughening transition
-  in gauge theories." *Nucl. Phys. B* 180, 317 (1981). — Luscher term.
-- Bali, G. S. "QCD forces and heavy quark bound states." *Phys. Rep.*
-  343, 1-136 (2001). — String tension review.
-- FLAG Collaboration. "FLAG review 2024." arXiv:2411.04268 (2024).
-  — Λ_QCD and quark masses.
 - Sakharov, A. D. "Violation of CP invariance, C asymmetry, and
   baryon asymmetry of the universe." *JETP Lett.* 5, 24 (1967).
 - Fukugita, M. & Yanagida, T. "Baryogenesis without grand unification."
   *Phys. Lett. B* 174, 45 (1986). — Leptogenesis.
+
+### Lattice confinement and string tension
+
+- Bali, G. S. "QCD forces and heavy quark bound states." *Phys. Rep.*
+  343, 1-136 (2001). — String tension review.
+- Bali, G. S. et al. "Static potentials and glueball masses from pure
+  SU(3) lattice QCD." *Phys. Rev. D* 51, 5165 (1995).
+- Luscher, M. "Symmetry breaking aspects of the roughening transition
+  in gauge theories." *Nucl. Phys. B* 180, 317 (1981). — Luscher term.
+- Luscher, M. & Weisz, P. "Quark confinement and the bosonic string."
+  *JHEP* 0207, 049 (2002).
+- Athenodorou, A. et al. "Closed flux tubes and their string description
+  in D=3+1 SU(N) gauge theories." *JHEP* 1102, 030 (2011). — Luscher
+  term measurement.
+
+### Polyakov loop and deconfinement
+
+- Polyakov, A. M. "Thermal properties of gauge fields and quark
+  liberation." *Phys. Lett. B* 72, 477 (1978).
+- Svetitsky, B. & Yaffe, L. G. "Critical behavior at finite-temperature
+  confinement transitions." *Nucl. Phys. B* 210, 423 (1982).
+
+### Glueball spectrum
+
+- Morningstar, C. J. & Peardon, M. J. "Glueball spectrum from an
+  anisotropic lattice study." *Phys. Rev. D* 60, 034509 (1999).
+- Chen, Y. et al. "Glueball spectrum and matrix elements on anisotropic
+  lattices." *Phys. Rev. D* 73, 014516 (2006).
+
+### Quark masses and standard review
+
+- Workman, R. L. et al. (Particle Data Group). "Review of Particle
+  Physics." *Prog. Theor. Exp. Phys.* 2022, 083C01 (2022).
+- FLAG Collaboration. "FLAG review 2024." arXiv:2411.04268 (2024).
+  — Λ_QCD and quark masses.
+
+### CP2 instanton and gauge theory
+
+- Atiyah, M. F. & Jones, J. D. S. "Topological aspects of Yang-Mills
+  theory." *Commun. Math. Phys.* 61, 97 (1978).
+- Rawnsley, J. H. "Coherent states and Kahler manifolds." *Quart. J.
+  Math. Oxford* 28, 403 (1977). — CP2 geometry and gauge theory.
+
+### Papers in this series
+
 - Paper 1: Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness,
   and Twenty-Two Derivations from Kaluza-Klein Geometry.
   DOI: 10.5281/zenodo.19423681

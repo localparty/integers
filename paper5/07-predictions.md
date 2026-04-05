@@ -10,6 +10,7 @@
 | Neutron-proton Δm | ~1.3 MeV | 1.293 MeV | ~0.5% |
 | Deconfinement T_c | ~200 MeV | 155 MeV | 30% |
 | Lightest glueball | ~880 MeV | ~1500 MeV (mixed) | factor 1.7 |
+| Luscher coefficient L | π/6 ≈ 0.524 | 0.502 ± 0.020 (lattice) | 4% |
 | Baryon asymmetry η_B | ~10⁻¹⁰–10⁻⁷ | 6.1 × 10⁻¹⁰ | order-of-magnitude |
 
 *The sub-1% numerical matches for `√σ` and `m_p` are leading-order

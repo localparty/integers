@@ -489,4 +489,3 @@ inconsistencies between what each paper claims vs what is established.
 
 ---
 
-*Prompt written by Sonnet 4.6 on April 5, 2026.*
