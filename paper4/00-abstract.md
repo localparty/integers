@@ -79,4 +79,15 @@ manifestations of one geometric principle — the Casimir energy
 of quantum fields on compact dimensions determines the holonomy,
 and the holonomy determines the physics.
 
+The identification of the e-circle with the M-theory circle
+provides the physical interpretation the 11th dimension has lacked
+since Witten (1995): the e-coordinate `φ` is the quantum phase of
+particles, the wave function is the literal shape of a particle in
+5D, and measurement is e-space sampling. The Scherk-Schwarz
+SUSY breaking on `S¹/Z₂` — which gives `ΔN = 8` and derives
+`ρ_Λ = (2.25 meV)⁴` with zero free parameters (§7.21) — is
+precisely the Horava-Witten M-theory mechanism on the 11th
+dimension. The e-circle framework is M-theory's 11th dimension
+made physical.
+
 ---
