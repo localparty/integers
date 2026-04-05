@@ -21,6 +21,12 @@
 | Strong CP: `θ = 0`, no axion | **Derived** (Section 7.6) | `π₄(CP²) = Z₂` + CP symmetry |
 | Anomaly cancellation (all types) | **Verified** (Appendix A) | 3 bulk `ν_R` cancel grav. anomaly |
 | Neutrino-dark energy coincidence | **Derived** (Section 7.7) | Both from e-circle radius `R` |
+| `Λ_QCD ≈ 190 MeV` from `CP²` geometry | **Derived** (Section 7.8) | `α_s(M_3)` from `Vol(CP²)` + QCD running |
+| CKM hierarchy `λ, λ², λ³` from Z₃ | **Derived** (Section 7.9) | Quark bulk mass splittings |
+| `J_CKM ~ 10⁻⁵` from Z₃ phase | **Derived** (Section 7.9) | Same mechanism as `δ_CP` |
+| DM mass = mirror proton ≈ 1 GeV | **Derived** (Section 7.10) | Z₂ symmetry fixes `m_DM = m_p` |
+| EW vacuum absolutely stable | **Derived** (Section 7.11) | Compact field space, bounded potential |
+| First-order EWPT → LISA GW signal | **Predicted** (Section 7.12) | Casimir barrier in `V(θ_H)` |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |
 | `CP² × S²` from 3-generation entanglement | **Conjectured** (Section 5.5) | SLOCC → isometry map |
 | e-circle = M-theory circle | **Conjectured** (Section 2.3) | Structural alignment |

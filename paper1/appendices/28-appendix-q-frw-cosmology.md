@@ -261,15 +261,27 @@ This matches the observed Hubble constant `H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹` (6
 by construction — we determined `L` from `ρ_Λ` in Section 6.6.
 
 **DESI tension.** DESI DR2 (2025) reports `4.2σ` evidence for evolving dark
-energy with `w₀ ≈ −0.75`, `w_a ≈ −0.75` — in tension with the `w = −1` prediction
-of the static Casimir scenario. A resolution is available: if the e-circle
-radius (dilaton) is slowly rolling near a shallow minimum of its potential
-(a "thawing" quintessence scenario), the equation of state evolves from
-`w ≈ −1` in the past toward `w ≈ −0.8` today, consistent with the DESI
-measurement. In this scenario, `α` remains constant if the electromagnetic
-coupling is topological rather than geometric — resolving the apparent
-tension with quasar `α`-stability bounds. This extension is speculative and
-identified as future work.
+energy with `w₀ ≈ −0.75`, `w_a ≈ −0.75` — in tension with the `w = −1`
+prediction of the static Casimir scenario. The framework provides a
+concrete resolution: the dilaton (e-circle radius modulus) is currently
+rolling slowly toward its Casimir potential minimum, producing a thawing
+quintessence equation of state. Paper 2, Appendix F derives the trajectory
+from the Casimir + Goldberger-Wise potential:
+
+    w₀ = −0.85,    w_a = −0.23
+
+This prediction lies within the DESI DR2 `2σ` contour (arXiv:2503.14738,
+Figure 12) but predicts milder evolution than DESI's best fit. The
+framework's `w(z)` trajectory: `w(z=0) = −0.85`, `w(z=0.5) = −0.93`,
+`w(z=1) = −0.97`, `w(z→∞) → −1.08` (slightly phantom in the past,
+characteristic of thawing quintessence).
+
+DESI DR3 (expected 2027) will distinguish the framework's prediction from
+both `ΛCDM` and DESI's best fit at `3–4σ`. The `α`-stability constraint
+is satisfied: the electromagnetic coupling is topological (set by the
+e-circle winding number), not geometric (not proportional to `R`), so the
+rolling dilaton does not alter `α` — consistent with quasar absorption-line
+bounds (`Δα/α < 10⁻⁶` over `z = 0–4`).
 
 ### Q.5.2 The Coincidence Problem
 

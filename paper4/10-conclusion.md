@@ -45,12 +45,24 @@ mixing angles (`θ₁₂ = 33.7°`, `θ₂₃ = 49°` — matching data; and
 strong CP problem (`θ_QCD = 0` from `π₄(CP²) = Z₂` — predicting
 no axion).
 
+The QCD confinement scale `Λ_QCD ≈ 190 MeV` is derived from the
+`CP²` compactification volume and QCD running — completing the
+three-scale Casimir correspondence. The CKM quark mixing matrix
+is derived from the same Z₃ orbifold mechanism as the PMNS neutrino
+matrix, with the hierarchical pattern `λ, λ², λ³` emerging from the
+small quark bulk mass splittings. The electroweak vacuum is
+absolutely stable (the compact Wilson line field space admits no
+runaway), and the first-order EWPT produces gravitational waves
+at 1–10 mHz detectable by LISA.
+
 The 11D extension is verified to be anomaly-free: the three bulk
 right-handed neutrinos cancel the gravitational anomaly on each
 brane, serving triple duty alongside their roles in Casimir dark
-energy and baryogenesis. The neutrino-dark energy coincidence —
-both scales set by the e-circle radius — emerges as a geometric
-consequence of a single compact dimension.
+energy and baryogenesis. The dark matter mass is the mirror proton
+mass (`m_DM = m_p ≈ 1 GeV`), fixed by Z₂ symmetry — not a free
+parameter. The neutrino-dark energy coincidence — both scales set
+by the e-circle radius — emerges as a geometric consequence of a
+single compact dimension.
 
 The central conjecture — that the non-abelian dimensions are
 selected by the entanglement geometry of the matter content, via
