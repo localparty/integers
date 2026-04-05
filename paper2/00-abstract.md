@@ -60,12 +60,12 @@ surveys (DES Y3: `0.776 ± 0.017`, KiDS-1000: `0.759 ± 0.024`, HSC Y3:
 reduces `S8`.
 
 **Expansion history:** With the revised `w = −1` (frozen dilaton;
-see `etc/09`), the expansion history matches `ΛCDM` — the H(z)
-peak previously predicted from thawing quintessence is absent. The
-remaining deviations from `ΛCDM` come from elevated `N_eff` and
-lower `Ω_m`, not from evolving `w`. The framework prediction lies
-within the DESI DR2 `2σ` contour (`w₀ = −0.75`, `w_a = −0.75`) but predicts
-milder evolution.
+see `etc/09`), the expansion history at the `w` level matches
+`ΛCDM`. The H(z) peak previously predicted from thawing
+quintessence is absent. Remaining deviations from `ΛCDM` come
+from elevated `N_eff` and lower `Ω_m`, not from evolving `w`.
+If DESI DR3 confirms `w ≠ −1`, non-perturbative modifications
+to the dilaton potential are required.
 
 **Sound horizon:** `r_d = 145.8–146.2` Mpc (0.6–0.9% below Planck).
 

@@ -247,16 +247,17 @@ Combined with the master formula `Ω_DM/Ω_b = 1/ξ²`:
     **ξ = 1/√(Ω_DM/Ω_b) = 1/√5.36 = 0.432**
 
 This is the LEADING-ORDER prediction. The washout correction
-(§E.3.3) shifts the result: for the framework's Yukawa coupling
-(`y ~ 0.45`, `K ~ 460`), the corrected formula `Ω_DM/Ω_b = f(K,ξ)/ξ²`
-gives `ξ ≈ 0.49–0.51` rather than 0.432. This is significant: the
+(§E.3.3) shifts the result. With the corrected gauge-Higgs Yukawa
+`y₄ = g₂√2 = 0.92` (Paper 4, §7.22) and `M_R = 10¹⁵ GeV` (CP²
+seesaw): `K = m_ν/m_star ≈ 46` (BDP 2005; see `etc/07-k-resolution.md`).
+The corrected formula `Ω_DM/Ω_b = f(K,ξ)/ξ²` with `K = 46` gives
+`ξ ≈ 0.50–0.51` — at the BBN boundary, marginally consistent.
+
+The leading-order value `ξ = 0.432` remains the benchmark. The
 corrected `ξ` converges with Scenario A (`ξ = 0.47`, determined
 independently by matching the CMB angular scale `θ*`). Two completely
 independent constraints — the baryogenesis scaling law and the CMB
-acoustic peak position — point to the same value of `ξ`. This
-convergence turns the washout correction from a complication into
-a consistency check: the baryogenesis mechanism PREDICTS that `ξ`
-should lie near the `θ*`-matched value.
+acoustic peak position — point to the same value of `ξ`.
 
 **`ξ` is no longer a free parameter.** At leading order, `ξ = 0.432`
 from `Ω_DM/Ω_b = 1/ξ²`. With the washout correction, `ξ ≈ 0.49` —

@@ -709,3 +709,48 @@ geometric machinery showing that ρ_Λ is NOT fine-tuned — it is
   fermion Yukawa in gauge-Higgs unification
 - Buchmuller, Di Bari, Plumacher, hep-ph/0401240 (2005) — BDP
   washout efficiency K = m̃/m_star
+
+---
+
+## Idea 7: Thermal Tracking (computed April 5 — DOES NOT WORK)
+
+At finite temperature, the KK tower adds V_thermal ~ −dT⁵R to the
+Casimir V = −c/R⁴. The combined potential has V' = 0 at
+R_crit = (4c/d)^{1/5}/T. But V'' < 0 — it's a MAXIMUM, not minimum.
+
+Worse: (4c/d)^{1/5} = 0.20, so R_crit is always 5× below 1/T. When
+KK modes decouple (T ~ 1/R), R is already past the maximum and runs
+to infinity on the bare Casimir. The Casimir coefficient c ~ 10⁻⁴ is
+too small (from ζ(5)/(64π⁶)) relative to the thermal coefficient
+d ~ 2 (O(1)) for thermal tracking to work.
+
+---
+
+## Final Status: All Routes Explored
+
+| Route | Result | Status |
+|---|---|---|
+| A. Gauge couplings | R decoupled from gauge physics | **DEAD** |
+| B. Neutrino mass | m_ν is R-independent | **DEAD** |
+| C. GW stabilization | Requires μ ~ 0.4 eV (undetermined) | **OPEN** |
+| D. Number theory | No mechanism found | **DEAD** |
+| E. Species bound | Upper limit only | **DEAD** |
+| 1. w₀ equation | w = −1 exactly (c₂ = 0) | **DEAD** |
+| 2. The 140 | GW term is zero perturbatively | **DEAD** |
+| 3. m_ν/m_KK | Ratio is continuous, not topological | **DEAD** |
+| 5. Grav. Hosotani | Killed by c₂ = 0 | **DEAD** |
+| 6. Inflation | Inflaton ≠ radion (ε >> 1) | **DEAD** |
+| 7. Thermal | Maximum not minimum; R runs away | **DEAD** |
+
+**R is the ONE remaining free parameter of the framework.** It plays
+the same role as M_Pl in the Standard Model — a single dimensionful
+input that sets the overall scale. Everything else is derived.
+
+The CC problem is reduced from 10¹²² orders of fine-tuning to ONE
+geometric parameter R, whose value gives ρ_Λ through a clean formula
+with all other factors derived from topology and gauge symmetry.
+
+R awaits:
+1. **Measurement** — short-range gravity experiments at ~10 μm
+2. **Non-perturbative computation** — beyond current perturbative tools
+3. **Inflationary initial conditions** — requires solving the measure problem

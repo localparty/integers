@@ -72,15 +72,12 @@ re-emerges.
 The decompactification timescale — when R doubles from its current
 value — is:
 
-    t_double ~ R/(dR/dt) = 1/(Ṙ/R) = 1/(0.67 H₀) ~ 1/(H₀) ~ t₀
+**⚠ Revised (see §10.3):** The perturbative result gives
+`w = −1` to 10⁻⁵² precision. The dilaton is frozen
+(ε ≈ 10⁻⁵²). The e-circle is NOT growing: `Ṙ/R ~ ε H₀ ≈ 0`.
 
-The e-circle doubles in size in approximately one Hubble time
-(~14 Gyr from now). But the OBSERVABLE consequences of this
-doubling are negligible: the dark energy equation of state shifts
-from `w = −0.85` to `w ~ −0.75` — detectable by DESI and Euclid
-but not catastrophic.
-
-The decompactification to `R ~ 1 m` (where KK modes become
-accessible at human scales) takes `~ 10⁵⁰ yr` — far beyond any
-conceivable observation. The framework predicts an interesting
-far future but not an imminent one.
+There is no R-doubling, no decompactification, no evolving `w`.
+The future is eternal de Sitter with constant `R` and constant
+`Λ = ΔN c/R⁴`. The framework predicts a STABLE future, not
+a dynamical one — unless non-perturbative effects modify the
+dilaton potential.

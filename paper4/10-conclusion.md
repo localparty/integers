@@ -65,12 +65,12 @@ amount of matter in the universe — is derived from three geometric
 inputs: the Z₃ CP phase, the bulk Yukawa coupling, and the washout
 dynamics.
 
-The dilaton — the e-circle radius modulus — unifies inflation and
-dark energy in a single field. At early times it drives slow-roll
-inflation with `n_s ≈ 0.965` and `r ≈ 0.03` (testable by CMB-S4).
-At late times it rolls toward its Casimir minimum with
-`w₀ = −0.85` (testable by DESI DR3). One field, one potential, the
-entire expansion history of the universe.
+The dilaton — the e-circle radius modulus — has the perturbative
+potential `V = V₀/φ⁴` (exact to all orders; c₂ = 0 from Epstein
+zeta zeros). It is frozen at its post-inflationary value by Hubble
+friction (ε ≈ 10⁻⁵²), giving `w = −1` — a true cosmological
+constant. If DESI DR3 finds `w ≠ −1`, non-perturbative corrections
+to the dilaton potential are needed.
 
 The central conjecture — that the non-abelian dimensions are
 selected by the entanglement geometry of the matter content, via

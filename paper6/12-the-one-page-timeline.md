@@ -19,9 +19,8 @@ The complete thermal history from the e-dimension framework.
 | `5×10⁴ yr` | `0.8 eV` | φ frozen | **Matter-radiation eq.** | Mirror proton DM dominates, `Ω_DM/Ω_b = 1/ξ²` | §9 |
 | `3.8×10⁵ yr` | `0.3 eV` | φ frozen | **Recombination** | CMB released, `θ* = 0.5964°`, `S8 = 0.753` | Paper 2 |
 | `2×10⁵ yr` | `0.15 eV` | — | Mirror recombination | Mirror CMB released (invisible) | §9.3 |
-| `7×10⁹ yr` | `10⁻⁴ eV` | φ begins thawing | **Dark energy onset** | Dilaton rolls past `φ_min`, `w → −0.85` | §10 |
-| `1.38×10¹⁰ yr` | `2.4×10⁻⁴ eV` | φ slowly rolling | **Today** | `H₀ = 67.4` km/s/Mpc, `Λ = (2.25 meV)⁴` | Paper 2, Paper 4 §7.21 |
-| `10¹¹ yr` | — | φ rolling uphill | Future | `w → −0.75`, R doubles, KK modes lighten | §11 |
-| `10⁵⁰ yr` | — | φ → large | Far future | e-circle macroscopic, approaching 5D de Sitter | §11.3 |
+| `7×10⁹ yr` | `10⁻⁴ eV` | φ frozen | **Dark energy onset** | `Ω_Λ > Ω_m`, `w = −1` (frozen dilaton) | §10 |
+| `1.38×10¹⁰ yr` | `2.4×10⁻⁴ eV` | φ frozen | **Today** | `H₀ = 67.4` km/s/Mpc, `Λ = (2.25 meV)⁴`, `w = −1` | Paper 2, Paper 4 §7.21 |
+| `10¹¹+ yr` | — | φ frozen | Future | R ≈ const (ε ~ 10⁻⁵²), eternal de Sitter | §11 |
 
 **One field. One potential. Every epoch.**

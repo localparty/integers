@@ -25,14 +25,17 @@ The dilaton `φ(t)` measures the e-circle radius at cosmic time `t`:
 where `R₀ ≈ 10 μm` is the stabilized radius (Paper 1, Appendix W;
 Paper 4, §7.21). The dilaton evolves in the potential:
 
-    V(φ) = V₀/φ⁴ + Aφ⁴(ln φ)²
+    V(φ) = V₀/φ⁴
 
-derived from the Casimir energy of bulk fields (`V₀/φ⁴`) plus the
-Goldberger-Wise stabilization (`Aφ⁴(ln φ)²`). This potential has
-been established in Paper 1 (§6.6) and Paper 2 (Appendix F).
+derived from the Casimir energy of bulk fields. This potential is
+exact to all perturbative orders (the 2-loop and higher corrections
+vanish from the Epstein zeta zeros — the same mechanism that gives
+UV finiteness; see Paper 4 §7.21.10 and `etc/09`). No Goldberger-
+Wise term exists at the perturbative level.
 
-The dilaton's trajectory through this potential IS the thermal
-history of the universe.
+The dilaton is frozen at its inflationary value by Hubble friction
+(ε = 8πR/M_Pl² ≈ 10⁻⁵², giving `w = −1` to extraordinary
+precision). Its current value sets the cosmological constant.
 
 ## 1.2 The Three Regimes
 

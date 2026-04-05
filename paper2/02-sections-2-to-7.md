@@ -1,5 +1,17 @@
 # Paper 2 — Sections 2–7
 
+**⚠ Note on w₀:** Several sections below use `w₀ = −0.85`,
+`w_a = −0.23` (the thawing dilaton CPL parameterization). This has
+been **revised to `w₀ = −1`, `w_a = 0`** based on the perturbative
+result that V = V₀/φ⁴ is exact to all orders (c₂ = 0 from Epstein
+zeta zeros; see Paper 4 §7.21.10, Paper 6 §2, `etc/09`). The CAMB
+predictions (H₀, S8, t₀, θ*, N_eff) that depend on `w₀` should be
+recomputed with `w = −1`. The qualitative results (S8 tension
+resolution, H₀ shift from N_eff) are driven by the mirror sector
+(ξ), not by `w`, and remain valid. The quantitative H(z) fingerprint
+prediction (§6, Appendix B) is modified — the peak at z ~ 0.3–0.7
+from evolving `w` is absent with `w = −1`.
+
 ---
 
 ## Section 2: Framework Parameters
