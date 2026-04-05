@@ -40,6 +40,11 @@ where `ω` is the Brans-Dicke parameter. For the canonical KK reduction,
 
     γ_{BD} = 1/2
 
+and the scalar-matter coupling strength is `σ = 1/√3` in Planck units —
+a fixed output of the 5D Einstein action, not a free parameter (Appendix D,
+Section D.5: the scalar kinetic term normalization gives
+`L_scalar = −(1/2)(∂φ)² / (√3 M_Pl)²`, yielding `σ = 1/√3 ≈ 0.577`).
+
 This is excluded by more than four orders of magnitude. The question is
 therefore unavoidable: does the scalar field in our framework violate the
 Cassini bound?

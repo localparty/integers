@@ -88,9 +88,13 @@ the e-charge at every step:
 The proof requires that the 5D path integral is well-defined — that
 no perturbative divergences destroy unitarity. This is established
 by the perturbative finiteness theorem (Paper 1, Appendix S, Theorem
-S.1): the L-loop effective action is finite at every order, with
-counterterm coefficients uniquely determined by Epstein zeta values.
-No uncontrolled divergences arise to break unitarity.
+S.1): the L-loop effective action for linearized 5D gravity on
+`M⁴ × S¹`, under zeta regularization of the KK mode sums, is finite
+at every order, with counterterm coefficients uniquely determined by
+Epstein zeta values. The unitarity claim inherits this regularization
+dependence: it holds within the zeta/dimensional regularization
+framework that preserves the `U(1)` symmetry of the e-circle
+(Paper 1, Appendix S, §S.7).
 
 The S-matrix maps the space of infalling e-configurations `{φ_in}`
 to the space of outgoing Hawking e-configurations `{φ_out}` via the

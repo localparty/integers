@@ -115,34 +115,74 @@ energy vanishes — a constraint, not the absence of dynamics.
 
 The connection between time and the e-dimension has a second,
 independent manifestation in the Euclidean (thermal) formulation.
+We derive it from the near-horizon metric.
 
-In thermal quantum field theory, temperature is related to
-periodicity in imaginary (Euclidean) time via the KMS condition:
+**The near-horizon 5D geometry.** The Schwarzschild metric in the
+5D KK framework (Paper 1, Appendix O, Section O.2.1) is:
 
-    ψ(t_E + β) = ±ψ(t_E),     β = ℏ/(k_B T)
+    ds² = f(r) c²dt² − f(r)⁻¹ dr² − r² dΩ² + R₀² dφ²
 
-where `+` is for bosons and `−` for fermions.
+where `f(r) = 1 − r_s/r`, `r_s = 2GM/c²`, and `φ ∈ [0, 2π)` is
+the e-circle coordinate. Near the horizon (`r → r_s`), define the
+proper distance `ρ` from the horizon:
 
-The e-circle has exactly the same structure (Paper 1, Appendix B,
-Appendix E):
+    ρ = ∫_{r_s}^{r} f(r')^{-1/2} dr' ≈ 2√(r_s(r − r_s))
 
-    Bosons:   ψ(φ + 2π) = +ψ(φ)     (periodic)
-    Fermions: ψ(φ + 2π) = −ψ(φ)     (anti-periodic)
+so `f ≈ ρ²/(4r_s²)`. The near-horizon metric becomes:
 
-The Euclidean time circle (with period `β`) and the e-circle (with
-period `2π`) have identical periodicity and spin structure. In the
-near-horizon geometry of a black hole, the Euclidean time direction
-IS periodic with period `β_H = 1/T_H = 8πGM/(ℏc³)`. The e-circle
-and the Euclidean time circle are geometrically identified:
+    ds² ≈ (ρ²κ²) c²dt² − dρ² − r_s² dΩ² + R₀² dφ²
 
-    φ_e = 2π t_E / β_H
+where `κ = 1/(2r_s) = c⁴/(4GM)` is the surface gravity.
 
-This identification means that **the e-circle near a black hole
-horizon is the thermal circle.** The Hawking temperature is
-determined by the e-circle geometry, not imposed externally. The
-thermal nature of Hawking radiation is a geometric consequence of
-the e-circle's periodicity — the same periodicity that gives rise
-to the spin-statistics theorem in Paper 1.
+**The Euclidean section.** Wick-rotating `t → −it_E`:
+
+    ds²_E ≈ ρ²κ² c²dt_E² + dρ² + r_s² dΩ² + R₀² dφ²
+
+The `(ρ, t_E)` sector is a flat plane in polar coordinates
+`(ρ, κct_E)`. Regularity at `ρ = 0` (the horizon) requires that
+`κct_E` be periodic with period `2π`:
+
+    κct_E ∼ κct_E + 2π
+
+This fixes the Euclidean time period:
+
+    β_H = 2π/(κc) = 8πGM/(c⁴) × c = 8πGM/c³
+
+giving `T_H = ℏc³/(8πGMk_B)` — the Hawking temperature, derived
+purely from regularity of the Euclidean metric.
+
+**The identification.** The Euclidean section of the 5D metric near
+the horizon has the topology `R² × S² × S¹`, where the `R²` is the
+`(ρ, κct_E)` plane. The `κct_E` direction is an angular coordinate
+with period `2π`. The e-circle coordinate `φ` is also an angular
+coordinate with period `2π`. Both have identical periodicity and
+identical spin structure:
+
+    Bosons:   Ψ(t_E + β_H) = +Ψ(t_E)  and  Ψ(φ + 2π) = +Ψ(φ)
+    Fermions: Ψ(t_E + β_H) = −Ψ(t_E)  and  Ψ(φ + 2π) = −Ψ(φ)
+
+The bosonic periodicity is the KMS condition. The fermionic
+anti-periodicity is the spin structure of Paper 1, Appendix B. The
+two circles — the thermal circle of Euclidean time and the geometric
+e-circle — are isomorphic as spin manifolds:
+
+    (S¹_thermal, period β_H, spin structure) ≅ (S¹_e, period 2π, spin structure)
+
+The identification map is:
+
+    φ = 2π t_E / β_H = κ c t_E
+
+**What this means.** The Hawking temperature is not imposed from
+outside — it is the statement that the thermal circle and the
+e-circle are the same geometric object near the horizon. The
+e-circle, which produces the spin-statistics theorem (Paper 1,
+Appendix B), the Born rule (Appendix C), and quantum phase (Section
+2.3), is also the object whose periodicity gives the black hole its
+temperature.
+
+The thermal nature of Hawking radiation is a geometric consequence
+of the e-circle's periodicity. The same compact dimension that makes
+particles fermions or bosons also makes black holes hot.
 
 ### 3.5 Why This Matters for the Information Paradox
 

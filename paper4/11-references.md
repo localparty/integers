@@ -2,8 +2,10 @@
 
 - Acharya, B. S. & Witten, E. "Chiral fermions from manifolds of
   G₂ holonomy." arXiv:hep-th/0109152 (2001).
-- Baptista, R. "The Standard Model from metric instabilities on
-  SU(3)." arXiv:2401.XXXXX (2024).
+- Baptista, J. M. "Internal symmetries in Kaluza-Klein models."
+  *JHEP* 05, 178 (2024). arXiv:2306.01049.
+- Baptista, J. M. "Higher-dimensional routes to the Standard Model
+  fermions." arXiv:2105.02901 (2021).
 - Candelas, P., Horowitz, G. T., Strominger, A. & Witten, E.
   "Vacuum configurations for superstrings." *Nucl. Phys. B* 258,
   46–74 (1985).
@@ -34,6 +36,20 @@
   (1983).
 - Witten, E. "String theory dynamics in various dimensions." *Nucl.
   Phys. B* 443, 85–126 (1995).
+- Alvarez-Gaumé, L. & Witten, E. "Gravitational anomalies."
+  *Nucl. Phys. B* 234, 269–330 (1984).
+- Baker, C. A. et al. "Improved experimental limit on the electric
+  dipole moment of the neutron." *Phys. Rev. Lett.* 97, 131801
+  (2006).
+- Green, M. B. & Schwarz, J. H. "Anomaly cancellations in
+  supersymmetric D = 10 gauge theory and superstring theory."
+  *Phys. Lett. B* 149, 117–122 (1984).
+- Horava, P. & Witten, E. "Eleven-dimensional supergravity on a
+  manifold with boundary." *Nucl. Phys. B* 475, 94–114 (1996).
+- Peccei, R. D. & Quinn, H. R. "CP conservation in the presence of
+  pseudoparticles." *Phys. Rev. Lett.* 38, 1440 (1977).
+- Witten, E. "An SU(2) anomaly." *Phys. Lett. B* 117, 324–328
+  (1982).
 - Paper 1: [this framework, Paper 1 citation]
 - Paper 2: [this framework, Paper 2 citation]
 - Paper 3: [this framework, Paper 3 citation]

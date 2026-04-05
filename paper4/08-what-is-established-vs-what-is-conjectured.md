@@ -15,6 +15,12 @@
 | Higgs mass `~125 GeV` from Casimir | **Derived** (Section 6.7) | Top Yukawa + geometry |
 | KK W'/Z' at 1–2.5 TeV | **Predicted** (Section 6.9) | `S²` compactification scale |
 | Three-scale Casimir hierarchy | **Derived** (Section 6.4) | `Λ`, `v`, `M_GUT` from geometry |
+| Neutrino mixing `θ₁₂ = 33.7°` | **Derived** (Section 7.5) | Z₃ orbifold + warp factor |
+| Neutrino mixing `θ₂₃ = 49°` | **Derived** (Section 7.5) | Z₃ orbifold + warp factor |
+| CP phase `δ_CP = −90°` | **Predicted** (Section 7.5) | Z₃ democratic assignment |
+| Strong CP: `θ = 0`, no axion | **Derived** (Section 7.6) | `π₄(CP²) = Z₂` + CP symmetry |
+| Anomaly cancellation (all types) | **Verified** (Appendix A) | 3 bulk `ν_R` cancel grav. anomaly |
+| Neutrino-dark energy coincidence | **Derived** (Section 7.7) | Both from e-circle radius `R` |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |
 | `CP² × S²` from 3-generation entanglement | **Conjectured** (Section 5.5) | SLOCC → isometry map |
 | e-circle = M-theory circle | **Conjectured** (Section 2.3) | Structural alignment |

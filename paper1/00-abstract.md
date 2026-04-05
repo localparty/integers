@@ -34,8 +34,9 @@ via Kaluza-Klein decomposition to four-dimensional gravity coupled to
 electromagnetism and a scalar field in a single metric. The compactness of
 the `e`-circle converts the continuous UV momentum integrals of 4D quantum
 gravity into discrete Kaluza-Klein mode sums that admit zeta regularization.
-Under zeta regularization of the KK mode sums, the leading UV divergence
-vanishes identically at every loop order:
+For linearized 5D gravity on `M⁴ × S¹`, under zeta regularization of the
+KK mode sums, the leading UV divergence vanishes identically at every loop
+order:
 `S₀^{(L)} = [1 + 2ζ(0)]^L = 0`. The subleading terms are Epstein zeta
 functions evaluated at non-positive integers. For the two-loop `R³` counterterm of linearized 5D gravity on `M⁴ × S¹`
 — corresponding to the Goroff-Sagnotti divergence that proved 4D Einstein

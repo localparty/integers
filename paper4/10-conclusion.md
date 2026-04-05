@@ -38,9 +38,19 @@ in physics.
 Quantitative predictions follow: the Weinberg angle
 (`sin²θ_W ≈ 0.232` at `M_Z`, matching experiment to 0.3%), three
 fermion generations (from `χ(CP²) = 3`), a proton lifetime in the
-range `10³⁴–10³⁶` years (testable by Hyper-Kamiokande), and KK W'
-and Z' resonances at 1–2.5 TeV (testable at HL-LHC and future
-colliders).
+range `10³⁴–10³⁶` years (testable by Hyper-Kamiokande), KK W'
+and Z' resonances at 1–2.5 TeV (testable at HL-LHC), the neutrino
+mixing angles (`θ₁₂ = 33.7°`, `θ₂₃ = 49°` — matching data; and
+`δ_CP = −90°` — testable by DUNE), and a geometric resolution of the
+strong CP problem (`θ_QCD = 0` from `π₄(CP²) = Z₂` — predicting
+no axion).
+
+The 11D extension is verified to be anomaly-free: the three bulk
+right-handed neutrinos cancel the gravitational anomaly on each
+brane, serving triple duty alongside their roles in Casimir dark
+energy and baryogenesis. The neutrino-dark energy coincidence —
+both scales set by the e-circle radius — emerges as a geometric
+consequence of a single compact dimension.
 
 The central conjecture — that the non-abelian dimensions are
 selected by the entanglement geometry of the matter content, via

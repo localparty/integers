@@ -73,4 +73,10 @@ from the top Yukawa and `S²` geometry), KK W' and Z' resonances
 at 1–2.5 TeV (testable at HL-LHC), and a proton lifetime
 `τ_p ~ 10³⁴–10³⁶` years (testable by Hyper-Kamiokande).
 
+The unifying insight across all four papers: the Aharonov-Bohm
+effect, the Higgs mechanism, and dark energy are three
+manifestations of one geometric principle — the Casimir energy
+of quantum fields on compact dimensions determines the holonomy,
+and the holonomy determines the physics.
+
 ---

@@ -78,7 +78,11 @@ non-linear interplay of three effects:
 Note: the individual contributions are APPROXIMATE (estimated by varying
 one parameter at a time). They do not add linearly to the CAMB total
 because the effects are coupled through the Friedmann equation and the
-growth function. The CAMB value `S8 = 0.753` is the definitive number.
+growth function. The CAMB value `S8 = 0.753` is the definitive number;
+the breakdown is illustrative only. In particular, the "non-linear
+coupling" row is the residual between the CAMB total and the sum of the
+individual estimates — it is not an independent physical effect and
+should not be cited as a separate contribution.
 
 An additional suppression from KK cascade decays (Obied et al. 2023,
 same physics as Paper 1 §Y.5.2) is NOT included in the CAMB computation

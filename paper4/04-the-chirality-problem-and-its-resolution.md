@@ -40,7 +40,8 @@ Witten's theorem applies to *smooth* compactifications with the
 
 ### 4.3 The Baptista Construction
 
-Baptista (2024, arXiv:2401.XXXXX) starts with the `SU(3)` group
+Baptista (2024, arXiv:2306.01049; chirality: 2021, arXiv:2105.02901)
+starts with the `SU(3)` group
 manifold (8-dimensional) as the internal space. The key results:
 
 **Step 1: Initial symmetry.** The bi-invariant Einstein metric on
