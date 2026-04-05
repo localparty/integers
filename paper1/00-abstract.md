@@ -72,8 +72,8 @@ deviations at that scale. The same bulk neutrinos give neutrino masses at the
 meV scale through the bulk seesaw mechanism. Kinetic mixing between the two
 branes' `U(1)` gauge fields is predicted at `ε ~ 5 × 10⁻⁴` (from the
 KK tower mediation: `α_EM × π²/6 × exp(−π)`), testable by LDMX and LHCb
-Run 3. A conjectured `Z₃` orbifold structure gives three SM generations, with
-conjectured exponential mass hierarchies from a warp factor `k ≈ 2`. A
+Run 3. Three SM generations are derived from `χ(CP²) = 3` via the index theorem
+(Paper 4, §6.2), with exponential mass hierarchies from a warp factor `k ≈ 2`. A
 speculative identification of the Planck-scale electromagnetic coupling with
 the inverse configuration torus area, `1/α(M_P) = 4π²`, combined with three
 generations of SM running, gives `1/α(0) ≈ 137`.
@@ -92,7 +92,7 @@ km/s/Mpc from hidden-brane dark radiation; in `3–4σ` tension with ACT DR6
 in Paper 2 via bulk leptogenesis). Six are conjectured: the dark energy
 equation of state (thawing dilaton, derived quantitatively in Paper 2),
 the fine structure constant `α ≈ 1/137` (from the configuration torus
-area), `α` stability, three fermion generations (`Z₃` orbifold), the fermion
+area), `α` stability, three fermion generations (derived from `χ(CP²) = 3` in Paper 4), the fermion
 mass hierarchy (warp factor `k ≈ 2`), and normal neutrino mass ordering
 (from `Z₃` geometry, testable by JUNO). Seven testable predictions follow:
 two are already consistent with current data (observed `α` stability, and the

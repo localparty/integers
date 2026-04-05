@@ -128,38 +128,51 @@ over `CP²` times `S¹`.
 representations (zero-mode spectrum depends on the spin structure of the
 internal space), but not the gauge group or coupling predictions.
 
-### 9.5 The Two-Loop Gauge Coupling Amplitude
+### 9.5 Gauge Coupling Unification and the Moduli Potential
 
 Appendix C derives that exact GUT unification `α₃/α₂ = 1` at the
 compactification scale requires an interpolation parameter `λ = 0.6552`
 between the pure one-loop log stabilization and the coupled two-loop
-self-consistent solution. The λ value is determined from the unification
-condition — it is not yet derived from first principles.
+self-consistent solution. The coupled Casimir + Goroff-Sagnotti system
+(`etc/21`) exhibits a saddle-node bifurcation at `κ_bif = 3.477 × 10⁻²`,
+with GUT unification requiring `κ_* = 3.545 × 10⁻²`.
 
-**The open calculation:** Compute the two-loop Goroff-Sagnotti amplitude
-on `S² × CP²` including the cross-coupling between sectors (the two-loop
-coefficient for the S² modulus depends on `r₃` through the complementary
-CP² volume, and vice versa). Specifically:
+**The three-equation system (`etc/22`).** The coupled stabilization
+equations for `S²` and `CP²`, together with the Planck mass constraint
+`M_Pl² = M₁₁⁹ × Vol(CP² × S² × S¹)` and R fixed by dark energy,
+form a self-consistent system that determines `κ` without free
+parameters. The computation (`etc/22-three-equation-system.md`) shows
+that this system does **not** close:
 
-    c₂^{S²}(r₃) = α_GS × G_{eff,S²}²(r₃) × [Z_{S²}(0)]²
-    c₂^{CP²}(r₂) = α_GS × G_{eff,CP²}²(r₂) × [Z_{CP²}(0)]²
+- The Planck + dark energy constraints give
+  `χ = R/l₁₁ ~ 2.4 × 10¹⁸`, forcing
+  `κ = α_GS/(4π²χ²) ~ 3 × 10⁻⁴⁰`.
+- This is **38 orders of magnitude** below `κ_bif`, far outside the
+  regime where Branch 1 solutions exist.
+- The physical origin is the hierarchy `R/l₁₁ ~ 10¹⁸`: the
+  Goroff-Sagnotti two-loop correction scales as `G_eff² ~ (l₁₁/r)¹⁸`
+  and is negligible at the physical compactification scale.
+- In the pure one-loop regime (`κ → 0`), each modulus is stabilized
+  independently by the logarithmic mechanism at `Q_X(ln x_X) = 0`,
+  giving `ρ ≈ 17` and `α₃/α₂ ≈ 391`.
 
-where `G_{eff,X}` depends on the volume of the complementary space.
-The coupled stabilization equations then determine `r₂` and `r₃` (and
-hence `λ`) self-consistently.
+**What remains open:** The gauge coupling prediction `α₃/α₂ = 1`
+requires a mechanism that stabilizes the `S²` and `CP²` moduli at
+the ratio `ρ = √3/2`. The perturbative Casimir + Goroff-Sagnotti
+potential is insufficient. Non-perturbative contributions to the
+moduli potential are needed:
 
-**What would close this problem:**
-- Compute `G_{eff,S²}` from `G₁₁` and `Vol(CP²) = 8π²r₃⁴/3`.
-- Substitute into the coupled stabilization equations.
-- Solve numerically for `(r₂, r₃)` as a function of `M₁₁` and `R`.
-- Verify that the self-consistent solution gives `λ ≈ 0.6552` and
-  hence `α₃/α₂ ≈ 1.000`.
+1. **G-flux stabilization** (Gukov-Vafa-Witten superpotential)
+2. **M2/M5 brane instanton contributions**
+3. **Non-perturbative gauge dynamics** on the curved factors
+4. **Mixed `S² × CP²` Casimir contributions** (cross-spectrum effects
+   not captured by the factored one-loop analysis)
 
-If the first-principles `λ` matches 0.6552, the gauge coupling
-hierarchy is fully derived with no free parameters (beyond `G₄` and
-`R`). If `λ` differs significantly from 0.6552, the framework
-overshoots or undershoots GUT unification, and the discrepancy
-identifies where the two-loop cross-coupling approximation breaks down.
+The spectral zeta data (Z(−2), Z'(−2), Z(0)) and the gauge coupling
+formula `α₃/α₂ = (4/3)ρ²` remain exact. The `etc/21` bifurcation
+analysis correctly characterizes the perturbative sector. The open
+problem is identifying which non-perturbative mechanism selects
+`κ ≈ 3.5 × 10⁻²` at the compactification scale.
 
 ---
 

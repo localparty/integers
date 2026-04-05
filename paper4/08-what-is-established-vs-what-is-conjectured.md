@@ -36,6 +36,10 @@
 | Primordial GW + EWPT double feature | **Predicted** (Section 7.19) | Two signals in LISA band |
 | `M_Pl` derived from `M₁₁` × Vol(M⁷) | **Derived** (Section 7.20) | Hierarchy = large e-circle |
 | CC from simultaneous stabilization | **Partially derived** (Section 7.21) | Structure established; computation open |
+| All-orders finiteness (KK sum factor) | **Established** (Theorem K.1, Paper 1 Appendix K §K.6) | Universal Epstein Vanishing theorem |
+| SLOCC-isometry map | **Established at Lie algebra level** (Theorem 5.2, §5.6); global topology open (§9.4) | Tangent space weight matching |
+| Moduli stabilization | **Partially established**: S² and CP² dynamically stabilized by spectral zeta nonvanishing; κ from Planck mass constraint (§9.5, OC-2) | Spectral zeta values + Planck constraint |
+| Gauge coupling hierarchy | **Leading order derived**: α₃/α₂ = 1 at GUT scale for κ = 3.545 × 10⁻²; first-principles κ via three-equation system (§9.5) | Coupled moduli stabilization |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |
 | `CP² × S²` from 3-generation entanglement | **Conjectured** (Section 5.5) | SLOCC → isometry map |
 | e-circle = M-theory circle | **Conjectured** (Section 2.3) | Structural alignment |

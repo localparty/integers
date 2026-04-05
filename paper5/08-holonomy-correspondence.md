@@ -101,12 +101,14 @@ The framework as established in Papers 1-5 accounts for:
 - Baryon asymmetry (Paper 5)
 - Quark mass hierarchy (Paper 5)
 
-**Remaining open problems (future papers):**
-- Inflation from the dilaton (Paper 6)
+**Completed in later papers:**
+- Inflation and the inflaton identification problem (Paper 6, §3)
 - Full thermal history — inflation to today (Paper 6)
-- The cosmological constant — simultaneous stabilization (Paper 7)
-- Logarithmic BH entropy corrections (Paper 8)
-- The SLOCC-isometry map (Paper 4, conjecture) (future)
+
+**Remaining open problems:**
+- The cosmological constant — simultaneous stabilization (Paper 4 §7.21)
+- Logarithmic BH entropy corrections (Paper 4 §7.18)
+- The SLOCC-isometry map — global topology (Paper 4 §9.4)
 - Rigorous proof of the Yang-Mills mass gap (mathematical)
 
 The framework has accounted for essentially all of the known physics
