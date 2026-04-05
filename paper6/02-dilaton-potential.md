@@ -63,10 +63,27 @@ dilaton's kinetic energy is converted to particle production
 through its gravitational coupling to the Standard Model. The
 e-circle settles to its equilibrium size `R₀ ≈ 10 μm`.
 
-**Regime III: The thawing slope** (`φ > φ_min`)
+**Regime III: The frozen dilaton** (`φ ≈ φ_i`, frozen by Hubble friction)
 
-At late times (the current epoch), the dilaton has rolled slightly
-past the minimum and is slowly climbing the GW potential on the
-other side. This slow roll produces the dark energy equation of
-state `w₀ = −0.85`, `w_a = −0.23` (Paper 2, Appendix F). The
-e-circle is slowly growing — the fifth dimension is expanding.
+**⚠ Correction (see `etc/09-creative-routes-to-R.md`):**
+
+The perturbative Casimir potential V = −c/R⁴ is EXACT to all orders
+(the 2-loop and higher corrections vanish from the Epstein zeta zeros
+— the same mechanism that gives UV finiteness in Appendix G). No
+Goldberger-Wise potential exists at any perturbative order. The
+dilaton potential has NO minimum.
+
+The dilaton is frozen at its inflationary value R_i by Hubble
+friction. With the physical-field kinetic term L ∝ M₅³/R²(∂R)²,
+the slow-roll parameter is ε = 8/M₅³ ≈ 10⁻⁵², giving:
+
+    **w₀ = −1.000...000  (indistinguishable from Λ)**
+
+The original prediction `w₀ = −0.85`, `w_a = −0.23` assumed a
+GW-stabilized minimum with a thawing slope. The exact perturbative
+result removes both. The dark energy IS a cosmological constant
+to 10⁻⁵² precision. The e-circle is frozen, not slowly expanding.
+
+If DESI DR3 confirms `w = −1` (within its ~5% precision), this
+revised prediction is confirmed. If DESI finds `w₀ ≠ −1`,
+non-perturbative modifications to the dilaton potential are required.

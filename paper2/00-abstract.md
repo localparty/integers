@@ -13,9 +13,10 @@ inputs — the dark energy density `ρ_Λ` (which fixes the e-circle circumferen
 the brane temperature ratio `ξ` through the scaling law below) — together
 with the Standard Model field content, Planck inflation parameters
 (inherited unchanged from `ΛCDM`), and a thawing dilaton dark energy equation
-of state (`w₀ = −0.85`, `w_a = −0.23`, derived from the Casimir +
-Goldberger-Wise potential in Paper 1), determine every cosmological
-observable.
+of state — **revised to `w₀ = −1`, `w_a = 0`** (the perturbative
+Casimir potential V = c/R⁴ is exact to all orders; the dilaton is
+frozen by Hubble friction at ε ~ 10⁻⁵²; see `etc/09`) — determine
+every cosmological observable.
 
 The central discovery of this paper is the scaling law — derived from
 temperature-asymmetric bulk leptogenesis on the `Z₂` orbifold — that fixes `ξ`:
@@ -58,9 +59,11 @@ surveys (DES Y3: `0.776 ± 0.017`, KiDS-1000: `0.759 ± 0.024`, HSC Y3:
 `w(z)` modifies the growth rate, and lower `Ω_m = 0.290–0.302` directly
 reduces `S8`.
 
-**Expansion history:** The thawing dilaton (`w₀ = −0.85`, `w_a = −0.23`) drives
-`H(z)` to peak 4–6% above `ΛCDM` at `z ~ 0.3–0.7`, with a specific fingerprint
-testable by DESI DR3 at `8σ` significance. The framework prediction lies
+**Expansion history:** With the revised `w = −1` (frozen dilaton;
+see `etc/09`), the expansion history matches `ΛCDM` — the H(z)
+peak previously predicted from thawing quintessence is absent. The
+remaining deviations from `ΛCDM` come from elevated `N_eff` and
+lower `Ω_m`, not from evolving `w`. The framework prediction lies
 within the DESI DR2 `2σ` contour (`w₀ = −0.75`, `w_a = −0.75`) but predicts
 milder evolution.
 

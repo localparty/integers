@@ -504,26 +504,61 @@ State the result honestly:
 - The GW stabilization reduces the CC problem from 10¹²² to ~10¹⁰
 - The remaining gap (μ ~ eV) is a well-defined target for future work
 
-### 10.2 For the computation (next session)
+### 10.2 The c₂ = 0 discovery (computed April 5)
 
-1. Compute the 11D dilaton effective potential V_eff(R) on S¹/Z₂,
-   including:
-   - The Casimir (done: ΔN × c/R⁴)
-   - The brane-localized SM contribution (Hosotani potential on S²)
-   - The gravitino condensate (if present)
-   - Any R-dependent correction from the CP² sector
+The 2-loop coefficient c₂ was extracted from Appendix G. Result:
+**c₂ = 0**. The Epstein zeta zeros that give UV finiteness ALSO
+kill all perturbative corrections to the Casimir:
 
-2. Identify the source of the bulk scalar mass μ
+    V(R) = −ΔN × 3ζ(5)/(64π⁶R⁴)  [EXACT to all perturbative orders]
 
-3. If μ is determinable: R is predicted, ρ_Λ follows, CC solved.
-   If not: state the open problem precisely.
+**Perturbative finiteness ↔ no perturbative stabilization.**
+These are two faces of the same coin. The same mechanism (the
+complementary zeros of ζ(s) and L(s, χ₋₃)) that makes quantum
+gravity finite also prevents the potential from developing a
+minimum.
 
-### 10.3 For the long term
+### 10.3 The w₀ = −1 prediction (computed April 5)
 
-The species bound (Route E) may provide a complementary constraint
-from black hole physics. The computation: derive Λ_species from
-the framework's BH entropy (Paper 3, §8) and check whether
-Λ_species⁴ constrains R independently.
+With the physical-field kinetic term L ∝ M₅³/R² × (∂R)², the
+slow-roll parameter is ε = 8/M₅³ ≈ 10⁻⁵². This gives:
+
+    **w₀ = −1.000...000 (52 zeros after the decimal)**
+
+The dilaton on V ∝ 1/R⁴ is frozen to extraordinary precision.
+It IS a cosmological constant. This contradicts Paper 6's
+w₀ = −0.85 — that prediction must be revised or reinterpreted.
+
+### 10.4 The revised picture
+
+R is NOT stabilized. It is frozen at its inflationary value R_i
+by Hubble friction. The "cosmological constant" is the current
+value of the dilaton potential: ρ_Λ = ΔN × c/R_i⁴.
+
+R_i is determined by the inflationary dynamics — specifically,
+by where on the V ∝ 1/R⁴ potential the inflaton lands after
+inflation. This connects the CC to the inflationary initial
+conditions — a new link between early and late cosmology.
+
+### 10.5 What remains open
+
+1. **What sets R_i?** The inflationary dynamics (Paper 6) must
+   determine where R ends up after inflation. If the inflaton IS
+   the dilaton (as Paper 6 claims), its post-inflation value R_i
+   follows from the number of e-folds and the reheating dynamics.
+   This is a computable question.
+
+2. **Is w₀ exactly −1 or approximately −1?** The perturbative
+   result gives −1 to 10⁻⁵² precision. Non-perturbative effects
+   (instantons ~ exp(−10³⁰)) could shift this by ~10⁻10³⁰ —
+   completely negligible. Only new physics beyond the framework
+   could give w₀ ≠ −1.
+
+3. **The DESI test.** DESI DR2 shows 4.2σ tension with w = −1
+   (preferring w₀ ≈ −0.75, w_a ≈ −0.75). If DESI DR3 confirms
+   w₀ ≠ −1, the frozen-dilaton picture is falsified, and
+   non-perturbative or additional-field modifications are needed.
+   If DESI converges to w = −1, the picture is confirmed.
 
 ---
 

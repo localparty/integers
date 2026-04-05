@@ -123,9 +123,13 @@ the independently `θ*`-matched value `ξ = 0.47`. Three scenarios bracket
 the prediction. The CAMB-computed results: `t₀ = 13.47–13.60` Gyr, `H₀ = 68.7–69.5` km/s/Mpc, `S8 = 0.753–0.785` (resolving the `4σ` weak lensing
 tension without tuning), `r_d = 145.8–148.0 Mpc`, and the CMB angular
 scale `θ*` matched to within 0.5–6.6 arcseconds of Planck's measurement.
-The thawing dilaton (`w₀ = −0.85`, `w_a = −0.23`) drives the expansion
-history `H(z)` to peak 4–6% above `ΛCDM` at `z ~ 0.3–0.7` — a specific
-fingerprint testable by DESI DR3 at `8σ`. The cosmic coincidence
+The dilaton dark energy equation of state — **revised to `w = −1`
+exactly** (the perturbative Casimir V = c/R⁴ is exact to all orders;
+the dilaton is frozen at ε ~ 10⁻⁵²; see Paper 6 revision and
+`etc/09-creative-routes-to-R.md`) — makes the expansion history
+consistent with `ΛCDM` at the w level. Remaining deviations from
+`ΛCDM` come from elevated `N_eff` and lower `Ω_m`, testable by
+DESI DR3 and CMB-S4. The cosmic coincidence
 `Ω_DM/Ω_b ≈ 5` is not a coincidence: it is `1/ξ²`, where `ξ` is fixed by
 geometry and baryogenesis. All three scenarios predict `N_eff = 3.31–3.39`,
 in `3–4σ` tension with ACT DR6 (`N_eff = 2.86 ± 0.13`) — the framework's

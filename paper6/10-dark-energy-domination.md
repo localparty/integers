@@ -31,21 +31,26 @@ slowly with:
 
     φ̇/φ_min ~ √(3(1 + w₀)) × H₀ ~ 0.67 H₀
 
-The dark energy equation of state (Paper 2, Appendix F):
+**⚠ Revised prediction (see `etc/09-creative-routes-to-R.md`):**
 
-    w₀ = −0.85,   w_a = −0.23
+The perturbative Casimir potential V = −c/R⁴ is exact to all orders
+(the 2-loop coefficient c₂ = 0 from the Epstein zeta zeros that
+give UV finiteness). With the physical-field normalization
+L ∝ M₅³/R²(∂R)², the slow-roll parameter is ε = 8/M₅³ ≈ 10⁻⁵²:
 
-    w(z) = w₀ + w_a × z/(1+z)
+    **w₀ = −1,   w_a = 0**   (to 10⁻⁵² precision)
 
-The trajectory: `w(z=0) = −0.85`, `w(z=0.5) = −0.93`,
-`w(z=1) = −0.97`, `w(z→∞) → −1.08` (slightly phantom in the past,
-characteristic of thawing quintessence).
+The original `w₀ = −0.85`, `w_a = −0.23` assumed a Goldberger-Wise
+thawing slope beyond a potential minimum. The exact perturbative
+result shows no minimum exists and no thawing occurs. The dark
+energy IS a cosmological constant — the frozen Casimir energy.
 
 ## 10.3 The Physical Interpretation
 
-The dilaton rolling means **the e-circle radius is slowly changing**:
+The dilaton is **frozen** at its inflationary value by Hubble
+friction. The e-circle radius is NOT changing:
 
-    Ṙ/R = φ̇/φ ~ 0.67 H₀ ~ 1.5 × 10⁻¹⁸ s⁻¹
+    Ṙ/R ~ ε × H₀ ~ 10⁻⁵² × H₀ ≈ 0
 
 Over the age of the universe:
 

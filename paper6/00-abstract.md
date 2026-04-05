@@ -12,13 +12,15 @@ to dark energy domination at `10¹⁰` years — driven by a single
 geometric object: the dilaton `φ`, the modulus of the e-circle
 radius established in Paper 1.
 
-The dilaton potential `V(φ) = V₀/φ⁴ + Aφ⁴(ln φ)²` — derived from
-the Casimir energy of bulk fields plus the Goldberger-Wise
-stabilization — has three regimes that map onto three cosmological
-eras: (i) the Casimir plateau at large `φ` drives slow-roll
-inflation with `n_s = 0.965`, `r = 0.03`; (ii) the potential basin
-near `φ_min` drives reheating and the thermal history; (iii) the
-thawing slope beyond `φ_min` drives dark energy with `w₀ = −0.85`.
+The dilaton potential `V(φ) = V₀/φ⁴` — derived from the Casimir
+energy of bulk fields (exact to all perturbative orders; see
+`etc/09-creative-routes-to-R.md`) — has two regimes: (i) the
+Casimir plateau at large `φ` drives slow-roll inflation with
+`n_s = 0.965`, `r = 0.03`; (ii) after inflation, Hubble friction
+freezes the dilaton at its post-inflationary value, making the
+Casimir energy a true cosmological constant (`w = −1` to 10⁻⁵²
+precision). No Goldberger-Wise stabilization is needed or present
+at the perturbative level — the dilaton is frozen, not stabilized.
 
 This paper makes four contributions unique to the series.
 

@@ -27,15 +27,12 @@ reaches `φ = ∞` in finite time.
 
 In phantom dark energy models (`w < −1`), the expansion can
 become singular in finite time — the "Big Rip" (Caldwell, Kamionkowski
-& Weinberg 2003). The e-dimension framework has `w₀ = −0.85 > −1`
-(quintessence, not phantom). The dilaton potential is bounded from
-below and the field lives on a smooth trajectory. **No Big Rip can
-occur.**
+& Weinberg 2003). The e-dimension framework has `w = −1` exactly
+(frozen Casimir energy, not quintessence or phantom). The dilaton
+is frozen by Hubble friction at ε ~ 10⁻⁵². **No Big Rip can occur.**
 
-The Casimir potential `V₀/φ⁴` vanishes as `φ → ∞`, but the GW
-potential grows. The total potential:
-
-    V(φ) = V₀/φ⁴ + Aφ⁴(ln φ)² → Aφ⁴(ln φ)²
+The Casimir potential `V₀/φ⁴` is the exact perturbative result
+(no GW correction at any perturbative order). The dilaton sits at
 
 is always positive and monotonically increasing for large `φ`. The
 vacuum energy grows, but the dilaton slows — approaching a new

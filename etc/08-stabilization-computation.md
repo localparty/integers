@@ -177,26 +177,79 @@ stabilization WOULD give an independent R if μ were determined,
 but μ at 0.4 eV requires explanation. The species bound (Route E)
 provides a consistency check but not a precise value.
 
-The computation to close this gap: derive V_GW from the 11D dilaton
-effective potential, including all brane couplings. This is a
-specific, well-defined calculation in 5D supergravity.
+---
+
+## 5. The c₂ = 0 Result (April 5)
+
+Extracting the 2-loop coefficient from Appendix G reveals:
+
+**c₂ = 0.** ALL perturbative corrections to the Casimir vanish.
+
+The Epstein zeta zeros (E₂(−j; Q₀) = 0 for j ≥ 1, from the
+complementary trivial zeros of ζ(s) and L(s, χ₋₃)) kill every
+term in the 2-loop mass expansion. The same mechanism extends
+to all loop orders (S₀^L = 0^L = 0 for L ≥ 1).
+
+**V(R) = −ΔN × 3ζ(5)/(64π⁶R⁴) is EXACT to all perturbative orders.**
+
+This is a deep structural result:
+
+**Perturbative finiteness ↔ no perturbative stabilization.**
+
+The zeros that make quantum gravity UV-finite also prevent the
+radion potential from developing a minimum. These are two faces
+of the same mathematical structure (the Epstein zeta on the
+Eisenstein lattice).
+
+The GW stabilization (§2, §3 above) requires a non-perturbative
+V_GW term. But Appendix J shows non-perturbative effects are
+suppressed by exp(−10³⁰). So:
+
+**R is NOT stabilized.** It is frozen at its inflationary value
+by Hubble friction. ρ_Λ = c/R_i⁴ is the current value of the
+dilaton potential, frozen since inflation.
 
 ---
 
-## 5. What This Teaches Us
+## 6. The w₀ = −1 Prediction
 
-The S¹ Casimir can determine ρ_Λ given R, OR determine R given ρ_Λ.
-It cannot determine both — one must come from elsewhere.
+With the physical-field kinetic term (non-canonical):
 
-The framework currently uses ρ_Λ (observed) to fix R. A fully
-predictive theory would use the stabilization potential to fix R
-and predict ρ_Λ. The gap is the bulk scalar mass μ.
+    L = (M₅³/R²)(∂R)²
 
-If μ is eventually determined from the 11D geometry, the chain:
+the slow-roll parameter on V = −c/R⁴ is:
 
-    11D SUGRA → ΔN = 8 → Casimir coefficient
-    11D dilaton coupling → μ → GW stabilization → R_min
-    R_min + ΔN → ρ_Λ = (2 meV)⁴ (PREDICTED)
+    ε = 8/M₅³ = 8πR/M_Pl² ≈ 2 × 10⁻⁵²
 
-would be the first derivation of the cosmological constant from
-first principles. The CC problem would be solved.
+    **w₀ = −1 + 2ε/3 = −1.000...000**
+
+The dilaton is frozen to 10⁻⁵² precision. It IS a cosmological
+constant — not quintessence.
+
+This contradicts Paper 6's w₀ = −0.85. The perturbative result
+says w₀ = −1 exactly. Paper 6's prediction must be revised.
+
+---
+
+## 7. What This Teaches Us (Revised)
+
+The S¹ Casimir gives ρ_Λ = ΔN c/R⁴ with R frozen from inflation.
+The potential is exact to all perturbative orders (no corrections).
+The equation of state is w = −1 to 10⁻⁵² precision.
+
+**The framework predicts a TRUE cosmological constant**, not
+quintessence. The CC value is set by:
+
+    ρ_Λ = ΔN × 3ζ(5)/(64π⁶R_i⁴)
+
+where:
+- ΔN = 3.44 (from 11D SUGRA + spin structure — DERIVED)
+- R_i = inflationary initial condition (the REMAINING unknown)
+
+The CC problem is reduced to: **what sets R_i during inflation?**
+
+If the inflaton IS the dilaton (Paper 6), R_i is determined by
+the number of e-folds and the reheating dynamics. Computing R_i
+from the inflationary slow roll on V = C/φ⁴ is a specific,
+tractable calculation — the initial condition, not the potential,
+is the key.
