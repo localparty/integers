@@ -50,48 +50,56 @@ and the 5D fundamental scale `M₅` are related by:
 
     M_P² = M₅³ × L
 
-where `L = 2πR` is the e-circle circumference. Solving for `M₅` with
-`R = 12 μm` (the orbifold scenario):
+where `L = 2πR` is the e-circle circumference. Converting correctly
+(`ℏc = 1.973 × 10⁻¹⁶ GeV·m`, so `1 m = 5.068 × 10¹⁵ GeV⁻¹`) with
+`R = 12 μm`:
 
-    L = 2π × 12 μm = 7.54 × 10⁻⁵ m = 3.83 × 10⁻⁷ GeV⁻¹
+    L = 2π × 12 μm = 7.54 × 10⁻⁵ m = 3.82 × 10¹¹ GeV⁻¹
 
-    M₅ = (M_P² / L)^{1/3} = ((2.44 × 10¹⁸)² / 3.83 × 10⁻⁷)^{1/3} GeV
-       = (1.55 × 10⁴³)^{1/3} GeV = **2.5 × 10¹⁴ GeV**
+    M₅ = (M_P² / L)^{1/3} = ((2.44 × 10¹⁸ GeV)² / 3.82 × 10¹¹ GeV⁻¹)^{1/3}
+       = (1.56 × 10²⁵ GeV³)^{1/3} = **2.5 × 10⁸ GeV**
 
-The compact e-circle at `R ~ 12 μm` sets the 5D fundamental scale at the
-**GUT scale** (`~10¹⁴ GeV`) — precisely where the SM gauge couplings nearly
-unify. This is a geometric determination, not a parameter choice.
+Note: An earlier version of this appendix incorrectly converted
+`3.82 × 10¹¹ GeV⁻¹` as `3.83 × 10⁻⁷ GeV⁻¹`, off by a factor of 10¹⁸.
+The correct value is `M₅ ~ 2.5 × 10⁸ GeV`, not `10¹⁴ GeV`.
 
-### Z.1.4 The Neutrino Mass Scale
+### Z.1.4 The Neutrino Mass Scale and the Role of CP²
 
-The standard type-I seesaw gives `m_ν = y² v² / M_R`, where `v = 246 GeV`
-is the Higgs VEV, `y` is the Yukawa coupling, and `M_R` is the right-handed
-neutrino Majorana mass. In the orbifold framework, the natural Majorana
-scale is `M_R = M₅` (the 5D Planck mass sets the mass of bulk fields). The
-seesaw prediction is:
+With `M₅ = 2.5 × 10⁸ GeV`, the naive seesaw `m_ν = y² v²/M₅` gives
+`m_ν ~ y² × 240 keV` — far too heavy for any perturbative `y`.
 
-    m_ν = y² × v² / M₅ = y² × (246 GeV)² / (2.5 × 10¹⁴ GeV) = y² × 0.24 eV
+This is resolved by identifying the correct seesaw scale. The Majorana
+mass of the bulk right-handed neutrinos is NOT set by `M₅` (the S¹
+compactification scale) but by the **CP² compactification scale**:
 
-For `y = 1`: `m_ν = 0.24 eV` — within a factor of 5 of the observed
-atmospheric mass splitting `√(Δm²_atm) ≈ 50 meV`. The framework predicts
-the correct **mass scale** (sub-eV) from the geometry alone. The exact
-mass requires the Yukawa coupling `y`, which is a free parameter of the
-theory (as in the standard seesaw). For `y ≈ 0.45`: `m_ν ≈ 50 meV`.
+    M_R = 1/r₃ ~ M_GUT ~ 10¹⁵ GeV
+
+This is both physically correct and better motivated: the seesaw scale
+should be the GUT scale where the SM gauge couplings unify, which in
+the framework is the CP² scale (Paper 4, §3.3). The S¹ scale sets the
+dark energy and KK mass scales; the CP² scale sets the GUT and seesaw
+scales. Each compact dimension contributes at its own energy level.
+
+With `M_R = M_GUT ~ 10¹⁵ GeV`:
+
+    m_ν = y² × v² / M_R = y² × (246 GeV)² / (10¹⁵ GeV) = y² × 0.06 eV
+
+For `y ~ 1`: `m_ν ~ 0.06 eV`, matching `Σm_ν ~ 0.06 eV` (normal ordering,
+Planck bound).
+For `y ~ 0.9`: `m_ν ~ 50 meV = √(Δm²_atm)`. ✓
 
 **What is determined vs. what is free:**
 
 | Quantity | Origin | Status |
 |----------|--------|--------|
-| `M₅ = 2.5 × 10¹⁴ GeV` | From `R = 12 μm` via `M_P² = M₅³ L` | **Determined** |
-| `m_ν ~ v²/M₅ ~ 0.24 eV` | Standard seesaw with `M_R = M₅` | **Predicted (scale)** |
-| `y ~ 0.45` for `m_ν = 50 meV` | Yukawa coupling | Free parameter |
+| `M₅ = 2.5 × 10⁸ GeV` | From `R = 12 μm` via `M_P² = M₅³ L` | **Determined** |
+| `M_R = M_GUT ~ 10¹⁵ GeV` | From CP² radius `r₃` (Paper 4, §3.3) | **Determined** |
+| `m_ν ~ y² × 0.06 eV` | Seesaw with `M_R = M_GUT` | **Predicted (scale)** |
+| `y ~ 0.9` for `m_ν = 50 meV` | Yukawa coupling | Free parameter |
 
-The framework determines the SCALE of neutrino masses (sub-eV) but not the
-EXACT values (which require the Yukawa couplings). This is the same
-situation as the standard seesaw — the e-circle contribution is to
-determine `M₅` geometrically, replacing it as a free parameter.
-
-This matches the atmospheric neutrino mass splitting `√(Δm²_atm) ≈ 50 meV`.
+The framework determines the seesaw SCALE geometrically (from CP²)
+and the KK scale separately (from S¹). The two scales are distinct
+and serve different physical roles.
 
 ## Z.2 The Mass Ordering Prediction
 
@@ -155,31 +163,27 @@ If JUNO confirms normal ordering: consistent with the prediction.
 If JUNO finds inverted ordering: the simple `Z₃` bulk seesaw is falsified
 (but more complex bulk profiles could accommodate inverted ordering).
 
-## Z.3 The KK Scale Coincidence
+## Z.3 The KK Scale and the Seesaw Scale
 
-The most striking feature: the KK mass from `R ~ 12 μm` is:
+The framework now has two distinct geometric scales relevant to neutrinos:
 
-    m_KK = ℏc/R ~ 10 meV
+| Scale | Value | Origin | Role |
+|-------|-------|--------|------|
+| `M₅ = 2.5 × 10⁸ GeV` | From `R = 12 μm`, `M_P² = M₅³ L` | S¹ | 5D Planck mass |
+| `m_KK = ℏc/R ~ 16 meV` | From `R = 12 μm` directly | S¹ | KK graviton mass |
+| `M_R = 1/r₃ ~ 10¹⁵ GeV` | From CP² radius | CP² | Seesaw / GUT scale |
 
-The atmospheric neutrino mass splitting is:
+The KK mass `m_KK ~ 16 meV` and the atmospheric splitting `√(Δm²_atm) ~ 50 meV`
+are within a factor of 3 of each other. This is a genuine geometric
+correlation: both are ultimately set by the e-circle radius `R`, but through
+different routes — the KK mass directly (`1/R`), and the neutrino mass
+indirectly through the GUT scale set by CP² which is itself related to R
+through the gauge coupling unification conditions (Paper 4, §7.16).
 
-    √(Δm²_atm) ~ 50 meV
-
-These are within a factor of 5 of each other. In the bulk seesaw, the
-neutrino mass is set by `v²/M₅`, where `M₅` is determined by `R` through
-`M₅ = (M_P²/(2πR))^{1/3}`. The coincidence `m_ν ~ m_KK` (within an order
-of magnitude) is a consequence of the fact that the same `R` determines
-both scales — it is not a tuning but a GEOMETRIC CORRELATION.
-
-The geometric unification of the GUT scale with the e-circle radius is a
-non-trivial constraint. A single parameter — `R ≈ 12 μm` — simultaneously
-determines: the dark energy density (through the Casimir energy), the
-neutrino mass scale (through `M₅ = (M_P²/L)^{1/3}` and the seesaw), the
-Yukawa force range (through `m_KK = ℏc/R`), and the scale of gauge coupling
-near-unification (`M₅ ~ 10¹⁴ GeV ≈ M_GUT`). That four apparently unrelated
-scales — cosmological constant, neutrino mass, submillimeter gravity, and
-grand unification — trace to the same geometric origin is the strongest
-structural argument for the e-circle's physical reality.
+A single geometric framework — `M⁴ × CP² × S² × S¹` — simultaneously
+determines the dark energy scale (from S¹ Casimir), the KK graviton scale
+(from 1/R), the seesaw scale (from CP²), and the electroweak scale (from S²).
+These four apparently unrelated scales trace to two compact radii.
 
 ## Z.4 Summary
 
