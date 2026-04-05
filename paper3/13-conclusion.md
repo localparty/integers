@@ -67,8 +67,8 @@ dimensions.
 | Scrambling time t_scr ~ β ln S | **Derived** (from e-propagation + thermal emission rate) | A measurement of scrambling time inconsistent with β ln S |
 | Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; zeta regularization dependent) | A proof that the 5D path integral is not well-defined |
 | δφ = φ_infalling (e-imprint mechanism) | **Argued** (from e-conservation at the horizon vertex) | A proof that e-conservation does not apply at the horizon |
-| e-correlations not subject to monogamy | **Conjectured** (the Gauss-law / superselection argument) | A rigorous proof that e-conservation is standard Hilbert-space entanglement |
-| Firewall paradox resolution | **Conjectured** (depends on e-correlation claim above) | A proof that all three AMPS postulates cannot simultaneously hold in 5D |
+| e-correlations not subject to monogamy | **Derived** (§9.3.1: Q_e is a superselection charge by Wick-Wightman-Wigner) | A proof that the KK zero-mode projection does not commute with Q_e |
+| Firewall paradox resolution (Theorem 9.1) | **Argued** (Properties 1-2 proved; horizon vertex assumption from §4.3) | A proof that e-conservation does not hold at the horizon vertex |
 | e-coordinate non-dynamical (no causal structure) | **Argued** (from the fiber bundle geometry) | A derivation of a causal propagation equation for the e-coordinate |
 
 **The resolution is complete at the level of physical argument.**
