@@ -252,8 +252,9 @@ Are there claims that should cite something but don't?
 ### 3.2 The CAMB Computation
 - Are the CAMB input parameters (Table in §2.3) correctly derived from
   the framework's geometric parameters?
-- Is the CPL parameterization (w₀ = −0.85, w_a = −0.23) for the thawing
-  dilaton justified or just asserted? Where does w₀ = −0.85 come from?
+- **⚠ Revised:** The prediction is now w₀ = −1, w_a = 0 (Casimir
+  potential exact; dilaton frozen; Paper 6 §2). The CPL parameterization
+  is no longer used; w = −1 exactly.
 - Does CAMB's PPF treatment of dark energy perturbations introduce any
   artifacts at these parameter values?
 - **Critical:** verify that As = 2.1e-9 is used in compute_age.py (the
@@ -382,8 +383,9 @@ verify:
    not parameters. But ΛCDM also uses observations to set its parameters.
    What is the actual difference in predictive power?"**
 
-4. **"w₀ = −0.85 and w_a = −0.23: where do these come from? Are they
-   derived from the dilaton potential, or just chosen to match DESI?"**
+4. **"w₀ = −1, w_a = 0 (revised): the perturbative Casimir potential
+   is exact (c₂ = 0 from Epstein zeta zeros; Paper 6 §2). The dilaton
+   is frozen by Hubble friction at ε ~ 10⁻⁵². No thawing occurs."**
 
 5. **"Scenario C shifts ω_b by 3.9% to match θ*. This creates a D/H
    tension. Isn't this just trading one tension for another?"**

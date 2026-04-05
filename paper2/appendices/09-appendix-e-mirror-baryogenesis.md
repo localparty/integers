@@ -287,7 +287,7 @@ are determined by:
 - The Casimir energy (fixes `ρ_Λ`, fixes `L`)
 - The SM field content (fixes `g_*`)
 - The observed `Ω_DM/Ω_b` (fixes `ξ` through the `1/ξ²` law)
-- The dilaton potential (fixes `w₀`, `w_a`)
+- The dilaton potential (fixes `w₀ = −1`, `w_a = 0`; Casimir exact, Paper 6 §2)
 - The bulk seesaw (fixes `Σm_ν`)
 
 ---

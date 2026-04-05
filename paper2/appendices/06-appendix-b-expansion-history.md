@@ -1,9 +1,11 @@
 # Appendix B — The Expansion History H(z) and DESI Predictions
 
-> The 5D framework's expansion history `H(z)` is its cosmological
-> fingerprint: it peaks 4–6% above `ΛCDM` at `z ~ 0.3–0.7`, converges
-> to `ΛCDM` at `z > 2`, and crosses `ΛCDM` at `z ~ 1.5`. This shape is
-> a specific, parameter-free prediction testable by DESI DR3.
+> **⚠ Revised:** With the perturbative Casimir potential exact
+> (`w₀ = −1`, `w_a = 0`; dilaton frozen; Paper 6 §2), the H(z) peak
+> from evolving `w` is absent. The remaining deviations from `ΛCDM`
+> come from elevated `N_eff` and lower `Ω_m`, not from evolving `w`.
+> The fingerprint described below assumed the earlier `w₀ = −0.85`
+> prediction and should be recomputed with `w = −1`.
 
 ---
 
@@ -100,8 +102,10 @@ DESI DR2 (arXiv:2503.14738) reports H(z) × `r_d` values consistent
 with `ΛCDM` at z > 0.5, but with `2–4σ` hints of evolving dark energy.
 The framework's prediction of H(z) peaking at z ~ 0.5 and the
 thawing w(z) trajectory are in the same direction as the DESI hints
-but milder in amplitude (DESI's best-fit `w₀` ≈ −0.75, `w_a` ≈ −0.75
-vs framework's `w₀` = −0.85, `w_a` = −0.23).
+but milder in amplitude (DESI's best-fit `w₀` ≈ −0.75, `w_a` ≈ −0.75).
+**⚠ Revised:** The framework now predicts `w₀ = −1`, `w_a = 0` (Casimir
+potential exact; Paper 6 §2). If DESI DR3 confirms `w ≠ −1`,
+non-perturbative modifications to the dilaton potential are required.
 
 The current DESI DR2 data neither confirms nor excludes the
 framework. DESI DR3 will be decisive.

@@ -9,7 +9,7 @@ consequences of the projection from five to four dimensions.
 
 The cosmological predictions of Paper 1 were stated qualitatively:
 - `H₀ ≈ 68–70 km/s/Mpc` from hidden-brane dark radiation
-- `w(z)` evolving from `−1` toward `−0.8` from the thawing dilaton
+- `w = −1` exactly (frozen dilaton; revised from earlier thawing prediction)
 - `S8` suppressed by elevated `N_eff` and evolving dark energy
 - `t₀` younger than Planck `ΛCDM` by up to 500 Myr
 
@@ -30,7 +30,7 @@ geometry in Paper 1:
 | Quantity | Value | Derivation chain (Paper 1) |
 |----------|-------|---------------------------|
 | `L` | ~130 `μm` | Casimir energy = `ρ_Λ` (§6.6) |
-| `w₀`, `w_a` | −0.85, −0.23 | Dilaton potential from `L` (Appendix Q/F) |
+| `w₀`, `w_a` | −1, 0 | Casimir potential exact (c₂ = 0; Appendix Q/F, Paper 6 §2) |
 | `Σm_ν` | 0.06 eV | Bulk seesaw from `M₅ = (M_P²/L)^{1/3}` (Appendix Z) |
 | `N_eff^{tower}` | 0.05 | Intra-tower decays (Appendix Y, Gonzalo et al.) |
 | `ΔN_eff^{mirror}` | `6.14 × ξ⁴` | Hidden-brane dark radiation (Appendix Y) |

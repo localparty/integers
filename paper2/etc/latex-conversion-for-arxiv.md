@@ -9,7 +9,7 @@ Same as Paper 1 with subtitle:
 We compute the cosmological predictions of the 5D e-dimension framework
 using CAMB v1.6.6, fitting zero parameters to CMB data. Two observational
 inputs ($\rho_\Lambda$, $\Omega_{DM}/\Omega_b$) plus a thawing dilaton
-($w_0=-0.85$, $w_a=-0.23$) determine every observable. The central result:
+($w_0=-1$, $w_a=0$; frozen dilaton, Casimir potential exact) determine every observable. The central result:
 $\Omega_{DM}/\Omega_b = 1/\xi^2$ from bulk leptogenesis on the $Z_2$
 orbifold, where $\xi = T_{hidden}/T_{visible}$. Three scenarios bracket
 the prediction ($\xi = 0.432$--$0.47$): $t_0 = 13.47$--$13.60$ Gyr;
@@ -182,9 +182,10 @@ arXiv compiles your LaTeX on their servers. Key rules:
 \begin{figure}
   \includegraphics[width=\columnwidth]{fig_wz}
   \caption{Dark energy equation of state $w(z)$. The framework's
-    thawing dilaton ($w_0=-0.85$, $w_a=-0.23$; orange) lies within
-    the DESI~DR2 $2\sigma$ contour but predicts milder evolution
-    than the DESI best-fit (red).}
+    frozen dilaton ($w_0=-1$, $w_a=0$; revised prediction).
+    The perturbative Casimir potential is exact; the dilaton is
+    frozen by Hubble friction. If DESI~DR3 confirms $w \neq -1$,
+    non-perturbative modifications are required.}
   \label{fig:wz}
 \end{figure}
 

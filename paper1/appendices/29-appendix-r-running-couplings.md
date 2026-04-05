@@ -165,12 +165,10 @@ each KK photon mode to the EM beta function) is:
 
     Δb_EM = 0 (massive vector KK modes are neutral!)
 
-Wait — the photon's KK excitations are massive spin-1 bosons. Do they carry
-electric charge? No — they are massive PHOTONS (KK excitations of the
-electromagnetic field itself). They couple to charged particles but are
-themselves neutral. Their contribution to the EM beta function is through
-vacuum polarization — but as neutral particles, they do not contribute to
-charge renormalization.
+The photon's KK excitations are massive spin-1 bosons, but they are
+electrically neutral — they are massive excitations of the electromagnetic
+field itself. They couple to charged particles but, as neutral particles,
+do not contribute to charge renormalization.
 
 **The KK correction to `α_EM` running vanishes.** The massive photon KK modes
 are neutral and do not renormalize the electric charge.

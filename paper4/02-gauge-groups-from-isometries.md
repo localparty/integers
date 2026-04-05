@@ -147,15 +147,16 @@ The honest status is therefore:
 | M5-branes at orbifold fixed points | **Used** — visible + hidden branes |
 | M2-branes wrapping CP¹ | **Used** — color flux tubes (Paper 5) |
 | Non-perturbative M2 instantons | **Used** — strong CP resolution (§7.6) |
-| M-brane bound states (M2-M5) | **Not yet developed** |
-| Full quantum gravity of M-theory | **Not yet developed** |
+| M-brane bound states (M2-M5) | **Classified** (Appendix B) |
+| Full quantum gravity of M-theory | **Partially developed** (§9.3) |
 
-The two genuinely open items are M-brane bound states — which
-would describe exotic composite objects beyond the SM — and the
-full quantum gravity regime of M-theory, which is beyond the
-perturbative 11D SUGRA sector the framework currently uses.
-These are identified as directions for future work, not gaps
-in the current results.
+The M-brane bound states are now fully classified in Appendix B:
+quarks are M2-M5 bound states (M2-branes ending on the visible
+M5-brane), all exotic composites from higher wrappings lie at or
+above `M_{GUT}`, and the fundamental string is not physical in the
+strongly coupled regime (`g_s ≫ 1`). The full quantum gravity
+regime — the non-perturbative M-theory path integral beyond 11D
+SUGRA — remains partially open (§9.3).
 
 ---
 

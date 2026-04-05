@@ -33,11 +33,11 @@ The hidden-brane dark radiation predicts `H₀` = 69.5 km/s/Mpc
 (Paper 1, Appendix Y, Tier 1). Higher `H₀` → younger universe.
 Naive effect: −420 Myr.
 
-### Channel 2: Evolving Dark Energy (partial compensation)
-The thawing dilaton gives `w₀` = −0.85, `w_a` = −0.23. This predicts
-slightly less dark energy at intermediate z than a cosmological
-constant, extending the matter-dominated deceleration phase.
-Effect: +120 Myr.
+### Channel 2: Evolving Dark Energy (absent in revised prediction)
+**⚠ Revised:** The perturbative Casimir potential is exact (`w₀ = −1`,
+`w_a = 0`; dilaton frozen by Hubble friction at ε ~ 10⁻⁵²; Paper 6 §2).
+No thawing occurs. This channel contributes 0 Myr in the revised
+prediction (previously +120 Myr for `w₀ = −0.85`).
 
 ### Channel 3: Elevated `N_eff` (small)
 `N_eff` = 3.39 (tower + mirror) increases radiation density, raising
@@ -68,8 +68,8 @@ e-circle geometry:
 | `ω_b h²` | 0.02237 | SM baryonic physics (unchanged) |
 | `ω_c h²` | 0.1170 | From `θ*` consistency (see §A.4) |
 | `N_eff` | 3.39 | Tower (0.05) + mirror (`6.14×ξ⁴`) |
-| `w₀` | −0.85 | Thawing dilaton (Appendix F) |
-| `w_a` | −0.23 | Thawing dilaton (Appendix F) |
+| `w₀` | −1 | Frozen dilaton (Casimir exact; Paper 6 §2) |
+| `w_a` | 0 | Frozen dilaton (no GW term; c₂ = 0) |
 | `Σm_ν` | 0.06 eV | Bulk seesaw, normal ordering |
 | `A_s` | `2.215×10⁻⁹` | Inflation (unchanged) |
 | `n_s` | 0.9649 | Inflation (unchanged) |
@@ -135,14 +135,10 @@ radiation-dominated era (the physical radiation density, set by
 `z = 1` (+41 Myr) reflects the competing effects of §A.2. At late times
 (`z < 1`), the framework's higher `H₀` dominates: faster expansion means
 less time accumulates between `z = 1` and today, so `t₀` is younger. At
-intermediate redshifts (`z ~ 1–3`), the thawing dilaton (`w₀` = −0.85 > −1)
-provides less dark energy than a cosmological constant, slowing the
-expansion relative to `ΛCDM`. Combined with lower `Ω_m` = 0.290, the
-framework's `H(z)` is actually lower than `ΛCDM`'s `H(z)` in the `z ~ 1–3`
-window, so more time accumulates at those epochs. The net result:
-the framework universe reaches `z = 1` slightly OLDER than `ΛCDM` (by
-41 Myr), but the rapid late-time expansion then compresses the final
-stretch, making today 327 Myr younger.
+**⚠ Revised:** With `w = −1` (frozen dilaton; Paper 6 §2), the
+evolving-dark-energy channel is absent. The crossover behavior at
+`z ~ 1` is driven entirely by lower `Ω_m` = 0.290 and elevated `N_eff`,
+not by thawing `w(z)`.
 
 ---
 
@@ -184,8 +180,8 @@ Myr level within the next decade.
 | `σ₈` | 0.766 | 0.811 | −0.045 |
 | **`S8`** | **0.753** | 0.832 | **−0.079** |
 | `N_eff` | 3.39 | 3.044 | +0.35 |
-| `w₀` | −0.85 | −1.0 | +0.15 |
-| `w_a` | −0.23 | 0 | −0.23 |
+| `w₀` | −1 | −1.0 | 0 |
+| `w_a` | 0 | 0 | 0 |
 | `Σm_ν` (eV) | 0.06 | < 0.12 | (predicted) |
 
 ---

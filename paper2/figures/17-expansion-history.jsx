@@ -89,7 +89,7 @@ export default function ExpansionHistory() {
       for (let i = 0; i <= nPts; i++) {
         const z = (i / nPts) * zMax;
         lcdmH.push(Hz(z, H0_lcdm, Om_lcdm, Or_lcdm, -1, 0));
-        fwH.push(Hz(z, H0_fw, Om_fw, Or_fw, -0.85, -0.23));
+        fwH.push(Hz(z, H0_fw, Om_fw, Or_fw, -1.0, 0));
       }
 
       const toX = (i) => mL + (i / nPts) * pW;
@@ -229,7 +229,7 @@ export default function ExpansionHistory() {
 
         // Age integral (approximate)
         const ageSec = integrate(
-          (z) => ageIntegrand(z, h0, om, or_, -0.85, -0.23),
+          (z) => ageIntegrand(z, h0, om, or_, -1.0, 0),
           0, 1000, 500
         );
         const ageGyr = ageSec * 3.086e19 / 3.156e16; // Mpc/km * s/Gyr

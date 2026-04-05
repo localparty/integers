@@ -96,21 +96,13 @@ Every term in the vertex contains products of the form `p_i · p_j` (5D dot
 products). These decompose as:
 
     p_i · p_j = η̂^{AB} p_{i,A} p_{j,B}
-              = η^{μν} k_{i,μ} k_{j,ν} + (−1/R²)(n_i/R)(n_j/R)
-              = k_i · k_j − n_i n_j / R²
 
-Wait — let me be more careful with the metric signature. The 5D metric is:
+The 5D metric is `η̂_{AB} = diag(+1, −1, −1, −1, −R²)`, so
+`η̂^{55} = −1/R²`. The canonical momentum conjugate to the coordinate
+`ψ ∈ [0, 2π)` on the e-circle is `p_ψ = n` (integer), and the physical
+momentum in the fifth direction is `p^5 = n/R`. Since `ĝ_{55} = R²`:
 
-    η̂_{AB} = diag(+1, −1, −1, −1, −R²)
-
-So `η̂^{55} = −1/R²`. The fifth-momentum component is `p_5 = Rn/R`...
-
-Actually, the canonical momentum conjugate to the coordinate `ψ ∈ [0, 2π)`
-on the e-circle is `p_ψ = n` (integer). The physical momentum in the fifth
-direction is `p^5 = n/(R)` (with `R` being the physical radius). The metric
-component is `ĝ_{55} = R²`, so:
-
-    p_i · p_j = η^{μν} k_{i,μ} k_{j,ν} − (1/R²)(n_i)(n_j)
+    p_i · p_j = η^{μν} k_{i,μ} k_{j,ν} − n_i n_j / R²
               = k_i · k_j − n_i n_j / R²
 
 Each 5D dot product decomposes into a 4D dot product (the leading term in

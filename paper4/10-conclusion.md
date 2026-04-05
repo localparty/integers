@@ -107,8 +107,8 @@ reach and ordered by timeline.
 
 | Observable | Prediction | Current bound | Experiment | Timeline |
 |---|---|---|---|---|
-| Tensor-to-scalar `r` | `0.030–0.036` | `< 0.036` | LiteBIRD | ~2033 |
-| Spectral index `n_s` | `0.967 ± 0.003` | `0.965 ± 0.004` | CMB-S4 | 2030s |
+| Tensor-to-scalar `r` | ⚠ Suspended (inflaton ≠ radion; §7.15) | `< 0.036` | LiteBIRD | ~2033 |
+| Spectral index `n_s` | ⚠ Suspended (inflaton ≠ radion; §7.15) | `0.965 ± 0.004` | CMB-S4 | 2030s |
 | Higgs self-coupling `δλ/λ` | `−15%` to `−30%` | `~50%` | ILC, FCC-ee | 2035+ |
 | EWPT gravitational waves | `f ~ 1–10 mHz`, `h²Ω ~ 10⁻¹³` | — | LISA | ~2035 |
 | KK `W'/Z'` | `1.0–2.5 TeV` | `> 6 TeV` (sequential) | HL-LHC | 2026–2035 |

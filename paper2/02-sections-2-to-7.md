@@ -25,14 +25,14 @@ inputs. All are established in Paper 1:
 |-------|-------|-----------------|
 | `L` (e-circle circumference) | ~130 `μm` | Casimir energy = `ρ_Λ` (Section 6.6) |
 | SM field content | Fixed (Standard Model) | `N_B = 28`, `N_F = 90` |
-| `V(φ)` (dilaton potential) | Casimir + Goldberger-Wise | Appendix Q §Q.5 |
+| `V(φ)` (dilaton potential) | Casimir: `V = V₀/φ⁴` (exact; no GW term) | Appendix Q §Q.5, Paper 6 §2 |
 | Orbifold structure | `Z₂ × Z₃` | Appendix W |
 
 From these, Paper 1 derives the key quantities used here:
 - Casimir dark energy density `ρ_Λ` matching observation
 - `N_eff^{tower} = 3.09` (dilaton + intra-tower decays, citing Gonzalo et al. 2024)
 - `ΔN_eff^{mirror} = 6.14 × ξ⁴` (from hidden-brane dark radiation, Appendix Y)
-- `w₀ = −0.85`, `w_a = −0.23` (thawing dilaton, Section 6.6)
+- `w₀ = −1`, `w_a = 0` (frozen dilaton; Casimir potential exact, Section 6.6, Paper 6 §2)
 - `Σm_ν = 0.06 eV`, normal ordering (bulk seesaw, Appendix Z)
 
 ### 2.2 The New Result: `ξ` from `Ω_DM/Ω_b`
@@ -98,8 +98,8 @@ analysis would determine whether the `θ*` improvement justifies it. All three s
 
 | Shared parameter | Value | Source |
 |-----------------|-------|--------|
-| `w₀` | −0.85 | Thawing dilaton |
-| `w_a` | −0.23 | Thawing dilaton |
+| `w₀` | −1 | Frozen dilaton (Casimir exact; Paper 6 §2) |
+| `w_a` | 0 | Frozen dilaton (no GW term; c₂ = 0) |
 | `Σm_ν` | 0.06 eV | Bulk seesaw |
 | `A_s` | `2.215×10⁻⁹` | Inflation (unchanged) |
 | `n_s` | 0.9649 | Inflation (unchanged) |
@@ -158,7 +158,9 @@ mirror sector at `> 9σ`. This is the framework's make-or-break test.
 
 CAMB v1.6.6 was used (Lewis, Challinor & Lasenby 2000).
 The dark energy equation of state uses the CPL parameterization
-(Chevallier & Polarski 2001, Linder 2003) with `w₀ = −0.85`, `w_a = −0.23`.
+(Chevallier & Polarski 2001, Linder 2003) with `w₀ = −1`, `w_a = 0`
+(revised: the perturbative Casimir potential V = V₀/φ⁴ is exact; the
+dilaton is frozen by Hubble friction at ε ~ 10⁻⁵²; see Paper 6 §2).
 Massive neutrinos are included with the bulk seesaw mass (`Σm_ν = 0.06 eV`,
 normal ordering).
 
@@ -181,10 +183,10 @@ Eight parameter sets were run, spanning the range from minimal
 | Planck `ΛCDM` | 67.4 | — | −1.0 | Baseline |
 | 5D Minimal | 67.7 | 0 | −1.0 | Tower-only |
 | 5D Stabilized | 69.5 | 0.47 | −1.0 | No dilaton |
-| 5D Thawing (A) | 69.5 | 0.47 | −0.85 | `θ*` matched |
-| 5D DESI | 69.5 | 0.47 | −0.80 | DESI best-fit |
-| 5D TRGB | 69.8 | 0.47 | −0.85 | `H₀` = TRGB |
-| 5D `Low-Ω` | 68.7 | 0.432 | −0.85 | **`1/ξ²` law (B)** |
+| 5D Thawing (A) | 69.5 | 0.47 | −1.0 | `θ*` matched (revised: w = −1) |
+| 5D DESI | 69.5 | 0.47 | −0.80 | DESI best-fit (exploratory) |
+| 5D TRGB | 69.8 | 0.47 | −1.0 | `H₀` = TRGB (revised: w = −1) |
+| 5D `Low-Ω` | 68.7 | 0.432 | −1.0 | **`1/ξ²` law (B)** (revised: w = −1) |
 | 5D `Low-Ω` static | 68.7 | 0.432 | −1.0 | Cross-check |
 
 ---
@@ -236,10 +238,11 @@ observational question outside the framework.
 ### 5.3 The DESI Evolving Dark Energy
 
 DESI DR2 (arXiv:2503.14738) reports `4.2σ` evidence for evolving dark
-energy with `w₀ ≈ −0.75`, `w_a ≈ −0.75`. The framework's thawing dilaton
-predicts `w₀ = −0.85`, `w_a = −0.23` — same sign, milder amplitude,
-within DESI's `2σ` contour. The physical mechanism is identified: the
-e-circle radius modulus is slowly rolling toward its potential minimum.
+energy with `w₀ ≈ −0.75`, `w_a ≈ −0.75`. The perturbative framework
+predicts `w₀ = −1`, `w_a = 0` (the Casimir potential V = V₀/φ⁴ is exact;
+the dilaton is frozen by Hubble friction at ε ~ 10⁻⁵²; see Paper 6 §2).
+If DESI DR3 confirms `w ≠ −1`, non-perturbative modifications to the
+dilaton potential are required.
 
 ### 5.4 The Cosmic Coincidence
 

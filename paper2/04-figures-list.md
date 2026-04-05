@@ -37,7 +37,7 @@ Available as supplementary files in the Zenodo repository.
 
 | Figure | File | Section | Description |
 |--------|------|---------|-------------|
-| 17 | `17-expansion-history.html` | §3, Appendix B | Expansion History H(z) — the thawing dilaton driving H(z) to peak 4–6% above ΛCDM at z ~ 0.3–0.7. DESI DR2 data overlay. The framework's specific fingerprint testable at 8σ by DESI DR3. |
+| 17 | `17-expansion-history.html` | §3, Appendix B | Expansion History H(z) — with `w = −1` (frozen dilaton), H(z) deviations from ΛCDM arise from elevated N_eff and lower Ω_m only. DESI DR2 data overlay. (The H(z) peak from thawing `w` is absent in the revised prediction.) |
 | 18 | `18-s8-resolution.html` | §5.1, Appendix C | S8 Tension Resolution — framework prediction S8 = 0.753 vs Planck ΛCDM 0.832. Shows DES Y3, KiDS-1000, HSC Y3 data points. Three effects (elevated N_eff, evolving w(z), lower Ω_m) combining to resolve the 4σ discrepancy. |
 | 19 | `19-cosmic-coincidence.html` | §5.4, Appendix E | The Cosmic Coincidence Explained — Ω_DM/Ω_b = 1/ξ². The brane temperature ratio ξ = 0.432 fixed by the 1/ξ² baryogenesis law. The ratio ~5 is geometric, not coincidental. |
 | 20 | `20-scenario-dashboard.html` | §4 | Scenario Dashboard — all three scenarios (A, B, C) side by side. Complete prediction table: t₀, H₀, S8, N_eff, θ* offset, r_d, Ω_DM/Ω_b. Compare against Planck ΛCDM and observational data. |

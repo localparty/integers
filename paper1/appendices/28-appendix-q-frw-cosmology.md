@@ -263,25 +263,14 @@ by construction — we determined `L` from `ρ_Λ` in Section 6.6.
 **DESI tension.** DESI DR2 (2025) reports `4.2σ` evidence for evolving dark
 energy with `w₀ ≈ −0.75`, `w_a ≈ −0.75` — in tension with the `w = −1`
 prediction of the static Casimir scenario. The framework provides a
-concrete resolution: the dilaton (e-circle radius modulus) is currently
-rolling slowly toward its Casimir potential minimum, producing a thawing
-quintessence equation of state. Paper 2, Appendix F derives the trajectory
-from the Casimir + Goldberger-Wise potential:
-
-    w₀ = −0.85,    w_a = −0.23
-
-This prediction lies within the DESI DR2 `2σ` contour (arXiv:2503.14738,
-Figure 12) but predicts milder evolution than DESI's best fit. The
-framework's `w(z)` trajectory: `w(z=0) = −0.85`, `w(z=0.5) = −0.93`,
-`w(z=1) = −0.97`, `w(z→∞) → −1.08` (slightly phantom in the past,
-characteristic of thawing quintessence).
-
-DESI DR3 (expected 2027) will distinguish the framework's prediction from
-both `ΛCDM` and DESI's best fit at `3–4σ`. The `α`-stability constraint
-is satisfied: the electromagnetic coupling is topological (set by the
-e-circle winding number), not geometric (not proportional to `R`), so the
-rolling dilaton does not alter `α` — consistent with quasar absorption-line
-bounds (`Δα/α < 10⁻⁶` over `z = 0–4`).
+concrete resolution was originally proposed via a thawing dilaton
+(`w₀ = −0.85`, `w_a = −0.23`). **⚠ Revised (Paper 6 §2):** The
+perturbative Casimir potential V = V₀/φ⁴ is exact to all orders
+(c₂ = 0 from Epstein zeta zeros; no Goldberger-Wise stabilization
+term exists). The dilaton is frozen by Hubble friction (ε ~ 10⁻⁵²),
+giving `w₀ = −1`, `w_a = 0` — a true cosmological constant. If DESI
+DR3 confirms `w ≠ −1`, non-perturbative modifications to the dilaton
+potential are required.
 
 ### Q.5.2 The Coincidence Problem
 
@@ -347,7 +336,7 @@ This is an open problem.
 |-------|-----------|-------------|-------------|--------|
 | BBN | `N_eff` | 3.04 | **3.09** (dilaton + intra-tower decays) | **Consistent** (ACT+SPT: `2.81±0.18`; naive 3.61 reduced to 3.09 by tower dynamics) |
 | CMB | Power spectrum | Standard | Standard + `ΔN_eff` | Consistent (Planck) |
-| Late-time | w (dark energy) | −1 | −1 (Casimir) or ~−0.8 (thawing) | **DESI tension** (`4.2σ` vs w=−1) |
+| Late-time | w (dark energy) | −1 | **−1 (Casimir exact; Paper 6 §2)** | If DESI confirms w ≠ −1, non-perturbative modifications required |
 | Late-time | `H₀` | 67.4 km/s/Mpc | Consistent (by construction) | `✓` |
 | Inflation | Possible driver | Inflaton field | E-circle evolution (speculative) | Open |
 
@@ -365,7 +354,7 @@ arise from the existing KK tower physics — no new parameters are needed.
 
 The framework's cosmological record: dark energy `✓`, `N_eff` `✓` (tower
 dynamics), `S8` `✓` (KK cascade decays), DESI `w ≈ −0.8` (consistent via
-thawing dilaton), `H₀` tension (open — not solved by the minimal framework).
+frozen dilaton, `w = −1`), `H₀` tension (open — not solved by the minimal framework).
 CMB-S4 (`σ(N_eff) ~ 0.03`) will precisely test the tower dynamics prediction.
 
 ---

@@ -337,16 +337,56 @@ The finiteness of the `L`-loop effective action rests on three results:
    functions `E_L(s; Q_L)` at non-positive integers `s`. Established at
    `L = 1, 2`; conjectured for general `L`.
 
-3. **Epstein zeta finiteness:** `E_L(s; Q_L)` is finite at all non-positive
-   integers, because its unique pole is at `s = L/2 > 0`. This is a theorem.
+3. **KK sum factor vanishing:** `E_L(-j; Q_L) = 0` for all integers
+   `j ≥ 1` and any positive-definite `Q_L` (Structural Zero Theorem,
+   §K.7b). The subleading KK counterterm coefficients vanish at every
+   loop order. This is proven.
 
-The conjunction — one proven, one conjectured, one proven — yields the
-all-orders finiteness conjecture. The compact e-circle, introduced to
-explain quantum mechanics (Sections 3-4) and the spin-statistics theorem
-(Appendix B), produces finiteness of the gravitational effective action
-at every computed order through a mechanism fundamentally different from
+4. **Factorization gap:** The reduction of full counterterms into
+   `(4D part) × (KK sum)` at `L ≥ 3` — i.e., that the KK sum factor
+   actually separates from the 4D momentum structure in the presence of
+   overlapping subdivergences — is the remaining open step.
+
+The conjunction yields the all-orders finiteness conjecture: the KK sum
+factor is proved to vanish; the factorization into KK sums is the
+remaining gap. The compact e-circle, introduced to explain quantum
+mechanics (Sections 3-4) and the spin-statistics theorem (Appendix B),
+produces finiteness of the gravitational effective action at every
+computed order through a mechanism fundamentally different from
 supersymmetry, string theory, or any other known approach to quantum
 gravity.
+
+---
+
+## K.7b The Structural Zero Theorem
+
+**Theorem (Universal Vanishing).** *For any positive-definite quadratic
+form `Q` in `L` variables, `E_L(-j; Q) = 0` for all integers `j ≥ 1`.*
+
+**Proof.** The completed Epstein zeta function is:
+
+    Λ(s) = π^{-s} Γ(s) E_L(s; Q)
+
+By the Epstein analytic continuation, `Λ(s)` is meromorphic with poles
+only at `s = 0` and `s = L/2`. At `s = -j` (`j ≥ 1`), `Λ(-j)` is
+therefore finite. Inverting:
+
+    E_L(s; Q) = π^s Λ(s) / Γ(s)
+
+Since `1/Γ(-j) = 0` (the Gamma function has poles at all non-positive
+integers), we obtain `E_L(-j; Q) = 0`.  ∎
+
+**Significance.** The `L = 2` "complementary zeros" (§G.5) were
+sufficient but not necessary — the vanishing is structural, not
+lattice-specific. The subleading KK counterterm coefficients vanish at
+ALL loop orders for ANY positive-definite quadratic form `Q_L`.
+
+**Scope.** This does NOT close the overlapping subdivergences gap
+(§K.5.2). The Structural Zero Theorem proves the KK sum factor vanishes,
+but the factorization of full counterterms into `(4D part) × (KK sum)`
+at `L ≥ 3` remains the open step. That factorization — not the vanishing
+of the KK sums themselves — is what separates the conjecture from a
+theorem.
 
 ---
 

@@ -11,7 +11,7 @@ geometric inputs:
 
 1. `L ~ 130 μm` — e-circle circumference, from Casimir dark energy
 2. `ξ = 0.47` — hidden-to-visible temperature ratio, from BBN
-3. `V(φ)` — dilaton potential: Casimir + Goldberger-Wise
+3. `V(φ)` — dilaton potential: Casimir `V = V₀/φ⁴` (exact; no Goldberger-Wise term at perturbative level; Paper 6 §2)
 4. SM content — Standard Model fields, fixed
 
 determine ten cosmological observables simultaneously.

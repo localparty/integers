@@ -1,10 +1,14 @@
 # Appendix F — The Thawing Dilaton: `w(z)` Trajectory and DESI Comparison
 
-> The dilaton — the e-circle radius modulus — is currently rolling
-> slowly toward its potential minimum. This produces a dark energy
-> equation of state `w(z)` that evolves from slightly phantom at high
-> redshift toward `w₀ = −0.85` today. The trajectory is a specific
-> prediction of the dilaton potential `V(φ)`, not a free fit.
+> **⚠ Revised (Paper 6 §2):** The perturbative Casimir potential
+> V = V₀/φ⁴ is exact to all orders (c₂ = 0 from Epstein zeta zeros;
+> no Goldberger-Wise stabilization term exists at any perturbative
+> order). The dilaton is frozen by Hubble friction at ε ~ 10⁻⁵²,
+> giving `w₀ = −1`, `w_a = 0` — a true cosmological constant. The
+> thawing scenario described below is **superseded**. It is retained
+> for reference; the CPL values `w₀ = −0.85`, `w_a = −0.23` are no
+> longer the framework's prediction. If DESI DR3 confirms `w ≠ −1`,
+> non-perturbative modifications to the dilaton potential are required.
 
 ---
 

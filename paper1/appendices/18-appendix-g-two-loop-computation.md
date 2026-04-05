@@ -171,7 +171,7 @@ Under zeta regularization:
 
     Σ_{n=-∞}^{∞} 1 = 2ζ(0) + 1 = 2(−1/2) + 1 = 0
 
-Wait — this requires care. The sum `Σ_{n=-∞}^{∞} 1` includes `n = 0`:
+This requires care. The sum `Σ_{n=-∞}^{∞} 1` includes `n = 0`:
 
     Σ_{n=-∞}^{∞} 1 = 1 + 2Σ_{n=1}^{∞} 1 = 1 + 2ζ(0) = 1 + 2(−1/2) = 0
 

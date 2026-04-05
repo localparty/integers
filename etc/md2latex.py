@@ -1737,8 +1737,8 @@ PAPER2_FIGURE_LATEX = {
   \includegraphics[width=\textwidth]{fig_Hz}
   \caption{\textit{Left:} Expansion history $H(z)$ for the three
     scenarios and Planck~\LCDM. \textit{Right:} Ratio to \LCDM,
-    showing the characteristic 4--5\% peak at $z \sim 0.3$--$0.5$
-    from the thawing dilaton. DESI~DR3 will test this at $8\sigma$.}
+    With $w = -1$ (frozen dilaton), deviations from $\Lambda$CDM arise
+    from elevated $N_\text{eff}$ and lower $\Omega_m$ only.}
   \label{fig:Hz}
 \end{figure*}
 """,
@@ -1746,9 +1746,10 @@ PAPER2_FIGURE_LATEX = {
 \begin{figure}
   \includegraphics[width=\columnwidth]{fig_wz}
   \caption{Dark energy equation of state $w(z)$. The framework's
-    thawing dilaton ($w_0=-0.85$, $w_a=-0.23$; orange) lies within
-    the DESI~DR2 $2\sigma$ contour but predicts milder evolution
-    than the DESI best-fit (red).}
+    frozen dilaton ($w_0=-1$, $w_a=0$; revised prediction).
+    The perturbative Casimir potential is exact; the dilaton is
+    frozen by Hubble friction. If DESI~DR3 confirms $w \neq -1$,
+    non-perturbative modifications are required.}
   \label{fig:wz}
 \end{figure}
 """,

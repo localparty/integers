@@ -20,8 +20,8 @@ both scenarios are listed once.
 | `t₀` (Gyr) | **13.47** | **13.47** | 13.797 | Stellar ages (JWST) |
 | `H₀` (km/s/Mpc) | **69.5** | **68.7** | 67.4 | TRGB, GW sirens |
 | `N_eff` | **3.39** | **3.31** | 3.044 | CMB-S4 |
-| `w₀` | **−0.85** | **−0.85** | −1.0 | DESI DR3, Euclid |
-| `w_a` | **−0.23** | **−0.23** | 0.0 | DESI DR3, Euclid |
+| `w₀` | **−1** | **−1** | −1.0 | DESI DR3, Euclid |
+| `w_a` | **0** | **0** | 0.0 | DESI DR3, Euclid |
 | `S8` | **0.753** | **0.785** | 0.832 | Euclid, Rubin |
 | `σ₈` | **0.766** | **0.782** | 0.811 | CMB lensing |
 | `Ω_m` | **0.290** | **0.302** | 0.315 | BAO + CMB |
@@ -59,16 +59,17 @@ confirmed. Every other prediction in this table follows.
 
 **Target:** `σ(H(z)) ~ 0.5%` at each redshift bin
 **Expected:** 2027
-**Framework prediction:** `H(z)` peaks 4% above `ΛCDM` at `z ~ 0.5`
+**⚠ Revised:** With `w = −1` (frozen dilaton; Paper 6 §2), the H(z)
+peak from evolving `w` is absent. The remaining H(z) deviations from
+`ΛCDM` come from elevated `N_eff` and lower `Ω_m`.
 
 At DESI DR3 precision:
-- The 4% excess at `z ~ 0.5` is an **`8σ` detection**
-- The framework's `w₀ = −0.85` vs `ΛCDM` `w = −1` is a **`5σ`** signal
+- The `H₀` shift (69.5 vs 67.4) is detectable via the BAO scale
 - The `r_d` shift (146.2 vs 147.1 Mpc) is distinguishable at **`1.8σ`**
+- If DESI confirms `w ≠ −1`, non-perturbative modifications are required
 
-DESI DR3 is the combination test: it simultaneously probes `H(z)`,
-`w(z)`, and `D_A(z)`. The framework's specific `H(z)` shape — rising to
-a peak at `z ~ 0.5` then falling back — is uniquely characteristic
+DESI DR3 probes `H(z)`, `w(z)`, and `D_A(z)`. The framework's `w = −1`
+prediction, combined with elevated `N_eff` and lower `Ω_m`, is
 and cannot be produced by any `ΛCDM` model.
 
 ---

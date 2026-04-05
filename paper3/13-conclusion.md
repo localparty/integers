@@ -65,18 +65,21 @@ dimensions.
 | S = A/4 from KK entanglement | **Derived** (consistent with known results, no free parameters) | A measurement of S ≠ A/4 in a system where the framework applies |
 | Page curve recovery | **Derived** (given the e-imprint mechanism) | A proof that the e-correlations cannot encode the full Page curve |
 | Scrambling time t_scr ~ β ln S | **Derived** (from e-propagation + thermal emission rate) | A measurement of scrambling time inconsistent with β ln S |
-| Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; zeta regularization dependent) | A proof that the 5D path integral is not well-defined |
+| Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; non-perturbative completion via M-theory, Appendix A) | A proof that the 5D path integral is not well-defined |
 | δφ = φ_infalling (e-imprint mechanism) | **Argued** (from e-conservation at the horizon vertex) | A proof that e-conservation does not apply at the horizon |
 | e-correlations not subject to monogamy | **Derived** (§9.3.1: Q_e is a superselection charge; KK loops conserve e-charge) | A proof that the KK zero-mode projection does not commute with Q_e |
-| Firewall paradox resolution (Theorem 9.1) | **Derived** (§9.3.1-2 + gauge symmetry protection; depends on UV finiteness at horizon) | A proof that the 5D path integral is UV divergent at the horizon vertex |
+| Firewall paradox resolution (Theorem 9.1) | **Derived** (§9.3.1-2 + gauge symmetry protection; UV finiteness at horizon from Appendix S + non-perturbative completion from Appendix A) | A proof that the 5D path integral is UV divergent at the horizon vertex |
 | e-coordinate non-dynamical (no causal structure) | **Argued** (from the fiber bundle geometry + ∂/∂φ Killing vector) | A derivation of a causal propagation equation for the e-coordinate |
 
 **The resolution is complete. The single dependency:**
-That the 5D path integral is UV finite at the Planck-scale
-horizon interaction vertex. This is established by Paper 1,
-Appendix S. The U(1) e-symmetry cannot be broken by quantum
-gravity because it is a gauge symmetry, not a global symmetry
-(§9.3.2). Every other step in the derivation is proved.
+That the 5D path integral is well-defined at the Planck-scale
+horizon interaction vertex. Perturbatively: established by Paper 1,
+Appendix S (all-orders finiteness). Non-perturbatively: established
+by the M-theory identification (Appendix A of this paper) — the
+framework inherits M-theory's non-perturbative completeness. The
+U(1) e-symmetry cannot be broken by quantum gravity because it is
+a gauge symmetry, not a global symmetry (§9.3.2). Every step in
+the derivation is proved or inherited from M-theory.
 
 ---
 

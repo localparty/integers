@@ -365,7 +365,7 @@ With:
 |-------|-------|-----------------|
 | L | ~130 μm | ρ_Λ observed → Casimir = ρ_Λ (Paper 1, §6.6) |
 | ξ | 0.432 | Ω_DM/Ω_b = 1/ξ² → ξ = 1/√5.36 (Paper 2, App E) |
-| w₀, w_a | −0.85, −0.23 | Dilaton potential from L (Paper 1, App Q/F) |
+| w₀, w_a | −1, 0 | Casimir potential exact (c₂ = 0; Paper 6 §2) |
 | Σm_ν | 0.06 eV | Bulk seesaw from M₅ = (M_P²/L)^{1/3} (Paper 1, App Z) |
 | N_eff^{tower} | 0.05 | Intra-tower decays (Paper 1, App Y, citing Gonzalo et al.) |
 | ω_b h² | 0.02237 | SM BBN + Planck (inherited, same as ΛCDM) |
@@ -537,18 +537,11 @@ Appendix F says the e-circle radius changed by ~67% over cosmic time.
 This conflicts with constant-R assumptions elsewhere.
 
 ### The fix
-The CPL parameterization (w₀ = −0.85, w_a = −0.23) IS the linearized
-approximation to the variable-R dynamics. The CAMB computation with
-CPL w(z) effectively captures the cosmological effects of the rolling
-dilaton. The constant-R calculations in Paper 1 (hydrogen atom, 5D
-Einstein equations) are correct because they describe PRESENT-DAY physics
-(R = R_today). The 67% change is cumulative over 13.5 Gyr and affects
-only the cosmological expansion history, not local physics.
-
-Add a clarifying paragraph to Appendix F §F.6:
-> "The CPL parameterization used in the CAMB computation (w₀ = −0.85,
-> w_a = −0.23) is the linearized approximation to the full variable-R
-> dilaton dynamics. The 67% cumulative change in R occurs over cosmological
+**⚠ Revised:** The dilaton is frozen (w₀ = −1, w_a = 0; Casimir
+potential exact, c₂ = 0; Paper 6 §2). The e-circle radius does NOT
+change over cosmic time — ε ~ 10⁻⁵². The 67% change previously
+claimed in Appendix F was based on the superseded thawing scenario.
+The constant-R calculations in Paper 1 are automatically consistent.
 > timescales; local physics (particle masses, coupling constants, the
 > hydrogen spectrum) is determined by the PRESENT value R = R₀. The
 > constraint |Δα/α| < 10⁻⁵ is satisfied by the topological coupling

@@ -206,10 +206,10 @@ KK scalar kinetic term normalization. Not a free parameter.
 
 S7 — DESI tension:
 ✅ RESOLVED. Appendix Q DESI paragraph now updated: references Paper 2
-Appendix F's concrete prediction (w₀ = −0.85, w_a = −0.23), gives
-w(z) trajectory at four redshifts, notes it lies within DESI DR2 2σ
-contour, identifies DESI DR3 (2027) as the 3–4σ discriminator. No longer
-calls it "speculative and identified as future work."
+**⚠ Revised:** The prediction is now w₀ = −1, w_a = 0 (Casimir
+potential exact; dilaton frozen; Paper 6 §2). The earlier thawing
+prediction (w₀ = −0.85) is superseded. If DESI confirms w ≠ −1,
+non-perturbative modifications are required.
 
 S8 — R-value inconsistency:
 ✅ RESOLVED. New file appendix-W-orbifold-casimir-update.md includes §W.9.3

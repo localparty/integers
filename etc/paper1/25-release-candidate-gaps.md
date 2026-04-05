@@ -84,10 +84,10 @@ Add a sentence in Section 2.5 being more precise about the exact difference from
                                                                                 
   1. Run the quantitative extended-model fit. This is non-negotiable — the      
   reviewer demands it. Run MontePython or CosmoMC with your full parameter set
-  (w₀ = -0.85, w_a = -0.23, N_eff) against ACT DR6 likelihoods. The thawing     
-  dilaton changes the damping tail degeneracy. When ΛCDM fits data with low
-  N_eff, it may be absorbing the effect of your evolving w(z). Show the
-  posterior shift with a plot.
+  (w₀ = −1, w_a = 0, N_eff) against ACT DR6 likelihoods. **⚠ Note:**
+  The prediction is now w = −1 (Casimir potential exact; Paper 6 §2).
+  The evolving-w degeneracy is absent; the fit depends on N_eff alone.
+  Show the posterior shift with a plot.
 
   2. Calculate the mirror e± Boltzmann suppression exactly. You say "~10%
   reduction" qualitatively. T_mirror ~ 0.43 MeV vs m_e = 0.511 MeV means mirror 

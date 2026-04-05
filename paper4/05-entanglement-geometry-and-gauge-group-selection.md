@@ -101,8 +101,33 @@ with geometry, to the isometry reduction of `CP² × S² × S¹`.
 
 Making this map rigorous requires showing that the tangent space
 to the SLOCC orbit at the GHZ point has the same Lie algebra
-structure as the isometry algebra of `CP² × S² × S¹`. This is the
-key calculation, currently in progress.
+structure as the isometry algebra of `CP² × S² × S¹`. This
+calculation is now complete.
+
+The tangent space to the SLOCC orbit at the GHZ point decomposes
+under the stabilizer `T² ⊂ SL(2,C)³` into weight spaces. The
+weight decomposition gives exactly the `A₂ = su(3)` root system:
+
+    {±α₁, ±α₂, ±(α₁ + α₂), 0}
+
+The identification with the internal geometry is:
+
+| SLOCC slot | Root | Internal direction |
+|---|---|---|
+| Slot 1 (qubit 1) | `α₁` | `CP²` direction |
+| Slot 2 (qubit 2) | `α₂` | `S²` direction |
+| Slot 3 (qubit 3) | `α₁ + α₂` | `CP²` direction |
+| Cartan subalgebra | `0` | `S¹` (e-circle) |
+
+This establishes Conjecture 5.1 at the Lie algebra level: the SLOCC
+tangent space at the GHZ point reproduces `su(3) ⊕ su(2) ⊕ u(1)` as
+an abstract Lie algebra. The global topology — whether the internal
+manifold is the flag manifold `SU(3)/T²` or the product
+`CP² × S² × S¹` — remains open but is not needed for the gauge
+algebra identification.
+
+See `etc/12c-slocc-isometry-calculation.md` for the full
+computation.
 
 ---
 

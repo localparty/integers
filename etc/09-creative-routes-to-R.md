@@ -201,23 +201,14 @@ The framework currently has ~13 CAMB predictions from 3 inputs
 | ΔN | None (from 11D SUGRA, R-independent) |
 | ξ | None directly (from K = m_ν/m_star, R-independent) |
 | ρ_Λ | ∝ 1/R⁴ |
-| w₀ | Via m_φ/H₀ ∝ 1/√R |
-| w_a | Via dilaton dynamics (R-dependent) |
+| w₀ | −1 exactly (Casimir potential exact; Paper 6 §2) |
+| w_a | 0 exactly (no GW term; dilaton frozen) |
 
-If w₀ depends on R independently of ρ_Λ, the DESI measurement
-of (w₀, w_a) combined with the Planck measurement of ρ_Λ gives
-THREE constraints on R:
-
-    ρ_Λ → R (one equation)
-    w₀ → R (another equation, if w₀ ≠ w₀(ρ_Λ) only)
-    w_a → R (a third, potentially)
-
-Even TWO independent equations overdetermine R.
-
-**The experimental test:** DESI DR3 (2027) will measure w₀ to
-~5% and w_a to ~20%. If the framework predicts SPECIFIC values
-(w₀ = −0.85, w_a = −0.23), these are INDEPENDENT of ρ_Λ and
-determine R through the dilaton dynamics.
+**⚠ Revised:** With w₀ = −1 and w_a = 0, the DESI measurement does
+not provide an independent R constraint through dilaton dynamics.
+The only R constraint from dark energy is ρ_Λ ∝ 1/R⁴. If DESI
+confirms w ≠ −1, non-perturbative modifications to the dilaton
+potential would reopen this route.
 
 ---
 

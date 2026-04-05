@@ -47,10 +47,11 @@ predict lower `σ₈` at fixed `Ω_m h²`.
 
 ### Effect 2: Evolving `w(z)` changes the growth rate
 
-The thawing dilaton (`w₀ = −0.85`, `w_a = −0.23`) gives slightly less
-dark energy at intermediate `z` than a cosmological constant. Less dark
-energy → more matter-dominated growth → higher `σ₈` — but this
-PARTLY CANCELS the `N_eff` effect.
+**⚠ Revised:** With the perturbative Casimir potential exact (`w₀ = −1`,
+`w_a = 0`; Paper 6 §2), the evolving-`w` channel is absent. The `S8`
+resolution is driven entirely by elevated `N_eff` and lower `Ω_m`, which
+remain valid. (Previously, the thawing dilaton `w₀ = −0.85` partly
+cancelled the `N_eff` effect by allowing more matter-dominated growth.)
 
 ### Effect 3: Lower `Ω_m` reduces `S8` directly
 

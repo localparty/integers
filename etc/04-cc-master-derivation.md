@@ -355,9 +355,11 @@ The dilaton mass at the minimum:
 
 (At R = 12.4 μm, slightly lighter than the 23 meV at R = 8.5 μm.)
 
-The dark energy equation of state `w₀ = -0.85`, `w_a = -0.23` is
-determined by the shape of the dilaton potential, not by R directly.
-The DESI predictions are unchanged.
+**⚠ Revised:** The dark energy equation of state is `w₀ = −1`, `w_a = 0`
+(the perturbative Casimir potential V = V₀/φ⁴ is exact; no GW term;
+c₂ = 0 from Epstein zeta zeros; dilaton frozen by Hubble friction at
+ε ~ 10⁻⁵²; see Paper 6 §2). If DESI confirms `w ≠ −1`,
+non-perturbative modifications are required.
 
 ---
 
