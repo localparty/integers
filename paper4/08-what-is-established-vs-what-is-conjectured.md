@@ -37,6 +37,7 @@
 | `M_Pl` derived from `M₁₁` × Vol(M⁷) | **Derived** (Section 7.20) | Hierarchy = large e-circle |
 | CC from simultaneous stabilization | **Partially derived** (Section 7.21) | Structure established; computation open |
 | All-orders finiteness (KK sum factor) | **Established** (Theorem K.1, Paper 1 Appendix K §K.6) | Universal Epstein Vanishing theorem |
+| BPHZ factorization at L ≥ 3 | **Well-supported** (locality of counterterms forces polynomial KK structure; see Paper 1, §K.5.3). Not yet a rigorous theorem. | Weinberg's theorem + Epstein zeta structure |
 | SLOCC-isometry map | **Established at Lie algebra level** (Theorem 5.2, §5.6); global topology open (§9.4) | Tangent space weight matching |
 | Moduli stabilization | **Partially established**: S² and CP² dynamically stabilized by spectral zeta nonvanishing; κ from Planck mass constraint (§9.5, OC-2) | Spectral zeta values + Planck constraint |
 | Gauge coupling hierarchy | **Leading order derived**: α₃/α₂ = 1 at GUT scale for κ = 3.545 × 10⁻²; first-principles κ via three-equation system (§9.5) | Coupled moduli stabilization |

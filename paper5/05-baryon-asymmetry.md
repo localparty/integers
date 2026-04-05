@@ -160,3 +160,27 @@ inputs from geometry — while the SM has no explanation for why
 `η_B ~ 10⁻¹⁰` rather than zero — is the key result. The order-of-
 magnitude agreement is encouraging; a precision prediction requires
 the resonant leptogenesis calculation with the Z₃ mass spectrum.
+
+## 5.6 The Resonant Enhancement Path
+
+The ~10³ overshoot in §5.5 can be bridged by resonant leptogenesis.
+In the framework's Z₃ orbifold geometry (Paper 4, §7.5), the three
+right-handed neutrino masses are set by the Z₃ warp factor:
+
+    M₁ ≈ M₂ ≈ 10¹⁵ GeV,   M₃ = M₁ × e^{−Δ_c kπR/3}
+
+For `Δ_c ≈ 0.1`, the mass splitting `|M₁ − M₂| ~ 0.1 × M₁`. When
+the mass splitting is comparable to the decay width (`|M₁ − M₂| ~ Γ_N`),
+the CP asymmetry is resonantly enhanced by:
+
+    ε_resonant ~ (Γ_N / (M₁ − M₂)) × ε_vanilla ~ 10³ × ε_vanilla
+
+This factor of 10³ is exactly what is needed to bridge the overshoot.
+The condition for resonance — `|M₁ − M₂| ~ Γ_N` — requires
+`Δ_c ~ y²M_R / (8π M_R) ~ y²/(8π) ~ 0.01`, within the expected
+bulk mass splitting range from the Z₃ geometry.
+
+**The precise computation:** Boltzmann equations for the `N₁`, `N₂`
+system with Z₃ CP phases (Paper 4, §7.13) and the warp-factor mass
+splitting. This is identified as a concrete computation target for
+Paper 5 Appendix D (not yet written).

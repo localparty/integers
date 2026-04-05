@@ -361,6 +361,64 @@ interpolation between two calculable limits. The remaining open problem is
 computing the two-loop amplitude that fixes λ from first principles rather
 than from the GUT unification condition. This is the subject of §9.5.
 
+### C.5.5 The G₄ Flux Completion
+
+The perturbative three-equation system (`etc/22-three-equation-system.md`)
+establishes that the Goroff-Sagnotti correction is negligible at the
+physical compactification scales: `κ_Planck/κ_* ~ 10⁻³⁸`. The 38-order
+gap is a regime diagnosis, not a numerical failure. It traces to:
+
+    r₃/l₁₁ ≈ 0.003 ≪ 1
+
+The CP² and S² moduli are sub-Planckian in 11D units, with loop expansion
+parameter `(l₁₁/r₃)² ~ 10⁵ ≫ 1`. Perturbation theory in G_N has broken
+down at these scales.
+
+The correct stabilization mechanism is **G₄ flux** — the 4-form field
+strength of M-theory. The Gukov-Vafa-Witten (GVW) superpotential:
+
+    W_GVW = (1/l₁₁³) ∫_{M₇} G₄ ∧ Φ
+
+with two independent integer flux quanta:
+- `n₁ = (1/2πl₁₁³) ∫_{CP²} G₄` (on the CP² 4-cycle)
+- `n₂ = (1/2πl₁₁³) ∫_{CP¹×S²} G₄` (on the mixed 4-cycle)
+
+generates a potential `V_flux(r₂, r₃)` that is non-perturbative in the
+gravitational coupling and valid precisely in the strong-coupling regime
+`r₃ < l₁₁`.
+
+**Decoupling from S¹:** The S¹ factor contributes no 4-cycle to
+`H₄(M₇, ℤ)`, so G₄ does not couple to the S¹ radius `R`. The dark
+energy mechanism (S¹ Casimir, Paper 1) is completely independent of the
+flux stabilization of CP² and S². This explains the clean separation of
+the dark energy scale (`R ~ 12 μm`) from the GUT scale (`1/r₃ ~ 10¹⁵`
+GeV).
+
+**The minimum:** The F-term potential from the diagonal Kähler metric
+`K = −3 ln(r₃/l₁₁) − 2 ln(r₂/l₁₁)` gives:
+
+    V = (8V₀/3) e^{−3σ−2τ} [5a² + 3ab + 3b²]
+
+where `a = n₁ e^{2τ−4σ}`, `b = n₂ e^{−2τ}`. The minimum determines
+`r₂/r₃ = F(n₁/n₂)`. The GUT unification condition `α₃/α₂ = 1`
+requires `F = √3/2`.
+
+**The torsion subtlety:** CP² × S² × S¹/Z₂ is not a G₂ holonomy
+manifold. The standard GVW formula must be corrected for intrinsic
+torsion (House-Micu 2005). The explicit computation of the torsion
+classes and the resulting F-term minimum is the central open computation
+(see `etc/23-g4-flux-stabilization.md` for the full development and
+`paper4/09-open-problems.md` §9.5 for the status summary).
+
+**What the perturbative analysis established:** The spectral zeta data
+(§C.1–C.4) and the gauge coupling formula `α₃/α₂ = (4/3)ρ²` are exact
+results that hold regardless of the stabilization mechanism. The Casimir
+analysis correctly identifies the geometric principle (flat freezes,
+curved stabilizes) and the spectral origin of the coupling hierarchy.
+The perturbative λ interpolation (§C.5.1–C.5.4) characterizes the
+structure of the Casimir+GS sector, even though this sector is
+physically subdominant at the CP²/S² scale.
+
 ---
 
 ## C.6 Implications

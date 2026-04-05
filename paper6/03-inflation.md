@@ -98,3 +98,29 @@ unaffected:
 The open question is: which modulus drove inflation, and what are
 its slow-roll parameters? This is identified as the primary open
 problem for the inflationary sector.
+
+## 3.5 The G₄ Flux Axion as Inflaton
+
+The geometric radii `r₂` and `r₃` are not slow-roll inflatons because
+they are stabilized at the Planck scale (`r ~ l₁₁`) by G₄ flux — their
+potential is steep in the geometric direction (the moduli are sub-Planckian:
+`r₃/l₁₁ ≈ 0.003`, placing them in the M-theory strong-coupling regime
+where G₄ flux dominates). However, the PHASE of the GVW superpotential —
+the G₄ flux axion `a_G` — is a flat direction at tree level, protected
+by the shift symmetry `a_G → a_G + const`.
+
+The inflationary trajectory may be along `a_G` (the "axion monodromy"
+direction, Kim-Nilles-Peloso type), where `V ~ μ³ a_G` for large
+field values. The inflationary scale `μ` is set by `M₁₁` and the flux
+quantum number. Slow-roll parameters in this scenario:
+
+    ε ~ (M_Pl/a_G)² × (perturbation)²  → ε ≪ 1 for a_G ≫ M_Pl
+
+The predictions `n_s = 0.965`, `r = 0.03` may then follow from the
+axion monodromy inflation model on the G₄ flux moduli space — a
+concrete and well-studied inflation mechanism.
+
+This is a qualitative identification, not yet a complete derivation.
+**The computation:** find the G₄ axion kinetic term and potential from
+the GVW superpotential on `CP² × S²`, verify the slow-roll parameters
+match Paper 4 §7.15.

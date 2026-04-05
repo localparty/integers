@@ -241,27 +241,78 @@ into `(4D part) × E_L(-j; Q_L)` holds in the presence of overlapping
 subdivergences. Routes A (Kontsevich-Vishik) and B (BPHZ joint analyticity)
 remain open approaches to closing this gap.
 
-### K.5.3 Heat Kernel Coefficients
+### K.5.3 Why the Factorization Holds: The Locality Argument
+
+The gap identified in §K.5.2 — whether the BPHZ-subtracted amplitude at
+arbitrary `L` always produces an Epstein zeta evaluation at a negative
+integer — can be narrowed by a locality argument.
+
+**The key observation:** BPHZ counterterms are LOCAL. By Weinberg's
+theorem, each counterterm for a sub-diagram γ is a polynomial in the
+external momenta and the internal masses of that sub-diagram. In the KK
+theory, the only mass parameters are the KK masses `m_n² = n²/R²`. Therefore:
+
+1. Each BPHZ counterterm `C_γ` is polynomial in `m_n² = n²/R²` and the
+   external 4D momenta `p²`. It takes the form:
+   `C_γ = Σ_k c_k(p²) × (n²/R²)^k`
+   where `c_k(p²)` are the 4D momentum-dependent coefficients.
+
+2. When summed over the KK index `n ∈ ℤ^L`, each term `(n²)^k` produces:
+   `Σ'_{n ∈ ℤ^L} [Q_L(n)]^{k-s}` evaluated at appropriate `s`,
+   which is an Epstein zeta function `E_L(s - k; Q_L)` — still evaluated
+   at a non-positive integer when `s` is a non-positive integer.
+
+3. The BPHZ-subtracted amplitude is therefore a finite sum of terms, each
+   of the form `(4D integral) × E_L(-j; Q_L)` for various `j ≥ 1`.
+
+4. By Theorem K.1, every such Epstein zeta value vanishes. The subtracted
+   amplitude is zero.
+
+**Why locality is the essential ingredient:** Non-local counterterms could
+introduce factors like `exp(-n²/R²Λ²)` or `1/(n² + p²R²)` whose KK sums
+are NOT Epstein zeta functions. Locality — guaranteed by the BPHZ theorem
+for renormalizable sub-divergences and by Weinberg's power-counting theorem
+for the polynomial degree — restricts the KK dependence to polynomials in
+`n²`, which are precisely the functions whose lattice sums reduce to Epstein
+zeta evaluations.
+
+**Scope of the argument:** This applies specifically to KK gravity on
+`M⁴ × S¹`, where:
+- The vertices are polynomial in momenta (Einstein-Hilbert action is
+  polynomial in derivatives),
+- The only mass parameter is `n²/R²` (single compact circle),
+- The quadratic form `Q_L` is positive definite (§K.5.1).
+
+The argument upgrades the factorization gap from "open" to "well-supported
+by a physical locality argument." It is not a rigorous theorem because
+the polynomial bound on BPHZ counterterms in the JOINT variables
+`(p, n)` — rather than separately in `p` and `n` — has not been
+formally established for overlapping subdivergences at `L ≥ 3`. The
+distinction is between "polynomial in `(p², n²/R²)` jointly" (which
+suffices) and "polynomial in `p²` at each fixed `n`, then summed"
+(which is weaker). The locality argument asserts the former.
+
+### K.5.4 Heat Kernel Coefficients
 
 The Seeley-DeWitt coefficients `a_k(D)` are polynomial in the curvature
 `R_{ABCD}`, the KK masses `m_n²`, and `1/R` — all finite on `M⁴ × S¹`. No
 coefficient diverges. The only potential source of divergence is the
 discrete KK sum, controlled by the Epstein zeta function.
 
-### K.5.3 Pole Collision
+### K.5.5 Pole Collision
 
 A pole collision would require `L/2 = -k` for some `k ≥ 0`, i.e., `L = -2k`.
 Since `L` is a positive integer, `L/2 > 0` always. The gap between the pole
 and the nearest needed value is at least `L/2 ≥ 1/2`. No value of `L` can
 close this gap.
 
-### K.5.4 Non-Planar Diagrams
+### K.5.6 Non-Planar Diagrams
 
 Non-planar topologies change `Q_L` but not its dimension `L`. The Epstein
 pole at `s = L/2` depends only on `L`, not on the specific form. Non-planar
 diagrams are therefore irrelevant to the finiteness argument.
 
-### K.5.5 Summary
+### K.5.7 Summary
 
 | Potential obstruction | Status | Reason |
 |----------------------|--------|--------|

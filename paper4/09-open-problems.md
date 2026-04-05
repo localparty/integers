@@ -128,6 +128,29 @@ over `CP²` times `S¹`.
 representations (zero-mode spectrum depends on the spin structure of the
 internal space), but not the gauge group or coupling predictions.
 
+**The resolution via cohomology.** The two candidate manifolds have
+different cohomology rings:
+
+    H*(CP² × S² × S¹; ℤ) = ℤ[x,y,z] / (x³, y², z²)
+        with |x| = 2, |y| = 2, |z| = 1. Product structure is trivial.
+
+    H*(Fl(1,2;3) × S¹; ℤ) = H*(Fl(1,2;3)) ⊗ H*(S¹)
+        where H*(Fl(1,2;3)) has a non-trivial cup product structure
+        from the fibration S² → Fl(1,2;3) → CP².
+
+The flag manifold satisfies: `x₁ + x₂ + x₃ = 0` (from the Borel
+presentation), making `H*(Fl)` NOT a polynomial ring — it is a
+truncated polynomial ring with relations. This distinguishes it
+from the product `CP² × S²`.
+
+**Computation:** Compute `H*(SU(2)³/T²; ℤ)` using the Eilenberg-Moore
+spectral sequence for the fibration `T² → SU(2)³ → SU(2)³/T²`. If
+the result matches `H*(CP² × S² × S¹)`, Conjecture 5.1 is globally
+true. If it matches `H*(Fl(1,2;3) × S¹)`, the correspondence is
+Lie-algebraic only (which is still sufficient for the gauge algebra
+derivation). This is a finite computation in algebraic topology —
+to be developed in `etc/24-flag-manifold-cohomology.md`.
+
 ### 9.5 Gauge Coupling Unification and the Moduli Potential
 
 Appendix C derives that exact GUT unification `α₃/α₂ = 1` at the
@@ -156,23 +179,51 @@ that this system does **not** close:
   independently by the logarithmic mechanism at `Q_X(ln x_X) = 0`,
   giving `ρ ≈ 17` and `α₃/α₂ ≈ 391`.
 
-**What remains open:** The gauge coupling prediction `α₃/α₂ = 1`
-requires a mechanism that stabilizes the `S²` and `CP²` moduli at
-the ratio `ρ = √3/2`. The perturbative Casimir + Goroff-Sagnotti
-potential is insufficient. Non-perturbative contributions to the
-moduli potential are needed:
+**The G₄ flux mechanism.** The CP² and S² moduli are sub-Planckian
+(`r₃/l₁₁ ≈ 0.003`), placing their stabilization entirely in the
+M-theory strong-coupling regime where G₄ flux dominates. The
+perturbative Casimir + Goroff-Sagnotti potential is irrelevant: the
+loop expansion parameter `(l₁₁/r₃)² ~ 10⁵ ≫ 1` at the CP² scale
+(see `etc/22-three-equation-system.md` for the full diagnosis).
 
-1. **G-flux stabilization** (Gukov-Vafa-Witten superpotential)
-2. **M2/M5 brane instanton contributions**
-3. **Non-perturbative gauge dynamics** on the curved factors
-4. **Mixed `S² × CP²` Casimir contributions** (cross-spectrum effects
-   not captured by the factored one-loop analysis)
+The correct stabilization mechanism is the Gukov-Vafa-Witten (GVW)
+superpotential:
+
+    W_GVW = (1/l₁₁³) ∫_{M₇} G₄ ∧ Φ
+
+with two independent flux quanta:
+- `n₁ = (1/2πl₁₁³) ∫_{CP²} G₄` (CP² flux)
+- `n₂ = (1/2πl₁₁³) ∫_{CP¹×S²} G₄` (mixed flux)
+
+The S¹ radius `R` is unaffected — G₄ does not couple to flat cycles
+(S¹ contributes no 4-cycle to `H₄(M₇, ℤ)`). The dark energy
+mechanism (S¹ Casimir, Paper 1) and the GUT scale (CP²/S² flux) are
+stabilized by entirely independent mechanisms.
+
+The F-term scalar potential `V_flux(r₂, r₃)` from the two flux
+quanta has the structure (`etc/23-g4-flux-stabilization.md` §2.5):
+
+    V = (8V₀/3) e^{−3σ−2τ} [5a² + 3ab + 3b²]
+
+where `a = n₁ e^{2τ−4σ}`, `b = n₂ e^{−2τ}`, and `σ = ln(r₃/l₁₁)`,
+`τ = ln(r₂/l₁₁)`. The minimum determines `r₂/r₃ = F(n₁/n₂)` as a
+function of the flux ratio. The condition `F = √3/2` (GUT unification,
+`α₃/α₂ = 1`) constrains the flux ratio to a specific value.
+
+**What remains open:** The product manifold CP² × S² × S¹/Z₂ does
+not have G₂ holonomy — it has a G₂ structure with intrinsic torsion.
+The diagonal-Kähler GVW formula gives a runaway in the σ direction;
+the torsion-corrected superpotential (House-Micu 2005, Behrndt-Jeschek
+2005) provides the additional curvature-flux balance needed for
+stabilization. The explicit computation of the torsion classes and
+the resulting F-term minimum is identified as the central computation
+for Paper 7. The tadpole constraint (`etc/23` §4) is not an
+obstruction for small flux quanta.
 
 The spectral zeta data (Z(−2), Z'(−2), Z(0)) and the gauge coupling
 formula `α₃/α₂ = (4/3)ρ²` remain exact. The `etc/21` bifurcation
-analysis correctly characterizes the perturbative sector. The open
-problem is identifying which non-perturbative mechanism selects
-`κ ≈ 3.5 × 10⁻²` at the compactification scale.
+analysis correctly characterizes the perturbative sector (which is
+now understood to be physically irrelevant at the CP²/S² scale).
 
 ---
 
