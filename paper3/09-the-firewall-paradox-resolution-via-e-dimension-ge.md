@@ -423,6 +423,35 @@ requires the UV finiteness of the 5D theory (Paper 1,
 Appendix S) to be applicable there. This dependence is
 explicitly acknowledged as the one remaining assumption.
 
+**Why quantum gravity does not break the e-symmetry.**
+
+One might worry that quantum gravity effects — specifically
+wormhole configurations (Giddings & Strominger 1988) — could
+violate the e-conservation law by breaking the U(1) e-symmetry.
+This concern is resolved by noting that the U(1) e-translation
+symmetry `φ → φ + α` is NOT a global symmetry — it is a
+**gauge symmetry**.
+
+Precisely: the e-coordinate `φ` parameterizes the fiber of a
+principal U(1) bundle over M⁴ (Paper 1, §2.1). The U(1)
+translation `φ → φ + α` is the fiber automorphism — a gauge
+transformation, not a physical symmetry. Gauge symmetries
+are redundancies of description. They cannot be broken by
+any physical process, including quantum gravity.
+
+The wormhole argument (Giddings & Strominger 1988, Abbott &
+Wise 1989) applies to GLOBAL symmetries — symmetries that
+act on physical, gauge-invariant observables. The argument
+does not apply to gauge symmetries, which by definition do
+not act on physical observables (they change only the
+description, not the physics).
+
+Therefore: e-conservation is a gauge symmetry, it cannot be
+broken by quantum gravity, and the assumption in Theorem 9.1
+is protected. The one remaining assumption reduces to:
+whether the 5D path integral is UV finite at the horizon
+vertex — which is established by Paper 1, Appendix S.
+
 ### 9.4 The Infalling Observer
 
 The infalling observer crosses a smooth horizon. The e-imprint on
