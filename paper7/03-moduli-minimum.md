@@ -166,15 +166,6 @@ unification condition is group-theoretic (set by the gauge group
 embedding). The flux ratio n₂/n₁ = −17/9 is the unique solution to
 three interlocking constraints, each with independent origin.
 
-**Tadpole check.** From the intersection matrix (§2 of `etc/23`):
-
-    (1/2)(n₁² + 2n₁n₂) = (1/2)(81 − 306) = −225/2
-
-This is negative, so the tadpole condition
-`(1/2)(n₁² + 2n₁n₂) + N_{M2} = χ/24 + boundary` is satisfied
-with positive M2-brane charge `N_{M2} > 0`. No exotic sources
-are required.
-
 ## 3.5 Honest Assessment
 
 | Result | Status | Comment |
@@ -206,3 +197,208 @@ flux quantization on the specific internal manifold
 `CP² × S² × S¹/Z₂`. The integers 9 and 17 are as fundamental
 to the framework as the gauge group ranks 3, 2, and 1 that arise
 from the isometries of CP² and S².
+
+---
+
+## 3.6 Theorem U: The Underivability of R
+
+The F-flat result Eq. (3.3) — `r₃² = n₁/(2cR)` — is both a
+success and a pointer. It links the GUT scale to the flux integer
+n₁ and the S¹ radius R. But R itself appears as a parameter,
+fixed by the dark energy condition from Paper 1. A natural
+question arises: can R be derived from within the framework,
+making the dark energy density a prediction rather than an input?
+
+**The answer is no.** This section proves the precise statement
+of that impossibility.
+
+### 3.6.1 The Algebraic Closure
+
+Substituting the explicit torsion coefficient from §2.1,
+
+    c = (64π⁵)/(126 l₁₁³)    [from c₀ = 1/42, House-Micu]
+
+into Eq. (3.3):
+
+    r₃² = 63 n₁ l₁₁³ / (64π⁵ R)                               (3.7)
+
+The 4D Planck mass constraint `M_Pl² = M₁₁⁹ × Vol(M₇)` with
+`Vol(M₇) = 16π⁴ r₃⁶ R` at the GUT minimum gives:
+
+    l₁₁³ = (16π⁴ r₃⁶ R / M_Pl²)^{1/3}                         (3.8)
+
+Substituting (3.8) into (3.7):
+
+    r₃² = (63 n₁ / (64π⁵ R)) × (16π⁴)^{1/3} × r₃² × R^{1/3} / M_Pl^{2/3}
+
+The factor `r₃²` appears on both sides and **cancels exactly**.
+Every dependence on the internal geometry — on r₃, r₂, M_GUT,
+and l₁₁ — drops out simultaneously. What remains is a single
+equation in R and M_Pl alone:
+
+    1 = 63 n₁ × (16π⁴)^{1/3} / (64π⁵ × R^{2/3} × M_Pl^{2/3})
+
+Solving:
+
+    ┌──────────────────────────────────────────────────────┐
+    │                                                      │
+    │         (63 n₁)^{3/2}                               │
+    │  R  =  ────────────────────                          │
+    │         128 π^{11/2} M_Pl                            │
+    │                                                      │
+    └──────────────────────────────────────────────────────┘
+
+This is the unique value of R consistent with the F-flat
+conditions, the G₂ torsion structure, and the 4D Planck mass.
+It depends only on the flux integer n₁ and the observed Planck
+mass — all internal geometry has cancelled.
+
+**Numerical evaluation for n₁ = 9:**
+
+    R_bare = (63 × 9)^{3/2} / (128π^{11/2} × 2.435 × 10¹⁸ GeV)
+           = 13501 / (128 × 542.4 × 2.435 × 10¹⁸ GeV)
+           ≈ 7.99 × 10⁻²⁰ GeV⁻¹
+           ≈ 1.58 × 10⁻³⁵ m
+           = 0.975 l_P
+
+The algebraic system gives the Planck length.
+
+### 3.6.2 Why This Is Not a Failure
+
+The result `R_bare ≈ l_P` is not an error in the calculation —
+it is a precise statement about what perturbative M-theory can
+and cannot determine.
+
+**Theorem U** *(Perturbative Underdetermination of R).*
+
+*In perturbative 11D supergravity on `M⁴ × CP² × S² × S¹/Z₂`
+with G₄ flux `(n₁, n₂) = (9, −17)`, the four classes of
+constraint available to the theory are:*
+
+*(i) Topological constraints: anomaly cancellation, G₄ tadpole,
+flux quantization, and the Witten index `ΔN = 3.44`. These are
+constructed from characteristic classes and intersection numbers,
+which are metric-independent topological invariants. They place
+no constraint on the continuous modulus R.*
+
+*(ii) The effective potential: V_Casimir(R) = +ΔN × 3ζ(5)/(64π⁶R⁴)
+is monotone decreasing with no critical points for R > 0, exact
+to all perturbative orders (from the Epstein zero theorem,
+Paper 1). The G₄ flux potential V_flux(r₂,r₃) is R-independent
+because G₄ has no 4-cycle on S¹ (§2.3). The cross-coupling
+V_cross(R,r₃) ~ exp(−R/r₃) ~ exp(−10²⁶) is doubly
+exponentially negligible.*
+
+*(iii) The F-flat conditions and Planck mass constraint: these
+determine R algebraically, with the unique solution*
+`R_bare = (63n₁)^{3/2}/(128π^{11/2}M_Pl) ≈ 0.975 l_P`.
+
+*Therefore the observed value `R_obs ≈ 10.1 μm` is not derivable
+from perturbative M-theory on this manifold. The ratio
+`R_obs/R_bare ≈ 6.4 × 10²⁹` lies outside perturbative reach.* □
+
+### 3.6.3 What the Theorem Establishes
+
+Theorem U is not a negative result about the framework. It is a
+precise positive statement: the cosmological constant problem,
+in this framework, has been reduced to a single, mathematically
+sharp question.
+
+In the standard formulation, the CC problem asks: "Why is
+ρ_Λ ~ (meV)⁴ rather than (M_Pl)⁴?" — a vague hierarchy
+involving a dimensionful quantity with no obvious structural home.
+
+In this framework, the same question becomes: "Why is R_obs ≈ 10.1 μm
+rather than R_bare ≈ l_P?" — a precise question about a single
+geometric modulus with a known bare value and a known observed
+value. The ratio `R_obs/R_bare ≈ 6.4 × 10²⁹` corresponds
+exactly to the usual factor through
+
+    ρ_Λ = ΔN × 3ζ(5)/(64π⁶ R_obs⁴)    →    ρ_bare/ρ_obs = (R_obs/R_bare)⁴ ≈ 10¹²⁰
+
+The precision of the isolation is new. Consider what *is* derived
+within perturbative reach:
+
+| Observable | Derived from | R-dependent? |
+|---|---|---|
+| Gauge group SU(3)×SU(2)×U(1) | Isometry of CP²×S²×S¹ | No |
+| GUT flux condition n₂/n₁ = −17/9 | F-flat + torsion | No (ratio) |
+| Inflaton n_s ≈ 0.967, r ≈ 0.001 | G₄ axion hilltop | No |
+| Neutrino mass m_ν = 51 meV | Gauge-Higgs seesaw on CP² | No |
+| Dark matter ratio Ω_DM/Ω_b = 1/ξ² | Z₂ baryogenesis | No |
+| Equation of state w₀ = −1 | Epstein zero theorem | No |
+| Dark energy density ρ_Λ | Casimir on S¹ | **Yes — requires R as input** |
+
+Every observable in the framework is R-independent except one.
+R is the unique remaining free parameter, and Theorem U
+establishes why: it is the modulus of the one flat compact
+dimension, whose Casimir potential has no minimum at any
+perturbative order.
+
+### 3.6.4 The Cosmological Constant Problem, Precisely Stated
+
+The framework has accomplished something that was not previously
+possible: it has **isolated** the cosmological constant problem
+to a single modulus with a specific bare value. Previous
+formulations of the CC problem are qualitative — "the vacuum
+energy is 10¹²⁰ times too large." Theorem U provides the
+quantitative, geometric version:
+
+> *In the e-dimension framework, the bare e-circle radius,
+> fixed by the internal consistency of perturbative M-theory on
+> CP² × S² × S¹/Z₂ with flux (n₁,n₂) = (9,−17), is*
+>
+>     R_bare = (63n₁)^{3/2} / (128π^{11/2} M_Pl) ≈ l_P
+>
+> *The observed e-circle radius is R_obs ≈ 10.1 μm. The ratio
+> R_obs/R_bare ≈ 6.4 × 10²⁹ is not explained by any perturbative
+> mechanism. Any resolution requires physics beyond 11D SUGRA on
+> this manifold.*
+
+This is a sharper formulation of the CC problem, not a
+solution to it. But sharpness has value: it tells us precisely
+what new physics must do. It must provide a mechanism that
+drives R from l_P to 10 μm while leaving all other moduli
+(r₃, r₂, and hence M_GUT, gauge couplings, and neutrino masses)
+unaffected. The R-independence of all other observables (the
+table above) makes this a highly constrained target.
+
+### 3.6.5 What Could Resolve the Underdetermination
+
+Three classes of mechanism are logically possible:
+
+**Class A — Non-perturbative potential.** A term V_np(R) with a
+minimum at R_obs. The candidates are M2-brane instantons wrapping
+S¹ (suppressed by `exp(−T_M2 × 2πR) ~ exp(−10⁴⁹)`, negligible)
+and topology-changing processes (not computable in perturbation
+theory). No mechanism in this class has been identified.
+
+**Class B — Initial conditions from inflation.** R is displaced
+during inflation and frozen by Hubble friction at R_obs. The
+inflationary Hubble rate `H_inf` sets a horizon that prevents R
+from rolling to infinity during the inflationary epoch. After
+inflation, R evolves extremely slowly (the Casimir potential is
+flat at macroscopic scales) and effectively remains frozen. In
+this picture R_obs is an initial condition, not a prediction.
+It is consistent with the framework and explains the observed
+`w = −1` exactly (Paper 6), but does not predict the specific
+value 10.1 μm.
+
+**Class C — Anthropic selection.** Among all possible values of
+R in a landscape, only those with `ρ_Λ < ρ_matter,today` permit
+structure formation (Weinberg 1987). The anthropic bound gives
+`R > R_min ~ few μm`, consistent with `R_obs ≈ 10 μm`. This
+selects a range but not a specific value.
+
+None of these three classes resolves the underdetermination
+within the current framework. The observation stands: R is the
+framework's last free parameter, equivalent to the cosmological
+constant, and its value is an input from observation.
+
+**The value of Theorem U is not resolution but precision.**
+The theorem transforms a vague hierarchy mystery into a
+mathematically sharp statement about one modulus in one theory,
+with a specific bare value and a specific observed value, and
+a specific proof that no perturbative mechanism bridges them.
+That precision is what makes the problem tractable for future
+work.

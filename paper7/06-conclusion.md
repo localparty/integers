@@ -1,24 +1,147 @@
 # 6. Conclusion: The Framework Completed
 
 This paper closes the last major physics gap in the e-dimension
-framework. The perturbative sector (Papers 1–6) — quantum mechanics,
-gauge group selection, confinement, cosmology, and the cosmological
-constant — is now complemented by the non-perturbative G₄ flux
-sector, which stabilizes the CP² and S² moduli in the strong-coupling
-regime where they belong (`r₃/l₁₁ ≈ 0.003`). The hierarchy between
-the dark energy scale (S¹ Casimir, perturbative) and the GUT scale
-(CP²/S² flux, non-perturbative) is not fine-tuned but reflects two
-distinct regimes of M-theory operating on different parts of the
-internal geometry. The BPHZ factorization gap — previously listed as open — was
-closed by Theorem K.3 (Paper 1, section K.5.3) via joint holomorphicity of
-the Epstein zeta function in the loop-momentum and Schwinger
-parameters. The flag manifold cohomology was resolved by the
-corrected Theorem 5.2 (Paper 4, section 5.6). The sole remaining
-open calculation is the Boltzmann equations for resonant
-leptogenesis (Paper 5, Appendix D, section D.4): the parametric estimate
-gives the correct order of magnitude, but the numerical integration
-of the resonant washout network (K = 46) has not yet been carried
-out. This is a numerical refinement of an already complete physical
-picture. The framework's claim stands: 11D geometry
-explains quantum mechanics, gravity, the Standard Model, cosmology,
-and confinement.
+framework. Papers 1–6 established the perturbative sector —
+quantum mechanics, gauge group selection, confinement, cosmology,
+and the cosmological constant — by exploiting two distinct regimes
+of M-theory operating on different parts of the internal geometry:
+the perturbative Casimir regime on the super-Planckian S¹ (R/l₁₁ ≈ 10²³)
+and the non-perturbative G₄ flux regime on the sub-Planckian CP²
+and S² (r₃/l₁₁ ≈ 0.003). This paper has established that regime
+explicitly, derived the GUT unification condition from flux
+quantization, and identified the one remaining free parameter.
+
+## What Was Established
+
+**Gauge coupling unification.** The torsion-corrected GVW
+superpotential on CP² × S² × S¹/Z₂ gives F-flat conditions whose
+solution is the flux ratio n₂/n₁ = −17/9 (§3.4). The smallest
+coprime integers are n₁ = 9, n₂ = −17. This is the central result:
+gauge coupling unification is not a coincidence or a fine-tuning
+but a consequence of integer-quantized G₄ flux on the specific
+manifold. The 17/9 arises from the interplay of the Kähler
+structure of CP² (weight −3), the Kähler structure of S² (weight −2),
+the torsion of the G₂ structure (coefficients 6 and 2 from the
+Ricci scalars), and the group-theoretic unification condition
+ρ = √3/2. None of these inputs can be continuously adjusted.
+
+**The inflaton.** The G₄ axion — the phase of the GVW superpotential —
+is a natural inflaton. With sub-Planckian decay constant f = M_Pl/√3,
+the M2-instanton potential takes the hilltop cosine form, giving
+n_s ≈ 0.967 and r ≈ 0.001 (§5). The r prediction is below current
+BICEP/Keck constraints and within CMB-S4 reach at σ(r) ≈ 0.003.
+
+**The structure of the moduli space.** The internal manifold has
+three compact factors stabilized by three independent mechanisms:
+r₃ and r₂ by G₄ flux (this paper), R by Casimir dark energy
+(Paper 1). The decoupling is geometric: G₄ has no 4-cycle on the
+flat S¹, so the two sectors cannot communicate perturbatively.
+The 38-order gap between the GUT scale (flux-stabilized) and the
+dark energy scale (Casimir-stabilized) is not fine-tuning — it
+reflects two entirely separate physical mechanisms operating in
+non-overlapping regimes of the same theory.
+
+## The Sole Remaining Free Parameter: Theorem U
+
+The most important result of §3.6 is not a derivation but a
+proof of underivability. The framework has progressively
+eliminated free parameters:
+
+- **Gauge group**: from entanglement geometry (Theorem 5.2, Paper 4)
+- **GUT condition**: from flux quantization (n₂/n₁ = −17/9, this paper)
+- **Gauge couplings**: from spectral zeta values of CP²/S² (Paper 4 App C)
+- **w₀ = −1**: from Epstein zeros exact to all orders (Paper 1 App S)
+- **m_ν = 51 meV**: from gauge-Higgs unification on CP² (Paper 4 §7.22)
+- **Ω_DM/Ω_b = 1/ξ²**: from Z₂ baryogenesis geometry (Paper 2)
+- **n_s, r**: from G₄ axion hilltop (§5)
+
+R alone resists. **Theorem U** establishes why: combining the
+F-flat condition r₃² = n₁/(2cR) with the explicit torsion
+coefficient c = (64π⁵)/(126l₁₁³) and the Planck mass constraint
+M_Pl² = M₁₁⁹ × Vol(M₇), all internal geometry cancels exactly,
+leaving the unique algebraic solution:
+
+    R_bare = (63 n₁)^{3/2} / (128 π^{11/2} M_Pl)
+
+For n₁ = 9: **R_bare ≈ 0.975 l_P**. The observed R_obs ≈ 10.1 μm
+lies 30 orders of magnitude away. Every other perturbative
+constraint — anomaly cancellation, tadpole, Witten index,
+the Casimir potential — is either topological (R-independent)
+or gives a monotone potential with no minimum (R-free). The
+cross-coupling between the S¹ sector and the CP²/S² sector is
+suppressed by exp(−R × M_GUT) ~ exp(−10²⁶), negligible by any
+physical measure.
+
+The cosmological constant problem, in this framework, reduces to
+a single precise question: why is R_obs/R_bare ≈ 6.4 × 10²⁹?
+The ratio (R_obs/R_bare)⁴ ≈ 10¹²⁰ is the usual CC discrepancy,
+now geometrically isolated to one modulus with a specific bare
+value and a specific observed value. This is a sharper formulation
+of the problem, not a solution to it. Its value is precision:
+it identifies exactly what new physics must accomplish — drive R
+from l_P to 10 μm while leaving all other moduli unaffected —
+and proves that nothing within perturbative 11D SUGRA can do so.
+
+## What Remains Open
+
+**Theorem U (open resolution).** Three classes of mechanism
+could in principle fix R_obs: non-perturbative potentials
+(M2-instanton contributions are suppressed by exp(−10⁴⁹) —
+negligible), initial conditions from inflation (consistent but
+not predictive of the specific value), or anthropic selection
+(selects a range, not a point). None constitutes a derivation.
+The resolution of Theorem U is an open problem.
+
+**The Freed-Witten refinement** (§4.4). The flux integers
+(n₁, n₂) = (9, −17) are coprime and give the right flux ratio,
+but the minimal configuration satisfying both n₂/n₁ = −17/9
+and the half-integer Freed-Witten quantization on CP² (which
+is not spin) is a number-theoretic refinement. The physics
+conclusions of §§2–3 are robust — the GUT condition depends
+only on the ratio — but the explicit tadpole integer N_M2 awaits
+the full Freed-Witten calculation.
+
+**Resonant leptogenesis** (Paper 5, Appendix D §D.4). The
+parametric estimate gives the right order of magnitude, and the
+resonant mechanism from Z₃ near-degeneracy bridges the factor
+of 10³ overshoot. The full numerical Boltzmann equations remain
+to be integrated.
+
+## The Complete Chain
+
+Papers 1–7 together establish the following chain, entirely from
+geometry and flux:
+
+    S¹ [Casimir, perturbative, R super-Planckian]
+      → quantum mechanics (wavefunction = shape in e)
+      → electromagnetism (U(1) isometry)
+      → spin-statistics theorem (e-winding)
+      → UV finiteness (Theorems K.1 + K.3)
+      → dark energy w₀ = −1 (Epstein zeros, exact)
+      → dark energy density ρ_Λ [input: R from observation]
+
+    CP² × S² [G₄ flux, non-perturbative, r₃ sub-Planckian]
+      → SU(3) × SU(2) × U(1) (isometry + entanglement, Theorem 5.2)
+      → GUT unification n₂/n₁ = −17/9 (flux quantization)
+      → M_GUT = 1/r₃ (connected to dark energy by n₁)
+      → neutrino masses m_ν = 51 meV (gauge-Higgs seesaw)
+      → confinement, Luscher L = π/6 (CP² holonomy)
+
+    G₄ axion [hilltop, sub-Planckian f = M_Pl/√3]
+      → inflation n_s = 0.967, r ≈ 0.001
+
+    Z₂ orbifold [Horava-Witten, two branes]
+      → mirror sector dark matter
+      → Ω_DM/Ω_b = 1/ξ² (baryogenesis)
+
+    e-dimension [horizon geometry, S¹ thermal circle]
+      → Hawking temperature (spin structure identification)
+      → black hole information preserved (e-conservation)
+      → AMPS firewall resolved (superselection vs entanglement)
+
+**One geometry. Seven papers. One remaining number.**
+
+The framework's claim stands: 11D geometry explains quantum
+mechanics, gravity, the Standard Model, cosmology, and confinement —
+with one input from observation, whose underivability is now a
+theorem.

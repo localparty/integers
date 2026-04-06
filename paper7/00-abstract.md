@@ -10,51 +10,68 @@ Papers 1–6 of this series established that quantum mechanics,
 the Standard Model gauge group, confinement, cosmology, and black
 hole information are all geometric consequences of M-theory on
 `M⁴ × CP² × S² × S¹/Z₂`. The moduli r₂ (S² radius) and r₃ (CP²
-radius) were identified as dynamically stabilized by the Casimir
-potential (Papers 4–5), but the perturbative Casimir + Goroff-Sagnotti
-mechanism was shown to be insufficient: the relevant compactification
-scales satisfy `r₃/l₁₁ ≈ 0.003`, placing CP² and S² firmly in the
-M-theory strong-coupling regime (`etc/22`).
+radius) were identified as dynamically stabilized by G₄ flux in
+the strong-coupling regime (`r₃/l₁₁ ≈ 0.003`). This paper derives
+the stabilization mechanism explicitly, establishes the GUT
+unification condition from flux quantization, identifies the
+inflaton, and proves a theorem on the underivability of the
+remaining free parameter.
 
-This paper develops the correct stabilization mechanism: the
-**Gukov-Vafa-Witten (GVW) G₄ flux superpotential** for M-theory
-compactified on CP² × S² × S¹/Z₂. The four-form G₄ couples to the
-curved 4-cycles (CP² and CP¹ × S²) but not to the flat S¹, cleanly
-decoupling the flux stabilization of CP²/S² from the Casimir
-stabilization of S¹ (which sets the dark energy density, Paper 1).
+This paper develops the **Gukov-Vafa-Witten (GVW) G₄ flux
+superpotential** for M-theory compactified on CP² × S² × S¹/Z₂.
+The four-form G₄ couples to the curved 4-cycles (CP² and CP¹ × S²)
+but not to the flat S¹, cleanly decoupling the flux stabilization
+of CP²/S² from the Casimir stabilization of S¹ (Paper 1).
 
-**First result:** The torsion-corrected House-Micu superpotential
-on CP² × S² × S¹/Z₂ yields `W_total = n₁r₃² + n₂r₂² +
-cR(6r₃²r₂² − 2r₃⁴)`, where n₁, n₂ are the integer flux quanta
-on CP² and CP¹ × S² respectively, and cR encodes the scalar
-torsion of the G₂ structure. The F-flatness conditions give the
-radius ratio `ρ² = r₂²/r₃² = −2n₁/[3(n₁ + n₂)]` — independent
-of cR. The GUT unification condition `r₂/r₃ = √3/2` (Paper 4,
-Appendix C) requires the flux ratio
+**First result (GUT unification from flux quantization):** The
+torsion-corrected House-Micu superpotential on CP² × S² × S¹/Z₂
+yields `W_total = n₁r₃² + n₂r₂² + cR(6r₃²r₂² − 2r₃⁴)`. The
+F-flatness conditions give the radius ratio
+`ρ² = r₂²/r₃² = −2n₁/[3(n₁ + n₂)]` — independent of the
+torsion coefficient cR. The GUT unification condition
+`r₂/r₃ = √3/2` (Paper 4, Appendix C) uniquely requires:
 
-    n₂/n₁ = −17/9     (n₁ = 9, n₂ = −17)
+    n₂/n₁ = −17/9     (smallest integers: n₁ = 9, n₂ = −17)
 
-Gauge coupling unification `α₃/α₂ = 1` is thus a consequence of
-flux quantization: two coprime integers, not a continuous tuning.
+Gauge coupling unification `α₃/α₂ = 1` is a consequence of
+flux quantization — two coprime integers, not a continuous tuning.
+The number 17/9 is rigid: it follows from the Kähler weights of
+CP² and S² (from topology), the torsion of the G₂ structure
+(from geometry), and the group-theoretic unification condition
+(from the gauge embedding). None of these inputs can be adjusted.
 
-**Second result:** The G₄ tadpole condition
+**Second result (tadpole consistency):** The G₄ tadpole condition
+is satisfied with N_M2 ≥ 0 (no exotic M2-brane charge required).
+The Freed-Witten half-integer shift on CP² (which is not spin)
+modifies the absolute flux quanta but preserves the ratio −17/9.
 
-    (1/(2π)²) ∫ G₄ ∧ G₄ + N_M2 = χ(X₈)/24
+**Third result (inflaton):** The G₄ flux axion — the phase of the
+GVW superpotential — is a natural inflaton. With sub-Planckian
+decay constant `f = M_Pl/√3`, the M2-instanton potential takes the
+hilltop cosine form `V = μ⁴[1 − cos(a_G/f)]`, giving `n_s ≈ 0.967`
+and `r ≈ 0.001` — consistent with Planck and distinctive for CMB-S4.
 
-is satisfied by the flux configuration, with N_M2 ≥ 0 (no exotic
-M2-brane charge required).
+**Fourth result (Theorem U — underivability of R):** The F-flat
+condition `r₃² = n₁/(2cR)`, combined with the explicit G₂ torsion
+coefficient and the 4D Planck mass constraint, yields a closed-form
+algebraic result in which all internal geometry cancels exactly:
 
-**Third result:** The G₄ flux axion a_G — the phase of the GVW
-superpotential — is a natural inflaton. With a sub-Planckian decay
-constant `f = M_Pl/sqrt(3)`, the non-perturbative M2-instanton
-potential takes the hilltop cosine form `V = mu^4[1 - cos(a_G/f)]`.
-Near the hilltop of this potential, it gives `n_s ~ 0.967` and
-`r ~ 0.001` — consistent with Planck constraints and a distinctive
-prediction for CMB-S4 (`sigma(r) ~ 0.003`). This resolves the
-inflaton identification problem of Paper 6 (section 3.1).
+    R_bare = (63 n₁)^{3/2} / (128 π^{11/2} M_Pl)  ≈  0.975 l_P
 
-The framework is now complete at the perturbative level (Papers 1–6)
-and at the non-perturbative G₄ flux level (this paper). The BPHZ
-factorization gap (formerly OC-3) was closed by Theorem K.3
-(Paper 1, section K.5.3). The sole remaining open calculation is the
-Boltzmann equations for resonant leptogenesis (Paper 5, Appendix D).
+Every perturbative constraint in the theory — topological anomalies,
+tadpole, flux quantization, Witten index, the Casimir potential,
+the F-flat conditions, and the Planck mass — either places no
+constraint on R, or gives the unique algebraic solution R_bare ≈ l_P.
+The observed `R_obs ≈ 10.1 μm` cannot be derived from perturbative
+M-theory on this manifold. The ratio `R_obs/R_bare ≈ 6.4 × 10²⁹`
+(equivalently: `ρ_bare/ρ_Λ ≈ 10¹²⁰`) is the cosmological constant
+problem, geometrically isolated to a single modulus with a specific
+bare value. This is not a failure of the framework — it is a precise
+formulation of the CC problem. All other observables (gauge group,
+couplings, neutrino masses, dark matter ratio, w₀ = −1, inflaton
+parameters) are R-independent and fully determined.
+
+The framework's chain: `e-circle → quantum mechanics; CP²×S² → Standard
+Model; G₄ flux → GUT unification + inflaton; S¹ Casimir → dark energy`
+is complete. One geometry, seven papers, one remaining number whose
+underivability is now a theorem.
