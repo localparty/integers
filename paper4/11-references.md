@@ -50,6 +50,26 @@
   pseudoparticles." *Phys. Rev. Lett.* 38, 1440 (1977).
 - Witten, E. "An SU(2) anomaly." *Phys. Lett. B* 117, 324–328
   (1982).
+- Bourbaki, N. *Groupes et algèbres de Lie*, Chapters 4–6. Hermann
+  (1968). — Root systems, Weyl groups, and flag manifolds.
+- Boubekeur, L. & Lyth, D. H. "Hilltop inflation." *JCAP* 0507, 010
+  (2005). arXiv:hep-ph/0502047. — Hilltop slow-roll parameters.
+- Cleyton, R. & Swann, A. "G₂ manifolds with large symmetry groups."
+  *Differ. Geom. Appl.* 19, 31–69 (2003). — Torsion of product G₂
+  structures.
+- Epstein, P. "Zur Theorie allgemeiner Zetafunktionen." *Math. Ann.* 56,
+  615–644 (1903). — Epstein zeta function for lattice sums.
+- Friedrich, T., Kath, I., Moroianu, A. & Semmelmann, U. "On nearly
+  parallel G₂-structures." *J. Geom. Phys.* 23, 259–286 (1997).
+  — Nearly-G₂ classification.
+- House, T. & Micu, A. "M-theory compactifications on manifolds with G₂
+  structure." *JHEP* 0601, 182 (2006). arXiv:hep-th/0507263.
+  — Torsion-corrected GVW superpotential.
+- Pilaftsis, A. & Unterdarfer, T. E. J. "The minimal leptogenesis
+  model." *Phys. Rev. D* 72, 113001 (2005). arXiv:hep-ph/0506107.
+  — Resonant leptogenesis.
+- Szangolies, J. "Quantum states as objective informational bridges."
+  arXiv:2210.06024 (2022). — SLOCC-isometry correspondence.
 - Paper 1: [this framework, Paper 1 citation]
 - Paper 2: [this framework, Paper 2 citation]
 - Paper 3: [this framework, Paper 3 citation]

@@ -58,3 +58,15 @@ with ratio m_{k+1}/m_k = sqrt((k+1)(k+3)/(k(k+2))).
 **Section:** Section 7 (Predictions and Experimental Tests)
 
 **Type:** Spectrum comparison
+
+## Figure 6: Luscher Coefficient Comparison
+
+**Description:** Bar chart comparing three values of the Luscher coefficient:
+Standard Nambu-Goto prediction (L = pi/12 = 0.262), CP2 framework prediction
+(L = pi/6 = 0.524), and lattice QCD measurement (L = 0.502 +/- 0.020). Shows
+the factor-of-2 improvement of the CP2 prediction over the standard Nambu-Goto
+value, with the geometric prediction falling within the lattice error bars.
+
+**Section:** Appendix B (Luscher Term from CP2 Geometry)
+
+**Type:** Data comparison chart

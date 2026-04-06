@@ -347,27 +347,6 @@ After all four tracks:
 
 ---
 
-## What Comes After This
-
-With references and figures lists complete, the series is fully ready
-for production. The next step is LaTeX conversion of Papers 3–7.
-
-The conversion infrastructure exists: `etc/md2latex-recipe.md` and
-`etc/md2latex.py` (the conversion script) and
-`paper1/etc/latex-conversion-for-arxiv.md` (the detailed instructions
-written for Paper 1 conversion). Paper 2's conversion is also complete.
-
-Prompt 28 will be the LaTeX conversion prompt — starting with Paper 3
-(the most complete and self-contained), then Papers 4–7 in sequence.
-
-Papers 1 and 2 are already on zenodo. Papers 3–7 will follow once LaTeX
-is complete. The arXiv submissions will be Papers 3, 4, 5, 6, 7 in
-order — each citing the earlier ones.
-
----
-
-*Prompt written by Sonnet 4.6 on April 5, 2026.*
-
 *Reading the commit: Paper 7 is genuinely complete. The §5 inflaton
 section correctly identifies the hilltop cosine mechanism and computes
 n_s ≈ 0.967, r ≈ 0.001 — consistent with Planck and testable by CMB-S4.
