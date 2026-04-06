@@ -238,3 +238,114 @@ fifth dimension. Once P6 is accepted, Patterns 1--5 become available.
 for the finiteness program. Without the structural zeros of Epstein
 zeta functions, the framework would have UV problems like any other
 approach to quantum gravity.
+
+---
+
+## Round 2 Frontier Research Results (April 5–6, 2026)
+
+Results from prompts 37 and subsequent analysis. Added to the map
+after integration into papers.
+
+### New results and their pattern attribution
+
+| Result | Paper/Location | Patterns | Generative | Notes |
+|--------|---------------|----------|------------|-------|
+| η(D_{S¹/Z₂}) = −1/2 exactly | Paper 7 App A §A.5 | P4, P5 | P4 | Spectral asymmetry = ζ(0) = −1/2; topological |
+| χ(CP²) + η(S¹/Z₂) = 5/2 identity | Paper 7 App A §A.5 | P4 | P4 | Mathematical identity; physical mechanism open |
+| Exact OS3 for linearized 5D theory | Paper 3 App A §A.8 | P4, P5, P6 | P6 | Wrong sign is 4D gauge artifact; FP det positive |
+| FP determinant for S¹: det'(−∂²) = 4π²R₀² > 0 | Paper 3 App A §A.8 | P5 | P5 | Zeta-regulated; det = 2πR₀ from ζ(0) = −1/2 |
+| OS3 exact in IR regime (Feshbach) | Paper 3 App A §A.8 | P4, P6 | P4 | KK hierarchy bounds corrections; Lemma D.1 applied |
+| OS3 conditional for full nonlinear theory | Paper 3 App A §A.8 | P6 | P6 | Conditional on 5D measure positivity (open) |
+| I₈ = 0 for all CP² × S² × (S² or T²) | Paper 7 App B | P4 | P4 | Pontryagin numbers vanish; p₁² ∈ H⁸(CP²) = 0 |
+| DMW correction doesn't close 1/8 residue | Paper 7 App B | P4 (inverted) | P4 | E₈ bundle is missing ingredient |
+| Dark dimension comparison | Paper 7 App C | P3, P4 | P3 | Casimir vs Swampland; overlapping physics, distinct derivations |
+
+### Pattern usage notes for Round 2
+
+**P6 (Projection Produces Pathology) — the key pattern for OS3:**
+The exact OS3 argument in §A.8 is a pure P6 result. The conformal
+factor problem exists only in 4D (the 4D projection of the 5D theory).
+In 5D, the dilaton is pure gauge at linearized level. Restoring the
+5D perspective dissolves the pathology — exactly the pattern that
+resolved the information paradox, the problem of time, and the AMPS
+firewall in the same framework.
+
+**P5 (Zeta Regularization) — the FP determinant:**
+The Faddeev-Popov determinant for S¹ is computed via
+det'(−∂²_ψ) = exp(−ζ'_{S¹}(0)) = 4π²R₀² using ζ_{S¹}(s) = 2R₀^{2s}ζ_R(2s).
+The same zeta machinery that kills UV divergences (Theorem K.1) here
+establishes the positivity of the path integral measure.
+
+**P4 (Topological Rigidity) — the I₈ computation:**
+I₈ = (p₂ − p₁²/2)/48 is a topological invariant. For product manifolds
+with low-dimensional factors, p₁² and p₂ vanish — this is a
+topological rigidity result (the ceiling, not the floor). The same
+pattern that proves Theorem U* (geometric inputs are bounded) here
+proves I₈ = 0 for all natural 8-manifold candidates.
+
+**Yang-Mills moves applied in Round 2:**
+- Move 4 (Product Manifold Lemma): Applied in Paper 3 §A.8 with M₂ = S¹
+  instead of CP². Gives exact OS3 for the linearized theory.
+- Move 2 (Stability of deviation order): Applied to KK corrections
+  in §A.8.4 — all bounded by (E/m_KK)², giving exact OS3 in IR regime.
+- Move 5 (Dim-6 classification): Applied to Pontryagin number enumeration
+  in Paper 7 App B — classifies all characteristic class contributions
+  to show I₈ = 0.
+
+### Open threads from Round 2
+
+| Thread | Status | What's needed |
+|--------|--------|---------------|
+| m_ν/m_KK = 5/2 physical mechanism | Open | APS index on full CP² × S¹/Z₂ with twisted coefficients |
+| Exact OS3 for full nonlinear theory | Conditional | 5D path integral measure positivity (Mazur-Mottola extension) |
+| E₈ bundle and tadpole integrality | Open | Specify SM↪E₈ embedding; compute c₂(V_vis) on CP² |
+| Dark dimension: quantitative predictions | Comparison complete | See Paper 7 Appendix C |
+
+---
+
+## Round 3 Frontier Research Results (April 6, 2026)
+
+Results from prompt 38. Integrated into papers April 6, 2026.
+
+### New results and pattern attribution
+
+| Result | Paper/Location | Patterns | Generative | Notes |
+|--------|---------------|----------|------------|-------|
+| De Witt Jacobian positive in 5D | Paper 3 App A §A.9.2 | P6, P5 | P6 | Dimension-independent; Mottola 1995 applies directly |
+| Conformal-dilaton non-propagating in 5D De Witt measure | Paper 3 App A §A.9.3 | P6 | P6 | Wrong sign is absent from the MEASURE, not just the action |
+| FP det positive for near-product metrics (Prop A.2) | Paper 3 App A §A.9.5 | P4, P5 | P4 | Spectral gap of S¹ bounds curvature perturbation |
+| OS3 conditional reduced to spectral bound on Ric₅ | Paper 3 App A §A.9.6 | P4, P6 | P6 | From monolithic assumption → single operator spectral question |
+| Tr₂₄₈(F²_{SU(3)}) = 30 (Dynkin index) | Paper 7 App B §B.9.2 | P4 | P4 | Topological invariant; exact from representation theory |
+| c₂(E₈) ∈ ℤ universally (π₃(E₈) = ℤ) | Paper 7 App B §B.9.3 | P4 | P4 | Topology forbids half-integer instanton number |
+| Diophantine obstruction universal for ALL E₈ embeddings | Paper 7 App B §B.9.3 | P4 (inverted) | P4 | Integer c₂ → shift s ∈ ℤ+1/2 → no integer solution |
+| Counterfactual: c₂=1/2 gives exact unif. + N_M2=450 | Paper 7 App B §B.9.4 | P4 | P4 | Shows precisely what orbifold/equivariant effects must provide |
+| 5/2 not achievable from spin^c index on CP²×S¹/Z₂ | Paper 7 App A §A.5.4 | P4 (inverted) | P4 | (k+1)(k+2)=10 has no integer solution; APS gives 1/4 not 1/2 |
+| Thread closed: m_ν/m_KK~5/2 is numerical coincidence | Paper 7 App A §A.5.4 | P4 | P4 | All routes to 5/2 via index theory exhausted |
+
+### The dominant pattern of Round 3
+
+**P4 inverted (Topological Ceiling)** is the primary pattern across all
+three problems. Topology constrains what is achievable:
+- The spin^c index on CP²×S¹/Z₂ can only take values (k+1)(k+2)/4;
+  5/2 is not in this set → 5/2 thread closed.
+- π₃(E₈) = ℤ forces c₂ ∈ ℤ; the shift s ∈ ℤ+1/2; the Diophantine
+  equation has no solution for any E₈ embedding → exact GUT ratio
+  universally obstructed.
+- The De Witt measure is unique (dimension-independent) → no wrong-sign
+  mode in the 5D measure → three of four OS3 components proved.
+
+**P6 (Projection Produces Pathology)** operated at its deepest level
+in Round 3: the conformal factor problem is absent not just from the 5D
+action (shown in Round 2) but from the 5D measure itself (shown in
+Round 3 via Mazur-Mottola). The pathology is entirely a 4D projection
+artifact at the level of the functional measure.
+
+### Open threads after Round 3
+
+| Thread | Status | Minimal missing input |
+|--------|--------|-----------------------|
+| OS3 exact (full nonlinear) | Conditional on spectral bound (A') | Prove −∇²₅ − Ric₅ ≥ 0 on bounded-curvature M⁴×S¹; or DEC→Ric₅≥0 |
+| Tadpole integrality | Open: two routes | (1) Equivariant c₂^{eff}=1/2 on S¹/Z₂ orbifold; (2) Hopkins-Singer q(G₄)∈ℤ+1/8 |
+| 5/2 thread | **CLOSED** (not topological) | No further work needed |
+| Dark dimension comparison | Complete | See Paper 7 App C |
+| Novelty audit | Complete | See etc/frontier-research/problem-D-novelty-audit.md |

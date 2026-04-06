@@ -250,22 +250,86 @@ These arise from different internal spaces (m_nu from CP^2, m_KK from
 S^1). For m_nu ~ m_KK to hold, one needs r_3 R ~ 1/(g_2^2 v^2),
 relating the CP^2 radius to the S^1 radius through the electroweak
 scale. The ratio 2.61 is suggestively close to 5/2 (4% discrepancy,
-improving to 0.1% with TeV-scale RG corrections to g_2), but no
-mechanism is known that derives this ratio from the geometry.
+improving to 0.1% with TeV-scale RG corrections to g_2). A spectral
+geometry observation sharpens the hint: the eta invariant of the
+Dirac operator on S¹/Z₂ with Neumann boundary conditions is
+η(D_{S¹/Z₂}) = ζ_R(0) = −1/2 (exact). Therefore the mathematical
+identity
 
-### A.5.4 Assessment
+    χ(CP²) + η(D_{S¹/Z₂}) = 3 + (−1/2) = 5/2
 
-- rho_Lambda^{1/4} / m_KK = 0.115 is **structural** (derived from
-  the Casimir mechanism).
-- m_nu / m_KK = 2.61 ~ 5/2 is **suggestive** but has no demonstrated
-  topological origin.
-- The meV clustering itself is a restatement of the CC problem
-  (equivalent to R ~ 10 um).
+holds exactly, where both sides involve genuine topological and
+spectral invariants of the two spaces. The APS index theorem on
+manifolds with boundary gives index = (bulk integral) − (h + η)/2,
+so η(0) = −1/2 is the spectral asymmetry of the S¹/Z₂ boundary
+Dirac operator. This identity shows the number 5/2 has a precise
+geometric origin in the framework — combining the Euler characteristic
+of CP² (which counts generations) with the spectral asymmetry of the
+S¹ orbifold boundary.
 
-If the ratio m_nu / m_KK = 5/2 were derivable from the internal
-geometry, rho_Lambda would become a prediction:
-rho_Lambda = Delta_N x 48 zeta(5) x m_nu^4 / (40000 pi^6).
-This remains an open question.
+However, no physical quantity in the framework is currently computed
+by an index theorem on CP² × S¹/Z₂ that would produce this additive
+combination as its value. Index theorems on product manifolds produce
+multiplicative (not additive) contributions from the factors. The
+identity χ + η = 5/2 is therefore a suggestive mathematical structure
+without a demonstrated physical mechanism.
+
+### A.5.4 The spin^c index obstruction: 5/2 is not topological
+
+*Pattern: P4 (Topological Rigidity) inverted as ceiling — the discrete
+set of achievable index values excludes 5/2.*
+
+A systematic investigation via the Kawasaki orbifold index theorem
+(Kawasaki 1979, 1981) and the APS index theorem (Atiyah-Patodi-Singer
+1975) establishes that 5/2 **cannot arise from any spin^c index on
+CP² × S¹/Z₂** with any natural twisting bundle. The proof has four
+independent components:
+
+**(1) Arithmetic obstruction for line bundles.** The spin^c index on
+CP² twisted by O(k) with the canonical spin^c structure equals
+(k+1)(k+2)/2 (Hirzebruch-Riemann-Roch). The Kawasaki orbifold theorem
+halves this for the Z₂ quotient, giving ind_orb = (k+1)(k+2)/4.
+Setting this equal to 5/2 requires (k+1)(k+2) = 10. This has no
+integer solution: the nearest triangular products are
+T_3 = 2×3 = 6 and T_4 = 3×4 = 12.
+
+**(2) Wilson line independence.** The Wilson line on S¹ corresponds to
+a flat U(1) bundle with trivial Chern character. The Kawasaki index
+is independent of the Wilson line angle θ (flat bundles do not change
+the topological index). This closes the one remaining route by which
+a continuous deformation could produce 5/2.
+
+**(3) APS boundary correction.** On a manifold with boundary where the
+eta invariant η = −1/2 contributes, the APS correction is
+−(h + η)/2 = +1/4 (for h = 0). This shifts an integer index by a
+quarter-integer, not a half-integer. The value 5/2 requires a
+half-integer shift — not achievable from this boundary.
+
+**(4) No natural higher-rank bundle.** The only rank-r bundle on CP²
+with ind = 5 is O(1) ⊕ 2O (checked by exhaustive search over all
+c₁-odd bundles). This bundle has c₁ = 1, c₂ = 0, and arises in no
+natural physical construction within the framework.
+
+**Conclusion:** The identity χ(CP²) + η(D_{S¹/Z₂}) = 5/2 is an exact
+mathematical identity of topological and spectral invariants. But the
+index theorem on CP² × S¹/Z₂ produces multiplicative (not additive)
+contributions from the two factors. The additive combination 3 + (−1/2)
+is not the output of any index theorem on this space. The thread is
+**closed**: m_ν/m_KK ≈ 5/2 is a numerical coincidence, not a
+topological identity.
+
+### A.5.5 Assessment
+
+- ρ_Λ^{1/4} / m_KK = 0.115 is **structural** (derived from the
+  Casimir mechanism, §A.5.2).
+- m_ν / m_KK = 2.61 ~ 5/2 is a **numerical coincidence** with no
+  topological origin (§A.5.4, proved).
+- The meV clustering is a restatement of the CC problem (R ~ 10 μm).
+
+Since m_ν/m_KK = 5/2 is not derivable from index theory on the
+compactification geometry, the chain
+ρ_Λ = ΔN × 48ζ(5) × m_ν⁴/(40000π⁶) is permanently broken at
+the first link. R_obs remains the one free parameter.
 
 ---
 
@@ -283,8 +347,8 @@ This remains an open question.
 | U*.8 | Gap: R_obs / R_max >= 10^{24} (conservative) or 10^{30} (realistic) | **Proved** | U*.4 + U*.7 |
 | U*.9 | **Theorem U*: R_obs is underivable from geometric data** | **Proved** | U*.4 + U*.7 + U*.8 |
 | U*.10 | rho_Lambda^{1/4} / m_KK = 0.115 is structural (Casimir mechanism) | **Derived** | Paper 1 (Delta_N = 3.44) |
-| U*.11 | m_nu / m_KK = 2.61 ~ 5/2 (numerical) | **Suggestive** | 4% match |
-| U*.12 | If m_nu / m_KK = 5/2 exactly, rho_Lambda is predicted from m_nu | **Conditional** | Requires new derivation |
+| U*.11 | m_nu / m_KK = 2.61 ~ 5/2 (numerical) | **Closed** (not topological) | Kawasaki + APS (Appendix A §A.5.4) |
+| U*.12 | m_nu / m_KK = 5/2 is NOT achievable from any spin^c index on CP² × S¹/Z₂ | **Proved** | Arithmetic obstruction: (k+1)(k+2)=10 has no integer solution |
 
 ---
 

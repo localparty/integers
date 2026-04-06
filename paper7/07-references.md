@@ -77,3 +77,30 @@
   from CP² Holonomy. [in preparation]
 - Paper 6: Cosmological Timeline from Inflation to Dark Energy
   via Dilaton Dynamics. [in preparation]
+
+## Comparison and prior art
+
+- Montero, M., Vafa, C. & Valenzuela, I. "The dark dimension scenario."
+  arXiv:2205.12293 (2022). — Independent proposal of mesoscopic extra
+  dimension (R ~ 1–10 μm) from Swampland Distance Conjecture. Physical
+  picture overlaps substantially with this framework; methodology and
+  derivations are distinct. See Appendix C for detailed comparison.
+- Ooguri, H. & Vafa, C. "On the geometry of the string landscape and
+  the swampland." *Nucl. Phys. B* 766, 21–33 (2007). — Distance
+  Conjecture, which motivates the dark dimension.
+- Diaconescu, D.-E., Moore, G. & Witten, E. "E₈ gauge theory, and a
+  derivation of K-theory from M-theory." arXiv:hep-th/0005090 (2000).
+  — DMW tadpole correction for non-spin manifolds; see Appendix B.
+- Hopkins, M. J. & Singer, I. M. "Quadratic functions in geometry,
+  topology, and M-theory." *J. Diff. Geom.* 70, 329–452 (2005).
+  arXiv:math/0211216. — Quadratic refinement and C-field partition
+  function on non-spin manifolds.
+- Mazur, P. O. & Mottola, E. "The path integral measure, conformal
+  factor problem and stability of the ground state of quantum gravity."
+  *Nucl. Phys. B* 341, 187–212 (1990). — Conformal factor problem in
+  Euclidean quantum gravity; relevant to OS3 argument (Paper 3,
+  Appendix A, §A.8).
+- Atiyah, M. F., Patodi, V. K. & Singer, I. M. "Spectral asymmetry and
+  Riemannian geometry. I." *Math. Proc. Cambridge Philos. Soc.* 77,
+  43–69 (1975). — APS index theorem and eta invariant, relevant to
+  the 5/2 meV coincidence discussion (Appendix A, §A.5).
