@@ -280,6 +280,54 @@ confirmed by explicit calculation.
 
 ---
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 1** is the foundational move of the entire series: every
+  quantum phenomenon (superposition, entanglement, spin-statistics,
+  measurement) is a shadow cast by ordinary 5D geometry. The mystery
+  dissolves when the e-dimension is restored.
+
+- **Pattern 6** explains why quantum mechanics looks strange: 4D
+  observers perform a partial trace over the e-coordinate, and a
+  partial trace over a structured 5D state necessarily looks
+  probabilistic, non-local, and "spooky." The strangeness is
+  a projection artifact, not a feature of reality.
+
+- **Pattern 4** gives the spin-statistics theorem: spin and
+  statistics are the same discrete invariant — the winding number
+  of the particle's helix through the e-dimension. The connection
+  between them is not a theorem requiring axioms; it is a tautology.
+
+- **Pattern 5** gives UV finiteness: the KK tower on S¹ converts
+  UV-divergent loop integrals into discrete sums evaluated by the
+  Epstein zeta function. At negative integers these vanish
+  identically (Theorem K.1). No counterterms exist.
+
+
+---
+
 ## 1.8 Interactive Visualizations
 
 Nineteen interactive figures accompany this paper as supplementary files,

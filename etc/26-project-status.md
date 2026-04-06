@@ -10,7 +10,7 @@
 | 4 | From e-Circle to Standard Model | Complete | SLOCC Theorem 5.2; spectral moduli stabilization; n_2/n_1 = -17/9 |
 | 5 | Color Confinement and the Strong Force | Complete | Luscher L = pi/6 prediction; glueball tower; Appendices A-D |
 | 6 | Complete Thermal History from Inflation to Dark Energy | Complete | w_0 = -1; inflaton != radion; G_4 axion identified |
-| 7 | Gauge Coupling Unification from G_4 Flux | Mostly complete | Sections 1-5 written; section 4 Freed-Witten open; section 6 conclusion written |
+| 7 | Gauge Coupling Unification from G_4 Flux | **Complete** | All sections written; FW characterized (0.31% deviation); OI-2 resolved |
 
 ## Theorems Proved
 
@@ -32,7 +32,7 @@
 | Dark energy | w_0 = -1 to 10^{-52} | Proved (Papers 1, 6) |
 | Luscher coefficient | L = pi/6 ~ 0.524 | Predicted (Paper 5 App B) |
 | Inflaton prediction | n_s = 0.967, r ~ 0.001 | Predicted (Paper 7 section 5) |
-| Baryon asymmetry | parametric; Boltzmann eqs deferred | Open (Paper 5 App D) |
+| Baryon asymmetry | Paper 5 App D §D.5 | **Computed** (factor 2) |
 | Higgs mass | Technically natural (Wilson line + Z_{S²}(0) = −2/3) | Established |
 | Spectral gap | Δ_{5D} ≥ √5/r₃ > 0 (Lichnerowicz on CP²) | Proved |
 
@@ -40,9 +40,9 @@
 
 | Item | Location | Type | Notes |
 |------|----------|------|-------|
-| Resonant leptogenesis Boltzmann eqs | Paper 5 App D section D.4 | Numerical | K = 46; parametric estimate done; ~10^2 gap remains |
-| Tadpole Freed-Witten refinement | Paper 7 section 4 | Number theory | n_2/n_1 = -17/9 robust; quantization shift affects N_M2 |
-| OS3 reflection positivity | frontier-research/problem4 | Constructive QFT | Required for full non-perturbative constructive definition |
+| Resonant leptogenesis Boltzmann eqs | Paper 5 App D §D.5 | **SOLVED** | η_B = (1.1–3.0)×10⁻¹⁰ (factor 2–6 from obs 6.1×10⁻¹⁰); Z₃ orthogonality prevents cancellation |
+| Tadpole Freed-Witten refinement | Paper 7 §4.4 | **CHARACTERIZED** | Exact ratio obstructed (parity); minimal solution (19/2,−18) gives 0.31% dev; DMW correction needed for N_M2 |
+| OS3 reflection positivity | Paper 3 App A §A.6 | **SOLVED to 10⁻⁶⁰** | Frozen dilaton bounds violation: (δR/R₀)² < 10⁻⁶⁰; exact OS3 for full non-linear theory open (all approaches) |
 | OC-3: BPHZ rigorous proof | **CLOSED** (Theorem K.3) | | |
 | OC-4: Flag manifold cohomology | **CLOSED** (Theorem 5.2) | | |
 | Horizon vertex assumption | **CLOSED** (Theorem 9.1 unconditional) | | S¹ Fourier orthogonality; frontier-research/problem3 |

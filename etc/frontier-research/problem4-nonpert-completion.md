@@ -10,6 +10,40 @@
 
 ---
 
+---
+
+## Methodology: Which Patterns Were Used
+
+This result uses two patterns from the framework playbook (`readme.md`):
+
+**Pattern 4 — Topological Rigidity.**
+The spectral gap Δ_{5D} > 0 is established via the Lichnerowicz bound
+on Fubini-Study CP² with its canonical spin^c structure. The positive
+scalar curvature R_{CP²} = 24/r₃² is a geometric property of CP² that
+cannot be continuously deformed away (it is fixed by the Einstein
+condition and the Kähler structure). This topological/geometric rigidity
+of CP² prevents zero modes from forming — the same mechanism that
+makes CP²'s contribution to all other framework results (three
+generations, SU(3) gauge group, confinement) exact and uncorrectable.
+
+**Pattern 5 — Zeta Regularization of KK Towers (as perturbative
+stability).**
+Once Δ_{5D} > 0 is established classically, Theorems K.1 and K.3
+guarantee it receives no quantum corrections at any loop order. The
+spectral gap is an observable of the KK spectrum; KK sums at L ≥ 2
+loops reduce to Epstein zeta functions E_L(−j; Q) with j ≥ 1, which
+vanish identically. The gap is perturbatively exact.
+
+**Yang-Mills precedent (`PROOF-CHAIN.md`).**
+The structure mirrors the Yang-Mills mass gap proof: find a positive
+quantity (there: Δ_∞; here: Δ_{5D}), show it is positive at the
+starting point (there: Thm 4, the KK transfer matrix; here:
+Lichnerowicz on CP²), show it is stable under the RG flow (there:
+stability of deviation order; here: Theorems K.1 + K.3 + exp(−10³⁰)).
+The remaining gap (OS3 reflection positivity) is the analog of the
+remaining open question in constructive Yang-Mills.
+
+---
 ## 0. The Problem
 
 Paper 3 Appendix A establishes three layers of non-perturbative control:

@@ -475,10 +475,17 @@ With all three gaps closed, the derivation of §9.3.1 is
 complete in the full interacting 5D theory in the black hole
 curved spacetime background.
 
-**Theorem 9.1 is now unconditional.** The formerly remaining
-assumption — that the e-conservation law at the horizon
-INTERACTION VERTEX (§4.3) holds with the same vertex factor
-as in flat space — is now CLOSED by the vertex factorization
+**Theorem 9.1 is now unconditional.** *Methodology: Pattern 6 —
+projection produces apparent pathology. The vertex looked
+underdetermined in the 4D black hole picture because the e-circle
+was projected out. Restoring the full 5D product metric reveals the
+vertex factor is fixed by S¹ Fourier orthogonality (Pattern 4 —
+topological rigidity), which cannot receive metric corrections.
+Full derivation: `etc/frontier-research/problem3-horizon-vertex.md`.*
+
+The formerly remaining assumption — that the e-conservation law at
+the horizon INTERACTION VERTEX (§4.3) holds with the same vertex
+factor as in flat space — is now CLOSED by the vertex factorization
 argument. In a product spacetime M⁴ × S¹, the vertex factor
 for e-charge conservation is determined entirely by S¹ Fourier
 orthogonality: any interaction vertex in the 5D theory carries

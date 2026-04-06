@@ -8,6 +8,34 @@
 
 ---
 
+---
+
+## Methodology: Which Patterns Were Used
+
+This result uses two patterns from the framework playbook (`readme.md`):
+
+**Pattern 6 — Projection Produces Apparent Pathology.**
+The horizon vertex looked mysterious in 4D because the black hole
+geometry seemed to modify the interaction. Projecting back to 5D reveals
+the source of the apparent problem: the 4D observer is missing the S¹
+factor. In the full 5D geometry the vertex is trivially determined by
+S¹ Fourier orthogonality — a topological identity that does not know
+about black holes.
+
+**Pattern 4 — Topological Rigidity.**
+The vertex factor is not a dynamical quantity — it is locked by the
+topology of S¹ (the Fourier orthogonality integral
+`∫₀^{2πR} e^{i(n−m)φ/R} dφ = 2πR δₙₘ`). Topological identities
+cannot receive metric corrections, regardless of whether the 4D base
+geometry is flat, curved, or singular at the horizon. This is why the
+result is unconditional.
+
+The proof uses no new physics — only the product structure of the metric
+(Paper 1), Noether's theorem (Paper 1 Theorem 2.1), and the Ward
+identity (standard QFT). The key move is Pattern 6: lift the 4D
+projection and the mystery disappears.
+
+---
 ## 0. The Problem
 
 Paper 3, Theorem 9.1 resolves the AMPS firewall paradox using

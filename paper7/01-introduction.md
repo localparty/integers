@@ -15,6 +15,54 @@ the thermal history from the dilaton, and the cosmological constant
 from the S¹ Casimir energy. But every paper left one question open:
 **what determines r₃?**
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 4** gives gauge coupling unification: the flux ratio
+  n₂/n₁ = −17/9 is determined by three interlocking discrete
+  constraints (Kähler weights, G₂ torsion coefficients, group-
+  theoretic unification condition). Each is topological or geometric
+  and cannot be continuously adjusted. The integers 9 and 17 are
+  as rigid as χ(CP²) = 3.
+
+- **Pattern 4** (inverted) gives Theorem U*: the geometric inputs
+  {n_i, χ_j, M_Pl} are all O(1) integers or small numbers. Any
+  algebraic function of O(1) inputs produces an O(1) output.
+  R_obs/l_P ~ 10³⁰ is therefore unreachable by algebraic derivation
+  — the topological rigidity that makes other results exact also
+  makes the CC value structurally inaccessible. This is a type error,
+  not a fine-tuning.
+
+- **Pattern 5** gives the spectral gap Δ_{5D} ≥ √5/r₃ > 0:
+  the Lichnerowicz formula on Fubini-Study CP² with the canonical
+  spin^c structure gives D² ≥ 5/r₃². Theorems K.1 and K.3 then
+  make this gap perturbatively exact. The framework's non-perturbative
+  stability follows without assuming M-theory.
+
+
+---
+
 ## 1.1 The Scale Diagnosis
 
 The answer does not lie in perturbation theory. Computing the

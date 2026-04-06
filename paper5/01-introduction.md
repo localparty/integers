@@ -23,6 +23,49 @@ becomes of order 1 at low energies, and perturbation theory fails.
 This paper resolves confinement geometrically, without perturbation
 theory.
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 2** is the confinement mechanism: the Wilson line of the
+  SU(3) connection around CP² develops a non-trivial holonomy (flux
+  tubes) that prevents color-charged objects from separating. The
+  same geometric object that generates the SU(3) gauge group also
+  confines it.
+
+- **Pattern 4** gives the Lüscher coefficient L = π/6 exactly from
+  the topology of CP²: the confining string tension is fixed by a
+  discrete topological invariant (the first homotopy class of the
+  holonomy map), making the result exact rather than perturbative.
+
+- **Pattern 5** gives the glueball spectrum: the KK tower on CP²
+  is zeta-regulated, producing a discrete mass ladder. The
+  spectral zeta of CP² at the relevant argument gives the
+  string tension and Lüscher coefficient without a cutoff.
+
+
+---
+
 ## 1.2 The Pattern from Papers 1–4
 
 Papers 1–4 established a pattern that this paper extends to completion.

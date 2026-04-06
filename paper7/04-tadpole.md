@@ -166,12 +166,38 @@ quanta and the resulting M2-brane charge, but it does not affect:
 - The moduli stabilization mechanism (§§2–3), which depends on
   the ratio of flux quanta, not their absolute values.
 
-The determination of the minimal integer (or half-integer) flux
-pair consistent with both n₂/n₁ = −17/9 AND the full
-Freed-Witten quantization AND N_M2 ∈ ℤ_{\geq 0} is a
-number-theoretic refinement. It does not affect any of the
-physical conclusions of §§2–3 or §5 — the GUT unification
-condition, the moduli values, and the inflaton identification
-all depend on the flux ratio, not the absolute scale. We leave
-the complete Freed-Witten resolution as an explicit open
-problem for the tadpole sector.
+The Freed-Witten problem has been fully characterized
+(`etc/frontier-research/oi2-freed-witten-tadpole.md`). The key results:
+
+**The exact ratio is obstructed.** The equation 18n₂ + 34n₁_int = −17
+has gcd(18, 34) = 2, which does not divide 17. No integer pair
+(n₁_int, n₂_int) satisfies n₂_int/(n₁_int + 1/2) = −17/9 exactly.
+The obstruction is a parity conflict between the evenness of 18n₂
+and the oddness of 17 × (odd integer).
+
+**Approximate unification survives.** The minimal Freed-Witten-consistent
+configuration is (n₁_int = 9, n₂_int = −18), giving physical fluxes
+(19/2, −18) and ratio −36/19 = −1.8947..., deviating from −17/9 =
+−1.8889... by **0.31%**. The resulting correction to the radius ratio:
+δ(ρ²)/ρ² = −0.65%, which produces δ(α₃/α₂)/(α₃/α₂) ~ 0.7% — well
+within the 2–3% two-loop threshold uncertainties already neglected in
+the one-loop analysis of Paper 4.
+
+**The tadpole requires the DMW-corrected formula.** The naive formula
+N_flux + N_M2 = χ/24 is itself modified on non-spin manifolds
+(Diaconescu-Moore-Witten 2003). With the FW shift, N_flux always
+contributes a 1/8 residue from the constant cross-term, making N_M2
+non-integer under the naive formula for any (n₁_int, n₂_int). The
+correct tadpole on the Horava-Witten manifold with specified E₈ bundles
+requires the full DMW analysis, which lies beyond the current paper's
+scope. What is guaranteed: N_flux < 0 for any physical configuration,
+so N_M2 > 0 (no exotic sources required).
+
+**Physical conclusions unaffected.** The flux ratio origin of GUT
+unification, moduli stabilization, Theorem U, and the inflaton
+identification depend on the ratio n₂/n₁, not the absolute values.
+The 0.31% deviation from exact unification is a sub-threshold effect,
+comparable to the two-loop corrections already neglected. Gauge
+coupling unification is preserved at the precision level of this
+analysis, and the Freed-Witten anomaly provides a specific, calculable
+refinement: the physical flux pair is (19/2, −18), not (9, −17).

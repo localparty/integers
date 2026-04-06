@@ -16,6 +16,51 @@ object.
 
 This paper fills that gap.
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 3** drives the entire thermal history: the dilaton
+  potential V(φ) = V₀/φ⁴ is the Casimir energy of bulk fields on S¹.
+  This one function — one compact dimension, one mechanism — produces
+  inflation (from the G₄ axion hilltop), reheating, matter domination,
+  and dark energy, in a single unbroken narrative.
+
+- **Pattern 4** gives w₀ = −1 exactly: Theorem K.1 (Epstein zeros)
+  forces all perturbative corrections to V(φ) to vanish. The dilaton
+  potential is exact, and the equation of state is locked. No slow
+  roll, no reconstruction — the equation of state is topologically
+  rigid.
+
+- **Pattern 1** frames the inflaton identification: the G₄ axion
+  looked like a separate degree of freedom in 4D effective field
+  theory. In 5D it is the phase of the GVW superpotential — a
+  geometric object whose hilltop potential follows from the
+  sub-Planckian decay constant f = M_Pl/√3.
+
+
+---
+
 ## 1.1 The Central Object
 
 The dilaton `φ(t)` measures the e-circle radius at cosmic time `t`:

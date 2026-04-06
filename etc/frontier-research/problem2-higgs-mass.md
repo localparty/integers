@@ -18,6 +18,36 @@ one-loop correction is exactly delta m_H^2 ~ (g^2/16pi^2)(1/r_2^2)(-2/3)
 
 ---
 
+---
+
+## Methodology: Which Patterns Were Used
+
+This result uses two patterns from the framework playbook (`readme.md`):
+
+**Pattern 5 — Zeta Regularization of KK Towers.**
+The KK tower correction to the Higgs mass is a discrete sum over S²
+eigenvalues `l(l+1)/r₂²`. Rather than cutting the sum off at some
+Λ_UV (which would give a large quadratic divergence), we evaluate it
+by analytic continuation via the S² spectral zeta function. The value
+Z_{S²}(0) = −2/3 is the zeta-regularized sum — finite, unambiguous,
+and of order 1. This converts a potentially catastrophic divergence
+into a calculable O(1) coefficient.
+
+**Pattern 3 — Casimir Energy as Universal Scale-Setter.**
+The one-loop Higgs mass is the Casimir energy of the SU(2) gauge field
+on S². The scale it sets is 1/r₂ — the S² compactification scale,
+which is the electroweak scale by the Hosotani identification. One
+mechanism (Casimir), one radius (r₂), one physical scale (M_EW). No
+quadratic sensitivity to Planck or GUT physics enters because the
+Hosotani Wilson line couples only to modes that wind around S², and
+those are controlled entirely by the S² geometry.
+
+Additionally, **Theorem K.1** (Pattern 5 applied at higher loops)
+kills all corrections beyond one loop: the Epstein zeta E_L(−j; Q) = 0
+for j ≥ 1. The one-loop Casimir result is exact to all perturbative
+orders.
+
+---
 ## 0. The Standard Hierarchy Problem (Context)
 
 In the Standard Model, the Higgs mass receives one-loop corrections:

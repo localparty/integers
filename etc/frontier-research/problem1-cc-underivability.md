@@ -4,6 +4,34 @@
 
 ---
 
+---
+
+## Methodology: Which Patterns Were Used
+
+This result uses one pattern in an inverted form:
+
+**Pattern 4 — Topological Rigidity (inverted: rigidity as a ceiling,
+not a floor).**
+The standard use of Pattern 4 is to show that a discrete topological
+invariant *locks in* a result (e.g., three generations from χ(CP²) = 3).
+Here Pattern 4 is applied in reverse: the geometric inputs are *all*
+discrete or O(1) numbers. Any algebraic function of O(1) numbers gives
+an O(1) result. Therefore the geometric inputs impose a *ceiling* on
+what is derivable — the ceiling is R ~ l_P × O(10⁵) at most.
+
+The observed R ~ 10³⁰ l_P lies above this ceiling. The topological
+rigidity that makes results robust also makes the observed CC value
+structurally unreachable. This is the "type error" formulation:
+discrete inputs cannot produce a number 10³⁰ times their natural
+scale by algebraic operations.
+
+**The Yang-Mills analogy.**
+The Yang-Mills proof found that all dim-6 operators have deviation ≥ 2.
+That was a classification argument using existing structure to prove
+a bound. Theorem U* is a classification argument using the geometric
+input set G to prove an upper bound on R. The strategy is identical.
+
+---
 ## 0. Summary
 
 Theorem U (Paper 7 section 3.6) shows that the F-flat condition and Planck

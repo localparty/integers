@@ -343,6 +343,12 @@ holonomy, and the holonomy determines the physics.**
 
 ### 6.11 Higgs Mass Naturalness
 
+*Methodology: Pattern 5 (zeta regularization converts the KK sum into
+Z_{S²}(0) = −2/3, a finite O(1) number) + Pattern 3 (Casimir on S²
+sets the electroweak scale, so the correction is O(m_H²) not O(M_GUT²))
++ Theorem K.1 (all higher-loop Epstein sums vanish, making the one-loop
+result exact). Full derivation: `etc/frontier-research/problem2-higgs-mass.md`.*
+
 The Higgs mass is technically natural in the framework. As a Wilson
 line on `S²`, it receives one-loop KK corrections
 `δm_H² = (g₂²/16π²)(1/r₂²) × Z_{S²}(0)` where `Z_{S²}(0) = −2/3`.

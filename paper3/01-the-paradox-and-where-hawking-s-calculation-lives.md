@@ -1,6 +1,52 @@
 ## 1. The Paradox and Where Hawking's Calculation Lives
 
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 6** is the central resolution: the information paradox
+  arises because Hawking's calculation is a partial trace over the
+  e-dimension. The trace produces a mixed state by construction —
+  not because information is destroyed, but because the e-coordinate
+  is averaged out. Restore the e-dimension and the state is pure.
+
+- **Pattern 1** resolves the problem of time: the Wheeler-DeWitt
+  equation H|Ψ⟩ = 0 appears timeless in 4D because the clock is the
+  e-coordinate, which 4D observers have projected out. Time exists
+  in 5D as the phase advance along the e-circle.
+
+- **Pattern 4** makes Theorem 9.1 unconditional: the horizon vertex
+  factor is fixed by S¹ Fourier orthogonality — a topological
+  identity that cannot receive metric corrections regardless of
+  the 4D background geometry. Pattern 6 is what made the vertex
+  look uncertain: the 4D projection hid the e-circle, making the
+  vertex appear to depend on the black hole geometry. Restoring
+  the 5D product structure reveals that the vertex is trivially 1.
+
+
+---
+
 ### 1.1 The Information Paradox
 
 In 1974, Stephen Hawking showed that black holes radiate thermally —

@@ -19,6 +19,49 @@ free fits to cosmological data — we compute the complete expansion
 history `H(z)`, the CMB power spectrum, and all derived cosmological
 observables.
 
+---
+
+## 1.M Methodology: The Framework's Reasoning Patterns
+
+This paper is one of seven in a series. Each paper applies the same
+small set of reasoning patterns to a different domain of physics.
+The patterns are documented in full in `readme.md`; the relevant ones
+for this paper are identified below. Understanding which pattern a
+derivation uses lets you see *why* the result works, not just *that*
+it works — and lets you apply the same move to new problems.
+
+The six patterns of the framework:
+
+| # | Name | Core move |
+|---|------|-----------|
+| 1 | **Geometric Reinterpretation** | A 4D mystery is a shadow of simpler 5D geometry |
+| 2 | **Holonomy Correspondence** | Wilson line VEV around a compact dimension → gauge phase |
+| 3 | **Casimir as Scale-Setter** | Quantum vacuum energy on a compact space → a fundamental scale |
+| 4 | **Topological Rigidity** | Discrete invariant (winding number, χ, homotopy) → exact quantized result |
+| 5 | **Zeta Regularization of KK Towers** | Compact → discrete KK sum → analytic continuation → finite result |
+| 6 | **Projection Produces Apparent Pathology** | 4D looks broken because 4D is a partial trace over the geometry |
+
+**Primary patterns in this paper:**
+
+- **Pattern 3** is the engine of Paper 2: the Casimir energy on S¹
+  sets the dark energy scale; the Casimir energy on S²  sets the
+  electroweak scale; the ratio between them, together with the
+  Witten index ΔN, produces the equation of state w₀ = −1 exactly.
+  One mechanism, two scales, all cosmological observables.
+
+- **Pattern 6** resolves the dark matter problem: dark matter is
+  not a new particle — it is Standard Model matter on the hidden
+  (Z₂ mirror) brane, invisible to us because it is in the
+  projection-orthogonal sector. The coincidence Ω_DM/Ω_b ~ 5 is a
+  consequence of the orbifold geometry.
+
+- **Pattern 4** gives w₀ = −1 exactly: the Epstein zero theorem
+  (Theorem K.1) forces all perturbative corrections to the Casimir
+  potential to vanish. The equation of state is locked by topology.
+
+
+---
+
 ## 1.2 The Central Claim
 
 **The framework fits zero parameters to the CMB.** Two observational
