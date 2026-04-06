@@ -39,6 +39,10 @@
 | All-orders finiteness (KK sum factor) | **Established** (Theorem K.1, Paper 1 Appendix K §K.6) | Universal Epstein Vanishing theorem |
 | BPHZ factorization at L ≥ 3 | **Proved** (Theorem K.3, Paper 1 §K.5.3): joint holomorphicity of E_L(s; Q(α)) in (s, α) establishes the commutation of BPHZ subtraction with Epstein zeta evaluation. | Weinberg's theorem + Epstein zeta structure + Morera's theorem |
 | SLOCC-isometry map | **Established (global)**: SU(2)³/T² ≅ SU(3)/T² (Theorem 5.2, corrected). Orbit is 6D flag manifold Fl(1,2;3); S¹ is the U(1) Cartan, not a geometric factor. §9.4 resolved. | Tangent space weight matching + cohomology (etc/24) |
+| Higgs mass naturalness | **Established**: Wilson line + UV finiteness + Z_{S²}(0) = −2/3 gives δm_H² ~ m_H² (no hierarchy problem) | Hosotani + Thm K.1 + spectral zeta |
+| CC underivability (Theorem U*) | **Proved**: R ~ l_Pl from algebraic inputs; 10³⁰ gap is structural | Enumeration of geometric inputs + instanton bound |
+| Non-perturbative spectral gap | **Proved**: Δ_{5D} ≥ √5/r₃ > 0 (Lichnerowicz); stable under all corrections | Lichnerowicz bound on spin^c CP² + Thms K.1, K.3 |
+| Constructive QFT definition | **Open**: OS3 (reflection positivity) not yet established | Osterwalder-Schrader axioms |
 | Moduli stabilization | **Partially established**: S² and CP² dynamically stabilized by spectral zeta nonvanishing; κ from Planck mass constraint (§9.5, OC-2) | Spectral zeta values + Planck constraint |
 | Gauge coupling hierarchy | **Leading order derived**: α₃/α₂ = 1 at GUT scale for κ = 3.545 × 10⁻²; first-principles κ via three-equation system (§9.5) | Coupled moduli stabilization |
 | G₄ flux stabilizes CP²/S² moduli | **Established** (Paper 7, sections 2–3): `W_total = n₁r₃² + n₂r₂² + cR(6r₃²r₂² − 2r₃⁴)`; minimum exists with `n₂ < 0` | GVW superpotential on CP² x S² x S¹/Z₂ |

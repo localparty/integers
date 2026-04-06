@@ -3,7 +3,6 @@
 > **For:** Claude Opus (maximum reasoning depth, creative)
 > **Date:** April 5, 2026
 > **Context:** The 5D e-Dimension / M-theory framework, seven-paper series
-> **Git HEAD:** current
 > **Tone:** This is a genuine research session. Be creative. Follow threads.
 >   Report honestly — including dead ends and partial results.
 >   The goal is to find new physics *we* haven't found yet, using tools
@@ -379,6 +378,11 @@ For each problem:
 ## Context management
 
 Use local agents/sub-agents to favor/keep your context.
+
+## Output
+
+Write detailed .md files in `/Users/gsix/quantum-geometry-in-5d-latex/etc/frontier-research`
+
 ---
 
 *Precedent: the Yang-Mills proof found its key insight (stability of*

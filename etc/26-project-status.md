@@ -19,6 +19,9 @@
 | K.1 (Universal Epstein Vanishing) | E_L(-j; Q) = 0 for all j >= 1, any positive-definite Q | Paper 1 section K.7b |
 | K.3 (BPHZ Factorization) | BPHZ-subtracted amplitudes factor as (4D) x E_L(-j; Q) | Paper 1 section K.5.3 |
 | 5.2 (SLOCC-Isometry, corrected) | SU(2)^3 GHZ orbit = Fl(1,2;3) at Lie algebra level | Paper 4 section 5.6 |
+| U* (CC Underivability) | R_obs underivable from algebraic/topological data | frontier-research/problem1 |
+| Higgs Naturalness | δm_H² ~ −(g²/24π²)m_H², perturbatively exact | frontier-research/problem2 |
+| 9.1 (Unconditional) | Horizon vertex = 1 from S¹ Fourier orthogonality | frontier-research/problem3 |
 
 ## Key Physical Results
 
@@ -30,15 +33,19 @@
 | Luscher coefficient | L = pi/6 ~ 0.524 | Predicted (Paper 5 App B) |
 | Inflaton prediction | n_s = 0.967, r ~ 0.001 | Predicted (Paper 7 section 5) |
 | Baryon asymmetry | parametric; Boltzmann eqs deferred | Open (Paper 5 App D) |
+| Higgs mass | Technically natural (Wilson line + Z_{S²}(0) = −2/3) | Established |
+| Spectral gap | Δ_{5D} ≥ √5/r₃ > 0 (Lichnerowicz on CP²) | Proved |
 
 ## Remaining Open Items
 
 | Item | Location | Type | Notes |
 |------|----------|------|-------|
-| Tadpole Freed-Witten refinement | Paper 7 section 4 | Number theory | n_2/n_1 = -17/9 robust; quantization shift affects N_M2 |
 | Resonant leptogenesis Boltzmann eqs | Paper 5 App D section D.4 | Numerical | K = 46; parametric estimate done; ~10^2 gap remains |
+| Tadpole Freed-Witten refinement | Paper 7 section 4 | Number theory | n_2/n_1 = -17/9 robust; quantization shift affects N_M2 |
+| OS3 reflection positivity | frontier-research/problem4 | Constructive QFT | Required for full non-perturbative constructive definition |
 | OC-3: BPHZ rigorous proof | **CLOSED** (Theorem K.3) | | |
 | OC-4: Flag manifold cohomology | **CLOSED** (Theorem 5.2) | | |
+| Horizon vertex assumption | **CLOSED** (Theorem 9.1 unconditional) | | S¹ Fourier orthogonality; frontier-research/problem3 |
 
 ## The Complete Chain
 

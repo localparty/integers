@@ -145,3 +145,26 @@ The framework's claim stands: 11D geometry explains quantum
 mechanics, gravity, the Standard Model, cosmology, and confinement —
 with one input from observation, whose underivability is now a
 theorem.
+
+## Frontier Results
+
+**Theorem U* (CC Underivability).** The cosmological constant is
+structurally underivable from any algebraic or topological mechanism
+in the framework (Theorem U*, `etc/frontier-research/problem1-cc-underivability.md`).
+The geometric inputs — flux integers bounded by the tadpole, Euler
+characteristics (small integers), and M_Pl — can produce R only at
+the Planck scale via algebraic operations. The observed R ~ 10 um
+requires a factor of 10^{30} that cannot arise from any finite
+combination of topological invariants. R remains the framework's
+single free parameter.
+
+**Non-perturbative spectral gap (Lichnerowicz bound).** The positive
+curvature of CP^2 provides a spectral gap Delta_{5D} >= sqrt{5}/r_3 > 0
+for the Dirac operator on M_7 (from the Lichnerowicz bound on
+Fubini-Study CP^2 with the canonical spin^c structure). Combined
+with perturbative exactness (Theorems K.1, K.3) and non-perturbative
+suppression (exp(-10^{30}), Paper 1 Appendix J), this gives a
+self-contained non-perturbative stability argument independent of
+M-theory. The remaining step for full constructive definition —
+reflection positivity (Osterwalder-Schrader axiom OS3) — is an open
+problem (see `etc/frontier-research/problem4-nonpert-completion.md`).

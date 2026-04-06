@@ -71,15 +71,20 @@ dimensions.
 | Firewall paradox resolution (Theorem 9.1) | **Derived** (§9.3.1-2 + gauge symmetry protection; UV finiteness at horizon from Appendix S + non-perturbative completion from Appendix A) | A proof that the 5D path integral is UV divergent at the horizon vertex |
 | e-coordinate non-dynamical (no causal structure) | **Argued** (from the fiber bundle geometry + ∂/∂φ Killing vector) | A derivation of a causal propagation equation for the e-coordinate |
 
-**The resolution is complete. The single dependency:**
-That the 5D path integral is well-defined at the Planck-scale
-horizon interaction vertex. Perturbatively: established by Paper 1,
-Appendix S (all-orders finiteness). Non-perturbatively: established
-by the M-theory identification (Appendix A of this paper) — the
-framework inherits M-theory's non-perturbative completeness. The
-U(1) e-symmetry cannot be broken by quantum gravity because it is
-a gauge symmetry, not a global symmetry (§9.3.2). Every step in
-the derivation is proved or inherited from M-theory.
+**The resolution is complete with no remaining dependencies.**
+The formerly single dependency — that the horizon interaction
+vertex preserves e-conservation with the flat-space vertex factor
+— is now resolved. The vertex factorization argument
+(`etc/frontier-research/problem3-horizon-vertex.md`) derives the
+vertex factor from first principles: in the product spacetime
+M⁴ × S¹, the vertex factor is the Kronecker delta δ_{Σn,0}
+from S¹ Fourier orthogonality — a topological identity independent
+of the 4D metric. The 5D path integral is well-defined at all
+orders (Paper 1, Appendix S) and non-perturbatively (M-theory
+identification, Appendix A). The U(1) e-symmetry cannot be broken
+by quantum gravity because it is a gauge symmetry, not a global
+symmetry (§9.3.2). Every step in the derivation is proved or
+inherited from M-theory. Theorem 9.1 is unconditional.
 
 ---
 

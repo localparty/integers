@@ -246,21 +246,31 @@ non-perturbative structure.
 ### A.5.1 The Horizon Vertex
 
 Theorem 9.1 requires e-conservation at the Planck-scale horizon
-interaction vertex (§4.3, §9.3.2). Three independent results
-establish this:
+interaction vertex (§4.3, §9.3.2). The horizon vertex factor is
+now **derived** from the product structure and Ward identity,
+closing the formerly remaining assumption. Four independent
+results establish this:
 
-1. **Perturbative finiteness** (Appendix S): The vertex is
+1. **Product-space vertex factorization** (`etc/frontier-research/
+   problem3-horizon-vertex.md`): In the product spacetime
+   M⁴ × S¹ with constant fiber radius R₀, the KK decomposition
+   is exact and the vertex factor reduces to the S¹ Fourier
+   orthogonality integral δ_{Σn,0} — a topological identity
+   independent of the 4D metric g₄D. The black hole curves the
+   4D base but leaves the e-circle untouched.
+
+2. **Perturbative finiteness** (Appendix S): The vertex is
    well-defined at every loop order. The KK mode sums converge.
    The e-conservation law — which is a gauge symmetry (§9.3.2),
    not a global symmetry — is preserved at every vertex by the
    Ward identity.
 
-2. **Non-perturbative stability** (Appendix J): Non-perturbative
+3. **Non-perturbative stability** (Appendix J): Non-perturbative
    corrections to the vertex are suppressed by `exp(−10³⁰)`.
    The perturbative vertex factor IS the physical vertex factor
    to `10³⁰`-digit precision.
 
-3. **Gauge symmetry protection** (§9.3.2): The U(1)
+4. **Gauge symmetry protection** (§9.3.2): The U(1)
    e-translation is a gauge symmetry — the fiber automorphism of
    the principal bundle. Gauge symmetries cannot be broken by any
    physical process, including quantum gravity. The wormhole

@@ -341,5 +341,29 @@ are three manifestations of one geometric principle: the Casimir
 energy of quantum fields on compact dimensions determines the
 holonomy, and the holonomy determines the physics.**
 
+### 6.11 Higgs Mass Naturalness
+
+The Higgs mass is technically natural in the framework. As a Wilson
+line on `S²`, it receives one-loop KK corrections
+`δm_H² = (g₂²/16π²)(1/r₂²) × Z_{S²}(0)` where `Z_{S²}(0) = −2/3`.
+This correction is negative, of order `m_H²`, and perturbatively
+exact — higher-loop corrections vanish identically by Theorems K.1
+and K.3. No quadratic divergence arises because: (1) the Hosotani
+mechanism forbids local mass counterterms for Wilson lines, (2) UV
+finiteness (Theorem K.1) eliminates power-law KK contributions, and
+(3) the spectral zeta `Z_{S²}(0)` provides a finite `O(1)` coefficient.
+
+The result satisfies 't Hooft's naturalness criterion: setting
+`m_H → 0` enhances the gauge symmetry to the full higher-dimensional
+gauge group (the Wilson line becomes a flat direction), so the small
+mass is protected by the approximate symmetry. The correction is
+parametrically `δm_H²/m_H² ~ −g₂²/(24π²) ~ −1/370` — a small,
+negative, calculable shift with no hierarchy problem.
+
+The full derivation, including the three-layer protection mechanism
+(Hosotani gauge protection, UV finiteness via Theorem K.1, spectral
+zeta finiteness) and the proof that all higher-loop corrections
+vanish, is in `etc/frontier-research/problem2-higgs-mass.md`.
+
 ---
 
