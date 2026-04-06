@@ -45,6 +45,32 @@ everywhere simultaneously — not because information traveled, but
 because gauge fixing is a constraint on the configuration space,
 not a dynamical process.
 
+The gauge-fixing analogy captures the *acausal* character of δφ
+propagation accurately — it is a constraint on the configuration
+space, not a dynamical process in spacetime. But the analogy has a
+limit that must be stated. In gauge theory, the gauge degree of
+freedom is unphysical — pure redundancy with no observable
+consequences. The e-coordinate is not redundant. It is physically
+meaningful: it determines the quantum phase of a particle (Paper 1,
+§2.3), its statistics under exchange (Paper 1, Appendix B), and
+through e-conservation, its entire interaction history. What is
+acausal is not a gauge artifact but a genuine Noether charge.
+
+The correct framing is this: δφ is a Noether charge evaluated on a
+compact dimension, and Noether charges are global quantities. When the
+total momentum of a system changes — because a particle is created or
+absorbed — the momentum of every other particle in the system is
+immediately constrained by conservation. There is no signal. There is
+no propagation. There is only the algebraic fact that a conserved
+quantity has a definite total value, and a change in one term
+constrains all others simultaneously. The acausality of δφ is exactly
+this — not the FTL transfer of information, but the global character
+of Noether conservation. The locality is in the *encoding*: one Planck
+pixel absorbs one infalling quantum and acquires one unit of e-imprint.
+The *constraint* that follows is global, just as conservation of
+energy is global — it holds everywhere, not because a signal traveled,
+but because it is an algebraic identity on the state space.
+
 **What is claimed:** The e-conservation constraint `Σ φ_i = C`
 implies that a change in one e-coordinate immediately constrains
 all others. This is algebraic, not causal.

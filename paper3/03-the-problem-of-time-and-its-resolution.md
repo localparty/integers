@@ -172,6 +172,35 @@ The identification map is:
 
     φ = 2π t_E / β_H = κ c t_E
 
+The spin structure is the key. Two circles of the same period could
+still be distinct objects — one could carry periodic boundary
+conditions for bosons and antiperiodic for fermions, while the other
+carried the opposite assignment. What makes the thermal circle and
+the e-circle the *same* geometric object is precisely that they carry
+identical spin structure: bosons periodic, fermions antiperiodic, for
+exactly the same physical reason in each case. For the thermal circle,
+the assignment comes from the KMS condition — finite-temperature
+Green's functions must be periodic in imaginary time for bosons and
+antiperiodic for fermions. For the e-circle, the assignment comes from
+the spin-statistics theorem (Paper 1, Appendix B): winding once around
+the e-circle multiplies the wave function by +1 for bosons and −1 for
+fermions. Given the identification φ = κct_E, these two assignments
+must agree — and they do, not by accident but by necessity. A particle
+that is a fermion (e-antiperiodic) is also a particle that contributes
+with a minus sign to the thermal partition function (t_E-antiperiodic).
+The e-dimension explains both facts with one geometric fact.
+
+**Corollary 3.1** *(Hawking Temperature from Spin Structure).*
+The Hawking temperature T_H = ℏκc/(2πk_B) is the unique temperature
+for which the thermal spin structure of the heat bath matches the
+geometric spin structure of the e-circle at the horizon. It is not a
+free parameter. It is fixed by the requirement that the two descriptions
+of the same physical fact — the statistics of radiation and the
+geometry of the compact dimension — are mutually consistent. Any other
+temperature would produce a mismatch between the KMS boundary condition
+and the e-periodicity condition, making the Euclidean path integral
+ill-defined.
+
 **What this means.** The Hawking temperature is not imposed from
 outside — it is the statement that the thermal circle and the
 e-circle are the same geometric object near the horizon. The
@@ -207,6 +236,41 @@ The e-dimension framework restores dynamics:
 With time and unitarity restored, the information paradox becomes
 a precise question with a precise answer — developed in the
 remaining sections.
+
+There is a deeper unity here worth stating once explicitly. The same
+compact circle — the e-dimension — does three things that might seem
+unrelated:
+
+It provides the internal clock (§3.2–3.3): the e-coordinate φ evolves
+as ∂φ/∂τ = −E/ℏ, giving the 4D effective theory a well-defined notion
+of time through the Page-Wootters mechanism. The WDW equation is not
+timeless — it is 5D dynamics with the e-clock projected out.
+
+It provides the temperature (§3.4): near the horizon, the e-circle is
+geometrically identified with the thermal circle of Euclidean quantum
+gravity. The Hawking temperature is fixed by the requirement that the
+spin structure of the e-circle and the KMS boundary condition match —
+Corollary 3.1. The temperature is not imposed from outside; it is read
+off from the geometry of the compact dimension.
+
+It provides the information carrier (Sections 4–6): the e-coordinate
+of each infalling quantum is conserved at the horizon vertex and
+imprints on the e-bundle of the horizon surface. Subsequently emitted
+Hawking quanta inherit these e-imprints through e-conservation at each
+emission vertex. The radiation is thermal in 4D and structured in e.
+
+These are not three separate applications of the e-dimension. They
+are the same geometric fact — the compactness and periodicity of the
+e-circle — appearing in three distinct regimes: time evolution in
+flat space, near-horizon Euclidean geometry, and Lorentzian information
+transfer. The resolution of the information paradox depends on all
+three in sequence. Without the clock, "unitary time evolution" is
+undefined in quantum gravity and the question cannot even be posed.
+Without the temperature derivation, the connection to Hawking's
+original calculation is unclear and the framework appears to be
+adding structure rather than explaining existing results. Without the
+information carrier, unitarity is asserted but the mechanism is not
+constructed. The e-circle delivers all three.
 
 ---
 

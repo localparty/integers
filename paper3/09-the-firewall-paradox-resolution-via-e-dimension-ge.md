@@ -61,6 +61,68 @@ The AMPS argument applies monogamy of entanglement to the
   entanglement, which is a theorem about 4D Hilbert spaces,
   does not constrain correlations in the e-dimension.
 
+### 9.2.1 The Emission Vertex: Why the Sectors Decouple After
+
+A careful reader will notice a potential gap: at the *moment of
+emission*, the Hawking quantum H is being created as a KK mode — a
+5D object that couples both the 4D sector and the e-sector
+simultaneously. In this moment the two sectors are not decoupled.
+Does the argument hold during the emission process itself, not just
+in the asymptotic state?
+
+It does. Here is why.
+
+At the emission vertex, a near-horizon vacuum fluctuation produces
+a pair: the outgoing quantum H and the interior quantum I. Both
+are KK modes with definite e-coordinates. The e-conservation law
+at this vertex (established by the Killing vector argument in
+§9.3.2, Gap 2) constrains:
+
+    φ_H + φ_I = Q_e − φ_horizon
+
+where Q_e is the total conserved e-charge and φ_horizon is the
+accumulated e-imprint on the horizon. After the emission, H carries
+a definite e-coordinate fixed by this constraint.
+
+Now consider the two correlations of H post-emission:
+
+**Correlation 1 (4D entanglement with I):** H and I are a Bogoliubov
+pair. Their 4D quantum numbers — energy, angular momentum, helicity
+— are entangled. This is the vacuum entanglement across the horizon
+that AMPS requires for "no drama." It lives inside the 4D Hilbert
+space sector H_4D.
+
+**Correlation 2 (e-correlation with the horizon and early radiation R):**
+H's e-coordinate φ_H is determined by the constraint above. This
+correlates H with the accumulated e-imprint of all previously infalling
+matter. It is a superselection constraint — it specifies which sector
+H_Q of the full Hilbert space H_5D the system (H + I + horizon + R)
+occupies.
+
+These two correlations are not competing resources because they live
+at different levels of the Hilbert space structure. The 4D monogamy
+theorem (Coffman-Kundu-Wootters 2000) is a theorem about entanglement
+*within* a superselection sector H_Q. It constrains how much of H's
+4D entanglement capacity can be shared between I and R. It says nothing
+about *which sector* H_Q the system occupies. The e-conservation
+constraint determines the sector. The 4D entanglement lives inside it.
+
+The key distinction, stated precisely:
+
+> The 4D vacuum entanglement between H and I is a fact about the
+> *state* within a superselection sector. The e-correlation between
+> H and the early radiation R is a fact about *which sector* the
+> system occupies. These are not competing resources — one is
+> intra-sector, the other is inter-sector. Monogamy of entanglement
+> constrains intra-sector correlations. It has nothing to say about
+> which sector the system is in.
+
+The moment-of-emission coupling between sectors is real. After the
+emission, the sectors are again decoupled in the sense that matters
+for the monogamy argument: the 4D entanglement of H is entirely
+within H_Q, and the e-superselection constraint is a constraint on
+Q itself. The argument holds.
+
 ### 9.3 Why Monogamy Does Not Apply to e-Correlations
 
 Monogamy of entanglement (Coffman, Kundu & Wootters 2000) states:

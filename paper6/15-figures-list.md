@@ -27,7 +27,7 @@ Plot of `V(φ) = V₀/φ⁴` in the physical field `σ`, showing three
 regimes:
 
 - **Plateau** (large `φ`): the Casimir plateau region where slow-roll
-  inflation occurs. Label: `ε ≪ 1`, `n_s = 0.965`.
+  inflation occurs. Label: `ε ≪ 1`, `n_s = 0.967 (G₄ axion hilltop, Paper 7 §5)`.
 - **Steep slope** (intermediate `φ`): the region where the dilaton
   oscillates and decays, driving reheating. Label: `T_reh ≈ 5 × 10⁹ GeV`.
 - **Frozen tail** (small `φ`, post-inflationary): the dilaton is

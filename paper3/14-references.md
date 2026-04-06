@@ -63,5 +63,12 @@
   and black hole complementarity." *Phys. Rev. D* 48, 3743 (1993).
 - Thorne, K. S., Price, R. H. & Macdonald, D. A. *Black Holes: The
   Membrane Paradigm.* Yale University Press (1986).
-- Paper 1: [this framework, Paper 1 citation]
-- Paper 2: [this framework, Paper 2 citation]
+- Paper 1 of this series: G Six. "Spin-Statistics, Aharonov-Bohm,
+  Perturbative Finiteness, and Twenty-Two Derivations from
+  Kaluza-Klein Geometry." (2025). — The e-dimension framework,
+  UV finiteness (Theorems K.1, K.3), dark energy, and the
+  spin-statistics theorem.
+- Paper 2 of this series: G Six. "The Dark Matter-Baryon Ratio,
+  Hubble and Clustering Tensions, and Thirteen Observables from
+  Kaluza-Klein Geometry." (2025). — Cosmological predictions,
+  Ω_DM/Ω_b = 1/ξ², S8 resolution.
