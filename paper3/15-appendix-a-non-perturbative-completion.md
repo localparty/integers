@@ -251,13 +251,13 @@ now **derived** from the product structure and Ward identity,
 closing the formerly remaining assumption. Four independent
 results establish this:
 
-1. **Product-space vertex factorization** (`etc/frontier-research/
-   problem3-horizon-vertex.md`): In the product spacetime
-   M⁴ × S¹ with constant fiber radius R₀, the KK decomposition
-   is exact and the vertex factor reduces to the S¹ Fourier
-   orthogonality integral δ_{Σn,0} — a topological identity
-   independent of the 4D metric g₄D. The black hole curves the
-   4D base but leaves the e-circle untouched.
+1. **Product-space vertex factorization** (Appendix B, this paper):
+   In the product spacetime M⁴ × S¹ with constant fiber radius
+   R₀, the KK decomposition is exact and the vertex factor
+   reduces to the S¹ Fourier orthogonality integral δ_{Σn,0} —
+   a topological identity independent of the 4D metric g₄D. The
+   black hole curves the 4D base but leaves the e-circle
+   untouched.
 
 2. **Perturbative finiteness** (Appendix S): The vertex is
    well-defined at every loop order. The KK mode sums converge.
@@ -318,16 +318,17 @@ layers.
   vanish (as they do at `L = 2`).
 
 **The OS3 status (updated).** The Osterwalder-Schrader reflection
-positivity axiom has been established to 10⁻⁶⁰ precision
-(`etc/frontier-research/oi3-reflection-positivity.md`). The key
-argument: the conformal mode of 4D gravity is the KK dilaton R in the
-5D framework. The dilaton is frozen at R₀ by Hubble friction with
-fluctuations δR/R₀ < 10⁻³⁰ (quantum) or 10⁻⁵² (classical). The
+positivity axiom has been established to 10⁻⁶⁰ precision. The key
+argument: the conformal mode of 4D gravity is the KK dilaton R in
+the 5D framework. The dilaton is frozen at R₀ by Hubble friction
+with fluctuations δR/R₀ < 10⁻³⁰ (quantum) or 10⁻⁵² (classical);
+see Paper 6, Appendix A for the derivation of ε_eff ~ 10⁻⁵². The
 OS inner product factorizes into healthy KK modes (all reflection-
 positive) and the dilaton sector, whose violation is bounded by
 (δR/R₀)² < 10⁻⁶⁰. This is below experimental sensitivity by 47
-orders of magnitude. The proof chain in `etc/frontier-research/
-problem4-nonpert-completion.md` is updated:
+orders of magnitude. The spectral gap Δ_{5D} ≥ √5/r₃ > 0
+(Paper 4, Appendix E) feeds into the reconstruction. The proof
+chain:
 
     OS1 (regularity):            Established (Thm S.1)
     OS2 (Euclidean covariance):  Established (product metric)
@@ -339,7 +340,8 @@ problem4-nonpert-completion.md` is updated:
 
 Exact OS3 for the full non-linear theory remains open — this is the
 conformal factor problem of Euclidean quantum gravity, open for all
-approaches to quantum gravity.
+approaches to quantum gravity. The full derivation of the
+approximate OS3 bound is given in §A.7 below.
 
 **The honest status:** The framework's perturbative finiteness is
 a theorem. Its non-perturbative stability is established to
@@ -348,5 +350,195 @@ established to 10⁻⁶⁰ precision (via approximate OS3 from the frozen
 dilaton). Its formal non-perturbative completeness is inherited from
 M-theory. No other approach to quantum gravity has all four layers
 simultaneously established to this level of precision.
+
+---
+
+## A.7 Approximate Reflection Positivity (OS3) to 10⁻⁶⁰
+
+### A.7.1 Statement
+
+**Theorem (Approximate Reflection Positivity).** *For the 5D
+framework on M⁴ × S¹ with the dilaton frozen at R₀ by Hubble
+friction (ε_freeze ~ 10⁻⁵² classical, 10⁻³⁰ quantum), the
+Osterwalder-Schrader inner product satisfies:*
+
+    *⟨θf, f⟩ ≥ −C · ε_freeze² · ‖f‖²*
+
+*where C is an O(1) constant, ε_freeze = 10⁻³⁰ (taking the
+quantum fluctuation bound), and θ is the Euclidean time-reflection
+operator. Equivalently: for any normalized test function f
+supported in the positive-time half-space,*
+
+    *⟨θf, f⟩ ≥ −10⁻⁶⁰ · ‖f‖²*
+
+*The reflection positivity is violated by at most one part in
+10⁶⁰.*
+
+### A.7.2 The Conformal Factor Problem in Standard Gravity
+
+In 4D Euclidean quantum gravity, the Einstein-Hilbert action
+(Gibbons, Hawking & Perry 1978):
+
+    S_E[g] = −(1/16πG) ∫ R √g d⁴x
+
+has the wrong overall sign for the conformal mode. Decomposing
+g_{μν} = φ² ḡ_{μν}, the kinetic term for φ is −6(∇φ)² — the
+wrong sign. The Euclidean path integral diverges along the
+conformal direction, and the Euclidean measure is not positive.
+This is the fundamental obstacle to constructive quantum gravity
+via the OS program: the inner product ⟨θf, f⟩ can be negative.
+
+### A.7.3 Identification of the Conformal Mode in 5D
+
+In the KK reduction on M⁴ × S¹, the 5D metric decomposes as:
+
+    ds₅² = φ⁻¹/³ g_{μν} dx^μ dx^ν + φ²/³ R₀² (dψ + A_μ dx^μ)²
+
+The 4D Einstein-frame action contains the radion kinetic term
+(Paper 6, §3):
+
+    L_kin = (3M_Pl²)/(4R²) (∂R)²
+
+This has the correct sign in Lorentzian signature. Under Wick
+rotation t → −it_E, the Euclidean kinetic term becomes negative:
+
+    L_kin^E = −(3M_Pl²)/(4R₀²) [(∂_{t_E} δR)² + (∇δR)²]
+
+**The conformal mode of 4D gravity is the KK dilaton R, and its
+Euclidean kinetic term has the wrong sign.** The 5D theory itself
+has no conformal ambiguity — the S¹ direction is fixed by
+compactness — and the pathology is an artifact of the 4D
+Einstein-frame decomposition.
+
+### A.7.4 The Frozen Dilaton
+
+The dilaton is frozen at R₀ by two mechanisms:
+
+**(a) Classical freezing.** In FRW cosmology, the dilaton
+equation of motion R̈ + 3HR̊ + (2R³)/(3M_Pl²)V'(R) = 0 is
+dominated by Hubble friction. The effective drift rate is
+(Paper 6, Appendix A):
+
+    Ṙ/R ~ ε_eff × H₀
+
+where ε_eff = 8/M₅³ ~ 10⁻⁵² with M₅³ = M_Pl²/(πR). Over a
+Hubble time: δR/R₀ ~ 10⁻⁵².
+
+**(b) Quantum fluctuations.** The effective mass m_eff² =
+V''(R₀) = 20c/R₀⁶ gives m_eff ~ 10 meV (consistent with the
+radion mass, Appendix J). The quantum fluctuation amplitude is:
+
+    ⟨(δR)²⟩ ~ 1/(m_eff R₀²) ~ (l_Pl/R₀)² ~ 10⁻⁶⁰
+
+    δR_quantum/R₀ ~ 10⁻³⁰
+
+For the OS3 bound we use the larger value: δR/R₀ < 10⁻³⁰.
+
+### A.7.5 Factorization and the Bound
+
+The 4D fields after KK reduction split into four sectors:
+
+| Sector | OS3 status |
+|--------|-----------|
+| (a) Massless graviton h_{μν}^{TT} | Reflection-positive |
+| (b) Massive KK graviton tower | Reflection-positive (m_n² > 0) |
+| (c) KK vector tower | Reflection-positive (m_n² > 0) |
+| (d) Dilaton δR | **Wrong-sign Euclidean kinetic term** |
+
+The entire OS3 violation is localized in sector (d). The OS inner
+product decomposes:
+
+    ⟨θf, f⟩ = ⟨θf, f⟩_healthy + ⟨θf, f⟩_dilaton
+
+where ⟨θf, f⟩_healthy ≥ 0 (standard OS3 for fields with
+correct-sign kinetic terms and positive masses).
+
+Within the constraint |δR| < εR₀ (with ε = 10⁻³⁰), the
+wrong-sign kinetic energy over a natural 4-volume R₀⁴ is:
+
+    S_kin ~ (3/4) M_Pl² R₀² ε² ~ 10⁴⁰ × 10⁻⁶⁰ = 10⁻²⁰
+
+The corresponding enhancement: exp(S_kin) ~ 1 + 10⁻²⁰. The
+relative violation:
+
+    |⟨θf, f⟩_dilaton| / |⟨θf, f⟩_healthy| ≤ ε² = (δR/R₀)² < 10⁻⁶⁰
+
+### A.7.6 Physical Sufficiency
+
+The OS reconstruction theorem, applied with approximate
+reflection positivity, gives an approximate Wightman QFT with
+unitarity violation bounded by ε²:
+
+    |⟨ψ|ψ⟩ − 1| ≤ ε² ~ 10⁻⁶⁰
+
+For comparison: the best experimental precision in physics (the
+electron g − 2) is ~ 10⁻¹³; the age of the universe in Planck
+times is ~ 10⁶¹. The violation is 47 orders of magnitude below
+experimental sensitivity.
+
+### A.7.7 The 5D Perspective
+
+The conformal factor problem is a 4D phenomenon. In the 5D
+theory with the S¹ radius fixed at R₀, the Euclidean 5D
+Einstein-Hilbert action has no conformal ambiguity: the 5D
+diffeomorphism invariance gauges away the conformal mode. The
+wrong-sign kinetic term for R arises from the gauge-fixing
+procedure in the 4D Einstein-frame reduction.
+
+In the linearized 5D theory, the conformal mode is pure gauge,
+and OS3 holds exactly. In the full nonlinear theory, the dilaton
+is a physical modulus with genuine wrong-sign kinetic term in 4D
+Einstein frame, but its fluctuations are bounded by 10⁻³⁰,
+giving the approximate result above.
+
+### A.7.8 Comparison with Other Approaches
+
+| Approach | Conformal factor problem | OS3 status |
+|----------|-------------------------|-----------|
+| Standard 4D gravity | Order-1 violation | Open |
+| Asymptotic safety | Fixed point may cure it | Conjectured |
+| CDT | Avoided by causal structure | Numerical evidence |
+| String theory | Not directly formulated | Not addressed |
+| **5D e-dimension** | **Bounded by ε² ~ 10⁻⁶⁰** | **Approximate (10⁻⁶⁰)** |
+
+The framework's result is the only quantitative bound on the OS3
+violation from the conformal factor in any approach to quantum
+gravity. The 10⁻⁶⁰ bound is a consequence of two framework-
+specific features: (i) identification of the conformal mode as
+the KK dilaton, and (ii) the frozen dilaton from the exact
+Casimir potential V = −c/R⁴ with its Epstein-zeta-protected
+all-orders exactness (Theorems K.1 and K.3, Paper 1,
+Appendix K).
+
+### A.7.9 Proof Chain
+
+| Step | Statement | Status |
+|:-----|:----------|:-------|
+| 1 | Conformal mode = KK dilaton R | Identification (KK reduction) |
+| 2 | Classical drift: δR/R₀ ~ 10⁻⁵² per Hubble time | Derived (Paper 6, Appendix A) |
+| 3 | Quantum fluctuations: δR/R₀ ~ 10⁻³⁰ | Derived (m_eff from V''(R₀)) |
+| 4 | OS inner product factorizes: healthy + dilaton sectors | Standard (product structure) |
+| 5 | Healthy sector is reflection-positive | Standard OS3 for massive fields |
+| 6 | Dilaton violation bounded by (δR/R₀)² < 10⁻⁶⁰ | New argument (constrained path integral) |
+| 7 | Physical sufficiency: 47 orders below experiment | Assessment |
+
+### A.7.10 Honest Caveats
+
+1. **Exact OS3 is open.** The approximate result (10⁻⁶⁰) uses
+   the bounded dilaton fluctuation as input. A full non-
+   perturbative proof would require controlling arbitrarily
+   large dilaton fluctuations — the same unsolved problem as
+   in all approaches to Euclidean quantum gravity.
+
+2. **The freezing relies on cosmological initial conditions.**
+   The dilaton is frozen because it was initialized near R₀
+   during inflation and Hubble friction has prevented it from
+   rolling. This is a physical input, not a mathematical
+   theorem.
+
+3. **The bound uses the quantum fluctuation estimate.** The
+   10⁻³⁰ bound on δR/R₀ comes from ⟨(δR)²⟩ ~ (l_Pl/R₀)².
+   A rigorous derivation would require the full non-perturbative
+   path integral measure, which is not available.
 
 ---

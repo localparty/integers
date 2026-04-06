@@ -292,6 +292,8 @@ This entanglement IS subject to monogamy. But it does NOT
 compete with the e-correlations, because the e-correlations
 are superselection constraints, not entanglement within H_Q.
 
+*[Pattern 4 --- Topological Rigidity + Pattern 6 --- Projection Produces Apparent Pathology]: S^1 Fourier orthogonality (topology) decouples e-correlations from 4D monogamy; the firewall paradox is an artifact of projecting out the e-dimension.*
+
 **Theorem 9.1** *(Compatibility of unitarity, no drama, and
 effective field theory in 5D).*
 

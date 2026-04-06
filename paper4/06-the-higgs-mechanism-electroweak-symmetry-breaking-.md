@@ -343,6 +343,8 @@ holonomy, and the holonomy determines the physics.**
 
 ### 6.11 Higgs Mass Naturalness
 
+*[Pattern 2 --- Holonomy Correspondence + Pattern 5 --- Zeta Regularization]: The Higgs is a Wilson line on S^2 (holonomy), so its mass correction is Z_{S^2}(0) = -2/3 (zeta); Theorem K.1 kills all higher loops.*
+
 *Methodology: Pattern 5 (zeta regularization converts the KK sum into
 Z_{S²}(0) = −2/3, a finite O(1) number) + Pattern 3 (Casimir on S²
 sets the electroweak scale, so the correction is O(m_H²) not O(M_GUT²))

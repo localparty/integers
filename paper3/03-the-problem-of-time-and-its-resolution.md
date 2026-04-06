@@ -190,6 +190,8 @@ that is a fermion (e-antiperiodic) is also a particle that contributes
 with a minus sign to the thermal partition function (t_E-antiperiodic).
 The e-dimension explains both facts with one geometric fact.
 
+*[Pattern 4 --- Topological Rigidity]: The spin structure on S^1 (bosons periodic, fermions antiperiodic) is a discrete topological datum that uniquely fixes the Hawking temperature.*
+
 **Corollary 3.1** *(Hawking Temperature from Spin Structure).*
 The Hawking temperature T_H = ℏκc/(2πk_B) is the unique temperature
 for which the thermal spin structure of the heat bath matches the

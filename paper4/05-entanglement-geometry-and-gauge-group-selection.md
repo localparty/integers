@@ -173,6 +173,8 @@ The discrete stabilizer supplements `T²` with `(Z₂)²` in
 
 #### The weight decomposition and the A₂ root system
 
+*[Pattern 4 --- Topological Rigidity]: The A_2 root system in the SLOCC tangent space is a discrete algebraic structure that rigidly identifies the orbit with the flag manifold SU(3)/T^2.*
+
 **Theorem 5.2 (SLOCC-Isometry Correspondence, Corrected).**
 *The GHZ SLOCC orbit under `SU(2)³` in projective Hilbert space is
 a 6-dimensional simply connected manifold whose tangent space carries

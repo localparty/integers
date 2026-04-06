@@ -13,6 +13,8 @@
 
 ## S.1 Statement of the Theorem
 
+*[Pattern 5 --- Zeta Regularization]: The Epstein-Terras pole at s = L/2 is always positive, while the needed values are at non-positive integers --- finiteness is structural, not empirical.*
+
 **Theorem S.1** *(Perturbative Finiteness).*
 
 *The `L`-loop effective action for linearized 5D gravity on `M⁴ × S¹`, with

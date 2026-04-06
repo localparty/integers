@@ -117,6 +117,8 @@ is geometric competition for the same e-structure.
 
 ## 3.2 Entanglement → e-Conservation
 
+*[Pattern 1 --- Geometric Reinterpretation]: What appears as non-local correlation in 4D is e-coordinate conservation (e_1 + e_2 = C) --- a local Noether charge in 5D geometry.*
+
 ### The Standard Account
 
 When two particles interact, they can become entangled: their quantum states are

@@ -183,10 +183,9 @@ geometry. The numerical solution has been obtained (see §D.5).
 ## D.5 Numerical Solution and Assessment
 
 **Status: SOLVED.** The numerical integration of the coupled Boltzmann
-equations (§D.4) confirms that the Z₃ resonant leptogenesis mechanism
-reproduces η_B within a factor of 2–6 of observation across the natural
-parameter range. The full computation is in
-`etc/frontier-research/oi1-boltzmann-equations.md`.
+equations (section D.4) confirms that the Z₃ resonant leptogenesis mechanism
+reproduces eta_B within a factor of 2-6 of observation across the natural
+parameter range. The full computation is summarized below.
 
 ### D.5.1 The Three Key Physics Ingredients
 
@@ -285,8 +284,13 @@ theoretical precision of the Boltzmann equation approach.
 
 ### D.5.6 Numerical Code
 
-The complete Python implementation using `scipy.integrate.solve_ivp`
-(BDF method, rtol = 10⁻¹⁰) is in
-`etc/frontier-research/oi1-boltzmann-equations.md`, §10. The code
+The numerical integration uses `scipy.integrate.solve_ivp` (BDF
+method, rtol = 10^{-10}). The system consists of three coupled ODEs
+(two for N_{N_1} and N_{N_2}, one for N_L) with z = M_1/T as the
+independent variable, integrated from z = 0.01 to z = 50. The decay
+terms D_i use modified Bessel functions K_1(z)/K_2(z); the washout
+term W(z) includes both inverse decays and Delta L = 2 scatterings.
+With inputs K_1 = 47.4, epsilon = 4.69 x 10^{-5}, and the Z_3
+flavour-orthogonality condition p_{12} = xi^2 ~ 10^{-3}, the code
 runs in < 1 second on standard hardware and reproduces all entries
-in §D.5.3.
+in section D.5.3.

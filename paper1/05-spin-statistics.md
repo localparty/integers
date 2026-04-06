@@ -2,6 +2,8 @@
 
 ---
 
+*[Pattern 4 --- Topological Rigidity]: pi_1(S^1) = Z forces the winding number to be the single quantity that determines both spin and exchange phase --- they are the same topological invariant.*
+
 ## 4.2.1 The Problem: A Theorem Nobody Can Explain
 
 The spin-statistics theorem is one of the most important results in quantum mechanics.

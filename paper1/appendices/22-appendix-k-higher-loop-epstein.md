@@ -380,6 +380,8 @@ proven. Part (ii) — the vanishing of the KK sum factor at negative
 integers — was previously conjectured from the pole-separation argument.
 It is now established by Theorem K.1 (§K.7b):
 
+*[Pattern 5 --- Zeta Regularization]: Compactness converts the KK tower into an Epstein zeta function whose structural zeros at negative integers kill all subleading counterterms.*
+
 **Theorem K.1 (Universal Epstein Vanishing).** For any positive-definite
 quadratic form `Q` in `L` variables, `E_L(-j; Q) = 0` for all integers
 `j ≥ 1`. (See §K.7b for the proof.)

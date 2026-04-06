@@ -113,6 +113,8 @@ purely by flux quantization.
 
 ## 3.4 The GUT Unification Condition
 
+*[Pattern 4 --- Topological Rigidity]: Three interlocking constraints (Kahler coefficients, torsion structure, gauge embedding) are each discrete; their unique solution n_2/n_1 = -17/9 cannot be continuously deformed.*
+
 Paper 4, Appendix C established that gauge coupling unification
 `α₃/α₂ = 1` at the compactification scale requires:
 
@@ -268,6 +270,8 @@ The algebraic system gives the Planck length.
 The result `R_bare ≈ l_P` is not an error in the calculation —
 it is a precise statement about what perturbative M-theory can
 and cannot determine.
+
+*[Pattern 4 inverted --- Topological Rigidity as ceiling]: All geometric inputs are O(1) in Planck units, so R_bare ~ l_P algebraically; the 10^30 gap to R_obs is structurally unreachable by perturbative means.*
 
 **Theorem U** *(Perturbative Underdetermination of R).*
 

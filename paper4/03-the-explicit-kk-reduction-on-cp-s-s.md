@@ -1,5 +1,6 @@
 ## 3. The Explicit KK Reduction on `CP² × S² × S¹`
 
+*[Pattern 2 --- Holonomy Correspondence]: Each compact factor contributes its isometry group as a gauge symmetry --- CP^2 gives SU(3), S^2 gives SU(2), S^1 gives U(1) --- one mechanism for all three forces.*
 
 ### 3.1 The 11D Metric Decomposition
 
