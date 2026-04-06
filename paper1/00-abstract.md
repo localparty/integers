@@ -58,7 +58,12 @@ linearized 5D gravity on `M⁴ × S¹` is perturbatively predictive — establis
 through two loops by explicit computation, and **established to all orders**
 by the Universal Epstein Vanishing theorem: `E_L(-j; Q_L) = 0` for all
 `j ≥ 1` and all `L`, proven by the pole structure of the completed Epstein
-zeta function (Appendix K, Theorem K.1) — with counterterm coefficients
+zeta function (Appendix K, Theorem K.1). The BPHZ Factorization theorem
+(Theorem K.3, section K.5.3) extends this to all orders in the presence of
+BPHZ subtractions: joint holomorphicity of the Epstein zeta in the
+loop-momentum and Schwinger parameters ensures that BPHZ-subtracted
+amplitudes factor as (4D finite part) times `E_L(-j; Q)`, inheriting
+the universal vanishing. Counterterm coefficients are
 determined from two parameters: `G₄` and the `e`-circle circumference `L`.
 
 The spin structure of the `e`-circle (bosons periodic, fermions anti-periodic)

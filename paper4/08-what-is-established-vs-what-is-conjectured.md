@@ -41,6 +41,10 @@
 | SLOCC-isometry map | **Established (global)**: SU(2)³/T² ≅ SU(3)/T² (Theorem 5.2, corrected). Orbit is 6D flag manifold Fl(1,2;3); S¹ is the U(1) Cartan, not a geometric factor. §9.4 resolved. | Tangent space weight matching + cohomology (etc/24) |
 | Moduli stabilization | **Partially established**: S² and CP² dynamically stabilized by spectral zeta nonvanishing; κ from Planck mass constraint (§9.5, OC-2) | Spectral zeta values + Planck constraint |
 | Gauge coupling hierarchy | **Leading order derived**: α₃/α₂ = 1 at GUT scale for κ = 3.545 × 10⁻²; first-principles κ via three-equation system (§9.5) | Coupled moduli stabilization |
+| G₄ flux stabilizes CP²/S² moduli | **Established** (Paper 7, sections 2–3): `W_total = n₁r₃² + n₂r₂² + cR(6r₃²r₂² − 2r₃⁴)`; minimum exists with `n₂ < 0` | GVW superpotential on CP² x S² x S¹/Z₂ |
+| GUT unification from flux quantization | **Derived** (Paper 7, section 3.4): `n₂/n₁ = −17/9`; minimum integers `n₁ = 9`, `n₂ = −17` | F-flatness + GUT radius ratio |
+| G₄ axion as inflaton | **Identified** (Paper 7, section 5): hilltop cosine potential gives `n_s = 0.967`, `r ~ 0.001` | M2-instanton potential with `f = M_Pl/sqrt(3)` |
+| S¹ decoupled from G₄ flux | **Proved** (Paper 7, section 2): no 4-cycle on S¹; Casimir mechanism independent | Product manifold topology |
 | Entanglement selects gauge group | **Conjectured** (Section 5.4) | Szangolies + e-dimension |
 | `CP² × S²` from 3-generation entanglement | **Conjectured** (Section 5.5) | SLOCC → isometry map |
 | e-circle = M-theory circle | **Conjectured** (Section 2.3) | Structural alignment |

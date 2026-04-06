@@ -16,7 +16,10 @@ The dilaton potential `V(φ) = V₀/φ⁴` — derived from the Casimir
 energy of bulk fields (exact to all perturbative orders; see
 `etc/09-creative-routes-to-R.md`) — has two regimes: (i) the
 Casimir plateau at large `φ` drives slow-roll inflation with
-`n_s = 0.965`, `r = 0.03`; (ii) after inflation, Hubble friction
+`n_s = 0.965`, `r = 0.03` (these values are superseded by
+Paper 7, which identifies the G₄ flux axion as the inflaton
+with a hilltop cosine potential giving `n_s ~ 0.967`,
+`r ~ 0.001`); (ii) after inflation, Hubble friction
 freezes the dilaton at its post-inflationary value, making the
 Casimir energy a true cosmological constant (`w = −1` to 10⁻⁵²
 precision). No Goldberger-Wise stabilization is needed or present
