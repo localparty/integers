@@ -349,3 +349,53 @@ artifact at the level of the functional measure.
 | 5/2 thread | **CLOSED** (not topological) | No further work needed |
 | Dark dimension comparison | Complete | See Paper 7 App C |
 | Novelty audit | Complete | See etc/frontier-research/problem-D-novelty-audit.md |
+
+---
+
+## Round 4 Frontier Research Results (April 6, 2026)
+
+Results from prompt 39 (Problem 2). Integrated April 6, 2026.
+
+### New results and pattern attribution
+
+| Result | Paper/Location | Patterns | Generative | Notes |
+|--------|---------------|----------|------------|-------|
+| HW anomaly cancellation forces half-integer c₂^{eff} on CP² | Paper 7 App B §B.9.5 | P4 | P4 | p₁(CP²)/2 = 3/2; two integers cannot sum to 3/2 |
+| Z₂-equivariant E₈ bundles have fractional c₂ (literature) | Paper 7 App B §B.9.5 | P2, P4 | P2 | Holonomy (gauge twist) determines fractional part |
+| c₂^{eff} = 1/2 closes tadpole: N_{M2} = 450, ratio = −17/9 exact | Paper 7 App B §B.9.5 | P4, P2, P6 | P4 | All constraints simultaneously satisfied |
+| Round 3 obstruction dissolves on orbifold | Paper 7 App B §B.9.5 | P6 | P6 | π₃(E₈)=ℤ applies to ordinary bundles, not equivariant |
+| Level-matching requires {c₂(V₁)}+{c₂(V₂)}=1/2 on CP² | Paper 7 App B §B.9.5 | P4 | P4 | Orbifold consistency condition; half-integer mandatory |
+
+### Pattern usage notes for Round 4
+
+**P4 (Topological Rigidity) — inverted then restored:** Round 3 used
+P4 as a ceiling (π₃(E₈) = ℤ obstructs half-integer c₂). Round 4
+shows this ceiling applies only to ordinary bundles. On the orbifold,
+P4 operates as a FLOOR: anomaly cancellation (a topological constraint)
+FORCES half-integer c₂^{eff}. The same pattern first blocks, then
+mandates — a new mode of P4 not seen in earlier rounds.
+
+**P2 (Holonomy Correspondence) — the gauge twist:** The entire
+fractional instanton mechanism is a holonomy correspondence. The Z₂
+involution τ ∈ E₈ is the Wilson line around S¹/Z₂. Its conjugacy
+class determines the fractional part of c₂. This connects the abstract
+topology (equivariant K-theory) to concrete gauge theory data (the
+embedding of the SM gauge group in E₈).
+
+**P6 (Projection Produces Pathology) — the orbifold resolution:**
+The integer obstruction from Round 3 was the pathology produced by
+projecting out the Z₂ equivariant structure. Restoring the orbifold
+structure dissolves the obstruction, exactly paralleling how restoring
+the fifth dimension dissolved the information paradox, the problem of
+time, and the conformal factor problem.
+
+### Open threads after Round 4
+
+| Thread | Status | Minimal missing input |
+|--------|--------|-----------------------|
+| OS3 exact (full nonlinear) | Conditional on spectral bound (A') | Prove −∇²₅ − Ric₅ ≥ 0 on bounded-curvature M⁴×S¹; or DEC→Ric₅≥0 |
+| Tadpole integrality | **Conditionally closed** | c₂^{eff}=1/2 mechanism identified; eta-invariant of E₆×SU(3) involution on CP² needed |
+| Exact GUT unification | **Conditionally closed** | Same condition as tadpole; if c₂^{eff}=1/2 then ratio = −17/9 exact |
+| 5/2 thread | **CLOSED** (not topological) | No further work needed |
+| Dark dimension comparison | Complete | See Paper 7 App C |
+| Novelty audit | Complete | See etc/frontier-research/problem-D-novelty-audit.md |
