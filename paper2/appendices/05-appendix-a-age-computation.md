@@ -33,11 +33,12 @@ The hidden-brane dark radiation predicts `H₀` = 69.5 km/s/Mpc
 (Paper 1, Appendix Y, Tier 1). Higher `H₀` → younger universe.
 Naive effect: −420 Myr.
 
-### Channel 2: Evolving Dark Energy (absent in revised prediction)
-**⚠ Revised:** The perturbative Casimir potential is exact (`w₀ = −1`,
-`w_a = 0`; dilaton frozen by Hubble friction at ε ~ 10⁻⁵²; Paper 6 §2).
-No thawing occurs. This channel contributes 0 Myr in the revised
-prediction (previously +120 Myr for `w₀ = −0.85`).
+### Channel 2: Evolving Dark Energy (absent)
+
+The dark energy equation of state is `w₀ = −1`, `w_a = 0` (Casimir
+potential exact; dilaton frozen by Hubble friction at `ε ~ 10⁻¹²²`;
+Appendix F, Paper 6 §2). No thawing occurs. This channel contributes
+0 Myr.
 
 ### Channel 3: Elevated `N_eff` (small)
 `N_eff` = 3.39 (tower + mirror) increases radiation density, raising
@@ -52,8 +53,9 @@ The mirror matter abundance required by `θ*` consistency gives
 `Σm_ν` = 0.06 eV (bulk seesaw, Paper 1, Appendix Z).
 Effect: −30 Myr.
 
-**Net effect: −420 + 120 − 80 + 160 − 30 = −250 Myr**
-(CAMB gives −327 Myr; the channel analysis is approximate)
+**Net effect: −420 + 0 − 80 + 160 − 30 = −370 Myr**
+(CAMB gives −327 Myr; the channel analysis is approximate due to
+non-linear coupling between effects)
 
 ---
 
@@ -135,10 +137,10 @@ radiation-dominated era (the physical radiation density, set by
 `z = 1` (+41 Myr) reflects the competing effects of §A.2. At late times
 (`z < 1`), the framework's higher `H₀` dominates: faster expansion means
 less time accumulates between `z = 1` and today, so `t₀` is younger. At
-**⚠ Revised:** With `w = −1` (frozen dilaton; Paper 6 §2), the
-evolving-dark-energy channel is absent. The crossover behavior at
-`z ~ 1` is driven entirely by lower `Ω_m` = 0.290 and elevated `N_eff`,
-not by thawing `w(z)`.
+intermediate redshifts, the lower `Ω_m = 0.290` and elevated `N_eff`
+produce a longer matter-dominated phase, slightly increasing the look-back
+time. With `w = −1` (Appendix F), the crossover behavior is driven
+entirely by lower `Ω_m` and elevated `N_eff`.
 
 ---
 

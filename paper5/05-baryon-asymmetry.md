@@ -35,6 +35,16 @@ In the framework, all three are satisfied geometrically:
 
 ## 5.2 The CP² Chern-Simons Number
 
+To be precise about the roles: the CP² Chern-Simons number provides the
+topological background for baryon number violation (Sakharov condition 2
+— CP violation in the gauge sector), by allowing tunneling between SU(3)
+vacua with different N_CS. The quantitative CP asymmetry ε_CP that enters
+the leptogenesis formula (§5.3) is driven by the Z₃ Yukawa phases
+(δ_CP = −90° and the complex CKM phase from Paper 4, §7.5). These are
+different objects: the Chern-Simons topology provides the non-perturbative
+B-violation opportunity; the Z₃ phases provide the quantitative CP
+asymmetry that produces an asymmetric outcome.
+
 The Chern-Simons number for the SU(3) gauge field on CP²:
 
     N_CS = (g₃²/32π²) ∫_{CP²} Tr[A ∧ dA + (2/3) A ∧ A ∧ A]
@@ -184,3 +194,75 @@ bulk mass splitting range from the Z₃ geometry.
 system with Z₃ CP phases (Paper 4, §7.13) and the warp-factor mass
 splitting. This is identified as a concrete computation target for
 Paper 5 Appendix D (not yet written).
+
+## 5.7 The Unified Role of the Leptogenesis Neutrino
+
+The bulk neutrino `N^{5D}` responsible for leptogenesis in §5.3
+is a five-dimensional Dirac fermion whose position in the extra
+dimension is controlled by its bulk mass parameter `c_ν`. This
+parameter is not a free input: it is determined by the observed
+dark matter abundance. Paper 6, §6.5 derives, from the requirement
+that the brane temperature ratio `ξ = T_hid/T_vis` set during
+leptogenesis reproduces `Ω_DM/Ω_b = 5.36` (via `ξ = 0.432` and
+`Ω_DM/Ω_b = 1/ξ²`):
+
+$$\boxed{c_\nu = 0.634}$$
+
+derived from `ξ = 0.432` (Planck 2018) and the warp factor `k = 2`
+(Paper 1). The corresponding five-dimensional mass is
+`m_ν^{5D} = c_ν × k = 1.27 M_KK`, an order-unity parameter
+requiring no fine-tuning.
+
+**From `c_ν` to the 4D neutrino mass.** The same wavefunction
+that imprints ξ enters the bulk seesaw formula for the
+four-dimensional neutrino mass:
+
+$$m_\nu(4D) = F_c^2 \times \frac{y^2 v^2}{\pi R \, M_R}$$
+
+where the wavefunction suppression factor is
+
+$$F_c^2 = \frac{(2c_\nu - 1)\,k}{1 - e^{-2(2c_\nu-1)k\pi}} = 0.659$$
+
+for `c_ν = 0.634`, `k = 2`.
+
+**The GUT-scale identity.** In gauge–Higgs unification (Paper 4),
+the neutrino Yukawa coupling at the GUT scale is fixed by the
+SU(2) gauge coupling: `y = g₂√2` (Paper 4, §7.5.7). With this
+constraint the mass ratio becomes:
+
+$$\frac{m_\nu}{m_\mathrm{KK}} = \frac{5}{2} = \chi(CP^2) - \frac{c_2^{\mathrm{eff}}}{2} = 3 - \frac{1}{2}$$
+
+where `χ(CP²) = 3` is the Euler characteristic of the compact
+space (the spin^c Dirac index — a topological invariant), and the
+`1/2` shift is enforced by Horava–Witten/Freed–Witten anomaly
+cancellation on the non-spin manifold CP² (Paper 7, Appendix B;
+Paper 4, §7.5.7).
+
+**Convergence of three phenomena.** The leptogenesis neutrino
+`N^{5D}` is therefore the single object that simultaneously:
+
+1. Sets the baryon asymmetry `η_B ~ 10^{-10}` (§5.3, via its
+   CP-asymmetric decay);
+2. Sets the dark matter abundance `Ω_DM/Ω_b = 1/ξ²` (Paper 6,
+   §6.5, via its wavefunction localization `c_ν = 0.634`);
+3. Determines the neutrino mass ratio `m_ν/m_KK = 5/2` (Paper 4
+   §7.5.7, Paper 7 Appendix B, via the same wavefunction overlap
+   and the topological identity above).
+
+These are not three coincidences. They are three consequences of
+one bulk fermion with one localization parameter fixed by one
+topological constraint of the CP² geometry. The bulk neutrino
+that generates the baryon asymmetry is the same neutrino whose
+mass satisfies a topological relation — and it is the same
+neutrino whose wavefunction explains why dark matter is five
+times more abundant than baryons.
+
+**The sharpest prediction.** The R-quantization argument (Paper 9 §4d)
+shows that dark matter, dark energy, and the 5/2 identity are three
+simultaneous constraints on the compactification radius R. At
+M_GUT = 1.65×10¹⁶ GeV, their intersection requires the heaviest
+neutrino mass to be m_ν = 49.74 meV — 0.41 meV below the current
+NuFIT central value. CMB-S4 combined with DESI will discriminate
+between closure and non-closure at 13.7σ. This prediction originates
+with the leptogenesis neutrino analyzed in this section; its full
+derivation is in Paper 4 §7.0 and Paper 9 §4d.

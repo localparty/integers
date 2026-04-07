@@ -58,29 +58,50 @@ using the normalization `∫|fᵢ|² dx = 1` and `Σⱼ|αⱼ|² = 1`.
 
     P(i) = |αᵢ|²
 
-This is the Born rule. It is geometrically motivated and uniquely selected
-by the framework, following from:
-(a) the identification of `|ψ|²` as the 5D density,
-(b) the Haar measure `dφ/2π` on the e-circle — the *unique*
-    translation-invariant measure on `U(1)`, forced by Postulate 3
-    (e-translation invariance), and
-(c) the orthonormality of e-eigenstates.
+This is the Born rule.
 
-Note that the Haar measure argument breaks the circularity that would
-arise from simply postulating `|ψ|²` as a probability density. The
-measure is not chosen to reproduce the Born rule — it is the *only*
-measure consistent with the e-circle's symmetry. The Born rule is
-then a theorem, not an assumption.
+**Epistemic status of the derivation — two parts with different logical status:**
 
-This result is independently supported by Torres Alegre (2026,
-arXiv:2512.12636), who proves that `|⟨φ|ψ⟩|²` is the unique probability
-assignment consistent with causal consistency (no superluminal
-signaling) in any generalized probabilistic theory. In the 5D
-framework, where causal signals propagate along the 4D base and not
-along the e-fiber, this condition is geometrically enforced. See also
-Brenig and Vincke (2026, arXiv:2601.12092), who derive the Born rule
-from invariance properties of a "new space-like dimension" —
-conceptually parallel to the e-dimension.
+**Part 1 — Derived (a theorem within the framework):** Given that the 5D
+density is |ψ(x,φ)|², the probability of measurement outcome i is P(i) = |α_i|².
+This follows from the Haar measure dφ/2π (the unique translation-invariant
+measure on U(1), forced by Postulate 3) and from the orthonormality of the
+e-eigenstates {g_i(φ)}. No additional probability postulate is needed once the
+density identification is made.
+
+**Part 2 — Assumed (a framework postulate):** The identification of the 5D
+density as |ψ(x,φ)|² — rather than |ψ(x,φ)|^p for some other power p — is an
+assumption of the framework. The geometry of the e-circle constrains the
+integration measure (Part 1) but does not, by itself, select p = 2. The
+exponent p = 2 is the non-trivial content of the Born rule.
+
+**Support for p = 2 from causal consistency.** The strongest available argument
+for p = 2 is due to Torres Alegre (2026, arXiv:2512.12636), who proves that
+|⟨φ|ψ⟩|² is the unique probability assignment consistent with causal consistency
+(no superluminal signaling) in any generalized probabilistic theory. In the 5D
+framework, the e-dimension is a spatial dimension along which no causal signal
+propagates faster than c (it is compact and Euclidean in the imaginary-time
+formulation). Causal signals propagate along the 4D base manifold only. The
+condition of causal consistency in the 5D setting therefore requires, by Torres
+Alegre's theorem, that probabilities are assigned by |⟨φ|ψ⟩|², i.e., p = 2.
+
+The chain of inference is:
+(a) The e-dimension is spatial and carries no causal signals. [Framework postulate]
+(b) Causal consistency + generalized probabilistic theory → p = 2. [Torres Alegre 2026]
+(c) p = 2 + Haar measure + orthonormality → P(i) = |α_i|². [Theorem within framework]
+
+Step (b) constitutes a derivation of p = 2 conditional on the framework
+postulate (a). We claim, more precisely, that the Born rule follows from two
+assumptions: the physical interpretation of the e-dimension as a spatial
+dimension along which causal signals do not propagate, and the identification
+of measurement with e-space sampling. Both are postulates of the framework.
+Subject to these postulates, the Born rule is a theorem, not an additional assumption.
+
+A parallel derivation is available via Brenig and Vincke (2026, arXiv:2601.12092),
+who derive the Born rule from the invariance properties of a "new space-like
+dimension" — the same logical structure as the present framework. Their result
+supports p = 2 from a different angle (symmetry of the extra-dimensional
+probability functional under rotations in the extended space).
 
 ### C.1.2 The Singlet State in the E-Dimension
 

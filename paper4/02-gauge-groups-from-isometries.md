@@ -158,5 +158,44 @@ strongly coupled regime (`g_s ≫ 1`). The full quantum gravity
 regime — the non-perturbative M-theory path integral beyond 11D
 SUGRA — remains partially open (§9.3).
 
+### 2.3b Why R ~ 12 μm Is Consistent with M-Theory
+
+A potential source of confusion: conventional M-theory compactification
+takes the 11th dimension to have size R ~ l_P (Planck length). Why
+does the e-circle have R ~ 12 μm — thirty orders of magnitude larger?
+
+The answer is that the conventional expectation (R ~ l_P) applies to
+M-theory in the perturbative string regime, where the string coupling
+g_s = (R/l_s)^{3/2} is taken to be small (weak coupling). In that
+regime, M-theory reduces to Type IIA string theory with coupling
+g_s ~ (R/l_s)^{3/2} < 1, requiring R < l_s ~ l_P.
+
+The e-circle framework is in the opposite regime: R ~ 12 μm gives
+
+    g_s = (R/l_s)^{3/2} = (12 μm / 1.6 × 10⁻³⁵ m)^{3/2} ~ 10⁴⁵
+
+This is strongly coupled M-theory. In this regime, the correct
+description is NOT perturbative string theory — it IS M-theory. The
+large R is not a conflict with M-theory; it is the defining feature of
+the strongly coupled regime where M-theory (not string theory) is the
+correct low-energy description.
+
+Physically: in M-theory with a large 11th dimension (R ~ 12 μm), the
+4D spacetime sees the 11th dimension not as an extra compact dimension
+at the Planck scale but as a "large" extra dimension at the cosmological
+scale. The Casimir energy of quantum fields on this large dimension is
+proportionally tiny (V_Casimir ~ 1/R⁴ ~ (meV)⁴), which is precisely
+why it equals the dark energy density.
+
+**The Theorem U* status.** The "CC Underivability Theorem" in Section 8
+states that R cannot be determined from the algebraic inputs (M_Pl, m_p,
+etc.) alone — there is a 10³⁰ gap between the geometric prediction and
+the physical value. This is a statement about underivability, not about
+the scale of R. The physical value R ~ 12 μm is determined by the
+observed dark energy density ρ_Λ through ρ_Λ = ΔN × 3ζ(5)/(64π⁶R⁴),
+which gives a unique value of R without reference to the Planck scale.
+Theorem U* says this determination cannot be derived from first principles
+within the present geometric framework; it does not say R ~ l_P.
+
 ---
 

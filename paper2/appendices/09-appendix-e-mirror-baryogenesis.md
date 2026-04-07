@@ -87,18 +87,29 @@ deposition.
 
 ### E.3.1 Setup
 
-Each bulk Majorana neutrino `N_i` (mass `M_i ~ M₅ ~ 10¹⁴ GeV`) decays
-to lepton-Higgs pairs on BOTH branes:
+Each bulk Majorana neutrino `N_i` (mass `M_i ~ M_R ~ 10¹⁵ GeV`, from
+the CP² seesaw scale, Paper 1 Appendix Z) decays to lepton-Higgs pairs
+on BOTH branes:
 
     N_i → l_L + H        (visible brane, φ = 0)
     N_i → l'_L + H'      (hidden brane, φ = π)
+
+The Davidson-Ibarra bound (`M_N > 10⁹ GeV` for vanilla thermal
+leptogenesis) is satisfied with `M_R ~ 10¹⁵ GeV` by a factor `10⁶`.
 
 The CP asymmetry parameter `ε_i` is the same for both branes (`Z₂`
 symmetry enforces identical CP-violating phases):
 
     ε_i = (1/8π) × Σ_{j≠i} Im[(Y†Y)²_{ij}] / (Y†Y)_{ii} × f(M_j²/M_i²)
 
-For `M_i ~ 10¹⁴ GeV`, standard thermal leptogenesis gives `ε_i ~ 10⁻⁶`.
+For `M_i ~ 10¹⁵ GeV`, standard thermal leptogenesis gives `ε_i ~ 10⁻⁶`.
+
+**Scope of this appendix.** The absolute baryon-to-photon ratio
+`η_B^{vis} = 6.1 × 10⁻¹⁰` requires computing the CP asymmetry parameter
+`ε` from the bulk Yukawa mixing matrix — a calculation developed in
+Paper 5 (neutrino physics). The present appendix derives the *ratio*
+`η_ratio = η_B^{hid}/η_B^{vis}` from the two-brane thermal structure,
+taking the observed visible-sector `η_B` as input.
 
 ### E.3.2 The Branching Ratio
 
@@ -127,93 +138,54 @@ is the LOCAL photon density. Since `n_γ^{hidden} = ξ³ × n_γ^{visible}`:
     η_B^{hidden} / η_B^{visible}|_{entropy} = n_B^{hid}/n_B^{vis} × (n_γ^{vis}/n_γ^{hid})
                                              = 1 × (1/ξ³)
 
-**Effect 2 — Washout asymmetry.** In the strong washout regime, the
-washout efficiency is `κ ~ 1/(K ln K)` where `K = Γ_D / H|_{T=M_N}` is
-the washout parameter. On the hidden brane at `T' = ξT`, the effective
-washout parameter is `K' = K × ξ²` (the lepton number density scales as
-`T'³ = ξ³T³`, modifying the rate at which washout processes deplete the
-asymmetry). The washout ratio is:
+**Effect 2 — Washout asymmetry and the washout parameter K.**
 
-    κ_hid / κ_vis = [K ln K] / [K' ln K'] = (1/ξ²) × [ln K / ln(Kξ²)]
+The washout parameter `K = Γ_D / H|_{T=M_N}` governs the efficiency of
+lepton-number washout. For a Majorana neutrino `N` with Yukawa coupling
+`y` and mass `M_N`, and using the seesaw relation `y² = m_ν M_N / v²`:
 
-**The leading-order result** (`K → ∞`): `ln K / ln(Kξ²) → 1`, giving
-`κ_hid/κ_vis → 1/ξ²`. This is the "`1/ξ²` law."
+    Γ_D = y² M_N / (8π) = (m_ν M_N / v²) × M_N / (8π)
 
-**The logarithmic correction:** For finite `K`, the factor
-`f(K,ξ) = ln K / ln(Kξ²)` differs from unity:
+    H(T = M_N) = 1.66 √g_* M_N² / M_Pl
 
-| K | f(K, `ξ=0.43`) | Corrected `ξ` from `Ω_DM/Ω_b` = `f/ξ²` = 5.36 |
-|---|-------------|-------------------------------------------|
-| 10 | 3.67 | 0.828 (violates BBN) |
-| 100 | 1.57 | 0.541 (marginal BBN) |
-| 500 | 1.25 | 0.483 (within BBN) |
-| 1000 | 1.18 | 0.469 (within BBN) |
-| `10⁴` | 1.08 | 0.449 (within BBN) |
-| ∞ | 1.00 | 0.432 (the `1/ξ²` law value) |
+    K = Γ_D / H = m_ν M_Pl / (8π × 1.66 × √g_* × v²)
 
-**The consistency condition:** For `ξ` to satisfy the BBN bound (`ξ < 0.50`),
-the washout parameter must satisfy `K ≳ 200`. The framework's parameters
-give `K = Γ_D / H|_{T=M_N}`, where:
+The `M_N` dependence cancels exactly. With `m_ν = 50 meV` (bulk seesaw
+prediction, Paper 1 Appendix Z), `g_* = 106.75`, `v = 246 GeV`,
+`M_Pl = 2.44 × 10¹⁸ GeV`:
 
-    Γ_D = (Y†Y)_{11} × M_N / (8π)
-    H(T=M_N) = 1.66 × √g_* × M_N² / M_Pl
+    K = (0.05 × 10⁻⁹ GeV × 2.44 × 10¹⁸ GeV) / (8π × 1.66 × 10.3 × 6.05 × 10⁴ GeV²)
+      ≈ 5
 
-For `M_N ~ M₅ ~ 2.5 × 10¹⁴ GeV` and `g_* ~ 100`:
+This `K` value is fixed by the observed neutrino mass and SM parameters —
+no free parameters are introduced. `K ≈ 5` places leptogenesis in the
+transition regime (`K ~ 1–10`), where the BDP (2005) efficiency
+function gives `κ(K) ≈ 0.14 (K/8.25)^{−1.16}` for `K ≲ 10`.
 
-    H ≈ 1.66 × 10 × (2.5 × 10¹⁴)² / (2.4 × 10¹⁸) ≈ 4.3 × 10⁹ GeV
+**The washout ratio.** At the hidden brane (temperature `T' = ξT`), the
+effective washout parameter is `K' = K × ξ²` (the Hubble rate is the
+same on both branes but the lepton asymmetry density scales as `T'³ =
+ξ³T³`, reducing the scattering rate by `ξ²`). Using `κ(K) ∝ K^{α}` with
+`α ≈ −1.16`:
 
-The Yukawa coupling sets `K`: `K ~ (Y†Y)_{11} × M_Pl / (8π × 1.66 × √g_* × M_N)`.
-For `K ≳ 200`: `(Y†Y)_{11} ≳ 200 × 8π × 1.66 × 10 × 2.5 × 10¹⁴ / (2.4 × 10¹⁸)`
-`≈ 200 × 8π × 4.3 × 10⁹ / (2.4 × 10¹⁸) / (2.5×10¹⁴)` ... 
+    κ_hid / κ_vis = (K')^α / K^α = (Kξ²)^α / K^α = ξ^{2α} ≈ ξ^{−2.3}
 
-More simply: `K = Γ_D/H`. For `K = 200`: `Γ_D = 200 × 4.3 × 10⁹ = 8.6 × 10¹¹ GeV`.
-From `Γ_D = (Y†Y)M_N/(8π)`: `(Y†Y) = 8π × 8.6 × 10¹¹ / (2.5 × 10¹⁴) = 0.086`.
-This corresponds to Yukawa coupling `y ~ 0.29` — well within the perturbative
-range and consistent with the neutrino mass from the bulk seesaw (Paper 1,
-Appendix Z, where `y ~ 0.45` was used to match `m_ν ~ 50 meV`).
+At leading order this is `1/ξ²`, i.e., the leading-order scaling law
+holds. The 15% correction (`ξ^{−0.3}` at `ξ ≈ 0.43` is 1.31) gives a
+corrected scaling `Ω_DM/Ω_b ≈ 1.31/ξ²`, yielding `ξ ≈ 0.49` — consistent
+with the `θ*`-matched Scenario A value and within the BBN bound `ξ < 0.50`.
 
-**For `y = 0.45` (the original Paper 1 seesaw value, using the
-now-corrected `M_N = 2.5 × 10¹⁴ GeV`):** `(Y†Y) = 0.20`, giving
-`K = 0.20 × 2.5 × 10¹⁴ / (8π × 4.3 × 10⁹) = 460`. Then
-`f(460, 0.43) = ln(460)/ln(460 × 0.185) = 6.13/4.45 = 1.38`.
-
-Corrected `ξ`: `f/ξ² = 5.36` → `ξ² = 1.38/5.36 = 0.257`, `ξ = 0.507`.
-
-**Correction (see `etc/07-k-resolution.md`):**
-
-The original calculation used `M_N = 2.5 × 10¹⁴ GeV` (from a unit
-error in Appendix Z). The corrected seesaw scale is `M_R ~ 10¹⁵ GeV`
-(from CP² geometry) with `y ~ 0.9`. However, **K does not depend on
-M_R**: substituting `y² = m_ν M_R/v²` into `K = y² M_Pl/(8π × 1.66
-× √g_* × M_R)` gives:
-
-    K = m_ν × M_Pl / (8π × 1.66 × √g_* × v²)
-
-The M_R cancels. For `m_ν = 50 meV`: **K ≈ 5** (transition regime,
-not K = 460). The `1/ξ²` law still holds because `κ(K) ∝ K^{−1.16}`
-gives `κ(Kξ²)/κ(K) ≈ ξ^{−2.3} ≈ 1/ξ²` at leading order. At K = 5,
-`ξ = 0.43`: `Ω_DM/Ω_b ≈ 6.2` (16% above 5.36, within theoretical
-uncertainty of the approximate κ function).
-
-The cosmological predictions (H₀, S8, t₀, θ*, N_eff) depend on ξ
-as an INPUT parameter and are unaffected by this correction.
-
-**Summary of the washout correction (with original parameters):**
-
-    Ω_DM / Ω_b = f(K, ξ) / ξ²
-
-where `f = ln K / ln(Kξ²)`. For `K ~ 300-500` (original parameters),
-`f ≈ 1.3-1.4`, and the corrected `ξ ≈ 0.49-0.51`. For the corrected
-parameters (K ~ 5), the washout correction is smaller and ξ is closer
-to the leading-order value of 0.432.
+**Conclusion:** The washout correction shifts `ξ` from the leading-order
+0.432 to ≈ 0.49, using only the observed neutrino mass as input. This
+corrected value converges with the independently `θ*`-matched `ξ = 0.47`,
+providing a non-trivial cross-check.
 
 The `1/ξ²` law is a robust leading-order result. A precise
-determination of `ξ` from first principles requires either the full
-Boltzmann equation for two-sector leptogenesis with the corrected
-seesaw parameters (future work), or a resonant leptogenesis
-calculation in the Z₃ quasi-degenerate regime.
+determination of `ξ` from first principles requires the full
+Boltzmann equation for two-sector leptogenesis (future work), or a
+resonant leptogenesis calculation in the Z₃ quasi-degenerate regime.
 
-### E.3.4 The Master Formula (Leading Order)
+### E.3.4 The Master Formula and the Step from η_ratio to Ω_DM/Ω_b
 
 Combining entropy asymmetry and washout asymmetry at leading order
 (`K → ∞`):
@@ -225,9 +197,40 @@ Combining entropy asymmetry and washout asymmetry at leading order
 
 (for `c = 2`, flat neutrino profile, and `K → ∞`)
 
-The dark matter to visible baryon ratio:
+**From η_ratio to Ω_DM/Ω_b.** The two brane temperatures `T_vis` and
+`T_hid = ξ T_vis` lead to two independent photon baths with number
+densities
 
-    Ω_DM / Ω_b = η_ratio × ξ³ = (1/ξ⁵) × ξ³ = **1/ξ²**
+    n_γ^{vis} ∝ T_vis³,     n_γ^{hid} ∝ T_hid³ = ξ³ T_vis³
+
+The local baryon-to-photon ratio on each brane is
+
+    η_B ≡ n_B / n_γ  (local, using local photon density)
+
+The ratio of baryon asymmetries (as local number ratios) is therefore
+
+    η_ratio ≡ η_B^{hid} / η_B^{vis}
+            = (n_B^{hid} / n_γ^{hid}) / (n_B^{vis} / n_γ^{vis})
+
+To find the mass density ratio today we need the absolute baryon
+number ratio, which we obtain by converting back:
+
+    n_B^{hid} / n_B^{vis} = η_ratio × (n_γ^{hid} / n_γ^{vis}) = η_ratio × ξ³
+
+Since visible baryons become `Ω_b` and hidden baryons become `Ω_DM`
+(mirror matter), both species redshifting identically as matter:
+
+    Ω_DM / Ω_b = n_B^{hid} / n_B^{vis} = η_ratio × ξ³
+
+With `η_ratio = 1/ξ⁵` from the leptogenesis calculation:
+
+    Ω_DM / Ω_b = (1/ξ⁵) × ξ³ = **1/ξ²**    ✓
+
+The two factors `ξ³` cancel three of the five inverse powers: the entropy
+asymmetry factor (the definition of `η_B` uses the local photon density,
+which differs by `ξ³` between branes) cancels three powers, and the
+remaining two inverse powers come from the washout suppression
+(`κ_hid/κ_vis ~ 1/ξ²`).
 
 **This is the central result.** The ratio of dark to visible matter
 is the SQUARE of the inverse brane temperature ratio. It follows
@@ -246,12 +249,18 @@ Combined with the master formula `Ω_DM/Ω_b = 1/ξ²`:
 
     **ξ = 1/√(Ω_DM/Ω_b) = 1/√5.36 = 0.432**
 
-This is the LEADING-ORDER prediction. The washout correction
-(§E.3.3) shifts the result. With the corrected gauge-Higgs Yukawa
-`y₄ = g₂√2 = 0.92` (Paper 4, §7.22) and `M_R = 10¹⁵ GeV` (CP²
-seesaw): `K = m_ν/m_star ≈ 46` (BDP 2005; see `etc/07-k-resolution.md`).
-The corrected formula `Ω_DM/Ω_b = f(K,ξ)/ξ²` with `K = 46` gives
-`ξ ≈ 0.50–0.51` — at the BBN boundary, marginally consistent.
+This is the LEADING-ORDER *determination* of `ξ` (not a parameter-free
+prediction of `ξ` in isolation — see §2.2 for the distinction). The
+predictive content is in the functional form of the law (the specific
+`1/ξ²` scaling, not `1/ξ`, not `1/ξ³`) and in the convergence of the
+determined `ξ` with the independently `θ*`-matched value.
+
+The washout correction (§E.3.3) shifts the result. With `K ≈ 5` (fixed
+by the observed neutrino mass `m_ν = 50 meV`; the `M_R` dependence
+cancels exactly in `K`), the power-law approximation
+`κ(K) ∝ K^{−1.16}` gives the corrected formula
+`Ω_DM/Ω_b ≈ 1.31/ξ²`, yielding `ξ ≈ 0.49` — within the BBN bound
+(`ξ < 0.50` at `2σ`).
 
 The leading-order value `ξ = 0.432` remains the benchmark. The
 corrected `ξ` converges with Scenario A (`ξ = 0.47`, determined
@@ -259,12 +268,12 @@ independently by matching the CMB angular scale `θ*`). Two completely
 independent constraints — the baryogenesis scaling law and the CMB
 acoustic peak position — point to the same value of `ξ`.
 
-**`ξ` is no longer a free parameter.** At leading order, `ξ = 0.432`
-from `Ω_DM/Ω_b = 1/ξ²`. With the washout correction, `ξ ≈ 0.49` —
-consistent with Scenario A and within the BBN constraint (`ξ < 0.50`
-at `2σ`). The precise value requires a full two-sector Boltzmann
-equation analysis (future work), but the convergence with `θ*`
-constrains it to the narrow range `ξ ≈ 0.47–0.50`.
+**`ξ` is determined, not free.** At leading order, `ξ = 0.432`
+from `Ω_DM/Ω_b = 1/ξ²`. With the washout correction at `K = 5`,
+`ξ ≈ 0.49` — consistent with Scenario A and within the BBN constraint.
+The precise value requires a full two-sector Boltzmann equation analysis
+(future work), but the convergence with `θ*` constrains it to the narrow
+range `ξ ≈ 0.47–0.50`.
 
 ---
 
@@ -322,7 +331,27 @@ of the framework's four geometric parameters).
 
 ---
 
-## E.7 The Cosmic Coincidence Explained
+## E.7 The Reheating Origin of ξ (status) and The Cosmic Coincidence Explained
+
+**E.7 The Reheating Origin of ξ (status)**
+
+The temperature ratio `ξ = T_hidden/T_visible` is ultimately set during
+reheating by the differential efficiency with which the inflaton
+deposits energy on the two branes. A full calculation of this ratio
+requires the inflaton-brane coupling in the orbifold background, which
+depends on the warp factor `e^{kπ} ≈ 540` and the inflaton profile
+`f_infl(φ)`. This calculation has not been completed; it is deferred to
+Paper 6 (inflation) where the inflaton sector is developed in full.
+
+What the present appendix establishes: (i) the microphysics law
+`Ω_DM/Ω_b = 1/ξ²` is derived independently of the reheating
+calculation; (ii) inserting the observed `Ω_DM/Ω_b` determines
+`ξ = 0.432–0.49`; (iii) the warp correction `c = 1.986` (§E.8) is
+self-consistent with `ξ = 0.47` and `Ω_DM/Ω_b = 5.36`. The derivation
+of `ξ` from the reheating dynamics is identified as future work that
+will complete the chain from geometric parameters to `ξ`.
+
+**The cosmic coincidence explained.**
 
 The observed ratio `Ω_DM/Ω_b ≈ 5.4` has no explanation in `ΛCDM`.
 Dark matter and baryons are independent species with unrelated
@@ -338,16 +367,11 @@ is fixed by the temperature asymmetry between the two branes:
 The cosmic coincidence becomes: **why is the hidden brane at
 temperature `ξ ~ 0.43 × T_visible`?** This is determined by the
 reheating dynamics — specifically, by the efficiency with which
-the inflaton heats each brane gravitationally. For the e-circle
-inflation scenario (Paper 1, Appendix Q §Q.6), the reheating
-temperature ratio is set by the relative coupling of the inflaton
-to each brane, which is a calculable quantity from the Casimir
-potential.
-
-The coincidence problem is transformed: it is no longer "why is
-dark matter 5× baryons?" but "why did inflation heat the hidden
-brane to 43% of the visible temperature?" — a question that has
-a concrete geometric answer in the framework.
+the inflaton heats each brane gravitationally. The coincidence
+problem is transformed: it is no longer "why is dark matter 5×
+baryons?" but "why did inflation heat the hidden brane to 43% of
+the visible temperature?" — a question with a concrete geometric
+answer once the reheating calculation (Paper 6) is complete.
 
 ---
 

@@ -99,5 +99,84 @@ This is the same structure as entanglement: the e-conservation
 constraint is real, but measuring it requires access to the
 e-dimension, which 4D observers do not have directly.
 
+The argument that `[Q̂_e, Ô_{4D}] = 0` (Section 9.3.1, Property 2)
+relies on 4D observables being KK zero-modes. Massive KK modes
+(`n ≠ 0`) carry e-charge and could in principle provide a channel
+through which e-information leaks into 4D-accessible observables.
+This channel is thermally suppressed for all astrophysical black holes.
+The lightest KK mode has mass `m₁ = ℏc/(R₀) ~ 10⁻² eV` for
+`R₀ ~ 12 μm`, corresponding to a temperature scale `T₁ = m₁c²/k_B ~ 100 K`.
+The Hawking temperature of a solar-mass black hole is `T_H ~ 10⁻⁷ K`,
+nine orders of magnitude below T₁. The thermal production rate of
+the lightest KK mode is `Γ ~ exp(−m₁c²/k_B T_H) ~ exp(−10⁹)` —
+negligible by any standard. For black holes with `M >> M_Pl`, we
+always have `T_H << m₁/k_B` (the KK mass far exceeds the thermal
+scale), so the `n ≠ 0` sector is dynamically inaccessible and the
+4D observables are genuinely restricted to the zero-mode sector.
+The no-signaling argument is complete in this astrophysical regime.
+For `M ~ M_Pl`, `T_H ~ m₁/k_B` and the KK modes are produced, but
+at that scale the semi-classical approximation itself breaks down
+— the AMPS argument, and indeed the Hawking calculation, are not
+reliable there anyway.
+
+### 5.4 How the Global Constraint Distributes: From Conservation to Imprint
+
+Section 4.3 derives that the total horizon e-charge shifts by
+`δφ = φ_{infalling}` when one bit falls in. Section 7 requires that
+this shift is distributed across the individual Planck pixels in a
+way that allows the Page curve to be derived. We now make this
+distribution precise.
+
+**The state of the horizon e-sector.** Before the infalling quantum
+arrives, the horizon consists of `N_BH` Planck pixels with e-coordinates
+`{φ₁, φ₂, ..., φ_{N_BH}}`. The e-conservation constraint fixes the
+total: `Σᵢ φᵢ = Q_{before}`.
+
+After the infalling quantum (e-coordinate `φ_{in}`) is absorbed,
+the new total is `Q_{after} = Q_{before} + φ_{in}`. This is a
+constraint on the updated pixel configuration `{φ₁', φ₂', ..., φ_{N_BH+1}'}` —
+the new pixel created by the Planck area growth joins the surface
+with e-coordinate `φ_{new pixel} = φ_{in}` (by local e-conservation
+at the absorption vertex, Section 4.3, Theorem 2.1). The other
+`N_BH` pixels are not individually updated by the absorption — the
+global constraint is satisfied by the creation of the new pixel.
+
+**Interpretation (a) is the correct one for the absorption event.**
+The total e-charge changes; the individual pixels are not each
+updated; the new pixel carries the infalling e-charge. This is
+consistent with the local Noether conservation at the absorption
+vertex (Paper 1, Theorem 2.1) and requires no acausal pixel-by-pixel
+update.
+
+**The scrambling distributes the imprint.** What converts this
+localized new pixel's e-coordinate into a distributed imprint across
+all pixels is not the conservation law but the scrambling dynamics.
+The horizon is a quantum system in contact with the Hawking thermal
+bath at temperature `T_H`. The 4D thermal dynamics cause the horizon's
+internal degrees of freedom to mix — to scramble — on the timescale
+`t_scr ~ β ln S_BH` (Section 11). After scrambling, the information
+about the infalling `φ_{in}` has been distributed across all `N_BH+1`
+pixels: no individual pixel carries the original `φ_{in}`, but
+correlations among all pixels encode it.
+
+**Precise claim replacing the ambiguous "instantaneous global shift":**
+
+> When a bit falls in, the e-charge of the new horizon pixel is
+> locally set to `φ_{in}` by e-conservation at the absorption vertex.
+> No other pixel is instantly updated. After the scrambling time
+> `t_scr`, the e-information in `φ_{in}` is mixed across all horizon
+> pixels by the thermal dynamics, making it available to be encoded
+> in subsequent Hawking emissions. The "instantaneous" character of
+> e-encoding refers to the local absorption (which happens at the
+> vertex, not via a propagating signal), not to an instantaneous
+> redistribution across all pixels.
+
+**Consequence for Section 7 (Page curve).** The random-unitary model
+of Section 7 applies to the scrambled configuration — after `t_scr`,
+not at the moment of absorption. For `k < t_scr/β = O(ln S_BH)`
+emissions, the e-configuration has not yet been scrambled and the
+random-unitary approximation is not yet valid. The early-time behavior
+is treated explicitly in Section 7.7.
+
 ---
 

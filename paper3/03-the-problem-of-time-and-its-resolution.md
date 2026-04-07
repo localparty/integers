@@ -56,60 +56,170 @@ This clock is:
   coordinates, time slicing, or gauge fixing.
 
 - **Metric-independent:** The e-evolution `∂φ/∂τ = −E/ℏ` holds
-  regardless of the background spacetime metric. Near a black hole,
-  in an expanding universe, or in flat space — the e-clock ticks.
+  in the product-metric gauge `g_{5D} = g_{4D} + R₀² dφ²`, which
+  corresponds to the KK gauge choice `A_μ = 0` (no off-diagonal KK
+  vector). This gauge is enforced by the Z₂ orbifold symmetry
+  `φ → −φ` of the e-circle (Paper 1, §2.1), which forbids the
+  odd-function coupling `g_{5μ} ∝ A_μ`. The product structure is
+  therefore not a gauge choice but a symmetry consequence: the Z₂
+  symmetry renders `A_μ = 0` exact, and the e-clock evolution is
+  metric-independent as a result — near a black hole, in an expanding
+  universe, or in flat space.
 
 - **Universal:** Every quantum system has an e-coordinate. Every
   particle carries this clock. The clock is not an external
   apparatus — it is a geometric property of the particle itself.
 
-### 3.3 The Wheeler-DeWitt Equation as a 4D Projection
+### 3.2.1 Self-Adjointness and the Correct Clock Observable
 
-The WDW equation `H|Ψ⟩ = 0` is a constraint on the 4D wave
-function. In the 5D framework, the full wave function is:
+The e-coordinate `φ ∈ [0, 2π)` parameterizes the compact e-circle
+S¹. As an operator on L²(S¹), the angle `φ̂` is NOT self-adjoint —
+this is the standard angle-angular momentum problem (Garrison & Wong
+1970; Carruthers & Nieto 1968). The compact topology S¹ forces the
+identification `φ ~ φ + 2π`, which is incompatible with a self-adjoint
+angle operator. The canonically conjugate momentum to φ — the KK
+winding number operator `n̂ = R₀ p̂_e / ℏ = −iR₀ ∂/∂φ` — IS
+self-adjoint on L²(S¹) with discrete integer eigenvalues `n ∈ Z`.
+
+**The correct clock observable is `n̂`, not `φ̂`.**
+
+In the Page-Wootters mechanism, the clock system must have a
+self-adjoint "clock observable" (playing the role of "time") and
+a conjugate "clock Hamiltonian" (generating time translation).
+On S¹:
+
+- Clock Hamiltonian: `Ĥ_e` with eigenvalues `E_n = n²ℏ²/(2mR₀²)`,
+  `n ∈ Z`.
+- Clock observable: The energy eigenvalues `n` label the clock states.
+  For the clock to "read time," we need a finer observable. The
+  correct choice is the winding observable W, counting net winds
+  around the e-circle over the evaporation history.
+
+**Winding number as clock.** The winding number `W = ∮ dφ/(2π)` is
+an integer-valued observable that counts how many times the
+particle's phase has advanced around the full circle. Unlike `φ̂`,
+W is well-defined on the universal cover `R` of S¹ and is
+self-adjoint. It can take arbitrarily large integer values, making
+it suitable as a clock for the full evaporation history.
+
+The relationship between winding and time is: for a particle with
+energy E, the phase advances at rate `∂φ/∂τ = −E/ℏ` (Section 3.2).
+The winding number after proper time τ is `W = |Eτ/(2πℏ)|`. Since
+`E ~ T_H` and `τ = t_evap ~ M³` (in Planck units), the total winding
+over the evaporation is `W_evap ~ T_H × t_evap / (2πℏ) ~ S_BH/(2π) >> 1`
+for any macroscopic black hole. The clock has more than enough
+"resolution" to track the entire evaporation.
+
+**The Page-Wootters mechanism revisited.** The clock state in the
+Page-Wootters mechanism should be indexed by the winding number W,
+not the compact angle φ:
+
+    |ψ(W)⟩ = ⟨W|Ψ_{5D}⟩
+
+The conditional state at winding number W is the 4D state seen at
+the W-th thermal cycle. The WdW constraint `Ĥ_{5D}|Ψ_{5D}⟩ = 0`
+implies `Ĥ_{4D}|ψ_n⟩ = −E_n|ψ_n⟩`, and conditioning on the winding
+observable W (which counts cycles of the clock) reproduces
+Schrödinger evolution in the 4D sector with time parameter
+`t = 2πWℏ/E`.
+
+**The role of φ vs. W.** The compact angle φ provides the periodic
+identification that makes particles fermions or bosons (spin-statistics,
+Paper 1 Appendix B) and that generates the Hawking temperature from
+Euclidean periodicity (Section 3.4). The winding number W provides
+the self-adjoint clock observable for the Page-Wootters mechanism.
+These are complementary aspects of the same compact dimension —
+the local phase structure (φ) and the global winding structure (W).
+
+### 3.3 The Wheeler-DeWitt Equation — Scope and Factorization
+
+The Wheeler-DeWitt (WdW) equation in canonical quantum gravity is
+`Ĥ_G|Ψ⟩ = 0` where `Ĥ_G` is the full gravitational Hamiltonian
+constraint — the 5D ADM Hamiltonian. This is a nonlinear functional
+differential operator on superspace (the space of 5D metrics). It
+does NOT factorize as `Ĥ_{4D} + Ĥ_e` in general, because gravity
+couples the 4D and e-sectors through the radion (the KK scalar that
+describes fluctuations of R₀).
+
+The factorization `Ĥ_{5D} = Ĥ_{4D} + Ĥ_e` presented in this section
+applies to matter fields in a fixed 5D background geometry (the
+Born-Oppenheimer approximation for quantum gravity: treat the metric
+as a fixed classical background and quantize matter fields on it).
+In this approximation, the 5D Hamiltonian for matter factorizes
+exactly by the product structure of the metric (Section B.3):
+
+    Ĥ_{5D,matter} = Ĥ_{4D,matter} + Ĥ_{e,matter}
+
+This is the sense in which the factorization holds: it is a statement
+about the matter Hamiltonian in a fixed background, not about the
+full quantum gravitational Hamiltonian.
+
+**What additional assumptions are needed for the gravitational case?**
+
+To extend the argument to the full gravitational WdW equation, we
+need: (1) modulus stabilization ensures R₀ is frozen at its
+Casimir-determined value (Paper 1, §2.1), so the radion is not a
+dynamical degree of freedom below energy scales `1/R₀ ~ 10⁻² eV`;
+(2) below this scale, the e-sector of the gravitational Hamiltonian
+reduces to the frozen radion sector plus the KK matter tower, both
+of which contribute to the factorized `Ĥ_e`; (3) the 4D gravitational
+Hamiltonian `Ĥ_{4D,grav}` is the standard 4D ADM Hamiltonian,
+decoupled from the frozen e-sector.
+
+Under these conditions — which hold throughout the semiclassical
+evaporation regime — the effective WdW factorization holds:
+
+    Ĥ_{eff,5D}|Ψ_{5D}⟩ = (Ĥ_{4D,grav} + Ĥ_e)|Ψ_{5D}⟩ = 0
+
+The effective factorization is not the full WdW equation but its
+Born-Oppenheimer limit with a frozen radion. This is the framework
+in which the Page-Wootters mechanism applies.
+
+In the 5D framework, the full wave function is:
 
     Ψ₅D(x, t, φ) = Σₙ ψₙ(x, t) · e^{inφ/R}
 
 where `ψₙ(x, t)` are the KK mode wave functions and `n` indexes
-the e-momentum (charge) quantum number. The 5D Hamiltonian is:
+the e-momentum (charge) quantum number. The effective factorized
+Hamiltonian gives `Ĥ_{4D}|ψₙ⟩ = −E_n|ψₙ⟩`. Each KK sector evolves
+with energy `E_n`. The 4D wave function `ψₙ` has non-trivial dynamics
+— it satisfies a Schrödinger equation with energy sourced by the
+e-circle.
 
-    Ĥ₅D = Ĥ₄D + Ĥ_e
+This is the **Page-Wootters mechanism** (Page & Wootters 1983): time
+emerges from entanglement between a "clock" subsystem and the rest
+of the universe. The clock is the e-circle, indexed by the winding
+number W (Section 3.2.1). The conditional state:
 
-where `Ĥ_e` is the e-circle Hamiltonian, whose eigenvalues are
-`E_n = n²ℏ²/(2mR²)` — the KK tower.
+    |ψ(W)⟩ = ⟨W|Ψ_{5D}⟩
 
-The WDW constraint `Ĥ₅D|Ψ₅D⟩ = 0` does NOT say the 5D state is
-static. It constrains the *total* energy (4D + e-circle) to vanish:
+is the 4D state conditioned on the winding number W. As W increases,
+the 4D state evolves unitarily. The WdW constraint `Ĥ_{5D}|Ψ_{5D}⟩ = 0`
+states that the total (4D + e-clock) energy vanishes — a constraint,
+not the absence of dynamics.
 
-    Ĥ₄D|ψₙ⟩ = −E_n|ψₙ⟩
+### 3.3.1 Factor Ordering
 
-Each KK sector evolves with energy `E_n`. The 4D wave function `ψₙ`
-has non-trivial dynamics — it satisfies a Schrödinger equation with
-energy sourced by the e-circle. The apparent timelessness of the
-WDW equation is an artifact of looking at the total (4D + e) system.
-When we separate the e-sector, the 4D sector has dynamics because
-the e-clock provides the reference.
+The WdW equation suffers from factor-ordering ambiguities: the
+classical constraint `H = 0` can be quantized as `Ĥ|Ψ⟩ = 0` in
+multiple inequivalent ways. In the 5D framework, the factor-ordering
+question for the e-sector is straightforward: the e-sector Hamiltonian
+is `Ĥ_e = (1/2m)(p̂_e)²` with `p̂_e = −iℏ(1/R₀)∂/∂φ`, a self-adjoint
+operator on L²(S¹). The eigenvalues are `E_n = n²ℏ²/(2mR₀²)`, and
+factor ordering does not arise (the Hamiltonian is already in
+normal-ordered form on the compact S¹).
 
-This is precisely the **Page-Wootters mechanism** (Page & Wootters
-1983): time emerges from entanglement between a "clock" subsystem
-and the rest of the universe. In their framework, one defines:
-
-    |ψ(t)⟩ = ⟨t_clock|Ψ_total⟩
-
-— the conditional state of the universe given that the clock reads
-time `t`. This conditional state evolves unitarily even though the
-total state is static.
-
-In the e-dimension framework: **the clock is the e-circle.** The
-conditional state:
-
-    |ψ(φ)⟩ = ⟨φ|Ψ₅D⟩
-
-is the 4D state conditioned on the e-coordinate value `φ`. As `φ`
-varies (tracing around the e-circle), the 4D state evolves —
-unitarily, because the underlying 5D evolution is unitary. The WDW
-equation `H|Ψ₅D⟩ = 0` simply states that the total (4D + e-clock)
-energy vanishes — a constraint, not the absence of dynamics.
+For the 4D gravitational sector `Ĥ_{4D,grav}`, factor ordering is
+the standard unresolved problem of quantum gravity — present in all
+approaches (Wheeler-DeWitt, loop quantum gravity, Euclidean path
+integrals). The e-dimension framework does not resolve this problem
+for the 4D sector. What it does resolve is the problem of time: given
+that some consistent quantization of `Ĥ_{4D,grav}` exists (with any
+factor ordering), the e-clock provides the conditional state
+`|ψ(W)⟩ = ⟨W|Ψ_{5D}⟩` that evolves unitarily as W increases. The
+clock resolves the frozen-formalism problem (dynamics disappears)
+without needing to solve the factor-ordering problem (which
+quantization of `Ĥ_{4D,grav}` to use). The two issues are decoupled.
 
 ### 3.4 Euclidean Time and the e-Circle
 
@@ -244,9 +354,12 @@ compact circle — the e-dimension — does three things that might seem
 unrelated:
 
 It provides the internal clock (§3.2–3.3): the e-coordinate φ evolves
-as ∂φ/∂τ = −E/ℏ, giving the 4D effective theory a well-defined notion
-of time through the Page-Wootters mechanism. The WDW equation is not
-timeless — it is 5D dynamics with the e-clock projected out.
+as ∂φ/∂τ = −E/ℏ, and the winding number W provides the self-adjoint
+clock observable (§3.2.1), giving the 4D effective theory a well-defined
+notion of time through the Page-Wootters mechanism. The WDW equation is
+not timeless — it is 5D dynamics with the e-clock projected out. The
+factorization holds in the Born-Oppenheimer limit with frozen radion
+(§3.3), which is the relevant regime throughout semiclassical evaporation.
 
 It provides the temperature (§3.4): near the horizon, the e-circle is
 geometrically identified with the thermal circle of Euclidean quantum

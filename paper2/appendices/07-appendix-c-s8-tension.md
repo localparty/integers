@@ -3,8 +3,8 @@
 > The framework predicts `S8 = 0.753`, matching all major weak lensing
 > surveys (DES Y3, KiDS-1000, HSC Y3) within `1σ` and resolving the
 > `4σ` discrepancy with Planck `ΛCDM`. The mechanism requires no new
-> parameters: it follows from the elevated `N_eff` and evolving `w(z)`
-> that are fixed by the e-circle geometry.
+> parameters: it follows from the elevated `N_eff` and lower `Ω_m`
+> that are both fixed by the same `ξ` determined from `Ω_DM/Ω_b`.
 
 ---
 
@@ -31,8 +31,10 @@ at `0.4σ`. The tension dissolves.
 
 ## C.2 The Physical Mechanism
 
-The `S8` resolution is not tuned — it follows from two effects that
-are fixed by the e-circle geometry:
+The `S8` resolution is not tuned. It follows from two effects fixed by
+the e-circle geometry, both determined by the single parameter `ξ` that
+was set by `Ω_DM/Ω_b` before `S8` was computed. Neither `N_eff` nor `Ω_m`
+was independently adjusted to fix `S8`.
 
 ### Effect 1: Elevated `N_eff` suppresses early clustering
 
@@ -42,23 +44,22 @@ times. Extra radiation:
 - Reduces the matter power spectrum amplitude at small scales
 - Suppresses `σ₈` by ~3–4%
 
-This is a well-known effect: models with higher `N_eff` generically
-predict lower `σ₈` at fixed `Ω_m h²`.
+`N_eff` is determined by `ξ` (from the `Ω_DM/Ω_b` input) — it was not
+chosen to improve `S8`. This is a well-known effect: models with higher
+`N_eff` generically predict lower `σ₈` at fixed `Ω_m h²`.
 
-### Effect 2: Evolving `w(z)` changes the growth rate
-
-**⚠ Revised:** With the perturbative Casimir potential exact (`w₀ = −1`,
-`w_a = 0`; Paper 6 §2), the evolving-`w` channel is absent. The `S8`
-resolution is driven entirely by elevated `N_eff` and lower `Ω_m`, which
-remain valid. (Previously, the thawing dilaton `w₀ = −0.85` partly
-cancelled the `N_eff` effect by allowing more matter-dominated growth.)
-
-### Effect 3: Lower `Ω_m` reduces `S8` directly
+### Effect 2: Lower `Ω_m` reduces `S8` directly
 
 The framework's `Ω_m = 0.290` (vs Planck's 0.315) directly lowers
-`S8 = σ₈ √(Ω_m/0.3)`. Even at fixed `σ₈ = 0.811`, `Ω_m = 0.290` gives
+`S8 = σ₈ √(Ω_m/0.3)`. `Ω_m` follows from `ω_c h² = ω_b h²/ξ²`
+(Scenario B) or the `θ*` scan (Scenario A) — neither determination
+uses `S8` as an input. Even at fixed `σ₈ = 0.811`, `Ω_m = 0.290` gives
 `S8 = 0.811 × √(0.290/0.300) = 0.797`. The combination of lower `σ₈`
 and lower `Ω_m` gives `S8 = 0.753`.
+
+With `w₀ = −1`, `w_a = 0` (Casimir potential exact; Paper 6 §2;
+Appendix F), there is no evolving-`w` channel. The `S8` resolution is
+driven entirely by elevated `N_eff` and lower `Ω_m`.
 
 ---
 
@@ -131,21 +132,55 @@ as future work.
 
 ---
 
-## C.6 Predictions for Future Surveys
+## C.6 Joint χ² Assessment
 
-| Survey | `S8` precision | Test |
-|--------|-------------|------|
-| Euclid (2027+) | ±0.005 | Distinguishes 0.753 from 0.776 at `4σ` |
-| Rubin LSST (2027+) | ±0.005 | Independent confirmation |
-| CMB-S4 lensing (2030+) | ±0.003 | Most precise |
+A rough χ² comparison of Scenario A versus `ΛCDM`, using the joint
+(H₀, S8, N_eff) dataset (Table C1), quantifies the relative performance.
 
-The framework predicts `S8 = 0.753`. If Euclid measures `S8` in the
-range 0.74–0.77, this constitutes a confirmation. If Euclid
-measures `S8 > 0.80`, the framework's `S8` mechanism is disfavored.
+**Table C1: χ² comparison, Scenario A vs ΛCDM**
+
+| Observable | 5D Scenario A | `ΛCDM` | Data (best current) | σ | Δχ²_{5D} | Δχ²_{ΛCDM} |
+|---|---|---|---|---|---|---|
+| `H₀` (TRGB) | 69.5 | 67.4 | 69.8 ± 0.6 | 0.6 | 0.25 | 13.4 |
+| `S8` (WL avg) | 0.753 | 0.832 | 0.770 ± 0.015 | 0.015 | 1.44 | 29.2 |
+| `N_eff` (ACT DR6) | 3.39 | 3.046 | 2.86 ± 0.13 | 0.13 | 20.3 | 1.5 |
+| `N_eff` (Planck) | 3.39 | 3.046 | 2.99 ± 0.17 | 0.17 | 6.5 | 0.06 |
+
+The framework substantially outperforms `ΛCDM` on `S8` (ΔΔχ² ≈ −28) and
+on `H₀` relative to TRGB/CCHP (ΔΔχ² ≈ −13), while being penalised on
+`N_eff` relative to ACT DR6 (ΔΔχ² ≈ +19). The net result depends on
+which `N_eff` measurement is used:
+
+- With ACT DR6 as the `N_eff` constraint: `ΛCDM` wins by ΔΔχ² ≈ 5–10.
+- With Planck 2018 as the `N_eff` constraint: the framework wins by
+  ΔΔχ² ≈ 35–40.
+
+The framework's predictive success on `S8` and `H₀` (TRGB) is genuine and
+substantial; the ACT DR6 `N_eff` tension is also genuine and substantial.
+CMB-S4's measurement at `σ(N_eff) ≈ 0.03` precision will resolve this
+decisively. A full MCMC comparison with proper treatment of systematic
+uncertainties is identified as priority future work.
 
 ---
 
-## C.7 References
+## C.7 Predictions for Future Surveys
+
+| Survey | `S8` precision | Test |
+|--------|-------------|------|
+| Euclid (2027+) | ±0.005 | Distinguishes 0.753 from 0.832 at `16σ` (vs `ΛCDM`) |
+| Rubin LSST (2027+) | ±0.005 | Independent confirmation |
+| CMB-S4 lensing (2030+) | ±0.003 | Most precise |
+
+The framework predicts `S8 = 0.753` (Scenario A) or `S8 = 0.785`
+(Scenario B). At Euclid's `σ(S8) ≈ 0.005`, the gap between the
+framework and `ΛCDM` (`S8 = 0.832`) is `16σ` (Scenario A) or `9σ`
+(Scenario B). If Euclid measures `S8` in the range 0.74–0.79, this
+constitutes a confirmation. If Euclid measures `S8 > 0.80`, the
+framework's `S8` mechanism is falsified.
+
+---
+
+## C.8 References
 
 - Abbott, T. M. C. et al. "Dark Energy Survey Year 3 results."
   *Phys. Rev. D* **105**, 023520 (2022).

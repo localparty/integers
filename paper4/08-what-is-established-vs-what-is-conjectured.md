@@ -6,13 +6,13 @@
 | KK on `CP² × S² × S¹` gives SM gauge group | **Established** (Witten 1981) | Standard KK theory |
 | 12 gauge bosons with correct structure | **Established** (Section 3) | KK reduction |
 | e-dimension physics survives in `S¹` sector | **Established** (Section 3.4) | Product manifold structure |
-| Chiral fermions from Baptista instability | **Established** (Baptista 2024) | Metric instability on SU(3) |
+| Chiral fermions from Baptista instability | **Partially Established / Under Active Development** — Baptista 2024 establishes symmetry breaking to SM gauge group and asymmetric fermionic couplings in principle (§4.2b–4.3); the explicit SM generation spectrum is derived in §7.2.1–7.2.4; the complete mode-by-mode derivation is in progress | Metric instability on SU(3) + non-Killing gauge bosons (Baptista) + spin^c index (this paper) |
 | 3 generations from `χ(CP²) = 3` | **Derived** (Section 6.2) | Index theorem + flux choice |
-| Weinberg angle `sin²θ_W ≈ 0.232` | **Derived** (Section 6.1) | GUT normalization + SM running |
+| Weinberg angle `sin²θ_W ≈ 0.232` | **Derived** (§7.1) — GUT normalization factor 5/3 assumed as input; standard SU(5)/GUT prediction recovered geometrically; consistent with experiment at ~0.5% level including KK threshold corrections (§7.1b) | GUT normalization + SM running |
 | Proton lifetime `~10³⁴⁻³⁶` years | **Derived** (Section 7.3) | Compactification scale |
 | Higgs = off-diagonal metric `g_{iψ}` | **Derived** (Section 6.2) | KK metric decomposition |
 | Higgs potential from Casimir energy | **Derived** (Section 6.3) | One-loop on `S² × S¹` |
-| Higgs mass `~125 GeV` from Casimir | **Derived** (Section 6.7) | Top Yukawa + geometry |
+| Higgs mass `~125 GeV` from Casimir | **Consistent** (§6.7) — M_KK = 1/r₂ is a free parameter pending moduli stabilization OC-2; m_H ~ 125 GeV for M_KK ~ 1–2.5 TeV; top mass self-consistency addressed in §6.5b | Top Yukawa + geometry + partial localization F(c_t) ~ 0.84 |
 | KK W'/Z' at 1–2.5 TeV | **Predicted** (Section 6.9) | `S²` compactification scale |
 | Three-scale Casimir hierarchy | **Derived** (Section 6.4) | `Λ`, `v`, `M_GUT` from geometry |
 | Neutrino mixing `θ₁₂ = 33.7°` | **Derived** (Section 7.5) | Z₃ orbifold + warp factor |
@@ -57,6 +57,20 @@ The established results (Sections 2–4, 6) stand independently of
 the conjecture (Section 5). The conjecture provides the *why* —
 why this internal space and not another — but the *what* (the SM
 gauge group from KK reduction) is a theorem.
+
+**Scope of finiteness claims.** The all-orders finiteness result
+(Theorem K.1, Paper 1) applies to the 4D effective theory obtained
+by integrating out all KK modes — i.e., to the tower of regulated
+Kaluza-Klein contributions to the 4D vacuum energy. It does not
+apply to the full 11D supergravity counterterm structure, which has a
+nonzero `R⁴` counterterm at one loop in 11D (Green-Schwarz-West 1987;
+Gross-Sloan 1987). The 11D R⁴ term is consistent with Theorem K.1:
+it contributes to the 4D effective action in a way that is captured
+by the spectral zeta regularization of the KK sum, and the Epstein
+vanishing theorem ensures its net contribution to the 4D potential
+is zero on the S¹ sector. The claim is finiteness of the 4D
+KK-summed theory, not absence of higher-derivative counterterms
+in the 11D parent theory.
 
 ---
 

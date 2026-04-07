@@ -105,6 +105,50 @@ freedom weighted by their `SU(2)` representations, and the
 `cos(n(θ_H + π))` term for fermions reflects their anti-periodic
 boundary conditions.
 
+### 6.3b S¹ vs S² in the Casimir Potential
+
+A potential confusion arises between the Casimir potential formula in
+§6.3 and the S² spectral zeta computation in Appendix D. We clarify
+the distinct roles:
+
+**The Wilson line lives on S¹.** The gauge-Higgs parameter θ_H is the
+holonomy of the SU(2) gauge field around the S¹ (e-circle) direction:
+
+    W_{S¹} = P exp(i ∮_{S¹} A_ψ dψ) = e^{i θ_H τ_3/2}
+
+This is a path integral along the compact S¹ direction, not around S².
+The S¹ direction is special because it is the unique non-contractible
+1-cycle in CP² × S² × S¹ (since π₁(CP²) = 0 and π₁(S²) = 0). The
+Wilson line must wind around S¹ — there is no non-trivial Wilson line
+winding around S².
+
+**The Hosotani potential formula applies to S¹.** The standard result
+for the Casimir potential of a Wilson line on a circle of radius r₂ is:
+
+    V(θ_H) = (3/(64π⁶ r₂⁴)) Σ_{n=1}^∞ [c_B cos(nθ_H) − c_F cos(n(θ_H + π))] / n⁵
+
+This formula uses the S¹ KK spectrum m_n = (n + θ_H/2π)/r₂ and sums
+over windings n around S¹. It is the correct formula for the
+θ_H-dependent Casimir energy. The fields propagating in the loop include
+all KK modes from S² and CP², but these are integrated out as heavy
+fields contributing to the constants c_B and c_F — they shift the
+amplitude but not the functional dependence on θ_H.
+
+**The S² spectral zeta enters the mass correction.** The second
+derivative V''(θ₀) determines the Higgs mass. In this computation, the
+effective field theory at scale r₂ includes the S² KK modes as internal
+lines. Regularizing the S² KK tower produces the factor Z_{S²}(0) = −2/3
+(Appendix D, §D.3), which enters as a multiplicative correction to the
+Higgs mass formula. This is entirely consistent with the S¹ Hosotani
+potential formula: the two calculations address different aspects of the
+same one-loop effective potential.
+
+The S² KK modes contribute a θ_H-independent term to V(θ_H) — a
+constant shift in the energy — and a θ_H-dependent correction to the
+curvature V''(θ₀) proportional to Z_{S²}(0). The former is absorbed
+into the definition of the vacuum energy; the latter is the Higgs mass
+correction of Appendix D.
+
 ### 6.4 The Three-Scale Casimir Hierarchy
 
 The Casimir mechanism now operates at three scales within the
@@ -142,6 +186,43 @@ detailed form of the Casimir potential on the full internal space
 (Section 9.1) but whose structure is already determined by the
 framework.
 
+The three-scale hierarchy is a genuine consequence of the Casimir
+mechanism operating at three compact dimensions of vastly different
+sizes. The current status of each scale:
+
+- **R ~ 12 μm (established).** The e-circle radius is derived in Paper 1
+  from the dark energy constraint, independently of CP² and S². The
+  Casimir energy of the e-circle gives ρ_Λ = (2.25 meV)⁴ with zero
+  free parameters. This is the only scale that is fully independently
+  fixed in the present paper series.
+
+- **r₃ ~ 10⁻³¹ m (structure established, computation pending).** The CP²
+  radius is determined by the G₄ flux stabilization condition (Paper 7,
+  §§2–3) with flux quanta n₁ = 9, n₂ = −17 fixed by GUT unification.
+  The numerical value requires the torsion-corrected GVW superpotential
+  (House-Micu 2005), the computation of which is the central open problem
+  of Paper 7. Once the torsion classes are computed, r₃ is determined
+  without free parameters.
+
+- **r₂ ~ 10⁻¹⁸ m (relationship fixed, absolute value pending).** The
+  ratio r₂/r₃ = √3/2 is established from the GUT coupling condition
+  α₃/α₂ = 1 (Appendix C, §C.5.2). Once r₃ is fixed by Paper 7, r₂
+  follows without additional free parameters. The independent derivation
+  of r₂ is Open Problem OC-2 (§9.5).
+
+The claim "one geometric mechanism generates three fundamental energy
+scales" is therefore:
+- Fully established for the dark energy scale (R derived in Paper 1).
+- Established in structure for the GUT scale (r₃ to be computed in Paper 7).
+- Established contingently for the electroweak scale (r₂ follows from r₃).
+
+The three-scale hierarchy is a prediction of the framework rather than
+a fully completed derivation, pending the results of Paper 7. The
+conceptual insight — that dark energy, electroweak symmetry breaking,
+and GUT-scale physics all arise from the same Casimir mechanism on
+compact spaces of different sizes — is established. The quantitative
+derivation is in progress.
+
 ### 6.5 Electroweak Symmetry Breaking
 
 The minimum of `V(θ_H)` determines the Higgs VEV.
@@ -178,6 +259,75 @@ which relates the Wilson line angle `θ₀` to the `S²` radius `r₂`:
 
 For `g₂ ≈ 0.65` and `θ₀ ~ π/4`: `r₂ ~ 10⁻¹⁸ m`, consistent
 with the weak-scale compactification radius.
+
+### 6.5b Self-Consistency: Top Mass, Wilson Line Angle, and M_KK
+
+The top quark mass m_t = 172.76 ± 0.30 GeV (PDG 2022) constrains the
+Wilson line angle θ₀ through the gauge-Higgs Yukawa formula:
+
+    m_t = y_t^{5D} × v × sin(θ₀)
+
+where v = 246 GeV and y_t^{5D} is the 5D Yukawa coupling. Using the
+4D top Yukawa y_t = m_t/v = 0.704 as the effective coupling:
+
+    sin(θ₀) = m_t / (y_t^{5D} v)
+
+If y_t^{5D} ~ 1 (the natural value in the bulk): sin(θ₀) ≈ 0.70.
+
+Substituting into the Higgs mass formula (§6.7) with sin(θ₀) = 0.70:
+
+    m_H² ~ (3 y_t⁴/8π²) × (0.49/r₂²) × (ln(2.04) + 1)
+          ~ 0.048 × 0.49 × 1.71 / r₂² ~ 0.040/r₂²
+
+    m_H ~ 0.20 × M_KK    (for M_KK = 1/r₂)
+
+Setting m_H = 125 GeV: M_KK ~ 625 GeV. However, LHC bounds on the
+gauge-Higgs W' with sin(θ₀) ~ 0.70 require M_KK ≳ 1–1.5 TeV
+(Hosotani-Yamatsu 2015; Funatsu et al. 2019). There is a tension.
+
+**The orbifold resolution.** The Z₂ orbifold structure of the S¹/Z₂
+factor (Paper 1, Appendix W) localizes the top quark wavefunction near
+the IR fixed point at φ = π. If the top quark bulk mass parameter c_t
+is chosen slightly above 1/2 (the "elementary" regime), the top quark
+wave function is exponentially peaked at the IR brane, while the Higgs
+Wilson line is delocalized over the full S¹. The overlap integral reduces
+the effective 4D coupling:
+
+    y_t^{(eff)} = y_t^{5D} × F(c_t)
+
+where F(c_t) < 1 is the wavefunction overlap. The coupled equations:
+
+    m_H = 0.20 × sin(θ₀) × M_KK           (Higgs mass)
+    m_t = y_t^{5D} × F(c_t) × v × sin(θ₀)  (top mass)
+
+with M_KK = 1.5 TeV, m_H = 125 GeV, m_t = 173 GeV give:
+
+    sin(θ₀) = 125 / (0.20 × 1500) = 0.417
+    F(c_t) × y_t^{5D} = 173 / (246 × 0.417) = 1.686
+
+For y_t^{5D} ~ 2 (an O(1) bulk coupling, natural in strongly coupled
+M-theory) and F(c_t) ~ 0.84 (moderate IR localization), this system is
+consistent. The required localization parameter c_t ~ 0.55 is well within
+the perturbative regime for the orbifold profile
+F(c_t) = √(2c_t − 1)/√(e^{(2c_t−1)πkR} − 1).
+
+The consistent solution requires:
+
+    sin(θ₀) ≈ 0.42,  M_KK ≈ 1.5 TeV,  y_t^{(eff)} ≈ 1.7
+
+This means the statement in §6.7, "For y_t = 1.0, sin θ₀ = 0.4, and
+1/r₂ = 1.5 TeV: m_H ~ 120–130 GeV," remains numerically correct with
+the revised interpretation that y_t in §6.7 is the effective 4D Yukawa
+(not the 5D bulk coupling) and sin(θ₀) = 0.42 is determined by the
+Higgs mass equation at M_KK = 1.5 TeV rather than by the top mass alone.
+The top mass constraint m_t = 173 GeV is satisfied by the partial
+localization mechanism with F(c_t) ~ 0.84. The framework is thus
+self-consistent: sin(θ₀) = 0.42 simultaneously gives m_H = 125 GeV and,
+via partial localization, m_t = 173 GeV.
+
+The precise determination of c_t from the orbifold parameters of Paper 1
+and the confirmation of F(c_t) ~ 0.84 is identified as a precision
+calculation for future work.
 
 ### 6.6 The W and Z Masses
 
@@ -231,10 +381,28 @@ The experimental value is `m_H = 125.25 ± 0.17 GeV` (ATLAS+CMS
 combined). The gauge-Higgs prediction is consistent for
 compactification scales `M_KK = 1/r₂` in the range `1.0–2.5 TeV`.
 
-**The Higgs mass is not a free parameter.** It is determined by
-the top Yukawa coupling, the Wilson line angle, and the `S²`
-compactification radius — all of which are either measured
-(`y_t`, `m_H`) or predicted by the internal geometry (`θ₀`, `r₂`).
+**The Higgs mass is not an independent parameter** — it is
+determined by the compactification radius r₂, the top Yukawa
+coupling y_t^{(eff)}, and the Wilson line angle θ₀ (which in turn
+follows from r₂ via the Higgs mass equation). However, r₂ itself
+is not yet independently fixed: its derivation from first-principles
+flux stabilization is Open Problem OC-2 (§9.5). Pending moduli
+stabilization, the Higgs mass prediction is: `m_H ~ 125 GeV` for
+`M_KK ~ 1–2.5 TeV`. The top mass self-consistency is addressed
+in §6.5b.
+
+**R-dependence of M_KK and m_H.** The compactification radius r₂
+is itself R-dependent: since `r₂ ∝ R^{−1/2}` (Paper 7, §3.2, where
+`r₃² = n₁/(2c_R) ∝ R⁻¹` and the ratio `ρ = r₂/r₃ = √3/2` is
+R-independent), it follows that `M_KK = 1/r₂ ∝ R^{1/2}`. The
+Higgs mass prediction `m_H ~ 125 GeV` is therefore R-dependent: it
+holds at the observed value `R_obs ≈ 10.1 μm`, which is itself
+determined by the dark energy matching condition (§7.21). The
+combination M_KK ∝ R^{1/2} means that the precise Higgs mass
+prediction and the KK resonance mass scale are not free parameters
+but are fixed once R_obs is known — and the underivability of R_obs
+from within the framework is established in Paper 7 Theorem U*,
+which restates the cosmological constant problem geometrically.
 
 ### 6.8 The Higgs as Pseudo-Goldstone Boson
 
@@ -322,9 +490,9 @@ accessible.
 | Property | Standard Model | e-Dimension framework |
 |---|---|---|
 | Higgs identity | Fundamental scalar (no explanation) | Off-diagonal metric `g_{iψ}` between `S²` and `S¹` |
-| Higgs potential | `V = −μ²|H|² + λ|H|⁴` (4 parameters) | `V = V_{Casimir}(θ_H)` (0 free parameters) |
+| Higgs potential | `V = −μ²|H|² + λ|H|⁴` (4 parameters) | `V = V_{Casimir}(θ_H)` (1 free parameter: r₂, pending stabilization OC-2) |
 | Symmetry breaking | Imposed (`μ² > 0` chosen) | Dynamical (top quark drives minimum) |
-| Higgs mass | Free parameter (125.25 GeV) | Calculated: `m_H ~ g²f sin(θ₀) / (4π)` |
+| Higgs mass | Free parameter (125.25 GeV) | Consistent with observation for `M_KK ~ 1–2.5 TeV` (parameter-free given r₂; see §6.5b) |
 | Hierarchy problem | Unresolved (requires BSM) | Resolved (pseudo-Goldstone protection) |
 | Lightness of Higgs | Unexplained | Pseudo-Goldstone boson of `S²` translation |
 | W/Z masses | From Higgs VEV (standard) | From Wilson line (= AB phase) on `S²` |

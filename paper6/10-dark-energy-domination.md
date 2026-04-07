@@ -1,92 +1,69 @@
-# 10. Dark Energy Domination (φ Thaws Past φ_min)
+# 10. Dark Energy Domination
 
-## 10.1 The Dilaton Wakes Up
+## 10.1 The Frozen Dilaton
 
-For most of cosmic history — from reheating through BBN, structure
-formation, and recombination — the dilaton sits frozen at `φ_min`
-by Hubble friction. The Hubble rate `H(t)` is much larger than the
-dilaton mass `m_φ ~ 10–20 meV`, so the field cannot respond to
-its potential.
+For all of cosmic history — from reheating through BBN, structure
+formation, and recombination — the dilaton sits kinematically frozen
+at its post-inflationary value R₀ by Hubble friction. The dilaton
+has no potential minimum (§2.2): the Casimir potential V = +c/R⁴ is
+monotonically decreasing and has no stationary point. There is no
+"thawing" — the dilaton does not roll past any minimum because no
+minimum exists.
 
-At `z ~ 1` (`t ~ 7 × 10⁹ yr`), the Hubble rate drops below `m_φ`:
+The e-circle radius is frozen:
 
-    H(z~1) ~ H₀ × √(Ω_m(1+z)³ + Ω_Λ) ~ 2H₀ ~ 5 × 10⁻³³ eV
+    Ṙ/R = ΔR/R₀ × H₀ ~ (3 × 10⁻³⁰) × H₀ ≈ 0
 
-    m_φ ~ 15 meV = 1.5 × 10⁻² eV
+Over one Hubble time:
 
-Since `m_φ ≫ H`, the dilaton thawed long ago in the sense of
-`H < m_φ`. The LATE thawing occurs because the dilaton was
-initially displaced BEYOND `φ_min` during the post-inflationary
-oscillation phase, and has been slowly rolling toward the true
-minimum from the other side.
+    ΔR/R₀ ~ H₀ R₀ ~ 3 × 10⁻³⁰   (Appendix A, Proposition A.1)
 
-## 10.2 The Thawing Trajectory
+The e-circle is frozen. There is no measurable change in R over
+cosmic time. The fifth dimension is stable.
 
-The equation of motion:
+## 10.2 The Dark Energy Equation of State
 
-    φ̈ + 3Hφ̇ + V'(φ) = 0
+The equation of motion for the dilaton in the frozen regime gives:
 
-Near the minimum, `V'(φ) ≈ m_φ²(φ − φ_min)`. The dilaton rolls
-slowly with:
+    w₀ = −1,   w_a = 0   (to precision (ΔR/R₀)² ~ 10⁻⁵⁹)
 
-    φ̇/φ_min ~ √(3(1 + w₀)) × H₀ ~ 0.67 H₀
+The dark energy density ρ_Λ = V(R₀) = c/R₀⁴ is a true cosmological
+constant: time-independent to precision H₀R₀ ~ 3 × 10⁻³⁰. The dark
+energy IS the frozen Casimir energy. The accelerated expansion IS the
+geometry of the e-circle. The cosmological constant IS determined by
+the topology of the spin structure.
 
-**⚠ Revised prediction (see `etc/09-creative-routes-to-R.md`):**
+There is no w₀ ≠ −1 deviation, no w_a ≠ 0 evolution, and no DESI
+fingerprint from the dilaton sector at any accessible precision.
 
-The perturbative Casimir potential V = −c/R⁴ is exact to all orders
-(the 2-loop coefficient c₂ = 0 from the Epstein zeta zeros that
-give UV finiteness). With the physical-field normalization
-L ∝ M₅³/R²(∂R)², the slow-roll parameter is ε = 8/M₅³ ≈ 10⁻⁵²:
+## 10.3 The DESI Test (Revised)
 
-    **w₀ = −1,   w_a = 0**   (to 10⁻⁵² precision)
+The framework now predicts w₀ = −1, w_a = 0 to 10⁻³⁰ precision.
+This is indistinguishable from ΛCDM at any current or near-future
+observational precision.
 
-The original `w₀ = −0.85`, `w_a = −0.23` assumed a Goldberger-Wise
-thawing slope beyond a potential minimum. The exact perturbative
-result shows no minimum exists and no thawing occurs. The dark
-energy IS a cosmological constant — the frozen Casimir energy.
+DESI DR3 tests whether the dark energy equation of state deviates
+from w = −1. The prediction w = −1 is a firm, falsifiable result of
+the framework: if DESI DR3 or future surveys observe a deviation from
+w = −1 at the percent level, the kinematic-freezing picture requires
+modification — non-perturbative corrections to the dilaton potential
+(instantons, brane nucleation events) would need to be invoked.
 
-## 10.3 The Physical Interpretation
+Confirming w = −1 to percent-level precision is still a meaningful
+and non-trivial test: it excludes the entire class of thawing
+quintessence models that predict percent-level deviations at z ~ 1.
 
-The dilaton is **frozen** at its inflationary value by Hubble
-friction. The e-circle radius is NOT changing:
-
-    Ṙ/R ~ ε × H₀ ~ 10⁻⁵² × H₀ ≈ 0
-
-Over the age of the universe:
-
-    ΔR/R ~ 0.67
-
-The e-circle has grown by ~67% since the Big Bang. The fifth
-dimension is expanding.
-
-This expansion is the dark energy. The vacuum energy that drives
-the current acceleration is the Casimir energy of the slowly
-expanding e-circle — less than the energy at the equilibrium
-radius because the dilaton has rolled past the minimum.
-
-## 10.4 The DESI Test
-
-DESI DR3 (expected 2027) will measure `H(z)` at the precision
-needed to distinguish the framework's `w(z)` trajectory from ΛCDM:
-
-    H(z)/H_ΛCDM(z) peaks at 4–6% above ΛCDM at z ~ 0.3–0.7
-
-This is the framework's fingerprint — an `8σ` detection at DESI DR3
-(Paper 2). Either the fingerprint is there, or the thawing dilaton
-is excluded.
-
-## 10.5 The Cosmological Constant Connection
+## 10.4 The Cosmological Constant
 
 The dark energy density today:
 
-    ρ_Λ = V(φ_today) ≈ V(φ_min) × (1 + corrections from rolling)
+    ρ_Λ = V(R₀) = c/R₀⁴ = ΔN × 3ζ(5)/(64π⁶ R₀⁴)
 
-Paper 4 (§7.21) shows that `V(φ_min)` is determined by the SUSY
-protection mechanism: `ΔN = 3.44` from the Witten-index-matched
-zero-mode counting, `R = 10.1 μm`. The rolling correction shifts
-`ρ_Λ` by a few percent — negligible for the CC prediction but
-measurable through `w₀ ≠ −1`.
+This is a true cosmological constant. Paper 4 (§7.21) shows that
+ΔN = 3.44 from the Witten-index-matched zero-mode counting and
+R₀ = 10.1 μm. There is no rolling correction to ρ_Λ — the dilaton
+is frozen to precision 3 × 10⁻³⁰ per Hubble time.
 
 The dark energy IS the Casimir energy. The accelerated expansion IS
-the geometry of the e-circle. The cosmological constant IS
-determined by the topology of the spin structure.
+the geometry of the e-circle. The cosmological constant IS determined
+by the topology of the spin structure.

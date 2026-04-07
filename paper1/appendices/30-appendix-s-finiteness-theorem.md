@@ -253,7 +253,9 @@ power of the UV cutoff — have ZERO coefficient. Only the subleading terms
 (suppressed by powers of `1/R²`) survive.
 
 For `L = 2`: the Goroff-Sagnotti `R³` counterterm has coefficient
-`S₀^{(2)} × c₃ = 0 × c₃ = 0`. The `R³` counterterm is NOT needed.
+`S₀^{(2)} × c₃ = 0 × c₃ = 0`. The `R³` counterterm is NOT needed — this
+is the conditional theorem of Appendix U §U.7.3 (conditional on vertex
+mass-independence; not yet verified by an explicit full two-loop calculation).
 
 For general `L`: the `R^{L+1}` counterterm has coefficient `S₀^{(L)} × c_{L+1} = 0 × c_{L+1} = 0`. The highest-dimension counterterm at each loop order
 is NOT needed.
@@ -347,6 +349,36 @@ uniqueness of the Epstein zeta values at each evaluation point. The
 alternative formulation via the full spectral zeta function (Section S.5)
 provides an independent verification: `ζ'(0)` is finite on any compact
 Riemannian manifold because `s = 0` is below the smallest pole at `s = 1/2`.
+
+---
+
+#### S.1b Applicability to Companion Papers
+
+Theorem S.1 is proved for linearized 5D gravity on M⁴ × S¹. Companion papers
+(Papers 4-6) use higher-dimensional compactification geometries:
+
+- Paper 4: M⁴ × CP² × S² × S¹ (11D framework; SM gauge group)
+- Paper 5: M⁴ × S¹ with Z₂ × Z₃ orbifold structure
+- Paper 6: dilaton stabilization via Casimir potential on M⁴ × S¹
+
+For these geometries, Theorem S.1 does not directly apply, because the KK
+spectrum differs from the S¹ case and the Epstein zeta function that appears
+will be of higher dimension with a different quadratic form.
+
+**What carries over universally:** Theorem K.1 (Universal Epstein Vanishing)
+applies to any positive-definite quadratic form in any number of variables.
+Provided the KK mode sums for the companion papers' compactification geometries
+reduce to L-dimensional Epstein zeta functions E_L(s; Q_L) evaluated at
+non-positive integers — a structure that follows from the same Seeley-DeWitt
+arguments as in the present paper, but must be established separately for each
+geometry — the vanishing E_L(-j; Q_L) = 0 is guaranteed by Theorem K.1
+regardless of the specific quadratic form Q_L.
+
+Each companion paper must therefore: (a) establish that its KK mode sums
+reduce to Epstein zeta evaluations at non-positive integers (the factorization
+property), and (b) invoke Theorem K.1 for the vanishing. Step (a) is
+geometry-specific; step (b) is universal. Theorem S.1 provides the template
+for how step (a) is carried out in the M⁴ × S¹ case.
 
 The mass-independence of the leading vertex coefficient — identified in
 Appendix U as the sole remaining conditional assumption — is established
@@ -483,11 +515,114 @@ would require a regularization that respects U(1) but does NOT produce
 the analytic continuation of `ζ(s`) at s = 0. We are not aware of such a
 scheme, but we cannot rule it out.
 
-### S.7.6 Summary
+### S.7.6 Two-Loop Zero-Mode Extraction: Reconciliation with Goroff-Sagnotti
+
+We carry out the calculation needed to reconcile the zeta-regularization result
+with dimensional regularization: evaluate the R³ coefficient of the two-loop
+effective action in the 5D KK theory using dimensional regularization for both
+the 4D loop momenta and the KK mode sums, and show that:
+
+(i) The n=0 mode alone reproduces the Goroff-Sagnotti coefficient 209/2880.
+(ii) The full KK sum (all modes) vanishes.
+(iii) The difference is absorbed by the contribution of the KK tower, establishing
+     that the 4D divergence is a zero-mode truncation artifact, not a feature
+     of the full 5D theory.
+
+**Setup.** Working in the background field method in the 5D de Donder gauge,
+the two-loop effective action for linearized gravity on M⁴ × S¹ takes the
+schematic form (from the three diagram topologies; see Appendix G):
+
+    Γ^{(2)}_{div} = (1/ε) × Σ_{n,m ∈ ℤ} C(n, m, R) × ∫ d⁴x √(-ḡ) R̄³
+
+where C(n, m, R) is the contribution of the KK mode pair (n, m, -(n+m)) to
+the R³ coefficient, expressed in dimensional regularization.
+
+**Zero-mode contribution.** Setting n = m = 0, the three internal lines are
+all massless (zero-mode gravitons). This is precisely the 4D Goroff-Sagnotti
+configuration. In dimensional regularization:
+
+    C(0, 0, R) = d₀^{GS} = 209/2880   (in units of G₄²/(16π²))
+
+This follows from the identity: the 4D limit of the 5D KK theory (retaining
+only the zero KK modes and integrating out all massive KK modes at tree level)
+reproduces the 4D Einstein-Hilbert action. At two loops with only the n=0
+mode, the computation is therefore precisely the Goroff-Sagnotti computation,
+and its dim-reg result is 209/2880. This establishes (i).
+
+**Non-zero mode contributions.** For modes with at least one of (n, m) ≠ 0,
+the loop integrand has massive propagators. In dimensional regularization, the
+UV-divergent part of the two-loop integral with three massive propagators of
+masses m₁², m₂², m₃² is:
+
+    I_div(m₁², m₂², m₃²) = (1/ε) × [d₀ + d₂(m₁² + m₂² + m₃²)/μ² + d₄(...) + ...]
+
+where d₀ = 209/2880 is the mass-independent (leading) coefficient — the same
+for all KK modes, since in the UV limit (loop momentum k >> masses), all
+modes contribute identically. The subleading coefficients d₂, d₄, ... depend
+on the masses m_n² = n²/R².
+
+**The full KK sum.** Summing over all KK modes:
+
+    Σ_{n,m} C(n, m, R) = Σ_{n,m} [d₀ + d₂(n² + m² + (n+m)²)/R² + ...]
+
+Leading term: Σ_{n,m} d₀ = d₀ × Σ_{n,m} 1 = d₀ × S₀²
+
+In dimensional regularization, as argued in §S.7.3 by Fubini's theorem and
+uniqueness of analytic continuation:
+
+    Σ_{n,m} 1  [dim reg] = [Σ_n 1]² [dim reg] = [1 + 2ζ(0)]² = 0² = 0
+
+Therefore: Σ_{n,m} d₀ = d₀ × 0 = 0.
+
+Subleading terms: Σ_{n,m} d₂ × Q(n,m)/R² = d₂/R² × E₂(-1; Q) = 0 by
+Theorem K.1.
+
+**Total:** Σ_{n,m} C(n, m, R) = 0. This establishes (ii).
+
+**Reconciliation with Goroff-Sagnotti.** The apparent contradiction is resolved:
+
+    Goroff-Sagnotti = C(0,0,R) = d₀ = 209/2880   ← n=0 truncation
+    Full 5D theory  = Σ_{n,m} C(n,m,R) = 0        ← full KK sum
+
+The 4D Goroff-Sagnotti coefficient is the zero-mode contribution to a full KK
+sum that vanishes. The non-zero-mode contributions collectively cancel it:
+
+    Σ_{(n,m) ≠ (0,0)} C(n,m,R) = -d₀ × 1 = -209/2880
+
+This "cancellation between the zero mode and the KK tower" is not a conspiracy
+— it is precisely the structure imposed by ζ(0) = -1/2: the zero-mode
+contributes +1 to S₀, the KK tower contributes 2ζ(0) = -1, and the total
+is S₀ = 1 + 2ζ(0) = 0. The Goroff-Sagnotti result is the "1" in this sum;
+the KK tower contribution is the "-1" that cancels it.
+
+**Caveat and status.** The computation above establishes the structure of
+the cancellation. The explicit verification of step (i) — that C(0,0,R)
+equals 209/2880 exactly, not just in the mass-independent limit — requires
+confirming that the n=0 sector of the 5D background field method
+with 5D gauge fixing reduces exactly to the Goroff-Sagnotti computation.
+This reduction follows from the fact that the zero mode of the 5D
+graviton in the 5D de Donder gauge is the 4D graviton in de Donder gauge
+(plus decoupled Kaluza-Klein scalar and vector), and the sunset diagram
+with three zero-mode gravitons in 5D is isomorphic to the Goroff-Sagnotti
+sunset in 4D. A complete verification would enumerate the tensor structures
+of the three-graviton vertex at n=0 and confirm they equal the 4D vertex;
+this is the explicit calculation identified in Appendix U §U.6.2 as a
+companion-paper task.
+
+**Revised claim (applicable to abstract and §S.7):** The total KK-summed R³
+coefficient vanishes in dimensional regularization, while the n=0 mode alone
+reproduces the Goroff-Sagnotti value 209/2880, establishing the 4D divergence
+as a zero-mode truncation artifact. The structural argument is laid out above.
+A complete tensor-level verification of the n=0 reduction is identified
+as the key open calculation.
+
+---
+
+### S.7.7 Summary
 
 | Term | Vanishing mechanism | Scheme-dependent? | Status |
 |------|--------------------|--------------------|--------|
-| j = 0 (leading) | `ζ(0`) = −1/2 → `S₀` = 0 | Yes (hard cutoff gives ∞) | Resolved by dim reg + U(1) symmetry |
+| j = 0 (leading) | `ζ(0`) = −1/2 → `S₀` = 0 | Yes (hard cutoff gives ∞) | Resolved by dim reg + U(1) symmetry; zero-mode structure shown in §S.7.6 |
 | j ≥ 1 odd (sunset) | L(−j, `χ₋₃`) = 0 | **No** (number-theoretic theorem) | **Established** |
 | j ≥ 2 even (sunset) | `ζ(−2j`) = 0 | **No** (number-theoretic theorem) | **Established** |
 | j ≥ 1 (figure-eight) | `ζ(−2j`) = 0 | **No** (number-theoretic theorem) | **Established** |
@@ -526,8 +661,14 @@ has blocked quantum gravity since the 1960s. The resolution mechanism is:
 5. **`S₀` = 0** kills the leading divergence at every order (the
    zeta-regularized mode count vanishes).
 
-These five facts, together, constitute a PROOF — not a conjecture — that the
-theory is perturbatively finite.
+These five facts, together, constitute a **conditional theorem**: the theory is
+perturbatively finite, conditional on the factorization of BPHZ-subtracted
+amplitudes into (4D part) × E_L(-j; Q_L) at L ≥ 3 loops (established by
+Theorem K.3 subject to Weinberg locality) and conditional on vertex
+mass-independence (established by explicit tensor argument for the sunset
+topology in Appendix U §U.3.6; not yet verified by a complete two-loop
+Feynman calculation). The path to an unconditional theorem is identified
+in Appendix U §U.7.4.
 
 **The result depends on the physical postulate that the e-circle is real.**
 The zeta regularization of the KK sum is physically justified by the reality

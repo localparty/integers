@@ -4,6 +4,29 @@
 
 ## C.1 The Geometric Principle: Flat Freezes, Curved Stabilizes
 
+**UV finiteness of the Casimir sector.** Before analyzing the spectral
+structure of each factor, we establish that all Casimir computations in
+this appendix are UV-finite. The S¹ sector is UV-finite by direct
+application of Theorem K.1 of Paper 1 (the Universal Epstein Vanishing
+theorem, Paper 1 Appendix K §K.6): every KK mode sum over the S¹
+spectrum is proportional to a Riemann zeta value `ζ(−2j)` at a trivial
+zero, so the regulated sum is identically zero at every loop order. The
+CP² and S² contributions are UV-finite by a different mechanism — the
+Epstein-Terras theorem (Terras 1980), which guarantees that the
+meromorphic continuation of the spectral zeta function `Z_X(s)` for a
+compact Riemannian manifold has its only pole at `s = L/2`, where `L` is
+the dimension of `X`. For `CP²` (`L = 4`) and `S²` (`L = 2`), the poles
+occur at `s = 2` and `s = 1` respectively — both strictly positive. The
+Casimir energy requires evaluating `Z_X(s)` at `s ≤ 0`, so the pole is
+never reached and the result is analytic (hence finite) at all physically
+relevant values. Crucially, however, the two sectors differ in their
+physical content: the S¹ sector evaluates to zero (the trivial zeros of
+the Riemann zeta function kill every power sum), while the CP² and S²
+sectors evaluate to the nonzero values tabulated in §C.1. It is these
+nonzero values that generate the stabilization potentials `V(r₂)` and
+`V(r₃)` discussed in §C.3. Both sectors are UV-finite, but only the S¹
+sector has a vanishing Casimir energy.
+
 The internal manifold `CP² × S² × S¹/Z₂` has three moduli: the
 radii `r₃`, `r₂`, and `R` of the three factors. Their fates under
 quantum corrections are determined by the spectral zeta functions

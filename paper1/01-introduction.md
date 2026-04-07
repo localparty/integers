@@ -159,12 +159,90 @@ geometric postulate and are consistent with all known experimental data:
   its physical reality is forced by the geometry (Section 4.1).
 
 - The spin-statistics theorem — the connection between a particle's spin and its
-  exchange statistics — is not a theorem requiring four axioms and a proof by
-  contradiction. It is a tautology: spin and statistics are both the winding number
-  of the particle's helix through the e-dimension. Integer winding gives bosons;
-  half-integer winding gives fermions; fractional winding in two-dimensional
-  configuration spaces gives anyons, which have been experimentally confirmed in
-  the fractional quantum Hall effect (Section 4.2).
+  exchange statistics — is not a theorem requiring proof by contradiction. It is
+  a geometric tautology: spin and statistics are both the winding number
+  of the particle's helix through the e-dimension. The derivation uses the same
+  Hilbert-space and rotation-group structure as the standard proof, with the
+  additional e-phase coupling postulate providing a geometric determination of
+  the representation χ(σ) = e^{i2πs} that the standard topological approach
+  leaves as a free parameter. Integer winding gives bosons; half-integer winding
+  gives fermions; fractional winding in two-dimensional configuration spaces
+  gives anyons, which have been experimentally confirmed in the fractional
+  quantum Hall effect (Section 4.2).
+
+**A note on the all-orders finiteness claim.** The all-orders result — that
+the KK mode sums vanish at every loop order — has three logically distinct
+parts. The Universal Epstein Vanishing theorem (Theorem K.1, Appendix K)
+establishes that any Epstein zeta function E_L(-j; Q) = 0 for j ≥ 1; this is
+a pure mathematical theorem and is fully proved. The BPHZ Factorization theorem
+(Theorem K.3) establishes, via joint holomorphicity of the Epstein zeta function
+in Schwinger parameters, that BPHZ-subtracted L-loop amplitudes preserve the
+Epstein zeta structure; this proof is complete for the class of diagrams where
+BPHZ counterterms are polynomial in the KK masses — as guaranteed by Weinberg's
+locality theorem for renormalizable sub-divergences. The factorization has been
+verified at L=1 (Appendix F) and L=2 (Appendix G) by explicit computation; at
+L ≥ 3 it relies on Theorem K.3 plus Weinberg locality, and has not been verified
+by an independent explicit three-loop calculation. All-orders perturbative
+finiteness is therefore established conditional on the scope of Theorem K.3; the
+independent explicit verification at three loops remains an identified open task
+(§K.5.2, Route C).
+
+**Table 1.1: Epistemic Status of the Eight Core Results**
+
+| Result | Hypotheses | Conclusion | Logical path | Falsification condition | Epistemic label |
+|--------|------------|------------|--------------|------------------------|-----------------|
+| **Quantum mechanics** (superposition, entanglement, uncertainty) | e-dimension exists; wavefunction = 5D shape; measurement = e-sampling | Standard QM phenomenology reproduced | Geometric reinterpretation; consistency | Experiment showing e-coordinate inaccessible to no physical process | Geometric interpretation (not independent derivation) |
+| **Electromagnetism** | 5D metric on M⁴ × S¹; KK reduction | 4D EM field equations from KK zero mode of metric | Kaluza-Klein theorem (1919, 1926) | KK reduction of the 5D metric failing to produce Maxwell's equations | Established (known KK result) |
+| **Gravity** | Same as electromagnetism | Newtonian gravity + GR in weak-field limit | KK reduction (Appendix D, Claim 1) | Geodesic equation failing to reproduce Newton's law | Established (known KK result) |
+| **Spin-statistics theorem** | Hilbert space; Wigner's theorem; π₁(SO(d)) = ℤ₂; e-phase coupling postulate | Integer winding → bosons; half-integer → fermions; χ(σ) = e^{i2πs} fixed | Topological argument in Appendix B; Noether identification | Finding a particle with integer spin and fermionic exchange statistics | Geometric derivation (same axioms as standard proof + e-phase coupling) |
+| **Perturbative UV finiteness** | Linearized 5D gravity on M⁴ × S¹; spectral zeta regularization; Theorem K.3 scope | E_L(-j;Q) = 0 for all j,L; KK mode sums finite at all loop orders | Theorems K.1, K.3, S.1; explicit L=1,2 | Finding nonzero R³ coefficient in dim-reg KK calculation | Conditional theorem (L≥3 factorization gap; no explicit two-loop calculation) |
+| **Hydrogen spectrum** | Coulomb potential from KK photon; standard QM | E_n = -13.6/n² eV spectrum | KK-reduced Coulomb Hamiltonian + Schrödinger equation | Spectrum disagreeing with observation | Established (standard QM result, reproduced in framework) |
+| **Black hole entropy** | Bekenstein-Hawking; KK reduction | S = A/4G_N from KK spectrum | KK counting of near-horizon modes (Appendix O) | BH entropy disagreeing with A/4G_N | Geometric consistency (not new result) |
+| **CPT theorem** | 5D Lorentz invariance of the KK action; PCT theorem in 5D QFT | CPT symmetry of 4D effective field theory | Standard PCT proof applied to 5D theory then reduced | CPT violation | Established (standard result, not new) |
+
+**Key:** "Established" = known result reproduced within framework. "Geometric interpretation" = existing result illuminated geometrically. "Geometric derivation" = same logical ingredients as standard proof, with additional geometric unification. "Conditional theorem" = theorem proved modulo a stated open computation.
+
+**Single-parameter orbifold sector.** The Z₂ orbifold extension has one free
+continuous parameter: the brane separation R. This parameter is fixed by
+matching the Casimir energy to the observed dark energy density, giving
+R ≈ 12 μm. With R fixed, the following are parameter-free predictions:
+
+1. Gravitational deviations at 12–21 μm (KK graviton tower; testable by
+   Eöt-Wash / Stanford torsion pendulum experiments)
+2. Dark photon kinetic mixing ε ~ 5 × 10⁻⁴ (from α_EM × π²/6 × exp(-π);
+   testable by LDMX and LHCb Run 3)
+3. Neutrino masses at meV scale, normal ordering (from bulk seesaw with R ~ 12
+   μm; testable by JUNO within 6 years)
+4. H₀ = 68.7–69.5 km/s/Mpc (from hidden-brane dark radiation; distinctive
+   from local H₀ measurements)
+5. N_eff = 3.31–3.39 (testable by CMB-S4; currently in 3-4σ tension with ACT
+   DR6 N_eff = 2.86 ± 0.13 — the framework's primary open issue)
+6. Casimir effect magnitude from R (standard calculation, reproduced)
+7. Ω_DM/Ω_b = 1/ξ² (from bulk leptogenesis entropy asymmetry; companion
+   Paper 2)
+
+These are not 8 independent verifications of the model — they are 7 predictions
+from a single fixed parameter. The predictive content is: fix R from dark energy;
+everything else follows. This is a substantive, falsifiable scientific claim.
+
+**Note on the e-circle radius.** All quantitative predictions in the orbifold
+sector depend on the e-circle circumference L = 2πR ≈ 75 μm (equivalently,
+R ≈ 12 μm). In the current paper, R is treated as a measured parameter: it is
+fixed by requiring the Casimir energy on the Z₂ orbifold to match the observed
+dark energy density. This is one observable fixing one parameter.
+
+The dynamical mechanism that stabilizes R against rolling — what prevents the
+dilaton from evolving and changing the fine structure constant and Newton's
+constant with time — is not addressed in this paper. It is deferred to Paper 6,
+which develops the dilaton potential and shows it is frozen at the Casimir
+minimum to precision ε ~ 10⁻⁵². Until Paper 6 is available, R should be
+regarded as a measured input, not a derived prediction.
+
+Readers evaluating the paper's predictions should note: if R differs from
+12 μm, all seven quantitative predictions scale accordingly (gravitational
+deviation scale ∝ R, dark photon mixing ∝ exp(-πR/R₀), neutrino masses ∝ 1/R²).
+The predictions are not independent of R; they are a family parameterized by R,
+and R is fixed by the single dark energy matching condition.
 
 **Proposed as a research program** — a specific, falsifiable approach to quantum
 gravity that emerges naturally from the framework:
@@ -174,18 +252,25 @@ gravity that emerges naturally from the framework:
   each with specific mathematical conditions that would confirm or falsify them
   (Section 5).
 
-**Speculative extensions** — flagged explicitly as such:
+**Speculative extensions** — flagged explicitly as such (six conjectured results):
 
-- The ER=EPR conjecture (Maldacena-Susskind 2013) has a natural realization in
-  this framework: the Einstein-Rosen bridge is the e-space tube connecting
-  entangled particles.
+- The dark energy equation of state (thawing dilaton; Paper 6).
+- The fine structure constant α ≈ 1/137 (from the configuration torus area).
+- α stability.
+- Three fermion generations (from χ(CP²) = 3 in Paper 4).
+- The fermion mass hierarchy (warp factor k ≈ 2; this value also enters
+  the leptogenesis analysis as a direct input to the bulk neutrino
+  localization cᵥ = 0.634 and hence to Ω_DM/Ω_b — see Appendix W §W.5
+  and Paper 6 §6.5).
+- Normal neutrino mass ordering (from Z₃ geometry; testable by JUNO).
+- The strong CP problem: the topological resolution is classified as a
+  conjecture pending three open verifications (see Appendix X §X.3.3).
 
-- Spacetime geometry may emerge from the e-entanglement structure, making
-  Einstein's equations the macroscopic description of e-space geometry.
-
-- Anyon statistics in reduced-dimensional systems, dark matter as e-orthogonal
-  matter, and the three generations of fundamental particles may each have
-  geometric explanations in the e-dimension framework.
+The ER=EPR conjecture (Maldacena-Susskind 2013) has a natural realization in
+this framework: the Einstein-Rosen bridge is the e-space tube connecting
+entangled particles. Anyon statistics in reduced-dimensional systems and
+the three generations of fundamental particles may each have geometric
+explanations in the e-dimension framework.
 
 ---
 

@@ -66,6 +66,24 @@ e-imprints in the radiation transition from being insufficient to
 reconstruct the horizon e-configuration (outside the island) to
 being sufficient (inside the island).
 
+The mapping `A(X)/4G_N ↔ (number of Planck pixels on X)` and
+`S_bulk ↔ (4D thermal component)` is a qualitative identification
+at the level of counting degrees of freedom. The derivation of the
+island formula by Penington (2020) and Almheiri et al. (2019) uses
+a gravitational path integral with replica wormhole saddles in JT
+gravity; the saddle-point transition at the Page time is a dynamical
+result, not a kinematic one. The e-framework does not reproduce the
+replica wormhole calculation. What we establish is consistency: the
+Page curve that follows (conditionally) from the e-framework
+matches the Page curve derived from the island formula at leading
+order. Subleading corrections of order `e^{−S_BH}` from replica
+wormhole saddles are not captured by the e-framework's
+random-unitary model. Whether the replica wormhole structure
+emerges from the e-framework's gravitational path integral —
+specifically, whether the e-sector generates topological
+contributions to the gravitational path integral that produce
+wormhole saddles — is an open question.
+
 ### 10.4 Why the e-Framework Is More General
 
 The island formula was derived in AdS/CFT using the replica trick
@@ -81,6 +99,38 @@ only on:
 
 No holographic duality, no AdS boundary, no replica trick. The
 information encoding is geometric, and geometry exists everywhere.
+
+### 10.5 Scope and Limitations of the Island Identification
+
+The connection between the e-framework and the island formula is
+at present a physical picture, not a mathematical derivation. We
+summarize what is and is not established:
+
+**Established:** (1) The e-framework produces a Page curve
+(conditional on the fast-scrambler assumption, Theorem 7.1) that
+agrees with the island formula result at the level of the Page time
+and the leading entropy formula `S_{rad} = min[N_{rad}, N_{BH}]`.
+(2) The physical interpretation of the "island" as the set of
+Planck pixels whose e-imprints have been transferred to radiation
+is internally consistent. (3) The boundary `A(X)/4G_N` naturally
+maps to a pixel count in the e-framework.
+
+**Not established:** (1) The extremization condition `δS_gen/δX = 0`
+from the island formula is not rederived in the e-framework;
+it is argued that the e-information boundary provides a natural
+geometric locus, but the precise equality with the quantum
+extremal surface condition is not shown. (2) Subleading corrections
+of order `e^{−S_BH}` from replica wormholes are not computed.
+(3) The applicability to non-AdS spacetimes is asserted (Section
+10.4) based on the geometric character of the e-framework, but the
+island formula has only been derived in holographic settings; the
+e-framework's extension is conjectural.
+
+The e-framework provides a non-holographic geometric mechanism
+whose coarse-grained result coincides with the island formula.
+Whether this coincidence reflects a deeper identity — the island
+formula as the holographic dual of the e-mechanism — is an open
+problem.
 
 ---
 

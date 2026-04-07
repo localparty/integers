@@ -53,24 +53,45 @@ reduces to the minimal prediction (`N_eff = 3.09`, `H₀ ≈ 67.7`,
 **If CMB-S4 measures `N_eff = 3.3–3.5`:** The mirror sector is
 confirmed. Every other prediction in this table follows.
 
+**Why N_eff cannot be dialled away.** The hidden sector coupling
+cannot be adjusted to reduce `N_eff` toward 3.046 without destroying
+the dark matter explanation. The two predictions are structurally
+linked through `ξ`:
+
+    N_eff ≈ 3.046 + 0.49 × 6.14 × ξ⁴   and   Ω_DM/Ω_b ≈ 1/ξ²
+
+Any value of `ξ` consistent with `Ω_DM/Ω_b ≈ 5` (giving `ξ ≈ 0.43–0.47`)
+predicts `N_eff ≈ 3.3–3.4`. The only way to obtain `N_eff ≈ 3.046` with
+this framework is `ξ → 0` (no mirror sector), which then gives
+`Ω_DM/Ω_b → ∞` — inconsistent with observation.
+
+The framework therefore makes the following falsifiable joint
+prediction: IF a hidden mirror sector explains dark matter via the
+`1/ξ²` law, THEN `N_eff` must be elevated above the SM value at precisely
+the level detectable by CMB-S4. If CMB-S4 finds `N_eff = 3.046 ± 0.03`,
+the mirror sector explanation of dark matter is excluded at `> 9σ`.
+
 ---
 
 ## I.3 DESI DR3: The Expansion History Test
 
 **Target:** `σ(H(z)) ~ 0.5%` at each redshift bin
 **Expected:** 2027
-**⚠ Revised:** With `w = −1` (frozen dilaton; Paper 6 §2), the H(z)
-peak from evolving `w` is absent. The remaining H(z) deviations from
-`ΛCDM` come from elevated `N_eff` and lower `Ω_m`.
+**Framework prediction:** `H(z) × r_d` elevated by 3–3.4% at `z = 0.5–0.9`;
+`w₀ = −1`, `w_a = 0` (frozen dilaton; Paper 6 §2; Appendix F).
 
-At DESI DR3 precision:
+With `w = −1`, the `H(z)` deviations from `ΛCDM` come from elevated
+`N_eff` and lower `Ω_m` (not from evolving `w`). At DESI DR3 precision:
 - The `H₀` shift (69.5 vs 67.4) is detectable via the BAO scale
+- The 3.2–3.4% excess in `H(z) × r_d` at `z = 0.51–0.93` is a
+  **`6–7σ` signal** in individual DESI DR3 bins (see Appendix B Table B4)
 - The `r_d` shift (146.2 vs 147.1 Mpc) is distinguishable at **`1.8σ`**
-- If DESI confirms `w ≠ −1`, non-perturbative modifications are required
 
-DESI DR3 probes `H(z)`, `w(z)`, and `D_A(z)`. The framework's `w = −1`
-prediction, combined with elevated `N_eff` and lower `Ω_m`, is
-and cannot be produced by any `ΛCDM` model.
+If DESI DR3 confirms `w ≠ −1` at `> 5σ`, non-perturbative modifications
+to the dilaton potential are required (a significant revision). The
+framework's `w = −1` prediction, combined with elevated `N_eff` and lower
+`Ω_m`, produces a distinctive `H(z)` signature that cannot be produced
+by any `ΛCDM` model.
 
 ---
 
@@ -99,15 +120,40 @@ is falsified.
 
 **Target:** Mass ordering at `> 3σ`
 **Expected:** 2028–2031
-**Framework prediction:** Normal ordering (`m₃ > m₂ > m₁`)
+**Framework prediction:** Normal ordering (`m₃ > m₂ > m₁`), with
+`Σm_ν = 0.06` eV and `m₁ → 0` (normal hierarchy minimum)
 
-From Paper 1, Appendix Z: the `Z₃` geometry of the orbifold predicts
-normal neutrino mass ordering. JUNO is currently taking data (since
-August 2025) and published first oscillation results in November 2025.
-The ordering determination is expected within the 6-year run.
+**Source of the prediction.** From Paper 1, Appendix Z: the `Z₃`
+geometry of the orbifold imposes a cyclic permutation symmetry on the
+three generations of bulk right-handed neutrinos. The `Z₃` action on
+their wavefunctions (phases `ω, ω², 1` where `ω = e^{2πi/3}`) generates
+a neutrino mass matrix whose eigenvalue ordering in the 4D effective
+theory is `m₁ < m₂ < m₃` (normal ordering). Inverted ordering requires
+either breaking `Z₃` or introducing a hierarchy in the bulk masses —
+neither of which is present in the minimal orbifold. The normal
+ordering prediction is robust as long as the `Z₃` symmetry is exact
+(forced by the orbifold geometry, not an assumption).
 
-**If JUNO finds normal ordering:** Consistent. Combined with the
-other predictions, this strengthens the case significantly.
+JUNO is currently taking data (since August 2025) and published first
+oscillation results in November 2025. The ordering determination is
+expected within the 6-year run.
+
+**The three-experiment neutrino test.** JUNO alone tests the ordering
+prediction. The combination of three experiments provides a highly
+specific corroboration:
+
+1. **JUNO (ordering):** Normal ordering confirmed if `m₃ > m₂ > m₁`.
+2. **KATRIN (lightest mass):** `m₁ → 0` (below KATRIN's `0.2 eV` threshold,
+   consistent with framework; KATRIN non-detection is expected).
+3. **CMB-S4 (mass sum):** `Σm_ν ≈ 0.06 eV` at sub-meV precision. The
+   framework predicts the normal hierarchy minimum, not a higher
+   `Σm_ν ≈ 0.10–0.12 eV`.
+
+The joint signature — normal ordering + `m₁ → 0` + `Σm_ν ≈ 0.06 eV` —
+is unique to this framework among viable BSM scenarios.
+
+**If JUNO finds normal ordering:** Consistent. Combined with
+KATRIN and CMB-S4, this provides strong corroboration.
 
 **If JUNO finds inverted ordering:** The simple `Z₃` bulk seesaw
 is falsified.

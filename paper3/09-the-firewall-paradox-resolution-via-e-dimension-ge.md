@@ -236,6 +236,21 @@ This is the key result. It means: **no 4D measurement can
 distinguish states that differ only in their e-charge Q_e.**
 The e-charge is invisible to 4D observers.
 
+**Mass range validity.** The derivation of Property 2
+(`[Q̂_e, Ô_{4D}] = 0`) rests on 4D observables being KK zero-modes.
+For black holes with `M >> M_Pl`, the Hawking temperature
+`T_H = ℏc³/(8πGMk_B)` satisfies `T_H << m₁c²/k_B` (the lightest
+KK mass, `m₁ = ℏc/R₀`). In this regime, KK modes are not thermally
+produced (`Γ ~ e^{−m₁/T_H} → 0`) and the 4D observable algebra
+is effectively restricted to the zero-mode sector. The argument
+holds unconditionally for `M >> M_Pl`. For `M ~ M_Pl` (the
+near-Planck regime), `T_H ~ m₁/k_B` and the KK sector becomes
+dynamically relevant — but at this scale the semiclassical
+approximation itself breaks down, making the AMPS argument
+inapplicable. We therefore state: Theorem 9.1 holds for all
+black holes in the semiclassical regime `M >> M_Pl`, which is the
+only regime where the AMPS argument is formulated.
+
 **Property 3: Superselection structure — sectors decouple.**
 
 From Properties 1 and 2, Q̂_e is a superselection operator:
@@ -546,8 +561,124 @@ in a dimension to which their 4D detectors are not sensitive. The
 equivalence principle is preserved in the 4D sector, and the
 e-sector provides no physical obstruction.
 
+**KK mass renormalization near the horizon.** In the curved 4D
+background, the KK masses receive curvature corrections from the
+coupling of the KK fields to the Ricci scalar:
+`m_n² → n²/R₀² + ξR_{4D}`, where `R_{4D}` is the 4D Ricci scalar
+and ξ is the non-minimal coupling. Near the horizon in IEF
+coordinates, `R_{4D}` is finite (for a smooth Schwarzschild horizon
+it vanishes in the vacuum). For the Unruh vacuum near the horizon,
+`⟨T_μν⟩ = 0` (the renormalized stress tensor vanishes for the
+Hadamard state), so the backreaction curvature from quantum fields
+is negligible. The KK mass renormalization near the horizon is of
+order `R_{4D}/m₁² ~ (M_Pl/M)⁴ × (l_P/R₀)²` — suppressed by four
+powers of `M_Pl/M` and by `(l_P/R₀)² ~ 10^{-60}` for `R₀ ~ 12 μm`.
+This is negligible for any astrophysical black hole. No observable
+energy density is created near the horizon by KK mass renormalization.
+See Paper 1, Appendix O for the detailed computation of curvature
+corrections to KK masses in the Schwarzschild background.
+
+**The 5D equivalence principle.** The equivalence principle in the
+5D framework states: the local 5D geometry at any point p is
+indistinguishable from flat 5D spacetime `M^{4,1} = M⁴ × S¹_{flat}`
+(locally) — a freely-falling observer in a region small compared to
+the curvature scale sees flat 5D physics. The e-imprint `δφ` on the
+horizon is a change in the fiber connection — a global property of
+the bundle over the horizon surface `S² × S¹`, not a local geometric
+property at any single point. A freely-falling observer passing
+through one fiber does not "see" the connection of adjacent fibers,
+just as a particle traveling along a worldline does not detect a
+non-trivial holonomy of a gauge field unless it travels a closed
+loop. The e-imprint `δφ` is detectable only through non-local
+operations (comparing e-coordinates of spatially separated points
+on the horizon, or accessing the global e-charge `Q_e`) — neither
+of which is available to a local infalling observer. The 5D
+equivalence principle is preserved: locally, the horizon looks
+like a smooth 5D Minkowski geometry, with the e-imprint invisible
+to any local measurement. This is analogous to the Berry phase
+in quantum mechanics: a globally non-trivial gauge connection
+produces no local force or energy density.
+
 **No firewall. No drama. Unitarity preserved. All three AMPS
 postulates hold simultaneously.**
+
+### 9.5 Hadamard Condition for the Infalling Observer
+
+For the infalling observer to encounter a smooth horizon (AMPS
+Postulate 2 — "no drama"), the 4D quantum state near the horizon
+must satisfy the Hadamard condition: the 2-point function of the
+quantum field must have the short-distance behavior of the Minkowski
+vacuum. We demonstrate this for the 4D marginal state in the 5D
+framework.
+
+**Setup.** The full 5D state is `ρ_{5D}` living on
+`H_{5D} = H_{4D} ⊗ H_e`. The 4D marginal state seen by the
+infalling observer is `ρ_{4D} = Tr_e[ρ_{5D}]`. We must show
+`ρ_{4D}` satisfies the Hadamard condition near the horizon.
+
+**Step 1: The 5D state in ingoing coordinates.** In ingoing
+Eddington-Finkelstein (IEF) coordinates `(v, r, θ, ϕ_S, φ)` — where
+`v = t + r*` is the advanced time and φ is the e-coordinate — the
+near-horizon 5D metric is regular (no coordinate singularity at
+`r = r_s`). The 5D vacuum state `|0⟩_{5D}` defined in IEF
+coordinates is the Unruh state — the physical vacuum appropriate
+for the infalling observer. In IEF coordinates the metric is:
+
+    ds² = −f(r)dv² + 2dvdr − r²dΩ² + R₀²dφ²
+
+This is regular at the horizon with no divergence.
+
+**Step 2: Tracing over e in the Unruh state.** The Unruh state
+`|0⟩_{5D}` in the product spacetime `M⁴ × S¹` factorizes as
+`|0⟩_{5D} = |0⟩_{4D,Unruh} ⊗ |0⟩_e`, because the 5D metric is a
+direct product and the 5D vacuum mode functions factorize into
+4D mode functions times e-circle mode functions (the product
+structure established in Appendix B). The e-sector vacuum is
+the standard S¹ ground state.
+
+The marginal 4D state is:
+
+    ρ_{4D} = Tr_e[|0⟩_{5D}⟨0|] = Tr_e[|0⟩_{4D,Unruh}⟨0| ⊗ |0⟩_e⟨0|]
+            = |0⟩_{4D,Unruh}⟨0| × ⟨0|0⟩_e = |0⟩_{4D,Unruh}⟨0|
+
+The 4D marginal state is the 4D Unruh vacuum.
+
+**Step 3: Hadamard condition.** The 4D Unruh vacuum `|0⟩_{4D,Unruh}`
+is a Hadamard state on the Schwarzschild spacetime. This is a
+standard result in quantum field theory on curved spacetime
+(Fredenhagen & Haag 1990; Kay & Wald 1991): the Unruh state
+defined by requiring regularity of mode functions on the past
+horizon satisfies the Hadamard condition near the future horizon
+in ingoing coordinates. The 2-point function
+`G(x,x') = ⟨0_{Unruh}|Φ(x)Φ(x')|0_{Unruh}⟩` has the Minkowski
+short-distance behavior for `x, x'` near the horizon.
+
+**Conclusion.** The 4D marginal state `ρ_{4D} = Tr_e[ρ_{5D}]` is
+the 4D Unruh vacuum, which satisfies the Hadamard condition. The
+infalling observer — whose detectors respond to 4D field observables
+— sees the vacuum near the horizon. There is no firewall. The
+e-sector's state `|0⟩_e` contributes no energy density when traced
+over.
+
+**What the e-imprints do to this calculation.** After the black hole
+has absorbed infalling matter, the full 5D state is not the product
+vacuum but an e-imprinted state:
+
+    ρ_{5D}^{imprinted} = |Ψ_Hawking⟩⟨Ψ_Hawking|
+
+The 4D marginal state is still `ρ_{4D} = Tr_e[ρ_{5D}^{imprinted}]`
+`= Σ_{n,φ} |α_{n,φ}|² |n⟩⟨n|` = thermal state (Section 6.1). The
+thermal state near the horizon, in ingoing coordinates, is again the
+Unruh state — the same Hadamard state as before. The e-imprints
+modify the e-sector of `ρ_{5D}` but not the 4D marginal state, which
+remains thermal. Since the thermal 4D state satisfies the Hadamard
+condition (it is the Unruh vacuum), the infalling observer encounters
+no drama. The argument is consistent.
+
+**Caveats.** The factorization `ρ_{5D} = ρ_{4D} ⊗ ρ_e` used above
+is exact only in the product metric (Appendix B). Near the Planck
+scale (`M ~ M_Pl`) this approximation breaks down; but as noted, the
+semiclassical analysis is valid only for `M >> M_Pl` anyway.
 
 ---
 

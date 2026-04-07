@@ -2,8 +2,9 @@
 
 ## 7.1 Standard BBN on the Visible Brane
 
-At `T ~ 1 MeV` (`t ~ 1 s`), the dilaton is frozen at `φ_min` by
-Hubble friction. The e-circle has settled to its equilibrium size.
+At `T ~ 1 MeV` (`t ~ 1 s`), the dilaton is frozen at its
+post-inflationary value R₀ by Hubble friction. The e-circle is at its
+initial value set by the conditions of compactification.
 Standard Big Bang Nucleosynthesis proceeds on the visible brane
 with:
 
@@ -61,3 +62,16 @@ scenario (Paper 2). This is:
 - In 3–4σ tension with ACT DR6 (2.86 ± 0.13), though ACT is itself
   1.9σ below the SM
 - **Definitively testable by CMB-S4** (`σ(N_eff) ≈ 0.03`) at 9σ
+
+Mirror BBN proceeds at T_mirror ≈ ξ × T_visible ≈ 0.43–0.47 MeV
+(for ξ = 0.49), which is the epoch at which N_eff^{BBN} ≈ 3.55–3.65
+(Paper 2). The mirror helium yield Y_p^{mirror} is set by this
+BBN-epoch value. The lower value N_eff^{recomb} = 3.31–3.39 quoted
+in Paper 2's CMB predictions reflects mirror e± annihilation occurring
+after mirror BBN, which reheats the mirror photon sector relative to
+neutrinos — the same process that reduces N_eff between BBN and
+recombination in the visible sector. The distinction between
+N_eff^{BBN} and N_eff^{recomb} is therefore physically meaningful
+and must be tracked separately when comparing this framework against
+light-element abundance measurements versus CMB angular power spectrum
+constraints.

@@ -45,6 +45,16 @@ test is two loops.
 
 ## G.2 Two-Loop Diagrams in the KK Theory
 
+**Note on KK tower completeness.** The loop calculations in this appendix
+(and in Appendix F at one loop) sum over the **full KK tower** — all KK
+modes n ∈ ℤ are retained in the internal loop sums. No truncation of the
+tower is performed. This is the essential distinction from classical KK
+truncation arguments (which retain only the zero mode for low-energy
+effective field theory): here the quantum loops include all massive KK
+states, and it is precisely this completeness that allows the Epstein zeta
+regularization to assign finite values via analytic continuation. A
+truncated sum would produce a different (and incorrect) result.
+
 ### G.2.1 Diagram Topologies
 
 At two loops, the graviton effective action receives contributions from
@@ -369,6 +379,17 @@ factorization. This has two consequences:
 2. **The mechanism extends to all loop orders** without requiring the
    identification of special lattice arithmetic at each `L`. The `L = 2`
    factorization `E₂ = 6ζL` was illuminating but not necessary.
+3. **The complementary zeros argument is an L=2 feature.** The observation
+   that the zeros of ζ(s) and L(s,χ₋₃) "complement" each other to cover
+   all negative integers is specific to the L=2 Eisenstein lattice sum
+   E₂(s; Q₀) = 6ζ(s)L(s,χ₋₃). For L=3 and above, the Epstein zeta
+   function does not in general factor into a product of Riemann zeta and
+   Dirichlet L-functions, so the complementary zeros argument does not
+   generalize directly. The correct general mechanism is Theorem K.1:
+   E_L(-j; Q_L) = 0 for all j ≥ 1 follows from the pole structure of the
+   completed Epstein zeta function, which is valid for any positive-definite
+   Q and any L. The L=2 case is a special instance of this universal result,
+   illuminated by the factorization into familiar L-functions.
 
 ---
 
@@ -535,6 +556,58 @@ If both answers are affirmative, the 5D e-dimension framework provides what
 has been sought since the 1930s: a consistent, finite quantum theory of
 gravity, unified with electromagnetism and quantum mechanics in a single
 geometric structure.
+
+---
+
+## G.9b Distinguishing Predictions of the KK Finiteness Mechanism
+
+All proposed UV completions of gravity share the prediction that graviton-
+graviton scattering is finite at trans-Planckian energies. The mechanisms
+differ, however, and produce distinct signatures at energies accessible in
+principle:
+
+**1. Running of Newton's constant.** In the KK theory, the renormalized
+Newton's constant G₄ receives corrections from KK mode loops. The one-loop
+correction is:
+
+    G₄(μ) = G₄(0) × [1 + (G₄/R²) × F(μR) + O(G₄²)]
+
+where F(μR) is a calculable function of the ratio of the energy scale μ to
+the KK scale 1/R. For μR << 1 (energies below the KK threshold), F is
+exponentially suppressed and G₄ is nearly constant. For μR >> 1 (energies
+above the KK threshold), G₄ runs logarithmically, but the KK finiteness
+ensures no Landau pole. The rate of running above 1/R differs from:
+- N=8 SUGRA (where the running is suppressed by SUSY non-renormalization
+  theorems to higher loop order before the Landau pole question arises)
+- String theory (where G₄ runs to the string scale via dilaton mixing)
+- Asymptotic safety (where G₄ runs to a UV fixed point with a specific
+  critical exponent)
+
+The distinctive feature of the KK mechanism: G₄ reaches a constant at
+the KK threshold scale 1/R ≈ 1/(12 μm) ~ 0.016 eV, not the Planck scale.
+This is an extraordinarily low KK threshold, making the KK finiteness
+mechanism uniquely testable by short-range gravity experiments (Adelberger,
+Long, Kapitulnik groups) rather than requiring Planck-scale energies.
+
+**2. KK graviton tower.** Unlike N=8 SUGRA or string theory, the KK
+mechanism predicts a tower of massive spin-2 states with masses m_n = n/R.
+The first excited state (n=1) has mass m₁ ~ 0.016 eV, corresponding to a
+Compton wavelength ~ 12 μm. This is a unique prediction with no analogue
+in other UV-complete proposals: neither SUGRA nor string theory (in their
+standard formulations) predicts a Newtonian gravity deviation at precisely
+12 μm. The upcoming Stanford torsion-pendulum (ATLAS) experiment and the
+Eöt-Wash group's current program are the primary tests.
+
+**3. Absence of string resonances.** String theory predicts Regge resonances
+in graviton scattering at the string scale M_s. The KK theory predicts no
+such resonances — only Kaluza-Klein excitations at n/R. If future experiments
+find Regge resonances without KK tower signatures, string theory is favored;
+if KK signatures appear without Regge resonances, the KK mechanism is favored.
+
+**4. N_eff prediction.** The e-circle predicts N_eff = 3.31-3.39 (from bulk
+field contributions; see main text §6). This is distinct from N=8 SUGRA
+(which makes no specific cosmological N_eff prediction without additional
+structure) and provides a near-term discriminant via CMB-S4.
 
 ---
 

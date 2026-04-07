@@ -115,6 +115,27 @@ These are the only topologically stable configurations because:
    conserved — they can only change by integer jumps, which require discontinuous
    (high-energy) processes.
 
+**Why only integers and half-integers?** A first guess might be that the
+answer comes from the e-circle itself: since the e-circle is periodic, winding
+numbers are integers. But this is not the source of the half-integer options.
+The e-circle (S¹) has π₁(S¹) = ℤ, which allows any integer winding — it does
+not, by itself, produce the half-integer alternative.
+
+The half-integer winding numbers arise from the rotation group of physical
+space, not from the e-circle. In d ≥ 3 spatial dimensions, the rotation group
+SO(d) has fundamental group π₁(SO(d)) = ℤ₂. This means a 4π rotation (720°)
+is contractible to the identity, while a 2π rotation (360°) is not. For the
+e-phase to be consistent with this topology, the phase shift over a 4π rotation
+must be a multiple of 2π:
+
+    4πs = 2πk   for some k ∈ ℤ   →   s = k/2 ∈ ½ℤ
+
+The e-circle provides the phase variable; the rotation group's π₁ = ℤ₂
+provides the constraint that forces s into half-integers. Formally: the
+allowed winding numbers are the eigenvalues of the e-momentum operator p̂_φ
+restricted to representations of Spin(d), the universal cover of SO(d) —
+and these are precisely the half-integers. The full proof is in Appendix B.1.
+
 **This establishes a fundamental dichotomy from topology alone:**
 `Integer winding ↔ integer spin ↔ bosons`.
 `Half-integer winding ↔ half-integer spin ↔ fermions`.
@@ -261,23 +282,50 @@ spin-statistics theorem is not a theorem, it is a definition.
 
 ---
 
-## 4.2.7 Comparison with the Standard Proof
+## 4.2.7 Comparison with the Standard Proof [REVISED]
 
-| Property | Standard proof (Pauli 1940) | 5D geometric derivation |
-|----------|----------------------------|------------------------|
-| **Method** | Proof by contradiction | Direct geometric construction |
-| **Axioms required** | 4 (Lorentz, locality, positive energy, microcausality) | 1 (e-dimension is a circle) |
-| **What it shows** | Wrong statistics leads to contradiction | Spin IS statistics (same winding number) |
-| **Why the connection exists** | Not explained — forced by consistency | Explained — same topological quantity |
-| **Feynman's "freshman level" proof** | Does not exist | This is it |
-| **Pauli exclusion** | Separate postulate | Immediate geometric corollary |
-| **Intuitive picture** | None | Helix winding number |
+| Property | Standard proof (Pauli 1940 / Lüders-Zumino) | 5D geometric derivation |
+|----------|---------------------------------------------|------------------------|
+| **Method** | Proof by contradiction in QFT | Direct geometric construction |
+| **Shared foundations** | Hilbert space; Wigner's theorem; π₁(SO(d)) = ℤ₂ | Same (not derived from 5D postulate) |
+| **Additional input** | Lorentz invariance; locality; positive energy; microcausality | e-phase coupling postulate (Step 3) |
+| **What it establishes** | Wrong statistics leads to contradiction; correct assignment is forced | Spin and statistics are both the winding number |
+| **Why the connection exists** | Not explained — consistency is the argument | Explained — same topological quantity, identified by the Noether theorem |
+| **Free parameter fixed?** | Yes (by the contradiction argument) | Yes (by the Noether identification χ(σ) = e^{i2πs}) |
+| **Feynman's "freshman level"** | Does not exist | Geometric picture (not fewer axioms) |
+
+**The corrected characterization:** Both the standard proof and the 5D
+derivation rely on the Hilbert space formalism of quantum mechanics and on the
+topology of the rotation group SO(d) — specifically π₁(SO(d)) = ℤ₂ for d ≥ 3.
+Neither derives these facts; both assume them.
+
+The distinctive contribution of the 5D derivation is not that it requires fewer
+axioms. It is that it provides a positive geometric account of *why* spin and
+statistics are linked, which the standard proof cannot supply. The standard
+proof shows that the wrong assignment is contradictory. The 5D derivation shows
+that spin and statistics are both the same quantity — the winding number of the
+particle's e-helix — making their connection not a theorem requiring
+contradiction, but a tautology visible from the geometry.
+
+Specifically: in the Leinaas-Myrheim (1977) topological formulation, the
+representation χ of π₁(C₂(ℝᵈ)) that assigns the exchange phase is a free
+parameter. It is the 5D framework, through the Noether identification of spin
+angular momentum with the e-momentum operator (Appendix B.3), that fixes
+χ(σ) = e^{i2πs}. This is genuine new content relative to the standard
+topological approach — not fewer axioms, but a geometric determination of a
+previously underdetermined parameter.
+
+Readers comparing the axiom count of the two approaches are cautioned that
+the relevant comparison is not the number of statements assumed, but the
+illumination provided: the standard proof closes a door (wrong statistics is
+impossible); the 5D derivation opens a window (here is why the connection is
+necessary from geometry).
 
 The 5D derivation does not replace the standard proof — the standard proof remains
-valid and complete within its framework. What the 5D derivation provides is the
-geometric reason *why* the connection holds, which the standard proof explicitly
-does not provide. These are complementary: one establishes the result rigorously
-within QFT; the other explains it geometrically from a deeper principle.
+valid and complete within its framework. These are complementary: one establishes
+the result rigorously within QFT; the other explains it geometrically and fixes
+the free representation parameter left underdetermined by the standard topological
+approach.
 
 ---
 

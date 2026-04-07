@@ -17,13 +17,26 @@ quantization, and identified the one remaining free parameter.
 superpotential on CP² × S² × S¹/Z₂ gives F-flat conditions whose
 solution is the flux ratio n₂/n₁ = −17/9 (§3.4). The smallest
 coprime integers are n₁ = 9, n₂ = −17. This is the central result:
-gauge coupling unification is not a coincidence or a fine-tuning
-but a consequence of integer-quantized G₄ flux on the specific
-manifold. The 17/9 arises from the interplay of the Kähler
+gauge coupling unification, once required by the gauge embedding
+of Paper 4, is governed by integer-quantized G₄ flux rather than
+a continuous moduli tuning. The GUT condition ρ = √3/2 (from
+Paper 4) and F-flatness together force n₂/n₁ = −17/9. Flux
+quantization transforms a continuous condition into a Diophantine
+one: the moduli ratio is rational because the flux integers are
+integers. The 17/9 arises from the interplay of the Kähler
 structure of CP² (weight −3), the Kähler structure of S² (weight −2),
 the torsion of the G₂ structure (coefficients 6 and 2 from the
 Ricci scalars), and the group-theoretic unification condition
 ρ = √3/2. None of these inputs can be continuously adjusted.
+
+*Note on α₁.* The flux quantization establishes α₃ = α₂ at the
+GUT scale from the Diophantine condition n₂/n₁ = −17/9. The U(1)
+coupling α₁, however, depends on R through the KK zero-mode
+normalization (Theorem U*) and is not independently fixed by the
+flux. The sin²θ_W prediction in Paper 4 assumes GUT normalization
+α₁ = α₂ = α₃ at M_GUT — a standard SU(5) assumption geometrically
+motivated by the CP² × S² structure but not derived from flux
+quantization alone.
 
 **The inflaton.** The G₄ axion — the phase of the GVW superpotential —
 is a natural inflaton. With sub-Planckian decay constant f = M_Pl/√3,
@@ -63,7 +76,7 @@ leaving the unique algebraic solution:
 
     R_bare = (63 n₁)^{3/2} / (128 π^{11/2} M_Pl)
 
-For n₁ = 9: **R_bare ≈ 0.975 l_P**. The observed R_obs ≈ 10.1 μm
+For n₁ = 9: **R_bare = O(1) l_P**. The observed R_obs ≈ 10.1 μm
 lies 30 orders of magnitude away. Every other perturbative
 constraint — anomaly cancellation, tadpole, Witten index,
 the Casimir potential — is either topological (R-independent)

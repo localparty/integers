@@ -28,17 +28,22 @@ torsion-corrected House-Micu superpotential on CP² × S² × S¹/Z₂
 yields `W_total = n₁r₃² + n₂r₂² + cR(6r₃²r₂² − 2r₃⁴)`. The
 F-flatness conditions give the radius ratio
 `ρ² = r₂²/r₃² = −2n₁/[3(n₁ + n₂)]` — independent of the
-torsion coefficient cR. The GUT unification condition
-`r₂/r₃ = √3/2` (Paper 4, Appendix C) uniquely requires:
+torsion coefficient cR. The gauge coupling unification condition
+`r₂/r₃ = √3/2`, established in Paper 4 from the SU(3) × SU(2)
+embedding in the isometry group of CP² × S², uniquely requires:
 
     n₂/n₁ = −17/9     (smallest integers: n₁ = 9, n₂ = −17)
 
-Gauge coupling unification `α₃/α₂ = 1` is a consequence of
-flux quantization — two coprime integers, not a continuous tuning.
-The number 17/9 is rigid: it follows from the Kähler weights of
-CP² and S² (from topology), the torsion of the G₂ structure
-(from geometry), and the group-theoretic unification condition
-(from the gauge embedding). None of these inputs can be adjusted.
+Flux quantization therefore *crystallizes* gauge coupling
+unification from a continuous geometric condition (ρ = √3/2
+tunable) into a discrete Diophantine constraint (n₂/n₁ exactly
+rational). The two coprime integers 9 and 17 replace a
+continuously adjustable parameter; that rationality is a
+consequence of flux quantization. The number 17/9 is rigid: it
+follows from the Kähler weights of CP² and S² (topology), the
+torsion of the G₂ structure (geometry), and the unification
+condition from gauge group embedding (Paper 4). None of these
+inputs can be adjusted.
 
 **Second result (tadpole consistency):** The G₄ tadpole condition
 is satisfied with N_M2 ≥ 0 (no exotic M2-brane charge required).
@@ -56,12 +61,13 @@ condition `r₃² = n₁/(2cR)`, combined with the explicit G₂ torsion
 coefficient and the 4D Planck mass constraint, yields a closed-form
 algebraic result in which all internal geometry cancels exactly:
 
-    R_bare = (63 n₁)^{3/2} / (128 π^{11/2} M_Pl)  ≈  0.975 l_P
+    R_bare = (63 n₁)^{3/2} / (128 π^{11/2} M_Pl)  =  O(1) l_P
 
 Every perturbative constraint in the theory — topological anomalies,
 tadpole, flux quantization, Witten index, the Casimir potential,
 the F-flat conditions, and the Planck mass — either places no
-constraint on R, or gives the unique algebraic solution R_bare ≈ l_P.
+constraint on R, or gives the unique algebraic solution
+R_bare ≈ O(1) l_P.
 The observed `R_obs ≈ 10.1 μm` cannot be derived from perturbative
 M-theory on this manifold. The ratio `R_obs/R_bare ≈ 6.4 × 10²⁹`
 (equivalently: `ρ_bare/ρ_Λ ≈ 10¹²⁰`) is the cosmological constant

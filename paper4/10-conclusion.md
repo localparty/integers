@@ -23,10 +23,12 @@ that produces the Aharonov-Bohm effect in Paper 1: the holonomy
 The Higgs doublet is the off-diagonal metric component between the
 weak (`S²`) and electromagnetic (`S¹`) internal spaces — electroweak
 symmetry breaking is the geometry tilting. The Higgs potential is
-the Casimir energy of bulk fields on `S²`, finite and calculable
-with no free parameters. The Higgs mass `m_H ≈ 125` GeV is
-reproduced for compactification scales `M_KK ~ 1–2.5` TeV, with
-the Higgs protected as a pseudo-Goldstone boson.
+the Casimir energy of bulk fields on `S²`, finite and calculable,
+with functional form parameter-free given the compactification scale
+M_KK. The Higgs mass `m_H ≈ 125` GeV is consistent with observation
+for compactification scales `M_KK ~ 1–2.5` TeV (with M_KK a free
+parameter pending moduli stabilization, OC-2), with the Higgs
+protected as a pseudo-Goldstone boson.
 
 The framework reveals a three-scale Casimir hierarchy: dark energy
 (`Λ` from the `S¹` Casimir), the electroweak scale (`v` from the
@@ -36,8 +38,11 @@ dimensions — generates three of the most important energy scales
 in physics.
 
 Quantitative predictions follow: the Weinberg angle
-(`sin²θ_W ≈ 0.232` at `M_Z`, matching experiment to 0.3%), three
-fermion generations (from `χ(CP²) = 3`), a proton lifetime in the
+(`sin²θ_W ≈ 0.232` at `M_Z`, the standard SU(5)/GUT prediction
+recovered geometrically with GUT normalization assumed; consistent
+with experiment at ~0.5% including KK threshold corrections; §7.1–7.1b),
+three fermion generations (from the spin^c index on CP² × S²; §7.2.1),
+a proton lifetime in the
 range `10³⁴–10³⁶` years (testable by Hyper-Kamiokande), KK W'
 and Z' resonances at 1–2.5 TeV (testable at HL-LHC), the neutrino
 mixing angles (`θ₁₂ = 33.7°`, `θ₂₃ = 49°` — matching data; and

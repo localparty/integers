@@ -456,3 +456,53 @@ The resonance parameter ξ=y²/(8π) encodes the gauge coupling structure via P2
 | Explicit ADHM bundle construction | c₂=1/2 bundle for E₆×SU(3) involution on C²/Z₂ |
 | First-principles Δ₁₂/Γ | One-loop self-energy of N₁,N₂ from CP² KK spectrum with Z₃-breaking BCs |
 | F-theory cross-check | Lift to CY₄, verify χ(CY₄)/24 = 450 |
+
+---
+
+## Round 6 Verifications (April 6, 2026)
+
+Files: verification-1-conrad-correction.md, verification-2-product-index.md,
+       verification-3-L3-bphz.md
+Integrated into: paper7/appendix-B §B.10, paper4/07-predictions §7.2.1,
+                 paper1/appendices/22-appendix-k §K.6.2
+
+### Results and revised statuses
+
+| Verification | Key finding | Impact on papers |
+|-------------|------------|-----------------|
+| V1 (Conrad correction) | 5/12 + 1/12 = 1/2 decomposition is **motivational, not proved**. The (χ−σ)/24 formula has no standard literature source. Top-down uniqueness (C1–C5) remains the rigorous proof. | Paper 7 App B §B.10 Route A demoted to "motivational scaffolding"; Route B (uniqueness) is now explicitly the primary proof |
+| V2 (Product index) | ind = 6, N_gen = 3 **confirmed rigorously** by HRR on CP²×S². Paper 4 §7.2 conflated χ(CP²) with spin^c index (they coincide numerically for O(1) twist but are distinct objects). | Paper 4 §7.2.1 added with the rigorous factored computation |
+| V3 (L≥3 BPHZ) | Gap is **narrow and well-characterised**: 80–85% confidence. Issue is Schwinger-boundary behaviour of the forest formula, not Epstein vanishing (which is a theorem). Three closure routes identified. | Paper 1 App K §K.6.2 updated with precise gap statement and three routes |
+
+### What Round 6 changed about the proof structure
+
+1. **The tadpole proof is stronger after V1, not weaker.** The verifier
+   correctly identified that the 5/12 + 1/12 decomposition is not
+   independently derived. But it also verified that the top-down
+   uniqueness argument is clean and stands alone. The papers now
+   present the uniqueness proof first, with the Conrad decomposition
+   as a suggestive remark. This is more honest and more rigorous.
+
+2. **The generation count is now rigorously proved on the product
+   manifold.** V2 adds a computation that was missing: the spin^c
+   index on CP²×S² with the correct twist bundle O(1)⊠O(1) gives
+   ind = 3×2 = 6, N_gen = 3. The previous schematic formula was
+   numerically right but conceptually imprecise.
+
+3. **The L≥3 gap is narrower than it was.** V3 characterises the
+   gap precisely (Schwinger boundary, not Epstein vanishing), identifies
+   three closure routes, and gives 80–85% confidence. This is more
+   useful for arXiv readers than "conjectured."
+
+### Final status map after Round 6
+
+| Result | Status |
+|--------|--------|
+| OS3 (quantum gravity) | Complete — Proposition P + Theorem A.3* |
+| 5/2 thread | Closed |
+| Tadpole / GUT unification | Complete — top-down uniqueness proves c₂^{eff}=1/2 |
+| Three generations | Rigorously proved — ind(D^{spin^c}_{CP²×S²}⊗[O(1)⊠O(1)]) = 6 |
+| Leptogenesis | Within order of magnitude; honest range established |
+| L≥3 BPHZ | 80–85%; gap precisely characterised; three closure routes |
+| Dark dimension comparison | Complete |
+| Novelty audit | Complete |

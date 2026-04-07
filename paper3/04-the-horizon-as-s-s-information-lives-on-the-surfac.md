@@ -35,12 +35,41 @@ the infalling observer) and encoded on the horizon (for the exterior
 observer). The 5D framework provides the geometric mechanism for
 the exterior encoding.
 
+**The classical limit.** The discrete Planck-area growth events
+occur at a rate set by the infalling flux. For a black hole of mass
+`M >> M_Pl`, the flux of infalling matter corresponds to
+`~10^(2S_BH)` growth events over the evaporation time — an
+astronomically large number of discrete steps. In the classical
+limit `M >> M_Pl`, the discrete area increments `ΔA = l_P² ≪ A`
+are invisible at any classical or semiclassical resolution. The
+smooth, continuously-shrinking horizon of the standard Hawking
+calculation is recovered as the coarse-grained average of these
+Planck-scale growth events, with corrections suppressed by
+`M_Pl/M << 1`. This is the same limit in which any discrete quantum
+spectrum (atomic energy levels, angular momentum eigenvalues)
+reproduces the Bohr correspondence principle for large quantum
+numbers. The discreteness is real at the Planck scale and invisible
+above it.
+
 ### 4.3 The e-Coordinate of the Horizon — Derivation
 
 When the horizon grows by one Planck pixel to incorporate a bit of
 infalling information, the growth manifests as a change in the
 e-coordinate of the horizon surface at that location. We derive
 this from the e-conservation law explicitly.
+
+**Geometric definition.** The event horizon of a Schwarzschild black
+hole in the 5D framework is a null hypersurface in the 4D base M⁴.
+The e-bundle restricts to this null hypersurface: at each point of
+the 2-sphere S² of the horizon, an e-circle S¹ is attached as the
+fiber of the principal U(1) bundle. The "e-coordinate of the horizon"
+`φ_{horizon}` is the section of this restricted bundle — the
+assignment of an e-circle position to each point of the horizon
+2-sphere. As established in Section 9.3.2 (Gap 3), the e-Killing
+vector `∂/∂φ` is spacelike everywhere, including at the horizon,
+and `Q_e` is well-defined on the horizon hypersurface. The
+"e-coordinate" is the eigenvalue of the e-charge operator `Q̂_e`
+restricted to the horizon.
 
 The e-conservation law (Paper 1, §2.2.3) states that for any
 interaction vertex in the 5D theory, the sum of incoming
@@ -70,6 +99,38 @@ e-conservation alone. No additional assumption is required.
 horizon vertex in the same way it applies in flat space. This
 requires the 5D theory to remain well-defined near the horizon —
 established by the UV finiteness result (Paper 1, Appendix S).
+
+**The area quantization.** The derivation above establishes that each
+infalling quantum deposits one unit of e-charge (`δφ = φ_{infalling}`)
+on the horizon. What is the corresponding area increase?
+
+This is not independently derived from the e-conservation law alone.
+It follows from combining two results: (1) the e-conservation law at
+the absorption vertex, which establishes the e-charge transfer;
+(2) the Bekenstein-Hawking entropy formula `S_BH = A/(4l_P²)`, derived
+in Section 8 from the entanglement entropy of KK modes across the
+horizon after G-renormalization.
+
+From Section 8.3: the entropy counts independent e-circle
+configurations on the horizon, with each Planck-area cell supporting
+one independent e-degree of freedom. `S_BH = N_{pixels}` where
+`N_{pixels} = A/(4l_P²)`. Therefore one unit of entropy (one bit,
+in natural units with `s₀ = 1` after G-renormalization, as derived
+in Section 7 and established in Section 8.2) corresponds to one
+Planck area and one e-charge unit. The "one Planck area per bit"
+claim is the statement that these two units are the same — which is
+forced by requiring consistency between the e-charge counting and the
+entropy formula. It is derived from the conjunction of e-conservation
+and `S_BH = A/4`, not from e-conservation alone.
+
+The precise relationship between e-charge units and area eigenvalues
+in the 5D quantum gravity theory — the analog of the LQG area
+spectrum derivation — is not computed here. The claim is that the
+semiclassical counting is consistent: one absorbed quantum increases
+the entropy by one unit (one bit in Bekenstein units), and the entropy
+formula assigns one Planck area per entropy unit. The derivation of
+the exact area eigenvalue spectrum from the 5D operator algebra is
+deferred to future work.
 
 ---
 

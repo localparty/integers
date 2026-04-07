@@ -117,7 +117,19 @@ instability where the compact circle shrinks to zero inside an
 expanding bubble. In the framework, the Casimir stabilization
 potential creates a barrier with Coleman-De Luccia tunneling
 action `S_{CDL} ≫ 10³⁰`. The nucleation rate is
-`Γ ~ exp(−10³⁰) ~ 0`.
+`Γ ~ exp(−10³⁰) ~ 0`. There is a kinematic suppression of the
+bubble of nothing instability that is stronger than the exponential
+Casimir barrier: fermions in this framework have antiperiodic
+boundary conditions around the e-circle (from the spin-statistics
+theorem, Paper 1, Appendix B; winding once around the e-circle
+multiplies a fermion wave function by −1). Witten (1982, p. 1263)
+showed that with antiperiodic fermion boundary conditions, the
+bubble of nothing nucleation requires a fermionic zero mode on the
+bubble wall. This zero mode raises the bubble's energy, making
+nucleation kinematically suppressed beyond the exponential Casimir
+barrier. The antiperiodic spin structure is therefore the primary
+mechanism suppressing the bubble of nothing; the Casimir barrier
+provides additional suppression on top of the kinematic one.
 
 **Gravitational instantons:** Euclidean saddle points of the 5D
 Einstein action. Their action scales as `S ~ (R/l_P)² ~ 10⁶⁰`.
@@ -135,6 +147,23 @@ low-energy physics.
 pairs (suppressed by the monopole mass) or singular geometries
 (forbidden by chronology protection). The instanton action for any
 topology-changing process is `~ 10³⁰`.
+
+**4D topology change during evaporation.** Black hole evaporation
+involves a change in the 4D causal structure: the spacetime begins
+as Minkowski space, develops a Schwarzschild trapped region with an
+event horizon, and (in the semiclassical picture) the mass decreases
+until the black hole dissolves. Throughout this process the 5D metric
+remains a direct product `g_{5D} = g_{4D}(x, t) + R₀² dφ²`, where
+`g_{4D}(x, t)` is the time-evolving 4D metric. The 4D topology
+changes as the evaporation proceeds, but the e-fiber S¹ is always
+present: it is attached to every point of the 4D base by a trivial
+bundle, and as the 4D base changes topology, the e-fiber simply
+accompanies it. No fiber degeneration occurs because R₀ is constant
+(modulus stabilization, Paper 1, §2.1) and the S¹ factor is
+orthogonal to all 4D dynamics. The 5D topology during evaporation
+is `M⁴_{evap}(t) × S¹`, where `M⁴_{evap}(t)` evolves but S¹ is
+constant. This is topologically trivial from the perspective of
+the e-dimension.
 
 ### A.3.2 The Summary
 
@@ -204,23 +233,44 @@ theory?
 ### A.4.2 The M-Theory Answer
 
 The e-circle `S¹` of the framework is the M-theory circle `S¹_M`
-(Paper 4, §2.3). This identification is not a conjecture — it is
-implicit in every calculation that uses the 11D SUGRA field
-content. M-theory is, by definition, the non-perturbative
+(Paper 4, §2.3). M-theory is, by definition, the non-perturbative
 completion of 11D supergravity (Witten 1995).
 
-The framework inherits M-theory's non-perturbative definition:
+The framework inherits M-theory's non-perturbative definition
+under the following premises:
 
-    Premise 1: The framework = M-theory on (S¹/Z₂ × CP² × S²)
-               [Established: Paper 4, §2.3]
+    Premise 1: The framework ≅ M-theory on (S¹/Z₂ × CP² × S²)
+               [Status: Conjectured — evidence in Paper 4, §2.3;
+                verification pending submission of Paper 4]
     Premise 2: M-theory is non-perturbatively well-defined
                [Standard assumption, supported by duality checks,
-                anomaly cancellation, matrix theory]
+                anomaly cancellation, matrix theory; not proved]
     Conclusion: The framework is non-perturbatively well-defined
+               [Conditional on Premises 1 and 2]
 
-This provides the formal closure that Layers 1 and 2 do not:
-the perturbative series has a non-perturbative completion, and
-that completion is M-theory itself.
+We flag explicitly that this is a plausibility argument, not a
+proof. Premise 1 is a conjecture with supporting evidence (the
+e-circle identified with the M-theory circle, the KK spectrum
+consistent with the M-theory compactification) to be established
+in Paper 4. Premise 2 is the standard (unproven) assumption about
+M-theory's non-perturbative definition shared by all approaches
+invoking M-theory as a UV completion. The M-theory completion is
+not required for any physical prediction in this paper — all
+predictions follow from Layers 1 and 2 (perturbative finiteness
+and non-perturbative stability), which are proved from within the
+framework without M-theory.
+
+The M-theory identification used here — M-theory on M⁴ × CP² × S²
+× S¹/Z₂ with the Standard Model field content arising from CP² ×
+S² isometries — is fully established only when Paper 4 (derivation
+of SM gauge groups and chiral fermions from CP² × S² geometry) and
+Paper 7 (G₄ flux tadpole cancellation and moduli stabilization) are
+accepted. The core information-loss resolution of the present paper
+operates at the 5D e-circle level (Papers 1–2) and does not require
+the full M-theory identification for its central argument. Papers 3
+and 4 are companion submissions establishing the same 11D geometry
+from two different directions: Paper 3 from black hole
+thermodynamics, Paper 4 from particle physics.
 
 ### A.4.3 The Character of the M-Theory Contribution
 

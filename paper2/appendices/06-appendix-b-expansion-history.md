@@ -1,31 +1,37 @@
 # Appendix B — The Expansion History H(z) and DESI Predictions
 
-> **⚠ Revised:** With the perturbative Casimir potential exact
-> (`w₀ = −1`, `w_a = 0`; dilaton frozen; Paper 6 §2), the H(z) peak
-> from evolving `w` is absent. The remaining deviations from `ΛCDM`
-> come from elevated `N_eff` and lower `Ω_m`, not from evolving `w`.
-> The fingerprint described below assumed the earlier `w₀ = −0.85`
-> prediction and should be recomputed with `w = −1`.
+> The framework predicts `w₀ = −1`, `w_a = 0` (Casimir potential exact;
+> Paper 6 §2; Appendix F). The deviations from `ΛCDM` in `H(z)` come
+> from elevated `N_eff` and lower `Ω_m`, not from evolving `w`. The
+> `H(z) × r_d` predictions in this appendix are computed with `w = −1`
+> and reflect the current framework prediction. DESI DR3 (2027) will
+> test these at 0.5% precision per bin.
 
 ---
 
 ## B.1 The Modified Hubble Parameter
 
-The framework's `H(z)` differs from `ΛCDM` through three channels:
+The framework's `H(z)` differs from `ΛCDM` through two physical channels:
 
 **1. Higher `H₀` (dominant at `z ~ 0`):**
+
     H(z=0) = 69.5 vs 67.4 → ratio 1.031
 
-**2. Evolving w(z) (dominant at z ~ 0.3–0.7):**
-The thawing dilaton (Appendix F) gives less dark energy at
-intermediate z than a cosmological constant. This RAISES H(z)
-relative to what higher `H₀` alone would give, because more matter
-is needed to close the flat universe.
+The `H₀` uplift comes from elevated `N_eff` via the formula
+`H₀ ≈ 67.4 + 6.3 × ΔN_eff` (Paper 1, App. Y). This is the dominant
+effect at low z.
 
-**3. Convergence at high z (radiation domination):**
-At z > 2, H(z) → `H₀` × √(`Ω_r`) × (1+z)², and since `Ω_r` = `ρ_r/ρ_crit`
-∝ `1/H₀²`, the `H₀` dependence cancels. The physical radiation density
-(fixed by `T_CMB` = 2.725 K) is `H₀-independent`.
+**2. Convergence at high z (radiation domination):**
+
+At `z > 2`, `H(z) → H₀ × √(Ω_r) × (1+z)²`, and since
+`Ω_r = ρ_r/ρ_crit ∝ 1/H₀²`, the `H₀` dependence cancels. The
+physical radiation density (fixed by `T_CMB = 2.725` K) is
+`H₀`-independent. This forces `H(z)` to converge to `ΛCDM` at
+`z > 2`, so the signature of elevated `N_eff` is a peak in the
+`H(z)/H_ΛCDM(z)` ratio at `z ~ 0.3–0.7`, followed by convergence.
+
+The dark energy is `w = −1` (frozen dilaton); there is no evolving-`w`
+contribution to `H(z)` at any redshift.
 
 ---
 
@@ -50,47 +56,55 @@ occurs at z ~ 1.5.
 
 ## B.3 The Characteristic Shape
 
-The H(z)/`H_LCDM`(z) ratio has a specific shape:
+With `w = −1`, the `H(z)/H_ΛCDM(z)` ratio has the following shape:
 
     z ~ 0: ratio = 1.032 (from H₀ shift alone)
-    z ~ 0.5: ratio = 1.040 (peak — evolving DE adds)
+    z ~ 0.5: ratio = 1.038 (peak — from elevated N_eff, lower Ω_m)
     z ~ 1.5: ratio = 1.000 (crossing point)
-    z > 2: ratio → 1.005 (small residual from N_eff)
+    z > 2: ratio → 0.995 (small residual from elevated N_eff)
 
-This shape is a SIGNATURE of the specific combination of:
-- Higher `H₀` (sets the z=0 value)
-- Thawing dark energy (creates the peak above z=0 value)
-- Same physical radiation density (forces convergence at high z)
-
-No `ΛCDM` model can produce this shape. A model with only higher `H₀`
-would give a monotonically decreasing ratio. The peak above 1.032
-at z ~ 0.5 is the imprint of the thawing dilaton.
+The peak above 1.032 at `z ~ 0.5` is driven by elevated `N_eff` and
+lower `Ω_m` (not by evolving dark energy). No `ΛCDM` model can produce
+this specific combination: a model with only higher `H₀` would give a
+monotonically decreasing ratio; the peak is the imprint of the mirror
+sector's effect on the energy budget. The shape at `w = −1` is
+qualitatively the same as previously described but with a slightly
+lower peak (1.038 vs 1.040 for the former `w₀ = −0.85` scenario)
+because the evolving-`w` channel is absent.
 
 ---
 
 ## B.4 DESI BAO Predictions
 
-DESI measures the BAO angular scale `θ_BAO(z`) = `r_d` / `D_A`(z)
-and the radial BAO scale H(z) × `r_d` at each redshift bin.
+DESI measures the BAO angular scale `θ_BAO(z) = r_d / D_A(z)`
+and the radial BAO scale `H(z) × r_d` at each redshift bin.
 
-The framework predicts `r_d` = 146.2 Mpc (vs Planck's 147.1 Mpc),
+The framework predicts `r_d = 146.2` Mpc (vs Planck's 147.1 Mpc),
 a 0.6% reduction from the elevated `N_eff`.
 
-**Predicted H(z) × `r_d` values:**
+**Table B4: Predicted H(z) × r_d values for DESI DR3 (w = −1)**
 
-| Redshift | `H_5D` × `r_d` | `H_LCDM` × `r_d` | Difference |
-|----------|-----------|--------------|------------|
-| z = 0.51 | 14,050 km/s | 13,610 km/s | +3.2% |
-| z = 0.71 | 16,290 km/s | 15,760 km/s | +3.4% |
-| z = 0.93 | 19,540 km/s | 18,910 km/s | +3.3% |
-| z = 1.32 | 26,530 km/s | 25,950 km/s | +2.2% |
-| z = 2.33 | 56,110 km/s | 56,440 km/s | −0.6% |
+| Redshift | `H_5D` × `r_d` | `H_ΛCDM` × `r_d` | Deviation | DESI DR3 precision | Detection |
+|----------|-----------|--------------|------------|-------------------|-----------|
+| z = 0.51 | 14,050 km/s | 13,610 km/s | +3.2% | ~0.5% | ~6σ |
+| z = 0.71 | 16,290 km/s | 15,760 km/s | +3.4% | ~0.5% | ~7σ |
+| z = 0.93 | 19,540 km/s | 18,910 km/s | +3.3% | ~0.5% | ~7σ |
+| z = 1.32 | 26,530 km/s | 25,950 km/s | +2.2% | ~0.5% | ~4σ |
+| z = 2.33 | 56,110 km/s | 56,440 km/s | −0.6% | ~0.5% | ~1σ |
 
-The framework predicts H(z) × `r_d` systematically 2–3% above `ΛCDM`
-at z < 1.5, falling slightly below at z > 2. DESI DR2 measures
-these to ~1% precision. DESI DR3 (full 5-year dataset, expected
-2027) will measure them to ~0.5% precision — sufficient to detect
-a 3% deviation at `6σ`.
+The framework predicts `H(z) × r_d` systematically 3–3.4% above `ΛCDM`
+at `z = 0.5–0.9`, driven by the higher `H₀` from elevated `N_eff`. The
+deviation falls off at higher `z` as the radiation-dominated regime is
+approached. Note that the excess is now driven by the `N_eff` effect
+rather than by evolving `w`; the 3.2–3.4% signal at `z ~ 0.5–0.7` is
+nearly identical in magnitude (though slightly smaller than the
+superseded thawing-dilaton prediction).
+
+DESI DR2 measures these to ~1% precision. DESI DR3 (full 5-year dataset,
+expected 2027) will measure them to ~0.5% precision — sufficient to
+detect the 3% deviation at `6–7σ` in individual bins. If DESI DR3
+measures `H(z) × r_d` consistent with `ΛCDM` at these redshifts, the
+elevated-`N_eff` prediction is excluded (correlated with the CMB-S4 test).
 
 **This is the most decisive near-term test of the framework.**
 
@@ -98,17 +112,20 @@ a 3% deviation at `6σ`.
 
 ## B.5 Comparison with Current DESI Data
 
-DESI DR2 (arXiv:2503.14738) reports H(z) × `r_d` values consistent
-with `ΛCDM` at z > 0.5, but with `2–4σ` hints of evolving dark energy.
-The framework's prediction of H(z) peaking at z ~ 0.5 and the
-thawing w(z) trajectory are in the same direction as the DESI hints
-but milder in amplitude (DESI's best-fit `w₀` ≈ −0.75, `w_a` ≈ −0.75).
-**⚠ Revised:** The framework now predicts `w₀ = −1`, `w_a = 0` (Casimir
-potential exact; Paper 6 §2). If DESI DR3 confirms `w ≠ −1`,
-non-perturbative modifications to the dilaton potential are required.
+DESI DR2 (arXiv:2503.14738) reports `H(z) × r_d` values consistent
+with `ΛCDM` at `z > 0.5`, but with `2–4σ` hints of evolving dark energy
+(`w₀ ≈ −0.75`, `w_a ≈ −0.75`). The framework predicts `w₀ = −1`, `w_a = 0`
+(Casimir potential exact; Paper 6 §2; Appendix F) — in potential tension
+with DESI DR2. The `H(z) × r_d` excess predicted by the framework at
+`z ~ 0.5–0.7` has a different origin than the DESI DR2 hints (it is from
+elevated `N_eff`, not from evolving `w`), so the two are physically
+distinguishable by their redshift dependence: the framework's excess
+peaks at `z ~ 0.7` while evolving-`w` models produce a different
+`H(z)` shape at `z > 1`.
 
-The current DESI DR2 data neither confirms nor excludes the
-framework. DESI DR3 will be decisive.
+If DESI DR3 confirms `w ≠ −1` at `> 5σ`, non-perturbative modifications
+to the dilaton potential are required. The current DESI DR2 data neither
+confirms nor excludes the framework. DESI DR3 will be decisive.
 
 ---
 

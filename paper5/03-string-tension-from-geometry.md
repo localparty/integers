@@ -13,8 +13,12 @@ potential energy between a static quark-antiquark pair is:
     V(R) = σ × R   (linear confinement)
 
 The string tension `σ = (440 MeV)² ≈ 0.18 GeV²` (from lattice QCD
-and Regge trajectories). Its derivation from first principles is the
-central result of this section.
+and Regge trajectories). A geometric mechanism yielding a formula for
+the string tension consistent with the area law is the central result
+of this section. The paper does not prove that ⟨W(C)⟩ ≤ e^{−σA(C)}
+for arbitrary large 4D Wilson loops — that formal proof remains an open
+problem (§3.4). What is derived is a formula for σ whose numerical
+value is consistent with experiment at leading order.
 
 ## 3.2 The String Tension from the CP² Geometry
 
@@ -98,13 +102,42 @@ where the factor 2.3 is the result of the RG running integral
 
 Experimental value: `√σ = 440 MeV` (from Regge trajectories).
 
-**Match: 0.7%.** However, this agreement should be treated cautiously:
-the coefficient `c = 3/(8π²)` comes from the minimal instanton
-configuration and may receive O(1) corrections from higher-order gauge
-configurations. The 0.7% agreement may partially reflect the 2.3
-running factor, which itself has ~10% uncertainty from the QCD scale.
-The result is a leading-order geometric estimate, not a precision QCD
-calculation.
+**Leading-order result.** The geometric formula gives √σ ≈ 437 MeV at
+the central value c = 3/(8π²). The theoretical uncertainty in c — which
+lies in the range [1/(3π²), 1/(2π²)] depending on normalization
+convention and the lattice matching factor, as detailed in Appendix A —
+propagates to a ~25% systematic uncertainty in √σ (since √σ ~ √c):
+
+    c_min = 1/(3π²) ≈ 0.0338  →  √σ_min ≈ 437 × √(0.0338/0.0380) ≈ 411 MeV
+    c_mid = 3/(8π²) ≈ 0.0380  →  √σ_mid ≈ 437 MeV  (central value)
+    c_max = 1/(2π²) ≈ 0.0507  →  √σ_max ≈ 437 × √(0.0507/0.0380) ≈ 506 MeV
+
+The predicted range is approximately [410, 510] MeV. The experimental
+value √σ = 440 MeV lies within this range, consistent with the
+leading-order geometric prediction. The CP² radius r₃ used here is
+fixed from α_s(M_Z) as an observational input. Paper 7 §3.2 establishes
+that r₃² ∝ R⁻¹ through flux stabilization, so √σ carries an implicit
+R-dependence — the prediction is valid at R = R_obs, the observed
+e-circle radius fixed by dark energy matching.
+
+The formula for √σ contains g₃(M₃), determined by requiring the KK
+gauge coupling to match α_s(M_Z) = 0.118 at the Z pole. This is a
+single observational input; the compactification scale M₃ and CP²
+radius r₃ are then fixed by the geometry (Paper 4, §3.3 and §7.8).
+The value of r₃ adopted here from α_s(M_Z) is independently confirmed
+by G₄ flux stabilization in Paper 7 §3.2. With this input, the string
+tension is a prediction of the framework, not a fit — but it is not
+parameter-free in the absolute sense.
+
+The framework predicts the correct order of magnitude with the right
+physics content — CP² topology, SU(3) instanton charge — but does not
+constitute a precision prediction of √σ. The renormalization scheme
+used is `\overline{MS}`: the β-function coefficient b₀ = 7 corresponds
+to the two-loop `\overline{MS}` coefficient for N_f = 3 active flavors.
+The resulting Λ_{\overline{MS}} = 190 MeV is 12% below the PDG central
+value Λ_{\overline{MS}}^{(N_f=3)} = 210 ± 14 MeV — a 1.4σ discrepancy
+within the expected accuracy of the one-loop running approximation over
+13 orders of magnitude from M₃ ~ 10¹⁵ GeV to the confinement scale.
 
 ## 3.3 The Regge Trajectory from CP² Geometry
 
@@ -127,7 +160,10 @@ calculation.
 The intercept `α₀` is determined by the quantum corrections to the
 string worldsheet theory — the Luscher term — which is a Casimir-type
 calculation on the CP² flux tube. This will be computed in a future
-appendix.
+appendix. The finiteness of this Casimir calculation is guaranteed by
+the same spectral structure as the U(1) KK tower on S¹; since the
+SU(3) KK tower on S¹ shares that structure, Theorem K.1 of Paper 1
+(Appendix L) applies to the SU(3) Casimir sector as well.
 
 ## 3.4 The Mass Gap
 

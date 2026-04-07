@@ -4,55 +4,105 @@
 
 ## 11.1 Where the Dilaton Goes
 
-**⚠ Revised:** The perturbative Casimir potential V = V₀/φ⁴ is exact
-(no Goldberger-Wise term; c₂ = 0 from Epstein zeta zeros; see §2).
-The dilaton is frozen at its current value by Hubble friction
-(ε ~ 10⁻⁵²). There is no rolling and no GW slope to climb.
+The perturbative Casimir potential V = +c/R⁴ is exact (no
+Goldberger-Wise term; all higher-loop corrections vanish from
+Epstein zeta zeros; §2). The dilaton is frozen at its current
+value by Hubble friction — the fractional drift per Hubble time is
+ΔR/R₀ ~ H₀R₀ ~ 3 × 10⁻³⁰ (Appendix A, Proposition A.1).
 
-The potential V = V₀/φ⁴ has no minimum: it is a monotonically
-decreasing function for φ > 0. However, the dilaton is frozen
-by Hubble friction — the slow-roll parameter ε = (V'/V)² ×
-(M_Pl²/2) ≈ 8πR²/M_Pl² ≈ 10⁻⁵² is negligibly small. The dilaton
-does not roll. The future is eternal de Sitter at constant R and
-constant Λ.
+The potential V = +c/R⁴ has no minimum: it is monotonically
+decreasing for R > 0. However, with the correct sign V = +c/R⁴
+(positive Casimir energy from the fermionic-dominated bulk field
+content, §2.1a), the potential curvature at the frozen point is
+V''(R₀) = +20c/R₀⁶ > 0 — the potential is convex. Small
+perturbations around the frozen value oscillate with Hubble damping
+rather than growing exponentially (Appendix A, §A.6). The frozen
+point is a genuinely stable fixed point of the slow-drift dynamics.
+
+The stability is quasi-permanent: as shown in §A.6, the frozen
+dilaton is stable for approximately 50 Hubble times (~700 Gyr)
+into the future, after which the small growing mode of the linear
+analysis becomes significant. The universe is in a quasi-stable
+de Sitter phase, not an eternal one.
 
 ## 11.2 No Big Rip
 
-In phantom dark energy models (`w < −1`), the expansion can
-become singular in finite time — the "Big Rip" (Caldwell, Kamionkowski
-& Weinberg 2003). The e-dimension framework has `w = −1` exactly
+In phantom dark energy models (w < −1), the expansion can become
+singular in finite time — the "Big Rip" (Caldwell, Kamionkowski &
+Weinberg 2003). The e-dimension framework has w = −1 exactly
 (frozen Casimir energy, not quintessence or phantom). The dilaton
-is frozen by Hubble friction at ε ~ 10⁻⁵². **No Big Rip can occur.**
+is frozen by Hubble friction at ΔR/R₀ ~ 3 × 10⁻³⁰. **No Big Rip
+can occur.**
 
-The Casimir potential `V₀/φ⁴` is the exact perturbative result
-(no GW correction at any perturbative order). The dilaton is frozen
-at its current value by Hubble friction (ε ~ 10⁻⁵²). The universe
-is in a true de Sitter phase with constant `H` — identical to
-`ΛCDM` at the `w` level. No Big Rip, no runaway, no decompactification.
+The Casimir potential V₀/R⁴ is the exact perturbative result (no
+GW correction at any perturbative order). The universe is in a true
+de Sitter phase with constant H — identical to ΛCDM at the w level.
+No Big Rip, no phantom crossing.
 
 ## 11.3 The Physical Picture
 
 The e-circle is FROZEN. The fifth dimension is stable. The dilaton
 sits at its post-inflationary value, held in place by Hubble friction
-(ε ~ 10⁻⁵²). The compact dimension does not decompactify at the
-perturbative level.
+(ΔR/R₀ ~ 3 × 10⁻³⁰ per Hubble time). The compact dimension does not
+decompactify on any observationally accessible timescale.
 
-If non-perturbative effects (instantons, brane nucleation) modify
-the potential at exponentially long timescales, the dilaton could
-eventually tunnel or roll. But within the perturbative framework,
-the future is eternal de Sitter at constant R.
+If non-perturbative effects (instantons, brane nucleation) modify the
+potential at exponentially long timescales, the dilaton could eventually
+tunnel or roll. Within the perturbative framework, the future is
+quasi-stable de Sitter at constant R for approximately 50 Hubble times
+(~700 Gyr), after which decompactification becomes significant.
 
 ## 11.4 The Timescale
 
-The decompactification timescale — when R doubles from its current
-value — is:
+The stability timescale for the frozen dilaton is determined by the
+ODE analysis in Appendix A §A.6. The growing mode of the linearized
+equation around R₀ grows as e^{λ₊(t−t₀)} with λ₊ ≈ 3.96 H_∞
+(where H_∞ = H₀√Ω_Λ ≈ 0.83 H₀). Starting from the initial
+displacement ΔR₀/R₀ ~ 3 × 10⁻³⁰ (Appendix A, Proposition A.1):
 
-**⚠ Revised (see §10.3):** The perturbative result gives
-`w = −1` to 10⁻⁵² precision. The dilaton is frozen
-(ε ≈ 10⁻⁵²). The e-circle is NOT growing: `Ṙ/R ~ ε H₀ ≈ 0`.
+- **After 1 Hubble time** (~14 Gyr): δR/R₀ ~ 2.2 × 10⁻²⁸ (negligible)
+- **After 10 Hubble times** (~140 Gyr): δR/R₀ ~ 8 × 10⁻¹⁰ (negligible)
+- **After 50 Hubble times** (~700 Gyr): δR/R₀ ~ large (decompactification)
 
-There is no R-doubling, no decompactification, no evolving `w`.
-The future is eternal de Sitter with constant `R` and constant
-`Λ = ΔN c/R⁴`. The framework predicts a STABLE future, not
-a dynamical one — unless non-perturbative effects modify the
-dilaton potential.
+The decompactification timescale is approximately 50 Hubble times
+(~700 Gyr) — far beyond the current age of the universe (13.8 Gyr)
+and beyond any observational horizon. The universe is
+indistinguishable from eternal de Sitter on any observationally
+accessible timescale. Non-perturbative effects (instantons, brane
+nucleation) could modify the potential at earlier times; within the
+perturbative framework, the dilaton is stable for O(10²) Hubble times.
+
+The future is **quasi-stable de Sitter for approximately 50 Hubble
+times** (~700 Gyr), not eternal de Sitter. The observational
+prediction w = −1 today is unchanged.
+
+## 11.5 The de Sitter Swampland Conjecture
+
+The de Sitter swampland conjecture (Obied, Ooguri, Spodyneiko & Vafa
+2018; Garg & Krishnan 2019) states that any consistent quantum gravity
+theory satisfies at least one of:
+
+    |∇V| ≥ c V/M_Pl    or    min(∇_i ∇_j V) ≤ −c' V/M_Pl²
+
+for some O(1) constants c, c'. This rules out metastable de Sitter
+vacua (V' = 0, V > 0, V'' > 0).
+
+In this framework, the dilaton is **NOT** at a de Sitter minimum:
+V'(R₀) = −4c/R₀⁵ ≠ 0. In terms of the canonical field σ (defined
+in Appendix A, eq. A.1), the canonical gradient is:
+
+    |∇_σ V| = |dV/dσ| = |V'(R)| × |dR/dσ|
+             = (4c/R₀⁵) × (R₀/(M_Pl √(3/2)))
+             = (4/√(3/2)) × V(R₀)/M_Pl
+             = 4√(2/3) V/M_Pl
+
+This satisfies the first swampland condition with c = 4√(2/3) ~ 3.3 > 0.
+The frozen dilaton picture is therefore **consistent with the swampland
+conjecture**: the potential is steep in canonical field space
+(ε = 32/3 ≫ 1), satisfying the first swampland condition with c ~ 3.3.
+
+The predicted de Sitter phase is not a vacuum state but a kinematically
+frozen field configuration with V'(R₀) ≠ 0. The de Sitter swampland
+conjecture, which forbids metastable V' = 0 minima, is therefore not
+violated. The framework naturally satisfies the swampland bound because
+the dilaton is on a slope, not at a minimum.

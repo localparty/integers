@@ -1,22 +1,26 @@
 # Paper 5 — Section 6: The Proton Mass as a Derived Quantity
 
-## 6.1 Why the Proton Mass Has Never Been Derived
+## 6.1 The Proton Mass and the Role of This Framework
 
 The proton mass `m_p = 938.272 MeV` is the most fundamental mass scale
-of nuclear physics. Yet no theory has derived it from first principles.
-The Standard Model inputs the quark masses and the QCD coupling as
-free parameters; the proton mass emerges from non-perturbative
-lattice QCD calculations, not from an analytic formula.
+of nuclear physics. It has been computed from first principles by lattice
+QCD, with the quark masses and α_s as inputs, to better than 1% precision
+(FLAG review; Dürr et al., Science 322:1224, 2008). What no analytic
+calculation has achieved — and what the present framework provides — is a
+direct link from the compactification geometry to Λ_QCD, from which m_p
+follows via the MIT bag model approximation at ~10% accuracy. The advance
+is the geometrization of Λ_QCD, not the computation of m_p per se.
 
-The difficulty: `m_p` is a purely non-perturbative quantity. It arises
-from the confinement of three quarks inside a Compton wavelength of
-~1 fm, with the binding energy constituting ~99% of the proton mass.
-The light quark masses (`m_u + m_d + m_s ~ 10 MeV`) account for only
-~1% of `m_p`. The rest is the energy of the confined gluon field.
+The difficulty of m_p in the Standard Model is that it is purely
+non-perturbative: it arises from the confinement of three quarks inside
+a Compton wavelength of ~1 fm, with the binding energy constituting ~99%
+of the proton mass. The light quark masses (`m_u + m_d + m_s ~ 10 MeV`)
+account for only ~1% of `m_p`. The rest is the energy of the confined
+gluon field.
 
 In the framework, the derivation chain is:
 
-    CP² geometry → Λ_QCD → m_p
+    CP² radius r₃ [+ α_s(M_Z) as input] → Λ_QCD → m_p
 
 ## 6.2 The Derivation Chain
 
@@ -25,7 +29,16 @@ In the framework, the derivation chain is:
     Λ_QCD = M_3 × exp(−2π/(b₀ α_s(M_3))) ≈ 190 MeV
 
 where `M_3 ~ 10¹⁵ GeV` is the CP² compactification scale and
-`α_s(M_3) ~ 1/25` from the CP² volume (Paper 4, §3.3).
+`α_s(M_3) ~ 1/25` from the CP² volume (Paper 4, §3.3). The
+renormalization scheme used is `\overline{MS}`: the β-function
+coefficient b₀ = 7 corresponds to the effective one-loop
+`\overline{MS}` coefficient for N_f = 3 active flavors. The resulting
+Λ_{\overline{MS}} = 190 MeV is 12% below the PDG central value
+Λ_{\overline{MS}}^{(N_f=3)} = 210 ± 14 MeV (1.4σ of the PDG
+uncertainty). This 12% discrepancy is within the expected accuracy of
+the one-loop running approximation applied over 13 orders of magnitude
+from M₃ ~ 10¹⁵ GeV to the confinement scale; two-loop scheme-conversion
+corrections would shift Λ_QCD upward by a few percent.
 
 **Step 2: m_p from Λ_QCD**
 
@@ -103,15 +116,21 @@ understood as a leading-order estimate, not a precision calculation.
 
 ## 6.4 What This Means
 
-The derivation chain is complete:
+The derivation chain is:
 
-    CP² radius r₃ → g₃(M_3) → Λ_QCD → √σ → m_p
+    CP² radius r₃ [+ α_s(M_Z) as input] → g₃(M_3) → Λ_QCD → √σ → m_p
 
-Every step is from geometry. The proton mass — the scale of nuclear
-physics, the scale of human chemistry, the scale of biology — is
-determined by the radius of the CP² internal manifold, which is
-itself fixed by the requirement that the 11D theory contains the
-Standard Model gauge group.
+The CP² radius r₃ is fixed by requiring the KK gauge coupling to
+reproduce α_s(M_Z) = 0.118 (Paper 4). With this single observational
+input, the framework predicts Λ_QCD via the QCD β-function (§6.2) and
+m_p via the MIT bag model (§6.3). The derivation is not parameter-free
+— it uses the strong coupling at the Z pole as input — but it reduces
+the origin of the proton mass to a single experimentally measured number
+(α_s(M_Z)) plus the compactification geometry. The proton mass — the
+scale of nuclear physics, the scale of human chemistry, the scale of
+biology — is thereby linked to the radius of the CP² internal manifold,
+which is itself fixed by the requirement that the 11D theory contains
+the Standard Model gauge group.
 
 The proton exists with its specific mass because spacetime is 11D,
 with the CP² internal manifold at a radius set by the GUT scale.

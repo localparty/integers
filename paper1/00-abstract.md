@@ -55,63 +55,46 @@ by the perfect-square structure of KK masses). Ghost contributions, carrying the
 Eisenstein quadratic form through KK number conservation, vanish by the
 same mechanisms. Under zeta regularization of the KK mode sums,
 linearized 5D gravity on `M⁴ × S¹` is perturbatively predictive — established
-through two loops by explicit computation, and **established to all orders**
-by the Universal Epstein Vanishing theorem: `E_L(-j; Q_L) = 0` for all
-`j ≥ 1` and all `L`, proven by the pole structure of the completed Epstein
-zeta function (Appendix K, Theorem K.1). The BPHZ Factorization theorem
-(Theorem K.3, section K.5.3) extends this to all orders in the presence of
-BPHZ subtractions: joint holomorphicity of the Epstein zeta in the
-loop-momentum and Schwinger parameters ensures that BPHZ-subtracted
-amplitudes factor as (4D finite part) times `E_L(-j; Q)`, inheriting
-the universal vanishing. Counterterm coefficients are
+through two loops by explicit computation (Appendices F and G), and
+**established to all orders by two theorems working in tandem**:
+the Universal Epstein Vanishing theorem (Appendix K, Theorem K.1) proves
+that `E_L(-j; Q_L) = 0` for all `j ≥ 1` and any positive-definite `Q`,
+and the BPHZ Factorization theorem (Theorem K.3) proves via joint
+holomorphicity of the Epstein zeta function in Schwinger parameters that
+BPHZ-subtracted amplitudes retain the Epstein zeta structure at all loop
+orders — provided the Schwinger-boundary contributions are polynomial in
+the KK masses, as established by Weinberg's power-counting theorem for
+renormalizable sub-divergences. The factorization is verified explicitly
+at `L = 1` and `L = 2`; at `L ≥ 3` it rests on Theorem K.3, which closes
+the gap via the locality of BPHZ counterterms. An independent explicit
+three-loop computation (Route C of §K.5.2) would provide additional
+verification and is identified as an open task. Counterterm coefficients are
 determined from two parameters: `G₄` and the `e`-circle circumference `L`.
 
-The spin structure of the `e`-circle (bosons periodic, fermions anti-periodic)
-implies a natural `Z₂` orbifold with two fixed-point branes. The visible brane
-at `φ = 0` supports Standard Model matter; the hidden brane at `φ = π` gravitates
-normally but couples to no SM force — geometric dark matter. The Casimir
-energy of bulk fields on the orbifold, with three right-handed neutrinos in
-the bulk to ensure positive energy, matches the observed dark energy density
-for a brane separation `R ≈ 12 μm` and predicts Yukawa-type gravitational
-deviations at that scale. The same bulk neutrinos give neutrino masses at the
-meV scale through the bulk seesaw mechanism. Kinetic mixing between the two
-branes' `U(1)` gauge fields is predicted at `ε ~ 5 × 10⁻⁴` (from the
-KK tower mediation: `α_EM × π²/6 × exp(−π)`), testable by LDMX and LHCb
-Run 3. Three SM generations are derived from `χ(CP²) = 3` via the index theorem
-(Paper 4, §6.2), with exponential mass hierarchies from a warp factor `k ≈ 2`. A
-speculative identification of the Planck-scale electromagnetic coupling with
-the inverse configuration torus area, `1/α(M_P) = 4π²`, combined with three
-generations of SM running, gives `1/α(0) ≈ 137`.
+The compact e-circle, with fermions anti-periodic and bosons periodic, has a
+natural Z₂ orbifold interpretation with two fixed-point branes. The visible
+brane supports Standard Model matter; the hidden brane gravitates normally but
+couples to no SM force. The Casimir energy of bulk fields on the orbifold,
+with three right-handed neutrinos to ensure positivity, matches the observed
+dark energy density for brane separation R ≈ 12 μm and predicts Yukawa-type
+gravitational deviations at that scale — a unique signature testable by
+short-range gravity experiments currently underway. The same construction
+gives neutrino masses at the meV scale and kinetic mixing between brane U(1)
+fields at ε ~ 5 × 10⁻⁴ (from α_EM × π²/6 × exp(-π)), testable by LDMX and
+LHCb Run 3. These are quantitative predictions following from the single
+parameter R fixed by dark energy matching. Further consequences at higher
+rigor levels (including baryon asymmetry, fermion generations, and mass
+hierarchies) are detailed in §1.5 and the companion papers.
 
-The `e`-circle, `Z₆`-orbifolded and warped, provides a geometric account of
-twenty-two phenomena at three levels of rigor. Eight are derived from the
-basic `e`-circle (`M⁴ × S¹`): quantum mechanics, electromagnetism, gravity,
-the spin-statistics theorem, perturbative UV finiteness, the hydrogen
-spectrum, black hole entropy, and the CPT theorem. Eight more follow from
-the `Z₂` orbifold extension: dark energy (Casimir energy), dark matter
-(hidden-brane matter), neutrino masses (bulk seesaw), kinetic mixing
-with a dark photon (`ε ~ 5 × 10⁻⁴`), the strong CP problem (topological
-resolution: `π₄(SU(3)) = 0` in 5D), the Hubble tension (`H₀ ≈ 68.7–69.5`
-km/s/Mpc from hidden-brane dark radiation; in `3–4σ` tension with ACT DR6
-`N_eff = 2.86 ± 0.13`), the Casimir effect, and baryon asymmetry (derived
-in Paper 2 via bulk leptogenesis). Six are conjectured: the dark energy
-equation of state (thawing dilaton, derived quantitatively in Paper 2),
-the fine structure constant `α ≈ 1/137` (from the configuration torus
-area), `α` stability, three fermion generations (derived from `χ(CP²) = 3` in Paper 4), the fermion
-mass hierarchy (warp factor `k ≈ 2`), and normal neutrino mass ordering
-(from `Z₃` geometry, testable by JUNO). Seven testable predictions follow:
-two are already consistent with current data (observed `α` stability, and the
-dark energy equation of state `w ≈ −1` — though DESI DR2 shows `4.2σ` tension
-with static `w = −1`, resolvable via thawing dilaton quintessence). The naive dilaton prediction (`ΔN_eff ≈ 0.57`) appeared in tension with
-combined ACT+SPT+Planck measurements (`N_eff = 2.81 ± 0.18`), but this
-tension is resolved by intra-tower KK neutrino decays (Gonzalo et al.
-2024), reducing the effective `ΔN_eff` to `~0.05` and giving `N_eff ≈ 3.09`,
-consistent with all CMB data. The remaining four — short-range
-gravitational deviations at `~12 μm`, the dark photon signal at `ε ~ 5 × 10⁻⁴`,
-neutrino masses and normal mass ordering (testable by JUNO within 6 years),
-and mirror dark matter — are within reach of experiments in the next 3–10 years.
-
-The orbifold extensions are speculative but quantitative, with specific falsifiable predictions. What is established is a geometric framework in which the same compact circle that makes quantum mechanics necessary also makes perturbative quantum gravity finite.
+What is established in this paper is a geometric framework in which the same
+compact circle that provides a geometric account of quantum mechanics also
+produces perturbative finiteness of linearized 5D gravity via the Universal
+Epstein Vanishing theorem. The spin-statistics theorem, the Aharonov-Bohm
+effect, and the Born rule each receive geometric interpretations that, while
+using the same logical foundations as their standard derivations, provide
+the geometric picture that those derivations cannot supply. A full accounting
+of the twenty-two phenomena addressed at three levels of rigor, together with
+the epistemic status of each result, appears in §1.5 and Table 1.1.
 
 A companion computation (Paper 2) applies the CAMB Boltzmann solver to
 the framework's cosmological sector (to appear separately) with parameters

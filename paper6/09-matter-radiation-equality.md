@@ -25,9 +25,9 @@ The framework's structure formation predictions (Paper 2):
   KiDS-1000: 0.759 ± 0.024, HSC Y3: 0.763 ± 0.020)
 - Resolves the 4σ S8 tension with Planck ΛCDM (S8 = 0.832)
 
-The dilaton is still frozen at `φ_min` during this epoch — dark
-energy is negligible, and the expansion is matter-dominated. The
-e-circle sits quietly at its equilibrium size.
+The dilaton is still frozen at its post-inflationary value R₀ during
+this epoch — dark energy is negligible, and the expansion is
+matter-dominated. The e-circle is frozen at R₀ by Hubble friction.
 
 ## 9.3 Recombination
 

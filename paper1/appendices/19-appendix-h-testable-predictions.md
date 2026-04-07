@@ -293,7 +293,7 @@ e-circle scenario predicts exactly zero variation.
 | 6 | Anyon statistics in 2D | `θ = π/m` for `ν = 1/m` FQH | FQH interferometry | **Confirmed** | Done |
 | 7 | Constant `α` | `dα/dt = 0` | Quasar spectra, atomic clocks | **Consistent** | Ongoing |
 | 8 | Normal neutrino mass ordering | `m₃ > m₂ > m₁` from `Z₃` geometry | JUNO (data taking since Aug 2025) | Hinted at `2–3σ` (NOvA, T2K, SK) | 3–6 years |
-| 9 | No QCD axion (strong CP topological) | `θ = 0`, `π₄(SU(3)) = 0` | ADMX, ABRACADABRA, IAXO | Not yet excluded | Ongoing |
+| 9 | No QCD axion (strong CP topological) | `θ̄ = 0` (conjecture pending; see Appendix X §X.3.3 for open requirements: π₃(SU(3)) instanton analysis, quark mass phase, 4D effective theory) | ADMX, ABRACADABRA, IAXO | Not yet excluded | Ongoing |
 | 10 | `H₀ ≈ 68.0–68.7 km/s/Mpc` (hidden-brane dark radiation) | `ΔN_eff = 0.02–0.14`, `ξ < 0.384` (BBN); `ξ < 0.397` (ACT DR6 `3σ`) | CMB-S4, TRGB/JWST, GW sirens | Tier 1 **consistent** with ACT DR6+DESI (`68.2–68.4`); Tier 2 in `2.5–2.8σ` tension with ACT DR6 | 5–10 years |
 
 ---
@@ -355,9 +355,10 @@ could accommodate inverted ordering, so this would constrain but not
 decisively rule out the `Z₃` scenario.)
 
 **If axion searches (ADMX, ABRACADABRA, IAXO) discover the QCD axion:**
-The topological strong CP resolution (`π₄(SU(3)) = 0`) is falsified. This
-would be a decisive falsification with no obvious rescue — the 5D homotopy
-argument either holds or it doesn't.
+The topological strong CP conjecture (Appendix X) is falsified. Since this
+is a conjecture (not a derived result — see Appendix X §X.3.3 for the three
+open requirements), this would rule out that particular resolution but
+would not falsify the core e-circle framework.
 
 **If CMB-S4 finds `N_eff` consistent with `3.046 ± 0.03`**: the mirror sector
 is absent at the needed level. The framework is left with `H₀ ≈ 67.7` (tower
@@ -376,3 +377,30 @@ Tier 1 (`H₀ ≈ 68.0–68.3`) as the allowed prediction.
 The framework is falsifiable at multiple levels. The most immediate tests are
 Prediction 1 (modified gravity at `~21 μm`), Prediction 8 (neutrino mass
 ordering from JUNO), Prediction 9 (no QCD axion), and Prediction 10 (`H₀ ≈ 68.0–68.7` from CMB-S4 `N_eff` detection and JWST-calibrated distance measurements).
+
+---
+
+## H.12 Referee-Requested Summary: Seven Predictions with Full Metadata
+
+The following table provides, for each of the seven primary quantitative
+predictions, the four items requested by journal referees: (i) current
+experimental status, (ii) quantitative prediction with uncertainty,
+(iii) what falsifies it, (iv) whether it is unique to this framework or
+generic to extra-dimension models.
+
+| # | Prediction | Quantitative value | Framework-unique? | Falsification | Current status | Timeline |
+|---|------------|-------------------|-------------------|--------------|----------------|---------|
+| 1 | Gravitational deviation at short range | Yukawa deviation at λ ~ R ≈ 12 μm (Scenario 1) to 21 μm (Scenario 3); α ~ O(1) | Specific scale from dark energy matching — generic extra-dim models have free R | Any experiment ruling out Yukawa forces at 12-21 μm scale with O(1) coupling | Not yet excluded; current limits from Eöt-Wash reach ~50 μm; Stanford torsion pendulum extends to ~10 μm | 3-5 years |
+| 2 | Dark photon kinetic mixing | ε = α_EM × π²/6 × exp(-π) ≈ 5.0 × 10⁻⁴ (within ~20% from subleading corrections) | Specific formula from two-brane KK tower mediation; generic models have ε as free parameter | ε outside range 2-8 × 10⁻⁴ at A' mass m_{A'} = n₁/R ~ 16 meV | Not yet probed at this (ε, mass) point; below current FASER sensitivity | 3-7 years (LDMX, LHCb Run 3-4) |
+| 3 | Neutrino masses | m_ν ~ meV scale from bulk seesaw with M_R ~ 1/R²M_Pl; normal ordering from Z₃ geometry | Scale tied to R; ordering from geometry | Inverted hierarchy measured by JUNO or KamLAND-Zen | Normal ordering preferred by current oscillation fits; mass scale consistent | 5-8 years (JUNO) |
+| 4 | N_eff from KK neutrino contribution | N_eff = 3.31-3.39 (three scenarios; see Paper 2) | Specific prediction from three bulk RHN; generic models have this as free parameter | N_eff < 3.1 at 2σ from CMB-S4 | 3-4σ tension with ACT DR6 N_eff = 2.86 ± 0.13; consistent with Planck+BAO | 5-8 years (CMB-S4) |
+| 5 | H₀ from hidden brane dark radiation | H₀ = 68.7-69.5 km/s/Mpc | Dark radiation contribution from ξ = T_hidden/T_visible fixed by Ω_DM/Ω_b ratio | H₀ < 67 or > 71 km/s/Mpc from multiple independent probes | Consistent with Planck+BAO (67.4 ± 0.5); below SH0ES (73.0 ± 1.0); helps but does not resolve H₀ tension | Currently testable |
+| 6 | Dark energy equation of state | w = -1 exactly (perturbative Casimir V = c/R⁴ is exact to all orders; dilaton frozen) | The w = -1 prediction comes from dilaton being frozen to ε ~ 10⁻⁵²; differs from quintessence | w ≠ -1 at > 2σ from DESI DR3 or Euclid | Current DESI DR2 shows 4.2σ tension with static w = -1; if the quintessence interpretation holds, framework w = -1 is in tension | 2-3 years (DESI DR3) |
+| 7 | Mirror dark matter signal | Hidden-brane baryons with same spectrum as SM but no electromagnetic coupling | Generic dark matter models have no visible mirror baryons | Direct detection of mirror baryon with SM nuclear interactions at low cross section | Not probed; distinctive phenomenology (dark atoms, mirror neutrinos) | 10+ years |
+
+**Notes on uniqueness (column 4).** Predictions 1-4 are quantitatively specific
+to the framework because their numerical values are fixed by the single parameter
+R = 12 μm, which is itself fixed by the dark energy matching. Generic extra-
+dimension models with a free compactification radius would have these as free
+parameters. The framework's predictions are therefore falsifiable at the specific
+numerical values listed, not merely "consistent with extra dimensions."

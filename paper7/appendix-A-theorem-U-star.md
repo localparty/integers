@@ -27,9 +27,19 @@ from the compactification M^4 x CP^2 x S^2 x S^1/Z_2:
 
 where:
 
-- n_i: G_4 flux integers. Bounded by the tadpole condition
-  |n_i| <= chi(M_8)/24. In the framework: n_1 = 9, n_2 = -17.
-  All flux integers satisfy |n_i| <= O(10^2).
+- n_i: G_4 flux integers. Bounded by the backreaction condition:
+  for the flux stress-energy to be sub-Planckian relative to the
+  compact metric (supergravity validity), one requires
+  n_i ≲ (Vol(cycle_i)/l_11^4)^{1/2} at the compactification scale.
+  For the cycles in this framework at their F-flat volumes
+  (Vol(CP²) ~ r_3^4 ~ (n_1/c_R)^2, Vol(S²) ~ r_2²), this gives
+  |n_i| ≲ O(10) at the leading-order estimate. More conservatively,
+  including the O(100) numerical factors from geometric coefficients,
+  we use |n_i| <= O(10^2) as the working bound. Note that the tadpole
+  condition N_M2 >= 0 does *not* bound |n_i| from above (it is
+  satisfied automatically for n_2 < -n_1/2 regardless of the
+  magnitude of n_i); the relevant physical constraint is backreaction.
+  In the framework: n_1 = 9, n_2 = -17.
 
 - chi_j: Euler characteristics. chi(CP^2) = 3, chi(S^2) = 2,
   chi(S^1/Z_2) = 1.
@@ -64,6 +74,13 @@ O(10^2) in magnitude.
 
 **Theorem U* (Underivability of rho_Lambda).**
 
+*This theorem establishes underivability within the class of
+perturbative 11D supergravity mechanisms on M^4 × CP^2 × S^2 × S^1/Z_2.
+It does not rule out mechanisms not yet known within perturbative
+M-theory, or UV-complete mechanisms from a more fundamental theory.
+The theorem's value is precision: it specifies the exact barrier that
+any resolution must overcome.*
+
 *Let R be the S^1 compactification radius in the e-Dimension framework
 M^4 x CP^2 x S^2 x S^1/Z_2. Let G be the geometric input set
 (Definition A.1) and M_Pl the reduced Planck mass. Then:*
@@ -74,10 +91,12 @@ satisfies*
     R_alg <= C_max / M_Pl
 
 *where C_max = max_f |f(G)| over algebraic functions f built from the
-inputs in Section A.2. For the framework's input values,
-C_max ~ O(10^5), giving*
+inputs in Section A.2. From exhaustive enumeration of physically
+motivated combinations (Table A.1), C_max ~ O(10^8) (conservative
+bound); in any physically derived formula, C_max ~ O(1). Taking the
+conservative bound:*
 
-    R_alg <= 10^5 l_Pl ~ 10^{-30} m
+    R_alg <= 10^8 l_Pl ~ 10^{-27} m
 
 *(ii) (Non-perturbative bound.) Instanton corrections to R are of
 the form*
@@ -104,24 +123,18 @@ R_obs requires either:*
 ### A.4.1 Step 1: The algebraic bound
 
 **Claim.** Any algebraic function f(G) of the geometric inputs
-satisfies |f(G)| <= O(10^5).
+in Definitions A.1–A.4 satisfies |f(G)| <= C_max where
+C_max = O(10^8).
 
 **Proof.** The inputs are:
 
-- Flux integers: |n_i| <= O(10^2). In the framework: n_1 = 9,
+- Flux integers: |n_i| <= O(10^2) (see Definition A.1 for the
+  physical bound from backreaction). In the framework: n_1 = 9,
   n_2 = 17.
 - Topological invariants: chi(CP^2) = 3, chi(S^2) = 2,
   sigma(CP^2) = 1, p_1 = 3. All single-digit integers.
 - Dimensions: {1, 2, 4, 7, 11}.
 - Spectral/geometric constants: all O(1) to O(10^2).
-
-For R to be large, we need f(G) >> 1. In M-theory compactifications,
-the power of any flux integer in a physical formula is bounded by the
-number of form-field indices. G_4 is a 4-form on an 11-manifold; the
-maximum power of n_i in any volume/flux formula is p <= dim(M_7)/2
-= 7/2, so p <= 3 (integer powers from integration over cycles). The
-Planck mass formula involves n_i at most quadratically. Theorem U
-(Section 3.6) gives the explicit result: f = 0.194 for n_1 = 9.
 
 An exhaustive enumeration of the largest algebraic combinations:
 
@@ -132,16 +145,25 @@ An exhaustive enumeration of the largest algebraic combinations:
 | n_2^2 x n_1 x chi(CP^2) x sigma(CP^2) | 7803 | Maximal product |
 | n_1^3 x n_2^2 x chi(CP^2)^2 x 11^2 | 2.87 x 10^8 | Extreme (unphysical) combination |
 
-Even extreme, physically unmotivated combinations give f ~ 10^8.
-In any physically derived formula, f ~ O(1). To reach
-R_obs / l_Pl ~ 10^{30} requires either 30th powers of O(10)
-integers (unphysical --- no compactification formula involves such
-powers), an exponential function (not algebraic), or a new large
-number not in G. None is available. QED (Step 1).
+The inputs are bounded: |n_i| <= O(10^2), all topological invariants
+are single-digit, all dimensions <= 11, all spectral constants
+O(1)–O(10^2). For the worst-case combination from exhaustive
+enumeration (allowing all products of available inputs):
 
-*Remark.* The bound C_max ~ O(10^5) is conservative. In practice,
-any physically derivable formula gives f = O(1), as Theorem U
-demonstrates. The gap to R_obs is O(10^{30}), not O(10^5).
+    max_f |f(G)| <= n_max^3 x chi_max^2 x d_max^2
+                <= (100)^3 x 9 x 121 ~ 10^9
+
+The explicit enumeration in Table A.1 shows that the actual maximum
+attained by any expression with physical motivation is 2.87 x 10^8,
+achieved by an unphysical product of all available invariants. We
+therefore set C_max = 10^8 as the conservative algebraic bound.
+The gap to R_obs/l_P ~ 6.4 x 10^29 is then O(10^21). With the
+realistic bound (f ~ O(1) for any physically derived formula, as
+Theorem U demonstrates): R_obs / R_alg ~ 10^30. In either case, R_obs
+is algebraically unreachable. To reach R_obs / l_Pl ~ 10^30 requires
+either 30th powers of O(10) integers (unphysical — no compactification
+formula involves such powers), an exponential function (not algebraic),
+or a new large number not in G. None is available. QED (Step 1).
 
 ### A.4.2 Step 2: Non-perturbative effects go the wrong way
 
@@ -152,14 +174,23 @@ delta_R << l_Pl.
 
 **(a) M2-brane instantons.** An M2-brane wrapping a 3-cycle C_3
 contributes a correction proportional to exp(-S_{M2}) where
-S_{M2} = M_11^3 x Vol(C_3). The minimal 3-cycle in
-M_7 = CP^2 x S^2 x S^1 is S^2 x S^1 with volume
-4 pi r_2^2 x 2 pi R. At the observed values:
+S_{M2} = M_11^3 x Vol(C_3). The minimal 3-cycle using the S²
+factor is S² × S¹ with volume 4πr_2² × 2πR. At the *observed*
+parameter values r₂/l₁₁ ~ 10⁻³ and R/l₁₁ ~ 10²³:
 
-    S_{M2} ~ 10^{11}
+    S_{M2}(S^2 x S^1) ~ 10^{11}
 
-Even at R ~ l_Pl (the algebraic value): S_{M2}(R ~ l_Pl) ~ 10^5.
-In either case, exp(-S_{M2}) is effectively zero.
+This computation holds when r₂ and R are treated as independent
+parameters at their observed values. At the *self-consistent F-flat
+minimum*, the F-flat relation r₃² = n₁l₁₁³/(128π⁵c₀R) causes an
+exact R-cancellation in the action of the CP¹ × S¹ 3-cycle (the
+relevant cycle for the inflaton — see §5.2), giving
+S_M2(CP¹ × S¹) = n₁/(128π³c₀) ≈ 0.095 — which is O(1) and does
+not correct R (M2-instantons generating inflaton potential, not R).
+For the purpose of Theorem U* (corrections to R), the relevant
+M2-instanton wraps S² × S¹ (no CP¹ × S¹ cycle generates a
+potential for R, since G₄ has no 4-cycle on S¹). For that cycle
+at the observed values: S_{M2} ~ 10¹¹, so exp(-S_{M2}) ≈ 0.
 
 **(b) M5-brane instantons.** An M5-brane wrapping a 6-cycle gives
 S_{M5} = M_11^6 x Vol(6-cycle). The minimal 6-cycle is CP^2 x S^2,
@@ -181,12 +212,12 @@ can bridge the gap R_obs / l_Pl ~ 10^{30}.
 
 **Proof.** Combining Steps 1 and 2:
 
-    R_max = R_alg + delta_R <= O(10^5) x l_Pl + epsilon
-          ~ 10^5 x 1.6 x 10^{-35} m = 1.6 x 10^{-30} m
+    R_max = R_alg + delta_R <= O(10^8) x l_Pl + epsilon
+          ~ 10^8 x 1.6 x 10^{-35} m = 1.6 x 10^{-27} m
 
 But R_obs = 10.1 x 10^{-6} m, giving:
 
-    R_obs / R_max >= 10^{24}
+    R_obs / R_max >= 10^{21}
 
 With the realistic bound (f ~ O(1)): R_obs / R_alg ~ 10^{30}. There
 exists no algebraic or non-perturbative path from the geometric inputs
@@ -338,13 +369,13 @@ the first link. R_obs remains the one free parameter.
 | # | Statement | Status | Source |
 |---|-----------|--------|--------|
 | U*.1 | Geometric input catalogue: all dimensionless inputs are O(1) to O(10^2) | **Established** | M-theory compactification on M_7 |
-| U*.2 | Flux integers bounded by tadpole: \|n_i\| <= O(10^2) | **Established** | Tadpole cancellation (standard) |
-| U*.3 | Powers of flux integers in physical formulas bounded by p <= 3 | **Established** | Dimensional analysis of 4-form flux |
-| U*.4 | Any algebraic f(G) gives \|f(G)\| <= O(10^5) (conservative) | **Proved** | Section A.4.1 |
+| U*.2 | Flux integers bounded by backreaction/SUGRA validity: \|n_i\| <= O(10^2) | **Established** | Backreaction condition (Definition A.1) |
+| U*.3 | Exhaustive enumeration: worst-case unphysical combination gives |f(G)| = 2.87 × 10^8 | **Established** | Table A.1 |
+| U*.4 | Any algebraic f(G) gives \|f(G)\| <= O(10^8) (conservative); O(1) for physical formulas | **Proved** | Section A.4.1 |
 | U*.5 | Theorem U gives f = 0.194 for n_1 = 9 | **Proved** | Section 3.6 |
 | U*.6 | All instanton actions satisfy S_inst >> 1 | **Proved** | Explicit computation (Section A.4.2) |
 | U*.7 | Non-perturbative corrections delta_R << l_Pl | **Proved** | U*.6 |
-| U*.8 | Gap: R_obs / R_max >= 10^{24} (conservative) or 10^{30} (realistic) | **Proved** | U*.4 + U*.7 |
+| U*.8 | Gap: R_obs / R_max >= 10^{21} (conservative, C_max = 10^8) or 10^{30} (realistic, C_max = O(1)) | **Proved** | U*.4 + U*.7 |
 | U*.9 | **Theorem U*: R_obs is underivable from geometric data** | **Proved** | U*.4 + U*.7 + U*.8 |
 | U*.10 | rho_Lambda^{1/4} / m_KK = 0.115 is structural (Casimir mechanism) | **Derived** | Paper 1 (Delta_N = 3.44) |
 | U*.11 | m_nu / m_KK = 2.61 ~ 5/2 (numerical) | **Closed** (not topological) | Kawasaki + APS (Appendix A §A.5.4) |
@@ -362,8 +393,9 @@ framework has exactly one free parameter (R), and that parameter
 cannot be fixed by any mechanism internal to the perturbative theory.
 
 The observed value R_obs = 10.1 um lives in a desert between the
-algebraic ceiling (R ~ 10^5 l_Pl at most) and R_obs = 10^{30} l_Pl,
-with no mathematical path connecting them. The only escape would be an
+algebraic ceiling (R ~ 10^8 l_Pl at most from exhaustive enumeration;
+R ~ O(1) l_Pl for any physically motivated formula) and
+R_obs = 6.4 × 10^{29} l_Pl, with no mathematical path connecting them. The only escape would be an
 exponential mechanism of the form exp(c x N), but all exponential
 effects in the framework (instantons) have the wrong sign:
 exp(-S) << 1, not exp(+S) >> 1. An exponential enhancement would

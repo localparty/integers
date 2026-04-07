@@ -14,10 +14,15 @@ not the absence of dynamics.
 incorporate each infalling bit (Section 4.2), encoding it as an
 e-coordinate shift on the horizon surface (Section 4.3).
 
-**The e-shift propagates instantaneously.** Because the e-dimension
-carries no causal structure, the shift modifies the entire horizon
-surface simultaneously (Section 5.2) — consistently, because no
-signal travels.
+**The e-shift is locally encoded and globally distributed.** The
+`n = 0` zero-mode of the e-coordinate is a non-dynamical geometric
+variable: changes to it are determined by the algebraic e-conservation
+constraint, not by a differential equation of motion in spacetime
+(Section 2.4). When a bit falls in, the new horizon pixel's
+e-coordinate is locally set by e-conservation at the absorption
+vertex; after the scrambling time, the e-information is mixed
+across all horizon pixels by the 4D thermal dynamics (Section 5.4).
+No signal travels and no 4D causality is violated.
 
 **Hawking radiation is structured in e.** The 5D state of the
 radiation carries e-imprints of all infalling bits. The 4D
@@ -37,13 +42,15 @@ applies to 4D correlations; e-correlations are geometric
 constraints in a different dimension and do not compete
 (Section 9.2).
 
-**The island formula is recovered geometrically.** The island is the
-region of the horizon whose e-information has been transferred to
-the radiation (Section 10.2).
+**The island formula is qualitatively identified.** The island is
+the region of the horizon whose e-information has been transferred
+to the radiation (Section 10.2). The e-framework produces a Page
+curve consistent with the island formula at leading order; the
+full replica wormhole derivation is not reproduced (Section 10.5).
 
 **The scrambling time is reproduced.** `t_scr = β ln(S_BH)/(2π)`
-follows from instantaneous e-propagation plus thermally governed
-4D emission (Section 11.2).
+follows from the Hayden-Preskill decoupling theorem applied to the
+e-sector plus the thermally governed 4D emission rate (Section 11.2).
 
 **Unitarity is proved.** The 5D S-matrix is unitary by Noether's
 theorem applied to e-conservation (Section 6.4).
@@ -63,13 +70,13 @@ dimensions.
 | WDW equation as 4D projection | **Derived** (from the 5D/4D reduction) | A proof that the WDW constraint cannot be separated into KK sectors |
 | Hawking temperature from e-circle periodicity (φ = κct_E) | **Derived** (from regularity of the Euclidean 5D metric) | A different identification of the thermal circle |
 | S = A/4 from KK entanglement | **Derived** (consistent with known results, no free parameters) | A measurement of S ≠ A/4 in a system where the framework applies |
-| Page curve recovery | **Derived** (given the e-imprint mechanism) | A proof that the e-correlations cannot encode the full Page curve |
-| Scrambling time t_scr ~ β ln S | **Derived** (from e-propagation + thermal emission rate) | A measurement of scrambling time inconsistent with β ln S |
+| Page curve recovery | **Conditional** (given e-imprint mechanism + fast-scrambler assumption; Theorem 7.1; §7.6) | A proof that the horizon does not act as a fast scrambler in the e-sector |
+| Scrambling time t_scr ~ β ln S | **Derived** (from Hayden-Preskill decoupling theorem applied to e-sector + thermal emission rate; §11.2) | A measurement of scrambling time inconsistent with β ln S |
 | Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; non-perturbative completion via M-theory, Appendix A) | A proof that the 5D path integral is not well-defined |
 | δφ = φ_infalling (e-imprint mechanism) | **Argued** (from e-conservation at the horizon vertex) | A proof that e-conservation does not apply at the horizon |
 | e-correlations not subject to monogamy | **Derived** (§9.3.1: Q_e is a superselection charge; KK loops conserve e-charge) | A proof that the KK zero-mode projection does not commute with Q_e |
 | Firewall paradox resolution (Theorem 9.1) | **Derived** (§9.3.1-2 + gauge symmetry protection; UV finiteness at horizon from Appendix S + non-perturbative completion from Appendix A) | A proof that the 5D path integral is UV divergent at the horizon vertex |
-| e-coordinate non-dynamical (no causal structure) | **Argued** (from the fiber bundle geometry + ∂/∂φ Killing vector) | A derivation of a causal propagation equation for the e-coordinate |
+| e-coordinate zero-mode non-dynamical | **Argued** (from KK decomposition: `n=0` mode is non-propagating background; `n≠0` modes propagate sublumianlly; §2.4) | A derivation of a causal propagation equation for the `n=0` zero-mode specifically |
 
 **The resolution is complete with no remaining dependencies.**
 The formerly single dependency — that the horizon interaction

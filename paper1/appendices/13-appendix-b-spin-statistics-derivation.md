@@ -628,7 +628,7 @@ The spin-statistics theorem is now established through the three-step chain:
     \text{Step 2 (B.2):} \quad \text{Phase} = e^{i2πn}  \quad (\text{exchange phase from e-transport})
     \text{Theorem B.3.3:} \quad \text{Phase} = (−1)^{2s} \quad (\text{spin determines statistics})
 
-Every step is geometric. No step requires the four axioms of the standard proof (Lorentz invariance, locality, positive energy, microcausality). The single geometric input is the framework's postulate: spacetime has a fifth dimension, and it is a circle.
+Every step is geometric. The derivation uses the same Hilbert-space and rotation-group foundations as the standard proof — in particular, Wigner's theorem and π₁(SO(d)) = ℤ₂ for d ≥ 3 are assumed, not derived from the 5D postulate. What distinguishes the 5D derivation is that it additionally uses the e-phase coupling (Step 3) to fix the free representation χ(σ) = e^{i2πs} in the Leinaas-Myrheim formulation, providing a geometric account of *why* the connection holds rather than merely showing that the wrong assignment is contradictory. The single additional geometric input beyond the standard axioms is the framework's postulate: spacetime has a fifth dimension, and it is a circle.
 
 ### B.3.10 Lorentz Invariance
 
@@ -637,6 +637,57 @@ The Lagrangian in Section B.3.2 is non-relativistic, chosen for clarity. The rel
     ds₅² = g_{μν} dx^μ dx^ν + R² (dφ + A_μ dx^μ)²
 
 where `g_{μν}` is the Lorentzian spacetime metric. The 5D Dirac equation on this manifold --- a known construction in Kaluza-Klein theory --- reduces upon dimensional reduction to the standard 4D Dirac equation with minimal electromagnetic coupling (see Overduin & Wesson, *Phys. Reports* 283, 303, 1997; Bailin & Love, *Rep. Prog. Phys.* 50, 1087, 1987). The spin identification `Ŝ_z = p̂_φ` carries over to the relativistic setting because the fiber structure and the Noether theorem are independent of whether the base metric is Riemannian or Lorentzian. The non-relativistic treatment in this appendix is therefore a specialization of a Lorentz-covariant framework, not a limitation of it.
+
+---
+
+### B.3.11 Integer-Spin Cases: Photon (s=1) and Graviton (s=2)
+
+The Noether identification of Step 3 (§B.3) gives Ŝ_z = p̂_φ, the e-momentum
+operator. This applies uniformly for all spin values, including the bosonic
+gauge bosons of the KK theory.
+
+**The KK photon (s=1).** The electromagnetic potential A_M in 5D decomposes
+as A_μ (the 4D photon) plus A_φ (the KK scalar). The helical winding number
+of the photon is n = 1 (one e-revolution per spatial wavelength). Under a 2π
+spatial rotation:
+
+    e-phase = e^{i·2π·1} = +1
+
+This is the bosonic exchange phase. Two photons in the same state are permitted;
+their wavefunction is symmetric. This is consistent with Bose-Einstein statistics
+for spin-1 particles.
+
+Under exchange of two photons:
+
+    Exchange phase = e^{i·2πs} = e^{i·2π·1} = +1
+
+Symmetric wavefunction. Bosons. ✓
+
+**The KK graviton (s=2).** The 5D graviton h_{MN} decomposes into the 4D
+graviton h_{μν}, the graviphoton A_μ, and the dilaton. The helical winding
+number of the 4D graviton is n = 2 (two e-revolutions per spatial wavelength).
+Under a 2π spatial rotation:
+
+    e-phase = e^{i·2π·2} = +1
+
+Under exchange:
+
+    Exchange phase = e^{i·2πs} = e^{i·2π·2} = +1
+
+Symmetric wavefunction. Bosons. ✓
+
+This is consistent with the observed bosonic statistics of gravitational waves
+and with the KK mode structure: the graviton propagates via the same metric
+perturbation that sources the KK reduction, and its winding-number assignment
+is fixed by the KK Lagrangian through the same Noether mechanism that fixes
+the fermion winding.
+
+**Integer spin, integer winding: general argument.** For any integer-spin
+particle with s = k ∈ ℤ, the Noether relation gives winding number n = k.
+The exchange phase e^{i·2πk} = +1 for all k ∈ ℤ, confirming bosonic statistics
+uniformly. For half-integer spin s = k + ½, the exchange phase e^{i·π(2k+1)} = -1
+for all k ∈ ℤ, confirming fermionic statistics uniformly. The dichotomy is
+complete and exhaustive for all spin values in ½ℤ.
 
 ---
 

@@ -263,15 +263,19 @@ at the Planck scale. The full SM electroweak running from `M_P` to zero
 energy adds ~32, yielding `1/α(0) ≈ 137.0 ± 0.3` — within 0.12% of the
 experimental 137.036. The full treatment is given in Appendix W.
 
-**The strong CP problem from orbifold topology.** The `Z₂` orbifold requires 5D
-gauge fields living on the full interval `[0, πR]`. The homotopy group that gives
-rise to the QCD theta parameter in 4D is `π₃(SU(3)) = Z`. In 5D, the relevant
-group is `π₄(SU(3)) = 0` (Bott periodicity) — there are no topologically
-non-trivial gauge configurations. The theta parameter is absent, not small:
-`θ = 0` topologically enforced. KK instanton contributions are suppressed by
-`exp(−10³⁰)` (Appendix J). The prediction is stark: no QCD axion. If ADMX,
-ABRACADABRA, or IAXO find the QCD axion, this mechanism is falsified. The full
-derivation is in Appendix X.
+**The strong CP problem from orbifold topology (conjecture).** The `Z₂` orbifold
+places 5D gauge fields on the full interval `[0, πR]`. The homotopy group relevant
+to QCD instantons — gauge field configurations with non-zero winding on S³ at
+spatial infinity — is `π₃(SU(3)) = Z`. In 5D, the analogous classification uses
+`π₄(SU(3)) = Z₂` (Bott periodicity), which is relevant for Witten's global
+anomaly, not directly for QCD instantons. A complete resolution of the strong CP
+problem in this framework requires: (a) establishing whether the orbifold boundary
+conditions project out π₃(SU(3)) instanton contributions, (b) addressing the quark
+mass matrix phase θ̄ = θ_QCD + arg det(M_q), and (c) showing θ_eff vanishes in
+the 4D effective theory. None of these has been established; the strong CP claim
+is therefore a conjecture. If it holds, the prediction is stark: no QCD axion. If
+ADMX, ABRACADABRA, or IAXO find the QCD axion, the orbifold resolution is
+falsified. See Appendix X for the full statement and open requirements.
 
 **Neutrino mass ordering from the `Z₃` geometry.** The three bulk right-handed
 neutrinos required by the Casimir calculation (Appendix W, §W.9.1) are

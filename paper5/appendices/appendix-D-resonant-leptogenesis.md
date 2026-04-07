@@ -129,6 +129,17 @@ depends on the full thermal history including:
 A full numerical solution of the Boltzmann equations (§D.4) is needed
 to determine whether these effects close the remaining gap.
 
+**Note (added in revision):** The factor-of-10³ enhancement estimated
+above assumed O(1) off-diagonal Yukawa matrix elements, i.e.,
+(Y†Y)₁₂ ~ y² ~ 0.85. The Z₃ democratic structure of the Yukawa
+matrix (§D.5.1) gives instead (Y†Y)₁₂ ~ ξy² with ξ = y²/(8π) ~ 0.034,
+reducing the off-diagonal element by a factor of ξ ~ 0.034 and the
+apparent 10³ enhancement by a factor of ξ² ~ 10⁻³. The naive 10³
+estimate of §D.3 is therefore incorrect for the Z₃ democratic Yukawa
+structure; the actual resonant enhancement (§D.5.2) is a factor of ~12.
+The detailed accounting in §D.5 supersedes the parametric estimate
+of §D.3.
+
 ## D.4 The Coupled Boltzmann Equations
 
 The complete set of Boltzmann equations for the N₁-N₂ resonant
@@ -182,10 +193,21 @@ geometry. The numerical solution has been obtained (see §D.5).
 
 ## D.5 Numerical Solution and Assessment
 
-**Status: SOLVED.** The numerical integration of the coupled Boltzmann
-equations (section D.4) confirms that the Z₃ resonant leptogenesis mechanism
-reproduces eta_B within a factor of 2-6 of observation across the natural
-parameter range. The full computation is summarized below.
+**Status: Consistent within systematic uncertainty.** The numerical
+integration of the coupled Boltzmann equations (section D.4) gives
+η_B ∈ (1.1–3.0) × 10⁻¹⁰ across the natural range α ∈ [0, 3], where
+α parametrizes the O(1) K-splitting between N₁ and N₂ from the
+Z₃-breaking boundary correction. The observed value η_B = 6.1 × 10⁻¹⁰
+is a factor of 2–6 above this range. The parameter α is not
+geometrically fixed from first principles; it is an order-unity number
+characterizing the boundary conditions at the visible brane. The
+framework predicts the correct order of magnitude and sign of η_B from
+geometric inputs; the remaining factor-of-2 to factor-of-6 discrepancy
+is within the combined systematic uncertainty from spectator processes,
+ΔL = 2 washout, NLO QCD corrections, and thermal CP asymmetry
+corrections (see §D.5.4). The claim is that the Z₃ geometry is
+consistent with the observed baryon asymmetry, not that it predicts
+η_B precisely. The full computation is summarized below.
 
 ### D.5.1 The Three Key Physics Ingredients
 
@@ -268,19 +290,29 @@ prediction is consistent with observation within theoretical precision.
 
 ### D.5.5 Revised Assessment
 
-The Appendix D.3 parametric estimate used the naive O(1) off-diagonal
-Yukawa, giving an apparent gap of 10² between the resonant estimate
-and observation. The numerical solution with the correct Z₃ Yukawa
-structure closes this gap:
+The §D.3 parametric estimate assumed O(1) off-diagonal Yukawa matrix
+elements, (Y†Y)₁₂ ~ y², which would give a factor-of-10³ resonant
+enhancement. This estimate is incorrect for the Z₃ democratic Yukawa
+structure: as explained in §D.5.1, the Z₃ democratic assignment gives
+(Y†Y)₁₂ ~ ξy² with ξ = y²/(8π) ~ 0.034, suppressing the off-diagonal
+element relative to the naive estimate. The naive factor-of-10³
+enhancement in §D.3 therefore does not apply; the actual resonant
+enhancement is ~12, as computed in §D.5.2. The §D.3 parametric estimate
+is retracted (see also the note added at the end of §D.3).
 
-- ε_res = 4.69 × 10⁻⁵ (not 10⁻³ × ε_vanilla as naively estimated)
-- Flavour orthogonality prevents the two-species cancellation
-- η_B = (1.1–3.0) × 10⁻¹⁰ across the natural parameter range
-- Observed η_B = 6.1 × 10⁻¹⁰ — agreement within factor 2–6
+The numerical solution with the correct Z₃ Yukawa structure gives:
 
-All inputs are geometric. The baryon asymmetry of the universe is
-a prediction of the Z₃ orbifold structure, accurate to within the
-theoretical precision of the Boltzmann equation approach.
+- ε_res = 4.69 × 10⁻⁵ (factor ~12 over vanilla, not 10³ as in §D.3)
+- Flavour orthogonality (p₁₂ = ξ² ≪ 1) prevents catastrophic
+  two-species cancellation
+- η_B = (1.1–3.0) × 10⁻¹⁰ across the natural parameter range α ∈ [0, 3]
+- Observed η_B = 6.1 × 10⁻¹⁰ — agreement within factor 2–6, consistent
+  with the systematic uncertainty from α and from the effects in §D.5.4
+
+The parameter α (K-splitting) is an O(1) free parameter not fixed from
+first principles; the prediction η_B ∈ (1–3) × 10⁻¹⁰ has a
+corresponding O(1) factor of freedom. The framework is consistent with
+the observed baryon asymmetry within this uncertainty.
 
 ### D.5.6 Numerical Code
 

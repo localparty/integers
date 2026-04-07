@@ -41,6 +41,16 @@ this framework, the specific ratio ρ_Λ^{1/4}/m_KK = 0.115 is a
 **derived consequence** of the Casimir formula with ΔN = 3.44
 (Paper 1, §6.6; Appendix A of this paper, §A.5.2).
 
+Both frameworks also predict deviations from Newtonian gravity (the
+inverse-square law) at distances ≲ R ~ 10 μm, as tested by Eöt-Wash
+and similar short-range gravity experiments (Kapner et al. 2007;
+Lee et al. 2020). This is a *shared* prediction and does not
+discriminate between the two frameworks. The primary distinguishing
+observable is the dark matter mechanism: Kaluza-Klein graviton tower
+(mass spectrum m_n ~ n/R ~ n × 20 meV) in the dark dimension
+scenario vs. mirror-brane matter from the Z₂ hidden sector in the
+present framework.
+
 ---
 
 ## C.3 The Fundamental Differences
@@ -112,9 +122,11 @@ principles — it uses Λ as input through the SDC.
 
 Theorem U* (Appendix A of this paper) proves this underivability as a
 **theorem** for the specific class of M-theory compactifications on
-CP² × S² × S¹/Z₂: the geometric input set G contains only O(1) integers
-and M_Pl, and any algebraic function f(G)/M_Pl satisfies R_alg ≤ O(10⁵) l_P,
-falling 30 orders of magnitude short of R_obs.
+CP² × S² × S¹/Z₂: the geometric input set G contains only O(1)–O(10²)
+integers and M_Pl, and any algebraic function f(G)/M_Pl satisfies
+R_alg ≤ O(10⁸) l_P (conservative bound from exhaustive enumeration;
+O(1) l_P for any physically derived formula), falling 21–30 orders of
+magnitude short of R_obs.
 
 This is a rigorous statement of the same obstacle the dark dimension
 faces: in either framework, explaining R_obs ~ 10 μm from first

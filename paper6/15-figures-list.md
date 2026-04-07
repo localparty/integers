@@ -31,8 +31,8 @@ regimes:
 - **Steep slope** (intermediate `φ`): the region where the dilaton
   oscillates and decays, driving reheating. Label: `T_reh ≈ 5 × 10⁹ GeV`.
 - **Frozen tail** (small `φ`, post-inflationary): the dilaton is
-  frozen by Hubble friction at `ε ≈ 10⁻⁵²`, giving `w = −1`. Label:
-  dark energy (Casimir cosmological constant).
+  frozen by Hubble friction at `ΔR/R₀ ~ 3×10⁻³⁰` per Hubble time,
+  giving `w = −1`. Label: dark energy (Casimir cosmological constant).
 
 Annotate the transition points between regimes. Show that the
 potential is bounded below — no Big Rip.

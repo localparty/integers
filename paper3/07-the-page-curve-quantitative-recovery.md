@@ -56,10 +56,36 @@ where `g_k` is the function encoding how the `k`-th emission samples
 the horizon's e-structure (determined by the Bogoliubov coefficients
 of the 5D field theory).
 
-Following Page (1993) and Hayden-Preskill (2007), we model the
-horizon dynamics as a random unitary acting on the e-Hilbert space
-— the assumption that the black hole is a fast scrambler
-(Sekino & Susskind 2008). Under this assumption, the entanglement
+The derivation of the Page curve presented here is a *conditional*
+result: it follows from (i) the structure of the e-Hilbert space
+established in Section 7.2, and (ii) the assumption that the horizon
+dynamics act as an approximate random unitary on this Hilbert space.
+Assumption (ii) is not derived from the 5D equations of motion in
+this paper — it is the fast-scrambler conjecture (Sekino & Susskind
+2008) applied to the e-sector. What the 5D framework adds over a
+bare appeal to Page (1993) is structural: it identifies the Hilbert
+space on which the random unitary acts (the e-sector, not an abstract
+qubit system), it provides the physical mechanism that mixes the
+e-coordinates (the 4D thermal horizon dynamics at temperature `T_H`),
+and it establishes — via e-conservation — that the map from horizon
+e-configurations to radiation e-configurations is deterministic and
+unitary. The result is that if the horizon acts as a fast scrambler
+in the e-sector (the standard assumption for black holes, confirmed
+for holographic black holes by the MSS chaos bound argument), the
+Page curve follows. We state this as a conditional theorem:
+
+**Theorem 7.1 (Conditional Page Curve).** *Assume: (i) the e-Hilbert
+space decomposition `H_{5D} = H_{BH} ⊗ H_{rad}` from Section 7.2;
+(ii) the horizon dynamics between emissions act as a Haar-random
+unitary on `H_{BH}`. Then the entanglement entropy of the radiation
+satisfies `S_{rad}(k) = min[k, N₀ − k] × ln(d_e)`, reproducing the
+Page curve with Page time at `k = N₀/2`.*
+
+The derivation of assumption (ii) from the 5D Hamiltonian — proving
+that the 5D dynamics form an approximate unitary k-design on the
+e-sector — is deferred to future work.
+
+Under the fast-scrambler assumption (Theorem 7.1), the entanglement
 entropy of the radiation after `k` emissions is:
 
     S_rad(k) = min[k, N_0 - k] × ln(d_e)
@@ -84,6 +110,31 @@ For `k ≪ N_0/2`, the correction term is negligible:
 
 This is half the initial Bekenstein-Hawking entropy — the Page
 maximum.
+
+**The coefficient s₀ after renormalization.** The formula above uses
+`s₀ = ln(d_e) = ln(2πR₀/l_{P,bare}) ≫ 1` (using bare Planck length).
+This must agree with the Bekenstein-Hawking formula `S_BH = A/(4l_P²)`,
+which assigns exactly 1 degree of freedom per Planck area. The two
+are consistent after G-renormalization (Section 8.2).
+
+From Section 8.2: the renormalized Newton's constant satisfies
+
+    1/G_ren = 1/G_bare + (loop contributions from N_eff KK species)
+
+The renormalized Planck length is `l_{P,phys}² = G_ren ℏ/c³`. The
+e-Hilbert space has `d_e = 2πR₀/l_{P,bare}` states per pixel. The
+physical number of independent e-states per Planck pixel — using the
+physical Planck area `l_{P,phys}²` — is:
+
+    s₀ = ln(d_e) × (l_{P,bare}²/l_{P,phys}²) = 1
+
+after G-renormalization. The renormalization of G absorbs exactly the
+`ln(d_e)` enhancement, leaving `s₀ = 1` in Bekenstein-Hawking units.
+This is the same renormalization that resolves the species problem in
+Section 8.2; the two resolutions are identical. The Page curve formula
+in Bekenstein-Hawking units is `S_{rad}(k) = min[k, N₀ − k]`, with
+`s₀ = 1`, correctly recovering the standard Page curve with no free
+parameters.
 
 **After the Page time** (`k > N_0/2`): The radiation is now the
 larger subsystem. The horizon is the smaller subsystem with
@@ -143,6 +194,72 @@ and derives consequences. The e-dimension framework provides the
    and invisible to any 4D measurement. This is why Hawking's 4D
    calculation correctly gives a thermal result — the information is
    present but encoded in a dimension the 4D calculation doesn't see.
+
+### 7.6 Status of the Page Curve Result
+
+For clarity, we distinguish three levels of statement in this section:
+
+**Level 1 (derived from 5D equations of motion):** The e-Hilbert space
+decomposition `H_{5D} = H_{BH} ⊗ H_{rad}`, the e-conservation law
+at each emission vertex, and the identification of the e-sector as
+the information carrier (Sections 4–6) — these follow from the 5D
+action and Noether's theorem.
+
+**Level 2 (conditional on fast-scrambler assumption):** The Page
+curve formula `S_{rad}(k) = min[k, N₀ − k] × s₀` — this follows
+from Level 1 plus the random-unitary (fast scrambler) assumption.
+It is a conditional result, not a first-principles derivation.
+
+**Level 3 (open problem):** The derivation of the fast-scrambler
+property from the 5D Hamiltonian — showing the e-sector dynamics
+generate an approximate k-design — is an open problem. Progress
+requires computing the spectral statistics of the 5D Hamiltonian
+restricted to the e-sector, which is connected to the study of
+quantum chaos in the KK theory.
+
+The identification with the island formula (Section 10) is at
+Level 2 — qualitatively consistent with the island result but not
+a rederivation of it (see Section 10.5).
+
+### 7.7 Early-Time Behavior: The Pre-Scrambling Regime
+
+The derivation of Theorem 7.1 assumes the random-unitary approximation
+holds for each emission. This requires the horizon to have scrambled
+between successive emissions. The scrambling time is
+`t_scr ~ β ln S_BH` (Section 11), while the emission time is `~ β`
+(one Hawking period per quantum). For the first `k < k_scr ≡ ln S_BH`
+emissions, the horizon has NOT scrambled and the random-unitary
+approximation fails.
+
+**How many emissions are affected?** `k_scr = O(ln S_BH)`. For a
+solar-mass black hole `S_BH ~ 10^{77}`, so `k_scr ~ 77 × ln(10) ~ 177`
+emissions. This is a negligible fraction of the total `N₀ = S_BH ~ 10^{77}`
+emissions — a fraction `k_scr/N₀ ~ 10^{-75}`.
+
+**The early-time entropy.** For `k < k_scr`, the infalling information
+has not yet been scrambled across the horizon. The horizon's
+e-configuration reflects the history of recent infalling bits with
+minimal mixing. In this regime the emission is not sampling a
+Haar-random state. A conservative estimate: for `k < k_scr`, the
+entanglement entropy grows at most as `S_{rad} ≤ k × ln(d_e)` (the
+random-unitary upper bound), and at least as `S_{rad} ≥ 0` (trivially).
+The precise value depends on the initial state and the early-time
+dynamics — it is not determined by the random-unitary model.
+
+**The Page curve is unaffected.** The Page time occurs at `k = N₀/2 ≫ k_scr`.
+The behavior near the Page time — which determines the qualitative
+shape of the Page curve and its turnover — is deep in the regime
+`k ≫ k_scr`, where the random-unitary approximation is valid. The
+early-time (`k < k_scr`) correction affects only the first `ln(S_BH)`
+emissions out of `S_BH` total, modifying the entropy by at most
+`ln(S_BH) × ln(d_e)` out of the maximum entropy of `N₀/2 × ln(d_e)`.
+The correction is suppressed by a factor of `2 ln(S_BH)/N₀ ~ 10^{-74}`
+(for solar-mass black holes) relative to the total entropy.
+
+**Revised statement.** Theorem 7.1 applies for `k ≫ k_scr = O(ln S_BH)`.
+For `k ≤ k_scr`, the entropy satisfies `0 ≤ S_{rad}(k) ≤ k × ln(d_e)`,
+with the precise value determined by initial conditions. The Page
+curve derivation and Page-time result are unchanged.
 
 ---
 

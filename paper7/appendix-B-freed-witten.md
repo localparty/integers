@@ -391,40 +391,7 @@ Correspondence — the Z₂ involution τ₃ is the Wilson line in E₈).
 P6 (Projection Produces Pathology — the integer obstruction was an
 artifact of ignoring the Z₂ equivariant structure).*
 
-### B.10.1 The Conrad formula plus the gravitational correction
-
-Round 4 (problem-2-equivariant-c2.md) showed that the HW anomaly
-cancellation forces at least one E₈ factor to have half-integer
-equivariant c₂^{eff} on CP². Round 5 (computation-1-eta-invariant.md)
-identifies the precise value from two independent routes that converge
-on the same answer.
-
-**Route A: Conrad formula + gravitational correction.**
-
-Conrad's formula (hep-th/0009251) for the fractional instanton number
-from a gauge twist V in a Z₂ orbifold is:
-
-    {k} = (V² − v²) mod 1
-
-For the E₆ × SU(3)-preserving involution τ₃ (the one relevant to SM
-embedding), the twist vector satisfies V² = 2/3. The S¹/Z₂ orbifold
-contributes v² = 1/4. On flat T⁴/Z₂:
-
-    {k}_{Conrad} = 2/3 − 1/4 = 5/12
-
-Conrad's formula was derived for flat T⁴/Z₂. On CP² (non-flat,
-χ(CP²) = 3, σ(CP²) = 1), the level-matching condition receives a
-gravitational correction proportional to the Euler characteristic and
-signature of the base manifold (Vafa 1986; Dixon-Harvey-Vafa-Witten 1985):
-
-    δ_{grav} = [χ(CP²) − σ(CP²)] / 24 = (3 − 1)/24 = 1/12
-
-Therefore:
-
-    c₂^{eff}(V_vis)|_{CP²} = 5/12 + 1/12 = 6/12 = **1/2**         (B.10.1)
-
-This is exact arithmetic: the gravitational correction is precisely
-what is needed to shift the flat-space value to 1/2.
+### B.10.1 The Primary Proof (Route B): Five-Constraint Uniqueness
 
 **Route B: Uniqueness from five-constraint self-consistency.**
 
@@ -438,6 +405,37 @@ unique solution in the allowed range:
   to be an integer, so c₂^{eff}(V_vis) ∈ {1/2, 3/2}.
 - For c₂^{eff}(V_vis) = 3/2: N_flux = −225/2 (non-integer), violating C4.
 - Therefore: **c₂^{eff}(V_vis) = 1/2 is the unique solution.**
+
+This is the authoritative derivation. The constraint C4 (N_M2 ∈ ℤ_≥0)
+is a physical necessity — not a derived consequence — that eliminates
+one of the two candidate values, leaving c₂^{eff} = 1/2 as the unique
+consistent choice.
+
+### B.10.1b Motivational Check (Route A): Conrad Formula
+
+*The following computation is presented as a consistency check and
+motivational scaffolding, not as a primary proof. The Conrad
+gravitational correction formula δ_grav = (χ − σ)/24 was derived
+for flat orbifolds T⁴/Z₂ (Conrad 2004) and has not been established
+for curved CP². We include it here because it reproduces the Route B
+result numerically, suggesting that the formula may extend to curved
+spaces — but this is not proven, and the reader should regard Route B
+as the authoritative derivation.*
+
+Conrad's formula (hep-th/0009251) for the fractional instanton number
+from a gauge twist V in a Z₂ orbifold on flat T⁴/Z₂ is {k} = (V² − v²)
+mod 1. For the E₆ × SU(3) twist vector (V² = 2/3) with S¹/Z₂ orbifold
+(v² = 1/4), this gives {k}_{Conrad} = 5/12.
+
+On CP² (curved, non-spin), the level-matching condition receives a
+gravitational correction δ_{grav} from the non-trivial topology. The
+combination (χ(CP²) − σ(CP²))/24 = 1/12 would shift 5/12 to exactly 1/2.
+This decomposition is suggestive and numerically exact, but the specific
+formula δ_{grav} = (χ − σ)/24 has not been independently confirmed in the
+literature for this geometry — Conrad's formula was derived for flat
+T⁴/Z₂ and does not directly apply to CP². The 5/12 + 1/12 decomposition
+should be understood as motivational scaffolding, with Route B being the
+rigorous proof.
 
 ### B.10.2 The complete solution
 
@@ -474,6 +472,42 @@ the combined flux and gravitational contributions. The number 450 = 2 × 225
 = 2 × 15² is consistent with the arithmetic of the flux quantization
 (n₁ = 18, n₂ = −34, intersection matrix giving |N_flux| = 450).
 
+### B.10.3a Connection to the Neutrino Mass Ratio
+
+The fractional instanton `c₂^{eff}(V_vis)|_{CP²} = 1/2` established in
+§B.10.1 enters directly into the neutrino mass spectrum of Paper 4. The
+spin^c Dirac operator on CP² twisted by the tautological bundle O(1) has
+index:
+
+    ind(D^{spin^c} ⊗ O(1), CP²) = 3
+
+by the Hirzebruch-Riemann-Roch theorem (equal to `χ(CP²) = 3` for this
+specific twist on CP²), and this index counts the three zero modes
+corresponding to the three right-handed neutrino generations. The
+difference:
+
+    ind(D^{spin^c} ⊗ O(1)) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2 = 5/2
+
+gives the ratio of the atmospheric neutrino mass to the Kaluza-Klein scale
+at the GUT unification scale:
+
+    m_ν / m_KK |_{GUT} = χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 5/2
+
+The mechanism has two independent layers. The `3` arises from the topology
+of CP² as the compactification manifold: it is fixed, independent of the
+gauge sector. The `1/2` arises from the M-theory anomaly structure on the
+HW orbifold: because `w₂(CP²) ≠ 0`, the Freed-Witten quantization
+condition forces a half-integer shift in the G₄ flux on the CP² cycle,
+and the five-constraint uniqueness theorem (§B.10.1) eliminates all other
+values. The 1/2 shift is not a choice; it is required by anomaly
+cancellation on the non-spin manifold.
+
+This connects the M-theory anomaly structure to a prediction for the
+neutrino mass scale. RG running of the SU(2) gauge coupling from `M_GUT`
+to `M_Z` accounts for the 2.4% deviation between the exact GUT-scale
+prediction `5/2 = 2.500` and the observed ratio `m_ν^{atm}/m_KK = 2.56`
+at the electroweak scale (Paper 4, §7.5.7).
+
 ### B.10.4 Updated proof chain
 
 | Step | Statement | Status |
@@ -483,11 +517,11 @@ the combined flux and gravitational contributions. The number 450 = 2 × 225
 | B.3 | Approximate solution (19/2, −18), 0.31% deviation | **Proved** (Round 1) |
 | B.4 | I₈ = 0 for all natural 8-fold candidates | **Proved** (Round 2) |
 | B.5 | E₈ anomaly forces half-integer equivariant c₂ on orbifold | **Proved** (Round 4) |
-| B.6 | Conrad formula: {k} = 5/12 for E₆ × SU(3) twist on T⁴/Z₂ | **Computed** (Round 5) |
-| B.7 | Gravitational correction for CP²: δ = (χ−σ)/24 = 1/12 | **Computed** (Round 5) |
-| B.8 | c₂^{eff} = 5/12 + 1/12 = 1/2 (exact) | **Proved** (Round 5) |
-| B.9 | Uniqueness: c₂ = 1/2 is the only value satisfying C1–C5 | **Proved** (Round 5) |
-| B.10 | Exact GUT unification: ratio = −17/9, N_{M2} = 450 | **Proved** (B.8 + B.9) |
+| B.6 | Conrad formula: {k} = 5/12 for E₆ × SU(3) twist on T⁴/Z₂ (motivational) | **Computed** (Round 5) |
+| B.7 | Gravitational correction for CP²: δ = (χ−σ)/24 = 1/12 (motivational; formula not established for curved CP²) | **Computed** (Round 5) |
+| B.8 | c₂^{eff} = 5/12 + 1/12 = 1/2 via Route A (heuristic check only) | **Motivational** |
+| B.9 | Uniqueness: c₂ = 1/2 is the only value satisfying C1–C5 (Route B, primary proof) | **Proved** (Round 5) |
+| B.10 | Exact GUT unification: ratio = −17/9, N_{M2} = 450 | **Proved** (B.9, Route B) |
 
 ### B.10.5 References
 

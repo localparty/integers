@@ -28,10 +28,13 @@ Second, we address the classical obstruction to chiral fermions in
 Kaluza-Klein theory (Witten 1983) by adopting and extending the
 recent result of Baptista (2024): metric instabilities on the
 `SU(3)` group manifold break the symmetry to exactly
-`(SU(3) × SU(2) × U(1))/Z₆`, with a single 12-dimensional spinor
-yielding one complete generation of SM fermions with correct
-chirality. We embed the e-circle into this construction and verify
-compatibility with the quantum-mechanical interpretation.
+`(SU(3) × SU(2) × U(1))/Z₆`. The metric instability mechanism
+circumvents Witten's no-go theorem via non-Killing gauge bosons
+(§4.2b), and the spin^c index calculation (§7.2.1–7.2.4)
+establishes three complete SM generations with correct
+SU(3) × SU(2)_L × U(1)_Y quantum numbers. We embed the e-circle
+into this construction and verify compatibility with the
+quantum-mechanical interpretation.
 
 Third, we connect Szangolies' result (2025) — that three entangled
 qubits encode the SM gauge group — to the e-dimension framework's
@@ -48,28 +51,36 @@ The Higgs doublet is identified as the off-diagonal metric
 component `g_{iψ}` connecting the weak internal space (`S²`) to
 the electromagnetic internal space (`S¹`). The Higgs potential
 is the one-loop Casimir energy of bulk fields on `S²` — finite,
-calculable, and free of parameters. Electroweak symmetry breaking
+calculable, and parameter-free in form (given the compactification
+scale M_KK; see §6.5b and §6.7). Electroweak symmetry breaking
 is driven by the top quark's anti-periodic boundary conditions
 (the same spin structure that produces the spin-statistics theorem
 in Paper 1), which tilt the `S²` and `S¹` dimensions relative to
-each other. The Higgs mass `m_H ≈ 125 GeV` is reproduced for
-compactification scales `M_KK ~ 1–2.5 TeV`, with the Higgs
-protected as a pseudo-Goldstone boson of the broken translational
-symmetry on `S²`. The Higgs mechanism is the non-abelian
-Aharonov-Bohm effect — the same holonomy that produces quantum
-interference in the `U(1)` sector produces mass generation in the
-`SU(2)` sector.
+each other. The Higgs mass `m_H ≈ 125 GeV` is consistent with observation for
+compactification scales `M_KK ~ 1–2.5 TeV`, and is determined
+by the compactification scale `M_KK` (pending stabilization of
+`r₂`, Open Problem OC-2) and the top Yukawa coupling, with the
+Higgs protected as a pseudo-Goldstone boson of the broken
+translational symmetry on `S²`. The Higgs mechanism is the
+non-abelian Aharonov-Bohm effect — the same holonomy that
+produces quantum interference in the `U(1)` sector produces
+mass generation in the `SU(2)` sector.
 
 The framework reveals a three-scale Casimir hierarchy: the `S¹`
 Casimir energy produces dark energy `Λ`, the `S²` Casimir produces
 the electroweak scale `v = 246 GeV`, and the `CP²` Casimir produces
-the GUT scale `M_X ~ 10¹⁵ GeV`. One geometric mechanism generates
-three of the most important energy scales in physics.
+the GUT scale `M_X ~ 10¹⁵ GeV`. The dark energy scale is fully
+derived (Paper 1); the GUT and electroweak scales are fixed in
+structure, with the numerical values determined by Paper 7's
+flux stabilization computation (§6.4).
 
 Five quantitative predictions follow: the Weinberg angle
-(`sin²θ_W ≈ 0.232`, matching experiment to 0.3%), three fermion
-generations (from `χ(CP²) = 3`), the Higgs mass (`m_H ~ 125 GeV`
-from the top Yukawa and `S²` geometry), KK W' and Z' resonances
+(`sin²θ_W ≈ 0.232`, the standard SU(5)/GUT prediction recovered
+geometrically with GUT normalization assumed; §7.1), three fermion
+generations (from the spin^c index on CP² × S²; §7.2.1), the
+Higgs mass (`m_H ~ 125 GeV` consistent with observation for
+compactification scale `M_KK ~ 1–2.5 TeV`, determined by the
+top Yukawa and `S²` geometry; §6.7), KK W' and Z' resonances
 at 1–2.5 TeV (testable at HL-LHC), and a proton lifetime
 `τ_p ~ 10³⁴–10³⁶` years (testable by Hyper-Kamiokande).
 

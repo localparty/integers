@@ -366,6 +366,72 @@ the Higgs mechanism remain outside its scope.
 
 ---
 
+## L.4b Gauge-Gravity Mixing Diagrams
+
+At two loops and beyond, mixed diagrams exist in the 5D KK theory in which a
+graviton line and a gauge boson line (KK photon) share one or more vertices.
+These produce counterterms of the form (curvature) × (gauge field strength)^k,
+not present in pure gravity or pure gauge theory.
+
+**The KK mode structure.** In the 5D theory on M⁴ × S¹, both the graviton
+and the gauge boson (Kaluza-Klein photon) have the same KK spectrum:
+m_n = |n|/R for n ∈ ℤ. The KK conservation law at each vertex is the same
+for both field species: Σ n_i = 0 at each vertex. The mode sums in gauge-gravity
+mixing diagrams are therefore over the same lattice ℤ^L as in the pure
+gravity or pure gauge cases.
+
+**The Epstein zeta structure.** The leading UV contribution from each
+mixed-diagram KK mode configuration is mass-independent (by the same UV
+asymptotic expansion argument as in Appendix U §U.3): the leading coefficient
+is the value of the diagram with all KK masses set to zero (the 4D massless
+result). Summing over KK modes:
+
+    Σ_modes (leading term) = d₀^{mixed} × S₀^L = 0
+
+for the leading term, and
+
+    Σ_modes (subleading) = d_j^{mixed} × E_L(-j; Q_L) = 0
+
+by Theorem K.1, for the subleading terms.
+
+**Conclusion.** Gauge-gravity mixing diagrams produce Epstein zeta structures
+with the same vanishing properties as pure gravity diagrams. Their counterterm
+coefficients vanish by the same mechanisms (S₀^L = 0 for the leading term;
+Theorem K.1 for subleading terms). The finiteness result of Theorem S.1
+(Appendix S) extends to the gauge-gravity sector without additional calculation,
+as a consequence of the universal Epstein vanishing mechanism applying to any
+KK mode sum over the same lattice ℤ^L.
+
+**SU(N) towers and the extension to non-abelian gauge-gravity mixing.** The
+analysis above applies equally when the gauge propagator in the mixed loop
+carries a KK mode of an SU(N) gauge field rather than the U(1) KK photon.
+As established in §L.3.1 and §L.4 above, the SU(N) KK tower on S¹ has
+precisely the same spectral structure as the U(1) tower — both produce
+discrete masses m_n = |n|/R for n ∈ ℤ — so Theorem K.1 applies to the
+SU(N) KK sums without modification. The crucial property driving the
+Epstein zeta structure in pure graviton loops is the polynomial dependence
+of vertex factors on the KK masses: each vertex in the 5D theory contributes
+factors that are polynomial in the external momenta and the KK mass labels,
+and this polynomial character is present in exactly the same form in
+gauge-gravity mixing vertices, regardless of whether the internal loop line
+carries a graviton propagator or a gauge propagator. The mass lattice, the
+polynomial degree of the vertex factors, and the KK conservation law at each
+vertex are all unchanged by the substitution of a gauge line for a graviton
+line; the Epstein zeta structure therefore persists and the vanishing
+mechanism of Theorem K.1 applies to non-abelian gauge-gravity mixing diagrams
+by the same argument as in the pure gravity case.
+
+It must be noted honestly that this extension has not been verified by a
+dedicated explicit calculation for SU(N) gauge-gravity diagrams. Its status
+is the same as the L ≥ 3 loop factorization result discussed in Appendix K:
+the result is structurally plausible and follows the same mechanism, but a
+separate computation confirming the Epstein structure diagram by diagram in
+the non-abelian mixed sector does not yet exist. This gap is also noted in
+Paper 4 §8, where the gauge-gravity mixing contribution to the full
+one-loop effective action is examined in the context of the SU(N) extension.
+
+---
+
 ## L.5 The 11-Dimensional Connection
 
 ### L.5.1 Structural alignment

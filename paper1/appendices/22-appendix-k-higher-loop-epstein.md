@@ -420,17 +420,29 @@ zeta function regularization has three parts:
   1985).
 - Finiteness at `L = 1` (Appendix F) and `L = 2` (Appendix G).
 
-**Remaining gap:**
-- Part (ii) for the factorization structure: that the BPHZ-subtracted
-  amplitude always produces an Epstein zeta evaluation at a negative
-  integer. That is, the reduction of full counterterms into
-  `(4D part) × E_L(-j; Q_L)` at `L ≥ 3` — ensuring the KK sum factor
-  actually separates from the 4D momentum structure in the presence of
-  overlapping subdivergences — is the remaining open step.
+**Remaining gap — precisely characterised (Verification 3, Round 6):**
 
-The gap is narrow and specific: it concerns the factorization structure of
-multi-loop Feynman integrals in the KK theory, not the vanishing of the
-KK sums themselves (which is now a theorem).
+The factorization `(4D part) × E_L(-j; Q_L)` at `L ≥ 3` has been
+analysed in detail. The precise gap is: does BPHZ subtraction at
+overlapping subdivergences in the Mercedes three-loop topology preserve
+polynomial-in-`(n²/R²)` KK dependence? Weinberg's theorem (locality of
+counterterms) implies yes — counterterms are polynomial in masses and
+momenta, and in the KK theory the only mass parameters are `n²/R²`. The
+joint holomorphicity of `E_L(s; Q(α))` established in Theorem K.3
+ensures the BPHZ Taylor expansion commutes with evaluation at `s = -j`.
+Three routes to a complete proof are identified:
+- **Route A:** Kontsevich-Vishik symbol class argument (not yet applied
+  to the multi-loop product-manifold setting).
+- **Route B:** Direct dominated-convergence verification at the Schwinger
+  boundary `α_e → 0` for each forest in the Zimmermann formula.
+- **Route C:** Explicit three-loop Mercedes diagram computation, verifying
+  that the KK sum takes the form `E_3(-j; Q_3)`.
+
+**Confidence: 80–85%.** No mechanism is known by which BPHZ subtraction
+at overlapping subdivergences could introduce non-polynomial KK dependence.
+The gap is narrow and specific: it concerns the Schwinger-boundary behaviour
+of the forest formula, not the vanishing of the Epstein zeta values (which
+is a theorem).
 
 ### K.6.3 Comparison with Known Results
 

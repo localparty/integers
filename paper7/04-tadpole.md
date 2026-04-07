@@ -51,7 +51,41 @@ intersection numbers on H₄(CP² × S², ℤ) are:
                                     but S² ∩ S² = 0 on S²; the product
                                     vanishes since dim(S² ∩ S²) < 0)
 
-The intersection form is therefore:
+**Derivation of I₁₂.** The intersection form on H₄(CP² × S², ℤ)
+is computed via Poincaré duality in the 6-manifold X = CP² × S²
+(real dimension 6). By the Künneth theorem:
+
+    H₄(X, ℤ) = ⊕_{p+q=4} H_p(CP²) ⊗ H_q(S²)
+              = H₄(CP²) ⊗ H₀(S²) ⊕ H₂(CP²) ⊗ H₂(S²) ⊕ H₀(CP²) ⊗ H₄(S²)
+              = ℤ ⊕ ℤ ⊕ 0
+
+since H₄(S²) = 0. The two generators of H₄(X, ℤ) are:
+
+- γ₁ = [CP²] × {pt} ∈ H₄(CP²) ⊗ H₀(S²),
+  Poincaré dual to ω_{S²} ∈ H²(X)
+- γ₂ = [CP¹] × [S²] ∈ H₂(CP²) ⊗ H₂(S²),
+  Poincaré dual to h ∈ H²(CP²)
+
+where ω_{S²} is the volume form of S² (normalized: ∫_{S²} ω_{S²} = 1)
+and h is the hyperplane class in CP² (normalized: ∫_{CP¹} h = 1).
+The Poincaré dual of γ₁ = [CP²] × {pt} in the 6-manifold is the
+2-form π_{S²}^*(ω_{S²}) pulled back from S². The Poincaré dual of
+γ₂ = [CP¹] × [S²] is the 2-form π_{CP²}^*(h) pulled back from CP².
+Computing I₁₂ = γ₁ · γ₂ via cohomology:
+
+    I₁₂ = ∫_{CP² × S²} π_{S²}^*(ω_{S²}) ∧ π_{CP²}^*(J_{CP²})
+
+where J_{CP²} is the (1,1)-form on CP² dual to [CP¹] via ∫_{CP¹} J_{CP²} = 1.
+By the Künneth formula for integrals:
+
+    I₁₂ = (∫_{CP²} J_{CP²}) × (∫_{S²} ω_{S²}) = 1 × 1 = 1
+
+Here we use: ∫_{CP²} J_{CP²} = Vol_alg(CP¹ in CP²) = 1 in units
+where the hyperplane class is normalized to integer periods, and
+∫_{S²} ω_{S²} = 1 by convention. The self-intersection numbers
+I₁₁ = 1 (CP² self-intersection in CP²) and I₂₂ = 0 (S² has no
+4-cycles, H₄(S²) = 0) are standard. The intersection form is
+therefore:
 
     I = ( 1  1 )
         ( 1  0 )

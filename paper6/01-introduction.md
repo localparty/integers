@@ -78,20 +78,28 @@ vanish from the Epstein zeta zeros — the same mechanism that gives
 UV finiteness; see Paper 4 §7.21.10 and `etc/09`). No Goldberger-
 Wise term exists at the perturbative level.
 
-The dilaton is frozen at its inflationary value by Hubble friction
-(ε = 8πR/M_Pl² ≈ 10⁻⁵², giving `w = −1` to extraordinary
-precision). Its current value sets the cosmological constant.
+The dilaton is frozen at its post-inflationary value by Hubble friction.
+The dimensionless fractional drift per Hubble time is ΔR/R₀ ~ H₀R₀ ~
+3 × 10⁻³⁰ (Appendix A, Proposition A.1), giving w = −1 to precision
+(ΔR/R₀)² ~ 10⁻⁵⁹. The dilaton is not the inflaton (ε = 32/3 ≫ 1;
+§3.1). The G₄ flux axion drives inflation (Paper 7). The dilaton's
+current value sets the cosmological constant: ρ_Λ = c/R₀⁴.
 
-## 1.2 The Three Regimes
+## 1.2 The Two Dynamical Regimes
 
-| Regime | Dilaton | Potential | Epoch |
-|---|---|---|---|
-| Casimir plateau | `φ ≪ φ_min` | `V ≈ V₀` (flat) | Inflation |
-| Oscillation basin | `φ ~ φ_min` | `V ≈ ½m_φ²(φ−φ_min)²` | Reheating → BBN |
-| Thawing slope | `φ > φ_min` | `V` slowly decreasing | Dark energy |
+The dilaton potential V(R) = +c/R⁴ has no minimum. The relevant
+epochs map onto two regimes:
 
-Every epoch of cosmic history maps onto a segment of the dilaton
-trajectory. This paper walks through each in sequence.
+| Regime | Dilaton state | Epoch |
+|---|---|---|
+| Frozen by Hubble friction | R ≈ R₀, ΔR/R₀ ~ 3×10⁻³⁰/Hubble time | All epochs from inflation to today and beyond |
+| Inflaton oscillation | G₄ axion oscillates around its own minimum | Reheating → leptogenesis |
+
+Every epoch of cosmic history maps onto a segment of this picture.
+The dilaton itself does not oscillate or roll in the revised framework
+— it is frozen. The inflaton (G₄ axion) oscillates during reheating;
+the dilaton is a bystander that happens to set the cosmological
+constant through its frozen Casimir energy.
 
 ## 1.3 What Is New in This Paper
 
