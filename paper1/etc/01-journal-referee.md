@@ -168,7 +168,6 @@ The Streater-Wightman proof uses (i) Lorentz invariance, (ii) locality, (iii) po
 (c) **Gauge-gravity mixing.** In theories with both SU(N) gauge fields and gravity, there are gauge-gravity mixing diagrams at two loops and beyond. These produce additional counterterms not present in pure gravity or pure gauge theory. Does the Appendix L argument address these mixing terms, or only the separate gravity and gauge contributions?
 
 ---
-
 ## Part B: The Geometric Derivations
 
 ### Point B1: Spin-Statistics from Winding Numbers [HEAVY]
@@ -252,6 +251,42 @@ The Streater-Wightman proof uses (i) Lorentz invariance, (ii) locality, (iii) po
 (b) **Independence of the 8 orbifold results.** Each orbifold phenomenon likely depends on shared parameters (boundary conditions, brane tensions, orbifold radius). Are these parameters fixed independently of the phenomena they explain, or are they separately tuned for each of the 8 results? If tuned separately, the 8 results are not independent predictions.
 
 (c) **The strong CP claim.** The paper argues $\pi_4(\text{SU}(3)) = 0$ in 5D resolves the strong CP problem. In 4D, $\pi_4(\text{SU}(3)) = \mathbb{Z}_2$, generating instantons and the $\theta$-angle. Eliminating 4D instantons does not automatically set $\bar{\theta} = 0$ — the $\bar\theta$ term also receives contributions from the quark mass matrix phases. What is the prediction for $|\bar\theta|$ in this framework, and how does it compare to the experimental bound $|\bar\theta| < 10^{-10}$?
+
+---
+
+### Point C3: The Warp Factor k = 2 as Leptogenesis Input [HEAVY]
+
+**Location:** Appendix W §W.5
+
+**The claim:** The warp factor $k = 2$ is identified as a direct input to the leptogenesis derivation, from which $c_\nu = 0.634$ and $m_\nu^{5D} = 1.27\,M_{KK}$ follow.
+
+**Interrogate:**
+
+(a) **k = 2 as a prediction vs. an assumption.** The warp factor $k$ governs the ratio of the hidden-brane temperature to the visible-brane temperature and sets the Kaluza-Klein mass hierarchy. Is $k = 2$ derived from a stability or quantization condition within the compactification geometry, or is it asserted as input chosen to reproduce the observed ratio $\Omega_{DM}/\Omega_b$? If the latter, the cosmological consequences of Appendix W §W.5 are not predictions but inversions — $k$ is chosen to give the right answer, and $c_\nu$, $m_\nu^{5D}$ follow by construction.
+
+(b) **Derivation of $c_\nu = 0.634$.** The coefficient $c_\nu$ entering the 5D neutrino mass is claimed to follow from $k = 2$. Exhibit the explicit calculation: which integral over the extra dimension produces $c_\nu$, how does it depend on $k$, and what is the analytic formula $c_\nu(k)$ from which $c_\nu(2) = 0.634$ is read off? A claim of this specificity requires an explicit formula, not a quoted value.
+
+(c) **The $m_\nu^{5D} = 1.27\,M_{KK}$ prediction and its 4D consequence.** The 5D neutrino mass $m_\nu^{5D} = 1.27\,M_{KK}$ must map onto the observed 4D neutrino masses $\Sigma m_\nu \lesssim 0.12$ eV through the KK zero-mode profile. What is $M_{KK}$ in eV units, and does the resulting 4D neutrino mass match the observed mass splittings? If $M_{KK}$ is not independently fixed, this is a consistency check that cannot determine $M_{KK}$ without additional input.
+
+(d) **Consistency with the Paper 2 dark matter sector.** Paper 2 uses $\xi = 0.432$ (from $\Omega_{DM}/\Omega_b$) and $c_\nu = 0.634$ from this appendix in its leptogenesis calculation. Is the $c_\nu$ value entering Paper 2's §2.2 calculation the same $c_\nu$ derived here from $k = 2$? If so, the cross-paper consistency is a testable constraint — any revision to the $k = 2$ assignment would cascade through the entire leptogenesis prediction chain.
+
+(e) **Uniqueness of $k = 2$.** Is $k = 2$ the unique warp factor consistent with the compactification geometry, or is it one member of a discrete family (e.g., $k \in \mathbb{Z}$ or $k \in \mathbb{Z}/2$)? If other values of $k$ are geometrically permitted, the paper should explain why $k = 2$ is selected and what predictions differ for $k = 1$ or $k = 3$.
+
+---
+
+### Point C4: Non-Spin CP² and the Freed-Witten Half-Integer G₄ Shift [MEDIUM]
+
+**Location:** Appendix Z §Z.3.1
+
+**The claim:** The same non-spin property of $CP^2$ ($w_2 \neq 0$) that fixes spin-statistics also forces a Horava-Witten / Freed-Witten half-integer $G_4$ flux shift, giving $m_\nu/m_{KK} = \chi(CP^2) - c_2^{\text{eff}}/2 = 5/2$.
+
+**Interrogate:**
+
+(a) **The Freed-Witten anomaly condition and $G_4$ quantization.** The Freed-Witten anomaly cancellation condition on a non-spin manifold requires $[G_4/2\pi] + \lambda/2 \in H^4(\mathcal{M},\mathbb{Z})$ where $\lambda = p_1/2$ — so $G_4$ is half-integer quantized rather than integer quantized when $w_2 \neq 0$. State explicitly which manifold carries this half-integer flux and why the non-spin condition of $CP^2$ (rather than, say, any other factor in the full compactification) is the relevant one. If $CP^2$ appears as a factor in the 11D compactification of Paper 4, and the rest of the internal manifold is spin, why does the $CP^2$ factor dominate the flux quantization condition?
+
+(b) **The formula $m_\nu/m_{KK} = \chi(CP^2) - c_2^{\text{eff}}/2 = 5/2$.** The Euler characteristic $\chi(CP^2) = 3$; thus $c_2^{\text{eff}}/2 = 1/2$, implying $c_2^{\text{eff}} = 1$. Identify $c_2^{\text{eff}}$ explicitly: is it the first Chern class integrated over $CP^2$, the second Chern number of a gauge bundle, or something else? Exhibit the calculation that gives $c_2^{\text{eff}} = 1$ and show this is not a free parameter chosen to produce $m_\nu/m_{KK} = 5/2$.
+
+(c) **Two separate uses of $w_2(CP^2) \neq 0$.** This appendix claims that the non-spin property simultaneously (i) resolves spin-statistics (the subject of Paper 1's main result) and (ii) forces the half-integer $G_4$ shift. These are two logically distinct consequences of the same topological fact. The paper must show that both uses are consistent — i.e., the same choice of spin structure (or lack thereof) that produces the fermionic statistics assignment in Part B also forces the specific $G_4$ quantization used here. If the two applications require different conventions or different manifold factors, the "same fact" claim is misleading.
 
 ---
 

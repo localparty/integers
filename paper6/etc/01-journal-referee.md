@@ -151,6 +151,62 @@ The SM electroweak phase transition is a smooth crossover (not a phase transitio
 
 ---
 
+## Part B2: The Z₂ Conservation Theorem and ξ = 0.432
+
+### Point B2: Z₂ Conservation Theorem — ξ Across the Full Thermal History [HEAVY]
+
+**Location:** §6.4 (Z₂ Conservation Theorem)
+
+**The claim:** A theorem is stated that ξ = T_hidden/T_visible is exactly conserved through the entire thermal history — gravitational thermalization, bulk neutrino decoupling, QCD confinement, and the QCD transition — because the ratio g_*(T)^{hidden}/g_*(T)^{visible} evolves identically in both sectors at every epoch. The old "thermal-history chain" (0.14 → 0.84 → 0.79 → 0.49) is replaced by this conservation theorem.
+
+**Interrogate:**
+
+(a) **Mirror QCD confinement at the same relative temperature.** The theorem requires that the hidden-sector QCD confinement occurs at the same ratio T_hidden/T_visible as visible-sector QCD confinement. Visible QCD confinement occurs at T_c ≈ 155 MeV. Hidden QCD confinement occurs at T_c^{hidden} = ξ × T_c^{visible} ≈ 0.432 × 155 MeV ≈ 67 MeV. For the Z₂ theorem to hold at the QCD transition, the hidden sector must have the same number of quark flavors active at T_c^{hidden} as the visible sector has active at T_c^{visible}. Do both sectors have three light quarks at their respective confinement temperatures? If the mirror up/down/strange masses are not equal to the visible sector's (due to Yukawa hierarchy mirroring), the number of active flavors may differ, breaking the Z₂ symmetry of g_* at the QCD transition.
+
+(b) **g_* steps are identical — but is this proved or assumed?** The proof strategy appears to be: since the hidden and visible sectors are exact mirrors, every g_* step is identical. But the Z₂ symmetry is a symmetry of the Lagrangian, not automatically a symmetry of the thermal history, unless both sectors start at the same temperature. The initial temperature ratio at the end of reheating is set by the warp factor (§6.6), which is ξ₀ ≠ 1. If ξ₀ ≠ 1, then at the epoch of each SM phase transition (EWPT, QCD), the hidden sector is at a different temperature and may have a different number of active degrees of freedom. Show explicitly that g_*(T)/g_*(ξ₀ T) = const(ξ₀) for all T, not just at specific temperatures.
+
+(c) **The old chain vs. the theorem.** The old chain gave a specific numerical trajectory (0.14 → 0.84 → 0.79 → 0.49). The theorem replaces this with ξ = const. These are numerically inconsistent: if ξ were evolving along the old chain, it was not conserved. One of the two must be wrong. Is the old chain formally retracted? Does the theorem show where the old chain calculation erred — specifically, which g_* step was computed incorrectly?
+
+(d) **The theorem's hypotheses.** A theorem has stated hypotheses and a proof. What are the precise hypotheses of the Z₂ Conservation Theorem? If one hypothesis is "the hidden sector has exactly the same gauge group and Yukawa structure as the visible sector," this must be derived from the compactification geometry, not assumed. Paper 6 should either derive the Z₂ mirror symmetry from the brane construction, or state it as an additional input whose consequences the theorem then follows.
+
+(e) **Impact on Paper 2's CAMB runs.** Paper 2 used ξ = 0.49 (not ξ = 0.432) in its CAMB runs. The Z₂ Conservation Theorem justifies using a single epoch-independent ξ, but the theorem does not by itself change the value from 0.49 to 0.432. If the theorem merely confirms that ξ is constant (while Paper 2's CAMB runs already assumed ξ = const = 0.49), there is no conflict. But if §6.3 corrects ξ to 0.432 and asserts the old 0.49 was wrong, Paper 2's CAMB runs must be redone at ξ = 0.432. Which is it?
+
+---
+
+### Point B3: Neutrino Localization and c_ν = 0.634 [HEAVY]
+
+**Location:** §6.5 (Neutrino Localization Mechanism)
+
+**The claim:** The neutrino bulk mass parameter c_ν = 0.634 is derived from ξ = 0.432 and k = 2 via the localization mechanism f(y) ∝ e^{(2-c_ν)k|y|}. The 5D neutrino mass is m_ν^{5D} = 1.27 M_KK. The same wavefunction overlap that sets ξ enters the neutrino mass, giving the 5/2 identity connection.
+
+**Interrogate:**
+
+(a) **The wavefunction formula on a Z₂ orbifold.** The profile f(y) ∝ e^{(2-c_ν)k|y|} is stated for the bulk neutrino. On the $S^1/Z_2$ orbifold, the wavefunction must satisfy Z₂ boundary conditions: either f(-y) = +f(y) (even) or f(-y) = -f(y) (odd). The exponential profile e^{(2-c_ν)k|y|} is automatically even in y, but must it also satisfy Neumann or Dirichlet conditions at the orbifold fixed points y = 0 and y = πR? Show that the boundary conditions are satisfied and that no boundary mass term is required.
+
+(b) **The circularity of c_ν and ξ.** The text derives c_ν from ξ = 0.432. But ξ = 0.432 is derived in Paper 2 from the observed Ω_DM/Ω_b — an observational input, not a prediction. So c_ν = 0.634 is derived from an observation, not from first principles. The paper must be transparent about this. Is c_ν claimed as a "derived" parameter (in which case: derived from what fundamental quantity?) or as a "predicted" parameter (in which case: what is the prediction chain that does not use ξ = 0.432 as input)? The framing that ξ is "derived" from the neutrino localization, when in fact c_ν is derived from ξ, has the logic running backwards.
+
+(c) **The 5/2 identity: Paper 6's claim or Paper 4's?** §6.5 connects the wavefunction overlap to the identity m_ν^{5D}/M_KK = 5/2, and notes the relation 5/2 = χ(CP²) − c₂^{eff}/2. Paper 4 establishes the gauge-Higgs Yukawa mechanism and the 5/2 prediction. Paper 7 establishes Freed-Witten c₂^{eff} = 1/2. Paper 6 is making a connection claim across three other papers. Is §6.5 appropriate for Paper 6 to present this identity as a result, or should it defer entirely to Papers 4 and 7 for the 5/2 computation and merely cite the connection to c_ν? If Paper 6 claims the identity, it must re-derive it — if it cites it, the claim must be hedged appropriately.
+
+(d) **m_ν^{5D} = 1.27 M_KK: how precisely is this computed?** The factor 1.27 ≈ 5/2 × c_ν / (2 − c_ν)... confirm the exact formula. Is 5/2 an approximation that holds for c_ν ≈ 0.634, or an exact identity? The 5/2 identity as stated (from Papers 4 and 7) is exact, not approximate. If the c_ν = 0.634 derivation only gives m_ν^{5D}/M_KK ≈ 1.27 rather than exactly 5/2, this is a discrepancy that must be resolved: is the correct value 5/2 or 1.27, and what determines c_ν — the exact 5/2 or the observational ξ?
+
+---
+
+### Point B4: R-Quantization and the ξ⁴ Correction [MEDIUM]
+
+**Location:** §6.5 (final paragraphs, R-quantization)
+
+**The claim:** ξ⁴ shifts R_A (the compactification radius) by 0.86%. The dark matter sector is one of three constraints on R.
+
+**Interrogate:**
+
+(a) **Three constraints on R — over-determination or consistency?** If R is determined by three independent constraints (Paper 7's Theorem U establishes R is underivable from perturbative geometry; Paper 6 claims the dark matter sector constrains R; a third constraint must come from somewhere), there is a risk of over-determination. Either the three constraints are mutually consistent (and R is fixed to a specific value), or they are inconsistent (and R cannot satisfy all three simultaneously). State the three constraints explicitly and show they have a common solution.
+
+(b) **The 0.86% shift from ξ⁴.** The ξ⁴ correction to R_A is computed from the hidden-sector Casimir energy contribution. Show the computation: what is the coefficient of ξ⁴ in the Casimir energy sum, and why does it shift R_A by 0.86% rather than some other value? Is this shift within the observational uncertainties on R, or does it have observable consequences (e.g., a 0.86% shift in the KK spectrum)?
+
+(c) **Consistency with Paper 7's Theorem U.** Paper 7's Theorem U states that perturbative geometric inputs cannot fix R to the observed value. If the dark matter sector (mirror sector with temperature ξ T) constrains R, is this a perturbative or non-perturbative constraint? If it is perturbative, Theorem U would appear to exclude it. If it is non-perturbative, the claim must be made carefully: what non-perturbative mechanism is invoked?
+
+---
+
 ## Part C: Reheating and Leptogenesis
 
 ### Point C1: Reheating Temperature and Non-Thermal Leptogenesis [HEAVY]
@@ -167,7 +223,7 @@ The SM electroweak phase transition is a smooth crossover (not a phase transitio
 
 (c) **Washout after production.** Non-thermal leptogenesis requires that the produced lepton asymmetry is not washed out by inverse decays and $\Delta L = 2$ scattering. The washout is controlled by $\tilde{m}_i = (\lambda_\nu \lambda_\nu^\dagger)_{ii} v^2 / M_i$. Are these parameters predicted by the compactification (neutrino Yukawa couplings from the KK zero modes), or are they free? Is the washout factor in the safe regime?
 
-(d) **Consistency with Paper 2's $\xi$.** Paper 2 derives $\xi = T_{\text{hidden}}/T_{\text{visible}} = 0.49$ from the brane thermal history. Paper 6 claims $\xi$ is "set during reheating by warp-factor-suppressed hidden-brane coupling." Are these two derivations consistent — do they give the same value of $\xi$ from the same underlying parameters? Or is $\xi$ derived differently in Papers 2 and 6, with no guarantee of consistency?
+(d) **Consistency with Paper 2's $\xi$ and the corrected value ξ = 0.432.** Paper 2 derives ξ = 0.432 at leading order (from Ω_DM/Ω_b = 5.36) and refines it to ξ ≈ 0.49 with washout corrections. Paper 6 §6.3 states the corrected value is ξ = 0.432 and removes the washout refinement. Paper 6 §6.6 claims ξ is "set during reheating by warp-factor-suppressed hidden-brane coupling." Three different mechanisms now contribute to setting ξ: (i) the dark matter ratio (Paper 2), (ii) the reheating warp factor (Paper 6 §6.6), (iii) the neutrino localization (Paper 6 §6.5). Show that all three give the same numerical value ξ = 0.432. If they agree, state which is the primary derivation and which are consistency checks. If they are three independent routes to the same number, that is a significant self-consistency result that should be emphasized — but must be verified explicitly, not asserted.
 
 ---
 

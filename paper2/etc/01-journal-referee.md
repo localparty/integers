@@ -110,9 +110,9 @@ The paper predicts N_eff = 3.31–3.39. ACT DR6 (Madhavacheril et al. 2024) give
 
 ### Point A1: Whether ξ Is a Prediction or an Inversion [HEAVY]
 
-**Location:** Main text, Appendix E (mirror baryogenesis)
+**Location:** Main text §2.2, Appendix E (mirror baryogenesis)
 
-**The claim:** The temperature ratio ξ = T_hidden/T_visible is a parameter-free prediction of the framework. From Ω_DM/Ω_b = 1/ξ², and using the observed Ω_DM/Ω_b = 5.36, ξ = 0.432 at leading order, refined to ξ ≈ 0.49 with washout corrections.
+**The claim:** The temperature ratio ξ = T_hidden/T_visible is a parameter-free prediction of the framework. From Ω_DM/Ω_b = 1/ξ², and using the observed Ω_DM/Ω_b = 5.36, ξ = 0.432 at leading order, refined to ξ ≈ 0.49 with washout corrections. The paper further asserts that ξ = 0.432 constitutes a measurement of the 5D warp parameter $c_\nu = 0.634$.
 
 **Interrogate:**
 
@@ -124,9 +124,27 @@ The paper predicts N_eff = 3.31–3.39. ACT DR6 (Madhavacheril et al. 2024) give
 
 (d) **The three scenarios.** The paper presents three scenarios that bracket predictions. What distinguishes the three scenarios? Do they correspond to different values of geometric parameters, different washout assumptions, or different treatments of higher-order corrections? If the three scenarios span a range, the prediction is not a single number but a range — what determines the range, and is it fixed by the model or by the analysis choices?
 
+(e) **ξ as a measurement of $c_\nu$.** The paper claims that ξ = 0.432 from $\Omega_{DM}/\Omega_b$ constitutes a measurement of the 5D parameter $c_\nu = 0.634$ (from Paper 1, Appendix W §W.5, via $k = 2$). For this to be a measurement of a 5D parameter — rather than circular reasoning — the chain must run: (i) compactification geometry fixes $k = 2$ independently; (ii) $k = 2$ gives $c_\nu = 0.634$ by an analytic formula; (iii) $c_\nu$ predicts ξ via the leptogenesis calculation; (iv) the predicted ξ is compared to the observed $\Omega_{DM}/\Omega_b$. Does §2.2 execute all four steps, or does it run the chain backward — inferring $c_\nu$ from the observed ratio and calling the inversion a "measurement"? If the latter, the language is misleading and must be corrected.
+
 ---
 
-### Point A2: CAMB Inputs and Parameter-Freedom [MEDIUM]
+### Point A2: The Z₂ Conservation Theorem [MEDIUM]
+
+**Location:** Main text §2.2
+
+**The claim:** ξ is conserved through all thermal history — it does not evolve between reheating and recombination — because the $Z_2$ symmetry of the orbifold makes $\Delta g_*$ identical in both sectors at every phase transition.
+
+**Interrogate:**
+
+(a) **Rigor of the proof.** The claim that $Z_2$ symmetry forces $\Delta g_*^{\text{hidden}} = \Delta g_*^{\text{visible}}$ at every phase transition is a non-trivial assertion. The standard model has QCD and electroweak phase transitions; the mirror sector has mirror-QCD and mirror-electroweak transitions at temperatures scaled by ξ. Even under exact $Z_2$ symmetry, the transitions occur at different times (since $T_{\text{hidden}} = \xi T_{\text{visible}}$ with $\xi < 1$), meaning they never overlap in cosmic time. How then can $\Delta g_*$ be "identical" at the same time? State the precise theorem: is the claim that the entropy injection into each sector is individually zero at every transition (no entropy production — i.e., the transitions are all second-order), or is the claim that the ratio of entropy injections from the two sectors is unity?
+
+(b) **Phase transition order.** QCD confinement in the visible sector is a crossover (not a true phase transition) at $T_{\text{QCD}} \approx 150$ MeV. If mirror QCD is also a crossover, no entropy is injected by either sector at $T_{\text{mirror-QCD}} \approx 65$ MeV (for ξ = 0.432), and the $Z_2$ argument is unnecessary — ξ is conserved trivially. If the transitions are first-order (as in some BSM scenarios), they produce latent heat and inject entropy differently depending on the bubble nucleation dynamics, which the $Z_2$ symmetry does not control. Which case does the paper assume, and is the assumption justified by the mirror sector spectrum?
+
+(c) **Consequence for the "no free parameters" claim.** If the Z₂ conservation theorem is sound, ξ is genuinely set at reheating and does not drift — the cosmological prediction uses a single ξ throughout. If the theorem has a gap (for example, if one sector undergoes a first-order transition the other does not, breaking $Z_2$ thermally), ξ is time-varying and the CAMB run with a fixed ξ is internally inconsistent. Assess whether this theorem, if it fails, qualitatively invalidates the cosmological predictions of §2.4 and onward.
+
+---
+
+### Point A3: CAMB Inputs and Parameter-Freedom [MEDIUM]
 
 **Location:** Main text (CAMB computation section)
 
@@ -144,21 +162,25 @@ The paper predicts N_eff = 3.31–3.39. ACT DR6 (Madhavacheril et al. 2024) give
 
 ## Part B: The Observational Tensions
 
-### Point B1: The N_eff Tension [HEAVY]
+### Point B1: The N_eff Tension and Mirror Recombination [HEAVY]
 
-**Location:** Main text, Appendix I (decisive tests)
+**Location:** Main text §2.3–§2.4, Appendix I (decisive tests)
 
-**The claim:** The framework predicts N_eff = 3.31–3.39, "in 3–4σ tension with ACT DR6 (2.86 ± 0.13), though consistent with SH0ES+combined data."
+**The claim:** The framework predicts a corrected $\Delta N_{\text{eff}} = 3.43\,\xi^4$ (superseding the earlier formula $6.14\,\xi^4$), giving N_eff in the range 3.31–3.39. The tension with ACT DR6 (N_eff = 2.86 ± 0.13) is stated as precisely 3.5σ. A degeneracy scan over the available parameter space finds no combination of parameters that closes this gap. Mirror recombination occurs at $z \approx 2463$ (before visible recombination at $z \approx 1090$), after which mirror photons free-stream and contribute to $\Delta N_{\text{eff}}$.
 
 **Interrogate:**
 
-(a) **ACT DR6 weighting.** ACT DR6 is a current, high-quality CMB measurement. A prediction in 3–4σ tension with ACT DR6 is a serious problem for the model — this is not a "tension to be resolved by future data" but a current falsification candidate. Explain why the paper considers itself consistent with "SH0ES+combined data" but not with ACT DR6. What is the combined data set being referenced, and how does it treat ACT DR6?
+(a) **Derivation of the corrected formula $3.43\,\xi^4$ vs. $6.14\,\xi^4$.** The factor of 2 discrepancy between the old and new $\Delta N_{\text{eff}}$ prefactors is significant — it shifts the prediction by roughly 0.12 in N_eff for ξ = 0.432. Exhibit the calculation that gives 3.43: where does the factor 3.43 come from (is it $2 \times (4/11)^{4/3} \times f$ for some $f$?), and what was wrong in the prior derivation that gave 6.14? A corrected formula of this specificity requires a derivation that can be checked line-by-line, not just a quoted number.
 
-(b) **Source of the N_eff elevation.** The paper predicts N_eff > 3.046 (the SM value). What is the source of the excess? Is it from the hidden sector contributing to radiation, from the bulk right-handed neutrinos, or from another mechanism? Is this excess independently computable from the framework (i.e., is N_eff = 3.31–3.39 a genuine prediction, or is it a range determined by the scenario choices)?
+(b) **Mirror recombination at z ≈ 2463.** If mirror hydrogen recombines at $z_{\text{mirror}} \approx 2463$ and mirror photons subsequently free-stream, they contribute to $N_{\text{eff}}$ as if they were additional neutrino species from the visible sector's perspective. The free-streaming mirror photons must be accounted for in the CAMB run as a modified radiation component, not as standard neutrinos. Does the CAMB run implement the mirror photon free-streaming correctly — specifically, does it treat the mirror photons as a relativistic fluid before $z_{\text{mirror}}$ and as free-streaming radiation after? If not, the CMB power spectrum predictions are wrong at multipoles $\ell$ sensitive to the damping tail at $z \sim 2000$.
 
-(c) **CMB-S4 falsifiability.** CMB-S4 will measure N_eff to ±0.03. The paper's prediction 3.31–3.39 is more than 8σ above the SM value of 3.046 at CMB-S4 precision. Is this a falsification in 5 years, or does the framework have room to move N_eff back toward 3.046 by adjusting the hidden sector coupling?
+(c) **The 3.5σ ACT tension and the degeneracy scan.** The paper states a 3.5σ tension with ACT DR6 and asserts that no parameter space closes this gap. Describe the degeneracy scan: which parameters were varied (ξ, $M_{KK}$, $\Sigma m_\nu$, $H_0$, etc.), over what ranges, and what statistic was used to measure the tension (χ² improvement, Δ ln $\mathcal{L}$, tension metric)? A statement that "no parameter space closes the tension" is extraordinary — it means the ACT DR6 constraint, if correct, falsifies the model at 3.5σ. Has the paper verified that the tension cannot be reduced by, for example, varying ξ below 0.432 (which would lower $\Delta N_{\text{eff}}$), even at the cost of worsening the $\Omega_{DM}/\Omega_b$ fit?
 
-(d) **BBN consistency.** N_eff at the epoch of BBN must satisfy N_eff < 3.4 (from deuterium abundance constraints, Cooke et al. 2018). Is the predicted N_eff = 3.31–3.39 consistent with BBN, and is it the same value at BBN as at recombination (or does N_eff evolve between the two epochs in this model)?
+(d) **Mirror BAO signature.** Mirror recombination at $z \approx 2463$ imprints a mirror sound horizon $r_d^{\text{mirror}} = r_d^{\text{visible}} \times \xi^{\alpha}$ on the matter power spectrum. State the predicted mirror BAO peak location in units of $h/\text{Mpc}$ (or equivalently, the angular scale in the CMB), and whether this signature has been searched for in BOSS DR12 or DESI DR1 data. If the mirror BAO peak lies within the current survey window, its non-detection is a constraint on this model.
+
+(e) **CMB-S4 falsifiability.** CMB-S4 will measure N_eff to ±0.03. The paper's prediction 3.31–3.39 is more than 8σ above the SM value of 3.046 at CMB-S4 precision. Is this a falsification in 5 years, or does the framework have room to move N_eff back toward 3.046 by adjusting the hidden sector coupling?
+
+(f) **BBN consistency.** N_eff at the epoch of BBN must satisfy N_eff < 3.4 (from deuterium abundance constraints, Cooke et al. 2018). Is the predicted N_eff = 3.31–3.39 consistent with BBN, and is it the same value at BBN as at recombination (or does N_eff evolve between the two epochs in this model)? In particular, if mirror recombination at $z \approx 2463$ changes the effective radiation content between BBN and recombination, the N_eff inferred from deuterium abundance is not the same N_eff entering the CMB Boltzmann equations — this discrepancy must be tracked.
 
 ---
 

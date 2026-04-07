@@ -203,6 +203,58 @@ The string tension formula is $\sigma = (3/8\pi^2) \times g_3^2(M_3)/r_3^2$. The
 
 ---
 
+## Part E: §5.7 — The Unified Role of the Leptogenesis Neutrino
+
+### Point E1: One N^{5D}, Three Consequences [HEAVY]
+
+**Location:** §5.7 ("The Unified Role of the Leptogenesis Neutrino")
+
+**The claim:** A single five-dimensional right-handed neutrino $N^{5D}$ with bulk localization parameter $c_\nu = 0.634$ simultaneously produces: (1) the observed baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ via leptogenesis, (2) the correct dark matter abundance $\Omega_{\text{DM}} h^2 \approx 0.12$ (presumably via the same or a related mechanism), and (3) the neutrino mass ratio $m_\nu/m_{KK} = 5/2$ giving $m_\nu = 49.74$ meV. The paper presents this as a unified consequence of one object, not three separate calculations that share a parameter.
+
+**Interrogate:**
+
+(a) **One object or one parameter?** The claim of unification is strong: one $N^{5D}$ produces three consequences. But "sharing $c_\nu = 0.634$" is precisely "sharing a parameter" — the three calculations are still three separate calculations (leptogenesis, dark matter, Dirac mass) that are evaluated at the same value of $c_\nu$. In what sense is this unification beyond parameter sharing? Exhibit the single equation or the single physical constraint from which all three consequences follow simultaneously — or, if no such equation exists, retract the language of "unification" and replace it with "parameter convergence."
+
+(b) **The dark matter claim.** Dark matter from a right-handed neutrino in extra dimensions is a specific mechanism (KK gravitino, sterile neutrino WDM, or Kaluza-Klein dark matter). Which mechanism produces $\Omega_{\text{DM}} h^2 \approx 0.12$ from $N^{5D}$ with $c_\nu = 0.634$? Is it: (i) the lightest KK mode of $N^{5D}$ as a warm dark matter candidate, (ii) a sterile neutrino mixing via the bulk wavefunction overlap, or (iii) a different mechanism? Exhibit the calculation that gives $\Omega_{\text{DM}} h^2 \approx 0.12$ from $c_\nu = 0.634$ without additional free parameters. In particular: the relic abundance depends on the production rate, which depends on the reheating temperature $T_{\text{RH}}$ and the mixing angle — are these fixed by the compactification or free inputs?
+
+(c) **Consistency of the leptogenesis and dark matter mechanisms.** Leptogenesis from $N^{5D}$ requires $N^{5D}$ to be heavy (typically $M_N \gtrsim 10^9$ GeV for standard leptogenesis, or near-degenerate for resonant leptogenesis). Dark matter from $N^{5D}$ requires it to be light (eV-to-keV for sterile neutrino WDM) or to have suppressed couplings. Can the same $N^{5D}$ with $c_\nu = 0.634$ simultaneously be heavy enough for leptogenesis and produce the correct dark matter abundance? If the leptogenesis mechanism is resonant (Appendix D), the near-degeneracy condition on right-handed neutrino masses must be shown to be compatible with the dark matter abundance. Exhibit this consistency check.
+
+(d) **The baryon asymmetry calculation from $c_\nu$.** §5.7 states that $c_\nu = 0.634$ fixes the baryon asymmetry. The baryon asymmetry from leptogenesis depends on the CP asymmetry $\varepsilon$ in $N^{5D}$ decay, the washout factor $K$, and the sphaleron conversion factor. How does $c_\nu = 0.634$ enter each of these: (i) does it fix the CP asymmetry $\varepsilon$ through the Yukawa coupling structure (and if so, via the same $y = g_2\sqrt{2}$ relation from Paper 4)?, (ii) does it fix the washout factor $K$ through the decay width $\Gamma \propto y^2 M_N$?, and (iii) is $\eta_B \approx 6 \times 10^{-10}$ the result of a full Boltzmann equation solution, or a parametric estimate? If the answer to (iii) is a parametric estimate, the precision implied by the 6-significant-figure match with observation is unjustified.
+
+(e) **The neutrino mass ratio as a third consequence.** The mass ratio $m_\nu/m_{KK} = 5/2$ is described in Paper 4 §7.5.7 as following from the topological decomposition $\chi(CP^2) - c_2^{\text{eff}}/2 = 5/2$. In §5.7 of Paper 5, the same result appears as a "consequence" of $c_\nu = 0.634$. Are these two derivations of the same result, or two different derivations? If they are the same derivation cross-referenced, say so. If they are independent derivations that agree, exhibit both and explain how they are independent.
+
+---
+
+### Point E2: c_ν = 0.634 — Prediction or Cross-Reference? [MEDIUM]
+
+**Location:** §5.7
+
+**The claim:** $c_\nu = 0.634$ is a cosmologically determined bulk fermion localization parameter appearing in Paper 5.
+
+**Interrogate:**
+
+(a) **Provenance: prediction of Paper 5 or import from Paper 4?** The parameter $c_\nu = 0.634$ appears in Paper 4 §7.5.6 in a table alongside $c_t$, $\delta c$, $\Delta c$. Does Paper 5 independently derive $c_\nu = 0.634$ from the leptogenesis/dark matter calculation (i.e., the cosmological constraints alone fix $c_\nu$), or does Paper 5 import $c_\nu = 0.634$ from Paper 4 and then show it is consistent with cosmological observables? These are very different claims. If the former: exhibit the computation from which $c_\nu = 0.634$ is uniquely determined by cosmological data. If the latter: the paper should say clearly that $c_\nu$ is defined by Paper 4 and checked here, not that it is "cosmologically determined."
+
+(b) **What "cosmologically determined" means.** The phrase "cosmologically determined" implies that cosmological observables (baryon asymmetry, dark matter abundance, CMB spectrum) uniquely fix $c_\nu = 0.634$. If two of the three observables are needed to fix $c_\nu$, then the third is a genuine prediction; if all three are inputs, nothing is predicted. How many cosmological observables are used to fix $c_\nu$, and how many are genuine predictions of the model once $c_\nu$ is fixed?
+
+(c) **Precision of $c_\nu = 0.634$.** Is the value 0.634 exact (a mathematical constant, e.g., related to the topology of $CP^2$), or is it a numerical value computed from cosmological inputs with some uncertainty? If $c_\nu = 0.634 \pm \delta c_\nu$, what is $\delta c_\nu$, and how does it propagate to the uncertainty in $m_\nu = 49.74$ meV?
+
+---
+
+### Point E3: m_ν = 49.74 meV in a Baryon Asymmetry Paper [LIGHT]
+
+**Location:** End of §5.7
+
+**The claim:** The neutrino mass prediction $m_\nu = 49.74$ meV appears at the conclusion of §5.7, described as "the sharpest prediction."
+
+**Interrogate:**
+
+(a) **Scope of Paper 5.** Paper 5 is titled (from the file list) as a paper about color confinement, the strong force, and $CP^2$ holonomy. §5.7 appears to import a prediction — $m_\nu = 49.74$ meV — that is the headline result of Paper 4. Is it appropriate for this prediction to appear as the "sharpest prediction" of Paper 5, or should it be: (i) a cross-reference to Paper 4 with a brief mention, (ii) a Paper-5-specific derivation that reaches the same number by a different route (in which case exhibit that route), or (iii) omitted from Paper 5 entirely as out of scope? The referee will flag as a scope problem any prediction that is presented as a result of Paper 5 if it was derived in Paper 4.
+
+(b) **Does §5.7 add anything to the m_ν prediction?** If $m_\nu = 49.74$ meV is derived in Paper 4 from the 5/2 identity and the KK scale, what does §5.7 add? If the answer is "it shows the same number emerges from the leptogenesis/dark matter requirement on $c_\nu$," this is a valuable consistency check — but it should be presented as a check, not as "the sharpest prediction." Clarify the epistemic status of the number's appearance in §5.7.
+
+---
+
 ## Output Location
 
 Write your complete review to `paper5/journal-reviewer/report.md`.

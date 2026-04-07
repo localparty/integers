@@ -216,6 +216,94 @@ In KK theories, the Weinberg angle $\sin^2\theta_W$ is determined by the ratio o
 
 ---
 
+## Part E: The §7 Predictions — The 5/2 Identity, M_GUT, and m_ν
+
+### Point E1: The 5/2 Identity and Its Topological Decomposition [HEAVY]
+
+**Location:** §7.5.7 (the 5/2 identity)
+
+**The claim:** The mass ratio $m_\nu / m_{KK} = \chi(CP^2) - c_2^{\text{eff}}/2 = 3 - 1/2 = 5/2$ follows from a topological decomposition, where the Euler characteristic $\chi(CP^2) = 3$ provides the integer part and the Horava-Witten boundary forces $c_2^{\text{eff}} = 1/2$.
+
+**Interrogate:**
+
+(a) **Rigor of the topological decomposition.** The expression $\chi(CP^2) - c_2^{\text{eff}}/2$ mixes a topological invariant of the compactification manifold ($\chi = 3$, an integer) with a bulk fermion localization parameter ($c_2^{\text{eff}}$, a continuous real number fixed by dynamics). These are objects of fundamentally different types. Exhibit the derivation that places them in the same formula: what is the precise equation from which $m_\nu/m_{KK} = \chi - c_2^{\text{eff}}/2$ follows, and in what sense is $c_2^{\text{eff}}$ "topological" rather than a dynamical parameter that happens to take the value $1/2$?
+
+(b) **Horava-Witten forcing of $c_2^{\text{eff}} = 1/2$.** The claim is that the Horava-Witten boundary conditions force $c_2^{\text{eff}} = 1/2$ exactly. Is this a theorem (derived from the boundary conditions via an explicit calculation) or an assertion (consistent with but not uniquely determined by the boundary conditions)? Exhibit the step in the Horava-Witten analysis that uniquely pins $c_2^{\text{eff}} = 1/2$ and not, say, $1/3$ or $2/3$.
+
+(c) **The integer $\chi = 3$ and generation counting.** Point A1(e) already interrogates whether $\chi(CP^2) = 3$ counts fermion generations. Here the same integer appears in a mass ratio formula. If $\chi = 3$ is used simultaneously to count generations (A1(e)) and to fix a mass ratio (E1), these are two separate physical claims from the same topological number. Are they derived from the same mechanism, or does the same number happen to appear twice by coincidence? Coincidence requires explicit justification.
+
+(d) **The gauge-Higgs Yukawa $y = g_2\sqrt{2}$.** §7.5.7 also states the Yukawa coupling relation $y = g_2\sqrt{2}$ where $g_2$ is the SU(2) gauge coupling. In gauge-Higgs unification (Hosotani 1983), the Yukawa coupling of a bulk fermion to the Wilson line (Higgs) equals its gauge coupling times a group-theory factor. Is the factor $\sqrt{2}$ here the correct group-theory factor for SU(2) doublet coupling to the adjoint, or is it an approximation? Exhibit the group-theory calculation that fixes the coefficient to be $\sqrt{2}$ and not, e.g., $1$ or $2$.
+
+(e) **Sensitivity to the Yukawa relation.** The prediction $m_\nu = 49.74$ meV ultimately depends on the chain: $y = g_2\sqrt{2}$ → RGE of $g_2$ to $M_{GUT}$ → $m_{KK}$ → $m_\nu$. If $y = g_2\sqrt{2}$ is an approximation accurate to $X\%$, how does this propagate to the uncertainty in $m_\nu$? Is the 49.74 meV figure sensitive to the $\sqrt{2}$ at the 1% or 10% level?
+
+---
+
+### Point E2: The M_GUT Prediction from the 5/2 Identity [MEDIUM]
+
+**Location:** §7.3.1
+
+**The claim:** The 5/2 identity independently constrains $M_{GUT} \approx 1.65 \times 10^{16}$ GeV (or exact closure at $7 \times 10^{16}$ GeV), with proton lifetime consequences $\tau_p \sim 10^{34}$–$10^{35}$ yr (Hyper-K range) or $\tau_p \sim 10^{40}$ yr (exact closure).
+
+**Interrogate:**
+
+(a) **Derived vs. fitted.** The standard SU(5) prediction from one-loop RGE gives $M_{GUT} \approx 2 \times 10^{15}$ GeV, inconsistent with proton decay bounds. The MSSM gives $M_{GUT} \approx 2 \times 10^{16}$ GeV. The value $1.65 \times 10^{16}$ GeV in this paper is between these. Is $M_{GUT} \approx 1.65 \times 10^{16}$ GeV derived from the compactification geometry (fixed by the KK scale, flux quantization, or R-quantization independently), or is it the value of $M_{GUT}$ at which the 5/2 identity closes? If the identity $m_\nu/m_{KK} = 5/2$ is used to fix $M_{GUT}$, then $M_{GUT}$ is not a prediction of the identity — the identity is used to define a constraint on $M_{GUT}$.
+
+(b) **Exact closure at $7 \times 10^{16}$ GeV.** The second scenario — "exact closure" at $7 \times 10^{16}$ GeV — gives $\tau_p \sim 10^{40}$ yr, beyond any foreseeable experimental reach. What physical condition distinguishes the "approximate" scenario ($1.65 \times 10^{16}$ GeV) from the "exact closure" scenario ($7 \times 10^{16}$ GeV)? Are these two distinct solutions of the same equation, or two different equations? If the paper presents two scenarios without a mechanism to select between them, both $\tau_p$ predictions are unverifiable simultaneously, and neither can be falsified.
+
+(c) **Proton lifetime calculation.** The proton decay rate $\Gamma_p \propto \alpha_{GUT}^2 M_{GUT}^{-4} m_p^5$ requires knowing $\alpha_{GUT}$ at the GUT scale. Is $\alpha_{GUT}$ fixed by the RGE from the low-energy couplings (independent input), or is it a prediction of the compactification? If $\alpha_{GUT}$ is taken from experiment, the proton lifetime range $10^{34}$–$10^{35}$ yr is not a genuine prediction — it is a standard consequence of the GUT scale value combined with observed couplings.
+
+---
+
+### Point E3: R-Quantization and the 2.3–3.3% Gap [MEDIUM]
+
+**Location:** §7.5.7 (R as quantization)
+
+**The claim:** Three independent constraints on the compactification radius $R$ produce a quantization condition. The current 2.3–3.3% gap between the predicted and observed values is either a prediction or a residual.
+
+**Interrogate:**
+
+(a) **Independence of the three constraints.** The paper asserts three constraints on $R$ are "genuinely independent." Exhibit the three equations and show they are independent — i.e., that no two of them follow from the same underlying equation by algebraic manipulation. In particular: if constraint (i) comes from flux quantization, constraint (ii) from the Casimir energy minimum, and constraint (iii) from the 5/2 identity, then constraints (i) and (ii) both depend on the compactification geometry and may share a common origin. Show the Jacobian or independence argument explicitly.
+
+(b) **The 2.3–3.3% gap: prediction or problem?** A 2.3–3.3% gap between three constraints that are claimed to be simultaneously satisfied is either: (i) a residual from higher-order corrections (a prediction that the gap closes when loop corrections are included), (ii) an indication that the three constraints are not simultaneously consistent (a genuine gap requiring revision), or (iii) a numerical approximation artifact from truncating the RGE. The paper must classify which of (i)–(iii) applies and justify the classification. A "prediction" of 2.3–3.3% that is not accompanied by a calculation of the expected size of the correction is not a prediction.
+
+(c) **Falsifiability.** If the gap is attributed to higher-order corrections, what order is required to close it, and can that order be computed within the framework? If the gap is expected to close at two-loop RGE order, exhibit the two-loop calculation or estimate its magnitude.
+
+---
+
+### Point E4: The m_ν = 49.74 meV Precision and Uncertainty Budget [HEAVY]
+
+**Location:** §7.0 (prediction table), §7.5.6
+
+**The claim:** The headline prediction is $m_\nu = 49.74$ meV with sufficient precision that a 14σ CMB-S4 test is the leading discriminant, and $N_{\text{eff}}$ provides a 9–17σ test.
+
+**Interrogate:**
+
+(a) **The full uncertainty budget.** A claim of 14σ discrimination power requires knowing the theoretical uncertainty in $m_\nu$ to sub-percent precision. What are the contributions to the uncertainty in $m_\nu = 49.74$ meV from each of the following: (i) the uncertainty in $c_\nu = 0.634$ (see §7.5.6); (ii) the uncertainty in $y = g_2\sqrt{2}$ (see E1(d)); (iii) the RGE uncertainty from $M_Z$ to $M_{GUT}$ (scheme dependence, threshold corrections); (iv) the uncertainty in $M_{GUT}$ itself (from E2); (v) the uncertainty in $\Delta N_{\text{vis}}$ (number of SM degrees of freedom at decoupling). Is the dominant uncertainty from $\Delta N_{\text{vis}}$? If so, exhibit the formula showing how $\Delta N_{\text{vis}}$ enters $m_\nu$ and quantify its contribution.
+
+(b) **The 49.74 meV figure: how many significant figures are justified?** The prediction is stated to four significant figures. If the theoretical uncertainty from (a) is at the 1% level, the justified precision is $\sim 0.5$ meV, and the figure should be $m_\nu \approx 49.7$ meV. If the theoretical uncertainty is at the 10% level, the figure should be $m_\nu \approx 50$ meV. Exhibit the calculation showing that four significant figures are meaningful, not the output of a numerical calculator applied to an expression with 5–10% inputs.
+
+(c) **CMB-S4 sensitivity curve.** The 14σ discrimination power assumes a specific experimental sensitivity for CMB-S4 to $\sum m_\nu$. CMB-S4 is sensitive to $\sum m_\nu$ via the suppression of small-scale power, with projected sensitivity $\sigma(\sum m_\nu) \approx 14$–40 meV depending on configuration (Abazajian et al. 2016). What value of $\sigma(\sum m_\nu)$ is used, and is it for the full CMB-S4 + BAO + LSS combination or CMB alone? The 14σ claim requires the gap $|\sum m_\nu^{\text{predicted}} - \sum m_\nu^{\text{current}}|$ divided by $\sigma(\sum m_\nu)$ — exhibit this calculation.
+
+(d) **N_eff prediction.** The 9–17σ range for $N_{\text{eff}}$ spans almost a factor of two. What drives this range — is it the uncertainty in the predicted $N_{\text{eff}}$ value (from the compactification), or the uncertainty in the experimental sensitivity? If the theoretical prediction of $N_{\text{eff}}$ has a 9–17σ range, the framework does not make a precise prediction for $N_{\text{eff}}$.
+
+---
+
+### Point E5: The §7.0 Prediction Table — Derived vs. Fitted [MEDIUM]
+
+**Location:** §7.0
+
+**The claim:** The prediction table, ranked by experimental discriminating power, accurately represents what the framework derives. The headline is $m_\nu = 49.74$ meV at 14σ CMB-S4.
+
+**Interrogate:**
+
+(a) **Derived vs. fitted: the table.** For each entry in the prediction table, classify it as: (D) derived from first principles with no free parameters after compactification; (F) fitted (the parameter is chosen to match the observed value); or (C) constrained (the prediction follows from a combination of derived and observational inputs). A table that presents fitted quantities as predictions is misleading. In particular: the Weinberg angle (B2), the Higgs mass (C1), and $M_{GUT}$ (E2) are candidates for class (F) or (C) rather than (D). Does the table distinguish these classes?
+
+(b) **The c_ν = 0.634 entry in §7.5.6.** The table in §7.5.6 places $c_\nu = 0.634$ alongside $c_t$ (top quark localization), $\delta c$, and $\Delta c$. Is $c_\nu = 0.634$ a prediction of the compactification (derived from the geometry and boundary conditions independently of the neutrino mass), or is it defined as the value that gives $m_\nu/m_{KK} = 5/2$? If the latter, $c_\nu = 0.634$ is not an independent prediction — it is a parametrization of the 5/2 identity. The distinction matters because the table appears to give $c_\nu$ and $m_\nu$ as two independent predictions when they may be one.
+
+(c) **Ranking by discriminating power.** The table is ranked by experimental discriminating power. Is this ranking based on the actual signal-to-noise ratio $|\text{prediction} - \text{SM}| / \sigma_{\text{exp}}$ for each observable, or is it a qualitative judgment? Exhibit the numerical σ values for each entry that justify the ranking.
+
+---
+
 ## Output Location
 
 Write your complete review to `paper4/journal-reviewer/report.md`.
