@@ -399,3 +399,60 @@ time, and the conformal factor problem.
 | 5/2 thread | **CLOSED** (not topological) | No further work needed |
 | Dark dimension comparison | Complete | See Paper 7 App C |
 | Novelty audit | Complete | See etc/frontier-research/problem-D-novelty-audit.md |
+
+---
+
+## Round 5 Results (April 6, 2026 — Computation Round)
+
+Files: computation-1-eta-invariant.md, computation-2-leptogenesis-z3.md
+Integrated into: paper7/appendix-B-freed-witten.md §B.10, paper4/07-predictions.md §7.13
+
+### New results and pattern attribution
+
+| Result | Paper/Location | Patterns | Generative | Notes |
+|--------|---------------|----------|------------|-------|
+| Conrad formula gives 5/12 for E₆×SU(3) twist | Paper 7 App B §B.10 | P4 | P4 | V²=2/3, v²=1/4, {k}=5/12 |
+| Gravitational correction (χ-σ)/24 = 1/12 for CP² | Paper 7 App B §B.10 | P4 | P4 | (3-1)/24 = 1/12 exactly |
+| 5/12 + 1/12 = 1/2: c₂^{eff} = 1/2 proved | Paper 7 App B §B.10 | P4, P2, P6 | P4 | Two independent routes converge |
+| Uniqueness: c₂=1/2 is the ONLY value satisfying C1-C5 | Paper 7 App B §B.10 | P4 | P4 | c₂=3/2 fails tadpole; only 1/2 works |
+| Exact GUT unification: ratio=-17/9, N_M2=450 | Paper 7 App B §B.10 | P4 | P4 | (17,-34) flux pair; verified |
+| Z₃→Z₂ breaking by G₄ flux: Δ₃₁/Γ~265 | Paper 4 §7.13 | P4 | P4 | N₃ hierarchically separated |
+| M₁-M₂ splitting at order ξ²: Δ₁₂/Γ~ξ | Paper 4 §7.13 | P4, P3 | P4 | Natural scale from Z₂ breaking |
+| η_B within order of magnitude (honest range) | Paper 4 §7.13 | P4, P2, P3 | P4 | Factor 3 requires favorable O(1) coeff |
+
+### The convergence of Round 5
+
+**P4 (Topological Rigidity) dominated Round 5 completely.**
+
+Computation 1: The Conrad formula + gravitational correction = 5/12 + 1/12 = 1/2
+is a pure number-theoretic result. The uniqueness theorem (c₂=1/2 is the ONLY
+value satisfying five simultaneous constraints) is a logical consequence of
+topological inputs alone. P4 first obstructed (Round 3: π₃(E₈)=Z), then
+mandated the exact value through consistency.
+
+Computation 2: The Z₃→Z₂ breaking hierarchy (Δ₃₁/Γ~265 vs Δ₁₂/Γ~ξ) is
+entirely determined by which fixed points sit on the preferred CP¹ selected
+by the G₄ flux. This is topology — which points are on the cycle, which are off it.
+The resonance parameter ξ=y²/(8π) encodes the gauge coupling structure via P2.
+
+### Status after Round 5: all major items closed or bounded
+
+| Item | Status |
+|------|--------|
+| OS3 exact (full nonlinear) | Proved semiclassically (Proposition P, Round 4) |
+| Tadpole integrality | **CLOSED** (c₂^{eff}=1/2 via Conrad+grav correction) |
+| Exact GUT unification | **CLOSED** (ratio=-17/9 exact, N_{M2}=450) |
+| 5/2 thread | **CLOSED** (not topological) |
+| Dark dimension comparison | Complete (App C, Paper 7) |
+| Leptogenesis precision | Honest range established; central value η_B/obs~0.05 |
+| Z₃ breaking / M₃ hierarchy | **SOLVED** (G₄ flux on CP¹×S² breaks Z₃→Z₂) |
+| Novelty audit | Complete |
+
+### What remains as genuine open items for future work
+
+| Item | Minimal missing input |
+|------|----------------------|
+| Direct eta-invariant computation | Spectral data of D_{τ₃} on CP² (Cahen-Franc-Gutt extension) |
+| Explicit ADHM bundle construction | c₂=1/2 bundle for E₆×SU(3) involution on C²/Z₂ |
+| First-principles Δ₁₂/Γ | One-loop self-energy of N₁,N₂ from CP² KK spectrum with Z₃-breaking BCs |
+| F-theory cross-check | Lift to CY₄, verify χ(CY₄)/24 = 450 |
