@@ -1,3 +1,20 @@
+## Before you begin: archive the previous run
+
+Before writing anything, check whether `paper1/journal-reviewer/` contains any
+files (report.md, gap-responses.md, or others).
+
+If it does:
+1. List the directories in `paper1/reviewer-runs/` (they are named r00, r01, r02, ...).
+   If none exist, the next run number is r00.
+2. Find the next available number (e.g. if r00 and r01 exist, use r02).
+3. Create `paper1/reviewer-runs/rNN/` (e.g. `mkdir -p paper1/reviewer-runs/r02/`).
+4. Move all files from `paper1/journal-reviewer/` into `paper1/reviewer-runs/rNN/`.
+5. Proceed with the review. Write all new output fresh to `paper1/journal-reviewer/`.
+
+If `paper1/journal-reviewer/` is empty or does not exist, skip directly to the review.
+
+---
+
 # Journal Referee: Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry
 
 You are an expert referee evaluating this paper for submission to a high-impact theoretical physics journal (Physical Review Letters, Physical Review D, or Communications in Mathematical Physics).

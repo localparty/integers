@@ -147,6 +147,8 @@ For each paper with A or B findings:
 
 ## Notes
 
+- **Reviewer run archiving**: Each paper's referee prompt archives the previous `journal-reviewer/` output to `paperN/reviewer-runs/rNN/` before starting. Run history is preserved in these numbered directories (r00, r01, r02, ...) following the pattern at `~/yang-mills/math-referee-runs/`.
+
 - **Delete any generated `.tex` files** before starting (they are regenerated):
   `find /Users/gsix/quantum-geometry-in-5d-latex -name "*.tex" -delete`
 

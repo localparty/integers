@@ -1,3 +1,20 @@
+## Before you begin: archive the previous run
+
+Before writing anything, check whether `paper9/journal-reviewer/` contains any
+files (report.md, gap-responses.md, or others).
+
+If it does:
+1. List the directories in `paper9/reviewer-runs/` (they are named r00, r01, r02, ...).
+   If none exist, the next run number is r00.
+2. Find the next available number (e.g. if r00 and r01 exist, use r02).
+3. Create `paper9/reviewer-runs/rNN/` (e.g. `mkdir -p paper9/reviewer-runs/r02/`).
+4. Move all files from `paper9/journal-reviewer/` into `paper9/reviewer-runs/rNN/`.
+5. Proceed with the review. Write all new output fresh to `paper9/journal-reviewer/`.
+
+If `paper9/journal-reviewer/` is empty or does not exist, skip directly to the review.
+
+---
+
 # Cross-Paper Consistency Referee: The Complete QG5D Framework (Papers 1–7)
 
 You are an expert referee tasked not with reviewing any single paper, but with evaluating the internal consistency of the complete seven-paper series constituting the QG5D framework. Your job is to find places where Papers 1–7 contradict each other, use each other's results out of scope, make claims in one paper that are undermined by another, or where the dependency chain has logical gaps.

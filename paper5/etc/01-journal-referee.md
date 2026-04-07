@@ -1,3 +1,20 @@
+## Before you begin: archive the previous run
+
+Before writing anything, check whether `paper5/journal-reviewer/` contains any
+files (report.md, gap-responses.md, or others).
+
+If it does:
+1. List the directories in `paper5/reviewer-runs/` (they are named r00, r01, r02, ...).
+   If none exist, the next run number is r00.
+2. Find the next available number (e.g. if r00 and r01 exist, use r02).
+3. Create `paper5/reviewer-runs/rNN/` (e.g. `mkdir -p paper5/reviewer-runs/r02/`).
+4. Move all files from `paper5/journal-reviewer/` into `paper5/reviewer-runs/rNN/`.
+5. Proceed with the review. Write all new output fresh to `paper5/journal-reviewer/`.
+
+If `paper5/journal-reviewer/` is empty or does not exist, skip directly to the review.
+
+---
+
 # Journal Referee: Color Confinement, the Strong Force, and the CP² Holonomy
 
 You are an expert referee evaluating this paper for submission to Physical Review D or Physical Review Letters.
