@@ -42,15 +42,18 @@ leptons on both branes, producing `η_B ≈ 6 × 10⁻¹⁰` through the
 Z₃ CP phases of Paper 4 (§5).
 
 Second, we explain the origin of the brane temperature asymmetry
-`ξ = T_hidden/T_visible ~ O(0.5)`. During reheating, the inflaton
-couples to both branes through gravitational channels. This paper
-identifies the mechanism and demonstrates why `ξ ~ O(0.3–0.9)` is
-a natural geometric prediction (§6). The precise value `ξ = 0.49`
-is determined in Paper 2 from the Ω_DM/Ω_b observational ratio,
-not derived here. The intermediate step — from ξ ~ 0.79 (bulk
-neutrino decays) to ξ = 0.49 (after phase transitions) — requires
-a full two-sector Boltzmann simulation that is deferred to future
-work.
+`ξ = T_hidden/T_visible`. During reheating, the inflaton couples to
+both branes through gravitational channels. This paper identifies the
+mechanism and demonstrates why `ξ ~ O(0.3–0.9)` is a natural
+geometric prediction (§6). The precise value `ξ = 0.432`, determined
+by `Ω_DM/Ω_b = 5.36` via the `1/ξ²` law (§6.5 and Paper 2 §2.4), is
+derived here from the bulk neutrino localization parameter `c_ν = 0.634`
+as a consistency result. The Z₂ Conservation Theorem (§6.4) establishes
+that this value is preserved exactly through all subsequent thermal
+history. An earlier value `ξ = 0.49`, cited in prior drafts of this
+paper and companion papers, incorporated a thermal-history correction
+that the Z₂ theorem shows to be spurious; it is formally retracted
+(§6.4). Paper 2's CMB predictions should be revised to use `ξ = 0.432`.
 
 Third, we place the electroweak phase transition (Paper 4, §7.12)
 in its cosmological context: at `T_c ~ 1 TeV`, the gauge-Higgs

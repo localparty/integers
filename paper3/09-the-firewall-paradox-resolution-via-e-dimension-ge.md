@@ -155,6 +155,57 @@ They are different aspects of a single geometric conservation law
 operating in a dimension orthogonal to the 4D Hilbert space where
 monogamy applies.
 
+**Counting argument: e-superselection does not reduce 4D entanglement capacity.**
+
+A potential concern: does fixing the superselection sector H_Q reduce the effective
+dimension of the Hilbert space available to mode b, thereby reducing its 4D
+entanglement capacity?
+
+The answer is no. We give the explicit counting.
+
+The joint Hilbert space of the full system (black hole, early radiation R, late mode b,
+interior mode I) is H₅D = ⊕_Q H_Q. The total e-charge Q is conserved. Restricting to
+a definite sector H_Q does not reduce the dimension of the 4D factor of H_Q. Here is
+why.
+
+The 5D Hilbert space of N_total = N_BH + N_rad constituents decomposes as:
+
+    H₅D = H_{4D} ⊗ H_e
+
+where H_{4D} is the standard 4D Fock space (dimensions of 4D quantum numbers: energy,
+angular momentum, spin) and H_e = (C^{d_e})^{⊗N_total} is the e-sector Hilbert space.
+The superselection decomposition acts only on H_e:
+
+    H_e = ⊕_Q H_e^Q,    where H_e^Q = {|φ₁,...,φ_{N_total}⟩ ∈ H_e : Σ_i φᵢ = Q}
+
+The dimension of H_e^Q is the number of ways to distribute total e-charge Q among
+N_total constituents from an alphabet of d_e symbols:
+
+    dim(H_e^Q) = C(N_total + d_e - 1, d_e - 1)|_{fixed Q} ~ d_e^{N_total - 1} / (d_e - 1)
+
+For d_e ~ 10³⁰ and N_total ~ S_BH ~ 10⁷⁷, this is still doubly exponentially large —
+dim(H_e^Q) ~ 10^{30 × 10^77} / 10^30 ~ 10^{30 × 10^77}, negligibly smaller than
+dim(H_e) = d_e^{N_total}.
+
+The 4D factor H_{4D} is untouched by the e-superselection: the constraint acts
+entirely on H_e, not on H_{4D}. Within the sector H_Q = H_{4D} ⊗ H_e^Q, the late
+mode b retains its full 4D Hilbert space H_{4D}^{(b)} — a 2-dimensional qubit (for a
+single fermionic mode) or higher-dimensional Fock space. The 4D entanglement capacity
+is:
+
+    E_max(b) within H_Q = log₂ dim(H_{4D}^{(b)}) = 1 ebit (fermionic mode)
+
+This is identical to the 4D entanglement capacity without the e-constraint. The
+e-superselection fixes which e-charge sector the system is in; it does not remove any
+4D dimension from mode b's Hilbert space.
+
+Therefore: the AMPS monogamy argument — which concerns the 4D entanglement of mode b
+with I (vacuum entanglement) and with R (unitarity entanglement) — operates entirely
+within H_{4D} ⊗ H_e^Q for a fixed Q. The e-correlations that encode infalling
+information are in H_e^Q and do not consume any of E_max(b) = 1 ebit. Monogamy of 4D
+entanglement within H_Q is not violated; the e-correlations are orthogonal resources
+in the e-factor. ∎
+
 **Open problem — honest statement:** The claim that e-correlations
 are not subject to monogamy rests on the assertion that they are
 not Hilbert space entanglement but geometric constraints. This
@@ -311,6 +362,12 @@ are superselection constraints, not entanglement within H_Q.
 
 **Theorem 9.1** *(Compatibility of unitarity, no drama, and
 effective field theory in 5D).*
+
+*(Scope: The following theorem holds in the semiclassical regime M >> M_Pl, where
+the Hawking temperature T_H << m₁ c²/k_B — the temperature is far below the lightest
+KK mass — so 4D observables are restricted to the KK zero-mode sector. See the Mass
+range validity note in §9.3.1 and Appendix B.8. The AMPS argument is not formulated
+for M ~ M_Pl, where the semiclassical approximation itself breaks down.)*
 
 *In the 5D e-dimension framework, the three AMPS postulates
 hold simultaneously:*
@@ -628,20 +685,72 @@ for the infalling observer. In IEF coordinates the metric is:
 
 This is regular at the horizon with no divergence.
 
-**Step 2: Tracing over e in the Unruh state.** The Unruh state
-`|0⟩_{5D}` in the product spacetime `M⁴ × S¹` factorizes as
-`|0⟩_{5D} = |0⟩_{4D,Unruh} ⊗ |0⟩_e`, because the 5D metric is a
-direct product and the 5D vacuum mode functions factorize into
-4D mode functions times e-circle mode functions (the product
-structure established in Appendix B). The e-sector vacuum is
-the standard S¹ ground state.
+**Step 2: The 5D vacuum factorization — working assumption and its justification.**
 
-The marginal 4D state is:
+We require the 4D marginal state ρ₄D = Tr_e[ρ₅D] to be the 4D Unruh vacuum. In a
+product spacetime M⁴ × S¹ with metric g₅D = g₄D + R₀² dφ², the 5D wave equation for
+a minimally coupled scalar field Φ separates into independent equations for each KK
+mode Φ_n(x) with effective 4D mass m_n = n/R₀. The mode functions therefore factor as:
 
-    ρ_{4D} = Tr_e[|0⟩_{5D}⟨0|] = Tr_e[|0⟩_{4D,Unruh}⟨0| ⊗ |0⟩_e⟨0|]
-            = |0⟩_{4D,Unruh}⟨0| × ⟨0|0⟩_e = |0⟩_{4D,Unruh}⟨0|
+    u_{k,n}(x,φ) = f_k(x) × e^{inφ/R₀}
 
-The 4D marginal state is the 4D Unruh vacuum.
+where f_k(x) are the standard 4D Hawking/Unruh mode functions and e^{inφ/R₀} are
+the S¹ harmonics. This factorization of the *mode functions* motivates the conjecture
+that the 5D vacuum state factorizes correspondingly:
+
+    |0⟩₅D =? |0⟩_{4D,Unruh} ⊗ |0⟩_e
+
+**However, this factorization is not derived.** The 5D vacuum is defined by the 5D
+positive-frequency condition — the absence of 5D particles, including all KK
+excitations. The Bogoliubov transformation relating the infalling vacuum (defined by
+ingoing Eddington-Finkelstein coordinates) to the exterior Fock space mixes 4D modes
+with KK modes in a way that depends on the full 5D mode structure. In particular, the
+KK masses m_n = n/R₀ appear in the 5D frequency condition and modify the Bogoliubov
+coefficients relative to the pure 4D calculation. The 5D Bogoliubov coefficients
+have not been computed, and it is therefore not established from first principles that
+Tr_e[ρ₅D] is exactly the 4D Unruh vacuum.
+
+**Working Assumption 9.1 (5D Vacuum Factorization).** *We assume that the 5D vacuum
+state in the product spacetime M⁴ × S¹ factorizes as |0⟩₅D = |0⟩_{4D,Unruh} ⊗ |0⟩_e,
+so that ρ₄D = Tr_e[ρ₅D] = |0⟩_{4D,Unruh}⟨0|.*
+
+This assumption is well-motivated by the following evidence, but not yet a theorem:
+
+1. **Mode function factorization:** The 5D mode functions factor by the product
+   metric structure, as shown above. If the vacuum is the Fock vacuum built on these
+   factored modes, the state factorization follows. The question is whether the 5D
+   Bogoliubov transformation (which mixes modes across the horizon) preserves this
+   factored structure.
+
+2. **KK mass gap suppression:** The corrections to the 4D Bogoliubov coefficients
+   from KK mode mixing are estimated to scale as (T_H/m₁)² ~ (M_Pl/M)⁴ × (l_P/R₀)²
+   ~ 10⁻⁶⁰ for astrophysical black holes, where m₁ = 1/R₀ is the KK mass scale and
+   T_H ~ 1/M is the Hawking temperature. At this level of suppression, the deviation
+   from the factorized state is undetectable in any physical measurement. This is a
+   dimensional estimate, not a rigorous bound on the Bogoliubov coefficients.
+
+3. **Consistency with Section 6.2:** The 4D projection of the 5D state reproduces
+   the Hawking thermal spectrum (§6.2), which is consistent with ρ₄D being the
+   4D Unruh vacuum. This is a consistency check, not an independent derivation.
+
+**What would close the gap:** Computing the 5D Bogoliubov transformation explicitly —
+expanding the 5D field in both infalling and outgoing mode bases, computing the
+overlap coefficients α_{km}^{(n)} and β_{km}^{(n)} for each KK level n, and showing
+that the off-diagonal (n ≠ 0) coefficients are suppressed by the KK mass gap — would
+upgrade Working Assumption 9.1 to a theorem. This computation is deferred to future
+work. Alternatively, a rigorous bound on ‖β^{(n)}‖ from the KK mass gap via the
+Fulling-Sweeny-Wald theorem (1978) on Bogoliubov coefficient decay would suffice.
+
+**Consequence for the Hadamard condition argument:** Accepting Working Assumption 9.1,
+the marginal 4D state is ρ₄D = |0⟩_{4D,Unruh}⟨0|. The Hadamard condition then follows
+from the established result that the 4D Unruh vacuum is a Hadamard state on
+Schwarzschild spacetime (Fredenhagen & Haag 1990; Kay & Wald 1991). The conclusion
+— the infalling observer encounters no firewall — follows from Working Assumption 9.1.
+The no-drama result of §9.4 (no 4D energy barrier from δφ) is independent of this
+assumption and holds unconditionally in the semiclassical regime.
+
+Accepting Working Assumption 9.1, the marginal 4D state ρ₄D = Tr_e[ρ₅D] = |0⟩_{4D,Unruh}⟨0|
+is the 4D Unruh vacuum. We then proceed to Step 3.
 
 **Step 3: Hadamard condition.** The 4D Unruh vacuum `|0⟩_{4D,Unruh}`
 is a Hadamard state on the Schwarzschild spacetime. This is a
@@ -675,10 +784,16 @@ remains thermal. Since the thermal 4D state satisfies the Hadamard
 condition (it is the Unruh vacuum), the infalling observer encounters
 no drama. The argument is consistent.
 
-**Caveats.** The factorization `ρ_{5D} = ρ_{4D} ⊗ ρ_e` used above
-is exact only in the product metric (Appendix B). Near the Planck
-scale (`M ~ M_Pl`) this approximation breaks down; but as noted, the
-semiclassical analysis is valid only for `M >> M_Pl` anyway.
+**Caveats and status.** The Hadamard condition argument rests on Working Assumption 9.1
+(5D vacuum factorization). This assumption is well-motivated but not yet derived;
+computing the 5D Bogoliubov transformation to verify it is deferred to future work.
+The no-drama conclusion of §9.4 does not depend on this assumption. The factorization
+approximation ρ₅D ≈ ρ₄D ⊗ ρ_e also breaks down at M ~ M_Pl (Planck-scale regime),
+but as noted, the AMPS argument and the semiclassical analysis are not reliable there
+in any case. The Hadamard condition claim is therefore a conditional result: it holds
+given Working Assumption 9.1, and it holds unconditionally in the M >> M_Pl regime
+to the extent that the KK mass gap suppression of the Bogoliubov mixing
+(estimated at ~ 10⁻⁶⁰) constitutes a reliable approximation.
 
 ---
 

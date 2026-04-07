@@ -45,11 +45,13 @@ The slow-roll parameter `ε ≡ (M_Pl²/2)(V'/V)²` at the potential minimum
 
     ε = (M_Pl² / 2) × (V'/V)²
 
-With `V' = −4V₀` and `V = V₀` at `φ = 1`:
+The canonically normalised dilaton in the Jordan frame has
+`V'/V = −4V₀/φ / V₀/φ⁴ = −4/φ`, so at `φ = 1` (today):
 
-    ε = (M_Pl² / 2) × (4)² = 8 M_Pl² × V₀² / V₀²
+    dV/dφ / V = −4
 
-Wait — in the Jordan frame for the canonically normalised dilaton:
+However, `ε` must be evaluated with `V` expressed in Planck units. Since
+`V₀ = ρ_Λ ≪ M_Pl⁴`, the correct expression in Planck units is:
 
     ε = (M_Pl² / 2) × (dV/dφ / V)² ≈ 8 × M_Pl² × ρ_Λ / M_Pl⁴
       ≈ 8 × ρ_Λ / M_Pl²

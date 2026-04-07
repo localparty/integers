@@ -80,8 +80,11 @@ instanton number on the visible brane consistent with M-theory anomaly
 cancellation, tadpole integrality, and GUT unification.
 
 For CP², σ(CP²) = 1, so c₂^{eff}(V_vis) = 1/2 = σ(CP²)/2 numerically. This
-numerical coincidence is specific to CP²: the HW anomaly forces c₂^{eff} = 1/2
-independent of σ (from integrality), while σ/2 = 1/2 only when σ = 1. CP² is
+numerical coincidence is specific to CP²: the HW anomaly-cancellation
+argument (Paper 7 §B.10.1) establishes c₂^{eff} = 1/2 as the unique fractional
+instanton number consistent with all five constraints (integrality, tadpole
+positivity, level-matching, and gauge unification), while σ/2 = 1/2 only when
+σ = 1. CP² is
 the unique compact 4-manifold with σ = 1 and the correct topology for this
 compactification.
 
@@ -100,6 +103,17 @@ Both numbers are topological in the sense that matters physically: neither can
 be changed by adjusting a free parameter in the Lagrangian, and both are forced
 by the geometry of the compactification. Their difference is the number the
 framework produces for m_ν/m_KK.
+
+The combination 3 − 1/2 = 5/2 is a numerical coincidence in the sense now
+precisely established by Paper 7 §B.10.3a: each component is separately of
+topological origin, but no mechanism connecting a manifold invariant (χ = 3)
+and a gauge-bundle invariant (c₂^{eff} = 1/2) in different cohomological
+contexts has been identified that would make their difference a topological
+identity. "Index theorems on product manifolds produce multiplicative, not
+additive, contributions from the two factors" (Paper 7 §B.10.3a). The 5/2
+is therefore a topologically grounded numerical coincidence — remarkable in
+that both inputs are separately rigid — but it is not an index theorem result
+on the full space.
 
 ---
 
@@ -273,7 +287,9 @@ along the extra dimension S¹/Z₂. For localization parameter c_ν:
 
     ξ = e^{−(2c_ν − 1)kπ/2}
 
-At k = 2 (Paper 1), the observed ξ = 0.432 gives c_ν = 0.634.
+At k = 2 (Paper 1 §W.5; an observationally fitted warp factor — no geometric
+quantization condition selecting this value is currently established within the
+framework), the observed ξ = 0.432 gives c_ν = 0.634.
 
 Now: the same c_ν that determines ξ also appears in the wavefunction factor for
 the seesaw mass formula. The two sectors are not independent — both depend on
@@ -378,17 +394,21 @@ The 5/2 identity at M_GUT = 1.65 × 10¹⁶ GeV requires:
 
     m_ν* = (5/2) × ℏc / R_B × [g₂(M_Z)/g₂(M_GUT)]⁻²
 
-Solving: m_ν* = 49.74 meV. The current oscillation central value is 50.15 meV.
+Solving: m_ν* = 49.7 ± 0.5 meV (the ±0.5 meV theory uncertainty is dominated
+by ΔN_vis entering through R_A; see §4d.4 precision budget). This prediction
+is conditional on the five-constraint uniqueness theorem of Paper 7 §B.10.1,
+which establishes c₂^{eff}(V_vis) = 1/2.
+
+The current oscillation central value is 50.15 meV.
 The offset is −0.41 meV, which is 1.46σ below the NuFIT 5.3 central value at
 current precision (σ = 0.28 meV). This is not a significant tension today.
 
 CMB-S4 (projected first data ~2030) will measure the sum of neutrino masses to
-σ = 0.030 meV. At that precision, the discrimination between m_ν = 49.74 meV
-(closure prediction) and m_ν = 50.15 meV (current central value) is:
-
-    |49.74 − 50.15| / 0.030 = 13.7σ
-
-This is the sharpest prediction in the QG5D framework. The neutrino mass test
+σ = 0.030 meV. Taking the central closure value m_ν* = 49.7 meV and the current central
+value 50.15 meV, the naive discrimination at σ = 0.030 meV is 15σ. However,
+once the ΔN_vis theory uncertainty (dominant; ±0.5 meV in m_ν*) is included
+in the comparison, the net discriminating power is 5–8σ (Paper 4 §7.5.7a).
+This remains the sharpest prediction in the QG5D framework. The neutrino mass test
 is more decisive than the proton decay test, more decisive than the N_eff test,
 and independent of both. It relies only on the Casimir formula (with its ξ⁴
 mirror correction), the topological 5/2 identity, and the 2-loop SM RGE.
@@ -398,8 +418,14 @@ mirror correction), the topological 5/2 identity, and the 2-loop SM RGE.
 | Scenario | M_GUT (GeV) | Gap | τ_p (yr) | m_ν required | CMB-S4 pull |
 |----------|------------|-----|---------|--------------|------------|
 | Exact closure | 7.04 × 10¹⁶ | 0.000% | ~10⁴⁰ | 50.15 meV | — |
-| Approx. closure | 1.65 × 10¹⁶ | −0.81% | ~4.6 × 10³⁷ | 49.74 meV | 13.7σ |
-| Low-end neutrino | 1.65 × 10¹⁶ | — | — | 49.74 meV | decisive |
+| Approx. closure | 1.65 × 10¹⁶ | −0.81% | ~4.6 × 10³⁷ | 49.7 ± 0.5 meV | 5–8σ |
+| Low-end neutrino | 1.65 × 10¹⁶ | — | — | 49.7 ± 0.5 meV | decisive |
+
+*Table: Closure scenarios for the R_A = R_B system. All predictions are
+conditional on Paper 7 §B.10.1's five-constraint uniqueness argument establishing
+c₂^{eff}(V_vis) = 1/2. The 5–8σ CMB-S4 discrimination (replacing the earlier
+"13.7σ" figure) accounts for the ΔN_vis theory uncertainty budget (Paper 4
+§7.5.7a). The m_ν required column uses m_ν = 49.7 ± 0.5 meV (Paper 4 §7.5.7b).*
 
 The topological identity itself is exact — 3 − 1/2 = 5/2 cannot be changed —
 but its connection to the observed mass scale depends on M_GUT, R₀, and m_ν,
@@ -418,8 +444,9 @@ The topology of CP² forces three things independently:
 right-handed neutrino generations. It is computed by HRR. It cannot be changed
 without changing the manifold.
 
-**Two.** The HW anomaly cancellation forces c₂^{eff}(V_vis) = 1/2 on CP². This
-is the unique solution to five simultaneous constraints from M-theory. It is not
+**Two.** The HW anomaly-cancellation argument establishes c₂^{eff}(V_vis) = 1/2 on CP²
+as the unique solution to the five-constraint uniqueness argument of Paper 7
+§B.10.1. It is not
 a free parameter and it cannot be changed within the framework.
 
 **Three.** The localization parameter c_ν = 0.634 — set by the zero-mode
@@ -456,15 +483,13 @@ numerical content, and the sharpest test is the neutrino mass measurement.
 
 The R-closure surface analysis makes a specific, quantitative prediction: if
 M_GUT = 1.65 × 10¹⁶ GeV (approximate closure, within threshold corrections),
-then the framework requires m_ν = 49.74 meV. The current central value is
-50.15 meV. CMB-S4 projected precision is σ = 0.030 meV, giving a discrimination
-of:
-
-    |49.74 − 50.15| / 0.030 = 13.7σ
-
-This is not ambiguous. CMB-S4 will discriminate these two hypotheses — m_ν = 49.74
-(closure) and m_ν = 50.15 (current) — at 14σ. The framework will pass or fail
-decisively.
+then the framework requires m_ν = 49.7 ± 0.5 meV. The current central value is
+50.15 meV. CMB-S4 projected precision is σ = 0.030 meV. Taking the central
+closure value m_ν* = 49.7 meV versus the current central
+value 50.15 meV at CMB-S4 projected precision σ = 0.030 meV, and accounting
+for the ±0.5 meV theory uncertainty (dominated by ΔN_vis; Paper 4 §7.5.7a),
+the net discriminating power is 5–8σ. This is not ambiguous. The framework
+will pass or fail decisively.
 
 The proton decay test is secondary and model-dependent. At exact closure
 M_GUT* = 7 × 10¹⁶ GeV, τ_p ~ 10⁴⁰ yr — undetectable. At approximate closure
@@ -477,18 +502,22 @@ without the intermediate step.
 
 - The topological decomposition 5/2 = 3 − 1/2 is **proven** (from HRR and HW
   anomaly cancellation as computed in 35b).
-- The HW forcing of c₂^{eff} = 1/2 is **proven** conditional on the five
-  constraints (Theorem 2 of 35b; Paper 7 Appendix B).
+- The HW argument establishing c₂^{eff} = 1/2 is **conditional on the five
+  constraints** (Theorem 2 of 35b; Paper 7 §B.10.1); see Finding B6 note in
+  the gap-response. The language "proven" is replaced by "established by the
+  five-constraint uniqueness argument of Paper 7 §B.10.1, conditional on those
+  constraints."
 - The numerical agreement at M_Z is **observed** at 2.9% precision.
 - The 2-loop SM RGE calculation is **complete**: at canonical M_GUT = 2 × 10¹⁵ GeV,
   the running widens rather than closes the gap, and exact closure requires either
-  M_GUT ≈ 1.65 × 10¹⁶ GeV, R₀ = 9.84 μm, or m_ν ≈ 49.74 meV.
+  M_GUT ≈ 1.65 × 10¹⁶ GeV, R₀ = 9.84 μm, or m_ν ≈ 49.7 meV.
 - The 4.7σ tension at canonical parameters is **real** and is stated as such.
 - The R-closure surface is **computed** (Story 36b): exact closure at
   M_GUT* = 7.04 × 10¹⁶ GeV; 0.81% gap at M_GUT = 1.65 × 10¹⁶ GeV; the
   R_B band spans only 9.67–10.31 μm over five decades.
-- The neutrino mass prediction m_ν = 49.74 meV at M_GUT = 1.65 × 10¹⁶ GeV
-  is **testable at 14σ by CMB-S4** — the sharpest test in the framework.
+- The neutrino mass prediction m_ν = 49.7 ± 0.5 meV at M_GUT = 1.65 × 10¹⁶ GeV
+  is **testable at 5–8σ by CMB-S4 + DESI** — the sharpest test in the framework;
+  the ±0.5 meV theory uncertainty is dominated by ΔN_vis (Paper 4 §7.5.7a).
 - The connection of all three sectors through CP² topology is **structural** —
   both c_ν (dark matter via ξ) and the neutrino mass (via the seesaw) depend on
   the same CP² zero-mode data.
@@ -496,8 +525,9 @@ without the intermediate step.
 The framework does not claim the identity is proven to close. It claims the
 topological structure is real, the closure surface has been computed, the
 sub-percent gap at SUSY-scale M_GUT is well within threshold corrections, and
-the resolution is tested by CMB-S4 at 14σ precision. The neutrino mass is now
-a prediction, not a parameter to be tuned after the fact.
+the resolution is tested by CMB-S4 at 5–8σ precision (accounting for the ΔN_vis
+theory uncertainty budget). The neutrino mass is now a prediction, not a
+parameter to be tuned after the fact.
 
 One compact space. The topology is exact. The neutrino mass test is decisive.
 CMB-S4 will say which geometry is realized.
@@ -526,7 +556,13 @@ Three near-agreements. One geometry. No free parameters in any of the three
 topological inputs. The 2.9% gap at M_Z is not closed by SM running at the
 canonical GUT scale. Closing it requires M_GUT ≈ 1.65 × 10¹⁶ GeV (testable
 from proton decay), or R₀ = 9.84 μm (within Casimir uncertainty), or
-m_ν ≈ 48.8 meV (testable from CMB-S4). These are predictions, not adjustments.
+m_ν = 49.7 ± 0.5 meV (testable at 5–8σ by CMB-S4 + DESI, §4c.6–4c.7; this
+is the approximate-closure prediction at M_GUT = 1.65 × 10¹⁶ GeV). The exact
+topological identity at canonical M_GUT = 2 × 10¹⁵ GeV gives 48.843 meV,
+which is 4.7σ from the current central value 50.150 meV and is stated as a
+genuine tension in §4c.3 and §4c.7 — it is not the preferred closure scenario.
+The exact closure at M_GUT* = 7.04 × 10¹⁶ GeV is consistent with the current
+central value 50.15 meV. These are predictions, not adjustments.
 
 ---
 

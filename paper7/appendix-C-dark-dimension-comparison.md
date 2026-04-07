@@ -49,7 +49,7 @@ discriminate between the two frameworks. The primary distinguishing
 observable is the dark matter mechanism: Kaluza-Klein graviton tower
 (mass spectrum m_n ~ n/R ~ n × 20 meV) in the dark dimension
 scenario vs. mirror-brane matter from the Z₂ hidden sector in the
-present framework.
+present framework. A secondary non-Gaussianity discriminant f_NL ~ 0.3 (from the G₄ hilltop cosine inflaton, §5.4) is in principle distinguishable from the dark dimension scenario's prediction, but f_NL ~ 0.3 is beyond current and likely near-future experimental reach: CMB-S4's projected sensitivity is σ(f_NL^{local}) ~ 1, and no currently funded or planned CMB experiment reaches the sub-unity threshold required to detect this signal.
 
 ---
 

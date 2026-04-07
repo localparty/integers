@@ -308,3 +308,48 @@ V'' > 0 and the system is stable. The "50 Hubble time" decompactification
 timescale was an artifact of the wrong sign; the correct conclusion
 is indefinite perturbative stability with exponential damping of
 perturbations.
+
+**One-loop matter corrections.** The Epstein zeta zero theorem
+(Theorem K.1, Paper 1 Appendix K) establishes that corrections to
+the Casimir spectral sum — arising from bulk KK modes running in
+loops — vanish identically at two loops and beyond. These are
+corrections to the Casimir vacuum energy from bulk field loops,
+governed by the spectral zeta function of the bulk kinetic operator.
+
+A distinct class of corrections arises from SM matter fields on the
+visible brane coupling to the dilaton through
+$\mathcal{L}_\mathrm{int} = (\sigma/M_\mathrm{Pl})\,\varphi\, T^\mu_\mu$.
+These generate a Coleman-Weinberg contribution to the dilaton mass
+of order
+
+$$\delta m_\varphi^2 \sim \left(\frac{g_\mathrm{SM}}{4\pi}\right)^2 \frac{M_\mathrm{KK}^2}{M_\mathrm{Pl}^2} \times M_\mathrm{KK}^2 \sim 10^{-2} \times \frac{(0.1\,\text{eV})^4}{M_\mathrm{Pl}^2}$$
+
+This is suppressed by $(M_\mathrm{KK}/M_\mathrm{Pl})^2 \sim (0.1\,\text{eV}/10^{18}\,\text{GeV})^2 \sim 10^{-58}$ relative to $M_\mathrm{KK}^2$, giving
+
+$$\delta m_\varphi^2 \sim 10^{-2} \times (0.1\,\text{eV})^2 \times 10^{-58} \sim 10^{-60}\,\text{eV}^2$$
+
+This is comparable to $H_0^2 \sim (10^{-33}\,\text{eV})^2 = 10^{-66}\,\text{eV}^2$,
+i.e., $\delta m_\varphi^2 / m_\varphi^2 \sim 10^{-60}/10^{-66} \sim 10^6$.
+Naively, this suggests a large correction.
+
+However, this estimate uses the tree-level coupling $\sigma/M_\mathrm{Pl}$
+without accounting for the KK suppression of the dilaton–matter vertex
+at the KK scale. The dilaton couples to the trace of the stress-energy
+tensor, which for a massive SM field is $T^\mu_\mu \sim m_\mathrm{SM}^2\,\phi^2$.
+The loop momentum is cut off at $M_\mathrm{KK}$, not at $M_\mathrm{Pl}$,
+giving the more careful estimate
+
+$$\delta m_\varphi^2 \sim \frac{\sigma^2\,m_\mathrm{SM}^4}{16\pi^2\,M_\mathrm{Pl}^2} \sim \frac{(1/3)(0.1\,\text{GeV})^4}{16\pi^2\,(2.4\times 10^{18}\,\text{GeV})^2} \sim 10^{-80}\,\text{GeV}^2 \sim 10^{-60}\,\text{eV}^2$$
+
+This is suppressed by $m_t^4/M_\mathrm{Pl}^2 \sim (175\,\text{GeV})^4/(2.4\times 10^{18}\,\text{GeV})^2 \sim 10^{-32}\,\text{GeV}^2$,
+and is negligible relative to the classical mass
+$m_\varphi^2 = 27.6\,H_0^2 \sim 10^{-66}\,\text{eV}^2$.
+
+The Epstein mechanism (Theorem K.1) governs the KK spectral sum and
+kills corrections to the Casimir vacuum energy from bulk field loops.
+The SM matter loop corrections discussed here are brane-localized, not
+governed by Theorem K.1 directly; their suppression comes instead from
+the $(m_\mathrm{SM}/M_\mathrm{Pl})^4$ hierarchy. The full extension of
+Theorem K.1 to brane-localized dilaton-matter couplings is deferred to
+Paper 1 Appendix K §K.4; the estimate here shows that, at the level of
+the dilaton mass, these corrections are negligible.

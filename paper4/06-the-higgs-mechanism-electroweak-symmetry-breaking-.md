@@ -329,6 +329,8 @@ The precise determination of c_t from the orbifold parameters of Paper 1
 and the confirmation of F(c_t) ~ 0.84 is identified as a precision
 calculation for future work.
 
+*Note: the bulk mass parameter c_t ≈ 0.55 is fixed by requiring y_t^{eff} M_KK ≈ m_t — it is not derived independently from the geometry. It is a parameter the RS-type localization framework accommodates naturally (c_t = 0.55 lies in the standard RS range for a top-quark-like Yukawa), but its specific value is an input, not a prediction. It is not listed in the prediction table as a derived quantity.*
+
 ### 6.6 The W and Z Masses
 
 The gauge boson masses arise from the non-zero Wilson line. The

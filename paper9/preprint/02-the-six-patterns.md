@@ -98,18 +98,29 @@ fine-tuning.
 
 **Why it works:** The Casimir energy is not a perturbative correction — it
 is the leading-order energy of the vacuum on a compact space. It is
-calculable, exact to all perturbative orders (by Pattern 5), and sets a
-hard physical scale that cannot be adjusted without changing the geometry.
+calculable, and the zeta-regularized Casimir sum vanishes on S¹ at every
+loop order within the framework (by Pattern 5). More precisely: the KK-mode
+sum is proved all-orders finite; whether this vanishing is scheme-independent
+— i.e., whether it reflects a physical property of the S-matrix — is an open
+problem as identified in Paper 1 §K. The Casimir energy sets a hard physical
+scale that cannot be adjusted without changing the geometry.
 
 **The clearest example:** The dark energy density. The Casimir energy of
-bulk fields on the S¹/Z₂ orbifold is:
+bulk fields on the S¹/Z₂ orbifold generates a dilaton potential V(R) = c/R⁴
+(Paper 6 §2), where c is determined by the field content of the orbifold.
+The observed dark energy density ρ_Λ = (2.25 meV)⁴ corresponds to V(R₀):
+the dilaton potential evaluated at the frozen radius R₀, whose freezing is
+established in Paper 6 Appendix A (ΔR/R₀ ~ 3 × 10⁻³⁰ per Hubble time).
 
-    ρ_Λ = ℏc · π² / (240 R⁴)
+The bare Casimir formula (without mirror-sector correction) gives R ≈ 12 μm.
+Including the mirror sector's ξ⁴ contribution to ΔN_eff gives the corrected
+value R₀ = 10.1 μm (§4c.3), which is the value used in §§4b–4d. Both values
+are legitimate (bare vs. mirror-corrected); they refer to the same observable
+and the discrepancy is explained in §4c.3 and §1.2.
 
-Setting this equal to the observed dark energy density fixes R ≈ 12 μm. This
-is the framework's one observational input. From R, every other scale
-follows: the KK mass scale sets the gravity-SM coupling; the S² Casimir sets
-the electroweak scale; the CP² volume sets the QCD scale.
+From R₀, every other scale follows: the KK mass scale sets the gravity-SM
+coupling; the S² Casimir sets the electroweak scale; the CP² volume sets the
+QCD scale.
 
 **Where Pattern 3 appears:**
 - Dark energy density → e-circle circumference R ≈ 12 μm (Paper 1, §6.6)
@@ -216,6 +227,14 @@ and L(s,χ₋₃). The divergence that ended the 4D program in 1986 is zero in
 - Lüscher coefficient from spectral zeta of CP² (Paper 5, App B)
 - Glueball mass tower from KK spectrum on CP² (Paper 5, §6)
 - Higgs mass naturalness from Z_{S²}(0) = −2/3 (Paper 4, §6.11)
+
+**Open problem.** Theorems K.1 and K.3 establish UV finiteness to all loop
+orders and BPHZ factorization for non-overlapping subdivergences. At L ≥ 3
+loops with overlapping subdivergences, the factorization of the amplitude as
+(4D finite part) × E_L(−j; Q_L) relies on joint holomorphicity of the Epstein
+zeta in loop-momentum and Schwinger parameters. Whether this holomorphicity
+holds for all momentum routings from L ≥ 3 overlapping diagrams is not yet
+established at full generality (§7.2 Thread 3 of this paper; Paper 1 §7.2).
 
 Pattern 5 is what makes the framework perturbatively predictive. Without it,
 5D gravity is as badly divergent as 4D gravity. With it, the same compact

@@ -5,18 +5,18 @@
 | Observable | Geometric prediction | Experiment | Match |
 |---|---|---|---|
 | `Λ_QCD` | 190 MeV (Paper 4) | 213 ± 8 MeV | 12% |
-| String tension `√σ` | 437 MeV | 440 MeV | 0.7%* |
-| Proton mass `m_p` | 946 MeV | 938.3 MeV | ~1%* |
+| String tension `√σ` | [410, 510] MeV | 440 MeV | within range |
+| Proton mass `m_p` | 946 MeV | 938.3 MeV | within ~10% leading-order uncertainty |
 | Neutron-proton Δm | ~1.3 MeV | 1.293 MeV | ~0.5% |
 | Deconfinement T_c | ~200 MeV | 155 MeV | 30% |
 | Lightest glueball | ~880 MeV | ~1500 MeV (mixed) | factor 1.7 |
 | Luscher coefficient L | π/6 ≈ 0.524 | 0.502 ± 0.020 (lattice) | 4% |
 | Baryon asymmetry η_B | ~10⁻¹⁰–10⁻⁷ | 6.1 × 10⁻¹⁰ | order-of-magnitude |
 
-*The sub-1% numerical matches for `√σ` and `m_p` are leading-order
-estimates with intrinsic ~10% uncertainty from the instanton coefficient
-and MIT bag model respectively. The close agreement should be treated
-as consistent at leading order, not as precision predictions.
+The string tension is quoted as the full predicted range [410, 510] MeV;
+the experimental value 440 MeV lies within this range. The proton mass
+946 MeV agrees within the ~10% leading-order uncertainty of the MIT bag
+model. Neither should be treated as a precision prediction.
 
 The 30% discrepancy in `T_c` and factor-1.7 in the glueball mass are
 expected at leading order: both require knowing the numerical coefficient

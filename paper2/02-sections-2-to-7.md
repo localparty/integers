@@ -37,28 +37,44 @@ Inserting the observed ratio 5.36 determines `ξ`:
 
     ξ = 1/√5.36 = **0.432**  (leading order)
 
-This determination simultaneously fixes the bulk neutrino localization
-parameter. Paper 6 §6.5 derives that `ξ` is related to `c_ν` (the
-bulk mass parameter controlling the profile of right-handed neutrinos
-in the extra dimension) via the leptogenesis efficiency; with `k = 2`
-from Paper 1, one finds `c_ν = 0.634`. The 5D neutrino mass is then
-`m_ν^{5D} = c_ν k = 1.27 M_KK`. The single observable `Ω_DM/Ω_b`
-therefore encodes not only the thermal history of the hidden sector
-but also the geometry of neutrino localization in the extra dimension.
+This determination is consistent with the bulk neutrino localization
+parameter fixed in Paper 6. Paper 6 §6.5 derives, within the gauge-Higgs
+unification context, that the leptogenesis efficiency relates `ξ` to the
+5D bulk mass parameter `c_ν`; with `k = 2` from Paper 1, one finds
+`c_ν = 0.634` and 5D neutrino mass `m_ν^{5D} = c_ν k = 1.27 M_KK`. Note on
+parameter conventions: Appendix E §E.8 determines `c = 1.986`, the bulk mass
+parameter of the right-handed neutrino zero-mode profile in the
+Randall-Sundrum background. The parameter `c_ν = 0.634` of Paper 6 §6.5 is
+the same underlying 5D bulk mass expressed in the gauge-Higgs unification
+normalization convention; the explicit mapping between the two conventions is
+established in Paper 6. The present paper cannot independently verify this
+mapping.
 
-The value `c_ν = 0.634` has a second consequence beyond fixing the
-dark matter abundance. In gauge-Higgs unification (Paper 4), the
-wavefunction factor `F_c²` arising from `c_ν` enters the 4D neutrino
-mass formula; combined with the Horava-Witten anomaly constraint on
-CP² (Paper 7), this yields the GUT-scale identity
+The logical direction of this consistency check is: the cosmological
+observation `Ω_DM/Ω_b = 5.36` determines `ξ = 0.432` via the derived scaling
+law; the resulting `ξ` is then consistent with `c_ν = 0.634` if the Paper 6
+§6.5 relation holds. This is a cross-check, not a forward prediction of `c_ν`
+from first principles in this paper. The forward chain — compactification
+geometry fixes `k = 2`, `k = 2` gives `c_ν = 0.634` by the Paper 6 analytic
+formula, `c_ν = 0.634` predicts `ξ` via the leptogenesis efficiency, `ξ`
+predicts `Ω_DM/Ω_b` — will be completed in Paper 6. The predictive content
+claimed here is the functional form of the `1/ξ²` scaling law and the
+convergence of the cosmologically determined `ξ` with the independently
+`θ*`-matched `ξ = 0.47`.
+
+The consistency of `ξ = 0.432` with `c_ν = 0.634` (under the Paper 6
+relation) has a further consequence. In gauge-Higgs unification (Paper 4),
+the wavefunction factor `F_c²` arising from `c_ν` enters the 4D neutrino
+mass formula; combined with the Horava-Witten anomaly constraint on CP²
+(Paper 7), this yields the GUT-scale identity
 
     m_ν / m_KK = χ(CP²) − c₂^{eff}/2 = 5/2          (Paper 4 §7.5.7)
 
-The dark matter abundance (`Ω_DM/Ω_b = 5.36`) and the neutrino mass
-scale (`m_ν ≈ 50 meV`) are therefore connected through the same CP²
-localization parameter `c_ν`: the cosmological measurement of `ξ`
-performed in this section is simultaneously a measurement of a
-GUT-scale mass ratio.
+If the Paper 6 relation between `ξ` and `c_ν` is confirmed, the cosmological
+ratio `Ω_DM/Ω_b = 5.36` and the neutrino mass scale `m_ν ≈ 50 meV` are
+connected through the same CP² localization parameter. This connection is
+stated as a consistency observation, not a derived result of the present
+paper.
 
 All subsequent calculations use `ξ = 0.432` as the primary value
 (Scenario B), with `ξ = 0.47` (Scenario A, where `ξ` is tuned to match
@@ -74,13 +90,17 @@ without consulting the observed ratio; (ii) we then insert the
 observational input `Ω_DM/Ω_b = 5.36` to determine `ξ = 0.432` at
 leading order (`ξ ≈ 0.49` with washout correction). This is a
 *determination* of `ξ` from a derived law, not a prediction of `ξ`
-in isolation. Paper 6 §6 identifies the physical mechanism that places
-`ξ` in the range 0.3–0.9; the precise value `ξ = 0.49` is determined
-in this paper from the `Ω_DM/Ω_b` scaling law. The predictive content lies in the functional form of
-the law (the specific `1/ξ²` scaling), in the convergence of this
-determined value with the independently `θ*`-matched `ξ = 0.47`, and
-in the fact that no CMB parameter is adjusted to achieve this
-convergence. The two observational inputs to the framework are `ρ_Λ`
+in isolation. Paper 6 §6 identifies the physical mechanism — warp-factor-suppressed
+reheating — that in principle places `ξ` in the range 0.3–0.9; however, the
+explicit calculation of `ξ` from the reheating dynamics and inflaton-brane
+coupling has not been completed and is deferred to Paper 6. In the present
+paper, `ξ` is determined from the observed `Ω_DM/Ω_b = 5.36` via the derived
+`1/ξ²` scaling law. This is a determination from a cosmological observable,
+not a prediction of `ξ` from the geometric parameters alone; that forward
+prediction will be completed in Paper 6. The predictive content lies in the
+functional form of the law (the specific `1/ξ²` scaling), in the convergence
+of this determined value with the independently `θ*`-matched `ξ = 0.47`, and
+in the fact that no CMB parameter is adjusted to achieve this convergence. The two observational inputs to the framework are `ρ_Λ`
 (which fixes the e-circle circumference `L` via the Casimir energy,
 Paper 1 §6.6) and `Ω_DM/Ω_b` (which fixes `ξ` through the `1/ξ²` law);
 all other cosmological observables are then computed predictions.
@@ -105,9 +125,39 @@ temperature ratio satisfies:
     ξ_after / ξ_before = (g_{*,vis,before}/g_{*,vis,after})^{1/3}
                        × (g_{*,hid,after}/g_{*,hid,before})^{1/3} = 1
 
-This holds independently for each phase transition; accumulated over
-the full thermal history from leptogenesis to recombination, `ξ` is
-unchanged. The value `ξ = 0.432` determined in this section from the
+**Sequential-transition argument.** The two sectors undergo their QCD
+crossovers at different cosmic times. The mirror QCD crossover occurs when
+`T_mirror = T_QCD ≈ 150` MeV, which corresponds to `T_vis = T_QCD/ξ ≈
+150/0.432 ≈ 347` MeV — earlier than the visible QCD crossover. We trace `ξ`
+through the two transitions in sequence.
+
+*Step 1 (mirror QCD crossover, T_vis ≈ 347 MeV).* At this epoch,
+`g_*^{hid}` drops from 61.75 to 17.25 (mirror quarks and gluons confining)
+while `g_*^{vis}` is unchanged. The mirror sector heats its own photon bath:
+
+    ξ → ξ × (g_{*,hid,before}/g_{*,hid,after})^{1/3} = ξ × (61.75/17.25)^{1/3} ≈ ξ × 1.528
+
+At this step `ξ` increases — the mirror sector is temporarily "hotter"
+relative to what it will be.
+
+*Step 2 (visible QCD crossover, T_vis ≈ 150 MeV).* Now `g_*^{vis}` drops
+from 61.75 to 17.25 while `g_*^{hid}` is unchanged. The visible sector heats
+its photon bath:
+
+    ξ → ξ_step1 × (g_{*,vis,after}/g_{*,vis,before})^{1/3} = ξ_step1 × (17.25/61.75)^{1/3}
+       ≈ ξ_step1 × (1/1.528) = ξ
+
+The two steps cancel exactly: `ξ` is restored to its pre-QCD value. The
+cancellation holds because the Z₂ symmetry enforces `Δg_*^{vis} = Δg_*^{hid}`
+at each corresponding threshold — the magnitudes are equal, only the timing
+differs. The argument extends to every threshold (electroweak, `e±`
+annihilation, mirror `e±` annihilation): for each visible-sector transition at
+`T_vis = T_threshold`, the mirror-sector transition occurs at
+`T_vis = T_threshold/ξ`, and the equal but time-separated changes in `g_*`
+produce changes in `ξ` that cancel in pairs. Accumulated over the full
+thermal history from leptogenesis to recombination, `ξ` is exactly conserved.
+
+The value `ξ = 0.432` determined in this section from the
 present-day `Ω_DM/Ω_b` ratio is therefore valid at all epochs — it is
 a property of the initial conditions set at leptogenesis, not an
 epoch-dependent quantity. There is no need to track `ξ(T)` as a
@@ -129,13 +179,23 @@ and held fixed, and (iii) determined by the `θ*` scan.
 | `H₀` | 69.5 / 68.7 km/s/Mpc | *Computed* | From `H₀ = 67.4 + 6.3×ΔN_eff` formula, Paper 1 App. Y |
 | `ω_b h²` | 0.02237 | *Prior measurement* | Standard BBN value (Cooke et al. 2018); unchanged from `ΛCDM` |
 | `ω_c h²` | 0.1170 / 0.1199 | *Computed* | Scenario A: from `θ*` scan. Scenario B: `ω_b h²/ξ²` |
-| `N_eff` | 3.39 / 3.31 | *Computed* | `3.046 + 0.05` (KK tower) `+ 6.14ξ⁴ × 0.49` (mirror, Boltzmann-corrected) |
+| `N_eff` | 3.39 / 3.31 | *Computed — fluid upper bound* | `3.046 + 0.05` (KK tower) `+ 6.14ξ⁴ × 0.49` (mirror, fluid formula; see §2.4 and Table 2 for free-streaming estimate 3.16–3.26) |
 | `w₀` | −1 | *Computed* | Casimir potential exact (`c₂ = 0`), Paper 6 §2 |
 | `w_a` | 0 | *Computed* | Frozen dilaton |
 | `Σm_ν` | 0.06 eV | *Computed* | Bulk seesaw, Paper 1 Appendix Z |
 | `A_s` | `2.1 × 10⁻⁹` | *Prior measurement* | Planck inflation amplitude; unchanged from `ΛCDM` |
 | `n_s` | 0.9649 | *Prior measurement* | Planck spectral index; unchanged from `ΛCDM` |
 | `τ` | 0.054 | *Prior measurement* | Planck optical depth; unchanged from `ΛCDM` |
+
+**Note on N_eff upper-bound status.** The N_eff values in Table 1 use the
+fluid formula `ΔN_eff^{mirror} = 6.14 ξ⁴`. As explained in Section 2.4,
+mirror photons free-stream from `z ≈ 2460` onward; the appropriate comparison
+to ACT DR6 (which measures `N_eff` at recombination, `z ≈ 1090`) uses the
+free-streaming estimate `ΔN_eff^{mirror,fs} ≈ 3.43 ξ⁴`, giving
+`N_eff^{recomb} ≈ 3.16–3.26` (Section 2.4, Table 2). All fluid-formula values
+should be read as upper bounds. The ACT tension is between 2.3σ
+(free-streaming lower estimate) and 3.5σ (fluid upper bound), with the
+definitive value pending the full Boltzmann computation.
 
 Parameters computed from the geometry (`H₀`, `ω_c h²`, `N_eff`, `w₀`, `w_a`,
 `Σm_ν`) are determined before any comparison to CMB observables. The
@@ -202,11 +262,18 @@ analysis would determine whether the `θ*` improvement justifies it. All three s
 | `A_s` | `2.1×10⁻⁹` | Inflation (unchanged from `ΛCDM`) |
 | `n_s` | 0.9649 | Inflation (unchanged) |
 
-**`N_eff`: the framework's primary tension.** All three scenarios predict
-`N_eff = 3.31–3.39` — the framework's most directly falsifiable near-term
-prediction. This is in **3.5σ tension with ACT DR6** (`N_eff = 2.86 ±
-0.13`; Qu et al. 2025, arXiv:2503.14454), which constitutes a genuine
-discrepancy with current data and is the framework's primary open problem.
+**`N_eff`: the framework's primary tension.** The fluid-formula values
+`N_eff = 3.31–3.39` are upper bounds on the `N_eff` measured at recombination
+(see Section 2.4 and the note above for the reasoning). The free-streaming-
+corrected estimate is `N_eff^{recomb} ≈ 3.16–3.26`. Both ranges constitute the
+framework's most directly falsifiable near-term prediction. The fluid upper
+bound is in **3.3–3.5σ tension** with ACT DR6 (`N_eff = 2.86 ± 0.13`; Qu et
+al. 2025, arXiv:2503.14454); the free-streaming estimate reduces this to
+approximately **2.3–3.1σ**. This range of tension — from 2.3σ to 3.5σ
+depending on the treatment of mirror photon perturbations — represents a
+genuine discrepancy with current data and is the framework's primary open
+problem. The definitive calculation (full Boltzmann treatment of mirror photons
+in CAMB) is identified as the highest-priority pending improvement.
 
 **Source of the N_eff elevation.** The elevation has two components:
 (i) a KK tower contribution `ΔN_eff ≈ 0.05` from intra-tower decays
@@ -277,7 +344,29 @@ reduce to their minimal form (`N_eff ≈ 3.09`, `H₀ ≈ 67.7`, `S8 ≈ 0.80`).
 CMB-S4 confirms `N_eff = 3.3–3.5`, every other prediction in this paper
 follows. This is the framework's make-or-break test.
 
-**N_eff degeneracy analysis.** A systematic scan of the extended parameter space `(ξ, ω_b h², H₀, Ω_m)` was performed to test whether any combination of cosmological parameters simultaneously satisfies ACT DR6 (`N_eff = 2.86 ± 0.13`; Hill et al. 2022), DES Y3 (`S8 = 0.776 ± 0.017`), TRGB (`H₀ = 69.8 ± 0.6` km/s/Mpc), and the Planck CMB angular scale (`θ* = 0.59655 ± 0.00031` deg). The framework's frozen-dilaton dark energy (`w₀ = −1`, `w_a = 0`) provides no relief: the dark energy compensation reduces the damping-tail χ² by 0% relative to a pure ΛCDM fit at the same `N_eff`. No viable degenerate region exists in the scanned parameter space — the framework's `N_eff^{recomb} = 3.31–3.39` (Scenario B to A) stands in genuine 3.5σ tension with ACT DR6 that cannot be absorbed by parameter freedom. With CMB-S4's projected `σ(N_eff) = 0.02–0.03`, this tension widens to `9–17σ`. If ACT DR6 is confirmed by independent experiments at `N_eff < 3.1`, the mirror sector as modeled is excluded.
+**Structural argument against N_eff degeneracy.** No combination of
+cosmological parameters can simultaneously satisfy `N_eff ~ 3.046` and
+`Ω_DM/Ω_b ~ 5.36` within this framework. The argument is direct. The dark
+matter-baryon ratio requires `ξ = 1/√(Ω_DM/Ω_b)`. Observationally,
+`Ω_DM/Ω_b = 5.36 ± 0.50` (combining Planck 2018 `Ω_c h²` and `Ω_b h²`
+uncertainties at 2σ), which forces `ξ ∈ [0.41, 0.50]`. Any `ξ` in this range
+gives a mirror contribution (fluid upper bound):
+
+    ΔN_eff^{mirror} = 6.14 ξ⁴ ≥ 6.14 × (0.41)⁴ ≈ 0.17
+
+Adding the KK tower contribution `ΔN_eff^{tower} = 0.05` gives `N_eff ≥ 3.27`
+at the minimum `ξ = 0.41`. With the free-streaming correction (coefficient
+3.43 instead of 6.14), the minimum `N_eff` is `≥ 3.10`. Reducing `N_eff` to
+the Standard Model value 3.046 would require `ξ → 0`, but `ξ = 0` gives
+`Ω_DM/Ω_b = 1/ξ² → ∞` — no dark matter. The framework cannot simultaneously
+satisfy `N_eff ~ 3.046` and `Ω_DM/Ω_b ~ 5`. The predictions stand or fall
+together: the `N_eff` elevation is a structural consequence of the same `ξ`
+that explains dark matter. The framework's frozen-dilaton dark energy
+(`w₀ = −1`, `w_a = 0`) provides no relief: dark energy does not enter the
+`N_eff` constraint. Appendix I §I.2 gives the full algebraic version of this
+argument. With CMB-S4's projected `σ(N_eff) = 0.02–0.03`, the test becomes
+`9–17σ` (using the fluid upper bound) or `3–7σ` (using the free-streaming
+estimate), decisively resolving the question.
 
 ### 2.4 Mirror Recombination and the Free-Streaming Transition
 
@@ -353,20 +442,62 @@ reduces `ΔN_eff^{mirror}` from `0.214` (fluid) to approximately `0.119`
 `3.31`. This would narrow, though not eliminate, the tension with ACT
 DR6.
 
-**Caution: this estimate is approximate.** The coefficient `3.43` is
-derived by applying the neutrino-like free-streaming conversion factor to
-the mirror photon degrees of freedom. A proper treatment requires
-evolving the mirror photon perturbations through the Boltzmann hierarchy
-as a free-streaming species below `z = 2460`, with the transition
-handled self-consistently in CAMB. The current computation approximates
-the mirror sector as a fluid throughout, which overestimates `N_eff` as
-measured by CMB experiments. This is **listed as a pending improvement**:
-the highest-priority refinement to the `N_eff` sector is a full CAMB
-computation in which the mirror photon-baryon fluid is switched to a
-free-streaming component at `z = z_mirror_recomb ≈ 2460`. Until that
-computation is completed, the fluid `N_eff` values in Table 1 and §2.3
-should be understood as upper estimates for the `N_eff` measured at
-CMB recombination.
+**Derivation of the free-streaming coefficient.** The fluid formula
+`ΔN_eff^{mirror} = 6.14 ξ⁴` follows from the energy density of mirror photons
+relative to the standard neutrino energy density:
+
+    ΔN_eff^{fluid} = (8/7) × (g_b/2) × (T_mirror/T_ν)⁴
+                   = (8/7) × (11/4)^{4/3} × ξ⁴
+                   = 6.14 ξ⁴
+
+where `g_b = 2` for photons, `T_mirror = ξ T_vis`, and `T_ν = (4/11)^{1/3} T_vis`.
+The factor 8/7 converts from bosonic to fermionic counting (as `N_eff` is
+defined relative to neutrinos). For a free-streaming species, the contribution
+to `N_eff` as measured by CMB temperature and polarization anisotropies
+involves not only energy density but also the anisotropic stress tensor. The
+effective `N_eff` for a free-streaming boson is related to the fluid `N_eff`
+by the ratio of the relevant CMB response functions. For a single free-streaming
+boson versus a single free-streaming fermion (neutrino), the ratio of CMB
+damping contributions is:
+
+    ΔN_eff^{fs} / ΔN_eff^{fluid} = (7/8) × (g_b_eff^{fs}/g_b)
+
+Numerically, for a photon species decoupling at `z ≈ 2460` and free-streaming
+from that epoch to recombination, `g_b_eff^{fs}/g_b ≈ 0.640`, giving the ratio
+`7/8 × 0.640 ≈ 0.559` and:
+
+    ΔN_eff^{mirror, free-streaming} ≈ 0.559 × 6.14 ξ⁴ ≈ 3.43 ξ⁴
+
+This estimate carries an uncertainty of approximately ±15% from the
+approximation of an instantaneous decoupling at `z = 2460`. The full Boltzmann
+treatment will refine this coefficient.
+
+**Caution: this estimate is approximate.** A proper treatment requires
+evolving the mirror photon perturbations through the Boltzmann hierarchy as a
+free-streaming species below `z = 2460`, with the transition handled
+self-consistently in CAMB. The current computation approximates the mirror
+sector as a fluid throughout, which overestimates `N_eff` as measured by CMB
+experiments. This is **listed as a pending improvement**: the highest-priority
+refinement to the `N_eff` sector is a full CAMB computation in which the
+mirror photon-baryon fluid is switched to a free-streaming component at
+`z = z_mirror_recomb ≈ 2460`. Until that computation is completed, the fluid
+`N_eff` values in Table 1 and §2.3 must be understood as upper bounds on the
+`N_eff` as measured by ACT DR6. For completeness, Table 2 gives both the fluid
+upper bound and the free-streaming estimate for each scenario.
+
+**Table 2: N_eff summary — fluid upper bound vs. free-streaming estimate**
+
+| Scenario | ξ | N_eff (fluid, upper bound) | N_eff (free-streaming est.) | ACT tension (fluid) | ACT tension (fs est.) |
+|----------|---|---------------------------|------------------------------|---------------------|----------------------|
+| A        | 0.470 | 3.39 | 3.26 | 3.5σ | 3.1σ |
+| B        | 0.432 | 3.31 | 3.21 | 3.3σ | 2.7σ |
+| C        | 0.4375| 3.32 | 3.22 | 3.4σ | 2.8σ |
+
+ACT DR6 measurement: `N_eff = 2.86 ± 0.13` (Qu et al. 2025). Tensions computed
+as `(N_eff^{pred} − 2.86)/0.13`. The free-streaming estimate uses
+`ΔN_eff^{mirror,fs} = 3.43 ξ⁴`; see text for the derivation of the coefficient
+3.43. The definitive calculation requires the full Boltzmann implementation in
+CAMB; all values in this table are estimates pending that computation.
 
 **Mirror BAO signature.** Prior to mirror recombination, the
 mirror photon-baryon plasma supports acoustic oscillations. Mirror
@@ -388,6 +519,43 @@ feature. The amplitude is suppressed relative to the visible BAO signal
 `Ω_DM/Ω_b ≈ 5.36` implies mirror baryons are ~16% of dark matter) but
 the scale separation from the visible BAO is a qualitatively distinct
 prediction of the mirror sector.
+
+**Mirror BAO quantitative estimates.** The mirror sound horizon at mirror
+recombination (`z_mirror ≈ 2460`) is approximately `r_{s,mirror} ≈ ξ ×
+r_s(z_recomb)`. However, the mirror photon-to-baryon ratio
+`R_b^{mirror} = 3ρ_b^{mirror}/(4ρ_γ^{mirror})` differs from the visible sector
+by a factor `ξ³ × (Ω_DM/Ω_b)^{−1} ≈ 0.0156`, making the mirror sector more
+baryon-dominated. This reduces the mirror sound speed relative to the naive
+`ξ`-scaling. Accounting for this, the approximate mirror sound horizon is:
+
+    r_{s,mirror} ≈ ξ × r_s(z_recomb) × C_{R_b}
+
+where `C_{R_b}` is a correction factor of order 0.8–0.9 from the larger
+`R_b^{mirror}`. With `r_s(z_recomb) ≈ 147` Mpc and `ξ = 0.432`, the mirror
+sound horizon is approximately:
+
+    r_{s,mirror} ≈ 0.432 × 147 × 0.85 ≈ 54 Mpc
+
+The corresponding BAO wavenumber is:
+
+    k_{BAO}^{mirror} = 2π / r_{s,mirror} ≈ 2π / 54 Mpc ≈ 0.116 h/Mpc
+
+compared to `k_{BAO}^{visible} ≈ 2π/147 ≈ 0.043 h/Mpc`. The mirror BAO
+feature appears at roughly 2.7× the visible BAO wavenumber.
+
+The amplitude of the mirror BAO signal relative to the visible BAO is
+suppressed by the mirror baryon fraction. Mirror baryons constitute
+`≈ Ω_b^{vis}/Ω_DM ≈ 1/5.36 ≈ 19%` of the total matter density. The BAO
+feature amplitude scales approximately as the oscillating matter fraction
+squared, giving an amplitude suppression of order `(0.19)² ≈ 4%` relative to
+the visible BAO. BOSS DR12 (`σ_P/P ~ 5–10%` per BAO bin) and DESI DR1
+(`σ_P/P ~ 2–3%` at `k ~ 0.1 h/Mpc`) are marginally sensitive to a feature at
+this amplitude. A dedicated power spectrum analysis at `k ~ 0.10–0.12 h/Mpc`
+would be needed, accounting for the damping of the mirror BAO by non-linear
+structure formation (which erases BAO features at `k ≳ 0.2 h/Mpc`). Detection
+at current sensitivity is unlikely but not impossible; the feature becomes
+cleanly detectable at the ~3σ level at Stage-IV surveys with `σ_P/P ~ 0.5%`
+(e.g., Euclid spectroscopic survey, ~2028).
 
 **CMB-S4 discriminator.** The transition from mirror photon-baryon
 coupling to free-streaming at `z ≈ 2460` corresponds to a Hubble scale

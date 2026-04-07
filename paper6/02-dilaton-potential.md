@@ -37,6 +37,31 @@ Theorem K.1 applies to the cosmological Casimir calculation to all
 required precision, and V = +c/R⁴ remains the exact perturbative
 result in the cosmological background.
 
+**Scope of Theorem K.1.** The statement "exact to all perturbative
+orders" applies specifically to corrections from the KK spectral sum
+— bulk field loops whose ultraviolet behavior is governed by the
+spectral zeta function of the e-circle kinetic operator. For these,
+Theorem K.1 establishes that ζ_e-circle(s) vanishes at all even
+negative integers, killing every loop correction beyond one loop.
+This covers: (i) higher-loop contributions to the Casimir vacuum
+energy from bulk graviton and neutrino KK modes; (ii) curvature
+corrections in the FRW background, which are of order
+$(H_0 R_0)^2 \sim 10^{-68}$ (negligible).
+
+The theorem does not automatically govern: (i) Coleman-Weinberg
+corrections from dilaton-matter couplings, in which SM matter fields
+on the brane run in loops coupled to the dilaton zero mode through
+$\mathcal{L}_\mathrm{int} = (\sigma/M_\mathrm{Pl})\varphi T^\mu_\mu$
+— these are brane-localized corrections to the dilaton kinetic term
+and mass, suppressed by $(m_\mathrm{SM}/M_\mathrm{Pl})^4$ rather
+than by the Epstein mechanism (see Appendix A, §A.6); (ii) corrections
+from off-diagonal KK metric components to the dilaton kinetic term,
+which require a separate analysis of the KK reduction beyond the
+breathing mode (deferred to Paper 1). The claim "exact to all
+perturbative orders" should be understood as applying to the Casimir
+vacuum energy from bulk KK loops; the broader claim of corrections to
+the full dilaton effective action requires these separate treatments.
+
 ## 2.1a The Sign of the Casimir Energy
 
 The sign of the Casimir energy on the e-circle (S¹ of radius R)
@@ -201,3 +226,25 @@ initial conditions" is the accurate description. The framework
 predicts the value of the cosmological constant given R₀, but the
 value of R₀ itself requires an explanation from the UV theory
 (M-theory flux vacua or the initial conditions of compactification).
+
+**Direction of the gradient force and the Dine-Seiberg problem.**
+For $V = +c/R^4$ with $c > 0$, the gradient of the potential is
+$V'(R) = -4c/R^5 < 0$ (the potential decreases as $R$ increases).
+The gradient force on $R$ in the equation of motion (Appendix A,
+eq. A.3) is
+
+$$F_R = -\frac{2R^3}{3M_\mathrm{Pl}^2}\,V'(R) = +\frac{8c}{3M_\mathrm{Pl}^2 R^2} > 0$$
+
+This force pushes $R$ toward **smaller** values ($R \to 0$, the
+10-dimensional collapse direction), not toward decompactification
+($R \to \infty$). This is the opposite of the standard Dine-Seiberg
+runaway problem in string theory, where the dilaton or volume modulus
+typically runs toward weak coupling ($R \to \infty$). In this
+framework, the runaway is a collapse runaway, and Hubble friction
+stabilizes $R_0$ against collapse just as effectively as it
+stabilizes against decompactification: in either direction, the
+potential gradient $|F_R|$ is of order $H_0^2 R_0$ (as computed in
+§A.3), and the Hubble friction term overwhelms it. The perturbative
+stability of the frozen point is confirmed by
+$V''(R_0) = +20c/R_0^6 > 0$ (Appendix A, §A.6), which shows that
+small perturbations oscillate and decay rather than growing.

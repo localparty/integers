@@ -188,12 +188,55 @@ Br ~ 10⁻² (upper end of the estimate in §5.2a) and resonant factor
 
     η_B ≈ 0.354 × 5 × 10⁻⁷ × 1.28 × 10⁻² × 0.26 ≈ 6 × 10⁻¹⁰ ✓
 
-**Conclusion.** The framework produces η_B ≈ 6 × 10⁻¹⁰ for
-Br(inf→NN) ~ 10⁻², resonant enhancement factor ~80 (corresponding
-to mass splitting |M₂−M₁|/M₁ ~ a few × 10⁻³), and strong washout
-K = 50 (η_L = 0.26). These parameters are consistent with the
-Z₃ geometry of Paper 4 §7.5.4, but should be confirmed by a
-first-principles mass-splitting calculation.
+**Conclusion.** The non-thermal leptogenesis calculation establishes
+the framework's consistency with $\eta_B \approx 6 \times 10^{-10}$
+at natural parameter values. The computation is an order-of-magnitude
+estimate, not a precise prediction. The central GNRRS estimate gives
+$\mathrm{Br} \sim 2.8 \times 10^{-3}$, yielding
+$\eta_B \sim 1.7 \times 10^{-10}$ — a factor of ~3.5 below observed.
+Agreement with the observed value requires either
+$\mathrm{Br} \sim 10^{-2}$ (upper end of the off-shell estimate) or
+a resonant enhancement factor of ~250 at the central Br, or some
+combination. The resonant factor of ~80 used above corresponds to a
+mass splitting $|M_2 - M_1|/M_1 \sim \text{a few} \times 10^{-3}$,
+which should be confirmed from the Z₃ geometry calculation in Paper 4
+§7.5.4. Until that confirmation is in hand, the leptogenesis section
+should be understood as showing that: (i) the non-thermal pathway is
+open ($T_\mathrm{reh} \ll M_N$ is satisfied), (ii) the required
+parameter values (Br, resonant factor) are within the natural range
+for the framework's geometry, and (iii) an independent first-principles
+determination of the mass splitting from Paper 4 §7.5.4 is needed to
+convert this from a consistency check to a prediction. This is flagged
+explicitly.
+
+**Sensitivity to T_reh from Paper 7.** The leptogenesis calculation
+above uses $T_\mathrm{reh} = 5 \times 10^9\,\text{GeV}$, derived from
+$H_\mathrm{inf} \sim 10^{13}\,\text{GeV}$ (§4.0). Paper 7's
+inflationary observables ($r \approx 0.001$) imply
+$H_\mathrm{inf} \sim 6 \times 10^{13}\,\text{GeV}$, which shifts
+$T_\mathrm{reh} \to (1\text{--}2) \times 10^{10}\,\text{GeV}$ (a
+factor of ~4; see §4.0). Since
+$n_N/s \propto \mathrm{Br} \times T_\mathrm{reh}/M_N$, the higher
+$T_\mathrm{reh}$ rescales $\eta_B$ upward by the same factor:
+
+At $T_\mathrm{reh} = 1 \times 10^{10}\,\text{GeV}$:
+
+$$n_N/s \sim 2.8 \times 10^{-3} \times \frac{10^{10}}{10^{14}} \sim 2.8 \times 10^{-7}$$
+
+$$\eta_B \approx 0.354 \times 2.8 \times 10^{-7} \times (1.6 \times 10^{-4} \times 80) \times 0.26 \approx 3.4 \times 10^{-10}$$
+
+This is within a factor of 2 of the observed $\eta_B = 6 \times 10^{-10}$
+with the central Br estimate, without requiring Br at its upper end.
+For $\mathrm{Br} \sim 10^{-2}$ at
+$T_\mathrm{reh} = 2 \times 10^{10}\,\text{GeV}$:
+
+$$\eta_B \approx 0.354 \times 10^{-6} \times 1.28 \times 10^{-2} \times 0.26 \approx 1.2 \times 10^{-9}$$
+
+The framework comfortably spans the observed value across the parameter
+range. The revised Paper 7 $T_\mathrm{reh}$ relaxes the leptogenesis
+tension substantially: agreement with $\eta_B = 6 \times 10^{-10}$ is
+achievable with the central Br estimate at the Paper 7 reheating
+temperature.
 
 ## 5.7 Comparison with Paper 2
 

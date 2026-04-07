@@ -32,10 +32,12 @@ asymmetry (`1/ξ³`) and washout suppression (`1/ξ²`) combine to give
 (the photon-number dilution between branes). The scaling law `Ω_DM/Ω_b = 1/ξ²`
 is derived without consulting the observed ratio; inserting `Ω_DM/Ω_b = 5.36`
 then *determines* `ξ = 0.432` at leading order (a determination from a derived
-law, not a parameter-free prediction of `ξ` in isolation). The washout
-correction at `K ≈ 5` (fixed by `m_ν = 50` meV and SM parameters; `M_R`
-cancels exactly) shifts the corrected `ξ` to `≈ 0.49`, converging with the
-independently `θ*`-matched `ξ = 0.47` and providing a non-trivial cross-check.
+law, not a parameter-free prediction of `ξ` in isolation). The washout correction at `K ≈ 5` (fixed by `m_ν = 50` meV and SM parameters;
+`M_R` cancels exactly) shifts the corrected `ξ` to the range `≈ 0.44–0.50`,
+with a central estimate near `ξ ≈ 0.49`. The dominant uncertainty is the ~20%
+accuracy of the BDP power-law fit at `K = 5`; see Appendix E §E.3.3. This
+range converges with the independently `θ*`-matched `ξ = 0.47`, providing a
+non-trivial cross-check.
 
 Three scenarios bracket the prediction:
 
@@ -76,17 +78,26 @@ testable by JUNO within 6 years.
 coincidence — it is a geometric consequence of the two-brane thermal
 history. The ratio is `1/ξ²`, where `ξ` is fixed by bulk leptogenesis.
 
-All three scenarios predict `N_eff = 3.31–3.39`, the framework's most
-falsifiable near-term prediction and its primary current tension. This
-value is in **3.5σ tension with ACT DR6** (`N_eff = 2.86 ± 0.13`; Qu et al.
-2025), which is the framework's principal open problem. A CAMB computation
+All three scenarios predict a fluid-formula `N_eff = 3.31–3.39` (upper bound;
+see below). This constitutes the framework's most falsifiable near-term
+prediction and its primary current tension. When mirror photons are treated
+as free-streaming at recombination — which is the physically correct
+treatment, since mirror recombination occurs at `z ≈ 2460`, well before
+visible recombination — the estimated `N_eff^{recomb}` falls to `3.16–3.26`,
+reducing the tension with ACT DR6 (`N_eff = 2.86 ± 0.13`; Qu et al. 2025)
+from **3.5σ** (fluid upper bound) to approximately **2.3–3.1σ** (free-streaming
+estimate). The definitive value requires a full Boltzmann computation with
+mirror photons switched from fluid to free-streaming at `z ≈ 2460`; this is
+the highest-priority pending computation. Until that computation is complete,
+all `N_eff` values in this paper are fluid-formula upper bounds on the
+recombination-epoch `N_eff` relevant to CMB experiments. A CAMB computation
 of the mirror-sector thermal history shows that mirror `e±` undergo
 Boltzmann suppression at BBN (`T_mirror ≈ 0.43–0.47` MeV vs `m_e = 0.511` MeV),
 producing a time-varying `ΔN_eff`: `N_eff^{BBN} ≈ 3.55–3.65` (within the
 95% CL D/H bound `N_eff < 3.7`; Cooke et al. 2018), falling to
-`N_eff^{recomb} = 3.31–3.39` after mirror `e±` annihilation. The `N_eff`
-elevation and the `H₀` prediction are structurally linked through the
-same `ξ`: the framework cannot simultaneously satisfy `N_eff ≈ 3.046` and
+`N_eff^{recomb} = 3.31–3.39` (fluid upper bound) after mirror `e±` annihilation.
+The `N_eff` elevation and the `H₀` prediction are structurally linked through
+the same `ξ`: the framework cannot simultaneously satisfy `N_eff ≈ 3.046` and
 `Ω_DM/Ω_b ≈ 5` — the predictions stand or fall together. CMB-S4
 (`σ(N_eff) ≈ 0.03`) will confirm or exclude the mirror sector at `> 9σ`.
 

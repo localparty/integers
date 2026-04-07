@@ -125,6 +125,98 @@ kernel expansion are local diffeomorphism-invariant polynomials in the curvature
 (Vassilevich 2003, eq. (4.3)), ensuring that the zeta-regularized effective action
 is a valid diffeomorphism-invariant expression at each loop order.
 
+**One-loop vs. multi-loop gauge invariance: two separate arguments.** The
+one-loop argument — that the spectral zeta function ζ_Δ(s) = Σ_λ λ^{−s} of a
+covariant kinetic operator Δ is automatically background diffeomorphism
+invariant — applies specifically to the one-loop effective action Γ^{(1)} =
+−½ζ'_Δ(0), where zeta regularization acts on the spectrum of a single operator
+on the background geometry (§F). At this order, the identification of
+regularization with a covariant spectral function directly ensures gauge
+invariance.
+
+At loop order L ≥ 2, the situation is structurally different. Zeta
+regularization is applied to the KK mode sums — the sums over integers
+n₁, …, n_L labeling the discrete KK masses running in the L internal loops.
+These sums are not the spectrum of a single covariant operator; they are
+arithmetic sums over the KK index lattice after the 4D momentum integrals have
+been performed. Background diffeomorphism invariance at L ≥ 2 is not supplied
+by the spectral zeta argument at this stage — it is guaranteed, independently,
+by the background field method: the background field split g_{MN} = ḡ_{MN} +
+κh_{MN} ensures that the effective action Γ[ḡ] is a diffeomorphism-invariant
+functional of the background metric ḡ at every loop order (DeWitt 1967, §23;
+Abbott 1981, Theorem 1). The background field method Ward identities hold
+regardless of how the KK sums are regularized. The role of zeta regularization
+at multi-loop order is therefore to provide a well-defined finite value for the
+KK mode sums, not to supply gauge invariance. The two arguments are logically
+independent: gauge invariance from the background field method; KK sum
+finiteness from the Epstein zeta structure.
+
+---
+
+## U.2c Scheme Independence: An Open Problem
+
+A critical question that the present paper does not resolve is whether the
+vanishing of the R³ counterterm under zeta regularization is a
+scheme-independent property of a physical observable, or a feature of the
+particular regularization used.
+
+**The comparison with Goroff-Sagnotti.** Goroff and Sagnotti (1986), confirmed
+by van de Ven (1992), computed the two-loop graviton effective action in 4D pure
+gravity using dimensional regularization and found:
+
+    Γ^{(2)}_div = (209 / (2880 (16π²)² ε)) ∫ d⁴x √(−g) C^{αβ}_{μν} C^{ρσ}_{αβ} C^{μν}_{ρσ}
+
+The present paper finds, in 5D KK gravity on M⁴ × S¹ with the full KK tower
+regularized by spectral zeta functions, that the corresponding coefficient is
+zero at every loop order. These two results are consistent because the two
+computations are performed in *different theories*: Goroff-Sagnotti computed in
+4D pure gravity (the zero-mode truncation, no KK tower, dimensional
+regularization); the present paper computes in 5D KK gravity on M⁴ × S¹ (the
+full KK tower, zeta regularization of the KK mode sums). The 4D theory is the
+R → 0 limit of the 5D theory in which all KK masses diverge and the tower
+decouples. In the framework's regime (R ~ 12 μm), the relevant theory is the
+5D one.
+
+**What the Lin-Zhai equivalence does and does not establish.** Lin and Zhai
+(2014) demonstrate that zeta regularization and the Abel-Plana formula give
+the same result as the physical (vacuum-subtracted) Casimir energy on a compact
+space. This equivalence applies to the vacuum energy, which is a free-field
+observable. The R³ operator coefficient is a different object: it encodes the
+UV structure of graviton self-interactions and is not a vacuum energy. The
+Lin-Zhai equivalence does not directly imply that the zeta-regularized R³
+coefficient equals the dim-reg R³ coefficient in the 5D KK theory.
+
+**The scheme-independence problem.** Physical S-matrix elements must be
+regularization-scheme independent. A vanishing counterterm coefficient under one
+scheme and a nonzero coefficient under another scheme are compatible only if
+there exists a finite renormalization relating them — and in a non-renormalizable
+theory, such finite renormalizations are constrained by physical observables
+(on-shell scattering amplitudes). Two paths to establishing physical scheme
+independence exist:
+
+*Path (i): Same-theory comparison.* Compute the two-loop graviton scattering
+amplitude in 5D KK gravity (with the full KK tower) using both dimensional
+regularization and zeta regularization. If the physical S-matrix elements
+(on-shell, at physical KK level) agree between the two schemes, the vanishing
+is scheme-independent. This computation does not exist in the literature; it
+is identified as the definitive open calculation.
+
+*Path (ii): On-shell observable.* Compute the on-shell graviton–graviton
+scattering amplitude in the 5D KK theory at two loops, using a
+scheme-independent definition (e.g., dispersion relations or on-shell
+renormalization). If this amplitude is finite, the vanishing of the counterterm
+is physically meaningful independent of regularization.
+
+**Current status.** The result established in this paper is: *under zeta
+regularization of the KK mode sums, the R³ counterterm coefficient vanishes
+identically at every loop order.* Whether this vanishing is
+scheme-independent — i.e., whether it reflects a property of physical
+observables in the 5D KK theory — is an open question. We do not claim
+scheme independence; we claim vanishing within the zeta regularization scheme.
+The table in §K.6.3 reflects this: the finiteness mechanism is labeled
+"KK sum factor proved all orders; scheme independence open." This is the
+correct characterization, and the abstract and §1.5 are revised to match.
+
 ---
 
 ## U.3 Gap 1: Vertex Mass-Independence
@@ -514,6 +606,18 @@ Feynman diagram.
 is verified by the structural argument. The remaining topologies follow
 the same logic. A complete explicit computation has not been performed —
 this is the natural target for a follow-up technical paper.
+
+The complete two-loop KK calculation — computing all topologies (sunset,
+figure-eight, vertex corrections, ghost contributions) in 5D KK gravity on
+M⁴ × S¹ with the full KK tower, and comparing the result against both the
+structural argument and the Goroff-Sagnotti computation — is the single most
+important open computation identified in this paper. It would simultaneously
+verify the factorization structure for all topologies at L = 2, establish the
+scheme-independence question for the simplest loop order, and provide the
+explicit confirmation that Route C (§K.5.2) is meant to supply at L = 3. No
+such calculation exists in the literature (footnote U.1.0); it is more
+computationally intensive than the original Goroff-Sagnotti calculation due to
+the KK tower sum, but less so in conceptual novelty.
 
 ---
 

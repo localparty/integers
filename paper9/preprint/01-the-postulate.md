@@ -47,7 +47,12 @@ It is not fitted to any quantum mechanical measurement. It is fixed by a
 single cosmological observation — the dark energy density ρ_Λ — via the
 Casimir energy of bulk fields on the S¹/Z₂ orbifold:
 
-    ρ_Λ = ℏc · π² / (240 R⁴)   →   R ≈ 12 μm
+    ρ_Λ = ℏc · π² / (240 R⁴)   →   R ≈ 12 μm (bare Casimir, mirror sector absent)
+
+The corrected value including the mirror sector's ξ⁴ contribution to ΔN_eff
+is R₀ = 10.1 μm (§4c.3), which is the value used in §§4b–4d. The bare 12 μm
+and corrected 10.1 μm refer to the same physical radius at successive levels
+of approximation.
 
 Everything else — every mass, every coupling, every cosmological observable,
 every topological count — is a consequence of R and the geometry.

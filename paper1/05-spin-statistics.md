@@ -136,6 +136,23 @@ allowed winding numbers are the eigenvalues of the e-momentum operator p̂_φ
 restricted to representations of Spin(d), the universal cover of SO(d) —
 and these are precisely the half-integers. The full proof is in Appendix B.1.
 
+A geometric precision point: a "half-integer winding" in this context does not
+mean that the e-coordinate traces a half-revolution that closes on the
+e-circle. Paths on S¹ close only at integer winding numbers — the e-circle has
+π₁(S¹) = ℤ, and a half-revolution through the e-dimension does not return to
+the starting point on the circle. What closes is a path in the rotation group's
+double cover Spin(d): a 4π spatial rotation — two full turns — is contractible
+in Spin(d) (this is the Dirac belt trick), so the state must return to itself
+after 4π. The constraint 4πs = 2πk (integer k) therefore applies to the full
+4π rotation, not to a single 2π rotation. For s = 1/2: after a single 2π
+rotation, the e-phase is π (the e-coordinate has advanced half a revolution);
+after a 4π rotation, the e-phase is 2π (one complete revolution, returning to
+the start). The "half-integer winding" refers to the rate of e-phase
+accumulation per 2π spatial rotation — specifically, s complete e-revolutions
+per 4π spatial rotation for s ∈ ½ℤ. The formalism closing this argument is in
+Appendix B.1.2, where the constraint is stated precisely as a condition on
+ρ(R̃(4π)) = I in Spin(d), not as a condition on a closed path in S¹.
+
 **This establishes a fundamental dichotomy from topology alone:**
 `Integer winding ↔ integer spin ↔ bosons`.
 `Half-integer winding ↔ half-integer spin ↔ fermions`.

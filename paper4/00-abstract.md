@@ -52,7 +52,7 @@ component `g_{iψ}` connecting the weak internal space (`S²`) to
 the electromagnetic internal space (`S¹`). The Higgs potential
 is the one-loop Casimir energy of bulk fields on `S²` — finite,
 calculable, and parameter-free in form (given the compactification
-scale M_KK; see §6.5b and §6.7). Electroweak symmetry breaking
+scale M_KK; see §6.5b and §6.7). *(Note: M_KK is a free parameter of the framework until the moduli stabilization problem OC-2 is resolved by Paper 7's flux computation; the Higgs mass prediction is therefore conditional in the same sense as any top-quark-driven electroweak symmetry breaking calculation with an unfixed compactification scale.)* Electroweak symmetry breaking
 is driven by the top quark's anti-periodic boundary conditions
 (the same spin structure that produces the spin-statistics theorem
 in Paper 1), which tilt the `S²` and `S¹` dimensions relative to
@@ -74,15 +74,7 @@ derived (Paper 1); the GUT and electroweak scales are fixed in
 structure, with the numerical values determined by Paper 7's
 flux stabilization computation (§6.4).
 
-Five quantitative predictions follow: the Weinberg angle
-(`sin²θ_W ≈ 0.232`, the standard SU(5)/GUT prediction recovered
-geometrically with GUT normalization assumed; §7.1), three fermion
-generations (from the spin^c index on CP² × S²; §7.2.1), the
-Higgs mass (`m_H ~ 125 GeV` consistent with observation for
-compactification scale `M_KK ~ 1–2.5 TeV`, determined by the
-top Yukawa and `S²` geometry; §6.7), KK W' and Z' resonances
-at 1–2.5 TeV (testable at HL-LHC), and a proton lifetime
-`τ_p ~ 10³⁴–10³⁶` years (testable by Hyper-Kamiokande).
+Five quantitative predictions follow: the Weinberg angle (`sin²θ_W ≈ 0.232`, recovered as a *consistency check*: the equal-curvature KK geometry of CP² × S² × S¹, with the GUT normalization factor 5/3 for U(1)_Y assumed, reproduces the standard SU(5) Georgi-Glashow prediction, consistent with experiment at the ~0.5% level after KK threshold corrections; §7.1), three fermion generations (from the spin^c index on CP² × S²; §7.2.1), the Higgs mass (`m_H ~ 125 GeV` consistent with observation for compactification scale `M_KK ~ 1–2.5 TeV`; §6.7), KK W' and Z' resonances at 1–2.5 TeV (testable at HL-LHC), and a proton lifetime `τ_p ~ 10³⁴–10³⁶` years (testable by Hyper-Kamiokande). The neutrino mass `m_ν = 49.7 ± 0.5 meV` (conditional on Paper 7's uniqueness theorem; §7.5.7) is the primary discriminant, potentially testable at 5–8σ by CMB-S4 + DESI.
 
 The unifying insight across all four papers: the Aharonov-Bohm
 effect, the Higgs mechanism, and dark energy are three
@@ -98,7 +90,7 @@ particles, the wave function is the literal shape of a particle in
 SUSY breaking on `S¹/Z₂` — which gives `ΔN = 8` and derives
 `ρ_Λ = (2.25 meV)⁴` with zero free parameters (§7.21) — is
 precisely the Horava-Witten M-theory mechanism on the 11th
-dimension. The e-circle framework is M-theory's 11th dimension
+dimension. *(More precisely: the dark energy prediction uses R_obs — the observed e-circle radius determined by matching to the measured ρ_Λ — as one observational input. The prediction is that the Casimir formula ρ_Λ = c(ΔN)/R⁴ with ΔN fixed by the bulk field content gives the correct dark energy density for this R_obs. The "zero free parameters" statement means no parameter beyond R_obs and the bulk field content is tuned.)* The e-circle framework is M-theory's 11th dimension
 made physical.
 
 ---

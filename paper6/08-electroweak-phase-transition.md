@@ -132,6 +132,26 @@ From Paper 4, §7.12, the transition parameters are:
 | Peak frequency (today) | f ~ 6 mHz |
 | Peak amplitude | h²Ω_GW ~ 5 × 10⁻¹³ |
 
+**Note on M_KK scaling.** The parameters in this table
+($\alpha = 0.12$, $\beta/H_* = 32$, $T_* = 900\,\text{GeV}$,
+$f_\mathrm{sw} \sim 6\,\text{mHz}$,
+$h^2\Omega_\mathrm{GW} \sim 5 \times 10^{-13}$) are computed for
+$M_\mathrm{KK} = 1\,\text{TeV}$. Current LHC constraints from KK
+gauge boson searches (KK $W^\pm \to \ell\nu$ below $\sim 3\,\text{TeV}$;
+KK $Z \to \ell^+\ell^-$ below $\sim 4\,\text{TeV}$) require
+$M_\mathrm{KK} \gtrsim 3\,\text{TeV}$. At $M_\mathrm{KK} = 3\,\text{TeV}$,
+the transition temperature shifts to $T_* \sim 3\,\text{TeV}$, and
+the peak frequency scales as
+$f_\mathrm{sw} \propto T_*/g_*^{1/2} \to \sim 20\,\text{mHz}$. The
+amplitude $h^2\Omega_\mathrm{GW} \propto \alpha^2 / (\beta/H_*)^2$
+requires recomputing $\alpha$ and $\beta/H_*$ at
+$M_\mathrm{KK} = 3\,\text{TeV}$ from the thermal effective potential
+of Paper 4 §7.12; this rescaling is deferred to that calculation. The
+$M_\mathrm{KK} = 1\,\text{TeV}$ values in this table should be
+regarded as preliminary estimates, with the LHC-consistent prediction
+at $M_\mathrm{KK} = 3\,\text{TeV}$ to be presented in a companion
+analysis.
+
 ## 8.3a GW Spectrum Parameters and LISA Prediction
 
 The dominant GW contribution is from sound waves (Espinosa,
@@ -180,7 +200,7 @@ subtraction).
 ## 8.4 Simultaneous Events on the Hidden Brane
 
 At the same cosmic time, the hidden brane undergoes its own
-electroweak phase transition at T'_c = ξ T_c ~ 490 GeV. The mirror
+electroweak phase transition at T'_c = ξ T_c ~ 432 GeV (using ξ = 0.432). The mirror
 W' and Z' bosons acquire mass. Mirror fermions become massive.
 
 The mirror EWPT also produces gravitational waves — at a slightly

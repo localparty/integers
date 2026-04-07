@@ -206,6 +206,33 @@ standard. The result is a well-defined finite number for every `k ≥ 1`.
 
 ## K.5 Obstruction Analysis
 
+### K.5.0 Structure of the Proof: What Is Proved and What Remains
+
+The all-orders finiteness argument has two logically separate components, and
+it is important to hold them apart.
+
+**Component 1 (proved completely): Vanishing of the KK sum factor.**
+For any positive-definite quadratic form Q in L variables, E_L(−j; Q) = 0 for
+all integers j ≥ 1. This is Theorem K.1 (§K.7b). The proof uses only
+1/Γ(−j) = 0 and is independent of the diagram topology, the loop order, and
+any assumptions about overlapping subdivergences. It requires only that Q be
+positive definite (confirmed in §K.5.1 below via the Gershgorin circle theorem).
+
+**Component 2 (the remaining gap): Factorization of the amplitude.**
+Whether the full L-loop BPHZ-subtracted amplitude takes the form
+(4D integral) × E_L(−j; Q_L) in the presence of overlapping subdivergences is
+a separate claim, addressed by Theorem K.3 via a locality argument. This
+factorization is verified by explicit computation at L = 1 (Appendix F) and
+L = 2 (Appendix G). At L ≥ 3 it relies on Theorem K.3 plus Weinberg's locality
+theorem and has not been independently verified by an explicit three-loop
+calculation. The gap is narrow — there is no known mechanism by which BPHZ
+subtraction could introduce non-polynomial KK dependence — but it is real.
+
+The presentation below follows this structure: §K.5.1 confirms positive
+definiteness (Component 1 prerequisite); §K.5.2 discusses the factorization
+gap (Component 2); §K.5.3 states Theorem K.3 (partial closure of Component 2);
+§K.6 states the overall logical status.
+
 ### K.5.1 Degenerate Quadratic Forms
 
 If `det(Q_L) = 0`, the Epstein zeta function would develop additional
@@ -288,11 +315,24 @@ by a physical locality argument." The following theorem makes this rigorous
 by establishing the joint analyticity needed for BPHZ subtraction to commute
 with Epstein zeta evaluation.
 
-**Theorem K.3 (BPHZ Factorization).** *In KK gravity on M⁴ × S¹,
-the BPHZ-subtracted L-loop amplitude at each order in the mass
-expansion takes the form (4D integral) × E_L(−j; Q_L) for integers
-j ≥ 1. By Theorem K.1, each factor E_L(−j; Q_L) = 0. Therefore
-all L-loop counterterm coefficients vanish identically.*
+**Theorem K.3 (BPHZ Factorization — Conditional).** *In KK gravity on
+M⁴ × S¹, if the BPHZ counterterms for all sub-diagrams are polynomial in the
+KK masses m_n² = n²/R² — as follows from Weinberg's power-counting theorem
+applied to the KK theory when all sub-divergences are renormalizable — then
+the BPHZ-subtracted L-loop amplitude at each order in the mass expansion takes
+the form (4D integral) × E_L(−j; Q_L) for integers j ≥ 1. By Theorem K.1,
+each factor E_L(−j; Q_L) = 0. Therefore all L-loop counterterm coefficients
+vanish identically, conditional on this polynomial-mass-dependence property.*
+
+*The polynomial-mass-dependence assumption is verified by explicit computation
+at L = 1 (Appendix F) and L = 2 (Appendix G). At L ≥ 3 it has not been
+verified by an independent explicit calculation, in particular for the
+three-loop Mercedes topology where overlapping subdivergences first appear in
+the most entangled form. The proof below establishes Steps 1–2 (joint
+holomorphicity) unconditionally; Step 3 (BPHZ subtraction commutes with
+evaluation) is established conditional on the polynomial-KK-mass behavior of
+BPHZ counterterms. The honest label for Theorem K.3 is a conditional theorem
+at L ≥ 3.*
 
 *Proof.*
 
@@ -336,6 +376,16 @@ forest formula subtracts precisely these boundary contributions. By the
 locality of counterterms (Weinberg's theorem), each subtracted boundary
 term is polynomial in `n²/R²`, and its KK sum is again an Epstein zeta
 evaluation at a non-positive integer — hence zero by Theorem K.1.  ∎
+
+*Limitation of the boundary argument.* The argument in the boundary paragraph
+applies Weinberg's locality theorem to conclude that each BPHZ boundary term is
+polynomial in n²/R². Weinberg's theorem guarantees polynomial dependence on
+external momenta and internal masses for sub-divergences that are superficially
+divergent and local in the EFT sense. Its application to the overlapping
+subdivergence structure of the three-loop Mercedes topology in KK gravity —
+where the internal KK mass parameters play the role of "internal masses" in
+Weinberg's framework — has not been verified by explicit index and momentum
+algebra for that topology. This is Route C of §K.5.2.
 
 ### K.5.4 Heat Kernel Coefficients
 

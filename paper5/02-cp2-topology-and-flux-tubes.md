@@ -24,13 +24,30 @@ Consider the SU(3) gauge field `A_a(y)` on CP² (where `y^a` are the
 CP² coordinates, `a = 1,...,4`). The holonomy of the gauge connection
 evaluated on the CP¹ generator of H₂(CP², ℤ) is:
 
-    W_{CP¹} = Tr P exp(i ∮_{∂(CP¹)} A_a dy^a)
+    W_{CP¹} = Tr P exp(i ∮_{γ_eq} A_a dy^a)
 
-where P denotes path ordering around a representative 1-loop on the
-boundary of the CP¹ 2-cycle in CP². The relevant topological object is
-the 2-cycle itself (H₂(CP², ℤ) = ℤ; note π₁(CP²) = 0, so CP² has
-no non-contractible 1-loops); the holonomy is computed by integrating
-the gauge connection around a generating path on CP¹ ≅ S².
+where γ_eq ⊂ CP¹ ≅ S² is the equatorial S¹ — a representative
+generating path on the 2-cycle.¹ Path ordering P is taken along
+γ_eq in the direction determined by the orientation of the Fubini-Study
+2-form ω_FS. The relevant topological object is the 2-cycle itself
+(H₂(CP², ℤ) = ℤ; note π₁(CP²) = 0, so CP² has no non-contractible
+1-loops); the holonomy is computed by integrating the gauge connection
+around this representative path on CP¹ ≅ S².
+
+---
+¹ CP¹ ≅ S² is a closed 2-manifold with ∂(CP¹) = ∅; there is no
+boundary circle. The expression ∮_{∂(CP¹)} appearing in some
+earlier drafts is ill-formed and has been corrected here. The
+holonomy W_{CP¹} is computed by integrating the gauge connection
+around a representative path γ_eq on CP¹. Because π₁(CP¹) = 0
+(CP¹ is simply connected), γ_eq is contractible on CP¹ itself; the
+non-trivial topology is carried by the 2-cycle class [CP¹] ∈ H₂(CP², ℤ),
+not by a 1-cycle. Physically, W_{CP¹} measures the holonomy of the
+SU(3) connection around this representative path and serves as an
+order parameter for the confining phase (⟨W_{CP¹}⟩ = 0) vs. the
+deconfined phase (⟨W_{CP¹}⟩ ≠ 0). The relevant topological distinction
+is between gauge configurations with trivial and non-trivial second
+Chern class c₂ on CP², not between different homotopy classes of paths.
 
 In the confining vacuum, this Wilson loop has a vacuum expectation
 value:

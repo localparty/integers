@@ -67,6 +67,17 @@ from the orbifold geometry.
 
 ## D.3 The Enhanced Asymmetry
 
+> **⚠ Retraction notice.** The parametric estimate in this section
+> assumes O(1) off-diagonal Yukawa matrix elements (Y†Y)₁₂ ~ y². This
+> assumption is incorrect for the Z₃ democratic Yukawa structure of
+> Paper 4 §7.13, which gives instead (Y†Y)₁₂ ~ ξy² with ξ = y²/(8π)
+> ~ 0.034 — suppressing the off-diagonal element by a factor of ~30
+> relative to the naive estimate. The resulting factor-of-10³ resonant
+> enhancement in §D.3 therefore does not apply. The correct calculation
+> is in §D.5, which supersedes §D.3. §D.3 is retained for transparency
+> (to show the error and how it was discovered) but should not be cited
+> for the numerical result.
+
 In the hierarchical (vanilla) limit, §5.3 computed:
 
     ε_vanilla ~ 4 × 10⁻⁶
@@ -217,8 +228,17 @@ Z₃-breaking boundary correction ξ = y²/(8π) = 0.034:
 
 **1. Near-degeneracy (M₁ ≈ M₂).** The Z₃ orbifold gives three
 identical fixed-point masses at leading order. The boundary-breaking
-parameter ξ = 0.034 sets Δ/Γ ~ 1, placing the system in the resonant
-regime. This is not tuning — it is a geometric output.
+parameter ξ = y²/(8π) = 0.034 sets the *order of magnitude* of the
+mass splitting as Δ ~ ξ M₁, and the decay width as Γ₁ ~ ξ M₁
+(Appendix D.2), so Δ/Γ ~ 1 to order of magnitude. This places the
+system in the resonant regime — a consequence of the Z₃ geometry, not
+a free tuning. The *precise* value of Δ/Γ within this O(1) regime
+depends on the boundary correction parameter α (which controls the
+K-splitting between N₁ and N₂); α is an O(1) number not fixed from
+first principles within Paper 5. To be precise: the *existence* of
+near-degeneracy (Δ/Γ ~ 1) is a geometric prediction; the *exact*
+degree of degeneracy (the specific value of Δ/Γ ∈ [0.5, 3] for
+α ∈ [0, 5]) is not. The table in §D.5.3 spans this natural range.
 
 **2. Flavour orthogonality.** The Z₃ democratic Yukawa matrix has columns
 that are orthogonal in lepton flavour space (overlap p₁₂ = ξ² ~ 10⁻³).
@@ -268,6 +288,25 @@ For the most natural range α = 0–3 (order-unity boundary correction):
 
 The sign is correct (positive η_B, matter dominance) for the Z₃ phase
 assignment with arg((Y†Y)₁₂) = 60°.
+
+**Direction of the discrepancy.** The observed value η_B = 6.1 ×
+10⁻¹⁰ lies *above* the predicted range (1.1–3.0) × 10⁻¹⁰ by a
+factor of 2–6. The parameter α increases washout (larger α gives
+larger K₂, stronger washout, smaller η_B), so no value of α in the
+natural range [0, 5] closes the gap upward — larger α moves the
+prediction further from observation. The gap must be closed by physical
+effects not included in the leading-order Boltzmann calculation.
+
+The most important such effect is NLO QCD corrections to the
+leptogenesis rate, which provide a multiplicative enhancement. From
+the systematic uncertainty table (§D.5.4), NLO QCD corrections give
+a factor of 1.3–1.7 enhancement. Taking the upper end: 1.7 × 3.0 ×
+10⁻¹⁰ = 5.1 × 10⁻¹⁰, which is below η_B^{obs} = 6.1 × 10⁻¹⁰ but
+consistent within the stated combined factor-3 systematic uncertainty
+(the combination of all effects in §D.5.4 gives a factor-3 envelope).
+The framework's prediction is therefore marginally consistent with
+observation at the level of its theoretical precision; a precision
+claim is not made.
 
 The residual at α = 0 (no K-splitting) arises from the thermal history:
 the slightly heavier N₂ decays at a slightly later time, giving a

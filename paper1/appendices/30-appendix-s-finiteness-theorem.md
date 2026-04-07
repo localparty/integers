@@ -32,6 +32,19 @@ evaluated at a non-positive integer, and is therefore finite.*
 *(c) The `L`-loop effective action is a finite polynomial in these finite
 zeta values.*
 
+**Scope note.** Theorem S.1 establishes perturbative finiteness for linearized
+5D gravity on M⁴ × S¹. The companion papers (Papers 4–6) work with richer
+geometries: M⁴ × CP² × S² × S¹ (Paper 4), M⁴ × S¹ at finite temperature
+(Paper 5), and the stabilized orbifold (Paper 6). The finiteness mechanism
+generalizes to any compact internal manifold with discrete KK spectrum — the
+Epstein zeta argument applies to the lattice of KK mass eigenvalues, which for
+any compact Riemannian manifold forms a discrete set with the required pole
+structure (pole at s = L/2 for an L-loop diagram). However, the specific
+numerical results — the quadratic forms Q_L, the explicit zero-mode sums, and
+the two-loop verification — are specific to M⁴ × S¹. Extension to the full 11D
+geometry of Paper 4 is not established in this paper and is noted as a separate
+calculation.
+
 ---
 
 ## S.2 Prerequisites

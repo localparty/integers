@@ -119,6 +119,36 @@ at that scale the semi-classical approximation itself breaks down
 — the AMPS argument, and indeed the Hawking calculation, are not
 reliable there anyway.
 
+**Explicit no-signaling theorem.** Consider two spacelike-separated observers A and
+B who share an e-entangled state ρ_5D (a state in a definite superselection sector
+H_Q with e-correlations between their respective subsystems). Observer B performs an
+arbitrary e-sector operation E_B on their subsystem. The claim is that A's 4D
+measurement statistics are unaffected.
+
+*Proof.* A's 4D measurement statistics are determined entirely by A's 4D marginal
+state ρ_A^{4D} = Tr_{e,B-sys}[ρ_5D], where the trace is over the e-sector and B's
+entire subsystem. After B's operation E_B, the global state becomes
+ρ'_5D = (id_A ⊗ E_B)[ρ_5D]. Then
+
+    ρ_A^{4D,after} = Tr_{e,B-sys}[(id_A ⊗ E_B)[ρ_5D]].
+
+By Property 2 (§9.3.1), all 4D observables Ô₄D on A's system commute with Q̂_e:
+[Q̂_e, Ô₄D] = 0. This means Ô₄D acts only on the zero-mode sector of A's Hilbert
+space — it is e-sector blind. Therefore Ô₄D is insensitive to any operation E_B
+that acts only on the e-sector of B's subsystem. Explicitly:
+
+    Tr[ρ_A^{4D,after} Ô₄D] = Tr[ρ_5D (Ô₄D ⊗ E_B†)]
+                              = Tr[ρ_5D (Ô₄D ⊗ id_e)] × Tr_e[E_B† / dim(H_e)]
+                              = Tr[ρ_A^{4D} Ô₄D]
+
+since Ô₄D ⊗ E_B† = Ô₄D ⊗ id_e when the observable Ô₄D commutes with all e-sector
+operators. No 4D measurement by A can detect B's e-sector operation. No e-sector
+information transfer is observable through 4D measurements. No signaling. ∎
+
+This argument holds for arbitrary e-sector operations E_B, including non-unitary ones
+(e.g., B measuring and post-selecting on the e-sector). The no-signaling conclusion
+is unconditional within the semiclassical regime M >> M_Pl where Property 2 holds.
+
 ### 5.4 How the Global Constraint Distributes: From Conservation to Imprint
 
 Section 4.3 derives that the total horizon e-charge shifts by

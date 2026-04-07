@@ -180,47 +180,44 @@ different routes — the KK mass directly (`1/R`), and the neutrino mass
 indirectly through the GUT scale set by CP² which is itself related to R
 through the gauge coupling unification conditions (Paper 4, §7.16).
 
-A single geometric framework — `M⁴ × CP² × S² × S¹` — simultaneously
-determines the dark energy scale (from S¹ Casimir), the KK graviton scale
-(from 1/R), the seesaw scale (from CP²), and the electroweak scale (from S²).
-These four apparently unrelated scales trace to two compact radii.
+The two-scale structure — the e-circle radius R setting the dark energy and KK
+graviton scales, and the seesaw scale M_R from the GUT geometry of Paper 4
+setting the neutrino mass scale — suggests that a unified geometric framework
+can account for these apparently unrelated scales. The specific identification
+of M_R with the CP² radius is deferred to Paper 4.
 
-### Z.3.1 A Topological Identity for the Neutrino–KK Mass Ratio
+### Z.3.1 Deferred to Paper 4
 
-The proximity of `m_ν ~ 50 meV` and `m_KK ~ 16–20 meV` is not merely a
-numerical coincidence among geometric scales — it has a precise topological
-origin in the characteristic classes of CP².
+A topological derivation of the neutrino-to-KK mass ratio from the characteristic
+classes of CP² (Freed-Witten anomaly cancellation, G₄ flux quantization, and the
+Euler characteristic χ(CP²) = 3) is not within the scope of this paper. Paper 1
+establishes the M⁴ × S¹ sector. CP² appears in the full 11-dimensional
+M-theory compactification M⁴ × CP² × S² × S¹ of Paper 4. The formula
 
-CP² is not a spin manifold: its second Stiefel-Whitney class satisfies
-`w₂(CP²) ≠ 0`. This is precisely the fact that Section 4.2 identifies as
-the source of the spin-statistics resolution — the non-trivial spin^c
-structure of the compact space is what forces the e-winding to be
-half-integer for fermions. The same topological fact has a second,
-independent consequence: Horava-Witten / Freed-Witten anomaly cancellation
-on a non-spin manifold requires the M-theory four-form flux `G₄` to be
-half-integer shifted,
+    m_ν / m_KK = χ(CP²) − c₂^{eff}(V)|_{CP²} = 5/2
 
-    c₂^{eff}(V)|_{CP²} = 1/2,
+requires: (i) the identification of the gauge bundle V over CP² with c₂(V) = 1,
+established in Paper 4 via the Horava-Witten construction; (ii) the Freed-Witten
+anomaly cancellation condition on the non-spin manifold CP², which is a
+statement about the 11D geometry; (iii) the seesaw chain relating the Dirac
+index on CP² to the neutrino zero-mode count and to the mass ratio via M_R =
+1/r₃. All three ingredients are outside M⁴ × S¹ geometry. The derivation is
+deferred in full to Paper 4.
 
-to cancel the global worldsheet anomaly. Combined with the spin^c Dirac
-index on CP² — which equals the Euler characteristic `χ(CP²) = 3` — this
-gives a GUT-scale relation between the heaviest 4D neutrino mass and the
-Kaluza-Klein mass:
+The numerical proximity of m_ν ~ 50 meV and m_KK ~ 16–20 meV (a factor of
+~ 2.5) is noted as a suggestive coincidence within the present paper. Whether
+this proximity has a topological origin in the characteristic classes of the
+higher-dimensional geometry will be established in Paper 4.
 
-    m_ν / m_KK  =  χ(CP²) − c₂^{eff}(V)|_{CP²}  =  3 − 1/2  =  5/2.
-
-Numerically: at the electroweak scale `M_Z`, the ratio `m_ν / m_KK = 50 meV /
-19.5 meV ≈ 2.56`. Running the weak coupling `g₂` from `M_Z` to `M_GUT` over
-14 decades of RGE brings the ratio to `2.50 = 5/2`, a 2.4% gap fully accounted
-for by the `g₂` renormalization group flow.
-
-The same topological fact — that CP² is not spin — therefore has two physical
-consequences that Paper 1 identifies from opposite ends. The non-spin structure
-forces the half-integer e-winding that is the geometric content of the
-spin-statistics theorem (Section 4.2). And it forces the half-integer `G₄`
-flux shift that, combined with `χ(CP²) = 3`, pins the neutrino mass scale
-relative to the KK scale at the GUT-scale value `5/2`. One geometric fact; two
-observable predictions.
+Note on the spin-statistics connection: the spin-statistics result of Section 4.2
+is derived within M⁴ × S¹ geometry, using π₁(SO(d)) = ℤ₂ and the e-phase
+coupling postulate. It does not require CP², and CP² does not appear in the
+argument. The non-spin character of CP² (w₂(CP²) ≠ 0) is a property of the
+11-dimensional compactification geometry of Paper 4, not of the M⁴ × S¹
+framework of this paper. The connection between the spin-statistics result
+established here and the G₄ flux quantization of the 11D theory is a feature
+of the embedding — to be established in Paper 4 — not a result of the present
+paper.
 
 ## Z.4 Summary
 

@@ -42,7 +42,20 @@ dimension his mathematics did not include.
 | Fuzzball (string theory) | Horizon replaced by string structure | Requires string theory |
 | Island formula (AdS/CFT) | Quantum extremal surfaces | AdS-derived; mechanism unclear |
 | Firewall (AMPS) | Violation of equivalence principle | Extreme; no consensus |
-| **5D e-dimension** | **Information in e-coordinates** | **Geometric; any spacetime** |
+| **5D e-dimension** | **Information in e-coordinates; e-conservation encodes information as superselection sector** | **Geometric; any spacetime; Page curve reproduced conditionally (Theorem 7.1, §7.6)** |
+
+*Note on Page curve status:* The 5D framework reproduces the Page curve conditionally,
+given the fast-scrambler assumption (Sekino & Susskind 2008). The unconditional
+contributions are: the identification of the e-sector as the information-carrying
+Hilbert space (§7.2); the derivation that the e-conservation map is unitary (§6.4,
+Theorem 6.1); and the physical scrambling mechanism (4D thermal horizon dynamics,
+§7.5). The fast-scrambler property — that the 5D horizon dynamics form an approximate
+Haar-random unitary on the e-sector — is assumed (at Level 2 of §7.6), not derived
+from the 5D Hamiltonian (Level 3, open problem). No density matrix ρ_rad has been
+computed from a direct time-evolution of the 5D state; the Page curve argument is
+kinematic, applying Page's (1993) combinatorial result to the e-Hilbert space under
+the fast-scrambler assumption. This is the correct and honest characterization of
+Theorem 7.1.
 
 The 5D framework is distinguished by:
 - Providing an explicit geometric mechanism (not a calculational
@@ -50,7 +63,12 @@ The 5D framework is distinguished by:
 - Working in any spacetime geometry (not just AdS)
 - Resolving the firewall paradox simultaneously (Section 9)
 - Connecting to the problem of time (Section 3)
-- Deriving (not assuming) the Page curve (Section 7)
+- Reproducing the Page curve conditionally: given the fast-scrambler assumption
+  (Sekino-Susskind), the e-Hilbert space structure of Section 7 yields Theorem 7.1
+  (Conditional Page Curve). The unconditional structural contribution is the
+  identification of the e-sector Hilbert space and the physical scrambling mechanism;
+  the fast-scrambler property itself remains an assumption at the level of this paper
+  (see Section 7.6, Level 2/3 stratification).
 
 ---
 

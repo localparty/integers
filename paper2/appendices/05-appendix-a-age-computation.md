@@ -73,7 +73,7 @@ e-circle geometry:
 | `w₀` | −1 | Frozen dilaton (Casimir exact; Paper 6 §2) |
 | `w_a` | 0 | Frozen dilaton (no GW term; c₂ = 0) |
 | `Σm_ν` | 0.06 eV | Bulk seesaw, normal ordering |
-| `A_s` | `2.215×10⁻⁹` | Inflation (unchanged) |
+| `A_s` | `2.101×10⁻⁹` | Inflation (Planck 2018 TT,TE,EE+lowE; unchanged from ΛCDM) |
 | `n_s` | 0.9649 | Inflation (unchanged) |
 
 ---

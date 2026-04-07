@@ -1,27 +1,29 @@
-# Cross-Paper Consistency Review: The QG5D Framework (Papers 1–7)
+# Referee Report: Paper 9 — "One Postulate, Ten Papers: The Geometric Framework and Its Grammar"
 
-**Reviewer role:** Senior theoretical physicist, cross-series consistency referee
+**Reviewer role:** Senior theoretical physicist, cross-series synthesis referee
 **Date:** 2026-04-07
-**Status of series:** All seven papers revised following individual referee reports; gap-responses filed; source files updated.
-**Scope:** This review assesses cross-paper consistency of the revised versions.
+**Scope:** Paper 9 draft reviewed against the corrected versions of Papers 1–7 (post-individual-referee-revision). The primary question is whether Paper 9 has incorporated the corrections mandated by the individual referee reports, and whether it introduces any new cross-paper inconsistencies.
+
+**Rating key:**
+- **A — GENUINE GAP:** Publication-blocking; requires substantive revision
+- **B — CLOSABLE GAP:** Important but fixable with targeted edits
+- **C — MINOR:** Style/clarity issue
 
 ---
 
 ## 1. Executive Summary
 
-The seven-paper QG5D series has been substantially improved by the individual revision rounds. Several per-paper genuine gaps (the 0.7% string-tension overclaim in Paper 5, the dilaton inflation misidentification in Paper 6, the "GUT condition as derived output" overclaim in Paper 7) have been corrected honestly and with appropriate hedging. The series, viewed as a whole, is more internally honest than most multi-paper theoretical programs of comparable ambition.
+Paper 9 is a well-written synthesis document that succeeds in its stated purpose: naming the six reasoning patterns, tracing their origins, and mapping the series' results to their generative geometry. As narrative and record it is largely sound.
 
-However, four cross-paper tensions survive the individual revisions. Two are genuine inconsistencies (A-rated) requiring coordinated revision before any submission. Two are resolvable tensions (B-rated) requiring explicit clarifying text.
+However, Paper 9 was written before — or without incorporating — a substantial fraction of the corrections mandated by the individual referee reports for Papers 1–7. Several retracted or downgraded claims appear verbatim in Paper 9's quantitative sections (§§4b–4d), sometimes in more prominent rhetorical positions than in the companion papers themselves. The most serious — the 14σ/13.7σ CMB-S4 discrimination figure and the four-significant-figure neutrino mass claim (49.74 meV without uncertainty) — were explicitly retracted in Paper 4's gap-response and must not appear in the synthesis paper.
 
-**The three most critical issues before any paper in the series is submitted, in priority order:**
+**Five findings require immediate action before any paper in the series is submitted:**
 
-**Priority 1 — The ξ origin story is mechanically unresolved (B1c, Parts B and C).** Paper 6 Section 6 attempts to derive ξ ≈ 0.49 from reheating dynamics but reaches ξ ~ 0.84 at its last quantitative step, with the final value appealing to "full thermal history" without a completed calculation. Paper 2's ξ is determined by inverting the Ω_DM/Ω_b observational ratio. These approaches have not been shown quantitatively consistent. Paper 6 §6.5 already contains the honest statement that only ξ ~ 0.3–0.9 is established; the abstract must match it.
-
-**Priority 2 — The Casimir scale assignment in Paper 4 vs. Paper 6 is contradictory as stated (A1c, Part A).** Paper 4 assigns the S¹ Casimir energy to the cosmological constant (a constant). Paper 6 identifies the same S¹ Casimir energy as V(R) = +c/R⁴, a runaway scalar field potential. These are physically distinct. The reconciliation — that V(R₀) at the frozen value equals ρ_Λ — is available but requires Paper 6 Appendix A's dilaton-freezing argument to be imported into Paper 4 §7.21.
-
-**Priority 3 — The R-dependence of Papers 4 and 5's numerical predictions is not acknowledged (D1b, Part D).** Paper 7 establishes r₃² = n₁/(2c_R) ∝ R⁻¹, so M_GUT ∝ R^{1/2}, m_H ∝ R^{1/2}, and τ_p ∝ R². Papers 4 and 5 give numerical predictions (m_H ~ 125 GeV, √σ ≈ 440 MeV) without stating this R-dependence. Paper 7's gap-response acknowledges it but the source files do not yet reflect this.
-
-**Overall recommendation:** The series is submittable after addressing Priorities 1–3. The papers should not be submitted independently until the cross-paper fixes described below are implemented.
+1. **[A] §4b.9 and §4c.6–4c.7: "14σ" and "49.74 meV"** — both explicitly retracted in Paper 4; Paper 9 uses them approximately 10–12 times across §§4b–4d.
+2. **[A] §4b.9: The N_eff CMB-S4 discrimination stated as 9–17σ** — the corrected figure from Papers 2 and 4 is 4–6σ (conservative) with the fluid-formula 9–17σ labeled explicitly as an upper bound.
+3. **[B] §4b.1 and §4c.4: k = 2 described as "from Paper 1"** — Paper 1 now explicitly treats k as a fitted parameter with no geometric derivation.
+4. **[B] §4b.8 and §4c.2–4c.7: 5/2 identity language** — residual "forced by Horava-Witten anomaly" and "proven conditional on five constraints" language must be replaced with "numerical coincidence" language consistent with Paper 7's revised §B.10.3a.
+5. **[B] §2 Pattern 3 and Pattern 5: Casimir exactness claim** — stated without the scheme-independence open problem caveat now required by Paper 1's gap-response.
 
 ---
 
@@ -29,344 +31,287 @@ However, four cross-paper tensions survive the individual revisions. Two are gen
 
 ---
 
-### PART A: The Finiteness Result and Its Scope
+### FINDING A1 — §4b.9 and §4c: "14σ" and "49.74 meV" survive the Paper 4 retraction
+
+**Rating: (A) GENUINE GAP**
+
+**The retraction.** Paper 4's gap-response to Finding E4(a–d) states explicitly: "We retract this figure [14σ] and replace it with the 5–8σ falsifiability statement above." It further states: "A four-significant-figure claim without an uncertainty budget is unjustified." Paper 4's revised abstract and §7.0 table now read m_ν = 49.7 ± 0.5 meV, CMB-S4 discrimination 5–8σ.
+
+**What Paper 9 currently says.** The following passages use the retracted figures:
+
+- §4b.9 (line 327): "a discrimination between the two hypotheses at 14σ"
+- §4b.9 (line 325): "requires m_ν = 49.74 meV"
+- §4b.9 (line 349): "the framework is confirmed at 14σ"
+- §4b.9 (line 360): "the neutrino mass prediction at 14σ discrimination"
+- §4b.9 (line 366): "The neutrino mass is either 49.74 meV or it is not"
+- §4c.6 table (line 401): "13.7σ" in the CMB-S4 pull column
+- §4c.7 (line 463): "|49.74 − 50.15| / 0.030 = 13.7σ"
+- §4c.7 (line 465): "CMB-S4 will discriminate these two hypotheses ... at 14σ"
+- §4c.7 (line 491): "testable at 14σ by CMB-S4"
+- §4c.7 (line 499): "tested by CMB-S4 at 14σ precision"
+- §4d.4 (line 177): "|50.15 − 49.74| / 0.030 = 13.7σ"
+
+These figures appear as the primary conclusion of each section, including the closing sentence of §4b.9: "The neutrino mass is either 49.74 meV or it is not. CMB-S4 will answer both questions." The synthesis paper presents as its sharpest headline result a figure that the companion paper has explicitly retracted with a detailed correction. A referee comparing Paper 4 and Paper 9 will find them directly contradictory.
+
+**What is needed.** Replace all instances of "14σ", "13.7σ", and bare "49.74 meV" with the corrected values from Paper 4 §7.5.7b: m_ν = 49.7 ± 0.5 meV, CMB-S4 discrimination 5–8σ. The rhetorical sentence "The neutrino mass is either 49.74 meV or it is not" must be rewritten to acknowledge the ±0.5 meV theory uncertainty that dominates the discriminating power. The precision budget — that the dominant uncertainty is ΔN_vis entering through the R_A formula — must be mentioned when the discriminating power is cited, consistent with Paper 4 §7.5.7a.
 
 ---
 
-**A1(a): Geometry mismatch — single S¹ vs. CP² × S² × S¹**
+### FINDING A2 — §4b.9: CMB-S4 N_eff discrimination stated as "9–17σ" without labeling this as a fluid-formula upper bound
 
-**Rating: (B) RESOLVABLE TENSION**
+**Rating: (A) GENUINE GAP**
 
-Paper 1's Theorem S.1 is for M⁴ × S¹. Paper 4 Appendix C correctly explains the mechanism — the S¹ spectral zeta evaluates to 2ζ(−2j) = 0 (trivial zeros), while the CP² and S² spectral zetas are nonzero because shifted-square eigenvalues mix ζ values at different arguments. Paper 4 does not claim finiteness of the full CP² × S² sector; it claims the S¹ sector is UV-finite (Paper 1) and the CP² × S² sector generates a nonzero stabilization potential.
+**The correction.** Paper 2's gap-response to Finding B1(a)/(b) established that the fluid-formula N_eff values 3.31–3.39 are upper bounds, and that the free-streaming corrected estimate is N_eff ≈ 3.165 (giving approximately 2.3σ ACT tension vs. the fluid's 3.5σ). Paper 4's gap-response replaced "9–17σ CMB-S4 discrimination" with a conservative range of 4–6σ using baseline CMB-S4 design sensitivity compared against the SM prediction N_eff = 3.044, with the fluid-formula upper bound retained as an upper estimate.
 
-**What is needed:** Paper 4 Appendix C needs one paragraph explicitly stating: (i) finiteness of the S¹ Casimir uses Theorem K.1 of Paper 1 directly; (ii) the CP² and S² contributions are finite by the Epstein-Terras theorem (their pole at s = L/2 > 0 is never reached at the needed s ≤ 0); (iii) both sectors are UV-finite but only the S¹ sector evaluates to zero — the CP² and S² sectors generate nonzero potentials. Papers requiring revision: Paper 4 Appendix C (one paragraph); Paper 5 §3 (citation of Paper 1 Appendix L).
+**What Paper 9 currently says.** §4b.9 (lines 304–309): "CMB-S4, scheduled for first light ~2030, will measure N_eff to σ = 0.02–0.03. The framework predicts N_eff = 3.31–3.39. The Standard Model predicts 3.044. The gap is 0.27–0.35. CMB-S4's precision is 0.02–0.03. That is a 9–17σ discrimination."
 
----
+The arithmetic is correct if the fluid values are taken literally, but the fluid values are upper bounds. The free-streaming corrected prediction is N_eff ≈ 3.165, which at σ = 0.02–0.03 gives 6–8σ vs. the SM prediction, or roughly 2.5σ vs. ACT DR6. Paper 9 does not label 3.31–3.39 as upper bounds at this point in the text — it presents them as firm predictions. §4b.7 does contain the correction (lower in the same section), but the opening claim "9–17σ" in §4b.9 stands uncorrected.
 
-**A1(b): Non-abelian finiteness — gauge-gravity mixing diagrams**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 1 Appendix L correctly establishes that SU(N) KK towers on S¹ have the same spectral structure as U(1), so Theorem K.1 applies. Gauge-gravity mixing diagrams are not explicitly addressed. The argument that polynomial vertex mass-dependence (which drives the Epstein structure) extends to mixed loops is plausible but unstated.
-
-**What is needed:** One paragraph in Paper 1 Appendix L or Paper 4 §8 explicitly extending the Epstein structure argument to gauge-gravity mixing diagrams, with the honest note that this has not been separately computed (same status as the L ≥ 3 factorization gap). Papers requiring revision: Paper 1 Appendix L (one paragraph); Paper 5 §3 (one citation).
+**What is needed.** §4b.9 must be revised so that N_eff = 3.31–3.39 is labeled the fluid-formula upper bound at its first appearance. The discrimination must be stated as: conservative estimate 4–6σ vs. SM prediction (Papers 2 and 4 consistent presentation), with the upper bound 9–17σ applying only if the fluid approximation holds exactly — a condition the paper itself explains does not hold (mirror hydrogen recombines at z ≈ 2463). The ACT DR6 tension must be stated as 2.3–3.5σ (not 3.5σ), matching Paper 2's corrected abstract.
 
 ---
 
-**A1(c): The S¹ Casimir energy — cosmological constant or dilaton potential?**
+### FINDING B1 — §4b.1 and §4c.4: k = 2 attributed to "Paper 1" as a derived geometric result
 
-**Rating: (A) GENUINE INCONSISTENCY**
+**Rating: (B) CLOSABLE GAP**
 
-This is the most precisely identifiable cross-paper inconsistency in the series.
+**The correction.** Paper 1's gap-response to Finding C3(a) and C3(e) added a "Uniqueness of k = 2" paragraph to §W.5 stating: "no quantization condition forcing k = 2 has been established; k is treated as a free parameter whose value is inferred from observation" (the tau-electron mass ratio).
 
-Paper 4 §7.21: "The Scherk-Schwarz SUSY breaking on S¹/Z₂ derives ρ_Λ = (2.25 meV)⁴ with zero free parameters." Paper 4's three-scale Casimir hierarchy explicitly identifies S¹ → dark energy Λ (a constant).
+**What Paper 9 currently says.**
+- §4b.1 (lines 38–39): "At k = 2 (Paper 1), ξ = 0.432 determines c_ν = 0.634"
+- §4b.8 (line 268): "k = 2 from Paper 1. The value c_ν = 0.634 is natural (O(1), no fine-tuning)."
+- §4c.4 (line 276): "At k = 2 (Paper 1), the observed ξ = 0.432 gives c_ν = 0.634"
 
-Paper 6 §2.1: "The dilaton potential V(R) = +c/R⁴ — the Casimir energy of bulk fields on the e-circle, exact to all perturbative orders." Paper 6 Appendix A shows this is a runaway function: V'(R) = −4c/R⁵ ≠ 0, no minimum.
+The citation "(Paper 1)" in each case implies k = 2 is an output of Paper 1 — a derived or topologically forced value. It is not. Paper 1 now explicitly states that k is observationally fitted. The phrase "k = 2 from Paper 1" will be read by any referee as "Paper 1 derives k = 2," which is false.
 
-The reconciliation is available: the "cosmological constant" of Paper 4 is V(R₀) = c/R₀⁴ evaluated at the kinematically frozen value R = R₀, where the freezing is established by Paper 6 Appendix A (ΔR/R₀ ~ 3 × 10⁻³⁰ per Hubble time). But Paper 4 presents ρ_Λ as directly derived from the Casimir energy without invoking this argument. A reader of Paper 4 alone sees a constant cosmological constant derived from the S¹ Casimir. A reader of Paper 6 alone sees a runaway potential. Neither paper's self-contained presentation explains how both are simultaneously true.
+Additionally, Paper 7's gap-response to Finding A4(b) added two sentences to §B.10.3a distinguishing the O(1) twist used in the spin^c index computation from the integer k = 2 appearing in Papers 1 and 6. Paper 9's use of "k = 2 (Paper 1)" without this disambiguation makes the situation worse.
 
-Additionally, Paper 4's claim w₀ = −1 now depends on the Paper 6 Appendix A corrected calculation (ΔR/R₀ ~ 3 × 10⁻³⁰, replacing the earlier erroneous 10⁻⁵²). This dependency is not stated.
-
-**What is needed:** Paper 4 §7.21 must be revised to state: (i) the S¹ Casimir energy produces V(R) = c/R⁴, not a constant; (ii) the observed cosmological constant is V(R₀) at the frozen value R₀ ~ 10 μm; (iii) the frozen-dilaton argument justifying w₀ = −1 is established in Paper 6 Appendix A (forward reference). Paper 6 §2.1 should add a backward cross-reference noting that Paper 4's "S¹ Casimir → Λ" is V(R₀) at frozen R₀. Papers requiring revision: Paper 4 §7.21 (one to two paragraphs); Paper 6 §2.1 (one sentence). Estimated difficulty: Moderate — careful wording required.
-
----
-
-**A1(d): The R³ counterterm in 11D vs. 5D**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 1's two-loop finiteness is for 5D gravity. The 11D counterterm structure (R⁴ at one loop in 11D SUGRA) is different. Paper 1 is not claiming to eliminate all UV divergences in 11D SUGRA — it claims the 4D effective theory from integrating out KK modes is UV-finite. These are different claims that should be stated explicitly.
-
-**What is needed:** Paper 4 §8 should add one sentence clarifying that finiteness claims apply to the 4D effective theory from KK integration, not to the full 11D SUGRA counterterm structure.
+**What is needed.** In each of the three instances above, add a qualifier: "k = 2 (Paper 1 §W.5; an observationally fitted warp factor — no geometric quantization condition selecting this value is currently established within the framework)." The parenthetical should reference the section now containing the disclaimer, not present k = 2 as a derivation.
 
 ---
 
-**A1(e): "Exact to all orders" for the Coleman-Weinberg effective potential vs. S-matrix**
+### FINDING B2 — §4b.8 and §4c.2–4c.7: Residual "forced by Horava-Witten anomaly" language contradicts Paper 7's revised §B.10.3a
 
-**Rating: (B) RESOLVABLE TENSION**
+**Rating: (B) CLOSABLE GAP**
 
-The background field method guarantees that the effective action (including the effective potential) has the same UV structure as the S-matrix amplitudes, because both are governed by the spectral representation of the heat kernel. The Epstein-vanishing mechanism applies to both.
+**The correction.** Paper 7's gap-response to Finding A3(a)–(e) and A4(a) replaced §B.10.3a in its entirety. The new text states: "the value 5/2 is therefore a numerical coincidence — remarkable in that each component is separately of topological origin, but not a topological identity in the sense of being the output of an index theorem on the full space." It further states: "No physical mechanism is currently identified within the M-theory framework that would explain why the difference of two separately topological quantities in different cohomological contexts should equal a mass ratio."
 
-**What is needed:** Paper 6 §2.1 should add one sentence: "The Epstein-vanishing mechanism applies to the spectral zeta function of the kinetic operator, which governs both the S-matrix amplitudes (Paper 1) and the Coleman-Weinberg effective potential via the same heat kernel representation."
+**What Paper 9 currently says.**
 
----
+§4c.2 (lines 83–85): "the HW anomaly forces c₂^{eff} = 1/2 ... The value c₂^{eff}(V_vis) = 1/2 is not a choice ... both are forced by the geometry of the compactification."
 
-**A2(a): Paper 3 UV completion cites Paper 4's geometry**
+§4b.8 (line 285): "the 1/2 is forced by Horava-Witten anomaly cancellation on the non-spin manifold CP²."
 
-**Rating: (B) RESOLVABLE TENSION**
+§4c.7 (line 421): "The HW anomaly cancellation forces c₂^{eff}(V_vis) = 1/2 on CP²."
 
-Paper 3 Appendix A's "M-theory identification" commits to M-theory on M⁴ × CP² × S² × S¹/Z₂, whose SM field content is established in Paper 4. This is a real dependency. Paper 3's information-loss resolution operates at the 5D e-circle level (Papers 1–2) and does not require Paper 4 for its core argument, but the UV completion claim does.
+§4c.7 (lines 478–480): "The HW forcing of c₂^{eff} = 1/2 is proven conditional on the five constraints (Theorem 2 of 35b; Paper 7 Appendix B)."
 
-**What is needed:** Paper 3 Appendix A §A.3 should explicitly state: "The M-theory identification is fully established only when Paper 4 (SM field content) and Paper 7 (tadpole cancellation) are accepted. Papers 3 and 4 are companion submissions establishing the same 11D geometry from two different directions."
+The statement "c₂^{eff} = 1/2 is forced by the HW anomaly" is accurate for c₂^{eff} individually. The problem is the implicit slide from "c₂^{eff} = 1/2 is forced" to "5/2 is the topologically derived mass ratio." Paper 7's revised §B.10.3a explicitly says the combination χ(CP²) − c₂^{eff} = 5/2 is a numerical coincidence, not a topological identity — "the combination χ(CP²) − c₂^{eff} is not a standard index-theoretic quantity: index theorems on product manifolds produce multiplicative, not additive, contributions from the two factors." Paper 9 does not reflect this. §4c.8 uses the careful phrase "topologically grounded numerical near-coincidence," which is close to correct, but §4c.2 and §4c.7 are still written in "forced" language that implies the mass ratio is a topological theorem.
 
----
+The phrase "proven conditional on the five constraints" (§4c.7 line 478) is stronger than Paper 7 now uses. Paper 7's revised text says "established by the five-constraint uniqueness argument," not "proven." The five constraints themselves include the gauge unification condition from Paper 7, which is itself conditional.
 
-**A2(b): Bubble-of-nothing instability**
-
-**Rating: (C) CONSISTENT**
-
-Correctly distributed across Papers 1 (Appendix J: antiperiodic fermion suppression + Casimir barrier, S_CDL ≫ 10³⁰), 3 (cites Paper 1), and 7 (CP² × S² moduli stabilized by flux, not subject to the same S¹ instability). No cross-paper inconsistency.
-
----
-
-**A2(c): M-theory UV completion requires Papers 4 and 7**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Same as A2(a), but emphasizing the Paper 7 dependency (tadpole cancellation, Freed-Witten anomaly). Paper 3 Appendix A should state the conditional nature of the UV-complete claim.
+**What is needed.**
+1. §4b.8 (line 285): Replace "the 1/2 is forced by Horava-Witten anomaly cancellation" with "the 1/2 is the fractional instanton number established by the HW anomaly-cancellation argument (Paper 7 §B.10.1)." Do not use "forced" in a way that implies the mass ratio is topologically derived.
+2. §4c.2: After the "composite" subsection, add one sentence: "The combination 3 − 1/2 = 5/2 is a numerical coincidence in the sense now precisely established by Paper 7 §B.10.3a: each component is separately of topological origin, but no mechanism connecting a manifold invariant (χ = 3) and a gauge-bundle invariant (c₂^{eff} = 1/2) in different cohomological contexts has been identified that would make their difference a topological identity."
+3. §4c.7 (line 478): Replace "proven conditional on the five constraints" with "established by the five-constraint uniqueness argument of Paper 7 §B.10.1, conditional on those constraints."
 
 ---
 
-### PART B: The ξ Parameter Across Papers
+### FINDING B3 — §2 Pattern 3 and Pattern 5: Casimir and UV finiteness presented as established without open-problem caveats
+
+**Rating: (B) CLOSABLE GAP**
+
+**The background.** Paper 1's gap-response to Finding A1(b) labels scheme independence of the finiteness result as an open problem: "KK sum factor proved all orders; scheme independence open." The cross-paper series report identified as a GENUINE INCONSISTENCY (Finding A1(c)) the conflict between Paper 4's "S¹ Casimir = constant dark energy" and Paper 6's "S¹ Casimir = V(R) = c/R⁴ runaway potential."
+
+**What Paper 9 currently says.** §2 Pattern 3 (line 101): "The Casimir energy is not a perturbative correction — it is the leading-order energy of the vacuum on a compact space. It is calculable, exact to all perturbative orders (by Pattern 5), and sets a hard physical scale that cannot be adjusted without changing the geometry."
+
+§2 Pattern 5 (lines 210–215) lists UV finiteness to all loop orders as established, citing Theorems K.1 and K.3, without noting that scheme independence is an open problem.
+
+Two issues: (i) "exact to all perturbative orders" for the Casimir energy conflates the UV finiteness of the Casimir sum (established within the framework) with the scheme-independent physical content (open problem); (ii) the Casimir formula as written (ρ_Λ = ℏc · π²/(240R⁴)) treats the Casimir energy as a constant, not acknowledging that it is V(R) = c/R⁴ evaluated at frozen R₀. This is the inconsistency the cross-paper report flagged.
+
+**What is needed.**
+1. §2 Pattern 3, after "exact to all perturbative orders (by Pattern 5)": add "(more precisely: the zeta-regularized Casimir sum vanishes on S¹ at every loop order within the framework; whether this vanishing is scheme-independent — i.e., whether it reflects a physical property of the S-matrix — is an open problem as identified in Paper 1 §K)."
+2. §2 Pattern 5: After the result list, add: "The L ≥ 3 overlap-subdivergence factorization gap — whether the Epstein structure holds for all momentum routings of overlapping diagrams — is identified as an open problem in Paper 1 Appendix K and §7.2 Thread 3 of this paper."
+3. §2 Pattern 3 "clearest example" paragraph: Add a note that the dark energy Casimir formula gives R ≈ 12 μm in the bare case; the mirror-sector correction gives R₀ = 10.1 μm (§4c.3); and the Casimir energy is V(R) = c/R⁴ (a dynamical potential, Paper 6 §2) evaluated at the frozen dilaton value R₀, whose freezing is established in Paper 6 Appendix A.
 
 ---
 
-**B1(a): Are Paper 2 and Paper 6 computing the same quantity?**
+### FINDING B4 — §6 Paper 2 summary: S8 = 0.753–0.785 inconsistent with §4b.3 CAMB output
 
-**Rating: (B) RESOLVABLE TENSION**
+**Rating: (B) CLOSABLE GAP**
 
-The two derivations operate in different logical directions and are consistent in principle: Paper 2 determines ξ from Ω_DM/Ω_b via the leptogenesis scaling law; Paper 6 explains the physical mechanism placing ξ in the range 0.3–0.9. The problem is presentation — Paper 2 §2.2 cites Paper 6 as providing "the origin of ξ," overstating Paper 6's result.
+**The inconsistency.** §6 (Paper 2 summary, line 36): "S8 = 0.753–0.785 (resolving the 4σ tension)."
 
-**What is needed:** Paper 2 §2.2 should revise its citation of Paper 6 to read: "Paper 6 §6 identifies the physical mechanism that places ξ in the range 0.3–0.9; the precise value ξ = 0.49 is determined in this paper from the Ω_DM/Ω_b scaling law."
+§4b.4 (line 74): "S8 = 0.770–0.803."
 
----
+The CAMB table in §4b.3 shows the three scenarios yield S8 = 0.803, 0.770, and 0.771. The value 0.753 does not appear in §4b's CAMB table and is likely from an earlier draft. The two sections of the same paper are numerically inconsistent by 0.017 on the lower bound and by 0.018 on the upper bound, which is larger than the DES Y3 measurement uncertainty (0.017).
 
-**B1(b): Washout corrections**
-
-**Rating: (C) CONSISTENT**
-
-Paper 2's washout (K ≈ 5 from m_ν = 50 meV; BDP efficiency function) corrects the leptogenesis scaling law at the epoch of leptogenesis. Paper 6's entropy correction from differential QCD confinement is a different physical effect at a later epoch. These are additive, non-competing corrections. The gap-response for Paper 2 (A1(b)) provides the correct, corrected K ≈ 5 calculation with the M_N-cancellation demonstrated explicitly.
+**What is needed.** §6 Paper 2 summary: Replace "S8 = 0.753–0.785" with "S8 = 0.770–0.803" to match §4b.3 and §4b.4.
 
 ---
 
-**B1(c): Direction of logical flow of ξ**
+### FINDING B5 — §4b.8: "Localizes dark matter" language contradicts Paper 5 §5.7a correction
 
-**Rating: (A) GENUINE INCONSISTENCY**
+**Rating: (B) CLOSABLE GAP**
 
-Paper 2 abstract: "fits zero free parameters to CMB data... Ω_DM/Ω_b (which fixes ξ through the scaling law)."
+**The correction.** Paper 5's gap-response to Finding E1(a)–(b) added §5.7a, which explicitly states: "The dark matter connection is indirect: c_ν controls ξ = T_hid/T_vis during the epoch of N^{5D} decay; [the dark matter] abundance is sensitive to c_ν only through ξ, not through N^{5D} being a dark matter particle." The dark matter is mirror baryons (mirror-sector species), not N^{5D} itself.
 
-Paper 6 abstract: "the precise value ξ = 0.49 (Paper 2) emerges from the full numerical thermal history."
+**What Paper 9 currently says.** §4b.8 (line 275): "CP² is not merely the compactification that localizes dark matter." The phrase "localizes dark matter" implies CP² localizes the dark matter particles — which was the old (now corrected) Paper 5 description in which N^{5D} was the dark matter. In fact, CP²'s role is in determining c_ν, which determines ξ, which determines the mirror baryon abundance. Dark matter (mirror baryons) is not localized by CP².
 
-These statements create a circular presentation. Paper 6's §6.4 final paragraph gives ξ = 0.79 after bulk neutrino decays, then appeals to unquantified "entropy from phase transitions" to reach 0.49 — this calculation is incomplete. The abstract's claim that ξ = 0.49 "emerges" from the thermal history is therefore premature.
-
-The honest statement is: Paper 2 determines ξ = 0.49 from the Ω_DM/Ω_b ratio; Paper 6 explains the physical mechanism producing ξ ~ 0.3–0.9. Paper 6 §6.5 already contains this honest assessment; the abstract must be brought into alignment.
-
-**What is needed:** Paper 6 abstract must be revised to remove the implication that ξ = 0.49 precisely is derived from the mechanism. The 0.79 → 0.49 step is an unresolved calculation gap that should be labeled as such, with the full two-sector Boltzmann simulation identified as needed future work. Papers requiring revision: Paper 6 abstract (one sentence); Paper 6 §6.2–6.5 (remove overstatement that ξ = 0.49 is derived). Estimated difficulty: Light editing.
+**What is needed.** §4b.8 (line 275): Replace "CP² is not merely the compactification that localizes dark matter" with "CP² is not merely the compactification whose zero-mode structure determines the dark matter abundance (via c_ν → ξ → Ω_DM/Ω_b = 1/ξ²; the dark matter consists of mirror baryons in the hidden sector, Paper 5 §5.7a)."
 
 ---
 
-**B1(d): N_eff consistency**
+### FINDING B6 — §4c.3 and §4c.6 table: No conditionality-on-Paper-7 disclaimer at first use
 
-**Rating: (C) CONSISTENT**
+**Rating: (B) CLOSABLE GAP**
 
-Paper 2 computes N_eff = 3.31–3.39 from ΔN_eff = 6.14 × ξ⁴. Paper 6 defers N_eff calculation to Paper 2. Both use the same ξ and the same formula. The tension with ACT DR6 (N_eff = 2.86 ± 0.13) is an experimental tension acknowledged by both papers, not a cross-paper inconsistency.
+**The correction.** Paper 4's gap-response to Finding E1(b) introduced explicit conditionality language in Paper 4's abstract, §7.0 table, §7.3.1, and §7.5.7: "The 5/2 identity, and consequently the neutrino mass prediction m_ν = 49.7 ± 0.5 meV, is conditional on Paper 7's uniqueness theorem."
 
----
+**What Paper 9 currently says.** The conditionality disclaimer appears in §4c.7 (line 480): "The HW forcing of c₂^{eff} = 1/2 is proven conditional on the five constraints." However, it does not appear in §4c.3 (where the RGE calculation and neutrino mass prediction are first presented) or in the §4c.6 closure surface table. A reader who encounters the prediction in §4c.3 or reads the summary table in §4c.6 without reading §4c.7 to its end will not encounter the conditionality.
 
-### PART C: The Inflation Model Conflict
-
----
-
-**C1(a): T_reh robustness to inflaton identity**
-
-**Rating: (C) CONSISTENT — with important caveat requiring a calculation**
-
-Paper 6 §4.0 correctly argues that both the dilaton and G₄ axion couple gravitationally with Γ ~ m_inf³/M_Pl². Paper 7's r ≈ 0.001 constrains H_inf ~ 6 × 10¹³ GeV (from r = (2/π²)(H_inf/M_Pl)²), within a factor of 6 of the assumed 10¹³ GeV. T_reh scales as H_inf^{3/2}/M_Pl, so T_reh would shift by ~15, remaining below M_N ~ 10¹⁴ GeV (non-thermal leptogenesis path intact).
-
-**What is needed:** Paper 6 §4.0 should add three equations computing T_reh self-consistently using Paper 7's r ≈ 0.001 to fix H_inf ~ 6 × 10¹³ GeV, and confirm T_reh ~ (1–2) × 10¹⁰ GeV remains below M_N.
+**What is needed.** §4c.3, after "Solving: m_ν* = 49.74 meV [→ revised to 49.7 meV]": add "This prediction is conditional on the five-constraint uniqueness theorem of Paper 7 §B.10.1, which establishes c₂^{eff}(V_vis) = 1/2." Add to the §4c.6 table caption: "All predictions in this table are conditional on Paper 7 §B.10.1."
 
 ---
 
-**C1(b): Leptogenesis efficiency with G₄ inflaton**
+### FINDING C1 — §1.2 and §7.1: R ≈ 12 μm vs. R₀ = 10.1 μm inconsistency unexplained
 
-**Rating: (C) CONSISTENT**
+**Rating: (C) MINOR**
 
-The leptogenesis CP asymmetry ε ~ 10⁻⁶ comes from Paper 4's Z₃ Yukawa phases, independent of the inflaton. The inflaton-to-neutrino coupling changes parametrically (gravitational vs. axion-gauge kinetic) but at the same Planck-suppressed order. No inconsistency.
+§1.2 (line 51) and §7.1 (line 13): "ρ_Λ = ℏc · π²/(240R⁴) → R ≈ 12 μm."
+§4c.3 and throughout §§4b–4d: "R₀ = 10.1 μm."
 
----
+The discrepancy arises because §1.2 and §7.1 use the bare Casimir formula without mirror-sector correction, while §4c.3 includes the ξ⁴ correction. Both are legitimate but the two values appear in the same paper without any explanation that they are related. A referee will notice this immediately.
 
-**C1(c): ξ origin story with G₄ inflaton profile**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 6 §6.2 computes initial brane energy deposition from the dilaton wavefunction f(y) = e^{−αk|y|}, giving ρ_hid/ρ_vis = e^{−4kπ} ~ 10⁻¹¹ (warp-factor suppressed). With the G₄ axion as inflaton, the axion is the zero-mode of A₃ along compact 4-cycles — it has a flat bulk profile, not a warped one. The §6.2 initial energy ratio becomes ρ_hid/ρ_vis ≈ 1 (equal energy deposition on both branes). This changes the starting point of the §6.4 gravitational thermalization calculation, which then dominates the determination of ξ anyway. The final ξ ~ 0.3–0.9 range is not invalidated; the intermediate steps need updating.
-
-**What is needed:** Paper 6 §6.2 should note: "With the G₄ flux axion as inflaton (Paper 7), the axion has a flat bulk profile and the warp-factor suppression in §6.2 does not apply. For the G₄ axion, ρ_hid/ρ_vis ≈ 1 at the end of reheating, and gravitational thermalization (§6.4) dominates the determination of ξ." This revision strengthens the §6.4 argument.
+**What is needed.** §1.2 and §7.1: Add a parenthetical noting the two values: "R ≈ 12 μm (bare Casimir, mirror sector absent); the corrected value including the mirror sector's ξ⁴ contribution to ΔN_eff is R₀ = 10.1 μm (§4c.3), which is the value used in §§4b–4d."
 
 ---
 
-**C1(d): Predictions belonging to Paper 6**
+### FINDING C2 — §7.2 Thread 1: η formula for 5/2 contradicts Paper 7 revised §B.10.3a
 
-**Rating: (C) CONSISTENT after revision**
+**Rating: (C) MINOR**
 
-Paper 6 correctly eliminates dilaton inflation (ε = 32/3 ≫ 1), defers G₄ axion inflation to Paper 7, and makes no quantitative n_s/r claims. The four headline results (T_reh, ξ mechanism, EWPT, dilaton future) are all inflaton-model-independent as presented. No revision needed on this point.
+§7.2 Thread 1 (line 42): "m_ν / m_KK = χ(CP²)/2 + η(D_{S¹/Z₂})/2 = 5/2 where η is the eta invariant of the Dirac operator on the orbifold."
 
----
+Paper 7's revised §B.10.3a states: "The eta invariant of the spin^c Dirac operator on CP² — computed explicitly from the Cahen-Franc-Gutt spectrum and proven from the anti-holomorphic isometry of CP² — is identically zero (η = 0 for all standard spin^c structures). The −1/2 does not arise from APS boundary corrections; it arises from the physics of M-theory flux at the orbifold fixed plane." Paper 7 explicitly rules out the APS boundary contribution as the source of the −1/2.
 
-### PART D: Moduli Stabilization and the Ordering Problem
+The η formula in §7.2 Thread 1 invokes exactly the mechanism Paper 7 rules out. This is an internal cross-paper contradiction between Paper 9 §7.2 and Paper 7 revised §B.10.3a.
 
----
-
-**D1(a): What Papers 1–6 assume about R**
-
-**Rating: (C) CONSISTENT**
-
-Paper 7 Theorem U claims all observables are R-independent. Checking against Papers 1–6: the core high-precision observables (α₃/α₂, sin²θ_W, n_s, r, Ω_DM/Ω_b, N_eff) are genuinely R-independent. Dimensionful observables with absolute-scale predictions (m_H, KK resonance masses) depend on R through r₃(R), but Paper 4 explicitly acknowledges this via Open Problem OC-2. Paper 7's abstract claim "all observables are R-independent" should be revised to distinguish dimensionless from dimensionful observables (see D1(b)).
+**What is needed.** §7.2 Thread 1: Replace "m_ν / m_KK = χ(CP²)/2 + η(D_{S¹/Z₂})/2 = 5/2" with the decomposition of §4c.2: "the number 5/2 = χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2, where 3 is the spin^c Dirac index on CP² and 1/2 is the fractional instanton number (Paper 7 §B.10.1). The eta invariant η(D_{CP²}) = 0, ruling out the APS boundary interpretation (Paper 7 §B.10.3a)."
 
 ---
 
-**D1(b): m_H, M_GUT, and √σ depend on R through r₃(R)**
+### FINDING C3 — §4c.8: Third m_ν value (48.8 meV) used in the summary
 
-**Rating: (B) RESOLVABLE TENSION — critical for submission**
+**Rating: (C) MINOR**
 
-Paper 7 establishes r₃² = n₁/(2c_R) ∝ R⁻¹ (since c_R ∝ R). Therefore:
-- M_GUT = r₃⁻¹ ∝ R^{1/2}
-- r₂ = ρ r₃ ∝ R^{−1/2} (since ρ = √3/2 is R-independent)
-- M_KK = r₂⁻¹ ∝ R^{1/2}
-- m_H ∝ M_KK ∝ R^{1/2} (gauge-Higgs unification)
-- τ_p ∝ M_X⁴ ∝ R²
+§4c.8 (line 529): "Closing it requires ... m_ν ≈ 48.8 meV (testable from CMB-S4)."
 
-Paper 7's gap-response explicitly acknowledges this, but the Paper 4 and Paper 5 source files do not state the R-dependence of their predictions. A referee of Papers 4 or 5 reading Paper 7 will notice this immediately.
+Three distinct neutrino mass values appear in Paper 9's §4c: 48.843 meV (exact topological identity at canonical R₀ and M_GUT = 2 × 10¹⁵ GeV — the 4.7σ scenario), 49.74 meV (approximate closure at M_GUT = 1.65 × 10¹⁶ GeV — the preferred scenario), and now 48.8 meV in the summary. The value 48.8 meV in §4c.8 conflates the 4.7σ-tension scenario with the preferred approximate-closure scenario and is the wrong value to describe as "testable from CMB-S4."
 
-The important physics consequence: m_H ~ 125 GeV and dark energy scale (2.3 meV)⁴ are related through R — both are determined by R_obs, whose value is the CC problem. Paper 4 §7.21's "zero free parameters" claim for dark energy is accurate given R = R_obs, but the coincidence that m_H ~ 125 GeV at the same R_obs as dark energy is a genuine structural observation that deserves to be stated explicitly.
-
-**What is needed:** Paper 4 §6.7 should state: "Since r₂ ∝ R^{−1/2} (Paper 7, §3.2), M_KK ∝ R^{1/2}, and the Higgs mass depends on R. The prediction m_H ~ 125 GeV is consistent with the observed R_obs ≈ 10.1 μm (determined by dark energy matching), whose underivability is established in Paper 7 Theorem U." Paper 5 §3.2.2 should add an analogous two-sentence note. Paper 7 §3.6.3 should revise "all observables are R-independent" to "all dimensionless observables are R-independent; dimensionful observables (M_GUT, m_H, KK resonance masses) depend on R through r₃(R)." Papers requiring revision: Papers 4, 5, 7 (one paragraph each or less).
+**What is needed.** §4c.8 (line 529): Replace "m_ν ≈ 48.8 meV (testable from CMB-S4)" with "m_ν ≈ 49.7 meV (testable at 5–8σ by CMB-S4, §4c.6–4c.7; this is the approximate-closure prediction at M_GUT = 1.65 × 10¹⁶ GeV; the exact closure at M_GUT* = 7.04 × 10¹⁶ GeV is consistent with the current central value 50.15 meV)."
 
 ---
 
-**D1(c): Logical ordering of Papers 4, 5, and 7**
+### FINDING C4 — §6 Paper 3 summary: "Page curve is derived" without conditional qualifier
 
-**Rating: (B) RESOLVABLE TENSION**
+**Rating: (C) MINOR**
 
-Papers 4 and 5 use r₃ by fixing it from α_s(M_Z) (observational input). Paper 7 derives r₃ from flux stabilization. Both give the same r₃ — this consistency should be stated explicitly with cross-references in both directions.
+§6 Paper 3 summary (line 50): "the 4D radiation is thermal, the 5D state is pure. The Page curve is derived."
 
-**What is needed:** Papers 4 §3.3 and 5 §3.2 should add forward references to Paper 7 §3.2 noting that r₃ is independently confirmed by flux stabilization. Paper 7 §3.5 should note consistency with Papers 4 and 5.
+Paper 3's gap-response to Finding B1(a) replaced all "Deriving (not assuming) the Page curve" language with "Reproducing the Page curve conditionally: given the fast-scrambler assumption (Sekino-Susskind), the e-Hilbert space structure yields the full Page curve." The word "derived" in the synthesis paper's one-sentence summary is precisely the language Paper 3 corrected.
 
----
-
-**D1(d): The cosmological constant — environmental selection in Paper 4?**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 4 §7.21 presents the dark energy prediction without noting that R_obs — on which it depends — is declared underivable by Paper 7 Theorem U. The prediction is a consistency relation at R = R_obs, not a derivation of R_obs.
-
-**What is needed:** Paper 4 §7.21 should add: "The zero-parameter nature of the dark energy derivation should be understood as a consistency relation: given the observed R_obs (whose value is the CC problem, Paper 7 Theorem U), the Casimir energy c/R_obs⁴ precisely reproduces ρ_Λ^obs with no further free parameters."
+**What is needed.** §6 Paper 3 summary (line 50): Replace "The Page curve is derived" with "The Page curve is reproduced conditionally (given the fast-scrambler assumption, Paper 3 §7.6)."
 
 ---
 
-### PART E: Gauge Structure Consistency
+### FINDING C5 — §4b.7: ACT DR6 tension stated as "3.5σ" without the corrected range
+
+**Rating: (C) MINOR**
+
+§4b.7 (line 200): "N_eff = 2.86 ± 0.13 — 3.5σ below the fluid-approximation prediction of 3.31–3.39."
+
+Paper 2's gap-response to Finding B1(a)/(b) required the tension to be stated as "between 2.3σ (free-streaming lower estimate) and 3.5σ (fluid upper bound)." §4b.7 does eventually provide the correction (lines 203–211), but opening with "3.5σ below" without immediately noting it is the upper bound is inconsistent with Paper 2's corrected presentation.
+
+**What is needed.** §4b.7 (line 200): After "3.5σ below the fluid-approximation prediction," add "(upper bound; the free-streaming corrected estimate gives ≈2.3σ tension, as derived below)." This is a parenthetical insertion.
 
 ---
 
-**E1(a): sin²θ_W ≈ 0.232 and α₃ = α₂ — consistent?**
+## 3. Cross-Reference Audit
 
-**Rating: (C) CONSISTENT**
-
-Paper 4 §7.1 correctly derives sin²θ_W = 3/8 at GUT scale → 0.231 at M_Z, under GUT normalization assumption. Paper 7's α₃ = α₂ from n₂/n₁ = −17/9 is consistent. Both papers acknowledge that GUT normalization is assumed. No inconsistency in the numerics. The "geometric" content is that α₃ = α₂ is derived from CP² × S² geometry; sin²θ_W then follows from standard SU(5) running under GUT normalization.
-
----
-
-**E1(b): α₁ is not fixed by flux — sin²θ_W requires α₁ = α₂ = α₃**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 7 establishes α₃ = α₂ from flux. But α₁ = 1/(2πM_Pl² R²) depends on R (Theorem U). The "complete GUT unification" α₃ = α₂ = α₁ is not derived from the framework's flux physics — only two of the three couplings are equalized by the flux. The sin²θ_W prediction assumes α₁ = α₂ at the GUT scale (GUT normalization), which is equivalent to three-coupling unification, which is not derived.
-
-**What is needed:** Papers 4 §7.1 and 7 §6 should both note: "Only α₃ = α₂ follows from flux quantization. α₁ depends on R (Theorem U). The sin²θ_W prediction assumes GUT normalization for α₁, equivalent to asserting three-coupling unification — a standard SU(5) assumption that the framework motivates but does not derive."
-
----
-
-**E1(c): M_X and proton lifetime consistency**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-M_X ∝ R^{1/2} (from D1(b)), so τ_p ∝ R². Paper 4's prediction τ_p ~ 10³⁴–10³⁶ years at M_X ~ 10¹⁵ GeV is consistent with observation for R = R_obs. Paper 4 §7.3 should note this R-dependence explicitly.
+| Paper 9 location | Claim | Status |
+|-----------------|-------|--------|
+| §2 Pattern 5 — Theorem K.1 | UV finiteness all loop orders | Consistent — but scheme-independence caveat missing (Finding B3) |
+| §4b.1 — k = 2 (Paper 1) | k = 2 as derived value | **INCONSISTENT** — Paper 1 labels k as fitted (Finding B1) |
+| §4b.7 — ACT tension | 3.5σ | **INCONSISTENT** — should be 2.3–3.5σ range (Finding C5) |
+| §4b.9 — 14σ | CMB-S4 neutrino mass discrimination | **RETRACTED** in Paper 4 (Finding A1) |
+| §4b.9 — 9–17σ | CMB-S4 N_eff discrimination | **INCONSISTENT** — Papers 2 & 4 now give 4–6σ conservative (Finding A2) |
+| §4b.9 — 49.74 meV | Neutrino mass prediction | **RETRACTED** in Paper 4; should be 49.7 ± 0.5 meV (Finding A1) |
+| §4c.2 — "HW anomaly forces 5/2" | 5/2 origin | **INCONSISTENT** — Paper 7 calls 5/2 a numerical coincidence (Finding B2) |
+| §4c.6 table — 13.7σ | CMB-S4 pull | **RETRACTED** in Paper 4 (Finding A1) |
+| §4d.4 — 13.7σ | CMB-S4 discrimination | **RETRACTED** in Paper 4 (Finding A1) |
+| §6 Paper 2 — S8 = 0.753–0.785 | S8 range | **INCONSISTENT** with §4b.3 CAMB output of 0.770–0.803 (Finding B4) |
+| §6 Paper 3 — "Page curve is derived" | Page curve status | **INCONSISTENT** with Paper 3 correction (Finding C4) |
+| §7.2 Thread 1 — η formula | 5/2 decomposition | **INCONSISTENT** with Paper 7 revised §B.10.3a (Finding C2) |
+| §4b.8 — "localizes dark matter" | CP² role | **INCONSISTENT** with Paper 5 §5.7a correction (Finding B5) |
+| §1.2, §7.1 — R ≈ 12 μm | Casimir formula | Technically correct but inconsistent with §§4b–4d usage without explanation (Finding C1) |
+| §7.2 Thread 3 — L ≥ 3 gap | Finiteness frontier | **Consistent** with Paper 1 (correctly stated as open) |
+| Pattern attribution map (Appendix) | All attributions | Consistent with series |
 
 ---
 
-### PART F: The Confinement–GUT Scale Connection
+## 4. What Paper 9 Should Add
+
+Three elements are absent from Paper 9 but required for cross-paper consistency:
+
+**4.1 R-dependence of dimensionful predictions (from cross-paper Finding D1b)**
+
+Paper 9 claims: "The framework has one free parameter: R ... Every other quantity is a consequence." Paper 7's gap-response established that M_GUT ∝ R^{1/2}, m_H ∝ R^{1/2}, and τ_p ∝ R². The dimensionful predictions are consequences of R and the geometry, but since R is the one free parameter, they are consistency relations at R = R_obs, not parameter-free predictions in the same sense as dimensionless observables (sin²θ_W, α₃/α₂, n_s, N_eff). Paper 9 should add one paragraph distinguishing dimensionless (genuinely parameter-free) from dimensionful (consequences of R at R_obs) predictions.
+
+**4.2 Casimir-as-potential reconciliation (from cross-paper Finding A1c)**
+
+The synthesis paper presents "ρ_Λ = ℏc · π²/(240R⁴)" as the dark energy formula (Pattern 3 §2, §1.2) without noting that this is V(R₀) — the dilaton potential V(R) = c/R⁴ evaluated at the frozen R₀. This is the cross-paper inconsistency identified in the series report. The synthesis paper should state explicitly: the S¹ Casimir energy produces a dilaton potential V(R) = c/R⁴ (Paper 6 §2); the observed cosmological constant is V(R₀) at the frozen dilaton value; the freezing is established in Paper 6 Appendix A (ΔR/R₀ ~ 3 × 10⁻³⁰ per Hubble time).
+
+**4.3 ξ origin story completeness (from cross-paper Finding B1c)**
+
+§4b states ξ is "set at leptogenesis by the wavefunction localization of the bulk neutrino N^{5D}" (lines 33–36), which is correct. But it implies the thermal history closes the derivation. Paper 6's gap-response states that Paper 6's thermal calculation reaches ξ ~ 0.79 at its last quantitative step, with the 0.79 → 0.432 step identified as requiring a full two-sector Boltzmann simulation (future work). The synthesis paper should acknowledge that Paper 6 establishes the range ξ ~ 0.3–0.9 mechanistically, while the precise value ξ = 0.432 is determined from Ω_DM/Ω_b (Paper 2), and the two derivations have not been shown quantitatively consistent.
 
 ---
 
-**F1(a): Scale consistency — r₃ in Papers 4 and 5**
+## 5. Summary Table
 
-**Rating: (C) CONSISTENT**
+| Finding | Rating | Location | Issue |
+|---------|--------|----------|-------|
+| A1 | **A — GENUINE GAP** | §4b.9, §4c.6–4c.7, §4d.4 | 14σ/13.7σ and 49.74 meV retracted in Paper 4; appear ~10–12× in Paper 9 |
+| A2 | **A — GENUINE GAP** | §4b.9 | 9–17σ N_eff discrimination; Papers 2 & 4 give 4–6σ conservative with fluid values labeled as upper bounds |
+| B1 | **B — CLOSABLE GAP** | §4b.1, §4b.8, §4c.4 | k = 2 cited "(Paper 1)" as if derived; Paper 1 now labels it a fitted parameter |
+| B2 | **B — CLOSABLE GAP** | §4b.8, §4c.2–4c.7 | "Forced by HW anomaly" implies topological derivation; Paper 7 requires "numerical coincidence" language |
+| B3 | **B — CLOSABLE GAP** | §2 Pattern 3, §2 Pattern 5 | Casimir "exact to all orders" and UV finiteness without scheme-independence open problem caveat |
+| B4 | **B — CLOSABLE GAP** | §6 Paper 2 summary | S8 = 0.753–0.785 inconsistent with §4b.3 CAMB output of 0.770–0.803 |
+| B5 | **B — CLOSABLE GAP** | §4b.8 | "Localizes dark matter" language inconsistent with Paper 5 §5.7a correction |
+| B6 | **B — CLOSABLE GAP** | §4c.3, §4c.6 | Conditionality-on-Paper-7 disclaimer absent from §4c.3 and §4c.6 table |
+| C1 | **(C) MINOR** | §1.2, §7.1 | R ≈ 12 μm vs. R₀ = 10.1 μm unexplained |
+| C2 | **(C) MINOR** | §7.2 Thread 1 | η formula for 5/2 ruled out by Paper 7 revised §B.10.3a |
+| C3 | **(C) MINOR** | §4c.8 | Third m_ν value (48.8 meV) in summary, inconsistent with primary prediction |
+| C4 | **(C) MINOR** | §6 Paper 3 summary | "Page curve is derived" should be "reproduced conditionally" |
+| C5 | **(C) MINOR** | §4b.7 | ACT tension stated as 3.5σ without the corrected 2.3–3.5σ range label |
 
-The apparent dimensional catastrophe (σ at GUT scale ≪ 440 MeV) is explicitly resolved by Paper 5 §3.2.2 through the QCD beta function running over 13 orders of magnitude. The CP² geometry sets the GUT-scale boundary condition α_s(M₃) = 1/25; dimensional transmutation then gives Λ_QCD = 190 MeV; the string tension at confinement scale is √σ ~ Λ_QCD × 2.3 ~ 437 MeV. Both Papers 4 and 5 use the same r₃, consistently defined. No inconsistency.
-
----
-
-**F1(b): QCD running explicitly performed**
-
-**Rating: (C) CONSISTENT**
-
-Paper 5 §3.2.2 explicitly performs the RG running with b₀ = 7 (two-loop MS-bar, N_f = 3), three-loop running factor 2.3, and quotes Λ_QCD = 190 MeV (12% below PDG central value 210 MeV — noted as a 1.4σ discrepancy within expected one-loop accuracy over 13 orders of magnitude). The revised paper correctly characterizes the result as a leading-order formula with ~25% systematic uncertainty, not a precision prediction.
-
----
-
-### PART G: The Mirror Sector Across Papers
-
----
-
-**G1(a): Mirror BBN and N_eff^{BBN} vs. N_eff^{recomb}**
-
-**Rating: (B) RESOLVABLE TENSION**
-
-Paper 2's time-varying N_eff is correctly computed: N_eff^{BBN} ≈ 3.55–3.65, falling to N_eff^{recomb} = 3.31–3.39 after mirror e± annihilation. Paper 6 §7's mirror BBN discussion should reference this distinction — the mirror helium yield Y_p^{mirror} is governed by N_eff^{BBN}, not N_eff^{recomb}.
-
-**What is needed:** Paper 6 §7 should add one paragraph: "Mirror BBN proceeds at T_mirror ≈ ξ × T ≈ 0.43–0.47 MeV (Paper 2), when N_eff^{BBN} ≈ 3.55–3.65. The mirror helium yield uses this BBN-epoch value; the lower N_eff^{recomb} = 3.31–3.39 quoted in Paper 2's CMB predictions reflects mirror e± annihilation occurring after BBN."
+**Count: 2 genuine gaps (A), 6 closable gaps (B), 5 minor issues (C).**
 
 ---
 
-**G1(b): Mirror baryons = dark matter**
+## 6. Recommendation
 
-**Rating: (C) CONSISTENT**
+Paper 9 is not submittable in current form alongside the corrected companion papers. The two A-rated findings — the 14σ/13.7σ retraction and the uncorrected N_eff discrimination range — are publication-blocking because any referee comparing Paper 9 with Paper 4 will find them directly contradictory on the paper's own stated "sharpest prediction."
 
-Paper 2 §2.2 and Appendix E are explicit: Ω_DM = Ω_{mirror baryons}. The scaling law Ω_DM/Ω_b = 1/ξ² is a ratio of mirror baryons to visible baryons. No confusion between mirror baryons and non-baryonic dark matter. Paper 6 §7 is consistent.
+The B-rated findings are important for the series' credibility as a whole: the k = 2 and 5/2 "forced" language issues are ones a serious referee will identify, and the S8 numerical inconsistency within the paper itself is a straightforward error.
 
----
+**Recommended revision order:**
+1. Find-and-replace all instances of "14σ", "13.7σ", and bare "49.74 meV" with the corrected values (m_ν = 49.7 ± 0.5 meV, 5–8σ discrimination). Mechanical search across §§4b.9, 4c.6, 4c.7, and 4d.4.
+2. Revise the N_eff CMB-S4 discrimination in §4b.9 to label fluid values as upper bounds and give the corrected conservative range.
+3. Revise the 5/2 language across §§4b.8 and 4c to "numerical coincidence" consistent with Paper 7 §B.10.3a.
+4. Add k = 2 fitted-parameter disclaimers in §§4b.1, 4b.8, 4c.4.
+5. Address B3–B6 and C1–C5.
+6. Add the three new paragraphs identified in Section 4 (R-dependence of dimensionful predictions; Casimir-as-potential reconciliation; ξ origin completeness).
 
-## 3. Parameter Audit Table
-
-| Parameter | Paper 1 | Paper 2 | Paper 3 | Paper 4 | Paper 5 | Paper 6 | Paper 7 | Consistent? |
-|-----------|---------|---------|---------|---------|---------|---------|---------|-------------|
-| **ξ** | — | 0.432–0.49 (from Ω_DM/Ω_b) | — | — | — | ~0.3–0.9 mechanism; "0.49 (Paper 2)" in abstract | — | **INCONSISTENCY A (B1c):** Paper 6 abstract implies ξ = 0.49 derived from mechanism; §6.5 limits claim to ξ ~ 0.3–0.9 |
-| **r₃ (CP² radius)** | — | — | — | r₃⁻¹ ~ 10¹⁵ GeV (from α_s(M_Z)) | same r₃ | — | r₃² = n₁/(2c_R) ∝ R⁻¹; r₃/l₁₁ ≈ 0.003 | **TENSION (D1b):** Papers 4, 5 use r₃ without stating R-dependence |
-| **M_X (GUT scale)** | — | — | — | M_X ~ 10¹⁵ GeV | M₃ ~ 10¹⁵ GeV | — | M_GUT = r₃⁻¹ ∝ R^{1/2} | **TENSION (D1b):** M_X is R-dependent; not stated in Papers 4, 5 |
-| **T_reh** | — | — | — | — | — | 5 × 10⁹ GeV | — | Internally consistent; needs Paper 7 H_inf check (C1a) |
-| **R (S¹ radius)** | 12–21 μm (dark energy matching) | — | 12 μm | uses α_s to fix r₃ | — | R₀ ~ 21 μm | R_bare ~ l_Pl (Theorem U); R_obs ≈ 10.1 μm | **CONSISTENT:** all use R_obs from dark energy; Paper 7 characterizes R_bare vs. R_obs as CC problem |
-| **N_eff** | 3.31–3.39 (Paper 2) | 3.31–3.39 (CAMB) | — | — | — | deferred to Paper 2 | — | **CONSISTENT** |
-| **n_s, r** | — | — | — | — | — | no claim (deferred to Paper 7) | n_s ≈ 0.967, r ≈ 0.001 | **CONSISTENT** |
-| **ρ = r₂/r₃** | — | — | — | √3/2 (from α₃/α₂ = 1, Appendix C) | — | — | √3/2 (from n₂/n₁ = −17/9 F-flat) | **CONSISTENT:** same value from two independent arguments |
-| **m_H** | — | — | — | ~125 GeV for M_KK ~ 1–2.5 TeV (Open Problem OC-2) | — | — | r₂ = ρ r₃ ∝ R^{−1/2}; m_H ∝ R^{1/2} | **TENSION (D1b):** m_H is R-dependent; labeled OC-2 but R-dependence not stated |
-| **√σ** | — | — | — | — | [410, 510] MeV (25% uncertainty) | — | — | **CONSISTENT within Paper 5**; depends on r₃ via α_s running (F1a sound) |
-| **sin²θ_W** | — | — | — | 0.232 (GUT normalization assumed) | — | — | α₃ = α₂ from flux → 0.231 at M_Z | **CONSISTENT numerically; TENSION (E1b):** α₁ R-dependent, three-coupling unification not derived |
-| **S¹ Casimir (c/R⁴)** | c = ρ_Λ R₀⁴ | — | — | "S¹ Casimir = dark energy (constant)" | — | V(R) = +c/R⁴ (runaway) | — | **INCONSISTENCY A (A1c):** Paper 4 presents V(R₀) as constant; Paper 6 presents V(R) as scalar field; reconciliation requires Paper 6 App. A to be imported into Paper 4 |
-| **Σm_ν** | 0.06 eV | 0.06 eV | — | — | — | — | — | **CONSISTENT** |
-| **K (washout)** | — | K ≈ 5 (m_ν = 50 meV; M_N cancels) | — | — | — | entropy correction from QCD confinement (different epoch) | — | **CONSISTENT:** different physical corrections at different epochs |
-
-**Summary count: 2 genuine inconsistencies (A), 12 resolvable tensions (B), 11 consistent (C).**
-
----
-
-## 4. Recommended Submission Order
-
-**Phase 1 — Revise first, before any submission:**
-- Paper 7: revise §3.6.3 to distinguish dimensionless from dimensionful R-independence; add explicit R-dependence of M_GUT.
-- Paper 6: revise §6.2 for G₄ axion flat profile; revise abstract to remove premature ξ = 0.49 claim from mechanism.
-- Paper 4: revise §7.21 (A1(c) fix); revise §6.7 (D1(b) fix); revise §7.1 (E1(b) note on α₁).
-
-**Phase 2 — Submit together:** Papers 1 and 2. These establish the M⁴ × S¹ sector and the cosmological predictions. Paper 2's ξ determination is from Ω_DM/Ω_b — the dependency chain is clean.
-
-**Phase 3 — Submit together, after Phase 2:** Papers 3 and 4. Paper 3 UV completion depends on Paper 4 geometry. Paper 4 depends on Papers 1 (finiteness) and 7 (flux stabilization).
-
-**Phase 4 — Submit after Phase 3:** Papers 5, 6, and 7. Paper 5 depends on Paper 4's r₃. Paper 6 depends on Paper 7 for inflaton identification. Paper 7 depends on Paper 4 for GUT condition.
-
-**Papers that cannot be submitted before others are revised:**
-- Paper 3 cannot be submitted before Paper 4 is revised.
-- Papers 4 and 5 should not claim specific numerical predictions without the Paper 7 R-dependence caveat.
-- Paper 6 cannot be submitted with its current abstract claiming ξ = 0.49 emerges from the mechanism.
-
----
-
-*Report prepared following complete reading of all seven abstracts, referee reports, gap-responses, and all source sections specified in the referee prompt: Paper 1 Appendices S and K; Paper 2 §§2–7 and Appendix E; Paper 3 Appendix A; Paper 4 §6, Appendix C; Paper 5 §3; Paper 6 §§3, 4, 6, Appendix A; Paper 7 §§3, 5, Appendix A. All cross-references are to section numbers as found in the revised source files.*
+*Report prepared following complete reading of all Paper 9 preprint section files (00-abstract through 08-appendix) and cross-referencing against Paper 1 gap-responses §§C3(a), C3(e), A1(b); Paper 2 gap-responses §§B1(a)/(b), C1(a); Paper 3 gap-responses §§B1(a); Paper 4 gap-responses §§B2(a), E1(b), E4(a–d); Paper 5 gap-responses §§E1(a)–(c); Paper 7 gap-responses §§A3(a)–(e), A4(a); and the cross-paper series report.*

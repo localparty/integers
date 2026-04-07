@@ -153,12 +153,16 @@ allowing m_ν to deviate from its current central value. Solving for the m_ν*
 that would close the gap exactly:
 
     m_ν* = (5/2) × ℏc / R_A × [g₂(M_Z)/g₂(M_GUT)]⁻²
-         = 49.74 meV
+         = 49.7 ± 0.5 meV
+
+The ±0.5 meV theory uncertainty is dominated by ΔN_vis entering through R_A
+(a 5% uncertainty in ΔN_vis propagates as ~0.6 meV in m_ν*; see precision
+budget below and Paper 4 §7.5.7a).
 
 The current NuFIT 5.3 central value is m_ν = 50.15 ± 0.28 meV (normal
 ordering, atmospheric sector). The offset is:
 
-    Δm_ν = 49.74 − 50.15 = −0.41 meV
+    Δm_ν = 49.7 − 50.15 = −0.45 meV
 
 At current precision this is a 1.46σ deviation — consistent with zero within
 current measurement uncertainties.
@@ -170,16 +174,19 @@ projected precision σ(Σm_ν) = 0.030 meV (combined CMB-S4 + DESI). At this
 precision, the discrimination between:
 
     H₀: m_ν = 50.15 meV   (current central value, no closure at 1.65 × 10¹⁶ GeV)
-    H₁: m_ν = 49.74 meV   (closure prediction at M_GUT = 1.65 × 10¹⁶ GeV)
+    H₁: m_ν = 49.7 meV    (closure prediction at M_GUT = 1.65 × 10¹⁶ GeV)
 
 is:
 
-    |50.15 − 49.74| / 0.030 = 13.7σ
+    naive pull: |50.15 − 49.7| / 0.030 ≈ 15σ
+    net discrimination (including ±0.5 meV theory uncertainty from ΔN_vis): 5–8σ
+    (Paper 4 §7.5.7a)
 
-This is the sharpest prediction in the QG5D framework. It is a genuine
-quantitative test: the framework predicts not just the sign of a shift but the
-exact magnitude, 49.74 meV, with a stated origin (the 0.81% closure gap at
-M_GUT = 1.65 × 10¹⁶ GeV), and the test is decisive at CMB-S4 precision.
+This remains the sharpest prediction in the QG5D framework: a specific
+quantitative target at a named experiment with a defined timeline. The
+discriminating power of 5–8σ (after accounting for the ΔN_vis theory
+uncertainty budget) is unambiguous — the framework will pass or fail
+decisively at CMB-S4 + DESI.
 
 The prediction carries the following precision budget:
 

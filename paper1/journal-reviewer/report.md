@@ -1,10 +1,9 @@
-# Journal Referee Report
+# Referee Report
+## Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry
 
-**Manuscript:** "Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry"
-
-**Submitted to:** Physical Review Letters / Physical Review D / Communications in Mathematical Physics
-
-**Referee profile:** Mathematical physicist with expertise in perturbative quantum gravity and extra-dimension compactifications.
+**Journal:** Physical Review D (or Communications in Mathematical Physics)
+**Referee profile:** Mathematical physicist, perturbative quantum gravity and KK compactifications.
+**Run:** r01 (previous run archived to reviewer-runs/r00)
 
 ---
 
@@ -12,21 +11,23 @@
 
 **Recommendation: Major Revision**
 
-This manuscript is ambitious in scope, technically earnest, and contains real mathematics. It cannot be accepted in its present form, but it is not without merit and a substantive revision could yield a publishable paper — though almost certainly not in PRL, and more plausibly in PRD or CMP if properly scoped.
+This paper presents a U(1) Kaluza-Klein framework on M⁴ × S¹ and claims geometric derivations of spin-statistics, the Born rule, the Aharonov-Bohm effect, and perturbative UV finiteness of linearized 5D gravity. It is ambitious, carefully written, and self-aware: the abstract and Table 1.1 explicitly distinguish established results, geometric interpretations, and conjectures, and prior rounds of revision have improved its honesty substantially.
 
-The paper proposes a 5D Kaluza-Klein framework in which the compact e-circle simultaneously explains quantum mechanics, the spin-statistics theorem, the Aharonov-Bohm effect, and the perturbative UV finiteness of linearized gravity. The strongest technical result — Theorem K.1 (Universal Epstein Vanishing) combined with Theorem S.1 (Perturbative Finiteness) — is a genuine mathematical observation: the Epstein zeta function at negative integers vanishes because E_L(-j; Q) = π^j Λ(-j)/Γ(-j) = 0 by the fact that 1/Γ(-j) = 0 for positive integers j. This is correct as stated.
+The paper cannot be published in its present form for the following reasons, in decreasing severity:
 
-However, the manuscript has four critical problems that prevent publication as submitted:
+1. **The finiteness claim is not shown to be scheme-independent.** Goroff-Sagnotti computed the same two-loop amplitude in dimensional regularization and obtained a nonzero 1/ε pole. The paper derives zero via zeta regularization. The Lin-Zhai / Casimir analogy invoked to justify physical equivalence addresses the vacuum energy, not the R³ operator coefficient. Physical S-matrix elements must be scheme-independent; the "zero" produced by zeta regularization is not automatically physical.
 
-(A) The finiteness claim, while mathematically correct as a statement about zeta-regularized KK sums, has not been demonstrated to imply scheme-independent physical finiteness of the graviton S-matrix. The Goroff-Sagnotti coefficient is nonzero in dimensional regularization for the 4D theory; the paper's own appendix acknowledges the scheme-dependence of the leading S₀ = 0 term (Appendix S, §S.7.1) but then argues this away with insufficient force.
+2. **The factorization gap at L ≥ 3 is honestly admitted but not closed.** Theorem K.3 (BPHZ Factorization) is a genuine advance; its locality argument is physically sound. However, the critical Step 3 — that BPHZ subtraction at overlapping subdivergences commutes with Epstein zeta evaluation — relies on polynomial-in-(n²/R²) KK dependence of BPHZ counterterms at the Schwinger boundary α_e → 0. This is argued from Weinberg's theorem but not verified for the three-loop Mercedes topology. The honest 80–85% confidence stated in §K.6.2 is appropriate; "conditional theorem" is the correct label.
 
-(B) The spin-statistics "derivation" does not produce a new logical path from geometry to the theorem; it presupposes the Hilbert-space structure (Wigner's theorem, projective representations of Spin(d)) that the standard proof already uses, and then shows the winding-number picture is consistent with it. This is valuable geometric insight, not an independent derivation.
+3. **The spin-statistics derivation is a geometric re-description, not a logically independent proof.** The paper now acknowledges this explicitly in §4.2.7, but surrounding prose still occasionally overstates the contribution. The genuine new content — fixing the free parameter χ(σ) in Leinaas-Myrheim — is real but modest.
 
-(C) The factorization gap at L ≥ 3 loops — acknowledged honestly in Appendix K, §K.5.2 — means the all-orders finiteness result is supported at L = 1 and L = 2 by explicit computation (or structural argument conditional on vertex mass-independence), and at L ≥ 3 by an open conjecture. The paper's summary tables sometimes present this as "established," which overstates the case.
+4. **The k = 2 warp factor and c_ν = 0.634 chain is circular.** k ≈ 2 is inferred from the charged-lepton mass ratio (a fit, not a derivation), then used to compute c_ν, which feeds Paper 2's leptogenesis calculation. This is an inversion disguised as a prediction.
 
-(D) The 22-phenomena scope, while partially labeled by rigor level, creates a credibility problem the paper does not adequately address. A single submission claiming to derive quantum mechanics, UV finiteness, dark matter, neutrino masses, and baryon asymmetry invites dismissal before the technical content is read.
+5. **The Freed-Witten / CP² formula in Appendix Z §Z.3.1 imports Paper 4's 11D geometry into Paper 1's 5D scope.** The formula m_ν/m_KK = χ(CP²) − c₂^{eff}/2 = 5/2 is not derivable from M⁴ × S¹; it requires the full 11D M-theory compactification of Paper 4, which is not established here.
 
-These are serious issues, but none is fatal. The paper's honest self-assessment in Appendices U, K, and S demonstrates awareness of the limitations. The task for revision is to bring the claims in the main text and abstract into strict alignment with the hedges in the technical appendices.
+6. **The 22-phenomena scope creates a credibility problem.** Even with careful epistemic labels, this breadth will cause editorial concern at any high-impact journal.
+
+Issues 3–6 are closable at revision. Issues 1–2 are deeper; issue 1 requires a scheme-independence demonstration that is currently absent.
 
 ---
 
@@ -34,422 +35,402 @@ These are serious issues, but none is fatal. The paper's honest self-assessment 
 
 ---
 
-### PART A: The Finiteness Claim
+### Part A: The Finiteness Claim
 
----
-
-#### A1: The S₀ Vanishing and Scheme Dependence [HEAVY]
-
----
-
-**A1(a): Legitimacy of the Epstein zeta application**
-
+#### A1(a) — Legitimacy of the Epstein Zeta Application
 **Rating: (B) CLOSABLE GAP**
 
-The manuscript correctly identifies that at L loops the KK mode sum reduces to an L-dimensional Epstein zeta function E_L(s; Q_L) evaluated at non-positive integers, and that by the Epstein-Terras theorem the unique pole is at s = L/2 > 0, well separated from the needed values s ≤ 0. Theorem K.1 (§K.7b) correctly derives vanishing from E_L(-j; Q) = π^j Λ(-j)/Γ(-j) = 0 because Γ has poles at all non-positive integers. This is mathematically sound.
+Theorem K.1 (Universal Vanishing: E_L(−j; Q) = 0 for all j ≥ 1, proved in §K.7b via 1/Γ(−j) = 0) is a genuine mathematical theorem, correctly proved and fully general with respect to Q. The Epstein-Terras analytic continuation is correctly invoked; the pole of E_L at s = L/2 > 0 is correctly separated from the needed values at s ≤ 0.
 
-However, the identification of the Epstein zeta function arising at each loop order is explicitly verified only at L = 1 (one-dimensional sum = Riemann zeta, App. F) and L = 2 (sunset topology = Eisenstein lattice sum 6ζ(s)L(s,χ₋₃), App. G). At L ≥ 3, the reduction of the full KK mode sum to E_L(s; Q_L) is claimed based on the Seeley-DeWitt expansion structure and a locality argument in §K.5.3, but no explicit calculation has been performed. The paper acknowledges this as the "factorization gap" (§K.5.2, §K.6.2).
+The gap is not in the vanishing of E_L once it appears, but in whether the full L-loop Feynman integral factorizes into (4D integral) × E_L(−j; Q_L) in the presence of overlapping subdivergences. This is established at L = 1, 2 by explicit computation and argued for general L via Theorem K.3 — see A1(d).
 
-**What is needed:** Either (a) an explicit three-loop calculation verifying the KK sum takes the form E₃(-j; Q₃) (Route C in §K.5.2), or (b) a rigorous Kontsevich-Vishik symbol class argument for the product manifold (Route A). The locality argument in §K.5.3 is physically well-motivated but does not constitute a proof. This is a 1-paper-scale gap for complete rigour; a careful statement of what is conjectured and what is proved is sufficient for publication.
+**What is needed:** Confirm that Q_L is positive-definite at each L (argued via Gershgorin/diagonal dominance in §K.5.1 — this part is sound). The bottleneck is the factorization, not the vanishing. *Difficulty: 1 page to clarify scope.*
 
 ---
 
-**A1(b): Scheme independence**
-
+#### A1(b) — Scheme Independence
 **Rating: (A) GENUINE GAP**
 
-This is the most serious problem in the paper. The Goroff-Sagnotti calculation uses dimensional regularization and finds a 1/ε pole with coefficient 209/2880 ≠ 0. The present paper uses zeta regularization and finds zero. Both computations nominally concern linearized gravity. Physical S-matrix elements must be scheme-independent; this apparent contradiction demands resolution.
+This is the most serious issue in the paper. Goroff-Sagnotti (1986), confirmed by van de Ven (1992), found coefficient 209/2880 ≠ 0 for the R³ counterterm in dimensional regularization. The present paper finds zero under zeta regularization of KK mode sums. These are the same physical amplitude treated by two different regularization schemes.
 
-The paper's response (Appendix S, §S.7) has two parts with different statuses:
+The paper's best response invokes Lin-Zhai (2014) showing zeta regularization = Abel-Plana = physical vacuum subtraction. But the Lin-Zhai equivalence applies to the vacuum energy (Casimir energy), which is a free-field computation on a compact space. The R³ operator coefficient involves the UV structure of graviton self-interactions — a fundamentally different object. Calling it "the Casimir contribution of the 5D graviton to the R³ counterterm" does not make it scheme-independent.
 
-For the **subleading terms** (j ≥ 1): The vanishing of ζ(-2j) = 0 for j ≥ 1 follows from the functional equation of the Riemann zeta function (the sin(πs/2) factor), and L(-j, χ₋₃) = 0 for odd j follows from vanishing generalized Bernoulli numbers — both are number-theoretic theorems, not regularization prescriptions. The commutativity argument (§S.7.3) — that dim reg and zeta reg agree for the KK sum factor because both are analytic continuations that commute by Fubini's theorem and uniqueness of analytic continuation — is technically sound for the KK sum factor in the region of absolute convergence. The subleading vanishing is therefore scheme-independent among regularizations that preserve the U(1) symmetry. This part of the argument is acceptable.
+Two paths to resolution: (i) The 5D KK theory is a different theory from 4D gravity and the two computations are not directly comparable — but then the paper must argue that the 5D KK amplitude (not the 4D limit) is what matters, and compute a physical on-shell amplitude in the 5D theory; (ii) Demonstrate that the zeta-regularized KK sum and dim-reg of the same 5D theory agree on the physical S-matrix element.
 
-For the **leading term** (j = 0, S₀ = 0): The paper explicitly acknowledges (§S.7.1) that S₀ = 1 + 2ζ(0) = 0 IS scheme-dependent. The defence is that hard cutoffs break U(1) symmetry and dim reg agrees with zeta reg. But the Goroff-Sagnotti computation IS done in dim reg and gives 209/2880 ≠ 0. The reconciliation — that Goroff-Sagnotti computes the 4D zero-mode (n=0) only, while the KK sum sums all modes and the total vanishes — is not demonstrated by an explicit calculation. The paper argues this but does not show it.
-
-**What is needed:** An explicit two-loop calculation in the 5D KK theory using dimensional regularization for both the 4D momenta and the KK mode sum. Show that the total (summed over all KK modes) R³ coefficient is zero in dim reg, while the n=0 mode alone reproduces 209/2880. This would directly demonstrate scheme independence and reconcile with Goroff-Sagnotti. Until this calculation exists, the scheme-independence claim for the leading term is unproved. This is a 1-paper gap; the paper must downgrade the claim to "strongly supported conjecture" pending this calculation.
+**What is needed:** Either compute a scheme-independent observable (on-shell graviton scattering amplitude in the 5D KK theory) and show it is finite, or state explicitly that scheme independence remains an open question. The current text presents a regularization-dependent result as if it were physically established. *Difficulty: 1 paper. This is a genuine open problem in the field.*
 
 ---
 
-**A1(c): Gauge invariance of the regularization**
-
+#### A1(c) — Gauge Invariance of the Regularization
 **Rating: (B) CLOSABLE GAP**
 
-Appendix F performs the one-loop calculation in 5D de Donder gauge. The background field method (used throughout) maintains background diffeomorphism invariance, which largely mitigates the gauge-dependence concern. The argument in §U.3 that the 5D gauge structure ensures n-independent propagator numerators and polynomial vertex n-dependence is sound within the 5D formulation. No explicit Ward identity violation is demonstrated.
+The argument in §U.2b is correct for one-loop: spectral zeta of a covariant operator Δ is automatically diffeomorphism-invariant. Background diffeomorphism invariance at multi-loop order is guaranteed by the background field method (DeWitt 1967, Abbott 1981), independently of the regularization — so gauge invariance per se is not a problem.
 
-**What is needed:** One paragraph in Appendix U explicitly stating that the background field method preserves background diffeomorphism invariance at loop level and that the zeta-regularized effective action satisfies the corresponding Ward identities. This is a 1-paragraph gap.
+However, the claim that "spectral zeta is automatically diffeomorphism-invariant at multi-loop order" conflates one-loop and multi-loop structures. At L ≥ 2, zeta regularization is applied to a product of propagators of different KK modes, not to the spectrum of a single covariant operator. The Ward identities are satisfied by the background field method, not by the spectral zeta argument, and the text should reflect this distinction.
 
----
-
-**A1(d): The product factorization at L loops**
-
-**Rating: (A) GENUINE GAP — honestly acknowledged**
-
-The formula S₀^(L) = [1 + 2ζ(0)]^L = 0 requires that the L-loop amplitude factorizes into L independent copies of the one-loop structure for the leading (mass-independent) term. For the leading constant summand (= 1), the factorization of [Σ_{n,m} 1] = [Σ_n 1]² is algebraically justified because independent loop momenta correspond to independent KK sums. Zeta regularization preserves this product by the commutativity of independent analytic continuations. For the **leading** term this argument is sound.
-
-For the subleading terms at L ≥ 3, however, the full BPHZ forest formula for overlapping subdivergences has not been shown to preserve the factored structure (4D part) × E_L(-j; Q_L). The paper acknowledges this in §K.5.2 and §K.6.2 with an estimated confidence of 80–85%.
-
-**What is needed:** The factorization gap must be clearly flagged in the abstract and main text (not just appendices) as an open conjecture. The abstract and introduction currently imply all-orders finiteness is established. A clear, prominent disclaimer is required. This is a 1-paragraph revision of each of the abstract and §5.X.5.
+**What is needed:** A brief clarification separating the one-loop spectral zeta argument from the multi-loop gauge invariance argument (background field method). *Difficulty: 1 paragraph.*
 
 ---
 
-**A1(e): Physical consequences — distinguishing predictions**
-
+#### A1(d) — Product Factorization at L Loops
 **Rating: (B) CLOSABLE GAP**
 
-The paper does not provide quantitative predictions for graviton-graviton scattering at trans-Planckian energies or the running of Newton's constant that would distinguish the KK finiteness from other UV-complete proposals. The experimental predictions in the abstract (short-range gravity, dark photon) follow from the e-circle radius, not from the finiteness mechanism per se.
+The gap is honestly identified throughout. Current status:
 
-**What is needed:** A subsection comparing the finiteness mechanism to N=8 SUGRA (supersymmetric cancellations) and string theory (extended objects + modular invariance), and identifying whether the KK finiteness makes any prediction at accessible energies beyond what other extra-dimension models predict. The comparison table in §G.9 is a good start. This is a half-page gap.
+- S₀^(L) = [1+2ζ(0)]^L = 0: sound. The constant summand factorizes algebraically before regularization.
+- Subleading factorization via Theorem K.3: Steps 1–2 of the proof (joint real-analyticity of the theta function; joint holomorphicity of E_L in (s, α)) are mathematically sound.
+- Step 3 (BPHZ subtraction commutes with Epstein evaluation): The argument that joint holomorphicity justifies commuting the Taylor expansion in α with evaluation at s = −j holds in the interior of the Schwinger domain (α_e > 0). At the boundary α_e → 0 (where subdivergences are subtracted), positive-definiteness of Q_L can degenerate and λ_min(α) → 0. The BPHZ forest formula handles this, but the claim that each subtracted boundary term is polynomial in n²/R² — required for the argument — relies on Weinberg's locality theorem applied to a product-manifold setting not explicitly verified for the three-loop Mercedes topology.
+
+The paper honestly assigns 80–85% confidence and identifies Route C (explicit three-loop computation) as the definitive path.
+
+**What is needed:** Route C (explicit three-loop Mercedes diagram computation) to verify the Epstein structure. Routes A (Kontsevich-Vishik) and B (dominated-convergence at Schwinger boundary) are mathematical alternatives. *Difficulty: 1 paper.*
 
 ---
 
-#### A2: The Goroff-Sagnotti R³ Coefficient [HEAVY]
-
----
-
-**A2(a): Identification of the L-function**
-
+#### A1(e) — Physical Consequences / Distinguishing Predictions
 **Rating: (C) SOUND**
 
-The appearance of L(s, χ₋₃) is correctly derived. The sunset diagram in the KK theory involves three lines with KK numbers (n, m, -(n+m)), and the resulting double sum is over Q₀(n,m) = n² + nm + m², the norm form of the Eisenstein integers ℤ[ω]. The Dedekind zeta of ℚ(√-3) factors as ζ(s)L(s, χ₋₃), and the Epstein zeta for Q₀ satisfies E₂(s; Q₀) = 6ζ(s)L(s, χ₋₃) (factor 6 from the 6 units of ℤ[ω]). The character χ₋₃ is the unique primitive character mod 3. This identification is correct. The character enters from the lattice arithmetic of the KK spectrum (KK number conservation at vertices), not from the group theory of graviton vertices.
+Section §G.9b provides clear distinguishing predictions: running of G₄ reaching a constant at the KK threshold 1/R ≈ 0.016 eV; a KK graviton tower with m₁ ~ 0.016 eV (12 μm Compton wavelength); no string resonances; N_eff = 3.31–3.39. The comparison table versus N=8 SUGRA, string theory, and asymptotic safety is honest and useful. The acknowledgment that N_eff is in 3–4σ tension with ACT DR6 is scientifically responsible. No issues.
 
 ---
 
-**A2(b): The complementary zero claim**
-
-**Rating: (C) SOUND for L=2; (B) CLOSABLE GAP for general L**
-
-At L = 2, the complementary zero mechanism is explicitly verified: ζ(-2j) = 0 for j ≥ 1 (trivial Riemann zeros at negative even integers, forced by the sin(πs/2) factor in the functional equation); L(-j, χ₋₃) = 0 for odd j (trivial zeros of the odd L-function, forced by vanishing generalized Bernoulli numbers B_{2k,χ₋₃} = 0 for odd characters). These zero-sets are disjoint and together cover all negative integers. The claim is sound and the table in §G.4.2 is correct.
-
-Appendix K subsumes this as a special case of Theorem K.1, which is a cleaner derivation. The complementary zeros argument is illuminating for L = 2 but the general mechanism is Theorem K.1.
-
-**What is needed:** The main text should make clear that the complementary zeros argument is an L=2 feature and that the general extension uses Theorem K.1, not a generalized complementary zeros argument.
-
----
-
-**A2(c): The calculation versus the analogy**
-
-**Rating: (A) GENUINE GAP — honestly acknowledged in Appendix U**
-
-Appendix U §U.6 explicitly admits that no full two-loop Feynman diagram calculation has been performed. The claim is a conditional theorem (§U.7.3): if the leading UV coefficient of the KK-decomposed sunset is mass-independent, then S₀² = 0 kills it. The vertex mass-independence is argued from 5D gauge structure (§U.3) but not verified by explicit tensor algebra of the three-graviton vertex.
-
-For a claim that resolves the specific divergence that proved 4D gravity non-renormalizable, a conditional theorem is insufficient for journal publication. The Goroff-Sagnotti result was established by a complete calculation; its purported resolution must also be established by calculation.
-
-**What is needed:** Perform the explicit two-loop KK calculation. Enumerate all diagram topologies (sunset, figure-eight, vertex corrections, ghost contributions), compute each KK mode sum under dim reg, and show the R³ coefficient totals zero. Until this is done, the two-loop vanishing must be presented as a conjecture supported by structural argument, not as an established result. This is a 1-paper-scale gap.
-
----
-
-**A2(d): Relation to supergravity finiteness**
-
+#### A2(a) — Identification of the L-function
 **Rating: (B) CLOSABLE GAP**
 
-The paper distinguishes the KK mechanism from SUGRA cancellations correctly in principle (no supersymmetry; the cancellation is between discrete KK modes via zeta regularization, not between bosons and fermions via SUSY Ward identities). However, the paper does not check the literature for two-loop calculations in 5D KK gravity (non-supersymmetric). If such calculations exist and show a nonzero R³ coefficient, this would refute the paper's claim.
+The identification of L(s, χ₋₃) is correct: the sunset diagram with KK conservation n₁ + n₂ + n₃ = 0 generates Q₀(n, m) = n² + nm + m² (the Eisenstein integer norm form), whose Epstein zeta factors as E₂(s; Q₀) = 6ζ(s)L(s, χ₋₃) by standard algebraic number theory (discriminant −3, class number 1, 6 units). The character χ₋₃ enters through the KK index lattice arithmetic, not through group-theory Casimir factors of the graviton.
 
-**What is needed:** A literature search for multi-loop calculations in non-supersymmetric 5D KK gravity. The Appelquist-Chodos 1983 calculation (cited in App. F references) concerns one-loop KK quantum effects; two-loop results in pure 5D KK gravity appear absent from the literature. The paper should confirm this absence explicitly.
+The paper correctly notes in §G.6 (point 3) that the complementary-zeros argument is L = 2 specific and does not generalize to L ≥ 3. The general vanishing is established by Theorem K.1. The abstract's phrasing "established via complementary trivial zeros of ζ(s) and L(s, χ₋₃)" should be qualified as the L = 2 result.
 
----
-
-#### A3: The Non-Abelian Extension [MEDIUM]
+**What is needed:** One sentence in the abstract clarifying that the complementary-zeros result is specific to the two-loop sunset and is superseded at higher loops by Theorem K.1. *Difficulty: 1 sentence.*
 
 ---
 
-**A3(a): KK mode structure for non-abelian fields**
-
-**Rating: (C) SOUND — scope correctly characterized**
-
-Appendix L is commendably honest: it explicitly states that the framework accounts for U(1) only, that extending to the full SM gauge group requires either 7 additional compact dimensions (Strategy A) or an unproven mechanism (Strategy C), and that "no concrete construction currently exists" for deriving SU(3)×SU(2)×U(1) from a single S¹. The finiteness argument (Theorem K.1) extends to non-abelian KK towers since the KK spectrum for an SU(N) field on S¹ is m_n = |n|/R — the same as U(1) — and the Epstein zeta machinery applies identically.
-
-The honesty of Appendix L contrasts with the abstract, which implies the full SM structure is accommodated. The abstract must be aligned with Appendix L's honest assessment.
-
----
-
-**A3(b): Group-theory Casimir factors**
-
+#### A2(b) — The Complementary Zero Claim
 **Rating: (C) SOUND**
 
-The Casimir invariants C₂(G)^L appear as overall prefactors. Since E_L(-j; Q_L) = 0 for j ≥ 1, the product C₂(G)^L × 0 = 0 regardless of C₂(G). The group-theory structure does not affect the vanishing. This is correct.
+The table in §G.4.2 is correct and verifiable. At s = −1: L(−1, χ₋₃) = 0 because the generalized Bernoulli number B_{2,χ₋₃} = 0 (the symmetry B₂(x) = B₂(1−x) and the odd character pairing a = 1 and a = 2 annihilates the sum). At s = −2: ζ(−2) = 0 (trivial Riemann zero). The complementary zeros cover every j ≥ 1 at L = 2. This is now recognized as a special case of the universal 1/Γ(−j) = 0 mechanism. Sound.
 
 ---
 
-**A3(c): Gauge-gravity mixing**
-
+#### A2(c) — The Calculation versus the Analogy
 **Rating: (B) CLOSABLE GAP**
 
-The paper does not address gauge-gravity mixing diagrams at two loops and beyond (diagrams with one graviton loop and one gauge boson loop sharing vertices). The structural argument (polynomial KK mass dependence from polynomial vertices) should apply here too, but it has not been stated.
+The paper does not contain an explicit two-loop graviton amplitude calculation in the 5D KK theory. What exists: (i) structural argument (mass-independence → KK sum = S₀²  = 0); (ii) partial tensor-level verification for the sunset dominant topology (§U.3.6); (iii) Theorem K.1 for subleading terms. The figure-eight, vertex correction, and cross-terms between different KK field types are argued structurally but not computed. Appendix U §U.6.5 honestly states "Gap 4: Partially resolved."
 
-**What is needed:** A brief statement that gauge-gravity mixing diagrams also produce Epstein zeta structures with the same vanishing properties, or acknowledgement that this is an open item. One paragraph suffices.
-
----
-
-### PART B: The Geometric Derivations
+**What is needed:** The complete two-loop KK calculation (all topologies, all field types), as identified in §U.6.2. Comparable in difficulty to the original Goroff-Sagnotti calculation. *Difficulty: 1 paper.*
 
 ---
 
-#### B1: Spin-Statistics from Winding Numbers [HEAVY]
-
----
-
-**B1(a): The ℤ vs ℤ₂ problem**
-
-**Rating: (B) CLOSABLE GAP**
-
-The concern about π₁(S¹) = ℤ vs the needed ℤ₂ is addressed correctly in Appendix B §B.1. The argument correctly invokes π₁(SO(d)) = ℤ₂ for d ≥ 3, not π₁(S¹). The constraint s ∈ ½ℤ arises from the contractibility of the 4π rotation in Spin(d), which forces 4πs ∈ 2πℤ, giving s ∈ ½ℤ. The ℤ₂ structure comes from the rotation group of spacetime, not from the e-circle itself. The e-circle provides the phase variable; the rotation-group topology provides the ℤ₂ constraint. This is correct in Appendix B but ambiguous in the main text.
-
-Section 4.2.3 states "winding numbers on the e-circle are integers or half-integers" without clearly explaining that the half-integer constraint comes from π₁(SO(d)) = ℤ₂, not from the e-circle's own topology (π₁(S¹) = ℤ allows any winding). A reader without prior knowledge of the topological approach to spin-statistics could be misled.
-
-**What is needed:** Clarify in the main text (Section 4.2.3) that the ℤ₂ dichotomy arises from the fundamental group of the rotation group SO(d), and that the e-circle provides the phase variable constrained by this topology. One paragraph revision.
-
----
-
-**B1(b): Logical independence**
-
-**Rating: (A) GENUINE GAP — about scope, not correctness**
-
-The comparison table in §4.2.7 claims "Axioms required: 1 (e-dimension is a circle)" vs. "4 (Lorentz, locality, positive energy, microcausality)." This overstates. Examining Appendix B: the proof uses (i) the Hilbert space formalism of quantum mechanics, (ii) Wigner's theorem that symmetries act as projective unitary representations, (iii) the topology of SO(d) for d ≥ 3, and (iv) the e-phase coupling postulate. Items (i)-(iii) are standard axioms of quantum mechanics and are not derived from the 5D postulate. The "1 axiom" claim is therefore incorrect.
-
-The correct characterization: the 5D framework shows that spin and statistics are both manifestations of the same winding number, providing a geometric picture of why the spin-statistics connection is "tautological" once the framework is accepted. It is not an independent derivation from fewer axioms — it assumes the same Hilbert-space and rotation-group structure as the standard proof and adds geometric interpretation.
-
-**What is needed:** Revise §4.2.7 to accurately state the epistemic status. The comparison table's "Axioms required: 1" claim must be corrected. The geometric insight is genuine and valuable; the false claim of fewer axioms weakens rather than strengthens the paper. One-page revision.
-
----
-
-**B1(c): Configuration space topology**
-
+#### A2(d) — Relation to Supergravity Finiteness
 **Rating: (C) SOUND**
 
-Appendix B §B.1.5 correctly addresses the Laidlaw-DeWitt/Leinaas-Myrheim configuration-space argument. For d ≥ 3, π₁(C₂(ℝᵈ)) = ℤ₂, giving exactly two statistics. In d = 2, π₁(C₂(ℝ²)) = ℤ (braid group), giving anyons. The paper identifies that Leinaas-Myrheim left the representation χ of π₁ as a free parameter, and that the e-dimension geometry fixes χ(σ) = e^{2πis} through the Noether identification of spin with e-angular momentum. This is a genuine contribution to the topological approach to spin-statistics. The argument is sound.
+Section §U.8 and §G.9b correctly characterize the distinction: SUSY cancellations (boson-fermion) in N=8 SUGRA vs. compactness + zeta regularization (KK mode discretization) in this framework. The comparison table is honest. N=8 SUGRA has been verified by explicit multi-loop computation; the KK mechanism has not. No overclaiming.
 
 ---
 
-**B1(d): Higher spin representations**
-
+#### A3(a) — KK Mode Structure for Non-Abelian Fields
 **Rating: (B) CLOSABLE GAP**
 
-The argument establishes s ∈ ½ℤ and the existence of all half-integer representations. The Noether identification of spin with e-momentum (Step 3, Appendix B.3) gives Ŝ_z = p̂_φ, the e-momentum operator. This identification must be consistent for all spin values, including s = 1 (photon) and s = 2 (graviton). The paper treats the fermion case (s = ½) in detail but does not explicitly verify that integer-spin fields (the photon and graviton of the KK tower) have integer winding-number assignments consistent with the e-phase coupling.
+Appendix L §L.4b argues that SU(N) KK towers on S¹ have the same spectral structure (masses m_n = |n|/R) as the U(1) tower, so Theorem K.1 applies. The Casimir C₂(G) factor is n-independent (all KK modes are in the adjoint) and commutes outside the KK sum, multiplying S₀^L = 0. These arguments are correct.
 
-**What is needed:** A brief treatment of the s = 1 gauge boson and s = 2 graviton in the winding-number picture, confirming integer winding and bosonic exchange statistics. One page.
+The gap: the SU(N) gauge-gravity mixing vertex has a different tensor structure from the pure gravity three-graviton vertex. The claim that "polynomial character of vertex factors is unchanged by substitution of a gauge line for a graviton line" needs verification at the level of explicit vertex algebra (analogous to §U.3.6 for the graviton). The paper honestly acknowledges this gap in §L.4b.
 
----
-
-#### B2: Born Rule from 5D Density [MEDIUM]
+**What is needed:** Explicit vertex-algebra verification for SU(N) gauge-gravity mixing. *Difficulty: 1 paper.*
 
 ---
 
-**B2(a): Derivation vs. consistency**
-
-**Rating: (B) CLOSABLE GAP**
-
-The Born rule derivation in Appendix C §C.1.1 proceeds as follows: (1) identify |ψ(x,φ)|² as the 5D density; (2) use the Haar measure dφ/2π on U(1), forced by e-translation invariance (Postulate 3); (3) integrate over e-region Ω_i using orthonormality of e-eigenstates to get P(i) = |α_i|².
-
-The quadratic dependence on α_i — the non-trivial content of the Born rule — is not derived from geometry; it is assumed in step (1) by identifying the density as |ψ|² rather than |ψ| or |ψ|^p for other p. The Haar measure argument selects the integration weight (uniform in φ) but not the power p. The claim that the Born rule "follows from the Haar measure" is an overstatement.
-
-The Torres Alegre (2026) causal consistency argument is more powerful: if it proves |⟨φ|ψ⟩|² is the unique causally consistent probability assignment, and if the 5D causal structure enforces the conditions of that theorem, then p = 2 is derived. The paper should engage this argument explicitly rather than citing it in passing.
-
-**What is needed:** Either (a) demonstrate explicitly that the 5D causal structure satisfies the hypothesis of Torres Alegre's theorem and therefore derives p = 2; or (b) honestly state that |ψ|² as the 5D density is assumed (not derived) and the Haar measure then uniquely selects the integration weight, making the Born rule a theorem modulo this assumption. One page clarification.
-
----
-
-**B2(b): The squaring step**
-
-**Rating: (B) CLOSABLE GAP**
-
-The squaring arises from (standard) cross-term orthogonality:
-∫_{Ω_i} |ψ|² dφ = |α_i|² by orthonormality of e-eigenstates g_i.
-This algebra is correct. The exponent 2 comes from the density being |ψ|² — which is assumed, not derived from geometry. See B2(a) above.
-
----
-
-**B2(c): Interference**
-
+#### A3(b) — Group-Theory Casimir Factors
 **Rating: (C) SOUND**
 
-Appendix C §C.2 derives I(θ) = I₀ cos²(πd sinθ/λ) correctly from the e-phase difference. The cross-term in |ψ₁ + ψ₂|² is reproduced correctly. No gap.
+KK modes of SU(N) on S¹ are all in the adjoint, with the same Casimir C₂(G). This n-independent factor commutes outside the sum, multiplying S₀^L = 0. Correct.
 
 ---
 
-#### B3: Aharonov-Bohm as e-Bundle Holonomy [LIGHT]
-
----
-
-**B3(a): New result vs. known formulation**
-
-**Rating: (C) SOUND — novelty correctly characterized as ontological, not mathematical**
-
-The AB effect as U(1) bundle holonomy is due to Wu-Yang (1975). The present paper's formulation is mathematically identical to Wu-Yang, with the added ontological claim that the U(1) fiber is a literal physical dimension (not gauge redundancy). The paper does not overclaim beyond this. The derivation in §4.1.6 is correct. The formula for the interference pattern in Appendix C §C.3 reproduces the standard result. This is category (i): same mathematics as Wu-Yang, new physical interpretation. The novelty is real but limited. The paper's characterization is accurate.
-
----
-
-**B3(b): The topological defect in 5D**
-
-**Rating: (C) SOUND**
-
-In M⁴ × S¹, the solenoid is a 2-dimensional extended object (codimension 3 in 5D). The topological structure (non-contractible loops in the complement) is the same as in 4D. The 5D formulation adds no new prediction beyond Wu-Yang for this effect. The geometric picture is coherent and the calculation is correct.
-
----
-
-### PART C: Scope and Journal Eligibility
-
----
-
-#### C1: The Twenty-Two Phenomena Presentation [HEAVY]
-
----
-
-**C1(a): Separation of rigor levels**
-
+#### A3(c) — Gauge-Gravity Mixing Diagrams
 **Rating: (B) CLOSABLE GAP**
 
-The paper attempts a tripartite structure (§1.5: "established within framework," "proposed as research program," "speculative extensions") and the abstract mirrors this (8 derived, 8 orbifold, 6 conjectured). The structure is present but inconsistently enforced:
-
-- "Perturbative UV finiteness" is listed among the 8 "derived" results. At the time of submission, this is a conditional theorem with an open factorization gap at L ≥ 3 and no explicit two-loop Feynman calculation. Calling it "derived" alongside, e.g., the standard Kaluza-Klein result for electromagnetism, conflates results of very different rigor levels.
-- The abstract's opening is appropriately hedged ("We propose...") but the conclusions section of the abstract reads as established results.
-
-**What is needed:** Revise the abstract and §1.5 to ensure the 8 "derived" results have consistent standards. The finiteness result should be labeled "conditional theorem" or "established up to factorization gap" in these sections, not just in the appendices.
+Same as A3(a): structurally argued, unverified by explicit computation. Honest acknowledgment present.
 
 ---
 
-**C1(b): Threshold for "derivation"**
+### Part B: The Geometric Derivations
 
+#### B1(a) — The ℤ vs ℤ₂ Problem
+**Rating: (B) CLOSABLE GAP**
+
+The paper's resolution in §4.2.3 and Appendix B.1.2–B.1.3 is correct: π₁(S¹) = ℤ is NOT the source of the half-integer restriction. The ℤ₂ structure comes from π₁(SO(d)) = ℤ₂ for d ≥ 3 (Theorem B.1.1, correctly proved). The S¹ provides the phase variable; the rotation group's topology provides the constraint 4πs = 2πk → s ∈ ½ℤ. The formal derivation in Appendix B is rigorous.
+
+The issue is in the geometric prose: Section 4.2.3 and surrounding text repeatedly uses "half-integer winding on the e-circle" as if this corresponded to a closed path on S¹, when technically a half-revolution does not close on S¹. What closes is the double-cover Spin(3) path, not an S¹ path. The geometric picture elides this distinction.
+
+**What is needed:** Sharper prose distinguishing (a) the e-phase accumulated under a rotation (πs for s ∈ ½ℤ) from (b) a geometric path on S¹ (which must be an integer winding to close). The formal Appendix B is correct; the main-text geometric picture needs refinement. *Difficulty: 1 paragraph.*
+
+---
+
+#### B1(b) — Logical Independence
+**Rating: (C) SOUND**
+
+Section 4.2.7 is now explicit: both the standard proof and the 5D derivation assume Hilbert space, Wigner's theorem, and π₁(SO(d)) = ℤ₂. Neither derives these. The 5D derivation's distinctive contribution — fixing χ(σ) = e^{i2πs} in the Leinaas-Myrheim formulation — is correctly identified and honestly characterized. The comparison table in §4.2.7 is accurate. Sound.
+
+---
+
+#### B1(c) — Configuration Space Topology
+**Rating: (B) CLOSABLE GAP**
+
+The paper does not explicitly address the Laidlaw-DeWitt configuration space π₁(C₂(ℝ³ × S¹)) for indistinguishable particles. The argument proceeds instead via the rotation group π₁(SO(3)) = ℤ₂ and the e-phase holonomy. The fermionic/bosonic classification is correctly obtained.
+
+The gap: for particles on ℝ³ × S¹, additional topological sectors arise (particles winding around the spatial S¹). The paper implicitly assumes these do not affect the fermionic/bosonic dichotomy. This is correct — the dichotomy comes from π₁(SO(3)) regardless of the spatial topology — but should be stated.
+
+**What is needed:** A brief remark in Appendix B confirming that π₁(C₂(ℝ³ × S¹)) does not introduce new fermionic/bosonic sectors beyond those from π₁(SO(3)) = ℤ₂. *Difficulty: 1 paragraph.*
+
+---
+
+#### B1(d) — Higher Spin Representations
+**Rating: (C) SOUND**
+
+Theorem B.1.1 establishes s ∈ ½ℤ; Step 3 correctly cites Fulton-Harris for the existence of every D^s representation. The exchange phase e^{i·2πs} is uniform across all projections m_s, confirmed in Appendix B.3. No gap.
+
+---
+
+#### B2(a) — Derivation vs. Consistency
+**Rating: (B) CLOSABLE GAP**
+
+Appendix C.1's two-part epistemic split is admirably honest: Part 1 (Theorem: given ρ = |ψ|², Born rule follows from Haar measure + orthonormality) is correct; Part 2 (Postulate: the exponent p = 2 is assumed, supported by Torres Alegre 2026 causal consistency argument) is correctly identified as the non-trivial content.
+
+The Torres Alegre chain (e-dimension carries no causal signals → causal consistency forces p = 2) is a conditional derivation, not a theorem. Appendix C.1 says this clearly; the main text summary in §3.5 should reflect it equally clearly.
+
+**What is needed:** A statement in §3.5's "Born rule" resolution entry noting that p = 2 is motivated by causal consistency, not derived from geometry alone. *Difficulty: 1 sentence.*
+
+---
+
+#### B2(b) — The Squaring Step
+**Rating: (C) SOUND**
+
+Given the postulate ρ = |ψ|² (p = 2) and Haar measure dφ/2π from e-translation invariance, P(i) = |α_i|² follows correctly from orthonormality of e-eigenstates. The calculation is correct within the framework.
+
+---
+
+#### B2(c) — Interference
+**Rating: (C) SOUND**
+
+Appendix C.2 correctly derives the double-slit pattern I(θ) = I₀ cos²(πd sin θ/λ) from e-phase overlap. The cross-term 2Re(α₁*α₂) follows from the bilinear structure of |α₁g₁ + α₂g₂|². Correct.
+
+---
+
+#### B3(a) — Aharonov-Bohm: New Result vs. Known Formulation
+**Rating: (C) SOUND**
+
+Category (i): mathematically equivalent to Wu-Yang (1975) in different language. The paper explicitly acknowledges this in §2.5. The contribution is ontological: claiming the U(1) fiber is a literal physical dimension. This is a legitimate scientific claim, not overclaimed. The formal calculation in §4.1.6 is identical to the standard fiber bundle treatment.
+
+---
+
+#### B3(b) — The Topological Defect in 5D
+**Rating: (C) SOUND**
+
+In M⁴ × S¹, the solenoid extends trivially in the e-direction. The holonomy calculation and π₁ = ℤ structure are unchanged from the 4D treatment. No new 5D predictions beyond Wu-Yang follow, except the ontological interpretation. The paper does not overclaim. Sound.
+
+---
+
+### Part C: Scope and Journal Eligibility
+
+#### C1(a) — Separation of Rigor Levels
+**Rating: (C) SOUND**
+
+Table 1.1 is one of the paper's genuine strengths: clean, honest accounting of eight core results with hypotheses, conclusions, logical paths, falsification conditions, and epistemic labels. The two-scenario structure (circle vs. orbifold) is documented in §2.7.2. The abstract labeling is consistent with Table 1.1.
+
+---
+
+#### C1(b) — Threshold for "Derivation"
+**Rating: (B) CLOSABLE GAP**
+
+All eight epistemic labels in Table 1.1 are accurate. The one concern: the abstract's fifth paragraph reads "all-orders perturbative finiteness is therefore established conditional on the scope of Theorem K.3." This caveat is buried. A reader skimming the abstract for the finiteness claim may miss it.
+
+**What is needed:** Move "conditional on Theorem K.3's factorization scope" to the first finiteness paragraph in the abstract. *Difficulty: 1 sentence reorganization.*
+
+---
+
+#### C1(c) — The Kitchen-Sink Credibility Problem
+**Rating: (A) GENUINE GAP — Editorial**
+
+Not a logical error but an editorial reality. A paper simultaneously claiming to address quantum mechanics, electromagnetism, gravity, spin-statistics, UV finiteness, hydrogen spectrum, black hole entropy, CPT, dark matter, dark energy, baryon asymmetry, neutrino masses, strong CP, and the Hubble tension will be treated with extreme skepticism by referees regardless of correctness.
+
+Physical Review D is the appropriate venue for the full paper. Physical Review Letters would require selecting the single most important result. Communications in Mathematical Physics would require the finiteness theorem as the exclusive focus.
+
+**Recommendation:** Consider submitting a focused paper on the finiteness theorem (Appendices F, G, K, S, U plus the abstract finiteness claim) to a QFT/gravity journal, with the geometric interpretations (spin-statistics, Born rule, AB) as a companion paper in a foundations journal. *Difficulty: Structural reorganization; not required for Major Revision but strongly recommended.*
+
+---
+
+#### C1(d) — The Seven Testable Predictions
+**Rating: (B) CLOSABLE GAP**
+
+The seven predictions are correctly identified as consequences of one parameter (R ~ 12 μm). Each is, in principle, falsifiable. However:
+
+Prediction 2 (dark photon ε ~ α_EM × π²/6 × exp(−π) ~ 5 × 10⁻⁴): the derivation of this formula is not present in the portions of the paper reviewed. The specific numerical formula needs a reference or derivation in Appendix W.
+
+Prediction 5 (N_eff = 3.31–3.39): in 3–4σ tension with ACT DR6 (2.86 ± 0.13). The acknowledgment is honest; this is a potential falsification.
+
+**What is needed:** For each prediction, state: (i) current experimental bound, (ii) whether it is already tested (Prediction 6 — Casimir — is standard physics; others are not yet tested at the relevant scale), (iii) what experiment would falsify it. The §1.5 predictions table partially does this. *Difficulty: 1 page of additions.*
+
+---
+
+#### C2(a) — Orbifold Boundary Terms
+**Rating: (B) CLOSABLE GAP**
+
+Section W.0 correctly identifies R as the only continuous free parameter. The field assignment (SM at visible brane, bulk/dark at hidden brane) is described as geometrically motivated by the Z₂ spin structure. However, the Z₂ spin structure determines which fields are Z₂-even or Z₂-odd; it does not automatically assign SM matter to φ = 0 versus φ = π. That assignment requires either a separate argument or acknowledgment as a convention.
+
+**What is needed:** A clarification that the assignment of SM matter to the visible brane is a convention (observationally equivalent by symmetry to the reversed assignment) and is not derived from the Z₂ topology. *Difficulty: 1 paragraph.*
+
+---
+
+#### C2(b) — Independence of the 8 Orbifold Results
+**Rating: (C) SOUND**
+
+Section 1.5 is explicit: "These are not 8 independent verifications of the model — they are 7 predictions from a single fixed parameter." Correctly stated.
+
+---
+
+#### C2(c) — The Strong CP Claim
+**Rating: (C) SOUND**
+
+Appendix X's retraction ("the earlier claim that π₄(SU(3)) = 0 trivializes the instanton sector was incorrect on two counts") is scientifically responsible. The distinction between π₃ (instantons, θ-vacuum) and π₄ (Witten anomaly) is correctly stated. The strong CP claim is now classified as a conjecture pending three open verifications. Sound.
+
+---
+
+#### C3(a) — k = 2 as Prediction vs. Assumption
 **Rating: (A) GENUINE GAP**
 
-The paper does not uniformly provide theorem-level statements for the 8 "core derived" results. For each result, a minimal theorem statement requires: hypotheses, conclusion, and logical path. The finiteness claim has Theorem S.1; the spin-statistics claim has Theorem B.1.1 and B.1.2; but several of the 8 (quantum mechanics, CPT, black hole entropy) lack explicit theorem statements.
+Section W.5 derives k ≈ 2 from the tau-electron mass ratio: m_τ/m_e ≈ 3477 requires 4kπ/3 = 8.15, giving k ≈ 1.95. This is an inversion from observation, not a derivation from geometry. The warp factor k is then used to compute c_ν = 0.634, which feeds Paper 2's leptogenesis calculation.
 
-The comparison table in §4.2.7 ("Axioms required: 1") is specifically misleading, as established in B1(b).
+The phrase "the value — inferred here from the charged-lepton mass hierarchy — is independently required by the cosmological dark matter abundance" does not constitute independent derivation. It constitutes two uses of the same inferred parameter k ≈ 2, combined with the independently measured ξ = 0.432 (from Ω_DM/Ω_b = 5.36). Both inputs are observational; neither is a prediction.
 
-**What is needed:** A table in §1.5 listing each of the 8 derived results with: (a) formal hypothesis, (b) conclusion, (c) logical path, (d) what would falsify the derivation, (e) correct epistemic label (derived, consistent, conjectured). Two pages.
-
----
-
-**C1(c): The kitchen-sink credibility problem**
-
-**Rating: (A) GENUINE GAP — strategic decision required**
-
-A paper simultaneously claiming to derive quantum mechanics, gravity, spin-statistics, UV finiteness, dark matter, neutrino masses, and baryon asymmetry activates a strong prior against correctness that is difficult to overcome regardless of the mathematical content. Most expert referees will not reach the technical appendices.
-
-The referee's recommendation: submit as two or three papers. Paper 1A: geometric interpretation of quantum mechanics + AB + spin-statistics (CMP or Annals of Physics). Paper 1B: perturbative finiteness claim — after the explicit two-loop calculation (PRD or CMP). Paper 1C: orbifold cosmology (JCAP or PRD). Each can be evaluated on its own merits.
-
-If a single submission is insisted upon: radically reduce the abstract scope. A paper titled "Perturbative UV Finiteness of Linearized Kaluza-Klein Gravity via Zeta Regularization" with the geometric QM as motivation would receive a much fairer hearing. The 22-phenomena count should appear only in a final section labeled "broader implications," not in the abstract.
+**What is needed:** Restate clearly: k ≈ 2 is inferred from the lepton mass hierarchy (qualitative fit). c_ν is then a consequence of k and ξ, both fitted to observation. Remove or strongly qualify the "independently required" language. *Difficulty: 1 paragraph revision.*
 
 ---
 
-**C1(d): The seven testable predictions**
-
+#### C3(b) — Derivation of c_ν = 0.634
 **Rating: (B) CLOSABLE GAP**
 
-The most concrete predictions are: (1) gravitational deviation at 12–21 μm (factor-of-2 ambiguity between scenarios); (2) dark photon signal at ε ~ 5×10⁻⁴ at LDMX/LHCb; (3) neutrino masses at meV scale, normal ordering (JUNO); (4) N_eff = 3.31–3.39 (in tension with ACT DR6). The dark photon prediction is the strongest: it gives a specific numerical value with a derivation from α_EM × π²/6 × exp(-π) and is testable by named experiments in a specific time frame.
+The formula c_ν = ½ − ln(ξ)/(kπ) is given in §W.5. The arithmetic (c_ν = 0.5 + 0.133 = 0.634 with ξ = 0.432, k = 2) is correct. The derivation of the formula from the bulk profile condition is deferred to Paper 6 §6.5 (not yet available).
 
-For each prediction, the paper should provide: (i) current experimental status; (ii) quantitative prediction with uncertainty; (iii) what falsifies it; (iv) whether it is unique to this framework or generic to extra-dimension models. Currently this information is scattered across the abstract and appendices.
-
-**What is needed:** A dedicated predictions table or Appendix H providing the above four items for each of the seven predictions. Two pages.
+**What is needed:** The key bulk profile integral deriving c_ν(k, ξ) should be reproduced in Paper 1 if c_ν is used in Paper 1's analysis. *Difficulty: 1 page.*
 
 ---
 
-#### C2: The Z₂ Orbifold Phenomena [MEDIUM]
-
----
-
-**C2(a): Orbifold boundary terms**
-
+#### C3(c) — m_ν^{5D} = 1.27 M_KK
 **Rating: (B) CLOSABLE GAP**
 
-The boundary conditions (SM fields at φ = 0, only bulk fields at φ = π) are phenomenological choices, not derived from the e-circle geometry. The paper acknowledges this (§2.7.1: "geometrically motivated by the spin structure but not forced by it"). The number of free parameters introduced by this choice must be stated explicitly.
+m_ν^{5D} = c_ν × k × M_KK = 1.27 M_KK follows from c_ν and k. The 4D light neutrino mass prediction requires the GUT-scale seesaw parameter M_R from CP² (Paper 4). With M_KK ~ 16 meV and M_R ~ 10¹⁵ GeV, the seesaw gives m_ν^{light} ~ y² × 0.06 eV, matching observations for y ~ 0.9. The Yukawa coupling y is a free parameter.
 
-**What is needed:** State explicitly: how many parameters are fixed by the orbifold boundary conditions, from which observations they are fixed, and which of the 8 orbifold results are then predicted vs. assumed. One paragraph.
+**What is needed:** Clarify that the 4D neutrino mass prediction is a scale estimate (not a precise prediction), dependent on M_R from CP² (Paper 4) and a free Yukawa coupling. *Difficulty: 1 paragraph.*
 
 ---
 
-**C2(b): Independence of the 8 orbifold results**
+#### C3(d) — Consistency with Paper 2
+**Rating: (B) CLOSABLE GAP**
 
+The c_ν = 0.634 value entering Paper 2's leptogenesis calculation is identified as the same c_ν derived here. This creates a cross-paper dependency: any revision to k cascades through Paper 2.
+
+**What is needed:** A remark in §W.5 noting this dependency explicitly. *Difficulty: 1 sentence.*
+
+---
+
+#### C3(e) — Uniqueness of k = 2
 **Rating: (A) GENUINE GAP**
 
-Multiple orbifold phenomena share the single parameter R ≈ 12 μm (or equivalently L). The dark energy density, the KK gravitational deviation scale, the dark photon kinetic mixing (ε ~ 5×10⁻⁴), and the neutrino seesaw scale all depend on R. If R is fixed by one of these (the Casimir dark energy matching appears to fix it), the remaining predictions are derived from a single-parameter model, not eight independent verifications. The paper should make this accounting explicit.
+The paper does not address whether k = 2 is uniquely determined by the compactification geometry or is a free parameter. For a warped extra dimension (Randall-Sundrum type), k is generically continuous, set by the ratio of bulk cosmological constant to brane tension. No quantization condition forcing k ∈ {integer} or k = 2 specifically is established.
 
-**What is needed:** A parameter accounting: state that R is fixed from one observable (dark energy density), and that the remaining 7 orbifold results are then predictions (zero free parameters). If this is the case, the paper should highlight this more prominently — fixing R from dark energy and then predicting the dark photon coupling and gravitational deviation scale is a substantive predictive success. One page.
+If k is a free parameter fit to the lepton mass hierarchy, the leptogenesis chain is entirely phenomenological.
+
+**What is needed:** Either (i) demonstrate a theoretical mechanism (e.g., moduli stabilization from the e-circle geometry) forcing k = 2, or (ii) explicitly state that k is a free parameter. *Difficulty: 1 paragraph (statement) or 1 paper (derivation).*
 
 ---
 
-**C2(c): The strong CP claim**
-
+#### C4(a) — Freed-Witten Half-Integer G₄ Shift
 **Rating: (A) GENUINE GAP**
 
-The paper claims π₄(SU(3)) = 0 in 5D resolves the strong CP problem. Several problems:
+The formula in Appendix Z §Z.3.1 requires the Freed-Witten anomaly cancellation condition on a non-spin manifold containing CP². Paper 1's geometry is M⁴ × S¹; CP² does not appear until Paper 4's 11D construction. Three specific gaps:
 
-(1) The homotopy group relevant for QCD instantons is π₃(SU(3)) = ℤ (winding number of gauge field configurations on S³ at spatial infinity), not π₄(SU(3)). The θ-vacuum is parameterized by the integer winding of π₃(SU(3)) = ℤ. The group π₄(SU(3)) = ℤ₂ is relevant for Witten's global SU(2) anomaly in 5D, not for QCD instantons.
+First, CP² is not in Paper 1's scope. Importing the Freed-Witten condition from Paper 4 into Paper 1's formula makes Appendix Z §Z.3.1 non-self-contained.
 
-(2) Even if the instanton contribution to θ could be argued to vanish in the 5D theory, the strong CP problem also involves the quark mass matrix phase: θ̄ = θ_QCD + arg det(M_q). The quark mass matrix phases receive contributions from Yukawa couplings that are unrelated to the 5D instanton structure. The paper does not address this.
+Second, c₂^{eff} = 1 is stated but not derived. Which bundle V over CP² carries c₂(V)|_{CP²} = 1? The identification requires the specific gauge bundle from the 11D M-theory compactification.
 
-(3) The prediction for |θ̄| is not given. The experimental bound is |θ̄| < 10⁻¹⁰ from the neutron electric dipole moment.
+Third, the formula m_ν/m_KK = χ(CP²) − c₂^{eff}/2 = 5/2 requires identifying the Dirac index on CP² with the neutrino zero-mode count, the seesaw formula mapping index to neutrino mass, and the GUT-scale seesaw from M_R = 1/r₃ (Paper 4). None of this chain is established in Paper 1.
 
-**What is needed:** Correct the homotopy group reference (π₃ vs π₄), address the quark mass phase contribution, and provide a prediction for |θ̄|. Until this is corrected, the strong CP claim should be removed from the 8 "orbifold results." One-page revision or deletion.
-
----
-
-### PART D: Technical Foundations
+**What is needed:** Either defer this calculation entirely to Paper 4 (where CP² is in scope), or provide a completely self-contained derivation identifying the gauge bundle V, computing c₂(V)|_{CP²}, applying the Freed-Witten condition, and establishing the neutrino-to-KK mass ratio from the seesaw chain. The current one-paragraph treatment is insufficient for a claim this strong. *Difficulty: 1 paper.*
 
 ---
 
-#### D1: The 5D Einstein Equations and KK Consistency [LIGHT]
+#### C4(b) — The Formula m_ν/m_KK = 5/2
+**Rating: (A) GENUINE GAP**
+
+The numerical agreement at M_Z (m_ν/m_KK ≈ 2.56) and the claim that RGE running to M_GUT gives exactly 2.50 is a specific quantitative claim. "A 2.4% gap fully accounted for by g₂ RGE" should be backed by an explicit calculation. The chain of identifications (topological ratio → zero-mode count → seesaw neutrino mass → ratio to m_KK) is not laid out. This claim belongs in Paper 4, not Paper 1.
+
+**What is needed:** Move to Paper 4 or provide the complete derivation. *Difficulty: 1 paper.*
 
 ---
 
-**D1(a): Consistency of KK truncation**
+#### C4(c) — Two Separate Uses of w₂(CP²) ≠ 0
+**Rating: (A) GENUINE GAP**
 
+The claim that the same w₂(CP²) ≠ 0 simultaneously (i) resolves spin-statistics (Section 4.2) and (ii) forces the G₄ shift is logically problematic. The spin-statistics derivation in Section 4.2 uses π₁(SO(d)) = ℤ₂ and the e-phase coupling postulate — CP² does not appear in the argument. The spin-statistics result is for M⁴ × S¹; the G₄ flux shift is for the 11D M-theory compactification. These use w₂(CP²) ≠ 0 in different physical settings. Claiming Paper 1 simultaneously establishes both consequences conflates the two frameworks.
+
+**What is needed:** Clearly state that the connection between Paper 1's spin-statistics result and Paper 4's G₄ flux quantization is a feature of the 11D embedding (to be established in Paper 4), not a result of Paper 1. *Difficulty: 1 paragraph.*
+
+---
+
+### Part D: Technical Foundations
+
+#### D1(a) — Consistency of KK Truncation
 **Rating: (B) CLOSABLE GAP**
 
-The linearized 5D gravity calculation (Appendices F, G) retains ALL KK modes in the loop sums and does not truncate the tower. This is the correct approach. The KK truncation consistency issue does not arise here.
+The loop calculations correctly retain the full KK tower (§G.2). The classical gravity results (Newton's law, Appendix D) use the KK zero mode. This distinction is present but should be stated more clearly: the zero-mode truncation for classical observables is consistent because (at the scale of classical gravity experiments) the KK tower is energetically inaccessible, even at the framework's low KK scale of ~16 meV — classical gravity experiments probe static fields, not the KK excitation energy spectrum.
 
-**What is needed:** A sentence clarifying that the loop calculations sum over the full KK tower (not a truncation), distinguishing the quantum gravity context from classical KK truncation arguments.
-
----
-
-**D1(b): The radius stabilization problem**
-
-**Rating: (A) GENUINE GAP — but explicitly deferred**
-
-The e-circle radius R is a free modulus. Its value is fixed by fitting to the observed dark energy density (Casimir matching), not derived. The paper acknowledges the dilaton is "frozen" and defers stabilization to Paper 6. This deferral is acceptable in a multi-paper series but must be prominently labeled in Paper 1, since all numerical predictions depend on R.
-
-**What is needed:** A clear statement in the main text (not just §5.X.5) that R is treated as a measured parameter and that its dynamical stabilization is an open problem addressed in Paper 6.
+**What is needed:** A brief scale argument justifying the zero-mode truncation for classical observables in Appendix D. *Difficulty: 1 paragraph.*
 
 ---
 
-#### D2: Self-Containedness Relative to the Series [LIGHT]
-
----
-
-**D2(a): What Papers 2–7 actually need from Paper 1**
-
+#### D1(b) — The Radius Stabilization Problem
 **Rating: (B) CLOSABLE GAP**
 
-Theorem S.1 applies to linearized 5D gravity on M⁴ × S¹. Papers 4–6 use 11D compactification geometries. The theorem does not directly apply to these richer geometries. However, Theorem K.1 (Universal Epstein Vanishing) applies to any positive-definite quadratic form in any dimension, so the vanishing mechanism is preserved. The specific numerical values of the Epstein zeta function at each loop order will differ for 7-dimensional internal spaces, but the vanishing itself is universal.
+Explicit and honest deferral to Paper 6. The dilaton frozen at ε ~ 10⁻⁵² is stated in the abstract with forward citation to "Paper 6 revision." This is unusual — citing a revision of an unpublished paper.
 
-**What is needed:** A statement clarifying that companion papers using higher-dimensional compactifications will need to re-derive the Epstein zeta structure for their own KK spectra, but that Theorem K.1 ensures the vanishing mechanism carries over. One paragraph.
+**What is needed:** Either summarize the stabilization mechanism in one sentence (e.g., "the Casimir energy on the orbifold provides a minimum at R ≈ 12 μm; dilaton evolution is suppressed to ε ~ 10⁻⁵² by the flatness of this minimum — detailed in Paper 6") or remove the "Paper 6 revision" citation and cite the Casimir minimum directly. *Difficulty: 1 sentence.*
 
 ---
 
-**D2(b): Circular dependencies**
+#### D2(a) — What Papers 2–7 Need from Paper 1
+**Rating: (B) CLOSABLE GAP**
 
-**Rating: (C) SOUND**
+Theorem S.1 applies to M⁴ × S¹ only. Papers 4–6 work with richer geometries. The finiteness mechanism generalizes (Epstein zeta argument applies to any compact internal manifold) but specific numerical results change. The paper notes this in §L.8.3.
 
-The full SM gauge group is deferred to Paper 4 and Appendix L. The 5D framework is self-contained for the results it claims. No circular dependency between Paper 1 and the companion papers is identified.
+**What is needed:** A statement in the introduction or Appendix S specifying: Theorem S.1 covers M⁴ × S¹; extension to the full 11D geometry is not established in Paper 1. *Difficulty: 1 paragraph.*
+
+---
+
+#### D2(b) — Circular Dependencies
+**Rating: (B) CLOSABLE GAP**
+
+For the core M⁴ × S¹ results, there are no circular dependencies with other series papers. For Appendices W–Z (orbifold/cosmological), forward citations to Papers 2, 4, 6 (not yet available) create non-self-contained content. The paper should clearly label these appendices as anticipating the extended framework.
+
+**What is needed:** A disclaimer at the beginning of Appendix W noting dependence on Paper 4's 11D framework and that the quantitative predictions in Appendices X–Z are conditional on that framework. *Difficulty: 1 paragraph.*
 
 ---
 
 ## 3. Recommendation to Editors
 
-**Major Revision required. Not suitable for PRL. Potentially suitable for Physical Review D or Communications in Mathematical Physics following revision.**
+**Recommendation: Major Revision.**
 
-The three most critical issues to resolve before publication:
+Three critical issues must be addressed before publication:
 
-**Issue 1 (Critical): Explicit two-loop Feynman diagram calculation.**
-The headline claim — absence of the Goroff-Sagnotti R³ divergence in 5D KK gravity — rests on a conditional theorem requiring vertex mass-independence (argued but not computed) and a structural argument for the diagram topologies (not all explicitly verified). No full two-loop Feynman calculation in the 5D KK theory has been performed. The original Goroff-Sagnotti result required an explicit calculation; its purported resolution must also be demonstrated by calculation. Until this is done, the two-loop vanishing must be downgraded from "established" to "strongly supported conjecture," both in the abstract and in Theorem S.1's scope clause. The mathematical machinery is in place; the calculation is the missing piece.
+**Critical Issue 1 — Scheme Independence (Points A1b):** The finiteness result is a property of zeta regularization of KK mode sums, not a demonstrated property of the physical S-matrix. Goroff-Sagnotti found a nonzero R³ coefficient in the same theory using dimensional regularization. The paper must either (a) compute a scheme-independent physical observable (on-shell graviton scattering amplitude in the 5D KK theory) and show it is finite, or (b) explicitly state that scheme independence of the vanishing is an open question and remove language suggesting the result is physically established. This is a genuine gap in the field; the authors have made significant progress via Theorem K.1 and Theorem K.3, but the physical interpretation requires more work.
 
-**Issue 2 (Critical): Scheme independence demonstration.**
-Even granting the structural argument, the paper must explicitly reconcile the zeta-regularization result with dimensional regularization. The specific calculation needed: show that in dim reg, the total (summed over all KK modes) R³ coefficient is zero, while the n=0 mode alone gives 209/2880. This would establish that the Goroff-Sagnotti result is the zero-mode contribution to a theory whose full KK sum vanishes — a physically meaningful statement about the 5D theory rather than a regularization artifact. The Fubini + analytic continuation argument in §S.7.3 points toward this conclusion; the explicit calculation would confirm it.
+**Critical Issue 2 — k = 2 Circularity (Points C3a, C3e):** The warp factor k ≈ 2 is inferred from a qualitative fit to the charged-lepton mass hierarchy, not derived from the compactification geometry. Using k = 2 to compute c_ν = 0.634, which then feeds Paper 2's leptogenesis prediction, constitutes an inversion chain in which observational inputs are repackaged as geometric predictions. The paper must clearly state k's status as a fitted (not predicted) parameter, and whether k = 2 is geometrically unique or one value among a continuous family.
 
-**Issue 3 (Important): Abstract and main text must honestly reflect the appendices.**
-The abstract and §1.5 must be revised to: (a) label the finiteness result as a conditional theorem with open factorization gap at L ≥ 3 and no explicit two-loop calculation; (b) correct the "Axioms required: 1" claim for spin-statistics; (c) remove or correct the strong CP claim (wrong homotopy group, quark mass phase not addressed); (d) acknowledge that R is a measured parameter, not derived. The honest assessments in Appendices K, S, and U must be visible from the abstract, not buried in 26 appendices.
+**Critical Issue 3 — Freed-Witten / CP² Scope (Points C4a–c):** The formula m_ν/m_KK = χ(CP²) − c₂^{eff}/2 = 5/2 in Appendix Z §Z.3.1, and the claim that it follows from the same non-spin property of CP² that resolves spin-statistics, imports Paper 4's 11D geometry into Paper 1's scope. Paper 1 establishes M⁴ × S¹; CP² is not in scope. This material should either be moved to Paper 4 or accompanied by a complete self-contained derivation including the specific gauge bundle, the Freed-Witten condition, and the seesaw chain.
 
-If these issues are addressed — or if the scope is reduced to the core mathematical content (Theorem K.1, the one-loop result of Appendix F, and the two-loop structural argument honestly labeled as a conjecture plus the Born rule and spin-statistics geometric picture) — the paper has publishable content. The Universal Epstein Vanishing theorem is a clean mathematical result with clear physical application in KK theories. The geometric picture of spin-statistics correctly identifies the connection between the rotation-group topology and the winding-number picture. These contributions, properly scoped and with appropriately hedged claims, merit publication in a specialized journal.
+If the authors address these three issues, the paper's genuine contributions are substantial: Theorem K.1 (E_L(−j; Q) = 0 for all j ≥ 1, proved via 1/Γ(−j) = 0) is a new and elegant result in analytic number theory / mathematical physics; Theorem K.3 (BPHZ Factorization) is a significant advance in closing the multi-loop gap; the explicit two-loop vanishing via the complementary Eisenstein lattice zeros is technically impressive; and the geometric unification of spin-statistics, Born rule, and Aharonov-Bohm via U(1) KK geometry is carefully and honestly characterized. These contributions warrant publication in Physical Review D upon successful revision.
+
+For Physical Review Letters, focus on the finiteness theorem (Theorem K.1 + the two-loop vanishing) as a Letter, with the broader framework as a companion PRD article. For Communications in Mathematical Physics, the Epstein zeta vanishing theorem stands alone as a mathematical physics result of independent interest, separate from its physical applications.
 
 ---
-
-*Report prepared following complete reading of the manuscript and all 26 appendices. All citations to the manuscript text are by appendix or section number as found in the submitted version.*
+*Report prepared under the referee prompt at `paper1/etc/01-journal-referee.md` (Run r01).*
+*Prior run archived to `paper1/reviewer-runs/r00/`.*

@@ -34,6 +34,10 @@ information loss result is recovered exactly as the 4D projection
 of a structured 5D state: integrating over `e` yields a thermal
 spectrum, but the e-structure of the radiation encodes a complete
 record of all infalling information.
+The density matrix ρ_rad has not been computed from direct state evolution of the
+5D theory; the Page curve derivation is kinematic, applying Page's (1993) result to
+the e-Hilbert space given the fast-scrambler assumption (see §7.6 for the full
+stratification of what is derived vs. assumed).
 
 The Bekenstein-Hawking entropy `S = A/4` is derived from entanglement
 entropy of KK modes across the horizon, with the species factor

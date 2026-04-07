@@ -461,10 +461,21 @@ The density matrix becomes diagonal — a classical probability distribution ove
 measurement outcomes. This is the mathematical description of e-scrambling.
 
 The Born rule — that the probability of outcome i is `|αᵢ|²` — is not a
-separate postulate in the 5D framework. It is geometrically motivated and
-uniquely selected by two independent arguments (Appendix C.1):
+separate probability postulate in the 5D framework, but its derivation has two
+parts with different logical status (Appendix C.1). The Haar measure argument
+establishes that, *given* the 5D density ρ = |ψ(x,φ)|² (the squaring step,
+p = 2), the Born rule P(i) = |αᵢ|² follows from the uniqueness of the Haar
+measure on U(1) and the orthonormality of the e-eigenstates — the measure comes
+from the e-translation symmetry of the circle. The identification p = 2 (rather
+than some other exponent p) is not derived from geometry alone; it is motivated
+by causal consistency: Torres Alegre (2026) proves that |⟨φ|ψ⟩|² is the unique
+probability assignment consistent with no superluminal signaling in any
+generalized probabilistic theory, and the 5D framework's causal structure (the
+e-dimension carries no causal signals) geometrically enforces this condition.
+The p = 2 identification is therefore a conditional derivation, not an
+unconditional geometric theorem.
 
-First, the *Haar measure argument*. The e-dimension is a circle (`U(1)`).
+The Haar measure argument explicitly: The e-dimension is a circle (`U(1)`).
 The unique translation-invariant measure on `U(1)` is the Haar measure
 `dφ/2π` — forced by e-translation invariance (Postulate 3). The 5D density
 is `|ψ(x, φ)|²`. Integrating over any e-region `Ωᵢ` with this measure gives
@@ -473,14 +484,14 @@ the e-eigenstates. The Born rule follows from the *uniqueness of Haar
 measure on compact groups* combined with *e-translation invariance* —
 the measure comes from the symmetry, not from a probability postulate.
 
-Second, the *causal consistency argument*. Torres Alegre (2026,
-arXiv:2512.12636) proves within the framework of generalized
-probabilistic theories that `|⟨φ|ψ⟩|²` is the *unique* causally consistent
-probability assignment — any nonlinear deviation enables superluminal
-signaling. In the 5D framework, causal signals propagate along the 4D
-base manifold, not along the e-fiber. The framework's causal structure
-geometrically enforces the condition that Torres Alegre's theorem
-requires.
+The causal consistency argument (Torres Alegre 2026, arXiv:2512.12636) proves
+within the framework of generalized probabilistic theories that `|⟨φ|ψ⟩|²` is
+the *unique* causally consistent probability assignment — any nonlinear
+deviation enables superluminal signaling. In the 5D framework, causal signals
+propagate along the 4D base manifold, not along the e-fiber. The framework's
+causal structure geometrically enforces the condition that Torres Alegre's
+theorem requires. This motivates but does not derive the p = 2 squaring step
+from geometry alone.
 
 ### What This Resolves
 

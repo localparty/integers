@@ -75,7 +75,7 @@ dimensions.
 | Unitarity of 5D S-matrix (Theorem 6.1) | **Derived** (Noether + finiteness; non-perturbative completion via M-theory, Appendix A) | A proof that the 5D path integral is not well-defined |
 | δφ = φ_infalling (e-imprint mechanism) | **Argued** (from e-conservation at the horizon vertex) | A proof that e-conservation does not apply at the horizon |
 | e-correlations not subject to monogamy | **Derived** (§9.3.1: Q_e is a superselection charge; KK loops conserve e-charge) | A proof that the KK zero-mode projection does not commute with Q_e |
-| Firewall paradox resolution (Theorem 9.1) | **Derived** (§9.3.1-2 + gauge symmetry protection; UV finiteness at horizon from Appendix S + non-perturbative completion from Appendix A) | A proof that the 5D path integral is UV divergent at the horizon vertex |
+| Firewall paradox resolution (Theorem 9.1) | **Derived** conditionally: no-drama from §9.4 (no 4D energy barrier) is unconditional; no-drama from §9.5 (Hadamard condition) is conditional on Working Assumption 9.1 (5D vacuum factorization, §9.5); see B2(b) response | A proof that the 5D path integral is UV divergent at the horizon vertex, or a computation showing the 5D Bogoliubov transformation does not preserve the factorized vacuum |
 | e-coordinate zero-mode non-dynamical | **Argued** (from KK decomposition: `n=0` mode is non-propagating background; `n≠0` modes propagate sublumianlly; §2.4) | A derivation of a causal propagation equation for the `n=0` zero-mode specifically |
 
 **The resolution is complete with no remaining dependencies.**

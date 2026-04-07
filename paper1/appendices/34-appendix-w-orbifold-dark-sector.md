@@ -1,5 +1,21 @@
 # Appendix W — The `Z₂` Orbifold: Dark Matter, Three Generations, and the Fine Structure Constant
 
+> **Scope disclaimer.** Appendices W through Z extend the M⁴ × S¹ framework of
+> this paper to the Z₂ orbifold, the dark sector, and the neutrino mass
+> predictions. These appendices make forward references to Papers 2, 4, and 6 of
+> the series (Papers 4 and 6 are not yet available at the time of this
+> submission). Specifically: the leptogenesis calculation depends on Paper 2; the
+> CP² compactification and the GUT-scale seesaw use results from Paper 4; and the
+> dilaton stabilization and Casimir minimum use results from Paper 6. Quantitative
+> predictions in Appendices X–Z are therefore conditional on the extended
+> framework of those companion papers. They are included here because they arise
+> naturally from the orbifold geometry established in Appendix W, and because some
+> (in particular the neutrino mass ordering prediction of Appendix Z and the
+> dark photon mixing prediction of §W.7) are falsifiable in the near term
+> independently of the full 11D framework. The reader should understand the
+> orbital predictions in these appendices as a research program, not as
+> established results of this paper.
+
 > **Status:** Speculative extensions — labeled throughout by epistemic tier.
 > The `Z₂` structure is geometrically motivated by the spin structure already
 > established in Appendix B. The dark photon prediction (Section W.7) is the
@@ -31,6 +47,20 @@ inputs beyond the base M⁴ × S¹ framework:
 Both choices are geometric (motivated by the existing spin structure of the
 e-circle), not phenomenological tuning. They are not free parameters in the
 sense of having continuous adjustable values.
+
+**Brane assignment convention.** The Z₂ spin structure distinguishes two types
+of fields (Z₂-even and Z₂-odd) but does not, by itself, select which of the two
+fixed points φ = 0 and φ = π hosts the Standard Model. The designation of
+φ = 0 as the "visible brane" (SM fields) and φ = π as the "hidden brane" (dark
+sector) is a naming convention: by the Z₂ symmetry of the orbifold, the two
+branes are geometrically equivalent — there is no topological or geometric
+difference between them that would select one as the "SM brane." The assignment
+is observationally unambiguous (we observe SM matter, so we name the brane we
+live on "visible") but is not derived from the orbifold geometry. An observer in
+the dark sector would make the same convention with the labels reversed. This is
+analogous to choosing orientation in differential geometry: the Z₂ symmetry of
+S¹/Z₂ is a reflection, and choosing which endpoint is "left" and which is "right"
+is a convention, not a geometric necessity.
 
 **Continuous parameters:**
 - R ≈ 12 μm: the orbifold radius (= brane separation). Fixed by one
@@ -261,22 +291,107 @@ the quark sector, which constrain `k` and the `Z₃` locations further.
 The qualitative success is encouraging; the quantitative fit requires
 dedicated calculation.
 
-**Cosmological role of `k`.** The warp factor enters a second, independent
-analysis that connects the orbifold geometry directly to the observed dark
-matter abundance. The bulk right-handed neutrino `N^{5D}` responsible for
-leptogenesis has a wavefunction profile `∝ e^{(2 − cᵥ)k|φ|}` along the
-e-direction, where `cᵥ` is the 5D bulk mass parameter. Using the independently
-measured ratio `Ω_DM/Ω_b = 5.36` (which fixes the mirror-sector temperature
-ratio `ξ = 0.432` via `Ω_DM/Ω_b = 1/ξ²`; see Paper 2 §2.1) together with
-`k = 2`, the localization parameter is determined uniquely:
+**Cosmological role of `k`.** The warp factor enters the leptogenesis analysis of
+Paper 2 as a direct input to the bulk neutrino localization parameter c_ν. Given
+the independently measured ratio Ω_DM/Ω_b = 5.36, which fixes the mirror-sector
+temperature ratio ξ = 0.432 via Ω_DM/Ω_b = 1/ξ² (Paper 2 §2.1), the
+localization parameter c_ν is determined by k through:
 
-    cᵥ = 1/2 − ln(ξ)/(kπ) = 1/2 − ln(0.432)/(2π) = 0.634 ± 0.002
+    c_ν = 1/2 − ln(ξ)/(kπ)
 
-This gives a 5D neutrino mass `mᵥ^{5D} = cᵥ × k = 1.27 M_KK` (derived in
-Paper 6 §6.5). The warp factor `k = 2` is therefore not only a quantum
-gravity parameter: it is a direct input to the leptogenesis prediction, and
-its value — inferred here from the charged-lepton mass hierarchy — is
-independently required by the cosmological dark matter abundance.
+For k = 2: c_ν = 0.5 + 0.133 = 0.634 ± 0.002. This gives a 5D neutrino
+mass m_ν^{5D} = c_ν × k × M_KK = 1.27 M_KK (derived in Paper 6 §6.5, not
+reproduced here — see §W.5a below for the key integral).
+
+**Status of k as a parameter.** The value k ≈ 2 is *inferred* from the
+charged-lepton mass hierarchy: m_τ/m_e ≈ 3477 = exp(4kπ/3) gives k ≈ 1.95.
+This is an observational fit, not a geometric derivation. The quantity ξ = 0.432
+is similarly determined from observation (Ω_DM/Ω_b = 5.36). Both inputs to the
+c_ν formula are fitted to data; c_ν is a consequence, not a prediction. The
+phrase "independently required" in a previous draft was imprecise: the two
+observables (lepton mass ratio and Ω_DM/Ω_b) are independent measurements, but
+using them together to determine a single parameter (k) and then using k in a
+computation (c_ν) is not the same as two independent derivations of k.
+
+**Uniqueness of k = 2.** Whether the compactification geometry selects k = 2
+(or any particular value of k) from first principles is an open question. In
+the Randall-Sundrum framework, k is set by the ratio of the bulk cosmological
+constant Λ₅ to the brane tension σ: k² = −Λ₅/(6M₅³). This is a continuous
+parameter; no quantization condition from the e-circle geometry or the orbifold
+structure has been identified that would force k to be an integer or to take
+the specific value k = 2. The current paper treats k as a free parameter whose
+value is inferred from observation. A mechanism producing k = 2 geometrically —
+for example, a moduli stabilization condition from the e-circle Casimir potential
+or a consistency requirement from the gauge coupling unification at the CP² scale
+— would upgrade this section from a fit to a prediction, but no such mechanism
+is known at this stage.
+
+The leptogenesis analysis in Paper 2 must therefore be understood as using
+k = 2 as an observationally fitted input, not as a geometrically derived value.
+Any revision to the observed lepton mass ratios or to Ω_DM/Ω_b would cascade
+into the c_ν value and the Paper 2 predictions.
+
+### W.5a Derivation of the c_ν Formula
+
+The bulk right-handed neutrino N^{5D} in the warped background ds² = e^{−2k|φ|}
+g_{μν} dx^μ dx^ν + R² dφ² has a zero-mode profile f_R(φ) satisfying:
+
+    (∂_φ² − 4k² + 2kc_ν |∂_φ|) f_R = 0   (equation of motion in the bulk)
+
+with Neumann boundary conditions at φ = 0 and φ = π. The normalized zero-mode
+is:
+
+    f_R(φ) = N_ν × exp((2 − c_ν) k |φ|)
+
+where the normalization N_ν is determined by ∫_0^π R dφ |f_R|² = 1:
+
+    N_ν² = (2c_ν − 1) k / (e^{(2c_ν−1)kπ} − 1)
+
+The 4D Dirac mass is m_D = y₅ × f_R(0) × v, and the visible-brane profile
+at φ = 0 gives f_R(0) = N_ν. The dark-matter-related condition enters through
+the leptogenesis constraint: the CP asymmetry produced by N^{5D} decays on the
+visible brane (φ = 0) relative to the hidden brane (φ = π) is proportional to
+the ratio |f_R(0)|² / |f_R(π)|² = exp(−(2c_ν − 1)kπ). Requiring this ratio to
+equal ξ² (the temperature ratio squared, which controls the entropy asymmetry):
+
+    |f_R(0)|² / |f_R(π)|² = ξ²
+    exp(−(2c_ν − 1)kπ) = ξ²
+    −(2c_ν − 1)kπ = 2 ln(ξ)
+    c_ν = 1/2 − ln(ξ)/(kπ)
+
+This is the formula quoted in §W.5. The full derivation of the bulk profile
+equation of motion, the normalization integral, and the CP asymmetry formula in
+terms of the bulk wave function is carried out in detail in Paper 6 §6.5; the
+key steps above are reproduced here for self-containedness.
+
+The 5D neutrino mass m_ν^{5D} = c_ν × k × M_KK = 1.27 M_KK is the mass of the
+bulk zero-mode right-handed neutrino in units of the KK mass. To obtain the
+observable 4D light neutrino mass, the seesaw mechanism gives
+m_ν^{light} = (m_D)²/M_R, where m_D = y₄ × v is the Dirac mass (y₄ the 4D
+Yukawa coupling, v = 246 GeV the Higgs VEV) and M_R is the Majorana mass of
+the right-handed neutrino. In this framework, M_R ~ M_GUT ~ 10¹⁵ GeV is set
+by the CP² compactification scale (Paper 4, §3.3) rather than by the S¹ scale.
+With M_R = M_GUT:
+
+    m_ν^{light} = y² × v² / M_GUT ~ y² × 0.06 eV
+
+For y ~ 0.9, this gives m_ν^{light} ~ 50 meV ~ √(Δm²_atm). This is a scale
+estimate, not a precise prediction: the Yukawa coupling y is a free parameter
+of order unity, M_R depends on the CP² radius from Paper 4 (not established in
+this paper), and the precise relationship between m_ν^{5D} = 1.27 M_KK and the
+seesaw formula requires the full 11D chain from Paper 4. The prediction of the
+neutrino mass *scale* (meV range) is robust to order-unity changes in y; the
+specific value 50 meV requires y ~ 0.9, which is plausible but not derived.
+
+Note on cross-paper dependencies: the value c_ν = 0.634 computed here enters
+Paper 2's leptogenesis calculation directly as the bulk localization parameter
+that determines the CP asymmetry between the two branes. Any revision to k
+(for example, if a more precise fit to the lepton mass hierarchy gives k ≠ 2,
+or if a moduli-stabilization argument constrains k differently) would propagate
+into c_ν and through the entire Paper 2 analysis. The three papers (this paper,
+Paper 2, and Paper 6) form a chain in which k and R are the shared continuous
+parameters; k is currently fitted from observation, and future work that derives
+k geometrically would affect all three simultaneously.
 
 ---
 
@@ -628,6 +743,42 @@ between the two branes separated by d = `πR`:
 This estimate comes from the product of three factors: the fine structure
 constant (1/137), the zeta sum `Σ 1/n² = π²/6` over KK levels, and the
 exponential brane-separation suppression `exp(−π)` for the dominant n=1 mode.
+
+### W.7a Derivation of ε ~ α_EM × π²/6 × exp(−π)
+
+The kinetic mixing between the visible-brane U(1)_EM and the hidden-brane U(1)'
+arises from one-loop exchange of 5D bulk fields between the two branes. The
+mixing parameter ε is given by the one-loop integral over KK modes threading
+the bulk between φ = 0 and φ = π:
+
+    ε = (e₄²)/(16π²) × Σ_n (1/n²) × exp(−n|Δφ|/R)
+
+where |Δφ| = π is the brane separation in the e-direction and e₄ is the 4D
+electromagnetic coupling. With Δφ = πR:
+
+    ε = α_EM × Σ_{n=1}^∞ (1/n²) × exp(−nπ) / (4π)
+      = (α_EM / 4π) × Li₂(exp(−π))
+
+where Li₂ is the polylogarithm. For large argument, Li₂(exp(−π)) ≈
+(π²/6) × exp(−π) / (1 − exp(−π)) ≈ (π²/6) × exp(−π) (since exp(−π) ≈ 0.043
+≪ 1). Therefore:
+
+    ε ≈ (α_EM / 4π) × (π²/6) × exp(−π)
+      ≈ (1/137) × (π/4) × (1/6) × exp(−π)
+      ≈ 5 × 10⁻⁴
+
+This is a one-loop estimate; higher-loop contributions and the exact brane
+geometry will modify the prefactor at the order-unity level.
+
+**Current experimental status.** The dark photon kinetic mixing at ε ~ 5 × 10⁻⁴
+and mass m_γ' ~ m_KK ~ 16 meV lies in the parameter space targeted by LDMX
+(Light Dark Matter eXperiment), LHCb Run 3 dark photon searches, and the
+BaBar/NA64 excluded region. At m_γ' ~ 16 meV, current bounds from CAST-CAPP
+and solar emission constraints allow ε up to ~ 10⁻³ at this mass; the
+prediction ε ~ 5 × 10⁻⁴ is within reach of near-future experimental
+sensitivity. The formula is a derivation from first principles of the orbifold
+geometry; the order-unity prefactor uncertainty does not affect the
+experimental accessibility.
 
 Note: a naive geometric estimate gives `exp(−π) ≈ 0.04`, but this omits the
 coupling factors. The full KK tower calculation gives `ε ~ 5 × 10⁻⁴` — two

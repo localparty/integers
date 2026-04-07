@@ -187,6 +187,19 @@ finiteness is therefore established conditional on the scope of Theorem K.3; the
 independent explicit verification at three loops remains an identified open task
 (§K.5.2, Route C).
 
+A further caveat, identified in the referee process and not previously stated
+with equal prominence: the vanishing obtained under zeta regularization is a
+regularization-scheme-dependent result. The physical content of this vanishing
+— whether it reflects a scheme-independent property of on-shell graviton
+scattering amplitudes in the 5D KK theory — has not been demonstrated.
+Goroff-Sagnotti's computation in 4D pure gravity using dimensional
+regularization gives a nonzero result; this comparison is between different
+theories and different schemes, so it is not a direct contradiction, but the
+two results are not in positive agreement either. The necessary comparison
+— computing the two-loop amplitude in the 5D KK theory with both
+regularizations, or computing a physical on-shell observable — is identified as
+the critical next calculation.
+
 **Table 1.1: Epistemic Status of the Eight Core Results**
 
 | Result | Hypotheses | Conclusion | Logical path | Falsification condition | Epistemic label |
@@ -195,7 +208,7 @@ independent explicit verification at three loops remains an identified open task
 | **Electromagnetism** | 5D metric on M⁴ × S¹; KK reduction | 4D EM field equations from KK zero mode of metric | Kaluza-Klein theorem (1919, 1926) | KK reduction of the 5D metric failing to produce Maxwell's equations | Established (known KK result) |
 | **Gravity** | Same as electromagnetism | Newtonian gravity + GR in weak-field limit | KK reduction (Appendix D, Claim 1) | Geodesic equation failing to reproduce Newton's law | Established (known KK result) |
 | **Spin-statistics theorem** | Hilbert space; Wigner's theorem; π₁(SO(d)) = ℤ₂; e-phase coupling postulate | Integer winding → bosons; half-integer → fermions; χ(σ) = e^{i2πs} fixed | Topological argument in Appendix B; Noether identification | Finding a particle with integer spin and fermionic exchange statistics | Geometric derivation (same axioms as standard proof + e-phase coupling) |
-| **Perturbative UV finiteness** | Linearized 5D gravity on M⁴ × S¹; spectral zeta regularization; Theorem K.3 scope | E_L(-j;Q) = 0 for all j,L; KK mode sums finite at all loop orders | Theorems K.1, K.3, S.1; explicit L=1,2 | Finding nonzero R³ coefficient in dim-reg KK calculation | Conditional theorem (L≥3 factorization gap; no explicit two-loop calculation) |
+| **Perturbative UV finiteness** | Linearized 5D gravity on M⁴ × S¹; spectral zeta regularization; Theorem K.3 scope | E_L(-j;Q) = 0 for all j,L; KK mode sums finite at all loop orders | Theorems K.1, K.3, S.1; explicit L=1,2 | Finding nonzero R³ coefficient in dim-reg KK calculation | Conditional theorem (L≥3 factorization gap; no explicit two-loop KK calculation across all topologies; scheme independence not demonstrated — zeta regularization gives zero, but agreement with a scheme-independent physical observable is an open problem) |
 | **Hydrogen spectrum** | Coulomb potential from KK photon; standard QM | E_n = -13.6/n² eV spectrum | KK-reduced Coulomb Hamiltonian + Schrödinger equation | Spectrum disagreeing with observation | Established (standard QM result, reproduced in framework) |
 | **Black hole entropy** | Bekenstein-Hawking; KK reduction | S = A/4G_N from KK spectrum | KK counting of near-horizon modes (Appendix O) | BH entropy disagreeing with A/4G_N | Geometric consistency (not new result) |
 | **CPT theorem** | 5D Lorentz invariance of the KK action; PCT theorem in 5D QFT | CPT symmetry of 4D effective field theory | Standard PCT proof applied to 5D theory then reduced | CPT violation | Established (standard result, not new) |
@@ -207,19 +220,15 @@ continuous parameter: the brane separation R. This parameter is fixed by
 matching the Casimir energy to the observed dark energy density, giving
 R ≈ 12 μm. With R fixed, the following are parameter-free predictions:
 
-1. Gravitational deviations at 12–21 μm (KK graviton tower; testable by
-   Eöt-Wash / Stanford torsion pendulum experiments)
-2. Dark photon kinetic mixing ε ~ 5 × 10⁻⁴ (from α_EM × π²/6 × exp(-π);
-   testable by LDMX and LHCb Run 3)
-3. Neutrino masses at meV scale, normal ordering (from bulk seesaw with R ~ 12
-   μm; testable by JUNO within 6 years)
-4. H₀ = 68.7–69.5 km/s/Mpc (from hidden-brane dark radiation; distinctive
-   from local H₀ measurements)
-5. N_eff = 3.31–3.39 (testable by CMB-S4; currently in 3-4σ tension with ACT
-   DR6 N_eff = 2.86 ± 0.13 — the framework's primary open issue)
-6. Casimir effect magnitude from R (standard calculation, reproduced)
-7. Ω_DM/Ω_b = 1/ξ² (from bulk leptogenesis entropy asymmetry; companion
-   Paper 2)
+| # | Prediction | Value | Current bound | Test status | Experiment |
+|---|-----------|-------|--------------|------------|-----------|
+| 1 | Gravitational deviation | At ℓ_KK ~ 12–21 μm | No deviation found above 13 μm (Eöt-Wash 2008) | Not yet tested at 12–16 μm | Eöt-Wash, Stanford torsion pendulum |
+| 2 | Dark photon mixing | ε ~ 5 × 10⁻⁴ at m ~ 16 meV | ε ≲ 10⁻³ at 10–100 meV (CAST-CAPP, NA64) | Within near-future reach | LDMX, LHCb Run 3 |
+| 3 | Neutrino mass ordering | Normal (m₃ > m₂ > m₁) | ~2–3σ preference for normal (global fits) | Actively tested | JUNO (3–6 year timeline) |
+| 4 | Hubble parameter | H₀ = 68.7–69.5 km/s/Mpc | Planck: 67.4 ± 0.5; SH₀ES: 73.2 ± 1.3 | Consistent with Planck, in tension with local | DESI, CMB-S4 |
+| 5 | N_eff | 3.31–3.39 | ACT DR6: 2.86 ± 0.13 — **3–4σ tension** | Framework's primary open tension | CMB-S4 (σ ≈ 0.03) |
+| 6 | Casimir effect | Standard (R-dependent) | Measured at μm scales; standard result reproduced | Already tested (standard result) | Current Casimir experiments |
+| 7 | Ω_DM/Ω_b | = 1/ξ² (ξ from leptogenesis) | Observed: 5.36; predicted: consistent | Tested; Paper 2 details | Planck, DESI |
 
 These are not 8 independent verifications of the model — they are 7 predictions
 from a single fixed parameter. The predictive content is: fix R from dark energy;

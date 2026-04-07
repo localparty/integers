@@ -9,7 +9,9 @@ the physics is still missing.
 ## 7.1 The One Remaining Number
 
 The framework has one free parameter: R, the e-circle circumference. It is
-fixed observationally via ρ_Λ = ℏc·π²/(240R⁴), giving R ≈ 12 μm. This is
+fixed observationally via ρ_Λ = ℏc·π²/(240R⁴), giving R ≈ 12 μm (bare
+Casimir, mirror sector absent; the corrected value including the mirror sector's
+ξ⁴ contribution is R₀ = 10.1 μm, §4c.3 — the value used in §§4b–4d). This is
 not a problem — one parameter is extraordinarily few for a framework that
 covers quantum mechanics, the Standard Model, cosmology, and black hole
 physics. But it is a parameter, and the framework does not currently derive R
@@ -30,6 +32,19 @@ The cosmological constant problem has been sharpened from "why is Λ small?"
 to "what non-perturbative mechanism produces R_obs from l_P?" That is a
 more tractable question.
 
+**Dimensionless vs. dimensionful predictions.** The framework's claim that
+"every other quantity is a consequence of R and the geometry" requires one
+refinement (Paper 7 gap-response, Finding D1b). Dimensionless predictions —
+sin²θ_W, α₃/α₂, n_s, N_eff, Ω_DM/Ω_b, the generation count, θ_QCD — are
+genuinely parameter-free consequences of the geometry, independent of R's
+specific value. Dimensionful predictions — M_GUT ∝ R^{1/2}, m_H ∝ R^{1/2},
+τ_p ∝ R² — are consequences of R at R_obs. They are not independently
+parameter-free: they are consistency relations at the observationally fixed
+R. The distinction matters for falsifiability: if R were measured to be 11 μm
+rather than 10.1 μm, the dimensionless predictions would be unchanged; the
+dimensionful predictions would shift. The framework's strongest predictions
+are therefore the dimensionless ones.
+
 ---
 
 ## 7.2 Three Open Threads
@@ -39,13 +54,21 @@ more tractable question.
 The framework predicts Σm_ν ~ 0.06 eV via the bulk seesaw mechanism on the
 S¹/Z₂ orbifold. Separately, there is a numerical coincidence:
 
-    m_ν / m_KK = χ(CP²)/2 + η(D_{S¹/Z₂})/2 = 5/2
+    5/2 = χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2
 
-where η is the eta invariant of the Dirac operator on the orbifold. The ratio
-5/2 appears on both sides of an equation that connects a physical mass to
-topological invariants. The mechanism behind this coincidence is unknown.
-It may be Pattern 4 (Topological Rigidity) operating at a deeper level — or
-it may be numerical coincidence. This distinction needs to be established.
+where 3 is the spin^c Dirac index on CP² (computed by HRR; equals χ(CP²) for
+this specific manifold and twist) and 1/2 is the fractional instanton number
+established by the HW anomaly-cancellation argument (Paper 7 §B.10.1). Note:
+the eta invariant η(D_{CP²}) = 0 identically for all standard spin^c structures
+on CP², computed explicitly from the Cahen-Franc-Gutt spectrum (Paper 7
+§B.10.3a); the APS boundary interpretation of the −1/2 is therefore ruled out.
+The −1/2 arises from the physics of M-theory flux at the orbifold fixed plane,
+not from APS corrections. The ratio 5/2 connects a manifold invariant (χ = 3)
+and a gauge-bundle invariant (c₂^{eff} = 1/2) in different cohomological
+contexts. The mechanism that makes their difference equal the mass ratio is
+unknown — this is the open coincidence. It may be Pattern 4 (Topological
+Rigidity) operating at a deeper level, or it may be a numerical coincidence
+of topologically rigid components. This distinction needs to be established.
 
 **Thread 2 — The E₈ embedding and tadpole integrality**
 

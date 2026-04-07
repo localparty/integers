@@ -1,5 +1,18 @@
 # Spin-Statistics, Aharonov-Bohm, Perturbative Finiteness, and Twenty-Two Derivations from Kaluza-Klein Geometry
 
+> **Editorial Note:** This paper presents results at three rigor levels, clearly
+> labeled in §1.5 and Table 1.1. The central mathematical result — the Universal
+> Epstein Vanishing theorem (Theorem K.1) and the BPHZ Factorization theorem
+> (Theorem K.3), establishing perturbative UV finiteness of linearized 5D
+> KK gravity under zeta regularization — is independent of the geometric
+> interpretations of quantum mechanics (Sections 3–4). Referees whose primary
+> competence is in the gravitational/finiteness direction are directed to
+> Appendices F, G, K, S, U, and §G.9b. Referees whose primary competence is in
+> foundations/geometric interpretations are directed to Sections 3–4 and
+> Appendices B, C. The paper is designed to allow independent evaluation of each
+> part, and the epistemic labels in Table 1.1 are intended to make this structure
+> explicit.
+
 ## Abstract
 
 We propose that spacetime is five-dimensional — `(x, y, z, t, e)` — where the
@@ -48,28 +61,37 @@ is stronger than expected: the `R³` coefficient is **identically zero at
 every order in the mass expansion**, not just at leading order. The sunset
 topology produces the Epstein zeta of the Eisenstein lattice,
 `E₂(s; n²+nm+m²) = 6ζ(s)L(s,χ₋₃)`, which vanishes at every negative
-integer through complementary trivial zeros of `ζ(s)` and `L(s,χ₋₃)`. The
+integer through complementary trivial zeros of `ζ(s)` and `L(s,χ₋₃)` — a
+result specific to the two-loop sunset topology on the A₂ (Eisenstein)
+lattice, superseded at higher loops by the Universal Epstein Vanishing theorem
+(Theorem K.1), which establishes `E_L(-j; Q) = 0` for all `j ≥ 1`, all loop
+orders `L`, and any positive-definite quadratic form `Q` via the single
+structural fact `1/Γ(-j) = 0`. The
 figure-eight and vertex correction topologies vanish independently through
 the trivial zeros of the Riemann zeta at even negative integers (forced
 by the perfect-square structure of KK masses). Ghost contributions, carrying the same
 Eisenstein quadratic form through KK number conservation, vanish by the
-same mechanisms. Under zeta regularization of the KK mode sums,
-linearized 5D gravity on `M⁴ × S¹` is perturbatively predictive — established
-through two loops by explicit computation (Appendices F and G), and
-**established to all orders by two theorems working in tandem**:
-the Universal Epstein Vanishing theorem (Appendix K, Theorem K.1) proves
-that `E_L(-j; Q_L) = 0` for all `j ≥ 1` and any positive-definite `Q`,
-and the BPHZ Factorization theorem (Theorem K.3) proves via joint
-holomorphicity of the Epstein zeta function in Schwinger parameters that
-BPHZ-subtracted amplitudes retain the Epstein zeta structure at all loop
-orders — provided the Schwinger-boundary contributions are polynomial in
-the KK masses, as established by Weinberg's power-counting theorem for
-renormalizable sub-divergences. The factorization is verified explicitly
-at `L = 1` and `L = 2`; at `L ≥ 3` it rests on Theorem K.3, which closes
-the gap via the locality of BPHZ counterterms. An independent explicit
-three-loop computation (Route C of §K.5.2) would provide additional
-verification and is identified as an open task. Counterterm coefficients are
-determined from two parameters: `G₄` and the `e`-circle circumference `L`.
+same mechanisms. Under spectral zeta regularization of the KK mode sums,
+linearized 5D gravity on `M⁴ × S¹` is perturbatively UV finite: every
+loop-order KK counterterm coefficient vanishes identically. This is established
+through two loops by explicit computation (Appendices F and G), and at all
+orders by two theorems working in tandem: the Universal Epstein Vanishing
+theorem (Appendix K, Theorem K.1) proves that `E_L(-j; Q_L) = 0` for all
+`j ≥ 1` and any positive-definite `Q`, and the BPHZ Factorization theorem
+(Theorem K.3) establishes — via joint holomorphicity of the Epstein zeta
+function in Schwinger parameters — that BPHZ-subtracted amplitudes preserve
+the Epstein zeta structure at all loop orders. The factorization is verified
+explicitly at `L = 1` and `L = 2`; at `L ≥ 3` it relies on Theorem K.3 and
+Weinberg locality, and a Route-C explicit three-loop computation remains an
+open task (§K.5.2). **Whether the zeta-regularized zero is
+scheme-independent — i.e., whether it reflects a property of physical
+on-shell observables rather than of the regularization scheme — is not
+demonstrated in this paper and is identified as the critical open problem.**
+The comparison with Goroff-Sagnotti (1986) is between different theories
+(4D pure gravity vs. 5D KK gravity with full KK tower) and between different
+regularization schemes; a same-theory, same-observable comparison is the
+necessary next step. Counterterm coefficients are determined from two
+parameters: `G₄` and the `e`-circle circumference `L`.
 
 The compact e-circle, with fermions anti-periodic and bosons periodic, has a
 natural Z₂ orbifold interpretation with two fixed-point branes. The visible
@@ -115,8 +137,11 @@ tension without tuning), `r_d = 145.8–148.0 Mpc`, and the CMB angular
 scale `θ*` matched to within 0.5–6.6 arcseconds of Planck's measurement.
 The dilaton dark energy equation of state — **revised to `w = −1`
 exactly** (the perturbative Casimir V = c/R⁴ is exact to all orders;
-the dilaton is frozen at ε ~ 10⁻⁵²; see Paper 6 revision and
-`etc/09-creative-routes-to-R.md`) — makes the expansion history
+the dilaton is frozen at ε ~ 10⁻⁵², stabilized by the Casimir minimum of the
+orbifold potential: the Casimir energy of bulk fields on the Z₂ orbifold has a
+minimum at R ~ 12 μm, and the flatness of this minimum suppresses dilaton
+evolution to ε ~ 10⁻⁵² relative to the Planck time (detailed in the companion
+Paper 6)) — makes the expansion history
 consistent with `ΛCDM` at the w level. Remaining deviations from
 `ΛCDM` come from elevated `N_eff` and lower `Ω_m`, testable by
 DESI DR3 and CMB-S4. The cosmic coincidence

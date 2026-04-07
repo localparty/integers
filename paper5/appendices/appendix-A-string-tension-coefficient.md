@@ -92,12 +92,14 @@ c = 3/(8π²) used in §3.2 is a convenient leading-order expression;
 the first-principles derivation gives c ∈ [1/(3π²), 1/(2π²)]
 depending on normalization conventions and the lattice matching factor.
 
-The 0.7% match between the geometric prediction √σ ≈ 437 MeV and the
-experimental value 440 MeV is at leading order. The theoretical
-uncertainty in c is ~10-20%, making the agreement coincidentally precise.
-The correct claim is that the geometric framework predicts √σ within the
-correct order of magnitude with the right physics (CP² topology, SU(3)
-instanton charge), not that it predicts σ to sub-percent precision.
+The full range c ∈ [1/(3π²), 1/(2π²)] = [0.0338, 0.0507] spans a
+factor of 1.5 in c, propagating to a factor of √1.5 ≈ 1.22 in √σ — a
+22% spread across the full theoretical range. One-sided deviations from
+the central value c_mid = 3/(8π²) = 0.0380 reach approximately +16% at
+c_max and −9% at c_min. The correct claim is consistency within the
+leading-order predicted range [410, 510] MeV; the 0.7% numerical
+proximity of the central-value prediction 437 MeV to the experimental
+value 440 MeV should not be interpreted as a precision prediction.
 
 **The instanton coefficient from first principles** (via the CP² curvature
 integral for the k = 1 configuration in the fundamental representation)

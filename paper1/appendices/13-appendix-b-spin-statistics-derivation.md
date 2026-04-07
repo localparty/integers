@@ -206,6 +206,39 @@ Collecting all results, we obtain the full spectrum of allowed statistics as a f
 
 Every row follows from a single principle: **the fundamental group of the rotation group determines the allowed winding numbers of the e-dimension helix.** The rows are not separate postulates --- they are the same topological principle applied to different spatial geometries.
 
+### B.1.7 Particles on ℝ³ × S¹: No New Statistical Sectors
+
+The full spatial manifold in the 5D framework, at fixed time, is ℝ³ × S¹ (the
+three large spatial dimensions times the e-circle). For two indistinguishable
+particles on ℝ³ × S¹, the configuration space C₂(ℝ³ × S¹) differs from
+C₂(ℝ³) because exchange paths can include relative winding of the two
+particles around the spatial S¹. The Laidlaw-DeWitt (1971) analysis classifies
+exchange statistics by representations of π₁(C₂).
+
+For two particles on ℝ³ × S¹, the relevant fundamental group is:
+
+    π₁(C₂(ℝ³ × S¹)) ≅ π₁(C₂(ℝ³)) × π₁(S¹) = ℤ₂ × ℤ
+
+The ℤ₂ factor (from π₁(SO(3)) = ℤ₂) gives the bosonic/fermionic dichotomy.
+The ℤ factor corresponds to exchange paths in which the two particles wind
+relative to each other around the e-circle. However: the e-circle in this
+framework is the extra compact dimension with radius R ~ 12 μm, not a spatial
+S¹ in the conventional sense. The Laidlaw-DeWitt configuration space analysis
+applies to the spatial configuration of the particles' center-of-mass
+coordinates; at energies far below 1/R ~ 16 meV (i.e., all energies relevant
+to particle physics in the laboratory), the relative winding modes around the
+e-circle are energetically frozen out. The low-energy exchange statistics are
+therefore classified by the ℤ₂ factor alone, and the bosonic/fermionic
+dichotomy is recovered without modification.
+
+More fundamentally: the argument of Theorem B.1.1 derives the dichotomy from
+π₁(SO(d)) = ℤ₂, not from the topology of the configuration space. The rotation
+group topology determines which e-phase accumulations are consistent with the
+Spin(d) double-cover structure, and this argument is insensitive to whether the
+spatial manifold is ℝ³ or ℝ³ × S¹. The configuration-space analysis confirms
+the same conclusion, with the caveat that extra winding sectors are present but
+energetically inaccessible at laboratory scales.
+
 ---
 
 ## B.2 Step 2: Exchange Phase from e-Space Parallel Transport

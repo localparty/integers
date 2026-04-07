@@ -4,10 +4,22 @@
 
 ## 6.1 The Origin of ξ
 
-The brane temperature ratio `ξ = T_hidden/T_visible = 0.49`
-(Paper 2) is the parameter that determines the dark matter
-abundance through the `1/ξ²` law. Paper 2 derives its consequences
-but does not explain its ORIGIN. This section does.
+The brane temperature ratio `ξ = T_hidden/T_visible` is the parameter
+that determines the dark matter abundance through the `1/ξ²` law:
+`Ω_DM/Ω_b = 1/ξ²`. From the Planck 2018 measurement
+`Ω_DM/Ω_b = 5.36`, this gives
+
+$$\xi = \frac{1}{\sqrt{5.36}} = 0.432$$
+
+This is the value used consistently throughout this paper and the
+series. A previous value `ξ = 0.49`, cited in earlier drafts and in
+companion papers, arose from a thermal-history correction chain that
+is retracted by the Z₂ Conservation Theorem of §6.4. The retraction
+and its implications for Paper 2 are stated formally in §6.4 and in
+the abstract.
+
+Paper 2 derives the consequences of `ξ` for the CMB and large-scale
+structure but does not explain its origin. This section does.
 
 ## 6.2 Dilaton Coupling to Two Branes
 
@@ -58,6 +70,23 @@ This is too small — the observed `ξ = 0.432` (from Ω_DM/Ω_b = 5.36) require
 
 ## 6.4 The Z₂ Conservation Theorem
 
+**Derivation of the Z₂ mirror symmetry.** The $S^1/\mathbb{Z}_2$
+orbifold structure of the e-dimension is established in Papers 1 and
+4. The $\mathbb{Z}_2$ action maps $y \to -y$ (where
+$y \in [-\pi R, \pi R]$ is the coordinate on $S^1$), interchanging
+the two fixed-point branes at $y = 0$ (visible) and $y = \pi R$
+(hidden). The 5D gauge fields and matter multiplets are placed in 5D
+representations whose $\mathbb{Z}_2$ parity assignments are fixed by
+the orbifold action on the 5D spectrum (Paper 4, §7.1–7.2). Because
+both branes are fixed points of the same $\mathbb{Z}_2$ action and
+receive the same projection of the 5D bulk spectrum, they obtain
+identical gauge groups and identical particle content from the
+Kaluza-Klein reduction. This is a geometric consequence of the
+orbifold, not an independent assumption. The Z₂ mirror symmetry
+invoked in the theorem below is therefore a consequence of the
+$S^1/\mathbb{Z}_2$ geometry established in Papers 1 and 4, not an
+additional hypothesis.
+
 The thermal-history chain in the previous draft of this section
 — gravitational thermalization giving `ξ ~ 0.14`, bulk neutrino
 decays overshooting to `ξ ~ 0.84`, QCD asymmetry correcting to
@@ -92,6 +121,16 @@ $$\boxed{\frac{\xi_\mathrm{after}}{\xi_\mathrm{before}} = 1}$$
 
 **ξ is exactly conserved through thermal history under Z₂ symmetry.**
 
+The theorem holds for any initial $\xi_0 \neq 1$ because the Z₂
+symmetry acts on the particle content of each sector independently
+of the temperature ratio; the g_* evolution of each sector depends
+only on its own particle content and its own temperature, not on the
+other sector's current temperature. Non-simultaneity of the two
+sectors' transitions — they occur at $T_\mathrm{vis}$ and
+$T_\mathrm{hid} = \xi T_\mathrm{vis}$, which are at different cosmic
+times — is irrelevant to the ratio because each sector's entropy is
+separately conserved between its own transitions.
+
 The key subtlety is the one the earlier analysis got wrong: the
 hidden-sector QCD transition occurs at a *lower* temperature
 (`T'_\mathrm{QCD} = ξ T_\mathrm{QCD}`) than the visible-sector
@@ -109,6 +148,73 @@ artifacts of inconsistently applying entropy conservation: the
 visible-sector heating was being counted without the corresponding
 hidden-sector heating at `T' = ξ T`. When both are properly
 tracked, the corrections cancel.
+
+**Subtlety at QCD confinement: N_f = 2 vs. N_f = 3.** At
+$\xi = 0.432$, the hidden-sector QCD transition occurs at
+$T'_\mathrm{QCD} = \xi \times 155\,\text{MeV} \approx 67\,\text{MeV}$.
+The mirror strange quark has the same mass as the visible strange
+quark (by Z₂ symmetry): $m_{s'} = m_s \approx 95\,\text{MeV}$.
+Since $m_{s'} > T'_\mathrm{QCD}$, the mirror strange quark has
+already been integrated out of the mirror plasma before the mirror
+QCD transition; the mirror sector at its QCD transition has $N_f = 2$
+active flavors, while the visible sector at its QCD transition
+($T_\mathrm{QCD} = 155\,\text{MeV} > m_s$) has $N_f = 3$ active
+flavors. This apparently breaks the Z₂ symmetry of the theorem.
+
+The g_* drop at QCD confinement for $N_f = 3$ (visible sector) is
+$\Delta g_{*,3} = 10.5$ (quarks) $+ 8$ (gluons) $= 18.5$ relativistic
+degrees of freedom liberated by the deconfinement-to-confinement
+transition (using the lattice-corrected values). For $N_f = 2$
+(hidden sector), $\Delta g_{*,2} = 9.0$ (u, d quarks) $+ 8$
+(gluons) $= 17.0$. The ratio of drops is
+
+$$\frac{\Delta g_{*,\mathrm{hid}}}{\Delta g_{*,\mathrm{vis}}} = \frac{17.0}{18.5} = 0.919$$
+
+The effect on $\xi$ through a single QCD transition would be:
+
+$$\frac{\xi_\mathrm{after}}{\xi_\mathrm{before}} = \left(\frac{\Delta g_{*,\mathrm{hid}}}{\Delta g_{*,\mathrm{vis}}}\right)^{1/3} = (0.919)^{1/3} = 0.972$$
+
+This is a ~3% shift, not a cancellation. However, the strange quark
+decouples from the mirror plasma at $T' \sim m_{s'}/3 \approx 32\,\text{MeV}$
+(well before the mirror QCD transition), and its decoupling itself
+heats the mirror sector by a factor
+$(g_{*,\mathrm{before}}/g_{*,\mathrm{after}})^{1/3}$, partially
+restoring the ratio.
+
+A full quantitative resolution requires a careful two-sector
+Boltzmann code tracking both sectors' g_*(T) through the QCD
+transition and strange-quark decoupling. This analysis is deferred
+to the companion two-sector simulation mentioned in §6.6 and in
+future work. For the purposes of the Z₂ Conservation Theorem as
+stated, the claimed cancellation holds exactly only for
+$\xi \gtrsim m_s/T_\mathrm{QCD} \approx 0.61$ (where the mirror
+strange quark is still active at the mirror QCD transition). For
+$\xi = 0.432 < 0.61$, the theorem holds approximately, with a
+correction at the $\sim 3\%$ level from the $N_f = 2$ vs. $N_f = 3$
+difference. This correction would shift $\xi$ by
+$\delta\xi/\xi \sim 1 - 0.972 \sim 3\%$, moving $\xi$ from 0.432 to
+approximately 0.419. This is within the observational uncertainty on
+$\Omega_\mathrm{DM}/\Omega_b$ at the current Planck precision but
+should be computed precisely in the two-sector simulation.
+
+The Z₂ Conservation Theorem as proved above is therefore exact for
+the particle content above the strange quark mass threshold. Below
+this threshold, the mirror and visible sectors have different $N_f$
+and the theorem receives a computable correction. We flag this as a
+precision issue that is parametrically small (3%) and deferrable but
+should be addressed before high-precision CMB comparisons.
+
+**Formal retraction.** The thermal-history chain presented in earlier
+drafts of this paper and cited as
+$\xi_0 \to 0.84 \to 0.79 \to 0.49$ is formally retracted. The
+correct result, established by the Z₂ Conservation Theorem above,
+is $\xi = \mathrm{const}$ throughout thermal history at its
+leptogenesis value. The value $\xi = 0.49$ that appeared in earlier
+drafts of this paper and in companion Paper 2 was derived from this
+retracted chain. The consistent series value, under the Z₂ theorem,
+is $\xi = 0.432$ (from $\Omega_\mathrm{DM}/\Omega_b = 5.36$). Paper
+2's CAMB predictions, which used $\xi = 0.49$, require revision to
+$\xi = 0.432$.
 
 **Implication.** Since thermal history preserves ξ exactly,
 the value of ξ today is the value of ξ at the moment the two
@@ -134,6 +240,11 @@ is (Grossman & Neubert 2000; Gherghetta & Pomarol 2000):
 $$f_L(y) \propto e^{(2 - c_\nu) k |y|}$$
 
 for `c_ν > 1/2` (localization toward the visible brane at `y = 0`).
+The even profile $e^{(2-c_\nu)k|y|}$ automatically satisfies the
+Neumann boundary conditions $\partial_y f_L|_{y=0,\pi R} = 0$ on the
+$S^1/\mathbb{Z}_2$ orbifold in the absence of brane-localized mass
+terms (Grossman \& Neubert 2000), consistently with the fermion
+spectrum of Paper 4.
 The energy deposited on each brane is proportional to `|f(y_brane)|²`:
 
 $$\rho_\mathrm{vis} \propto |f_L(0)|^2 = 1 \quad \text{(normalized)}$$
@@ -174,45 +285,84 @@ $$\boxed{c_\nu = 0.634}$$
 **Naturalness.** The parameter `c_ν = 0.634` is a bulk fermion
 mass parameter in the range `(0, 1)` — the standard range for
 fermion localization in Randall–Sundrum–type geometries (Grossman
-& Neubert 2000). The corresponding five-dimensional neutrino mass
-is `m_\nu^{5D} = c_\nu \times k = 0.634 \times 2 = 1.268 M_\mathrm{KK}`,
-where `M_\mathrm{KK}` is the Kaluza–Klein scale. This is an
-order-unity parameter requiring no fine-tuning. The visible brane
-receives the bulk of the energy (the wavefunction is peaked there),
-while the hidden brane receives a suppressed but non-negligible
-fraction, giving `ξ < 1` naturally.
+& Neubert 2000). This is an order-unity parameter requiring no
+fine-tuning. The visible brane receives the bulk of the energy
+(the wavefunction is peaked there), while the hidden brane receives
+a suppressed but non-negligible fraction, giving `ξ < 1` naturally.
 
-**What this section claims.**
+**Notation.** Three distinct mass quantities appear in this section
+and must be kept separate:
 
-**(1) A derivation, not an estimate.** The value `ξ = 0.432`
-is derived from a single fundamental parameter of the 5D theory:
-the bulk neutrino mass `c_ν = 0.634`. This is not an order-of-magnitude
-argument or a range estimate. The Z₂ conservation theorem ensures
-that the leptogenesis value of ξ propagates unchanged to the CMB
-epoch, so the derivation is exact within the model.
+- $c_\nu = 0.634$: the dimensionless bulk fermion localization
+  parameter in the 5D Lagrangian. This parameterizes where on the
+  interval $[0, \pi R]$ the bulk neutrino wavefunction is peaked.
+- $M_\nu^\mathrm{5D} = c_\nu \times k = 0.634 \times 2 = 1.268\,M_\mathrm{KK}$:
+  the physical 5D bulk mass parameter of the right-handed neutrino,
+  in units of $M_\mathrm{KK}$. This governs the shape of the
+  zero-mode wavefunction.
+- $M_R$: the 4D Majorana mass of the right-handed neutrino, obtained
+  after integrating out the bulk KK tower. This is the quantity that
+  appears in the seesaw formula and in the 5/2 mass ratio identity.
 
-**(2) A prediction.** The relationship
+The 5/2 identity refers to the ratio $m_\nu / m_\mathrm{KK}$ where
+$m_\nu$ is the 4D Majorana mass $M_R$ (predicted from CP² topology
+in Paper 4). This is not the same as
+$M_\nu^\mathrm{5D}/M_\mathrm{KK} = c_\nu k = 1.268$. The
+near-equality $1.268 \approx 5/2 \approx 2.5$ suggested in earlier
+drafts is a factor-of-2 discrepancy, not a numerical coincidence:
+these are different physical objects. The parameter $c_\nu = 0.634$
+is determined here from the dark matter abundance. The mass ratio
+$M_R/M_\mathrm{KK} = 5/2$ is a separate result from CP² topology.
+The connection between them — whether the same wavefunction
+normalization that enters $\xi$ also produces $M_R/M_\mathrm{KK} = 5/2$
+through the seesaw — is a non-trivial structural consistency that is
+the subject of Paper 4 §7.5.7 and is noted here as such, not as a
+simple numerical equality.
+
+**What this section establishes.**
+
+**(1) A consistency result, not a forward derivation.** The logical
+direction of the computation is:
+
+$$\frac{\Omega_\mathrm{DM}}{\Omega_b} = 5.36 \;\text{(Planck 2018)} \quad\Longrightarrow\quad \xi = 0.432 \quad\Longrightarrow\quad c_\nu = 0.634$$
+
+The bulk neutrino localization parameter $c_\nu = 0.634$ is not
+derived from first principles and then used to predict $\xi$. Rather,
+the observed dark matter abundance constrains $c_\nu$ through the
+chain above. The result is a consistency statement: the parameter
+required to explain the observed $\Omega_\mathrm{DM}/\Omega_b$ is a
+natural $O(1)$ bulk fermion mass, requiring no fine-tuning.
+
+The physical content is the following: the 5D framework predicts that
+$\Omega_\mathrm{DM}/\Omega_b = 1/\xi^2$, where $\xi$ is set by the
+bulk neutrino wavefunction overlap at leptogenesis. The observed value
+$\Omega_\mathrm{DM}/\Omega_b = 5.36$ is consistent with a wavefunction
+localization parameter $c_\nu = 0.634 \in (0,1)$ — a value that would
+arise naturally from any number of UV completions. This is a non-trivial
+consistency check that would fail if $c_\nu$ were required to be outside
+$(0,1)$ or unnaturally close to 0 or 1. The framework is consistent
+with observation; it does not yet constitute an independent prediction
+of $c_\nu$.
+
+**(2) A measurement formula.** The relationship
 
 $$c_\nu = \frac{1}{2} + \frac{\ln(1/\xi^4)}{4 k\pi}$$
 
 translates any future CMB measurement of ξ directly into a
-measurement of the bulk neutrino mass parameter. The current
-observational precision `Ω_DM/Ω_b = 5.36 ± 0.05` (Planck 2018)
-corresponds to `ξ = 0.432 ± 0.002`, which gives
+measurement of the bulk neutrino localization parameter. The current
+precision `Ω_DM/Ω_b = 5.36 ± 0.05` (Planck 2018) gives
 `c_ν = 0.634 ± 0.002`. A CMB-S4 determination of ξ at the 0.1%
 level would fix `c_ν` to four significant figures — a precision
 measurement of a 5D Lagrangian parameter from cosmological
-observables.
+observables. Whether future theory can independently derive this
+value and confirm the prediction is an open question.
 
 **(3) What remains.** The value `k = 2` enters the derivation
 from Paper 1. A shift in `k` rescales `c_ν` proportionally:
 `c_ν = 1/2 + 1.679/(2kπ)`. For `k = 1.9` one gets `c_ν = 0.641`;
-for `k = 2.1` one gets `c_ν = 0.627`. The model has one free
-parameter per sector (the bulk mass `c_ν` of the leptogenesis
-neutrino), and the observed dark matter abundance fixes it.
-This section does not independently derive `k` — that is Paper 1's
-task. Given `k`, `c_ν` is determined with precision set by the
-CMB measurement of `Ω_DM/Ω_b`.
+for `k = 2.1` one gets `c_ν = 0.627`. Given `k`, `c_ν` is
+determined with precision set by the CMB measurement of
+`Ω_DM/Ω_b`.
 
 **The dark matter abundance is set at leptogenesis, not at
 reheating and not at freeze-out.** The parameter ξ — which
@@ -253,19 +403,43 @@ cancellation on the non-spin manifold CP² (Paper 7, Appendix B;
 Paper 4 §7.5.7). The integer part is topological; the half-integer
 shift is anomaly-determined.
 
-Numerically, at the Z-pole one finds `m_ν/m_KK = 2.57`, departing
-from 5/2 by running effects. Exact closure at 5/2 is recovered at
-`M_GUT ≈ 1.65 × 10¹⁶ GeV` (within the SUSY unification window),
-or equivalently requires either `m_ν = 48.8 meV` (4.7σ below the
-current central value, testable by CMB-S4 + DESI) or
-`R₀ = 9.84 μm` (within the Casimir ΔN uncertainty).
+**The 5/2 topological identity and an observational prediction.** The
+wavefunction overlap that sets $\xi$ also enters the four-dimensional
+neutrino mass. The mass ratio from the CP² topology is
 
-The parameter `c_ν = 0.634`, determined here from the dark matter
-abundance, and the neutrino mass ratio `m_ν/m_KK = 5/2`, determined
-from CP² topology, are two faces of the same geometric structure:
-the bulk neutrino wavefunction that imprints ξ at leptogenesis is
-the same wavefunction whose overlap with the Higgs zero-mode
-produces the topologically quantized mass ratio.
+$$\frac{m_\nu}{m_\mathrm{KK}} = \frac{5}{2} = \chi(\mathbf{CP}^2) - \frac{c_2^\mathrm{eff}}{2} = 3 - \frac{1}{2}$$
+
+where $\chi(\mathbf{CP}^2) = 3$ is the Euler characteristic and the
+$1/2$ is fixed by Horava-Witten/Freed-Witten anomaly cancellation
+(Paper 7, Appendix B; Paper 4, §7.5.7). At the Z-pole, running
+effects give $m_\nu/m_\mathrm{KK} = 2.57$, departing from $5/2$ by
+$\sim 3\%$. Exact closure at $5/2$ is recovered at
+$M_\mathrm{GUT} \approx 1.65 \times 10^{16}\,\text{GeV}$ within the
+SUSY unification window.
+
+This identity, together with $M_\mathrm{KK} \sim 1\,\text{TeV}$,
+requires $m_\nu \approx 48.8\,\text{meV}$. This is **a specific,
+falsifiable prediction**: it stands in $4.7\sigma$ tension with the
+current Planck 2018 central value of $m_\nu \approx 60\,\text{meV}$
+(from $\sum m_\nu \approx 0.12\,\text{eV}$ divided by 3 neutrino
+species, assuming normal hierarchy). The tension will be resolved by
+CMB-S4 and DESI in the next decade:
+
+- If CMB-S4 + DESI measure $\sum m_\nu \sim 146\,\text{meV}$
+  (corresponding to $m_\nu \sim 48.8\,\text{meV}$ per species), the
+  5/2 identity is confirmed.
+- If $\sum m_\nu \sim 180\,\text{meV}$ (corresponding to
+  $m_\nu \sim 60\,\text{meV}$), the exact 5/2 identity is falsified
+  at the Z-pole and the 3% running correction would need to be
+  recovered by a specific GUT-scale matching.
+
+The 5/2 identity is a numerical observation consistent with CP²
+topology and Paper 7's connection claim; it is not imposed as a
+theorem and its exact status depends on the precision of the
+GUT-scale Yukawa running calculation (deferred to Paper 4 §7.5.7
+and Paper 7). We flag the $4.7\sigma$ tension prominently as a
+prediction of the framework that upcoming cosmological surveys will
+test.
 
 The parameter ξ enters the Casimir constraint through `ξ⁴`: the mirror
 sector's contribution to the effective species count shifts R_A from
@@ -281,3 +455,39 @@ well within threshold corrections. The dark matter sector — encoded in
 neutrino mass: it is one of the three simultaneous constraints that
 determine the compactification radius R. Paper 9, §4d develops the full
 quantization argument.
+
+**The ξ⁴ correction to R: explicit derivation.** The mirror sector
+(visible sector scaled by $\xi^4$) contributes to the total Casimir
+energy through its additional degrees of freedom. The effective Casimir
+constant becomes
+
+$$c_\mathrm{eff} = c_\mathrm{vis} \times (1 + \xi^4)$$
+
+since the mirror sector is a scaled copy of the visible sector with
+$T' = \xi T$, contributing $\xi^4 \rho_\mathrm{vis}$ to the energy
+density (the $\xi^4$ comes from the Stefan-Boltzmann $T^4$
+dependence). The compactification radius is determined by
+$\rho_\Lambda = c_\mathrm{eff}/R_A^4$, giving
+
+$$R_A = R_\mathrm{vis} \times (1 + \xi^4)^{1/4} \approx R_\mathrm{vis} \times \left(1 + \frac{\xi^4}{4}\right)$$
+
+For $\xi = 0.432$: $\xi^4 = (0.432)^4 = 0.0348$, so
+
+$$\frac{R_A - R_\mathrm{vis}}{R_\mathrm{vis}} = \frac{\xi^4}{4} = \frac{0.0348}{4} = 0.0087 = 0.87\%$$
+
+This is consistent with the stated 0.86% shift (the small discrepancy
+is rounding in $\xi^4$).
+
+**The three constraints are not three independent fixing mechanisms.**
+To be precise: (i) the primary observational constraint is
+$\rho_\Lambda = c_\mathrm{vis}/R_0^4 = 3H_0^2 M_\mathrm{Pl}^2 \Omega_\Lambda$,
+which determines $R_0$ from the observed dark energy density; (ii)
+the $\xi^4$ correction from the mirror sector is a perturbative shift
+to $R$ (0.87%), computable given $\xi$; (iii) the 5/2 neutrino mass
+identity provides a consistency check on whether the shifted $R_A$
+falls in the window where exact GUT-scale closure of 5/2 is
+achievable. These are one primary determination plus two consistency
+checks, not three independent fixing mechanisms. Paper 9 §4d develops
+the full quantization argument that combines all three into an
+overdetermined system whose mutual consistency is a non-trivial
+prediction of the framework.

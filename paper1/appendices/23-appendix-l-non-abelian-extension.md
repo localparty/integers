@@ -430,6 +430,21 @@ the non-abelian mixed sector does not yet exist. This gap is also noted in
 Paper 4 §8, where the gauge-gravity mixing contribution to the full
 one-loop effective action is examined in the context of the SU(N) extension.
 
+**Scope limitation.** The argument above establishes that Casimir group-theory
+factors are n-independent and can be factored outside the KK sum, and that the
+S₀^L = 0 mechanism applies in principle to the SU(N) gauge-gravity system.
+However, the vertex-level verification that establishes this for the pure gravity
+case (§U.3.6: the propagator numerator is n-independent and vertex factors
+produce only polynomial n-dependence) has not been carried out for the SU(N)
+gauge-gravity mixing vertex. The mixing vertex involves the Christoffel symbols
+of the 5D metric contracted with the SU(N) structure constants and field
+strengths, and its tensor algebra is distinct from the three-graviton vertex.
+An explicit verification — analogous to the sunset tensor contraction in §U.3.6
+but for the gauge-gravity mixing topology — is required to close this gap.
+Until that calculation is performed, the extension of the finiteness result to
+the full SM gauge-gravity system should be understood as a well-supported
+structural argument, not an explicit computation.
+
 ---
 
 ## L.5 The 11-Dimensional Connection

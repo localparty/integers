@@ -472,41 +472,17 @@ the combined flux and gravitational contributions. The number 450 = 2 × 225
 = 2 × 15² is consistent with the arithmetic of the flux quantization
 (n₁ = 18, n₂ = −34, intersection matrix giving |N_flux| = 450).
 
-### B.10.3a Connection to the Neutrino Mass Ratio
+### B.10.3a Numerical Consistency with the Neutrino Mass Ratio
 
-The fractional instanton `c₂^{eff}(V_vis)|_{CP²} = 1/2` established in
-§B.10.1 enters directly into the neutrino mass spectrum of Paper 4. The
-spin^c Dirac operator on CP² twisted by the tautological bundle O(1) has
-index:
+The fractional instanton contribution c₂^{eff}(V_vis)|_{CP²} = 1/2 established by the five-constraint uniqueness argument of §B.10.1 has a suggestive numerical relationship with the neutrino mass ratio derived independently in Paper 4. The Euler characteristic of CP² is χ(CP²) = 3; it counts the topological complexity of the compactification manifold and is independent of the gauge sector. The spin^c Dirac operator on CP² twisted by the tautological bundle O(1) has Hirzebruch-Riemann-Roch index ind(D^{spin^c} ⊗ O(1), CP²) = 3, in agreement with this Euler characteristic for this particular twist. The relevant twist for V_vis is O(1) — the tautological line bundle with first Chern class c₁ = H (the hyperplane generator of H²(CP², ℤ)) — because the Freed-Witten anomaly cancellation on the non-spin manifold CP² requires G₄ to have its half-integer flux aligned with the generator H, and the visible bundle must be the unique rank-one bundle whose c₁ class carries this shift; the twist O(2) would give ind = (2+1)(2+2)/2 = 6 and a second Chern class incompatible with the uniqueness result of §B.10.1. This O(1) twist (k = 1 in the standard notation O(k)) is distinct from the integer k = 2 that appears in Papers 1 and 6 of this series: in Paper 1, k = 2 is the winding number of the spin-statistics map on S² (a topological invariant of the rotation group, not a bundle twist on CP²); in Paper 6, k = 2 is a parameter in the spectral gap derivation unrelated to the Freed-Witten structure. The anomaly-forced value c₂^{eff}(V_vis)|_{CP²} = 1/2 established in §B.10.1 then satisfies the numerical identity:
 
-    ind(D^{spin^c} ⊗ O(1), CP²) = 3
+    χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2 = 5/2
 
-by the Hirzebruch-Riemann-Roch theorem (equal to `χ(CP²) = 3` for this
-specific twist on CP²), and this index counts the three zero modes
-corresponding to the three right-handed neutrino generations. The
-difference:
+where the 3 is a topological invariant of the compactification manifold and the 1/2 is a topological invariant of the gauge sector, each fixed separately by independent arguments. The numerical value 5/2 is also the atmospheric neutrino mass ratio m_ν/m_KK|_{GUT} = 5/2 established in Paper 4, §7.5.7, from electroweak symmetry breaking inputs and RG running of the SU(2) gauge coupling from M_GUT to M_Z.
 
-    ind(D^{spin^c} ⊗ O(1)) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2 = 5/2
+However, as demonstrated in Appendix A §A.5.4 via four independent arguments (including the arithmetic obstruction that (k+1)(k+2) = 10 has no integer solution in k, and the APS boundary analysis showing that η(D_{S¹/Z₂}) = −1/2 contributes a quarter-integer shift rather than a half-integer to any index on this space), the value 5/2 **cannot** arise as the output of any spin^c index theorem on CP² × S¹/Z₂ with any natural twisting bundle. The combination χ(CP²) − c₂^{eff} is not a standard index-theoretic quantity: index theorems on product manifolds produce multiplicative, not additive, contributions from the two factors. The identity 3 − 1/2 = 5/2 is therefore a **numerical coincidence** — remarkable in that each component is separately of topological origin, but not a topological identity in the sense of being the output of an index theorem on the full space. The 5/2 prediction stands from Paper 4; Paper 7 notes only that the Freed-Witten anomaly structure, in forcing c₂^{eff} = 1/2, is *consistent with* that prediction, not that it derives it. No physical mechanism is currently identified within the M-theory framework that would explain why the difference of two separately topological quantities in different cohomological contexts should equal a mass ratio.
 
-gives the ratio of the atmospheric neutrino mass to the Kaluza-Klein scale
-at the GUT unification scale:
-
-    m_ν / m_KK |_{GUT} = χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 5/2
-
-The mechanism has two independent layers. The `3` arises from the topology
-of CP² as the compactification manifold: it is fixed, independent of the
-gauge sector. The `1/2` arises from the M-theory anomaly structure on the
-HW orbifold: because `w₂(CP²) ≠ 0`, the Freed-Witten quantization
-condition forces a half-integer shift in the G₄ flux on the CP² cycle,
-and the five-constraint uniqueness theorem (§B.10.1) eliminates all other
-values. The 1/2 shift is not a choice; it is required by anomaly
-cancellation on the non-spin manifold.
-
-This connects the M-theory anomaly structure to a prediction for the
-neutrino mass scale. RG running of the SU(2) gauge coupling from `M_GUT`
-to `M_Z` accounts for the 2.4% deviation between the exact GUT-scale
-prediction `5/2 = 2.500` and the observed ratio `m_ν^{atm}/m_KK = 2.56`
-at the electroweak scale (Paper 4, §7.5.7).
+RG running of the SU(2) gauge coupling from M_GUT to M_Z accounts for the 2.4% deviation between the exact GUT-scale value 5/2 = 2.500 and the observed ratio m_ν^{atm}/m_KK = 2.56 at the electroweak scale (Paper 4, §7.5.7). This agreement at the percent level is consistent with the coincidence being physical in origin, even if its topological derivation remains open.
 
 ### B.10.4 Updated proof chain
 

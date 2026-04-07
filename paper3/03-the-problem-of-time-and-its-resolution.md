@@ -66,6 +66,17 @@ This clock is:
   metric-independent as a result — near a black hole, in an expanding
   universe, or in flat space.
 
+  The Z₂ symmetry φ → −φ is anomaly-free: it is a discrete symmetry of the classical
+  action that is preserved by the one-loop fermion path integral because the fermionic
+  spectrum is symmetric under n → −n (Paper 1, §2.1; the KK fermion modes come in
+  degenerate pairs ±n), so no chiral anomaly or Witten anomaly can arise from a discrete
+  symmetry with a symmetric spectrum. Consequently, radiative corrections at all loop
+  orders preserve the Z₂ symmetry and cannot generate a non-zero off-diagonal metric
+  component g_{5μ} (an odd function of φ), confirming that the product-metric form
+  g₅D = g₄D + R₀² dφ² — and hence the metric-independence of the e-clock evolution
+  ∂φ/∂τ = −E/ℏ — is exact to all perturbative orders (see also Paper 1, §2.1 for the
+  full anomaly analysis).
+
 - **Universal:** Every quantum system has an e-coordinate. Every
   particle carries this clock. The clock is not an external
   apparatus — it is a geometric property of the particle itself.
@@ -174,6 +185,15 @@ evaporation regime — the effective WdW factorization holds:
 The effective factorization is not the full WdW equation but its
 Born-Oppenheimer limit with a frozen radion. This is the framework
 in which the Page-Wootters mechanism applies.
+
+The Born-Oppenheimer validity condition for the gravitational sector requires
+E_clock << M_BH: the clock energy must be negligible compared to the black hole
+mass. In the present framework, the e-clock energy scale is E_clock ~ T_H ~ ℏ/M
+(in Planck units, T_H = 1/(8πM)), while M_BH = M, so E_clock/M_BH ~ 1/M² << 1
+throughout the semiclassical regime M >> M_Pl — the ratio decreases as evaporation
+proceeds and M decreases, remaining small until M ~ M_Pl where the semiclassical
+approximation itself breaks down, confirming that the Born-Oppenheimer factorization
+is valid throughout the entire semiclassical evaporation history.
 
 In the 5D framework, the full wave function is:
 

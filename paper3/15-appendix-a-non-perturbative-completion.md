@@ -165,6 +165,16 @@ is `M⁴_{evap}(t) × S¹`, where `M⁴_{evap}(t)` evolves but S¹ is
 constant. This is topologically trivial from the perspective of
 the e-dimension.
 
+We note explicitly that this stability argument — resting on modulus stabilization at
+R₀ and the instanton action S_CDL >> 10³⁰ — is a semiclassical result valid for
+M >> M_Pl, where the radion fluctuations δR/R₀ ~ (M_Pl/M)² << 1 and the product-
+metric approximation g₅D = g₄D + R₀² dφ² is reliable; in the Planck-scale regime
+M ~ M_Pl, quantum fluctuations of the radion become O(1) and the modulus
+stabilization argument no longer applies, leaving open whether the full gravitational
+path integral at M ~ M_Pl generates 5D topological contributions such as fiber
+degeneration at the singularity — but this is consistent with the scope of the
+entire paper, which treats only the semiclassical regime M >> M_Pl throughout.
+
 ### A.3.2 The Summary
 
 | Non-perturbative effect | Suppression | Factor |
@@ -213,6 +223,21 @@ the non-perturbative stability follows automatically.
 ## A.4 Layer 3: Formal Non-Perturbative Completion via M-Theory
 
 ### A.4.1 What Remains After Layers 1 and 2
+
+**Important organizational note.** The central results of this paper — Theorem 6.1
+(unitarity of the 5D S-matrix), Theorem 7.1 (Conditional Page Curve), and Theorem 9.1
+(resolution of the AMPS paradox) — do not depend on the M-theory completion discussed
+in §A.4.2. All three theorems follow from the perturbative 5D framework (Paper 1) plus
+the 5D equations of motion; the perturbative finiteness (Layer 1, §A.2) and
+non-perturbative stability (Layer 2, §A.3) established within the framework are
+sufficient. The M-theory identification of §A.4.2 is additional forward-looking context
+— a plausibility argument that the self-consistent perturbative framework sits inside a
+non-perturbatively complete theory — contingent on Paper 4's identification of the
+Standard Model content from M-theory compactification. Readers who are skeptical of
+the M-theory identification should note that it is neither required by, nor does it
+strengthen, the paper's primary claims about black hole information. It is a structural
+observation about the framework's place in the landscape of quantum gravity, deferred
+in full to Paper 4.
 
 Layers 1 and 2 establish that the 5D path integral is:
 - Perturbatively finite at every order (Theorem S.1)

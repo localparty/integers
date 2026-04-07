@@ -397,6 +397,36 @@ structure.
 
 ---
 
+## D.9a Scale Argument for the Zero-Mode Truncation
+
+The KK reduction used in this appendix to derive Newton's law retains only the
+zero-mode (n = 0) of the 5D metric. The n ≠ 0 KK gravitons have masses
+m_n = n/R ~ n × 16 meV, which at the framework's scale R ~ 12 μm corresponds
+to Compton wavelengths λ_n = R/n ~ 12/n μm. These are the mass thresholds for
+KK graviton production.
+
+Classical gravitational experiments probe static or slowly varying fields at
+distances ≫ R. At a laboratory distance r ≫ R, the contribution of the KK tower
+to the gravitational potential is Yukawa-suppressed:
+
+    V(r) = −G₄M/r × [1 + Σ_{n=1}^∞ 2 exp(−r/λ_n)] ≈ −G₄M/r
+
+for r ≫ λ₁ = R. At r = 1 mm (the current short-range gravity limit), the
+correction is exp(−1 mm / 12 μm) ~ exp(−83) ~ 10^{−36} — completely
+negligible. At cosmological scales, the suppression is even more extreme. The
+zero-mode truncation is therefore accurate to better than 10^{−36} for all
+classical gravity observables at laboratory to cosmological scales.
+
+The only scale at which the KK tower contributes classically is r ~ λ₁ ~ 12 μm
+— precisely the prediction tested by short-range gravity experiments
+(Appendix H, §H.1). The loop calculations in Appendices F–K retain the full KK
+tower because those calculations address UV divergences, where all KK modes
+contribute through their high-mass behavior. The classical (zero-mode) and
+quantum (full tower) regimes are separated by the KK scale m_KK ~ 16 meV, and
+the two truncation choices are appropriate in their respective regimes.
+
+---
+
 ## D.10 Status of the Three Claims
 
 | Claim | Status | Evidence |

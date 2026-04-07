@@ -258,8 +258,7 @@ current and future CMB constraints:
     n_s = 0.9649 ± 0.0042    (68% CL)
     r < 0.10                  (95% CL)
 
-Our prediction n_s = 0.967 is within 0.5σ of the Planck central
-value. The tensor ratio r ≈ 0.001 is well below the current
+Our prediction n_s = 0.967 is within 0.5σ of the Planck 2018 central value (n_s = 0.9649 ± 0.0042); updated CMB datasets available as of 2026 — including ACT DR6 (Louis et al. 2025), which finds n_s values marginally higher than Planck 2018 alone with combined σ(n_s) ≈ 0.003 — may shift the comparison by up to 1σ but do not disfavour the prediction. The tensor ratio r ≈ 0.001 is well below the current
 upper bound.
 
 **BICEP/Keck 2021 + Planck:**
@@ -321,9 +320,7 @@ vs. phenomenological SUGRA), (ii) the form of the potential at
 large field values (cosine vs. various α-attractor potentials),
 and (iii) non-Gaussianity: for hilltop cosine inflation,
 f_NL = O(1) × (f/M_Pl)², while α-attractor Starobinsky-type
-models give f_NL ≈ −5/12 × (1 − n_s). A future measurement of
-non-Gaussianity at the f_NL ~ 10⁻² level could discriminate
-between the two, though this is beyond current experimental reach.
+models give f_NL ≈ −5/12 × (1 − n_s). A measurement of non-Gaussianity at the f_NL ~ 0.3 level could in principle discriminate between the two, but f_NL ~ 0.3 is beyond current and likely near-future experimental reach: CMB-S4's projected sensitivity is σ(f_NL^{local}) ~ 1, and no currently funded or planned CMB experiment reaches the sub-unity threshold required to detect this signal.
 
 ## 5.5 Correction to Paper 6 §7.15
 

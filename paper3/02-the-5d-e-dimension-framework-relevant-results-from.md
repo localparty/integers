@@ -93,6 +93,25 @@ analogy: the Yukawa potential bound on a massive scalar mediator
 how fast the scalar's vacuum expectation value can shift — VEV shifts
 are background rearrangements, not particle-exchange events.
 
+**Precision: quantum-operator status of the zero-mode.** The zero-mode φ₀ is a
+quantum operator — the zero-mode projection of the e-coordinate field operator
+Φ(x,φ) onto the n = 0 KK sector. Its canonical conjugate is the zero-mode momentum
+operator p̂₀ = ℏ Q̂_e / R₀, where Q̂_e is the conserved e-charge (§9.3.1). The
+Hilbert space is the KK Fock space H₅D = ⊕_Q H_Q — the direct sum over
+superselection sectors, each labeled by total e-charge eigenvalue Q (§9.3.1,
+Property 3). The "algebraic e-conservation constraint" Σ φᵢ = C is the operator
+statement that Q̂_e is conserved: [Q̂_e, Ĥ₅D] = 0 (Property 1). It is an operator
+equation in H₅D, not a classical background condition. Within each sector H_Q, the
+e-charge eigenvalue Q is fixed. Absorbing an infalling quantum with e-coordinate
+φ_in does not propagate any excitation through H₅D — it places the post-absorption
+state in the sector H_{Q + φ_in}. This transition is determined by the conservation
+law (which sector is correct), not by a differential equation in spacetime (how the
+transition propagates). The non-dynamical character of the zero-mode refers precisely
+to this: the zero-mode label Q is updated by sector selection, not by a field
+equation. The KK propagator bounds of §4.3 govern excitations *within* a sector H_Q —
+fluctuations around a background with fixed Q. They say nothing about which sector
+the system is in.
+
 ### 2.5 Perturbative Finiteness
 
 The 5D Einstein-Hilbert action on `M⁴ × S¹`, under zeta

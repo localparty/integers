@@ -33,9 +33,11 @@ Hubble tension and S8 tension suggest ΛCDM is incomplete. The 5D framework
 fits zero CMB parameters. The Z₂ orbifold has two branes; bulk leptogenesis
 deposits baryon asymmetries on both; the temperature ratio ξ = T_hidden/T_visible
 obeys 1/ξ² = Ω_DM/Ω_b — a geometric law, not a coincidence. The framework
-predicts H₀ = 68.7–69.5 km/s/Mpc (from mirror dark radiation), S8 = 0.753–0.785
-(resolving the 4σ tension), and N_eff = 3.31–3.39 (testable by CMB-S4 at
->9σ). Primary patterns: P3, P4, P6.
+predicts H₀ = 68.7–69.5 km/s/Mpc (from mirror dark radiation), S8 = 0.770–0.803
+(resolving the 4σ tension, consistent with the three CAMB scenarios in §4b.3),
+and N_eff = 3.31–3.39 (fluid-formula upper bound; free-streaming corrected
+estimate N_eff ≈ 3.165; testable by CMB-S4 at 4–6σ conservative, Papers 2
+and 4). Primary patterns: P3, P4, P6.
 
 ---
 
@@ -47,7 +49,11 @@ wrong — or the description must be incomplete. The e-dimension supplies the
 missing description: infalling information encodes its e-coordinate in the
 horizon surface as a new Planck pixel; the e-change propagates globally
 (geometry, not causality); outgoing Hawking quanta carry the e-imprint;
-the 4D radiation is thermal, the 5D state is pure. The Page curve is derived.
+the 4D radiation is thermal, the 5D state is pure. The Page curve is reproduced
+conditionally (given the fast-scrambler assumption of Sekino-Susskind; Paper 3
+§7.6). The result is not unconditional — it depends on Working Assumption 9.1
+(5D vacuum factorization) — but under those conditions the full Page curve
+follows from the e-Hilbert space structure without additional input.
 The AMPS firewall is dissolved. The information was never lost — it was stored
 in a dimension Hawking's calculation did not include. Primary patterns: P4, P6.
 

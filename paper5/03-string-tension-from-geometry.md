@@ -112,6 +112,15 @@ propagates to a ~25% systematic uncertainty in √σ (since √σ ~ √c):
     c_mid = 3/(8π²) ≈ 0.0380  →  √σ_mid ≈ 437 MeV  (central value)
     c_max = 1/(2π²) ≈ 0.0507  →  √σ_max ≈ 437 × √(0.0507/0.0380) ≈ 506 MeV
 
+The central value c = 3/(8π²) is the leading-order result of evaluating
+the SU(3) instanton integral over the CP¹ generator in the fundamental
+representation, using the standard Casimir ratio C₂(fund)/C₂(adj) =
+(4/3)/3 and normalizing with the lattice Sommer parameter r₀ = 0.5 fm
+(see Appendix A §A.3). It lies within the range [1/(3π²), 1/(2π²)]
+and is adopted as the central value for the purpose of comparison with
+the experimental value √σ = 440 MeV; no precision beyond leading order
+is claimed.
+
 The predicted range is approximately [410, 510] MeV. The experimental
 value √σ = 440 MeV lies within this range, consistent with the
 leading-order geometric prediction. The CP² radius r₃ used here is

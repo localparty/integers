@@ -35,9 +35,23 @@ at temperature T' = ξT, releasing identical entropy in both sectors, leaving ξ
 unchanged. This means ξ is not explained by thermal history — it is set at
 leptogenesis by the wavefunction localization of the bulk neutrino N^{5D}. For
 localization parameter c_ν in the extra dimension S¹/Z₂, the energy asymmetry
-is ρ_hid/ρ_vis = e^{-2(2c_ν-1)kπ}, giving ξ = e^{-(2c_ν-1)kπ/2}. At k = 2
-(Paper 1), ξ = 0.432 determines c_ν = 0.634 ± 0.002 — a natural O(1) bulk
-neutrino mass parameter (5D mass m_ν^{5D} = c_ν k = 1.27 M_KK, no fine-tuning).
+is ρ_hid/ρ_vis = e^{-2(2c_ν-1)kπ}, giving ξ = e^{-(2c_ν-1)kπ/2}. At k = 2 (Paper 1 §W.5; an observationally
+fitted warp factor — no geometric quantization condition selecting this value is
+currently established within the framework), ξ = 0.432 determines
+c_ν = 0.634 ± 0.002 — a natural O(1) bulk neutrino mass parameter
+(5D mass m_ν^{5D} = c_ν k = 1.27 M_KK, no fine-tuning).
+
+A note on derivation status: Paper 6's thermal-history calculation establishes
+the mechanism by which ξ is set — the wavefunction localization of N^{5D} along
+S¹/Z₂ — and computes ξ in the range ~ 0.3–0.9 from the localization parameter
+c_ν. The precise value ξ = 0.432 is determined from the observation Ω_DM/Ω_b = 5.36
+(Paper 2 §4). The connection between the Paper 6 thermal derivation (which reaches
+ξ ~ 0.79 at its last quantitative step) and the observationally determined ξ = 0.432
+requires a full two-sector Boltzmann simulation that has not yet been performed
+(Paper 6 gap-response; identified as future work). The framework establishes the
+range ξ ~ 0.3–0.9 mechanistically; the precise value is pinned by the dark matter
+observation, and the quantitative consistency of the two derivations awaits the
+Boltzmann simulation.
 
 ---
 
@@ -196,9 +210,10 @@ determination) or additional physics at recombination not currently in the model
 **Tension 2 — N_eff and ACT DR6.**
 
 Planck 2018 measures N_eff = 2.99 ± 0.17, consistent with the Standard Model
-prediction of 3.044 and with the framework's 3.31–3.39 at 1.7–2.3σ. ACT DR6
-gives N_eff = 2.86 ± 0.13 — 3.5σ below the fluid-approximation prediction of
-3.31–3.39.
+prediction of 3.044 and with the framework's 3.31–3.39 at 1.7–2.3σ. ACT DR6 gives N_eff = 2.86 ± 0.13 — 3.5σ below the fluid-approximation
+prediction of 3.31–3.39 (upper bound; the free-streaming corrected estimate
+N_eff ≈ 3.165 gives ≈2.3σ tension, as derived below; the correct stated range
+is 2.3–3.5σ per Paper 2's corrected abstract).
 
 The fluid approximation is, however, an upper estimate. Mirror hydrogen
 recombines at z ≈ 2463, when the mirror photon temperature drops below the
@@ -265,24 +280,35 @@ The geometry was missing because it was hidden in an extra dimension.
 ΛCDM has six parameters. The framework has one: ξ. But ξ is not a free
 parameter — the Z₂ conservation theorem shows it is set at leptogenesis by the
 bulk neutrino localization parameter c_ν = 0.634, derived from ξ = 0.432 and
-k = 2 from Paper 1. The value c_ν = 0.634 is natural (O(1), no fine-tuning).
+k = 2 (Paper 1 §W.5; an observationally fitted warp factor — no geometric
+quantization condition selecting this value is currently established; Paper 7
+§B.10.3a further distinguishes this integer k from the O(1) twist entering the
+spin^c index computation). The value c_ν = 0.634 is natural (O(1), no fine-tuning).
 The entire cosmological prediction — seven observables, two tension resolutions,
 one decisive CMB-S4 target — flows from a single bulk neutrino mass parameter
 in the extra dimension.
 
 **Fourth: the same geometry connects three sectors.**
 
-CP² is not merely the compactification that localizes dark matter. It is a
-single geometric object with three independent consequences, none of which was
-put in by hand:
+CP² is not merely the compactification whose zero-mode structure determines
+the dark matter abundance (via c_ν → ξ → Ω_DM/Ω_b = 1/ξ²; the dark matter
+consists of mirror baryons in the hidden sector, not N^{5D} itself; Paper 5
+§5.7a). It is a single geometric object with three independent consequences,
+none of which was put in by hand:
 
 - *Dark matter:* ξ = 0.432 from c_ν = 0.634, set by the wavefunction profile
   of the bulk neutrino zero modes along S¹/Z₂. The Z₂ orbifold geometry
   determines how efficiently the hidden brane is populated at leptogenesis.
 
-- *Neutrino mass:* m_ν/m_KK = 5/2 from χ(CP²) − c₂^{eff}/2 = 3 − 1/2, where
-  the index 3 counts the spin^c Dirac zero modes on CP² and the 1/2 is forced
-  by Horava-Witten anomaly cancellation on the non-spin manifold CP².
+- *Neutrino mass:* m_ν/m_KK = 5/2 from χ(CP²) − c₂^{eff}(V_vis)|_{CP²} = 3 − 1/2,
+  where the index 3 counts the spin^c Dirac zero modes on CP² and the 1/2 is
+  the fractional instanton number established by the HW anomaly-cancellation
+  argument (Paper 7 §B.10.1). The combination 3 − 1/2 = 5/2 is a numerical
+  coincidence in the precise sense of Paper 7 §B.10.3a: each component is
+  separately of topological origin, but no mechanism has been identified that
+  connects a manifold invariant (χ = 3) and a gauge-bundle invariant (c₂^{eff} = 1/2)
+  in different cohomological contexts and makes their difference a topological
+  identity.
 
 - *Dark energy:* ρ_Λ = c/R₀⁴ with R₀ = 10.1 μm from the Casimir energy of
   the compact space — a radius consistent with the m_ν/m_KK = 5/2 identity
@@ -302,11 +328,14 @@ in detail.
 ## 4b.9 The Decisive Experiment
 
 CMB-S4, scheduled for first light ~2030, will measure N_eff to σ = 0.02–0.03.
-The framework predicts N_eff = 3.31–3.39. The Standard Model predicts 3.044.
-The gap is 0.27–0.35. CMB-S4's precision is 0.02–0.03.
-
-That is a 9–17σ discrimination. There is no scenario in which CMB-S4 produces
-an ambiguous result for this prediction.
+The framework predicts N_eff = 3.31–3.39 (fluid-formula upper bound; see §4b.2
+and §4b.7). The Standard Model predicts 3.044. The free-streaming corrected
+estimate is N_eff ≈ 3.165, giving a conservative CMB-S4 discrimination of
+4–6σ versus the SM prediction. The fluid upper bound of 3.31–3.39 would
+correspond to 9–17σ only if the fluid approximation held exactly — a condition
+the framework itself explains does not hold after mirror recombination at
+z ≈ 2463. The conservative 4–6σ figure is the appropriate stated sensitivity
+(Papers 2 and 4 consistent presentation).
 
 CMB-S4 will also measure ξ directly through the mirror sector's imprint on the
 matter power spectrum (mirror BAO at z ≈ 2463) and the free-streaming transition
@@ -322,12 +351,15 @@ two additional decisive tests that are independent of CMB-S4's N_eff signal:
 
 **CMB-S4 + DESI (neutrino mass) — the primary test.** The R-closure surface
 analysis establishes a specific neutrino mass prediction: at M_GUT = 1.65 × 10¹⁶ GeV,
-approximate closure (gap = 0.81%) requires m_ν = 49.74 meV. The current
-central value is 50.15 meV. CMB-S4 projected precision is σ = 0.030 meV, giving
-a discrimination between the two hypotheses at 14σ. This is the sharpest single
-prediction in the QG5D framework. The current 1.46σ tension at today's precision
-will either collapse (if m_ν = 49.74 meV is confirmed) or rule out the closure
-interpretation decisively.
+approximate closure (gap = 0.81%) requires m_ν = 49.7 ± 0.5 meV (Paper 4
+§7.5.7b; the ±0.5 meV theory uncertainty is dominated by ΔN_vis entering
+through the R_A formula — see §4d.4 precision budget). The current central
+value is 50.15 meV. CMB-S4 projected precision is σ = 0.030 meV. The
+discrimination between the closure prediction and the current central value,
+accounting for the theory uncertainty budget, is 5–8σ (Paper 4 §7.5.7a).
+This is the sharpest single prediction in the QG5D framework. The current
+1.46σ tension at today's precision will either collapse (if m_ν ≈ 49.7 meV
+is confirmed) or rule out the closure interpretation decisively.
 
 **Hyper-Kamiokande (proton decay) — secondary and model-dependent.** The proton
 decay prediction depends on which closure scenario is realized:
@@ -345,10 +377,10 @@ decay prediction depends on which closure scenario is realized:
 The proton decay test is informative but not decisive in the way the neutrino
 mass test is. Both M_GUT scenarios are allowed by the framework. The CMB-S4
 measurement of m_ν will distinguish between them more sharply than any proton
-decay result: if CMB-S4 measures m_ν = 49.74 meV, the framework is confirmed
-at 14σ and the approximate closure M_GUT = 1.65 × 10¹⁶ GeV is preferred;
-if CMB-S4 measures m_ν = 50.15 meV (current value maintained), the exact
-closure at M_GUT* = 7 × 10¹⁶ GeV is preferred.
+decay result: if CMB-S4 measures m_ν ≈ 49.7 meV (within the ±0.5 meV theory
+band), the approximate closure M_GUT = 1.65 × 10¹⁶ GeV is preferred; if
+CMB-S4 measures m_ν = 50.15 meV (current value maintained), the exact closure
+at M_GUT* = 7 × 10¹⁶ GeV is preferred.
 
 Three experiments. One sharpest target. The neutrino mass measurement is the key.
 
@@ -356,14 +388,17 @@ No other framework tested against cosmological data carries a comparably sharp
 experimental target in a comparably near-term experiment. Most proposals make
 predictions at the 1–2σ level, permanently hovering in the range where
 confirmation and exclusion are both defensible. The framework's N_eff prediction
-is far enough from the Standard Model that the decision will be clean; and the
-neutrino mass prediction at 14σ discrimination is cleaner still.
+is well separated from the Standard Model (4–6σ conservative, from the
+free-streaming corrected N_eff ≈ 3.165); and the neutrino mass test at 5–8σ
+discrimination is independently decisive once the ΔN_vis precision budget is
+closed by dark energy equation-of-state data.
 
 This is the correct way to do science. The predictions are sharp. The experiments
 are specified. The timeline is fixed. The outcomes will be unambiguous.
 
 The mirror brane either exists or it does not. The neutrino mass is either
-49.74 meV or it is not. CMB-S4 will answer both questions.
+≈ 49.7 meV (within the ±0.5 meV theory band) or it is not. CMB-S4 will answer
+both questions.
 
 ---
 

@@ -51,6 +51,16 @@ reproduces the Bohr correspondence principle for large quantum
 numbers. The discreteness is real at the Planck scale and invisible
 above it.
 
+Quantitatively: an isolated black hole satisfies T_H ≪ T_Hawking^{equilibrium},
+so the Hawking emission rate exceeds any astrophysical accretion rate, and the net
+mass evolution dM/dt = −(dM/dt)_{Hawking} + (dM/dt)_{accretion} ≈ −σ T_H⁴ A to
+leading order in M_Pl/M; the discrete area-growth events from infalling matter
+(each increasing A by l_P²) contribute at order (infalling flux) × l_P² ≪ (Hawking
+flux) for an isolated black hole, so the standard semiclassical mass loss formula
+dM/dt ~ −1/M² is reproduced to leading order with corrections suppressed by M_Pl/M,
+confirming that the smooth classical dynamics emerge correctly from the discrete
+Planck-scale picture.
+
 ### 4.3 The e-Coordinate of the Horizon — Derivation
 
 When the horizon grows by one Planck pixel to incorporate a bit of
@@ -131,6 +141,14 @@ the entropy by one unit (one bit in Bekenstein units), and the entropy
 formula assigns one Planck area per entropy unit. The derivation of
 the exact area eigenvalue spectrum from the 5D operator algebra is
 deferred to future work.
+
+We therefore state explicitly: "Planck pixel creation" is an effective description
+valid in the semiclassical limit M >> M_Pl, where discrete area-eigenvalue growth
+events coarse-grain to the smooth Bekenstein area law. The underlying quantum gravity
+process — the precise eigenvalue spectrum and creation operator algebra for Planck
+area quanta in the 5D theory — is deferred to future work, consistent with the
+acknowledgement throughout Section 4 that the semiclassical counting is confirmed to
+be self-consistent while the full quantum gravity spectrum is an open problem.
 
 ---
 

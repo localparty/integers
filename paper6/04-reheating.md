@@ -150,40 +150,70 @@ initial large-amplitude oscillations (§5).
 The dilaton couples universally to the trace of the stress-energy
 tensor:
 
-    L_int = (σ/M_Pl) φ T^μ_μ,   σ = 1/√3
+$$\mathcal{L}_\mathrm{int} = \frac{\sigma}{M_\mathrm{Pl}}\,\varphi\, T^\mu{}_\mu, \qquad \sigma = 1/\sqrt{3}$$
 
-This coupling mediates a long-range scalar force (fifth force) if the
-dilaton is ultra-light. The relevant constraint is the Cassini bound
-on the post-Newtonian parameter γ:
+This coupling mediates a long-range scalar force if the dilaton is
+ultra-light. The relevant constraint is the Cassini bound on the
+post-Newtonian parameter $\gamma$:
 
-    |γ − 1| < 2.3 × 10⁻⁵   (Bertotti, Iess & Tortora 2003)
+$$|\gamma - 1| < 2.3 \times 10^{-5} \qquad \text{(Bertotti, Iess \& Tortora 2003)}$$
 
-For a free massless scalar with coupling strength α_φ = σ² = 1/3,
-the PPN parameter gives |γ − 1| = 2σ²/(1+σ²) ~ 1/2, which would
-be grossly excluded by Cassini.
+For a free massless scalar with coupling $\alpha_\varphi = \sigma^2 = 1/3$,
+the PPN parameter gives $|\gamma - 1| = 2\sigma^2/(1+\sigma^2) \approx 1/2$,
+grossly excluded by Cassini.
 
-However, the frozen dilaton is NOT a free massless scalar. The
-relevant effective coupling is suppressed by the kinematic freezing.
-From the dilaton equation of motion (Appendix A, eq. A.3), the
-response of the dilaton field to a local matter perturbation δT^μ_μ
-is suppressed by the Hubble friction term. For laboratory or
-solar-system measurements on a timescale t_obs ≪ 1/H₀, the dilaton
-cannot respond to local perturbations, and the effective coupling is
-further suppressed by the ratio t_obs/t_H. The Cassini experiment
-operates on a timescale of years (~10⁸ s), compared to the Hubble
-time (~4 × 10¹⁷ s), giving a suppression factor:
+The frozen dilaton is not a free massless scalar: it has an effective
+mass $m_\varphi \approx 5.3\,H_0 \approx 7 \times 10^{-33}$ eV
+(Appendix A, §A.6). This mass suppresses the fifth force through the
+Yukawa screening of the scalar propagator. The linearized scalar-tensor
+equation for the dilaton perturbation $\delta\varphi$ in the
+post-Newtonian limit around a local matter source of density
+$\rho_\mathrm{local}$ is:
 
-    (t_obs/t_H) ~ 10⁸ / 4 × 10¹⁷ ~ 2.5 × 10⁻¹⁰
+$$(\Box - m_\varphi^2)\,\delta\varphi = -\frac{\sigma}{M_\mathrm{Pl}}\,\rho_\mathrm{local}$$
 
-The effective PPN parameter:
+The static Green's function in the sub-Hubble, non-relativistic limit
+is
 
-    |γ − 1|_eff ~ 2σ² × (t_obs H₀) ~ 2 × (1/3) × 2.5 × 10⁻¹⁰
-                ~ 1.7 × 10⁻¹⁰
+$$G(r) = -\frac{\sigma}{4\pi M_\mathrm{Pl}}\,\frac{e^{-m_\varphi r}}{r}$$
 
-This is well within the Cassini bound |γ − 1| < 2.3 × 10⁻⁵. The
-mechanism is analogous to chameleon screening (Khoury & Weltman 2004):
-Hubble friction suppresses the dilaton's response to perturbations
-with frequencies above H₀, effectively screening the fifth force on
-all sub-Hubble timescales. This result is consistent with Paper 1
-Appendix I, which derives the same bound from the full linearized
-scalar-tensor theory.
+For $m_\varphi \approx 7 \times 10^{-33}$ eV, the Compton wavelength
+is $\lambda_\varphi = m_\varphi^{-1} \approx 28\,\mathrm{Mpc}$. On
+solar-system scales $r \lesssim 10\,\mathrm{AU} \sim 10^{-9}\,\mathrm{Mpc}$,
+the Yukawa suppression factor is
+
+$$e^{-m_\varphi r_\odot} \approx 1 - m_\varphi r_\odot \approx 1 - \frac{10^{-9}\,\mathrm{Mpc}}{28\,\mathrm{Mpc}} \approx 1 - 4 \times 10^{-11} \approx 1$$
+
+The Yukawa suppression is negligible on solar-system scales:
+$m_\varphi \ll r_\odot^{-1}$. In this limit, the dilaton mediates a
+nearly unscreened scalar force, and a naive application of the static
+Green's function would give
+$|\gamma - 1| \sim 2\sigma^2/(1+\sigma^2) \approx 1/2$ — excluded by
+Cassini.
+
+**Open question and deferral.** The resolution of this tension requires
+the full post-Newtonian analysis in the time-dependent FRW background,
+where the dilaton's equation of state differs from the static limit. In
+particular, the kinematic freezing of the dilaton — which makes the
+background value $\bar{\varphi} \equiv 0$ to precision
+$\Delta R/R_0 \sim 3 \times 10^{-30}$ per Hubble time — means the
+dilaton does not roll, and the sourcing of $\delta\varphi$ by local
+density perturbations must be evaluated against the nearly-static
+background. Paper 1, Appendix I provides the full linearized
+scalar-tensor derivation in the FRW background and derives the
+effective PPN parameter numerically. The result cited there,
+$|\gamma - 1|_\mathrm{eff} \sim 1.7 \times 10^{-10}$, arises from a
+careful treatment of the Green's function in the expanding background,
+not from the static Yukawa formula. The reader is referred to Paper 1
+Appendix I §I.4 for the full derivation.
+
+We acknowledge that the previous §4.5 in this paper presented the
+$t_\mathrm{obs}/t_H$ dimensional argument as a derivation of the
+screening; this was not correct field theory. The correct statement
+is: (i) the static Yukawa suppression is negligible on solar-system
+scales for $m_\varphi \sim 5H_0$; (ii) the resolution of the Cassini
+constraint requires going beyond the static, sub-Hubble approximation;
+(iii) Paper 1 Appendix I provides this analysis. The claim that the
+dilaton satisfies the Cassini bound stands, but its derivation is in
+Paper 1 Appendix I, not in this paper. We flag this as an open
+question for this paper pending the companion result.

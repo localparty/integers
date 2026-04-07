@@ -144,7 +144,7 @@ half-integer values. The correct quantization condition is:
 where `p₁` is the first Pontryagin class. For CP², `p₁ = 3h²`
 (with h the hyperplane class), so the shift is `3/4` of the
 generator — the flux quantum n₁ is quantized as `n₁ ∈ ℤ + 1/2`
-rather than `n₁ ∈ ℤ`.
+rather than `n₁ ∈ ℤ`. This convention, in which G₄ is normalized by 2π alone, agrees with the M-theory convention of Appendix B §B.2.1, which normalizes G₄ by 2πl₁₁³ and writes the shift as −λ/2 with λ = p₁/2: both give a total shift of p₁/4 on the CP² 4-cycle (corresponding to the physical half-integer flux shift δ₁ = 1/2 in integer flux units), and they differ only in whether the l₁₁³ factor is absorbed into the normalization of G₄ or written explicitly.
 
 **2. Modified tadpole.** With the half-integer shift, the
 tadpole condition (4.1) is corrected to:
