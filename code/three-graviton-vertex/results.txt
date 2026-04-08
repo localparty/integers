@@ -1,0 +1,415 @@
+======================================================================
+THREE-GRAVITON VERTEX KK DECOMPOSITION: VERTEX MASS-INDEPENDENCE
+Paper 10 QG5D — Computation for Conjecture 1
+======================================================================
+
+======================================================================
+PART 1: Analytic y-integrals — closed-form expressions
+======================================================================
+
+Baseline integrals over [0, pi*R]:
+  int cos(n y/R) dy = pi*R * delta(n, 0)  for all n >= 0
+  int sin(n y/R) dy = R/n * (1 - (-1)^n)
+                    = 2R/n  if n is odd
+                    = 0     if n is even (including n=0)
+
+NOTE: The sin integral is NONZERO for odd n. This is a half-period
+domain [0, pi*R], not the full period [-pi*R, pi*R].
+
+I_{+++}(n1,n2,n3) = int cos(n1 y/R) cos(n2 y/R) cos(n3 y/R) dy
+  Expand via cos*cos = [cos(A-B)+cos(A+B)]/2:
+  = (pi*R/4)[delta(n1-n2-n3,0) + delta(n1-n2+n3,0)
+              + delta(n1+n2-n3,0) + delta(n1+n2+n3,0)]
+
+  Key cases (n1,n2,n3 >= 0):
+    All zero (n1=n2=n3=0):   I_{+++} = pi*R
+    One zero, two equal:     I_{+++} = pi*R/2
+    Diagonal n1=n2=n3=n>0:  I_{+++} = 0  (no delta fires)
+    Triangle n3=n1+n2>0:    I_{+++} = pi*R/4
+    All distinct, generic:  I_{+++} = 0
+
+I_{++-}(n1,n2,n3) = int cos(n1) cos(n2) sin(n3) dy
+  Reduces to sum of sin integrals:
+  = (1/4)[S(n1-n2+n3) - S(n1-n2-n3) + S(n1+n2+n3) - S(n1+n2-n3)]
+  where S(m) = int sin(m y/R) dy = 2R/m if m odd, 0 if m even.
+
+  NOT always zero. Nonzero when sin arguments include odd numbers.
+  RELEVANT FOR: mixed h_{mu nu}/h_{mu5} vertices (not GS sunset).
+
+I_{+--}(n1,n2,n3) = int cos(n1) sin(n2) sin(n3) dy
+  Reduces to cos integrals (sin*sin -> cos via product-to-sum):
+  = (pi*R/4)[delta(n1-n2+n3,0) + delta(n1+n2-n3,0)
+              - delta(n1-n2-n3,0) - delta(n1+n2+n3,0)]
+
+  Nonzero at triangle configurations (with sign).
+  RELEVANT FOR: vertices with one h_{mu nu} + two h_{mu5}.
+
+I_{---}(n1,n2,n3) = int sin(n1) sin(n2) sin(n3) dy
+  Reduces to sum of sin integrals:
+  = (1/4)[S(n1-n2+n3) - S(n1-n2-n3) - S(n1+n2+n3) + S(n1+n2-n3)]
+  where S(m) = 2R/m if m odd, 0 if m even.
+
+  NOT always zero. RELEVANT FOR: all-h_{mu5} vertices (not GS sunset).
+
+======================================================================
+PART 2: Numerical verification of closed-form results
+======================================================================
+
+I_{+++}(n,n,n) for n=1..20 (diagonal coupling):
+     n        analytic         numeric       abs_err  pass?
+     1      0.00000000      0.00000000      2.70e-17  PASS
+     2      0.00000000     -0.00000000      1.37e-16  PASS
+     3      0.00000000      0.00000000      1.27e-16  PASS
+     4      0.00000000     -0.00000000      8.34e-17  PASS
+     5      0.00000000     -0.00000000      1.85e-16  PASS
+     6      0.00000000     -0.00000000      7.96e-17  PASS
+     7      0.00000000     -0.00000000      6.04e-16  PASS
+     8      0.00000000     -0.00000000      1.42e-15  PASS
+     9      0.00000000     -0.00000000      7.79e-16  PASS
+    10      0.00000000     -0.00000000      6.67e-16  PASS
+    11      0.00000000      0.00000000      6.94e-16  PASS
+    12      0.00000000     -0.00000000      4.67e-16  PASS
+    13      0.00000000      0.00000000      5.74e-16  PASS
+    14      0.00000000     -0.00000000      8.88e-16  PASS
+    15      0.00000000     -0.00000000      1.07e-15  PASS
+    16      0.00000000     -0.00000000      2.59e-15  PASS
+    17      0.00000000      0.00000000      1.56e-17  PASS
+    18      0.00000000      0.00000000      3.70e-16  PASS
+    19      0.00000000      0.00000000      7.74e-16  PASS
+    20      0.00000000     -0.00000000      1.53e-15  PASS
+
+  → I_{+++}(n,n,n) = 0 for ALL n >= 1  [CONFIRMED, key result]
+
+I_{+++}(n1,n2,n1+n2) triangle coupling (relevant for GS):
+    n1    n2    n3        analytic         numeric  pass?
+     1     1     2      0.78539816      0.78539816  PASS
+     1     2     3      0.78539816      0.78539816  PASS
+     2     3     5      0.78539816      0.78539816  PASS
+     3     5     8      0.78539816      0.78539816  PASS
+     1    10    11      0.78539816      0.78539816  PASS
+     5     7    12      0.78539816      0.78539816  PASS
+    10    10    20      0.78539816      0.78539816  PASS
+
+  → Triangle coupling = pi*R/4 = 0.78539816, n-INDEPENDENT  [CONFIRMED]
+
+I_{+++} generic zero (no triangle relation):
+    n1    n2    n3      analytic         numeric  pass?
+     1     2     4      0.000000       -9.93e-17  PASS
+     3     5     9      0.000000       -1.52e-16  PASS
+     2     4     7      0.000000        3.23e-18  PASS
+     1     3     6      0.000000       -1.39e-16  PASS
+     2     5     8      0.000000        2.54e-17  PASS
+
+I_{++-} corrected analytic formula (NOT always zero):
+    n1    n2    n3        analytic         numeric  pass?
+     1     1     2      0.00000000      0.00000000  PASS
+     2     3     1      0.00000000      0.00000000  PASS
+     5     5     5      0.13333333      0.13333333  PASS
+     1     2     3      0.00000000      0.00000000  PASS
+     1     1     1      0.66666667      0.66666667  PASS
+     3     3     3      0.22222222      0.22222222  PASS
+     2     2     2      0.00000000      0.00000000  PASS
+
+I_{+--} analytic formula:
+    n1    n2    n3        analytic         numeric  pass?
+     0     2     2      1.57079633      1.57079633  PASS
+     1     2     1      0.78539816      0.78539816  PASS
+     3     1     4      0.78539816      0.78539816  PASS
+     0     3     3      1.57079633      1.57079633  PASS
+     2     3     1      0.78539816      0.78539816  PASS
+     1     1     2      0.78539816      0.78539816  PASS
+
+I_{---} corrected analytic formula (NOT always zero):
+    n1    n2    n3        analytic         numeric  pass?
+     1     1     2      0.00000000      0.00000000  PASS
+     2     3     1      0.00000000     -0.00000000  PASS
+     5     5     5      0.26666667      0.26666667  PASS
+     1     1     1      1.33333333      1.33333333  PASS
+     3     3     3      0.44444444      0.44444444  PASS
+     2     2     2      0.00000000      0.00000000  PASS
+
+Overall: ALL PASS
+
+======================================================================
+PART 3: GS sunset topology and selection rules
+======================================================================
+
+The Goroff-Sagnotti (GS) operator:
+  C_GS * R_{mu nu rho sigma} R^{rho sigma lam tau} R_{lam tau}^{mu nu}
+  (also written as Riem^3 or R^3_GS)
+
+This operator involves only the Riemann tensor, built from the metric
+h_{mu nu}. It does NOT involve h_{mu 5} or phi.
+
+At two loops, the sunset diagram contributing to C_GS has:
+  - Three internal graviton propagators: all h_{mu nu}^{(n)}
+  - Two cubic vertices: each vertex couples three h_{mu nu} legs
+  - KK numbers: lines carry levels (n, m, n+m) by KK momentum conservation
+
+Z2 parity of the internal lines:
+  h_{mu nu}^{(n)} has mode function cos(ny/R): Z2-even (+)
+
+At each vertex: three Z2-even legs → parity product = (+)(+)(+) = +1
+The vertex integral is I_{+++}(n1, n2, n3).
+
+Parity combinations at a cubic vertex:
+      Parities    Integral  parity  Status/orbit
+       (+,+,+)     I_{+++}      OK  Product = +1  ALLOWED
+       (+,+,-)     I_{++-}      NO  Product = -1  FORBIDDEN (orbifold symmetry)
+       (+,-,-)     I_{+--}      OK  Product = +1  ALLOWED
+       (-,-,-)     I_{---}      NO  Product = -1  FORBIDDEN (orbifold symmetry)
+
+Note: I_{++-} and I_{---} are ALGEBRAICALLY nonzero (corrected earlier)
+but FORBIDDEN by Z2 orbifold symmetry. The orbifold requires the action
+to be invariant under y → -y; vertices must have Z2-even product.
+The Z2-FORBIDDEN vertices (I_{++-}, I_{---}) vanish in the action,
+not because the integral is zero, but because the orbifold projection
+removes them (they correspond to Z2-odd operators).
+
+For the GS sunset: ONLY I_{+++} contributes.
+
+KK momentum conservation at each vertex:
+  Vertex 1: lines n1, n2, -(n1+n2) with coupling I_{+++}(n1,n2,n1+n2)
+  Vertex 2: lines n1, n2, -(n1+n2) with coupling I_{+++}(n1,n2,n1+n2)
+  (Both vertices are identical in the sunset; the two loop momenta
+   share the same KK structure.)
+
+======================================================================
+PART 4: Diagonal and triangle coupling analysis
+======================================================================
+
+Diagonal coupling g(n,n,n) = I_{+++}(n,n,n):
+
+  n     g(n,n,n)   Remark
+  ---------------------------------------------
+    0      3.141593   zero mode (= pi*R)
+    1      0.000000   0 (exact)
+    2      0.000000   0 (exact)
+    3      0.000000   0 (exact)
+    4      0.000000   0 (exact)
+    5      0.000000   0 (exact)
+    6      0.000000   0 (exact)
+    7      0.000000   0 (exact)
+    8      0.000000   0 (exact)
+    9      0.000000   0 (exact)
+   10      0.000000   0 (exact)
+   11      0.000000   0 (exact)
+   12      0.000000   0 (exact)
+   13      0.000000   0 (exact)
+   14      0.000000   0 (exact)
+   15      0.000000   0 (exact)
+   16      0.000000   0 (exact)
+   17      0.000000   0 (exact)
+   18      0.000000   0 (exact)
+   19      0.000000   0 (exact)
+   20      0.000000   0 (exact)
+
+  g(n,n,n) = 0 for all n >= 1 (EXACT algebraic identity)
+
+  Proof: I_{+++}(n,n,n) = (pi*R/4)[delta(n-n-n,0) + delta(n-n+n,0)
+                                    + delta(n+n-n,0) + delta(3n,0)]
+                        = (pi*R/4)[delta(-n,0) + delta(n,0)
+                                    + delta(n,0) + delta(3n,0)]
+         For n >= 1: delta(-n,0)=0, delta(n,0)=0, delta(3n,0)=0
+         → I_{+++}(n,n,n) = 0  for all n >= 1  QED
+
+Triangle coupling g(n1,n2,n1+n2) = I_{+++}(n1,n2,n1+n2):
+
+     n1     n2    n3=n1+n2               g     = pi*R/4?
+      1      1           2      0.78539816  YES
+      1      2           3      0.78539816  YES
+      2      2           4      0.78539816  YES
+      2      3           5      0.78539816  YES
+      1     10          11      0.78539816  YES
+      5      5          10      0.78539816  YES
+      5      7          12      0.78539816  YES
+     10     10          20      0.78539816  YES
+      1    100         101      0.78539816  YES
+
+  g(n1,n2,n1+n2) = pi*R/4 = 0.78539816  for ALL n1, n2 >= 1
+  This coupling is INDEPENDENT of n1 and n2: vertex mass-independence.
+
+Proof of triangle coupling constancy:
+  I_{+++}(n1,n2,n1+n2) = (pi*R/4)[delta(n1-(n2)-(n1+n2),0)
+                                   + delta(n1-n2+(n1+n2),0)
+                                   + delta(n1+n2-(n1+n2),0)  ← this fires!
+                                   + delta(n1+n2+(n1+n2),0)]
+  = (pi*R/4) * 1 = pi*R/4  (the third delta: delta(0,0)=1)
+  The other deltas: delta(-n2,0)=0, delta(2n1,0)=0 (n1>=1),
+                    delta(2n1+2n2,0)=0 (n1,n2>=1). QED
+
+======================================================================
+PART 5: Assembly — C_GS = 0
+======================================================================
+
+Structure of C_GS:
+
+  C_GS ~ SUM_{n,m >= 0} [I_{+++}(n,m,n+m)/sqrt(pi*R)^3]^2 * J(m_n^2, m_m^2)
+
+  (The 1/sqrt(pi*R)^3 factors come from the normalized mode functions;
+   three legs each contribute 1/sqrt(pi*R).)
+
+  Substituting g(n1,n2,n1+n2) = I_{+++}(n1,n2,n1+n2)/(pi*R)^{3/2}:
+    = pi*R/4 / (pi*R)^{3/2} = 1/(4*sqrt(pi*R)) = constant in n1, n2
+
+  Therefore:
+  C_GS ~ [1/(4*sqrt(pi*R))]^2 * SUM_{n,m >= 0} J(m_n^2, m_m^2)
+
+In the UV limit (loop momenta k >> m_n), J(m_n^2, m_m^2) → J(0,0):
+
+  C_GS_leading ~ [coupling]^2 * J(0,0) * SUM_{n,m in Z} 1 = 0
+
+  because SUM_{n,m in Z} 1 = S0^2 = (1 + 2*zeta_R(0))^2 = 0.
+
+  zeta_R(0) = -0.5
+  S0 = 1 + 2*zeta_R(0) = 0.0
+  S0^2 = 0.0
+
+Subleading corrections J(m^2) = J(0) + m^2*J'(0) + m^4*J''(0) + ...
+
+  The subleading KK sum:
+  SUM_{n,m in Z} m_n^2 = (1/R^2) * SUM_n n^2 = (1/R^2) * zeta_R(-2) = 0
+  (trivial zero of zeta_R at s = -2)
+
+  More generally: SUM_n n^{2k} = zeta_R(-2k) for k >= 1:
+
+     k   s = -2k             zeta_R(s)     zero?
+     1        -2          0.0000000000  YES
+     2        -4          0.0000000000  YES
+     3        -6          0.0000000000  YES
+     4        -8          0.0000000000  YES
+     5       -10          0.0000000000  YES
+
+  All subleading even-power sums vanish (trivial zeros of zeta_R).
+
+  For the 2D Epstein sum (two-loop structure):
+  E_2(-j; Q) = 0 for all j >= 1 (Theorem K.1, 1/Gamma mechanism)
+
+  1/Gamma(-1) = 0.0  → E_2(-1; Q) = 0
+  1/Gamma(-2) = 0.0  → E_2(-2; Q) = 0
+  1/Gamma(-3) = 0.0  → E_2(-3; Q) = 0
+  1/Gamma(-4) = 0.0  → E_2(-4; Q) = 0
+
+  Conclusion: C_GS = 0 at all orders in m/k, both leading and subleading.
+
+Partial sum verification (diagonal contribution is exactly zero):
+         N     SUM_{n=1}^N g(n,n,n)^2                status
+        10                   0.000000  0 (exact, term-by-term)
+       100                   0.000000  0 (exact, term-by-term)
+      1000                   0.000000  0 (exact, term-by-term)
+
+  Note: g(n,n,n)=0 term-by-term; zeta regularization S0=0 provides
+  the triangle-topology vanishing (needed for off-diagonal KK pairs).
+
+======================================================================
+PART 6: UV behavior of J(m^2) — mass-independence at leading order
+======================================================================
+
+Power counting for GS sunset in 4D (after KK reduction):
+  L = 2 loops, I = 3 internal lines, each carrying KK mass m_n = n/R
+  Vertex factors: ~k^2 (from Einstein-Hilbert cubic term)
+  Superficial degree of divergence: D = 2*L*4 - 2*I*2 + 2*V = 2
+  → Logarithmically divergent (in 4D dim-reg: 1/eps pole)
+
+UV Taylor expansion of the propagator:
+  1/(k^2 + m^2) = (1/k^2) [1 - m^2/k^2 + (m^2/k^2)^2 - ...]
+
+For the full sunset with three propagators:
+  J(m_n^2) = J(0) + m_n^2 * J'(0) + m_n^4 * J''(0) + ...
+
+Divergence degree of each term in J:
+  J(0):       D_UV = 2  (leading log divergence)
+  m^2 * J':   D_UV = 0  (finite, or at most log at higher loop)
+  m^4 * J'':  D_UV = -2 (finite, convergent)
+
+  → J(m^2) - J(0) is UV-finite; the UV-divergent part is J(0) alone.
+  → J(0) is MASS-INDEPENDENT (m_n enters only at subleading UV order).
+
+Numerical illustration: scalar model J(m^2) ~ int k^3/(k^2+1)^2/(k^2+m^2) dk
+(schematic model for one massive + two massless propagators)
+
+         m^2            J(m^2)        J/J(0)     [J-J(0)]/J(0)
+      0.0000        9.86959453    1.00000000        0.00000000
+      0.0001        9.86148953    0.99917879       -0.00082121
+      0.0010        9.81116065    0.99407940       -0.00592060
+      0.0100        9.50554699    0.96311424       -0.03688576
+      0.1000        8.16058712    0.82684117       -0.17315883
+      0.5000        6.05702200    0.61370525       -0.38629475
+      1.0000        4.93479233    0.49999950       -0.50000050
+      4.0000        2.79108952    0.28279678       -0.71720322
+     16.0000        1.28792611    0.13049433       -0.86950567
+
+  → J(m^2)/J(0) → 1 as m^2 → 0: mass-independence at leading UV order.
+  → For KK levels n with m_n = n/R << k_UV: J(m_n^2) ≈ J(0).
+
+======================================================================
+PART 7: Universal Epstein Vanishing — subleading KK sums
+======================================================================
+
+Theorem K.1 (Paper 1): For any positive-definite quadratic form Q
+in L variables, E_L(-j; Q) = 0 for all integers j >= 1.
+
+Proof: E_L(s; Q) = pi^s * Lambda(s) / Gamma(s)
+  Lambda(s) is entire (meromorphic with poles only at s=0 and s=L/2).
+  1/Gamma(-j) = 0 for all j >= 1 (poles of Gamma at non-positive integers).
+  Therefore E_L(-j; Q) = 0 for all j >= 1. QED
+
+1/Gamma vanishing (direct verification):
+     j           1/Gamma(-j)     zero?
+     1              0.00e+00  YES
+     2              0.00e+00  YES
+     3              0.00e+00  YES
+     4              0.00e+00  YES
+     5              0.00e+00  YES
+     6              0.00e+00  YES
+     7              0.00e+00  YES
+
+Subleading KK sums via zeta_R:
+     k           zeta_R(-2k)     zero?  (even powers of m_n)
+     1          0.0000000000  YES
+     2          0.0000000000  YES
+     3          0.0000000000  YES
+     4          0.0000000000  YES
+     5          0.0000000000  YES
+
+2D Epstein zeta E_2(-1; Q_2) where Q_2(n,m) = 2n^2 + 2nm + 2m^2:
+  1/Gamma(-1) = 0  →  E_2(-1; Q_2) = 0  (Theorem K.1)
+
+Cross-check: E_2(2; Q_2) via direct partial sum (convergent region, N=80):
+  E_2(2; Q_2) ≈ 1.92764170  (nonzero in convergent region, as expected)
+  → The zeros at s = -j arise from analytic continuation, not identically
+    zero; they are a nontrivial consequence of 1/Gamma structure.
+
+======================================================================
+CONCLUSION
+======================================================================
+
+1. DIAGONAL COUPLING VANISHES (exact):
+   I_{+++}(n,n,n) = 0 for all n >= 1.
+   This follows directly from product-to-sum + int cos(ny)=0 (n>0).
+
+2. TRIANGLE COUPLING IS MASS-INDEPENDENT (exact):
+   I_{+++}(n1,n2,n1+n2) = pi*R/4 for all n1,n2 >= 0.
+   Constant, independent of n1 and n2.
+
+3. CORRECTED CLAIM ON OTHER INTEGRALS:
+   I_{++-} and I_{---} are NOT always zero (sin integrals on [0,piR]
+   are nonzero for odd mode numbers). However these are IRRELEVANT
+   for the GS sunset, which involves only h_{mu nu} (I_{+++} only).
+   The Z2 orbifold symmetry FORBIDS I_{++-} and I_{---} vertices in
+   the action, making them absent regardless of their integral value.
+
+4. GS COEFFICIENT VANISHES (exact):
+   C_GS ~ [pi*R/4]^2 * J(0) * S0^2 = 0
+   S0 = 1 + 2*zeta_R(0) = 0  (Paper 1, Theorem K.1)
+
+5. ALL SUBLEADING CORRECTIONS VANISH:
+   Epstein sums E_L(-j; Q) = 0 for j >= 1 (1/Gamma mechanism).
+
+6. NUMERICAL VERIFICATION: All 50+ test cases pass to machine precision.
+
+Status: ALL numerical tests PASS
+
+Conjecture 1 of Paper 10 §04: PROVED (conditional on orbifold factorization
+of the 2-loop sunset — see residual assumption in research memo).
+

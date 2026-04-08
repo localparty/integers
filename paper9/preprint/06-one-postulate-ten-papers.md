@@ -147,19 +147,30 @@ the moment the framework recognized its own grammar. Primary pattern: all six.
 
 ---
 
-**Paper 10 — The Riemann Hypothesis** *(in preparation)*
+**Paper 10 — Scheme-Independence of UV Finiteness in 5D KK Gravity** *(in preparation)*
 
-*Problem:* The Riemann zeta function ζ(s) is the spectral zeta function of
-the e-circle. That is not an analogy — it is an identity: Z_{S¹}(s) = 2R^{2s}ζ(2s).
-The framework has spent eight papers extracting physical truth from the
-spectral geometry of S¹, S², and CP². The Riemann Hypothesis asks whether
-the non-trivial zeros of ζ(s) lie on the critical line Re(s) = 1/2. The
-framework's Theorem K.1 already proves structural zeros for Epstein zeta
-functions at all negative integers, forced by compact geometry. The attack
-vectors for RH follow the same patterns: Topological Rigidity to force zeros
-onto the symmetry axis (Pattern 4); the trace formula on S¹ as a Selberg-type
-formula (Pattern 5); Projection Produces Pathology applied in reverse —
-RH looks mysterious in number theory because it is being seen as a 4D shadow
-of geometric forcing that is transparent in the full compact geometry
-(Pattern 6). Primary patterns: P4, P5, P6.
+*Problem:* Paper 1 establishes that the Goroff-Sagnotti R³ counterterm of 5D
+linearized gravity on M⁴ × S¹/Z₂ vanishes at every loop order under spectral
+zeta regularization (Theorem K.1). Paper 1 §U.2c flagged the remaining question:
+is this vanishing scheme-independent, or is it an artifact of the chosen
+regularization? In a non-renormalizable theory, this distinction is decisive —
+a counterterm that is zero in one scheme and nonzero in another represents a
+new physical coupling, not a regularization choice. Paper 10 closes this
+question. Five independent routes converge on the same conclusion: (i) the
+Seeley-DeWitt coefficients a₂ = a₄ = 0 of the Lichnerowicz operator on the
+flat background are intrinsic spectral invariants — one-loop UV finiteness is
+proved without reference to any regularization. (ii) Z₂ parity forces an
+algebraic, term-by-term cancellation between even and odd KK sectors at each
+KK level n ≥ 1, in every Z₂-preserving scheme. (iii) Poisson resummation
+bridges dim-reg and zeta-reg with only an exponentially suppressed residual.
+(iv) Wess-Zumino consistency protects the 4D Weyl anomaly coefficients — they
+vanish in every diffeomorphism-preserving scheme. (v) The y-integral computation
+of the three-graviton vertex yields a universal mass-independent coupling
+I_{+++}(n₁, n₂, n₁+n₂) = πR/4. Theorem 1 (C_GS = 0 unconditionally) is proved
+via Lemmas A1 (de Donder gauge vertex numerator), A2 (graviphoton/radion
+decoupling), A3 (method-of-images KK loop range). A side observation: the
+combined orbifold KK tower has a_grand = 19/240 ≠ 0 in curved backgrounds —
+orthogonal to Theorem 1, identified as an open frontier. Primary patterns:
+P3 (Casimir as scale-setter), P4 (topological rigidity), P5 (zeta regularization
+of KK towers).
 

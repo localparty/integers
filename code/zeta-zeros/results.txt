@@ -1,0 +1,261 @@
+========================================================================
+ZETA ZEROS COMPUTATION — QG5D Paper 9, Route 01
+Number-theoretic route: trivial zeros and Epstein vanishing
+========================================================================
+
+------------------------------------------------------------------------
+PART 1: Trivial zeros  zeta_R(-2k) = 0  for k = 1, 2, 3, 4
+------------------------------------------------------------------------
+
+These zeros follow from the functional equation:
+  zeta_R(s) = 2^s * pi^(s-1) * sin(pi*s/2) * Gamma(1-s) * zeta_R(1-s)
+
+At s = -2k:  sin(pi*(-2k)/2) = sin(-k*pi) = 0
+=> zeta_R(-2k) = 0 identically, by number theory, not regularization.
+
+       s                   zeta_R(s)            |zeta_R(s)|     Is zero?
+  ------   -------------------------   --------------------   ----------
+      -2                         0.0                    0.0          YES
+      -4                         0.0                    0.0          YES
+      -6                         0.0                    0.0          YES
+      -8                         0.0                    0.0          YES
+
+All four are numerically zero (to 50 decimal places).
+
+------------------------------------------------------------------------
+PART 2: Functional equation verification
+  zeta_R(s) = 2^s * pi^(s-1) * sin(pi*s/2) * Gamma(1-s) * zeta_R(1-s)
+------------------------------------------------------------------------
+
+         s           direct zeta(s)            via func. eq.          rel. diff
+  --------   ----------------------   ----------------------   ----------------
+      -0.5    -0.207886224977354566    -0.207886224977354566        1.60711e-51
+       0.5     -1.46035450880958681     -1.46035450880958681        1.83022e-51
+      -1.5   -0.0254852018898330359   -0.0254852018898330359        4.91602e-51
+      -3.0   0.00833333333333333333   0.00833333333333333333        2.50572e-51
+      -5.0   -0.00396825396825396825   -0.00396825396825396825                0.0
+
+Functional equation verified: both sides agree to machine precision.
+
+------------------------------------------------------------------------
+PART 3: Power-counting — determining s_0 for the GS diagram
+------------------------------------------------------------------------
+
+5D KK gravity on M^4 x S^1. Two-loop Goroff-Sagnotti diagram.
+
+Loop integral structure (schematic):
+  I ~ int d^4k1 d^4k2 [d(n1) d(n2)]  [vertex^2] / [prop^3]
+
+In 5D de Donder gauge:
+  Graviton propagator:  ~ 1/(k^2 + n^2/R^2)
+  Three-graviton vertex: ~ p^2  (two derivatives)
+  5D loop measure:       d^5p = d^4k dn
+
+After Kaluza-Klein reduction (compactifying the 5th dimension on S^1):
+  4D momentum integrals: d^4k1 d^4k2
+  KK mode sums:          sum_{n1, n2 in Z}
+
+Degree-of-divergence of the 2-loop diagram (in D=4 4D momenta):
+  Superficial: delta = 2*L*D/2 - 2*P + V_ext_deriv
+  = 2*2*2 - 2*3 + 2 = 8 - 6 + 2 = 4   (in 4D momentum counting)
+  But this is the 4D mass-dimension of the coefficient of the R^3 operator.
+
+The R^3 counterterm has mass dimension 6 (three Riemann tensors, each dim 2).
+The KK mode sum factor C_GS ~ sum_{n1,n2} f(n1,n2)
+
+The leading UV term (mass-independent) has f(n1,n2) = d_0 (constant).
+So the KK sum is:  sum_{n1,n2} 1 = S_0^2
+
+After zeta regularization, S_0 = 1 + 2*zeta(0) = 1 + 2*(-1/2) = 0.
+
+The subleading terms carry factors of n^2/R^2 and m^2/R^2.
+The sum of the leading subleading term:
+  sum_{n,m} (n^2 + m^2 + (n+m)^2)/R^2 = (1/R^2) * E_2(-1; Q)
+where Q(n,m) = 2n^2 + 2nm + 2m^2  (from the sunset topology).
+
+Identifying s_0: the KK sum is E_2(s; Q) evaluated at s = -1.
+  s_0 = -1  (a negative odd integer, NOT a trivial zero of zeta_R)
+
+For the leading term (constant summand), the relevant zeta value is:
+  zeta_R(0) = -1/2  (the S_0 sum, after regularization)
+  The cancellation S_0 = 1 + 2*zeta(0) = 0 uses zeta_R(0) = -1/2,
+  which is NOT a trivial zero — it's the special value at s=0.
+
+Summary of s values appearing:
+  Leading KK sum:     S_0 ~ zeta_R(0) = -1/2  [NOT a trivial zero]
+  Subleading KK sum:  E_2(-1; Q)      [negative ODD integer -> structural zero]
+  Further subleading: E_2(-2; Q), E_2(-3; Q), ...  [all zero by Thm K.1]
+
+------------------------------------------------------------------------
+PART 4: The S_0 cancellation and zeta_R(0)
+------------------------------------------------------------------------
+
+  zeta_R(0) = -0.5
+  S_0 = 1 + 2*zeta_R(0) = 1 + 2*(-0.5) = 0.0
+
+  The S_0 = 0 identity is the KEY cancellation.
+  It is NOT a trivial zero of zeta_R — rather, it is the analytic
+  continuation value zeta_R(0) = -1/2, which is a well-known special value
+  following from the functional equation evaluated at s=0.
+
+  Deriving zeta_R(0) from the functional equation:
+    As s -> 0:  2^s -> 1, pi^(s-1) -> 1/pi
+    sin(pi*s/2) -> pi*s/2
+    Gamma(1-s) -> Gamma(1) = 1
+    zeta_R(1-s) -> zeta_R(1) ~ 1/s (pole)
+  So: zeta_R(s) ~ (pi*s/2) * (1/pi) * (1/s) = 1/2  as s->0
+  Wait — but zeta_R(0) = -1/2. Let me be careful:
+
+  Actually zeta_R(0) = -1/2 is most directly seen from:
+    Bernoulli: zeta_R(-n) = -B_{n+1}/(n+1)
+    zeta_R(0) = zeta_R(-0) = -B_1/1 = -(-1/2) = ... careful with signs
+
+  zeta_R(  0): Bernoulli formula =  -0.50000000, mpmath =  -0.50000000, match=True
+  zeta_R( -1): Bernoulli formula =  -0.08333333, mpmath =  -0.08333333, match=True
+  zeta_R( -2): Bernoulli formula =   0.00000000, mpmath =   0.00000000, match=True
+  zeta_R( -3): Bernoulli formula =   0.00833333, mpmath =   0.00833333, match=True
+  zeta_R( -4): Bernoulli formula =   0.00000000, mpmath =   0.00000000, match=True
+  zeta_R( -5): Bernoulli formula =  -0.00396825, mpmath =  -0.00396825, match=True
+
+------------------------------------------------------------------------
+PART 5: Epstein zeta E_2(s; Q) for the S^1/Z_2 KK spectrum
+  Q(n,m) = 2n^2 + 2nm + 2m^2  (sunset topology on S^1)
+------------------------------------------------------------------------
+
+The Epstein zeta function is:
+  E_2(s; Q) = sum'_{(n,m) in Z^2} [Q(n,m)]^{-s}
+where sum' excludes (n,m) = (0,0).
+
+By Theorem K.1 (Universal Epstein Vanishing):
+  E_2(-j; Q) = 0 for all integers j >= 1
+Proof: E_2(s;Q) = pi^s * Lambda(s) / Gamma(s),
+and 1/Gamma(-j) = 0 for j = 1,2,3,...
+
+Direct numerical evaluation at s = 2 (convergent region, cross-check):
+  E_2(2; Q) (direct, 200 terms) = 1.92776310187537
+
+Demonstrating the vanishing mechanism for L=1 (Riemann zeta):
+  zeta_R(s) = pi^s * Lambda(s) / Gamma(s)   [Lambda(s) = pi^{-s} Gamma(s) zeta_R(s)]
+  At s = -j: 1/Gamma(-j) = 0 => zeta_R(-j) = 0
+
+  j=1: zeta_R(-1) = -0.083333333,  1/Gamma(-1) = 0.0
+  j=2: zeta_R(-2) = 0.0,  1/Gamma(-2) = 0.0
+  j=3: zeta_R(-3) = 0.0083333333,  1/Gamma(-3) = 0.0
+  j=4: zeta_R(-4) = 0.0,  1/Gamma(-4) = 0.0
+
+The vanishing is mechanical: 1/Gamma(s) = 0 at all non-positive integers.
+This is a NUMBER-THEORETIC identity — not a regularization choice.
+
+------------------------------------------------------------------------
+PART 6: S^1/Z_2 orbifold: Z_2-even vs Z_2-odd mode contributions
+------------------------------------------------------------------------
+
+On S^1/Z_2, modes split into:
+  Z_2-even: phi(n) with n = 0, 1, 2, 3, ...  (cosine modes)
+  Z_2-odd:  phi(n) with n = 1, 2, 3, ...  (sine modes, no zero mode)
+
+The full S^1 sum: sum_{n=-inf}^{inf} f(n) = f(0) + 2 * sum_{n=1}^{inf} f(n)
+The Z_2-even sum: f(0) + sum_{n=1}^{inf} f(n)  [half the oscillating part]
+The Z_2-odd sum:  sum_{n=1}^{inf} f(n)           [no zero mode]
+
+For the constant summand f(n) = 1:
+  Full S^1:   1 + 2*zeta_R(0) = 1 + 2*(-1/2) = 0  [S_0 = 0]
+  Z_2-even:   1 + zeta_R(0) = 1 + (-1/2) = 1/2  [S_0^even = 1/2]
+  Z_2-odd:    zeta_R(0) = -1/2  [S_0^odd = -1/2]
+
+  Cancellation: S_0^even + S_0^odd = 1/2 + (-1/2) = 0 = S_0
+  But also: S_0^even - S_0^odd = 1/2 - (-1/2) = 1 ≠ 0
+
+Numerical values:
+  zeta_R(0)  = -0.5
+  S_0 (full) = 0.0
+  S_0^even   = 0.5
+  S_0^odd    = -0.5
+  S_0^even + S_0^odd = 0.0
+
+On S^1/Z_2, if the theory has a definite Z_2 parity for each field,
+only Z_2-even modes contribute to the zero-mode sector.
+The Goroff-Sagnotti operator is Z_2-even (it is built from 4D curvature).
+The leading KK sum for Z_2-even modes: S_0^even = 1/2 ≠ 0.
+
+CRITICAL POINT: For orbifold boundary conditions, S_0 ≠ 0 for each parity sector.
+The full vanishing S_0 = 0 uses the COMPLETE S^1 sum (both parities).
+On S^1/Z_2, one must combine Z_2-even AND Z_2-odd internal loop modes.
+The orbifold does not project out internal loop modes; it constrains external states.
+
+------------------------------------------------------------------------
+PART 7: Is s_0 a negative even integer (trivial zero of zeta_R)?
+------------------------------------------------------------------------
+
+The S_0 cancellation uses zeta_R(0) = -1/2, not a trivial zero.
+The subleading Epstein sums use E_L(-j; Q) = 0 for j >= 1.
+
+The MECHANISM of E_L(-j; Q) = 0 is IDENTICAL to the trivial zero mechanism:
+  - Trivial zeros: zeta_R(-2k) = 0 because 1/Gamma(-2k) = 0
+  - Epstein zeros: E_L(-j; Q) = 0 because 1/Gamma(-j) = 0
+Both are consequences of the same gamma-function pole structure.
+
+However, there is an important distinction:
+  Trivial zeros of zeta_R: only at NEGATIVE EVEN integers (-2, -4, -6, ...)
+  Universal Epstein vanishing: at ALL NEGATIVE INTEGERS (-1, -2, -3, ...)
+
+The Goroff-Sagnotti subleading sum lands at E_2(-1; Q) (j=1, odd),
+which is NOT a trivial zero of zeta_R — but it IS a universal Epstein zero.
+
+Scheme independence question:
+  Trivial zeros of zeta_R ARE scheme-independent (number-theoretic identities).
+  Universal Epstein zeros: also scheme-independent, by the same gamma-pole argument.
+  The gamma-pole 1/Gamma(-j) = 0 is a mathematical fact, not a regularization choice.
+
+Claim: The Epstein vanishing at negative integers is SCHEME-INDEPENDENT in the
+same sense that trivial zeros of zeta_R are scheme-independent.
+Both follow from 1/Gamma(negative integer) = 0,
+which is a mathematical identity holding in any regularization scheme that
+represents the zeta function as (pi^s / Gamma(s)) * Lambda(s).
+
+------------------------------------------------------------------------
+PART 8: Special values of zeta_R for context
+------------------------------------------------------------------------
+
+     s                   zeta_R(s)                Bernoulli formula
+  ----   -------------------------   ------------------------------
+     0          -0.500000000000000           -B_1/1 = -0.5000000000
+    -1          -0.083333333333333           -B_2/2 = -0.0833333333
+    -2           0.000000000000000            -B_3/3 = 0.0000000000
+    -3           0.008333333333333            -B_4/4 = 0.0083333333
+    -4           0.000000000000000            -B_5/5 = 0.0000000000
+    -5          -0.003968253968254           -B_6/6 = -0.0039682540
+    -6           0.000000000000000            -B_7/7 = 0.0000000000
+    -7           0.004166666666667            -B_8/8 = 0.0041666667
+    -8           0.000000000000000            -B_9/9 = 0.0000000000
+
+Note: zeta_R(-2k) = 0 for k=1,2,3,... because B_{2k+1} = 0 for k >= 1.
+This is the number-theoretic content: odd-indexed Bernoulli numbers vanish.
+
+------------------------------------------------------------------------
+PART 9: Summary of findings
+------------------------------------------------------------------------
+
+1. The Goroff-Sagnotti KK sum S_0 = 1 + 2*zeta_R(0) = 0 uses zeta_R(0) = -1/2.
+   This is NOT a trivial zero of zeta_R; it is the analytic continuation value.
+
+2. The subleading Epstein sums E_L(-j; Q) = 0 for j >= 1 are UNIVERSAL ZEROS
+   of the Epstein zeta function, arising from the pole 1/Gamma(-j) = 0.
+
+3. The mechanism is IDENTICAL to the trivial zero mechanism for zeta_R(-2k)=0,
+   but applies to ALL negative integers j >= 1, not just even ones.
+
+4. This mechanism is SCHEME-INDEPENDENT in the mathematical sense:
+   1/Gamma(negative integer) = 0 is a mathematical identity.
+   Any regularization that represents zeta or Epstein functions via
+   Gamma functions will reproduce this vanishing.
+
+5. The S_0 cancellation (leading term) is scheme-DEPENDENT:
+   In zeta regularization: S_0 = 1 + 2*zeta_R(0) = 0
+   In dim-reg: the sum sum_{n} 1 is typically set to 0 by convention,
+   but the split '1 + 2*(-1/2)' is specific to zeta regularization.
+
+6. VERDICT: The Epstein vanishing is PARTIALLY scheme-independent.
+   The subleading zeros are number-theoretically grounded (1/Gamma = 0).
+   The leading cancellation S_0 = 0 requires more care.
+

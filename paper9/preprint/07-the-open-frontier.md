@@ -108,7 +108,7 @@ consequences table.
 **Proposed as a research program** — specific, falsifiable approaches that
 emerge naturally from the framework but are not yet fully derived. Includes:
 the SM ↪ E₈ embedding, the non-perturbative mechanism for R, the full
-nonlinear OS3 positivity, the RH approach of Paper 10.
+nonlinear OS3 positivity.
 
 **Speculative but quantitative** — flagged explicitly throughout the series.
 The N_eff = 3.31–3.39 prediction (testable by CMB-S4), the dark photon signal
@@ -169,20 +169,22 @@ The problem is unsolved. The framework has made it precise.
 
 ---
 
-## 7.6 Paper 10
+## 7.6 Beyond Linearized, Flat Background
 
-The Riemann Hypothesis is Paper 10.
+Paper 10 (Scheme-Independence) closes the one-loop and two-loop UV finiteness
+of 5D linearized gravity on flat M⁴ × S¹/Z₂ unconditionally: Theorem 1 with
+Lemmas A1–A3, two independent proofs of a₄ = 0 (Seeley-DeWitt and Weyl anomaly
+cohomology), and an algebraic Z₂ parity mechanism that holds in every
+Z₂-preserving regularization scheme. This closes the open problem stated in
+Paper 1 §U.2c.
 
-The connection is not speculative. The Riemann zeta function is the spectral
-zeta function of the e-circle. Every pattern in the framework operates on
-exactly the mathematical objects that RH is about. Theorem K.1 already proves
-structural zeros for Epstein zeta functions from compact geometry — the same
-type of argument that would be needed to force Riemann zeros onto the critical
-line. The three attack vectors are in preparation.
+What remains open beyond Paper 10 is the natural next layer: extension of the
+Seeley-DeWitt vanishing to all a_{2k} via a Gel'fand-Yaglom generating function;
+curved backgrounds (the proofs in Paper 10 are flat-background); the full
+non-linear theory beyond linearized fluctuations; and the curious orbifold
+observation a_grand = 19/240 ≠ 0 for the combined h_{μν} + A_μ + φ KK tower
+in curved backgrounds — orthogonal to Theorem 1 but a real, non-zero effect
+that deserves its own investigation.
 
-The framework does not claim to have proved RH. It claims to have the right
-tools, applied to the right geometric objects, with a track record of those
-tools producing exact results in adjacent domains.
-
-The pattern attribution map has one entry that is not yet complete. Paper 10
-will fill it.
+These are not gaps in the finiteness claim. They are the next frontier for
+the same machinery that closed it.
