@@ -37,6 +37,21 @@ details, numerical verification, and honest assessment.
 | [11](11-cp2-area-law-confinement.md) | CP² Area Law | 2D YM on CP¹ → confinement; holonomy table complete | **PROVED** |
 | [12](12-adiabatic-continuity-cp2-sigma.md) | Adiabatic Continuity N=3 | Four methods confirm m² > 0; rigorous lower bound m² ≥ 3e² | **STRONG EVIDENCE** |
 
+## Riemann-Physics Bridge (Paper 11)
+
+| # | Topic | Result | Status |
+|---|-------|--------|--------|
+| [13](13-oc2-bost-connes-riemann-relation.md) | OC-2 BC Discovery | log(R/l_P) ≈ γ_1 × π²/2 (initial discovery) | **DISCOVERED** |
+| [14](14-oc2-exact-formula-verified.md) | Verified Formula | log(πR/l_P) = γ_1 × π²/2 at 0.014% | **VERIFIED** |
+| [15-final](15-oc2-final-analysis-exact-formula.md) | High-precision Analysis | Verified at 150 digits, residual is physical | **VERIFIED** |
+| [15-neff](15-neff-from-gamma6.md) | N_eff from γ_6 | N_eff = γ_6^(1/3) at 0.0082% (best precision) | **VERIFIED** |
+| [16](16-fine-structure-from-riemann.md) | Fine Structure | 1/α = γ_1 × γ_4 / π at 0.024% (with correction) | **VERIFIED** |
+| [17](17-gamma8-double-coincidence.md) | Lepton Ratio + GUT Integer | m_τ/m_μ = 17 = γ_8^(3/4) where 3/4 = ρ² | **VERIFIED** |
+| [18](18-bc-first-principles-derivation.md) | BC First Principles | 8-step derivation: 3 rigorous, 4 semi-rigorous, 1 heuristic | **SEMI-RIGOROUS** |
+| [19](19-predict-zeros-analysis.md) | Predict Zeros Test | Simple formula doesn't generalise; each parameter has own structure | **DOCUMENTED** |
+| [20](20-fermion-decomposition-detail.md) | Fermion Decomposition | (C²)^⊗3 = 1₀ ⊕ 3̄₁ ⊕ 3₂ ⊕ 1₃; colour = entanglement | **VERIFIED** |
+| [21](21-systematic-parameter-search.md) | 12-Parameter Search | 6 parameters fit Riemann formulas, 6 don't (coherent pattern) | **DOCUMENTED** |
+
 ---
 
 ## Computation Scripts
