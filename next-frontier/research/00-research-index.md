@@ -35,6 +35,7 @@ details, numerical verification, and honest assessment.
 | # | Topic | Result | Status |
 |---|-------|--------|--------|
 | [11](11-cp2-area-law-confinement.md) | CP² Area Law | 2D YM on CP¹ → confinement; holonomy table complete | **PROVED** |
+| [12](12-adiabatic-continuity-cp2-sigma.md) | Adiabatic Continuity N=3 | Four methods confirm m² > 0; rigorous lower bound m² ≥ 3e² | **STRONG EVIDENCE** |
 
 ---
 
@@ -49,6 +50,7 @@ details, numerical verification, and honest assessment.
 | `code/kirillov_orbit.py` | 09 | Moment map, orbit dimension, Borel-de Siebenthal |
 | `code/fermion_quantum_numbers.py` | 10 | Weight decomposition → SM charges |
 | `code/cp2_area_law.py` | 11 | 2D YM on CP¹, SU(2) and SU(3) exact area law |
+| `code/cp2_sigma_mass_gap.py` | 12 | Four-method verification of N=3 mass gap |
 
 ---
 
