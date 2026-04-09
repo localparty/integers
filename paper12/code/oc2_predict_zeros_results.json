@@ -1,0 +1,137 @@
+{
+  "date": "2026-04-08",
+  "status": "Riemann zero prediction test",
+  "framework": "QG5D M-theory on M\u2074 \u00d7 CP\u00b2 \u00d7 S\u00b2 \u00d7 S\u00b9",
+  "formula": "log(\u03c0 \u00d7 ratio) = \u03b3_n \u00d7 \u03c0\u00b2 / 2",
+  "test_hierarchies": 17,
+  "target_zeros": 10,
+  "strict_matches": 0,
+  "matches_within_tolerance": [],
+  "all_predictions": [
+    {
+      "name": "R_obs / l_P (cosmological constant)",
+      "ratio": 1.234545e+29,
+      "log_ratio": 66.98567017797093,
+      "gamma_predicted": 13.80610555298456,
+      "match": null
+    },
+    {
+      "name": "M_EW \u00d7 l_P (electroweak scale)",
+      "ratio": 1.6694212116659156e-21,
+      "log_ratio": -47.84180996635974,
+      "gamma_predicted": -9.462806852796684,
+      "match": null
+    },
+    {
+      "name": "M_KK \u00d7 l_P (Kaluza-Klein scale, 1.5 TeV)",
+      "ratio": 6.160164271047229e-16,
+      "log_ratio": -35.02325804333707,
+      "gamma_predicted": -6.86522514595384,
+      "match": null
+    },
+    {
+      "name": "M_GUT \u00d7 l_P (GUT scale, 10^15 GeV)",
+      "ratio": 4.106776180698152e-34,
+      "log_ratio": -76.87525482533806,
+      "gamma_predicted": -15.346212849449143,
+      "match": null
+    },
+    {
+      "name": "M_Pl \u00d7 m_h_inv (Hubble radius)",
+      "ratio": 2.922e+17,
+      "log_ratio": 40.216214894227285,
+      "gamma_predicted": 8.381479763365483,
+      "match": null
+    },
+    {
+      "name": "R_obs / R_2 (e-circle to S\u00b2)",
+      "ratio": 100031100000000.0,
+      "log_ratio": 32.236502253566165,
+      "gamma_predicted": 6.764451903610465,
+      "match": null
+    },
+    {
+      "name": "R_2 / R_3 (S\u00b2 to CP\u00b2)",
+      "ratio": 1000000000000.0,
+      "log_ratio": 27.631021115928547,
+      "gamma_predicted": 5.831186303394658,
+      "match": null
+    },
+    {
+      "name": "R_3 / l_P_geV (CP\u00b2 to Planck)",
+      "ratio": 6188.118811881189,
+      "log_ratio": 8.73038641187728,
+      "gamma_predicted": 2.001116943782815,
+      "match": null
+    },
+    {
+      "name": "\u03a9_DM / \u03a9_b (dark matter / baryon)",
+      "ratio": 5.36,
+      "log_ratio": 1.6789639750827108,
+      "gamma_predicted": 0.5722000084664884,
+      "match": null
+    },
+    {
+      "name": "1 / \u03be (inverse mirror temp)",
+      "ratio": 2.314814814814815,
+      "log_ratio": 0.8393296907380268,
+      "gamma_predicted": 0.4020545294335072,
+      "match": null
+    },
+    {
+      "name": "M_Pl / M_EW (EW-Planck hierarchy)",
+      "ratio": 9898373983739838.0,
+      "log_ratio": 36.831146894495014,
+      "gamma_predicted": 7.695521570480135,
+      "match": null
+    },
+    {
+      "name": "M_Pl / M_GUT (GUT-Planck hierarchy)",
+      "ratio": 2435.0,
+      "log_ratio": 7.79770203551669,
+      "gamma_predicted": 1.8121155738276742,
+      "match": null
+    },
+    {
+      "name": "1 / \u03b1 (inverse fine structure constant)",
+      "ratio": 137.036,
+      "log_ratio": 4.920243665031785,
+      "gamma_predicted": 1.2290205978695081,
+      "match": null
+    },
+    {
+      "name": "m_p / m_e (proton-electron)",
+      "ratio": 1836.15,
+      "log_ratio": 7.515426267189631,
+      "gamma_predicted": 1.7549145439067781,
+      "match": null
+    },
+    {
+      "name": "n_2 / n_1 magnitude (GUT flux)",
+      "ratio": 1.8888888888888888,
+      "log_ratio": 0.6359887667199967,
+      "gamma_predicted": 0.3608490432246403,
+      "match": null
+    },
+    {
+      "name": "M_KK \u00d7 l_P (2 TeV estimate)",
+      "ratio": 8.213552361396304e-16,
+      "log_ratio": -34.73557597088529,
+      "gamma_predicted": -6.806928569766849,
+      "match": null
+    },
+    {
+      "name": "1 / m_\u03bd (neutrino mass inverse, 1/meV)",
+      "ratio": 20.120724346076457,
+      "log_ratio": 3.001750345879554,
+      "gamma_predicted": 0.8402525700566652,
+      "match": null
+    }
+  ],
+  "assessment": {
+    "genuine_matches": false,
+    "consecutive_pattern": false,
+    "random_match_probability": 0.068,
+    "conclusion": "No systematic pattern detected"
+  }
+}
