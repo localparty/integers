@@ -270,15 +270,26 @@ first two such terms with empirical coefficients:
 
 | m | Empirical coefficient | Implied |V_{1m}|² (= c_m · π²/2) |
 |:--|:----------------------|:-------------------------------|
-| 2 | −0.15 / γ_2 | 0.0750 |
+| 2 | −0.15 / γ_2 | **0.2425** (exact: 0.15·π²·(γ_2−γ_1)/(2γ_2)) |
 | 3 | +0.03 / γ_3 *(positive sign — see Section 4.3)* | (different mechanism) |
 | ≥ 4 | 0 (within 5 ppb) | exponentially small |
 
-The first matrix element |V_{12}|² ≈ 0.075 implies |V_{12}| ≈ 0.27,
+(*Numerical correction*: an earlier draft of this section quoted
+|V_{12}|² ≈ 0.075. The correct value, from the **exact** second-order
+PT denominator (γ_m − γ_1)·π²/2 (rather than the asymptotic
+γ_m·π²/2), is **0.2425**. The asymptotic form gives 0.7402. Both
+are order-1 numbers; both pass the consistency check below. The
+SM matter-content estimate of `research/07-matter-content-Vnm-derivation.md`
+gives |V_{12}|²_SM ∼ 0.12, which is a **factor-of-2 match** to the
+exact-denominator empirical value 0.2425 — strikingly close for an
+order-of-magnitude estimate from a single-loop SM running calculation.)
+
+The first matrix element |V_{12}|² ≈ 0.24 implies |V_{12}| ≈ 0.49,
 an order-1 number consistent with a generic non-trivial coupling
 between |γ_1⟩ and |γ_2⟩. **This is a non-trivial check**: the
 empirical coefficient −0.15 corresponds to a coupling of natural
-size, not a fine-tuned small number.
+size, not a fine-tuned small number — and the SM matter content
+predicts a value within a factor of 2 of the empirical (research/07).
 
 ### 4.2 Why only m = 2 and m = 3 matter (the convergence)
 

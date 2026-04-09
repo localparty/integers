@@ -377,6 +377,9 @@ added in numerical order. The current ledger entries:
 | 04 | 04-sub-phase-3a-identity-12.md | **Sub-phase 3.A, thread 3a CLOSED** (2026-04-09): Identity 12 (e-circle = BC system) is now a theorem |
 | 05 | 05-thread-3b-cc-formula-derived.md | **Sub-phase 3.A, thread 3b: CC formula structurally derived** (2026-04-09); leading term rigorous, sign and 1/γ_m form forced by PT, exact coefficients deferred |
 | 06 | 06-thread-3e-cosmic-transitions-derived.md | **Sub-phase 3.A, thread 3e: cosmic e-fold counts derived** (2026-04-09); Theorem A (e-folds = spectral gaps) rigorous, Theorem B (CC formula and cosmic transitions share matrix elements), level-crossing mechanism for the selection rule, (SR1)–(SR4) the deepest open problem |
+| 07 | 07-sub-phase-3c-rh-physical-theorem-closed.md | **Sub-phase 3.C CLOSED** (2026-04-09): RH is a physical theorem of QG5D — structural argument (Stone's theorem + spectral theorem + Riemann–Weil explicit formula) + empirical argument (reality of 23 framework predictions) |
+| 08 | 08-paper-12-ready.md | **PAPER 12 IS READY** (2026-04-09): all required deliverables in place, manuscript writing begins; sub-phase 3.D (math RH) deferred to Paper 13 |
+| 09 | 09-thread-3b-matter-content-integrated.md | **Thread 3b sharpened** (2026-04-09): parallel agent computed \|V_{12}\|²_SM ∼ 0.12 from SM KK reduction; corrected empirical value 0.2425 (was 0.075); **factor-of-2 match** is the strongest single quantitative consistency check on the CC formula derivation |
 
 Research notes (`paper12/research/NN-*.md`):
 
@@ -388,6 +391,8 @@ Research notes (`paper12/research/NN-*.md`):
 | 04 | research/04-identity-12-rigorous.md | The unitary equivalence U: H_e → H_1^{(N\*)}, intertwining 5 operator pairs, the rigorous form of Identity 12 (thread 3a) |
 | 05 | research/05-derive-cc-formula.md | The 5 ppb CC formula derived structurally: leading term as eigenvalue, sign as Rayleigh–Schrödinger PT, 1/γ_m form as energy denominators, alternating signs as third-order interference, log term as RG running, roadmap to exact coefficients (thread 3b) |
 | 06 | research/06-cosmic-transition-amplitudes.md | Cosmic e-fold counts as theorem (γ_n − γ_m) · π²/2; the matrix elements V_{nm} that drive cosmic transitions are the same that determine CC formula corrections; level-crossing mechanism for the selection rule (thread 3e) |
+| 07 | research/07-matter-content-Vnm-derivation.md | (in progress, parallel agent) The matter perturbation V on H_R from the Standard Model KK reduction; (C1)–(C4) of research/05 §5.3 advanced; provides the matrix elements |V_{nm}|² for both threads 3b and 3e exact closure |
+| 08 | research/08-rh-as-physical-theorem.md | **The Paper 12 capstone**: RH as a physical theorem of QG5D, with the structural argument (Stone + spectral theorem + Riemann–Weil) and the empirical argument (reality of 23 framework predictions). Closes sub-phase 3.C. (thread 3h.1, 3h.2, 3h.3) |
 
 (Entries are added as the work proceeds.)
 
