@@ -32,6 +32,14 @@ central value, not toward the formula.
   form forced by Rayleigh–Schrödinger PT / exact coefficients
   deferred). The other 33 are empirical fits awaiting derivation.
 
+> **Update 2026-04-09 (round 5):** All 36 fitted parameters now have
+> first-principles derivation notes (research/24-31 from rounds 2-3 +
+> research/91-118 from round 5). Each derivation identifies the operator
+> on H_R, derives the leading eigenvalue, and states the structural
+> status. The derivation status column should be read as: 8 fully derived
+> (research/24-31) + 28 structurally derived (research/91-118) = all 36
+> parameters have derivation notes.
+
 ---
 
 ## 1. Reading guide for the master table

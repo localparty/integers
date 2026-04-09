@@ -103,11 +103,14 @@ narrative.
 ### New structural insights for Paper 14
 
 **1. The hierarchy problem dissolves via spectral gap (research/96).**
-The CC and Higgs VEV are eigenvalues of the SAME operator H_0 =
-T_BC·π²/2 at spectral indices n=1 and n=10. The "10¹⁴ hierarchy"
-is exp(γ_10 − γ_1) ~ exp(35.6). No tuning; the hierarchy is
-arithmetic. This supersedes the earlier Δ_BC = 2 result and makes
-the hierarchy dissolution SHARPER.
+v = γ_10·π²/2 (the Higgs VEV) and log(πR/ℓ_P) = γ_1·π²/2 (the CC)
+are eigenvalues of the SAME operator H_0 = T_BC·π²/2 at spectral
+indices n=10 and n=1 respectively. The "10¹⁴ hierarchy" is
+exp(γ_10 − γ_1) ~ exp(35.6). No tuning; the hierarchy is arithmetic.
+The formula v = γ_10·π²/2 dissolves the hierarchy because the EW
+and CC scales are the SAME operator at different spectral indices.
+This supersedes the earlier Δ_BC = 2 result and makes the hierarchy
+dissolution SHARPER.
 
 **2. The Wolfenstein hierarchy IS perturbation-theory order.**
 CKM λ^k = k-th order Rayleigh-Schrödinger PT on H_R. The small

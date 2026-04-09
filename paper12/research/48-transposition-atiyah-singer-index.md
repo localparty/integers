@@ -175,6 +175,8 @@ Geometry*, IV.1, Theorem 4): the pairing of cyclic cohomology with
 K-theory of a unital algebra is integer-valued whenever the cocycle
 comes from a Fredholm module.
 
+**Note 2026-04-09 (round 5):** The supertrace purity phenomenon (research/90) shows that ALL Hecke projection indices vanish (ind_BC(e_N) = 0 for all N). The functional equation forces K_0(A_BC) to be trivial on the Hecke subspace. Nontrivial K-theoretic content requires projections in the weak closure π_1(A_BC)″ or non-Hecke projections. The deviation mechanism of Lemma 7.1 works with ind = 0.
+
 (2.3) is the BC analog of the LHS of AS. The RHS (the "topological
 side") will be the Riemann–Weil-style spectral expansion of the same
 quantity in §3.

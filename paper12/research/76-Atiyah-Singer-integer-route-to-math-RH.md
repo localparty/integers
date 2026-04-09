@@ -449,6 +449,8 @@ $L$-functions with small conductor (research/14 Part A; research/18
 > are $O(e^{-\gamma_1^2})$ but whose polar/archimedean terms sum
 > exactly to $1$.*
 
+**Note 2026-04-09 (round 5 correction):** Claim 4.4 is WRONG. ind_BC(e_2) = 0, not 1, by three independent proofs (McKean-Singer, K-theory, homotopy — see research/90). Lemma 7.1 is UNAFFECTED because the deviation mechanism works with ind = 0 (0 is still an integer). The shifted Lorentzian test function gives |dev| = 2ε²/s³ with ε_crit = s^{3/2}/2 → 0 (verified numerically in research/82). The supertrace purity phenomenon: the functional equation forces Re(Tr_s) = 0 for ALL Hecke projections, trivialising K_0(A_BC) on the Hecke subspace.
+
 (S3) is the **precise form of the non-trivial integer constraint**
 that Paper 13 should use. It is structural because the exact
 decomposition of the polar and archimedean contributions for $e_2$
