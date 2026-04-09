@@ -1,0 +1,83 @@
+{
+  "gamma_zeros": [
+    "(0.5 + 14.1347251417347j)",
+    "(0.5 + 21.0220396387716j)",
+    "(0.5 + 25.0108575801457j)",
+    "(0.5 + 30.4248761258595j)",
+    "(0.5 + 32.9350615877392j)"
+  ],
+  "fitted_count": 0,
+  "unfitted_count": 14,
+  "results": {
+    "omega_dm_b": {
+      "value": 5.36,
+      "description": "\u03a9_DM/\u03a9_b (dark matter to baryon ratio)",
+      "matches": []
+    },
+    "xi": {
+      "value": 0.432,
+      "description": "\u03be = T_hidden/T_visible",
+      "matches": []
+    },
+    "N_eff_lower": {
+      "value": 3.31,
+      "description": "N_eff (lower bound)",
+      "matches": []
+    },
+    "N_eff_upper": {
+      "value": 3.39,
+      "description": "N_eff (upper bound)",
+      "matches": []
+    },
+    "N_eff_mid": {
+      "value": 3.35,
+      "description": "N_eff (midpoint)",
+      "matches": []
+    },
+    "sin2_theta_W": {
+      "value": 0.232,
+      "description": "sin\u00b2\u03b8_W (Weinberg angle)",
+      "matches": []
+    },
+    "alpha_inv": {
+      "value": 137.036,
+      "description": "1/\u03b1 (fine structure constant)",
+      "matches": []
+    },
+    "m_p_m_e": {
+      "value": 1836.15,
+      "description": "m_p/m_e",
+      "matches": []
+    },
+    "m_H_m_t": {
+      "value": 0.728,
+      "description": "m_H/m_t",
+      "matches": []
+    },
+    "m_tau_m_mu": {
+      "value": 16.82,
+      "description": "m_\u03c4/m_\u03bc",
+      "matches": []
+    },
+    "m_mu_m_e": {
+      "value": 206.77,
+      "description": "m_\u03bc/m_e",
+      "matches": []
+    },
+    "sqrt_sigma": {
+      "value": 437.0,
+      "description": "\u221a\u03c3 (string tension, MeV)",
+      "matches": []
+    },
+    "gut_ratio_num": {
+      "value": 17.0,
+      "description": "17 (from n_2/n_1 = -17/9)",
+      "matches": []
+    },
+    "gut_ratio_denom": {
+      "value": 9.0,
+      "description": "9 (from n_2/n_1 = -17/9)",
+      "matches": []
+    }
+  }
+}
