@@ -154,6 +154,13 @@ The first-generation masses use the *smallest* combinations
 (fractional powers), the third uses *largest* (full products).
 This is not yet derived but is consistent across all 8 fits.
 
+> **Note 2026-04-09 (round 3 extension):** R-Theorem 55b
+> (`research/79-1st-gen-cross-CKM-PMNS.md`) confirms that the
+> three-category template extends beyond masses to mixing angles:
+> sin²θ_12^PMNS − sin²θ_12^CKM = √(2/γ_4) at 0.0067%, with γ_4 as
+> the first-generation zero. The template is a universal structural
+> principle, not a mass-sector peculiarity.
+
 ---
 
 ## 3. Predicting m_e

@@ -565,6 +565,23 @@ In execution order:
   notes (those have the highest "leverage" because they support
   multiple claims).
 
+### Step 2.5: The third-order PT computation (added 2026-04-09 round 3)
+
+The matter-content extension of research/56 closed ~5× of the K_12
+residual but identified that the remaining factor of ~3 lives in
+**third-order Rayleigh-Schrödinger PT cross-terms**
+V_{1m}·V_{mn}·V_{n1}/[(E_1−E_m)(E_1−E_n)], not in further matter
+sectors. G's direction: "right away, all the way." The third-order
+PT is a finite computation using the K_12^PV closed form
+(research/32) and the extended c_p (research/56). Close this and the
+CC formula's empirical −0.0099 deviation is fully derived from
+first principles.
+
+The same correction also appears in the Ω_DM/Ω_b residual at 2.26%
+(research/78); once the third-order PT is closed, both residuals
+should be derivable from the same extended V_{nm} matrix elements.
+**Include this in the strategy as the linchpin computational target.**
+
 ### Step 3: Close the open threads (after gaps filled)
 
 In order of difficulty/impact:

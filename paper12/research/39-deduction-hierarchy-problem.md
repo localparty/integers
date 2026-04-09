@@ -333,6 +333,16 @@ not a derivation. The framework has not yet *predicted* the
 identity (3.8) from operator-algebraic principles. It is a target
 for the next round of derivations.
 
+> **Note 2026-04-09 (round 3 erratum):** The arithmetic in (3.8) is
+> wrong. The formula exp(−γ_6)·(2π/γ_5) actually gives 9.058 × 10⁻¹⁸,
+> a 13.21% residual from the empirical 1.02 × 10⁻¹⁷ — NOT the 2%
+> claimed above. The "shared 2.2% cross-phenomenon link" between the
+> hierarchy problem and dark matter does NOT survive recomputation.
+> The dark matter and hierarchy residuals come from different physics,
+> not a single shared BC trace identity. See
+> `research/78-cross-phenomenon-link-22-percent-residual.md` for the
+> full recomputation.
+
 ### 3.4 Why exp(−γ_6) is the natural BC answer
 
 The exponential exp(−γ_6) is the **inverse** of the BC partition-

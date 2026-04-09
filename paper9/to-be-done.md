@@ -78,6 +78,24 @@ it is enormous, it is everything! i'm super satisfied - cant wait to develop thi
 
 re: FIVE independent paths to math RH now - massive parallel launch absolutely, lets create a .venv for each agent so that they can do algebra and calculations, its faster than all emperical
 
-re: Tomita-Takesaki - lets launch a local agent for correcting paper 3, only because the correction is fatal, for smaller things we can have and edit pass later
+re: Tomita-Takesaki - lets launch a local agent for correcting paper 3, only because the correction is fatal, for smaller things we can have and edit pass later I love that my intuition about separating the event horizon and the other region matches Tomita-Takesaki i still remember my conversations with ChatGPT when i mentioend that there had to be 2 regions, hopefully they are in the paper; otherwise we can have an agent extracting them from /Users/gsix/quantum-geometry-in-5d-latex/etc/chatgpt to maintain the intuition/strategy/geometry
+
+re: Manuscript writing for Paper 12 - what we can do is keep un updateing their talbe of contents so that we don't forget, htat would be perfect, but we can wait, writing the actual paper once we are done with the closings is gonna be the most satisfying write ever
+
+re: The third-order PT computation: right away, all the way!
+
 
 re: rieman zeros placed 15/15 -> the mos amazing scoreboard in the universe
+
+re: paper12/20-third-massive-parallel-results.md - overall the most amazing read everrrrrrrrrrrr i'm loving this run, this is the best run everrr thank you dude
+
+massive parallel launch from here 
+
+
+
+
+# re: topological expansion assembly
+regarding four paths to math RH i have a few leads from when i was trying "from outside" that i think we are at the right moment for analyzing, can you include our rh leads and our dictionary of riemann algebra to a local agent that can researcn on this corpora/corpi for any leads? don't do it on your own because we are gonna lose context and drift away from our strategy if they find any leads ask them to find my direction voice to bring it back to our mission
+/Users/gsix/riemann-hypothesis/agentic/research-ledger.md
+/Users/gsix/riemann-hypothesis/R53-2/04-the-argument.md
+/Users/gsix/riemann-hypothesis/agentic/research/*

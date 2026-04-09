@@ -614,6 +614,14 @@ computation of the three structure constants κ_{23}, κ_{25}, κ_{35}
 of the raising–raising brackets directly from BC algebra, without
 invoking Borel–de Siebenthal as a shortcut.
 
+> **Note 2026-04-09 (round 3 closure):** The explicit BC-internal
+> computation of κ_{pq} is now resolved in
+> `research/80-finite-C8-bracket-calculation.md`. All 7 bracket types
+> are rigorous from BC relations + the cube lift. Thread 3g.1 / T2 is
+> **fully closed**. κ_{23}=+1, κ_{25}=−1, κ_{35}=+1 (matching
+> Paper 11's transported values exactly). Borel–de Siebenthal is no
+> longer load-bearing for the κ_{pq} step.
+
 ---
 
 ## 9. Definition of Done
