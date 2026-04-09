@@ -245,6 +245,8 @@ By Galois invariance, the matrix element is nonzero only if
 >    *only of (n, m, p) and the Hecke structure, independent of*
 >    *the specific character representative r_χ.*
 
+**Note 2026-04-09 (round 4):** U4's numerical computation (research/83) shows that the Path B basis change V is real orthogonal, which PRESERVES but does not CREATE real symmetry. The implication runs one way: (γ_n ∈ R) ⟹ (T_BC real symmetric), NOT the reverse. **Path 5 is demoted from 'potential one-line proof' to 'consistency constraint'.** The four remaining paths to math RH are Stone, Penrose, Atiyah-Singer, Källén-Lehmann.
+
 ### 3.2 Proof
 
 **Proof.** (Schur's lemma for abelian Galois.) The Galois group

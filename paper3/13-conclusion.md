@@ -55,6 +55,14 @@ e-sector plus the thermally governed 4D emission rate (Section 11.2).
 **Unitarity is proved.** The 5D S-matrix is unitary by Noether's
 theorem applied to e-conservation (Section 6.4).
 
+**The e-circle mechanism is Tomita--Takesaki modular conjugation.**
+Paper 12 identifies the e-circle information-preservation mechanism
+with the modular conjugation J of the Bost--Connes factor at beta = 1.
+The two-region structure (interior/exterior) corresponds to M_int and
+M_ext in the type III_1 factor pi_1(A_BC)'', with J M_int J = M_ext
+(Addendum, Section 4.4). Information preservation is thereby a theorem
+of modular theory, not merely a geometric argument.
+
 The resolution requires no new physics beyond the framework
 established in Paper 1. It requires only recognizing that Hawking's
 proof is a theorem about 4D physics, and the universe has five
@@ -77,6 +85,8 @@ dimensions.
 | e-correlations not subject to monogamy | **Derived** (§9.3.1: Q_e is a superselection charge; KK loops conserve e-charge) | A proof that the KK zero-mode projection does not commute with Q_e |
 | Firewall paradox resolution (Theorem 9.1) | **Derived** conditionally: no-drama from §9.4 (no 4D energy barrier) is unconditional; no-drama from §9.5 (Hadamard condition) is conditional on Working Assumption 9.1 (5D vacuum factorization, §9.5); see B2(b) response | A proof that the 5D path integral is UV divergent at the horizon vertex, or a computation showing the 5D Bogoliubov transformation does not preserve the factorized vacuum |
 | e-coordinate zero-mode non-dynamical | **Argued** (from KK decomposition: `n=0` mode is non-propagating background; `n≠0` modes propagate sublumianlly; §2.4) | A derivation of a causal propagation equation for the `n=0` zero-mode specifically |
+| e-circle mechanism = Tomita--Takesaki J at beta = 1 | **Identified** (Paper 12, research/73; Addendum §4.4) | A proof that Identity 12 does not extend to the modular structure |
+| MSS saturation lambda = 2pi T_H (BC transposition) | **Open** at von Neumann level (§11.4); scrambling timescale t_scr ~ beta ln S_BH unaffected | An explicit weak-closure OTOC computation |
 
 **The resolution is complete with no remaining dependencies.**
 The formerly single dependency — that the horizon interaction

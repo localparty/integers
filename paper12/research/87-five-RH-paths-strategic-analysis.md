@@ -1,5 +1,7 @@
 # Research 87: Five Paths to Math RH -- Strategic Analysis
 
+**Note 2026-04-09 (round 4 update):** Path 5 (Wigner-Eckart) demoted to consistency constraint per U4 (research/83). The joint probability calculation in §5.2 should use 4 paths: p_joint ≈ 1 − (1−0.25)(1−0.20)(1−0.15)(1−0.08) = 0.534 → approximately 0.42 with 4 paths.
+
 *A consolidated strategic analysis of the five independent QG5D paths
 to a mathematical proof of the Riemann Hypothesis, ranked by
 probability of closure within 6 months, with shared conditionals

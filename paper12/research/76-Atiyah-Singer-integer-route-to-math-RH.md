@@ -527,6 +527,8 @@ enormous. The Gaussian gives a weak constraint.
 
 ### 5.3 The right test function
 
+**Note 2026-04-09 (round 4):** U3's computation (research/82) shows the **shifted Lorentzian** Φ_{s,γ_1}(γ) = s/((γ−γ_1)²+s²) — centered at the target zero, NOT at the origin — is the correct test function. The deviation formula is |dev| = 2ε²/s³ (verified exactly). The critical epsilon ε_crit = s^{3/2}/2 → 0 as s → 0, meaning **any nonzero Im(γ_n) is eventually detected**. Numerically confirmed at 200 zeros, 50-digit precision.
+
 The quantitative content of the bound depends on the test function.
 For $\Phi_s(\gamma) := (\gamma^2 + s^2)^{-1}$, a Lorentzian with
 scale $s$, the bound (5.5) becomes

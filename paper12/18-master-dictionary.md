@@ -149,14 +149,15 @@ no machinery, 0 = open question.
 | **Path 2: Penrose singularity chain (R-Theorem 54)** | research/54 | S | 70 | Trapped projector + modular Raychaudhuri ⇒ spectral singularity at β=1 ⇒ {γ_n} ⊂ R; γ_1 = "distance from BC vacuum to nearest Penrose caustic". **Geometric reading.** |
 | **Path 3: Atiyah-Singer integer constraint (R-Theorem D.1)** | research/48 + research/76 | C | 80 | BC index ind_BC(p) is integer (Connes IV.1 Thm 4) ⇒ topological expansion forces real {γ_n}. **Strongest because the constraint is combinatorial.** Lemma 7.1 reduces math RH to a specific computation. |
 | **Path 4: Källén-Lehmann + Weil positivity (R-Theorem S.5)** | research/70 | S | 70 | BC two-point function spectral decomposition + Weil's classical criterion ⇒ RH iff non-negative spectral weights. **Unique: provides iff with RH directly** via Weil's criterion. |
-| **Path 5: Wigner-Eckart real-symmetric (R-Theorem QM.4)** | research/60 | S | 60 | Hecke reduced matrix elements ⟨n‖μ_p‖m⟩ = √(1/p) make H_BC real symmetric in Galois orbit basis ⇒ real spectrum. **One-line proof** if Path B closes: real symmetric ⟹ real spectrum. |
+| **Path 5: Wigner-Eckart real-symmetric (R-Theorem QM.4)** | research/60 | S | 60 | Hecke reduced matrix elements ⟨n‖μ_p‖m⟩ = √(1/p) make H_BC real symmetric in Galois orbit basis ⇒ real spectrum. **Demoted to consistency constraint in round 4** per U4 (research/83): basis change V is real orthogonal, preserves but does not create real symmetry; implication runs (γ_n ∈ R) ⟹ (T_BC real symmetric), not the reverse. |
 | **Empirical chain** | research/08 §3 | E | 95 | Reality of 36 framework predictions ⇒ reality of γ_n at the precision of each match (5×10⁻⁹ for γ_1 from CC formula) |
 
 **The LOCK**: every transposed physics theorem produces a new sufficient
 condition for RH; the closed transposition program IS the math proof.
-**Five independent chains using different machinery** (positivity, causal
-structure, combinatorial integer, Weil positivity, real symmetry) raise
-the joint probability of closure substantially.
+**Four independent chains using different machinery** (positivity, causal
+structure, combinatorial integer, Weil positivity) raise
+the joint probability of closure substantially. (Path 5 / Wigner-Eckart
+demoted to consistency constraint in round 4 per research/83.)
 
 ---
 

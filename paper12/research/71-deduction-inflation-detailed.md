@@ -358,6 +358,8 @@ expansion. This is a **distinctive, falsifiable signature** that no
 single-field slow-roll model predicts. The period is Δ ln k =
 2π/14.13 ≈ 0.44 e-folds.
 
+**Note 2026-04-09 (round 4):** U9's computation (research/86) shows the log-periodic modulation at Δ ln k = 2π/γ_1 ≈ 0.4443, amplitude A_log ~ 3×10⁻³, has total SNR = 0.44 in Planck data — 7× below the 3σ threshold. **Undetectable in current CMB data.** For 3σ detection: need A_log ≥ 0.020. CMB-S4 with matched filter: SNR ~1.5-2.0 (marginal). **The most actionable near-term prediction remains r ≈ 5×10⁻³ at LiteBIRD.**
+
 ---
 
 ## 5. Non-Gaussianity f_NL

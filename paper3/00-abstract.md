@@ -59,6 +59,15 @@ reproduced. The scrambling time `t_scr ~ β ln S_BH` is reproduced
 from the Hayden-Preskill decoupling theorem applied to the e-sector
 and the thermally governed 4D emission rate.
 
+The e-circle information-preservation mechanism is identified with the
+Tomita--Takesaki modular conjugation J of the Bost--Connes factor at
+beta = 1 (Paper 12, Addendum). The two-region structure
+(interior/exterior) corresponds to von Neumann subalgebras M_int and
+M_ext in the type III_1 factor pi_1(A_BC)'', with J M_int J = M_ext
+guaranteeing that every interior observable has a J-conjugate exterior
+observable. Information preservation is thereby elevated from a
+geometric argument to a theorem of modular theory.
+
 Hawking's theorem is valid within 4D causal structure; the e-dimension
 provides the loophole his proof could not anticipate.
 

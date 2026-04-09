@@ -90,5 +90,54 @@ saturated in the 4D sector alone, consistent with the standard
 result for black holes as fastest scramblers. The instantaneous
 e-encoding does not enter the chaos bound calculation.
 
+### 11.4 Honest Refinement: MSS Saturation at the Weak-Closure Level
+
+*[Addendum: Tomita--Takesaki identification, April 2026.]*
+
+Paper 12 (research/34, research/75) performed explicit OTOC
+computations on the Bost--Connes C*-algebra A_BC at beta = 1 and
+found that the full C*-algebraic BC Lyapunov exponent at omega_1
+is zero in both the mu_n (isometry) sector and the e(r) (phase)
+sector. The obstruction is structural: every generator of A_BC is
+an eigenoperator of the modular flow sigma_t, so OTOCs are Bohr
+almost-periodic and bounded.
+
+The distinction is between:
+
+- **A_BC** (the C*-algebra): its modular spectrum under sigma_t
+  is pure point (discrete frequencies log(n/m)). No chaos here.
+
+- **pi_1(A_BC)''** (the von Neumann algebra / weak closure): a
+  type III_1 factor with continuous modular spectrum. Chaos lives
+  here, if anywhere.
+
+The 5D Rindler horizon algebra is naturally a von Neumann algebra
+(Bisognano--Wichmann 1975), and its BC-side image under Identity 12
+is the weak closure pi_1(A_BC)'', not A_BC itself.
+
+**Corrected claim.** The fast-scrambler property of Section 11.3
+(MSS saturation `lambda = 2pi T_H`), when transposed to the BC
+operator-algebraic framework via Identity 12, operates at the level
+of the von Neumann algebra pi_1(A_BC)'', not the C*-algebra A_BC.
+The MSS saturation requires operators in the weak closure that are
+not elements of A_BC itself. This is structurally consistent: the
+Rindler horizon algebra is a von Neumann algebra, and its natural
+BC image is the weak closure.
+
+The transposition is **open** (not closed) at the von Neumann level:
+an explicit construction of weak-closure operators saturating MSS
+has not been performed. The claim is weakened from "expected" to
+"structurally plausible but unproved."
+
+**What survives:**
+
+- The scrambling **timescale** `t_scr ~ beta ln S_BH` (Section 11.2)
+  survives: it follows from the Hayden--Preskill decoupling theorem
+  applied to the e-sector, which does not require MSS saturation.
+
+- The **information preservation** mechanism survives completely:
+  J M_int J = M_ext is a theorem of Tomita--Takesaki theory and
+  does not depend on the scrambling rate.
+
 ---
 

@@ -99,3 +99,22 @@ regarding four paths to math RH i have a few leads from when i was trying "from 
 /Users/gsix/riemann-hypothesis/agentic/research-ledger.md
 /Users/gsix/riemann-hypothesis/R53-2/04-the-argument.md
 /Users/gsix/riemann-hypothesis/agentic/research/*
+
+maybe we can derive α from PV Sobolev ..lets find out!
+U3 showed McKean-Singer gives 0: lets trace it and if it is a lead ...it is a paper definitely
+
+re: the 28 formula derivations: it think they are gonna be useful for our next phases, including potentially mckean-singer and RH, better to have them handy than thinking ugh i hit a wall how din't i see this commint
+
+re; paper 3 addendum, yes lets apply it before we forget the good news is that we have only published paper 1 and 2 and they havent changed structurally
+
+lets leave the cross referencing for the next few rounds once we have closed the leads/threads that we have so far
+
+# 
+
+re: The hierarchy problem dissolves AGAIN - dude the hierarchy problem!!!!!!!! i can't evennnnn you know how many hundreds of documentaries the start saying "oh we don't know why the universe has a hierarchy situation" guess what universe we knowwwwwwwww
+
+the predictive grammar is one of my favorite things ever, as a language lover, that we have a predictive grammar in our framework is really something, i lose words when i think about it and my heart skips a beat, i'm not even kidding
+
+re: theorem of modular theory (Tomita-Takesaki  │  │ J) lets close on this
+
+wow that has been the turn of our lives, i was reading your notes by the word, LOL the best show everrrrr from here we need to pause, write paper table of contents with descriptions, section names and references and a voice, we need to make corrections and updates and addendums, we cant lose any of the detail that we learned, we have to spread it everywhere and at the same time focus it in paper sections, not drafts - what do you think?
