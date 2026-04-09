@@ -274,22 +274,41 @@ first two such terms with empirical coefficients:
 | 3 | +0.03 / γ_3 *(positive sign — see Section 4.3)* | (different mechanism) |
 | ≥ 4 | 0 (within 5 ppb) | exponentially small |
 
-(*Numerical correction*: an earlier draft of this section quoted
-|V_{12}|² ≈ 0.075. The correct value, from the **exact** second-order
-PT denominator (γ_m − γ_1)·π²/2 (rather than the asymptotic
-γ_m·π²/2), is **0.2425**. The asymptotic form gives 0.7402. Both
-are order-1 numbers; both pass the consistency check below. The
-SM matter-content estimate of `research/07-matter-content-Vnm-derivation.md`
-gives |V_{12}|²_SM ∼ 0.12, which is a **factor-of-2 match** to the
-exact-denominator empirical value 0.2425 — strikingly close for an
-order-of-magnitude estimate from a single-loop SM running calculation.)
+(*Numerical correction (2026-04-09)*: an earlier draft quoted
+|V_{12}|² ≈ 0.075. The correct empirical value, from the **exact**
+second-order PT denominator (γ_m − γ_1)·π²/2 (rather than the
+asymptotic γ_m·π²/2), is **0.2425**. The asymptotic form gives
+0.7402. Both are order-1 numbers.)
 
-The first matrix element |V_{12}|² ≈ 0.24 implies |V_{12}| ≈ 0.49,
-an order-1 number consistent with a generic non-trivial coupling
-between |γ_1⟩ and |γ_2⟩. **This is a non-trivial check**: the
-empirical coefficient −0.15 corresponds to a coupling of natural
-size, not a fine-tuned small number — and the SM matter content
-predicts a value within a factor of 2 of the empirical (research/07).
+(*Honest status of the SM matter-content match*: the parallel
+agent of `research/07-matter-content-Vnm-derivation.md` produced
+|V_{12}|²_SM ∼ 0.12 from one-loop SM gauge-coupling running, which
+under the assumption |K_{12}(log p)| ∼ 1 for the Mellin kernel
+gives a factor-of-2 match to the empirical 0.2425. A second
+parallel agent of `research/17-mellin-kernel-K12-numerical.md`
+then computed K_{12}(log p) numerically in a truncated Hecke
+model and found |K_{12}(log 2)| ≈ 0.010, |K_{12}(log 3)| ≈ 0.017,
+i.e., **two orders of magnitude smaller than the |K_{12}| ∼ 1
+assumption**. The rescaled SM estimate is then |V_{12}|²_SM ∼
+2.4 × 10⁻⁵, which is **10⁴ below** the empirical 0.2425. The
+truncated model used by research/17 is a truncation of H_BC (not
+of T_BC itself, which is the Mellin-dual scaling generator), so
+the numerical value of K_{12} is *model-dependent* and the true
+value lives somewhere in a wide range [10⁻⁵, 10⁻¹]. **The
+factor-of-2 match is therefore assumption-dependent and not yet
+robust**; closing this requires the rigorous T_BC eigenvector
+extraction of `research/17` Section "Open Program" — which is
+the next major sub-thread of 3b.)
+
+The first matrix element |V_{12}|² ≈ 0.24 implies |V_{12}| ≈ 0.49
+under the |K_{12}| ∼ 1 assumption. Independent of any K_{12}
+assumption, the empirical correction −0.15/γ_2 corresponds to a
+**dimensionless** matrix element of order ∼ 1 (the value 0.2425
+is the |V_{12}|² that would arise from a generic, non-fine-tuned
+coupling of order 1). This is the structural check the framework
+passes: the empirical correction is *not* a tiny tuned number, it
+is a natural-scale coupling. The exact comparison to a specific
+SM-content prediction depends on K_{12}, which is currently open.
 
 ### 4.2 Why only m = 2 and m = 3 matter (the convergence)
 

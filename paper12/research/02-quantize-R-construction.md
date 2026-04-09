@@ -205,6 +205,22 @@ $$
 The Riemann subspace H_R is the operator-algebraic home of the
 Riemann zeros inside the BC GNS space.
 
+> **Note 2026-04-09: H_R vs H_1^{(N\*)}.** *The subspace H_R defined
+> here (spectral projections of T_BC at the points γ_n) and the
+> subspace H_1^{(N\*)} of `research/04-identity-12-rigorous.md`
+> (closed span of {μ_n Ω_1 : n ∈ N\*}) are **two different**
+> closed subspaces of H_1. Mellin transformation of the basis
+> {μ_n Ω_1} is the natural map from H_1^{(N\*)} to a function-space
+> realisation in which T_BC acts as differentiation, and the
+> spectral projections of T_BC at γ_n are then the conjectured
+> image of the Riemann zeros under this Mellin duality. The
+> identification H_R ↔ Mellin(H_1^{(N\*)}) is asserted in places in
+> the literature but is **not proved** in paper12; we treat it as
+> a structural assumption pending a rigorous proof. See
+> `research/21-bost-connes-system-reference.md` §6.2 for the
+> discovery of this gap and `research/19-galois-orbit-decomposition-HR.md`
+> for the closely related Galois orbit issue.*
+
 ---
 
 ## 4. The Construction of R̂

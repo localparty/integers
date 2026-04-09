@@ -578,6 +578,20 @@ $$
 is the **e-circle radius operator**, and its spectrum is {R_n}. It
 is the geometric incarnation of R̂ on the e-circle side.
 
+> **Note 2026-04-09: H_R vs H_1^{(N\*)}.** *The unitary U
+> constructed above maps H_e onto the N\*-labelled subspace
+> H_1^{(N\*)} ⊂ H_1 (closed span of {μ_n Ω_1}). The Phase 2 Riemann
+> subspace H_R ⊂ H_1 of `research/02-quantize-R-construction.md`
+> §3.3 is defined as the closed span of the spectral projections
+> of T_BC at the Riemann zeros γ_n. These are **two different**
+> subspaces of H_1; the inclusion (6.1) above asserts H_R ⊂
+> H_1^{(N\*)} via Mellin duality between the {μ_n Ω_1} basis and
+> the T_BC eigenbasis, but **this Mellin-duality identification is
+> not proved in paper12** and is currently a structural
+> assumption. See `research/21-bost-connes-system-reference.md`
+> §6.2 for the discovery and `research/19-galois-orbit-decomposition-HR.md`
+> for the closely related Galois orbit issue.*
+
 Identity 12 thus completes the picture: R̂ on the BC side is
 unitarily equivalent to R̂_geom on the e-circle side, and the
 universe's measured R is the smallest eigenvalue R_1 of either

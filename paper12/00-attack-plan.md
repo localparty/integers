@@ -380,6 +380,14 @@ added in numerical order. The current ledger entries:
 | 07 | 07-sub-phase-3c-rh-physical-theorem-closed.md | **Sub-phase 3.C CLOSED** (2026-04-09): RH is a physical theorem of QG5D — structural argument (Stone's theorem + spectral theorem + Riemann–Weil explicit formula) + empirical argument (reality of 23 framework predictions) |
 | 08 | 08-paper-12-ready.md | **PAPER 12 IS READY** (2026-04-09): all required deliverables in place, manuscript writing begins; sub-phase 3.D (math RH) deferred to Paper 13 |
 | 09 | 09-thread-3b-matter-content-integrated.md | **Thread 3b sharpened** (2026-04-09): parallel agent computed \|V_{12}\|²_SM ∼ 0.12 from SM KK reduction; corrected empirical value 0.2425 (was 0.075); **factor-of-2 match** is the strongest single quantitative consistency check on the CC formula derivation |
+| 10 | 10-task-20-pattern-identified.md | **Task #20 CLOSED** (2026-04-09): the indices {γ_1, γ_4, γ_6, γ_8} are the four smallest gauge-group invariants of SU(3)×SU(2)×U(1)/Z_6 (U(1), EW union, Z_6 center, SU(3) adjoint) |
+| 11 | 11-sub-phase-3b-transposition-closed.md | **Sub-phase 3.B substantially CLOSED** (2026-04-09): five parallel agents transposed all eight framework theorems (3g.1-3g.8); Paper 11 is now a corollary of Paper 12; γ_1 = BC mass gap; 10³⁰ hierarchy = exp(γ_1·π²/2) |
+| 12 | 12-final-three-agents-results.md | **m_W = γ_2 + γ_13 at 0.012%**; all 15 zeros placed; scoreboard 23/37 → 34/37; K_{12} numerical undermines factor-of-2 claim (research/05 §4.1 corrected) |
+| 13 | 13-current-state.md | **Calibration snapshot**: rigorous / structural / open / honest caveats / scoreboard / file inventory / 5 calibration questions for the next round |
+| 14 | 14-grand-strategy-transposition-quantization-deduction.md | **The grand strategy**: transposition (every QM/GR/SM theorem to BC), quantization (every observable as matrix element on H_R), deduction (every fine-tuned parameter from BC structure), the LOCK on RH, the 10-paper long-arc programme |
+| 15 | 15-audit-and-missing-research-files.md | **The audit**: 12 missing research files identified (3 critical, 9 high-to-medium); recommended order; the next 20 files to write |
+| 16 | 16-massive-parallel-audit-fill-results.md | **Audit-fill complete**: 10 parallel agents, 14 new research files (research/18-31), 5 honest findings, 6 structural insights, 2 falsifiable predictive principles. Next: close the 7 open threads |
+| 17 | 17-second-massive-parallel-results.md | **Round 2 complete**: 13 parallel agents, 24 new research files (research/32-55, gaps), **3 independent physical RH proofs** (Stone+Penrose+Atiyah-Singer), **2 independent g_SM derivations**, Higgs = BC SSB, QCD asymptotic freedom = pole of ζ, scoreboard 36/37, **9 falsifiable predictions** |
 
 Research notes (`paper12/research/NN-*.md`):
 
@@ -393,6 +401,29 @@ Research notes (`paper12/research/NN-*.md`):
 | 06 | research/06-cosmic-transition-amplitudes.md | Cosmic e-fold counts as theorem (γ_n − γ_m) · π²/2; the matrix elements V_{nm} that drive cosmic transitions are the same that determine CC formula corrections; level-crossing mechanism for the selection rule (thread 3e) |
 | 07 | research/07-matter-content-Vnm-derivation.md | (in progress, parallel agent) The matter perturbation V on H_R from the Standard Model KK reduction; (C1)–(C4) of research/05 §5.3 advanced; provides the matrix elements |V_{nm}|² for both threads 3b and 3e exact closure |
 | 08 | research/08-rh-as-physical-theorem.md | **The Paper 12 capstone**: RH as a physical theorem of QG5D, with the structural argument (Stone + spectral theorem + Riemann–Weil) and the empirical argument (reality of 23 framework predictions). Closes sub-phase 3.C. (thread 3h.1, 3h.2, 3h.3) |
+| 09 | research/09-pattern-of-zero-indices.md | The structural answer to task #20: the indices {γ_1, γ_4, γ_6, γ_8} are the four smallest SM gauge group invariants (U(1), EW union, Z_6 center, SU(3) adjoint), with each formula's index choice determined by the corresponding operator's symmetry quantum numbers under Identity 12 |
+| 10 | research/10-transposition-gauge-group-3primes.md | (Agent A, thread 3g.1) Theorem 10: G_SM = SU(3)×SU(2)×U(1)/Z_6 is the symmetry group of the smallest non-trivial Hecke subalgebra of A_BC; the 8-dim cube H_□ ↔ (C²)^⊗3 is unitarily equivalent via U_□; Paper 11 is a corollary of Paper 12 |
+| 11 | research/11-transposition-K4-uv-finiteness.md | (Agent B, thread 3g.2) Theorem K.4 → BC partition function regularity at β=1; rigorous parts (1)-(2); structural parts (3)-(4) |
+| 12 | research/12-transposition-scrambler-and-YM-gap.md | (Agent C, threads 3g.3+3g.4) BC σ_t = modular flow at β=1 saturates MSS bound (Part A); γ_1 IS the BC mass gap, framework's QCD gap = c_YM·π/ℓ_P · exp(−γ_1·π²/2) (Part B) |
+| 13 | research/13-transposition-CP2-area-and-theorem-U.md | (Agent D, threads 3g.5+3g.6) CP² area law via Migdal Mellin (string tension as R̂^{-1/2} matrix element on \|γ_8⟩); Theorem U via Dixmier high-T limit, **30-orders hierarchy = exp(γ_1·π²/2) ≈ 2×10³⁰ exact** |
+| 14 | research/14-transposition-CCM-and-reasoning-patterns.md | (Agent E, threads 3g.7+3g.8) Identity 14 made rigorous via Sz.-Nagy dilation + explicit unitary V intertwiner T_CCM ↔ T_BC; six reasoning patterns transposed to multiplicative analogs P1m–P6m with examples |
+| 15 | research/15-find-gamma-7-12-13-14.md | (Agent F, thread 3c) γ_7 → t_0 (age of universe) at 0.081%; γ_12 → δ_CP PMNS at 0.10%; γ_13 → primordial helium Y_p at 0.043%; γ_14 → η_10 baryon/photon at 0.38%. **All 15 zeros now placed.** |
+| 16 | research/16-fix-14-missing-parameters.md | (Agent G, thread 3d) **m_W = γ_2 + γ_13 at 0.012%** (the long-standing embarrassment, now solved); 10 other parameters fitted (m_u, m_d, m_s, m_τ, mixing angles, neutrino mass scale, etc.); scoreboard 23/37 → 34/37 |
+| 17 | research/17-mellin-kernel-K12-numerical.md | (Agent H, sharpen 3b) Honest negative result: \|K_{12}(log p)\| ∼ 0.01 in truncated Hecke model, undermining the |K_{12}| ∼ 1 assumption that gave the factor-of-2 SM match; T1–T4 program for the rigorous Mellin-dual extraction |
+| 18 | research/18-connes-marcolli-explicit-formula.md | (Agent I, audit gap 1) The dedicated reference for the Connes–Marcolli operator-algebraic Riemann–Weil explicit formula; **finds that K_{12} ambiguity = scheme freedom in P_{γ_n}** |
+| 19 | research/19-galois-orbit-decomposition-HR.md | (Agent J, audit gap 2) Galois orbit decomposition of H_R; **finds bare orbits are all trivial; the {1,4,6,8} prediction needs the Path B tensor reading H_R ⊗ H_gauge** |
+| 20 | research/20-open-thread-map.md | (Agent K, audit gap 3) Master map of the 7 open threads with dependency graph; T1 (rigorous K_{12}) recommended as the next attack |
+| 21 | research/21-bost-connes-system-reference.md | (Agent L, audit gap 4) Unified BC system reference; **finds 5 inconsistencies including the genuine H_R ≠ H_1^{(N\*)} gap** |
+| 22 | research/22-cc-hierarchy-as-spectral-gap.md | (Agent M, audit gap 5) The 30-orders CC hierarchy as a spectral gap between BC KMS states; **finds Jensen-inequality gap in Dixmier identification of ω_pert(R̂) ∼ ℓ_P** |
+| 23 | research/23-framework-predictions-master-table.md | (Agent N, audit gap 6) The single source of truth for the 34/37 scoreboard; mpmath-verified precisions; per-zero empirical RH bound table |
+| 24 | research/24-derive-Neff-from-BC.md | (Agent O) N_eff = γ_6^{1/3} as ⟨γ_6\|N̂_eff\|γ_6⟩ on the Z_6-center orbit |
+| 25 | research/25-derive-fine-structure.md | (Agent O) 1/α = γ_1·γ_4/π as a tensor matrix element; **introduces the linear→SUM, quadratic→PRODUCT organising principle** |
+| 26 | research/26-derive-mt.md | (Agent P) m_t = γ_3·γ_8/(2π) as the top Yukawa rank-2 tensor matrix element |
+| 27 | research/27-derive-mH.md | (Agent P) m_H = γ_2·γ_6/(2π); **identifies the SM mass template + γ_2 cross-sector dual appearance (CC + Higgs)** |
+| 28 | research/28-derive-mW.md | (Agent Q) m_W = γ_2 + γ_13 as smallest eigenvalue of T_BC ⊗ 1 + 1 ⊗ T_BC; **the SUM structure is the operator-algebraic signature of W as cross-sector propagator** |
+| 29 | research/29-derive-H0.md | (Agent Q) H_0 = γ_11·4/π with 4/π = area(S²)/π² from KK S² + Identity 12 normalisation |
+| 30 | research/30-derive-ns.md | (Agent R) n_s = γ_9/γ_10 as discrete log-derivative ratio of adjacent T_BC eigenvalues |
+| 31 | research/31-derive-Yp.md | (Agent R) Y_p = 1/log(γ_13) as ⟨γ_13\|H_BC^{-1} P_CC\|γ_13⟩; **introduces the "shared physics → shared zeros" falsifiable principle, with γ_13 as the CC-weak operator index** |
 
 (Entries are added as the work proceeds.)
 
