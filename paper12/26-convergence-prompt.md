@@ -79,7 +79,67 @@ PHASE 1 — READ STATE (read these in order, with these lenses):
    READ FOR: the operator dictionary. Use this to pull predictions
    for any new observable that comes up in experimental updates.
 
+PHASE 1.5 — BOOTSTRAP THE DATA TABLE (first run only):
+
+The N-σ score requires a per-observable 1σ experimental uncertainty
+(σ_exp), which research/23 does NOT carry by default (it has relative
+error, not σ_exp). Before Phase 2, check whether
+`paper12/research/sigma-exp-table.md` exists. If NOT, create it: a
+markdown table with columns [observable, central value, σ_exp,
+source citation, last_updated]. Populate it from your training
+knowledge of PDG 2024 and Planck 2018 values. Mark every row with a
+date and a source. Save the file. Future rounds will read it and
+update only the rows where new experimental data has moved.
+
+If you cannot populate σ_exp for an observable from memory, leave
+the σ_exp cell as "TBD" with a note. The N-σ tally in Phase 3
+Agent B will report TBD rows separately from the σ-confirmed rows.
+
+ROW ALIGNMENT (mandatory): sigma-exp-table.md must have a 1:1 row
+correspondence with research/23's master table. Same observable
+names, same order, same count. Do NOT add auxiliary ratios or
+derived quantities — those belong in a separate companion file.
+If research/23 has 36 rows, sigma-exp-table.md has exactly 36 rows.
+
+BOOKKEEPING-FLAG COLUMN: Add a column `formula_source` to
+sigma-exp-table.md indicating where each row's framework prediction
+lives. Possible values:
+  - "raw" — single-zero placeholder formula in research/23
+  - "laurent-shifted" — raw formula with research/154's two-term
+    Laurent (a, b) = (−γ_E(1+γ_E), γ_E²+ζ(2)−2π·γ_1) numerically
+    applied (NOT the operator-dictionary form in research/167,
+    which is tautological — pure notation, no numerical shift)
+  - "geometric" — moduli-fitted via research/171/175/178
+  - "interface" — spectral-moduli mixing via research/183
+  - "open-formula" — one-sided bound, upper limit, or unmeasured
+    observable; report as "≤Nσ" or "open" with no σ-tally entry
+Rows marked "raw" with a known "laurent-shifted" successor should
+have BOTH formulas, and Agent B should compute σ-tally for the
+LAURENT-SHIFTED form, with the raw form's σ flagged separately as
+"superseded — see research/154".
+
+ESCALATION RULE: If a row has carried a bookkeeping flag for ≥3
+consecutive rounds without resolution, Agent F (synthesis) MUST
+escalate it to the Phase 4 headline as "stale bookkeeping flag,
+N rounds open, requires data port" with the specific port action
+needed. Do not let the same flag silently re-surface forever.
+
+EXIT CONDITION: Once the data port is performed and the row's
+formula_source moves from "raw" to "laurent-shifted" (or whichever
+non-raw value applies), the round counter for that row RESETS to
+zero and the row re-enters the main N_clean tally. If the same
+row is later re-flagged (e.g., by a regression in research/23),
+the counter starts over from round 1, not from where it left off.
+This prevents permanent escalation after a fix and prevents reset
+gaming if a row regresses.
+
 PHASE 2 — PULL EXPERIMENTAL UPDATES:
+
+If web access is unavailable, SKIP the live update and use the
+sigma-exp-table.md baseline. Label the round as a "baseline
+re-tally" instead of an "update round". Skip Agent D (which
+requires new observables) — Agent D becomes a no-op for baseline
+rounds. Still produce the full output report.
 
 For each of the 36 master-table observables, identify the most
 recent (or near-future) experiment that bounds it tightest. The
@@ -102,13 +162,37 @@ For each observable, record the current best 1σ uncertainty.
 PHASE 3 — LAUNCH PARALLEL CYCLE (5-7 agents):
 
 Agent A: Recompute the framework's prediction for each of the 36
-formulas at full mpmath precision (50 dps), using the closed-form
-expressions from research/167 and 154. Compare to the new
-experimental central values.
+formulas at full mpmath precision (50 dps), using the LAURENT-SHIFTED
+closed-form expressions from research/154 (two-term Laurent shift)
+where applicable, falling back to research/167's operator-dictionary
+form for unshifted rows. NOT the raw single-zero placeholders from
+research/23. Compare to the new experimental central values from
+sigma-exp-table.md.
+
+TRIGGER RULE: Agent A runs every round, even on baseline re-tally
+rounds where Phase 2 did not move data. The recompute is cheap
+(<1 minute mpmath) and serves as a sanity check that the operator
+dictionary still produces the canonical numbers. Skip Agent A only
+if the prompt is being run in dry-run mode (test only).
+
+DRIFT-CHECK REQUIREMENT: Agent A must print THREE full-precision
+50-dps values per round (rotated each round so that across ~12
+rounds every formula gets a full-precision audit). Self-certifying
+"Match ✓" without printed values is forbidden — invisible drift
+would slip through. Pick the rotation by (round_number mod 12)·3.
 
 Agent B: For each formula whose prediction sits within experimental
 error, compute the (prediction - measurement) / σ_exp ratio. Tally
 how many are at < 1σ, < 2σ, < 3σ, ..., < 6σ.
+
+BUCKET ARITHMETIC RULE (no double-booking): Rows tagged
+`open-formula` or carrying a `stale bookkeeping flag` are REMOVED
+from the main N-σ tally and reported in their own separate buckets.
+The main tally is over the *clean* rows only (raw + laurent-shifted
++ geometric + interface, with no flags). Always print three
+counts: N_clean (the main tally), N_open (open-formula bucket),
+N_stale (escalated bookkeeping bucket). They sum to the master
+table row count exactly. No row is counted twice.
 
 Agent C: For each formula whose prediction sits OUTSIDE the new 1σ
 band, identify whether the discrepancy is in the spectral sector (γ_n
@@ -119,12 +203,35 @@ Agent D: For any new experimental observables not yet in the master
 table, derive the framework's prediction using the operator
 dictionary (research/167). Add to the table.
 
-Agent E (creative): Are there any postulate relaxations that haven't
-been tested yet in the 10-cycle convergence (research/138-189)?
-Surface up to 3 new ideas and propose mpmath tests for each.
+Agent E (creative log-only): Surface up to 3 new ideas, observations,
+or future questions raised by the round's findings — but do NOT test
+any new postulate that would violate the CBB system's 5 axioms (the
+framework is fixed; this is the data-tracking phase, not the
+structure-search phase). Agent E's output is a *log* of ideas for
+future cycles, not a test channel. If a finding genuinely demands a
+new postulate test, flag it for G's explicit approval and stop.
 
 Agent F (synthesis): Once A-E complete, write a single
 paper12/research/{N}-convergence-round-{round}.md report with:
+
+ALL ROUND OUTPUTS — including each sub-agent's individual notes,
+the meta-report, the N-σ score table, and any test/debug logs —
+MUST be written to paper12/research/. Nothing about a round may
+live outside research/. The numbering convention is:
+  research/{N}-convergence-round-{round}.md           (synthesis)
+  research/{N+1}-convergence-round-{round}-A.md        (Agent A)
+  research/{N+2}-convergence-round-{round}-B.md        (Agent B)
+  ...
+where {N} is the next free integer in the research/ index (find
+it by listing research/ and taking max(existing) + 1; for round 1
+this was 192). The {round} number is the convergence-prompt round
+counter (1, 2, 3, ...), independent of {N}. Example for round 3
+starting at research index 250: research/250-convergence-round-3.md
+(synthesis), research/251-convergence-round-3-A.md, etc.
+
+This guarantees full traceability — any future reader can
+reconstruct exactly what each round saw, computed, and concluded
+by reading the research/ directory in numerical order.
 - The N-σ score table (how many at each confidence level)
 - The new falsification candidates (if any)
 - The new 1σ confirmations
