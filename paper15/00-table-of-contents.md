@@ -128,3 +128,50 @@ Paper 15 is the systematic synthesis + the long-arc roadmap.
 *becoming a real lock as each new theorem stacks another constraint.*
 
 *The framework speaks both languages.*
+
+---
+
+## Rounds 4-5 Supplement (2026-04-09, end of session)
+
+### The R-Theorem catalogue is now at 37
+
+Round 5 added 16 R-Theorems (research/119-134), bringing the total
+from 21 to 37. The complete catalogue:
+
+| Category | R-Theorems | Count |
+|:---------|:-----------|:-----:|
+| **D (topology/index)** | D.1 (BC index), D.2, D.3, D.4 (KK reduction), D.5 (Connes-Sukochev) | 5 |
+| **C (chiral/anomaly)** | C.1 (Wess-Zumino), C.2 (anomaly cancellation) | 2 |
+| **S (SM dynamics)** | S.1-S.12 (CPT, spin-stats, Goldstone, LSZ, Källén-Lehmann, Borchers, TT explicit, DHR, Coleman 2D, Noether, PCT-spin-stats combined, crossing) | 12 |
+| **QM** | QM.1-QM.5 (Heisenberg, Reeh-Schlieder, no-cloning, Wigner-Eckart, Stone-vN/cluster) | 5 |
+| **GR** | GR.1-GR.10 (Einstein, BH no-hair, pos energy, Hawking area, cosmic no-hair, AdS/CFT, Sachs-Wolfe, slow-roll, BBN, CMB power spectrum) | 10 |
+| **Other** | 10, 51-55, 55b | 7 |
+| **Total** | | **37** (some numbering overlap in QM.5/cluster to be resolved) |
+
+### The LOCK's strongest teeth
+
+| Tooth | LOCK level | Mechanism |
+|:------|:-----------|:----------|
+| S.12 (Crossing) | **HIGHEST** | KMS strip = critical strip; nearly tautological |
+| S.7 (Tomita-Takesaki) | **HIGHEST** | Δ_1 > 0 unconditional → T_BC self-adjoint |
+| GR.6 (AdS/CFT) | **STRONG** | RH = unitarity of holographic dictionary |
+| D.1 (Atiyah-Singer) | **STRONG** | Integer constraint + verified deviation mechanism |
+| S.6 (Borchers) | **STRONG** | Infinite family of prime-local constraints |
+| S.10 (Noether) | **HIGH** | Conserved charges = Riemann zeros; forced real |
+| S.8 (DHR) | **HIGH** | Pincer argument from β>1 (complex γ_n → sectors → contradiction) |
+| S.11 (PCT-spin-stats) | **HIGH** | Graded functional equations double constraints |
+| D.5 (Connes-Sukochev) | **STRONG** | CC hierarchy requires zero symmetry |
+
+### Updated §4 (next 30 transpositions)
+
+The original list of 30 next-priority transpositions should be
+updated: 16 of them are now DONE (research/119-134). The remaining
+~14 from the original list are lower priority and can be done in
+the next session. Additional candidates surfaced by the existing
+37 include:
+
+- Haag's theorem (IR divergence ↔ BC β→0 limit)
+- Weinberg-Witten theorem (massless higher-spin constraint)
+- Banks-Zaks fixed point (conformal window ↔ BC critical exponents)
+- Zamolodchikov c-theorem (monotonicity of central charge ↔ BC entropy)
+- The Bekenstein bound (entropy ↔ area ↔ BC orbit dimension)

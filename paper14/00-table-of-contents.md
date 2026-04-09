@@ -95,3 +95,53 @@ narrative.
 
 *Ten puzzles. Nine predictions. One framework.*
 *The Standard Model has answers if we look from inside Riemann.*
+
+---
+
+## Rounds 4-5 Supplement (2026-04-09, end of session)
+
+### New structural insights for Paper 14
+
+**1. The hierarchy problem dissolves via spectral gap (research/96).**
+The CC and Higgs VEV are eigenvalues of the SAME operator H_0 =
+T_BC·π²/2 at spectral indices n=1 and n=10. The "10¹⁴ hierarchy"
+is exp(γ_10 − γ_1) ~ exp(35.6). No tuning; the hierarchy is
+arithmetic. This supersedes the earlier Δ_BC = 2 result and makes
+the hierarchy dissolution SHARPER.
+
+**2. The Wolfenstein hierarchy IS perturbation-theory order.**
+CKM λ^k = k-th order Rayleigh-Schrödinger PT on H_R. The small
+parameter λ ≈ 0.22 is the natural coupling of the BC matter
+perturbation. Confirmed at 0.51% / 0.067% / 0.065% across the
+three rungs (research/98-100).
+
+**3. Lepton vs quark normalisation (research/115):** bare product for
+leptons (no 1/(2π) factor) vs product/(2π) for quarks. Encodes
+colour-singlet status at the operator level. Leptons skip the S¹
+KK reduction.
+
+**4. The ratio principle (research/93):** relative observables give
+RATIOS of zeros. Three grammar types: sum, product, ratio.
+
+**5. Three-way cosmological consistency (research/130):** A_s, CC
+formula corrections, AND cosmic transition rates all derive from
+the SAME matrix element |V_{52}|². Three observables from one number.
+
+### Updated §3.1 (hierarchy, now sharper)
+
+Replace the Δ_BC = 2 argument with the spectral-index argument from
+research/96. Both are valid; the spectral-index version is cleaner
+and connects to the CC formula.
+
+### New §4.5 (Wolfenstein power ladder)
+
+Dedicated section. The CKM hierarchy is PT order. This explains WHY
+V_ub is small (it's 3rd-order PT, requiring three energy
+denominators) and PREDICTS the scaling pattern for any future CKM
+refinements.
+
+### Updated §6 (predictions, now 13)
+
+Add predictions 10-13 from rounds 4-5: inflation N=58.79, H_0=67.44,
+BH entropy c_log, CC-weak γ_13 sharing. Remove the CMB log-periodic
+from the "near-term" list (SNR = 0.44, undetectable per research/86).

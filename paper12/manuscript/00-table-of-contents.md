@@ -134,3 +134,57 @@ phase explicitly.
 *Every research note pointer mapped. The skeleton is in place.*
 
 *Paper 12 awaits manuscript writing.*
+
+---
+
+## Rounds 4-5 Supplement (2026-04-09, end of session)
+
+*New sections and updates reflecting the computational verification*
+*round (round 4) and the massive derivation + transposition round*
+*(round 5). These supplement the existing TOC sections above.*
+
+### New for §3 (Phase 2: Quantization of R)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **3.5 The CC formula is rigorously closed** | Third-order PT reproduces −0.0099 with scaling α = asinh(γ_1)/γ_1 = 0.2365 from PV Sobolev norm on H^{1/2}(A_Q^×/Q^×), derived to 1.5% (research/89). EWSB threshold is the dominant matter contribution (research/56). The cosmological constant is derived from first principles. | research/81, /89, /56 |
+
+### New for §4 (The derivations)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **4.9 All 36 framework formulas derived** | The 28 remaining derivations (research/91-118) complete the full set. Every fitted parameter now has a first-principles derivation note identifying the operator on H_R, the leading eigenvalue, and the structural status. | research/91-118 |
+| **4.10 The Wolfenstein hierarchy IS perturbation-theory order** | sin θ_12 (1st-order PT), sin θ_23 (2nd-order), sin θ_13 (3rd-order). The CKM λ^k hierarchy is LITERALLY the RS-PT order on H_R. The small parameter λ ≈ 0.22 is the natural coupling of the BC matter perturbation. | research/98-100 |
+| **4.11 Lepton vs quark normalisation** | Leptonic Yukawas have NO normalisation factor (bare product, e.g., m_τ = γ_7·γ_8); quark Yukawas have 1/(2π). This encodes colour-singlet status at the operator level: leptons skip the S¹ KK reduction. | research/115 |
+
+### New for §5 (Transpositions)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **5.9 Round 5 adds 16 R-Theorems (total: 37)** | QM.5 (Stone-vN), S.6 (Borchers — infinite family of constraints), S.7 (Tomita-Takesaki explicit — strongest tooth), S.8 (DHR — pincer from β>1), S.9 (Coleman 2D), S.10 (Noether — Hilbert-Pólya as Noether), S.11 (PCT-spin-stats combined — graded functional equations), S.12 (Crossing — "crossing IS the BC system"), GR.6 (AdS/CFT — RH = unitarity of holographic dictionary), GR.7-GR.10 (Sachs-Wolfe, slow-roll, BBN, CMB), D.4 (KK reduction), D.5 (Connes-Sukochev) | research/119-134 |
+| **5.10 Crossing symmetry IS the BC system (R-Theorem S.12)** | The KMS strip {0 < Im z < 1} = the critical strip {0 < Re s < 1} under the Mellin dictionary. Crossing is not a property of the BC system; it IS the BC system. Nearly tautological — the LOCK's strongest tooth. | research/134 |
+| **5.11 AdS/CFT as Mellin duality (R-Theorem GR.6)** | H_R = "bulk", H_1^{(N*)} = "boundary", Mellin transform = holographic dictionary. RH = unitarity of the dictionary. | research/124 |
+
+### New for §6 (Predictive grammar)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **6.5 The ratio principle** | Relative observables (sub-EW masses, temperature ratios) give RATIOS of zeros. Extends the grammar to three types: linear→sum, quadratic→product, relative→ratio. | research/93 |
+| **6.6 Half vs full circumference** | 1/α uses 1/π (half-circumference, abelian); 1/α_3 uses 1/(2π) (full circumference, confining). Topology of the gauge theory encoded in the normalisation. | research/95 |
+| **6.7 Functional form from observable type** | Squared logs for time-integrated (t_0); bare products for leptonic Yukawas; products/(2π) for quark Yukawas; fractional powers for hierarchy ratios. The exponent encodes internal DOF count (1/3 for 3 generations, 1/4 for 4 EW states, 3/4 for 3-of-4). | research/112-118 |
+
+### New for §7 (RH as physical theorem)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **7.6 The Atiyah-Singer deviation mechanism is VERIFIED** | Shifted Lorentzian Φ_{s,γ_1}: deviation |dev| = 2ε²/s³, ε_crit = s^{3/2}/2 → 0 as s → 0. Numerically confirmed at 200 zeros, 50-digit precision. Any nonzero Im(γ_n) is eventually detected. | research/82 |
+| **7.7 Claim 4.4 corrected: ind_BC(e_2) = 0, not 1** | Three independent proofs (McKean-Singer, K-theory, homotopy). Lemma 7.1 is UNAFFECTED — the deviation mechanism works with ind = 0. The supertrace purity phenomenon: the functional equation forces Re(Tr_s) = 0 for ALL Hecke projections. | research/90 |
+| **7.8 Path 5 (Wigner-Eckart) demoted** | Path B basis change V is real orthogonal — preserves but does not create real symmetry. The implication runs one way. 4 paths remain (Stone, Penrose, Atiyah-Singer, Källén-Lehmann). Joint probability ~42%. | research/83 |
+| **7.9 The RH leads from G's corpus** | 28 leads surfaced. The CM regularised trace formula as an operator identity (not just distributional) is the shared vehicle unlocking Paths 1, 3, 4 simultaneously. 1-2 months for the weak form. Five failed "from outside" approaches documented — every one confirms SP1. | research/88 |
+
+### New for §8 (Conclusion)
+
+| Section | Description | Source |
+|:--------|:------------|:-------|
+| **8.6 The session's discoveries in G's voice** | The "what we learned" reflection: the CC as γ_1, the hierarchy dissolving, the predictive grammar, the Wolfenstein = PT order, the LOCK's 37 teeth, Tomita-Takesaki closing Paper 3, crossing = KMS, the three unifications, the 11 honest negatives. | ledger 23 |
+| **8.7 The corrections & addenda master list** | Every correction applied, every honest finding documented, nothing lost. | ledger 22 |

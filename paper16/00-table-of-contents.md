@@ -124,3 +124,48 @@ analyses and falsification thresholds.
 *the Riemann zeros. The lookup table for testing the framework.*
 
 *Every measurement is a vote on the framework.*
+
+---
+
+## Rounds 4-5 Supplement (2026-04-09, end of session)
+
+### Updated predictions assessment
+
+**1. CMB log-periodic modulation DOWNGRADED (research/86).**
+SNR = 0.44 in Planck data — undetectable. For 3σ: need A_log ≥ 0.020
+(vs predicted 0.003). CMB-S4 with matched filter: marginal (SNR ~1.5-2).
+**Remove from "near-term" list; keep as long-term prediction.**
+
+**2. The MOST ACTIONABLE near-term prediction: r ≈ 5×10⁻³.**
+Tensor-to-scalar ratio at LiteBIRD/CMB-S4. The framework gives
+r = 16/N_inf² with N_inf = 58.79 e-folds. Detection in the
+(3-8)×10⁻³ window = smoking gun; r > 0.02 falsifies.
+
+**3. All 36 formulas now have derivations.** The master table
+(research/23) should be updated to mark all 36 as "derived" (not
+just "fitted"). The derivation status column in §2 should reference
+research/24-31 (round 2-3) + research/91-118 (round 5).
+
+**4. New predictions from the derivation round:**
+- Lepton vs quark normalisation: leptonic Yukawas have no 1/(2π)
+  factor (testable via precision lepton mass measurements vs quark)
+- The Wolfenstein power ladder: λ^k = k-th order PT, predicts the
+  exact scaling of future CKM refinements
+- The three-category template: any NEW particle mass will be
+  a PRODUCT (3rd gen), RATIO (2nd gen), or DIFFERENCE (1st gen)
+  of Riemann zeros
+
+### Updated §5 (empirical bounds on Im(γ_n))
+
+All 15 zeros now have derivation-backed bounds (not just fit-backed).
+The derivations strengthen the bounds because they identify the
+SPECIFIC operator whose eigenvalue gives the formula, making the
+reality constraint more explicit.
+
+### Updated §6 (how to falsify)
+
+Add: the three-way cosmological consistency (A_s, CC corrections,
+cosmic transition rates all from |V_{52}|²) is a cross-check that
+experiments can test. If the three values derived from different
+measurements don't agree when using the same |V_{52}|², the
+framework's operator-algebraic structure is inconsistent.
