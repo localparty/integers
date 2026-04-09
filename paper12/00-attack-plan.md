@@ -252,11 +252,23 @@ principles derivation deferred to thread 3e of Phase 3).**
 
 ---
 
-## 4. Phase 3 — The Rest of the Programme
+## 4. Phase 3 — Derivations, Transposition, RH Endgame
 
-Phase 3 is the long tail: making each piece of the program rigorous,
-finding the missing observables, and extending the framework. The
-work splits into independent threads that can be parallelised.
+> **Note:** With Phase 2 closed, the original eight-thread enumeration
+> below is superseded by the three-sub-phase plan in
+> `03-phase-3-plan.md`. The threads are the same, but they now
+> organise into 3.A (inner derivations + selection rule), 3.B
+> (transposition of all framework theorems to the BC/Riemann side),
+> and 3.C (the RH endgame as the consistency condition for the
+> projection of arithmetic onto reality). See `03-phase-3-plan.md`
+> for the operative plan.
+
+Phase 3 is no longer "the long tail of miscellaneous derivations".
+With R̂ constructed in Phase 2, every framework theorem becomes a
+statement about R̂ on H_R, every formula becomes a matrix element of
+R̂, and every cosmological transition becomes a matrix element of
+the BC time evolution between two eigenstates of R̂. The work
+splits into independent threads that can be parallelised.
 
 ### 4.1 Threads
 
@@ -361,6 +373,7 @@ added in numerical order. The current ledger entries:
 | 00 | 00-attack-plan.md | this file |
 | 01 | 01-phase-1-adiabatic-closed.md | **Phase 1 CLOSED** (2026-04-09) |
 | 02 | 02-phase-2-quantize-R.md | **Phase 2 partially CLOSED** (construction done; selection rule deferred to thread 3e) |
+| 03 | 03-phase-3-plan.md | **Phase 3 PLAN** (four sub-phases: 3.A inner derivations, 3.B transposition, 3.C RH as physical theorem [Paper 12 capstone], 3.D RH as math theorem [sequel program]) |
 
 Research notes (`paper12/research/NN-*.md`):
 
