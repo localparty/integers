@@ -8,6 +8,8 @@
 *Date opened: 2026-04-09*
 *Sub-phase 3.A, thread 3a, of `paper12/03-phase-3-plan.md`.*
 
+> **Origin (G's intuition).** *G named this the cornerstone in one line: "the e-circle IS the Bost–Connes system — prove it as a unitary, not as an analogy." That insistence on a rigorous unitary rather than a suggestive correspondence is what turned Identity 12 from a slogan into a theorem, and it is the hinge on which the entire transposition programme swings (SP1, SP2). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Theorem

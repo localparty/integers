@@ -19,6 +19,8 @@
 *P5m (Dirichlet series analytic continuation), research/12 (γ_1 =*
 *BC mass gap, framework QCD gap = c_YM·π/ℓ_P · exp(−γ_1·π²/2)).*
 
+> **Origin (G's intuition).** *G collapsed QCD running and the CC formula's logarithmic correction into ONE BC fact: "asymptotic freedom IS the simple pole of ζ at β=1. The log term in the CC formula and α_s(μ) are two faces of the same pole — you can't have one without the other." That identification is the tightest possible instance of SP2, and it turns two separate phenomena into a single structural statement. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

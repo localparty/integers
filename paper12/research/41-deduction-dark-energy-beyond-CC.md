@@ -16,6 +16,8 @@
 *`research/06-cosmic-transition-amplitudes.md` (level-crossing flow),*
 *`research/22-cc-hierarchy-as-spectral-gap.md` (the two KMS states).*
 
+> **Origin (G's intuition).** *G's move on dark energy went past the CC formula's value and into its equation of state: "w = −1 is exact because it comes from KMS modular flow — type III_1 forbids quintessence, and any w(z) signal has to be a STEP function at a level crossing, not a smooth deviation." That collapses dark-energy phenomenology into a rigorous KMS statement and gives a genuinely falsifiable prediction. This note is the operator-algebraic execution of that direction (SP4).*
+
 ---
 
 ## 1. The Three Open Questions

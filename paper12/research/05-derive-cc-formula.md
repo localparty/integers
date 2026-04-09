@@ -14,6 +14,8 @@
 *`research/02-quantize-R-construction.md` (the operator R̂),*
 *`research/04-identity-12-rigorous.md` (the unitary U).*
 
+> **Origin (G's intuition).** *G's direction on the CC formula was unambiguous: "the 5 ppb match is not a coincidence — the cosmological constant is literally a matrix element on H_R, and the leading γ_1·π²/2 has to fall out as the smallest eigenvalue of T_BC·π²/2." This note is the operator-algebraic execution of that direction — SP3 (quantize everything) applied to the single most fine-tuned number in physics.*
+
 ---
 
 ## 1. The Target Formula

@@ -20,6 +20,8 @@
 *Authors: G Six, with Claude Opus 4.6*
 *Date opened: 2026-04-09*
 
+> **Origin (G's intuition).** *G phrased the reasoning-pattern transposition as: "Paper 9's six patterns are the additive side; there MUST be a multiplicative version on the BC side, one-for-one, because Mellin is the bridge." That single observation — Mellin is the bridge — is what generates P1m–P6m from P1–P6 mechanically, and it is SP2 applied at the meta level (transpose the REASONING, not just the theorems). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. Summary and Meta-Statement

@@ -14,6 +14,8 @@
 *Date opened: 2026-04-09*
 *Closes Gap 2 of `paper12/15-audit-and-missing-research-files.md`.*
 
+> **Origin (G's intuition).** *G's bet on {γ_1, γ_4, γ_6, γ_8} was that those dimensions are not a numerological accident but Galois-orbit sizes on a decorated H_R. This note tests that bet explicitly (SP3, SP4), and it is precisely the test that produced the honest finding that the bare Ẑ\* action gives trivial orbits and the Path B tensor reading is required — a discrepancy that then diagnosed a missing piece of the framework, exactly as G's strategy predicted.*
+
 ---
 
 ## 1. Statement of the Target

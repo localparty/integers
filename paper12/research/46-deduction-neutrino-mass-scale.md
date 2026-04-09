@@ -16,6 +16,8 @@ file 3 of 4. Builds on: research/05 (template), research/16 §7.5
 (Σm_ν fit), research/15 §8 (PMNS sin² θ_12), research/31
 (shared-physics shared-zeros), research/26–28 (mass templates).*
 
+> **Origin (G's intuition).** *G's reading of Σm_ν = log(γ_10)/γ_15 was characteristically structural: "the log(γ)/γ form means neutrinos sit at a seesaw — log gives the inverse of the heavy scale, and the specific zeros force Majorana, normal ordering, m_1 ≈ 0.001 eV. Once you have the form, the predictions fall out." This is SP4 applied to the lightest known particles. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Phenomenon

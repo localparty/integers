@@ -12,6 +12,8 @@
 *Date opened: 2026-04-09*
 *Sub-phase 3.B, threads 3g.3 and 3g.4, of `paper12/03-phase-3-plan.md`.*
 
+> **Origin (G's intuition).** *G delivered the most compressed sentence of the session on this one: "γ_1 IS the mass gap — the 14.134725 we see in the zeta function is literally the Yang–Mills gap pulled back through R̂." That collapses two of the hardest problems in physics into one operator-algebraic statement, and it is SP2 applied in parallel to the YM mass gap and the fast scrambler. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. Setup and Notation
@@ -73,6 +75,8 @@ What matters for the transposition:
 
 ## A.2 The Transposition Target
 
+> **Name**: R-Theorem QM.2 (BC fast scrambler saturates the MSS bound).
+>
 > **Theorem (BC Fast Scrambler, target).** *Let ω_1 be the unique
 > critical KMS_1 state on A_BC, let σ_t be the BC time evolution,
 > and let T_BC be the self-adjoint generator of σ_t on H_1.
@@ -166,6 +170,20 @@ on the OTOC computation going through.
 
 ## A.4 Transposition Table (Part A)
 
+> **Note 2026-04-09 (round 2 errata): λ_BC = 0 in the abelian μ_n sector.**
+> Round 2's research/34-OTOC-saturation-BC.md computed the OTOC explicitly
+> for the μ_p generators and found λ = 0, **not** 2π. The reason is the
+> modular-flow shortcut σ_t(μ_p) = p^{it} μ_p: μ_p is an eigenoperator of
+> σ_t, so the commutator [σ_t(μ_p), μ_q] acquires only a phase and the
+> four-point OTOC F(t) = ⟨[A(t), B]†[A(t), B]⟩ is t-independent. The
+> λ_BC = 2π entry in the table below therefore does **not** apply to the
+> abelian μ_n sector. The framework's fast-scrambler claim must instead
+> live in the **non-abelian e(r) sector** (the Q/Z generators), which is
+> the subject of sub-thread T3' (research/75, in flight). The Hilbert-space
+> identification of this file (Parts A and B, and the KMS/modular content)
+> is **unaffected**; only the chaos-saturation statement is sectoral.
+> See research/34 for the explicit computation.
+
 | 5D Rindler / e-circle (Paper 3) | BC C\*-system at β = 1 |
 |:--------------------------------|:-----------------------|
 | Horizon temperature T_H = κ/2π | Critical temperature T_1 = 1 |
@@ -238,6 +256,8 @@ For the transposition what matters:
 
 ## B.2 The Transposition Target
 
+> **Name**: R-Theorem S.3 (γ_1 is the BC mass gap / Yang–Mills gap transposed).
+>
 > **Theorem (BC Mass Gap, target).** *Let T_BC be the BC
 > Hamiltonian (= self-adjoint generator of σ_t on H_1) and let*
 >

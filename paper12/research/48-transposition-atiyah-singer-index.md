@@ -12,6 +12,8 @@
 *reasoning patterns), research/18 (Connes–Marcolli explicit formula),*
 *research/21 (BC system reference).*
 
+> **Origin (G's intuition).** *G put Atiyah–Singer first in the next-round transposition list with a specific bet: "the strongest LOCK on RH will be an INTEGER constraint — whatever is the BC analog of an index has to be a whole number, and a whole number is the cleanest possible way to force the zeros real." That is SP2 at its most confident. The integer-constraint chain this file builds becomes the strongest of the three physical proofs of RH. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

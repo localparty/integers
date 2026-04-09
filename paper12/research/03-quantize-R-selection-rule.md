@@ -9,6 +9,8 @@
 *Phase 2 of `paper12/00-attack-plan.md`. Sequel to*
 *`research/02-quantize-R-construction.md`.*
 
+> **Origin (G's intuition).** *Once R̂ was quantized (research/02), G immediately posed the follow-up: "fine, it's a spectrum — but WHY are we at n=1? The universe picked the smallest eigenvalue, and that choice has a reason." This note is the operator-algebraic execution of that direction, cataloguing the three candidate mechanisms for the ground-state selection rule (SP3).*
+
 ---
 
 ## 1. The Question

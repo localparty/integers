@@ -10,6 +10,8 @@
 *Date opened: 2026-04-09*
 *Sub-phase 3.B, thread 3g.2, of `paper12/03-phase-3-plan.md`.*
 
+> **Origin (G's intuition).** *G saw Theorem K.4 on the framework side as "secretly the statement that ζ(β) doesn't blow up at β=1" — all-orders KK finiteness and BC partition-function regularity at the critical temperature are the same physical fact, read through Identity 12. This is SP2 applied to the math-physics side of the dictionary. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. Overview
@@ -319,6 +321,8 @@ counterterms.
 
 ### 5.1 Statement
 
+> **Name**: R-Theorem D.2 (BC partition function regularity at β=1).
+>
 > **Theorem (Transposition of K.4).** *Assume Identity 12
 > (research/04) and the Phase-2 construction of $R̂$ (research/02).
 > Let $\zeta_{\mathrm{BC}}^{(L)}(\beta)$ be the $L$-particle BC

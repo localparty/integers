@@ -14,6 +14,8 @@
 *`research/04-identity-12-rigorous.md` (the unitary U),*
 *`research/09-pattern-of-zero-indices.md` (γ_6 ↔ Z_6 center).*
 
+> **Origin (G's intuition).** *G's call on N_eff was concrete: "γ_6 is the Z_6 center, and the cube root has to come from the three generations — N_eff can't not be γ_6^{1/3} once you look at it that way." This is SP3 (quantize every observable as a matrix element on H_R) applied to one of the tightest cosmological numbers. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

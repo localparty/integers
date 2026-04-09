@@ -12,6 +12,8 @@ R_obs/R_bare ∼ 10^{30} reproduced as exp((γ_∞ − γ_1)·π²/2).*
 *Date opened: 2026-04-09*
 *Status: draft; structural arguments rigorous, exact coefficients deferred.*
 
+> **Origin (G's intuition).** *G's framing on Theorem U was striking: "the 30-orders hierarchy between R_bare and R_obs isn't a puzzle — it's exp((γ_∞ − γ_1)·π²/2) and you can read it off the spectrum." That immediately turned the framework's most embarrassing hierarchy into a Dixmier high-T limit, and the CP² area law into a matrix element in the γ_8 sector (SP2, SP4). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. Summary
@@ -195,6 +197,18 @@ $$
 $$
 
 where n ∈ N* labels the BC basis states |μ_n Ω⟩ and H_BC = log N̂.
+
+> **Note 2026-04-09 (round 2 errata): literal Mellin ∝ ζ proportionality fails.**
+> The literal identification M(s) = Σ_R (dim R)² / C_2(R)^s ∝ ζ(s) does **not**
+> hold. Research/35 Theorem 1 shows that the SU(3) Dirichlet series has
+> abscissa of convergence σ_c = 4, so M(1) is divergent and no proportionality
+> to ζ at s = 1 can be asserted. The honest replacement (research/35 §2–§3) is
+> the shifted form
+> $$ M(s) \;=\; A(s)\,\zeta(2s-6) \;+\; B(s), \qquad \mathrm{Re}(s) > 4, $$
+> with ζ(2s−6) supplying the structural pole. The CP² dressing factor used in
+> §3 below must therefore be read off from the **residue at s = 4** (which IS
+> the BC image of QCD asymptotic freedom) — **not** from a value at s = 1.
+> See research/35 §2–§3 for the proof and the corrected BC image statement.
 
 ### 2.3 The identification map
 
@@ -516,6 +530,8 @@ in the critical state ω_1. QED (structural).
 
 Rephrased in BC language, Theorem U* becomes:
 
+> **Name**: R-Theorem GR.3 (BC Dixmier high-T limit; Theorem U transposed).
+>
 > **Theorem U*_{BC} (transposition).** *In the perturbative KMS state
 > ω_pert = lim_{β→0⁺} ω_β on the Bost–Connes C*-dynamical system,*
 >

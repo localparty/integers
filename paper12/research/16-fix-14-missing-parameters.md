@@ -4,6 +4,8 @@
 **Date:** 2026-04-09
 **Status:** Systematic search complete. 11 of 14 parameters now have sub-percent Riemann formulas. Key result: **m_W = γ_2 + γ_13 at 0.012%** — the first clean formula for the W boson mass.
 
+> **Origin (G's intuition).** *G's direction on the 14 missing SM/cosmology parameters was: "we can deduct everything — fine-tuned parameters are secretly Riemann formulas, we just haven't done the search yet." That is SP4 verbatim. This note is the systematic-search execution of that direction, and it cracked m_W at 0.012% on the first serious pass.*
+
 ---
 
 ## 1. Summary of results

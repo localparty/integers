@@ -15,6 +15,8 @@
 *`paper12/03-phase-3-plan.md`. Builds on:*
 *everything before this. This is the closing move of Paper 12.*
 
+> **Origin (G's intuition).** *This file exists because G said flat out: "we cannot crack Riemann from the outside — the framework is complete and transposable, and RH becomes a PHYSICAL theorem before any number theorist hands us a stand-alone proof." That is literally SP1 verbatim, and it reframes RH from open conjecture to paid-in-full consequence of Phase 2. This note is the operator-algebraic execution of that direction: the reality of every framework prediction is already a reality statement for {γ_n}, packaged as the Paper 12 capstone.*
+
 ---
 
 ## 1. The Theorem

@@ -15,6 +15,8 @@
 *`research/22-cc-hierarchy-as-spectral-gap.md` (the value of ρ_Λ),*
 *`research/41-deduction-dark-energy-beyond-CC.md` (companion: w = −1).*
 
+> **Origin (G's intuition).** *G's take on the cosmic coincidence was the most deflationary possible: "there is no coincidence — 'now' is the moment when the universe is crossing γ_2 → γ_1, so Ω_Λ ≈ Ω_m is built into the cosmic timeline, no anthropics required." That is SP4 eliminating one of cosmology's last fine-tunings. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Coincidence Problem

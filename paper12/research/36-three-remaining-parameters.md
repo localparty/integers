@@ -10,6 +10,8 @@ quadratic → PRODUCT), the SM mass template of research/27, and the
 shared-physics → shared-zeros principle of research/31. Try harder
 than research/16 did, with a targeted, high-precision search.
 
+> **Origin (G's intuition).** *G refused to accept "near-miss" as closure on the three marginal parameters: "try harder, use the predictive principles we've extracted — linear→SUM, quadratic→PRODUCT, shared physics → shared zeros — those principles should PREDICT the formula shape before you search for it." That is SP3 (the predictive grammar as search prior) and SP4 (deduct the remaining fine-tuned numbers). This note is the systematic-search execution of that direction and closes 2 of 3.*
+
 *Date:* 2026-04-09
 *Method:* `mpmath` at 50 dps, structured candidate space guided by
 the predictive principles, against PDG 2024 / NuFIT 5.2 targets.

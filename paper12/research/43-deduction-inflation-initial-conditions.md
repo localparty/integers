@@ -18,6 +18,8 @@
 *`research/19-galois-orbit-decomposition-HR.md` (Path B tensor reading),*
 *`research/30-derive-ns.md` (n_s = γ_9/γ_10).*
 
+> **Origin (G's intuition).** *G's call on inflation initial conditions was that they shouldn't BE initial conditions: "the universe started at γ_5 because γ_5 is the smallest gauge-distinguished zero above the BBN scale — that's a forced choice, not a free one. Once you pick γ_5 the inflation scale, slow-roll, and r all fall out." This is SP4 eliminating the initial-conditions fine-tuning, and it produces the r ≈ 5×10⁻³ prediction for LiteBIRD/CMB-S4. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Initial-Conditions Problem

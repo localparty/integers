@@ -18,6 +18,8 @@ value, i.e., **the right ballpark**.*
 *`research/02-quantize-R-construction.md` (the operator R̂, T_BC),*
 *`research/04-identity-12-rigorous.md` (the unitary U: H_e → H_1^{(N\*)}),*
 *`research/05-derive-cc-formula.md` (the roadmap (C1)–(C4)),*
+
+> **Origin (G's intuition).** *G framed the matter-perturbation derivation as the linchpin that ties the SM KK reduction to the Riemann zeros: "the c_p coefficients aren't free — the Standard Model has to tell us what the perturbation is, and the explicit formula will convert that into a sum over zeros." This is SP3 (quantize everything; discrepancies → missing theorems) made concrete. This research note is the operator-algebraic execution of that direction.*
 *`research/06-cosmic-transition-amplitudes.md` (the same V_{nm}).*
 
 ---

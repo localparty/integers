@@ -18,12 +18,16 @@
 *`research/04-identity-12-rigorous.md` (the unitary U),*
 *`research/05-derive-cc-formula.md` (the same matrix elements V_{nm}).*
 
+> **Origin (G's intuition).** *G pushed the cosmic timeline onto the BC side with a single insistence: "e-fold counts are spectral gaps — the universe's history is a walk on the Riemann zeros." That reframing made the otherwise-qualitative inflationary timeline into a rigorous difference of T_BC eigenvalues, and forced the CC formula and the cosmic transitions to share the same matrix elements (SP3, SP4). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Statements
 
 This note proves two theorems and proposes one mechanism.
 
+> **Name**: R-Theorem GR.1 (Cosmic e-fold count as spectral gap).
+>
 > **Theorem A (Cosmic e-fold count).** *Let H_R be the Riemann*
 > *subspace of the Bost–Connes GNS space at β = 1 (Phase 2), and*
 > *let H_0 = T_BC · π²/2 be the unperturbed Hamiltonian on H_R*
@@ -46,6 +50,8 @@ This note proves two theorems and proposes one mechanism.
 >   N_{5 \to 2 \to 1} \;=\; 92.7759.
 > $$
 
+> **Name**: R-Theorem GR.2 (CC formula and cosmic transitions share matrix elements).
+>
 > **Theorem B (CC formula = cosmic transitions).** *The matrix*
 > *elements ⟨γ_n|V|γ_m⟩ that determine the cosmic transition*
 > *rates Γ_{n→m} = 2π|V_{nm}|²ρ(E_m) (Fermi's golden rule applied*

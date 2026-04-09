@@ -10,6 +10,8 @@
 *Date opened: 2026-04-09*
 *Closes pending task #20 of the Phase 3 program.*
 
+> **Origin (G's intuition).** *G flagged the {γ_1, γ_4, γ_6, γ_8} pattern as "the framework's fingerprint — those four numbers aren't random, they're the Z_6 center and the gauge-sector dimensions talking." That intuition forced the question of whether the pattern is structurally determined rather than fit, and opened the path to the Path B tensor reading (SP3).*
+
 ---
 
 ## 1. The Empirical Pattern

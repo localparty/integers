@@ -11,6 +11,8 @@
 *Cross-reference: `research/12-transposition-scrambler-and-YM-gap.md`,*
 *`research/20-open-thread-map.md` T3, `paper3/11-scrambling-time.md`.*
 
+> **Origin (G's intuition).** *G's rule for open threads was explicit: "close them honestly — if saturation fails, say it fails, and the failure itself tells us where chaos actually lives." That discipline is SP3 (discrepancies diagnose missing theorems), and it is exactly why this file delivers an honest negative (λ=0 in the abelian μ_n sector) that then opens sub-thread T3' for the non-abelian e(r) sector. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. The Question

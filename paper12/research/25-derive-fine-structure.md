@@ -17,6 +17,8 @@
 *`research/09-pattern-of-zero-indices.md` (γ_1 ↔ U(1), γ_4 ↔ EW*
 *union).*
 
+> **Origin (G's intuition).** *G was explicit on 1/α: "the fine structure constant is a tensor matrix element on |γ_1⟩ ⊗ |γ_4⟩ — U(1) crossed with the EW-unbroken union, divided by π. The product structure is forced because α is a QUADRATIC coupling." That single observation is the seed of the linear→SUM, quadratic→PRODUCT organising principle for the entire 36-formula scoreboard (SP3, SP4). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

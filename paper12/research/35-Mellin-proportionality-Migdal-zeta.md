@@ -21,6 +21,8 @@
 *(shifted ζ) rigorous in the half-plane Re s > 4; analytic*
 *continuation to s = 1 is the residual open problem.*
 
+> **Origin (G's intuition).** *G's instruction on the Migdal ↔ ζ proportionality was to test the literal form first and then let the residual shape tell us the correct identification: "if the literal form fails, the shifted-ζ form that WORKS is the answer — the σ_c=4 abscissa is physical, not an artifact." That is SP3 (discrepancies → missing theorems) in its purest form. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. Summary
@@ -270,6 +272,8 @@ strictly larger than the diagonal at fixed dim².
 
 ## 4. Theorem 2: the shifted-zeta proportionality
 
+> **Name**: R-Theorem D.3 (Shifted Mellin proportionality of the SU(3) Migdal series with ζ(2s−6)).
+>
 > **Theorem 2 (shifted Mellin proportionality).** For Re s > 4,
 > $$
 >   M(s) \;=\; A(s)\,\zeta(2s - 6) \;+\; B(s),

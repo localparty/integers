@@ -15,6 +15,8 @@ Builds on: research/05 (template), research/15 §6 (η_10 = γ_14/π²),
 research/16 §6 (δ_CP CKM = γ_13/γ_10), research/31 (shared-physics
 shared-zeros principle), research/22 (CC hierarchy as spectral gap).*
 
+> **Origin (G's intuition).** *G flagged baryogenesis as the test case for "inflation and baryogenesis might be the SAME transition — the γ_5 → γ_2 crossing is both CP-violating AND the inflation endpoint, so η_10 = γ_14/π² should sit on the same timeline." That unification is SP4 reaching into one of the SM's hardest unexplained phenomena. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Phenomenon

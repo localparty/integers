@@ -18,6 +18,8 @@
 *`research/02-quantize-R-construction.md` (the operator R̂),*
 *`research/04-identity-12-rigorous.md` (the unitary U),*
 *`research/05-derive-cc-formula.md` (the derivation template),*
+
+> **Origin (G's intuition).** *G's move on Y_p was the first clean example of the "shared physics → shared zeros" principle: "Y_p is 1/log(γ_13) because BBN n-p freezeout is W-mediated, and γ_13 is the W's cross-sector zero. The same γ_n has to appear in m_W AND in Y_p because they are the same physics." That single connection is SP3 sharpened into a falsifiable predictive principle. This note is the operator-algebraic execution of that direction.*
 *`research/15-find-gamma-7-12-13-14.md` (γ_13 → Y_p at 0.043 %),*
 *`research/16-fix-14-missing-parameters.md` (m_W = γ_2 + γ_13 at 0.012 %).*
 

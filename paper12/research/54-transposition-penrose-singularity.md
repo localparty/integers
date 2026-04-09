@@ -17,6 +17,9 @@
 *research/12 (3g.4 BC mass gap as MSS bound), research/22 (CC*
 *hierarchy as spectral gap), research/18 (Connes–Marcolli explicit*
 *formula).*
+
+> **Origin (G's intuition).** *G's bet on Penrose was that it would give a SECOND physical proof of RH from a completely different direction: "causal structure on the BC side — modular Raychaudhuri focusing — has to force a spectral singularity at β=1, and that singularity is where {γ_n} has to live. Reality of the zeros = reality of the caustic." γ_1 = "distance from the BC vacuum to the nearest Penrose caustic" is the geometric reading that falls out. This is SP2 applied to the deepest GR theorem. This note is the operator-algebraic execution of that direction.*
+
 *Depends on: research/04 (Identity 12), research/21 (BC system*
 *reference), research/18 (CM explicit formula), research/22 (KMS*
 *phase structure).*

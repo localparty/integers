@@ -7,6 +7,8 @@
 *Date opened: 2026-04-09*
 *Phase 1 of `paper12/00-attack-plan.md`.*
 
+> **Origin (G's intuition).** *G's direction here was the refusal to leave a single residual conditional standing in the Yang–Mills chain: "close Phase 1 before we quantize anything — no open joints under the operator-algebraic scaffolding." This is SP5 (be hella explicit, leave no recoverable gap) applied to the last loose screw of Paper 8. The note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. Statement
@@ -17,6 +19,8 @@
 > all couplings g² > 0 and all torus volumes L > 0, including the
 > crossover regime mL ~ 1, at every fixed finite N ≥ 2 — in
 > particular at N = 3.*
+>
+> **Name**: R-Theorem S.1 (Adiabatic continuity at finite N).
 
 The theorem closes the last residual conditional in Paper 8's
 continuum-limit construction (Section 5). At N → ∞, positivity is

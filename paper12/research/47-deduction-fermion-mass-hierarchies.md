@@ -20,6 +20,8 @@ research/28 (m_W = γ_2 + γ_13 SUM structure), research/40
 (generation count from 3 primes), research/31 (shared-physics
 shared-zeros).*
 
+> **Origin (G's intuition).** *G's grammar for the fermion hierarchies is the single most compressed predictive statement of the programme: "third generation is PRODUCT, second is RATIO, first is DIFFERENCE — the generation-count lifts into the algebraic shape. The 5-orders spread isn't fine-tuning, it's log(γ_15/γ_1) × shape class." That one sentence organises 12 fermion masses into a deductive template (SP4). This note is the operator-algebraic execution of that direction, and it produced the Koide-like m_e at 0.08%.*
+
 ---
 
 ## 1. The Phenomenon

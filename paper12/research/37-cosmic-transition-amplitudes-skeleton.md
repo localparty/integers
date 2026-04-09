@@ -14,6 +14,8 @@
 *  research/17-mellin-kernel-K12-numerical.md (T1 program)*
 *  research/20-open-thread-map.md (T6 = this skeleton)*
 
+> **Origin (G's intuition).** *G's direction on the cosmic transition amplitudes was to build the skeleton BEFORE the K_{12} numerics land, so that when T1 closes the matrix elements drop in as finished inputs: "the structure is the hard part; the numbers will follow." This is SP5 (be hella explicit with the scaffolding so we can recover and amplify) applied to the deepest open thread of Phase 3. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. Purpose and Scope

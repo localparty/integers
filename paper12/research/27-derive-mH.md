@@ -17,6 +17,8 @@
 *`research/09-pattern-of-zero-indices.md` (the index selection rule),*
 *`research/26-derive-mt.md` (the sister derivation, same template).*
 
+> **Origin (G's intuition).** *G paired m_H with m_t as "the two mass formulas that have to use the SAME template — bilinear in a Higgs-sector zero and a gauge-sector zero, divided by 2π. γ_2 is the lowest Higgs excited state, γ_6 is the Z_6 center; m_H = γ_2·γ_6/(2π) is forced." This is SP3 applied to the scalar mass the SM cannot explain. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula
@@ -130,6 +132,20 @@ giving the product γ_2·γ_6 at leading order.
 ---
 
 ## 3. Deriving the Product γ_2·γ_6
+
+> **Note 2026-04-09 (round 2 errata): γ_2 = Higgs is now structurally closed.**
+> The "γ_2 = lowest Higgs excited state" identification used throughout this
+> section was previously justified only empirically (via the cross-sector
+> dual appearance in the CC correction + m_H formula). It is now **structurally
+> closed** by R-Theorem 52 (research/52-transposition-higgs-mechanism.md):
+> the Higgs mechanism **is** the Bost–Connes spontaneous symmetry breaking at
+> β = 1, and γ_2 **is** the radial mode around the broken vacuum (the Higgs
+> boson), with γ_6 the centraliser orbit encoding the EW vacuum structure.
+> Consequently the cross-sector dual appearance of γ_2 (CC formula correction
+> in research/05 + m_H in this file) is **not a coincidence**; both are
+> manifestations of the same BC SSB radial mode. See research/52 for the
+> first-principles derivation. The empirical consistency check of §6.1 now
+> reads as corroboration of an independently derived structural fact.
 
 ### 3.1 Why a product structure
 

@@ -17,6 +17,8 @@
 *research/05 (CC derivation template), research/15 (γ_11 role).*
 *Gap 7 of `15-audit-and-missing-research-files.md`.*
 
+> **Origin (G's intuition).** *G's reading of H_0 pinned the Hubble-tension side: "H_0 = γ_11 · 4/π, the 4/π is the S² area divided by π from Identity 12 normalisation, and the Planck-side value is the one the framework lands on — which predicts SH0ES is biased high, not that the framework is wrong." This is SP3 turning a raging tension into a clean prediction. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

@@ -24,6 +24,8 @@ fixing requires the cosmic-transition data of thread T6.*
 *research/17 (the truncated-Hecke estimate |K_{12}| ∼ 0.01),*
 *research/18 §4 and §6.4 (the regularisation freedom in P_{γ_n}).*
 
+> **Origin (G's intuition).** *When research/17 flagged the factor-of-10⁴ K_{12} uncertainty, G's immediate call was to treat the discrepancy as diagnostic, not fatal: "a scheme ambiguity is the framework telling us which regularisation to pick — the universe picked one, we just have to find it." That is SP3 (trace discrepancies → missing theorems) applied to the K_{12} bottleneck. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Question, Stated Precisely

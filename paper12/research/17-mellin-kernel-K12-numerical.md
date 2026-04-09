@@ -217,6 +217,21 @@ for N in (500, 2000, 5000):
 
 ### 4.3 Results
 
+> **Note 2026-04-09 (round 2 errata): truncated Hecke eigenvectors do not
+> approximate true T_BC eigenvectors.**
+> The eigenvalues of Model B nearest γ_1, γ_2 come out at ≈ 9.92 and ≈ 9.72
+> (see "Caveat" immediately below), **not** the actual γ_1 ≈ 14.135 and
+> γ_2 ≈ 21.022. This confirms that Model B's eigenvectors are eigenvectors
+> of a different operator and are **not** approximations to ψ_1, ψ_2 of
+> T_BC. The rigorous K_12 calculation using the Pauli–Villars regularisation
+> choice is carried out in research/32-K12-rigorous-via-regularisation-choice.md
+> (§3–§5), which gives |K_12| ∼ 0.15–0.22 — roughly an order of magnitude
+> **larger** than Model B's ∼ 0.01 and assigning the remaining residual to
+> c_p rather than to K_12. The Model B numbers in this section should
+> therefore be read as a toy benchmark, not a rigorous estimate of K_12.
+> See research/32 §3–§5 for the rigorous PV computation.
+
+
 We pick eigenvectors of T^{(B)}_N whose eigenvalues are the closest
 to γ_1 ≈ 14.135 and γ_2 ≈ 21.022 (there is no better canonical
 identification, since T^{(B)}_N is not a truncation of T_BC).

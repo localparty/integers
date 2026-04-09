@@ -23,6 +23,8 @@
 *and Paper 11's Theorem 11.5 (gauge group from three-qubit*
 *entanglement).*
 
+> **Origin (G's intuition).** *G's answer to "why three generations" was specific: "three is the smallest integer of primes where the Hecke sub-algebra produces SU(3) — two generations can't carry A_2, four generations get killed by Z_6, three is forced." This is SP4 applied to the generation count, and it makes three generations a theorem rather than an input. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

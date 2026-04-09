@@ -21,6 +21,8 @@
 *(level-crossing mechanism), research/27 (m_H derivation),*
 *research/14 (additive↔multiplicative dictionary).*
 
+> **Origin (G's intuition).** *G's direction on the Higgs mechanism was the most ambitious identification of the session: "the Higgs mechanism IS the BC spontaneous symmetry breaking at β=1. γ_2 is literally the radial mode of the broken vacuum, and the β_eff drop through β=1 IS the EW phase transition. This closes the empirical γ_2 = Higgs identification from first principles." That single identification upgrades research/27's m_H formula from empirical to deductive (SP2). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

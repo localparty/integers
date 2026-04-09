@@ -18,6 +18,8 @@ file 2 of 4. Builds on: research/05 (template), research/10
 research/19 (Galois orbit decomposition of H_R), research/22
 (KMS critical state), research/44 (CP-odd operator C).*
 
+> **Origin (G's intuition).** *G's move on the strong CP problem was the most surgical of the deduction programme: "θ_QCD = 0 is forced by Z_6 invariance of ω_1 — it's not a fine-tuning, it's an algebraic obstruction. No axion. The Peccei–Quinn mechanism is replaced by an exact BC symmetry, and the neutron EDM is null at 10⁻³⁰." That is SP4 solving a 50-year SM puzzle as a KMS corollary. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Problem

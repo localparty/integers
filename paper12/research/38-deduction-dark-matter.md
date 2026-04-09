@@ -20,6 +20,8 @@ for direct/indirect detection.*
 *`research/25-derive-fine-structure.md` §3.2 (linear→SUM, quadratic→PRODUCT),*
 *`research/31-derive-Yp.md` (shared physics → shared zeros principle).*
 
+> **Origin (G's intuition).** *G put dark matter first among the deduction targets with a specific intuition: "DM is a Galois orbit of H_R that the visible brane doesn't couple to — Ω_DM/Ω_b ~ 5 has to be the dimension of that orphan orbit, not a parameter." That is SP4 applied to the biggest known unknown in the SM. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

@@ -17,6 +17,8 @@
 *formulas), research/19 (Path B tensor reading, three-generation*
 *subspace), research/10 (the three-prime Hecke structure).*
 
+> **Origin (G's intuition).** *G pushed CKM/PMNS as the final test of the Path B tensor reading: "unitarity on the three-generation subspace should predict cross-sector relations between CKM and PMNS angles that nobody has looked for — the Jarlskog is a determinantal matrix element, and the CKM–PMNS duals are forced." That prediction produced the sin θ_23^CKM · sin θ_23^PMNS = π/(2√2 γ_6) dual at 0.07% — a formula that had no precedent in the SM literature (SP2, SP3). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

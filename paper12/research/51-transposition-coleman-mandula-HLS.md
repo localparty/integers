@@ -16,6 +16,8 @@
 *Depends on: research/04 (Identity 12 rigorous), research/10 (the*
 *template), research/12 (BC modular flow = σ_t = scrambler),*
 *research/14 (the additive↔multiplicative dictionary), Coleman–Mandula*
+
+> **Origin (G's intuition).** *G wanted a SECOND independent derivation of g_SM before trusting the first: "research/10 gives SU(3)×SU(2)×U(1)/Z_6 from the three primes — now let Coleman–Mandula do it again, from the no-go side. If two completely different routes converge on the same gauge group, we have the strongest possible consistency check." This is SP2 applied with paranoid rigour. This note is the operator-algebraic execution of that direction.*
 *1967, Haag–Łopuszański–Sohnius 1975.*
 
 ---

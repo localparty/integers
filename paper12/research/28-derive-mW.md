@@ -16,6 +16,8 @@
 *research/05 (CC derivation template), research/16 (m_W discovery).*
 *Gap 7 of `15-audit-and-missing-research-files.md`.*
 
+> **Origin (G's intuition).** *m_W = γ_2 + γ_13 was the most shocking formula of the session. G's reading: "a SUM? That means W is a cross-sector propagator — it bridges EW (γ_2) and BBN (γ_13). The sum structure is the additive spectrum of a non-interacting two-factor Hamiltonian, and the W is the UNIQUE SM particle for which that makes sense." This is SP3 + SP4 executed live. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

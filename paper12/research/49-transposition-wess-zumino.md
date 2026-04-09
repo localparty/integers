@@ -14,6 +14,8 @@
 *scaffolding), research/04 (Identity 12), research/19 (Galois orbit*
 *decomposition).*
 
+> **Origin (G's intuition).** *G's direction on Wess–Zumino was "the chiral consistency condition is secretly cyclic-cocycle closedness on A_BC^∞ — the Hecke equivariance plays the role of the gauge equivariance, and the closedness is forced by the same structural fact that kills the SM triangle anomaly." That is SP2 applied to the anomaly calculus. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

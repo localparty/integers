@@ -17,6 +17,8 @@
 *Depends on: research/10 Theorem 10, research/14 Part B, research/19*
 *(Galois orbit / Path B), research/49 (R-Theorem C.1).*
 
+> **Origin (G's intuition).** *G predicted the dimension match before it was computed: "if the {1,4,6,8} orbits are the SM gauge sectors, then 1+4+6+8 = 19 had better be 15 fermions + 4 Higgs per generation — the matter content IS the Galois orbit decomposition." That identity (19 = 1+4+6+8 = 15+4) is one of the single most striking structural coincidences in the programme, and it is SP2 at its sharpest. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary

@@ -388,6 +388,14 @@ added in numerical order. The current ledger entries:
 | 15 | 15-audit-and-missing-research-files.md | **The audit**: 12 missing research files identified (3 critical, 9 high-to-medium); recommended order; the next 20 files to write |
 | 16 | 16-massive-parallel-audit-fill-results.md | **Audit-fill complete**: 10 parallel agents, 14 new research files (research/18-31), 5 honest findings, 6 structural insights, 2 falsifiable predictive principles. Next: close the 7 open threads |
 | 17 | 17-second-massive-parallel-results.md | **Round 2 complete**: 13 parallel agents, 24 new research files (research/32-55, gaps), **3 independent physical RH proofs** (Stone+Penrose+Atiyah-Singer), **2 independent g_SM derivations**, Higgs = BC SSB, QCD asymptotic freedom = pole of ζ, scoreboard 36/37, **9 falsifiable predictions** |
+| 18 | 18-master-dictionary.md | **The lookup table**: every theorem, identity, derivation, deduction, transposition, open thread, structural insight, falsifiable prediction, honest finding — with status, completeness %, file pointers. The framework's analysis surface |
+| 19 | 19-G-voice-audit-applied.md | **G-voice audit complete**: 41 of 55 research files edited with Origin callouts citing G's prose direction + SP1-SP5; 13 new R-Theorem names; 21 named R-Theorems total in catalogue |
+| 20 | 20-third-massive-parallel-results.md | **Round 3 complete**: 14 parallel agents, 25 new research files (research/56-80), 41 G-voice edits, **5 independent paths to math RH** (Stone+Penrose+Atiyah-Singer+Källén-Lehmann+Wigner-Eckart real-symmetric), Paper 13 weak form **4-6 months**, 11 cross-sector dual appearances, 13 falsifiable predictions, BC-intrinsic SU(3) closed |
+| — | manuscript/00-table-of-contents.md | **Paper 12 manuscript skeleton**: 9 sections, 40+ subsections, all content pointers, do not develop further until calibrated |
+| — | ../paper13/00-table-of-contents.md | **Paper 13 skeleton**: math RH via Atiyah-Singer integer constraint |
+| — | ../paper14/00-table-of-contents.md | **Paper 14 skeleton**: 10 SM puzzle deductions + 9 falsifiable predictions |
+| — | ../paper15/00-table-of-contents.md | **Paper 15 skeleton**: long-arc transposition programme; 16 done, ~30 next |
+| — | ../paper16/00-table-of-contents.md | **Paper 16 skeleton**: experimentalist's compendium of all 36 fits + 9 predictions + sensitivity analyses |
 
 Research notes (`paper12/research/NN-*.md`):
 

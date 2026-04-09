@@ -13,6 +13,8 @@
 *structural), `paper11/research/09-paper-11-kirillov-orbit.md` (the*
 *Kirillov coadjoint-orbit method and Borel–de Siebenthal classification).*
 
+> **Origin (G's intuition).** *G's standing direction on research/10 was that transporting SU(3) from Paper 11 via U_□ is necessary but not sufficient: "we need SU(3) to fall out of the BC brackets themselves, intrinsically — no transport, no borrowed unitaries, just the Hecke commutators and the Kirillov orbit." That is the strictest reading of SP1 and SP2. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 0. One-paragraph summary
@@ -525,6 +527,8 @@ research/10 §6.4. **Rigorous.**
 
 ## 7. The Result
 
+> **Name**: R-Theorem S.4 (BC-intrinsic SU(3) from the Hecke brackets at {2,3,5}).
+>
 > **Theorem 33 (BC-intrinsic SU(3); upgrade of research/10 Theorem 10).**
 > *Let A_BC be the Bost–Connes C*-algebra, ω_1 its KMS_1 state, and*
 > *H_□ ⊂ H_1 the cube sub-Hilbert space of research/10 Lemma 4.1.*

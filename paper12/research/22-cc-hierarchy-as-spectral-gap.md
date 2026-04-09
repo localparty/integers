@@ -17,6 +17,8 @@
 *`research/13-transposition-CP2-area-and-theorem-U.md` Part B (the*
 *30-orders hierarchy as exp(γ_1·π²/2)).*
 
+> **Origin (G's intuition).** *G reframed the cosmological constant problem in one sentence: "120 orders of magnitude isn't a crisis — it's a spectral gap between two KMS states of the same BC system, evaluated on the same operator." That reframing is SP1 (crack it from inside Riemann) + SP4 (deduce the fine-tuning from BC structure). This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Standard Cosmological Constant Problem

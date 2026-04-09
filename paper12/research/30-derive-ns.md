@@ -18,6 +18,8 @@
 *`research/05-derive-cc-formula.md` (the derivation template),*
 *`research/06-cosmic-transition-amplitudes.md` (inflation as γ_5 → γ_2).*
 
+> **Origin (G's intuition).** *G saw the spectral index as "a log-derivative of adjacent T_BC eigenvalues — slow roll IS adjacency in the Riemann spectrum. n_s = γ_9/γ_10 because those are the two adjacent zeros the inflaton picks up on its way from γ_5 to γ_2." This is SP3 applied to the cleanest inflation observable. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

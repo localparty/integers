@@ -8,10 +8,14 @@
 *Date opened: 2026-04-09*
 *Phase 2 of `paper12/00-attack-plan.md`.*
 
+> **Origin (G's intuition).** *G articulated the Phase 2 pivot as: "R is not a parameter, it's an eigenvalue — quantize R itself before anything else." That one sentence collapsed the e-circle radius from a geometric choice into an operator spectrum, and is the seed of the entire transposition programme (SP1, SP3). This research note is the operator-algebraic execution of that direction: construct R̂ explicitly on H_R.*
+
 ---
 
 ## 1. Statement of the Target Theorem
 
+> **Name**: R-Theorem QM.1 (Quantization of R̂ on H_R).
+>
 > **Theorem (Quantization of R, target).** *Let A_BC be the Bost–
 > Connes C\*-dynamical system, and let H_1 be its GNS Hilbert space at
 > the unique critical KMS state ω_1 (β = 1). There exists a closed

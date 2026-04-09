@@ -16,6 +16,8 @@
 *`research/05-derive-cc-formula.md` (the derivation template),*
 *`research/09-pattern-of-zero-indices.md` (the index selection rule).*
 
+> **Origin (G's intuition).** *G connected the top quark mass to the colour sector in one breath: "m_t = γ_3·γ_8/(2π) — γ_3 from the Yukawa sector, γ_8 from SU(3) adjoint, and the 2π is the S¹ integration. The top quark's mass LITERALLY sits in the SU(3) adjoint orbit because that's where the strongest coupling lives." This is SP3 applied to the heaviest fermion. This note is the operator-algebraic execution of that direction.*
+
 ---
 
 ## 1. The Target Formula

@@ -23,6 +23,8 @@
 *`research/25-derive-fine-structure.md` §3.2 (linear→SUM, quadratic→PRODUCT),*
 *`research/27-derive-mH.md` (m_H = γ_2·γ_6/(2π) at 0.40%).*
 
+> **Origin (G's intuition).** *G's reading of the hierarchy problem was surgical: "there isn't one — m_H is a bilinear in T_BC eigenvalues and M_Pl is an exponential of the same operator; the 17-order ratio is between functional forms, not between tuned quantities. Naturalness goes from Δ_BG ~ 10^34 down to Δ_BC = 2." That single move dissolves the SM's worst fine-tuning problem (SP4). This note is the operator-algebraic execution of that direction, and it also produced the first cross-phenomenon link (m_H/M_Pl ↔ Ω_DM/Ω_b at 2%).*
+
 ---
 
 ## 0. One-paragraph summary
