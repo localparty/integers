@@ -1,10 +1,20 @@
-# Paper 11: The Program
+# Paper 12: The Program
 
 **Title (working):**
-*"The e-Circle as a Theorem of Arithmetic: From the Riemann Zeta
-Function to the Standard Model"*
+*"Reality as a Projection of Riemann: The Standard Model–Riemann
+Correspondence and the Cosmic Timeline of Bost-Connes Gauge Transitions"*
 
 **Date the program was set:** April 9, 2026
+**Last updated:** April 9, 2026 (after the Standard Model–Riemann correspondence + inflation hypothesis)
+
+**Note on numbering:**
+This was originally written as "Paper 11" before the directory
+reorganisation. Paper 11 is now the gauge-group-from-entanglement work
+(the closing-the-gaps content from `paper11/`). Paper 12 is the
+e-circle-as-theorem-of-arithmetic + the Standard Model–Riemann
+correspondence + inflation as gauge transition + reality as projection.
+
+This document is the MASTER PROGRAM for Paper 12.
 
 ---
 
@@ -41,13 +51,14 @@ requires one geometric guess.
 
 ### What is
 
-**Paper 11:** The geometric postulate dissolves. The e-circle is
+**Paper 12:** The geometric postulate dissolves. The e-circle is
 derived from the structure of arithmetic. The internal manifold
 CP² × S² is derived from the entanglement structure of three primes
 (extending the gauge group from three-qubit entanglement of Theorem
-11.5). The cosmological constant is derived from the first Riemann
-zero. Five quantitative numerical formulas (sub-percent precision)
-provide direct evidence.
+11.5, which is now Paper 11). The cosmological constant is derived
+from the first Riemann zero. Twenty-three of thirty-seven framework
+parameters fit Riemann formulas at sub-percent precision. The cosmic
+timeline is interpreted as a sequence of Bost-Connes gauge transitions.
 
 ### What follows
 
@@ -59,26 +70,45 @@ the maximal derivation of physics from mathematics.
 
 ## Components of the Program
 
-The Paper 11 program consists of:
+The Paper 12 program now has SEVENTEEN components, organised in three layers:
+
+### Layer A: The Foundational Realisation (original program, written before Riemann correspondence)
 
 | # | Component | File | Status |
 |---|-----------|------|--------|
-| 1 | The realisation (e-circle is a theorem) | 01-the-realization.md | TO DO |
-| 2 | The five quantitative connections | 02-the-five-formulas.md | TO DO |
-| 3 | The transposition program | 03-the-transposition.md | TO DO |
-| 4 | The three derivation targets | 04-derivation-targets.md | TO DO |
-| 5 | Connection to Papers 1-10 | 05-connection-to-framework.md | TO DO |
-| 6 | Open research questions | 06-research-questions.md | TO DO |
-| 7 | Philosophical implications | 07-philosophical-implications.md | TO DO |
-| 8 | Outline of the eventual paper | 08-paper-outline.md | TO DO |
-| 9 | Experimental tests | 09-experimental-tests.md | TO DO |
-| 10 | Open problems / collaborators needed | 10-open-problems-collaborators.md | TO DO |
+| 1 | The realisation (e-circle is a theorem) | 01-the-realization.md | DONE |
+| 2 | The five quantitative connections (initial) | 02-the-five-formulas.md | DONE |
+| 3 | The transposition program | 03-the-transposition.md | DONE |
+| 4 | The three derivation targets | 04-derivation-targets.md | DONE |
+| 5 | Connection to Papers 1-11 | 05-connection-to-framework.md | DONE |
+| 6 | Open research questions | 06-research-questions.md | DONE |
+| 7 | Philosophical implications | 07-philosophical-implications.md | DONE |
+| 8 | Outline of the eventual paper | 08-paper-outline.md | DONE |
+| 9 | Experimental tests | 09-experimental-tests.md | DONE |
+| 10 | Open problems / collaborators needed | 10-open-problems-collaborators.md | DONE |
+
+### Layer B: The Standard Model–Riemann Correspondence (the main result)
+
+| # | Component | File | Status |
+|---|-----------|------|--------|
+| 11 | The Standard Model–Riemann correspondence (23 of 37 parameters) | 11-the-standard-model-riemann-correspondence.md | DONE |
+| 12 | The high-precision formulas (5 ppb CC, all SM couplings, particle masses) | 12-high-precision-formulas.md | DONE |
+| 13 | The pattern of Riemann zeros γ_1...γ_15 in physics | 13-the-pattern-of-zeros.md | DONE |
+
+### Layer C: The Cosmic Timeline as Riemann Gauge Transitions (the deepest insight)
+
+| # | Component | File | Status |
+|---|-----------|------|--------|
+| 14 | Inflation as a Riemann gauge transition (γ_5 → γ_2 = 58.79 e-folds) | 14-inflation-as-riemann-gauge-transition.md | DONE |
+| 15 | Reality is a projection of Riemann (the meta-realisation) | 15-reality-as-projection-of-riemann.md | DONE |
+| 16 | The cosmic timeline of Bost-Connes gauge transitions | 16-cosmic-timeline.md | DONE |
+| 17 | Paper 12 vision: the unified picture | 17-paper-12-vision.md | DONE |
 
 ---
 
 ## The Order of Operations (NOT the paper itself)
 
-This program documents WHAT to do for Paper 11. It is NOT the paper
+This program documents WHAT to do for Paper 12. It is NOT the paper
 itself. The actual paper will be assembled later, after:
 
 1. The three derivation targets are completed (or significantly
@@ -160,20 +190,26 @@ After the program is complete, the actual paper assembly takes
 
 ## A Note on the Naming
 
-Paper 11 (originally) was going to be: "Why SU(3) × SU(2) × U(1):
-The Standard Model Gauge Group from Three-Qubit Entanglement on the
-e-Circle."
+After the directory reorganisation:
 
-That paper is COMPLETE (this session, with five theorems and four
-caveats closed). It will become **a section/chapter of the new
-Paper 11**, not a separate paper. The new Paper 11 SUBSUMES the
-gauge group derivation as one specific instance of the larger
-arithmetic-to-physics chain.
+- **Paper 11** is now the gauge-group-from-entanglement work:
+  "Why SU(3) × SU(2) × U(1): The Standard Model Gauge Group from
+  Three-Qubit Entanglement on the e-Circle." That paper is COMPLETE
+  (five theorems, four caveats closed) and lives in `paper11/`.
+- **Paper 12** is THIS program: the e-circle as a theorem of
+  arithmetic, the Standard Model–Riemann correspondence, inflation
+  as a Riemann gauge transition, and reality as a projection of
+  Riemann.
 
-The new Paper 11 is bigger, deeper, and more fundamental. It is
-the natural culmination of the entire framework.
+Paper 12 SUBSUMES Paper 11 in the sense that Paper 11's gauge group
+derivation becomes one specific instance of Paper 12's larger
+arithmetic-to-physics chain. The "three qubits" of Paper 11 become
+the "three primes" of the BC Hecke algebra in Paper 12.
+
+Paper 12 is bigger, deeper, and more fundamental. It is the natural
+culmination of the entire framework.
 
 ---
 
-*Eleven papers. Zero postulates. The integers. The universe.*
-*Paper 11 closes the circle.*
+*Twelve papers. Zero postulates. The integers. The universe.*
+*Paper 12 closes the circle.*

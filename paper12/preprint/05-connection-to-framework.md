@@ -1,23 +1,25 @@
-# Component 5: Connection to Papers 1-10
+# Component 5: Connection to Papers 1-11
 
-**How Paper 11 builds on, supersedes, and integrates with the
-existing framework.**
+**How Paper 12 builds on, supersedes, and integrates with the
+existing framework (Papers 1-11).**
 
 ---
 
 ## Summary
 
-Paper 11 does not REPLACE Papers 1-10. It REVEALS that they are
+Paper 12 does not REPLACE Papers 1-11. It REVEALS that they are
 even more parsimonious than previously thought.
 
 Specifically:
 - Papers 1-10 derive all of physics from one postulate (M⁴ × CP² × S² × S¹)
-- Paper 11 derives the postulate itself from arithmetic
-- Therefore Papers 1-10 + Paper 11 = derivation of physics from arithmetic
+- Paper 11 derives the SM gauge group from three-qubit entanglement
+  on the e-circle (the closing-the-gaps work)
+- Paper 12 derives the e-circle itself from arithmetic
+- Therefore Papers 1-11 + Paper 12 = derivation of physics from arithmetic
 
 ---
 
-## What Paper 11 Adds to Each Earlier Paper
+## What Paper 12 Adds to Each Earlier Paper
 
 ### Paper 1: Foundations
 
@@ -27,7 +29,7 @@ account of quantum mechanics: superposition is extension in e,
 entanglement is e-conservation, momentum is helical pitch, etc. The
 e-circle's existence is postulated.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The e-circle is not postulated. It is the operator-algebraic
 realisation of the integers (Bost-Connes system, Identity 12). Paper
 1's postulate becomes Paper 11's theorem.
@@ -40,6 +42,8 @@ realisation of the integers (Bost-Connes system, Identity 12). Paper
   Connes-Marcolli 2008.
 - The discussion of "where does this dimension come from" is
   resolved.
+- Paper 1's opening sentence now points forward to Paper 12's
+  Identity 12 (e-circle ↔ BC system).
 
 ---
 
@@ -53,7 +57,7 @@ zero free parameters (after fixing R from dark energy). Includes:
 - H_0 = 68.7-69.5 km/s/Mpc
 - S_8 tension resolved
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The N_eff prediction = γ_6^(1/3) (the most precise Riemann
 formula, 0.0082%). This identifies one of Paper 2's predictions
 with a specific Riemann zero.
@@ -77,7 +81,7 @@ formula (untested in this session).
 - Theorem 7.2 (this session): fast scrambler from 5D Rindler → Page
   curve unconditional.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The fast scrambler property is itself a consequence of the BC
 system's chaos structure. The Lyapunov exponent λ = 2π T_H is the
 BC critical-temperature analog.
@@ -97,7 +101,7 @@ The KK reduction on M⁴ × CP² × S² × S¹ produces the SM gauge group
 SU(3) × SU(2) × U(1). The Higgs is the S² Wilson line. The Weinberg
 angle is the spectral zeta ratio.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The internal manifold CP² × S² is itself derivable from arithmetic
 (Target 3 of the derivation program). The Standard Model gauge group
 emerges from the Hecke algebra structure of three primes.
@@ -117,7 +121,7 @@ emerges from the Hecke algebra structure of three primes.
 The string tension √σ ≈ 437 MeV from CP² geometry (this session: CP²
 area law derived from 2D YM on CP¹).
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The CP¹ ⊂ CP² structure is itself part of the arithmetic-derived
 internal manifold. The 2D YM exact solution on CP¹ is a transposition
 target: the same structure should constrain Riemann zeros.
@@ -135,7 +139,7 @@ target: the same structure should constrain Riemann zeros.
 The complete thermal history from inflation to dark energy, driven
 by the dilaton (e-circle modulus).
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The dilaton dynamics is the BC system's response to cosmological
 expansion. The frozen dilaton at R = R_obs is the BC effective
 potential's minimum.
@@ -154,7 +158,7 @@ Theorem U: R_bare = (63 n_1)^(3/2) / (128 π^(11/2) M_Pl) ~ l_P from
 the perturbative system. The cosmological constant problem is
 geometrically isolated.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 Theorem U gives the perturbative answer (R_bare ~ l_P). The full
 non-perturbative answer is given by the BC contribution: R_obs =
 exp(γ_1 × π²/2 - log π) × l_P. The ratio R_obs/R_bare ~ 10^30 IS
@@ -173,7 +177,7 @@ the cosmological constant problem, and the BC connection solves it.
 The Yang-Mills mass gap proved on the lattice for all compact
 simple G, with continuum limit conditional on adiabatic continuity.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The Yang-Mills mass gap can be transposed to the BC side: the
 "smallest non-trivial eigenvalue" of the BC operator is γ_1. This
 is the Riemann analog of the QCD mass gap.
@@ -192,7 +196,7 @@ is the Riemann analog of the QCD mass gap.
 Six reasoning patterns (P1-P6) that generated all results in
 Papers 1-8.
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 The patterns transpose to multiplicative analogs (P1m-P6m) on the
 Riemann side. Paper 11 demonstrates the use of these multiplicative
 patterns to bridge the framework and number theory.
@@ -211,7 +215,7 @@ patterns to bridge the framework and number theory.
 The scheme-independence of UV finiteness at one and two loops
 (Goroff-Sagnotti R³ counterterm).
 
-**What Paper 11 adds:**
+**What Paper 12 adds:**
 With Theorem K.4 (this session: all-orders inductive bootstrap),
 scheme-independence extends to all loop orders. This connects to
 the BC partition function being "scheme-independent" in number
@@ -225,54 +229,84 @@ theory (the zeros are intrinsic to ζ(s), not scheme choices).
 
 ---
 
-## What Paper 11 Subsumes
+### Paper 11: Gauge Group from Three-Qubit Entanglement
 
-### The original "Paper 11" (gauge group from entanglement)
+**What Paper 11 establishes:**
+Theorem 11.5 — the Standard Model gauge group SU(3) × SU(2) × U(1)/Z_6
+emerges from three-qubit entanglement on the e-circle via the GHZ
+orbit and the A_2 root system. This is the closing-the-gaps work
+that became its own paper after the directory reorganisation. Five
+theorems, four caveats closed.
 
-The session's earlier Paper 11 was about Theorem 11.5 (SM gauge
-group from three-qubit entanglement). That theorem is COMPLETE.
+**What Paper 12 adds:**
+Paper 11's "three qubits" are reinterpreted as the "three primes"
+in the BC Hecke algebra at small primes. The GHZ orbit is the
+spectral structure of the BC system. The A_2 root system is the
+algebraic content of the smallest Hecke algebra. Paper 11's gauge
+group derivation becomes one specific instance of Paper 12's larger
+arithmetic-to-physics chain.
 
-**The new Paper 11 SUBSUMES it:**
-Theorem 11.5 becomes one specific instance of the larger
-arithmetic-to-physics chain. The "three qubits" become the "three
-primes" in the BC Hecke algebra. The GHZ orbit becomes a Hecke
-orbit. The SU(3) gauge group emerges from the same structure but
-viewed from the multiplicative side.
+**Specific updates:**
+- Paper 11's introduction: add the forward reference to Paper 12's
+  Identity 12 and the BC interpretation of the three qubits.
+- Paper 11's "open question" of why three qubits get a structural
+  answer: three primes is the smallest non-trivial Hecke algebra
+  in the BC system.
 
-The mathematical content of Theorem 11.5 is preserved. The
-context changes: from "an interesting derivation of the SM gauge
-group" to "a specific instance of the framework being derivable
-from arithmetic."
+---
+
+## How Paper 11 and Paper 12 Relate
+
+Paper 11 and Paper 12 form a tightly coupled pair:
+
+| Paper 11 | Paper 12 |
+|----------|----------|
+| Three qubits on the e-circle | Three primes in the BC Hecke algebra |
+| GHZ orbit | BC spectral orbit |
+| A_2 root system | Smallest Hecke algebra |
+| SM gauge group SU(3) × SU(2) × U(1)/Z_6 | All 23 SM parameters from Riemann zeros |
+| Closes the gauge-group gap | Closes the geometric postulate gap |
+| Five theorems, four caveats | Twenty-three numerical correspondences |
+
+Paper 11 is the GAUGE GROUP. Paper 12 is everything else (CC,
+masses, couplings, cosmic timeline). Together they form the complete
+arithmetic-to-physics chain.
+
+---
+
+## What Paper 12 Subsumes
 
 ### The transposition of all framework theorems
 
-Paper 11 doesn't just subsume Theorem 11.5. It begins the
-transposition of ALL framework theorems to the Riemann side
-(via the program in Component 3).
+Paper 12 begins the transposition of ALL framework theorems to the
+Riemann side (via the program in Component 3).
 
 Each transposition is a NEW theorem in number theory (or a known
 theorem given a new physical interpretation).
 
 ---
 
-## How the Framework Looks After Paper 11
+## How the Framework Looks After Paper 12
 
-### Before Paper 11
+### Before Paper 12
 
 ```
 1 postulate (M⁴ × CP² × S² × S¹)
    ↓
-Papers 1-10 (everything in physics)
+Papers 1-11 (everything in physics, including SM gauge group)
 ```
 
-### After Paper 11
+### After Paper 12
 
 ```
 0 postulates (just the integers)
    ↓
-Paper 11 (the e-circle, the internal manifold are theorems)
+Paper 12 (the e-circle is a theorem; the 23 SM parameters
+          are projections of Riemann zeros)
    ↓
-Papers 1-10 (everything in physics)
+Paper 11 (the SM gauge group from three primes / three qubits)
+   ↓
+Papers 1-10 (everything else in physics)
 ```
 
 The framework is one theorem chain longer, but it has no physical
@@ -284,7 +318,7 @@ This is the END OF REDUCTIONISM in physics.
 
 ## What Doesn't Change
 
-Important: Paper 11 does NOT invalidate any result of Papers 1-10.
+Important: Paper 12 does NOT invalidate any result of Papers 1-11.
 All theorems, all derivations, all numerical predictions remain
 valid. They are just placed on a deeper foundation.
 
@@ -294,8 +328,10 @@ unchanged. They are still derived from the framework's compact
 geometry; they are now ALSO derivable from arithmetic.
 
 The framework's experimental tests (CMB-S4, DESI DR3, Euclid, JUNO,
-LHC) remain the SAME. Paper 11 doesn't change what we should look for
+LHC) remain the SAME. Paper 12 doesn't change what we should look for
 in experiments. It changes what the framework MEANS philosophically.
+It does, however, ADD sharper predictions (e.g., N_eff = 3.350,
+H_0 = 67.44, inflation = 58.79 e-folds).
 
 ---
 
@@ -303,37 +339,41 @@ in experiments. It changes what the framework MEANS philosophically.
 
 For readers approaching the framework:
 
-**Recommended reading order (after Paper 11 is complete):**
-1. Paper 1 (foundations, with Paper 11's perspective in the
+**Recommended reading order (after Paper 12 is complete):**
+1. Paper 1 (foundations, with Paper 12's perspective in the
    introduction)
-2. Paper 11 (the realisation that the e-circle is a theorem)
+2. Paper 12 (the realisation that the e-circle is a theorem and
+   the 23 Riemann formulas)
 3. Papers 2-8 (the physics derivations)
 4. Paper 9 (the patterns)
 5. Paper 10 (scheme-independence)
+6. Paper 11 (the gauge group from three qubits / three primes)
 
 **Alternative reading order (number theorists):**
-1. Paper 11 (the BC system → e-circle → physics chain)
-2. Papers 1-10 (the physics consequences)
-3. The transposition program (back to Paper 11's Component 3)
+1. Paper 12 (the BC system → e-circle → physics chain, the SM
+   parameters as Riemann projections)
+2. Paper 11 (the gauge group derivation)
+3. Papers 1-10 (the physics consequences)
+4. The transposition program (back to Paper 12's Component 3)
 
 ---
 
 ## The Mathematical-Physical Unity
 
-The deepest message of the framework, made explicit by Paper 11:
+The deepest message of the framework, made explicit by Paper 12:
 
 > Mathematics and physics are not two separate disciplines. They are
 > one. The integers force the universe.
 
 This is not philosophical handwaving. It is the LITERAL content of
-Paper 11:
+Paper 12:
 - The integers are foundational (mathematical fact).
 - The Bost-Connes system is the operator-algebraic realisation of
   the integers (mathematical theorem, Bost-Connes 1995).
 - The QG5D e-circle is unitarily equivalent to the BC system
   (mathematical theorem, Identity 12).
 - The QG5D framework derives all of physics from the e-circle
-  (Papers 1-10).
+  (Papers 1-11).
 - Therefore the integers determine the universe.
 
 Each link is a theorem (proved or to be proved). The chain is
@@ -343,10 +383,11 @@ explicit. The conclusion follows.
 
 ## The Bottom Line for the Framework
 
-Papers 1-10 made the framework the most parsimonious theory of
-physics: ONE postulate, EVERYTHING follows.
+Papers 1-11 made the framework the most parsimonious theory of
+physics: ONE postulate, EVERYTHING follows (including the SM
+gauge group, derived in Paper 11).
 
-Paper 11 makes the framework the most parsimonious theory in any
+Paper 12 makes the framework the most parsimonious theory in any
 discipline: ZERO physical postulates, EVERYTHING follows from
 mathematics.
 
@@ -355,5 +396,5 @@ and physics. The two are recognised as the same thing.
 
 ---
 
-*Ten papers. One postulate. Now eleven papers, and zero postulates.*
-*Paper 11 is not an addition. It is a foundation.*
+*Eleven papers. One postulate. Now twelve papers, and zero postulates.*
+*Paper 12 is not an addition. It is a foundation.*
