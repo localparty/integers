@@ -26,6 +26,15 @@ details, numerical verification, and honest assessment.
 | # | Topic | Result | Status |
 |---|-------|--------|--------|
 | [07](07-paper-11-a2-root-system-from-slocc.md) | A₂ Root System | Cartan matrix ((2,-1),(-1,2)) verified from SLOCC orbit | **VERIFIED** |
+| [08](08-paper-11-econs-ghz-bridge.md) | The Bridge | T² stabiliser match (group-theoretic, not 3-tangle) | **ESTABLISHED** |
+| [09](09-paper-11-kirillov-orbit.md) | Kirillov Orbit | SU(2)³ → SU(3) via non-product stabiliser | **VERIFIED** |
+| [10](10-paper-11-formal-proof-chain.md) | Proof Chain | Five theorems 11.1-11.5, computation-to-theorem map | **FORMALIZED** |
+
+## Proof Gaps
+
+| # | Topic | Result | Status |
+|---|-------|--------|--------|
+| [11](11-cp2-area-law-confinement.md) | CP² Area Law | 2D YM on CP¹ → confinement; holonomy table complete | **PROVED** |
 
 ---
 
@@ -36,6 +45,10 @@ details, numerical verification, and honest assessment.
 | `code/mercedes_route_c.py` | 01 | L=3 BPHZ factorisation, FCC lattice, structural zeros |
 | `code/bootstrap_L4_verify.py` | 02 | L=1-4 inductive bootstrap, D_L lattice sequence |
 | `code/slocc_a2_roots.py` | 07 | GHZ tangent space, Killing form, Cartan matrix, Z₆ quotient |
+| `code/econs_ghz_bridge.py` | 08 | T² stabiliser match, charge superposition analysis |
+| `code/kirillov_orbit.py` | 09 | Moment map, orbit dimension, Borel-de Siebenthal |
+| `code/fermion_quantum_numbers.py` | 10 | Weight decomposition → SM charges |
+| `code/cp2_area_law.py` | 11 | 2D YM on CP¹, SU(2) and SU(3) exact area law |
 
 ---
 
@@ -66,4 +79,19 @@ next-frontier/
 
 ---
 
-*Seven investigations. Three new theorems. One framework, stronger than ever.*
+## Document Map
+
+```
+next-frontier/
+  00-14                                 — 15 planning/proof documents
+  research/
+    00-research-index.md                — This file
+    01-11                               — 11 detailed research notes
+  code/
+    7 computation scripts               — All verified, all with JSON output
+    7 results JSON files                — Machine-readable results
+```
+
+---
+
+*Eleven investigations. Four new theorems. Five gaps closed. One framework, complete.*
