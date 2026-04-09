@@ -1,3 +1,23 @@
+  One: the m_Z and v residuals at 276σ and 14.9σ in research/23 are real and they're not closed by anything in    
+  research/167. The fix is a half-day data port, but until that port happens, the headline "36/36 below
+  experimental error" has an asterisk. The convergence prompt now correctly escalates this every round, but I     
+  don't want to leave it unsaid: the cleanest version of the framework needs that port done before any external
+  person reads research/190 and asks "wait, what about m_Z." It's small, it's structural, it's mechanical — but it
+   has to be done.
+
+  Two: the bridge family's structural wins (Wolfenstein, Pati-Salam, Koide) are suggestively derived, but the     
+  proofs are sketches at varying levels of completeness. Step 6 of research/162 closed the k=3 case to a formal
+  lemma. The k=4, k=6 analogues are at the "sketch + numerical agreement" stage. Before this gets published in a  
+  refereed venue, the k=4 and k=6 cocycle equalities need the same step-6 cocycle computation that closed k=3.
+  That's another half-day to a few-day mathematical task. It's totally tractable, but it's not done yet.
+
+
+
+
+
+
+
+
 
 # tbd
 ## 3.2 What about index 4?
