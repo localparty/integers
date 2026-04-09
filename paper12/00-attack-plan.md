@@ -374,6 +374,8 @@ added in numerical order. The current ledger entries:
 | 01 | 01-phase-1-adiabatic-closed.md | **Phase 1 CLOSED** (2026-04-09) |
 | 02 | 02-phase-2-quantize-R.md | **Phase 2 partially CLOSED** (construction done; selection rule deferred to thread 3e) |
 | 03 | 03-phase-3-plan.md | **Phase 3 PLAN** (four sub-phases: 3.A inner derivations, 3.B transposition, 3.C RH as physical theorem [Paper 12 capstone], 3.D RH as math theorem [sequel program]) |
+| 04 | 04-sub-phase-3a-identity-12.md | **Sub-phase 3.A, thread 3a CLOSED** (2026-04-09): Identity 12 (e-circle = BC system) is now a theorem |
+| 05 | 05-thread-3b-cc-formula-derived.md | **Sub-phase 3.A, thread 3b: CC formula structurally derived** (2026-04-09); leading term rigorous, sign and 1/γ_m form forced by PT, exact coefficients deferred |
 
 Research notes (`paper12/research/NN-*.md`):
 
@@ -382,6 +384,8 @@ Research notes (`paper12/research/NN-*.md`):
 | 01 | research/01-adiabatic-closure.md | Formal closure of adiabatic continuity at N = 3 (Phase 1) |
 | 02 | research/02-quantize-R-construction.md | The construction of R̂ on the BC GNS space, spectrum {R_n}, identification R_1 = R_obs |
 | 03 | research/03-quantize-R-selection-rule.md | Three candidates for the n = 1 selection rule + the sharpest open problem |
+| 04 | research/04-identity-12-rigorous.md | The unitary equivalence U: H_e → H_1^{(N\*)}, intertwining 5 operator pairs, the rigorous form of Identity 12 (thread 3a) |
+| 05 | research/05-derive-cc-formula.md | The 5 ppb CC formula derived structurally: leading term as eigenvalue, sign as Rayleigh–Schrödinger PT, 1/γ_m form as energy denominators, alternating signs as third-order interference, log term as RG running, roadmap to exact coefficients (thread 3b) |
 
 (Entries are added as the work proceeds.)
 
