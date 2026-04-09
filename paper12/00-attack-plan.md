@@ -169,11 +169,11 @@ this value rather than 2× or 1/2× the BC formula.
 >   \mathrm{spec}(\hat R) \;=\; \bigl\{\,R_n \;:\; n = 1, 2, 3, \ldots\bigr\},
 >   \qquad
 >   R_n \;=\; \frac{\ell_{\mathrm{P}}}{\pi}\,
->             \exp\!\bigl(\gamma_n\pi^{2}/2 \;-\; \log\pi\bigr).
+>             \exp\!\bigl(\gamma_n\pi^{2}/2\bigr).
 > $$
 >
 > The QG5D e-circle radius is the n = 1 eigenvalue:
-> R = R_1 = R_obs.
+> R = R_1 = R_obs (10.10 μm at leading order, 5 ppb with corrections).
 
 The theorem turns R from "an observed parameter consistent with the
 BC formula" into "the unique smallest eigenvalue of an arithmetic
@@ -229,22 +229,26 @@ much of Phase 3 from "formula matching" into "spectral computation".
 
 ### 3.5 Definition of done
 
-- A `research/02-quantize-R-construction.md` file constructs R̂
-  explicitly on the BC GNS space with the spectrum claim proved.
-- A `research/03-quantize-R-selection-rule.md` file addresses why
-  n = 1 (or, if the answer is "n = 1 is empirical", documents the
-  selection rule as the next open problem).
-- A root ledger file `02-phase-2-status.md` records the status with
-  a one-sentence summary and links to the research files.
-- Component 4 of `preprint/` (the three derivation targets) is
-  updated to mark "derive R from BC" as DONE or IN PROGRESS with
-  current status.
+- [x] A `research/02-quantize-R-construction.md` file constructs R̂
+      explicitly on the BC GNS space with the spectrum claim proved
+      (rigorous given {γ_n} ⊂ spec(T_BC), conditional on
+      Hilbert–Pólya for equality).
+- [x] A `research/03-quantize-R-selection-rule.md` file analyses
+      three candidates for the n = 1 selection rule and identifies
+      the cosmic transition amplitudes as the sharpest open problem
+      (deferred to thread 3e of Phase 3).
+- [x] A root ledger file `02-phase-2-quantize-R.md` records the
+      partial closure with a one-sentence summary and pointers to
+      the research files.
+- [ ] Component 4 of `preprint/` (the three derivation targets) is
+      updated to mark "derive R from BC" as IN PROGRESS with current
+      status (next action).
 
 ### 3.6 Estimated effort
 
-Weeks to months. This is the new physics. Phases 1 and 3 are
-bookkeeping and long-tail filling; Phase 2 is the result that
-defines whether Paper 12 is a manuscript or a research programme.
+Weeks to months. **Construction half closed 2026-04-09. Selection-
+rule half partially closed (combined heuristic argument; first-
+principles derivation deferred to thread 3e of Phase 3).**
 
 ---
 
@@ -356,12 +360,15 @@ added in numerical order. The current ledger entries:
 |---|------|--------|
 | 00 | 00-attack-plan.md | this file |
 | 01 | 01-phase-1-adiabatic-closed.md | **Phase 1 CLOSED** (2026-04-09) |
+| 02 | 02-phase-2-quantize-R.md | **Phase 2 partially CLOSED** (construction done; selection rule deferred to thread 3e) |
 
 Research notes (`paper12/research/NN-*.md`):
 
 | # | File | Topic |
 |---|------|-------|
 | 01 | research/01-adiabatic-closure.md | Formal closure of adiabatic continuity at N = 3 (Phase 1) |
+| 02 | research/02-quantize-R-construction.md | The construction of R̂ on the BC GNS space, spectrum {R_n}, identification R_1 = R_obs |
+| 03 | research/03-quantize-R-selection-rule.md | Three candidates for the n = 1 selection rule + the sharpest open problem |
 
 (Entries are added as the work proceeds.)
 
