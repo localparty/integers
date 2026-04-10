@@ -315,6 +315,29 @@ point P_K has infinite order. By Kolyvagin (Theorem 12.3),
 rank(E(K)) = 1 and Sha(E/K) is finite. By the CM descent,
 rank(E(Q)) = 1 and Sha(E/Q) is finite.  □
 
+**Remark 12.6 (Rank-1 vacuity).** An important observation: GRH for
+the Hecke L-function $L(s, \psi)$ implies $L(1, \psi) \neq 0$, since
+$\operatorname{Re}(1) = 1 \neq 1/2$ places $s = 1$ off the critical
+line. Since $L(E, s) = L(s, \chi_K) \cdot L(s, \psi)$ and both factors
+are non-vanishing at $s = 1$ (by GRH, Theorem 9.2), we have
+$L(E, 1) \neq 0$ for *every* CM curve in scope. This means the analytic
+rank is 0 for all such curves, and the rank-1 case of Theorem 12.5 is
+**vacuously satisfied** — there are no CM curves over $\mathbb{Q}$ with
+CM by a class-number-1 imaginary quadratic field that have analytic
+rank $\geq 1$ over $\mathbb{Q}$.
+
+This is not a defect: Theorem 12.5 is a valid conditional statement
+("if $\operatorname{ord}_{s=1} = 1$, then..."), and the vacuity of the
+hypothesis is itself a consequence of GRH. The substantive content of
+BSD for CM curves in scope is entirely in the rank-0 case (Theorem 11.3),
+which is non-vacuously proved. Theorem 12.5 is included for logical
+completeness and because the argument is instructive.
+
+For completeness: CM curves *can* have positive analytic rank over larger
+number fields (e.g., over the CM field $K$ itself via base change).
+This setting is not addressed by the present theorem, which concerns
+$E/\mathbb{Q}$.
+
 For the leading coefficient formula at rank 1, BSD asserts:
 
     L'(E, 1) / ĥ(P) = (|Sha| · Ω · ∏ c_p · R) / |E(Q)_tors|²

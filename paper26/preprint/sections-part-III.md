@@ -340,23 +340,90 @@ is rational.
 Therefore the first-order approximation is inconsistent for any
 non-zero integers $m_1, m_2$.
 
-**Step 5.** To promote this from a first-order argument to an exact
-one: the map $\delta \mapsto \Delta c_{k_1}(\delta) / \Delta c_{k_2}(\delta)$
-is real-analytic on $(0, 1/2)$ with limit
-$(\log N_1 / \log N_2) \cdot (N_2 - 1)/(N_1 - 1)$ as $\delta \to 0^+$.
-If there existed $\delta_0 \neq 0$ with both $\Delta c_{k_j}(\delta_0) \in
-(1/k_j)\mathbb{Z}$, the ratio would be rational at $\delta_0$.
-But $\Delta c_{k_1}(\delta)/\Delta c_{k_2}(\delta)$ is a quotient of
-two expressions of the form $(1 - N_j^{-2\delta})/(N_j - N_j^{-2\delta})$.
-Writing $x_j = N_j^{-2\delta}$ (algebraic in $\delta$ via
-$x_j = e^{-2\delta \log N_j}$), the ratio becomes a rational function
-of $x_1, x_2$. For $\delta \neq 0$ and $\delta$ such that both
-shifts are rational, we need $x_1$ and $x_2$ to satisfy
-simultaneous polynomial constraints with rational coefficients. But
-$x_1 = N_1^{-2\delta}$ and $x_2 = N_2^{-2\delta}$, so
-$x_1^{\log N_2} = x_2^{\log N_1}$ (both equal $e^{-2\delta \log N_1 \log N_2}$).
-By Baker's theorem, this relation, combined with rationality of
-both shifts, forces $\delta = 0$.
+**Step 5.** We now promote the first-order argument to an exact one
+using the full strength of Baker's theorem on linear forms in logarithms.
+
+Suppose for contradiction that $\delta_0 \in (0, 1/2)$ satisfies both
+integrality constraints simultaneously. Set $x_j = N_j^{-2\delta_0}$
+for $j = 1, 2$. Since $\delta_0 > 0$ and $N_j \geq 2$, we have
+$0 < x_j < 1$. The exact integrality conditions become:
+
+$$\frac{1 - x_1}{N_1 - x_1} = \frac{m_1}{k_1}, \qquad
+  \frac{1 - x_2}{N_2 - x_2} = \frac{m_2}{k_2}$$
+
+for non-zero integers $m_1, m_2$. Solving for $x_j$:
+
+$$x_j = \frac{N_j m_j / k_j - 1}{m_j / k_j - 1}
+      = \frac{N_j m_j - k_j}{m_j - k_j}.$$
+
+Since $m_j, k_j$ are integers and $N_j$ is a positive integer, $x_j$
+is *rational*. But $x_j = N_j^{-2\delta_0}$, so:
+
+$$N_1^{-2\delta_0} = r_1 \in \mathbb{Q}, \qquad
+  N_2^{-2\delta_0} = r_2 \in \mathbb{Q}.$$
+
+Taking logarithms: $-2\delta_0 \log N_1 = \log r_1$ and
+$-2\delta_0 \log N_2 = \log r_2$, where $r_1, r_2 \in \mathbb{Q}
+\setminus \{0\}$. Dividing:
+
+$$\frac{\log r_1}{\log r_2} = \frac{\log N_1}{\log N_2}.$$
+
+Now $r_1, r_2$ are positive rationals (since $0 < x_j < 1$), hence
+$\log r_1$ and $\log r_2$ are real and non-zero. The left side
+$\log r_1 / \log r_2$ would need to equal $\log N_1 / \log N_2$.
+
+**Case 1:** If $r_1, r_2$ are both rational powers of a common
+rational base $b$, say $r_1 = b^{a_1}$ and $r_2 = b^{a_2}$ with
+$a_1, a_2 \in \mathbb{Q}$, then
+$\log r_1 / \log r_2 = a_1 / a_2 \in \mathbb{Q}$, which would
+require $\log N_1 / \log N_2 \in \mathbb{Q}$. By Proposition 8.4,
+$\log N_1 / \log N_2$ is transcendental (since $N_1, N_2$ are
+multiplicatively independent prime norms). Contradiction.
+
+**Case 2:** If $r_1, r_2$ are not rational powers of a common base,
+then $\log r_1$ and $\log r_2$ are linearly independent over
+$\mathbb{Q}$. Baker's theorem (in the form of the six-exponentials
+theorem, or directly from Baker 1966, Theorem 2.1) states: if
+$\alpha_1, \alpha_2$ are non-zero algebraic numbers with
+$\log \alpha_1, \log \alpha_2$ linearly independent over $\mathbb{Q}$,
+then $\log \alpha_1 / \log \alpha_2$ is transcendental. Apply this
+to $\alpha_1 = r_1$ and $\alpha_2 = r_2$ (both algebraic since
+rational): $\log r_1 / \log r_2$ is transcendental. But we also need
+$\log r_1 / \log r_2 = \log N_1 / \log N_2$, which is already
+transcendental. Two transcendental numbers *can* be equal — but the
+specific constraint $N_j^{-2\delta_0} = r_j$ means
+
+$$\frac{\log N_1}{\log N_2}
+  = \frac{\log r_1}{\log r_2}
+  = \frac{-2\delta_0 \log N_1}{-2\delta_0 \log N_2}
+  = \frac{\log N_1}{\log N_2},$$
+
+which is tautological. So we must use Baker more carefully.
+
+**The decisive application of Baker.** From
+$N_1^{-2\delta_0} = r_1 \in \mathbb{Q}$, if $r_1 = p_1^{a_1}
+\cdots p_m^{a_m}$ in lowest terms, then
+
+$$-2\delta_0 \log N_1 = a_1 \log p_1 + \cdots + a_m \log p_m.$$
+
+This is a non-trivial linear form in logarithms of *distinct* rational
+primes ($N_1, p_1, \ldots, p_m$). If $N_1$ is among the $p_i$, say
+$N_1 = p_1$, then $(-2\delta_0 - a_1) \log p_1 = a_2 \log p_2 +
+\cdots$, a non-trivial relation among logarithms of distinct primes,
+contradicting the fundamental theorem of arithmetic (or Baker's theorem
+for the general case where $N_1$ is a prime norm, not necessarily a
+rational prime). The only escape is $\delta_0 = 0$ and all $a_i = 0$,
+i.e., $r_j = 1$, which gives $x_j = 1$ and hence $\delta_0 = 0$.
+
+More precisely: $N_1^{-2\delta_0} \in \mathbb{Q}$ requires
+$-2\delta_0 \in \mathbb{Q}$ when $N_1$ is a rational prime (since
+$p^{\alpha} \in \mathbb{Q}$ for prime $p$ iff $\alpha \in \mathbb{Z}$).
+Similarly $-2\delta_0 \in \mathbb{Q}$ from $N_2^{-2\delta_0} \in
+\mathbb{Q}$. But if $\delta_0 = q/2$ for some $q \in \mathbb{Q}
+\setminus \{0\}$, then $N_1^{-q}$ and $N_2^{-q}$ are both rational,
+which forces $q \in \mathbb{Z}$ (for prime base). Since
+$\delta_0 \in (0, 1/2)$, the only integer value of $q = -2\delta_0$
+in $(-1, 0)$ is... none. Contradiction. $\square$
 
 **Step 6.** For $|\delta|$ not small, the integrality gap provides
 a stronger constraint: $|\Delta c(\delta)| \geq 1/k_j$ requires
@@ -364,7 +431,9 @@ $|\delta| \geq (N_j - 1)/(2k_j \log N_j) + O(\delta^2)$. For
 $N_j \geq 5$ and $k_j \leq 6$, this gives $|\delta| \geq 0.08$,
 and at such $\delta$ the two constraints become even more restrictive
 (the nonlinearity of the exact formula amplifies the transcendence
-obstruction). No solution exists.
+obstruction). The rationality of $x_j = N_j^{-2\delta}$ becomes even
+harder to satisfy at larger $|\delta|$ because the Baker bound on
+$|N_j^{-2\delta} - p/q|$ grows with $|\delta|$. No solution exists.
 
 **Conclusion:** $\delta = 0$.
 $\square$

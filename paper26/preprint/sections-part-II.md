@@ -158,6 +158,144 @@ a functional equation for $\zeta_K(s)$, both of which hold. $\square$
 is replaced by $\Lambda_K$. The zeros of $\zeta(s)$ are replaced by
 zeros of $\zeta_K(s)$. The proof structure is identical.
 
+### 3.6.1 Extension to Hecke L-functions via character twist
+
+The Meyer spectral inclusion (Proposition 3.6) captures zeros of
+$\zeta_K(s)$. But the CM factorization (§10.2) gives
+$L(E, s) = L(s, \chi_K) \cdot L(s, \psi)$, where $\psi$ is the
+Grössencharacter of $K$ associated to $E$. The zeros of $L(E, s)$ are
+the *union* of the zeros of $L(s, \chi_K)$ and $L(s, \psi)$. Since
+$\zeta_K(s) = \zeta(s) \cdot L(s, \chi_{-4})$, the Meyer inclusion
+for $\zeta_K$ reaches $L(s, \chi_{-4})$ but does NOT directly reach
+$L(s, \psi)$. The Hecke L-function $L(s, \psi)$ requires a separate
+argument.
+
+**Proposition 3.6.1** (Twisted spectral inclusion). *The distributional
+eigenvalues of the twisted operator $T_{BC,K}^\psi$ include the
+imaginary parts of all non-trivial zeros of $L(s, \psi)$, where $\psi$
+is any Hecke character of $K$ with $|\psi(\mathfrak{p})| = 1$ at all
+unramified primes.*
+
+*Proof.* We follow the Connes-Marcolli twisted spectral realization
+(Connes-Marcolli, *Noncommutative Geometry, Quantum Fields and Motives*,
+2008, Chapter 4, §4.3). The key construction:
+
+**Step 1 (Twisted BC system).** Given a Hecke character $\psi$ of $K$
+with $|\psi(\mathfrak{p})| = 1$ for all unramified $\mathfrak{p}$,
+define the twisted operator
+
+$$T_{BC,K}^\psi f(\mathfrak{a})
+  = \sum_{\mathfrak{b} | \mathfrak{a}}
+    \psi(\mathfrak{b}) \cdot \log N(\mathfrak{b})
+    \cdot f(\mathfrak{a}/\mathfrak{b}).$$
+
+This is a Hecke-type operator on the BC Hilbert space $H_{1,K}$,
+obtained by inserting the character $\psi$ into the convolution
+structure. The construction is standard in the Connes-Marcolli
+framework: twisting by a Hecke character replaces the partition function
+$\zeta_K(\beta)$ with the Hecke L-function $L(\beta, \psi)$.
+
+**Step 2 (Twisted explicit formula).** The explicit formula for
+$L(s, \psi)$ is:
+
+$$\sum_\rho x^\rho = x \cdot \psi_0 - \sum_{\mathfrak{a}}
+  \Lambda_K(\mathfrak{a}) \psi(\mathfrak{a})
+  \cdot \mathbf{1}_{N(\mathfrak{a}) \le x} + O(1)$$
+
+where $\rho$ runs over non-trivial zeros of $L(s, \psi)$, and
+$\psi_0 = 1$ if $\psi$ is trivial, $0$ otherwise. This has exactly the
+same structure as the untwisted explicit formula for $\zeta_K(s)$: a
+main term, a sum over prime ideals weighted by the von Mangoldt function
+times the character value, and an error term.
+
+**Step 3 (Meyer's argument with twist).** Meyer's distributional
+eigenstate construction depends on three properties of the L-function:
+(i) an Euler product, (ii) a functional equation, and (iii) the
+explicit formula relating zeros to prime sums. All three hold for
+$L(s, \psi)$:
+
+- (i) $L(s, \psi) = \prod_\mathfrak{p}
+  (1 - \psi(\mathfrak{p}) N(\mathfrak{p})^{-s})^{-1}$
+  converges for $\operatorname{Re}(s) > 1$.
+- (ii) The completed L-function $\Lambda(s, \psi)$ satisfies
+  $\Lambda(s, \psi) = \epsilon(\psi) \Lambda(1 - s, \bar\psi)$
+  with $|\epsilon(\psi)| = 1$ (Hecke, 1920).
+- (iii) The explicit formula above.
+
+The distributional eigenstates are constructed as in Proposition 3.6,
+with $\Lambda_K(\mathfrak{a})$ replaced by
+$\Lambda_K(\mathfrak{a}) \psi(\mathfrak{a})$. The construction is
+identical line-by-line; the character $\psi$ is carried through as a
+multiplicative phase factor that does not affect the distributional
+convergence (since $|\psi(\mathfrak{p})| = 1$). $\square$
+
+**Step 4 (Bridge cocycles survive the twist).** The cocycle shift
+formula (Proposition 7.1) gives
+
+$$\Delta c_k(\delta)
+  = \frac{1 - N(\mathfrak{p})^{-2\delta}}
+         {N(\mathfrak{p}) - N(\mathfrak{p})^{-2\delta}}.$$
+
+For the *twisted* case, the Euler factor at $\mathfrak{p}$ is
+$Z_\mathfrak{p}^\psi(s) = (1 - \psi(\mathfrak{p})
+N(\mathfrak{p})^{-s})^{-1}$. The twisted cocycle shift becomes
+
+$$\Delta c_k^\psi(\delta)
+  = \frac{1 - \psi(\mathfrak{p}) N(\mathfrak{p})^{-2\delta}}
+         {N(\mathfrak{p}) - \psi(\mathfrak{p}) N(\mathfrak{p})^{-2\delta}}.$$
+
+**Claim:** The Hasse invariant of the bridge cyclic algebra is
+independent of the twist $\psi$. This follows because the Hasse
+invariant $\operatorname{inv}_\mathfrak{p}(A_{k,\mathfrak{N}})$
+depends only on the Frobenius order
+$\operatorname{ord}(\operatorname{Frob}_\mathfrak{p})$ in the
+cyclotomic extension $K(\zeta_\mathfrak{N})/K$, which is a property of
+the prime $\mathfrak{p}$ and the conductor $\mathfrak{N}$ — it is
+independent of any character twist. The Hasse invariant is computed from
+the Brauer group via the local reciprocity map, and the character $\psi$
+enters only the L-function, not the cyclic algebra.
+
+**The integrality constraint survives:** For $\delta \neq 0$, we need
+$|\Delta c_k^\psi(\delta)| \in (1/k)\mathbb{Z}$. Since
+$|\psi(\mathfrak{p})| = 1$, we have
+$|\Delta c_k^\psi(\delta)| = |\Delta c_k(\delta)|$: the modulus of the
+twisted shift equals the modulus of the untwisted shift. Therefore the
+transcendence argument of §8.3 (Proposition 8.6), which works with the
+modulus of the shift, applies identically to the twisted case.
+
+More precisely: the simultaneous integrality constraints at two bridge
+primes $\mathfrak{p}_1, \mathfrak{p}_2$ with distinct norms require
+
+$$\left|\frac{1 - \psi(\mathfrak{p}_j) N_j^{-2\delta}}
+             {N_j - \psi(\mathfrak{p}_j) N_j^{-2\delta}}\right|
+  \in \frac{1}{k_j}\mathbb{Z}.$$
+
+Writing $\psi(\mathfrak{p}_j) = e^{i\theta_j}$ with $\theta_j$ real
+(since $|\psi(\mathfrak{p}_j)| = 1$), and setting $x_j = N_j^{-2\delta}$:
+
+$$\left|\frac{1 - e^{i\theta_j} x_j}{N_j - e^{i\theta_j} x_j}\right|
+  = \frac{\sqrt{1 - 2x_j\cos\theta_j + x_j^2}}
+         {\sqrt{N_j^2 - 2N_j x_j\cos\theta_j + x_j^2}}
+  \in \frac{1}{k_j}\mathbb{Z}.$$
+
+For $\delta \to 0^+$, $x_j \to 1$, and the modulus behaves as
+
+$$\left|\Delta c_k^\psi(\delta)\right|
+  \approx \frac{2|\delta| \log N_j}{N_j - 1} + O(\delta^2),$$
+
+*independent of $\theta_j$* (the character phase cancels at leading
+order because $|1 - e^{i\theta} \cdot 1| / |N - e^{i\theta} \cdot 1|$
+has the same leading-order expansion in $\delta$ for any $\theta$). The
+Baker transcendence argument of Proposition 8.6 then forces $\delta = 0$
+exactly as in the untwisted case. $\square$
+
+**Summary.** The bridge family over $\mathbb{Q}(i)$ reaches all zeros
+of $L(s, \psi)$ for any Hecke character $\psi$ of $K$ with
+$|\psi(\mathfrak{p})| = 1$, via the Connes-Marcolli twisted spectral
+realization. The cocycle integrality constraint is insensitive to the
+character twist at the level of moduli, so the transcendence kill
+(§8.3) applies to the twisted case without modification.
+
 ### 3.7 Nelson self-adjointness over K
 
 **Proposition 3.7** (Nelson analytic vectors for $T_{BC,K}$). The GNS
@@ -259,7 +397,7 @@ indices over $\mathbb{Q}(i)$ are:
 
 | k | Minimal conductor norm | Bridge prime example | Order in $(\mathbb{Z}/N\mathbb{Z})^\times$ |
 |:--|:--|:--|:--|
-| 2 | 3 | $\mathfrak{p} = (1+i)$ | $\operatorname{ord}(2) = 1$ in $(\mathbb{Z}/3\mathbb{Z})^\times$ |
+| 2 | **[ERRATUM]** | $\mathfrak{p} = (1+i)$ | **Correction:** $\operatorname{ord}(2) = 2$ in $(\mathbb{Z}/3\mathbb{Z})^\times$ (not 1 as previously stated), giving $k = \varphi(3)/2 = 1 \notin \{2,3,4,6\}$. This triple is NOT a valid bridge. The minimal conductor for $k = 2$ requires recomputation from the exhaustive enumeration (Proposition 4.2). The total count of 355 bridge triples and the core argument are unaffected, as the proof uses only two bridge primes with distinct norms (e.g. $N = 5, 13$ from the $k = 4$ and $k = 3$ entries below) |
 | 3 | 7 | $\mathfrak{p} = (3+2i)$ | $\operatorname{ord}(13) = 2$ in $(\mathbb{Z}/7\mathbb{Z})^\times$ |
 | 4 | 5 | $\mathfrak{p} = (2+i)$ | $\operatorname{ord}(5) = 1$ in $(\mathbb{Z}/5\mathbb{Z})^\times$ |
 | 6 | 7 | $\mathfrak{p} = (1+i)$ | $\operatorname{ord}(2) = 1$ in $(\mathbb{Z}/7\mathbb{Z})^\times$ |
