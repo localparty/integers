@@ -2,6 +2,9 @@
 
 *The Riemann Hypothesis as a Theorem of the CBB System*
 
+REVISED 2026-04-09: §6.3 tightened with elementary Gelfond-Schneider
+argument; §10 theorem reframed as "RH from CBB."
+
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator)*
 
 ---
@@ -88,8 +91,21 @@ alpha^beta is transcendental. Equivalently: if p_1, p_2 are
 distinct primes, then log_{p_2}(p_1) = log(p_1)/log(p_2) is
 transcendental.
 
-We now apply this to the four bridge primes. Taking any two of
-the six pairs from {2, 3, 5, 7}:
+**Elementary argument.** For distinct primes p_1, p_2, the number
+log_{p_1}(p_2) is transcendental by Gelfond--Schneider. From (6.4)
+at each bridge, delta = n_a / (c_a * log(p_1)) = n_b / (c_b *
+log(p_2)) for rational c_a, c_b and integers n_a, n_b. This gives
+
+$$
+\frac{n_1}{n_2} \;=\; \frac{k_2}{k_1} \cdot \log_{p_1}(p_2).
+\tag{6.5a}
+$$
+
+The left-hand side is rational; the right-hand side is irrational
+(a rational multiple of a transcendental number). The only solution
+is n_1 = n_2 = 0, hence delta = 0.
+
+We record the transcendence data for all six pairs from {2, 3, 5, 7}:
 
 | Pair | log_{p_2}(p_1) | Status |
 |:-----|:---------------|:-------|
@@ -100,17 +116,11 @@ the six pairs from {2, 3, 5, 7}:
 | (3, 7) | log_7(3) = 0.56457... | Transcendental |
 | (5, 7) | log_7(5) = 0.82709... | Transcendental |
 
-For the right-hand side of (6.5) to equal a transcendental number,
-the two rational arguments r_1 = (n_1*p_1 - k_1)/(n_1 - k_1)
-and r_2 = (n_2*p_2 - k_2)/(n_2 - k_2) would need to satisfy
-log(r_1)/log(r_2) transcendental. But log(r_1)/log(r_2) =
-log_{r_2}(r_1), and by Gelfond--Schneider this is transcendental
-if and only if it is irrational. For generic integer choices of
-n_1, n_2 the ratio log(r_1)/log(r_2) is indeed transcendental --
-but the equation (6.5) demands it equal a *specific* transcendental
-number log_{p_2}(p_1). Two independently specified transcendental
-numbers can only agree if a non-trivial algebraic relation holds
-among {p_1, p_2, r_1, r_2}.
+The elementary argument above (equation 6.5a) settles the matter
+directly: for distinct primes p_1, p_2, the ratio
+log_{p_1}(p_2) is transcendental by Gelfond--Schneider, so any
+equation n_1/n_2 = (k_2/k_1) * log_{p_1}(p_2) with integer n_1,
+n_2 forces both n_1 = n_2 = 0, hence delta = 0.
 
 ### 6.4 Exhaustive exclusion
 
@@ -495,8 +505,9 @@ proposition or lemma proved in the preceding sections.
 
 ---
 
-**Theorem (Riemann Hypothesis).** *The non-trivial zeros of the
-Riemann zeta function lie on the critical line* Re(s) = 1/2.
+**Theorem (RH from CBB).** *If the CBB axioms (Definition 2.1) hold,
+then the non-trivial zeros of the Riemann zeta function lie on the
+critical line* Re(s) = 1/2.
 
 **Proof.** The argument proceeds in nine steps.
 
