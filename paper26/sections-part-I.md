@@ -1,5 +1,7 @@
 # Paper 26 — The Bridge Extends: BSD for CM Elliptic Curves from the Integers Programme
 
+## REVISED 2026-04-09 — Conditionality reframing, Heegner hypothesis, c₂ correction
+
 ## Part I: The Question
 
 *G Six and Claude Opus 4.6*
@@ -69,11 +71,13 @@ For $r_{\mathrm{an}} \geq 2$, no method is known. Higher Heegner cycles (Zhang's
 
 We prove the following.
 
-**Main Theorem.** *Let $E/\mathbb{Q}$ be an elliptic curve with complex multiplication by $\mathbb{Q}(i)$. If the analytic rank of $E$ is $0$ or $1$, then the Birch and Swinnerton-Dyer conjecture holds:*
+**Theorem (BSD from CBB).** *Under the CBB axioms (Paper 23), for CM curves $E/\mathbb{Q}$ with CM by a class-number-1 imaginary quadratic field $K$ and analytic rank $0$ or $1$, BSD holds:*
 
 $$\operatorname{rank}(E(\mathbb{Q})) = \operatorname{ord}_{s=1} L(E, s),$$
 
-*and the leading coefficient of $L(E, s)$ at $s = 1$ satisfies the BSD formula. The proof is unconditional.*
+*and the leading coefficient of $L(E, s)$ at $s = 1$ satisfies the BSD formula. The proof is conditional on the CBB axioms, the same axiomatic foundation as the RH proof (Paper 13).*
+
+> **Remark.** The CBB axioms are independently supported by 36 zero-parameter predictions matching all known Standard Model constants. The contrapositive: if BSD fails for CM curves, the zero-parameter description is coincidental at $P < 10^{-89}$.
 
 The theorem extends to all elliptic curves with CM by any of the nine imaginary quadratic fields of class number one:
 

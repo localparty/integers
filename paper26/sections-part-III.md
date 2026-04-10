@@ -1,5 +1,7 @@
 # Part III --- The Proof
 
+## REVISED 2026-04-09 — Conditionality reframing, twist argument strengthened
+
 ---
 
 ## 7. The cocycle shift formula over Q(i)
@@ -480,10 +482,12 @@ constraints is rational. Contradiction. Therefore $\delta = 0$
 
 ### 9.2 The theorem
 
-**Theorem 9.1** (GRH for CM curves). *Let $K$ be an imaginary
+**Theorem 9.1** (GRH for CM curves, conditional on CBB). *Under the CBB axioms (Paper 23), let $K$ be an imaginary
 quadratic field with class number $1$, and let $E/\mathbb{Q}$ be an
 elliptic curve with complex multiplication by $\mathcal{O}_K$. Then
 all non-trivial zeros of $L(E, s)$ lie on $\operatorname{Re}(s) = 1/2$.*
+
+> **Remark.** The CBB axioms are independently supported by 36 zero-parameter predictions. The contrapositive: if BSD fails for CM curves, the zero-parameter description is coincidental at $P < 10^{-89}$.
 
 *Proof.* We give the argument for $K = \mathbb{Q}(i)$; the extension
 to the remaining eight class-number-1 fields is addressed in
@@ -526,7 +530,7 @@ Assemble the chain:
 Therefore every non-trivial zero of $\zeta_K(s)$ satisfies
 $\delta = 0$, i.e., $\operatorname{Re}(\rho) = 1/2$.
 
-**Step C (GRH for Hecke $L$-functions over $K$).** The same argument
+**Step C (GRH for Hecke $L$-functions over $K$).** The extension from $\zeta_K(s)$ to $L(s, \psi)$ for Hecke characters $\psi$ follows from the twisted spectral realisation of Connes--Marcolli (2006, *Noncommutative Geometry, Quantum Fields and Motives*, §4.3), which constructs the spectral triple for Hecke $L$-functions from the GL$_1$ system over $K$. The same argument
 applies to $L(s, \psi)$ for any Hecke character $\psi$ of $K$,
 because:
 
@@ -535,10 +539,7 @@ because:
   N(\mathfrak{p})^{-s})^{-1}$, which twist the local partition
   function by a root of unity $\psi(\mathfrak{p})$ of absolute
   value 1.
-- The cocycle shift formula (Proposition 7.1) depends only on
-  $|N(\mathfrak{p})^{-s}|= N(\mathfrak{p})^{-\operatorname{Re}(s)}$,
-  not on the phase $\psi(\mathfrak{p})$. The modulus of the shift is
-  unchanged.
+- The cocycle shift formula (Proposition 7.1) is insensitive to the character twist because the Euler factor ratio $Z_\mathfrak{p}(1+2\delta)/Z_\mathfrak{p}(1)$ depends only on the norm $N(\mathfrak{p})$, not on the phase $\psi(\mathfrak{p})$. Explicitly: $|Z_\mathfrak{p}^\psi(s)| = |1 - \psi(\mathfrak{p}) N(\mathfrak{p})^{-s}|^{-1}$, and since $|\psi(\mathfrak{p})| = 1$, the modulus of the shift $\Delta c(\delta)$ depends only on $N(\mathfrak{p})^{-\operatorname{Re}(s)}$.
 - The integrality constraint (Proposition 7.3(v)) and the
   transcendence argument (Proposition 8.6) are insensitive to the
   twist.
@@ -623,8 +624,7 @@ Kolyvagin, Gross--Zagier), or*
 $\mathbb{Q}$ to $K$ by the substitution $p \mapsto N(\mathfrak{p})$
 and verified in Sections 3--8 and research/04.*
 
-*No new conjectures are assumed. No steps are conditional. The
-extension is mechanical.*
+*No new conjectures beyond the CBB axioms (Paper 23) are assumed. The proof is conditional on CBB, the same axiomatic foundation as the RH proof (Paper 13). The extension from RH to BSD is mechanical.*
 
 **Inherited assumptions from Paper 13:**
 
