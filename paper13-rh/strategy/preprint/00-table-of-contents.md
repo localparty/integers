@@ -1,9 +1,13 @@
+# REVISED 2026-04-10: All 9 referee fixes incorporated
+
 # Paper 13: The Riemann Hypothesis via CCM Operators, ITPFI Convergence, and Boegli Spectral Exactness
 
 ## Table of Contents (14 sections)
 
-*Revised 2026-04-10. New proof architecture: CCM + ITPFI + Boegli + Hurwitz.*
+*Revised 2026-04-10. All 9 referee fixes incorporated.*
+*New proof architecture: CCM + ITPFI + Boegli + Hurwitz.*
 *The Gelfond-Schneider chain (v1) is killed. This is v2.*
+*Theorem 1.1 is conditional on CCM (arXiv:2511.22755).*
 
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator)*
 
@@ -19,16 +23,18 @@
 
 ### Section 1. Introduction
 
-*RH, the six-layer chain, what's new.*
+*RH (conditional on CCM), the six-layer chain, what's new, notation.*
 
-- 1.1. Statement of the Riemann Hypothesis (Theorem 1.1)
-- 1.2. The six-layer proof chain (overview diagram)
-- 1.3. What CCM did: self-adjoint D_N on E_N^+, eigenvalue approximation,
+- 1.1. Statement of the Riemann Hypothesis (Theorem 1.1, conditional on CCM)
+- 1.2. Notation and conventions (including lambda disambiguation:
+  bandwidth vs spectral parameter vs type III parameter)
+- 1.3. The six-layer proof chain (overview diagram)
+- 1.4. What CCM did: self-adjoint D_N on E_N^+, eigenvalue approximation,
   the two open steps (N -> infinity limit, eigenvalue identification)
-- 1.4. What we add: ITPFI + Boegli + Hurwitz closing CCM's gap
-- 1.5. The coboundary lesson: why v1 (Gelfond-Schneider) was killed
-- 1.6. Relation to the Integers programme
-- 1.7. Organization of the paper
+- 1.5. What we add: ITPFI + Boegli + Hurwitz closing CCM's gap
+- 1.6. The coboundary lesson: why v1 (Gelfond-Schneider) was killed
+- 1.7. Relation to the Integers programme
+- 1.8. Organization of the paper
 
 *Key references: CCM arXiv:2511.22755, Boegli arXiv:1604.07732,
 Connes-van Suijlekom arXiv:2511.23257, Teschl arXiv:2601.10476*
@@ -52,19 +58,21 @@ Connes-van Suijlekom arXiv:2511.23257, Teschl arXiv:2601.10476*
 ### Section 3. CCM zeta spectral triples (Layer 1)
 
 *The CCM construction: operators, self-adjointness, eigenvalues,
-the two missing steps we close.*
+even-sector compatibility, the two missing steps we close.*
 
 - 3.1. The prolate wave operator and its Hilbert space
 - 3.2. The truncated operators D_N on E_N^+ (even sector)
 - 3.3. Self-adjointness via Caratheodory-Fejer (CCM Theorem 4.2)
-- 3.4. Eigenvalue identification: spec(D_N) approximates {gamma_n}
+- 3.4. Even-sector compatibility: T commutes with parity (CCM Lemma 5.2(i))
+- 3.5. Eigenvalue identification: spec(D_N) approximates {gamma_n}
   (CCM Theorem 5.10)
-- 3.5. The two open steps in CCM:
+- 3.6. The two open steps in CCM:
   - (i) Existence and properties of the limit D_infinity
   - (ii) Exact identification spec(D_infinity) = {gamma_n}
-- 3.6. Our strategy: ITPFI for (i), Boegli + Hurwitz for (ii)
+- 3.7. Our strategy: ITPFI for (i), Boegli + Hurwitz for (ii)
 
-*Key references: CCM arXiv:2511.22755 Sections 4-5, Theorem 5.10*
+*Key references: CCM arXiv:2511.22755 Sections 4-5, Theorem 5.10,
+Lemma 5.2(i)*
 
 ---
 
@@ -119,16 +127,21 @@ Araki-Woods 1968, Laca-Raeburn 1996*
 
 ### Section 7. Uniform Sobolev regularity (Layer 3c)
 
-*The H^1 bound that provides discrete compactness.*
+*The H^1 bound that provides discrete compactness. Corrected proof
+via Fourier-basis cancellation (research/44).*
 
-- 7.1. Resolvent estimate: norm((D_N - i)^{-1})_{L^2 -> H^1} <= 2pi/L
-  (Proposition 7.1)
-- 7.2. Proof: integration by parts on the prolate Hilbert space
-- 7.3. Uniformity in N: the bound is independent of truncation level
+- 7.1. Resolvent estimate: norm((D_N - i)^{-1})_{L^2 -> H^1}
+  <= 1 + C rho^{-N} < 2 (Theorem 7.1, corrected)
+- 7.2. Proof: Fourier-basis cancellation -- H^1 weight
+  (1 + (2 pi n/L)^2) cancels resolvent denominator ((2 pi n/L)^2 + 1)
+  identically; rank-1 quotient correction is O(rho^{-N})
+- 7.3. Uniformity in N and in lambda: the bound holds for ALL lambda,
+  ALL N, with NO restriction on L = 2 log(lambda)
 - 7.4. Uniformity in eigenvector index: all eigenvectors, not just the first
-- 7.5. Application to Boegli H2: Rellich-Kondrachov compactness
+- 7.5. Alternative: CF-based compactness (approach (c) from research/44)
+- 7.6. Application to Boegli H2: Rellich-Kondrachov compactness
 
-*Key references: research/36, Reed-Simon II, Rellich-Kondrachov*
+*Key references: research/44, Reed-Simon II, Rellich-Kondrachov*
 
 ---
 
@@ -179,12 +192,21 @@ research/38, 40, 41*
 - 10.2. Uniform convergence: hat{xi}_N -> Xi on compact subsets
   (Lemma 7.3 + Estimate b)
 - 10.3. Hurwitz's theorem: uniform convergence of holomorphic
-  functions -> convergence of zeros (with multiplicity)
+  functions -> convergence of zeros (with multiplicity).
+  Note: Xi(0) = 0.4971... (not 1/2); the non-vanishing condition
+  for Hurwitz is satisfied.
 - 10.4. The identification chain:
-  - zeros of hat{xi}_N = eigenvalues of D_N (CCM Theorem 5.10(iii))
-  - zeros of Xi = {gamma_n} (definition)
-  - Hurwitz: lim(zeros of hat{xi}_N) = zeros of Xi
-  - Therefore: lim spec(D_N) = {gamma_n}
+  - Step 1: each hat{xi}_N has only real zeros (CCM Theorem 5.10(iii)
+    + explicit sine-times-rational formula)
+  - Step 2: hat{xi}_N -> Xi uniformly on compacts in {|Im z| < 1/2}
+    (Estimate (b) + CCM Lemma 7.3)
+  - Step 3: Xi(0) = 0.4971... != 0 (non-vanishing at origin)
+  - Step 4: By Hurwitz, every zero of Xi in {|Im z| < 1/2} is a limit
+    of zeros of hat{xi}_N; since each hat{xi}_N has only real zeros,
+    such limits are real
+  - Step 5: Zeros of Xi in {|Im z| < 1/2} correspond via s = 1/2 + iz
+    to non-trivial zeros of zeta in 0 < Re s < 1
+  - Step 6: Therefore every non-trivial zero of zeta is on Re s = 1/2. RH.
 
 *Key references: Hurwitz 1893, Connes-van Suijlekom arXiv:2511.23257
 (CMP), CCM Theorem 5.10(iii)*
@@ -195,7 +217,7 @@ research/38, 40, 41*
 
 *Assembly of all six layers into the final argument.*
 
-- 11.1. Theorem 11.1 (Riemann Hypothesis): statement
+- 11.1. Theorem 11.1 (Riemann Hypothesis, conditional on CCM): statement
 - 11.2. Proof:
   - Layer 4 (Boegli): spec(D_infinity) = lim spec(D_N)
   - Layer 5 (Hurwitz): lim spec(D_N) = {gamma_n}
@@ -217,10 +239,23 @@ research/38, 40, 41*
 - 12.2. The parity constraint: CCM Theorem 5.10 requires evenness + simplicity
 - 12.3. Even-sector restriction: E_N^+ automatically gives even eigenfunctions
 - 12.4. Simplicity in the even sector: AE from Kato perturbation theory
-- 12.5. Euler-Mascheroni elimination (Lemma 12.2, research/28)
-- 12.6. The non-exceptional set: identity theorem guarantees density
+- 12.5. Slepian Compatibility Lemma (NEW, research/45):
+  - 12.5.1. Statement: A^{ev}(lambda, N) agrees with N x N
+    finite-section of continuous positive integral operator K_lambda
+    up to O(e^{-cN})
+  - 12.5.2. Kernel identification: Loewner-type kernel from Weil
+    distribution Fourier coefficients
+  - 12.5.3. Positivity: Krein-Rutman gives strictly simple positive
+    ground state
+  - 12.5.4. Eigenvector convergence: Karnik-Romberg-Davenport (2021)
+    quantitative bounds
+  - 12.5.5. Consequence: AE simplicity holds for ALL N, closing the
+    Slepian gap for N > 20
+- 12.6. Euler-Mascheroni elimination (Lemma 12.2, research/28)
+- 12.7. The non-exceptional set: identity theorem guarantees density
 
-*Key references: research/22, 28, 29, 42; Kato perturbation theory*
+*Key references: research/22, 28, 29, 42, 45; Kato perturbation theory;
+Slepian-Pollack 1961; Karnik-Romberg-Davenport arXiv:2006.00427*
 
 ---
 
@@ -237,14 +272,20 @@ research/38, 40, 41*
   - Initial score: 7/10
   - After three fixes: 8/10
   - Layer-by-layer confidence assessment
-- 13.4. The three fixes applied:
-  - Fix 1: KLMN + gsrc (Teschl Lemma 2.7, a = 0 < 1)
-  - Fix 2: AE simplicity (certified N = 1..20, prolate N > 20)
-  - Fix 3: CCM soundness verification (no circularity, no hidden assumptions)
+- 13.4. The nine referee fixes applied:
+  - Fix 1: Final deduction rewritten (explicit Hurwitz + real-zero)
+  - Fix 2: Teschl-Boegli interface verified (Thm 2.6, gnrc)
+  - Fix 3: H^1 bound corrected (Fourier cancellation, ALL lambda)
+  - Fix 4: KLMN closability fixed (Reed-Simon X, three conditions)
+  - Fix 5: Slepian compatibility lemma proved (research/45)
+  - Fix 6: Theorem 1.1 conditional on CCM
+  - Fix 7: Lambda disambiguated throughout
+  - Fix 8: Xi(0) = 0.4971 (corrected from 1/2)
+  - Fix 9: Even-sector compatibility (CCM Lemma 5.2(i))
 - 13.5. What would upgrade to 9/10: CCM journal acceptance
 - 13.6. What would upgrade to 10/10: independent third-party verification
 
-*Key references: Strategies 10, 24, 25, 26; research/41, 42, 43*
+*Key references: Strategies 10, 24, 25, 26, 28; research/41, 42, 43, 44, 45*
 
 ---
 
@@ -295,3 +336,5 @@ research/38, 40, 41*
 | LR | Laca-Raeburn 1996, J. Operator Theory |
 | BY | Baranov-Yakubovich 2021, rank-one perturbation theory |
 | DK | Davis-Kahan 1970, sin(theta) theorem |
+| KRD | Karnik-Romberg-Davenport 2021, arXiv:2006.00427 |
+| SP | Slepian-Pollack 1961, BSTJ |

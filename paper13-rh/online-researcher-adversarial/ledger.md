@@ -1,4 +1,4 @@
-# Ledger — [TARGET]
+# Ledger — Prove the Riemann Hypothesis
 
 *The compressed state of the investigation.*
 *READ THIS FIRST — EVERY LINE — strategist AND executors.*
@@ -135,46 +135,13 @@ predictions invisible (extras contribute zero to formulas)
 **WRITE to this file at the end of every cycle.** Append a new
 cycle section. Never delete previous cycles — they're the history.
 
-**FORMAT per cycle:**
-
-```
-## Cycle N — [date]
-
-| # | Lead | Status | Reason | Adv. | File |
-|:--|:--|:--|:--|:--|:--|
-| 1 | [name] | ADVANCED | [1-line] | VERIFIED | leads/lead-1-x.md |
-| 2 | [name] | KILLED | [1-line] | — | leads/lead-2-y.md |
-| 3 | [name] | BLOCKED | [on what] | — | leads/lead-3-z.md |
-| 4 | [name] | REOPENED | [old kill] → [new reason] | — | leads/lead-4-w.md |
-
-**Strongest:** [name] — [1-line why]
-**Killed this cycle:** [count] ([names])
-**Advanced this cycle:** [count] ([names])
-**Overall feasibility:** X/10
-**Next cycle focus:** [recommendation]
-**Strategy file:** strategy/strategy-N.md
-```
-
-**Status definitions:**
-- ADVANCED — survived adversarial, active in next cycle
-- KILLED — failed, with reason. Can be REOPENED if new reason found
-- BLOCKED — waiting for external result or another lead
-- REOPENED — was killed, new reason found, back in play
-
-**Rules:**
-- One-line reasons only (details in the lead file)
-- Always include the file reference
-- Always include the adversarial verdict for ADVANCED leads
-- Killed leads stay in the ledger FOREVER (they're the map)
-- The ledger grows DOWN (new cycles appended, old ones stay)
-
 ---
 
 ## Cycle 0 — Pre-investigation
 
 *No leads yet. The investigation begins at Cycle 1.*
 
-**Target:** [STATE THE TARGET]
+**Target:** Prove RH from inside the BC algebra
 **Starting feasibility:** ?/10
 **Toolkit:** anchor doc, theorem catalogue (387 entries), Six
 Patterns, 37 R-Theorems, 179 computation scripts, sources library

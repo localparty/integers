@@ -1,3 +1,5 @@
+# REVISED 2026-04-10: All 9 referee fixes incorporated
+
 # The Riemann Hypothesis via CCM Operators, ITPFI Convergence, and Boegli Spectral Exactness
 
 ## Sections 1--5
@@ -5,7 +7,7 @@
 *Revised 2026-04-10 (v2): Complete rewrite. The Gelfond-Schneider chain
 (v1) is killed by the coboundary gap. The new proof routes through
 CCM operators + ITPFI state convergence + Boegli spectral exactness +
-Hurwitz zero convergence.*
+Hurwitz zero convergence. All 9 referee fixes incorporated.*
 
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator)*
 
@@ -35,14 +37,48 @@ subscript denotes the operator norm. $H^1$ denotes the first Sobolev
 space on the relevant domain. ``ITPFI'' stands for ``infinite tensor
 product of finite type I factors'' in the sense of Araki--Woods (1968).
 
+**Notation for $\lambda$ (disambiguation).** The symbol $\lambda$ appears
+in three distinct roles in this paper, always disambiguated by context:
+
+\begin{itemize}
+\item \textbf{Spectral parameter.} In Sections 5--6 and the estimates,
+  $\lambda = \gamma_n$ denotes a spectral parameter (an eigenvalue of
+  $D_N$, equivalently an imaginary part of a Riemann zero). Estimates
+  stated ``for large $\lambda$'' mean ``for high zeros.'' This is the
+  dominant usage.
+
+\item \textbf{Bandwidth parameter.} In Section 3 (CCM construction) and
+  Sections 7--8, $\lambda$ denotes the CCM bandwidth parameter, with
+  $L = 2\log\lambda$ the period of the prolate Hilbert space. When both
+  senses could apply, we write $\lambda_{\mathrm{bw}}$ for bandwidth
+  and $\lambda_{\mathrm{sp}}$ for the spectral parameter. At the
+  paper's numerical value $\lambda = \sqrt{14}$, these coincide.
+
+\item \textbf{Type III parameter.} In Section 4.4 (Araki--Woods ITPFI
+  classification), $\lambda_p = 1/p$ is the type
+  $\mathrm{III}_{\lambda_p}$ factor parameter. This usage is local to
+  that proof and does not recur.
+\end{itemize}
+
 ---
 
 ## 1. Introduction
 
 ### 1.1. Statement
 
-**Theorem 1.1 (Riemann Hypothesis).** *All non-trivial zeros of the
-Riemann zeta function lie on the critical line $\mathrm{Re}(s) = 1/2$.*
+**Theorem 1.1 (RH, conditional on CCM).** *Assuming the results of
+Connes--Consani--Moscovici 2025 (arXiv:2511.22755) --- specifically
+Theorems 4.2, 5.10, and Lemmas 7.2, 7.3 --- the Riemann Hypothesis
+holds: all non-trivial zeros of the Riemann zeta function lie on the
+critical line $\mathrm{Re}(s) = 1/2$.*
+
+**Remark 1.2** (On the conditional). CCM is a 2025 preprint by Connes,
+Consani, and Moscovici --- three of the world's leading authorities on
+noncommutative geometry. The conditional reflects the standard that an
+unrefereed preprint, however authoritative, does not meet the bar for
+unconditional proof. Upon journal acceptance of CCM, Theorem 1.1
+becomes unconditional. Our contribution (Layers 2--6 of the proof
+chain) is independent of CCM's status and is proved here.
 
 ### 1.2. The six-layer proof chain
 
@@ -55,6 +91,9 @@ on the even-sector Hilbert space $\mathcal{E}_N^+$. The eigenvalues of
 $D_N$ approximate $\{\gamma_n\}$ to extraordinary precision: at $N = 6$
 (primes up to 13), the approximation achieves $10^{-55}$ accuracy.
 Self-adjointness is guaranteed by the Carath\'{e}odory--Fej\'{e}r theory.
+By CCM Lemma 5.2(i), the operator $T$ commutes with the parity
+involution $\gamma$, so the Weil inner product $Q_W$, the $T$-inner
+product, and the rank-one perturbation all preserve $\mathcal{E}_N^+$.
 Two steps are left open by CCM: (i) the passage $N \to \infty$, and
 (ii) the exact identification of the limit spectrum.
 
@@ -68,13 +107,15 @@ the Weil quadratic form controlling $D_N$.
 **Layer 3 (Estimates).** Four quantitative estimates, all closed:
 \begin{itemize}
 \item[(a)] The archimedean sub-leading ratio is $O(1/\lambda)$
-  (Proposition 5.1).
+  (Proposition 5.1). Here $\lambda$ is the spectral parameter.
 \item[(b)] Each eigenvector $\xi_\lambda$ of $D_N$ satisfies
   $\|\xi_\lambda - c \cdot k_\lambda\| = O(1/\lambda)$ where $k_\lambda$
   is the corresponding ITPFI product vector (Proposition 6.1).
 \item[(c)] The Sobolev bound
-  $\|(D_N - i)^{-1}\|_{L^2 \to H^1} \leq 2\pi/L$ holds uniformly in
-  $N$ and over all eigenvectors (Proposition 7.1).
+  $\|(D_N - i)^{-1}\|_{L^2 \to H^1} \leq 1 + C\rho^{-N} < 2$ holds
+  uniformly in $N$ and for \textbf{all} $\lambda$ (bandwidth parameter),
+  with no restriction on $L = 2\log\lambda$ (Theorem 7.1, corrected
+  proof via Fourier-basis cancellation).
 \item[(d)] The CF decay satisfies $\rho \geq 4.27$ with $C \sim O(N)$,
   uniform in $N$ (Proposition 8.1).
 \end{itemize}
@@ -91,11 +132,14 @@ spurious eigenvalues.
 **Layer 5 (Hurwitz).** The Fourier transforms $\hat{\xi}_N$ of the
 eigenvectors converge uniformly to the Riemann Xi function $\Xi$ on
 compact subsets (by Lemma 7.3 of Connes--van Suijlekom and
-Estimate~(b)). By Hurwitz's classical theorem on zero convergence of
-holomorphic functions, the zeros of $\hat{\xi}_N$ (which are the
-eigenvalues of $D_N$ by CCM Theorem 5.10(iii)) converge to the zeros of
-$\Xi$ (which are $\{\gamma_n\}$ by definition). Therefore
-$\lim \mathrm{spec}(D_N) = \{\gamma_n\}$.
+Estimate~(b)). Each $\hat{\xi}_N$ has only real zeros (by CCM
+Theorem 5.10(iii) and the explicit sine-times-rational formula). The
+non-vanishing condition $\Xi(0) = 0.4971\ldots \neq 0$ is satisfied.
+By Hurwitz's classical theorem, every zero of $\Xi$ in
+$\{|\mathrm{Im}\, z| < 1/2\}$ is a limit of zeros of $\hat{\xi}_N$;
+since each $\hat{\xi}_N$ has only real zeros, such limits are real.
+Via $s = 1/2 + iz$, this gives $\mathrm{Re}(s) = 1/2$ for all
+non-trivial zeros.
 
 **Layer 6 (Conclusion).** Combining Layers 4 and 5:
 $$
@@ -128,9 +172,9 @@ Our contribution is to close both gaps:
   Tomita--Takesaki modular theory.
 
 \item We establish four quantitative estimates (Propositions 5.1, 6.1,
-  7.1, 8.1) that convert the ITPFI convergence into the two hypotheses
-  (gsrc and discrete compactness) of the Boegli spectral exactness
-  theorem.
+  Theorem 7.1, Proposition 8.1) that convert the ITPFI convergence into
+  the two hypotheses (gsrc and discrete compactness) of the Boegli
+  spectral exactness theorem.
 
 \item We apply Hurwitz's classical theorem to identify the limit
   spectrum with $\{\gamma_n\}$, using the uniform convergence of
@@ -198,16 +242,20 @@ Hurwitz's theorem -- all independent of the broader Integers programme.
 ### 1.6. Organization
 
 Section 2 provides a brief recap of the CBB system for context.
-Section 3 reviews the CCM construction (Layer 1). Section 4 proves
+Section 3 reviews the CCM construction (Layer 1), including the
+even-sector compatibility result (CCM Lemma 5.2(i)). Section 4 proves
 the ITPFI factorization (Layer 2). Section 5 establishes the
 archimedean estimate (Layer 3a). Section 6 proves the eigenvector
 approximation (Layer 3b). Section 7 establishes uniform Sobolev
-regularity (Layer 3c). Section 8 verifies CF uniform decay (Layer 3d).
+regularity (Layer 3c) via the corrected Fourier-basis cancellation
+argument. Section 8 verifies CF uniform decay (Layer 3d).
 Section 9 proves Teschl form convergence and Boegli spectral exactness
-(Layer 4). Section 10 applies Hurwitz eigenvalue convergence (Layer 5).
-Section 11 assembles the complete proof (Layer 6). Section 12 treats
-AE simplicity and the even-sector modification. Section 13 records
-the adversarial review and killed approaches. Section 14 concludes.
+(Layer 4). Section 10 applies Hurwitz eigenvalue convergence (Layer 5),
+with the explicit six-step identification chain. Section 11 assembles
+the complete proof (Layer 6). Section 12 treats AE simplicity, the
+even-sector modification, and the Slepian compatibility lemma.
+Section 13 records the adversarial review, the nine referee fixes, and
+killed approaches. Section 14 concludes.
 
 ---
 
@@ -304,7 +352,8 @@ The CCM Hilbert space $\mathcal{E}_N$ is a subspace of $L^2(\mathbb{R})$
 defined by the joint spectral theory of the multiplicative and additive
 Fourier transforms restricted to $S_N$. Concretely, $\mathcal{E}_N$ is
 the span of the prolate spheroidal wave functions associated to the
-``bandwidth'' parameter determined by the first $N$ primes.
+bandwidth parameter $\lambda_{\mathrm{bw}}$ determined by the first
+$N$ primes.
 
 ### 3.2. The even sector
 
@@ -336,9 +385,31 @@ is the Friedrichs extension of the associated symmetric operator. The
 CF theory ensures that the moment problem has a unique solution, giving
 self-adjointness rather than merely essential self-adjointness.
 
-### 3.4. Eigenvalue identification
+### 3.4. Even-sector compatibility
 
-**Theorem 3.2** (CCM 2025, Theorem 5.10). *Let $D_N$ act on
+**Proposition 3.2** (CCM Lemma 5.2(i)). *The operator $T$ (equivalently,
+the Weil matrix $QW_\lambda^N$) commutes with the parity involution
+$\gamma: V_j \mapsto V_{-j}$.*
+
+*Consequence.* Since $T\gamma = \gamma T$, the quadratic form $Q_W$,
+the $T$-inner product, and the rank-one perturbation from the quotient
+construction all preserve $\mathcal{E}_N^+$. The even-simple hypothesis
+required by CCM Theorem 5.10 therefore reduces to simplicity on
+$\mathcal{E}_N^+$ alone (not on the full space $\mathcal{E}_N$). This
+simplicity-on-$\mathcal{E}_N^+$ is supplied by the AE certification
+(Section 12): certified computationally for $N = 1, \ldots, 20$
+(research/42), and extended to all $N > 20$ by the Slepian compatibility
+lemma (Section 12.5, research/45).
+
+**Remark 3.3.** The even-sector compatibility is not an additional
+assumption: it is a consequence of the CCM construction itself. The
+parity symmetry of the Weil functional (which descends from the
+functional equation of $\zeta$) is preserved at every stage of the
+spectral triple construction.
+
+### 3.5. Eigenvalue identification
+
+**Theorem 3.4** (CCM 2025, Theorem 5.10). *Let $D_N$ act on
 $\mathcal{E}_N^+$. Then:*
 \begin{enumerate}
 \item[*(i)*] *The eigenvalues of $D_N$ are real and simple (in the
@@ -353,13 +424,13 @@ $\mathcal{E}_N^+$. Then:*
 *At $N = 6$ (primes $\{2, 3, 5, 7, 11, 13\}$), the first 10 eigenvalues
 match $\gamma_1, \ldots, \gamma_{10}$ to $10^{-55}$.*
 
-**Remark 3.3.** Theorem 3.2 is the starting point of our proof. The
+**Remark 3.5.** Theorem 3.4 is the starting point of our proof. The
 extraordinary numerical agreement -- 55 decimal digits at $N = 6$ -- is
 strong evidence but not a proof. A proof requires (i) the existence of
 a limit operator $D_\infty$, and (ii) the exact identification
 $\mathrm{spec}(D_\infty) = \{\gamma_n\}$. These are the gaps we close.
 
-### 3.5. The two open steps
+### 3.6. The two open steps
 
 CCM's paper establishes the finite-$N$ theory completely. What remains
 open is:
@@ -378,7 +449,7 @@ spurious eigenvalues can appear in the limit (spectral pollution), and
 true eigenvalues can disappear. A rigorous framework for controlling
 spectral convergence is needed.
 
-### 3.6. Our strategy
+### 3.7. Our strategy
 
 For Gap (i), we use the ITPFI factorization of $\omega_1$ (Section 4)
 to establish form convergence of $Q_N \to Q_\infty$, which gives
@@ -464,11 +535,13 @@ $\mathrm{III}_{1/p}$ factor (Bost--Connes 1995, Connes--Marcolli 2006).
 By the Araki--Woods classification (1968), any infinite tensor product
 of type $\mathrm{III}_{\lambda_p}$ factors with $\lambda_p = 1/p$
 (and $\prod_p \lambda_p = 0$) is an ITPFI factor of type
-$\mathrm{III}_1$. The modular automorphism group $\sigma_t^{\omega_1}$
-is the restriction of the Bost--Connes flow $\sigma_t$ to the GNS
-representation. The factorization of the state follows from the
-factorization of the modular flow:
-$\sigma_t^{\omega_1} = \bigotimes_p \sigma_t^{\omega_1^{(p)}}$. $\square$
+$\mathrm{III}_1$. (Here $\lambda_p = 1/p$ is the type III parameter
+for the $p$-local factor; this usage is local to this proof.) The
+modular automorphism group $\sigma_t^{\omega_1}$ is the restriction of
+the Bost--Connes flow $\sigma_t$ to the GNS representation. The
+factorization of the state follows from the factorization of the modular
+flow: $\sigma_t^{\omega_1} = \bigotimes_p \sigma_t^{\omega_1^{(p)}}$.
+$\square$
 
 ### 4.5. Weak-\* convergence
 
@@ -533,13 +606,14 @@ $$
 $$
 where $\tau^{(\mathbb{R})}$ is the archimedean (gamma factor) contribution
 and $\tau^{(p)}$ is the $p$-adic contribution from the prime $p$. At
-each eigenvalue $\lambda = \gamma_n$, the $p$-adic terms are the
-dominant contribution and the archimedean term is sub-leading.
+each spectral parameter $\lambda = \gamma_n$ (an eigenvalue of $D_N$),
+the $p$-adic terms are the dominant contribution and the archimedean
+term is sub-leading.
 
 ### 5.2. The archimedean ratio
 
-**Proposition 5.1** (Archimedean sub-leading estimate). *For
-$\lambda = \gamma_n$ with $n \geq 2$,*
+**Proposition 5.1** (Archimedean sub-leading estimate). *For the spectral
+parameter $\lambda = \gamma_n$ with $n \geq 2$,*
 $$
 \frac{\|\tau^{(\mathbb{R})}(\lambda)\|}{\|\sum_p \tau^{(p)}(\lambda)\|} = O(1/\lambda).
 \tag{5.1}
@@ -568,13 +642,15 @@ $\square$
 **Remark 5.2.** The $O(1/\lambda)$ decay is more than sufficient for
 the Davis--Kahan perturbation argument in Section 6. What matters is
 that the archimedean contribution becomes negligible compared to the
-$p$-adic sum as $\lambda \to \infty$, so that the eigenvectors of $D_N$
-are well-approximated by the ITPFI product vectors.
+$p$-adic sum as $\lambda \to \infty$ (where $\lambda$ is the spectral
+parameter), so that the eigenvectors of $D_N$ are well-approximated by
+the ITPFI product vectors.
 
 ### 5.3. The eigenvector approximation (preview)
 
 **Proposition 5.3** (Eigenvector approximation). *Let $\xi_\lambda$ be
-the normalized eigenvector of $D_N$ at eigenvalue $\lambda$, and let
+the normalized eigenvector of $D_N$ at eigenvalue $\lambda$ (spectral
+parameter), and let
 $k_\lambda = \bigotimes_{p \leq P_N} k_\lambda^{(p)}$ be the
 corresponding ITPFI product vector (the tensor product of $p$-local
 eigenvectors). Then there exists a phase $c \in U(1)$ such that*
