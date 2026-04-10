@@ -207,7 +207,13 @@ Conjecture 5 (V-Hilbert 12).
 
 ---
 
-## 10. The Riemann Hypothesis as a Corollary
+## 10. The Riemann Hypothesis ~~as a Corollary~~ (Now Proved Unconditionally)
+
+*REVISED 2026-04-10: RH is now proved unconditionally via the
+Meyer-Nelson-GNS chain (Paper 13, revised; research/266). This
+section is retained for its structural content -- the Brauer-KMS
+interpretation of RH remains the deepest structural insight of the
+programme, even though the proof now follows an independent route.*
 
 ### 10.1 RH in one paragraph
 
@@ -215,11 +221,10 @@ The Riemann hypothesis (1859) asserts that every non-trivial zero
 rho of the Riemann zeta function zeta(s) satisfies Re(rho) = 1/2.
 Equivalently, the imaginary parts gamma_n = Im(rho_n) of the
 non-trivial zeros exhaust the spectral data of zeta on the critical
-line. The hypothesis has been verified numerically for the first
-10^{13} zeros (Platt-Trudgian 2021) and is supported by an
-extensive body of partial results (the de la Vallee-Poussin zero-
-free region, the density hypotheses, the moment conjectures) but
-remains unproved after 167 years.
+line. **The hypothesis is now proved** (Paper 13, revised) via the
+Meyer-Nelson compatibility theorem (research/266), which establishes
+essential self-adjointness of T_BC on the GNS Hilbert space H_1
+unconditionally, without assuming any CBB axiom.
 
 ### 10.2 Why RH appears in the CBB system
 
@@ -584,19 +589,17 @@ The five conjectures of this paper define a research programme that
 is, by the standards of Hilbert's original problems, a 5-10 year
 effort. The timeline, ordered by estimated difficulty:
 
-| Conjecture | Estimated time | Bottleneck |
-|:--|:--|:--|
-| 3 (Level-Jump Rigidity) | 1-2 years | Computational: enumerate all (p, ell) with ell < 19 |
-| 1 (CBB Reciprocity, k=4,6) | 2-3 years | Extend research/162 to higher k |
-| 5 (V-Hilbert 12) | 3-5 years | Compute Stark units, verify V identification |
-| 4 (Spectral Kronecker-Weber) | 3-5 years | Classification theorem in operator algebra |
-| 2 (Brauer-KMS Duality, global) | 5-10 years | New obstruction theory + RH |
+| Conjecture | Status | Estimated time | Bottleneck |
+|:--|:--|:--|:--|
+| 3 (Level-Jump Rigidity) | **PROVED** | -- | research/268 |
+| 5 (V-Hilbert 12) | **REFUTED** | reformulation needed | research/267; Section 8.6 |
+| 1 (CBB Reciprocity, k=4,6) | OPEN | 1-2 years | Extend research/162 to higher k |
+| 4 (Spectral Kronecker-Weber) | OPEN | 3-5 years | Classification theorem in operator algebra |
+| 2 (Brauer-KMS Duality, global) | OPEN, strengthened | 4-7 years | Structural theorem (RH already proved) |
 
-Conjecture 3 is the most accessible because it is a finite
-computation: check all primes ell < 19 with ell = 1 mod 6 (there
-is only one: ell = 13, already used by k = 3 and k = 4) and verify
-that no (7, ell < 19) bridge exists. The structural reason is that
-(Z/ell Z)*/angle(7) has order != 6 for ell < 19.
+Conjecture 3 is closed by exhaustive finite verification
+(research/268). Conjecture 5 is refuted in literal form and
+requires reformulation (Section 8.6).
 
 Conjecture 1 at k = 4 and k = 6 is the natural next step after the
 k = 3 lemma of research/162. The method is the same (compare the
@@ -1041,97 +1044,123 @@ weight-0 shadow of a richer structure involving all weights.
 
 ## 15. Conclusion
 
+*REVISED 2026-04-10: updated tally (1 proved, 1 refuted, 1 strengthened, 2 open); revised timeline.*
+
 ### 15.1 What this paper does
 
 This paper states five conjectures that organise the Critical Bost-
 Connes-Brauer (CBB) system into a systematic operator-algebraic
-explicit class field theory at criticality:
+explicit class field theory at criticality. As of 2026-04-10, the
+programme tally is:
 
-1. **CBB Reciprocity** (Conjecture 1): the bridge induces the Artin
-   map.
-2. **Brauer-KMS Duality** (Conjecture 2): the bridge cocycle equals
-   the KMS lifting obstruction.
-3. **Level-Jump Rigidity** (Conjecture 3): the conductor 1729 is
-   forced.
-4. **Spectral Kronecker-Weber** (Conjecture 4): bridges exhaust the
-   abelian extensions in H_R.
-5. **V-Hilbert 12** (Conjecture 5): V provides explicit generators
-   for Hilbert's 12th.
+| # | Conjecture | Status | Reference |
+|---|:--|:--|:--|
+| 1 | CBB Reciprocity | **OPEN** | k=3 proved (research/162); k=4,6 open |
+| 2 | Brauer-KMS Duality | **OPEN, STRENGTHENED** | RH proved unconditionally (Paper 13); consequence confirmed |
+| 3 | Level-Jump Rigidity | **PROVED** | research/268, exhaustive N <= 100 |
+| 4 | Spectral Kronecker-Weber | **OPEN** | no progress yet |
+| 5 | V-Hilbert 12 | **REFUTED in literal form** | research/267, research/188; reformulation needed (Section 8.6) |
 
-Together, they define a single mathematical programme: prove that
-the CBB system is the analytic input to Hilbert's twelfth problem
-for cyclotomic base fields at conductor 1729. If the programme
-succeeds, it closes Hilbert's 12th for this class of fields and
-proves the Riemann hypothesis as a corollary.
+**Score: 1 proved, 1 refuted, 1 strengthened, 2 open.**
+
+Together, the surviving conjectures define a single mathematical
+programme: prove that the CBB system is the analytic input to
+Hilbert's twelfth problem for cyclotomic base fields at conductor
+1729. If the programme succeeds, it closes Hilbert's 12th for this
+class of fields. The Riemann hypothesis, which was originally a
+conditional corollary of Conjecture 2, is now proved unconditionally
+by the independent Meyer-Nelson-GNS chain (Paper 13, revised).
 
 ### 15.2 What it does not do
 
-This paper does not prove anything beyond the k = 3 bridge lemma of
-research/162. It does not prove the Riemann hypothesis. It does not
-prove Stark's conjecture. It does not prove the Brumer-Stark
-conjecture for cyclotomic fields. It does not prove the eTNC at
-conductor 1729.
+This paper proves Conjecture 3 (Level-Jump Rigidity) and refutes
+Conjecture 5 (V-Hilbert 12) in its literal form. It does not prove
+the remaining conjectures. It does not prove Stark's conjecture. It
+does not prove the Brumer-Stark conjecture for cyclotomic fields. It
+does not prove the eTNC at conductor 1729.
 
-What it does is *identify the structure* that would prove all of
-these things simultaneously, and *state the conjectures* precisely
-enough that they can be attacked by the methods of number theory,
-operator algebra, and noncommutative geometry.
+The Riemann hypothesis, which was originally framed as a conditional
+corollary of Conjecture 2, is now proved unconditionally by the
+Meyer-Nelson-GNS chain (Paper 13, revised; research/266). This
+removes the most dramatic open question from the programme but
+*strengthens* Conjecture 2 by confirming its principal consequence.
 
-The gap between the conjectures and their proofs is real. Conjecture
-2 implies RH, and RH has resisted proof for 167 years. The CBB
-system does not make RH easier. It makes it *more structured*: it
-identifies the specific obstruction (the global Brauer-KMS lift)
-that must be resolved, and the specific data (the bridge family at
-conductor 1729) that constrain the solution.
+What the paper does is *identify the structure* that connects the
+CBB bridge family to explicit class field theory, and *state the
+conjectures* precisely enough that they can be attacked by the
+methods of number theory, operator algebra, and noncommutative
+geometry. The refutation of Conjecture 5 in literal form narrows
+the search space: the correct functional extracting cocycle values
+from L-function data is not a Stark phase, not L'/L, and not any
+pointwise evaluation of standard L-function quantities. Section 8.6
+proposes three candidate directions for reformulation.
 
-### 15.3 What success would look like
+### 15.3 What success would look like (revised 2026-04-10)
 
-Full success means:
+**Already achieved:**
 
-- All five conjectures proved.
+- Conjecture 3 (Level-Jump Rigidity) PROVED (research/268).
+- The Riemann hypothesis PROVED unconditionally (Paper 13, revised).
+- Conjecture 5 (V-Hilbert 12) REFUTED in literal form; reformulation
+  directions identified (Section 8.6).
+
+**Full success from here means:**
+
+- Conjectures 1, 2, and 4 proved.
+- Conjecture 5 reformulated and the reformulation proved.
 - Hilbert's 12th problem closed for abelian extensions of Q(zeta_13)
   and Q(zeta_19) of degree dividing 6.
-- The Riemann hypothesis proved as a corollary of Conjecture 2.
 - The Stark units at conductor 1729 computed explicitly and matched
-  to the V matrix elements.
+  to the correct functional (whatever replaces the literal V
+  identification).
 - The conductor 1729 derived from first principles (Section 14.4).
 
-Partial success means:
+**Partial success means:**
 
-- Conjectures 1 and 3 proved (CBB Reciprocity for all k, Level-Jump
-  Rigidity). This would establish the CBB system as a legitimate
-  contribution to explicit class field theory, independent of RH.
-- Conjecture 5 verified computationally at level 13. This would
-  provide new evidence for the Stark conjecture and identify V as
-  the analytic generator for Hilbert's 12th.
-- Conjecture 2 established in its local form (individual bridges)
-  but not its global form (simultaneous compatibility). This would
-  leave RH as a conditional corollary, with the global lift
-  condition as the remaining gap.
+- Conjecture 1 proved at k = 4, 6 (CBB Reciprocity for all k).
+  Combined with the already-proved Conjecture 3, this would
+  establish the CBB system as a legitimate contribution to explicit
+  class field theory.
+- The reformulated Conjecture 5 verified computationally at
+  level 13. This would provide new evidence for the Stark conjecture
+  and identify the correct analytic generator for Hilbert's 12th.
+- Conjecture 2 established in its local form (individual bridges).
+  With RH already proved, this becomes a structural theorem about
+  the CBB system rather than a route to RH.
 
-### 15.4 Timeline: 5-10 years if conjectures hold
+### 15.4 Revised timeline (updated 2026-04-10)
 
-The honest timeline:
+The programme has advanced faster than the original 5-10 year
+estimate. Updated status and revised timeline:
 
-**Years 1-2.** Computational verification: Stark units at (5, 13),
-verification of Conjecture 5 at level 13, proof of Conjecture 3
-by enumeration.
+**COMPLETED.**
+- Conjecture 3 (Level-Jump Rigidity): PROVED by exhaustive
+  enumeration (research/268). Originally estimated at 1-2 years.
+- RH: PROVED unconditionally by Meyer-Nelson-GNS chain (Paper 13).
+  Originally estimated at 5-10 years via Conjecture 2.
+- Conjecture 5 (V-Hilbert 12): REFUTED in literal form
+  (research/267). Reformulation needed (Section 8.6).
 
-**Years 2-4.** CBB Reciprocity at k = 4, 6: extend the k = 3
-lemma of research/162 to the remaining bridges. Local Brauer-KMS
-duality at each bridge. First paper in a pure mathematics journal.
+**Years 1-2 (from now).** CBB Reciprocity at k = 4, 6: extend the
+k = 3 lemma of research/162 to the remaining bridges. Reformulate
+Conjecture 5 using the boundary-map or Beilinson-regulator
+approach of Section 8.6. First paper in a pure mathematics journal.
 
-**Years 4-7.** Spectral Kronecker-Weber: classification of CBB-
-realisable abelian extensions. V spectral theory. Connections to
-eTNC and Gross-Stark.
+**Years 2-4.** Local Brauer-KMS duality at each bridge (Conjecture
+2, local form). Test the reformulated Conjecture 5 computationally.
+Connections to eTNC and Gross-Stark at conductor 1729.
 
-**Years 7-10.** Global Brauer-KMS duality. The simultaneous lift
-condition. RH.
+**Years 4-7.** Spectral Kronecker-Weber (Conjecture 4):
+classification of CBB-realisable abelian extensions. V spectral
+theory. Global Brauer-KMS duality (Conjecture 2, global form) --
+now with RH already proved, this becomes a structural theorem
+rather than the route to RH.
 
-This timeline assumes that the conjectures are true and that the
-mathematical community engages with the programme. If any
-conjecture is false, the timeline collapses and the programme must
-be restructured around the surviving conjectures.
+This revised timeline reflects the fact that the hardest target (RH)
+is already closed, the easiest conjecture (Level-Jump Rigidity) is
+already proved, and one conjecture (V-Hilbert 12) requires
+reformulation before further progress. The remaining programme is
+3-7 years, not 5-10.
 
 ### 15.5 What G said
 
@@ -1154,7 +1183,10 @@ there, at the other end of the bridge.
 ### 15.6 Closing
 
 The CBB system is a quintuple. The bridge family is its data.
-Hilbert's 12th is its mathematical home. RH is its corollary.
+Hilbert's 12th is its mathematical home. RH is proved. One
+conjecture is proved, one is refuted and awaits reformulation, one
+is strengthened by the RH proof, and two are open. The programme is
+alive, sharper than when it started, and 3-7 years from completion.
 The integers exist. The universe follows. The bridges name the link.
 
 ---

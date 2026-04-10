@@ -1,0 +1,17 @@
+{
+  "theorem": "K.4 (All-Orders Inductive Bootstrap)",
+  "verified_through": "L=4",
+  "all_zeros_confirmed": true,
+  "lattice_sequence": [
+    "Z (L=1)",
+    "A_2/Eisenstein (L=2)",
+    "D_3/FCC (L=3)",
+    "D_4 (L=4)"
+  ],
+  "kissing_numbers": [
+    2,
+    6,
+    12,
+    24
+  ]
+}

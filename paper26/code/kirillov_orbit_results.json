@@ -1,0 +1,10 @@
+{
+  "computation": "Paper 11, Comp 3: Kirillov Orbit",
+  "moment_map_ghz": "origin (0,0,...,0)",
+  "orbit_dimension": 9,
+  "expected_dimension": 6,
+  "identification": "Fl(1,2;3) = SU(3)/T\u00b2",
+  "group_enhancement": "SU(2)\u00b3 \u2192 SU(3)",
+  "mechanism": "non-product stabiliser T\u00b2 = Cartan(SU(3))",
+  "gauge_group": "[SU(3) \u00d7 SU(2) \u00d7 U(1)] / Z\u2086"
+}

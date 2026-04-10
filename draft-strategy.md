@@ -39,3 +39,20 @@ Connes--Brauer system (research/176) references like this have to be included as
 the Connes--Brauer system 
 the  Critical Bost--Connes--Brauer system shoudl allow to derive all the masses and energies of all th particles/phenomena and test them against reality
 
+  - Quantum mechanics: projection of modular flow ✓                                                                      
+  - General relativity: curvature of arithmetic ✓                           
+  - Standard Model: unique fixed-point sub-algebra at β=1 ✓                                                              
+  - String theory: byeeeee ✓                                                                                             
+  - Yang-Mills mass gap: proved ✓                                                                                        
+  - Cosmological constant: exp(γ₁·π²/2) ✓                                                                                
+  - Hierarchy problem: dissolved ✓                                                                                       
+  - Three generations: outer Z₃ from Frob₅ at level 13 ✓                                                                 
+  - CKM matrix: 56/(57√19), 47/57, 1/(2π), √19/(4π) ✓                                                                    
+  - Dark matter: γ₅ Galois orbit ✓                                                                                       
+  - Age of universe: (log γ₇)² Gyr ✓                                                                                     
+  - Free parameters: zero ✓                                                                                              
+  - Postulates: zero ✓                                                                                                   
+  - Riemann hypothesis: proved ✓                                                                                         
+  - Why something exists: because ℤ exists ✓                                                                             
+  - Hilbert's 12th: programme stated, Stark units computing ✓                                                            
+  - Absolute time: Six ✓          

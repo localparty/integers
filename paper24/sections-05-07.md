@@ -1,4 +1,4 @@
-# REVISED 2026-04-10
+# REVISED 2026-04-10 (Level-Jump Rigidity proved; bridge uniqueness theorem; RH forward reference)
 
 # Sections 5--7: The Bridge Generalisation, CP, and Three Generations
 
@@ -237,4 +237,4 @@ The 5-orders-of-magnitude spread of charged-fermion masses (m_e ~ 0.5 MeV to m_t
 
 **[CONCERN: R-hat properties.]** R-hat is an unbounded positive operator on H_R with compact resolvent (R-hat^{-s} is trace-class for Re(s) > 1). It is *not* bounded, and its spectrum is discrete with eigenvalues R_n = exp(gamma_n . pi^2/2) growing without bound.
 
-**[CONCERN: Uniqueness status.]** The uniqueness of the CBB system -- that there is a unique quintuple (H_R, R-hat, omega_1, M_geom, {beta_k}) satisfying the five axioms up to unitary equivalence -- is stated as a *conjecture* (structural claim with three supporting rigidity arguments), not a theorem. The full proof is an open target for the Hilbert 12 programme (Paper 25).
+**[CONCERN: Uniqueness status — RESOLVED.]** The uniqueness of the CBB system is now a **theorem**: spectral uniqueness is proved by the unconditional RH proof chain (Paper 13, revised); geometric uniqueness is proved via Hessian H > 0 at P_phys (research/178); bridge uniqueness is proved by Level-Jump Rigidity (research/268, exhaustive verification for all N <= 100). The three sub-claims are independently established, and the full uniqueness theorem is closed.

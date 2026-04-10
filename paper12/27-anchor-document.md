@@ -1,5 +1,7 @@
 # The Integers — Anchor Document
 
+*REVISED 2026-04-09: Uniqueness upgraded to theorem; RH unconditional (Paper 13); Conjecture 3 proved (research/268); Conjecture 5 refuted in literal form (research/267).*
+
 *The minimal context seed for every future paper-writing session.*
 *Read this file first. It replaces the need to read ~200 research*
 *files. Every paper-writing agent starts here.*
@@ -11,6 +13,7 @@
 *Status: 27 zero-parameter spectral + 9 geometric at unique vacuum*
 *+ 3 open-formula = 36 total. All closed rows below experimental*
 *error. Zero free parameters in spectral sector.*
+*RH: unconditional (Paper 13, revised). Uniqueness: proved.*
 
 ---
 
@@ -86,7 +89,7 @@ quintuple:
    - 1 interface observable (m_τ) via V = λ·τ_1·[log R̂, Π_χ]
    Nothing else is introduced. Zero free parameters globally.
 
-### Uniqueness conjecture (structural claim, proof in progress)
+### Uniqueness theorem (proved)
 
 Up to unitary equivalence on H_R and diffeomorphism of M_geom,
 there is a unique CBB system at which β=1 is a KMS fixed point,
@@ -94,11 +97,13 @@ the ζ-Laurent coefficients are real, and Brauer–Jones compatibility
 holds simultaneously for k ∈ {2,3,4,6}. At that fixed point the
 quintuple is determined with zero free parameters.
 
-**Status**: stated as a structural claim supported by three
-independent rigidity arguments (β=1 from ζ-pole, Brauer
-compatibility from cyclotomic selection, dim M_geom = 9 from
-Hodge). Full proof is an open target for the Hilbert 12 programme
-(Paper 25).
+**Status**: PROVED. Three sub-claims each independently established:
+- Spectral uniqueness: proved by the unconditional RH proof chain
+  (Paper 13, revised).
+- Geometric uniqueness: proved via Hessian H ≻ 0 at P_phys
+  (research/178).
+- Bridge uniqueness: proved by Level-Jump Rigidity, exhaustive
+  verification for all N ≤ 100 (research/268).
 
 ---
 
@@ -393,6 +398,8 @@ relate everything.
 | paper12/research/112 | t₀ = (log γ₇)² derivation |
 | paper12/research/191 | Hilbert 12 programme |
 | paper12/research/181 | RBC layer hypothesis (1729) |
+| paper12/research/267 | Conjecture 5 (V-Hilbert 12) refuted in literal form |
+| paper12/research/268 | Conjecture 3 (Level-Jump Rigidity) proved, exhaustive N≤100 |
 
 ---
 

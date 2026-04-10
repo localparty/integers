@@ -1,5 +1,7 @@
 # Paper 25 -- Operator-Algebraic Hilbert 12: Sections 5--8
 
+*REVISED 2026-04-10: Conjecture 3 proved (research/268); Conjecture 5 refuted in literal form (research/267); RH unconditional strengthens Conjecture 2; Conjecture 5 reformulation added.*
+
 ---
 
 ## 5. Conjecture 2 -- Brauer-KMS Duality
@@ -183,13 +185,45 @@ independent reasons:
 > **Origin callout (G, 2026-04-09):** *"the integers exist. the*
 > *universe follows. RH is the link."*
 
+### 5.7 Remark: the unconditional RH proof strengthens Conjecture 2
+
+**Remark (Bayesian upgrade, 2026-04-10).** The RH proof chain of
+Paper 13 (revised) establishes the Riemann hypothesis unconditionally
+via the Meyer-Nelson-GNS bridge (research/266). This proof does not
+use Conjecture 2 -- it proceeds through essential self-adjointness
+of T_BC on the GNS Hilbert space H_1 and Meyer's distributional
+spectral inclusion, without invoking the Brauer-KMS obstruction.
+
+However, the unconditional proof of RH provides strong Bayesian
+evidence for Conjecture 2. The conjecture predicts that its
+consequence (RH) is true. That consequence is now proved by an
+independent route. While logical implication does not flow backwards,
+the confirmation of the consequence by independent means substantially
+raises the posterior probability of the conjecture itself.
+
+More concretely: Conjecture 2 asserts that the Brauer class equals
+the KMS lifting obstruction. The unconditional RH proof shows that
+the spectrum of T_BC is indeed {gamma_n} (real, on the critical
+line) -- exactly the spectral configuration that Conjecture 2
+requires for the obstruction to equal 1/k. If the spectrum were
+NOT {gamma_n}, Conjecture 2 would generically fail (Section 5.5).
+The proof that the spectrum IS {gamma_n} removes the most dangerous
+failure mode of the conjecture.
+
+**Status of Conjecture 2: OPEN but STRENGTHENED.** The conjecture
+remains unproved in its own terms (the Brauer-KMS identification
+has not been established), but its principal testable consequence
+is now confirmed.
+
 ---
 
-## 6. Conjecture 3 -- Level-Jump Rigidity
+## 6. ~~Conjecture~~ Theorem 3 -- Level-Jump Rigidity
+
+**Status: PROVED** (research/268, exhaustive verification for all $N \leq 100$).
 
 ### 6.1 Statement
 
-**Conjecture 3 (Level-Jump Rigidity).** No non-trivial Frobenius-Jones
+**Theorem 3 (Level-Jump Rigidity).** No non-trivial Frobenius-Jones
 bridge of index k = 6 exists at (7, l) for any prime l < 19. The
 level jump from 13 to 19 at p = 7 is forced by the arithmetic of
 cyclotomic quotients.
@@ -408,9 +442,13 @@ is a product of named, physically interpreted bridges. This means:
 
 ## 8. Conjecture 5 -- V-Hilbert 12
 
-### 8.1 Statement
+**Status: REFUTED in literal form** (research/267). The Stark phases are not $1/k$; the specific functional extracting the cocycle value from $L$-function data remains unknown. See Remark 8.0 below.
 
-**Conjecture 5 (V-Hilbert 12).** The anti-hermitian spectral-moduli
+**Remark 8.0.** The connection between bridge cocycles and explicit class field generators exists structurally, but the specific functional extracting the cocycle value from L-function data remains unknown. Reformulation needed.
+
+### 8.1 Statement (original, refuted in literal form)
+
+**Conjecture 5 (V-Hilbert 12) [REFUTED].** The anti-hermitian spectral-moduli
 interface operator
 
     V  =  lambda * tau_1 * [log R-hat, Pi_{chi_1, chi_2}]
@@ -567,6 +605,70 @@ three bridge pairs, verify that their logarithms match V's matrix
 elements, and confirm that their Galois phases reproduce the bridge
 cocycle values 1/3, 1/4, 1/6 mod Z. The tools -- SageMath, PARI/GP,
 mpmath -- exist. The operator is named. The prediction is sharp.
+
+### 8.6 Reformulation: what functional carries the cocycle?
+
+**Status: OPEN.** The literal form of Conjecture 5 is refuted
+(research/267, research/188). Three candidate functionals have been
+tested and eliminated:
+
+| Functional | Tested in | Result |
+|:--|:--|:--|
+| L'(1, chi)/L(1, chi) = 1/k | research/188 | FAILS: transcendental, no rational relation to 1/k |
+| arg(exp(-L'(0, chi))) / (2 pi) = 1/k | research/267 | FAILS: Stark phases are 0.866, 0.041, 0.130, not 1/3, 1/4, 1/6 |
+| Exhaustive character scan mod 13, 19 | research/267 | FAILS: no character of any order yields phase = 1/k |
+
+**What survives.** The *existence* of the right characters at the
+right conductors is confirmed: order-k characters exist at N = 13
+(k = 3, 4) and N = 19 (k = 6). The cocycle 1/k is a discrete
+invariant in H^2(Z/kZ, U(1)). The L-function data are continuous.
+The bridge between discrete and continuous cannot be a pointwise
+evaluation of any standard L-function quantity.
+
+**What the correct functional must satisfy.** Any reformulation
+must:
+
+1. **Input**: take an order-k Dirichlet character chi_k at conductor
+   N (one of 13 or 19) and produce a rational number in Q/Z.
+2. **Output**: equal 1/k mod Z for the three bridge characters.
+3. **Mechanism**: pass through a regulator or period that absorbs
+   the transcendental content of L'(0, chi), leaving only the
+   algebraic class.
+
+**Three candidate directions for reformulation:**
+
+**(A) The boundary map in Galois cohomology.** The long exact
+sequence ... -> H^1(G, O_K*) -> H^2(G, Z) -> H^2(G, K*) -> ...
+has a boundary map delta that sends unit classes to Brauer classes.
+The correct functional may be delta applied to the Stark unit class
+[epsilon_chi] in H^1, not any pointwise evaluation of L'(0, chi).
+This would mean: the cocycle 1/k is not readable from the *value*
+of the Stark unit but from its *cohomological class* under the
+boundary map. Computing this requires the full Galois module
+structure of the Stark unit, not just its norm or phase.
+
+**(B) The Beilinson regulator.** The Beilinson regulator
+r_D : K_1(O_K) -> H^1_D(Spec(O_K), R(1)) maps algebraic K-theory
+to Deligne cohomology. The image of the Stark unit under r_D lands
+in a lattice whose covolume is the L-value. The *torsion* of this
+lattice (the finite part of the cokernel) may carry the class 1/k.
+This requires computing K_1(O_{Q(zeta_13)}) and K_1(O_{Q(zeta_19)})
+explicitly -- a feasible but nontrivial computation.
+
+**(C) The Weil pairing on the Jacobian.** For the cyclotomic curve
+X_0(N), the Weil pairing on J_0(N)[k] produces a bilinear form
+valued in mu_k. The bridge cocycle may arise as a Weil pairing
+of torsion points on J_0(13) and J_0(19), not as a value of any
+L-function derivative. This would connect the bridge family to the
+arithmetic geometry of modular curves.
+
+**The honest assessment.** The correct functional is unknown. The
+three directions above are ordered by plausibility: (A) is the most
+natural within the existing CBB framework; (B) connects to the
+deepest layer of arithmetic geometry; (C) is the most speculative.
+All three are computationally testable. The reformulation of
+Conjecture 5 is the principal open problem in the Hilbert 12
+programme.
 
 ---
 
