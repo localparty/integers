@@ -376,26 +376,37 @@ that claim.
 
 ## Files to Read (in order, before writing anything)
 
-Read all of these before forming any judgments.
+Read all of these before forming any judgments. **Read every file
+cover-to-cover. Do not skim. Do not skip sections.**
 
-**Top-level structure (read first):**
-1. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/00-table-of-contents.md`
-2. Any PROOF-CHAIN.md if it exists
-3. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/sections-part-I.md`
-4. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/sections-part-II.md`
-5. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/sections-part-III.md`
-6. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/sections-part-IV.md`
+**The preprint (read in this order):**
+1. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/00-table-of-contents.md`
+   (master structure — read first to orient yourself)
+2. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/sections-part-I.md`
+   (Part I: The Question — §1-2: BSD statement, Integers programme recap)
+3. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/sections-part-II.md`
+   (Part II: The Extension — §3-6: BC over Q(i), bridges, ITPFI, dark states)
+4. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/sections-part-III.md`
+   (Part III: The Proof — §7-9: cocycle shift, Baker, GRH for CM curves)
+5. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/sections-part-IV.md`
+   (Part IV: From GRH to BSD — §10-13: CM factorization, Kolyvagin, Gross-Zagier, the theorem)
+6. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/preprint/sections-parts-V-VI.md`
+   (Parts V-VI: The Landscape + The Close — §14-18: examples, scope, adversarial review, connections)
 
-**Research directory:**
-7. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/research/` (all files)
+**The paper26 table of contents (development version, may differ from preprint):**
+7. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/00-table-of-contents.md`
 
-**Reference materials:**
-8. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/referee/references/clay-millennium-prize-rules.md`
-9. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/referee/references/clay-bsd-official-description.md`
+**Research directory (background, prior analysis, proof chain status):**
+8. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/research/` (all files)
+
+**Reference materials (Clay rules and BSD problem description):**
+9. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/referee/references/clay-millennium-prize-rules.md`
+10. `/Users/gsix/quantum-geometry-in-5d-latex/paper26/referee/references/clay-bsd-official-description.md`
 
 **Cross-references to the Integers programme (RH proof):**
-10. The RH proof (Paper 13) for the bridge family construction over Q
-11. Any appendices or supplements in the paper26 directory
+11. The RH proof (Paper 13) for the bridge family construction over Q —
+    read if available in the parent directory structure
+12. Any appendices or supplements in the paper26 directory
 
 ---
 
