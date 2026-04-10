@@ -12,6 +12,33 @@
   That's another half-day to a few-day mathematical task. It's totally tractable, but it's not done yet.
 
 
+# adversary architecture
+
+on the mean time can you help me write a prompt for what we are doing? 
+
+a running architecture that is provisioned with everything about QG5D, CBCBS, YANG MILLS, the predictive grammar, the transpositions, the correspondence patterns, etc and the theorems from all those AND WHICH PATTERN OR RATIONAL did we use for achieving it and in general the strategy that got is where we are, the north star?
+
+FIRST it should look online for leads then to follow and determine leads and write down a strategy with status all the leads in parallel and wait for them to finish
+
+write detailed lead, its rationale, the pattern that we used or determining that it was a lead in leads/ and write the current state of the strategy in strategy/ including the leads that are dead and the leads that are open
+
+the run should be motivated to follow the strategy that got us first R and then QG5D and then YANG MILLS and then CBCBS so we know it works for a FACT and it should be declarative
+
+the leads should be researched in massive parallel and wait until they ALL finish every research lead should write its result to /leads
+
+then write down the results of of the research phase in a research document that includes all the leads that have died and all the leads that are open
+
+importantly leads should contain the reason they were closed so that hey can be reopened for another reason, so a lead can have multiple closed it they have multiple reasons
+
+probably you can help me running a few cycles and checking that it progresses and ideally converges?
+
+a proof that it progresses is taht it should advance exactly like we have advanced all the files in the research directory, that is the ledger - the files in the research directory should be the ones that contain more details, the ledger itself should have names, status and reason and a reason for the status
+
+yeah it it can be adversarial, the adversary would TEST and verify the status of the lead before writing it down in the ledger, this would avoid what happened to us with RH that we hought that we had closed the proof but it was not, because I didn't verify it until I did the adversarial should also be provided with all of the tools and the north star but it should be super rigours
+
+
+
+
 
 
 
