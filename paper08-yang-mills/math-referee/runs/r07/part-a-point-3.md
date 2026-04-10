@@ -1,0 +1,10 @@
+## Part A, Point 3: The Bogomolny Bound and Topological Sector Restriction
+
+**Weight:** MEDIUM
+**Verdict:** CLOSABLE GAP
+
+**Finding:**
+
+The Bogomolny bound E >= (8*pi^2/g^2)|c_2| is used to suppress contributions from non-trivial topological sectors in the functional integral. On a finite lattice, the topological classification requires care: the continuum second Chern number c_2 is not directly available, and one must use Luscher's geometric construction to define an approximate topological charge that coincides with the continuum c_2 for lattice configurations in the small-field region (those satisfying |F| < p(g_k) for an appropriate polynomial bound on the plaquette field strength). For rough configurations in the large-field region, the topological charge is not well-defined through Luscher's construction, but these configurations are exponentially suppressed by the lattice action -- their contribution to the functional integral is bounded by e^{-c/g_k^2} for a constant c > 0, which is smaller than any power of the lattice spacing. Within the small-field region, the Bogomolny bound holds and the restriction to c_2 = 0 is dynamically preserved: the internal Yang-Mills action on CP^{N-1} in the c_2 = 0 sector is separated from sectors with c_2 != 0 by the Bogomolny energy barrier of height 8*pi^2/g^2, and at weak coupling the quantum tunneling amplitude between sectors is exponentially suppressed by e^{-8*pi^2/g^2}. The proof correctly restricts the functional integral to c_2 = 0 and bounds the complementary contribution. This chain of reasoning is standard in the constructive gauge theory literature (Luscher 1982, Phillips-Stone 1986) but the preprint should state the lattice-to-continuum topological correspondence and the large-field suppression argument explicitly rather than treating the Bogomolny bound as if it applied directly on the lattice.
+
+**Impact on the claimed result:** Minor. The gap is closable by adding one paragraph detailing the lattice topological charge construction and the small-field/large-field decomposition. The mathematical content is already present in the literature and no new estimates are required.

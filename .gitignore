@@ -14,3 +14,5 @@ __pycache__/
 **/missfont.log
 **/texput.log
 **/abstract-short.txt
+**/.venv
+paper13-rh/code

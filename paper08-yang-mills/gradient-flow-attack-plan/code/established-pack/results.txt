@@ -1,0 +1,46 @@
+==============================================================================
+W1-04 Numerical Verification Results
+Precision: 50 decimal digits (mpmath)
+==============================================================================
+
+------------------------------------------------------------------------------
+Part (b): S_0 = 1 + 2*zeta(0)
+------------------------------------------------------------------------------
+  zeta(0) = -0.5
+  S_0 = 1 + 2*zeta(0) = 0.0
+  |S_0| = 0.0
+  VERIFIED: S_0 = 0 exactly (to 50-digit precision)
+
+------------------------------------------------------------------------------
+Part (a): E_2(-j; Q_0) = 6*zeta(-j)*L(-j, chi_{-3}) for j = 1..10
+          Q_0 = n^2 + nm + m^2 (Eisenstein norm form, disc = -3)
+------------------------------------------------------------------------------
+
+   j     s                 zeta(s)            L(s, chi_-3)     E_2(s; Q_0)  Mechanism
+------------------------------------------------------------------------------------------------------------------------
+   1    -1     -0.0833333333333333   -3.75857537356715e-52   1.8792877e-52  L(-1, chi_-3) = 0 (trivial Dirichlet zero, odd negative)
+   2    -2                     0.0      -0.222222222222222             0.0  zeta(-2) = 0 (trivial Riemann zero, even negative)
+   3    -3     0.00833333333333333    8.45679459052609e-52   4.2283973e-53  L(-3, chi_-3) = 0 (trivial Dirichlet zero, odd negative)
+   4    -4                     0.0       0.666666666666667             0.0  zeta(-4) = 0 (trivial Riemann zero, even negative)
+   5    -5    -0.00396825396825397   -2.53703837715783e-51   6.0405676e-53  L(-5, chi_-3) = 0 (trivial Dirichlet zero, odd negative)
+   6    -6                     0.0       -4.66666666666667             0.0  zeta(-6) = 0 (trivial Riemann zero, even negative)
+   7    -7     0.00416666666666667    3.42500180916307e-50   8.5625045e-52  L(-7, chi_-3) = 0 (trivial Dirichlet zero, odd negative)
+   8    -8                     0.0        59.9259259259259             0.0  zeta(-8) = 0 (trivial Riemann zero, even negative)
+   9    -9    -0.00757575757575758    -5.1375027137446e-49   2.3352285e-50  L(-9, chi_-3) = 0 (trivial Dirichlet zero, odd negative)
+  10   -10                     0.0       -1231.33333333333             0.0  zeta(-10) = 0 (trivial Riemann zero, even negative)
+
+VERIFIED: E_2(-j; Q_0) = 0 for all j = 1..10
+  Mechanism: complementary trivial zeros of zeta(s) and L(s, chi_{-3})
+  - j odd:  L(-j, chi_{-3}) = 0 (odd Dirichlet character trivial zeros)
+  - j even: zeta(-j) = 0 (Riemann zeta trivial zeros at even negatives)
+
+==============================================================================
+Summary
+==============================================================================
+Both structural results are confirmed numerically:
+  (a) E_2(-j; Q_0) = 0 for j = 1..10 -- complementary trivial zeros
+  (b) S_0 = 1 + 2*zeta(0) = 0         -- KK mode count vanishing
+
+These results underpin Lemma 3.4 (KK mode sum vanishing) and
+Lemma 3.6 (Goroff-Sagnotti coefficient vanishing) of the
+gradient-flow attack plan.

@@ -1,0 +1,2 @@
+# MY3: Distributional spectrum compatible with Nelson self-adjointness
+**FAIL.** The upgrade from distributional eigenstates (in S') to genuine eigenvectors (in H_1) or even approximate spectrum is ASSERTED but NOT PROVED. This is the central open problem in the BC approach to RH. The paper's "approximate spectrum preservation" argument (Section 1.3, Appendix B.5) omits the key step: showing that Meyer's distributions yield Weyl sequences in H_1.
