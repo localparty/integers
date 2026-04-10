@@ -1,0 +1,21 @@
+{
+  "theorem": "Gauge group from entanglement geometry",
+  "cartan_matrix": [
+    [
+      2.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      2.0
+    ]
+  ],
+  "is_A2": true,
+  "root_system": "A\u2082",
+  "gauge_group": "[SU(3) \u00d7 SU(2) \u00d7 U(1)] / Z\u2086",
+  "stabilizer_continuous": "T\u00b2 (2-dimensional torus)",
+  "stabilizer_discrete": "(Z\u2082)\u00b2",
+  "orbit_dimension": 6,
+  "flag_manifold": "Fl(1,2;3) = SU(3)/T\u00b2",
+  "three_generations": "unique N giving SM gauge group"
+}

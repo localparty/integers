@@ -1,0 +1,48 @@
+{
+  "truncation_N": 100,
+  "n_riemann_zeros_used": 10,
+  "part_A": {
+    "projector_type": "top-k energy modes (diagonal)",
+    "rank": 10,
+    "theta_F_0": 0.0,
+    "trapped": false,
+    "note": "[H, P_F] = 0 => theta_F(t) = const => no focusing (trivial case)"
+  },
+  "part_B": {
+    "projector_type": "gamma-weighted (diagonal)",
+    "rank": 10,
+    "theta_F_0": 0.0,
+    "trapped": false,
+    "note": "Same trivial case: diagonal P_F commutes with diagonal H"
+  },
+  "part_D": {
+    "projector_type": "Hecke-arithmetic (off-diagonal, critical line s=1/2)",
+    "rank": 2,
+    "gamma_1_used": 14.134725141734695,
+    "gamma_2_used": 21.022039638771556,
+    "theta_F_0": 0.0,
+    "trapped": false,
+    "dtheta_dt_0": 0.0,
+    "T_BC_avg": 1.9294935635286916,
+    "raychaudhuri_rhs": -1.9294935635286916,
+    "raychaudhuri_satisfied": false,
+    "commutator_norm": 2.750440076016475,
+    "theta_min": 0.0,
+    "theta_max": 0.0,
+    "fraction_negative": 0.0
+  },
+  "part_E": {
+    "theta_init": -0.1,
+    "T_BC_const": 1.9294935635286916,
+    "t_star_numerical": 1.5485999999998459,
+    "t_star_riccati": 1.5474560214047282,
+    "t_star_pure_focusing": 20.0
+  },
+  "part_F": {
+    "H_hermitian": true,
+    "T_BC_hermitian": true,
+    "spec_T_BC_real": true,
+    "singularity_at_beta_1": true,
+    "forces_gamma_real": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "scaling": [
+    {
+      "label": "sqrt13",
+      "eps": 1.013562907169199e-58,
+      "min_A": -0.8483356666319809,
+      "min_B": -2.2125903878329143,
+      "c_shift": 2.244716291711243,
+      "S_shifted": 260.9468552515007,
+      "TrA": 136.2694006053929,
+      "TrB": 1.7802662376420435
+    },
+    {
+      "label": "5",
+      "eps": -2.289576031303046e-81,
+      "min_A": -1.1141617766715897,
+      "min_B": -3.139605380580694,
+      "c_shift": 3.1810014343865007,
+      "S_shifted": 223.88425127476825,
+      "TrA": 124.43990910115676,
+      "TrB": 4.498542624183115
+    },
+    {
+      "label": "10",
+      "eps": -6.736895341075529e-80,
+      "min_A": -1.6232060709033884,
+      "min_B": -4.0637891267374755,
+      "c_shift": 4.11442701800485,
+      "S_shifted": 221.98103634643633,
+      "TrA": 108.89558560030325,
+      "TrB": 10.872088708283853
+    }
+  ],
+  "A_not_posdef": true,
+  "B_not_posdef": true,
+  "entropy_direction_blocked": true,
+  "obstruction": "Neither A=W02-WR nor B=Wprimes is positive definite. Relative entropy requires positive definite inputs."
+}

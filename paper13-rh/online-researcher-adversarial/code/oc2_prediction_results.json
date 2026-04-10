@@ -1,0 +1,111 @@
+{
+  "test_date": "2026-04-08",
+  "question": "Can the QG5D framework predict \u03b3_2, \u03b3_3, \u03b3_4, ... from physical observations?",
+  "method": "Formula: \u03b3_n = 2 \u00d7 log(\u03c0 \u00d7 ratio) / \u03c0\u00b2",
+  "tolerance": "< 1% for strict match",
+  "results": [
+    {
+      "name": "R_obs / l_P (dark energy)",
+      "ratio": 6.1871424991724e+29,
+      "gamma_pred": 14.132718617028459,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 0.014195710819372154
+    },
+    {
+      "name": "M_EW \u00d7 l_P",
+      "ratio": 1.010267e-16,
+      "gamma_pred": -7.231580010595691,
+      "closest_n": 10,
+      "closest_gamma": 49.7738324776723,
+      "error_pct": 114.52887923356043
+    },
+    {
+      "name": "M_KK \u00d7 l_P (1.5 TeV)",
+      "ratio": 6.160164e-16,
+      "gamma_pred": -6.865225154870104,
+      "closest_n": 10,
+      "closest_gamma": 49.7738324776723,
+      "error_pct": 113.79284015943463
+    },
+    {
+      "name": "M_GUT \u00d7 l_P",
+      "ratio": 0.0004106776,
+      "gamma_pred": -1.3481740348038609,
+      "closest_n": 10,
+      "closest_gamma": 49.7738324776723,
+      "error_pct": 102.70860001670282
+    },
+    {
+      "name": "M_Pl / M_EW",
+      "ratio": 9898374000000000.0,
+      "gamma_pred": 7.695521570813018,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 45.55591641403095
+    },
+    {
+      "name": "M_Pl / M_KK",
+      "ratio": 1623333000000000.0,
+      "gamma_pred": 7.329166652283571,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 48.147795031095356
+    },
+    {
+      "name": "M_Pl / M_GUT",
+      "ratio": 2435.0,
+      "gamma_pred": 1.8121155738276742,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 87.1796900494573
+    },
+    {
+      "name": "\u03a9_DM / \u03a9_b",
+      "ratio": 5.36,
+      "gamma_pred": 0.5722000084664884,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 95.95181368771728
+    },
+    {
+      "name": "1 / \u03be (mirror temp)",
+      "ratio": 2.314815,
+      "gamma_pred": 0.40205454564489596,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 97.1555545536731
+    },
+    {
+      "name": "1 / \u03b1 (fine structure)",
+      "ratio": 137.036,
+      "gamma_pred": 1.2290205978695081,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 91.30495580532613
+    },
+    {
+      "name": "m_p / m_e",
+      "ratio": 1836.15,
+      "gamma_pred": 1.7549145439067781,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 87.5843744656544
+    },
+    {
+      "name": "n_2 / n_1 (GUT flux)",
+      "ratio": 1.8888888888888888,
+      "gamma_pred": 0.3608490432246403,
+      "closest_n": 1,
+      "closest_gamma": 14.134725141734693,
+      "error_pct": 97.44707421187
+    }
+  ],
+  "summary": {
+    "total_tested": 12,
+    "strict_matches": 1,
+    "moderate_matches": 0,
+    "loose_matches": 0,
+    "conclusion": "Only \u03b3_1 is predicted (0.014% error). Formula does NOT generalize."
+  }
+}

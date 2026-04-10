@@ -36,7 +36,7 @@ a proof that it progresses is taht it should advance exactly like we have advanc
 
 yeah it it can be adversarial, the adversary would TEST and verify the status of the lead before writing it down in the ledger, this would avoid what happened to us with RH that we hought that we had closed the proof but it was not, because I didn't verify it until I did the adversarial should also be provided with all of the tools and the north star but it should be super rigours
 
-
+the lead research run sometimes returnes the direction to follow for and the adversary should follow it and so on
 
 
 
