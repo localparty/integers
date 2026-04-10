@@ -159,9 +159,10 @@ Fourier transforms $\hat{\xi}_N$ converge uniformly to the
 Riemann Xi function $\Xi$ on compact subsets of
 $\{|\mathrm{Im}(z)| < 1/2\}$.
 
-*(iii) Non-vanishing at the origin.* $\Xi(0) \approx 0.4971 \neq 0$
-(the standard value $\Xi(0) = -\frac{1}{2}\zeta(1/2)\pi^{1/4}/
-\Gamma(1/4)$; see Appendix E.4 for the corrected computation).
+*(iii) Non-vanishing at the origin.* $\Xi(0) \approx 0.49712 \neq 0$
+(directly from $\xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$
+at $s = 1/2$, giving
+$\Xi(0) = -\Gamma(1/4)\zeta(1/2)/(8\pi^{1/4})$; see Appendix E.4).
 The hypothesis of Hurwitz's theorem is satisfied.
 
 *(iv) Zero convergence.* By Hurwitz's theorem (1893), every zero

@@ -434,25 +434,36 @@ that all non-trivial zeros of $\zeta$ lie on $\mathrm{Re}(s) = 1/2$.
 
 ### E.4 Why $\Xi$ is not identically zero
 
-The Riemann Xi function satisfies $\Xi(0) \approx 0.4971 \neq 0$.
-The standard computation gives:
+The Riemann Xi function satisfies $\Xi(0) \approx 0.49712 \neq 0$.
+The derivation: by definition $\Xi(t) = \xi(1/2 + it)$, where
+$\xi(s) = \frac{1}{2}\,s(s-1)\,\pi^{-s/2}\,\Gamma(s/2)\,\zeta(s)$.
+Evaluating at $s = 1/2$, the scalar prefactor is
+$\frac{1}{2} \cdot \frac{1}{2} \cdot \left(-\frac{1}{2}\right) = -\frac{1}{8}$,
+giving:
 
 $$
-\Xi(0) = -\frac{1}{2}\,\zeta(1/2)\,\frac{\pi^{1/4}}{\Gamma(1/4)}.
+\Xi(0) \;=\; \xi(1/2)
+\;=\; -\frac{1}{8}\,\pi^{-1/4}\,\Gamma(1/4)\,\zeta(1/2)
+\;=\; -\frac{\Gamma(1/4)\,\zeta(1/2)}{8\,\pi^{1/4}}.
 $$
 
-Using $\zeta(1/2) \approx -1.4604$ and $\Gamma(1/4) \approx 3.6256$:
+Using $\zeta(1/2) \approx -1.46035$, $\Gamma(1/4) \approx 3.62561$,
+and $\pi^{1/4} \approx 1.33134$:
 
 $$
-\Xi(0) = -\frac{1}{2} \times (-1.4604) \times \frac{1.3313}{3.6256}
-\approx 0.4971.
+\Xi(0) \;=\; -\,\frac{3.62561 \times (-1.46035)}{8 \times 1.33134}
+\;=\; \frac{5.29466}{10.65072}
+\;\approx\; 0.49712.
 $$
 
-**Correction.** The previous version of this appendix stated
-$\Xi(0) = 1/2$. This was an approximation error. The exact value is
-$\Xi(0) = 0.497121\ldots$, which is close to but not equal to $1/2$.
-The hypothesis of Hurwitz's theorem ($\Xi$ not identically zero) is
-satisfied regardless.
+**Correction history.** The earliest version of this appendix stated
+$\Xi(0) = 1/2$ (an approximation error) and gave an incorrect explicit
+formula. The exact value is
+$\Xi(0) = 0.4971207781883\ldots$, close to but not equal to $1/2$.
+The corrected formula above is derived directly from the definition of
+$\xi$ and matches the numerical value to full precision (verified at
+60 decimal digits with mpmath). The hypothesis of Hurwitz's theorem
+($\Xi$ not identically zero) is satisfied regardless.
 
 ---
 
