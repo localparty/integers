@@ -1,6 +1,6 @@
 # The Postulate-Relaxation Cycle — Strategy and Rationale
 
-*The full vision behind `paper12/relaxation/prompt.md`. This document*
+*The full vision behind `paper12/relaxation/02-prompt.md`. This document*
 *is the philosophy, the architecture, the worked examples, the*
 *expected failure modes, the publication strategy, and the priority*
 *mechanics. The prompt is the executable; this is the why.*

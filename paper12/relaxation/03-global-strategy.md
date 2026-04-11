@@ -36,7 +36,7 @@
 
 **Lead 1 — Verify T7 (Stark regulator) numerically with PARI/GP this week.** Compute the Stark unit ε_χ for χ of order 3 mod 13 (the (5,13) bridge) using existing PARI or SageMath tools, take L'(0,χ) = −log|ε_χ|, and check whether its Galois phase equals the cyclotomic Brauer class 1/3 mod ℤ. **If the equality holds**, the framework's deepest conjecture (the surviving form of the RBC layer from research/188) gets its first numerical anchor. **Cost**: half a day. **Payoff**: enormous — a hard arithmetic confirmation of the bridge family's deepest claim.
 
-**Lead 2 — Position the Theoretical-Precision Table as CODATA-style theoretical input.** Add a section to `paper12/relaxation/strategy-rationale.md` and Paper 23's abstract framing the framework-leads entries as constraints that can be incorporated into the CODATA 2026 global least-squares adjustment. This reframes the framework from "competitor to measurement" to "theoretical input to the existing CODATA workflow." **Cost**: a paragraph + a section. **Payoff**: massive framing improvement; reduces the "but you have no experimental basis" objection by 90%.
+**Lead 2 — Position the Theoretical-Precision Table as CODATA-style theoretical input.** Add a section to `paper12/relaxation/01-strategy-rationale.md` and Paper 23's abstract framing the framework-leads entries as constraints that can be incorporated into the CODATA 2026 global least-squares adjustment. This reframes the framework from "competitor to measurement" to "theoretical input to the existing CODATA workflow." **Cost**: a paragraph + a section. **Payoff**: massive framing improvement; reduces the "but you have no experimental basis" objection by 90%.
 
 **Lead 3 — Borrow Ax-Prover / Prover-Agent / HERMES vocabulary for the methodology section.** Read the three recent multi-agent theorem-proving papers (October-November 2025) and extract their standard terminology for parallel exploration, iterative refinement, adversarial review, and human-in-the-loop. Use those terms in our convergence cycle documentation so referees who know that literature recognize our methodology immediately. **Cost**: 2-3 hours of reading. **Payoff**: free credibility from terminology alignment; methodology section of Paper 23 writes itself.
 
@@ -346,7 +346,7 @@ The recommendation: **the bridge family papers (Paper 24) and the BSD paper (Pap
 
 ### Lead 2 — Position the Theoretical-Precision Table as CODATA-style theoretical input
 
-**Statement**: Add a section to `paper12/relaxation/strategy-rationale.md` and Paper 23's abstract framing the framework-leads entries as constraints to be incorporated into the CODATA 2026 global least-squares adjustment.
+**Statement**: Add a section to `paper12/relaxation/01-strategy-rationale.md` and Paper 23's abstract framing the framework-leads entries as constraints to be incorporated into the CODATA 2026 global least-squares adjustment.
 
 **Cost**: a paragraph in the strategy doc + a section in Paper 23 abstract + a citation to arXiv 2409.03787.
 
@@ -356,7 +356,7 @@ The recommendation: **the bridge family papers (Paper 24) and the BSD paper (Pap
 
 **Risks**: none. The framing is purely additive and doesn't change any of the framework's content.
 
-**Execution**: edit `paper12/relaxation/strategy-rationale.md` to add a new section "16. The CBB system as theoretical input to CODATA 2026" with the framing argument and the citations. Edit Paper 23's abstract to add the sentence "*The Theoretical-Precision Table is structurally compatible with the CODATA least-squares adjustment methodology and may be incorporated as theoretical input into the next adjustment cycle.*"
+**Execution**: edit `paper12/relaxation/01-strategy-rationale.md` to add a new section "16. The CBB system as theoretical input to CODATA 2026" with the framing argument and the citations. Edit Paper 23's abstract to add the sentence "*The Theoretical-Precision Table is structurally compatible with the CODATA least-squares adjustment methodology and may be incorporated as theoretical input into the next adjustment cycle.*"
 
 ### Lead 3 — Borrow Ax-Prover / Prover-Agent / HERMES vocabulary
 

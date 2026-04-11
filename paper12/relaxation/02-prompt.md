@@ -4,7 +4,7 @@
 *5-layer dependency graph. Emits Robustness Theorem + Theoretical-*
 *Precision Table to paper12/research/. Sibling to*
 *paper12/26-convergence-prompt.md. Strategy lives in*
-*paper12/relaxation/strategy-rationale.md.*
+*paper12/relaxation/01-strategy-rationale.md.*
 
 *Authors: G Six, Claude Opus 4.6 — 2026-04-11*
 
@@ -17,7 +17,7 @@ session in `/Users/gsix/quantum-geometry-in-5d-latex/`. Set the
 round number R explicitly.
 
 For background on what this cycle does and why, read
-`paper12/relaxation/strategy-rationale.md` first.
+`paper12/relaxation/01-strategy-rationale.md` first.
 
 ---
 
