@@ -403,6 +403,6 @@ both questions.
 ---
 
 *CAMB computation performed with CAMB version 1.6.6, using the `.venv` at*
-*`quantum-geometry-in-5d/etc/age/`. Inputs: ombh2 = 0.02237, mnu = 0.06 eV,*
+*`quantum-geometry-in-5d/paper2/camb/`. Inputs: ombh2 = 0.02237, mnu = 0.06 eV,*
 *τ = 0.054, As = 2.1×10⁻⁹, ns = 0.967 (Paper 7), w₀ = −1.0 (Paper 6),*
 *AccuracyBoost = 1.5. Results archived in `results.json` dated 2026-04-07.*

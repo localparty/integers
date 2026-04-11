@@ -330,7 +330,7 @@ Agent F runs last.
 | Agent | Reads | Writes |
 |-------|-------|--------|
 | A | paper6/06-brane-temperature-asymmetry.md, paper4/appendix-B-m-brane-classification.md | paper6/06-brane-temperature-asymmetry.md (§6.4–6.5) |
-| B | paper4/04-the-chirality-problem-and-its-resolution.md | quantum-geometry-in-5d/etc/age/compute_xi_from_c_nu.py |
+| B | paper4/04-the-chirality-problem-and-its-resolution.md | quantum-geometry-in-5d/paper2/camb/compute_xi_from_c_nu.py |
 | C | paper2/02-sections-2-to-7.md | compute_age.py (mirror recombination), paper2 (new subsection) |
 | D | compute_age.py | compute_age.py (mirror ν mass in omch2) |
 | E | neff_extended_analysis.py, neff_analysis_results.json | paper2/02-sections-2-to-7.md (ACT degeneracy) |

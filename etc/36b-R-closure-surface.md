@@ -1,8 +1,8 @@
 # QG5D Story 36b: R Closure Surface — Full Numerical Analysis
 
 **Date:** 2026-04-07  
-**Script:** `/Users/gsix/quantum-geometry-in-5d/etc/age/compute_R_closure_surface.py`  
-**Plots:** `/Users/gsix/quantum-geometry-in-5d/etc/age/closure_*.png`
+**Script:** `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_R_closure_surface.py`  
+**Plots:** `/Users/gsix/quantum-geometry-in-5d/paper2/camb/closure_*.png`
 
 ---
 
@@ -220,7 +220,7 @@ The framework predicts that if you know ξ (from early-universe observables) and
 
 ## Files
 
-- Script: `/Users/gsix/quantum-geometry-in-5d/etc/age/compute_R_closure_surface.py`
+- Script: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_R_closure_surface.py`
 - `closure_dN_vs_MGUT.png` — Part 2: ΔN_vis vs M_GUT* at ξ=0.432
 - `closure_xi_vs_MGUT.png` — Part 3: ξ vs M_GUT* at ΔN=3.44  
 - `closure_2D_surface.png` — Part 4: 2D contour map

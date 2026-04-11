@@ -239,6 +239,6 @@ This is numerically incorrect. Tracing the algebra:
 
 ---
 
-*Computed with: `/Users/gsix/quantum-geometry-in-5d/etc/age/.venv/bin/python3`*
+*Computed with: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/.venv/bin/python3`*
 *Source data: paper4/07-predictions.md §7.21, paper6/02-dilaton-potential.md §2.3*
 *NuFIT 5.3 (2023): Δm²_{32} = 2.515 × 10⁻³ eV²*

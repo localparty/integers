@@ -1,7 +1,7 @@
 # R-Quantization Conjecture: Numerical Check
 
 **Status**: Checked 2026-04-07  
-**Script**: `/Users/gsix/quantum-geometry-in-5d/etc/age/compute_R_quantization.py`
+**Script**: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_R_quantization.py`
 
 ---
 
@@ -188,5 +188,5 @@ The profound fact remains: three completely independent routes — Witten index,
 
 ## Files
 
-- Script: `/Users/gsix/quantum-geometry-in-5d/etc/age/compute_R_quantization.py`
+- Script: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_R_quantization.py`
 - This report: `/Users/gsix/quantum-geometry-in-5d-latex/etc/36-R-quantization-conjecture.md`

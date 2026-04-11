@@ -1,7 +1,7 @@
 # Update and Run Cosmological Computations — QG5D Framework
 
 This prompt updates the numerical computation scripts at
-`/Users/gsix/quantum-geometry-in-5d/etc/age/` to match the latest parameter
+`/Users/gsix/quantum-geometry-in-5d/paper2/camb/` to match the latest parameter
 values from the QG5D paper series, then runs the calculations and regenerates
 all plots.
 
@@ -70,7 +70,7 @@ values before making any changes.
 
 ## Step 3 — Update the scripts
 
-Edit the following files at `/Users/gsix/quantum-geometry-in-5d/etc/age/`:
+Edit the following files at `/Users/gsix/quantum-geometry-in-5d/paper2/camb/`:
 
 ### `compute_age.py`
 
@@ -131,10 +131,10 @@ Do not touch `.png`, `.json`, or `.venv` files in this step.
 ## Step 4 — Run the calculations
 
 Run the scripts in this order using the `.venv` Python at
-`/Users/gsix/quantum-geometry-in-5d/etc/age/.venv/bin/python`:
+`/Users/gsix/quantum-geometry-in-5d/paper2/camb/.venv/bin/python`:
 
 ```bash
-cd /Users/gsix/quantum-geometry-in-5d/etc/age
+cd /Users/gsix/quantum-geometry-in-5d/paper2/camb
 
 # Main CAMB computation (writes results.json)
 .venv/bin/python compute_age.py
@@ -180,7 +180,7 @@ Fill in all values from `results.json`. Flag any observable that is more than
 
 - The `.venv` has CAMB 1.6.6, numpy, matplotlib, sympy installed.
 - CAMB accuracy is set to `AccuracyBoost=1.5` — this is sufficient.
-- The computation scripts are at `/Users/gsix/quantum-geometry-in-5d/etc/age/`
+- The computation scripts are at `/Users/gsix/quantum-geometry-in-5d/paper2/camb/`
   (note: NOT the `-latex` directory — this is the original repo).
 - The paper source files are at `/Users/gsix/quantum-geometry-in-5d-latex/`.
 - Do not modify paper source files in this workflow — only read them for
