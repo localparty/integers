@@ -22,3 +22,10 @@ These papers were downloaded earlier and are available at
 | teschl-gsrc-norm-resolvent-2026.pdf | Teschl et al. | 2026 | On Generalized Strong and Norm Resolvent Convergence (arXiv:2601.10476) | Streamlined gsrc for self-adjoint operators on DIFFERENT Hilbert spaces with identification maps. Directly usable for CCM(N)→CCM(∞) transfer from H_N = L²([λ⁻¹,λ]) parameter-family. |
 | ascent-descent-src-stability-2025.pdf | (Ascent-Descent authors) | 2025 | Sharp Ascent–Descent Spectral Stability under Strong Resolvent Convergence (arXiv:2511.20971) | Handles NON-selfadjoint limits via reduced minimum modulus γ(T−λ)>0. Insurance policy if CCM self-adjointness breaks in the limit. |
 | majorana-rindler-rh-2025.pdf | (Majorana-Rindler authors) | 2025 | A Majorana Relativistic Quantum Spectral Approach to RH in (1+1)D Rindler Spacetime (arXiv:2503.09644) | Independent spectral realisation via deficiency-index + boundary-triplet + Krein extension. Worth comparing to CCM. |
+
+## Cycle 1 (tuned) — web references (not downloaded, cited in §D toolkit)
+
+| Ref | Author | Year | Title | Relevance |
+|:--|:--|:--|:--|:--|
+| arXiv:2602.04022 (html deep-read) | Connes | 2026 | The Riemann Hypothesis: Past, Present and a Letter Through Time | **NEW §D row Connes-Letter-2026.** Conditional theorem: if the smallest eigenvalue of the CF quadratic form at (λ,N) is simple and even, the approximating values lie EXACTLY on the critical line. Used in Lead 2. |
+| ScienceDirect S3050475925008978 | (SUSY-embedding authors) | 2025 | A Supersymmetric Quantum mechanical model and the spectral embedding conjecture for the Riemann zeros | **NEW §D row SUSY-embedding-2025.** Reframes Hilbert–Pólya: the zeros are a sparse subsequence of the full Hamiltonian spectrum; selection principle to be identified. Deferred to Cycle 2+ as orthogonal insurance; logged for future use. |
