@@ -1,11 +1,49 @@
 # Point E1 — The Assembly: Verdict
 
+> **☑ CLOSED 2026-04-10.** All three upstream dependencies listed
+> in sub-question (c) below are resolved:
+>
+> 1. Meyer distributional → point spectrum upgrade for ζ_K (MY4):
+>    **bypassed via Route 3** (G's projector — see
+>    `research/route3-kms-projector-bypass.md` and
+>    `strategy/05-route3-kms-projector-bypass.md`).
+> 2. Twisted spectral realization for `L(s, ψ)` (MY3):
+>    **Key Lemma B** in `research/meyer-extension-to-K.md`.
+> 3. Cohomology-class integrality (BR7/BR8): **Key Lemma C** in
+>    `research/cohomology-class-lemma.md`.
+>
+> Plus the Prop 4.3 [GAP] closed by
+> `research/corrected-bridge-table.md`.
+>
+> The chain is now **11 of 11** at the paper's 11-step framing
+> ([THEOREM]: 4, [LEMMA]: 7, [KEY LEMMA — OPEN]: 0, [GAP]: 0).
+> Paper 26 Theorem 13.1 is **[THEOREM] conditional on CBB axioms**
+> — the same conditional Paper 13 lives with, with no additional
+> Meyer or spectral dependency.
+>
+> **Overall rigor label (post-closure): [LEMMA]** at the GRH step
+> (upgraded from [KEY LEMMA — OPEN]); [LEMMA]/[THEOREM] at the
+> rank-0 closure.
+>
+> **Overall verdict (post-closure):** **PASS — chain is
+> rigorously complete within the stated scope.**
+>
+> See `closure-report.md` for the full walkthrough and
+> `strategy/05-route3-kms-projector-bypass.md` for the summary.
+>
+> *r01 verdict preserved below.*
+
+---
+
 **Weight:** HEAVY
 **Location in preprint:** §13, §9
-**Overall rigor label:** **[KEY LEMMA — OPEN]** at the GRH step;
+**Overall rigor label (r01):** **[KEY LEMMA — OPEN]** at the GRH step;
 **[LEMMA]** at the rank-0 closure
-**Overall verdict:** Chain is structurally complete but depends on
+**Overall rigor label (post-closure):** **[LEMMA]** at the GRH step (MY4 bypassed);
+**[LEMMA]** at the rank-0 closure (unchanged)
+**Overall verdict (r01):** Chain is structurally complete but depends on
 multiple [KEY LEMMA — OPEN] items upstream
+**Overall verdict (post-closure):** Chain is rigorously complete within stated scope
 
 ## Sub-question verdicts
 

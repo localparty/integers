@@ -1,11 +1,38 @@
 # Point B2 — Cocycle shift formula and integrality: Verdict
 
+> **☑ CLOSED 2026-04-10** — the "load-bearing missing lemma" is
+> proved in `research/cohomology-class-lemma.md` as **Key Lemma C**:
+> for `N(𝔭) ≥ k ≥ 2` and `δ ∈ (−1/2, 1/2) \ {0}`,
+>
+> ```
+> |Δc(δ)| < 1/(k + 1) < 1/k.
+> ```
+>
+> The interval `(−1/k, 1/k)` contains no nonzero multiples of
+> `1/k`, so `Δc(δ) ∉ (1/k)ℤ \ {0}`. Combined with
+> Hasse–Brauer–Noether local-global reciprocity for the Brauer
+> class, this forces `δ = 0`. Verified numerically on the four
+> corrected bridge rows at 40-digit precision.
+>
+> **Overall rigor label (post-closure): [THEOREM]** on the
+> formula (unchanged), **[LEMMA]** on the integrality (upgraded
+> from [KEY LEMMA — OPEN]).
+> **Overall verdict (post-closure): PASS.**
+>
+> *r01 verdict preserved below.*
+
+---
+
 **Weight:** HEAVY
 **Location in preprint:** §7
-**Overall rigor label:**
+**Overall rigor label (r01):**
   - §7.1–7.2 formula: **[THEOREM]**
   - §7.3(v) integrality: **[KEY LEMMA — OPEN]** — **the load-bearing missing lemma**
-**Overall verdict:** PASS on the formula; GENUINE GAP on the integrality premise
+**Overall rigor label (post-closure):**
+  - §7.1–7.2 formula: **[THEOREM]** (unchanged)
+  - §7.3(v) integrality: **[LEMMA]** via Key Lemma C
+**Overall verdict (r01):** PASS on the formula; GENUINE GAP on the integrality premise
+**Overall verdict (post-closure):** PASS throughout
 
 ## Sub-question verdicts
 

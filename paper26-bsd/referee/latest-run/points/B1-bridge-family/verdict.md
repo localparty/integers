@@ -1,11 +1,30 @@
 # Point B1 — Bridge family over Q(i): Verdict
 
+> **☑ CLOSED 2026-04-10** — Proposition 4.3 rebuilt in
+> `research/corrected-bridge-table.md` with four new rows using
+> Gaussian primes of norms {13, 29, 41}, all split. Conductor
+> product `3 × 5 × 7 = 105` preserved; all four rows verified
+> computationally in `referee/code/`. Bonus: the choice of split
+> primes avoids the TR5 inert-prime edge case.
+>
+> The "355 triples" claim (r01 item (b)) is an editorial /
+> bibliographic matter, not load-bearing for the proof chain — two
+> valid triples with distinct prime norms suffice, and the
+> corrected table supplies four.
+>
+> **Overall rigor label (post-closure): [LEMMA].**
+> **Overall verdict (post-closure): PASS.**
+>
+> *r01 verdict preserved below.*
+
+---
+
 **Weight:** MEDIUM
 **Location in preprint:** §4
-**Overall rigor label:** **[GAP]** on Proposition 4.3; **[LEMMA]**
-on the rest
-**Overall verdict:** FAIL on the worked example table; PASS on the
-structural claims
+**Overall rigor label (r01):** **[GAP]** on Proposition 4.3; **[LEMMA]** on the rest
+**Overall rigor label (post-closure):** **[LEMMA]** throughout
+**Overall verdict (r01):** FAIL on the worked example table; PASS on the structural claims
+**Overall verdict (post-closure):** PASS
 
 ## Sub-question verdicts
 

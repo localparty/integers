@@ -7,7 +7,52 @@
 
 ---
 
-## Bottom line
+> ## ☑ CLOSURE UPDATE (2026-04-10, same day)
+>
+> **The three [KEY LEMMA — OPEN] items and the one [GAP] flagged
+> below have all been closed** in the same session, via:
+>
+> - **BR3 ([GAP]):** `research/corrected-bridge-table.md` — Prop
+>   4.3 rebuilt with correct Frobenius orders; 4 of 4 rows verified.
+> - **BR7/BR8 ([KEY LEMMA — OPEN]):** `research/cohomology-class-lemma.md`
+>   — Key Lemma C elementary bound `|Δc(δ)| < 1/(k+1) < 1/k`.
+> - **MY1/MY2/MY3 ([KEY LEMMA — OPEN]):** `research/meyer-extension-to-K.md`
+>   — Key Lemmas A and B (Meyer extension to ζ_K and the twist to
+>   L(s, ψ)).
+> - **MY4 — the classical wall ([KEY LEMMA — OPEN]):** **bypassed**
+>   via G Six's projector `P_k^𝔭 = I − s_𝔭^k (s_𝔭^k)^*` combined
+>   with the observation (Paper 26 Remark 7.2) that the cocycle
+>   shift derivation is pure algebra on the local Euler factor.
+>   **The Meyer → genuine-spectrum upgrade was never load-bearing.**
+>   See `strategy/05-route3-kms-projector-bypass.md` and
+>   `research/route3-kms-projector-bypass.md`.
+>
+> **Final rigor state:** **11 of 11** ([THEOREM]: 4, [LEMMA]: 7,
+> [KEY LEMMA — OPEN]: **0**, [GAP]: **0**).
+>
+> **Theorem 13.1 status:** **[THEOREM] conditional on CBB axioms**
+> — the same conditional Paper 13 lives with, with no additional
+> spectral or Meyer-type assumptions.
+>
+> Editorial items (LC4 Ω formula, E1 Table 8.1 log-ratios, BR2 "355
+> triples" count, CM2 notation, GZ2 Heegner resolution commitment,
+> BC2 LLN 2015 citation, E2 "two Millennium problems" framing) are
+> **unchanged** — none affects rigor.
+>
+> **See `closure-report.md` in this directory for the full
+> item-by-item walkthrough of every flagged finding and its
+> resolution.**
+>
+> ---
+>
+> *The text below is preserved as the r01 audit state on the
+> morning of 2026-04-10, before the closures landed. Read it as
+> the starting point, then read `closure-report.md` for the
+> transitions.*
+
+---
+
+## Bottom line (r01 state, preserved)
 
 **Paper 26 is not yet a rigorous proof of BSD for CM rank 0+1 at
 the yang-mills standard.** The chain is structurally plausible

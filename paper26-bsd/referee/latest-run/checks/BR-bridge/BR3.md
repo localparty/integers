@@ -1,12 +1,33 @@
 # Check BR3: Minimal conductor product 105
 
+> **☑ CLOSED 2026-04-10** via `research/corrected-bridge-table.md`.
+> Proposition 4.3 rebuilt with correct Frobenius orders. New table:
+>
+> | k | N_cond | Bridge prime 𝔭 | N(𝔭) | ord | k |
+> |:-:|:-:|:-:|:-:|:-:|:-:|
+> | 2 | 3 | (2+3i) | 13 | 1 | 2 |
+> | 3 | 7 | (2+3i) | 13 | 2 | 3 |
+> | 4 | 5 | (4+5i) | 41 | 1 | 4 |
+> | 6 | 7 | (2+5i) | 29 | 1 | 6 |
+>
+> All four rows verified computationally. Conductor product
+> `3 × 5 × 7 = 105` preserved. **Bonus:** all four primes are
+> split Gaussian (norms 13, 29, 41 — rational primes), so the TR5
+> inert-prime edge case `δ ∈ {−1/4, 0, 1/4}` does not arise.
+>
+> **Final rigor label: [LEMMA] (straightforward computational
+> verification).**
+
+---
+
 **Group:** BR
 **Source:** Paper 26 §4.3, Proposition 4.3
 **Pass criterion:** Minimal conductors {3, 5, 7} verified
 computationally.
 
-**Verdict:** **FAIL** — 3 of 4 rows broken
-**Rigor label:** [GAP]
+**Verdict (r01):** **FAIL** — 3 of 4 rows broken
+**Rigor label (r01):** [GAP]
+**Rigor label (post-closure):** [LEMMA]
 
 **Justification:** Audit C5 directly computed the Frobenius
 orders in the "minimal conductor" Table 4.3 and found:

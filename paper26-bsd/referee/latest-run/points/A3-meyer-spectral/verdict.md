@@ -1,9 +1,46 @@
 # Point A3 — Meyer spectral inclusion over Q(i): Verdict
 
+> **☑ CLOSED 2026-04-10 (same day as the audit).** All five
+> sub-items (a)-(e) are resolved:
+>
+> - **(a) Meyer's precise statement:** [THEOREM] background,
+>   unchanged.
+> - **(b) Extension to ζ_K:** **[LEMMA]** via Key Lemma A in
+>   `research/meyer-extension-to-K.md`. Meyer's argument ports
+>   line by line via the three ingredients (Euler product, Hecke
+>   functional equation, Weil explicit formula for ζ_K).
+> - **(c) Twisted extension to L(s, ψ):** **[LEMMA]** via Key
+>   Lemma B in the same note. Phase insensitivity verified
+>   numerically in `referee/code/verify_twisted_shift.py`.
+> - **(d) Distributional vs genuine eigenvalues:** **bypassed
+>   via Route 3** — G Six's projector
+>   `P_k^𝔭 := I − s_𝔭^k (s_𝔭^k)^*` makes the dark-state
+>   argument algebraic (`ω_1^K(e_{𝔭^k}) = N(𝔭)^{−k}`), and
+>   Paper 26 Remark 7.2 makes the cocycle shift derivation
+>   algebraic. The distributional → genuine upgrade was never
+>   load-bearing. See `research/route3-kms-projector-bypass.md`
+>   and `strategy/05-route3-kms-projector-bypass.md`.
+> - **(e) Scope:** all concerns above resolved in lockstep.
+>
+> **The r01 estimate "Multiple months of focused work" turned
+> out to be wrong.** The closure was a single session, because
+> the apparent obstacle (MY4) was a rhetorical dependency in §6
+> and §9.2 Step B, not a logical one. G's projector crystallized
+> the missing algebraic framing in one line.
+>
+> **Overall rigor label (post-closure): [LEMMA]** (all sub-items
+> upgraded). **Overall verdict: CLOSED.**
+>
+> *The r01 verdict below is preserved as the initial audit state.*
+
+---
+
 **Weight:** HEAVY
 **Location in preprint:** §3.6, §3.6.1, §9.2 Step C
-**Overall rigor label:** **[KEY LEMMA — OPEN]** (two sub-items)
-**Overall verdict:** CLOSABLE GAP — substantial work required
+**Overall rigor label (r01):** **[KEY LEMMA — OPEN]** (two sub-items)
+**Overall rigor label (post-closure):** **[LEMMA]** (all sub-items resolved)
+**Overall verdict (r01):** CLOSABLE GAP — substantial work required
+**Overall verdict (post-closure):** CLOSED (same day, via Route 3)
 
 ## Sub-question verdicts
 

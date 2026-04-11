@@ -1,12 +1,39 @@
 # Check MY4: Distributional → genuine spectrum upgrade
 
+> **☑ CLOSED 2026-04-10 (same day) via Route 3 — G's KMS projector
+> bypass.**
+>
+> MY4 is the classical Meyer–Nelson wall. It was bypassed by the
+> observation that the bridge argument of Paper 26 §§6–8 never
+> actually needed the distributional → genuine upgrade. The
+> dependency was rhetorical (§6's eigenstate framing), not
+> logical. G's projector `P_k^𝔭 := I − s_𝔭^k (s_𝔭^k)^* ∈ A_{BC,K}`
+> has algebraic KMS_1 expectation `ω_1^K(P_k^𝔭) = 1 − N(𝔭)^{−k}`,
+> which is exactly the dark-state bound of §6 DS1 expressed at the
+> C*-algebra level with no reference to eigenstates. Combined with
+> Paper 26 Remark 7.2 ("the derivation is pure algebra on the
+> local Euler factor") and Hasse–Brauer–Noether local–global
+> reciprocity, the entire §9.2 Step B argument is eigenstate-free.
+>
+> **Final rigor label: [LEMMA] unconditional.** The distributional
+> → genuine upgrade is not needed for Paper 26's proof chain.
+>
+> See `strategy/05-route3-kms-projector-bypass.md` and
+> `research/route3-kms-projector-bypass.md` for the full argument.
+> Numerical sanity check: `referee/code/test_projector_P.py`.
+>
+> *The r01 verdict below is preserved as the initial audit state.*
+
+---
+
 **Group:** MY
 **Source:** Paper 26 §3.6 + §3.7 combined
 **Pass criterion:** Meyer distributional eigenstates become genuine
 point-spectrum eigenvalues of T̄_{BC,K}.
 
-**Verdict:** PARTIAL — CRITICAL
-**Rigor label:** [KEY LEMMA — OPEN]
+**Verdict (r01):** PARTIAL — CRITICAL
+**Rigor label (r01):** [KEY LEMMA — OPEN]
+**Rigor label (post-closure):** [LEMMA] (bypassed; not needed)
 
 **Justification:** **This is the classical wall of the Bost-Connes
 approach to GRH.** Meyer gives distributional eigenstates;

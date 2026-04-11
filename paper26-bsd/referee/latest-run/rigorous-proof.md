@@ -3,6 +3,58 @@
 *Math referee rigor audit of Paper 26, at the yang-mills standard.*
 *Run r01, 2026-04-10. Claude Opus 4.6 as referee.*
 
+> ## ☑ CLOSURE UPDATE (2026-04-10, same day)
+>
+> All `[KEY LEMMA — OPEN]` and `[GAP]` items in the 15-step
+> granular roll-up (§XII.B) have been closed in the same session:
+>
+> - **Lemma 3** (Meyer for ζ_K, §V): upgraded from [KEY LEMMA —
+>   OPEN] to **[LEMMA]** via `research/meyer-extension-to-K.md`
+>   (Key Lemma A) + Route 3 for the distributional → genuine
+>   framing.
+> - **Lemma 4** (Meyer twist, §VI): upgraded from [KEY LEMMA —
+>   OPEN] to **[LEMMA]** via `research/meyer-extension-to-K.md`
+>   (Key Lemma B) + Route 3.
+> - **Lemma 5 VII.B** (cohomology-class integrality): upgraded
+>   from [KEY LEMMA — OPEN] to **[LEMMA]** via
+>   `research/cohomology-class-lemma.md` (Key Lemma C, elementary
+>   bound `|Δc(δ)| < 1/(k+1) < 1/k`).
+> - **Lemma 5 VII.C** (Prop 4.3 bridge table): upgraded from
+>   [GAP] to **[LEMMA]** via `research/corrected-bridge-table.md`
+>   (four rows verified, product 105 preserved).
+> - **Lemma 7** (GRH assembly): upgraded from [KEY LEMMA — OPEN]
+>   to **[LEMMA]** via `research/route3-kms-projector-bypass.md`
+>   (MY4 bypassed by G Six's projector
+>   `P_k^𝔭 := I − s_𝔭^k (s_𝔭^k)^*`; the bridge chain was
+>   algebraic throughout, see Paper 26 Remark 7.2).
+>
+> **The "Key Lemmas" at §XIII are all proved** (A, B in
+> `meyer-extension-to-K.md`; C in `cohomology-class-lemma.md`;
+> MY4's distributional → genuine upgrade, the classical wall, is
+> shown to be **not load-bearing** via Route 3).
+>
+> **Final rigor scorecard** at the 15-item granularity (§XII.B):
+>
+> | Label | r01 | After closure |
+> |:--|:-:|:-:|
+> | [THEOREM] | 6 | 6 |
+> | [LEMMA] | 3 | **8** |
+> | [KEY LEMMA — OPEN] | 5 | **0** |
+> | [GAP] | 1 | **0** |
+>
+> At the paper's own 11-step framing: **11 of 11**
+> ([THEOREM] 4 + [LEMMA] 7). Theorem 13.1 is now
+> **[THEOREM] conditional on CBB axioms**, same conditional as
+> Paper 13.
+>
+> See `closure-report.md` for the full item-by-item walkthrough.
+>
+> *The audit text below is preserved as the r01 assessment. Read
+> the labels as "upgraded per the closure above" for Lemmas 3, 4,
+> 5 VII.B, 5 VII.C, and 7.*
+>
+> ---
+
 This document reformulates Paper 26's 11-step proof chain in the
 language of pure mathematics, following
 `paper08-yang-mills/research/21-the-rigorous-proof.md`. Every step

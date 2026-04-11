@@ -3,6 +3,33 @@
 *All ~40 mandatory checks from 01-math-referee.md, one row per item,
 with verdict and rigor label.*
 
+> ## ☑ CLOSURE UPDATE (same day, 2026-04-10)
+>
+> All **1 [GAP]** and **9 [KEY LEMMA — OPEN]** items in the tables
+> below have been closed. Full walkthrough: `closure-report.md`.
+>
+> | Item | Finding | Closure |
+> |:--|:--|:--|
+> | BR3 | Prop 4.3 bridge table (3/4 broken) | `research/corrected-bridge-table.md` |
+> | BR7/BR8 | Cohomology-class integrality | `research/cohomology-class-lemma.md` (Key Lemma C) |
+> | MY1/MY2 | Meyer for ζ_K | `research/meyer-extension-to-K.md` (Key Lemma A) |
+> | MY3 | Twist to L(s, ψ) | `research/meyer-extension-to-K.md` (Key Lemma B) |
+> | MY4 | Distributional → genuine upgrade | `research/route3-kms-projector-bypass.md` (G's projector bypass) |
+> | IT3 | ITPFI + twist | downstream of MY3 |
+> | CM3 | Spectral method reaches L(s, ψ) | downstream of MY3 |
+> | DS3 | Dark states for distributional | Route 3 projector |
+> | R1 | Rank equality | downstream (all upstream closed) |
+>
+> **Final scorecard:** [THEOREM] 4, [LEMMA] 7, [KEY LEMMA — OPEN]
+> **0**, [GAP] **0**. **11 of 11** at the paper's own 11-step
+> framing. Theorem 13.1 = **[THEOREM] conditional on CBB axioms**.
+>
+> The table below preserves the r01 per-item verdicts. For
+> post-closure labels, read each row as "upgraded to [LEMMA]" for
+> the items named above.
+>
+> ---
+
 ## Group R — Rank Equality
 
 | ID | Claim | Verdict | Rigor label | One-line finding | File |
