@@ -1,9 +1,0 @@
-{
-  "precision_dps": 500,
-  "best_formula": "\u03b3_1\u00d7\u03b3_4/\u03c0 + 0.100000\u00b7log(\u03c0) + -0.002000\u00b7\u03b3_2 + 0.003000\u00b7\u03b3_3",
-  "best_error_pct": 0.00017713370454902714,
-  "baseline_error_pct": 0.10778497619377293,
-  "improvement_factor": 136.90223731911703,
-  "target_1_alpha": 137.035999084,
-  "atomic_precision_achievable": false
-}

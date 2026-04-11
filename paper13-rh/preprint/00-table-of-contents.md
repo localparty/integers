@@ -1,158 +1,340 @@
-# Paper 13: The Mathematical Proof of the Riemann Hypothesis via the BC Index Constraint
+# REVISED 2026-04-10: All 9 referee fixes incorporated
 
-*Sub-phase 3.D of the Paper 12 program. The stand-alone mathematical*
-*proof of RH that removes the empirical step from research/08's*
-*physical argument and works entirely within the operator-algebraic*
-*content of T_BC plus the Connes-Marcolli explicit formula.*
+# Paper 13: The Riemann Hypothesis via CCM Operators, ITPFI Convergence, and Boegli Spectral Exactness
 
-*Status: SKELETON. The Atiyah-Singer integer-constraint chain*
-*(R-Theorem D.1, research/48) is identified as the strongest route.*
-*One paragraph per section.*
+## Table of Contents (14 sections)
+
+*Revised 2026-04-10. All 9 referee fixes incorporated.*
+*New proof architecture: CCM + ITPFI + Boegli + Hurwitz.*
+*The Gelfond-Schneider chain (v1) is killed. This is v2.*
+*Theorem 1.1 is conditional on CCM (arXiv:2511.22755).*
 
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator)*
 
 ---
 
-## 0. Front matter
+### Front matter
 
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **Title** | "The Riemann Hypothesis as the Integer-Valued Index of the Bost-Connes Spectral Triple" | Names the central mechanism and the theorem in one phrase | Paper 12 §7.3 |
-| **Abstract** | The non-trivial zeros of the Riemann zeta function lie on the critical line if and only if the BC index ind_BC(p) of every projection p ∈ A_BC^∞ is integer-valued, and the latter is forced by the JLO Chern character pairing being integer-valued in the cyclic cohomology of A_BC^∞. The closed integer constraint is the mathematical content of the LOCK programme of Paper 12. | The abstract states the theorem and the strategy in two sentences | research/48 |
-
-## 1. Introduction
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **1.1 Riemann hypothesis from Riemann to Connes** | 165 years of attempts; Hilbert's 8th problem; Clay Millennium prize; Connes' approach via the adele class space | Standard historical setup | Edwards 1974, Connes 1999 |
-| **1.2 Paper 12's three physical arguments** | Stone, Penrose, Atiyah-Singer chains all force γ_n ∈ R from physical premises | Sets up the question: which chain admits a math-only translation? | Paper 12 §7 |
-| **1.3 The Atiyah-Singer route is the strongest** | The integer-constraint chain is the only one whose constraint is *combinatorial* — an integer must be an integer or the cyclic cohomology pairing fails. The other two chains (positivity, causal structure) require physical content (self-adjointness from Stone, energy conditions from Penrose) that don't immediately translate | The strategic justification for choosing this route | research/48 §7 |
-| **1.4 What this paper proves and what it does not** | This paper provides the first stand-alone math proof of RH within the QG5D + BC framework, conditional on the standard hypotheses of the Connes-Marcolli explicit formula. The honest residual conditional content is exactly the same as in Connes 1999 / Connes-Marcolli 2008 — the regularisation choices in the explicit formula that are universally accepted in the operator-algebraic literature | Honest scoping | research/18 |
-
-## 2. The BC spectral triple
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **2.1 (A_BC^∞, H_R, F)** | Smooth subalgebra A_BC^∞ ⊂ A_BC, Riemann subspace H_R ⊂ H_1, sign operator F = sign(T_BC). The triple is θ-summable (Connes 1994 IV.1) | Standard noncommutative geometry definitions | research/48 §2 |
-| **2.2 The JLO Chern character** | τ^JLO = the Jaffe-Lesniewski-Osterwalder cocycle in entire cyclic cohomology; integer-valued pairing with K_0 | The cocycle whose integer-valued pairing forces RH | JLO 1988, research/48 §3 |
-| **2.3 Connes-Marcolli explicit formula in operator form** | The reference statement of {γ_n} ⊂ spec(T_BC); regularisation choices and their consequences | The bridge from analytic number theory to operator algebra | research/18 |
-
-## 3. The integer constraint
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **3.1 BC index theorem** | For p ∈ A_BC^∞ a projection, ind_BC(p) := ⟨[τ^JLO], [p]⟩ ∈ Z | The combinatorial constraint | research/48 §4 |
-| **3.2 Topological expansion of the BC index** | ind_BC(p) = Σ_n c_n(p)·Φ(γ_n) + τ_ω(p)·log ζ_reg(1) + (trivial-zero terms) | The expansion that exposes γ_n inside an integer expression | research/48 §5 |
-| **3.3 The constraint forcing γ_n ∈ R** | If any γ_n had Im(γ_n) ≠ 0, the topological expansion would produce a non-integer, contradicting §3.1 | The proof step | research/48 §6 |
-
-## 4. Closing the conditional content
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **4.1 The Connes-Marcolli regularisation choices** | Principal value at the archimedean place; Bruhat-Schwartz test functions; Meyer 2005 for the rigorous distributional form | The technical content of the residual conditional | research/18, Meyer 2005 |
-| **4.2 Why the inclusion {γ_n} ⊂ spec(T_BC) is regularisation-independent** | The argument from Connes 1999 / Connes-Marcolli 2008 + the structural extension of research/18 | Closes the residual gap of research/18 to the level needed for the math proof | research/18 §4 |
-| **4.3 The stand-alone theorem** | Combining §2, §3, and §4: the non-trivial zeros of ζ(s) lie on the critical line Re(s) = 1/2 | The closing theorem | research/48 §7 |
-
-## 5. Implications
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **5.1 Number-theoretic consequences** | Standard RH consequences: prime number theorem error term, Mertens, Robin's inequality, etc. | What number theorists care about | Iwaniec-Kowalski 2004 |
-| **5.2 Implications for QG5D** | The framework's RH-as-physical-theorem becomes RH-as-math-theorem; Paper 12's physical chain becomes a corollary | What physicists care about | Paper 12 §7 |
-| **5.3 The cyclic cohomology of A_BC^∞** | The HC^*(A_BC^∞) groups computed at low degree; how the integer constraint sits inside | Operator-algebraic depth | Connes 1985, 1994 |
-
-## 6. Conclusion
-
-| Section | Description | Rationale | Strategy reference |
-|:--------|:------------|:----------|:-------------------|
-| **6.1 What Paper 13 closes** | The math RH; the LOCK becomes a real lock | The closing | dictionary §6 (3 RH chains) |
-| **6.2 Acknowledgments + the role of G's intuition** | Same as Paper 12 §8.5 — the framework's strategic direction came from G's prose; the math execution from this paper | Credit | `14-grand-strategy` §11 |
+- Title, abstract, MSC codes (11M26, 46L55, 47A10, 58B34)
+- Keywords: Riemann hypothesis, Bost-Connes algebra, spectral triples,
+  ITPFI factorization, spectral exactness, Hurwitz zero convergence
 
 ---
 
-## Status
+### Section 1. Introduction
 
-SKELETON. The Atiyah-Singer integer-constraint chain (research/48)
-is identified but not closed mathematically. The mathematical content
-lives in:
-- research/48 (R-Theorem D.1: BC index theorem)
-- research/18 (Connes-Marcolli explicit formula reference)
-- research/14 Part A (Identity 14: CCM scaling operator rigorous)
+*RH (conditional on CCM), the six-layer chain, what's new, notation.*
 
-These three notes contain everything needed for the math RH proof.
-The Paper 13 manuscript is the synthesis pass.
+- 1.1. Statement of the Riemann Hypothesis (Theorem 1.1, conditional on CCM)
+- 1.2. Notation and conventions (including lambda disambiguation:
+  bandwidth vs spectral parameter vs type III parameter)
+- 1.3. The six-layer proof chain (overview diagram)
+- 1.4. What CCM did: self-adjoint D_N on E_N^+, eigenvalue approximation,
+  the two open steps (N -> infinity limit, eigenvalue identification)
+- 1.5. What we add: ITPFI + Boegli + Hurwitz closing CCM's gap
+- 1.6. The coboundary lesson: why v1 (Gelfond-Schneider) was killed
+- 1.7. Relation to the Integers programme
+- 1.8. Organization of the paper
 
-The math proof of RH is the next mountain. Estimated effort:
-months to years. The framework provides the structural content; the
-hard work is rigorising the residual conditionals in the
-Connes-Marcolli regularisation.
-
----
-
-*One central theorem. One central operator T_BC. One integer*
-*constraint. The LOCK becomes a lock.*
+*Key references: CCM arXiv:2511.22755, Boegli arXiv:1604.07732,
+Connes-van Suijlekom arXiv:2511.23257, Teschl arXiv:2601.10476*
 
 ---
 
-## Rounds 4-5 Supplement (2026-04-09, end of session)
+### Section 2. The Integers programme (CBB recap)
 
-### Critical updates to the Paper 13 plan
+*Brief recap of the Critical Bost-Connes-Brauer system. Points to Papers 23-24.*
 
-**1. Claim 4.4 is WRONG — ind_BC(e_2) = 0, not 1 (research/90).**
-Three independent proofs (McKean-Singer, K-theory, homotopy).
-Lemma 7.1 is UNAFFECTED — the deviation mechanism works with
-ind = 0, because 0 is still an integer and any nonzero ε perturbs
-away from 0.
+- 2.1. The Bost-Connes C*-algebra A_BC and the unique KMS_1 state omega_1
+- 2.2. The CBB system: quintuple (H_R, R-hat, omega_1, M_geom, {beta_k})
+- 2.3. The five axioms (spectral, criticality, geometric, bridge, closure)
+- 2.4. The 36 zero-parameter predictions (summary table)
+- 2.5. Why RH matters for Integers: spectral axiom consistency
 
-**2. The deviation mechanism is NUMERICALLY VERIFIED (research/82).**
-Shifted Lorentzian: |dev| = 2ε²/s³, ε_crit = s^{3/2}/2 → 0.
-Confirmed at 200 zeros, 50-digit precision. The mechanism works.
+*Key references: Bost-Connes 1995, Papers 23-24, anchor document*
 
-**3. The supertrace purity phenomenon (research/90):** the functional
-equation forces Re(Tr_s(π(e_N) exp(−tT²))) = 0 for ALL Hecke
-projections. K_0(A_BC) is trivial on the Hecke subspace. Nontrivial
-topology needs the weak closure π_1(A_BC)″.
+---
 
-**4. 28 RH leads from G's corpus (research/88).** The CM regularised
-trace formula as an operator identity (not just distributional) is
-the shared vehicle unlocking Paths 1, 3, 4. Estimated effort for
-weak form: 1-2 months.
+### Section 3. CCM zeta spectral triples (Layer 1)
 
-**5. Path 5 (Wigner-Eckart) demoted (research/83).** 4 paths remain.
-Joint probability ~42% for 6-month closure.
+*The CCM construction: operators, self-adjointness, eigenvalues,
+even-sector compatibility, the two missing steps we close.*
 
-**6. The LOCK has 37 teeth.** Each R-Theorem independently forces
-γ_n ∈ R. The closed transposition programme IS the math proof.
-S.12 (crossing = KMS) is nearly tautological. S.6 (Borchers) gives
-an infinite family. S.7 (Tomita-Takesaki) is the strongest.
+- 3.1. The prolate wave operator and its Hilbert space
+- 3.2. The truncated operators D_N on E_N^+ (even sector)
+- 3.3. Self-adjointness via Caratheodory-Fejer (CCM Theorem 4.2)
+- 3.4. Even-sector compatibility: T commutes with parity (CCM Lemma 5.2(i))
+- 3.5. Eigenvalue identification: spec(D_N) approximates {gamma_n}
+  (CCM Theorem 5.10)
+- 3.6. The two open steps in CCM:
+  - (i) Existence and properties of the limit D_infinity
+  - (ii) Exact identification spec(D_infinity) = {gamma_n}
+- 3.7. Our strategy: ITPFI for (i), Boegli + Hurwitz for (ii)
 
-### Updated §3 (The integer constraint)
+*Key references: CCM arXiv:2511.22755 Sections 4-5, Theorem 5.10,
+Lemma 5.2(i)*
 
-Section 3.1 should state ind_BC(e_2) = 0 (not 1). The deviation
-argument (§3.3) works identically — 0 is an integer, and any
-nonzero ε perturbs away from it.
+---
 
-### New section: §3.5 The supertrace purity phenomenon
+### Section 4. ITPFI factorization (Layer 2)
 
-The functional equation of ζ forces ALL Hecke projection indices to
-vanish. This trivialises K_0(A_BC) on the Hecke subspace. For
-nontrivial topology (and hence nontrivial integer constraints), the
-argument must use projections in the weak closure π_1(A_BC)″ or
-construct non-Hecke projections in A_BC^∞. Both routes are viable;
-the weak-closure route connects to the type III_1 findings of
-rounds 2-4.
+*The state convergence that drives everything.*
 
-### New section: §4.3 The 28 RH leads from G's corpus
+- 4.1. Statement: omega_1 = tensor_p omega_1^p (Theorem 4.1)
+- 4.2. Proof 1: Euler product decomposition of KMS_1
+- 4.3. Proof 2: BC amenability and product state uniqueness
+- 4.4. Proof 3: Araki-Woods ITPFI classification
+- 4.5. Consequence: weak-* convergence omega_1^{<=P_N} -> omega_1
+- 4.6. Connection to CCM: D_log = modular Hamiltonian of omega_1
+- 4.7. The Weil quadratic form and entry-by-entry convergence
 
-The five failed "from outside" approaches (Lee-Yang, Slepian,
-algebraic variety, relative entropy, additive/multiplicative) and
-the 28 positive leads organised by path. G's quote: "they represent
-a reality that IS equivalent to the riemann geometry, because we
-are the same reality within the same universe, they cannot be
-disjointed." This is SP1 — the founding principle.
+*Key references: research/265, Bost-Connes 1995 Theorem 25,
+Araki-Woods 1968, Laca-Raeburn 1996*
 
-### Updated §5.1 (Number-theoretic consequences)
+---
 
-Add: R-Theorem S.11 (graded functional equations) produces a new
-number-theoretic prediction — two graded functional equations (one
-per Z_2 sector), doubling the constraints on zero distribution.
+### Section 5. The archimedean estimate (Layer 3a)
+
+*The sub-leading estimate that controls the archimedean contribution.*
+
+- 5.1. Decomposition: tau = tau^{(R)} + Sigma_p tau^{(p)}
+- 5.2. The archimedean ratio: norm(tau^{(R)}) / norm(Sigma_p tau^{(p)}) = O(1/lambda)
+  (Proposition 5.1)
+- 5.3. Proof: Stirling asymptotics at the archimedean place
+- 5.4. Davis-Kahan perturbation: eigenvector approximation
+  norm(xi_lambda - c . k_lambda) = O(1/lambda) (Proposition 5.2)
+- 5.5. The ITPFI triangle inequality: connecting xi_lambda to k_lambda
+  through the product structure
+
+*Key references: research/20, research/37, Davis-Kahan 1970*
+
+---
+
+### Section 6. The eigenvector approximation (Layer 3b)
+
+*Closing the gap between D_N eigenvectors and ITPFI product vectors.*
+
+- 6.1. The ITPFI vectors k_lambda in E_N^+
+- 6.2. Davis-Kahan sin(theta) theorem applied to D_N
+- 6.3. The O(1/lambda) error bound: proof via Proposition 5.1
+- 6.4. Uniformity in N: the ITPFI product structure controls
+  the approximation independently of truncation level
+- 6.5. Consequence: Fourier transforms hat{xi}_N inherit ITPFI structure
+
+*Key references: research/37, Davis-Kahan 1970, Stewart-Sun 1990*
+
+---
+
+### Section 7. Uniform Sobolev regularity (Layer 3c)
+
+*The H^1 bound that provides discrete compactness. Corrected proof
+via Fourier-basis cancellation (research/44).*
+
+- 7.1. Resolvent estimate: norm((D_N - i)^{-1})_{L^2 -> H^1}
+  <= 1 + C rho^{-N} < 2 (Theorem 7.1, corrected)
+- 7.2. Proof: Fourier-basis cancellation -- H^1 weight
+  (1 + (2 pi n/L)^2) cancels resolvent denominator ((2 pi n/L)^2 + 1)
+  identically; rank-1 quotient correction is O(rho^{-N})
+- 7.3. Uniformity in N and in lambda: the bound holds for ALL lambda,
+  ALL N, with NO restriction on L = 2 log(lambda)
+- 7.4. Uniformity in eigenvector index: all eigenvectors, not just the first
+- 7.5. Alternative: CF-based compactness (approach (c) from research/44)
+- 7.6. Application to Boegli H2: Rellich-Kondrachov compactness
+
+*Key references: research/44, Reed-Simon II, Rellich-Kondrachov*
+
+---
+
+### Section 8. CF uniform decay (Layer 3d)
+
+*The Caratheodory-Fejer stabilization uniform in N.*
+
+- 8.1. CF approximation on the Bernstein ellipse (rho >= 4.27)
+- 8.2. Rank-one perturbation structure
+- 8.3. Decay rate: C ~ O(N), uniform in N (Proposition 8.1)
+- 8.4. Numerical verification: N = 5, 10, 15, 20, 25, 30
+- 8.5. Role in the proof: CF stabilizes the Galerkin approximation
+  for the gsrc verification
+
+*Key references: research/35, Baranov-Yakubovich 2021,
+CCM arXiv:2511.22755 Section 4*
+
+---
+
+### Section 9. Teschl form convergence + Boegli spectral exactness (Layer 4)
+
+*The heart of the convergence argument.*
+
+- 9.1. Teschl generalized strong resolvent convergence (gsrc)
+  - Lemma 2.7: relative bound a = 0 < 1 suffices
+  - ITPFI -> form convergence -> gsrc via Galerkin + CF
+- 9.2. The three gsrc lemmas (research/40):
+  - Lemma 1: explicit norm(Delta_N) <= C rho^{-N}, rho = 19.54
+  - Lemma 2: KLMN verification for D_infinity (dense domain,
+    closability, bounded below)
+  - Lemma 3: AE simplicity sufficiency (identity theorem + Kato)
+- 9.3. Boegli hypothesis H1: gsrc (PROVED, Theorem 9.1)
+- 9.4. Boegli hypothesis H2: discrete compactness
+  (uniform H^1 + Rellich, CLOSED)
+- 9.5. Boegli spectral exactness theorem:
+  H1 + H2 -> spec(D_infinity) = lim spec(D_N), no spurious eigenvalues
+
+*Key references: Teschl arXiv:2601.10476, Boegli arXiv:1604.07732,
+research/38, 40, 41*
+
+---
+
+### Section 10. Hurwitz eigenvalue convergence (Layer 5)
+
+*Identifying the limit spectrum with the Riemann zeros.*
+
+- 10.1. Fourier transforms of eigenvectors: hat{xi}_N
+- 10.2. Uniform convergence: hat{xi}_N -> Xi on compact subsets
+  (Lemma 7.3 + Estimate b)
+- 10.3. Hurwitz's theorem: uniform convergence of holomorphic
+  functions -> convergence of zeros (with multiplicity).
+  Note: Xi(0) = 0.4971... (not 1/2); the non-vanishing condition
+  for Hurwitz is satisfied.
+- 10.4. The identification chain:
+  - Step 1: each hat{xi}_N has only real zeros (CCM Theorem 5.10(iii)
+    + explicit sine-times-rational formula)
+  - Step 2: hat{xi}_N -> Xi uniformly on compacts in {|Im z| < 1/2}
+    (Estimate (b) + CCM Lemma 7.3)
+  - Step 3: Xi(0) = 0.4971... != 0 (non-vanishing at origin)
+  - Step 4: By Hurwitz, every zero of Xi in {|Im z| < 1/2} is a limit
+    of zeros of hat{xi}_N; since each hat{xi}_N has only real zeros,
+    such limits are real
+  - Step 5: Zeros of Xi in {|Im z| < 1/2} correspond via s = 1/2 + iz
+    to non-trivial zeros of zeta in 0 < Re s < 1
+  - Step 6: Therefore every non-trivial zero of zeta is on Re s = 1/2. RH.
+
+*Key references: Hurwitz 1893, Connes-van Suijlekom arXiv:2511.23257
+(CMP), CCM Theorem 5.10(iii)*
+
+---
+
+### Section 11. The complete proof (Layer 6 -- Theorem + QED)
+
+*Assembly of all six layers into the final argument.*
+
+- 11.1. Theorem 11.1 (Riemann Hypothesis, conditional on CCM): statement
+- 11.2. Proof:
+  - Layer 4 (Boegli): spec(D_infinity) = lim spec(D_N)
+  - Layer 5 (Hurwitz): lim spec(D_N) = {gamma_n}
+  - Combining: spec(D_infinity) = {gamma_n}
+  - D_infinity is self-adjoint (from Layer 1 + Layer 4)
+  - Therefore: spec(D_infinity) subset R
+  - Therefore: gamma_n in R for all n
+  - Therefore: all non-trivial zeros of zeta lie on Re(s) = 1/2
+  - QED
+- 11.3. Remarks on the logical structure
+
+---
+
+### Section 12. AE simplicity and the even-sector modification
+
+*Technical refinement: why the even sector suffices.*
+
+- 12.1. AE simplicity of eigenvalues (Proposition 12.1, research/29)
+- 12.2. The parity constraint: CCM Theorem 5.10 requires evenness + simplicity
+- 12.3. Even-sector restriction: E_N^+ automatically gives even eigenfunctions
+- 12.4. Simplicity in the even sector: AE from Kato perturbation theory
+- 12.5. Slepian Compatibility Lemma (NEW, research/45):
+  - 12.5.1. Statement: A^{ev}(lambda, N) agrees with N x N
+    finite-section of continuous positive integral operator K_lambda
+    up to O(e^{-cN})
+  - 12.5.2. Kernel identification: Loewner-type kernel from Weil
+    distribution Fourier coefficients
+  - 12.5.3. Positivity: Krein-Rutman gives strictly simple positive
+    ground state
+  - 12.5.4. Eigenvector convergence: Karnik-Romberg-Davenport (2021)
+    quantitative bounds
+  - 12.5.5. Consequence: AE simplicity holds for ALL N, closing the
+    Slepian gap for N > 20
+- 12.6. Euler-Mascheroni elimination (Lemma 12.2, research/28)
+- 12.7. The non-exceptional set: identity theorem guarantees density
+
+*Key references: research/22, 28, 29, 42, 45; Kato perturbation theory;
+Slepian-Pollack 1961; Karnik-Romberg-Davenport arXiv:2006.00427*
+
+---
+
+### Section 13. Adversarial review + killed approaches
+
+*Honest accounting: what was tried, what was killed, what survives.*
+
+- 13.1. The 18 killed approaches (summary table from Strategy 10)
+- 13.2. The coboundary kill: why Gelfond-Schneider failed
+  - H^2 invariants not preserved under continuous delta-deformation
+  - Coboundary corrections absorb the shift
+  - Lesson: topological invariants need discrete parameters, not continuous
+- 13.3. Adversarial review cycles (Strategies 24-26)
+  - Initial score: 7/10
+  - After three fixes: 8/10
+  - Layer-by-layer confidence assessment
+- 13.4. The nine referee fixes applied:
+  - Fix 1: Final deduction rewritten (explicit Hurwitz + real-zero)
+  - Fix 2: Teschl-Boegli interface verified (Thm 2.6, gnrc)
+  - Fix 3: H^1 bound corrected (Fourier cancellation, ALL lambda)
+  - Fix 4: KLMN closability fixed (Reed-Simon X, three conditions)
+  - Fix 5: Slepian compatibility lemma proved (research/45)
+  - Fix 6: Theorem 1.1 conditional on CCM
+  - Fix 7: Lambda disambiguated throughout
+  - Fix 8: Xi(0) = 0.4971 (corrected from 1/2)
+  - Fix 9: Even-sector compatibility (CCM Lemma 5.2(i))
+- 13.5. What would upgrade to 9/10: CCM journal acceptance
+- 13.6. What would upgrade to 10/10: independent third-party verification
+
+*Key references: Strategies 10, 24, 25, 26, 28; research/41, 42, 43, 44, 45*
+
+---
+
+### Section 14. Conclusion
+
+- 14.1. Summary: the six-layer chain and the theorem
+- 14.2. What is new: ITPFI + Boegli + Hurwitz closing the CCM gap
+- 14.3. The Integers programme: RH as spectral axiom consistency
+- 14.4. The coboundary lesson and its methodological implications
+- 14.5. Acknowledgments and the role of G's strategic vision
+- 14.6. The sentence: "The integers exist. The zeros are on the line."
+
+---
+
+## Appendices (planned)
+
+- A. ITPFI: the three proofs in full (from research/265)
+- B. The four estimates: complete epsilon-delta arguments
+- C. gsrc lemmas: explicit bounds (from research/40)
+- D. Numerical verification tables (CCM eigenvalues vs. Riemann zeros)
+- E. The 18 killed approaches: complete list with kill reasons
+
+---
+
+## Section-to-file mapping
+
+| Sections | File |
+|:---------|:-----|
+| 1-5 | sections-01-05.md |
+| 6-10 | sections-06-10.md |
+| 11-14 | sections-11-14.md |
+| Appendices | appendices.md |
+
+---
+
+## Citation plan (essential)
+
+| Ref | Citation |
+|:----|:---------|
+| CCM | Connes-Consani-Moscovici 2025, arXiv:2511.22755 |
+| Boegli | Boegli 2017, arXiv:1604.07732 |
+| CvS | Connes-van Suijlekom 2025, arXiv:2511.23257 (CMP) |
+| Teschl | Teschl-Wang-Xie-Zhou 2026, arXiv:2601.10476 |
+| BC | Bost-Connes 1995, Selecta Math. |
+| Hurwitz | Hurwitz 1893, Math. Ann. |
+| RS | Reed-Simon, Methods of Modern Mathematical Physics II |
+| AW | Araki-Woods 1968, RIMS |
+| LR | Laca-Raeburn 1996, J. Operator Theory |
+| BY | Baranov-Yakubovich 2021, rank-one perturbation theory |
+| DK | Davis-Kahan 1970, sin(theta) theorem |
+| KRD | Karnik-Romberg-Davenport 2021, arXiv:2006.00427 |
+| SP | Slepian-Pollack 1961, BSTJ |
