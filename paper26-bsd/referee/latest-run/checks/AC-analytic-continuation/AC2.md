@@ -1,4 +1,12 @@
-## Check AC2
+# Check AC2: Functional equation for L(E, s)
 
-See clay-checklist.md for verdict and one-line summary.
-See the corresponding points/ directory for detailed analysis.
+**Group:** AC
+**Source:** Hecke theory
+**Pass criterion:** L(E, s) satisfies the standard functional
+equation.
+
+**Verdict:** PASS
+**Rigor label:** [THEOREM]
+
+**Justification:** Standard for CM curves via Hecke. The
+completed L-function Λ(E, s) satisfies Λ(E, s) = ε · Λ(E, 2−s).

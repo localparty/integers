@@ -1,4 +1,12 @@
-## Check AC3
+# Check AC3: Order of vanishing at s = 1 is well-defined
 
-See clay-checklist.md for verdict and one-line summary.
-See the corresponding points/ directory for detailed analysis.
+**Group:** AC
+**Source:** Follows from AC1
+**Pass criterion:** ord_{s=1} L(E, s) is a well-defined non-negative
+integer.
+
+**Verdict:** PASS
+**Rigor label:** [THEOREM]
+
+**Justification:** Follows from analytic continuation (AC1).
+Immediate.

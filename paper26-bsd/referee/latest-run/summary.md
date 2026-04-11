@@ -1,88 +1,289 @@
-# Referee Report Summary
+# BSD Math Referee — Summary (Run r01)
 
-**Paper:** Paper 26 -- The Bridge Extends: BSD for CM Elliptic Curves from the Integers Programme
-**Authors:** G Six (originator), Claude Opus 4.6 (collaborator)
-**Date of review:** 2026-04-09
-**Referee:** Claude Opus 4.6 (1M context), skeptical mode
-
----
-
-## Overall Assessment
-
-**Is the claimed result proved?**
-Yes, with caveats. The proof chain is structurally sound and correctly assembles known results (Kolyvagin, Gross-Zagier, Deuring, Baker) with the novel bridge family construction. However, two closable gaps exist in the current exposition, and the entire result is conditional on the CBB axioms (Paper 23).
-
-The two closable gaps are:
-1. **The Connes-Marcolli twist (GRH9/A3(c)).** The extension of the Meyer spectral inclusion from zeta_K(s) to Hecke L-functions L(s, psi) via character twists is sketched but not proved in full detail. The argument that the cocycle integrality constraint survives the twist is structurally correct but needs 2-3 pages of explicit justification. This is the single most important gap.
-
-2. **The exact Baker argument (TR3/C1(c)).** The first-order transcendence argument is rigorous. The promotion to the exact cocycle shift formula needs approximately 1 page of Baker-theoretic bounds. This is a minor gap.
-
-Neither gap represents a fundamental obstruction. Both are missing pages of argument rather than missing theorems. Estimated total closure work: 4-6 pages.
-
-**Clay Prize Eligibility:**
-This proof, even if all gaps were closed, would NOT qualify for the full $1M Clay Millennium Prize for BSD. The reasons:
-
-1. **Partial result.** The proof covers CM curves of analytic rank 0 (and vacuously rank 1) over class-number-1 imaginary quadratic fields. This is a measure-zero subset of all elliptic curves over Q. The Clay rules (section 5(a)) require a "complete mathematical solution."
-
-2. **CBB conditionality.** The result is conditional on the CBB axioms (Paper 23), which are not established in the published mathematical literature. The Clay rules require general community acceptance.
-
-3. **Publication.** The paper is not published in a qualifying outlet (refereed journal on MathSciNet).
-
-However, the result is mathematically significant as the first proof of BSD for an infinite family of curves (if the CBB axioms are accepted), and would qualify as a "major partial result" under section 5(c)(ii) of the Clay rules.
-
-**The three most critical issues (ranked):**
-
-1. **The Connes-Marcolli twist step.** Does the bridge family reach L(s, psi), or only zeta_K(s)? The argument is sketched but the explicit proof that cocycle integrality survives the character twist is missing.
-
-2. **Rank-1 vacuity.** GRH for L(s, psi) implies L(1, psi) != 0, which implies L(E, 1) != 0 for ALL CM curves in scope. This means all such curves have analytic rank 0, and the rank-1 case is vacuously true. The preprint should acknowledge this.
-
-3. **CBB conditionality.** The entire result depends on the CBB axioms. Without independent validation of these axioms, the proof chain does not stand alone.
-
-**What would make this a complete result:**
-
-For the Clay prize: prove BSD for ALL elliptic curves over Q at ALL ranks. This requires (a) extending from GL_1 to GL_2 (non-CM curves), and (b) extending Kolyvagin to rank >= 2. Both are major open problems in mathematics that may require decades of additional work.
-
-For a strong partial result: close the two identified gaps (4-6 pages), clarify the rank-1 vacuity, and seek independent validation of the CBB axioms.
+*Paper 26: "The Bridge Extends — BSD for CM Elliptic Curves"*
+*Reviewer: Claude Opus 4.6 as math referee (Run r01, 2026-04-10)*
+*Scope: rigor audit at the yang-mills standard. Clay eligibility is*
+*the job of `02-clay-referee.md`, not this run.*
 
 ---
 
-## Detailed Findings
+## Bottom line
 
-### Points with GENUINE GAP: 0
+**Paper 26 is not yet a rigorous proof of BSD for CM rank 0+1 at
+the yang-mills standard.** The chain is structurally plausible
+and the downstream classical components (Deuring, Kolyvagin,
+Gross-Zagier, Baker) are correctly cited. But the upstream
+"bridge produces GRH for CM L-functions" argument has **three
+[KEY LEMMA — OPEN] items** that the paper asserts but does not
+prove, **one [GAP]** where the worked example table is broken,
+and **two editorial errors** found by computational check.
 
-No genuine gaps (proof-invalidating errors) were found.
+**None individually kills the proof**, but the collective state
+leaves the BSD claim short of what the yang-mills rigor bar
+requires.
 
-### Points with CLOSABLE GAP: 7
-
-| Point | Gap | Estimated closure |
-|:------|:----|:-----------------|
-| A3 (Meyer spectral) | Extension to Hecke L-functions via twist | 2-3 pages |
-| B1 (Bridge enumeration) | Table entry error; computational verification | 1 paragraph + script |
-| C1 (Baker) | Exact case promotion | 1 page |
-| D1 (CM factorization) | Bridge -> L(s,psi) (same as A3) | Same as A3 |
-| D2 (Kolyvagin rank 0) | Rank-1 vacuity clarification | 1 paragraph |
-| D3 (Gross-Zagier rank 1) | Rank-1 numerical verification; vacuity | 1 page |
-| E1 (Complete chain) | Aggregate of above | 4-6 pages total |
-
-### Points that are SOUND: 5
-
-| Point | Assessment |
-|:------|:-----------|
-| A1 (Ha-Paugam) | Sound -- construction correct |
-| A2 (Nelson) | Sound -- analytic vectors trivially satisfied |
-| B2 (ITPFI) | Sound -- standard argument transfers |
-| B3 (Dark state) | Sound -- elementary bound |
-| C2 (Cocycle shift) | Sound -- derivation correct |
-| E2 (Scope honesty) | Sound -- limitations honestly disclosed |
+**The substantive novel content of Paper 26 — extending the BC
+spectral method from ℚ to ℚ(i) so it reaches Hecke L-functions
+and hence CM L(E, s) — is asserted but not carried out at the
+level of full mathematical proof.** The rest is inherited
+(Deuring, Kolyvagin, Gross-Zagier, Baker) or standard operator-
+algebra (Nelson, ITPFI).
 
 ---
 
-## Closing Disclosures (REQUIRED)
+## The rigor scorecard
 
-1. **Scope limitation disclosure.** This proof covers BSD for CM curves of analytic rank 0 (and likely vacuously rank 1) over class-number-1 imaginary quadratic fields, conditional on the CBB axioms. It does NOT cover: non-CM curves (GL_2 territory), rank >= 2 (requires higher Euler systems), or h_K > 1 (multi-KMS analysis not done). The full BSD conjecture remains open for all non-CM curves and all ranks >= 2.
+For the 11-step chain (Paper 26 §9.1 + §§10–12):
 
-2. **Dependency on RH proof.** This proof depends on the bridge family construction validated in Paper 13 (the RH proof) and on the CBB axioms (Paper 23). If the RH proof has gaps, or if the CBB axioms are invalid, those problems propagate here. There is no logical circularity, but there is a dependency on unvalidated axioms.
+| Count | Label | Steps |
+|:-----:|:------|:------|
+| 4/11 | **[THEOREM]** | BC existence (Ha–Paugam); Nelson self-adjointness; cocycle shift formula; CM factorization (Deuring) |
+| 3/11 | **[LEMMA]** | KMS_1 uniqueness (citation gap to LLN 2015); ITPFI factorization; Baker kill (conditional on integrality premise) |
+| 3/11 | **[KEY LEMMA — OPEN]** | Meyer distributional → point spectrum upgrade; twisted spectral inclusion for L(s, ψ); cohomology-class integrality |
+| 1/11 | **[GAP]** | Proposition 4.3 bridge table (3 of 4 rows broken per the audit's computational check) |
 
-3. **Literature verification.** The proof uses Kolyvagin (1990), Gross-Zagier (1986), Baker (1966), Deuring (1953), and Ha-Paugam (2005) as black boxes. These are well-established results except Ha-Paugam, which has received less community scrutiny. The referee has not independently verified their proofs. **Action item for a future cycle:** verify that each black-box result is cited with the correct theorem statement and applicable scope. In particular, verify the precise statement of Kolyvagin's theorem for CM curves and the scope of the Gross-Zagier formula under the Yuan-Zhang-Zhang generalization.
+Note: Kolyvagin (rank 0) and Gross-Zagier + Kolyvagin (rank 1)
+are [THEOREM] from the literature but apply within the proof only
+**conditional** on the upstream GRH, which is itself [KEY LEMMA
+— OPEN]. The rank-1 case is additionally **vacuous** within the
+claimed scope (Paper 26's own Remark 12.6: GRH implies L(1, ψ) ≠
+0, so CM curves in scope cannot have analytic rank 1 over ℚ).
 
-4. **Tools added during this run:** None. No computational environment was set up per instructions.
+---
+
+## The single most critical issue
+
+**The cohomology-class integrality premise (Proposition 7.3(v)).**
+
+The entire bridge kill mechanism rests on the claim that a shift
+Δc(δ) ≠ 0 of the cocycle **representative** produces a shift of
+the cohomology **class** in H²(ℤ/kℤ, U(1)) ≅ ℤ/kℤ. The paper
+asserts this by saying "the bridge cocycle must remain in (1/k)ℤ
+for the bridge to be well-defined," which conflates the
+representative with the class. Without an explicit class-shifting
+lemma, Baker's theorem (which fires on the integrality constraint)
+operates on a premise that may not hold.
+
+The referee-required precise lemma:
+
+> *Let β(δ) ∈ Z²(ℤ/kℤ, U(1)) be the cocycle representative
+> obtained from the spectral shift at parameter δ. Let
+> [·] : Z² → H² be the class map. Then [β(δ)] ≠ [β(0)] for
+> δ ∈ (−1/2, 1/2) \ {0}.*
+
+Paper 26 does not state, prove, or even acknowledge this lemma.
+
+---
+
+## The three most critical issues (ranked)
+
+1. **Cohomology-class integrality premise is asserted, not
+   proved** (Proposition 7.3(v) / Key Lemma C in rigorous-proof.md).
+   This is the load-bearing item for the Baker kill.
+
+2. **Meyer–Nelson upgrade for ζ_K and twisted spectral inclusion
+   for L(s, ψ)** (Key Lemmas A and B). The paper asserts both by
+   analogy with Meyer 1997 and Connes–Marcolli 2008 §4.3 (both
+   stated for ℚ); neither extension to K = ℚ(i) is carried out.
+   Without these, GRH for CM L-functions is not established.
+
+3. **Proposition 4.3's "minimal conductor" bridge table is broken.**
+   Three of its four rows are wrong (per computational check C5):
+   - k=2: paper's own [ERRATUM] admits wrong Frobenius
+   - k=4: ((2+i), (5)) is invalid — (2+i) divides (5), so
+     Frobenius is undefined
+   - k=6: paper claims ord(2) = 1 in (ℤ/7ℤ)^×, but actually
+     ord(2) = 3, giving k = φ(7)/3 = 2, not 6
+   Only the k=3 row ((3+2i), (7)) is correct.
+
+---
+
+## What would close the gaps
+
+### For Key Lemma C (cohomology class)
+
+A direct computation in H²(ℤ/kℤ, U(1)) showing that the spectral
+shift map δ ↦ [β(δ)] is injective on (−1/2, 1/2). This is a
+well-defined group-cohomology exercise; either the shift changes
+the class or it doesn't.
+
+### For Key Lemmas A + B (Meyer-Nelson + twist)
+
+Either:
+- **Direct route:** state Meyer 1997 precisely, extend it to ζ_K
+  by re-verifying the explicit formula computation with Λ → Λ_K,
+  then carry out the distributional-to-genuine upgrade via the
+  Connes trace formula technology over number fields.
+- **Alternative architecture:** adopt the Paper 13 v2 route
+  (CCM + ITPFI + Bögli + Hurwitz) and extend it to number fields.
+  This would require a "CCM for number fields" result that does
+  not appear to be in the current literature.
+
+### For Proposition 4.3 (bridge table)
+
+Recompute the minimal-conductor table using correct Frobenius
+orders. Independently verify Proposition 4.2's claim of 355
+bridge triples. Supply at least two valid bridge triples with
+distinct norms explicitly, so that Baker's argument has concrete
+inputs to operate on.
+
+### For the editorial errors
+
+- **Table 8.1** (E1): recompute all log-ratios in mpmath at 30+
+  digits.
+- **Ω formula** (E2): replace `Γ(1/4)² / (2π)^{3/2}` with
+  `Γ(1/4)² / (2·√(2π))`. The numerical value 2.62205755 and
+  downstream BSD closure are correct.
+
+---
+
+## Computational verification summary
+
+All checks run in the venv at
+`paper26-bsd/referee/code/.venv/` using mpmath at 60–150 digit
+precision. Details in `computation-log.md`.
+
+| Check | Target | Result |
+|:------|:-------|:-------|
+| C1 | Dedekind zeta Euler product ζ_K(s) at s = 2, 3, 4 | PASS (diff < 1e-4 at s=2 with 2000 primes) |
+| C2 | Cocycle shift formula + Table 7.4 | PASS (paper's 7.856835e-3 at N=5 matches) |
+| C3 | Table 8.1 log-ratios | **4 of 5 WRONG** (Editorial E1) |
+| C4a | Ω_E formula in §13.3 | **WRONG BY FACTOR OF π** (E2) |
+| C4b | Ω_E numerical value and BSD closure at rank 0 | PASS (with c_2 = 4 per LMFDB) |
+| C5 | Proposition 4.3 bridge table | **3 of 4 rows broken** (Gap G1) |
+| C6 | Proposition 4.2 "355 triples" | NOT VERIFIED |
+
+---
+
+## Closing statements (mandatory per 01-math-referee.md)
+
+### 1. The cohomology-class lemma (B2/VII.B)
+
+**Verdict:** Paper 26 does NOT establish that the cocycle SHIFT
+induces a genuine shift in the cohomology CLASS. The paper's
+Proposition 7.3(v) asserts the integrality constraint by saying
+"the bridge cocycle must remain in (1/k)ℤ for the bridge to be
+well-defined," which is a statement about the class but is
+justified as if it were a statement about the representative.
+The precise class-shifting lemma (see Key Lemma C in
+rigorous-proof.md §XIII) is not stated or proved. **Flagged as
+[KEY LEMMA — OPEN]**, bordering on [GAP].
+
+### 2. Does the bridge reach L(s, ψ)?
+
+**Verdict:** Paper 26 ASSERTS that the twisted spectral
+realization of Connes–Marcolli 2008 §4.3 extends from ℚ to
+K = ℚ(i), giving a twisted BC operator T_{BC,K}^ψ whose
+distributional spectrum contains the zeros of L(s, ψ). The
+extension is **asserted by analogy**; it is not carried out.
+The critical technical step (twisting over number fields, not
+just over ℚ) is not verified. **Flagged as [KEY LEMMA — OPEN].**
+
+### 3. Kolyvagin and Gross-Zagier applicability
+
+**Verdict:** Kolyvagin's theorem at rank 0 and Gross-Zagier +
+Kolyvagin at rank 1 are correctly cited and applied within their
+actual scope. Modularity for CM curves is classical (Hecke theta
+series), so the modularity prerequisite is met. The Heegner
+hypothesis for y² = x³ − x (where prime 2 ramifies in ℚ(i)) is
+correctly flagged by the paper as requiring either the
+Yuan–Zhang–Zhang 2013 generalization or an auxiliary field like
+ℚ(√−7); the paper mentions both but does not commit to one. This
+is sufficient for the literature existence check but not for a
+watertight proof. **Rank-1 is vacuously satisfied per Paper 26's
+own Remark 12.6** — all CM curves in scope have analytic rank 0
+once GRH is established.
+
+### 4. What Paper 26 contributes (new vs standard)
+
+The genuinely new mathematical content of Paper 26, reduced to
+essentials:
+- **The extension of the BC spectral method from ℚ to ℚ(i)** so
+  that it reaches Hecke L-functions and hence CM L(E, s).
+- **The bridge family over ℚ(i)** (claimed 355 triples; only the
+  k=3 example at ((3+2i), (7)) is verified; the other minimal-
+  conductor examples are broken).
+- **The assembly** from GRH-for-CM-L-functions to BSD at rank
+  0 and 1 (using classical Kolyvagin/Gross-Zagier).
+
+Everything else is either inherited from the standard literature
+(Ha–Paugam, Nelson, Meyer, Baker, Deuring, Kolyvagin, Gross–
+Zagier, BCDT modularity) or from Paper 13 (the bridge family
+construction and cocycle shift derivation over ℚ).
+
+**The synthesis is programmatically interesting but mathematically
+under-developed at the yang-mills rigor standard.** The novel
+pieces are not carried out in the preprint; they are asserted by
+analogy.
+
+### 5. Tools added during this run
+
+None. All checks performed with the default venv packages
+(sympy, mpmath, numpy, scipy, pypdf). No additional libraries
+needed for the rigor audit.
+
+---
+
+## Is BSD for CM rank 0+1 established?
+
+**Conditional on the three [KEY LEMMA — OPEN] items being
+closed** and **Proposition 4.3 / 4.2 being rebuilt correctly**,
+the chain as Paper 26 presents it would yield BSD for CM curves
+with CM by a class-number-1 imaginary quadratic field and analytic
+rank 0 (the rank-1 case being vacuous per Remark 12.6).
+
+**As currently written**, the proof is at the "structurally
+complete but rigorously incomplete" stage. It is plausible;
+the pattern is right; the classical downstream components are
+sound. But the bridge → GRH step — the novel content — is
+asserted more than proved.
+
+---
+
+## Rating
+
+- **Rigor of the overall architecture:** 7/10 (plausible,
+  correct shape, classical downstream components sound)
+- **Rigor of the novel content (bridge → GRH for L(s, ψ)):**
+  4/10 (three [KEY LEMMA — OPEN] items, one [GAP])
+- **Numerical/editorial quality:** 6/10 (Ω formula wrong,
+  Table 8.1 wrong in 4/5, Prop 4.3 broken in 3/4)
+- **Overall rigor audit verdict:** 5-6/10 — in the same state as
+  Paper 13 was before its 9 referee fixes, but for a harder target
+  (BSD is a more demanding theorem than RH, even for CM rank 0+1).
+
+**Projected rating after closing the 3 key lemmas + fixing the
+gap and editorial errors:** 7-8/10, comparable to Paper 13's
+current post-fix state. Reaching 9/10 would additionally require
+having the cited preprints (Ha–Paugam, Laca–Larsen–Neshveyev,
+Yuan–Zhang–Zhang) integrated into a complete bibliography and
+independent expert review.
+
+---
+
+## Coordination with the Clay referee
+
+This rigor audit is the input the Clay compliance audit
+(`02-clay-referee.md`) needs. Specifically:
+
+- The **rigor scorecard** (4/3/3/1) means that the mathematics is
+  not yet "complete" in the sense of Clay §5(a).
+- The **three [KEY LEMMA — OPEN] items** and **one [GAP]** mean
+  the paper is "conditional" on open lemmas, regardless of whether
+  the paper's own framing calls itself "unconditional."
+- The **rank-1 vacuity (Remark 12.6)** means the substantive
+  content is entirely at rank 0, which is a narrower claim than
+  the paper's "BSD for rank 0 AND 1" framing suggests.
+
+When the Clay referee runs next (see `02-clay-referee.md` Point
+CA10), it should reference this file (`rigorous-proof.md` and
+this summary) and conclude that **Clay §5(a) (complete solution)
+is not met at the mathematical level**, regardless of publication
+status (Clay §4(a-c)).
+
+---
+
+*End of summary. Primary deliverable: `rigorous-proof.md` (the
+yang-mills-standard reformulation). Supporting outputs:
+`rigor-checklist.md`, `computation-log.md`, and the per-point
+and per-check files in `points/` and `checks/`.*
