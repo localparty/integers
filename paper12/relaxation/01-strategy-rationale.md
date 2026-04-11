@@ -10,6 +10,18 @@
 
 ---
 
+**Wave harvest (2026-04-11)** — four leads from the relaxation cycle have been executed in parallel, three hardening the framework and one retiring a load-bearing conjecture:
+
+- **Lead 7a — Anchor 2 HARDENED**: `paper12/relaxation/research/T5-cross-formula-verification.md` (159/159 cross-formula γ_n consistency at `mp.dps = 50`).
+- **Lead 7b — Anchor 4 + Anchor 5 geometric side HARDENED**: `paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md` (4/4 cyclotomic Brauer classes verified; k=3 / k=4 CRT dual-splitting of (ℤ/13ℤ)* discovered as structural by-product).
+- **Lead 7d — Anchor 3 HARDENED**: `paper12/relaxation/research/T7d-cross-functional-form-verification.md` (120/120 pairwise, max residual 1.71 × 10⁻⁴⁹; three genuinely independent Riemann encodings — ζ, Ξ, Riemann-Siegel Z — agree exactly; the log-R operator dictionary Form C is documented as structurally tautological per research/167's `L̂ := log R̂` definition, not an independent encoding, preserving honest-first discipline).
+- **Lead 7e — Anchor 4 STRENGTHENED from "agreement" to "forcing"**: `paper12/relaxation/research/T7e-bridge-minimality-verification.md` (4/4 lex-unique minima of a zero-SM-input sieve equal the SM multiplicities 2, 3, 4, 6; 133 valid pairs within N < 100, 4 unique minima, all matching the framework's choice).
+- **Lead 7c — T7 (Stark regulator equality) REFUTED, Anchor 5 spectral side HALF-STANDING**: `paper12/relaxation/research/T7c-stark-rescue-verification.md` (0/30 rescue candidates pass; Paper 25 Conjecture 5 formally retracted per `paper25/sections-05-08.md §8.0`; the cocycle `1/k` is confirmed as a discrete Brauer-cohomology invariant that is not encoded in any continuous Galois phase of any L-function derivative the framework has tested).
+
+**Net state**: Anchors 2, 3, and 4 hardened; Anchor 4 upgraded to "forcing"; Anchor 5 restated as cyclotomic-Brauer-side only; T7 retired; Paper 25 narrowed to four active conjectures. The framework's empirical content (36/36 master table, Wolfenstein, α_PS⁻¹ = 17, cosmic age, Theoretical-Precision Table) is **unaffected**. The seven-anchor strategy is stronger after this wave because Anchor 4's upgrade to forcing is structurally deeper than losing half of Anchor 5, and the honest refutation closes a hole the framework was carrying unknown to itself.
+
+---
+
 ## Table of Contents
 
 1. The philosophy: what this cycle is, in one sentence
@@ -53,7 +65,7 @@ The framework now carries four results that, individually, would each be a major
 
 | Result | Source | Conditional on | Mechanism |
 |:--|:--|:--|:--|
-| **Yang-Mills mass gap** | Paper 10 | Identity 12 + KK integer tower | Gradient flow + L.1-L.4 |
+| **Yang-Mills mass gap** | Paper 8 | Identity 12 + KK integer tower | Gradient flow + L.1-L.4 |
 | **Riemann Hypothesis** | Paper 13 | CBB axioms | CCM + ITPFI + Bögli + Hurwitz |
 | **BSD for CM curves** (rank 0+1, h_K=1) | Paper 26 (Route 3) | CBB axioms | BC over K + KMS projector P_k^𝔭 + Hasse-Brauer-Noether |
 | **Integers (36-row master table)** | Paper 23 | CBB axioms | Bridge family + spectral sector + geometric sector + interface |
@@ -156,10 +168,11 @@ The crucial property: **each test is also a load-bearing lemma in at least one C
 **Underwrites**: Yang-Mills KK scaffold + RH Layer 1 ("BC algebra") + the operator dictionary's R̂ definition.
 **Why it matters**: If Identity 12 fails, the e-circle of Papers 1-11 is no longer the BC system, and the entire transposition from Yang-Mills to the BC framework collapses.
 
-### T7 — Stark regulator equality
-**Constraint**: For each bridge character χ, the bridge cocycle equals the Stark unit phase L'(0,χ) at the corresponding character (the surviving form of the RBC layer from research/188).
-**Underwrites**: The bridge family + the Hilbert 12 programme of Paper 25.
-**Why it matters**: This is the conjectural connection between the operator-algebraic side (Jones subfactor index) and the analytic-arithmetic side (Stark units). If it holds, the bridge cocycles are *the same data* as Stark units, and the framework becomes a chapter in explicit class field theory.
+### T7 — Stark regulator equality [**REFUTED 2026-04-11**]
+
+**⚠️ REFUTED.** This test is retired as a framework constraint. Three independent research notes (`paper12/research/188`, `paper12/research/267`, `paper12/relaxation/research/T7c-stark-rescue-verification.md`) have tested nine distinct identifications between L-function-derived quantities and the bridge cocycle `1/k mod ℤ`, with zero matches at `mp.dps = 50`. The final nail is T7c's six-rescue-candidate test: **0 / 30 pass at tolerance 1e-40**. The structural reason (per T7c §5): the cocycle `1/k` is a discrete invariant in `H²(ℤ/kℤ, U(1))` while any L-function derivative is continuous transcendental; pointwise evaluation cannot land on a discrete invariant. Paper 25 Conjecture 5 (V-Hilbert 12) is formally retracted (see `paper25/sections-05-08.md §8.0`). **The framework does NOT depend on T7 holding.** Anchor 5 of the seven-anchor strategy is restated as the cyclotomic-Brauer-class side alone (Lead 7b, 4/4 verified), with T7 explicitly closed as a refuted companion claim.
+
+**Historical constraint (for the record)**: For each bridge character χ, the bridge cocycle was conjectured to equal the Stark unit phase L'(0,χ) at the corresponding character (the surviving form of the RBC layer from research/188). Originally underwrote: the bridge family + the Hilbert 12 programme of Paper 25. **Both are affected**: the bridge family's Brauer-cohomology side survives unchanged via Lead 7b + Lead 7e; the Hilbert 12 programme of Paper 25 is narrowed to Conjectures 1–4 with Conjecture 5 retracted.
 
 ### T8 — Hasse-Brauer-Noether local-global consistency
 **Constraint**: The sum of local Brauer invariants of a global Brauer class equals zero (classical local-global theorem).
@@ -193,7 +206,7 @@ The crucial property: **each test is also a load-bearing lemma in at least one C
 
 ### T14 — KK integer tower
 **Constraint**: The Kaluza-Klein modes from the e-circle (or equivalently the BC level structure) are indexed by integers, not fractions or continuous parameters.
-**Underwrites**: Yang-Mills mass-gap argument (Paper 10 L.1-L.4). The integer tower is what gives the discrete spectrum that produces the gap.
+**Underwrites**: Yang-Mills mass-gap argument (Paper 8 L.1-L.4). The integer tower is what gives the discrete spectrum that produces the gap.
 **Why it matters**: If a postulate introduces fractional or continuous KK modes, the discrete-spectrum argument fails and the mass gap collapses. This is the YM-specific test.
 
 ### T15 — Type III_1 modular flow uniqueness

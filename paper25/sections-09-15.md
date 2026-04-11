@@ -7,6 +7,10 @@
 
 ---
 
+**REVISED 2026-04-11 — Conjecture 5 (V-Hilbert 12) formally RETRACTED.** See `sections-05-08.md` §8.0 for the retraction notice and the Lead 7c refutation record (`paper12/relaxation/research/T7c-stark-rescue-verification.md`, 0 / 30 rescue candidates pass at `mp.dps = 50`). Throughout this file, references to Conjecture 5, V-Hilbert 12, Stark-unit identification with bridge cocycle phases, and the "five conjectures" framing should be read as **four active conjectures + one retracted**. §9 "The Stark regulator framework" was scaffolding for the retracted Conjecture 5 and is retracted with it; the "Why Stark regulators are right" subheading is explicitly withdrawn — T7c's refutation record shows Stark regulators do NOT carry the bridge cocycle in any tested identification. §12.1 + §12.2 computational programmes are closed out as superseded by T7c's negative result. §15.3's "Hilbert 12 closed" success criterion is withdrawn. **Unaffected**: Conjectures 1, 2, 3, 4; the V operator's m_τ closure role (research/183 → Paper 19/23); the cyclotomic Brauer side of the bridge family (Lead 7b, 4/4); the bridge minimality theorem (Lead 7e, 4/4 lex-unique); RH as a corollary of Conjecture 2; the entire empirical 36/36 master table. The content below is preserved as **historical record with per-subsection banners where load-bearing**.
+
+---
+
 ## 9. The Stark Regulator Framework
 
 ### 9.1 Stark's conjecture in one paragraph
@@ -592,14 +596,18 @@ effort. The timeline, ordered by estimated difficulty:
 | Conjecture | Status | Estimated time | Bottleneck |
 |:--|:--|:--|:--|
 | 3 (Level-Jump Rigidity) | **PROVED** | -- | research/268 |
-| 5 (V-Hilbert 12) | **REFUTED** | reformulation needed | research/267; Section 8.6 |
+| 5 (V-Hilbert 12) | **RETRACTED (2026-04-11)** | not a framework open problem | research/267 + T7c; Section 8.0 |
 | 1 (CBB Reciprocity, k=4,6) | OPEN | 1-2 years | Extend research/162 to higher k |
 | 4 (Spectral Kronecker-Weber) | OPEN | 3-5 years | Classification theorem in operator algebra |
 | 2 (Brauer-KMS Duality, global) | OPEN, strengthened | 4-7 years | Structural theorem (RH already proved) |
 
 Conjecture 3 is closed by exhaustive finite verification
-(research/268). Conjecture 5 is refuted in literal form and
-requires reformulation (Section 8.6).
+(research/268). Conjecture 5 is **retracted** (2026-04-11) per
+Section 8.0 after Lead 7c's six-rescue refutation — the
+reformulation of Section 8.6 is no longer an active framework open
+problem; the three candidate directions (Galois cohomology boundary
+map, Beilinson regulator, Weil pairing) are closed as NOT
+load-bearing for the framework.
 
 Conjecture 1 at k = 4 and k = 6 is the natural next step after the
 k = 3 lemma of research/162. The method is the same (compare the
@@ -1048,10 +1056,10 @@ weight-0 shadow of a richer structure involving all weights.
 
 ### 15.1 What this paper does
 
-This paper states five conjectures that organise the Critical Bost-
-Connes-Brauer (CBB) system into a systematic operator-algebraic
-explicit class field theory at criticality. As of 2026-04-10, the
-programme tally is:
+This paper originally stated five conjectures that organise the
+Critical Bost-Connes-Brauer (CBB) system into a systematic
+operator-algebraic explicit class field theory at criticality. As of
+**2026-04-11** (Conjecture 5 retraction), the programme tally is:
 
 | # | Conjecture | Status | Reference |
 |---|:--|:--|:--|
@@ -1059,17 +1067,25 @@ programme tally is:
 | 2 | Brauer-KMS Duality | **OPEN, STRENGTHENED** | RH proved unconditionally (Paper 13); consequence confirmed |
 | 3 | Level-Jump Rigidity | **PROVED** | research/268, exhaustive N <= 100 |
 | 4 | Spectral Kronecker-Weber | **OPEN** | no progress yet |
-| 5 | V-Hilbert 12 | **REFUTED in literal form** | research/267, research/188; reformulation needed (Section 8.6) |
+| ~~5~~ | ~~V-Hilbert 12~~ | **RETRACTED (2026-04-11)** | research/267, research/188, `paper12/relaxation/research/T7c-stark-rescue-verification.md`; Section 8.0 retraction notice |
 
-**Score: 1 proved, 1 refuted, 1 strengthened, 2 open.**
+**Score (four-conjecture programme): 1 proved, 1 strengthened, 2 open, 1 retracted.**
 
-Together, the surviving conjectures define a single mathematical
-programme: prove that the CBB system is the analytic input to
-Hilbert's twelfth problem for cyclotomic base fields at conductor
-1729. If the programme succeeds, it closes Hilbert's 12th for this
-class of fields. The Riemann hypothesis, which was originally a
-conditional corollary of Conjecture 2, is now proved unconditionally
-by the independent Meyer-Nelson-GNS chain (Paper 13, revised).
+Together, the four surviving conjectures (1, 2, 3, 4) define a
+mathematical programme inside the CBB system: prove CBB Reciprocity
+at k=4,6 and Spectral Kronecker-Weber as structural theorems,
+preserving the Brauer-KMS duality framing that yields RH as a
+corollary (RH itself now proved unconditionally via the
+Meyer-Nelson-GNS chain in Paper 13 revised). **The programme no
+longer claims to provide a partial solution to Hilbert's 12th
+problem for cyclotomic bases via explicit Stark-regulator-derived
+generators.** That claim (Conjecture 5) is retracted. The CBB
+system's contribution to the Hilbert 12 landscape is now: the
+cyclotomic Brauer cohomology witnesses for the bridge family
+(Lead 7b, 4/4 verified) and the bridge minimality theorem
+(Lead 7e, 4/4 lex-unique minima forcing the SM multiplicities).
+Both are discrete-invariant contributions; neither claims to be an
+explicit analytic generator in the sense Hilbert 12 asks for.
 
 ### 15.2 What it does not do
 
@@ -1138,8 +1154,12 @@ estimate. Updated status and revised timeline:
   enumeration (research/268). Originally estimated at 1-2 years.
 - RH: PROVED unconditionally by Meyer-Nelson-GNS chain (Paper 13).
   Originally estimated at 5-10 years via Conjecture 2.
-- Conjecture 5 (V-Hilbert 12): REFUTED in literal form
-  (research/267). Reformulation needed (Section 8.6).
+- Conjecture 5 (V-Hilbert 12): **RETRACTED (2026-04-11)**
+  after research/267 + `paper12/relaxation/research/T7c-stark-rescue-verification.md`
+  returned 0 / 30 pass across six pre-committed rescue candidates
+  at `mp.dps = 50`. See Section 8.0 for the retraction notice.
+  The Section 8.6 reformulation is closed out as NOT a framework
+  open problem.
 
 **Years 1-2 (from now).** CBB Reciprocity at k = 4, 6: extend the
 k = 3 lemma of research/162 to the remaining bridges. Reformulate

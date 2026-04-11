@@ -2,6 +2,8 @@
 
 *REVISED 2026-04-10: Conjecture 3 proved (research/268); Conjecture 5 refuted in literal form (research/267); RH unconditional strengthens Conjecture 2; Conjecture 5 reformulation added.*
 
+*REVISED 2026-04-11: **Conjecture 5 (V-Hilbert 12) formally RETRACTED**. Lead 7c (`paper12/relaxation/research/T7c-stark-rescue-verification.md`) tested six pre-committed rescue candidates (Gauss sum, sqrt(N)-normalised Gauss sum, Gauss sum of L' itself, both signs of the W-factor, raw and genus-rescaled log-Stark, combined Gauss+W, Stickelberger element, conductor-adjusted phase) at `mp.dps = 50` across all three bridges. **0 / 30 tests pass** at tolerance `1e-40`; closest near-miss is `Δ ≈ 5.4e-3` on one bridge and does not extend to the others. Combined with research/267 (raw Stark phase + exhaustive character scan) and research/188 (`L'(1,χ)/L(1,χ)`), the Stark-phase identification of the bridge cocycle is refuted in every form the framework can test. The honest finding — option (c) of research/267 §6 — is that the cocycle `1/k` is a discrete invariant in `H²(ℤ/kℤ, U(1))` and is **not encoded** in the continuous Galois phase of any Stark unit, Gauss sum, Stickelberger element, or L-function derivative. See §8.0 below for the retraction notice, §8.6 for the closed-out reformulation status, and `paper12/relaxation/research/T7c-stark-rescue-verification.md` for the full numerical record. **What survives unchanged**: the cyclotomic Brauer side of Anchor 5 (Lead 7b, 4/4 bridges verified at exact integer arithmetic), the V operator's role in m_τ closure (research/183, Paper 19/23 — independent of this retraction), and Conjectures 1, 2, 3, 4.*
+
 ---
 
 ## 5. Conjecture 2 -- Brauer-KMS Duality
@@ -440,11 +442,54 @@ is a product of named, physically interpreted bridges. This means:
 
 ---
 
-## 8. Conjecture 5 -- V-Hilbert 12
+## 8. Conjecture 5 -- V-Hilbert 12 — **RETRACTED** (2026-04-11)
 
-**Status: REFUTED in literal form** (research/267). The Stark phases are not $1/k$; the specific functional extracting the cocycle value from $L$-function data remains unknown. See Remark 8.0 below.
+**Status: RETRACTED.** Conjecture 5 (V-Hilbert 12) is formally withdrawn as a conjecture of the framework. The retraction is based on three independent refutation records:
 
-**Remark 8.0.** The connection between bridge cocycles and explicit class field generators exists structurally, but the specific functional extracting the cocycle value from L-function data remains unknown. Reformulation needed.
+| Refutation | Target | Result |
+|:--|:--|:--|
+| `paper12/research/188-character-decomposed-rbc.md` | `L'(1,χ)/L(1,χ) = 1/k` | FAILS — transcendental, no rational relation |
+| `paper12/research/267-stark-units-computation.md` | `arg(exp(-L'(0,χ)))/(2π) = 1/k` + exhaustive character scan mod 13 and mod 19 | FAILS — no character of any order yields phase `1/k` at any bridge |
+| `paper12/relaxation/research/T7c-stark-rescue-verification.md` (Lead 7c, 2026-04-11) | Six pre-committed rescue candidates — Gauss sum, `sqrt(N)`-normalised Gauss sum, Gauss sum of `L'` itself, both signs of the W-factor from the functional equation, raw and genus-rescaled log-Stark, combined Gauss+W, Stickelberger element, conductor-adjusted phase — all tested at `mp.dps = 50` with tolerance `1e-40` across the three bridges `(5,13)`, `(3,13)`, `(7,19)` at `k = 3, 4, 6` | **0 / 30 tests pass.** Closest near-miss: `Δ ≈ 5.4 × 10⁻³` on one bridge, does not extend to the others. |
+
+The pattern is unambiguous: every form of the "bridge cocycle `1/k` is encoded in a continuous Galois phase of a Stark-regulator-derived quantity" hypothesis the framework can test has been falsified numerically. The structural reason — surfaced by Lead 7c's diagnosis — is that the cocycle `1/k` lives in `H²(ℤ/kℤ, U(1))` as a **discrete invariant** while any L-function derivative is a **continuous transcendental quantity**; the bridge between the two cannot be a pointwise evaluation. This is option (c) of `research/267` §6 — *"Abandonment: the bridge cocycle `1/k` lives in `H²(ℤ/kℤ, U(1))` as a discrete invariant and is not encoded in the continuous Galois phase of any Stark unit"* — and it is the honest finding.
+
+### Remark 8.0 — Retraction notice (2026-04-11)
+
+**Conjecture 5 is retracted.** The V-matrix-elements-as-Stark-unit-logarithms identification of §8.4, the §8.5 claim that the CBB system provides explicit generators for the Hilbert 12 problem at conductor 1729, and the §8.6 list of "three candidate directions for reformulation" (Galois-cohomology boundary map, Beilinson regulator, Weil pairing on the Jacobian) are withdrawn. The framework's contribution to Hilbert's 12th problem via V is not established and should not be cited.
+
+**What is withdrawn specifically:**
+
+1. The identification `⟨χ_a | V | χ_b⟩ = L'(0, χ_{a-b})` up to period normalisation (§8.3 and §8.4).
+2. The claim that `⟨χ_1 | V | χ_1⟩` at `ℓ = 13` and `ℓ = 19` equals `-log|ε_{χ_1, ℓ}|` for Stark units whose Galois phases reproduce the bridge cocycles `1/3, 1/4, 1/6 mod ℤ` (§8.4 table).
+3. The claim that V solves Hilbert's 12th problem at conductor 1729 (§8.5 headline and its three-layer solution structure).
+4. The §8.6 "three candidate directions" as active reformulation targets. The three candidates (Galois cohomology boundary map, Beilinson regulator, Weil pairing on J₀(N)) are logically possible futures but are **not load-bearing** for the framework and are not the framework's open problems; they are open problems of Hilbert 12 generally, independent of CBB.
+5. The `§9` "Stark regulator framework" (sections-09-15.md) as a framework anchor — it was scaffolding for Conjecture 5 and is retracted with it.
+6. The §12.1 and §12.2 computational programmes targeting Conjecture 5 verification — superseded by the T7c verification, which returned negative, and no longer active.
+7. The §15.3 "success would look like Hilbert 12 closed" framing.
+
+**What is preserved** (and is unaffected by this retraction):
+
+1. **Conjectures 1, 2, 3, and 4** — CBB Reciprocity, Brauer–KMS Duality, Level-Jump Rigidity, Spectral Kronecker–Weber — all unaffected. None of them depend on the Stark-phase identification.
+2. **The V operator itself** (research/183) as a real anti-hermitian operator coupling `log R̂` to `τ_1`. V still closes `m_τ` in Paper 19/23. Its role in the m_τ derivation is independent of Hilbert 12 and survives the retraction unchanged.
+3. **The cyclotomic Brauer class side** of the bridge-cocycle story. Lead 7b (`paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md`) verified the Hasse invariants `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` exactly on all four bridges `(2,7), (5,13), (3,13), (7,19)`. This is exact integer arithmetic and stands.
+4. **Lead 7e** (`paper12/relaxation/research/T7e-bridge-minimality-verification.md`) further strengthened the bridge-integer side: the four pairs are the unique lex-minimal solutions of a number-theoretic sieve containing zero Standard Model input, and they equal the SM multiplicities `(3, 4, 6)` on the nose. Anchor 4 upgraded from "cross-integer agreement" to "cross-integer forcing". This hardening stands.
+5. **RH as a corollary of Conjecture 2** — unaffected. Conjecture 2 (Brauer–KMS Duality) is where RH lives; Conjecture 5 was a separate claim about explicit generators and does not touch the RH path.
+6. **The framework's empirical content** — 36/36 master-table closure, Wolfenstein closed forms, `α_PS⁻¹ = 17`, the cosmic age formula, the Theoretical-Precision Table — all independent of Hilbert 12 and unaffected.
+
+### Remark 8.0b — What the retraction tells us about the framework
+
+The retraction is a structural win for honest-first discipline: the framework *had* a load-bearing conjecture that would have been impressive if true, tested it numerically with 50-digit precision at nine different identifications across three independent research notes, and reported the negative result openly. The credibility of the framework is the credibility of its kill list. Conjecture 5 is now on it.
+
+The Anchor 5 of the seven-anchor strategy (`paper12/relaxation/04-geometric-spectral-cross-formula-cross-forms-cross-integers-cocycle-ccm-predictions-etc-strategy.md §4`) is updated to **Option A (narrow)** per Lead 7c's recommendation: the anchor is restated as the cyclotomic-Brauer statement alone, with the spectral-side identification explicitly struck out and cited as refuted.
+
+---
+
+*The subsections below (§8.1 through §8.6) are preserved in their original form as **historical record** of what was claimed and subsequently withdrawn. They are not active framework content. Each subsection carries a retraction banner at its start. The purpose is traceability: a reader should be able to see what was conjectured, why, and what evidence withdrew it.*
+
+---
+
+**⚠️ RETRACTED subsections follow. The content below is historical. See §8.0 above for the retraction notice.**
 
 ### 8.1 Statement (original, refuted in literal form)
 
@@ -558,7 +603,14 @@ proposes computing the Stark units for (5, 13), (3, 13), and (7, 19)
 using PARI/GP and comparing their logarithms to V's matrix elements.
 The computation is the immediate next step in the programme.
 
-### 8.5 Consequence: explicit generators for the Hilbert 12 problem at conductor 1729
+### 8.5 [WITHDRAWN] Consequence: explicit generators for the Hilbert 12 problem at conductor 1729
+
+**⚠️ WITHDRAWN (2026-04-11).** The headline claim of this subsection — that V furnishes explicit generators for abelian extensions of `Q(ζ_13)` and `Q(ζ_19)` at conductor 1729, constituting a partial solution to Hilbert's 12th problem for cyclotomic bases — is withdrawn per §8.0. The subsection is preserved as historical record of what was claimed. The **V operator's m_τ closure role is unchanged and unaffected** — that is a physical-sector result in Paper 19/23 independent of Hilbert 12. The *origin callout* quote is preserved as a record of G's optimism at the moment of proposal, not as a standing claim.
+
+---
+
+**[Historical, withdrawn] Original §8.5 content follows:**
+
 
 If Conjecture 5 holds, then the CBB system provides explicit
 generators for abelian extensions of Q(zeta_13) and Q(zeta_19) via
@@ -606,17 +658,29 @@ elements, and confirm that their Galois phases reproduce the bridge
 cocycle values 1/3, 1/4, 1/6 mod Z. The tools -- SageMath, PARI/GP,
 mpmath -- exist. The operator is named. The prediction is sharp.
 
-### 8.6 Reformulation: what functional carries the cocycle?
+### 8.6 [CLOSED OUT] Reformulation: what functional carries the cocycle?
 
-**Status: OPEN.** The literal form of Conjecture 5 is refuted
-(research/267, research/188). Three candidate functionals have been
-tested and eliminated:
+**Status: CLOSED (2026-04-11). Retracted alongside §8.1–§8.5.** The §8.6 reformulation was an open problem under the prior "refuted in literal form" status. Lead 7c has now tested six systematic rescue candidates beyond the three in the earlier table and all failed; the reformulation is no longer an active framework open problem. The Galois-cohomology, Beilinson-regulator, and Weil-pairing directions (A), (B), (C) below are logically possible futures, but they are general open problems of Hilbert 12, **not load-bearing for the framework**. The framework's contribution to Hilbert 12 via V is withdrawn. Future work on these directions is welcome but should not be cited as part of the framework's claimed content.
+
+**Updated refutation table** (superseding the 2026-04-10 version):
 
 | Functional | Tested in | Result |
 |:--|:--|:--|
 | L'(1, chi)/L(1, chi) = 1/k | research/188 | FAILS: transcendental, no rational relation to 1/k |
 | arg(exp(-L'(0, chi))) / (2 pi) = 1/k | research/267 | FAILS: Stark phases are 0.866, 0.041, 0.130, not 1/3, 1/4, 1/6 |
 | Exhaustive character scan mod 13, 19 | research/267 | FAILS: no character of any order yields phase = 1/k |
+| **Gauss sum normalisation** `arg(exp(-L'(0,χ))/τ(χ))/(2π)` and `arg(L'(0,χ)/τ(χ))` | `T7c-stark-rescue-verification.md` (Lead 7c, 2026-04-11) | **FAILS on all 3 bridges at `mp.dps = 50`, tolerance `1e-40`** |
+| **sqrt(N)-normalised Gauss sum** (`\|τ/sqrt(N)\| = 1` for primitive χ) | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** |
+| **W-factor normalisation** from the functional equation, both signs `arg(exp(-L'(0,χ))·W(χ)^{±1})/(2π)` | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** (closest near-miss: `Δ ≈ 5.4 × 10⁻³` on k=4; does NOT extend to k=3 or k=6) |
+| **Log-Stark rational approximation** `Im(log(ε_χ))/(2π)` against `1/k + ℤ` | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** |
+| **Genus-rescaled log-Stark** `log(ε_χ)/(2πi · log_N(genus))` | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** |
+| **Combined Gauss sum + W-factor** `L'(0,χ)/(τ(χ)·W(χ))` | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** |
+| **Stickelberger element** `θ(χ) = Σ χ(a)·(a/N)` | `T7c-stark-rescue-verification.md` | **FAILS** — θ(χ) vanishes for k=3 (forced by χ(-1)=+1, classical); for k=4 and k=6 the exact algebraic values `-1-i`, `-1-√3·i` give phases `5/8, 2/3`, nowhere near `1/k` |
+| **Conductor-adjusted phase** `arg(exp(-L'(0,χ)))/(2π) · (k/f(χ))` | `T7c-stark-rescue-verification.md` | **FAILS on all 3 bridges** |
+
+Total: **30 pre-committed numerical tests across 6 rescue candidates × 3 bridges × 10 sub-tests = 0 / 30 pass** (the table collapses the sub-tests for readability; the full numerical record is in `T7c-stark-rescue-verification.md` §4).
+
+The pattern is not "we haven't found the right functional yet". The pattern is **structural**: the discrete invariant `1/k mod ℤ` in `H²(ℤ/kℤ, U(1))` is not encoded in any continuous Galois phase of any L-function-derived quantity the framework has tested, across three independent research notes spanning four months and nine distinct identifications. The honest verdict is option (c) of `research/267` §6 — abandonment.
 
 **What survives.** The *existence* of the right characters at the
 right conductors is confirmed: order-k characters exist at N = 13
@@ -670,8 +734,20 @@ All three are computationally testable. The reformulation of
 Conjecture 5 is the principal open problem in the Hilbert 12
 programme.
 
+### 8.6.1 Closure note (2026-04-11) — the reformulation is not a framework open problem
+
+**⚠️ CLOSED.** After Lead 7c's six-rescue-candidate refutation, the three directions (A), (B), (C) above are closed as active framework work:
+
+- **(A) The Galois-cohomology boundary map** `δ: H¹(G, O_K*) → H²(G, ℤ)` — is a real mathematical object. Its application to Stark-unit classes is a well-defined question independent of CBB. **It is not a framework open problem.** If a mathematician outside CBB works on (A) and finds the boundary map produces `1/k` on the bridge Stark units, that would revive Conjecture 5, and we would welcome the finding. Until then, the framework does not claim it, does not depend on it, and does not pursue it.
+- **(B) The Beilinson regulator** `r_D: K_1(O_K) → H¹_D(Spec(O_K), ℝ(1))` — same status as (A). Computable in principle, not the framework's open problem.
+- **(C) The Weil pairing on `J₀(N)[k]`** — most speculative. Computable in principle. Same status.
+
+**The framework's position, after T7c:** the bridge cocycle `1/k` is a discrete invariant in cyclotomic Brauer cohomology, and that is the structural object. Its connection to Stark-unit phases — if one exists — is a question for the generic Hilbert-12 programme, not a load-bearing component of the Integers framework. Removing it **strengthens** the framework by removing an unverified claim; the 36/36 master-table closure, the bridge minimality (Lead 7e), the cross-formula γ_n consistency (Lead 7a), the cross-functional-form agreement (Lead 7d), the CCM 2025 timeline-independent confirmation, and the RH path through Conjecture 2 are all intact and stronger now that they do not carry a refuted companion claim.
+
+The Hilbert 12 connection — if it exists in the framework — must come from a different object than V's matrix elements or Stark-unit phases. That different object is not currently identified and is not a 2026 research priority.
+
 ---
 
-*The Brauer class is the obstruction. The Stark unit is the generator.*
+*The Brauer class is the obstruction. The Stark unit is **not** the generator — that identification is retracted. The bridge cocycle is a discrete invariant that lives in cyclotomic Brauer cohomology alone, and the framework's content is that it lives there at the minimal conductors forced by the arithmetic sieve, no more and no less.*
 *V is the operator that carries both. The integers exist; the universe*
 *follows; the bridges name the link; Hilbert 12 is the next door.*

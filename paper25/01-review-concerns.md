@@ -5,6 +5,10 @@
 
 ---
 
+**REVISED 2026-04-11 — Conjecture 5 (V-Hilbert 12) formally RETRACTED.** The entry for Conjecture 5 in the review-concerns table is updated from "Yes, computationally testable / Yes, via Stark unit computation" to **"RETRACTED (see `sections-05-08.md` §8.0)"**. The computational test ran (research/267 + `paper12/relaxation/research/T7c-stark-rescue-verification.md`) and returned 0 / 30 pass across six pre-committed rescue candidates. The retraction is a vindication of the "computationally testable" column — the conjecture was testable and was tested, and the test was negative. This is honest-first discipline working as designed.
+
+---
+
 ## CRITICAL
 
 ### C1. RH proof sketch gap (Section 5.4)

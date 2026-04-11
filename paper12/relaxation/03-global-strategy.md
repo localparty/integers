@@ -87,7 +87,7 @@ The Connes-Consani-Moscovici 2025 paper *Zeta Spectral Triples* (arXiv 2511.2275
 
 - The bridge family of cyclotomic Brauer cocycles k ∈ {2, 3, 4, 6} (Paper 24)
 - The structural derivation of Standard Model parameters from the spectral data (Paper 23)
-- The integration with Yang-Mills via the KK scaffold (Paper 10)
+- The integration with Yang-Mills via the KK scaffold (Paper 8)
 - The integration with BSD via the BC system over imaginary quadratic K (Paper 26)
 - The Robustness Theorem proving the axioms are minimal across the bundle
 - The Theoretical-Precision Table predicting observables to higher precision than measurement

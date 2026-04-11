@@ -505,7 +505,8 @@ consequence of the spectral triple construction.
 **Reading reference.** `paper13-rh/preprint/sections-06-10.md` (the
 RH proof chain's CCM/ITPFI/Bögli/Hurwitz layers — the template for
 any spectral transposition). **Always include this in the H4 closure
-ORA spawn context** (per ora-bundle-v4 §6.1).
+ORA spawn context** (per ora-bundle-v6 §6.1; v6 inherits v3/v4's
+§6.1 byte-for-byte).
 
 **Cost estimate.** 2-3 ORA cycles, ~8-12 hours of wall-clock. Larger
 because the CCM 2025 transposition is structurally more complex than
@@ -635,8 +636,10 @@ both have analogous conditionals).
 
 ### Files that must be in the ORA spawn context for the H4 closure run
 
-Per `online-researcher-adversarial/ora-bundle-v4/01-the-prompt.md` §6.1
-(the v4 H4 conditional include):
+Per `online-researcher-adversarial/ora-bundle-v6/01-the-prompt.md` §6.1
+(v6 inherits v3/v4's §6.1 byte-for-byte; the H4-specific conditional
+include was added to `05-framework-tools.md` during the v4 capacitor
+update and ported to v6 on 2026-04-11):
 
 **Always** (Author/Critic/Synthesis):
 - `paper12/research/214-the-method-six-patterns.md` (Six Patterns method)
@@ -684,12 +687,14 @@ similar for H4).
 
 ## 7. Recommended next move
 
-**Fire the ORA on this strategy file.** The v4 bundle
-(`online-researcher-adversarial/ora-bundle-v4/`) has the framework
-tools normative in §6.1/§6.2/§6.5, the H4 conditional include is
-in place, and the prior Wave 7 attack files are referenced so the
-Author starts with W7-14's analyticity reframing as the structural
-foundation rather than from scratch.
+**Fire the ORA on this strategy file.** The v6 bundle
+(`online-researcher-adversarial/ora-bundle-v6/`) has the framework
+tools normative in §6.1/§6.2/§6.5 (v6 inherits v3/v4's §6.1
+byte-for-byte plus 4 Layer-L-mined signatures 16-19), the H4
+conditional include is in place via the ported capacitor
+(`05-framework-tools.md`), and the prior Wave 7 attack files are
+referenced so the Author starts with W7-14's analyticity reframing
+as the structural foundation rather than from scratch.
 
 **Recommended ORA target priority** (the analog of the BSD MY4 cycle):
 

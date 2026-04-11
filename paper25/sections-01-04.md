@@ -7,6 +7,10 @@
 
 ---
 
+**REVISED 2026-04-11 — Conjecture 5 (V-Hilbert 12) formally RETRACTED.** See `sections-05-08.md` §8.0 for the retraction notice and the Lead 7c refutation record. Throughout this file, the introductory references to "five conjectures" should be read as **four active conjectures + one retracted**, and §2.3–§2.4 on Stark's conjecture and Bost–Connes are preserved as neutral mathematical background (not framework claims); the framework's use of Stark units as a functional carrying the bridge cocycle is withdrawn. The *introduction* framing of CBB as "analytic input to Hilbert's 12th problem over cyclotomic bases" is softened — the framework provides cyclotomic Brauer cohomology witnesses for the bridge family and the bridge minimality sieve (Leads 7b + 7e), and these are mathematical objects number theorists can engage with on their own terms, but the framework does **not** claim a partial solution to Hilbert's 12th problem for cyclotomic bases after the Conjecture 5 retraction.
+
+---
+
 ## 1. Introduction
 
 ### 1.1 Hilbert's twelfth problem

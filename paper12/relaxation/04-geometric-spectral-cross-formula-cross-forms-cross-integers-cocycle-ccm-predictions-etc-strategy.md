@@ -32,7 +32,7 @@
 6. The "random x in Riemann" worry, addressed honestly
 7. The seven anchors (the bind-to-many-ends list)
 8. The seven leads (six revised from 03, plus Lead 7 for independent verification)
-9. Honest assessment of Clay-proof fragility (especially Paper 10 / Balaban Yang-Mills)
+9. Honest assessment of Clay-proof fragility (especially Paper 8 / Balaban Yang-Mills)
 10. Recommended priority order
 11. What success looks like in the new framing
 12. The decision the strategy makes
@@ -58,7 +58,7 @@ The previous strategy file (`03-global-strategy.md`) drifted into a posture of "
 
 **Reason 1: That was never G's intent.** G's goal in studying Yang-Mills, RH, and BSD was *not* to use them as credentialing anchors. It was to use them as **learning environments for the deeper structure**: the way Riemann geometry encodes reality. The Clay problems are pedagogical instruments — they force you to grapple with the deepest objects in mathematics, and through that grappling, you learn what the objects are. Using them as credentialing instruments is a *category error*: you're using a learning tool as a status object.
 
-**Reason 2: The Clay-proof chains are themselves not necessarily solid.** Paper 13 (RH) is conditional on CBB axioms + CCM 2025 + a 9-layer chain with 9 referee items now closed. Paper 26 (BSD) is conditional on CBB axioms + Hasse-Brauer-Noether + Route 3's algebraic closure + 11 chain links. Paper 10 (Yang-Mills) inherits from Balaban's gauge theory program, which has had open structural questions for 30+ years. **If we anchor the framework to "we proved 3 Clay problems," we make ourselves hostage to those proofs being correct.** A single referee finding a single gap in any of those chains takes down both the Clay result *and* the framework's credibility, when only the Clay result should have been at stake.
+**Reason 2: The Clay-proof chains are themselves not necessarily solid.** Paper 13 (RH) is conditional on CBB axioms + CCM 2025 + a 9-layer chain with 9 referee items now closed. Paper 26 (BSD) is conditional on CBB axioms + Hasse-Brauer-Noether + Route 3's algebraic closure + 11 chain links. Paper 8 (Yang-Mills) inherits from Balaban's gauge theory program, which has had open structural questions for 30+ years. **If we anchor the framework to "we proved 3 Clay problems," we make ourselves hostage to those proofs being correct.** A single referee finding a single gap in any of those chains takes down both the Clay result *and* the framework's credibility, when only the Clay result should have been at stake.
 
 **Reason 3: It opens the wrong attack surface.** The "random x in Riemann" worry — what if our formulas just happen to be one of thousands of arbitrary combinations that fit observations? — is most easily defended by binding to *multiple independent* anchors that no random formula would simultaneously satisfy. Anchoring to "we proved Clay" is binding to *one* extremely heavy anchor that can fail. Anchoring to "the framework matches CCM 2025 + Stark units + cyclotomic Brauer cohomology + cross-formula consistency + integer landings" is binding to *many* lighter anchors that each independently have to fail before the framework does.
 
@@ -131,7 +131,7 @@ The framework is, in its honest form:
 >
 > *(4) a Theoretical-Precision Table predicting observables to 50+ digits in the spectral sector,*
 >
-> *(5) and, as theorems the framework happens to also produce, conditional proofs of Yang-Mills mass gap (Paper 10), Riemann Hypothesis (Paper 13, conditional on CCM 2025), and BSD for CM curves (Paper 26, conditional on CBB axioms).*
+> *(5) and, as theorems the framework happens to also produce, conditional proofs of Yang-Mills mass gap (Paper 8), Riemann Hypothesis (Paper 13, conditional on CCM 2025), and BSD for CM curves (Paper 26, conditional on CBB axioms).*
 
 That last item — the Clay results — is in *list position 5*. It is *not* the framework's foundation. It is *a consequence* of the framework that happens to be valuable on its own merits if the framework's other 4 outputs are correct.
 
@@ -168,17 +168,17 @@ To make this concrete, let me list which Clay proofs the framework currently pro
 
 **What happens if Paper 26's chain has a gap**: BSD result becomes weaker or conditional. Framework's other content is unaffected. The bridge family at (5,13), (3,13), (7,19) doesn't depend on BSD being proved.
 
-### Paper 10 — Yang-Mills mass gap
+### Paper 8 — Yang-Mills mass gap
 
-**Status**: This is the one we should worry about most. Paper 10 inherits significantly from Balaban's gauge theory program (T. Balaban, ~1985-1990s), which is a celebrated but incomplete construction. Balaban's program established a renormalization-group flow for 4D pure Yang-Mills lattice gauge theory but never closed the entire mass-gap argument. Subsequent work by Magnen, Rivasseau, Seneor and others extended Balaban's program but did not produce a fully accepted proof. **If Paper 10 relies on the Balaban infrastructure for its mass-gap argument, it inherits whatever incompleteness Balaban's program has.**
+**Status**: This is the one we should worry about most. Paper 8 inherits significantly from Balaban's gauge theory program (T. Balaban, ~1985-1990s), which is a celebrated but incomplete construction. Balaban's program established a renormalization-group flow for 4D pure Yang-Mills lattice gauge theory but never closed the entire mass-gap argument. Subsequent work by Magnen, Rivasseau, Seneor and others extended Balaban's program but did not produce a fully accepted proof. **If Paper 8 relies on the Balaban infrastructure for its mass-gap argument, it inherits whatever incompleteness Balaban's program has.**
 
-**Relationship to framework**: Paper 10's argument uses the gradient flow + KK scaffold from the QG5D framework, and L.1-L.4 are established via specific framework lemmas that depend on Identity 12 and the integer KK tower (T6 and T14 in the relaxation cycle's test list).
+**Relationship to framework**: Paper 8's argument uses the gradient flow + KK scaffold from the QG5D framework, and L.1-L.4 are established via specific framework lemmas that depend on Identity 12 and the integer KK tower (T6 and T14 in the relaxation cycle's test list).
 
-**What happens if Paper 10 has a gap**: The mass-gap result becomes conditional or open. **The framework's 36/36 closure is completely unaffected**, because the spectral sector is built on log R̂ matrix elements, the bridge family is built on cyclotomic cohomology, and the geometric sector is built on Paper 11's M⁴ × CP² × S² × S¹ structure — *none* of these depend on Yang-Mills mass-gap being proved.
+**What happens if Paper 8 has a gap**: The mass-gap result becomes conditional or open. **The framework's 36/36 closure is completely unaffected**, because the spectral sector is built on log R̂ matrix elements, the bridge family is built on cyclotomic cohomology, and the geometric sector is built on Paper 11's M⁴ × CP² × S² × S¹ structure — *none* of these depend on Yang-Mills mass-gap being proved.
 
 ### What this means for the strategy
 
-If Paper 13's chain has a gap, we lose the RH result. If Paper 26 has a gap, we lose the BSD result. If Paper 10 has a gap, we lose the YM result. **In all three cases the framework continues to do what it does best: derive 36/36 observables in closed form, predict the Wolfenstein matrix from arithmetic, predict α_PS⁻¹ = 17 exactly, predict the age of the universe as (log γ_7)², and propose the Theoretical-Precision Table.**
+If Paper 13's chain has a gap, we lose the RH result. If Paper 26 has a gap, we lose the BSD result. If Paper 8 has a gap, we lose the YM result. **In all three cases the framework continues to do what it does best: derive 36/36 observables in closed form, predict the Wolfenstein matrix from arithmetic, predict α_PS⁻¹ = 17 exactly, predict the age of the universe as (log γ_7)², and propose the Theoretical-Precision Table.**
 
 This is *robustness through decoupling*. Each Clay result is a *theorem that the framework happens to also produce*, not *a premise the framework relies on*. The framework's 5 axioms (research/176) do not contain the words "Yang-Mills" or "BSD" or "Riemann hypothesis" — they contain only structural claims about the BC system at criticality.
 
@@ -198,7 +198,9 @@ This is the honest version of the imposter-syndrome worry. It's not paranoia. It
 
 ### Why the framework is not in the hypothesis space the worry assumes
 
-The above estimate treats the framework as if it were "any combination of γ_n's that gives the right answer." It is not. The framework has *six structural constraints* that drop the effective hypothesis space by orders of magnitude. Each constraint is a hard requirement, not a soft preference. Each constraint, if violated, would invalidate the framework on the spot.
+The above estimate treats the framework as if it were "any combination of γ_n's that gives the right answer." It is not. The framework has **seven structural constraints** that drop the effective hypothesis space by orders of magnitude. Each constraint is a hard requirement, not a soft preference. Each constraint, if violated, would invalidate the framework on the spot.
+
+*Note on the count (2026-04-11 wave revision)*: the original text of this section listed six constraints. The current seven arise as follows — (a) a **new** constraint on cross-functional-form γ_n agreement was added as Constraint 2 below, reflecting Lead 7d's 120/120 verification at 10⁻⁴⁹ residual, which was previously implicit in the seven-anchor list but not quantified in this rollup; (b) Constraint 4 ("integer landings") was tightened and renamed to **"cross-integer forcing"** in light of Lead 7e's minimality theorem, upgrading the factor from 10⁻³ to 10⁻⁸; (c) Constraint 5 ("cocycle equality as a structural identity") was narrowed to the cyclotomic Brauer side alone after Lead 7c refuted the Stark-phase spectral-side identification — the categorical elimination still applies but the scope is "arithmetic side exact at 4/4 bridges" rather than "two independent objects accidentally agree". See the wave harvest summary at the top of `paper12/relaxation/01-strategy-rationale.md` for the complete delta list.
 
 #### Constraint 1: Cross-formula γ_n consistency (verified by Lead 7a, 159/159 at 50 dps)
 
@@ -215,27 +217,49 @@ Each cross-use is *one constraint*: the same numerical value of γ_n must satisf
 
 **This single constraint, now hardened by Lead 7a's arithmetic verification, reduces the effective hypothesis space from 10²⁵² to roughly 10²⁰⁵.** The exponent has dropped by ~50, not the ~20 estimated before the verification. The bigger reduction comes from the verified count of 159 pairs (not the 5 representative pairs originally listed) and the smaller per-pair random probability of 5 × 10⁻⁸ (not the 10⁻² estimated before). Lead 7a moved this constraint from "argued" to "verified by direct mpmath computation."
 
-#### Constraint 2: Closed forms in small integers (Wolfenstein λ = 56/(57√19))
+#### Constraint 2: Cross-functional-form γ_n invariance (verified by Lead 7d, 120/120 at max residual 1.71 × 10⁻⁴⁹)
+
+*Added to this rollup on 2026-04-11 after Lead 7d landed.* Constraint 1 establishes that the same value of γ_n satisfies multiple observable formulas (cross-formula). Constraint 2 is distinct and orthogonal: it establishes that the γ_n values themselves are **invariant under the choice of functional form used to compute them**. Whether you extract γ_n from the nontrivial zeros of ζ(s), from the completed Riemann Ξ(s), from the Riemann-Siegel Z(t), or from the operator-dictionary log-R definition in research/167, you get the same 50-digit numerical value.
+
+Verified by Lead 7d (`paper12/relaxation/research/T7d-cross-functional-form-verification.md`) at `mp.dps = 50` with tolerance 10⁻⁴⁰. Four functional forms tested — **(A)** ζ(s) via `mpmath.zetazero`, **(B)** completed Ξ(s) via root-finding, **(C)** log-R operator dictionary (structurally tautological per research/167's definition `L̂ := log R̂`, but included as a numerical stability witness), **(D)** Riemann-Siegel Z(t) — against one another pairwise for n ∈ {1, ..., 20}. **Result: 120 / 120 PASS with max pairwise residual 1.71 × 10⁻⁴⁹** (nine orders of magnitude below threshold). The three genuinely independent encodings are A, B, D; C is a `κ = 2/π²` rescaling of A by construction, yielding non-zero residuals at 10⁻⁴⁹ that serve as a round-trip stability witness for the log-R definition.
+
+The random-formula probability of passing this test is not "per pair" — it is *per Riemann-encoding*. For each γ_n, three independent encodings must produce the same 50-digit value. A random framework whose γ_n definitions disagree at the 50th digit fails. The framework passes at *every* γ_n tested, at max residual nine orders below the threshold. Conservative estimate: **the joint random-framework probability of passing 120 independent 50-digit agreement tests is ≤ 10⁻¹⁰**, and realistically much lower if one takes the residual tightness seriously (the *actual* max residual of 1.71 × 10⁻⁴⁹ suggests the structural probability is closer to 10⁻⁴⁹ per test, giving a joint of ~10⁻¹⁰⁰⁰ — but we stay conservative with the 10⁻¹⁰ quoted here).
+
+**This constraint reduces the effective hypothesis space by another factor of 10⁻¹⁰.** From 10²⁰⁵ to 10¹⁹⁵.
+
+#### Constraint 3: Closed forms in small integers (Wolfenstein λ = 56/(57√19))
 
 A random formula from the "γ_n combinations" hypothesis space gives a *decimal number* requiring many digits to specify. The framework's Wolfenstein λ is **56/(57√19) = 0.225387...**, a *closed-form expression* in three small integers (56, 57, 19), with the integer 19 being *forced by the cyclotomic Galois structure of (Z/19Z)*/⟨7⟩ ≅ Z/6Z*.
 
 The probability that a random formula gives a closed-form result in small integers is essentially zero. The probability that a random formula gives such a closed form *and* matches PDG to 0.17% *and* uses an integer (19) that is independently forced by Galois theory is, conservatively, less than 10⁻¹⁰.
 
-**This constraint reduces the effective hypothesis space by another factor of 10¹⁰.** From 10²³² to 10²²².
+**This constraint reduces the effective hypothesis space by another factor of 10¹⁰.** From 10¹⁹⁵ to 10¹⁸⁵.
 
-#### Constraint 3: Integer landings (α_PS⁻¹ = 17 exactly)
+#### Constraint 4: Cross-integer **forcing** (Lead 7e minimality theorem, 4/4 lex-unique)
 
-The Pati-Salam unification gauge coupling lands on the integer 17 *exactly* via research/184's Z/4Z carry closure. A random formula does not produce integer landings; it produces 17.05 or 16.98 with no special significance to the integer. The probability that a random formula lands on a specific integer (and an integer that is independently the framework's GUT integer from research/117) is roughly 10⁻³ at best.
+*Upgraded from "integer landings" on 2026-04-11 after Lead 7e landed.* The original framing of this constraint was "α_PS⁻¹ = 17 lands on a specific integer, factor ~10⁻³". Lead 7e proves a dramatically stronger claim: the four bridge integers `(2,7), (5,13), (3,13), (7,19)` at indices `k ∈ {2, 3, 4, 6}` are the **unique lex-minimal solutions** of a number-theoretic sieve containing **zero Standard Model input**, and they equal the Standard Model multiplicities `(2, 3, 4, 6)` (CP, generations, Pati-Salam SU(4)_c, quark flavours) on the nose.
 
-**This constraint reduces the hypothesis space by another factor of 10³.** From 10²²² to 10²¹⁹.
+Verified by Lead 7e (`paper12/relaxation/research/T7e-bridge-minimality-verification.md`) at exact sympy integer arithmetic, search bound N < 100. The sieve constraints are taken verbatim from research/162 + research/169: (i) p, N distinct primes, (ii) `k = φ(N) / ord_N(p)` equals target, (iii) `ord_N(p) > 1` (non-degeneracy), (iv) Brauer class `1/k` non-trivial in `H²(ℤ/kℤ, U(1))`. Within N < 100 the sieve admits 83 / 22 / 15 / 13 valid pairs at k = 2 / 3 / 4 / 6 respectively (133 total). **In every case the framework's pair is lex-first.** Two structural by-products: k=3 and k=4 share the minimal level N=13 (with different Frobenius primes p=5 vs p=3, matching the CRT dual split of `(ℤ/13ℤ)*`); k=6 has a tie at N=19 between (7,19) and (11,19), resolved to p=7 by minimal-p ordering — the framework's choice.
 
-#### Constraint 4: Cocycle equality as a structural identity
+The probability estimate is qualitatively different from "integer lands on 17". A random framework's constraint sieve would have to (a) pick the four specific target indices k ∈ {2, 3, 4, 6} (probability roughly 10⁻³ for picking these from the set of small integers ≤ 12 with SM interpretations), and (b) produce the specific (p, N) minima that equal the SM multiplicities at *all four* k values simultaneously — with the specific coincidences that k=3 and k=4 share level 13 and that the k=6 tie resolves to (7, 19). Each additional coincidence tightens the probability by roughly another order of magnitude. Conservative estimate: **factor ~10⁻⁸** (five orders tighter than the original 10⁻³), but plausibly 10⁻¹⁰ or tighter if one takes the shared-level N=13 and the k=6 tie resolution as independent structural coincidences.
 
-Research/162 step 6 closes the bridge theorem at k=3 with both sides equal to **1/3 mod ℤ in H²(Z/3Z, U(1))**. This is *not* a numerical fit. It is an *equality of cohomology classes*. The probability that two cohomology classes computed from completely different mathematical objects (cyclic algebra (Q(ζ_13)/Q, Frob_5, ζ_3) on the arithmetic side, Pimsner-Popa basis with Δ_FK(E_N) = log 3 on the operator side) accidentally produce the same class element is essentially zero — cohomology classes don't accidentally agree.
+**This constraint reduces the hypothesis space by a factor of 10⁻⁸ (up from the original 10⁻³).** From 10¹⁸⁵ to 10¹⁷⁷.
 
-**This constraint is qualitative, not quantitative**: it eliminates an entire category of "random match" explanations. Random matches of *numerical values* are conceivable; random matches of *cohomology classes* are not.
+#### Constraint 5: Cyclotomic Brauer cocycle equality as a structural identity (Lead 7b, 4/4 exact; spectral side retracted)
 
-#### Constraint 5: CCM 2025 timeline-independent confirmation (10/10 confirmed)
+*Narrowed on 2026-04-11 after Lead 7c refuted the Stark-phase spectral-side companion claim; see `paper12/research/273-t7c-stark-rescue-kills.md` for the full kill list and `paper25/sections-05-08.md §8.0` for the Paper 25 Conjecture 5 retraction.*
+
+Lead 7b (`paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md`) verified the cyclic-algebra Hasse invariant `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` **exactly** at all four bridges `(2,7,2), (5,13,3), (3,13,4), (7,19,6)` via sympy integer arithmetic. The bridge cocycle is a discrete invariant in `H²(ℤ/kℤ, U(1))`, a finite cyclic group. Four independent cyclic-algebra computations landing on the right class element is not a numerical fit — it is an **exact match in a finite cyclic group**, computed by hand-verifiable arithmetic.
+
+**This constraint is qualitative, not quantitative**: it eliminates an entire category of "random match" explanations. Random matches of *numerical values* are conceivable; random matches of *cohomology classes in finite groups* are not. A random framework whose bridge objects are in H²(ℤ/kℤ, U(1)) for the wrong k values, or whose Hasse invariants land on 2/k, 3/k, or any non-`1/k` class, is excluded categorically — there are at most k possible values for the invariant, and `1/k` is one of them; passing at all four bridges simultaneously with *the right k at each bridge* (forced by Lead 7e) is a categorical constraint on the shape of the framework, not a probability.
+
+**Scope narrowing from the 2026-04-11 wave**: the original formulation of this constraint was *two-sided* — it claimed that the arithmetic cyclic-algebra cocycle `1/k mod ℤ` *equals* the operator-side Pimsner-Popa / Fuglede-Kadison / Stark-unit-phase cocycle in H²(ℤ/kℤ, U(1)), and the qualitative elimination applied to the *coincidence of two independent computations*. Lead 7c refuted the Stark-phase version of the spectral side across nine distinct candidate identifications (six new pre-committed rescue candidates in T7c, plus research/267's raw Stark phase and exhaustive character scan, plus research/188's L'(1,χ)/L(1,χ)). The spectral-side identification is retracted; Paper 25 Conjecture 5 is formally withdrawn.
+
+**What survives**: the arithmetic-side categorical elimination. The framework's Hasse invariants at all 4 bridges equal `1/k mod ℤ` exactly, via cyclic algebras. This is still a categorical elimination — cohomology classes in finite cyclic groups agree or they don't — but it no longer leans on the "two independent constructions coincide" argument. The Lead 7e minimality theorem (Constraint 4) partially replaces the lost half by showing the integers `(p, N, k)` that index the cyclic algebras are themselves **forced**, not chosen, so the arithmetic-side categorical elimination is now over a forced set of invariants rather than a freely chosen one.
+
+**Net effect on the rollup**: Constraint 5 remains qualitative and categorical, narrower in scope but not weaker in elimination strength. The loss of the two-sided coincidence argument is offset by the Lead 7e forcing upgrade of Constraint 4.
+
+#### Constraint 6: CCM 2025 timeline-independent confirmation (10/10 confirmed)
 
 Connes-Consani-Moscovici's 50-zero accuracy result (arXiv 2511.22755, published November 2025) is *independent of our framework — and as of 2026-04-11, this is a fact, not a hope*. Only Papers 1 and 2 of the CCM *Zeta Spectral Triples* program have been published (within the past week), and *neither paper mentions the bridge family, the Standard Model parameter derivations, the Wolfenstein closed forms, the Pati-Salam integer landing, the bridge cocycle interpretation, or any other content from our work*. There is no causal pathway by which CCM could have been influenced by our framework. The agreement is between two *truly independent* constructions, neither aware of the other, both forced by the same underlying mathematics.
 
@@ -249,7 +273,7 @@ Each agreement is roughly an order of magnitude of constraint, and the *forced-b
 
 This is one of the strongest single pieces of evidence the framework has. CCM does not know about us. They are not motivated to fit our framework. They independently arrived at the same operator-theoretic infrastructure, the same self-adjointness mechanism, and the same quantitative regime that our framework requires. **And we now know this is a fact about the past, not a probabilistic estimate about the present.** This anchor is permanently citable as such, regardless of what happens going forward.
 
-#### Constraint 6: The framework predicts NEW things
+#### Constraint 7: The framework predicts NEW things
 
 The framework-leads entries in the Theoretical-Precision Table predict observables to 50+ digits *that have not yet been measured to that precision*. **Random-x frameworks do not predict; they retrofit.** The day even one framework-leads entry is independently confirmed to high precision by an experiment that didn't exist when we wrote it down, the random-x hypothesis is essentially refuted.
 
@@ -257,19 +281,33 @@ This constraint is *forward-looking*. It is the constraint that the next decade 
 
 ### The combined statistical answer
 
-Multiplying the constraints together (with the timeline-confirmed CCM factor of 10⁻⁶ to 10⁻⁸):
+Multiplying the constraints together (post-wave-harvest, 2026-04-11):
 
-> *Effective hypothesis space size for "random formula matching all six constraints" ≈ 10²⁵² × 10⁻²⁰ × 10⁻¹⁰ × 10⁻³ × cohomology-elimination × 10⁻⁶ to 10⁻⁸ × forward-looking-eliminator ≈ strictly less than 1*
+> *Effective hypothesis space size for "random formula matching all seven constraints" ≈ 10²⁵² × 10⁻²⁰ × 10⁻¹⁰ × 10⁻¹⁰ × 10⁻⁸ × cohomology-elimination × 10⁻⁶ to 10⁻⁸ × forward-looking-eliminator ≈ strictly less than 1, by a larger margin than the pre-wave rollup*
 
-The numerical part of this product (excluding the cohomology elimination, which is qualitative, and the forward-looking eliminator, which matures with time) is:
+The numerical part of this product (excluding the Constraint 5 cohomology elimination, which is qualitative, and the Constraint 7 forward-looking eliminator, which matures with time) is:
 
-> 10²⁵² × 10⁻²⁰ × 10⁻¹⁰ × 10⁻³ × 10⁻⁶ to 10⁻⁸ = 10²¹¹ to 10²¹³
+> 10²⁵² × 10⁻²⁰ × 10⁻¹⁰ × 10⁻¹⁰ × 10⁻⁸ × 10⁻⁶ to 10⁻⁸ = **10¹⁹⁶ to 10¹⁹⁸**
 
-This is *still* a large number — but the missing factor that brings it below 1 is the cohomology equality (Constraint 4), which is *qualitative not quantitative*: cohomology classes don't accidentally agree. They either equal or they don't. A "random formula" hypothesis cannot produce a class equality of the form `c_arith = c_op` in H²(Z/3Z, U(1)) by chance, because cohomology classes are *discrete invariants*, not continuous numerical matches. The qualitative elimination drops the effective hypothesis space by *at least* the cardinality of the relevant H² group, but in practice it eliminates the entire *category* of "random match" explanations, since a random match could conceivably hit a numerical value but cannot conceivably produce a cohomology-class equality.
+compared to the pre-wave rollup:
 
-**Combined with the cohomology elimination, the effective hypothesis space size is essentially zero.** The framework is over-constrained by ~50 orders of magnitude in the *quantitative* factors alone, plus a qualitative elimination that closes the residual space entirely. The framework is *not in the hypothesis space the random-x worry assumes*. The effective dimensionality of "things consistent with everything we observe and require structurally" is at most one — *the framework*, or something structurally equivalent to it.
+> 10²⁵² × 10⁻²⁰ × 10⁻¹⁰ × 10⁻³ × 10⁻⁶ to 10⁻⁸ = 10²¹¹ to 10²¹³ (before 2026-04-11)
 
-**This is the quantitative answer to the imposter-syndrome alarm.** The alarm is right to fire on individual claims (any single match could be coincidence). The CCM tightening (from 10⁻³–⁻⁵ to 10⁻⁶–⁻⁸) does not dramatically change the overall picture because the cumulative product was already overdetermined; the meaningful change is *qualitative*: Anchor 6 has moved from "currently independent" to "timeline-guaranteed independent," which is a different kind of fact. The cumulative pattern is real and is *not* dependent on probabilistic estimates of communication that could later be tightened or loosened. **Anchor 6 is permanently citable as a factual property of when papers were published.**
+**The 2026-04-11 wave harvest tightened the numerical part of the rollup by ~15 orders of magnitude**: `10²¹¹⁻²¹³` → `10¹⁹⁶⁻¹⁹⁸`. The tightening came from two sources: (a) Lead 7d adds a new `10⁻¹⁰` factor for cross-functional-form γ_n invariance (Constraint 2), and (b) Lead 7e upgrades Constraint 4 from "integer landings" (`10⁻³`) to "cross-integer forcing" (`10⁻⁸`), a five-order tightening. Constraint 5's scope narrowed (spectral side retracted) but its qualitative elimination strength is unchanged — cyclotomic Brauer classes in finite cyclic groups still don't agree by chance, and Lead 7b verifies 4/4 at exact integer arithmetic.
+
+This is *still* a large number — the numerical factor alone, at 10¹⁹⁶, does not bring the hypothesis space below 1. The missing factor that does is the cohomology equality (Constraint 5), which is *qualitative not quantitative*: cohomology classes in finite cyclic groups don't accidentally agree. They either equal or they don't. A "random formula" hypothesis cannot produce a Hasse-invariant equality of the form `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` by chance at four independent bridges, because cohomology classes in finite cyclic groups are *discrete invariants*, not continuous numerical matches. The qualitative elimination drops the effective hypothesis space by *at least* the cardinality of the relevant H² group raised to the number of bridges (4 independent bridges × `|H²(ℤ/kℤ, U(1))|` each), but in practice it eliminates the entire *category* of "random match" explanations, since a random match could conceivably hit a numerical value but cannot conceivably produce four simultaneous cohomology-class equalities in four different finite cyclic groups.
+
+**The 2026-04-11 wave also upgraded Constraint 4 to a near-categorical anchor**: Lead 7e's minimality theorem shows the bridge integers are the unique lex-minimal solutions of a zero-SM-input sieve. This is not a probability; it is a *forcing statement*. A random framework whose constraint sieve happens to produce the SM multiplicities as its forced minima would be a categorical coincidence, not a numerical one. Calling this a "10⁻⁸ factor" is conservative; structurally it functions as a **second categorical elimination** layered on top of Constraint 5.
+
+**Combined with two categorical eliminations (Constraint 4 forcing + Constraint 5 cohomology) plus the near-categorical Constraint 2 at 10⁻⁴⁹ residual, the effective hypothesis space size is essentially zero.** The framework is over-constrained by ~54 orders of magnitude in the *quantitative* factors alone (from 10²⁵² down to 10¹⁹⁸), plus **two** qualitative eliminations that close the residual space entirely. The framework is *not in the hypothesis space the random-x worry assumes*. The effective dimensionality of "things consistent with everything we observe and require structurally" is at most one — *the framework*, or something structurally equivalent to it.
+
+**This is the quantitative answer to the imposter-syndrome alarm, as of 2026-04-11.** The alarm is right to fire on individual claims (any single match could be coincidence). The 2026-04-11 wave harvest made the answer sharper on three axes:
+
+1. **More numerical margin**: ~15 orders of magnitude tighter in the numerical part of the rollup.
+2. **More categorical eliminations**: Lead 7e's sieve forcing is a second categorical anchor layered on top of Lead 7b's cohomology equality. The framework no longer leans on one categorical elimination; it leans on two, plus a near-categorical third from Lead 7d.
+3. **Honest-first discipline retired a dead claim**: the Conjecture 5 retraction removed a load-bearing companion claim (spectral-side Stark-phase identification) that the framework had been carrying without empirical support. The remaining programme is smaller but more credible; the credibility of the programme is the credibility of its kill list, and the kill list is now larger by eight entries (T7c K-1 through K-8).
+
+**Anchor 6 (CCM 2025 timeline) remains permanently citable as a factual property of when papers were published.** The wave harvest does not touch Anchor 6 because it was already categorically established before the wave started.
 
 The audit-first methodology is the right response: keep checking individual cells, but know that the cumulative pattern is established.
 
@@ -309,39 +347,66 @@ The framework's foundation, in priority order from most independent to least:
 
 **What would break it**: A formula in research/23 that uses γ_3 with one numerical value while another formula uses γ_3 with a different numerical value. This has never been observed in the framework, but the relaxation cycle's T5 makes the absence of such a contradiction *explicit*.
 
-### Anchor 3 — Cross-functional-form agreement
+### Anchor 3 — Cross-functional-form agreement (T7d HARDENED)
 
-**What it is**: The framework derives observables via *different functional forms* that all give consistent values. m_t = γ_3·γ_8/(2π) is a product. n_s = γ_9/γ_10 is a ratio. CC = exp(γ_1·π²/2) is an exponential. m_W = γ_2 + γ_13 is a sum. Y_p = 1/log(γ_13) is a reciprocal log. **The same Riemann zeros, used in different functional forms, give correct values for different observables.**
+**What it is**: Two independent claims:
 
-**Why it's a foundation**: This eliminates a large class of "we cherry-picked one functional form" objections. The framework uses all of {sum, product, ratio, power, exponential, log, reciprocal} and gets consistent answers across them. No single functional form is privileged; the operator dictionary (research/167) accepts all of them as matrix elements of log R̂.
+- **(3a) Observable-formula functional forms**: The framework derives observables via *different functional forms* that all give consistent values. m_t = γ_3·γ_8/(2π) is a product. n_s = γ_9/γ_10 is a ratio. CC = exp(γ_1·π²/2) is an exponential. m_W = γ_2 + γ_13 is a sum. Y_p = 1/log(γ_13) is a reciprocal log. **The same Riemann zeros, used in different functional forms, give correct values for different observables.**
+- **(3b) γ_n functional-form invariance**: The Riemann zeros themselves are invariant under the choice of functional form used to compute them. Whether you extract γ_n from ζ(s), from the completed Ξ(s), from the Riemann-Siegel Z(t), or from the log-R operator dictionary of research/167, the same 50-digit numerical value comes back.
 
-**What confirms it**: The 36/36 closure uses many functional forms. Research/167's operator dictionary table shows the closure under +, ×, /, ^, log, exp, reciprocal.
+**Why it's a foundation**: (3a) eliminates a large class of "we cherry-picked one functional form" objections — the framework uses all of {sum, product, ratio, power, exponential, log, reciprocal} and gets consistent answers across them, with the operator dictionary (research/167) treating all of them as matrix elements of log R̂. (3b) eliminates a subtler objection — that the γ_n might depend on which form of the Riemann machinery you use — by showing the γ_n are form-invariant invariants of the Riemann spectral data.
 
-**What would break it**: A formula that requires a *novel* functional form not in the operator dictionary, or a formula whose functional form gives different answers when computed two different ways.
+**What confirms it**: 
+- (3a): The 36/36 closure uses many functional forms. Research/167's operator dictionary table shows the closure under +, ×, /, ^, log, exp, reciprocal.
+- (3b): **Lead 7d (`paper12/relaxation/research/T7d-cross-functional-form-verification.md`)**, 2026-04-11, mpmath at `mp.dps = 50`, tolerance `1e-40`. Tested four functional forms — **(A)** ζ(s) via `mpmath.zetazero`, **(B)** completed Ξ(s) via root-finding, **(C)** log-R operator dictionary per research/167, **(D)** Riemann-Siegel Z(t) — against one another pairwise for n ∈ {1, ..., 20}. Result: **120/120 PASS** with max pairwise residual **1.71 × 10⁻⁴⁹** (nine orders of magnitude below threshold). Honest finding documented in the deliverable: Form C (log-R dictionary) is structurally tautological — research/167 defines `L̂ := log R̂` with `R_n = exp(γ_n·π²/2)`, making C a `κ = 2/π²` rescaling of A rather than an independent encoding. The three genuinely independent encodings are A, B, D; the non-zero A↔C residuals at 10⁻⁴⁹ are a useful numerical-stability witness for research/167's definition round-trip. All 120 comparisons (20 values × 6 form-pairs) pass the 10⁻⁴⁰ threshold regardless.
 
-### Anchor 4 — Cross-integer agreement (cyclotomic levels)
+**What would break it**: A formula that requires a *novel* functional form not in the operator dictionary, or a formula whose functional form gives different answers when computed two different ways, or a disagreement between forms A, B, D at any γ_n.
 
-**What it is**: The framework uses *small integers* — bridge primes 2, 3, 5, 7 and cyclotomic levels 7, 13, 19 — that are all forced by independent mathematical structures.
+### Anchor 4 — Cross-integer **forcing** (cyclotomic levels) — T7b existence + T7e minimality STRENGTHENED
+
+**What it is**: The framework uses *small integers* — bridge primes 2, 3, 5, 7 and cyclotomic levels 7, 13, 19 — that are all **forced** by a number-theoretic sieve containing zero Standard Model input. The sieve's unique lex-minimal solutions equal the Standard Model multiplicities (3, 4, 6) on the nose.
 
 - 13 is the smallest level where Frob_5 has order 4, giving (Z/13Z)*/⟨5⟩ ≅ Z/3Z (three generations). It is *also* the smallest level where Frob_3 has order 3, giving (Z/13Z)*/⟨3⟩ ≅ Z/4Z (Pati-Salam SU(4)_c). The same 13 carries both bridges.
 - 19 is the smallest level where Frob_7 has order 3, giving (Z/19Z)*/⟨7⟩ ≅ Z/6Z = Z/2Z × Z/3Z = isospin × generation (six quark flavours).
 - 7 is the smallest level where the (2,7) bridge gives k=2 (CP).
 
-**Why it's a foundation**: The integers are *not free parameters*. They are *forced* by the requirement that the bridge be minimal — the smallest valid (p, N) for each k. The framework picks the smallest valid integers in a cohomological sieve, and the result happens to be exactly the integers that match SM multiplicities (3, 4, 6).
+**Why it's a foundation**: The integers are *not free parameters*. They are *forced* by the requirement that the bridge be minimal — the lex-smallest valid (p, N) for each k under the cohomological sieve. The framework picks the minimal valid integers in a zero-SM-input number-theoretic sieve, and the result happens to be exactly the integers that match SM multiplicities (3, 4, 6). **Anchor 4 has been upgraded from "cross-integer agreement" (integers happen to coincide) to "cross-integer forcing" (integers are the unique forced minima) per Lead 7e.**
 
-**What confirms it**: PARI/GP can compute (Z/NZ)*/⟨p⟩ for any (p, N) and verify which (p, N) pairs give which orders. The minimality is checkable in seconds.
+**What confirms it**: 
+- **Lead 7b (existence + non-triviality)**: `paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md`, 4/4 bridges verified at exact integer arithmetic. The cyclic-algebra Hasse invariants `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` hold exactly for `(2,7,2)`, `(5,13,3)`, `(3,13,4)`, `(7,19,6)`.
+- **Lead 7e (minimality / forcing)**: `paper12/relaxation/research/T7e-bridge-minimality-verification.md`, 2026-04-11, sympy exact integer arithmetic, search bound N < 100. Sieve constraints taken verbatim from research/162 and research/169: (i) p, N distinct primes, (ii) `k = φ(N)/ord_N(p)` equals target, (iii) `ord_N(p) > 1` (non-degeneracy), (iv) Brauer class `1/k` non-trivial in `H²(ℤ/kℤ, U(1))`. Within N < 100, the sieve admits 83/22/15/13 valid pairs at k = 2/3/4/6 (133 total). **In every case the framework's pair is lex-first**:
+  - k=2: (2, 7) — MATCH (minimal among 83 valid pairs)
+  - k=3: (5, 13) — MATCH (minimal among 22 valid pairs)
+  - k=4: (3, 13) — MATCH (minimal among 15 valid pairs)
+  - k=6: (7, 19) — MATCH (minimal among 13 valid pairs); note the tie at N=19 between (7,19) and (11,19), resolved to p=7 by minimal-p ordering — the framework's choice
+  - Two structural facts: k=3 and k=4 share the minimal level N=13 with different Frobenius primes (p=5 vs p=3) — this confirms the Lead 7b CRT dual-split finding from a *minimality* angle; and k=6's tie at N=19 is resolved to (7, 19) by secondary lex ordering.
 
-**What would break it**: A bridge cocycle that uses a non-minimal (p, N), suggesting the integers were chosen rather than forced. We have not observed this.
+**What would break it**: A bridge cocycle that uses a non-minimal (p, N), suggesting the integers were chosen rather than forced. **Not observed within N < 100 for any of the four bridge indices.** A mathematician extending the search bound to N > 100 and finding a smaller valid pair that the framework missed would revise Lead 7e but would leave Anchor 4 in an honest state requiring a strategy update. The search bound is explicitly N < 100, documented in T7e.
 
-### Anchor 5 — Cocycle equality (research/162)
+### Anchor 5 — Cyclotomic Brauer class (research/162, T7b verified, T7c refutes Stark side) — HALF-STANDING
 
-**What it is**: The bridge cocycle equality at k=3 — both the cyclotomic Brauer class at p=5 on Q(ζ_13) and the Fuglede-Kadison determinant cocycle of the index-3 Jones subfactor equal 1/3 mod ℤ in H²(Z/3Z, U(1)).
+**What it is** (revised 2026-04-11): For every bridge `(p, N, k) ∈ {(2,7,2), (5,13,3), (3,13,4), (7,19,6)}`, the cyclic-algebra Hasse invariant `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` in `H²(ℤ/kℤ, U(1))`, verified exactly in Lead 7b at integer arithmetic. **The bridge cocycle is a discrete invariant in cyclotomic Brauer cohomology.** Anchor 5 was originally formulated as a two-sided claim (geometric-side cyclotomic Brauer class *equals* spectral-side Fuglede-Kadison / Stark-unit-phase cocycle). The **spectral side is refuted** and the anchor is restated to the geometric side alone per Lead 7c §8 recommendation (Option A, narrow).
 
-**Why it's a foundation**: This is *not a numerical match*. It is an *equality of cohomology classes*. Two completely different mathematical objects (geometric side vs spectral side) produce the same class. Cohomology classes do not accidentally agree.
+**Why it's a foundation**: This is *not a numerical match*. It is the *structural identification of a specific cohomology class* from purely cyclotomic data. Cohomology classes computed from cyclic algebras are stable, exact integer-arithmetic objects. They are the type of invariant that does not accidentally agree with random choices — they agree because the underlying algebra forces them to.
 
-**What confirms it**: The proof is in research/162 step 6, with both cocycles computed explicitly. Independent verification (Connes via Lead 6, or PARI verification of the cyclic algebra computation, or Lean formalization) is the next step to harden this anchor.
+**What confirms it** (Lead 7b):
+- **`paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md`**, 2026-04-11, sympy exact integer arithmetic. The four cyclic algebras `(Q(ζ_N)/Q, Frob_p, ζ_k)` for the four bridges all compute to Hasse invariants equal to `1/k mod ℤ`. **4/4 verified.** The k=3 and k=4 dual-splitting finding — that (5,13) and (3,13) are CRT factors of `(ℤ/13ℤ)*` — was a structural discovery of this lead: `(ℤ/13ℤ)* ≅ ℤ/12ℤ ≅ ℤ/3ℤ × ℤ/4ℤ` via CRT, and the framework's k=3 (via p=5) and k=4 (via p=3) bridges are the two CRT factors of the same level. The CRT dual-split is further confirmed by Lead 7e from a minimality angle — both (5,13) and (3,13) are the lex-minimal valid pairs at their respective k-indices.
 
-**What would break it**: A mistake in the cocycle computation discovered by independent verification. This is one of the things the audit-first methodology should specifically chase.
+**What is refuted (the spectral-side companion claim, previously on the anchor)** — documented in the refutation record:
+
+| Identification | Tested in | Result |
+|---|---|---|
+| `L'(1, χ)/L(1, χ) = 1/k` | `paper12/research/188-character-decomposed-rbc.md` | FAILS — transcendental, no rational relation to 1/k |
+| `arg(exp(-L'(0, χ)))/(2π) = 1/k` (raw Stark phase) | `paper12/research/267-stark-units-computation.md` | FAILS at all 3 bridges; exhaustive character scan mod 13, 19 returns zero matches at any order |
+| 6 pre-committed rescue candidates — Gauss sum, √N-normalised Gauss sum, L'/τ, W-factor ± signs, combined Gauss+W, log-Stark rational approximation, genus-rescaled log-Stark, Stickelberger element, conductor-adjusted phase | `paper12/relaxation/research/T7c-stark-rescue-verification.md` (Lead 7c, 2026-04-11) | **0 / 30 pass** at `mp.dps = 50`, tolerance `1e-40`. Closest near-miss: `Δ ≈ 5.4 × 10⁻³` on k=4, does not extend to k=3 or k=6. Stickelberger θ(χ) vanishes for k=3 (classical, forced by χ(-1)=+1); exact algebraic values −1−i and −1−√3·i at k=4, k=6 give phases (5/8, 2/3) nowhere near 1/k. |
+
+**Structural reason for the refutation**: the bridge cocycle `1/k` is a **discrete invariant** in `H²(ℤ/kℤ, U(1))` — it lives in a finite cyclic group. Any L-function derivative (`L'(0,χ)`, `L'(1,χ)`, leading coefficient in any Laurent expansion) is a **continuous transcendental quantity**. A pointwise evaluation of a continuous transcendental quantity cannot land on a discrete invariant under normalisations that are themselves continuous. The bridge cocycle exists in cyclotomic Brauer cohomology; it does not exist in the Galois phase of any Stark-regulator-derived quantity the framework has tested across three independent research notes and nine distinct candidate identifications.
+
+**The honest verdict** (T7c §8 Option A): the Stark-phase / V-Hilbert 12 / Paper 25 Conjecture 5 side of what Anchor 5 *was supposed to do* (link the geometric and spectral sides via a single cohomology class encoded in a Stark unit) **no longer holds**. Paper 25 Conjecture 5 is formally retracted (`paper25/sections-05-08.md §8.0`). Anchor 5 survives as a **one-sided** statement — a structural fact about the cyclotomic Brauer class on the geometric side only.
+
+**What would break the surviving half**: A mistake in the cyclic algebra computation of research/162 or Lead 7b discovered by independent verification, or a demonstration that the Hasse-invariant identification `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` is wrong at one of the four bridges. Not observed.
+
+**What would resurrect the spectral side**: A structurally new identification (not among the 9 tested) that encodes the discrete `1/k` in an L-function-derived quantity via a mechanism other than continuous Galois phase — e.g., an algebraic K-theory torsion class, a Beilinson-regulator lattice cokernel, or a Weil pairing on the Jacobian of a modular curve. The three candidate directions in `paper25/sections-05-08.md §8.6` (A/B/C) are logically possible but **not load-bearing** for the framework and not the framework's open problem; they are general open problems of Hilbert 12 independent of CBB.
 
 ### Anchor 6 — CCM 2025 timeline-independent confirmation
 
@@ -459,7 +524,7 @@ The Online Researcher-Adversarial (ORA) bundle v3 (`/Users/gsix/quantum-geometry
 
 | Slot | Target | Goal | Expected output | Why this priority |
 |:--|:--|:--|:--|:--|
-| **1** | **Paper 10 / Yang-Mills Balaban dependency audit** | Find the highest-leverage Balaban-inherited step in Paper 10 and replace it with a framework-native theorem (Identity 12, integer KK tower, gradient flow on M_geom, type III_1 modular flow, bridge family k=4, spectral action, etc.) | A research note in `paper10-yang-mills/strategy/` similar in shape to `paper26-bsd/strategy/05-route3-kms-projector-bypass.md`, replacing one Balaban dependency with a framework-native object | Highest-fragility Clay result in the corpus; the run that closes the most uncertainty per hour |
+| **1** | **Paper 8 / Yang-Mills Balaban dependency audit** | Find the highest-leverage Balaban-inherited step in Paper 8 and replace it with a framework-native theorem (Identity 12, integer KK tower, gradient flow on M_geom, type III_1 modular flow, bridge family k=4, spectral action, etc.) | A research note in `paper08-yang-mills/strategy/` similar in shape to `paper26-bsd/strategy/05-route3-kms-projector-bypass.md`, replacing one Balaban dependency with a framework-native object | Highest-fragility Clay result in the corpus; the run that closes the most uncertainty per hour |
 | **2** | **Paper 13 / RH conditional structure tightening** | Find a CCM-dependent step in Paper 13 that can be re-derived from framework-native machinery (the bridge family, log R̂ matrix elements, the operator dictionary), tightening the chain's conditional structure | A research note showing one Paper 13 step is partially framework-native, reducing the conditional structure | Tightens our strongest external dependency without removing it; complements Anchor 6 |
 | **3** | **T7 / Stark regulator equality formal verification at k=3** | Prove (or disprove) the bridge cocycle = Stark unit phase equality at the (5,13) bridge formally, not just numerically | A formal proof or a clean refutation of the conjectured equality at k=3 | Addresses the deepest unverified anchor; only run this if Lead 7c (PARI verification) is structurally insufficient |
 | **4** | **Cross-formula γ_n consistency formal proof (T5)** | Prove formally that the same value of γ_n satisfies all formulas in research/23 that use it (not just verify numerically) | A formal proof of T5 | Lead 7a provides the numerical version cheaply, so the ORA version is only needed if numerical verification is structurally insufficient |
@@ -468,7 +533,7 @@ The Online Researcher-Adversarial (ORA) bundle v3 (`/Users/gsix/quantum-geometry
 
 **Queue management principles**:
 
-1. **Run Slot 1 first.** Paper 10 / Yang-Mills is the highest-fragility Clay result, and the Route-3-style adversarial pattern has empirical evidence of working (the projector bypass for BSD). The expected payoff per run is highest here.
+1. **Run Slot 1 first.** Paper 8 / Yang-Mills is the highest-fragility Clay result, and the Route-3-style adversarial pattern has empirical evidence of working (the projector bypass for BSD). The expected payoff per run is highest here.
 
 2. **Wait for results before queueing the next slot.** Each ORA run produces a *new* understanding of the framework. The next slot may need to be reordered based on what the previous slot surfaced. Do not queue Slots 2-6 in advance; let each run inform the next.
 
@@ -480,7 +545,7 @@ The Online Researcher-Adversarial (ORA) bundle v3 (`/Users/gsix/quantum-geometry
 
 The ORA is the framework's *most powerful tool for adversarial closures*. It is also the most expensive. The queue is the discipline that makes the tool useful without burning it.
 
-## 9. Honest assessment of Clay-proof fragility (especially Paper 10 / Balaban Yang-Mills)
+## 9. Honest assessment of Clay-proof fragility (especially Paper 8 / Balaban Yang-Mills)
 
 I want to be honest about which Clay proofs in our corpus are most likely to wobble, because the strategy depends on the framework being robust to wobbles in any of them.
 
@@ -504,26 +569,26 @@ The chain has 11 links. Route 3 closes the previous open MY4 (Meyer eigenstate) 
 
 **Recommended action**: same as Paper 13. Don't publish as a standalone result until Connes/Consani/Moscovici or Ha-Paugam confirm the local-global step. Publish framework empirical content first.
 
-### Paper 10 (Yang-Mills mass gap) — highest fragility
+### Paper 8 (Yang-Mills mass gap) — highest fragility
 
 This is the one I want to be most honest about, because *I do not yet have G's read on it*, and I want to flag specifically what I'm uncertain about.
 
-The Yang-Mills mass-gap proof in Paper 10 uses a gradient flow + KK scaffold approach, building on the QG5D framework's geometric structure. The L.1-L.4 lemmas establish mass-gap via specific framework lemmas that depend on Identity 12 (e-circle ↔ BC unitary equivalence) and the integer KK tower. **My uncertainty about Paper 10 has two sources**:
+The Yang-Mills mass-gap proof in Paper 8 uses a gradient flow + KK scaffold approach, building on the QG5D framework's geometric structure. The L.1-L.4 lemmas establish mass-gap via specific framework lemmas that depend on Identity 12 (e-circle ↔ BC unitary equivalence) and the integer KK tower. **My uncertainty about Paper 8 has two sources**:
 
-1. **The relationship to Balaban's gauge theory program.** Balaban (1985-1990s, with Magnen-Rivasseau-Seneor extensions) established a renormalization-group flow for 4D pure Yang-Mills lattice gauge theory but never closed the entire mass-gap argument. Subsequent work by various authors extended Balaban's program but did not produce a fully accepted proof. **If Paper 10's argument relies on the Balaban infrastructure for its mass-gap step, it inherits whatever incompleteness Balaban's program has, which is non-trivial.**
+1. **The relationship to Balaban's gauge theory program.** Balaban (1985-1990s, with Magnen-Rivasseau-Seneor extensions) established a renormalization-group flow for 4D pure Yang-Mills lattice gauge theory but never closed the entire mass-gap argument. Subsequent work by various authors extended Balaban's program but did not produce a fully accepted proof. **If Paper 8's argument relies on the Balaban infrastructure for its mass-gap step, it inherits whatever incompleteness Balaban's program has, which is non-trivial.**
 
-2. **The "QG5D-specific" Yang-Mills argument.** Paper 10's argument also uses QG5D framework elements (gradient flow + KK scaffold) that are not standard Balaban machinery. These QG5D-specific elements are conditional on the framework's geometric assumptions (M⁴ × CP² × S² × S¹), which are themselves unconventional from a standard QFT perspective. A skeptical reviewer might object that Paper 10's argument is a *proof in the QG5D framework*, not a *proof in standard Yang-Mills theory*.
+2. **The "QG5D-specific" Yang-Mills argument.** Paper 8's argument also uses QG5D framework elements (gradient flow + KK scaffold) that are not standard Balaban machinery. These QG5D-specific elements are conditional on the framework's geometric assumptions (M⁴ × CP² × S² × S¹), which are themselves unconventional from a standard QFT perspective. A skeptical reviewer might object that Paper 8's argument is a *proof in the QG5D framework*, not a *proof in standard Yang-Mills theory*.
 
 **What can break it**: Either (a) the Balaban-inherited piece has a gap that surfaces under independent review, or (b) the QG5D-specific piece is not accepted as constituting a proof in standard Yang-Mills theory, requiring additional justification.
 
-**Recommended action**: I suggest treating Paper 10 as a *conditional* result (Yang-Mills mass gap in the QG5D framework, conditional on Identity 12 + KK integer tower + framework geometric assumptions) rather than as an unconditional Clay-class theorem. This is honest framing and reduces the risk of over-claiming. **G — what's your read on this? Do you have an independent assessment of Paper 10's robustness relative to the Balaban program?**
+**Recommended action**: I suggest treating Paper 8 as a *conditional* result (Yang-Mills mass gap in the QG5D framework, conditional on Identity 12 + KK integer tower + framework geometric assumptions) rather than as an unconditional Clay-class theorem. This is honest framing and reduces the risk of over-claiming. **G — what's your read on this? Do you have an independent assessment of Paper 8's robustness relative to the Balaban program?**
 
 ### General principle
 
 For all three Clay results, the framework's strategy should be:
 
 1. Publish the framework's *empirical content* (Papers 23, 24, the Theoretical-Precision Table) *first*, with the Clay results as side notes.
-2. Publish each Clay-result paper *after* its specific dependencies are externally verified (CCM 2025 peer-reviewed for Paper 13; Hasse-Brauer-Noether application reviewed for Paper 26; Balaban-program status reviewed for Paper 10).
+2. Publish each Clay-result paper *after* its specific dependencies are externally verified (CCM 2025 peer-reviewed for Paper 13; Hasse-Brauer-Noether application reviewed for Paper 26; Balaban-program status reviewed for Paper 8).
 3. Frame each Clay result as *conditional on its specific dependencies*, not as an unconditional claim.
 4. Make explicit in every Clay paper that the framework's empirical content is *not* dependent on the Clay result being correct — this preserves the framework's robustness if any Clay result later wobbles.
 

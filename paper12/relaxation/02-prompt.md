@@ -26,7 +26,7 @@ For background on what this cycle does and why, read
 ```
 We are running the Postulate-Relaxation Cycle on the CBB system. This
 is round R = {SET ME EXPLICITLY}. The framework now carries four
-Clay-class results: Yang-Mills mass gap (Paper 10), Riemann Hypothesis
+Clay-class results: Yang-Mills mass gap (Paper 8), Riemann Hypothesis
 (Paper 13, conditional on CBB axioms), BSD for CM curves (Paper 26
 Route 3, conditional on CBB axioms), and the Integers themselves
 (Paper 23, the 36-row master table, zero free parameters globally).
@@ -51,7 +51,7 @@ PHASE 0 — READ STATE (in this order):
 5. paper12/research/183-mtau-spectral-moduli-mixing.md and 187 — interface op V
 6. paper13-rh/strategy/28-all-gaps-closed.md — RH 9-layer chain
 7. paper26-bsd/strategy/05-route3-kms-projector-bypass.md — BSD 11-link chain
-8. yang-mills/gradient-flow-attack-plan/ (or Paper 10 source) — YM L.1-L.4
+8. paper08-yang-mills/gradient-flow-attack-plan/ (Paper 8 source) — YM L.1-L.4
 9. paper12/research/sigma-exp-table.md — 36 master-table σ_exp
 10. paper12/research/sigma-exp-table-tier-C.md — Tier C ultra-precise σ_exp.
     If missing, build it now from CODATA 2018 + PDG 2024 with at

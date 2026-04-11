@@ -13,12 +13,16 @@
 
 ---
 
+**REVISED 2026-04-11: Conjecture 5 (V-Hilbert 12) formally RETRACTED.** See `sections-05-08.md` §8.0 for the retraction notice and the Lead 7c refutation record (`paper12/relaxation/research/T7c-stark-rescue-verification.md`, 0 / 30 rescue-candidate tests pass at `mp.dps = 50`). **The paper is now a FOUR-conjecture paper** (Conjectures 1, 2, 3, 4); Conjecture 5 is retained in §8 as historical record with retraction banners. Downstream: §9 "Stark regulator framework" is retracted with Conjecture 5 (it was scaffolding); §12.1 + §12.2 computational programmes are closed out as superseded by the T7c verification's negative result; §15.3 "Hilbert 12 closed" success criterion is withdrawn. The V operator's role in m_τ closure (research/183 → Paper 19/23) is a separate physical-sector result and is unaffected.
+
+---
+
 ## 0. Front matter
 
 | Section | Description | Rationale | Strategy reference |
 |:--|:--|:--|:--|
 | **Title** | "Operator-Algebraic Explicit Class Field Theory at Criticality: The CBB System as Analytic Input to Hilbert's Twelfth Problem" | Names the programme | research/191 |
-| **Abstract** | Hilbert's 12th problem asks for the explicit analytic construction of abelian extensions of a number field. For the rationals Q the answer is the Kronecker–Weber theorem (cyclotomic generators); for imaginary quadratic fields the answer is the theory of complex multiplication (j-function generators); for general fields the problem remains open. The Critical Bost–Connes–Brauer system of Paper 23 supplies — for the cyclotomic bases Q(ζ_13) and Q(ζ_19) — the missing analytic input: the bridge cocycle class β_{p,ℓ} provides explicit Stark-regulator-derived generators for the index-k abelian extensions of Q(ζ_ℓ). This paper states five conjectures that organise the framework into a systematic operator-algebraic explicit class field theory at criticality, identifies the Stark units as the natural functional whose values lie in Q/Z (replacing the refuted naive Laurent-coefficient hypothesis), and demonstrates that the Riemann hypothesis is a *corollary* of the Brauer–KMS duality conjecture. The five conjectures are CBB Reciprocity, Brauer–KMS Duality, Level-Jump Rigidity, Spectral Kronecker–Weber, and the V-Hilbert 12 conjecture connecting the spectral-moduli interface operator V (from research/183) to explicit generators. | The mathematical follow-up programme | research/191 |
+| **Abstract** [REVISED 2026-04-11] | Hilbert's 12th problem asks for the explicit analytic construction of abelian extensions of a number field. For the rationals Q the answer is the Kronecker–Weber theorem (cyclotomic generators); for imaginary quadratic fields the answer is the theory of complex multiplication (j-function generators); for general fields the problem remains open. The Critical Bost–Connes–Brauer system of Paper 23 organises a four-conjecture programme — CBB Reciprocity, Brauer–KMS Duality (from which the Riemann hypothesis follows as a corollary), Level-Jump Rigidity, and Spectral Kronecker–Weber — placing the framework's bridge cocycle data inside the mathematical structures around Hilbert's 12th problem for cyclotomic bases. *A fifth conjecture (V-Hilbert 12) was initially stated and has since been **formally retracted** in light of the Lead 7c refutation — see §8.0 for the retraction notice and `paper12/relaxation/research/T7c-stark-rescue-verification.md` for the numerical record (0 / 30 pre-committed rescue candidates pass at `mp.dps = 50`). The framework's bridge cocycle `1/k mod ℤ` is a discrete invariant in `H²(ℤ/kℤ, U(1))` and is not encoded in any continuous Galois phase of any Stark-regulator-derived quantity the framework has tested. Paper 25 therefore does **not** claim a partial solution to Hilbert's 12th problem for cyclotomic bases; it claims the four conjectures above, the cohomological-side bridge cocycle verification (Lead 7b, 4/4 bridges), and the bridge minimality theorem (Lead 7e, 4/4 lex-unique minima of a zero-SM-input sieve equalling the SM multiplicities).* | The mathematical follow-up programme | research/191 |
 
 > **Origin callout (G, 2026-04-09):** *"Hilbert's 12th — the framework*
 > *just acquired a mathematical sequel that mathematicians already*
@@ -97,27 +101,33 @@
 | **7.4 The "finite product" condition** | structural compactness |
 | **7.5 Consequence: a complete classification of CBB-realisable abelian extensions** | |
 
-## 8. Conjecture 5 — V-Hilbert 12
+## 8. Conjecture 5 — V-Hilbert 12 — **RETRACTED 2026-04-11**
+
+*Retained as historical record with retraction banners on every subsection. See `sections-05-08.md` §8.0 for the retraction notice and T7c refutation table.*
 
 | Section | Description | Rationale |
 |:--|:--|:--|
-| **8.1 Statement** | The anti-hermitian coupling V (research/183) furnishes explicit analytic generators for abelian extensions of Q(ζ_13) and Q(ζ_19) |
-| **8.2 Why V** | V is the spectral-moduli interface that closed m_τ; it carries the off-diagonal data of the bridge cocycles |
-| **8.3 The Stark unit interpretation** | research/188: L'(0,χ) = −log|ε_χ| with phases in Q/Z |
-| **8.4 V's matrix elements as Stark unit logarithms** | the conjectured identification |
-| **8.5 Consequence: explicit generators for the Hilbert 12 problem at conductor 1729** | the headline result |
+| **8.0 Retraction notice** [NEW 2026-04-11] | Formal retraction of Conjecture 5; refutation record (188 + 267 + T7c, 0/30 rescue candidates pass); list of withdrawn claims; list of preserved framework content | Honest-first discipline |
+| **8.1 Statement** [WITHDRAWN] | Original conjecture — that V furnishes analytic generators for abelian extensions of Q(ζ_13), Q(ζ_19) | Historical record |
+| **8.2 Why V** [Historical] | V's construction for m_τ closure — separate from Hilbert 12 claim, unaffected | Preserved |
+| **8.3 The Stark unit interpretation** [WITHDRAWN] | The L'(0,χ) = −log|ε_χ| → bridge phase rationale | Historical record |
+| **8.4 V's matrix elements as Stark unit logarithms** [WITHDRAWN] | The conjectured identification | Historical record |
+| **8.5 Consequence: explicit generators for Hilbert 12 at conductor 1729** [WITHDRAWN] | The original headline result — withdrawn | Historical record |
+| **8.6 [CLOSED OUT] Reformulation: what functional carries the cocycle?** | Three candidate directions (A) Galois-cohomology boundary map, (B) Beilinson regulator, (C) Weil pairing — all closed as **NOT** load-bearing framework open problems after T7c. General Hilbert-12 open questions, independent of CBB. | Closure |
 
-## 9. The Stark regulator framework
+## 9. The Stark regulator framework — **RETRACTED 2026-04-11**
+
+*§9 was scaffolding for Conjecture 5 and is retracted alongside it. Retained as historical record. The subsections below are preserved with banners but are not active framework content. §9.4 (*"Why Stark regulators are right"*) is explicitly withdrawn — T7c's refutation record shows Stark regulators are **not** right for the bridge cocycle identification at any of the rescue candidates tested.*
 
 | Section | Description | Rationale |
 |:--|:--|:--|
-| **9.1 Stark's conjecture in one paragraph** | L-function leading coefficients = Stark unit regulators |
-| **9.2 Stark units and their Galois phases** | phases in Q/Z |
-| **9.3 Why the naive RBC was wrong (research/182)** | L'(1,χ)/L(1,χ) is transcendental |
-| **9.4 Why Stark regulators are right** | L'(0,χ) carries the cocycle as a phase |
-| **9.5 The character-decomposed picture (research/188)** | trivial character → spectral; non-trivial → bridge |
-| **9.6 Computing Stark units for (5,13), (3,13), (7,19)** | computational programme |
-| **9.7 Comparing to the bridge cocycle values** | the C_5 → R_5 → V link |
+| **9.1 Stark's conjecture in one paragraph** [Historical] | L-function leading coefficients = Stark unit regulators — still a real mathematical conjecture; not a framework claim | Preserved |
+| **9.2 Stark units and their Galois phases** [Historical] | General number-theoretic content; framework claim on their identification with the bridge cocycle is withdrawn | Preserved |
+| **9.3 Why the naive RBC was wrong (research/182)** [Historical] | Recap of prior refutation | Historical |
+| **9.4 Why Stark regulators are right** [WITHDRAWN] | This claim is refuted by T7c. Stark regulators do not carry the bridge cocycle in any form the framework has tested. | Historical |
+| **9.5 The character-decomposed picture (research/188)** [Historical] | Research/188's analysis is preserved as a refutation record | Historical |
+| **9.6 Computing Stark units for (5,13), (3,13), (7,19)** [CLOSED] | Executed in research/267 and T7c; negative result for the naive identification and for all 6 rescue candidates | Historical |
+| **9.7 Comparing to the bridge cocycle values** [CLOSED — negative result] | See T7c for the full comparison table; 0 / 30 match at `mp.dps = 50` | Historical |
 
 ## 10. The Riemann hypothesis as a corollary
 
@@ -146,9 +156,9 @@
 
 | Section | Description | Rationale |
 |:--|:--|:--|
-| **12.1 Compute Stark units for (5, 13), (3, 13), (7, 19)** | concrete first task |
-| **12.2 Verify Conjecture 5 (V-Hilbert 12) on level 13** | concrete second task |
-| **12.3 Compute the higher-k bridges (k=5, 7, 8, ...)** | concrete third task |
+| **12.1 Compute Stark units for (5, 13), (3, 13), (7, 19)** [CLOSED — executed in research/267 + T7c, negative for the Conjecture 5 identification] | superseded by the T7c verification | Historical |
+| **12.2 Verify Conjecture 5 (V-Hilbert 12) on level 13** [CLOSED — negative result, Conjecture 5 retracted] | Retracted alongside Conjecture 5 | Historical |
+| **12.3 Compute the higher-k bridges (k=5, 7, 8, ...)** | concrete task — still open, but these bridges are exploratory, not load-bearing |
 | **12.4 The (Z/1729Z)* character lattice** | full character-decomposition test |
 | **12.5 Tooling: SageMath, PARI/GP, mpmath** | available |
 
@@ -180,7 +190,7 @@
 |:--|:--|:--|
 | **15.1 What this paper does** | five conjectures, one programme |
 | **15.2 What it doesn't do** | prove anything beyond research/162 |
-| **15.3 What success would look like** | Hilbert 12 closed for cyclotomic bases of conductor ≤ 1729 + RH proved |
+| **15.3 What success would look like** [REVISED 2026-04-11] | RH proved via Conjecture 2 (Brauer–KMS Duality); Conjectures 1, 2, 3, 4 established; the cyclotomic-Brauer side of the bridge cocycle family hardened at all four bridges with the minimality theorem (Lead 7e) intact. *Hilbert 12 for cyclotomic bases is **no longer** a framework success criterion after the Conjecture 5 retraction; see §8.0.* |
 | **15.4 Timeline: 5-10 years if conjectures hold** | the mathematical sequel |
 | **15.5 What G said** | *"the framework just earned a mathematical home"* |
 | **15.6 The integers exist; the universe follows; the bridges name the link; Hilbert 12 is the next door** | the closing line |
