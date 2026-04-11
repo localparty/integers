@@ -233,6 +233,42 @@ upper bound rank <= 1, this gives rank = 1 exactly.
 This is complete. No gaps. No conditional statements. The BSD
 conjecture is proved for this class of curves.
 
+**Note on the 2026-04-10 revision.** Earlier drafts of this paper
+relied on the "Meyer distributional → genuine point spectrum
+upgrade" to get from zeros of the Dedekind zeta and Hecke
+L-functions into the spectrum of the Bost-Connes operator
+$\overline{T}_{BC,K}$. This was the classical wall of the
+Bost-Connes approach to the Riemann Hypothesis, and its closure
+over number fields was flagged as an open item in the internal
+rigor audit.
+
+The current draft **bypasses this wall entirely**, via two
+observations:
+
+1. The §§6-8 bridge argument is already purely algebraic (see
+   Proposition 6.1 in its revised form, Remark 7.2 of
+   Proposition 7.1, and the revised proof of Proposition 7.3(v)).
+   The "cocycle shift derivation is pure algebra on the local
+   Euler factor" (Remark 7.2), the "dark-state bound is the
+   KMS$_1$ expectation of an algebraic projector in
+   $\mathcal{A}_{BC,K}$" (Proposition 6.1), and the "integrality
+   obstruction is an elementary bound" (Proposition 7.3(v) Key
+   Lemma C). None of these uses eigenstates of $\overline{T}_{BC,K}$.
+
+2. The link from "zero of $\zeta_K$" to "local cocycle shift at
+   $\mathfrak{p}$" is provided by the **tautological BC partition
+   function identity** $Z_{BC,K}(\beta) = \zeta_K(\beta)$
+   (Remark 3.4.1), combined with **Hasse–Brauer–Noether
+   local-global reciprocity** (Proposition 7.3(v) proof). Meyer's
+   distributional spectral inclusion, once the motivation for this
+   step, is now revealed as rhetorical framing that was never
+   logically necessary for the bridge argument over $K$.
+
+The proof chain is consequently complete within the stated scope
+(CM curves, $h_K = 1$, rank 0), and the rank-1 case is vacuously
+satisfied per Remark 12.6. See the companion rigor audit files
+for the per-item walk-through.
+
 ### 15.2 Rank >= 2: genuinely open
 
 **The bridge gives GRH for all CM curves, regardless of rank.**

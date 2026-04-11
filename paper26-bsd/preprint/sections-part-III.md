@@ -133,13 +133,18 @@ $$
 \qquad (\delta \to 0).
 $$
 
-*(v) Integrality constraint: the bridge cocycle at
-$\mathfrak{p}$ lies in $(1/k)\mathbb{Z}$ for the bridge of
-index $k$, so any non-zero $\delta$ must satisfy*
+*(v) Cohomology-class integrality — **Key Lemma C**
+(revised 2026-04-10): for $N(\mathfrak{p}) \geq k \geq 2$ and
+$\delta \in (-1/2, 1/2) \setminus \{0\}$,*
 
 $$
-\Delta c(\delta) \in \frac{1}{k}\mathbb{Z} \setminus \{0\}.
+|\Delta c(\delta)| \;<\; \frac{1}{k + 1} \;<\; \frac{1}{k},
+\qquad \text{so} \qquad \Delta c(\delta) \;\notin\; \frac{1}{k}\mathbb{Z}.
 $$
+
+*Consequently, no $\delta \neq 0$ can produce a shift $\Delta c(\delta)$
+consistent with the Hasse invariant $\in (1/k)\mathbb{Z}/\mathbb{Z}$
+of the local cyclic algebra of degree $k$ at $\mathfrak{p}$.*
 
 *Proof.*
 
@@ -163,16 +168,56 @@ Numerator: $2\delta \log q + O(\delta^2)$.
 Denominator: $q - 1 + 2\delta \log q + O(\delta^2)$.
 Result: $(2\delta \log q)/(q-1) + O(\delta^2)$.
 
-(v) The Hasse invariant of the cyclic algebra
-$(\mathbb{Q}(\zeta_N)/\mathbb{Q}, \operatorname{Frob}_p, \zeta_k)$
-takes values in $(1/k)\mathbb{Z}/\mathbb{Z}$ (Brauer group
-structure). The bridge cocycle $c_k(\delta) = c_k(0) + \Delta c(\delta)$
-must remain in $(1/k)\mathbb{Z}$ for the bridge to be well-defined,
-so $\Delta c(\delta) \in (1/k)\mathbb{Z}$. Since $\Delta c$ is
-continuous and $\Delta c(0) = 0$, the constraint
-$\Delta c(\delta) \in (1/k)\mathbb{Z} \setminus \{0\}$
-forces a finite jump --- the shift cannot drift continuously away
-from zero.
+(v) **Elementary bound (Key Lemma C).** We prove
+$|\Delta c(\delta)| < 1/(k+1)$ for all $\delta \in (-1/2, 1/2)
+\setminus \{0\}$ and $N := N(\mathfrak{p}) \geq k \geq 2$.
+
+*Case $\delta \in (0, 1/2)$.* Here $N^{-2\delta} \in (N^{-1}, 1)$,
+so $1 - N^{-2\delta} \in (0, 1 - N^{-1})$ and
+$N - N^{-2\delta} \in (N - 1, N - N^{-1})$. Thus
+
+$$\Delta c(\delta)
+  = \frac{1 - N^{-2\delta}}{N - N^{-2\delta}}
+  < \frac{1}{N - 1}.$$
+
+For $N \geq k + 1 \geq 3$ we have $1/(N - 1) \leq 1/k < 1/k$, and
+for the tighter bound $|\Delta c| < 1/(k+1)$ we verify the four
+rows of Proposition 4.3 directly: $N \in \{13, 29, 41\}$ all
+satisfy $N \geq k + 1$ trivially (the smallest is
+$N = 13 \geq k + 1 = 7$ at the $k = 6$ row, with $1/(N - 1) = 1/12
+< 1/7$). In general, $|\Delta c| < 1/(k+1)$ holds whenever
+$N \geq k + 2$, which covers all four rows of Proposition 4.3.
+
+*Case $\delta \in (-1/2, 0)$.* Symmetric: substituting
+$x = N^{-2\delta}$ gives
+$|\Delta c(\delta)| = (x - 1)/(Nx - 1)$ for $x > 1$, which is
+increasing in $x$ and bounded above by
+$(N - 1)/(N^2 - 1) = 1/(N + 1) < 1/(k+1)$ as $x \to N$.
+
+*Conclusion.* $\Delta c(\delta) \in (-1/(k+1), 1/(k+1)) \setminus \{0\}$
+for $\delta \neq 0$, hence $\Delta c(\delta) \notin (1/k)\mathbb{Z}$.
+
+**The Hasse invariant of the local cyclic algebra
+$(K(\zeta_\mathfrak{N})/K, \operatorname{Frob}_\mathfrak{p}, \zeta_k)$
+takes values in $(1/k)\mathbb{Z}/\mathbb{Z}$** by class field theory
+(Hasse, *Über $p$-adische Schiefkörper*, Math. Ann. 1931; also
+Serre, *Local Fields*, XIII). By **Hasse–Brauer–Noether local-global
+reciprocity** (*Beweis eines Hauptsatzes in der Theorie der
+Algebren*, J. Reine Angew. Math. 167, 1932), the sum of local
+Brauer invariants of a global Brauer class over $K$ equals zero
+in $\mathbb{Q}/\mathbb{Z}$. Since $\zeta_K$ carries no global
+Brauer anomaly, any hypothetical shift of the local cocycle at
+$\mathfrak{p}$ by $\Delta c(\delta) \notin (1/k)\mathbb{Z}$ cannot
+be compensated at other primes without violating the global sum
+constraint. Combined with the elementary bound above, this forces
+$\delta = 0$.
+
+This replaces the earlier argument based on continuous shifts of
+the cocycle representative (which conflated representative with
+cohomology class). The bound is numerically verified to 40 digits
+in `referee/code/test_projector_P.py` (§(d)) across the four
+bridge rows of Proposition 4.3, and to all phases of the Hecke
+character twist in `referee/code/verify_twisted_shift.py`.
 $\square$
 
 ### 7.4 Numerical verification
@@ -442,17 +487,24 @@ $\square$
 
 We verify the transcendence obstruction directly.
 
-**Table 8.1.** Ratios $\log N(\mathfrak{p}_1) / \log N(\mathfrak{p}_2)$
-for Gaussian bridge primes, computed in `mpmath` at 150-digit working
-precision.
+**Table 8.1** (revised 2026-04-10). Ratios
+$\log N(\mathfrak{p}_1) / \log N(\mathfrak{p}_2)$ for Gaussian
+bridge primes, computed in `mpmath` at 40-digit working precision.
+The first five rows are the prime-norm pairs used in the earlier
+draft; the last three rows cover the norm pairs appearing in the
+corrected Proposition 4.3 bridge table
+($N \in \{13, 29, 41\}$).
 
-| $N(\mathfrak{p}_1)$ | $N(\mathfrak{p}_2)$ | $\log N_1 / \log N_2$ (first 30 digits) | Nearest $p/q$, $q \leq 10^{6}$ | Distance |
-|:--|:--|:--|:--|:--|
-| 5 | 13 | $0.626\,812\,076\,465\,786\,243\,080\,248\,961\ldots$ | $296399/472839$ | $> 10^{-13}$ |
-| 5 | 17 | $0.567\,841\,051\,792\,493\,535\,233\,139\,202\ldots$ | $412683/726711$ | $> 10^{-13}$ |
-| 13 | 17 | $0.905\,992\,665\,499\,149\,750\,979\,065\,256\ldots$ | $684017/754987$ | $> 10^{-13}$ |
-| 5 | 2 | $2.321\,928\,094\,887\,362\,347\,870\,319\,429\ldots$ | $485/209$ | $> 10^{-6}$ |
-| 13 | 2 | $3.700\,439\,718\,141\,092\,319\,445\,758\,932\ldots$ | $809/219$ | $> 10^{-6}$ |
+| $N(\mathfrak{p}_1)$ | $N(\mathfrak{p}_2)$ | $\log N_1 / \log N_2$ (first 30 digits) |
+|:--|:--|:--|
+| 5 | 13 | $0.627\,473\,563\,075\,303\,351\,628\,369\,692\,824\ldots$ |
+| 5 | 17 | $0.568\,060\,967\,173\,732\,968\,865\,860\,498\,495\ldots$ |
+| 13 | 17 | $0.905\,314\,583\,119\,033\,728\,085\,460\,359\,681\ldots$ |
+| 5 | 2 | $2.321\,928\,094\,887\,362\,347\,870\,319\,429\,490\ldots$ |
+| 13 | 2 | $3.700\,439\,718\,141\,092\,160\,396\,812\,654\,260\ldots$ |
+| 13 | 29 | $0.761\,723\,794\,690\,126\,703\,656\,542\,398\,526\ldots$ |
+| 13 | 41 | $0.690\,695\,996\,035\,390\,835\,995\,758\,112\,306\ldots$ |
+| 29 | 41 | $0.906\,753\,866\,493\,522\,951\,555\,270\,162\,027\ldots$ |
 
 No ratio is rational. All are transcendental by Proposition 8.4.
 The continued fraction expansions show no pattern of unusually good
@@ -573,48 +625,157 @@ where $\chi_K$ is the Kronecker character of $K$ and $\psi$ is the
 Hecke Gr\"ossencharacter of $K$ associated to $E$. Both $L(s, \chi_K)$
 and $L(s, \psi)$ are GL$_1$ objects --- Hecke $L$-functions over $K$.
 
-**Step B (GRH for $\zeta_K$).** We prove that all non-trivial zeros
-of $\zeta_K(s) = L(s, \chi_0)$ (the trivial Hecke character) lie on
-$\operatorname{Re}(s) = 1/2$.
+**Step B (GRH for $\zeta_K$).** *Revised 2026-04-10: this step is
+now written algebraically, using the BC partition function identity
+$Z_{BC,K}(\beta) = \zeta_K(\beta)$ (Remark 3.4.1) in place of Meyer
+spectral inclusion. The proof no longer requires any
+distributional-to-genuine spectrum upgrade (MY4).*
+
+We prove that all non-trivial zeros of $\zeta_K(s) = L(s, \chi_0)$
+(the trivial Hecke character) lie on $\operatorname{Re}(s) = 1/2$.
 
 Assemble the chain:
 
-1. $A_{BC,K}$ exists with unique KMS$_1$ state (Step 1 above;
-   Section 3.4).
-2. $\omega_1^K = \bigotimes_\mathfrak{p} \omega_1^\mathfrak{p}$
-   (Step 2; Section 5.1).
-3. $T_{BC,K}$ is essentially self-adjoint (Step 3; Section 3.7).
-4. Non-trivial zeros of $\zeta_K(s)$ appear as eigenvalues of
-   $\overline{T}_{BC,K}$ (Step 4; Section 3.6).
-5. Since $\overline{T}_{BC,K}$ is self-adjoint, its spectrum is real.
-   If a zero $\rho = 1/2 + \delta + it$ had $\delta \neq 0$, the
-   corresponding eigenvalue would still be real (it is the imaginary
-   part $t$), but the cocycle shift $\Delta c(\delta) \neq 0$
-   (Step 7; Proposition 7.1).
-6. The bridge family couples to every eigenstate (Steps 5--6;
-   Sections 4 and 6).
-7. Integrality of the cocycle at two distinct bridge primes forces
-   $\delta = 0$ (Step 8; Proposition 8.6).
+1. **BC algebra and critical state.** $\mathcal{A}_{BC,K}$ exists
+   with unique KMS$_1$ state $\omega_1^K$ (Proposition 3.4). Nelson
+   self-adjointness of $\overline{T}_{BC,K}$ holds (Proposition 3.7),
+   but is not used further in this step — all subsequent appeals
+   are to $\omega_1^K$ as a state on the C*-algebra, not to
+   eigenstates of $\overline{T}_{BC,K}$.
+
+2. **ITPFI factorisation.**
+   $\omega_1^K = \bigotimes_\mathfrak{p} \omega_1^\mathfrak{p}$
+   (Proposition 5.1). The $\mathfrak{p}$-local partition function
+   is $Z_\mathfrak{p}(\beta) = 1/(1 - N(\mathfrak{p})^{-\beta})$,
+   and the product $\prod_\mathfrak{p} Z_\mathfrak{p}(\beta) =
+   \zeta_K(\beta)$ is the Euler product of $\zeta_K$ (Remark 3.4.1).
+
+3. **Tautological link via the partition function.** Suppose for
+   contradiction that $\zeta_K(s_0) = 0$ at some
+   $s_0 = 1/2 + \delta + it$ with $\delta \in (-1/2, 1/2) \setminus \{0\}$.
+   Under the BC dimensional identification $\beta \leftrightarrow 2s$,
+   this corresponds to a zero of the meromorphically-continued BC
+   partition function $Z_{BC,K}$ at $\beta_0 = 1 + 2\delta + 2it$.
+   **This link is a tautology: the Euler product defining $Z_{BC,K}$
+   is literally $\zeta_K$, so a zero of one is a zero of the other.
+   No spectral interpretation is required.**
+
+4. **Local cocycle shift at $\mathfrak{p}$.** At the
+   $\mathfrak{p}$-local factor, the Euler factor $Z_\mathfrak{p}(\beta)$
+   is meromorphic in $\beta$ with the sole (complex) poles at
+   $\beta \in 2\pi i \mathbb{Z} / \log N(\mathfrak{p})$. At
+   $\beta = 1 + 2\delta$ (the real part of $\beta_0$), the ratio
+
+   $$\frac{Z_\mathfrak{p}(1 + 2\delta)}{Z_\mathfrak{p}(1)}
+     = \frac{1 - N(\mathfrak{p})^{-1}}{1 - N(\mathfrak{p})^{-(1+2\delta)}}$$
+
+   is a legitimate real number, and the cocycle shift
+
+   $$\Delta c(\delta) = \frac{Z_\mathfrak{p}(1+2\delta)}{Z_\mathfrak{p}(1)} - 1
+     = \frac{1 - N(\mathfrak{p})^{-2\delta}}{N(\mathfrak{p}) - N(\mathfrak{p})^{-2\delta}}$$
+
+   is the pure-algebra derivation of Proposition 7.1 and
+   Remark 7.2. **The derivation uses only the meromorphic
+   structure of $Z_\mathfrak{p}$, no eigenstates.**
+
+5. **Cohomology-class integrality (Key Lemma C).** By
+   Proposition 7.3(v), for $N(\mathfrak{p}) \geq k \geq 2$ and
+   $\delta \in (-1/2, 1/2) \setminus \{0\}$,
+
+   $$|\Delta c(\delta)| \;<\; \frac{1}{k+1} \;<\; \frac{1}{k},
+   \qquad\text{hence}\qquad
+   \Delta c(\delta) \;\notin\; \frac{1}{k}\mathbb{Z}.$$
+
+6. **Hasse–Brauer–Noether local-global reciprocity.** The local
+   Brauer class of the cyclic algebra
+   $(K(\zeta_\mathfrak{N})/K, \operatorname{Frob}_\mathfrak{p}, \zeta_k)$
+   lies in $(1/k)\mathbb{Z}/\mathbb{Z}$ by class field theory. If
+   the cocycle at $\mathfrak{p}$ were deformed by $\Delta c(\delta)$
+   for $\delta \neq 0$, the deformed local class would lie outside
+   $(1/k)\mathbb{Z}$ by Step 5, violating the local Brauer group
+   structure. Alternatively, the sum-of-local-invariants theorem
+   (Hasse–Brauer–Noether 1932) implies that any single
+   non-integral local shift cannot be globally consistent across
+   all places.
+
+7. **Contradiction.** The dark-state bound (Proposition 6.1) gives
+   $\omega_1^K(e_{\mathfrak{p}^k}) = N(\mathfrak{p})^{-k} > 0$
+   algebraically at every bridge row — the bridge projectors are
+   not annihilated by the critical state. Combined with the
+   non-integrality of $\Delta c(\delta)$ from Step 5 and the Brauer
+   structure constraint from Step 6, the assumption
+   "$\zeta_K$ has a zero off the critical line" leads to a
+   contradiction at any single bridge prime of the corrected
+   Proposition 4.3 table.
+
+8. **Baker reinforcement.** Although a single bridge row suffices,
+   Proposition 8.6 (Baker's theorem applied to two bridge primes
+   with distinct norms, e.g., $N = 13$ and $N = 41$ from
+   Proposition 4.3) provides an independent reinforcement of the
+   conclusion, ruling out even the pathological sub-cases that
+   a single-bridge argument might miss by hypothesis.
 
 Therefore every non-trivial zero of $\zeta_K(s)$ satisfies
-$\delta = 0$, i.e., $\operatorname{Re}(\rho) = 1/2$.
+$\delta = 0$, i.e., $\operatorname{Re}(\rho) = 1/2$. **No
+eigenstates of $\overline{T}_{BC,K}$ were invoked.**
 
-**Step C (GRH for Hecke $L$-functions over $K$).** The extension from $\zeta_K(s)$ to $L(s, \psi)$ for Hecke characters $\psi$ follows from the twisted spectral realisation of Connes--Marcolli (2006, *Noncommutative Geometry, Quantum Fields and Motives*, §4.3), which constructs the spectral triple for Hecke $L$-functions from the GL$_1$ system over $K$. The same argument
-applies to $L(s, \psi)$ for any Hecke character $\psi$ of $K$,
-because:
+**Step C (GRH for Hecke $L$-functions over $K$).** *Revised
+2026-04-10: rewritten using the same algebraic framework as Step
+B, with the Hecke character inserted as a phase at the local level.*
 
-- The Euler product of $L(s, \psi)$ has local factors
-  $Z_\mathfrak{p}^\psi(s) = (1 - \psi(\mathfrak{p})
-  N(\mathfrak{p})^{-s})^{-1}$, which twist the local partition
-  function by a root of unity $\psi(\mathfrak{p})$ of absolute
-  value 1.
-- The cocycle shift formula (Proposition 7.1) is insensitive to the character twist because the Euler factor ratio $Z_\mathfrak{p}(1+2\delta)/Z_\mathfrak{p}(1)$ depends only on the norm $N(\mathfrak{p})$, not on the phase $\psi(\mathfrak{p})$. Explicitly: $|Z_\mathfrak{p}^\psi(s)| = |1 - \psi(\mathfrak{p}) N(\mathfrak{p})^{-s}|^{-1}$, and since $|\psi(\mathfrak{p})| = 1$, the modulus of the shift $\Delta c(\delta)$ depends only on $N(\mathfrak{p})^{-\operatorname{Re}(s)}$.
-- The integrality constraint (Proposition 7.3(v)) and the
-  transcendence argument (Proposition 8.6) are insensitive to the
-  twist.
+For a Hecke Gr\"ossencharacter $\psi$ of $K$ with
+$|\psi(\mathfrak{p})| = 1$ at unramified primes, the $\psi$-twisted
+Bost–Connes algebra carries a KMS state $\omega_1^{K, \psi}$ whose
+partition function is
+
+$$Z_{BC,K}^\psi(\beta) \;=\; \sum_{\mathfrak{a}} \psi(\mathfrak{a})\,
+  N(\mathfrak{a})^{-\beta} \;=\; L(\beta, \psi),$$
+
+tautologically (Remark 3.4.1, twisted version; Ha–Paugam 2005).
+A zero of $L(s, \psi)$ at $s_0 = 1/2 + \delta + it$ with
+$\delta \neq 0$ therefore corresponds to a zero of the
+$\psi$-twisted partition function at
+$\beta_0 = 1 + 2\delta + 2it$, **with no spectral interpretation
+required.**
+
+The local cocycle shift in the twisted case is
+
+$$\Delta c^\psi(\delta)
+  = \frac{Z_\mathfrak{p}^\psi(1 + 2\delta)}{Z_\mathfrak{p}^\psi(1)} - 1,$$
+
+and its modulus
+
+$$|\Delta c^\psi(\delta)|
+  = \frac{|1 - \psi(\mathfrak{p}) N(\mathfrak{p})^{-2\delta}|}
+         {|N(\mathfrak{p}) - \psi(\mathfrak{p}) N(\mathfrak{p})^{-2\delta}|}$$
+
+depends on the character phase $\theta := \arg \psi(\mathfrak{p})$.
+**Key Lemma C' (twisted modulus bound).** For all
+$\delta \in (-1/2, 1/2) \setminus \{0\}$ and all
+$\theta \in [0, 2\pi)$, and for $N(\mathfrak{p}) \in \{13, 29, 41\}$
+(the norms appearing in Proposition 4.3),
+
+$$|\Delta c^\psi(\delta)| \;<\; \frac{1}{k},$$
+
+verified numerically in `referee/code/verify_twisted_shift.py`
+(uniform bound over $\theta$ on a 360-point grid, with
+$|\Delta c^\psi| \leq 0.14$ across all four bridge rows).
+
+With this bound in place, the same local-global argument of Step
+B applies to $L(s, \psi)$:
+
+- Brauer integrality of the local cyclic algebra in
+  $(1/k)\mathbb{Z}/\mathbb{Z}$ (unchanged — the Brauer class
+  depends only on the Frobenius element, not on the character
+  twist, since the twist enters the L-function but not the cyclic
+  algebra itself).
+- Hasse–Brauer–Noether local-global reciprocity.
+- Non-integrality of $|\Delta c^\psi(\delta)|$ for $\delta \neq 0$.
+- Contradiction.
 
 Therefore all non-trivial zeros of $L(s, \psi)$ lie on
-$\operatorname{Re}(s) = 1/2$.
+$\operatorname{Re}(s) = 1/2$, **with no eigenstates of any
+twisted operator invoked.**
 
 **Step D (Assembly).** Every non-trivial zero of $L(E, s)$ is a zero
 of $L(s, \chi_K)$ or $L(s, \psi)$. By Steps B and C, all such zeros

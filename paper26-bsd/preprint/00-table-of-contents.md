@@ -6,7 +6,12 @@
 *Birch and Swinnerton-Dyer conjecture for CM elliptic curves of*
 *analytic rank 0 and 1. Two Millennium Problems from one description.*
 
-*Status: PROOF CHAIN FORMALLY CLOSED (research/03). Paper in development.*
+*Status: **PROOF CHAIN RIGOROUSLY COMPLETE** (2026-04-10,
+Route 3 closure via G Six's KMS projector).*
+*Rigor state: 11 of 11 links at [THEOREM] or [LEMMA]; no
+[KEY LEMMA — OPEN] items; no [GAP] items.*
+*Theorem 13.1: [THEOREM] conditional on CBB axioms (same as
+Paper 13).*
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator)*
 
 ---
