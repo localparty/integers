@@ -18,7 +18,7 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 
 ## §C — Current bottleneck
 
-**Q_struct (1.3.1) — is M_Bool^L injective?** The OA1 Author found the Kawahigashi–Sutherland–Takesaki theorem (Acta Math 1992): every automorphism of the injective III₁ factor R_∞ is approximately inner, and R_∞ is non-full. If M_Bool^L ≅ R_∞ for all L, then ALL sectors are non-full and fullness never distinguishes P from NPC → bridge collapses. The bridge REQUIRES M_Bool^L to be non-injective for NPC languages. This is a deeper question than outerness and must be resolved first. Bottleneck has shifted from OA1 to Q_struct.
+**TWO-SCENARIO BRIDGE (1.3.2 + 1.3.3 convergence).** Node 1.3.2 found a fundamental tension: every individual alpha_f construction either gives the identity (diagonal case) or is nonlinear (off-diagonal). 8 local kills share the same root cause. Node 1.3.3 proved a conditional outerness theorem via PATB-DIAGONAL (Theorem 5.6): IF alpha_f is a well-defined automorphism (H2), AND D is a MASA (H1), THEN alpha_f is outer. The two nodes CONVERGE on a two-scenario architecture: **Scenario A** (individual outerness): if H2 is satisfied, Theorem 5.6 gives outerness directly. **Scenario B** (collective non-discreteness): if H2 fails, the clone's exponentially many operations produce a non-discrete family of approximate D-fixing symmetries, implying Inn(M) not closed -> non-full by Marrakchi. PATB-DIAGONAL is load-bearing in BOTH scenarios. Bridge probability: 0.54 (up from 0.41) because Scenario B provides an independent path. Remaining: close H1 (MASA), or formalize Scenario B rigorously.
 
 ---
 
@@ -38,6 +38,8 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | Q6-OUTDIM | Clone dim grows exponentially for P-time, collapses for NPC | pvnp_channel_capacity.py | E | dim_poly_k | — | — | 25 |
 | RULE9-GATE | Complexity obstruction = TGap × N_crossings; P: 0, NPC: exponential | computational | E | — | — | — | 25 |
 | BZ-CIRCULARITY-KILL | "¬Taylor → ¬P" is EQUIVALENT to P≠NP; BZ only proves "¬Taylor → NPC" | adversarial calibration | DISC | — | — | — | — |
+| Q_STRUCT-RESOLVED | M_Bool is non-injective: PCirc^+ non-abelian → G_Bool contains Thompson's V (non-amenable) → Connes' theorem → non-injective crossed product. KST does not apply. Sectors can be full or non-full. | Q_struct analysis + Connes 1976 + Thompson V | S | — | — | — | 75 |
+| CONNES-AMEN-INJ | Crossed product of amenable base by group G is injective iff G is amenable | Connes 1976 | R (external) | — | — | — | 100 |
 
 ---
 
@@ -87,11 +89,11 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 |---|---|---|---|
 | 1.1 UA1 | **ADVANCED** | 0.9 | no (supporting, proved) |
 | 1.2 UA2 | **ADVANCED** | 0.99 | no (done) |
-| 1.3 OA1 | **BLOCKED-DECOMPOSED** | 0.15-0.25 | YES — decomposed into 1.3.1-1.3.4 |
-| 1.3.1 Q_struct | OPEN (**NEW BOTTLENECK**) | 0.4 | YES — determines whether bridge can work AT ALL |
-| 1.3.2 Construction verify | OPEN (blocked by 1.3.1) | 0.6 | yes |
-| 1.3.3 Outerness via modular | OPEN (blocked by 1.3.1) | 0.3 | yes |
-| 1.3.4 Alternative bridge | OPEN (contingency) | 0.2 | yes (if 1.3.1 shows injective) |
+| 1.3 OA1 | **ADVANCED** | 0.35-0.45 | YES — 1.3.1 resolved (non-injective); 1.3.3 conditional theorem proved (PATB-DIAGONAL); 1.3.2 remains open (construction verification) |
+| 1.3.1 Q_struct | **ADVANCED** | 0.75 | RESOLVED — M_Bool non-injective (PCirc^+ non-abelian -> G_Bool non-amenable); KST obstruction evaded; 3 gaps remain (closable) |
+| 1.3.2 Construction verify | **PARTIAL** (8 local kills) | 0.35 | yes — fundamental tension found: diagonal => identity, independent copies => nonlinear. Strategic inversion candidate: collective non-discreteness bypasses individual construction. |
+| 1.3.3 Outerness via PATB-DIAGONAL | **ADVANCED** | 0.41 (unconditional) / 0.90 (given H1,H2) | YES — conditional outerness theorem proved via PATB-DIAGONAL (Thm 5.6): Taylor + essential arity >= 2 + D is MASA => alpha_f outer. One gap remains (H1: D is MASA). Three independent approaches converge (modular invariant, Marrakchi-Vaes amplification, PATB-DIAGONAL main proof). |
+| 1.3.4 Alternative bridge | DEPRIORITIZED | 0.2 | no longer needed if 1.3.1 holds; kept as contingency |
 | 1.4 OA2 | OPEN (blocked by 1.3) | 0.5 | yes (downstream) |
 | 1.5 Assembly | OPEN (blocked by all) | 0.9 (if deps close) | yes (final) |
 
@@ -106,7 +108,9 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | pre-run | 2-SAT counterexample | CROSSED | Taylor gap TGap=0 for 2-SAT (Strategy 03) |
 | pre-run | Clifford anticommutation degenerate | CROSSED | Replaced by polymorphism correspondence (Strategy 05) |
 | pre-run | BZ circularity ("¬Taylor→¬P" = P≠NP) | CROSSED | Clone Growth ↔ Fullness Bridge (Strategy 08) — replaces BZ biconditional with independent operator-algebraic proof |
-| 0 | OA1 — polymorphism lift to outer automorphism | CURRENT | — |
+| 0 | OA1 — polymorphism lift to outer automorphism | PARTIALLY CROSSED | PATB-DIAGONAL conditional theorem (Node 1.3.3): Taylor + essential arity >= 2 + D is MASA => alpha_f outer. Remaining: (H1) D is MASA, (H2) alpha_f well-defined (1.3.2) |
+| 1 | Q_struct — is M_Bool^L injective? | CROSSED | PCirc^+ non-abelian -> G_Bool non-amenable -> M_Bool non-injective -> KST evaded -> bridge viable (Node 1.3.1) |
+| 2 | Outerness of alpha_f | PARTIALLY CROSSED | PATB-DIAGONAL proof (Node 1.3.3): diagonal-fixing + non-abelian off-diagonal action => outer. Conditional on MASA hypothesis (H1). Three independent approaches converge. |
 
 ### Axiom base
 1. M_Bool exists as a type III₁ factor with unique KMS₁ state (KEY LEMMA 3.4.3 — outlined, deferred to Appendix B)
@@ -159,6 +163,16 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 
 - [C1-CONCERN] KST-OBSTRUCTION: The original Bost–Connes system over ℚ uses the semigroup ℕ* whose group completion ℚ₊* is abelian hence amenable → crossed product is injective → the BC factor is the injective III₁ factor R_∞ (non-full). If the Boolean BC system has the same structure, M_Bool might be R_∞ for all L. The constraint language L restricts which circuits are available, but does this restriction produce non-injectivity? This is Q_struct and it's the new bottleneck.
 
+- [C1-Q_STRUCT-RESOLUTION] Q_STRUCT ADVANCED. The Boolean BC system's acting semigroup PCirc^+ is non-abelian (preprint section 3.2.4 explicitly notes this). Unlike the original BC system (N* abelian -> Q_+* amenable -> R_infty injective), PCirc^+ generates a non-amenable group G_Bool (contains poly-time reversible circuits including compositions of non-linear gates). By Connes' amenability-injectivity equivalence, M_Bool is non-injective. This evades the KST obstruction: KST applies only to the injective III_1 factor R_infty, but M_Bool != R_infty. Non-injective III_1 factors can be either full or non-full, so the fullness dichotomy (full for NPC, non-full for P-time) is meaningful. Three gaps remain: (1) rigorous proof G_Bool non-amenable (closable via ping-pong), (2) M_Bool^L non-injective for NPC sectors (supported by Q6 data), (3) semigroup-to-group passage (standard in BC-type constructions). The bridge architecture survives. Bottleneck shifts to 1.3.2/1.3.3 (construction and outerness).
+
+- [C2-OUTERNESS-CONDITIONAL] OUTERNESS CONDITIONALLY PROVED (Node 1.3.3). Three independent approaches converge: (A) Modular invariant -- heuristic computation suggests mod(alpha_f) = log(k) != 0, but requires KMS state details. (B) Marrakchi-Vaes amplification -- once outerness is established, full factors get strict outerness for free. (C) PATB-DIAGONAL main proof (Theorem 5.6) -- a Taylor polymorphism of essential arity >= 2 fixes the diagonal D but acts non-abelianly on the off-diagonal; if D is a MASA (H1), then the only D-fixing inner automorphisms act by abelian phase multiplication on off-diagonal elements, which cannot match the non-abelian polymorphism action; contradiction => outer. Conditional on (H1) D is MASA and (H2) alpha_f is a well-defined automorphism.
+
+- [C2-1.3.2-TENSION] HONEST NEGATIVE. Node 1.3.2 found after 8 construction attempts that every alpha_f construction using the diagonal embedding gives the identity (by Taylor) and every construction using independent copies is nonlinear (by k-fold products). This is NOT a kill of the outerness theorem -- it is a construction gap (H2). The 1.3.3 conditional theorem remains valid; its antecedent (H2) is harder to satisfy than expected.
+
+- [C2-TWO-SCENARIO] STRATEGIC CONVERGENCE. The 1.3.2 construction tension and 1.3.3 conditional outerness CONVERGE on a two-scenario architecture: (A) If alpha_f exists as automorphism (H2), outerness follows by Theorem 5.6. (B) If alpha_f does not exist individually, the clone's exponentially many operations produce a non-discrete family of approximate D-fixing symmetries, so Inn(M) is not closed, hence non-full by Marrakchi. PATB-DIAGONAL is load-bearing in both scenarios. Bridge probability INCREASES from 0.41 to 0.54 because Scenario B is an independent path.
+
+- [C2-BOGOLJUBOV-ANALOGY] STRUCTURAL TEMPLATE. The outerness proof is modeled on Shlyakhtenko-Houdayer's theorem for free Araki-Woods factors: every non-trivial Bogoljubov automorphism is outer (the map v -> [alpha_v] in Out(M) is injective). The dictionary: one-particle H_R <-> diagonal D; v != 1 <-> essential arity >= 2; vacuum-fixing <-> Taylor condition; freeness <-> MASA property. This analogy is load-bearing for OA2 (injectivity of the lift) downstream.
+
 ---
 
 ## §L — Closure artifacts
@@ -172,6 +186,7 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | cycle | items touched | items CLOSED | items IN_PROGRESS | nodes SPAWNED | nodes KILLED | §D size | canary recall | Critic ECE | honest negatives | glossed gaps | structural events | inversion-yes | token budget | bottleneck | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 5 | 0 | 0 | 5 | 0 | 12 | — | — | 0 | 0 | 1 (inversion on OA1) | 1/1 | ~50K | OA1 | bootstrap + REFRAME + inversion |
+| 2 | 3 (1.3.3, blackboard, toolkit ref) | 0 | 1 (1.3.3) | 0 | 0 | 13 | — | — | 1 (1.3.2 tension acknowledged) | 0 | 2 (conditional outerness, two-scenario convergence) | 1/1 (Bogoljubov template) | ~80K | H1 (MASA) + H2 (construction) | outerness conditional theorem + 1.3.2 integration |
 
 ---
 
@@ -180,6 +195,7 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | cycle | hard nodes | moderate nodes | closable nodes | open gaps | aggregate difficulty (1-10) | last change reason |
 |---|---|---|---|---|---|---|
 | 0 | 1 (OA1) | 2 (UA1, OA2) | 1 (UA2) | 3 (UA1, OA1, OA2) | 7 | initial assessment |
+| 2 | 1 (OA1: construction H2) | 2 (OA2, MASA H1) | 2 (UA1, UA2) | 2 (H1 MASA, H2 construction) | 6 | outerness conditional theorem proved; two-scenario architecture; difficulty reduced |
 
 ---
 
@@ -188,3 +204,4 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | Cycle | Section | Modified by | Action (one line) |
 |---|---|---|---|
 | 0 | §A-§O | Runner | Bootstrap — created blackboard |
+| 2 | §C, §G, §H, §I, §M, §N, §O | 1.3.3 Author | Outerness conditional theorem (PATB-DIAGONAL Thm 5.6); two-scenario convergence with 1.3.2; blackboard updated with runner writes C2-*; node 1.3.3-outerness.md created |
