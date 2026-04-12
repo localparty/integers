@@ -548,6 +548,26 @@ They meet at invocation time.*
 
 *The ORA runs autonomously. The runner dispatches all open leads in parallel and cycles until programme-close. "Should I continue?" is a banned phrase.*
 
+## [2026-04-12] ORA v8 — EFFORT LEVELS BAKED IN
+
+**Problem observed**: every invocation required an external effort configuration block (15-20 lines specifying which roles get max effort). The P vs NP run file (`strategy/27--cp-1-verification-run.md`) had to say "assign /effort max for REFRAME, wall-attacking Authors, wall-attacking Critics, Meta-critic, Synthesis." This configuration was the same in principle across runs — it always mapped to "wall-attacking work gets max." Repeating it per invocation is both error-prone and unnecessary.
+
+**What changed:**
+- `01-the-prompt.md` §10.2 effort table: three universal bumps (REFRAME, Meta-critic, Synthesis: high → max) plus two conditional bumps (Author and Critic on bottleneck-engaging nodes: medium → max). Non-bottleneck nodes stay at medium. Notes and Reconcile stay at low/medium.
+- `01-the-prompt.md` §5.1 REFRAME: `effort=high` → `effort=max`.
+- `01-the-prompt.md` §5.3 Research: effort default now conditional on `engages-bottleneck` field in §G.
+- `01-the-prompt.md` §5.4 Critique: same conditional.
+- `01-the-prompt.md` §5.7 Synthesis: `effort=high` → `effort=max`.
+- `01-the-prompt.md` §6.1 Author spawn template: effort level now reads from §G metadata.
+- `01-the-prompt.md` §6.2 Critic spawn template: same.
+- `01-the-prompt.md` §6.3 Meta-critic: always max, noted explicitly.
+
+**The classification is free**: `engages-bottleneck: yes/no` is already in the §G node metadata from Plan. The runner does not classify — it reads what it already maintains. No new classification step, no lookup table, no conditional logic beyond one field check.
+
+**Empirical grounding**: (a) H4 closure R.D.1 WEAKENED at medium Critic effort → revision sub-cycle cost, (b) P vs NP invocation required 15 lines of external effort configuration, (c) the principle "wall-attacking work gets max" applied identically across both runs.
+
+*The invocation file no longer needs effort configuration. The ORA knows where to spend tokens.*
+
 ---
 
 *End of `08-changelog.md`. The v6 patches (I-v6-1 through I-v6-5) track in-run failures. The v8 entries track structural upgrades. I-v6-3 → I-v6-4 → I-v6-5 is a three-step convergence: (3) added a checklist, (4) made it mechanical, (5) killed the optimization entirely. The v8 autonomous-operation fix follows the same pattern: the intent was always there (§11.5, Sig 18), but the runner still asked — so make the instruction impossible to miss.*
