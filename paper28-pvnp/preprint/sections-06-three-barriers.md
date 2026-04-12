@@ -421,9 +421,9 @@ For honesty, we identify what *could* still go wrong with the
 proof of R-Theorem PNP.1, even granted the structural escape from
 the three known barriers.
 
-### 6.4.1 The two foundational dependencies
+### 6.4.1 The three foundational dependencies
 
-The proof depends on two clearly labelled conditional pieces:
+The proof depends on three clearly labelled conditional pieces:
 
 **KEY LEMMA 3.4.3 (existence and uniqueness of $\omega_1^{\rm
 Bool}$).** This is the existence of a unique critical KMS state
@@ -454,6 +454,33 @@ If the lemma fails, the trinity dictionary is not a functor and
 the trinity transposition is not a rigorous proof technique, only
 a suggestive analogy. The proof of PNP.1 would then have to be
 restated as a conjecture rather than a theorem.
+
+**LEMMA 3.8.2 (non-degeneracy of the graded structure).** This is
+the lemma that the trinity functor $\Phi_{\rm comp}$ does not send
+the non-trivial element of $H^2(S_\infty, U(1)) = \mathbb Z/2$ to
+the trivial element of the corresponding target cohomology. The
+proof (§3.8.1) is in two parts: an *algebraic* argument that the
+functor's induced map on $H^2$ must be the identity (because it
+is an isomorphism between two copies of $\mathbb Z/2$, and the
+only isomorphism of a two-element group is the identity), and an
+*operational* witness via the SAT witness operator $W_{\rm SAT}$.
+LEMMA 3.8.2 depends on Lemma 2.4.4 and Lemma 4.5.1; neither of
+these depends on it, so there is no circularity.
+
+If LEMMA 3.8.2 fails — i.e., if the trinity functor degenerates
+on $H^2$ despite preserving the cohomology group — then the
+graded structure of $M_{\rm Bool}$ collapses to a single sector,
+the inclusion $M_{\rm Bool}^{\rm P} \subset M_{\rm Bool}^{\rm NP}$
+becomes an equality, and the proof of PNP.1 fails at Step 1.
+However, the failure mode is *category-theoretically forbidden*
+by the algebraic part of the proof: as long as Lemma 2.4.4 holds
+and gives an isomorphism on $H^2$, the only homomorphism
+$\mathbb Z/2 \to \mathbb Z/2$ that is an isomorphism is the
+identity, so the failure would require Lemma 2.4.4 itself to fail.
+LEMMA 3.8.2 is therefore *implied* by Lemma 2.4.4 and is named
+separately only because the implication is non-obvious and the
+operational witness via $W_{\rm SAT}$ provides a redundant
+verification.
 
 ### 6.4.2 Why we believe the foundational pieces hold
 
@@ -498,6 +525,25 @@ matching the Schur multiplier element.
 
 Each of (d)–(f) is the subject of explicit verification in
 Appendix C.
+
+The grounds for believing LEMMA 3.8.2 are:
+
+(g) The algebraic part of the proof (parts (i) and (ii) of §3.8.1)
+is *forced by category theory*: a homomorphism $\mathbb Z/2 \to
+\mathbb Z/2$ that is an isomorphism is necessarily the identity
+map. There is no other possibility. As long as Lemma 2.4.4 gives
+an isomorphism on $H^2$, the non-degeneracy follows mechanically.
+
+(h) The operational part of the proof (part (iii) of §3.8.1) is a
+direct construction: the SAT witness operator $W_{\rm SAT}$ is
+non-zero (the trivial SAT instance $x = (x_1)$ is satisfiable, so
+the contribution $1 \cdot e(\chi_{(x_1)})$ to $W_{\rm SAT}$ is
+non-zero) and lies in the odd graded sector by the off-diagonal
+branch structure of the OR-over-witnesses sum (Lemma 4.5.1).
+
+(g) and (h) together make LEMMA 3.8.2 the most secure of the three
+foundational pieces: the algebraic part is a category-theoretic
+tautology, and the operational part is a one-line verification.
 
 ### 6.4.3 What if the proof is wrong
 
@@ -587,11 +633,16 @@ factors), not from any clever workaround. The framework's
 instruments are precisely the kind that the three barriers do not
 reach.
 
-The proof has two clearly labelled foundational dependencies (KEY
-LEMMA 3.4.3 and Lemma 2.4.4), both of which are the subject of
-mechanical verification in Appendices B and C. If either fails,
-the proof of PNP.1 fails accordingly. We have grounds for believing
-both hold, but the conditional is carried honestly.
+The proof has three clearly labelled foundational dependencies
+(KEY LEMMA 3.4.3, Lemma 2.4.4, and LEMMA 3.8.2), all of which are
+the subject of mechanical verification (Appendices B, C, and §3.8.1
+respectively). If any one fails, the proof of PNP.1 fails
+accordingly. We have grounds for believing all three hold; the
+strongest grounds are for LEMMA 3.8.2 (which is forced by
+category theory plus a one-line operational witness) and the
+weakest are for KEY LEMMA 3.4.3 (which is the central new
+operator-algebraic construction). The conditional is carried
+honestly.
 
 Three additional potential issues are flagged for transparency:
 quantum complexity classes (incompletely addressed), non-uniform

@@ -73,7 +73,12 @@
 | **3.5 The Boolean GNS factor `M_Bool`** | The GNS construction at `ω_1^Bool` yields a type III₁ factor `M_Bool := π_1^Bool(𝒜_BC^Bool)''`, by the same Connes spectrum argument as in CBB. This is the operator-algebraic home of computation | The factor | new + Paper 23 §2.4 |
 | **3.6 The Boolean Riemann subspace `H_R^Bool`** | Define `H_R^Bool` as the closed span of eigenvectors of the Boolean entropy operator `S_BC^Bool := -log Δ_{ω_1^Bool}`. Conjecturally, the spectrum on `H_R^Bool` is the same set `{γ_n · π²/2}` as in CBB, justified by the functoriality of the trinity dictionary (Lemma 2.4). [CONJECTURE — the proof would constitute a Hilbert–Pólya statement for the Boolean BC system] | The spectral core | CONJECTURE — possibly equivalent to RH itself |
 | **3.7 The Boolean CBB quintuple `𝒞_comp`** | Definition: `𝒞_comp := (H_R^Bool, R̂_Bool, ω_1^Bool, M_comp, {β_k^Bool})`, where `R̂_Bool = exp(S_BC^Bool · π²/2)`, `M_comp` is the Boolean analog of the geometric moduli space (the configuration space of polynomial-time circuits), and `{β_k^Bool}` is the Boolean bridge family at `k ∈ {2, 3, 4, 6}` | The five-tuple | new + Paper 23 §4.1 |
-| **3.8 Functorial equivalence** | [LEMMA] The trinity dictionary functor maps the CBB quintuple `𝒞` to `𝒞_comp` componentwise, preserving all cohomological invariants. In particular, `H²(S_n, U(1))` is preserved as the obstruction class | Why the construction is forced | LEMMA — direct from §2.4 |
+| **3.8 Functorial equivalence** | [LEMMA 3.8.1] The trinity dictionary functor maps the CBB quintuple `𝒞` to `𝒞_comp` componentwise, preserving all cohomological invariants. In particular, `H²(S_n, U(1))` is preserved as the obstruction class | Why the construction is forced | LEMMA — direct from §2.4 |
+| **3.8.1 Non-degeneracy corollary** | [LEMMA 3.8.2] The trinity functor `Φ_comp` does not send the non-trivial element of `H²(S_∞, U(1)) = ℤ/2` to the trivial element. The functor's induced map on `H²` is the *identity*, not just a homomorphism preserving the group. Operationally witnessed by `W_SAT ≠ 0` in the odd sector | Closes the gap between formal and operational preservation of cohomology | LEMMA — algebraic part forced by category theory; operational part by Lemma 4.5.1 |
+| **3.8.2 Why necessary** | Without LEMMA 3.8.2, R-Theorem PNP.1 would be vulnerable to the objection that `Φ_comp` could trivialise the cocycle while preserving the cohomology group. The lemma rules this out at two levels: algebraically (forced by category theory) and operationally (witnessed by `W_SAT`) | The technical gap that 3.8.2 closes | new (G, 2026-04-11) |
+| **3.8.3 Cocycle computation** | [LEMMA 3.8.3] The action of `S_n` on `W_SAT` realises the non-trivial element of `H²(S_n, U(1)) = ℤ/2`. The proof reduces to the anticommutation `{W_SAT, W_coSAT} = 0` (Clifford relation, Lemma 4.5.1), which generates the `ℤ/2` cocycle, then inflates to `H²(S_n)` via the inclusion `ℤ/2 → S_n` | Makes the "branch structure → odd sector" argument into a calculation | new (G, 2026-04-11): "the branch structure to the odd sector argument needs a cocycle computation" |
+| **3.8.4 SAT vs TAUT discrimination** | [LEMMA 3.8.4] `W_SAT` and `W_TAUT` are distinct operators, both in the odd graded sector, related by the De Morgan involution `θ : φ → ¬φ` lifted to an automorphism of `M_Bool` preserving the grading. PNP.1 establishes `P ≠ NP` and `P ≠ coNP` as a single fact, but does *not* establish `NP ≠ coNP` (which would need a finer cohomological separation) | Fixes the precise scope of PNP.1 and provides two independent operational witnesses for non-degeneracy | new (G, 2026-04-11): "we need to add a lemma that discriminates SAT from TAUT" |
+| **3.8.5 What the discrimination resolves** | The scope of PNP.1: separates P from both NP and coNP via a single `ℤ/2` obstruction, but does not separate NP from coNP, which would need a `ℤ/4` or larger obstruction | Honest scope statement | new (G, 2026-04-11) |
 
 ---
 
@@ -192,13 +197,35 @@ the explicit proof of R-Theorem PNP.1.
 Rigor labels in this TOC:
 - [THEOREM] ×2: PNP.1 (§4.4), PNP.2 (§5.4)
 - [KEY LEMMA] ×1: existence/uniqueness of `ω_1^Bool` (§3.4)
-- [LEMMA] ×2: trinity dictionary functoriality (§2.4), order-counting
-  ↔ complexity hierarchy (§5.2)
+- [LEMMA] ×6: trinity dictionary functoriality 2.4.4 (§2.4),
+  functorial equivalence 3.8.1 (§3.8), **non-degeneracy 3.8.2
+  (§3.8.1)** [NEW 2026-04-11], **cocycle computation 3.8.3
+  (§3.8.3)** [NEW 2026-04-11], **SAT vs TAUT discrimination
+  3.8.4 (§3.8.4)** [NEW 2026-04-11], order-counting ↔ complexity
+  hierarchy 5.2.1 (§5.2)
 - [CONJECTURE] ×1: spectral identification of `H_R^Bool` (§3.6) —
   possibly equivalent to RH for the Boolean BC system
 
 The proof of PNP.1 (§4.5) is the central new content. Everything
-else is recognition + transposition + cross-check.
+else is recognition + transposition + cross-check. **Three
+technical lemmas were added 2026-04-11 after G observed gaps in
+the first draft:**
+
+- **LEMMA 3.8.2** (non-degeneracy) closes the gap that PNP.1
+  implicitly relied on the trinity functor preserving specific
+  cohomology *elements*, not just cohomology *groups*.
+- **LEMMA 3.8.3** (cocycle computation) makes the "branch
+  structure → odd sector" argument into an explicit calculation
+  via the inflation $H^2(\mathbb Z/2) \to H^2(S_n)$ applied to
+  the Clifford cocycle.
+- **LEMMA 3.8.4** (SAT vs TAUT discrimination) fixes the precise
+  scope of PNP.1: P ≠ NP and P ≠ coNP as a single fact, but
+  *not* NP ≠ coNP.
+
+The three new lemmas form an internal cross-check pattern: each
+adds a layer of explicit verification for what was previously
+implicit, in keeping with the framework's discipline of two or
+more independent confirmations for every load-bearing claim.
 
 ---
 

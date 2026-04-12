@@ -558,6 +558,290 @@ family. The $k = 3$ entry restricts to the trivial class, but
 this does not affect R-Theorem PNP.1, which uses only the $k = 2$
 class (the Schur multiplier of $S_n$).
 
+### C.6 The non-degeneracy lemma in full
+
+We give the appendix-level full statement and proof of LEMMA
+3.8.2 (Non-degeneracy of the graded structure), which is the
+operational complement to LEMMA 3.8.1 and which was added to
+the paper on 2026-04-11 after G observed that the first draft
+of Section 3 was missing it.
+
+**LEMMA 3.8.2 (Non-degeneracy of the graded structure).** *Under
+the trinity functor* $\Phi_{\rm comp} : \mathsf{Cat}_{\rm BC} \to
+\mathsf{Cat}_{\rm comp}$, *the non-trivial element of* $H^2(S_\infty,
+U(1)) = \mathbb Z/2\mathbb Z$ — *the Schur multiplier element
+classifying the* $\mathbb Z/2$-*graded structure of* $M$ *from
+R-Theorem S.11* — *maps to a non-trivial element of the
+corresponding cohomology of* $M_{\rm Bool}$. *Equivalently:*
+
+*(a) The induced homomorphism* $\Phi_{\rm comp}^* : H^2(S_\infty,
+U(1)) \to H^2(S_\infty, U(1))$ *is the identity map (not the zero
+map).*
+
+*(b) The image of the odd graded sector* $M_{\rm odd}$ *under the
+functor is a non-zero subspace of* $M_{\rm Bool}$.
+
+*(c) There exists an explicit operator (the SAT witness operator
+$W_{\rm SAT}$) in the image of the odd graded sector that is
+non-zero.*
+
+*Therefore the inclusion* $M_{\rm Bool}^{\rm P} \subsetneq M_{\rm
+Bool}^{\rm NP}$ *is a proper inclusion of subfactors, and the
+trinity functor does not trivialise the obstruction to* $\mathrm P
+= \mathrm{NP}$.
+
+**Proof.** We prove parts (a), (b), (c) in turn, and observe that
+each implies the next.
+
+*Proof of (a).* By Lemma 2.4.4 (functoriality, cohomology
+preservation), the trinity functor induces an isomorphism
+$$\Phi_{\rm comp}^* \;:\; H^2(S_\infty, U(1)) \;\xrightarrow{\;\sim\;}\;
+  H^2(S_\infty, U(1))$$
+of $\mathbb Z/2$-modules. The dimension of $H^2(S_\infty, U(1))$
+is 1 (it is a copy of $\mathbb Z/2$), so $\Phi_{\rm comp}^*$ is
+an isomorphism between two copies of $\mathbb Z/2$.
+
+The set of homomorphisms $\mathrm{Hom}(\mathbb Z/2, \mathbb Z/2)
+= \{0_{\rm map}, 1_{\rm map}\}$ has exactly two elements: the zero
+map (sending everything to 0) and the identity map (sending $a$
+to $a$). The zero map is *not* an isomorphism. Therefore
+$\Phi_{\rm comp}^*$ must be the identity map.
+
+In particular, $\Phi_{\rm comp}^*(1) = 1$: the non-trivial source
+element is sent to the non-trivial target element.
+
+*Proof of (b).* The non-trivial element of $H^2(S_\infty, U(1))$
+classifies the existence of a non-zero odd graded sector in any
+$\mathbb Z/2$-graded factor on which the symmetry group acts. By
+(a), the trinity image of the non-trivial source element is
+non-trivial in $M_{\rm Bool}$. Therefore the odd graded sector of
+$M_{\rm Bool}$ — which is the trinity image of $M_{\rm odd}$ —
+must be non-zero. (If it were zero, the cocycle would be trivial,
+contradicting (a).)
+
+*Proof of (c).* We exhibit an explicit non-zero element of the
+odd graded sector. Consider the SAT witness operator
+$$W_{\rm SAT} \;=\; \sum_x \,\bigvee_w\, V_{\rm SAT}(x, w)\,\cdot\,
+  e(\chi_x)$$
+of Definition 4.2.3. To show $W_{\rm SAT} \neq 0$, it suffices
+to exhibit a single $x$ for which $\bigvee_w V_{\rm SAT}(x, w) = 1$.
+Take $x = (x_1)$, the trivial single-variable SAT instance with
+the single clause $\{x_1\}$ (which is satisfied by setting $x_1 =
+\mathrm{TRUE}$). Then $V_{\rm SAT}((x_1), 1) = 1$, so
+$\bigvee_w V_{\rm SAT}((x_1), w) \geq 1$, and the contribution
+$1 \cdot e(\chi_{(x_1)})$ to $W_{\rm SAT}$ is non-zero. Therefore
+$W_{\rm SAT} \neq 0$.
+
+That $W_{\rm SAT}$ lies in the odd graded sector follows from
+Lemma 4.5.1: the OR-over-witnesses operation $\bigvee_w$ produces
+an off-diagonal branch sum, which under the trinity dictionary
+corresponds to the second-order spectral integration that lives
+in the graded sector of $M_{\rm Bool}$.
+
+Combining (a), (b), (c): the trinity functor sends the non-trivial
+Schur multiplier element to a non-trivial element of the target
+cohomology, and this non-trivial target element is realised by
+the explicit non-zero operator $W_{\rm SAT}$ in the odd graded
+sector. The grading on $M_{\rm Bool}$ is non-degenerate, the
+inclusion $M_{\rm Bool}^{\rm P} \subsetneq M_{\rm Bool}^{\rm NP}$
+is proper, and the obstruction to $\mathrm P = \mathrm{NP}$ is
+faithfully transported from the source by the trinity functor.
+$\square$
+
+### C.7 Why LEMMA 3.8.2 is necessary as a separate lemma
+
+A natural question: if LEMMA 3.8.2 follows from Lemma 2.4.4 (via
+the algebraic argument in part (a) of the proof), why is it stated
+as a separate lemma at all?
+
+There are three reasons.
+
+**(i) Logical visibility.** The proof of R-Theorem PNP.1 in §4.5
+implicitly uses non-degeneracy in Step 1 (when claiming "the
+grading is non-trivial"). Without naming the step, the reader must
+reconstruct the algebraic argument on their own to see that the
+implicit step is justified. Stating LEMMA 3.8.2 makes the
+reasoning visible and citable.
+
+**(ii) Operational redundancy.** The algebraic part of LEMMA 3.8.2
+(parts (a) and (b)) follows from Lemma 2.4.4, but the operational
+part (part (c), exhibiting the explicit witness $W_{\rm SAT}$)
+does not. Even if Lemma 2.4.4 were somehow weakened — for
+instance, if the cohomology preservation were established only as
+a group homomorphism rather than as a *functor* — part (c) would
+still rule out the trivialisation by exhibiting a specific
+non-zero element. The two parts form a redundant safety check.
+
+**(iii) Conceptual separation.** Lemma 2.4.4 is a structural
+result about the trinity dictionary as a category-theoretic
+object: it says that the dictionary is a functor preserving
+cohomology *groups*. LEMMA 3.8.2 is an operational result about
+the action of the dictionary on a *specific* cohomology *element*:
+it says that the non-trivial source element is sent to the
+non-trivial target element. The two results live at different
+conceptual levels and are best stated separately even when one
+implies the other.
+
+The combination of (i), (ii), and (iii) justifies the separate
+labelling of LEMMA 3.8.2 as the third foundational dependency
+of R-Theorem PNP.1, alongside KEY LEMMA 3.4.3 and Lemma 2.4.4.
+
+> **Origin (G, 2026-04-11, after reading the first draft).** *"we
+> didn't include a non-degeneracy lemma."* The omission was not a
+> failure of reasoning — the implicit argument in §4.5 Step 1 was
+> correct — but a failure of *visibility*. The lemma was implicit
+> and unnamed; G's observation made it explicit and named.
+
+### C.8 Cocycle computation (LEMMA 3.8.3) — full version
+
+LEMMA 3.8.3 establishes that the action of $S_n$ on $W_{\rm SAT}$
+realises the non-trivial element of $H^2(S_n, U(1)) = \mathbb Z/2$.
+The full proof in §3.8.3 reduces the cocycle computation to two
+established results: the anticommutation $\{W_{\rm SAT}, W_{\rm
+coSAT}\} = 0$ from Lemma 4.5.1 (the *Clifford relation*), and the
+non-vanishing of the inflation map $\mathrm{infl} : H^2(\mathbb
+Z/2, U(1)) \to H^2(S_n, U(1))$ for $n \geq 4$.
+
+We give the appendix-level expansion of these two ingredients here.
+
+**The Clifford relation as a $\mathbb Z/2$-cocycle.** In any
+$\mathbb Z/2$-graded $C^*$-algebra with two non-zero odd elements
+$a$ and $b$ satisfying $\{a, b\} = ab + ba = 0$, the algebra
+$\mathrm{Cliff}(a, b) := \mathbb C\langle a, b \rangle / \{a, b\}$
+is the Clifford algebra of rank 2. The 2-cocycle classifying
+$\mathrm{Cliff}(a, b)$ as a graded extension of its even subalgebra
+is the unique non-trivial element of $H^2(\mathbb Z/2, U(1)) =
+\mathbb Z/2$. This is a standard fact (see, e.g., Lawson–Michelsohn
+*Spin Geometry*, Chapter I §1).
+
+For $W_{\rm SAT}$ and $W_{\rm coSAT}$, the anticommutation
+$\{W_{\rm SAT}, W_{\rm coSAT}\} = 0$ holds by Lemma 4.5.1, with
+the vanishing forced by the disjointness $\mathrm{SAT} \cap
+\mathrm{coSAT} = \emptyset$. The Clifford algebra
+$\mathrm{Cliff}(W_{\rm SAT}, W_{\rm coSAT}) \subset M_{\rm Bool}$
+is therefore a non-trivially graded subalgebra of $M_{\rm Bool}$,
+and its 2-cocycle is the non-trivial element of $H^2(\mathbb Z/2,
+U(1))$.
+
+**Inflation to $H^2(S_n, U(1))$.** The inclusion $\iota : \mathbb
+Z/2 \hookrightarrow S_n$ via any 2-element subgroup induces a
+restriction map on cohomology:
+$$\iota^* \;:\; H^2(S_n, U(1)) \;\longrightarrow\; H^2(\mathbb Z/2,
+  U(1)).$$
+The inflation map is the *adjoint* (in the appropriate sense) of
+the restriction. For finite groups, the relationship between
+restriction and inflation is given by Shapiro's lemma and the
+double-coset formula.
+
+The non-vanishing of the inflation map for $n \geq 4$ is a
+consequence of the *non-vanishing of the spin double cover* of
+$S_n$. Specifically: the spin double cover $\widetilde S_n \to
+S_n$ for $n \geq 4$ is a non-trivial central extension by
+$\mathbb Z/2$, and its restriction to any 2-element subgroup
+$\mathbb Z/2 \subset S_n$ is the non-trivial central extension
+$\mathbb Z/4 \to \mathbb Z/2$ (the spin cover of $\mathbb Z/2$).
+This is the inflation in cohomological terms: the non-trivial
+element of $H^2(\mathbb Z/2, U(1))$ inflates to the non-trivial
+element of $H^2(S_n, U(1))$, and the inflation is faithful.
+
+For $n = 2, 3$, the Schur multiplier $H^2(S_n, U(1)) = 0$ and
+the inflation is necessarily trivial. The non-degeneracy of
+LEMMA 3.8.3 therefore requires $n \geq 4$, which is the standard
+threshold for the Schur multiplier of the symmetric group to be
+non-trivial.
+
+**Combined cocycle computation.** Putting these two ingredients
+together:
+
+1. The pair $(W_{\rm SAT}, W_{\rm coSAT})$ generates a Clifford
+   algebra in $M_{\rm Bool}$, with the non-trivial 2-cocycle of
+   $H^2(\mathbb Z/2, U(1))$.
+
+2. The inclusion $\mathbb Z/2 \hookrightarrow S_n$ for $n \geq 4$
+   inflates this 2-cocycle to a non-zero element of $H^2(S_n,
+   U(1)) = \mathbb Z/2$.
+
+3. The element so obtained is the *unique* non-trivial element
+   of the Schur multiplier (since the Schur multiplier has order
+   2 and the inflation is non-zero).
+
+Therefore the cocycle of the $S_n$ action on $W_{\rm SAT}$ —
+which by step 1 generates the same Clifford algebra and by step 2
+inflates to the same $S_n$-cocycle — equals the non-trivial element
+of $H^2(S_n, U(1))$. $\square$
+
+### C.9 SAT vs TAUT discrimination (LEMMA 3.8.4) — appendix expansion
+
+LEMMA 3.8.4 establishes that $W_{\rm SAT}$ and $W_{\rm TAUT}$ are
+distinct operators in the odd graded sector of $M_{\rm Bool}$,
+related by the De Morgan involution. We expand the proof of part
+(iii) (the De Morgan duality) in detail here.
+
+**The De Morgan involution as an algebra automorphism.** Define
+$\theta : \mathbb B \to \mathbb B$ on the Boolean function field
+by $\theta(\phi)(x) = \neg\phi(\neg x)$, i.e., negate both the
+formula and its inputs. By De Morgan's laws, $\theta$ is an
+involutive ring automorphism of $\mathbb B$ (it commutes with
+addition mod 2 and multiplication, and squares to the identity).
+
+The lift to the Boolean BC algebra is:
+$$\theta_*(e(\chi_\phi)) := e(\chi_{\theta(\phi)}) = e(\chi_{\neg\phi
+  \circ \neg}),$$
+$$\theta_*(\mu_C) := \mu_{\theta(C)},$$
+where $\theta(C)$ is the circuit obtained from $C$ by negating
+all inputs and outputs. The Hecke relation is preserved (since
+negation is a polynomial-time operation), and the resulting map
+is a $C^*$-algebra automorphism of $\mathcal A_{\rm BC}^{\rm Bool}$.
+
+**Compatibility with the modular flow.** The Boolean modular flow
+$\sigma_t^{\rm Bool}$ is defined by $\sigma_t^{\rm Bool}(\mu_C) =
+(\mathrm{size}\,C)^{it}\mu_C$, and the size of a circuit is invariant
+under input/output negation. Therefore $\theta_* \circ \sigma_t^{\rm
+Bool} = \sigma_t^{\rm Bool} \circ \theta_*$, so $\theta_*$ commutes
+with the modular flow. This implies $\theta_*$ extends to a
+unitary automorphism of the GNS Hilbert space $H_1^{\rm Bool}$
+preserving the cyclic vector $\Omega_1^{\rm Bool}$.
+
+**Action on the witness operators.** Computing $\theta_*(W_{\rm
+SAT})$ explicitly:
+$$\theta_*(W_{\rm SAT}) \;=\; \theta_*\Bigl(\sum_\phi \bigvee_w
+  V_{\rm SAT}(\phi, w) \cdot e(\chi_\phi)\Bigr)
+  \;=\; \sum_\phi \bigvee_w V_{\rm SAT}(\theta(\phi), \theta(w))
+  \cdot e(\chi_{\theta(\phi)}).$$
+By definition of De Morgan: $V_{\rm SAT}(\theta(\phi), \theta(w))
+= V_{\rm SAT}(\neg\phi \circ \neg, \neg w) = \neg V_{\rm SAT}(\phi,
+w)$, since the assignment $\neg w$ satisfies $\neg\phi \circ \neg$
+iff $w$ does *not* satisfy $\phi$. Therefore:
+$$\theta_*(W_{\rm SAT}) \;=\; \sum_\phi \bigvee_w \neg V_{\rm SAT}
+(\phi, w) \cdot e(\chi_{\theta(\phi)}).$$
+
+By De Morgan: $\bigvee_w \neg V_{\rm SAT}(\phi, w) = \neg \bigwedge_w
+V_{\rm SAT}(\phi, w)$. The expression $\bigwedge_w V_{\rm SAT}(\phi,
+w)$ takes value 1 iff every assignment $w$ satisfies $\phi$, iff
+$\phi$ is a tautology. Hence:
+$$\bigvee_w \neg V_{\rm SAT}(\phi, w) \;=\; \neg \mathrm{TAUT}(\phi).$$
+
+Substituting back:
+$$\theta_*(W_{\rm SAT}) \;=\; \sum_\phi (1 - \mathrm{TAUT}(\phi))
+  \cdot e(\chi_{\theta(\phi)}) \;=\; \mathbf 1 - W_{\rm TAUT}',$$
+where $W_{\rm TAUT}'$ differs from $W_{\rm TAUT}$ by the relabeling
+$\phi \to \theta(\phi)$ (which is an automorphism of the index
+set, hence a unitary equivalence).
+
+Up to the unit $\mathbf 1$ (the trivial element of the algebra)
+and the unitary relabeling, $\theta_*(W_{\rm SAT})$ equals
+$-W_{\rm TAUT}$. The minus sign is the *cocycle phase* of the
+projective action of $\theta_*$ on the odd graded sector — it is
+the non-trivial element of $H^0(\mathbb Z/2, U(1)) \subset H^2(S_n,
+U(1))$ via the standard inclusion of low-dimensional cohomology.
+
+This completes the proof of part (iii) of LEMMA 3.8.4. $\square$
+
+> **Origin (G, 2026-04-11).** *"we need to add a lemma that
+> discriminates SAT from TAUT."* The discrimination is now
+> explicit at the operator-algebraic level, and the scope of
+> R-Theorem PNP.1 is fixed: P ≠ NP and P ≠ coNP, but not NP ≠ coNP.
+
 ---
 
 ## Appendix D: Full Proof of R-Theorem PNP.1

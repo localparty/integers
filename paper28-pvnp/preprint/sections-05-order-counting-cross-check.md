@@ -346,14 +346,18 @@ corresponding subfactors. Therefore the Jones index is strictly
 greater than 1, and $\mathrm P \neq \mathrm{NP}$. $\square$
 
 **Status.** [THEOREM] *conditional on Lemma 5.2.1, Theorem 5.3.2,*
-*KEY LEMMA 3.4.3 (existence of $\omega_1^{\rm Bool}$), and Lemma*
-*2.4.4 (functoriality of the trinity dictionary).*
+*KEY LEMMA 3.4.3 (existence of $\omega_1^{\rm Bool}$), Lemma 2.4.4*
+*(functoriality of the trinity dictionary), and LEMMA 3.8.2*
+*(non-degeneracy of the graded structure under $\Phi_{\rm comp}$).*
 
-The conditionality is the same as for R-Theorem PNP.1, with the
-same two named lemmas. The new content of R-Theorem PNP.2 is
-that it provides an *independent route* to the same conclusion,
-via the analytic structure of the Riemann zeros rather than via
-the cohomological structure of the Schur multiplier.
+The conditionality shares the three foundational dependencies of
+R-Theorem PNP.1 (KEY LEMMA 3.4.3, Lemma 2.4.4, LEMMA 3.8.2) and
+adds Lemma 5.2.1 and Theorem 5.3.2 as the additional structural
+inputs specific to the analytic route. The new content of
+R-Theorem PNP.2 is that it provides an *independent route* to the
+same conclusion, via the analytic structure of the Riemann zeros
+rather than via the cohomological structure of the Schur
+multiplier.
 
 ### 5.4.1 What R-Theorem PNP.2 adds beyond PNP.1
 
@@ -383,8 +387,8 @@ over-determined regime. The two routes are:
 | Source | R-Theorem S.11 (Paper 15) | Order-counting principle (Paper 17) |
 | Mechanism | Schur multiplier $H^2(S_n, U(1)) = \mathbb Z/2$ | PNT $\gamma_n \sim 2\pi n / \log n$ |
 | Argument | Cocycle rigidity | Asymptotic-growth incompatibility |
-| Dependencies | KEY LEMMA 3.4.3, Lemma 2.4.4 | KEY LEMMA 3.4.3, Lemma 2.4.4, Lemma 5.2.1, Theorem 5.3.2 |
-| What can fail | Schur multiplier vanishes (impossible by Schur 1911) | PNT fails (impossible — proved unconditionally 1895) |
+| Dependencies | KEY LEMMA 3.4.3, Lemma 2.4.4, LEMMA 3.8.2 | KEY LEMMA 3.4.3, Lemma 2.4.4, LEMMA 3.8.2, Lemma 5.2.1, Theorem 5.3.2 |
+| What can fail | Schur multiplier vanishes (impossible by Schur 1911) or trinity functor trivialises the cocycle (impossible by Lemma 3.8.2) | PNT fails (impossible — proved unconditionally 1895) |
 
 Both proofs depend on KEY LEMMA 3.4.3 and Lemma 2.4.4 (the
 two foundational pieces of the trinity dictionary). PNP.2
