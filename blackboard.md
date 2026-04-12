@@ -18,13 +18,7 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 
 ## §C — Current bottleneck
 
-**SPECTRAL GAP BYPASS EXECUTED (Node 1.3.5).** The strategic inversion identified by the convergence of two Authors (1.3.2, 1.3.3) and two Critics is now formalized. The bypass goes DIRECTLY from clone structure to modular spectral gap, avoiding the automorphism construction (K-12) and Out(M) argument (K-13) entirely. The mechanism: Taylor polymorphisms --> clone operators T_f (one live slot + k-1 omega-averaged slots) --> approximately central sequences in M_Bool^L --> no spectral gap --> non-full (by HM-FULLNESS). Non-Taylor --> essentially unary operators only --> no central sequences --> spectral gap via Houdayer-Isono (bi-exact group + strongly ergodic action) --> full.
-
-**Two gaps remain:**
-- **Gap Alpha** (Part (i)): the omega-averaged polymorphism action concentrates so that ||[T_f, y]||_2 --> 0 as arity k --> infty. A quantitative analytic estimate. Three closing strategies identified; most promising: S1 (explicit computation for majority on 2-SAT). p(closure) = 0.55-0.65.
-- **Gap Beta** (Part (ii)): the group G_L for NPC L is bi-exact and acts strongly ergodically on the base algebra. Requires constructing a free subgroup of G_L via ping-pong on specific polynomial-time reductions. p(closure) = 0.45-0.55.
-
-**Bridge probability: 0.25-0.35** (up from 0.20 on the OA1 path). The bypass is strictly better positioned: fewer gaps (2 vs 3), narrower gaps (quantitative vs structural), more amenable to computation. The OA1 path remains available as a fallback if both gaps close on the OA1 side instead.
+**STRATEGIC INVERSION — BYPASS Out(M) ENTIRELY (Critics converge).** Node 1.3.2 found a fundamental tension: every individual alpha_f construction either gives the identity (diagonal case) or is nonlinear (off-diagonal). 8 local kills share the same root cause. Node 1.3.3 proved a conditional outerness theorem via PATB-DIAGONAL (Theorem 5.6): IF alpha_f is a well-defined automorphism (H2), AND D is a MASA (H1), THEN alpha_f is outer. The two nodes CONVERGE on a two-scenario architecture: **Scenario A** (individual outerness): if H2 is satisfied, Theorem 5.6 gives outerness directly. **Scenario B** (collective non-discreteness): if H2 fails, the clone's exponentially many operations produce a non-discrete family of approximate D-fixing symmetries, implying Inn(M) not closed -> non-full by Marrakchi. PATB-DIAGONAL is load-bearing in BOTH scenarios. Bridge probability: 0.54 (up from 0.41) because Scenario B provides an independent path. Remaining: close H1 (MASA), or formalize Scenario B rigorously.
 
 ---
 
@@ -62,14 +56,11 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 - 1.4: OA2 — exponential clone → non-full factor (OPEN; parent = 1; depends-on 1.3; injectivity of lift + HM-FULLNESS)
 - 1.5: Assembly — chain UA1+UA2+OA1+OA2 → P≠NP (OPEN; parent = 1; depends-on 1.1, 1.2, 1.3, 1.4)
 
-- 1.3.5: Spectral Gap Bypass — clone operators --> approximately central sequences --> spectral gap (ADVANCED; parent = 1.3; depends on 1.1, 1.2, 1.3.1; Gap Alpha: concentration bound; Gap Beta: strong ergodicity for NPC)
-
 ### §E.1 — Joint probability and cross-path dependencies
 
 | Path | p (closure by horizon) | Shared sub-problems | Unlock value if sub-problem X closes |
 |---|---|---|---|
-| Bypass chain (1.1→1.2→1.3.1→1.3.5→1.5) | 0.25-0.35 | Gap Alpha + Gap Beta | High — closes bridge WITHOUT OA1/OA2 |
-| OA1 chain (1.1→1.2→1.3→1.4→1.5) | 0.20 | OA1 is shared bottleneck | High — OA1 unlocks OA2 |
+| Main chain (1.1→1.2→1.3→1.4→1.5) | 0.35 | OA1 is shared bottleneck | High — OA1 unlocks everything |
 | HONEST-STALL option | 0.99 | None | The bridge theorem stated as conjecture + computational evidence = publishable paper even without full proof |
 
 ---
@@ -103,8 +94,7 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | 1.3.2 Construction verify | **PARTIAL** (8 local kills) | 0.35 | yes — fundamental tension found: diagonal => identity, independent copies => nonlinear. Strategic inversion candidate: collective non-discreteness bypasses individual construction. |
 | 1.3.3 Outerness via PATB-DIAGONAL | **ADVANCED** | 0.41 (unconditional) / 0.90 (given H1,H2) | YES — conditional outerness theorem proved via PATB-DIAGONAL (Thm 5.6): Taylor + essential arity >= 2 + D is MASA => alpha_f outer. One gap remains (H1: D is MASA). Three independent approaches converge (modular invariant, Marrakchi-Vaes amplification, PATB-DIAGONAL main proof). |
 | 1.3.4 Alternative bridge | DEPRIORITIZED | 0.2 | no longer needed if 1.3.1 holds; kept as contingency |
-| 1.3.5 Spectral Gap Bypass | **ADVANCED** | 0.25-0.35 | YES — two gaps remain (Alpha: concentration, Beta: strong ergodicity); strictly better positioned than OA1 (fewer/narrower/more computable gaps); if both gaps close, the bypass closes the bridge WITHOUT OA1/OA2 |
-| 1.4 OA2 | OPEN (blocked by 1.3; BYPASSED if 1.3.5 closes) | 0.5 | yes (downstream of OA1); NOT needed if bypass closes |
+| 1.4 OA2 | OPEN (blocked by 1.3) | 0.5 | yes (downstream) |
 | 1.5 Assembly | OPEN (blocked by all) | 0.9 (if deps close) | yes (final) |
 
 ---
@@ -121,7 +111,6 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 | 0 | OA1 — polymorphism lift to outer automorphism | PARTIALLY CROSSED | PATB-DIAGONAL conditional theorem (Node 1.3.3): Taylor + essential arity >= 2 + D is MASA => alpha_f outer. Remaining: (H1) D is MASA, (H2) alpha_f well-defined (1.3.2) |
 | 1 | Q_struct — is M_Bool^L injective? | CROSSED | PCirc^+ non-abelian -> G_Bool non-amenable -> M_Bool non-injective -> KST evaded -> bridge viable (Node 1.3.1) |
 | 2 | Outerness of alpha_f | PARTIALLY CROSSED | PATB-DIAGONAL proof (Node 1.3.3): diagonal-fixing + non-abelian off-diagonal action => outer. Conditional on MASA hypothesis (H1). Three independent approaches converge. |
-| 3 | OA1 chain (construction + outerness + injectivity) | BYPASSED | Node 1.3.5 Spectral Gap Bypass: go directly from clone structure to approximately central sequences to modular spectral gap. No individual alpha_f, no Out(M). Two gaps remain: Gap Alpha (concentration bound), Gap Beta (strong ergodicity for NPC). Bypass is strictly better positioned than OA1 (2 gaps vs 3, quantitative vs structural). |
 
 ### Axiom base
 1. M_Bool exists as a type III₁ factor with unique KMS₁ state (KEY LEMMA 3.4.3 — outlined, deferred to Appendix B)
@@ -184,12 +173,6 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 
 - [C2-BOGOLJUBOV-ANALOGY] STRUCTURAL TEMPLATE. The outerness proof is modeled on Shlyakhtenko-Houdayer's theorem for free Araki-Woods factors: every non-trivial Bogoljubov automorphism is outer (the map v -> [alpha_v] in Out(M) is injective). The dictionary: one-particle H_R <-> diagonal D; v != 1 <-> essential arity >= 2; vacuum-fixing <-> Taylor condition; freeness <-> MASA property. This analogy is load-bearing for OA2 (injectivity of the lift) downstream.
 
-- [C3-BYPASS-EXECUTED] STRATEGIC INVERSION FORMALIZED (Node 1.3.5). The spectral gap bypass avoids the entire OA1 chain. Key construction: clone operators T_f with one "live" slot and k-1 omega-averaged slots. This is LINEAR in the first argument (avoids nonlinearity kill L-2) and NOT the identity (avoids identity kill L-6/L-8). The operators T_f are elements of M_Bool^L (not automorphisms), and the argument is that exponentially many such elements form non-trivial approximately central sequences, destroying the spectral gap. Two gaps: Gap Alpha (concentration of omega-average as k --> infty), Gap Beta (strong ergodicity for NPC sectors via Houdayer-Isono). Bypass probability 0.25-0.35 vs OA1's 0.20. The bypass is the new MAIN PATH; OA1 is demoted to fallback.
-
-- [C3-KILL-AVOIDANCE] K-12 and K-13 STRUCTURALLY BYPASSED. The bypass does not construct individual automorphisms (K-12) or argue via Aut/Out (K-13). It goes through approximately central sequences and HM-FULLNESS. All other kill items verified clean.
-
-- [C3-NEXT-STEPS] PRIORITY: (1) Compute T_{maj} for 2-SAT at n=5,7,10 and measure commutator norms -- this closes or kills Gap Alpha computationally. (2) Construct two non-commuting reductions to 3-SAT and verify ping-pong -- this closes Gap Beta. (3) Verify T_f membership in M_Bool^L for specific cases.
-
 ---
 
 ## §L — Closure artifacts
@@ -204,7 +187,6 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 5 | 0 | 0 | 5 | 0 | 12 | — | — | 0 | 0 | 1 (inversion on OA1) | 1/1 | ~50K | OA1 | bootstrap + REFRAME + inversion |
 | 2 | 3 (1.3.3, blackboard, toolkit ref) | 0 | 1 (1.3.3) | 0 | 0 | 13 | — | — | 1 (1.3.2 tension acknowledged) | 0 | 2 (conditional outerness, two-scenario convergence) | 1/1 (Bogoljubov template) | ~80K | H1 (MASA) + H2 (construction) | outerness conditional theorem + 1.3.2 integration |
-| 3 | 2 (1.3.5, blackboard) | 0 | 1 (1.3.5) | 1 (1.3.5) | 0 | 13 | — | — | 0 | 0 | 1 (spectral gap bypass: clone operators --> central sequences --> spectral gap) | 1/1 (Houdayer-Isono for Part (ii)) | ~120K | Gap Alpha (concentration) + Gap Beta (strong ergodicity) | bypass theorem formalized; OA1 demoted to fallback; two computable gaps identified |
 
 ---
 
@@ -214,7 +196,6 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 |---|---|---|---|---|---|---|
 | 0 | 1 (OA1) | 2 (UA1, OA2) | 1 (UA2) | 3 (UA1, OA1, OA2) | 7 | initial assessment |
 | 2 | 1 (OA1: construction H2) | 2 (OA2, MASA H1) | 2 (UA1, UA2) | 2 (H1 MASA, H2 construction) | 6 | outerness conditional theorem proved; two-scenario architecture; difficulty reduced |
-| 3 | 1 (Gap Alpha concentration) | 1 (Gap Beta strong ergodicity) | 2 (UA1, UA2) | 2 (Gap Alpha, Gap Beta) | 5 | bypass theorem formalized; OA1 chain bypassed; gaps are quantitative/analytic (easier than structural); difficulty reduced |
 
 ---
 
@@ -224,4 +205,3 @@ The proof rests on two established pillars: (1) **Universal algebra** — Bulato
 |---|---|---|---|
 | 0 | §A-§O | Runner | Bootstrap — created blackboard |
 | 2 | §C, §G, §H, §I, §M, §N, §O | 1.3.3 Author | Outerness conditional theorem (PATB-DIAGONAL Thm 5.6); two-scenario convergence with 1.3.2; blackboard updated with runner writes C2-*; node 1.3.3-outerness.md created |
-| 3 | §C, §E, §G, §H, §I, §M, §N, §O | 1.3.5 Author | Spectral gap bypass (Thm 1.3.5): clone operators T_f --> approximately central sequences --> spectral gap. OA1 chain bypassed. Two gaps (Alpha, Beta) identified. Bridge probability 0.25-0.35. Node 1.3.5-spectral-gap-bypass.md created. |
