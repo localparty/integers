@@ -1,0 +1,1581 @@
+{
+  "arity_3": {
+    "k": 3,
+    "n_valid": 4,
+    "incoherence_detected": true,
+    "profiles": [
+      {
+        "name": "threshold_maj",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.21382312127701508,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "tree_x0",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.0,
+        "dist_to_scalar_Gamma1": 0.0
+      },
+      {
+        "name": "tree_x1",
+        "angle_Gamma0": 1.5707963267948966,
+        "angle_Gamma1": 1.5707963267948966,
+        "dist_to_scalar_Gamma0": 1.4142135623730951,
+        "dist_to_scalar_Gamma1": 1.4142135623730954
+      },
+      {
+        "name": "tree_x2",
+        "angle_Gamma0": 1.5707963267948966,
+        "angle_Gamma1": 1.5707963267948966,
+        "dist_to_scalar_Gamma0": 1.4142135623730951,
+        "dist_to_scalar_Gamma1": 1.4142135623730954
+      }
+    ],
+    "ratio_results": [
+      {
+        "pair": [
+          "threshold_maj",
+          "tree_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.21382312127701508,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "tree_x1"
+        ],
+        "angle_ratio_Gamma0": 1.4636803735761874,
+        "angle_ratio_Gamma1": 1.5707963267948966,
+        "phase_difference": 0.10711595321870915,
+        "dist_to_scalar_Gamma0": 1.487892394565898,
+        "dist_to_scalar_Gamma1": 1.4142135623730951,
+        "phases_agree": false
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "tree_x2"
+        ],
+        "angle_ratio_Gamma0": 1.4636803735761874,
+        "angle_ratio_Gamma1": 1.5707963267948966,
+        "phase_difference": 0.10711595321870915,
+        "dist_to_scalar_Gamma0": 1.487892394565898,
+        "dist_to_scalar_Gamma1": 1.4142135623730951,
+        "phases_agree": false
+      },
+      {
+        "pair": [
+          "tree_x0",
+          "tree_x1"
+        ],
+        "angle_ratio_Gamma0": 1.5707963267948966,
+        "angle_ratio_Gamma1": 1.5707963267948966,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 1.4142135623730954,
+        "dist_to_scalar_Gamma1": 1.4142135623730954,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "tree_x0",
+          "tree_x2"
+        ],
+        "angle_ratio_Gamma0": 1.5707963267948966,
+        "angle_ratio_Gamma1": 1.5707963267948966,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 1.4142135623730954,
+        "dist_to_scalar_Gamma1": 1.4142135623730954,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "tree_x1",
+          "tree_x2"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 1.2953186911311323e-16,
+        "dist_to_scalar_Gamma1": 9.46022036549956e-16,
+        "phases_agree": true
+      }
+    ]
+  },
+  "arity_5": {
+    "k": 5,
+    "n_valid": 6,
+    "incoherence_detected": false,
+    "profiles": [
+      {
+        "name": "threshold_maj",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.38164735045449827,
+        "dist_to_scalar_Gamma1": 3.8933166091495663e-16
+      },
+      {
+        "name": "iter_maj_A",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3082293874927211,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "iter_maj_B",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "wt_alt12",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "wt_1..13",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.2138231212770147,
+        "dist_to_scalar_Gamma1": 3.3855460571677447e-15
+      },
+      {
+        "name": "dict_maj_x0",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.0,
+        "dist_to_scalar_Gamma1": 0.0
+      }
+    ],
+    "ratio_results": [
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_A"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.07452233016880162,
+        "dist_to_scalar_Gamma1": 7.844960618394939e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.021669954239395137,
+        "dist_to_scalar_Gamma1": 1.4898843266223543e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.021669954239395137,
+        "dist_to_scalar_Gamma1": 1.4898843266223543e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.16956597360512438,
+        "dist_to_scalar_Gamma1": 3.3721272528986954e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.38164735045449827,
+        "dist_to_scalar_Gamma1": 3.8933166091495663e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.05286304990902983,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.05286304990902983,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.09519421240346465,
+        "dist_to_scalar_Gamma1": 3.884761763836212e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3082293874927211,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 4.935327948389741e-16,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.14796408978654657,
+        "dist_to_scalar_Gamma1": 4.417840401673033e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_alt12",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.14796408978654657,
+        "dist_to_scalar_Gamma1": 4.417840401673033e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_alt12",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_1..13",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.2138231212770147,
+        "dist_to_scalar_Gamma1": 3.3855460571677447e-15,
+        "phases_agree": true
+      }
+    ]
+  },
+  "arity_7": {
+    "k": 7,
+    "n_valid": 6,
+    "incoherence_detected": false,
+    "profiles": [
+      {
+        "name": "threshold_maj",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5025856147835858,
+        "dist_to_scalar_Gamma1": 2.2879329946534462e-15
+      },
+      {
+        "name": "iter_maj_A",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3695824073672611,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "iter_maj_B",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.36035319341331534,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_C",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749173,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "wt_1..13",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3717313877114551,
+        "dist_to_scalar_Gamma1": 1.6019653351804012e-15
+      },
+      {
+        "name": "dict_maj_x0",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.0,
+        "dist_to_scalar_Gamma1": 0.0
+      }
+    ],
+    "ratio_results": [
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_A"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.13620706686869516,
+        "dist_to_scalar_Gamma1": 1.9077226096414813e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.14557057768774953,
+        "dist_to_scalar_Gamma1": 1.5688391918699291e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.04939240693620187,
+        "dist_to_scalar_Gamma1": 1.5688391918699291e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.1340251988969298,
+        "dist_to_scalar_Gamma1": 1.379720536451954e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5025856147835858,
+        "dist_to_scalar_Gamma1": 2.2879329946534462e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.009386804741949894,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08688779345431155,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.002186863878857801,
+        "dist_to_scalar_Gamma1": 1.166739677737382e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3695824073672611,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.09626477882710048,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.011573638923125141,
+        "dist_to_scalar_Gamma1": 1.086777152824804e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.36035319341331534,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08470294232187485,
+        "dist_to_scalar_Gamma1": 1.086777152824804e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749173,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_1..13",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3717313877114551,
+        "dist_to_scalar_Gamma1": 1.6019653351804012e-15,
+        "phases_agree": true
+      }
+    ]
+  },
+  "arity_9": {
+    "k": 9,
+    "n_valid": 9,
+    "incoherence_detected": false,
+    "profiles": [
+      {
+        "name": "threshold_maj",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5903518749613439,
+        "dist_to_scalar_Gamma1": 6.704781909918866e-16
+      },
+      {
+        "name": "iter_maj_A",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.4138734375874569,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "iter_maj_B",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.36035319341331506,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_C",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749167,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_D",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.536371409541255,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_E",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3874292008425041,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "wt_alt12",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5710579022694232,
+        "dist_to_scalar_Gamma1": 1.3906324220805418e-15
+      },
+      {
+        "name": "wt_1..13",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.48837077364871145,
+        "dist_to_scalar_Gamma1": 8.235239493465328e-16
+      },
+      {
+        "name": "dict_maj_x0",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.0,
+        "dist_to_scalar_Gamma1": 0.0
+      }
+    ],
+    "ratio_results": [
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_A"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.18214086880019117,
+        "dist_to_scalar_Gamma1": 1.2111048577748589e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.2363934346943997,
+        "dist_to_scalar_Gamma1": 1.4116590470143265e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.14052946447947784,
+        "dist_to_scalar_Gamma1": 1.4116590470143265e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.05625338928648702,
+        "dist_to_scalar_Gamma1": 1.4116590470143265e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.20900290044752026,
+        "dist_to_scalar_Gamma1": 1.2111048577748589e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.020162348636586856,
+        "dist_to_scalar_Gamma1": 1.7122746574572631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.10587068259311136,
+        "dist_to_scalar_Gamma1": 1.0633395158994465e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5903518749613439,
+        "dist_to_scalar_Gamma1": 6.704781909918866e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.054546993213092254,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.04174519786466181,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.12604918200413298,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.02699078009194125,
+        "dist_to_scalar_Gamma1": 7.342781032704859e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.16205305000644055,
+        "dist_to_scalar_Gamma1": 1.018432582817937e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.07645476465609898,
+        "dist_to_scalar_Gamma1": 1.2799057893529016e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.4138734375874569,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.0962647788271002,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.18044084523421058,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.027561286021531226,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.2163604074558159,
+        "dist_to_scalar_Gamma1": 1.3411025298177619e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.13093344715974073,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.36035319341331506,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08435951403993017,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.06872629623506366,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.12040980833071274,
+        "dist_to_scalar_Gamma1": 1.3411025298177619e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.034723423593899225,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749167,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.15297482482157695,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.036096158964539035,
+        "dist_to_scalar_Gamma1": 1.3411025298177619e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.04965427781063231,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.536371409541255,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "wt_alt12"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.18894032526907606,
+        "dist_to_scalar_Gamma1": 1.018432582817937e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.1034188537822098,
+        "dist_to_scalar_Gamma1": 1.2799057893529016e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3874292008425041,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_alt12",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08573122278055492,
+        "dist_to_scalar_Gamma1": 2.0503954739312847e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_alt12",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5710579022694232,
+        "dist_to_scalar_Gamma1": 1.3906324220805418e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_1..13",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.48837077364871145,
+        "dist_to_scalar_Gamma1": 8.235239493465328e-16,
+        "phases_agree": true
+      }
+    ]
+  },
+  "arity_11": {
+    "k": 11,
+    "n_valid": 9,
+    "incoherence_detected": false,
+    "profiles": [
+      {
+        "name": "threshold_maj",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.6553912418592971,
+        "dist_to_scalar_Gamma1": 4.0614823705126577e-16
+      },
+      {
+        "name": "iter_maj_A",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.44752117300348476,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "iter_maj_B",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_C",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749168,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_D",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5363714095412548,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "iter_maj_E",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.3874292008425045,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16
+      },
+      {
+        "name": "iter_maj_F",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5706482381640964,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15
+      },
+      {
+        "name": "wt_1..13",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.5752539107646292,
+        "dist_to_scalar_Gamma1": 8.235239493465328e-16
+      },
+      {
+        "name": "dict_maj_x0",
+        "angle_Gamma0": 0.0,
+        "angle_Gamma1": 0.0,
+        "dist_to_scalar_Gamma0": 0.0,
+        "dist_to_scalar_Gamma1": 0.0
+      }
+    ],
+    "ratio_results": [
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_A"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.21596267998182211,
+        "dist_to_scalar_Gamma1": 8.189358850167314e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3042095938157064,
+        "dist_to_scalar_Gamma1": 1.5099278102603165e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.20871232658909192,
+        "dist_to_scalar_Gamma1": 1.5099278102603165e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.12462767032898808,
+        "dist_to_scalar_Gamma1": 1.5099278102603165e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.2769401136769937,
+        "dist_to_scalar_Gamma1": 8.189358850167314e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08900838524366407,
+        "dist_to_scalar_Gamma1": 1.5099278102603165e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08420574214167205,
+        "dist_to_scalar_Gamma1": 7.897058873650194e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "threshold_maj",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.6553912418592971,
+        "dist_to_scalar_Gamma1": 4.0614823705126577e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_B"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.08898103781235907,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.007291552417549076,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.0916440166112735,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.061438593370657824,
+        "dist_to_scalar_Gamma1": 7.342781032704859e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.12726075745659546,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.1320577972576329,
+        "dist_to_scalar_Gamma1": 1.2799057893529016e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_A",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.44752117300348476,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_C"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.09626477882710031,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.18044084523421047,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.027561286021531465,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.2159354654769924,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.22071388998080302,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_B",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3603531934133152,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "iter_maj_D"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.0843595140399301,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.06872629623506338,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.11998313536316388,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.12478127947594829,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_C",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.4546248676749168,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "iter_maj_E"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.15297482482157665,
+        "dist_to_scalar_Gamma1": 9.448886649561633e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.035668782175482,
+        "dist_to_scalar_Gamma1": 1.4894630529516872e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.040475063516235116,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_D",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5363714095412548,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "iter_maj_F"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.18851478703469024,
+        "dist_to_scalar_Gamma1": 9.448886649561637e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.19329998932636258,
+        "dist_to_scalar_Gamma1": 1.2799057893529016e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_E",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.3874292008425045,
+        "dist_to_scalar_Gamma1": 5.66953519631638e-16,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_F",
+          "wt_1..13"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.004807148928141406,
+        "dist_to_scalar_Gamma1": 1.9784073581555164e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "iter_maj_F",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5706482381640964,
+        "dist_to_scalar_Gamma1": 1.366363901635631e-15,
+        "phases_agree": true
+      },
+      {
+        "pair": [
+          "wt_1..13",
+          "dict_maj_x0"
+        ],
+        "angle_ratio_Gamma0": 0.0,
+        "angle_ratio_Gamma1": 0.0,
+        "phase_difference": 0.0,
+        "dist_to_scalar_Gamma0": 0.5752539107646292,
+        "dist_to_scalar_Gamma1": 8.235239493465328e-16,
+        "phases_agree": true
+      }
+    ]
+  }
+}
