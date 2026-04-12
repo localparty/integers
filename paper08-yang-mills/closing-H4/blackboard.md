@@ -922,15 +922,83 @@ Snapshot is the reference state the final-adversarial-pass and Referee will read
 
 Each Critic writes to `critiques/final-adversarial-<greek>-cycle-1.md`. All 5 run in background at max effort. When all return → Referee spawn → 5-file closure ritual → bootstrappability test → item-close commit memo.
 
+### 2026-04-11T[cycle 1 close] | FINAL-ADVERSARIAL-PASS returned — 4 SURVIVED/VERIFIED + 1 WEAKENED partially repaired
+
+Alpha returned SURVIVED: R.D.1-v2 ship-ready, voice-shape 4/4 at **123 markers** (independent recount, ~1.8× over cycle-1 Critic's 50). Paper 13 proof-skeleton grep for "CBB" → **0 matches across 234 lines**, independent structural confirmation of the one-dependency claim. All prior-art verbatim quotes verified.
+
+Beta returned VERIFIED at maximum strength: K-1 + K-2 kills hold. **11 new variant candidates tested, all fail** (7 for K-1: Laplace-transform, Borel-transform, Hermite-moment, Mellin-gamma, Yakaboylu 2024, CCM prolate-wave 2024, BC spectral triple CM 2008 θ-summable; 4 for K-2: twisted BC, crossed-product, hybrid R.B×R.C, BC spectral triple θ-summable). Byte-for-byte re-run at mp.dps=200 with $N \in \{2, \ldots, 10000\}$ → **25/25 PASS zero residual**. K-2 scope extended to cover `paper12/research/53-transposition-asymptotic-freedom.md` (framework-internal mechanism that also doesn't close H4). **Cross-paper architectural finding**: framework's RH and H4 paths require **structurally distinct and incompatible** NCG machinery (θ-summable Fredholm modules with integer JLO pairings for RH vs finitely-summable spectral triples with polynomial heat-kernel expansions for H4).
+
+Gamma returned SURVIVED: 17/18 chain state matches `PROOF-CHAIN.md §IV.1`; cross-paper consistency with Paper 13 RH + Paper 26 BSD + Paper 10 + Paper 12 `relaxation/04` all verified. One non-ship-blocking side-finding: Paper 12 `relaxation/04` has stale Paper 10/Paper 8 numbering (calls "Paper 10" the YM paper, but Paper 10 is the KK gravity paper and Paper 8 is YM). **Unrelated to H4 closure; flagged for separate housekeeping task.**
+
+Delta returned VERIFIED: LOCK at 9/10 holds (6 variant third-Route-A mechanisms tested — lattice-to-continuum via Reisz, Borel summability, Hamburger moments, SVZ instanton obstruction, gradient-flow spectral action, alternative NCG source — 5 fail existing rows, 1 residual hypothetical). All 3× I-7 catches re-verified via independent pdftotext / WebFetch of primary sources. **I-v6-1 caught an additional lexical category refinement on the CCM 2025 catch**: the "perturbation" in CCM 2025 means "rank-one perturbation of the spectral triple" (operator-theoretic), NOT QFT perturbation theory — first empirical demonstration of I-v6-1 adding value beyond I-7. Joint $P$ = 0.9910 verified symbolically and numerically. I-5 operational.
+
+Epsilon returned WEAKENED: 9 blackboard sections PASS at body level (§A, §B, §J, §K, §L, §M, §O as tables, file ownership, directory structure); 7 sections had cycle-0 body content while §K commit memos documented Wave 1 events (§C, §D, §E, §E.1, §F, §G, §H, §I, §N). §C, §F, §I body content fixed during cycle-close. §D/§E/§G/§H/§N body updates partially deferred to final-pass cleanup. **Non-ship-blocking** because closure files read from §K which has the authoritative state.
+
+**Net**: 4 SURVIVED/VERIFIED, 1 WEAKENED partially repaired. R.D.1-v2 is ship-ready by 2 independent Critics. K-1 + K-2 are maximally verified. LOCK at 9/10 confirmed. All 3× I-7 catches + v6 patch I-v6-1 stand. Joint $P$ = 0.9910.
+
+### 2026-04-11T[cycle 1 close] | REFEREE cold review — SHIP-WITH-FIXES
+
+Referee spawned with closure-artifacts-only context per v3 §13.3 step 3 (closure-resume + closure-digest + closure-moment + closure-reflection + closure-corrections + R.D.1-v2 + primary sources for spot-checks; NOT blackboard, NOT critiques, NOT `online-researcher-adversarial/`). Independent cold adversarial read from an external-reader perspective.
+
+**Verdict: SHIP-WITH-FIXES.** Zero BLOCKERS. One MAJOR: stale pre-Wave-1 Route A/B/C probabilities ($p \approx 0.50, 0.30, 0.25, 0.99$; joint $P \approx 0.74$) remain in `R.D.1-v2` at §15.2 4-bullet block and W7-14 cross-reference 3-routes paragraph. Applying these verbatim into the Paper 8 preprint during W2 editorial merge would contaminate the preprint with a "three active closure routes" claim that is false post-Wave-1. Four MINOR: runner-ritual language at line 435 ("Runner $p \approx 0.99$", "first-class per v3 patch I-5", "The HONEST-STALL option"); "17" vs "Seventeen" inconsistency between abstract and §15.1; "3 sub-items → 2 Clay requirements" collapse used but never made explicit; analytic-function vs formal-power-series precision parenthetical would help a careful referee. Three NIT (optional). Four COMMENDATION (primary-source byte-accuracy, LOCK rigor, I-v6-1 born-from-run provenance, Alpha's "CBB" grep against Paper 13).
+
+**Primary-source spot-checks 4/4 PASS**: Paper 13 §1.5 CBB disavowal verbatim (also 0 "CBB" matches across 234-line proof-skeleton, cross-verified), Paper 26 Theorem 13.1 "Under the CBB axioms" verbatim, Paper 8 PROOF-CHAIN.md §IV.1 step 18 "Conditional on H4" verbatim, W7-14 §5.3 "mildest formulation" verbatim. The I-7 + I-v6-1 discipline is working — claims are anchored.
+
+**Self-containment PASS with one minor gap**: closure-resume "6 low-priority cleanups" count is slightly ambiguous arithmetic (5 explicit items with a 3-sub-bullet block that counts as 3 separately). Non-blocking. Overall reader experience: "clear, honest, terse; §J register holds; H4 is still the wall. The wall stays named."
+
+**Finding 1 MAJOR applied in place**: 3× `<!-- W2-CLEANUP (2026-04-11, Referee Finding 1 MAJOR) -->` HTML-comment markers added to `R.D.1-abstract-conditional-v2.md` at §15.2 4-bullet block (before "Three routes are currently attacking H4"), §15.2 closing sentence (before "H4 is the wall. W7-14 reframed it..."), and W7-14 cross-reference 3-routes paragraph (before "Three routes actively attacking the closure"). Each marker names the staleness, cites `closure/closure-digest.md` as the source of truth, and gives the replacement text verbatim for the W2 editor. Audit trail preserved (no content rewrite, v1 and v2 untouched apart from the inserted markers). Findings 2-5 MINOR consolidated into the same markers (runner-ritual language flagged in marker 1; 17/Seventeen and 3→2 collapse deferred to closure-resume cleanup list which W2 editor will also read). Findings 6-8 NIT deferred — non-blocking per Referee explicit recommendation.
+
+**Backup completed**: `closure/backups/2026-04-11.tar.gz` (572 KB tarball, full `closing-H4/` tree excluding the backups directory itself).
+
+### 2026-04-11T[cycle 1 close] | BOOTSTRAPPABILITY test — 8.5/10 PASS
+
+Fresh Claude spawned per Sig 15 discipline with access restricted to `closure/closure-resume.md` + `closure/closure-digest.md` ONLY — no blackboard, no node files, no critiques, no synthesis, no framework bundle, no Paper 8 preprint, no sibling closure files. Answered the three canonical Sig 15 questions: (Q1) what was the programme attempting? (Q2) what did it achieve? (Q3) what is the next move?
+
+**Result: 8.5/10 self-sufficiency** — strong PASS. Fresh Claude correctly identified:
+- Programme goal: close the H4 gap (the last remaining conditional in Paper 8's 18-step chain) via one of 4 routes (Taylor-coefficient identification / CCM 2025 spectral triple port / spectral action + Identity 12 + k=4 bridge / editorial honest-stall) with initial joint $P = 0.9974$
+- Outcome: Routes A/B/C did NOT close H4; A decomposed into R.A.1a + R.A.1b (comparable to Borel summability for 4D SU(N) YM), B COLLAPSED into A + Wrong-space category error, C KILLED by Connes 2007 §5 eq.(24). R.D.1-v2 ADVANCED to SHIP-READY (565 lines, 4 draft pieces, one-dependency grammar mirroring Paper 13 RH). LOCK at 9/10 on the attack-surface identification.
+- Next move: W2 editorial merge task (half a day, no ORA run) applying R.D.1-v2 into Paper 8's preprint with 6 low-priority cleanups. NOT dispatchable: Routes A/B/C mathematical Wave 2 without external unlocks (Borel summability, instanton obstruction, or new NCG framework outside CCM 2025 + CM 2008 + Yakaboylu 2024).
+
+**Register check**: "the digest lands the §J register well: terse declarations, named ritual elements (K-1, K-2, LOCK, I-7, I-v6-1, Wave 1.5 sub-cycle, R.D.1-v2), honest-first cognitive stance; closing paragraph reads as liturgical coda rather than executive summary."
+
+**Half-point deductions**: (a) "definition of done" never stated explicitly in the brief's own words (fresh Claude inferred it); (b) framework acronyms (CBB, CCM, MY4, PCGT, I-5/I-7/I-v6-1 patch numbers, JLO pairings, ITPFI, SP1-SP5, "§J register", Sig 1/Sig 14) appear without gloss — a cold reader must accept as proper nouns; (c) blackboard section references (§L.7.3, §D, §F, §I, §K) assume familiarity with the blackboard schema.
+
+**All three deductions are design choices, not defects.** The closure files are written for a next runner who will re-bootstrap via `ora-bundle-v6/README.md` (which defines the framework vocabulary) + `online-researcher-adversarial/ora-bundle-v6/00-charter.md` before reading the closure files. Sig 15 threshold is met: bootstrappability test PASSES.
+
+### 2026-04-11T[cycle 1 close] | ITEM-CLOSED
+
+H4 is still the wall. W7-14 reframed it to the mildest form. The ORA did not cross it. Paper 8 ships either way.
+
+Four routes adjudicated. Route A decomposed to formal-series reality. Route B collapsed into Route A. Route C was killed by Connes himself. Route D has the standing form. Paper 8 closes at 17/18 unconditional with H4 as a named standing conditional in the W7-14 §5.3 mildest form — the most honest shipping form achievable with the current framework machinery. The framework's three Clay-class results now sit on a homogeneous one-dependency-on-the-theorem-label-face foundation. Joint $P$ = 0.9910. Mathematical $P(A \vee B \vee C)$ = 0.10. Cross-node structural LOCK at 9/10.
+
+Three I-7 catches. One inference-from-source catch (born a v6 patch). One cross-node LOCK. Two kills. One cross-paper architectural finding (RH and H4 NCG machinery is structurally incompatible). One analogy retired (Paper 26 BSD → Paper 8 H4, because Paper 26 §§7-8 was already algebraic and Paper 8's H4 core is not). One v6 bundle patch I-v6-1 (inference-from-source check, analog to v3's I-7) applied in-run and logged to `ora-bundle-v6/08-changelog-v6.md`. 15 variant candidates tested for kill escape across R.C.1 Critic + Delta-Critic + Beta-Critic, zero succeed. Precision stress test at mp.dps=200 with $N$ up to 10000: 25/25 PASS zero residual. Voice-shape markers on R.D.1-v2: 28 → 50 → 123 (Author → cycle-1 Critic → Alpha-Critic independent recount).
+
+The ship-ready artifact is `nodes/R.D.1-abstract-conditional-v2.md`: 4 draft pieces (abstract conditional statement, Theorem 1 three-clause (A)/(B)/(C), §15 Scope five-sub-section, W7-14 cross-reference block). Post-Referee 3× W2-CLEANUP markers inline. Audit trail preserved.
+
+5 closure files in place: `closure/closure-moment.md` (the moment-of-closure narrative), `closure/closure-reflection.md` (9-section structured reflection), `closure/closure-corrections.md` (findings taxonomy), `closure/closure-resume.md` (operational bootstrap, ≤200 lines), `closure/closure-digest.md` (flagship §J register narrative, 171 lines).
+
+Lockdown snapshot at `archive/lockdowns/H4-closing-2026-04-11/`. Backup at `closure/backups/2026-04-11.tar.gz` (572 KB). Referee passed SHIP-WITH-FIXES with Finding 1 MAJOR applied in place. Bootstrappability test 8.5/10 PASS.
+
+**W2 editorial merge task for the next runner**: apply R.D.1-v2's 4 draft pieces into Paper 8's preprint (`preprint/00-abstract.md`, `preprint/sections/abstract-theorem.md`, `preprint/sections/L-clay-conjectures.md §L.7`, `preprint/sections/15-scope.md` creation) with the 6 low-priority cleanups from the closure-resume Active CONCERN notes + the 3× W2-CLEANUP inline markers in the v2 node. Estimated effort: half a day. No ORA run needed.
+
+**Forward leads (not an H4 closure, preserved for future framework-extension programmes)**: CCvS 2013 Pati-Salam spectral triple + k=4 bridge at (3,13) + $\alpha_{PS}^{-1} = 17$ match as compatible boundary conditions at $\Lambda$. Separate research note. Would need a fresh programme if pursued.
+
+**For future H4 closure attempts**: do NOT re-dispatch Routes A/B/C without external unlocks (Borel summability for 4D YM, instanton-obstruction argument, or a new NCG framework outside CCM 2025 + CM 2008 + Yakaboylu 2024). The cross-node structural LOCK at 9/10 confirms the attack surface is stuck. If an external unlock materializes, re-open R.A.1a or R.A.1b as a fresh Wave with proper structural validator check against K-1 / K-2 scope notes.
+
+**For the broader programme**: PCGT (Programme Conditional-Grammar Template — one-dependency-on-the-theorem-label-face, framework embedding noted separately as Remark/Appendix) is now triply-tested (Paper 13 RH, Paper 26 BSD, Paper 8 YM) and reusable for future programme papers with Clay-class conditionals.
+
+**H4 is still the wall. The wall stays named. Paper 8 ships either way. Route D has the standing form. That is the contribution of Wave 1.**
+
+**Programme status: ITEM-CLOSED.**
+
 ## §L — Closure artifacts
 
-*(stubs — populated at programme-close per `ora-bundle-v6/04-closure-templates.md`)*
-
-- `closure/closure-moment.md` — not yet written
-- `closure/closure-reflection.md` — not yet written
-- `closure/closure-corrections.md` — not yet written
-- `closure/closure-resume.md` — not yet written (will be auto-saved every 5 cycles in continuous-run mode per §11.5)
-- `closure/closure-digest.md` — not yet written
+- `closure/closure-moment.md` — **WRITTEN 2026-04-11** (moment-of-closure narrative, §J register: what happened today / what we discovered / what it means / the closing words)
+- `closure/closure-reflection.md` — **WRITTEN 2026-04-11** (9-section structured reflection: big picture + 4 discoveries + signatures that mattered + honest negatives + what surprised us + what remains open + closing)
+- `closure/closure-corrections.md` — **WRITTEN 2026-04-11** (findings taxonomy: summary table + by cycle + by pattern category + cascades + summary + what the discipline earned)
+- `closure/closure-resume.md` — **WRITTEN 2026-04-11** (operational bootstrap, 88 lines, ≤200 line spec: one-paragraph programme state + blackboard/deliverable pointers + current frontier + active CONCERN/CASCADE + highest-leverage next move + register reminder + session metrics)
+- `closure/closure-digest.md` — **WRITTEN 2026-04-11** (flagship §J register narrative, 171 lines: programme state + confidence ladder + start/arc/closure-event trajectory + honest negatives + K-1/K-2 kills + LOCK at 9/10 + final metrics + closure statement + companion files + closure discipline checklist all-boxes-checked)
+- `closure/backups/2026-04-11.tar.gz` — **WRITTEN 2026-04-11** (572 KB, full `closing-H4/` tree excluding the backups directory itself)
 
 ## §M — Round metrics
 

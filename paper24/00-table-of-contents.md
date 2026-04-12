@@ -60,6 +60,7 @@
 | **3.9 The operator cocycle c_op** | from Pimsner-Popa basis with Δ_FK(E_N) = log 3 |
 | **3.10 Equality in H²(Z/3Z, U(1)): both equal 1/3 mod Z** | the canonical generator |
 | **3.11 Corollaries: 3 generations, Koide Q=2/3, level-13 ↔ γ_13** | structural payoff |
+| **3.12 Lead 7b — independent verification of the Hasse invariants at all four bridges** [NEW 2026-04-11] | Sympy exact integer arithmetic verifies `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` at all four bridges (2,7,2), (5,13,3), (3,13,4), (7,19,6). 4/4 PASS. **Structural by-product (§3.12.1)**: k=3 and k=4 share level N=13 via the CRT dual splitting `(ℤ/13ℤ)* ≅ ℤ/3ℤ × ℤ/4ℤ` — the generation bridge and the Pati-Salam bridge are CRT factors of the same Galois group. Verification: `paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md` + `code/T1-T2-brauer-cohomology.py`. Cross-confirmed by Lead 7e (§5.7) from a minimality angle. |
 
 ## 4. The Koide ratio as a Brauer class
 
@@ -84,6 +85,7 @@
 | **5.4 The minimal conductor 1729 = 7·13·19** | the unique minimal field containing all bridge primes |
 | **5.5 The Hardy-Ramanujan number** | a side note |
 | **5.6 The bridge family as a structural sieve** | only k=2,3,4,6 are physically populated by SM multiplicities |
+| **5.7 The bridge minimality theorem (Lead 7e)** [NEW 2026-04-11] | Sympy exact-arithmetic enumeration: the four bridge pairs are the unique lex-minimal solutions of the sieve at their respective k indices, with N < 100 search bound. 4/4 match. Two structural by-products: (a) k=3 and k=4 share the minimal level N=13 via the CRT dual split of (Z/13Z)*, independently confirmed by Lead 7b from the Brauer-cohomology side; (b) k=6 has a tie at N=19 resolved to (7,19) by minimal-p ordering. Promotes the bridge family from "list of structural choices" to "forced minima of a zero-SM-input sieve". Anchor 4 of `paper12/relaxation/04` upgrades from "cross-integer agreement" to "cross-integer forcing". Verification: `paper12/relaxation/research/T7e-bridge-minimality-verification.md` + `code/T7e-bridge-minimality.py`. |
 
 ## 6. k=2 — CP discrete symmetry
 

@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-theme-clientpref-thumb-standard" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Schur multiplier - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-theme-clientpref-thumb-standard";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"3f29fedc-1519-46ee-96f6-a27632f65cb6","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Schur_multiplier","wgTitle":"Schur multiplier","wgCurRevisionId":1340334286,"wgRevisionId":1340334286,"wgArticleId":1121587,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description is different from Wikidata","CS1 German-language sources (de)","Group theory","Homological algebra","Issai Schur"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Schur_multiplier","wgRelevantArticleId":1121587,"wgTempUserName":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgConfirmEditCaptchaNeededForGenericEdit":"hcaptcha","wgConfirmEditHCaptchaVisualEditorOnLoadIntegrationEnabled":false,"wgConfirmEditHCaptchaSiteKey":"5d0c670e-a5f4-4258-ad16-1f42792c9c62","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":0,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":20000,"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q3327702","wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGESuggestedEditsTaskTypes":{"taskTypes":["copyedit","link-recommendation"],"unavailableTaskTypes":[]},"wgGETopicsMatchModeEnabled":false,"wgGELevelingUpEnabledForUser":false,"wgTestKitchenUserExperiments":{"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[]}};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.wikimediamessages.styles":"ready","ext.math.styles":"ready","ext.cite.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.parsermigration.survey","ext.math.polyfills","ext.cite.ux-enhancements","mediawiki.page.media","ext.scribunto.logs","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.bootstrap","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","wikibase.databox.fromWikidata","ext.checkUser.clientHints","ext.quicksurveys.init","ext.growthExperiments.SuggestedEditSession","ext.testKitchen"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cjquery.makeCollapsible.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.46.0-wmf.23">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cyclic_group.svg/1280px-Cyclic_group.svg.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1167">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Schur multiplier - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Schur_multiplier&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Schur_multiplier">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Schur_multiplier rootpage-Schur_multiplier skin-vector-2022 action-view">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li><li id="n-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/enwiki-25.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg" style="width: 8.75em; height: 1.375em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en-25.svg" width="140" height="11" style="width: 8.75em; height: 0.6875em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="none" spellcheck="false" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" class=" cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet"><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart"></span>
+
+<span>Donate</span></a>
+</li>
+<li id="pt-createaccount-2" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Schur+multiplier" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Schur+multiplier" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out user-links-collapsible-item"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" class=""><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart"></span>
+
+<span>Donate</span></a>
+</li>
+<li id="pt-createaccount" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Schur+multiplier" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span>
+
+<span>Create account</span></a>
+</li>
+<li id="pt-login" class="mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Schur+multiplier" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span>
+
+<span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	data-pinned-container-id="vector-toc-pinned-container"
+	data-unpinned-container-id="vector-toc-unpinned-container"
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Examples_and_properties"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Examples_and_properties">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Examples and properties</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Examples_and_properties-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Relation_to_projective_representations"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Relation_to_projective_representations">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Relation to projective representations</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Relation_to_projective_representations-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Relation_to_central_extensions"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Relation_to_central_extensions">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>Relation to central extensions</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Relation_to_central_extensions-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Relation_to_efficient_presentations"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Relation_to_efficient_presentations">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">4</span>
+				<span>Relation to efficient presentations</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Relation_to_efficient_presentations-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Relation_to_topology"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Relation_to_topology">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">5</span>
+				<span>Relation to topology</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Relation_to_topology-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Applications"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Applications">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">6</span>
+				<span>Applications</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Applications-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">7</span>
+				<span>See also</span>
+			</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Notes"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Notes">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">8</span>
+				<span>Notes</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Notes-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">9</span>
+				<span>References</span>
+			</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  title="Table of Contents" >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span lang="en" dir="ltr"><span class="mw-page-title-main">Schur multiplier</span></span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 2 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-2" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">2 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Multiplicateur_de_Schur" title="Multiplicateur de Schur – French" lang="fr" hreflang="fr" data-title="Multiplicateur de Schur" data-language-autonym="Français" data-language-local-name="French" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80_%D0%A8%D1%83%D1%80%D0%B0" title="Мультипликатор Шура – Russian" lang="ru" hreflang="ru" data-title="Мультипликатор Шура" data-language-autonym="Русский" data-language-local-name="Russian" class="interlanguage-link-target"><span>Русский</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3327702#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar vector-feature-custom-font-size-clientpref--excluded">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Schur_multiplier" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Schur_multiplier" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Schur_multiplier"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Schur_multiplier"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Schur_multiplier" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Schur_multiplier" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;oldid=1340334286" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Schur_multiplier&amp;id=1340334286&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSchur_multiplier"><span>Get shortened URL</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Schur_multiplier&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Schur_multiplier&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-wikibase" class="wb-otherproject-link wb-otherproject-wikibase-dataitem mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3327702" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<div class="wp25eastereggs-vector-sitenotice-landmark"></div>
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-subjectpageheader">
+</div><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Second homology group of a group</div>
+<style data-mw-deduplicate="TemplateStyles:r1333133064">.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:"\a0 · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><style data-mw-deduplicate="TemplateStyles:r1246091330">.mw-parser-output .sidebar{width:22em;float:right;clear:right;margin:0.5em 0 1em 1em;background:var(--background-color-neutral-subtle,#f8f9fa);border:1px solid var(--border-color-base,#a2a9b1);padding:0.2em;text-align:center;line-height:1.4em;font-size:88%;border-collapse:collapse;display:table}body.skin-minerva .mw-parser-output .sidebar{display:table!important;float:right!important;margin:0.5em 0 1em 1em!important}.mw-parser-output .sidebar-subgroup{width:100%;margin:0;border-spacing:0}.mw-parser-output .sidebar-left{float:left;clear:left;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-none{float:none;clear:both;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-outer-title{padding:0 0.4em 0.2em;font-size:125%;line-height:1.2em;font-weight:bold}.mw-parser-output .sidebar-top-image{padding:0.4em}.mw-parser-output .sidebar-top-caption,.mw-parser-output .sidebar-pretitle-with-top-image,.mw-parser-output .sidebar-caption{padding:0.2em 0.4em 0;line-height:1.2em}.mw-parser-output .sidebar-pretitle{padding:0.4em 0.4em 0;line-height:1.2em}.mw-parser-output .sidebar-title,.mw-parser-output .sidebar-title-with-pretitle{padding:0.2em 0.8em;font-size:145%;line-height:1.2em}.mw-parser-output .sidebar-title-with-pretitle{padding:0.1em 0.4em}.mw-parser-output .sidebar-image{padding:0.2em 0.4em 0.4em}.mw-parser-output .sidebar-heading{padding:0.1em 0.4em}.mw-parser-output .sidebar-content{padding:0 0.5em 0.4em}.mw-parser-output .sidebar-content-with-subgroup{padding:0.1em 0.4em 0.2em}.mw-parser-output .sidebar-above,.mw-parser-output .sidebar-below{padding:0.3em 0.8em;font-weight:bold}.mw-parser-output .sidebar-collapse .sidebar-above,.mw-parser-output .sidebar-collapse .sidebar-below{border-top:1px solid #aaa;border-bottom:1px solid #aaa}.mw-parser-output .sidebar-navbar{text-align:right;font-size:115%;padding:0 0.4em 0.4em}.mw-parser-output .sidebar-list-title{padding:0 0.4em;text-align:left;font-weight:bold;line-height:1.6em;font-size:105%}.mw-parser-output .sidebar-list-title-c{padding:0 0.4em;text-align:center;margin:0 3.3em}@media(max-width:640px){body.mediawiki .mw-parser-output .sidebar{width:100%!important;clear:both;float:none!important;margin-left:0!important;margin-right:0!important}}body.skin--responsive .mw-parser-output .sidebar a>img{max-width:none!important}@media screen{html.skin-theme-clientpref-night .mw-parser-output .sidebar:not(.notheme) .sidebar-list-title,html.skin-theme-clientpref-night .mw-parser-output .sidebar:not(.notheme) .sidebar-title-with-pretitle{background:transparent!important}html.skin-theme-clientpref-night .mw-parser-output .sidebar:not(.notheme) .sidebar-title-with-pretitle a{color:var(--color-progressive)!important}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .sidebar:not(.notheme) .sidebar-list-title,html.skin-theme-clientpref-os .mw-parser-output .sidebar:not(.notheme) .sidebar-title-with-pretitle{background:transparent!important}html.skin-theme-clientpref-os .mw-parser-output .sidebar:not(.notheme) .sidebar-title-with-pretitle a{color:var(--color-progressive)!important}}@media print{body.ns-0 .mw-parser-output .sidebar{display:none!important}}</style><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1246091330" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1246091330" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1246091330" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1246091330" /><table class="sidebar sidebar-collapse nomobile nowraplinks" role="navigation" style="width:20.0em;"><tbody><tr><th class="sidebar-title" style="padding-bottom:0.4em;"><span style="font-size: 8pt; font-weight: none"><a href="/wiki/Algebraic_structure" title="Algebraic structure">Algebraic structure</a> → <b>Group theory</b></span><br /><a href="/wiki/Group_theory" title="Group theory">Group theory</a></th></tr><tr><td class="sidebar-image"><span class="skin-invert"><span typeof="mw:File"><a href="/wiki/File:Cyclic_group.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cyclic_group.svg/120px-Cyclic_group.svg.png" decoding="async" width="120" height="117" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cyclic_group.svg/250px-Cyclic_group.svg.png 2x" data-file-width="443" data-file-height="431" /></a></span></span></td></tr><tr><td class="sidebar-content">
+<div class="sidebar-list mw-collapsible mw-collapsed"><div class="sidebar-list-title" style="background:transparent;border-top:1px solid #aaa;text-align:center;;color: var(--color-base)">Basic notions</div><div class="sidebar-list-content mw-collapsible-content hlist" style="border-top:1px solid #aaa;border-bottom:1px solid #aaa;"><table class="sidebar nomobile nowraplinks" role="navigation" style="background-color: transparent; color: var( --color-base, #202122 ); border-collapse:collapse; border-spacing:0px; border:none; width:100%; margin:0px; font-size:100%; clear:none; float:none"><tbody><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Subgroup" title="Subgroup">Subgroup</a></li>
+<li><a href="/wiki/Normal_subgroup" title="Normal subgroup">Normal subgroup</a></li>
+<li><a href="/wiki/Group_action" title="Group action">Group action</a></li></ul></td>
+</tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Quotient_group" title="Quotient group">Quotient group</a></li>
+<li><a href="/wiki/Semidirect_product" title="Semidirect product">(Semi-)</a><a href="/wiki/Direct_product_of_groups" title="Direct product of groups">direct product</a></li>
+<li><a href="/wiki/Direct_sum_of_groups" title="Direct sum of groups">Direct sum</a></li>
+<li><a href="/wiki/Free_product" title="Free product">Free product</a></li>
+<li><a href="/wiki/Wreath_product" title="Wreath product">Wreath product</a></li></ul></td>
+</tr><tr><th class="sidebar-heading">
+<i><a href="/wiki/Group_homomorphism" title="Group homomorphism">Group homomorphisms</a></i></th></tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Kernel_(algebra)#Group_homomorphisms" title="Kernel (algebra)">kernel</a></li>
+<li><a href="/wiki/Image_(mathematics)" title="Image (mathematics)">image</a></li></ul></td>
+</tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Simple_group" title="Simple group">simple</a></li>
+<li><a href="/wiki/Finite_group" title="Finite group">finite</a></li>
+<li><a href="/wiki/Infinite_group" title="Infinite group">infinite</a></li>
+<li><a href="/wiki/Continuous_group" class="mw-redirect" title="Continuous group">continuous</a></li>
+<li><a href="/wiki/Multiplicative_group" title="Multiplicative group">multiplicative</a></li>
+<li><a href="/wiki/Additive_group" title="Additive group">additive</a></li>
+<li><a href="/wiki/Cyclic_group" title="Cyclic group">cyclic</a></li>
+<li><a href="/wiki/Abelian_group" title="Abelian group">abelian</a></li>
+<li><a href="/wiki/Dihedral_group" title="Dihedral group">dihedral</a></li>
+<li><a href="/wiki/Nilpotent_group" title="Nilpotent group">nilpotent</a></li>
+<li><a href="/wiki/Solvable_group" title="Solvable group">solvable</a></li></ul></td>
+</tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Glossary_of_group_theory" title="Glossary of group theory">Glossary of group theory</a></li>
+<li><a href="/wiki/List_of_group_theory_topics" title="List of group theory topics">List of group theory topics</a></li></ul></td>
+</tr></tbody></table></div></div></td>
+</tr><tr><td class="sidebar-content">
+<div class="sidebar-list mw-collapsible"><div class="sidebar-list-title" style="background:transparent;border-top:1px solid #aaa;text-align:center;;color: var(--color-base)"><a href="/wiki/Finite_group" title="Finite group">Finite groups</a></div><div class="sidebar-list-content mw-collapsible-content hlist" style="border-top:1px solid #aaa;border-bottom:1px solid #aaa;"><table class="sidebar nomobile nowraplinks" role="navigation" style="background-color: transparent; color: var( --color-base, #202122 ); border-collapse:collapse; border-spacing:0px; border:none; width:100%; margin:0px; font-size:100%; clear:none; float:none"><tbody><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Cyclic_group" title="Cyclic group">Cyclic group</a> Z<sub><i>n</i></sub></li>
+<li><a href="/wiki/Symmetric_group" title="Symmetric group">Symmetric group</a> S<sub><i>n</i></sub></li>
+<li><a href="/wiki/Alternating_group" title="Alternating group">Alternating group</a> A<sub><i>n</i></sub></li></ul>
+<ul><li><a href="/wiki/Dihedral_group" title="Dihedral group">Dihedral group</a> D<sub><i>n</i></sub></li>
+<li><a href="/wiki/Quaternion_group" title="Quaternion group">Quaternion group</a> Q</li></ul></td>
+</tr><tr><td class="sidebar-content">
+<ul><li><a href="/wiki/Cauchy%27s_theorem_(group_theory)" title="Cauchy&#39;s theorem (group theory)">Cauchy's theorem</a></li>
+<li><a href="/wiki/Lagrange%27s_theorem_(group_theory)" title="Lagrange&#39;s theorem (group theory)">Lagrange's theorem</a></li></ul>
+<ul><li><a href="/wiki/Sylow_theorems" title="Sylow theorems">Sylow theorems</a></li>
+<li><a href="/wiki/Hall_subgroup" title="Hall subgroup">Hall's theorem</a></li></ul>
+<ul><li><a href="/wiki/P-group" title="P-group"><i>p</i>-group</a></li>
+<li><a href="/wiki/Elementary_abelian_group" title="Elementary abelian group">Elementary abelian group</a></li></ul>
+<ul><li><a href="/wiki/Frobenius_group" title="Frobenius group">Frobenius group</a></li></ul>
+<ul><li><a class="mw-selflink selflink">Schur multiplier</a></li></ul></td>
+</tr><tr><th class="sidebar-heading">
+<a href="/wiki/Classification_of_finite_simple_groups" title="Classification of finite simple groups">Classification of finite simple groups</a></th></tr><tr><td class="sidebar-content">
+<ul><li>cyclic</li>
+<li>alternating</li>
+<li><a href="/wiki/Group_of_Lie_type" title="Group of Lie type">Lie type</a></li>
+<li><a href="/wiki/Sporadic_group" title="Sporadic group">sporadic</a></li></ul></td>
+</tr></tbody></table></div></div></td>
+</tr><tr><td class="sidebar-content">
+<div class="sidebar-list mw-collapsible mw-collapsed"><div class="sidebar-list-title" style="background:transparent;border-top:1px solid #aaa;text-align:center;;color: var(--color-base)"><div class="hlist"><ul><li><a href="/wiki/Discrete_group" title="Discrete group">Discrete groups</a></li><li><a href="/wiki/Lattice_(discrete_subgroup)" title="Lattice (discrete subgroup)">Lattices</a></li></ul></div></div><div class="sidebar-list-content mw-collapsible-content hlist" style="border-top:1px solid #aaa;border-bottom:1px solid #aaa;">
+<ul><li><a href="/wiki/Integer" title="Integer">Integers</a> (<span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbb {Z} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbb {Z} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/449494a083e0a1fda2b61c62b2f09b6bee4633dc" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.55ex; height:2.176ex;" alt="{\displaystyle \mathbb {Z} }"></span>)</li>
+<li><a href="/wiki/Free_group" title="Free group">Free group</a></li></ul>
+<div style="display:inline-block; padding:0.2em 0.4em; line-height:1.2em;"><a href="/wiki/Modular_group" title="Modular group">Modular groups</a> <div class="hlist"><ul><li>PSL(2, <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbb {Z} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbb {Z} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/449494a083e0a1fda2b61c62b2f09b6bee4633dc" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.55ex; height:2.176ex;" alt="{\displaystyle \mathbb {Z} }"></span>)</li><li>SL(2, <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbb {Z} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbb {Z} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/449494a083e0a1fda2b61c62b2f09b6bee4633dc" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:1.55ex; height:2.176ex;" alt="{\displaystyle \mathbb {Z} }"></span>)</li></ul></div></div>
+<ul><li><a href="/wiki/Arithmetic_group" title="Arithmetic group">Arithmetic group</a></li>
+<li><a href="/wiki/Lattice_(group)" title="Lattice (group)">Lattice</a></li>
+<li><a href="/wiki/Hyperbolic_group" title="Hyperbolic group">Hyperbolic group</a></li></ul></div></div></td>
+</tr><tr><td class="sidebar-content">
+<div class="sidebar-list mw-collapsible mw-collapsed"><div class="sidebar-list-title" style="background:transparent;border-top:1px solid #aaa;text-align:center;;color: var(--color-base)"><a href="/wiki/Topological_group" title="Topological group">Topological</a> and <a href="/wiki/Lie_group" title="Lie group">Lie groups</a></div><div class="sidebar-list-content mw-collapsible-content hlist" style="border-top:1px solid #aaa;border-bottom:1px solid #aaa;">
+<ul><li><a href="/wiki/Solenoid_(mathematics)" title="Solenoid (mathematics)">Solenoid</a></li>
+<li><a href="/wiki/Circle_group" title="Circle group">Circle</a></li></ul>
+<ul><li><a href="/wiki/General_linear_group" title="General linear group">General linear</a> GL(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Special_linear_group" title="Special linear group">Special linear</a> SL(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Orthogonal_group" title="Orthogonal group">Orthogonal</a> O(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Euclidean_group" title="Euclidean group">Euclidean</a> E(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Special_orthogonal_group" class="mw-redirect" title="Special orthogonal group">Special orthogonal</a> SO(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Unitary_group" title="Unitary group">Unitary</a> U(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Special_unitary_group" title="Special unitary group">Special unitary</a> SU(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/Symplectic_group" title="Symplectic group">Symplectic</a> Sp(<i>n</i>)</li></ul>
+<ul><li><a href="/wiki/G2_(mathematics)" title="G2 (mathematics)">G<sub>2</sub></a></li>
+<li><a href="/wiki/F4_(mathematics)" title="F4 (mathematics)">F<sub>4</sub></a></li>
+<li><a href="/wiki/E6_(mathematics)" title="E6 (mathematics)">E<sub>6</sub></a></li>
+<li><a href="/wiki/E7_(mathematics)" title="E7 (mathematics)">E<sub>7</sub></a></li>
+<li><a href="/wiki/E8_(mathematics)" title="E8 (mathematics)">E<sub>8</sub></a></li></ul>
+<ul><li><a href="/wiki/Lorentz_group" title="Lorentz group">Lorentz</a></li>
+<li><a href="/wiki/Poincar%C3%A9_group" title="Poincaré group">Poincaré</a></li>
+<li><a href="/wiki/Conformal_group" title="Conformal group">Conformal</a></li></ul>
+<ul><li><a href="/wiki/Diffeomorphism" title="Diffeomorphism">Diffeomorphism</a></li>
+<li><a href="/wiki/Loop_group" title="Loop group">Loop</a></li></ul>
+<div style="display:inline-block; padding:0.2em 0.4em; line-height:1.2em;"><a href="/wiki/Infinite_dimensional_Lie_group" class="mw-redirect" title="Infinite dimensional Lie group">Infinite dimensional Lie group</a> <div class="hlist"><ul><li>O(∞)</li><li>SU(∞)</li><li>Sp(∞)</li></ul></div></div></div></div></td>
+</tr><tr><td class="sidebar-content">
+<div class="sidebar-list mw-collapsible mw-collapsed"><div class="sidebar-list-title" style="background:transparent;border-top:1px solid #aaa;text-align:center;;color: var(--color-base)"><a href="/wiki/Algebraic_group" title="Algebraic group">Algebraic groups</a></div><div class="sidebar-list-content mw-collapsible-content hlist" style="border-top:1px solid #aaa;border-bottom:1px solid #aaa;">
+<ul><li><a href="/wiki/Linear_algebraic_group" title="Linear algebraic group">Linear algebraic group</a></li></ul>
+<ul><li><a href="/wiki/Reductive_group" title="Reductive group">Reductive group</a></li></ul>
+<ul><li><a href="/wiki/Abelian_variety" title="Abelian variety">Abelian variety</a></li></ul>
+<ul><li><a href="/wiki/Elliptic_curve" title="Elliptic curve">Elliptic curve</a></li></ul></div></div></td>
+</tr><tr><td class="sidebar-navbar"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333133064" /><style data-mw-deduplicate="TemplateStyles:r1239400231">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}html.skin-theme-clientpref-night .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}}@media print{.mw-parser-output .navbar{display:none!important}}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Group_theory_sidebar" title="Template:Group theory sidebar"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Group_theory_sidebar" title="Template talk:Group theory sidebar"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Group_theory_sidebar" title="Special:EditPage/Template:Group theory sidebar"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>In mathematical <a href="/wiki/Group_theory" title="Group theory">group theory</a>, the <b>Schur multiplier</b> or <b>Schur multiplicator</b> is the second <a href="/wiki/Group_homology" class="mw-redirect" title="Group homology">homology group</a> <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{2}(G,\mathbb {Z} )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{2}(G,\mathbb {Z} )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2aca8319374bb85b9367bff60a95271ed48a192a" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.206ex; height:2.843ex;" alt="{\displaystyle H_{2}(G,\mathbb {Z} )}"></span> of a group <i>G</i>. It was introduced by <a href="/wiki/Issai_Schur" title="Issai Schur">Issai&#32;Schur</a>&#160;(<a href="#CITEREFSchur1904">1904</a>) in his work on <a href="/wiki/Projective_representation" title="Projective representation">projective representations</a>.
+</p>
+<meta property="mw:PageProp/toc" />
+<div class="mw-heading mw-heading2"><h2 id="Examples_and_properties">Examples and properties</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=1" title="Edit section: Examples and properties"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The Schur multiplier <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {M} (G)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">M</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {M} (G)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc424625d27622c5d4e0b1996bee9b907a16d316" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:5.767ex; height:2.843ex;" alt="{\displaystyle \operatorname {M} (G)}"></span> of a finite group <i>G</i> is a finite <a href="/wiki/Abelian_group" title="Abelian group">abelian group</a> whose <a href="/wiki/Periodic_group" class="mw-redirect" title="Periodic group">exponent</a> divides the order of <i>G</i>.  If a <a href="/wiki/Sylow_subgroup" class="mw-redirect" title="Sylow subgroup">Sylow <i>p</i>-subgroup</a> of <i>G</i> is cyclic for some <i>p</i>, then the order of <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {M} (G)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">M</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {M} (G)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc424625d27622c5d4e0b1996bee9b907a16d316" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:5.767ex; height:2.843ex;" alt="{\displaystyle \operatorname {M} (G)}"></span> is not divisible by <i>p</i>. In particular, if all <a href="/wiki/Sylow_subgroup" class="mw-redirect" title="Sylow subgroup">Sylow <i>p</i>-subgroups</a> of <i>G</i> are cyclic, then  <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {M} (G)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">M</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {M} (G)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc424625d27622c5d4e0b1996bee9b907a16d316" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:5.767ex; height:2.843ex;" alt="{\displaystyle \operatorname {M} (G)}"></span> is trivial.
+</p><p>For instance, the Schur multiplier of the <a href="/wiki/Nonabelian_group_of_order_6" class="mw-redirect" title="Nonabelian group of order 6">nonabelian group of order 6</a> is the <a href="/wiki/Trivial_group" title="Trivial group">trivial group</a> since every Sylow subgroup is cyclic.  The Schur multiplier of the <a href="/wiki/Elementary_abelian_group" title="Elementary abelian group">elementary abelian group</a> of order 16 is an elementary abelian group of order 64, showing that the multiplier can be strictly larger than the group itself.  The Schur multiplier of the <a href="/wiki/Quaternion_group" title="Quaternion group">quaternion group</a> is trivial, but the Schur multiplier of <a href="/wiki/Dihedral_group" title="Dihedral group">dihedral 2-groups</a> has order 2.
+</p><p>The Schur multipliers of the finite <a href="/wiki/Simple_group" title="Simple group">simple groups</a> are given at the <a href="/wiki/List_of_finite_simple_groups" title="List of finite simple groups">list of finite simple groups</a>.  The <a href="/wiki/Covering_groups_of_the_alternating_and_symmetric_groups" title="Covering groups of the alternating and symmetric groups">covering groups of the alternating and symmetric groups</a> are of considerable recent interest.
+</p><p><span class="anchor" id="Schur&#95;cover"></span>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Relation_to_projective_representations">Relation to projective representations</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=2" title="Edit section: Relation to projective representations"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<figure typeof="mw:File/Thumb"><a href="/wiki/File:Projective-representation-lifting.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Projective-representation-lifting.svg/250px-Projective-representation-lifting.svg.png" decoding="async" width="225" height="203" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Projective-representation-lifting.svg/500px-Projective-representation-lifting.svg.png 2x" data-file-width="225" data-file-height="203" /></a><figcaption>A <a href="/wiki/Projective_representation" title="Projective representation">projective representation</a> of <i>G</i> can be pulled back to a <a href="/wiki/Linear_representation" class="mw-redirect" title="Linear representation">linear representation</a> of a <a href="/wiki/Central_extension_(mathematics)" class="mw-redirect" title="Central extension (mathematics)">central extension</a> <i>C</i> of <i>G.</i></figcaption></figure>
+<p>Schur's original motivation for studying the multiplier was to classify <a href="/wiki/Projective_representation" title="Projective representation">projective representations</a> of a group, and the modern formulation of his definition is the second <a href="/wiki/Group_cohomology" title="Group cohomology">cohomology group</a> <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H^{2}(G,\mathbb {C} ^{\times })}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">C</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x00D7;<!-- × --></mo>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H^{2}(G,\mathbb {C} ^{\times })}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6eb35ff0cb2284b729b51f2460d236b9c06c4640" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:11.017ex; height:3.176ex;" alt="{\displaystyle H^{2}(G,\mathbb {C} ^{\times })}"></span>.  A projective representation is much like a <a href="/wiki/Group_representation" title="Group representation">group representation</a> except that instead of a homomorphism into the <a href="/wiki/General_linear_group" title="General linear group">general linear group</a> <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {GL} (n,\mathbb {C} )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>GL</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {GL} (n,\mathbb {C} )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45c47c9aa8bae7df52f562932d18c8b0aa39a545" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.193ex; height:2.843ex;" alt="{\displaystyle \operatorname {GL} (n,\mathbb {C} )}"></span>, one takes a homomorphism into the <a href="/wiki/Projective_general_linear_group" class="mw-redirect" title="Projective general linear group">projective general linear group</a> <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {PGL} (n,\mathbb {C} )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>PGL</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {PGL} (n,\mathbb {C} )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3f1478fb70f09907acbf19d13d46f02f03fa5022" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:10.776ex; height:2.843ex;" alt="{\displaystyle \operatorname {PGL} (n,\mathbb {C} )}"></span>.  In other words, a projective representation is a representation modulo the <a href="/wiki/Center_of_a_group" class="mw-redirect" title="Center of a group">center</a>.
+</p><p><a href="/wiki/Issai_Schur" title="Issai Schur">Schur</a>&#160;(<a href="#CITEREFSchur1904">1904</a>, <a href="#CITEREFSchur1907">1907</a>) showed that every finite group <i>G</i> has associated to it at least one finite group <i>C</i>, called a <b>Schur cover</b>, with the property that every projective representation of <i>G</i> can be lifted to an ordinary representation of <i>C</i>.  The Schur cover is also known as a <b>covering group</b> or <b>Darstellungsgruppe</b>.  The Schur covers of the <a href="/wiki/List_of_finite_simple_groups" title="List of finite simple groups">finite simple groups</a> are known, and each is an example of a <a href="/wiki/Quasisimple_group" title="Quasisimple group">quasisimple group</a>.  The Schur cover of a <a href="/wiki/Perfect_group" title="Perfect group">perfect group</a> is uniquely determined up to isomorphism, but the Schur cover of a general finite group is only determined up to <a href="/wiki/Isoclinism" class="mw-redirect" title="Isoclinism">isoclinism</a>.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Relation_to_central_extensions">Relation to central extensions</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=3" title="Edit section: Relation to central extensions"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The study of such covering groups led naturally to the study of <a href="/wiki/Central_extension_(mathematics)" class="mw-redirect" title="Central extension (mathematics)">central</a> and <b>stem extensions</b>.
+</p><p>A <a href="/wiki/Central_extension_(mathematics)" class="mw-redirect" title="Central extension (mathematics)">central extension</a> of a group <i>G</i> is an extension
+</p>
+<dl><dd><span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1\to K\to C\to G\to 1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>K</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>C</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>G</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1\to K\to C\to G\to 1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c6b754df5121eb171050309217110b24542ee985" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:22.44ex; height:2.176ex;" alt="{\displaystyle 1\to K\to C\to G\to 1}"></span></dd></dl>
+<p>where <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K\leq Z(C)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">(</mo>
+        <mi>C</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K\leq Z(C)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/49b1612ed54fd8bb14603e6a1b0d6603cc5f1422" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:10.42ex; height:2.843ex;" alt="{\displaystyle K\leq Z(C)}"></span> is a <a href="/wiki/Subgroup" title="Subgroup">subgroup</a> of the <a href="/wiki/Center_(group_theory)" title="Center (group theory)">center</a> of <i>C</i>.
+</p><p>A <b>stem extension</b> of a group <i>G</i> is an extension
+</p>
+<dl><dd><span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1\to K\to C\to G\to 1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>K</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>C</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>G</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1\to K\to C\to G\to 1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c6b754df5121eb171050309217110b24542ee985" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.338ex; width:22.44ex; height:2.176ex;" alt="{\displaystyle 1\to K\to C\to G\to 1}"></span></dd></dl>
+<p>where <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K\leq Z(C)\cap C'}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">(</mo>
+        <mi>C</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2229;<!-- ∩ --></mo>
+        <msup>
+          <mi>C</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K\leq Z(C)\cap C'}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b41cd4deef3d9f6ac4183da34e25b531035e3d4e" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:15.486ex; height:3.009ex;" alt="{\displaystyle K\leq Z(C)\cap C&#039;}"></span> is a subgroup of the intersection of the center of <i>C</i> and the <a href="/wiki/Derived_subgroup" class="mw-redirect" title="Derived subgroup">derived subgroup</a> of <i>C</i>; this is more restrictive than central.<sup id="cite&#95;ref-1" class="reference"><a href="#cite_note-1"><span class="cite-bracket">&#91;</span>1<span class="cite-bracket">&#93;</span></a></sup>
+</p><p>If the group <i>G</i> is finite and one considers only stem extensions, then there is a largest size for such a group <i>C</i>, and for every <i>C</i> of that size the subgroup <i>K</i> is isomorphic to the Schur multiplier of <i>G</i>.  If the finite group <i>G</i> is moreover <a href="/wiki/Perfect_group" title="Perfect group">perfect</a>, then <i>C</i> is unique up to isomorphism and is itself perfect.  Such a <i>C</i> is often called the <b>universal perfect central extension</b> of <i>G</i>, or <b>covering group</b> (as it is a discrete analog of the <a href="/wiki/Universal_covering_space" class="mw-redirect" title="Universal covering space">universal covering space</a> in topology).  If the finite group <i>G</i> is not perfect, then its Schur covering groups (all such <i>C</i> of maximal order) are only <a href="/wiki/Isoclinic" class="mw-redirect" title="Isoclinic">isoclinic</a>.
+</p><p>It is also called more briefly a <b>universal central extension</b>, but note that there is no largest central extension, as the <a href="/wiki/Direct_product_of_groups" title="Direct product of groups">direct product</a> of <i>G</i> and an <a href="/wiki/Abelian_group" title="Abelian group">abelian group</a> form a central extension of <i>G</i> of arbitrary size.
+</p><p>Stem extensions have the nice property that any lift of a generating set of <i>G</i> is a generating set of <i>C</i>.  If the group <i>G</i> is <a href="/wiki/Presentation_of_a_group" title="Presentation of a group">presented</a> in terms of a <a href="/wiki/Free_group" title="Free group">free group</a> <i>F</i> on a set of generators, and a <a href="/wiki/Normal_subgroup" title="Normal subgroup">normal subgroup</a> <i>R</i> generated by a set of relations on the generators, so that <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle G\cong F/R}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <mi>F</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>R</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle G\cong F/R}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d4e00df3c0508753591dc6a97278885774af0f44" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.592ex; height:2.843ex;" alt="{\displaystyle G\cong F/R}"></span>, then the covering group itself can be presented in terms of <i>F</i> but with a smaller normal subgroup <i>S</i>, that is, <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle C\cong F/S}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>C</mi>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <mi>F</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>S</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle C\cong F/S}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1e2a69ccb6df1d17fa2805cc5cabd18899e3ea54" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.267ex; height:2.843ex;" alt="{\displaystyle C\cong F/S}"></span>.  Since the relations of <i>G</i> specify elements of <i>K</i> when considered as part of <i>C</i>, one must have <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle S\leq [F,R]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mo stretchy="false">[</mo>
+        <mi>F</mi>
+        <mo>,</mo>
+        <mi>R</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S\leq [F,R]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8f90030a354c16b2b77ce87855971d0ff9501c80" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:10.43ex; height:2.843ex;" alt="{\displaystyle S\leq [F,R]}"></span>.
+</p><p>In fact if <i>G</i> is perfect, this is all that is needed: <i>C</i> ≅ [<i>F</i>,<i>F</i>]/[<i>F</i>,<i>R</i>] and M(<i>G</i>) ≅ <i>K</i> ≅ <i>R</i>/[<i>F</i>,<i>R</i>].  Because of this simplicity, expositions such as (<a href="#CITEREFAschbacher2000">Aschbacher 2000</a>, §33) handle the perfect case first.  The general case for the Schur multiplier is similar but ensures the extension is a stem extension by restricting to the derived subgroup of <i>F</i>: M(<i>G</i>) ≅ (<i>R</i> ∩ [<i>F</i>, <i>F</i>])/[<i>F</i>, <i>R</i>].  These are all slightly later results of Schur, who also gave a number of useful criteria for calculating them more explicitly.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Relation_to_efficient_presentations">Relation to efficient presentations</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=4" title="Edit section: Relation to efficient presentations"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>In <a href="/wiki/Combinatorial_group_theory" title="Combinatorial group theory">combinatorial group theory</a>, a group often originates from a <a href="/wiki/Presentation_of_a_group" title="Presentation of a group">presentation</a>.   One important theme in this area of mathematics is to study presentations with as few relations as possible, such as one relator groups like <a href="/wiki/Baumslag%E2%80%93Solitar_group" title="Baumslag–Solitar group">Baumslag–Solitar groups</a>.  These groups are infinite groups with two generators and one relation, and an old result of Schreier shows that in any presentation with more generators than relations, the resulting group is infinite.  The borderline case is thus quite interesting: finite groups with the same number of generators as relations are said to have a <a href="/wiki/Deficiency_(group_theory)" class="mw-redirect" title="Deficiency (group theory)">deficiency</a> zero.  For a group to have deficiency zero, the group must have a trivial Schur multiplier because the minimum number of generators of the Schur multiplier is always less than or equal to the difference between the number of relations and the number of generators, which is the negative deficiency.  An <i><a href="/wiki/Efficient_group" class="mw-redirect" title="Efficient group">efficient group</a></i> is one where the Schur multiplier requires this number of generators.<sup id="cite&#95;ref-2" class="reference"><a href="#cite_note-2"><span class="cite-bracket">&#91;</span>2<span class="cite-bracket">&#93;</span></a></sup>
+</p><p>A fairly recent topic of research is to find efficient presentations for all finite simple groups with trivial Schur multipliers.  Such presentations are in some sense nice because they are usually short, but they are difficult to find and to work with because they are ill-suited to standard methods such as <a href="/wiki/Todd%E2%80%93Coxeter_algorithm" title="Todd–Coxeter algorithm">coset enumeration</a>.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Relation_to_topology">Relation to topology</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=5" title="Edit section: Relation to topology"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>In <a href="/wiki/Topology" title="Topology">topology</a>, groups can often be described as finitely <a href="/wiki/Presentation_of_a_group" title="Presentation of a group">presented</a> groups and a fundamental question is to calculate their integral homology <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{n}(G,\mathbb {Z} )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{n}(G,\mathbb {Z} )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14490081363ec6f7dd22b454b6d58b7f284d2f39" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.37ex; height:2.843ex;" alt="{\displaystyle H_{n}(G,\mathbb {Z} )}"></span>.  In particular, the second homology plays a special role and this led <a href="/wiki/Heinz_Hopf" title="Heinz Hopf">Heinz Hopf</a> to find an effective method for calculating it.  The method in (<a href="#CITEREFHopf1942">Hopf 1942</a>) is also known as <b>Hopf's integral homology formula</b> and is identical to Schur's formula for the Schur multiplier of a finite group:
+</p>
+<dl><dd><span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{2}(G,\mathbb {Z} )\cong (R\cap [F,F])/[F,R]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>R</mi>
+        <mo>&#x2229;<!-- ∩ --></mo>
+        <mo stretchy="false">[</mo>
+        <mi>F</mi>
+        <mo>,</mo>
+        <mi>F</mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mi>F</mi>
+        <mo>,</mo>
+        <mi>R</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{2}(G,\mathbb {Z} )\cong (R\cap [F,F])/[F,R]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b119b72ed337e16e5c25110fd2d7a9e54ce096d5" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:31.264ex; height:2.843ex;" alt="{\displaystyle H_{2}(G,\mathbb {Z} )\cong (R\cap [F,F])/[F,R]}"></span></dd></dl>
+<p>where <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle G\cong F/R}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <mi>F</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>R</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle G\cong F/R}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d4e00df3c0508753591dc6a97278885774af0f44" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:9.592ex; height:2.843ex;" alt="{\displaystyle G\cong F/R}"></span> and <i>F</i> is a free group. The same formula also holds when <i>G</i> is a perfect group.<sup id="cite&#95;ref-3" class="reference"><a href="#cite_note-3"><span class="cite-bracket">&#91;</span>3<span class="cite-bracket">&#93;</span></a></sup>
+</p><p>The recognition that these formulas were the same led <a href="/wiki/Samuel_Eilenberg" title="Samuel Eilenberg">Samuel Eilenberg</a> and <a href="/wiki/Saunders_Mac_Lane" title="Saunders Mac Lane">Saunders Mac Lane</a> to the creation of <a href="/wiki/Cohomology_of_groups" class="mw-redirect" title="Cohomology of groups">cohomology of groups</a>.  In general, 
+</p>
+<dl><dd><span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{2}(G,\mathbb {Z} )\cong {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">Z</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <msup>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">C</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x00D7;<!-- × --></mo>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-CLOSE">
+              <mo maxsize="1.2em" minsize="1.2em">)</mo>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2217;<!-- ∗ --></mo>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{2}(G,\mathbb {Z} )\cong {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a866a47e31d37e91d03a88e7d2365316c4075bcb" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -1.005ex; width:26.505ex; height:3.343ex;" alt="{\displaystyle H_{2}(G,\mathbb {Z} )\cong {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}}"></span></dd></dl>
+<p>where the star denotes the algebraic dual group. Moreover, when <i>G</i> is finite, there is an <a href="/wiki/Natural_transformation" title="Natural transformation">unnatural</a> isomorphism 
+</p>
+<dl><dd><span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}\cong H^{2}(G,\mathbb {C} ^{\times }).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-OPEN">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <msup>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">C</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x00D7;<!-- × --></mo>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-CLOSE">
+              <mo maxsize="1.2em" minsize="1.2em">)</mo>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2217;<!-- ∗ --></mo>
+          </mrow>
+        </msup>
+        <mo>&#x2245;<!-- ≅ --></mo>
+        <msup>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo>,</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">C</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x00D7;<!-- × --></mo>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}\cong H^{2}(G,\mathbb {C} ^{\times }).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8ce03ddb03b0c2fd91b9e9a89861b34509081269" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -1.005ex; width:28.962ex; height:3.343ex;" alt="{\displaystyle {\bigl (}H^{2}(G,\mathbb {C} ^{\times }){\bigr )}^{*}\cong H^{2}(G,\mathbb {C} ^{\times }).}"></span></dd></dl>
+<p>The Hopf formula for <span class="mwe-math-element mwe-math-element-inline"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{2}(G)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{2}(G)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ad22d7f06bc09021030a4a95bc3f95f91783105" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.621ex; height:2.843ex;" alt="{\displaystyle H_{2}(G)}"></span> has been generalised to higher dimensions. For one approach and references see the paper by Everaert, Gran and Van der Linden listed below.
+</p><p>A <a href="/wiki/Perfect_group" title="Perfect group">perfect group</a> is one whose first integral homology vanishes.  A <a href="/wiki/Superperfect_group" title="Superperfect group">superperfect group</a> is one whose first two integral homology groups vanish.  The Schur covers of finite perfect groups are superperfect.  An <a href="/wiki/Acyclic_group" class="mw-redirect" title="Acyclic group">acyclic group</a> is a group all of whose reduced integral homology vanishes.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Applications">Applications</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=6" title="Edit section: Applications"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The <a href="/wiki/Algebraic_K-theory#K2" title="Algebraic K-theory">second algebraic K-group</a> K<sub>2</sub>(<i>R</i>) of a commutative ring <i>R</i> can be identified with the second homology group <i>H</i><sub>2</sub>(<i>E</i>(<i>R</i>), <b>Z</b>) of the group <i>E</i>(<i>R</i>) of (infinite) <a href="/wiki/Elementary_matrix" title="Elementary matrix">elementary matrices</a> with entries in <i>R</i>.<sup id="cite&#95;ref-4" class="reference"><a href="#cite_note-4"><span class="cite-bracket">&#91;</span>4<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="See_also">See also</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=7" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul><li><a href="/wiki/Quasisimple_group" title="Quasisimple group">Quasisimple group</a></li></ul>
+<p>The references from Clair Miller give another view of the Schur Multiplier as the kernel of a morphism κ: G ∧ G → G induced by the commutator map.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Notes">Notes</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=8" title="Edit section: Notes"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<style data-mw-deduplicate="TemplateStyles:r1327269900">.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}body.skin-vector-2022 .mw-parser-output .reflist-columns-2{column-width:27em}body.skin-vector-2022 .mw-parser-output .reflist-columns-3{column-width:22.5em}.mw-parser-output .references[data-mw-group=upper-alpha]{list-style-type:upper-alpha}.mw-parser-output .references[data-mw-group=upper-roman]{list-style-type:upper-roman}.mw-parser-output .references[data-mw-group=lower-alpha]{list-style-type:lower-alpha}.mw-parser-output .references[data-mw-group=lower-greek]{list-style-type:lower-greek}.mw-parser-output .references[data-mw-group=lower-roman]{list-style-type:lower-roman}.mw-parser-output div.reflist-liststyle-upper-alpha .references{list-style-type:upper-alpha}.mw-parser-output div.reflist-liststyle-upper-roman .references{list-style-type:upper-roman}.mw-parser-output div.reflist-liststyle-lower-alpha .references{list-style-type:lower-alpha}.mw-parser-output div.reflist-liststyle-lower-greek .references{list-style-type:lower-greek}.mw-parser-output div.reflist-liststyle-lower-roman .references{list-style-type:lower-roman}</style><div>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite&#95;note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a href="#CITEREFRotman1994">Rotman 1994</a>, p.&#160;553</span>
+</li>
+<li id="cite&#95;note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a href="#CITEREFJohnsonRobertson1979">Johnson &amp; Robertson 1979</a>, pp.&#160;275–289</span>
+</li>
+<li id="cite&#95;note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a href="#CITEREFRosenberg1994">Rosenberg 1994</a>, Theorems 4.1.3, 4.1.19</span>
+</li>
+<li id="cite&#95;note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a href="#CITEREFRosenberg1994">Rosenberg 1994</a>, Corollary 4.2.10</span>
+</li>
+</ol></div></div>
+<div class="mw-heading mw-heading2"><h2 id="References">References</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Schur_multiplier&amp;action=edit&amp;section=9" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<style data-mw-deduplicate="TemplateStyles:r1239549316">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}@media screen{.mw-parser-output .refbegin{font-size:90%}}</style><div class="refbegin" style="">
+<ul><li><style data-mw-deduplicate="TemplateStyles:r1333433106">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#bf3c2c)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#bf3c2c)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}</style><cite id="CITEREFAschbacher2000" class="citation cs2"><a href="/wiki/Michael_Aschbacher" title="Michael Aschbacher">Aschbacher, Michael</a> (2000), <i>Finite group theory</i>, Cambridge Studies in Advanced Mathematics, vol.&#160;10 (2nd&#160;ed.), <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-521-78145-9" title="Special:BookSources/978-0-521-78145-9"><bdi>978-0-521-78145-9</bdi></a>, <a href="/wiki/MR_(identifier)" class="mw-redirect" title="MR (identifier)">MR</a>&#160;<a rel="nofollow" class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1777008">1777008</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0997.20001">0997.20001</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Finite+group+theory&amp;rft.series=Cambridge+Studies+in+Advanced+Mathematics&amp;rft.edition=2nd&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2000&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0997.20001%23id-name%3DZbl&amp;rft&#95;id=https%3A%2F%2Fmathscinet.ams.org%2Fmathscinet-getitem%3Fmr%3D1777008%23id-name%3DMR&amp;rft.isbn=978-0-521-78145-9&amp;rft.aulast=Aschbacher&amp;rft.aufirst=Michael&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFHopf1942" class="citation cs2"><a href="/wiki/Heinz_Hopf" title="Heinz Hopf">Hopf, Heinz</a> (1942), "Fundamentalgruppe und zweite Bettische Gruppe", <i><a href="/wiki/Commentarii_Mathematici_Helvetici" title="Commentarii Mathematici Helvetici">Commentarii Mathematici Helvetici</a></i>, <b>14</b>: <span class="nowrap">257–</span>309, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2FBF02565622">10.1007/BF02565622</a>, <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="https://search.worldcat.org/issn/0010-2571">0010-2571</a>, <a href="/wiki/MR_(identifier)" class="mw-redirect" title="MR (identifier)">MR</a>&#160;<a rel="nofollow" class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0006510">0006510</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0027.09503">0027.09503</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Commentarii+Mathematici+Helvetici&amp;rft.atitle=Fundamentalgruppe+und+zweite+Bettische+Gruppe&amp;rft.volume=14&amp;rft.pages=257-309&amp;rft.date=1942&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0027.09503%23id-name%3DZbl&amp;rft&#95;id=https%3A%2F%2Fmathscinet.ams.org%2Fmathscinet-getitem%3Fmr%3D0006510%23id-name%3DMR&amp;rft.issn=0010-2571&amp;rft&#95;id=info%3Adoi%2F10.1007%2FBF02565622&amp;rft.aulast=Hopf&amp;rft.aufirst=Heinz&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFJohnsonRobertson1979" class="citation cs2">Johnson, David Lawrence; Robertson, Edmund Frederick (1979), "Finite groups of deficiency zero", in <a href="/wiki/C._T._C._Wall" title="C. T. C. Wall">Wall, C.T.C.</a> (ed.), <i>Homological Group Theory</i>, London Mathematical Society Lecture Note Series, vol.&#160;36, <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-521-22729-2" title="Special:BookSources/978-0-521-22729-2"><bdi>978-0-521-22729-2</bdi></a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0423.20029">0423.20029</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Finite+groups+of+deficiency+zero&amp;rft.btitle=Homological+Group+Theory&amp;rft.series=London+Mathematical+Society+Lecture+Note+Series&amp;rft.pub=Cambridge+University+Press&amp;rft.date=1979&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0423.20029%23id-name%3DZbl&amp;rft.isbn=978-0-521-22729-2&amp;rft.aulast=Johnson&amp;rft.aufirst=David+Lawrence&amp;rft.au=Robertson%2C+Edmund+Frederick&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFKuzmin2001" class="citation cs2">Kuzmin, Leonid Viktorovich (2001) [1994], <a rel="nofollow" class="external text" href="https://www.encyclopediaofmath.org/index.php?title=Schur_multiplicator">"Schur multiplicator"</a>, <i><a href="/wiki/Encyclopedia_of_Mathematics" title="Encyclopedia of Mathematics">Encyclopedia of Mathematics</a></i>, <a href="/wiki/European_Mathematical_Society" title="European Mathematical Society">EMS Press</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Schur+multiplicator&amp;rft.btitle=Encyclopedia+of+Mathematics&amp;rft.pub=EMS+Press&amp;rft.date=2001&amp;rft.aulast=Kuzmin&amp;rft.aufirst=Leonid+Viktorovich&amp;rft&#95;id=https%3A%2F%2Fwww.encyclopediaofmath.org%2Findex.php%3Ftitle%3DSchur&#95;multiplicator&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFRosenberg1994" class="citation cs2"><a href="/wiki/Jonathan_Rosenberg_(mathematician)" title="Jonathan Rosenberg (mathematician)">Rosenberg, Jonathan</a> (1994), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=TtMkTEZbYoYC"><i>Algebraic K-theory and its applications</i></a>, <a href="/wiki/Graduate_Texts_in_Mathematics" title="Graduate Texts in Mathematics">Graduate Texts in Mathematics</a>, vol.&#160;147, <a href="/wiki/Springer-Verlag" class="mw-redirect" title="Springer-Verlag">Springer-Verlag</a>, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-387-94248-3" title="Special:BookSources/978-0-387-94248-3"><bdi>978-0-387-94248-3</bdi></a>, <a href="/wiki/MR_(identifier)" class="mw-redirect" title="MR (identifier)">MR</a>&#160;<a rel="nofollow" class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1282290">1282290</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0801.19001">0801.19001</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algebraic+K-theory+and+its+applications&amp;rft.series=Graduate+Texts+in+Mathematics&amp;rft.pub=Springer-Verlag&amp;rft.date=1994&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0801.19001%23id-name%3DZbl&amp;rft&#95;id=https%3A%2F%2Fmathscinet.ams.org%2Fmathscinet-getitem%3Fmr%3D1282290%23id-name%3DMR&amp;rft.isbn=978-0-387-94248-3&amp;rft.aulast=Rosenberg&amp;rft.aufirst=Jonathan&amp;rft&#95;id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DTtMkTEZbYoYC&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span> <a rel="nofollow" class="external text" href="http://www-users.math.umd.edu/~jmr/KThy_errata2.pdf">Errata</a></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFRotman1994" class="citation cs2">Rotman, Joseph J. (1994), <i>An introduction to the theory of groups</i>, <a href="/wiki/Springer-Verlag" class="mw-redirect" title="Springer-Verlag">Springer-Verlag</a>, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-387-94285-8" title="Special:BookSources/978-0-387-94285-8"><bdi>978-0-387-94285-8</bdi></a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+introduction+to+the+theory+of+groups&amp;rft.pub=Springer-Verlag&amp;rft.date=1994&amp;rft.isbn=978-0-387-94285-8&amp;rft.aulast=Rotman&amp;rft.aufirst=Joseph+J.&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFSchur1904" class="citation cs2 cs1-prop-foreign-lang-source"><a href="/wiki/Issai_Schur" title="Issai Schur">Schur, Issai</a> (1904), <a rel="nofollow" class="external text" href="http://resolver.sub.uni-goettingen.de/purl?GDZPPN002165511">"Über die Darstellung der endlichen Gruppen durch gebrochene lineare Substitutionen."</a>, <i><a href="/wiki/Journal_f%C3%BCr_die_reine_und_angewandte_Mathematik" class="mw-redirect" title="Journal für die reine und angewandte Mathematik">Journal für die reine und angewandte Mathematik</a></i> (in German), <b>127</b>: <span class="nowrap">20–</span>50, <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="https://search.worldcat.org/issn/0075-4102">0075-4102</a>, <a href="/wiki/JFM_(identifier)" class="mw-redirect" title="JFM (identifier)">JFM</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:35.0155.01">35.0155.01</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+f%C3%BCr+die+reine+und+angewandte+Mathematik&amp;rft.atitle=%C3%9Cber+die+Darstellung+der+endlichen+Gruppen+durch+gebrochene+lineare+Substitutionen.&amp;rft.volume=127&amp;rft.pages=20-50&amp;rft.date=1904&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A35.0155.01%23id-name%3DJFM&amp;rft.issn=0075-4102&amp;rft.aulast=Schur&amp;rft.aufirst=Issai&amp;rft&#95;id=http%3A%2F%2Fresolver.sub.uni-goettingen.de%2Fpurl%3FGDZPPN002165511&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFSchur1907" class="citation cs2 cs1-prop-foreign-lang-source"><a href="/wiki/Issai_Schur" title="Issai Schur">Schur, Issai</a> (1907), <span class="id-lock-subscription" title="Paid subscription required"><a rel="nofollow" class="external text" href="http://resolver.sub.uni-goettingen.de/purl?GDZPPN00216633X">"Untersuchungen über die Darstellung der endlichen Gruppen durch gebrochene lineare Substitutionen."</a></span>, <i><a href="/wiki/Journal_f%C3%BCr_die_reine_und_angewandte_Mathematik" class="mw-redirect" title="Journal für die reine und angewandte Mathematik">Journal für die reine und angewandte Mathematik</a></i> (in German), <b>1907</b> (132): <span class="nowrap">85–</span>137, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1515%2Fcrll.1907.132.85">10.1515/crll.1907.132.85</a>, <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="https://search.worldcat.org/issn/0075-4102">0075-4102</a>, <a href="/wiki/JFM_(identifier)" class="mw-redirect" title="JFM (identifier)">JFM</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:38.0174.02">38.0174.02</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+f%C3%BCr+die+reine+und+angewandte+Mathematik&amp;rft.atitle=Untersuchungen+%C3%BCber+die+Darstellung+der+endlichen+Gruppen+durch+gebrochene+lineare+Substitutionen.&amp;rft.volume=1907&amp;rft.issue=132&amp;rft.pages=85-137&amp;rft.date=1907&amp;rft.issn=0075-4102&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A38.0174.02%23id-name%3DJFM&amp;rft&#95;id=info%3Adoi%2F10.1515%2Fcrll.1907.132.85&amp;rft.aulast=Schur&amp;rft.aufirst=Issai&amp;rft&#95;id=http%3A%2F%2Fresolver.sub.uni-goettingen.de%2Fpurl%3FGDZPPN00216633X&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFVan&#95;der&#95;Kallen1984" class="citation cs2">Van der Kallen, Wilberd (1984), <a rel="nofollow" class="external text" href="http://projecteuclid.org/euclid.bams/1183551591">"Review: F. Rudolf Beyl and Jürgen Tappe, Group extensions, representations, and the Schur multiplicator"</a>, <i><a href="/wiki/Bulletin_of_the_American_Mathematical_Society" title="Bulletin of the American Mathematical Society">Bulletin of the American Mathematical Society</a></i>, <b>10</b> (2): <span class="nowrap">330–</span>3, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1090%2Fs0273-0979-1984-15273-x">10.1090/s0273-0979-1984-15273-x</a></span></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Bulletin+of+the+American+Mathematical+Society&amp;rft.atitle=Review%3A+F.+Rudolf+Beyl+and+J%C3%BCrgen+Tappe%2C+Group+extensions%2C+representations%2C+and+the+Schur+multiplicator&amp;rft.volume=10&amp;rft.issue=2&amp;rft.pages=330-3&amp;rft.date=1984&amp;rft&#95;id=info%3Adoi%2F10.1090%2Fs0273-0979-1984-15273-x&amp;rft.aulast=Van+der+Kallen&amp;rft.aufirst=Wilberd&amp;rft&#95;id=http%3A%2F%2Fprojecteuclid.org%2Feuclid.bams%2F1183551591&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFWiegold1982" class="citation cs2"><a href="/wiki/James_Wiegold" title="James Wiegold">Wiegold, James</a> (1982), "The Schur multiplier: an elementary approach", <i>Groups–St. Andrews 1981 (St. Andrews, 1981)</i>, London Math. Soc. Lecture Note Ser., vol.&#160;71, <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>, pp.&#160;<span class="nowrap">137–</span>154, <a href="/wiki/MR_(identifier)" class="mw-redirect" title="MR (identifier)">MR</a>&#160;<a rel="nofollow" class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0679156">0679156</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0502.20003">0502.20003</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=The+Schur+multiplier%3A+an+elementary+approach&amp;rft.btitle=Groups%E2%80%93St.+Andrews+1981+%28St.+Andrews%2C+1981%29&amp;rft.series=London+Math.+Soc.+Lecture+Note+Ser.&amp;rft.pages=137-154&amp;rft.pub=Cambridge+University+Press&amp;rft.date=1982&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0502.20003%23id-name%3DZbl&amp;rft&#95;id=https%3A%2F%2Fmathscinet.ams.org%2Fmathscinet-getitem%3Fmr%3D679156%23id-name%3DMR&amp;rft.aulast=Wiegold&amp;rft.aufirst=James&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFMiller1952" class="citation cs2">Miller, Clair (1952), "The second homology of a group", <i><a href="/wiki/Proceedings_of_the_American_Mathematical_Society" title="Proceedings of the American Mathematical Society">Proceedings of the American Mathematical Society</a></i>, <b>3</b> (4): <span class="nowrap">588–</span>595, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1090%2Fs0002-9939-1952-0049191-5">10.1090/s0002-9939-1952-0049191-5</a></span>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0047.25703">0047.25703</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+American+Mathematical+Society&amp;rft.atitle=The+second+homology+of+a+group&amp;rft.volume=3&amp;rft.issue=4&amp;rft.pages=588-595&amp;rft.date=1952&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0047.25703%23id-name%3DZbl&amp;rft&#95;id=info%3Adoi%2F10.1090%2Fs0002-9939-1952-0049191-5&amp;rft.aulast=Miller&amp;rft.aufirst=Clair&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFDennis1976" class="citation cs2">Dennis, R.K. (1976), <i>In search of new "Homology" functors having a close relationship to K-theory</i>, Cornell University</cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=In+search+of+new+%22Homology%22+functors+having+a+close+relationship+to+K-theory&amp;rft.pub=Cornell+University&amp;rft.date=1976&amp;rft.aulast=Dennis&amp;rft.aufirst=R.K.&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFBrownJohnsonRobertson1987" class="citation cs2">Brown, R.; Johnson, D.L.; Robertson, E.F. (1987), "Some computations of non-abelian tensor products of groups", <i>Journal of Algebra</i>, <b>111</b>: <span class="nowrap">177–</span>202, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2F0021-8693%2887%2990248-1">10.1016/0021-8693(87)90248-1</a></span>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0626.20038">0626.20038</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Algebra&amp;rft.atitle=Some+computations+of+non-abelian+tensor+products+of+groups&amp;rft.volume=111&amp;rft.pages=177-202&amp;rft.date=1987&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0626.20038%23id-name%3DZbl&amp;rft&#95;id=info%3Adoi%2F10.1016%2F0021-8693%2887%2990248-1&amp;rft.aulast=Brown&amp;rft.aufirst=R.&amp;rft.au=Johnson%2C+D.L.&amp;rft.au=Robertson%2C+E.F.&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFEllisLeonard1995" class="citation cs2">Ellis, G.J.; Leonard, F. (1995), "Computing Schur multipliers and tensor products of finite groups", <i>Proceedings of the Royal Irish Academy</i>, <b>95A</b> (2): <span class="nowrap">137–</span>147, <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="https://search.worldcat.org/issn/0035-8975">0035-8975</a>, <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="https://www.jstor.org/stable/20490165">20490165</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0863.20010">0863.20010</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+Royal+Irish+Academy&amp;rft.atitle=Computing+Schur+multipliers+and+tensor+products+of+finite+groups&amp;rft.volume=95A&amp;rft.issue=2&amp;rft.pages=137-147&amp;rft.date=1995&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0863.20010%23id-name%3DZbl&amp;rft.issn=0035-8975&amp;rft&#95;id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F20490165%23id-name%3DJSTOR&amp;rft.aulast=Ellis&amp;rft.aufirst=G.J.&amp;rft.au=Leonard%2C+F.&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFEllis1998" class="citation cs2">Ellis, Graham J. (1998), "The Schur multiplier of a pair of groups", <i>Applied Categorical Structures</i>, <b>6</b> (3): <span class="nowrap">355–</span>371, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1008652316165">10.1023/A:1008652316165</a>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0948.20026">0948.20026</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Applied+Categorical+Structures&amp;rft.atitle=The+Schur+multiplier+of+a+pair+of+groups&amp;rft.volume=6&amp;rft.issue=3&amp;rft.pages=355-371&amp;rft.date=1998&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0948.20026%23id-name%3DZbl&amp;rft&#95;id=info%3Adoi%2F10.1023%2FA%3A1008652316165&amp;rft.aulast=Ellis&amp;rft.aufirst=Graham+J.&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFEickNickel2008" class="citation cs2">Eick, Bettina; Nickel, Werner (2008), "Computing the Schur multiplicator and the nonabelian tensor square of a polycyclic group", <i>Journal of Algebra</i>, <b>320</b> (2): <span class="nowrap">927–</span>944, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.jalgebra.2008.02.041">10.1016/j.jalgebra.2008.02.041</a></span>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:1163.20022">1163.20022</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Algebra&amp;rft.atitle=Computing+the+Schur+multiplicator+and+the+nonabelian+tensor+square+of+a+polycyclic+group&amp;rft.volume=320&amp;rft.issue=2&amp;rft.pages=927-944&amp;rft.date=2008&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A1163.20022%23id-name%3DZbl&amp;rft&#95;id=info%3Adoi%2F10.1016%2Fj.jalgebra.2008.02.041&amp;rft.aulast=Eick&amp;rft.aufirst=Bettina&amp;rft.au=Nickel%2C+Werner&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1333433106" /><cite id="CITEREFEveraertGranVan&#95;der&#95;Linden2008" class="citation cs2">Everaert, Tomas; Gran, Marino; Van der Linden, Tim (2008), "Higher Hopf formulae for homology via Galois theory", <i><a href="/wiki/Advances_in_Mathematics" title="Advances in Mathematics">Advances in Mathematics</a></i>, <b>217</b> (5): <span class="nowrap">2231–</span>67, <a href="/wiki/ArXiv_(identifier)" class="mw-redirect" title="ArXiv (identifier)">arXiv</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://arxiv.org/abs/math/0701815">math/0701815</a></span>, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.aim.2007.11.001">10.1016/j.aim.2007.11.001</a></span>, <a href="/wiki/Zbl_(identifier)" class="mw-redirect" title="Zbl (identifier)">Zbl</a>&#160;<a rel="nofollow" class="external text" href="https://zbmath.org/?format=complete&amp;q=an:1140.18012">1140.18012</a></cite><span title="ctx&#95;ver=Z39.88-2004&amp;rft&#95;val&#95;fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Advances+in+Mathematics&amp;rft.atitle=Higher+Hopf+formulae+for+homology+via+Galois+theory&amp;rft.volume=217&amp;rft.issue=5&amp;rft.pages=2231-67&amp;rft.date=2008&amp;rft&#95;id=https%3A%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A1140.18012%23id-name%3DZbl&amp;rft&#95;id=info%3Aarxiv%2Fmath%2F0701815&amp;rft&#95;id=info%3Adoi%2F10.1016%2Fj.aim.2007.11.001&amp;rft.aulast=Everaert&amp;rft.aufirst=Tomas&amp;rft.au=Gran%2C+Marino&amp;rft.au=Van+der+Linden%2C+Tim&amp;rfr&#95;id=info%3Asid%2Fen.wikipedia.org%3ASchur+multiplier" class="Z3988"></span></li></ul>
+</div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.codfw.main‐6cf7b454cb‐f4gd2
+Cached time: 20260411060633
+Cache expiry: 2592000
+Cache expiry source: Module:Citation/CS1 (os.date(%Y))
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, prevent‐selective‐update, show‐toc]
+CPU time usage: 0.333 seconds
+Real time usage: 0.439 seconds
+Preprocessor visited node count: 1802/1000000
+Revision size: 15209/2097152 bytes
+Post‐expand include size: 69353/2097152 bytes
+Template argument size: 1144/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 79148/5000000 bytes
+Lua time usage: 0.205/10.000 seconds
+Lua memory usage: 7921214/52428800 bytes
+Number of Wikibase entities loaded: 0/500
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  312.765      1 -total
+ 35.50%  111.028     16 Template:Citation
+ 26.13%   81.720      1 Template:Group_theory_sidebar
+ 25.73%   80.468      1 Template:Sidebar_with_collapsible_lists
+ 14.12%   44.164      1 Template:Short_description
+  9.13%   28.556      2 Template:Sidebar
+  8.97%   28.040      2 Template:Harv
+  8.92%   27.910      3 Template:Hlist
+  8.89%   27.802      2 Template:Pagetype
+  5.24%   16.384      1 Template:Reflist
+-->
+
+<!-- Render ID 96ec43ae-356c-11f1-802e-d94eeab3781d -->
+
+<!-- Saved in parser cache with key enwiki:pcache:1121587:|#|:idhash:canonical and timestamp 20260411060633 and revision id 1340334286. Rendering was triggered because: page_view
+ -->
+</div><noscript><img src="https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Schur_multiplier&amp;oldid=1340334286">https://en.wikipedia.org/w/index.php?title=Schur_multiplier&amp;oldid=1340334286</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw-interface=""><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Group_theory" title="Category:Group theory">Group theory</a></li><li><a href="/wiki/Category:Homological_algebra" title="Category:Homological algebra">Homological algebra</a></li><li><a href="/wiki/Category:Issai_Schur" title="Category:Issai Schur">Issai Schur</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:CS1_German-language_sources_(de)" title="Category:CS1 German-language sources (de)">CS1 German-language sources (de)</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 25 February 2026, at 03:50<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a href="/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" title="Wikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License">Creative Commons Attribution-ShareAlike 4.0 License</a>;
+additional terms may apply. By using this site, you agree to the <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use" class="extiw" title="foundation:Special:MyLanguage/Policy:Terms of Use">Terms of Use</a> and <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy" class="extiw" title="foundation:Special:MyLanguage/Policy:Privacy policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a rel="nofollow" class="external text" href="https://wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-legal-safety-contacts"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information">Legal &amp; safety contacts</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.wikipedia.org/w/index.php?title=Schur_multiplier&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Search Wikipedia">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:Search">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<nav aria-label="Contents" class="vector-toc-landmark">
+						
+					<div id="vector-sticky-header-toc" class="vector-dropdown mw-portlet mw-portlet-sticky-header-toc vector-sticky-header-toc vector-button-flush-left"  >
+						<input type="checkbox" id="vector-sticky-header-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-sticky-header-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+						<label id="vector-sticky-header-toc-label" for="vector-sticky-header-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+						</label>
+						<div class="vector-dropdown-content">
+					
+						<div id="vector-sticky-header-toc-unpinned-container" class="vector-unpinned-container">
+						</div>
+					
+						</div>
+					</div>
+			</nav>
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" ><span lang="en" dir="ltr"><span class="mw-page-title-main">Schur multiplier</span></span></div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<button class="cdx-button cdx-button--weight-quiet mw-interlanguage-selector" id="p-lang-btn-sticky-header" tabindex="-1" data-event-name="ui.dropdown-p-lang-btn-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language"></span>
+
+<span>2 languages</span>
+			</button>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-6cf7b454cb-ktskn","wgBackendResponseTime":118,"wgPageParseReport":{"limitreport":{"cputime":"0.333","walltime":"0.439","ppvisitednodes":{"value":1802,"limit":1000000},"revisionsize":{"value":15209,"limit":2097152},"postexpandincludesize":{"value":69353,"limit":2097152},"templateargumentsize":{"value":1144,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":79148,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%  312.765      1 -total"," 35.50%  111.028     16 Template:Citation"," 26.13%   81.720      1 Template:Group_theory_sidebar"," 25.73%   80.468      1 Template:Sidebar_with_collapsible_lists"," 14.12%   44.164      1 Template:Short_description","  9.13%   28.556      2 Template:Sidebar","  8.97%   28.040      2 Template:Harv","  8.92%   27.910      3 Template:Hlist","  8.89%   27.802      2 Template:Pagetype","  5.24%   16.384      1 Template:Reflist"]},"scribunto":{"limitreport-timeusage":{"value":"0.205","limit":"10.000"},"limitreport-memusage":{"value":7921214,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n    [\"CITEREFAschbacher2000\"] = 1,\n    [\"CITEREFBrownJohnsonRobertson1987\"] = 1,\n    [\"CITEREFDennis1976\"] = 1,\n    [\"CITEREFEickNickel2008\"] = 1,\n    [\"CITEREFEllis1998\"] = 1,\n    [\"CITEREFEllisLeonard1995\"] = 1,\n    [\"CITEREFEveraertGranVan_der_Linden2008\"] = 1,\n    [\"CITEREFHopf1942\"] = 1,\n    [\"CITEREFJohnsonRobertson1979\"] = 1,\n    [\"CITEREFMiller1952\"] = 1,\n    [\"CITEREFRosenberg1994\"] = 1,\n    [\"CITEREFRotman1994\"] = 1,\n    [\"CITEREFSchur1904\"] = 1,\n    [\"CITEREFSchur1907\"] = 1,\n    [\"CITEREFVan_der_Kallen1984\"] = 1,\n    [\"CITEREFWiegold1982\"] = 1,\n    [\"Schur_cover\"] = 1,\n}\ntemplate_list = table#1 {\n    [\"Anchor\"] = 1,\n    [\"Citation\"] = 16,\n    [\"Eom\"] = 1,\n    [\"Group theory sidebar\"] = 1,\n    [\"Harv\"] = 2,\n    [\"Harvnb\"] = 4,\n    [\"Harvs\"] = 2,\n    [\"Refbegin\"] = 1,\n    [\"Refend\"] = 1,\n    [\"Reflist\"] = 1,\n    [\"Short description\"] = 1,\n}\narticle_whitelist = table#1 {\n}\nciteref_patterns = table#1 {\n}\n"},"cachereport":{"origin":"mw-web.codfw.main-6cf7b454cb-f4gd2","timestamp":"20260411060633","ttl":2592000,"transientcontent":false,"expiry-source":"Module:Citation/CS1 (os.date(%Y))"}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Schur multiplier","url":"https:\/\/en.wikipedia.org\/wiki\/Schur_multiplier","sameAs":"http:\/\/www.wikidata.org\/entity\/Q3327702","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q3327702","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-10-31T21:47:22Z","dateModified":"2026-02-25T03:50:36Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/5f\/Cyclic_group.svg","headline":"the second homology group H\u2082(\ud835\udc3a,\u2124) of a group \ud835\udc3a"}</script>
+</body>
+</html>

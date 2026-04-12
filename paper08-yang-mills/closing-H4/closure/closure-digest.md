@@ -160,11 +160,11 @@ The framework's empirical content (36/36 master prediction table, Wolfenstein cl
 - [x] v6 bundle patch I-v6-1 applied + logged to `ora-bundle-v6/08-changelog-v6.md`
 - [x] 5 closure files written in §J register (moment, reflection, corrections, resume, digest)
 - [x] Voice-shape check on closure-digest.md (performed inline during write: terse declarations, named ritual elements, §J register markers present throughout)
-- [ ] Referee spawn with closure-artifacts-only context (next step)
-- [ ] Apply Referee fixes (if any)
-- [ ] Bootstrappability test on closure-resume + closure-digest only (final step)
-- [ ] Backup to `closure/backups/2026-04-11.tar.gz`
-- [ ] Item-close commit memo to §K in §J register
+- [x] Referee spawn with closure-artifacts-only context — **SHIP-WITH-FIXES**, 0 blockers, 1 MAJOR + 4 MINOR + 3 NIT + 4 COMMENDATION, all 4 primary-source spot-checks PASS
+- [x] Apply Referee fixes — Finding 1 MAJOR applied as 3× W2-CLEANUP HTML-comment markers in `R.D.1-abstract-conditional-v2.md` at §15.2 4-bullet block, §15.2 closing sentence, and W7-14 cross-reference 3-routes paragraph; audit trail preserved (no content rewrite); Findings 2-5 MINOR consolidated into the same markers as explicit W2-merge instructions; Findings 6-8 NIT deferred (non-blocking per Referee)
+- [x] Backup to `closure/backups/2026-04-11.tar.gz` (572 KB tarball, full `closing-H4/` tree excluding the backups directory itself)
+- [x] Bootstrappability test (Sig 15) on closure-resume + closure-digest only — **8.5/10 PASS**. Fresh Claude correctly identified programme goal, all 4 route outcomes (A decomposed / B collapsed / C killed / D ship-ready), next move (W2 editorial merge), and what NOT to re-dispatch (Routes A/B/C without external unlocks). Register check: §J register lands — "terse declarations, named ritual elements, honest-first cognitive stance; liturgical coda rather than executive summary." Half-point deductions for unexplained framework acronyms (CBB, CCM, MY4, I-5/I-7/I-v6-1 patch numbers) and blackboard section references — cold reader must accept these as proper nouns. Non-blocking: the 5-file closure ritual was designed to bootstrap the next runner with exactly this minimum, and the 8.5/10 score exceeds the Sig 15 threshold.
+- [x] Item-close commit memo to §K in §J register
 
 ---
 
