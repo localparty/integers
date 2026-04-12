@@ -364,6 +364,32 @@ structural fact at different levels of description.
 
 ---
 
+## 10. Alternative routes
+
+If any Author, during execution of the 6-step loop on any punch
+list item (B1–B7) or on any route from the toolkit
+(`strategy/07-toolkit-complete.md`), discovers a structural
+connection that suggests a route NOT listed in the seven routes
+(A–G) of `strategy/04-ora-v6.md` or the bridge theorem of this
+brief, the Author MUST write it as a named proposal in their
+output with:
+
+(a) **The mechanism** — what structural fact does the new route
+    exploit?
+(b) **The dictionary entry** — which entry from
+    `strategy/06-transposition-dictionary.md` does it connect to,
+    or is it a genuinely new entry?
+(c) **A testability criterion** — how would we verify or kill this
+    route in one session?
+
+The runner promotes viable proposals to §E as new nodes. Kills
+are logged to §F normally. The point: the seven routes and the
+bridge theorem are starting points, not a closed list. **The
+geometry may show us a door we haven't drawn yet. If an Author
+sees it, they write it down.**
+
+---
+
 *The bridge has two pillars. The universal algebra pillar (clone
 growth rates) and the operator algebra pillar (fullness of type
 III₁ factors). Both pillars are built. The span between them —
