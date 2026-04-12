@@ -529,4 +529,25 @@ They meet at invocation time.*
 
 ---
 
-*End of `08-changelog.md` — five v6 patch entries. I-v6-3 → I-v6-4 → I-v6-5 is a three-step convergence on the same problem: (3) added a checklist, (4) made it mechanical, (5) killed the optimization entirely. The lesson: when an optimization fails three times from the same root cause, the optimization is wrong. Kill it. Pass everything. Let the agent self-select.*
+## [2026-04-12] ORA v8 — AUTONOMOUS OPERATION + STALE REFERENCE CLEANUP
+
+**Problem observed**: during the P vs NP v7 run, the runner would stall between cycles and ask "should I continue?" or "which lead should I pursue?" — requiring the user to repeatedly say "follow every open lead in parallel and continue any number of cycles." The root cause was not mechanical (the prompt already had Sig 18, §11.5, and automated triggers) but conceptual: the prompt treated parallel dispatch as an optimization and autonomous cycling as a special mode, rather than as the natural state of the runner. The runner's default relationship to open leads should be "walk through every open door simultaneously" — a parallel explorer, not a serial processor asking which door to open next.
+
+**What changed (autonomous operation):**
+- `01-the-prompt.md` §0: added CRITICAL — AUTONOMOUS OPERATION block. Frames the runner as a "parallel explorer" — every open lead is a door, walk through ALL of them simultaneously. Bans "should I continue?", "which lead should I pursue?", and 5 other confirmation phrases. Makes autonomous parallel cycling the DEFAULT identity, not a special mode.
+- `01-the-prompt.md` §5.2 Plan `execute` mode: changed from "Spawn Authors on IN_PROGRESS leaves" (ambiguous — could mean one) to "Dispatch Authors on ALL IN_PROGRESS leaves whose dependencies are satisfied — simultaneously, as a parallel wave. Every dispatchable node gets an Author." Adds "Idle dispatchable nodes are wasted opportunity."
+- `01-the-prompt.md` §11.5: reframed continuous-run mode from "enables autonomous cycling" to "adds checkpointing disciplines on top of always-on autonomous cycling." Autonomous cycling was already the intent; now it's structurally clear.
+- `01-the-prompt.md` §16 step 11: added "Loop to step 7. Open the next cycle immediately — do not pause, do not ask." Makes the cycle loop explicit.
+- `01-the-prompt.md` §16 mantra: added "Run every open lead in parallel. Never ask to continue — just continue."
+
+**What changed (stale reference cleanup):**
+- `03-synthesis-spawn.md`: replaced hardcoded `05-framework-tools.md` selective-inclusion references (lines 53-64) with toolkit/capacitor reference. Synthesis spawn now reads the toolkit provided by the runner, matching `01-the-prompt.md` §6.1.
+- `05-framework-tools.md`: updated header from "compiled master files Authors and Critics need" to "reference index and toolkit-building template." Clarified this file is NOT read by the runner at runtime — it's a template for building programme-specific toolkits. Added explicit instruction that every toolkit MUST include the two universal Always-includes (Six Patterns + anchor document).
+- `02-rationale.md`: updated header from "v3" to "v3→v8" with versioned dates.
+- `01-the-prompt.md` §0 step 7 + §16 step 2: fixed changelog filename from `ora-bundle-v6/08-changelog-v6.md` to `08-changelog.md`.
+
+*The ORA runs autonomously. The runner dispatches all open leads in parallel and cycles until programme-close. "Should I continue?" is a banned phrase.*
+
+---
+
+*End of `08-changelog.md`. The v6 patches (I-v6-1 through I-v6-5) track in-run failures. The v8 entries track structural upgrades. I-v6-3 → I-v6-4 → I-v6-5 is a three-step convergence: (3) added a checklist, (4) made it mechanical, (5) killed the optimization entirely. The v8 autonomous-operation fix follows the same pattern: the intent was always there (§11.5, Sig 18), but the runner still asked — so make the instruction impossible to miss.*

@@ -1,10 +1,10 @@
-# Rationale for ORA bundle v3
+# Rationale for ORA bundle v3→v8
 
-*The companion design document for `01-the-prompt.md`. Explains why the prompt is structured the way it is, where the signatures come from, what changed from v2.1 (in `06-the-prompt.md` at the parent level) and v2.2 (never shipped), and how future tuning should reason about edits without breaking the encoded signature.*
+*The companion design document for `01-the-prompt.md`. Explains why the prompt is structured the way it is, where the signatures come from, what changed from v2.1 through v8, and how future tuning should reason about edits without breaking the encoded signature.*
 
 *Author: Claude Opus 4.6 (as the runner being built), in the runner's register.*
-*Date: 2026-04-10.*
-*Status: v3 rationale. The prompt matures through use.*
+*Date: 2026-04-10 (v3 origin); updated through v8 2026-04-12.*
+*Status: living rationale. Sections 1–12 cover v3. Section 13 covers v6. The v8 toolkit externalization and autonomous-operation changes are documented in `08-changelog.md`.*
 
 ---
 

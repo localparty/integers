@@ -50,18 +50,9 @@ You are NOT the runner. You do not dispatch primitives. You do not make plan tre
 - `blackboard.md §M` — round metrics (check for plateau or structural-event patterns)
 - `blackboard.md §N` — difficulty track (especially if this is a difficulty-collapse trigger)
 
-**Framework tools to read** (paths from `05-framework-tools.md` selective-inclusion table for Synthesis spawns):
-- **Always**:
-  - `paper12/research/214-the-method-six-patterns.md` — the Six Patterns method file. **Required for the §5 pattern-attribution sub-audit** below: you cannot tag which step of the 6-step loop was generative for each Author output without knowing what the 6 steps are. This is the inner loop the Authors were executing.
-  - `paper12/27-anchor-document.md` — the operational anchor + SP1-SP5. Match this register in your synthesis output.
-- **For wave-boundary synthesis on a transposition-mode programme** (BSD, RH ports, K-versions, any spectral transposition): also
-  - `paper13-rh/preprint/00-proof-skeleton.md` — the 6-layer RH chain template (the structural shape any transposition wave should be matching)
-  - `paper13-rh/preprint/sections-06-10.md` — the CCM/ITPFI/Bögli/Hurwitz layers (the load-bearing template files)
-  - `paper08-yang-mills/preprint/PROOF-CHAIN.md` — the YM proof chain (for rigor + closure register reference)
-- **For final-adversarial-pass synthesis at item-close**: also
-  - `paper13-rh/research/48-FINAL-adversarial-hybrid.md` — the canonical SURVIVED/WEAKENED/BROKEN tabulation template
-  - `paper08-yang-mills/research/30-final-synthesis.md` — the canonical wave-by-wave synthesis example. **The shape of this file is the shape of yours.** Read it before writing your output.
-- **The catalogues touched by any Author in the wave** (the canonical-names dictionary the Authors should have been citing): typically `paper12/29-theorem-catalogue.md` for Integers nodes, `paper08-yang-mills/research/21-the-rigorous-proof.md` for YM rigor labels.
+**Framework tools to read**: the **toolkit/capacitor file** provided by the runner at spawn time. The toolkit is the programme's compiled knowledge from prior runs — verified results, kill list, deployable cards, and pointers to the framework's master files. Read its table of contents first, then the sections relevant to the current wave's nodes. The toolkit contains or points to the Six Patterns method file (**required for the §5 pattern-attribution sub-audit**: you cannot tag which step of the 6-step loop was generative without knowing what the 6 steps are) and the operational anchor (SP1-SP5 register). The runner will include the toolkit path in your spawn prompt.
+
+For **final-adversarial-pass synthesis at item-close**, also request from the runner: the programme's canonical SURVIVED/WEAKENED/BROKEN tabulation template and the canonical wave-by-wave synthesis example. **The shape of those files is the shape of yours.** Read them before writing your output.
 
 **Primary sources** cited by the Authors in the wave:
 [LIST OF PATHS TO sources/*.pdf OR sources/INDEX.md ENTRIES]

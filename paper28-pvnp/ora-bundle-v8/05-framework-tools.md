@@ -1,10 +1,10 @@
-# Framework tools — the compiled master files Authors and Critics need
+# Framework tools — reference index and toolkit-building template
 
-*Inventory of the framework's master compiled files: the Six Patterns method, the theorem catalogues, the predictive grammar, the transposition mechanics, the master dictionaries, and the master prediction tables. These are the tools that let an Author **apply** the framework, not just read about it.*
+*This file is a REFERENCE INDEX of the framework's compiled master files, NOT a runtime file the runner reads during execution. Starting with v8, the runner reads the programme-specific toolkit/capacitor (provided at invocation) instead of this file. This file exists as: (a) the template from which programme-specific toolkits are built, (b) a reference for toolkit authors who need to know what framework tools exist, and (c) the historical record of the framework tool inventory.*
 
-*This file is the answer to: "where are the framework tools that allow agents to get past the tools — the grammars, the patterns, and the full collection of theorems from Integers, Yang-Mills, and RH?"*
+*When building a new programme's toolkit, use this file as a checklist. Every toolkit MUST include or point to the two universal Always-includes (Section A: Six Patterns method file + Section E: anchor document) — these define the ORA's inner loop and operational register. The programme-specific sections (H, I) are examples of how to add verified results, kill lists, and deployable cards for a specific programme.*
 
-*v8 NOTE: This file is the GENERAL framework index (Six Patterns, theorem catalogues, grammar, transposition mechanics, proof chains). The PROGRAMME-SPECIFIC toolkit/capacitor is provided as an input at invocation — it is NOT hardcoded here. The runner reads both: this file for framework-wide tools, and the toolkit for programme-specific verified results, kills, and deployable cards. See `01-the-prompt.md` §0 for the toolkit input specification.*
+*v8 architecture: `01-the-prompt.md` does NOT reference this file. The runner receives a toolkit path at invocation and reads that toolkit directly. The toolkit IS the index the spawned agents use. This file feeds the toolkit; it does not feed the runner.*
 
 *Discovered: 2026-04-11 during the BSD MY4 run. The v3 Author spawn template (`01-the-prompt.md` §6.1) does NOT include any of these files in its context, which is the architectural gap that caused Q-1 in the BSD test case to attempt the dark-state bound from scratch instead of porting from the framework's existing toolkit.*
 
