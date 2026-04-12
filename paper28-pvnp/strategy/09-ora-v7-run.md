@@ -3,7 +3,7 @@ read you your instructions from
 your brief is in 
 `/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/strategy/08-clone-growth-fullness-bridge.md`
 the run output directory is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/clone-growth-fullness-bridge`
+`/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/clone-growth-fullness-bridge-with-dictionary`
 
 `Read AND INTERNALIZE /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v7/05-framework-tools.md` §H.3 (the P vs NP toolkit) and §H.3h (the amplification results). Any verified  entry in those sections that is NOT already in your §D blackboard should be added as a §D row with the appropriate status code. The framework tools aren't just for Authors — they're your own toolkit too. Specifically: A5-AREA-LAW (VERIFIED, from §H.3h) and SPECTRAL-GAP-DUALITY (CONFIRMED by 2 agents, from §H.3h) should be in §D now.
 
