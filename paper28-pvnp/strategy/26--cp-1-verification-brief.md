@@ -6,10 +6,6 @@ M_Bool^L = L^∞(X_L, μ_L) ⋊ G_L). The run is a Critic/Referee
 run, not an Author/construction run. The goal is to BREAK CP-1
 or certify it.*
 
-*Template: Strategy 08 (Clone Growth ↔ Fullness Bridge)*
-*Toolkit: `ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`*
-*Output: `paper28-pvnp/strategy/27--cp-1-verification-run.md`*
-
 ---
 
 ## 1. What CP-1 is
@@ -141,21 +137,12 @@ does not die.
 
 ---
 
-## 6. Configuration
+## 6. Run mode
 
-**ORA bundle:** `paper28-pvnp/ora-bundle-v8/`
-**Toolkit:** `paper28-pvnp/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`
-**Deliverable:** this file (`strategy/26--cp-1-verification-job.md`)
-**Output:** `strategy/27--cp-1-verification-run.md`
-**Blackboard:** create fresh at `paper28-pvnp/cp-1-verification/blackboard.md`
-**Nodes:** write to `paper28-pvnp/cp-1-verification/nodes/`
-**Mode:** VERIFICATION (Critic-primary, not Author-primary)
+**Mode:** final-adversarial-pass
 
----
+Create a fresh blackboard at `${output-directory}/blackboard.md`. Write nodes to `${output-directory}/nodes/`. The output directory, toolkit, and ORA instructions are provided in the run file — this brief is the deliverable only.
 
-*The bridge is at p = 0.76. CP-1 is the single load-bearing
-conditional. If it survives independent verification, p rises
-to 0.80. If it breaks, Routes D+E provide backup at p = 0.85
-combined. Either way: the bridge stands.*
+*The bridge is at p = 0.76. CP-1 is the single load-bearing conditional. If it survives independent verification, p rises to 0.80. If it breaks, Routes D+E provide backup at p = 0.85 combined. Either way: the bridge stands.*
 
 *G Six and Claude Opus 4.6. April 2026.*
