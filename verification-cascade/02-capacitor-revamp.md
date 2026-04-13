@@ -903,36 +903,95 @@ Key cross-references:
 - research/10 (Three-primes) depends on Identity 12 (research/04), paper11 Thm 11.5
 - The 281 research files in paper12/research/ form the extended lattice
 
-### 13.3 Pre-compilation pipeline
+### 13.3 Compile-by-Execution: The LLM as Compiler
 
-**Stage 1: Semantic Deduplication (~30% reduction)**
+The key insight: **don't build external tooling to pre-compile the capacitor. Use the LLM itself as the compiler.** Run the capacitor generator, let it load all 30 files into context, then — with everything loaded — rewrite from that context into a single token-optimized file.
 
-The same concepts appear in 3-4 files:
-- Identity 14 (unitary bridge V): stated in research/14, cited in 09, 10, 27
-- Three-primes correspondence: stated in research/10, cited in 09, 14, 11/29
-- BC structure: defined in 27, referenced in 09, 10, 14, 213
-- P1-P6: defined in 214, applied in 14 (as P1m-P6m), cited in 213
+This is dynamic tracing, not static analysis. The dependency lattice resolves naturally because everything is in context. No graph traversal, no SemHash, no external scripts.
 
-**Fix:** One canonical definition per concept, referenced by ID. Eliminate restatements.
+**Why this is strictly better than a scripted pipeline:**
 
-**Stage 2: Hierarchical Compression (~40% reduction)**
+| Dimension | Scripted Pipeline | Compile-by-Execution |
+|-----------|------------------|---------------------|
+| Deduplication | SemHash (embedding similarity) | LLM reads all files, writes once (semantic) |
+| Compression | Rule-based stripping | LLM knows narrative vs load-bearing |
+| Format optimization | Custom TOON converter | LLM rewrites in TOON directly |
+| Abbreviation | Frequency analysis script | LLM identifies repeated phrases from context |
+| Dependency resolution | Graph traversal code | Already resolved by reading into context |
+| Math precision | Syntactic (can break formulas) | Semantic (understands the math) |
+| Maintenance | Code to maintain | Prompt to maintain |
+| Cost | Engineering time + compute | One Claude session (~30K tokens) |
 
-Strip from each file:
-- Motivation paragraphs ("Why this matters...")
-- Historical context ("In 2024, we discovered...")
-- Narrative connectors between sections
-- Redundant context-setting
+### 13.4 The Compile-by-Execution Protocol
 
-Keep from each file:
-- Every definition, formula, parameter
-- Every proof step and its dependencies
-- Every status (VERIFIED/WEAKENED/BROKEN/PENDING)
-- Every kill with WHY and re-entry gate
-- Every lookup table entry
+```
+STEP 1: EXECUTE THE CAPACITOR GENERATOR (one-time, expensive)
 
-**Stage 3: Format Optimization (~25% reduction)**
+  Run the ORA capacitor generator (00--ora-generator.md) against the target.
+  It reads all 30 source files: 7 keystones, 4 proof chains, 6 kill sources,
+  6 theorem catalogues, 2 dictionaries, ORA bundle, strategy files.
+  
+  Total loaded: ~14,230 lines across 30 files.
+  Everything the agent ACTUALLY touched is now in context.
+  The dependency lattice is RESOLVED — no graph traversal needed.
 
-Research findings on token efficiency across formats:
+STEP 2: REWRITE FROM LOADED CONTEXT (the compilation pass)
+
+  With everything in context, the same agent rewrites the entire capacitor
+  as a SINGLE token-optimized file. The agent acts as a semantic compiler —
+  it understands the content, knows what's load-bearing, and compresses
+  intelligently. No external tooling needed.
+
+  Compilation instructions (given to the agent after Step 1 completes):
+  
+  "You have now read all source files and built the full capacitor.
+  Everything you need is in your context. Rewrite the capacitor as a
+  single compiled file using these rules:
+  
+  1. DEDUPLICATE: Same concept in multiple source files → write ONCE
+     with a canonical ID. Identity 14 appears in 4 files — write it once.
+  
+  2. COMPRESS: Strip all motivation, history, narrative connectors.
+     Keep ONLY: definitions, formulas, parameters, proof steps,
+     dependencies, statuses, kills (with WHY + re-entry), lookup entries.
+  
+  3. FORMAT: Use TOON for uniform arrays (proof chains, kills, 
+     correspondences, grammar rules, operations tables).
+     Use adjacency-list for dependency graphs.
+     Use single-line compressed form for patterns and rules.
+  
+  4. ABBREVIATE: Build a legend of 50-150 repeated phrases.
+     Place legend at top. Replace all occurrences throughout.
+  
+  5. ORDER for cache: legend → kills → chain → deps → domains →
+     correspondences → patterns → grammar → operations → index.
+     Static content first, dynamic content last.
+  
+  6. PRESERVE: Every kill. Every formula. Every status. Every dependency.
+     Every re-entry gate. Zero information loss on load-bearing content.
+  
+  7. INDEX: At the end, list fetchable expansions (@FETCH-A through
+     @FETCH-I) with line counts for on-demand retrieval."
+
+STEP 3: VALIDATE (cheap)
+
+  Dispatch ONE pilot Critic agent with ONLY the compiled capacitor.
+  The Critic attempts to verify one load-bearing step.
+  If it produces a meaningful verdict → compiled capacitor works. Ship it.
+  If it cannot → identify what's missing, add it, recompile.
+
+STEP 4: WRITE THE FETCHABLE EXPANSIONS
+
+  The compiled capacitor has @FETCH pointers. Write each expansion as a
+  separate file (the FULL uncompressed source sections) so agents can
+  request them on-demand via Strategy A.
+```
+
+### 13.5 Token optimization techniques (the compiler's toolkit)
+
+These are the techniques the compiler agent applies during Step 2. They are not external tools — they are instructions to the LLM during the rewrite pass.
+
+**Format efficiency research** (ImprovingAgents 2025, measured across tokenizers):
 
 | Format | Tokens (same data) | vs Markdown |
 |--------|-------------------|-------------|
@@ -941,101 +1000,47 @@ Research findings on token efficiency across formats:
 | JSON | +51% | much worse |
 | XML | +79% | terrible |
 
-**TOON format** (Token-Oriented Object Notation) is 30-60% cheaper than JSON for uniform arrays. The proof chains, correspondence tables, and kill lists are exactly this shape:
+**TOON** (Token-Oriented Object Notation) is 30-60% cheaper than JSON for uniform arrays:
 
 ```
 proofchain[18]{id,type,statement,deps,status}:
   1,Def,KK-reduction,-,VERIFIED
   2,Def,Dilaton-coupling,1,VERIFIED
   3*,Lem,Gauge-unification,1|2,PENDING
-  4,Thm,Mass-gap-positivity,1|2|3,VERIFIED
 ```
 
-Kills in TOON:
+**Adjacency-list** for dependency graphs:
 ```
-kills[12]{id,what,why,pattern,reentry,source}:
-  K-1,CCM-port-to-YM,External-source-inconsistency,Spectral,Prove-CCM-extends-natively,YM-H4
-  K-2,Spectral-action,Vacuous,Spectral,Novel-non-perturbative-sum,YM-H4
+deps: 1->2*,3; 2*->4,5*; 3->5*; 5*->6
 ```
+vs table format at 3-5x the tokens.
 
-Correspondence tables in TOON:
-```
-corr[5]{concept,spectral,geometric,algebraic,information}:
-  Riemann-zeros,Eigenvalues-γ_n-of-T_BC,Curvature-e-circle/CP2,Hecke-action-μ_n,Channel-capacity-KMS_1
-  Mass-gap,Gap-Δ>0-transfer-matrix,Weitzenboeck-Bochner-KK,Balaban-polymer,Wilson-AF
-```
-
-**Markdown-Table** for non-uniform data. **TOON** for uniform arrays. **Adjacency-list** for dependency graphs:
-
-```
-deps: 1->2,3; 2->4; 3->4,5; 4->6; 5->6; 6->7*,8; 7*->9,10
-```
-
-vs the current table format at 3-5x the tokens.
-
-**Stage 4: N-gram Abbreviation (~15% reduction)**
-
-Build a legend of 50-150 frequently repeated phrases:
+**N-gram abbreviation** (CompactPrompt, ICAIF 2025 — 2.35x compression, accuracy improved on Claude):
 ```
 LEGEND:
 CCM:=Connes-Consani-Marcolli | BC:=Bost-Connes | KR:=Kato-Rellich
-P1-P6:=Six-Patterns | H_R:=Riemann-Hilbert-space | A_BC:=BC-C*-algebra
-T_BC:=BC-partition-function | SM:=Standard-Model | KMS:=KMS-state
-VBC:=Verification-Cascade | PC:=Proof-Chain | CF:=Caratheodory-Fejer
-ITPFI:=infinite-tensor-product-type-III_1 | AF:=asymptotic-freedom
 SP:=spectral | GE:=geometric | AL:=algebraic | IN:=information-theoretic
 ```
 
-Place legend at top of compiled file (inside cached prefix). Replace all occurrences.
-
-*Source: CompactPrompt (ICAIF 2025) — 2.35x compression via LZW-inspired n-gram abbreviation. Accuracy improved on Claude because removing noise helped focus.*
-
-**Stage 5: Cache-Optimized Ordering**
-
-Structure the compiled file for maximum Anthropic prompt cache hits:
-
+**Cache-optimized ordering** for Anthropic prompt caching:
 ```
 [CACHED PREFIX — stable across all agents, all waves, all tiers]
-  1. Abbreviation legend (50-150 entries)
-  2. Kill list (full, NEVER changes mid-wave)
-  3. Proof chain structure (steps + deps + statuses)
-  4. Domain map (active Tier 2 families)
-  5. Correspondence tables (four pillars + activated Tier 2)
-  6. Six Patterns reference (P1-P6 in compressed form)
-  7. Grammar rules (8 rules in TOON)
-  8. Operations equivalence table (14 operations x domains)
-  9. Section INDEX (pointers to fetchable expansions)
+  1. Abbreviation legend
+  2. Kill list (full, NEVER reduced)
+  3. Proof chain (steps + deps + statuses)
+  4. Domain map + correspondence tables
+  5. Patterns + grammar + operations (reference tools)
+  6. Section INDEX (@FETCH pointers)
 
 [FRESH SUFFIX — per-agent, changes every dispatch]
-  10. Step assignment + prior work on node
-  11. Feed subscriptions (live kills, cards from message bus)
-  12. Layer-specific pre-loaded sections (if Layer 2/3)
-  13. Delta overlay (if wave > 1)
+  7. Step assignment + prior work on node
+  8. Feed subscriptions (from message bus)
+  9. Layer-specific content + delta overlay
 ```
 
-Anthropic prompt cache mechanics:
-- Minimum cacheable prefix: 1,024 tokens
-- Default TTL: 5 minutes (refreshed on each use)
-- Cost: 0.1x base price for cached tokens (90% savings)
-- Latency: 85% reduction on cached prefix
-- **Critical:** Stagger agent launches by ~1s to allow first cache write before subsequent reads
+Cache mechanics: min 1,024 tokens, 5 min TTL, 0.1x cost on cached reads (90% savings), 85% latency reduction. Stagger agent launches ~1s to allow first cache write.
 
-### 13.4 Compression estimates
-
-| Stage | Reduction | Lines |
-|-------|-----------|-------|
-| Start | — | 14,230 |
-| Semantic deduplication | 30% | ~9,960 |
-| Hierarchical compression | 40% | ~5,975 |
-| Format optimization (TOON + adjacency lists) | 25% | ~4,480 |
-| N-gram abbreviation | 15% | ~3,810 |
-| **Compiled capacitor** | **~73%** | **~3,800 lines** |
-
-**Optional additional pass — LLMLingua-2** (Microsoft, `pip install llmlingua`): Token classification model that drops low-information tokens. 2-5x compression at 95-98% accuracy retention. At ratio=0.5 on the compiled 3,800 lines: **~1,900 lines**. Caveat: must protect mathematical symbols and formulas from compression. Test carefully.
-
-*Sources: LLMLingua-2 (ACL 2024, Microsoft); CompactPrompt (ICAIF 2025); TOON format; ImprovingAgents format benchmarks.*
-
-### 13.5 The compiled capacitor file structure
+### 13.6 The compiled capacitor file structure
 
 ```markdown
 # [Domain] Compiled Capacitor — v1
@@ -1092,99 +1097,28 @@ G:Correspondences-full→@FETCH-G (1528 lines)
 I:Framework-chains→@FETCH-I (1083 lines)
 ```
 
-### 13.6 Pre-compilation tools
+### 13.7 Compression estimates
 
-| Tool | Purpose | Compression | API-Compatible |
-|------|---------|-------------|----------------|
-| **TOON** | Format optimization for uniform arrays | 30-60% vs JSON | Yes |
-| **LLMLingua-2** | Token-level compression | 2-5x | Yes (pre-process) |
-| **CompactPrompt** | N-gram abbreviation pipeline | 2.35x | Yes (pre-process) |
-| **SemHash** | Semantic deduplication | Variable | Yes (pre-process) |
+| Stage | Reduction | Lines |
+|-------|-----------|-------|
+| Start (raw source files) | — | 14,230 |
+| After compile-by-execution | ~73% | ~3,800 |
+| With prompt caching on prefix | — | ~3,000 lines at 10% cost |
 
-### 13.7 Implementation: Compile-by-Execution
+**Optional post-pass — LLMLingua-2** (`pip install llmlingua`): Token classifier that drops low-information tokens. 2-5x additional compression at 95-98% accuracy. Could push compiled output to ~1,900 lines. Caveat: must protect mathematical symbols. Test carefully on one capacitor before deploying.
 
-Instead of building external tooling (scripts, SemHash, LLMLingua), **use the LLM itself as the compiler**. The insight: run the capacitor generator once, let it load all files into context, then rewrite from that loaded context.
+### 13.8 Lifecycle: when to recompile
 
-**Why this works:**
-- The dependency lattice (circular refs between keystones) resolves naturally — everything is in context
-- Semantic deduplication is free — the LLM *sees* when Identity 14 appears in 4 files and writes it once
-- Hierarchical compression is free — the LLM *knows* what's narrative vs load-bearing
-- Format optimization (TOON, adjacency lists) happens in the rewrite pass
-- The compiler understands the content — it does semantic compression, not syntactic
-
-**The compile-by-execution protocol:**
-
-```
-STEP 1: EXECUTE THE CAPACITOR GENERATOR
-  
-  Run the ORA capacitor generator (00--ora-generator.md) against the target.
-  It reads all 30 source files: 7 keystones, 4 proof chains, 6 kill sources,
-  6 theorem catalogues, 2 dictionaries, ORA bundle, strategy files.
-  
-  Total loaded: ~14,230 lines across 30 files.
-  Everything the agent ACTUALLY touched is now in context.
-  The dependency lattice is RESOLVED — no graph traversal needed.
-
-STEP 2: REWRITE FROM LOADED CONTEXT
-
-  With everything in context, rewrite the entire capacitor as a SINGLE
-  token-optimized file using all optimization layers:
-
-  Instructions to the compiler agent:
-  
-  "You have now read all source files. Rewrite the capacitor as a single
-  compiled file using these rules:
-  
-  1. DEDUPLICATE: If the same concept appears in multiple source files,
-     write it ONCE with a canonical ID. Do not restate.
-  
-  2. COMPRESS: Strip all motivation, history, narrative connectors.
-     Keep ONLY: definitions, formulas, parameters, proof steps,
-     dependencies, statuses, kills (with WHY and re-entry), lookup entries.
-  
-  3. FORMAT: Use TOON for uniform arrays (proof chains, kills, 
-     correspondences, grammar rules, operations tables).
-     Use adjacency-list for dependency graphs.
-     Use single-line compressed form for patterns and rules.
-  
-  4. ABBREVIATE: Build a legend of 50-150 repeated phrases.
-     Place legend at top. Replace all occurrences.
-  
-  5. ORDER for cache: legend → kills → chain → deps → domains →
-     correspondences → patterns → grammar → operations → index.
-     Static content first, dynamic content last.
-  
-  6. PRESERVE: Every kill. Every formula. Every status. Every dependency.
-     Every re-entry gate. Zero information loss on load-bearing content.
-  
-  7. INDEX: At the end, list fetchable expansions (@FETCH-A through @FETCH-I)
-     with line counts. These are the full source sections that agents can
-     request on-demand if the compiled version isn't enough.
-  
-  Output the compiled capacitor as a single file."
-
-STEP 3: VALIDATE
-
-  Dispatch ONE pilot Critic agent with ONLY the compiled capacitor.
-  The Critic attempts to verify one load-bearing step.
-  If it produces a meaningful verdict: the compiled capacitor works. Ship it.
-  If it cannot: identify what's missing, add it, recompile.
-
-STEP 4: WRITE THE FETCHABLE EXPANSIONS
-
-  The compiled capacitor has @FETCH pointers. Write each expansion as a
-  separate file (the FULL uncompressed source sections) so agents can
-  request them on-demand via Strategy A.
-```
-
-**Cost of compilation:** One Claude session reading ~14,230 lines (~30K tokens input) and writing ~3,800 lines output. One-time cost. The output is reused across all agents, all waves, all tiers, all runs until the source files change.
-
-**When to recompile:**
+The compiled capacitor is a **snapshot**. Recompile when:
 - Source files updated (new theorems proved, kills added, statuses changed)
 - New ORA run produces amplification entries that should be baked in
 - Tier escalation discovers new correspondence cells
+- Dynamic capacitor SELF-ADJUST/TRIM/AMPLIFY cycle produces significant changes
 
-**The ORA invocation becomes:**
+**Cost of compilation:** One Claude session reading ~14,230 lines + writing ~3,800 lines. One-time cost per target per version. Amortized across all agents, all waves, all tiers, all runs.
+
+### 13.9 The invocation
+
 ```
 read your instructions from
 online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md
@@ -1201,21 +1135,16 @@ verification-cascade/tier-N-output/
 
 One file. No runtime file reads. No dependency lattice traversal. The agent starts working immediately.
 
-### 13.8 Compile-by-execution vs scripted pipeline
+### 13.10 Reference: external tools (available but not required)
 
-| Dimension | Scripted Pipeline | Compile-by-Execution |
-|-----------|------------------|---------------------|
-| Deduplication | SemHash (embedding similarity) | LLM reads all files, writes once (semantic) |
-| Compression | Rule-based stripping | LLM knows narrative vs load-bearing |
-| Format optimization | Custom TOON converter | LLM rewrites in TOON directly |
-| Abbreviation | Frequency analysis script | LLM identifies repeated phrases from context |
-| Dependency resolution | Graph traversal code | Already resolved by reading into context |
-| Accuracy | Syntactic (can break formulas) | Semantic (understands math) |
-| Maintenance | Code to maintain | Prompt to maintain |
-| Cost | Engineering time + compute | One Claude session (~30K tokens) |
-| Quality | Mechanical | Understands what matters |
+The compile-by-execution approach makes these optional. Documented for reference:
 
-**Verdict:** Compile-by-execution is strictly superior for this use case. The LLM is a better compiler than any script because it understands the content.
+| Tool | Purpose | Use case |
+|------|---------|----------|
+| **TOON** | Format for uniform arrays | If scripting compilation outside LLM |
+| **LLMLingua-2** | Token-level compression | Optional post-pass on compiled output |
+| **CompactPrompt** | N-gram abbreviation | If automating legend generation |
+| **SemHash** | Semantic deduplication | If verifying LLM dedup quality |
 
 ---
 
