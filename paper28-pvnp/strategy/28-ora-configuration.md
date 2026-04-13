@@ -10,7 +10,7 @@ perfect lets do the mechanical part first we need to update the ORA
 ## ora update #1
 to **NOT hardcode the capacitor/toolkit**, it should be an input      
 like the job - FYI the toolkit/capacitor that we are gonna be using is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md` 
+`/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md` 
 
 # ora update #2
 includd the following instructions for the ORA runner 

@@ -122,12 +122,29 @@ $$\Delta_0^{\mathrm{KK}} > 0 \;(\text{Thm 4})
   \;\xrightarrow{\text{RG preservation}}\;
   \Delta_\infty > 0.$$
 
-No new conjectures are introduced. The single genuinely new
-contribution is the **stability of deviation order** argument
-(Part III): the dimension-6 classification forces
-$\mathrm{dev} \geq 2$ universally, not just perturbatively. The
-three former [VERIFY] items have been resolved by explicit argument
-in the verification report (`preprint-verification/verify-balaban-items.md`).
+No new conjectures are introduced. The genuinely new contributions
+are: the **KK spectral gap** (Theorem 4, Weitzenbock + cluster
+expansion), the **IR equivalence** (Theorem 5, Feshbach map), the
+**stability of deviation order** (Part III, dimension-6
+classification forces $\mathrm{dev} \geq 2$ universally), the
+**gradient-flow OS reconstruction** (Steps 15--17, Schwinger
+functions with all five OS axioms), and the **composite operator
+extraction** via convergent small-$t$ expansion (Gap G1 closure).
+The three former [VERIFY] items have been resolved by explicit
+argument in the verification report
+(`preprint-verification/verify-balaban-items.md`).
+
+**Adversarial review (Run 2, 2026-04-12).** 3 independent critics,
+18 nodes attacked. Results: 10 SOUND, 8 WEAKENED, 0 BROKEN. All 8
+weaknesses repaired in Run 3:
+- Node 02: IR equivalence operator bounds ($\|W\|$, $\inf\sigma(H_{QQ})$) made explicit
+- Node 05: Composition-of-analyticity domain tracking added
+- Node 09: H(4) exhaustiveness verified via Appendix J
+- Node 10: Two-particle threshold at early scales resolved (lattice bound)
+- Node 12: Telescoping mechanism explained; transient growth bounded
+- Node 14: OS axiom verification cross-referenced to Node 16
+- Node 16: Reflection positivity survival under limits justified (tightness + pointwise closure)
+- Node 17: Small-$t$ convergence mechanism clarified (Balaban analyticity radius)
 
 **Technical supplements.** The operator extraction
 lemma (Appendix I, Section I.1), the lattice-specific Symanzik

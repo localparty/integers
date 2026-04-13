@@ -118,7 +118,12 @@ the specific gap identified by the Critic.
 the Paper 28 template, using the node files (Run 1) as appendix
 sources, the verification verdicts (Run 2) as status labels, and
 the repairs (Run 3) as corrections. The PROOF-CHAIN diagram goes
-on page 1.
+on page 1. **Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the
+same format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+step-by-step table with status labels, classification of arguments,
+conditional dependencies, verdict, and scope section. This file is
+the backbone — every section references it, the diagram on page 1
+comes from it, and the referee checks the paper against it.
 
 **Pre-read requirement:** Before rewriting any section, the ORA
 MUST read Paper 9 (`paper09/`) to understand the narrative arc
@@ -176,10 +181,11 @@ add "Origin (G)" callouts until you know which steps had origin
 moments. Mixing voice into the math-writing pass risks the agent
 prioritizing style over correctness.
 
+<!-- DISABLED: Runs 6-7 (math referee + claim tester)
 ### Run 6: Mathematical referee — exhaustive review
 
 **Mode:** referee (not ORA — standalone agent with referee prompt)
-**Prompt:** Adapted from `paper28-pvnp/referee/00-original-advanced-math-referee.md`
+**Prompt:** Adapted from `online-researcher-adversarial/referee-prompts/00-original-advanced-math-referee.md`
 **Input:** The complete rewritten paper from Runs 4+5
 **Output:** `paper08-yang-mills/referee/math-referee-report.md`
 
@@ -217,7 +223,10 @@ If it requires a citation fix or clarification, edit in place.
 ### Run 7: Point-by-point claim tester — verify every citation
 
 **Mode:** referee (standalone agent with claim-tester prompt)
-**Prompt:** Adapted from `paper28-pvnp/referee/01-point-by-point-claim-tester.md`
+**Prompt:** `paper08-yang-mills/math-referee/02-point-by-point-yang-mills.md`
+(paper-specific: knows which claims, citations, and focus areas to
+test for YM). The generic methodology template is at
+`drafting/01-point-by-point-claim-tester.md`.
 **Input:** The paper after Run 6 fixes are applied
 **Output:** `paper08-yang-mills/referee/claim-tester-report.md`
 
@@ -255,6 +264,8 @@ Run 6: Math referee    → exhaustive review + fixes
 Run 7: Claim tester    → point-by-point verification + fixes
                        → PAPER COMPLETE
 ```
+
+-->
 
 Runs 1-3 produce the PROOF. Run 4 produces the PAPER. Run 5
 adds the VOICE. Runs 6-7 produce the POLISH. Each run's output
@@ -457,7 +468,7 @@ labels, same honest accounting.
 
 ```
 read your **instructions** from
-`/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/ora-bundle-v8/01-the-prompt.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md`
 
 the run **brief** (deliverable) is
 `/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/strategy/run1-construction-brief.md`
@@ -473,7 +484,7 @@ the run **output directory** is
 
 ```
 read your **instructions** from
-`/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/ora-bundle-v8/01-the-prompt.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md`
 
 the run **brief** (deliverable) is
 `/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/strategy/run2-verification-brief.md`

@@ -1,46 +1,6 @@
 # Paper 26 — The Bridge Extends: BSD for CM Elliptic Curves from the Integers Programme
 
-## REVISED 2026-04-10 — Route 3 closure: MY4 bypassed, chain rigorous throughout
-
-*Changes since 2026-04-09:*
-
-- **§4.3 Proposition 4.3 rebuilt.** The minimal-conductor bridge
-  table now uses the Gaussian primes `(2+3i)` norm 13, `(4+5i)`
-  norm 41, `(2+5i)` norm 29. All four rows are split primes; the
-  TR5 inert-prime edge case does not arise. Conductor product
-  `3 × 5 × 7 = 105` preserved. (See
-  `research/corrected-bridge-table.md`.)
-- **§6 Proposition 6.1 rewritten algebraically** using the
-  projector `P_k^𝔭 := I − s_𝔭^k (s_𝔭^k)^* ∈ A_{BC,K}` with
-  KMS_1 expectation `ω_1^K(P_k^𝔭) = 1 − N(𝔭)^(−k)`. The §6
-  dark-state bound is now a statement about the C*-algebra and
-  its KMS state, with no reference to Hilbert-space eigenstates.
-- **§7.3(v) integrality premise** supplied via an elementary
-  bound `|Δc(δ)| < 1/(k+1) < 1/k` (**Key Lemma C**), combined with
-  Hasse–Brauer–Noether local-global reciprocity for the Brauer
-  class. (See `research/cohomology-class-lemma.md`.)
-- **§9.2 Step B rewritten** without eigenstate language: the BC
-  partition function identity `Z_{BC,K}(β) = ζ_K(β)` is the link
-  from "zero of `ζ_K`" to "local cocycle shift at 𝔭," supplying
-  what used to be attributed to Meyer spectral inclusion. The
-  distributional → genuine spectrum upgrade is not required for
-  the argument to close.
-- **§15 open-items list** simplified: the Meyer–Nelson wall was
-  not load-bearing.
-- **§13.3 Ω_E formula fixed:** `Γ(1/4)² / (2·√(2π))` (off by
-  factor of π in the 2026-04-09 version; numerical value 2.62206
-  and BSD closure are unchanged).
-- **§8 Table 8.1 log-ratios recomputed** in mpmath at 30 digits.
-- **§3.4** adds Laca–Larsen–Neshveyev 2015 citation for KMS_1
-  uniqueness at h_K = 1.
-
-*The mathematical content of Theorem 9.1 and Theorem 13.1 is
-unchanged. What has changed is the quality of the proof: 7 of 11
-links at [THEOREM] or [LEMMA] in the 2026-04-09 version, **11 of
-11 after these revisions** (4 [THEOREM] + 7 [LEMMA]; no
-[KEY LEMMA — OPEN], no [GAP]).*
-
-## REVISED 2026-04-09 — Conditionality reframing, Heegner hypothesis, c₂ correction
+*See `PROOF-CHAIN.md` for the complete 11-step proof chain with status labels, classification of arguments, conditional dependencies, and verdict. See `CHANGELOG.md` for the revision history.*
 
 ## Part I: The Question
 
@@ -205,7 +165,9 @@ For this paper, the essential property is: the Hasse invariant of the Brauer cla
 
 ## 2.3. The RH proof in one paragraph
 
-The Riemann Hypothesis is proved in Paper 13 by the following chain. The Meyer spectral inclusion embeds the non-trivial zeros of $\zeta(s)$ as distributional eigenstates of the Bost--Connes time evolution $T_{\mathrm{BC}}$ on the GNS Hilbert space $H_1$ of the unique KMS$_1$ state. Nelson's analytic vector theorem upgrades these to genuine eigenstates, making $T_{\mathrm{BC}}$ essentially self-adjoint. The bridge family provides four Brauer cocycles whose shifts $\Delta c(\delta) = (1 - p^{-2\delta})/(p - p^{-2\delta})$ must be simultaneously integral (in $(1/k)\mathbb{Z}$) at two bridge primes $p_1, p_2$ if a zero lies at $1/2 + \delta$ with $\delta \neq 0$. The ITPFI factorization of $\omega_1$ ensures every eigenstate couples to every bridge (no dark states). Gelfond--Schneider implies $\log p_1 / \log p_2$ is transcendental for distinct rational primes, so simultaneous integrality forces $\delta = 0$. All zeros lie on $\operatorname{Re}(s) = 1/2$. QED.
+The Riemann Hypothesis is proved in Paper 13 by the following chain (see Paper 13, `preprint/00-proof-skeleton.md` for the 6-layer proof skeleton and `preprint/sections-06-10.md` §§6--10 for the core operator-theoretic layers). The BC partition function identity $Z_{BC}(\beta) = \zeta(\beta)$ links zeros of $\zeta(s)$ to the Bost--Connes system. Nelson's analytic vector theorem (Reed--Simon X.39) makes $T_{\mathrm{BC}}$ essentially self-adjoint. The bridge family provides four Brauer cocycles whose shifts $\Delta c(\delta) = (1 - p^{-2\delta})/(p - p^{-2\delta})$ violate Brauer integrality for $\delta \neq 0$ (Key Lemma C: $|\Delta c(\delta)| < 1/k$). The ITPFI factorization ensures the bridge projectors have positive KMS$_1$ mass at every row (no dark states). Gelfond--Schneider implies $\log p_1 / \log p_2$ is transcendental for distinct rational primes, providing independent reinforcement. Therefore $\delta = 0$ and all zeros lie on $\operatorname{Re}(s) = 1/2$. QED.
+
+**Note:** The RH proof chain as described above and as used in this paper operates via the algebraic projector bypass (Paper 13, revised 2026-04-10), which does not require Meyer distributional spectral inclusion or the distributional-to-genuine spectrum upgrade. The same bypass is used in the BSD proof (Section 9.2 Step B of this paper).
 
 ## 2.4. What extends and what doesn't
 

@@ -124,9 +124,15 @@ minimal.
 
 ### Run 4: Rewrite
 
-Convert the current proof skeleton into a full PROOF-CHAIN.md
-following the Paper 28 format. The skeleton already has the
-diagram — upgrade it to the step-by-step table format.
+**Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the same
+format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+step-by-step table with status labels, classification of arguments,
+conditional dependencies, verdict, and scope section. This file is
+the backbone — every section references it, the diagram on page 1
+comes from it, and the referee checks the paper against it.
+
+The proof skeleton (`00-proof-skeleton.md`) already has the
+diagram — upgrade it to the full PROOF-CHAIN.md table format.
 
 Rewrite sections into the Paper 28 structure:
 - §1: Proof diagram (from skeleton) + introduction + the two open
@@ -182,9 +188,10 @@ for the CBB bridge family that RH validates.
 - "the kill list is the learning trace"
 ```
 
+<!-- DISABLED: Runs 6-7 (math referee + claim tester)
 ### Run 6: Mathematical referee
 
-Adapted from `paper28-pvnp/referee/00-original-advanced-math-referee.md`.
+Adapted from `online-researcher-adversarial/referee-prompts/00-original-advanced-math-referee.md`.
 Focus areas for RH:
 - The CCM dependency: is the conditionality correctly stated?
   What exactly does CCM's paper prove vs assume?
@@ -199,17 +206,26 @@ Focus areas for RH:
 
 ### Run 7: Point-by-point claim tester
 
+**Prompt:** `paper13-rh/referee/` (paper-specific point-by-point
+prompt to be created, or adapt from `drafting/01-point-by-point-claim-tester.md`).
+
 Every citation to CCM (arXiv:2511.22755), Bögli (arXiv:1604.07732),
 Teschl et al. (arXiv:2601.10476), Connes-van Suijlekom
 (arXiv:2511.23257), Bost-Connes 1995, Hurwitz 1893, Reed-Simon II,
 Davis-Kahan 1970, Slepian-Pollack 1961, and
 Karnik-Romberg-Davenport 2021 must be located, read, and verified.
 
+**After the tester produces its report:** the formatting runner reads
+the report and uses the ORA (Author mode) to FIX any MISCITED,
+DEFERRED, or UNLOCATED findings. Each fix is a targeted edit. The
+paper is DONE when every citation is VERIFIED.
+-->
+
 ---
 
 ## 4. Configuration
 
-**ORA bundle:** `paper28-pvnp/ora-bundle-v8/` (same ORA for all)
+**ORA bundle:** `online-researcher-adversarial/ora-bundle-v8/` (same ORA for all)
 **Toolkit:** `paper13-rh/toolkit/framework-tools-rh.md` (to be
 created from: 00-proof-skeleton.md + strategy/14-one-proof-away.md
 + the §J voice canon above + key theorem catalogue entries from

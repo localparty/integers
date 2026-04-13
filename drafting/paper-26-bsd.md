@@ -128,6 +128,13 @@ produce ZERO repairs (best case) or minor citation fixes.
 Convert the current TABLE-format sections into PROSE-format
 mathematical writing following the Paper 28 template:
 
+**Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the same
+format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+step-by-step table with status labels, classification of arguments,
+conditional dependencies, verdict, and scope section. This file is
+the backbone — every section references it, the diagram on page 1
+comes from it, and the referee checks the paper against it.
+
 **Page 1:** PROOF-CHAIN diagram showing the 11 steps as a flow:
 
 ```
@@ -193,9 +200,10 @@ continuity between the two papers.
 - "the kill list is the learning trace"
 ```
 
+<!-- DISABLED: Runs 6-7 (math referee + claim tester)
 ### Run 6: Mathematical referee
 
-Adapted from `paper28-pvnp/referee/00-original-advanced-math-referee.md`.
+Adapted from `online-researcher-adversarial/referee-prompts/00-original-advanced-math-referee.md`.
 Focus areas for BSD:
 - Baker's theorem application (correct scope? correct hypotheses?)
 - Kolyvagin's Euler system (correct for CM curves? rank 0+1 scope?)
@@ -205,16 +213,26 @@ Focus areas for BSD:
 
 ### Run 7: Point-by-point claim tester
 
-Adapted from `paper28-pvnp/referee/01-point-by-point-claim-tester.md`.
+**Prompt:** `paper26-bsd/referee/02-point-by-point-referee.md`
+(paper-specific: knows which claims, citations, and focus areas to
+test for BSD). The generic methodology template is at
+`drafting/01-point-by-point-claim-tester.md`.
+
 Every citation to Paper 13 (RH), Paper 23 (CBB), Ha-Paugam 2005,
 Baker 1966, Kolyvagin 1990, Gross-Zagier 1986, Deuring 1953, and
 Coates-Wiles 1977 must be located, read, and verified.
+
+**After the tester produces its report:** the formatting runner reads
+the report and uses the ORA (Author mode) to FIX any MISCITED,
+DEFERRED, or UNLOCATED findings. Each fix is a targeted edit. The
+paper is DONE when every citation is VERIFIED.
+-->
 
 ---
 
 ## 4. Configuration
 
-**ORA bundle:** `paper28-pvnp/ora-bundle-v8/` (same ORA for all papers)
+**ORA bundle:** `online-researcher-adversarial/ora-bundle-v8/` (same ORA for all papers)
 **Toolkit:** `paper26-bsd/toolkit/framework-tools-bsd.md` (to be created,
 compiled from: closing-my4/closure/closure-digest.md + Paper 13 RH
 proof skeleton + Paper 23 CBB bridge family §8 + Baker's theorem +

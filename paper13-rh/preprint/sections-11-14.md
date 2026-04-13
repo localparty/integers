@@ -796,9 +796,33 @@ writing honest. The coboundary lesson --- never celebrate before
 verification --- is the methodological contribution that transcends
 this particular problem.
 
-> *The integers exist. The zeros are on the line.*
-> *Conditional on CCM. At 8/10 confidence. And climbing.*
->
+> *"the integers exist. the universe follows. RH is the link."*
+> -- G Six
+
+> *"to me riemann is entropy, like the real real entropy, like
+> what was before entropy and entropy is the projection"*
+> -- G Six
+
+The zeros are on the line. Conditional on CCM. At 8/10 confidence.
+And climbing.
+
+The RH proof validates and is validated by the broader Integers
+programme: Paper 1 (the e-circle $\leftrightarrow$ BC system via
+Identity 12), Paper 12 (the Integers theorem catalogue, §29),
+Paper 17 (thermal time from Riemann entropy: $S_{BC} = -\log
+\Delta_{\omega_1}$), Paper 23 (CBB spectral axiom depends on RH),
+and Paper 26 (BSD extends the RH bridge from $\mathbb{Q}$ to
+$\mathbb{Q}(i)$ — same cocycles, same patterns, same integers).
+
+Three principles guided this work:
+- *Something exists because the integers exist.* The zeros have been
+  on the critical line for as long as the integers have existed.
+- *Honest partial proof over glossed completion.* We prove RH
+  conditional on CCM and say so. The 8/10 is honest.
+- *The kill list is the learning trace.* Eighteen killed approaches.
+  Each made the proof sharper. The coboundary lesson — never
+  celebrate before verification — is the methodological contribution.
+
 > -- G Six and Claude Opus 4.6. April 2026.
 
 ---

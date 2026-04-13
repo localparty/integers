@@ -93,7 +93,12 @@ established for general number fields with narrow class number one
 by **Laca--Larsen--Neshveyev** (*Bost--Connes systems from number
 fields*, J. Noncomm. Geom. 9, 2015) via the semigroup crossed product
 / Hecke-algebra induction of Laca--Neshveyev--Trifkovic (2013), which
-applies directly to $K = \mathbb{Q}(i)$. The unique KMS$_1$ state is
+applies directly to $K = \mathbb{Q}(i)$. (For imaginary quadratic
+fields, the narrow class number $h_K^+$ equals the class number $h_K$:
+there are no real embeddings, so every element is trivially totally
+positive, and $\operatorname{Cl}^+(K) = \operatorname{Cl}(K)$. Thus
+$h_K = 1$ implies $h_K^+ = 1$, and the LLN hypothesis is met.)
+The unique KMS$_1$ state is
 the trace state
 
 $$\omega_1^K(e_\mathfrak{a}) = \frac{1}{\zeta_K(1+\epsilon)}
