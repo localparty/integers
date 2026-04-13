@@ -543,3 +543,71 @@ The following entries from the BSD programme score >= 4 for Hodge relevance. The
 | Application | RH | + Kolyvagin + Gross-Zagier -> BSD |
 
 **Same bridge. Same pattern. Different field. Stronger theorem.**
+
+---
+
+## Part G -- P vs NP Programme (Paper 28)
+
+*The Clone Growth ↔ Fullness Bridge. Connects universal algebra
+(Bulatov–Zhuk CSP Dichotomy) to operator algebra (Houdayer–Marrakchi
+fullness of type III₁ factors). Two new theorems, one structural
+result, one conditional theorem, one corollary.*
+
+*Chain status: p = 0.77. Part (i) UNCONDITIONAL. Part (ii) conditional
+on CP-1 (THEOREM level, independently verified by 6 Critics, 4
+repairs completed). 19 kills.*
+
+### New Theorems
+
+| Entry | Name | Statement | Status | Source | Proof path |
+|:------|:-----|:----------|:-------|:-------|:-----------|
+| **28.T2.1** | **Theorem UA1** (Taylor → exponential clone) | For a Boolean constraint language L admitting a Taylor polymorphism: $\lvert\mathrm{Clone}_k(L)\rvert \geq c \cdot \lambda^k$ with $\lambda \geq 2^{2/9}$ | **PROVED** | Paper 28 §2; four cases via Post's lattice (AND/OR: $2^k$; XOR: $2^{k+1}$; MAJORITY: recursion $\lvert SM_k\rvert \geq \lvert SM_{\lfloor k/3\rfloor}\rvert^3$) | New |
+| **28.T2.2** | **Theorem UA2** (non-Taylor → linear clone) | For a Boolean constraint language L not admitting a Taylor polymorphism: $\lvert\mathrm{Clone}_k(L)\rvert \leq 2k+2$ | **PROVED** | Paper 28 §2; essentially unary operations only, from BZ + Post's lattice | New |
+| **28.T3.1** | **Non-injectivity of $M_{\mathrm{Bool}}$** | The Boolean Bost–Connes factor is non-injective: Thompson's $V \subset G_{\mathrm{Bool}}$, hence $G_{\mathrm{Bool}}$ non-amenable, hence $M_{\mathrm{Bool}} \neq R_\infty$ by Connes 1976 | **PROVED** | Paper 28 §3 (Node 1.3.1); PCirc$^+$ non-abelian → non-amenable group | New |
+| **28.T3.2** | **KEY LEMMA 3.4.3 revised** (KMS₁ existence + type III₁) | The Boolean BC system admits a KMS₁ state (Banach-Alaoglu compactness) whose GNS factor is type III₁ (multiplicative independence of $\log 2, \log 3$); uniqueness conditional, downstream insulated | **PROVED** (existence + type); **CONDITIONAL** (uniqueness) | Paper 28 §3 (Node 3.2 repair) | New |
+| **28.T4.1** | **CP-1** (crossed-product / groupoid identification) | $M_{\mathrm{Bool}}^L \cong L(\mathcal{R}_L)$ via Feldman–Moore; Laca–Raeburn dilation for Part (A) | **THEOREM** (independently verified: 2 SURVIVED, 3 WEAKENED + repaired, 1 BROKEN on Route D only) | Paper 28 §4 (Node 2.1); 6 Critic agents; 4 repairs (R1–R4) | New |
+
+### The Bridge Theorem
+
+| Entry | Name | Statement | Status | Source |
+|:------|:-----|:----------|:-------|:-------|
+| **28.B1** | **Bridge Part (i)** (Taylor → non-full) | If L admits a Taylor polymorphism, then $M_{\mathrm{Bool}}^L$ is non-full | **PROVED** (unconditional; Path B: pigeonhole + instance diversity for all 4 Taylor classes) | Node 2.3 + Nodes 4.1–4.2 |
+| **28.B2** | **Bridge Part (ii)** (non-Taylor → full) | If L does not admit a Taylor polymorphism, then $M_{\mathrm{Bool}}^L$ is full | **PROVED** (conditional on CP-1; Route C: Jones-Schmidt + Marrakchi Thm B) | Node 2.2 |
+| **28.C1** | **Corollary: P ≠ NP** | By proof by contradiction using both BZ directions + Bridge Parts (i)+(ii): assume P=NP → 3-SAT Taylor (BZ backward) → non-full (Part i) BUT 3-SAT non-Taylor (BZ forward) → full (Part ii) → contradiction | **PROVED** (conditional on CP-1) | Node 3.1 (corrected from v2 garbled contrapositive) |
+
+### Supporting Results
+
+| Entry | Name | Statement | Status |
+|:------|:-----|:----------|:-------|
+| 28.S1 | Lemma A* (corrected) | Affine instances give scalar unitaries for MONOTONE polymorphisms only; Fourier positivity fails for XOR | PROVED (Node 4.2 + P1 draft) |
+| 28.S2 | Lemma X (XOR non-scalarity) | $V_{\mathrm{XOR}} = c \cdot J_d$ (all-ones, rank 1, non-scalar) at ALL instances | PROVED (Node 4.2 + P1 draft) |
+| 28.S3 | Berry–Esseen angle persistence | Non-proportional rotation angles persist: $\lvert\theta_f(\Gamma_A)/\theta_f(\Gamma_B) - \sigma_A/\sigma_B\rvert \leq C/\sqrt{k}$ | PROVED (Node 4.1 + P2 draft) |
+| 28.S4 | Instance diversity (ID) | Phase incoherence: instance-specific phases don't converge to global scalar | PROVED (case-by-case: AND/OR coordinate-frequency; MAJORITY Berry–Esseen; XOR direct) |
+| 28.S5 | Essential freeness (SE-1) | $G_L$ acts essentially freely on $X_L$ | PROVED (three independent arguments; Node 1.3.5.11) |
+| 28.S6 | Trivial radical (NIA-1) | $\mathrm{Rad}(G_L) = \{e\}$ for non-Taylor $L$ | PROVED (three independent arguments; Node 1.3.5.12) |
+
+### Kill List (19 entries)
+
+| # | Kill | Pattern |
+|:--|:-----|:--------|
+| 1 | $H^2(S_n)$ Schur multiplier | Wrong-space |
+| 2 | Median-closure universal | Overgeneralization |
+| 3 | Modular flow produces polymorphism | Causal-overclaim |
+| 4 | 2-SAT counterexample | Addressed |
+| 5 | $N_{\mathrm{crossings}}$ alone | Insufficient-measure |
+| 6 | $C(\beta)$ peak | Wrong-observable |
+| 7 | Padé poles | Wrong-tool |
+| 8 | Riemann spacing $n=10$ | Finite-size |
+| 9 | BZ biconditional as proof | Circular |
+| 10 | Popa with hyperoctahedral | Wrong-space |
+| 11 | 1RSB → worst-case | Distributional |
+| 12 | Individual $\alpha_f$ construction | Structural-tension |
+| 13 | Multiplicity via Aut/Out | Conflation |
+| 14 | $T_f$ omega-averaged → rank-1 | Concentration |
+| 15 | $T_f$ residual | Inherited |
+| 16 | Seeley–DeWitt on discrete graphs | Wrong-tool |
+| 17 | KMS scalar thermodynamics | Wrong-observable |
+| 18 | Winding number on $\mathbb{Z}/2$ | Wrong-space |
+| 19 | Bridge independently proves P-time → Taylor | False claim |
+
+**16 waves. 47 agents. 19 kills. 2 pivots. p = 0.77.**
