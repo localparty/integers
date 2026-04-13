@@ -815,6 +815,442 @@ The capacitor revamp introduces three communication layers, each serving a diffe
 
 ---
 
-*The capacitor is the variable. The method is the constant. The message bus is the new degree of freedom.*
+## 13. Capacitor Pre-Compilation: The Loading Phase
+
+The current loading phase reads ~30 core files (12,912 lines) plus the ORA bundle (1,318 lines) before agents start working. Those files cross-reference a lattice of 281 research files (109,416 lines). Pre-compilation collapses this into a single token-optimized file.
+
+### 13.1 Current runtime file inventory
+
+**Seven Keystone Files (3,345 lines):**
+
+| # | File | Lines | Capacitor Section |
+|---|------|-------|------------------|
+| 1 | paper12/research/214-the-method-six-patterns.md | 339 | A (Six Patterns) |
+| 2 | paper12/research/213-theorem-catalogue-grammar.md | 297 | C (Grammar) |
+| 3 | paper12/research/14-transposition-CCM-and-reasoning-patterns.md | 755 | D (Transposition) |
+| 4 | paper11/29-the-standard-model-riemann-correspondence.md | 558 | G (Correspondence) |
+| 5 | paper12/27-anchor-document.md | 426 | E (Anchor) |
+| 6 | paper12/research/09-pattern-of-zero-indices.md | 415 | G (Zero-selection) |
+| 7 | paper12/research/10-transposition-gauge-group-3primes.md | 555 | G (Three-primes) |
+
+**Framework Proof Chains (1,083 lines):**
+
+| Chain | File | Lines | Section |
+|-------|------|-------|---------|
+| YM | paper08-yang-mills/preprint/PROOF-CHAIN.md | 182 | I.1 |
+| RH | paper13-rh/preprint/00-proof-skeleton.md | 234 | I.2 |
+| BSD | paper26-bsd/preprint/PROOF-CHAIN.md | 179 | I.3 |
+| PvNP | paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md | 488 | I.4 |
+
+**Theorem Catalogues (3,300 lines):**
+
+| File | Lines | Section |
+|------|-------|---------|
+| paper12/29-theorem-catalogue.md | 613 | B |
+| paper12/research/208-uniqueness-decomposition.md | 182 | B |
+| paper12/research/209-theorem-catalogue-papers-1-12.md | 422 | B |
+| paper12/research/210-theorem-catalogue-papers-17-25.md | 173 | B |
+| paper12/research/211-theorem-catalogue-ym-convergence.md | 451 | B |
+| paper12/research/212-theorem-catalogue-ym-preprint.md | 585 | B |
+
+**Reference Dictionaries & Predictions (874 lines):**
+
+| File | Lines | Section |
+|------|-------|---------|
+| paper12/18-master-dictionary.md | 417 | E |
+| paper12/research/23-framework-predictions-master-table.md | 457 | F |
+
+**Kill List Sources (2,530 lines):**
+
+| File | Lines | Section |
+|------|-------|---------|
+| paper08-yang-mills/closing-H4/closure/closure-corrections.md | 127 | H.7 |
+| paper08-yang-mills/closing-H4/blackboard.md | 1,072 | H.7 |
+| paper13-rh/preprint/sections-11-14.md | 858 | H.7 |
+| paper26-bsd/closing-my4/closure/closure-corrections.md | 349 | H.7 |
+| paper28-pvnp/strategy/07-toolkit-complete.md | 349 | H.7 |
+| paper28-pvnp/strategy/10-amplification-entries.md | 124 | H.7 |
+
+**ORA Bundle + Strategy (2,654 lines):**
+
+| File | Lines | Purpose |
+|------|-------|---------|
+| online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md | 1,318 | System prompt |
+| verification-cascade/strategy/00-verification-cascade-meta-move.md | 342 | Strategy |
+| verification-cascade/strategy/01-capacitor-architecture.md | 311 | Architecture |
+| verification-cascade/strategy/02-three-tier-escalation-and-dynamic-capacitor.md | 366 | Escalation |
+| verification-cascade/strategy/03-ora-generator.md | 317 | Generator |
+
+**Total runtime load: ~14,230 lines across 30 files.**
+
+### 13.2 Dependency lattice structure
+
+The keystones form a lattice, not a tree — circular references are expected:
+
+```
+214 (Six Patterns) ←→ 213 (Grammar) ←→ 14 (Transposition)
+     ↑                     ↑                    ↑
+     └─── 27 (Anchor) ────┘────── 09 (Zeros) ──┘
+              ↑                        ↑
+              └──── 10 (Three-primes) ─┘
+                         ↑
+                    11/29 (SM-Riemann)
+```
+
+Key cross-references:
+- research/27 (Anchor) has 30+ cross-references to other research files
+- research/14 (Transposition) depends on research/02, 04, 05, 06
+- research/10 (Three-primes) depends on Identity 12 (research/04), paper11 Thm 11.5
+- The 281 research files in paper12/research/ form the extended lattice
+
+### 13.3 Pre-compilation pipeline
+
+**Stage 1: Semantic Deduplication (~30% reduction)**
+
+The same concepts appear in 3-4 files:
+- Identity 14 (unitary bridge V): stated in research/14, cited in 09, 10, 27
+- Three-primes correspondence: stated in research/10, cited in 09, 14, 11/29
+- BC structure: defined in 27, referenced in 09, 10, 14, 213
+- P1-P6: defined in 214, applied in 14 (as P1m-P6m), cited in 213
+
+**Fix:** One canonical definition per concept, referenced by ID. Eliminate restatements.
+
+**Stage 2: Hierarchical Compression (~40% reduction)**
+
+Strip from each file:
+- Motivation paragraphs ("Why this matters...")
+- Historical context ("In 2024, we discovered...")
+- Narrative connectors between sections
+- Redundant context-setting
+
+Keep from each file:
+- Every definition, formula, parameter
+- Every proof step and its dependencies
+- Every status (VERIFIED/WEAKENED/BROKEN/PENDING)
+- Every kill with WHY and re-entry gate
+- Every lookup table entry
+
+**Stage 3: Format Optimization (~25% reduction)**
+
+Research findings on token efficiency across formats:
+
+| Format | Tokens (same data) | vs Markdown |
+|--------|-------------------|-------------|
+| Markdown-Table | baseline | — |
+| YAML | +11% | worse |
+| JSON | +51% | much worse |
+| XML | +79% | terrible |
+
+**TOON format** (Token-Oriented Object Notation) is 30-60% cheaper than JSON for uniform arrays. The proof chains, correspondence tables, and kill lists are exactly this shape:
+
+```
+proofchain[18]{id,type,statement,deps,status}:
+  1,Def,KK-reduction,-,VERIFIED
+  2,Def,Dilaton-coupling,1,VERIFIED
+  3*,Lem,Gauge-unification,1|2,PENDING
+  4,Thm,Mass-gap-positivity,1|2|3,VERIFIED
+```
+
+Kills in TOON:
+```
+kills[12]{id,what,why,pattern,reentry,source}:
+  K-1,CCM-port-to-YM,External-source-inconsistency,Spectral,Prove-CCM-extends-natively,YM-H4
+  K-2,Spectral-action,Vacuous,Spectral,Novel-non-perturbative-sum,YM-H4
+```
+
+Correspondence tables in TOON:
+```
+corr[5]{concept,spectral,geometric,algebraic,information}:
+  Riemann-zeros,Eigenvalues-γ_n-of-T_BC,Curvature-e-circle/CP2,Hecke-action-μ_n,Channel-capacity-KMS_1
+  Mass-gap,Gap-Δ>0-transfer-matrix,Weitzenboeck-Bochner-KK,Balaban-polymer,Wilson-AF
+```
+
+**Markdown-Table** for non-uniform data. **TOON** for uniform arrays. **Adjacency-list** for dependency graphs:
+
+```
+deps: 1->2,3; 2->4; 3->4,5; 4->6; 5->6; 6->7*,8; 7*->9,10
+```
+
+vs the current table format at 3-5x the tokens.
+
+**Stage 4: N-gram Abbreviation (~15% reduction)**
+
+Build a legend of 50-150 frequently repeated phrases:
+```
+LEGEND:
+CCM:=Connes-Consani-Marcolli | BC:=Bost-Connes | KR:=Kato-Rellich
+P1-P6:=Six-Patterns | H_R:=Riemann-Hilbert-space | A_BC:=BC-C*-algebra
+T_BC:=BC-partition-function | SM:=Standard-Model | KMS:=KMS-state
+VBC:=Verification-Cascade | PC:=Proof-Chain | CF:=Caratheodory-Fejer
+ITPFI:=infinite-tensor-product-type-III_1 | AF:=asymptotic-freedom
+SP:=spectral | GE:=geometric | AL:=algebraic | IN:=information-theoretic
+```
+
+Place legend at top of compiled file (inside cached prefix). Replace all occurrences.
+
+*Source: CompactPrompt (ICAIF 2025) — 2.35x compression via LZW-inspired n-gram abbreviation. Accuracy improved on Claude because removing noise helped focus.*
+
+**Stage 5: Cache-Optimized Ordering**
+
+Structure the compiled file for maximum Anthropic prompt cache hits:
+
+```
+[CACHED PREFIX — stable across all agents, all waves, all tiers]
+  1. Abbreviation legend (50-150 entries)
+  2. Kill list (full, NEVER changes mid-wave)
+  3. Proof chain structure (steps + deps + statuses)
+  4. Domain map (active Tier 2 families)
+  5. Correspondence tables (four pillars + activated Tier 2)
+  6. Six Patterns reference (P1-P6 in compressed form)
+  7. Grammar rules (8 rules in TOON)
+  8. Operations equivalence table (14 operations x domains)
+  9. Section INDEX (pointers to fetchable expansions)
+
+[FRESH SUFFIX — per-agent, changes every dispatch]
+  10. Step assignment + prior work on node
+  11. Feed subscriptions (live kills, cards from message bus)
+  12. Layer-specific pre-loaded sections (if Layer 2/3)
+  13. Delta overlay (if wave > 1)
+```
+
+Anthropic prompt cache mechanics:
+- Minimum cacheable prefix: 1,024 tokens
+- Default TTL: 5 minutes (refreshed on each use)
+- Cost: 0.1x base price for cached tokens (90% savings)
+- Latency: 85% reduction on cached prefix
+- **Critical:** Stagger agent launches by ~1s to allow first cache write before subsequent reads
+
+### 13.4 Compression estimates
+
+| Stage | Reduction | Lines |
+|-------|-----------|-------|
+| Start | — | 14,230 |
+| Semantic deduplication | 30% | ~9,960 |
+| Hierarchical compression | 40% | ~5,975 |
+| Format optimization (TOON + adjacency lists) | 25% | ~4,480 |
+| N-gram abbreviation | 15% | ~3,810 |
+| **Compiled capacitor** | **~73%** | **~3,800 lines** |
+
+**Optional additional pass — LLMLingua-2** (Microsoft, `pip install llmlingua`): Token classification model that drops low-information tokens. 2-5x compression at 95-98% accuracy retention. At ratio=0.5 on the compiled 3,800 lines: **~1,900 lines**. Caveat: must protect mathematical symbols and formulas from compression. Test carefully.
+
+*Sources: LLMLingua-2 (ACL 2024, Microsoft); CompactPrompt (ICAIF 2025); TOON format; ImprovingAgents format benchmarks.*
+
+### 13.5 The compiled capacitor file structure
+
+```markdown
+# [Domain] Compiled Capacitor — v1
+# Generated: [date] | Target: [name] | Mode: [VERIFY/EXCISE/CONSTRUCT]
+# Charge: [N steps, M correspondences, K kills]
+
+## LEGEND
+CCM:=Connes-Consani-Marcolli | BC:=Bost-Connes | [...]
+
+## KILLS
+kills[K]{id,what,why,pattern,reentry}:
+  K-1,[...],[...],[...],[...]
+
+## CHAIN
+chain[N]{id,type,stmt,deps,status,load}:
+  1,Def,[...],—,EST,no
+  2*,Lem,[...],1,PEND,yes
+
+## DEPS
+1->2*,3; 2*->4,5*; 3->5*; 5*->6
+
+## DOMAINS
+active: SP,GE,AL,IN,OA,QFT
+tier2: OA(R.OA-1..6),QFT(R.QFT-1..9)
+
+## CORR
+corr[M]{concept,SP,GE,AL,IN}:
+  [concept],[image],[image],[image],[image]
+
+## PATTERNS
+P1:Shadow?→larger-space | P2:Phase?→holonomy | P3:Energy?→scale
+P4:Invariant?→rigid | P5:Divergent-sum?→zeta | P6:Projection?→restore
+
+## GRAMMAR
+grammar[8]{id,order,shape,norm}:
+  1,Linear,a+b,1
+  2,Quadratic,a*b/c,{π,2π,π²}
+  [...]
+
+## OPS
+ops[14]{op,SP,GE,AL,IN}:
+  inner,Tr(A*B),∫ω∧*ω,Hom-pairing,I(X;Y)
+  tensor,H₁⊗H₂,M₁×M₂,A⊗B,P(X,Y)
+  [...]
+
+## INDEX
+A:Six-Patterns-full→@FETCH-A (339 lines)
+B:Theorem-catalogues→@FETCH-B (3300 lines)
+C:Grammar-full→@FETCH-C (297 lines)
+D:Transposition-full→@FETCH-D (755 lines)
+E:Anchor+dicts→@FETCH-E (843 lines)
+F:Predictions→@FETCH-F (457 lines)
+G:Correspondences-full→@FETCH-G (1528 lines)
+I:Framework-chains→@FETCH-I (1083 lines)
+```
+
+### 13.6 Pre-compilation tools
+
+| Tool | Purpose | Compression | API-Compatible |
+|------|---------|-------------|----------------|
+| **TOON** | Format optimization for uniform arrays | 30-60% vs JSON | Yes |
+| **LLMLingua-2** | Token-level compression | 2-5x | Yes (pre-process) |
+| **CompactPrompt** | N-gram abbreviation pipeline | 2.35x | Yes (pre-process) |
+| **SemHash** | Semantic deduplication | Variable | Yes (pre-process) |
+
+### 13.7 Implementation: Compile-by-Execution
+
+Instead of building external tooling (scripts, SemHash, LLMLingua), **use the LLM itself as the compiler**. The insight: run the capacitor generator once, let it load all files into context, then rewrite from that loaded context.
+
+**Why this works:**
+- The dependency lattice (circular refs between keystones) resolves naturally — everything is in context
+- Semantic deduplication is free — the LLM *sees* when Identity 14 appears in 4 files and writes it once
+- Hierarchical compression is free — the LLM *knows* what's narrative vs load-bearing
+- Format optimization (TOON, adjacency lists) happens in the rewrite pass
+- The compiler understands the content — it does semantic compression, not syntactic
+
+**The compile-by-execution protocol:**
+
+```
+STEP 1: EXECUTE THE CAPACITOR GENERATOR
+  
+  Run the ORA capacitor generator (00--ora-generator.md) against the target.
+  It reads all 30 source files: 7 keystones, 4 proof chains, 6 kill sources,
+  6 theorem catalogues, 2 dictionaries, ORA bundle, strategy files.
+  
+  Total loaded: ~14,230 lines across 30 files.
+  Everything the agent ACTUALLY touched is now in context.
+  The dependency lattice is RESOLVED — no graph traversal needed.
+
+STEP 2: REWRITE FROM LOADED CONTEXT
+
+  With everything in context, rewrite the entire capacitor as a SINGLE
+  token-optimized file using all optimization layers:
+
+  Instructions to the compiler agent:
+  
+  "You have now read all source files. Rewrite the capacitor as a single
+  compiled file using these rules:
+  
+  1. DEDUPLICATE: If the same concept appears in multiple source files,
+     write it ONCE with a canonical ID. Do not restate.
+  
+  2. COMPRESS: Strip all motivation, history, narrative connectors.
+     Keep ONLY: definitions, formulas, parameters, proof steps,
+     dependencies, statuses, kills (with WHY and re-entry), lookup entries.
+  
+  3. FORMAT: Use TOON for uniform arrays (proof chains, kills, 
+     correspondences, grammar rules, operations tables).
+     Use adjacency-list for dependency graphs.
+     Use single-line compressed form for patterns and rules.
+  
+  4. ABBREVIATE: Build a legend of 50-150 repeated phrases.
+     Place legend at top. Replace all occurrences.
+  
+  5. ORDER for cache: legend → kills → chain → deps → domains →
+     correspondences → patterns → grammar → operations → index.
+     Static content first, dynamic content last.
+  
+  6. PRESERVE: Every kill. Every formula. Every status. Every dependency.
+     Every re-entry gate. Zero information loss on load-bearing content.
+  
+  7. INDEX: At the end, list fetchable expansions (@FETCH-A through @FETCH-I)
+     with line counts. These are the full source sections that agents can
+     request on-demand if the compiled version isn't enough.
+  
+  Output the compiled capacitor as a single file."
+
+STEP 3: VALIDATE
+
+  Dispatch ONE pilot Critic agent with ONLY the compiled capacitor.
+  The Critic attempts to verify one load-bearing step.
+  If it produces a meaningful verdict: the compiled capacitor works. Ship it.
+  If it cannot: identify what's missing, add it, recompile.
+
+STEP 4: WRITE THE FETCHABLE EXPANSIONS
+
+  The compiled capacitor has @FETCH pointers. Write each expansion as a
+  separate file (the FULL uncompressed source sections) so agents can
+  request them on-demand via Strategy A.
+```
+
+**Cost of compilation:** One Claude session reading ~14,230 lines (~30K tokens input) and writing ~3,800 lines output. One-time cost. The output is reused across all agents, all waves, all tiers, all runs until the source files change.
+
+**When to recompile:**
+- Source files updated (new theorems proved, kills added, statuses changed)
+- New ORA run produces amplification entries that should be baked in
+- Tier escalation discovers new correspondence cells
+
+**The ORA invocation becomes:**
+```
+read your instructions from
+online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md
+
+the toolkit for this run is
+verification-cascade/capacitors/tier-N-compiled-v1.md    ← SINGLE FILE
+
+the run brief is
+verification-cascade/strategy/0N-tier-N-brief.md
+
+the run output directory is
+verification-cascade/tier-N-output/
+```
+
+One file. No runtime file reads. No dependency lattice traversal. The agent starts working immediately.
+
+### 13.8 Compile-by-execution vs scripted pipeline
+
+| Dimension | Scripted Pipeline | Compile-by-Execution |
+|-----------|------------------|---------------------|
+| Deduplication | SemHash (embedding similarity) | LLM reads all files, writes once (semantic) |
+| Compression | Rule-based stripping | LLM knows narrative vs load-bearing |
+| Format optimization | Custom TOON converter | LLM rewrites in TOON directly |
+| Abbreviation | Frequency analysis script | LLM identifies repeated phrases from context |
+| Dependency resolution | Graph traversal code | Already resolved by reading into context |
+| Accuracy | Syntactic (can break formulas) | Semantic (understands math) |
+| Maintenance | Code to maintain | Prompt to maintain |
+| Cost | Engineering time + compute | One Claude session (~30K tokens) |
+| Quality | Mechanical | Understands what matters |
+
+**Verdict:** Compile-by-execution is strictly superior for this use case. The LLM is a better compiler than any script because it understands the content.
+
+---
+
+## 14. The Full Stack: Loading + Runtime + Communication
+
+All optimizations compose across three phases:
+
+```
+LOADING PHASE (before agents start):
+  Pre-compile → single ~3,800-line file (73% reduction from 14,230)
+  Cache-optimize ordering → shared prefix for Anthropic prompt caching
+
+RUNTIME PHASE (during agent work):
+  Strategy A → index + on-demand fetch (40-50% reduction on remaining)
+  Strategy B → effort-tiered dispatch (Layer 1/2/3)
+  Strategy C → delta-only wave updates
+  Prompt caching → 90% cost on shared prefix
+
+COMMUNICATION PHASE (between agents):
+  Message bus → live feeds (kills, cards, statuses, escalations)
+  Query protocol → agent-to-agent dialogue (40-60% fewer Judges)
+  AgentPrune → prune redundant edges
+
+COMBINED EFFECT (60-agent CCM wave):
+  Current:     14,230 lines × 60 agents = 853,800 lines, full cost
+  Pre-compiled: 3,800 lines × 60 agents = 228,000 lines
+  + Prompt cache: shared prefix (3,000 lines) paid once = 48,000 fresh lines
+  + Effort tiers: Layer 1 agents get 1,500 lines = mixed
+  + Message bus: 30-50% fewer secondary agents
+  
+  Effective: ~90% total cost reduction vs current architecture
+```
+
+---
+
+*The capacitor is the variable. The method is the constant. The message bus is the new degree of freedom. The compiler makes the variable weightless.*
 
 *G Six and Claude Opus 4.6. April 2026.*
