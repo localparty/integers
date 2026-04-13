@@ -42,14 +42,17 @@ Prove H4 independently — that the non-perturbative Schwinger functions agree w
 | Spiridonov-Chetyrkin | ESTABLISHED | gamma_{Tr F^2} = -2beta(g)/g, exact to all orders |
 | Hastings-Koma | ESTABLISHED | Exponential clustering at all RG scales |
 
-## §E — Route status
+## §E — Route status (FINAL)
 
-| Route | Status | Verdict |
-|---|---|---|
-| 1. Analyticity + Identity Theorem | DISPATCHED | See 01-route-1-analyticity.md |
-| 2. Borel Summability + Watson | DISPATCHED | See 02-route-2-borel.md |
-| 3. Instanton Gas | DISPATCHED | See 03-route-3-instanton.md |
-| 4. Large-N then Finite-N | DISPATCHED | See 04-route-4-large-N.md |
+| Route | Status | Verdict | Output |
+|---|---|---|---|
+| 1. Analyticity + Identity Theorem | **BLOCKED** | Same obstruction as prior Route A; F(0) = F^pert(0) IS H4 | 01-route-1-analyticity.md |
+| 2. Borel Summability + Watson | **BLOCKED (K-3)** | IR renormalon at u=2; Watson requires sector analyticity | 02-route-2-borel.md |
+| 3. Instanton Gas | **PARTIAL RESULT** | Instantons (|k|>=1) proved sub-leading O(|x|^{11N/6}); k=0 uncontrolled | 03-route-3-instanton.md |
+| 4. Large-N then Finite-N | **BLOCKED (K-4)** | H4 at large N itself open; no rigorous 1/N expansion | 04-route-4-large-N.md |
+
+**EXCISION VERDICT: HONEST-STALL.** See 05-excision-verdict.md.
+**CAPACITOR PATCH:** See 06-capacitor-patch.md.
 
 ## §F — Kill list (inherited + new)
 
@@ -62,3 +65,7 @@ Prove H4 independently — that the non-perturbative Schwinger functions agree w
 ## §K — Runner writes
 
 [2026-04-13 cycle 1] REFRAME: The prior run asked "can we MATCH two functions?" This run asks "does the CONSTRUCTION force the match?" The gradient-flow construction builds F(t) from the Balaban polymer integral. The perturbative series is the formal Taylor expansion of F(t) at t=0. The construction ALREADY proves F(t) is analytic at t=0 with convergent Taylor series (L.3.7 Step 2). The question is whether each Taylor coefficient a_n = F^(n)(0)/n! is computable by Feynman rules. This is not a matching problem — it is a COMPUTABILITY problem for the derivatives of an already-constructed analytic function.
+
+[2026-04-13 cycle 1 close] QUALITATIVE-THRESHOLD: All four routes dispatched, executed, and returned. Three BLOCKED, one PARTIAL RESULT. The instanton suppression partial result is genuine and worth adding to the preprint. But H4 stands. The wall is the wall. Seven routes tried across two runs, seven blocked by the same fundamental obstruction: the divergence of the g^2 perturbative series and the absence of a summation method that provably reconstructs the non-perturbative answer within the k = 0 topological sector. The LOCK tightens to 11/10. The only remaining direction is "does the Balaban polymer expansion converge to its perturbative truncation?" — a constructive QFT question that is more specific than generic Borel summability but still hard (8/10). Paper 8 ships as it is. The honest-stall holds.
+
+[2026-04-13 final] COMMIT: 6 files written to h4-excision-run/. Capacitor patch drafted with 2 new kills (K-3, K-4), 3 new cards (15-17), 4 corrections. LOCK updated to 11/10. Mathematical closure probability downgraded from 0.74 to 0.31. Paper shipping probability unchanged at 0.993.
