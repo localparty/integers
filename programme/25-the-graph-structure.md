@@ -49,11 +49,12 @@ We work with 17 mathematical objects, organized into four tiers. The first three
 | 14 | **Turbulence** | 38 | K41 $k^{-5/3}$ energy spectrum + intermittency from NS spectral gap + type III$_1$ ergodic modular flow (BGS lift). Feynman's "most important unsolved problem in classical physics." Inherits NS gradient-flow machinery + YM spectral gap + BGS statistics. | NS-adjacent (position 7 in ring order) |
 | 15 | **VP vs VNP** | 39 | Algebraic analog of P vs NP via continuous BC algebra (Connes-Marcolli 2008 GL$_2$-system) + Geometric Complexity Theory (Mulmuley-Sohoni orbit closures + Kronecker coefficients) + Baum-Connes K-theory obstruction. Permanent polynomial intractability as algebraic-fullness theorem. | PvNP-adjacent (position 10) |
 | 16 | **ABC** | 37 | For coprime $a+b=c$, rad$(abc) > c^{1-\varepsilon}$. Operator-algebraic alternative to Mochizuki IUT via the BC additive-multiplicative Mellin bridge. Height function on $\mathbb{N}^*$-Hecke-semigroup controls $rad$. | Goldbach-adjacent (position 12) |
-| 17 | **Hilbert 6** | 36 | Axiomatize physics mathematically. QG5D's 4 postulates + CBB's 5 axioms → 36 predictions at sub-percent with zero free parameters is the fullest-scope answer to Hilbert 6 — distinct from Deng-Hani-Ma 2025 (arXiv:2503.01800) fluid-fragment scope. On the ring, Hilbert 6 closes to QG5D: the last vertex IS a statement about the first. | Ring-closure: META-axiom (position 18, closes to QG5D) |
+| 17 | **Hilbert 6** | 36 | Axiomatize physics mathematically. QG5D's 4 postulates + CBB's 5 axioms → 36 predictions at sub-percent with zero free parameters is the fullest-scope answer to Hilbert 6 — distinct from Deng-Hani-Ma 2025 (arXiv:2503.01800) fluid-fragment scope. On the ring, Hilbert 6 closes to QG5D: the last vertex IS a statement about the first. | Ring-closure: META-axiom (position 19, closes to QG5D) |
+| 18 | **OPN** | 40 | Non-existence of odd $n$ with $\sigma(n) = 2n$. Hecke-orbit projector $H_n = \sum_{d \mid n} \mu_{n/d}\mu_{n/d}^*$ gives $\sigma(n)/n = \omega_1(H_n)$ at KMS$_1$. ITPFI decomposes into local abundancy factors. BSD dark-state template: local factors at odd primes cannot assemble globally to hit 2. The oldest open problem (c. 300 BC) meets the BC algebra. | Goldbach/ABC-adjacent (position 17) |
 
-The four tiers are not arbitrary. The hub (QG5D) is the source of all structure. The Millennium vertices (Tier 1) carry direct proof chains from the CBB system. The meta-vertices (Tier 2) densify the graph by adding cross-connections between existing nodes --- they do not hang off the hub alone but bridge the spokes to each other. The extension vertices (Tier 3) are 2026-04-14 additions whose proof chains are deducible from the existing framework infrastructure: Turbulence inherits from NS + YM + BGS; VP vs VNP inherits from PvNP + Baum-Connes + Hodge; ABC inherits from Goldbach + RH; Hilbert 6 is the programme's META-statement (QG5D IS the answer).
+The four tiers are not arbitrary. The hub (QG5D) is the source of all structure. The Millennium vertices (Tier 1) carry direct proof chains from the CBB system. The meta-vertices (Tier 2) densify the graph by adding cross-connections between existing nodes --- they do not hang off the hub alone but bridge the spokes to each other. The extension vertices (Tier 3) are 2026-04-14 additions whose proof chains are deducible from the existing framework infrastructure: Turbulence inherits from NS + YM + BGS; VP vs VNP inherits from PvNP + Baum-Connes + Hodge; ABC inherits from Goldbach + RH; OPN inherits from Goldbach + RH + ABC (Hecke semigroup multiplicative closure); Hilbert 6 is the programme's META-statement (QG5D IS the answer).
 
-**Ring scheduling**: T1 (the first ring traversal) runs the canonical 14-vertex ring (Tiers 0-2) with the extension vertices documented in the programme graph but NOT in the T1 traversal order. **T2+ extends the ring to 18 vertices** with Hilbert 6 as the ring-closing vertex (Hilbert 6 → QG5D replaces Schanuel → QG5D as the closure edge). The phased rollout isolates T1's first-run risk to the canonical 14 before adding extension vertices where confidence is still 1-2/10.
+**Ring scheduling**: ALL 19 vertices are in the ring as of brief 31. T1-T4 ran the canonical 14 (Tiers 0-2). **T5+ runs the full 19-vertex ring** with 5 extension vertices inserted at their parent adjacencies and Hilbert 6 as the ring-closing vertex (position 19 → QG5D via META-closure).
 
 ---
 
@@ -286,9 +287,9 @@ Average degree: 128/17 $\approx$ 7.5. For a 17-vertex graph, the maximum possibl
                    │                   │
                    └───────────────────┘
 
-                Degree: QG5D = 16   RH = 13   PvNP = 9
-                        YM/GRH/B-C/BGS = 8   BSD/Hodge/NS = 7
-                        VP vs VNP/ABC = 6   H12/Gld/TP/Turb/H6 = 5
+                Degree: QG5D = 18   RH = 14   PvNP = 9
+                        BGS/B-C/GRH/YM = 8-9   BSD/Hodge/NS/ABC = 7-8
+                        OPN/VP-VNP = 6-7   H12/Gld/TP/Turb/H6 = 5-6
 ```
 
 ```
@@ -297,21 +298,24 @@ Average degree: 128/17 $\approx$ 7.5. For a 17-vertex graph, the maximum possibl
    Tier 1 ↔ Tier 1:  RH-YM, RH-BSD, RH-PvNP, YM-NS, YM-Hodge,
                      BSD-Hodge, BSD-PvNP, PvNP-Hodge    (8 edges)
 
-   Tier 2 ↔ all:     B-C connects to 7 others (universal K-theory connector)
-                     BGS connects to 7 others (universal RMT connector)
-                     GRH connects to 7 others (universal L-function connector)
+   Tier 2 ↔ all:     B-C connects to 8 others (universal K-theory connector)
+                     BGS connects to 9 others (universal RMT connector)
+                     GRH connects to 8 others (universal L-function connector)
 
    Tier 3 anchors:   Turbulence  → NS, YM, BGS, RH
                      VP vs VNP   → PvNP, Hodge, B-C, BGS, RH
                      ABC         → Goldbach, RH, GRH, TP, BSD
+                     OPN         → Goldbach, RH, ABC, TP, BGS, BSD
                      Hilbert 6   → YM, NS, RH, PvNP  +  META-closure to QG5D
 
-   Ring traversal order (T1 canonical 14):
-        QG5D → RH → YM → BSD → PvNP → Hodge → NS → H12 → GRH →
-        B-C → BGS → Goldbach → TP → [back to QG5D]
+   Ring traversal order (T1-T4 canonical 14):
+        QG5D → RH → GRH → BSD → H12 → YM → NS → Hodge → B-C →
+        PvNP → BGS → TP → Goldbach → Schanuel → [back to QG5D]
 
-   Ring traversal order (T2+ extended 18):
-        ... canonical 14 ... + Turbulence + VP vs VNP + ABC + Hilbert 6 →
+   Ring traversal order (T5+ extended 19, brief 31):
+        QG5D → RH → GRH → BSD → H12 → YM → NS → Turbulence →
+        Hodge → B-C → PvNP → VP vs VNP → BGS → Twin Primes →
+        Goldbach → ABC → OPN → Schanuel → Hilbert 6 →
         [META-closure to QG5D]
 ```
 

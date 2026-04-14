@@ -173,9 +173,9 @@ The odd-restricted BC partition function Z_odd(β) = ζ(β) · (1 - 2^{-β}) has
 
 ### Route B — Quasi-modular E_2 obstruction
 
-σ(n) appears in the Fourier expansion of the Eisenstein series E_2(τ) = 1 - 24 Σ σ(n) q^n. The odd-restricted sum (removing q^{2k} terms) further breaks E_2's quasi-modular structure. The anomalous transformation E_2(-1/τ) = τ² E_2(τ) + 6τ/(πi) encodes the modular-flow anomaly. The odd restriction may obstruct the fixed point h = 2 on odd arguments.
+The odd-restricted σ generating function is F_odd(τ) = -(1/48)[E_2(τ) - E_2(τ + 1/2)]. Analysis (2026-04-14): G(τ) = E_2(τ) - E_2(τ+1/2) has period 2 but no quasi-modular transformation under SL_2(Z) or any congruence subgroup. The anomaly constrains the generating function analytically but does NOT restrict individual Fourier coefficients arithmetically. Key outputs: (1) the odd-restricted σ Dirichlet series has a ZERO at s=1, not a pole; (2) this confirms the halved Mertens constant e^γ/2. Both feed Route A.
 
-**Status:** SPECULATIVE. Connection to BC modular flow is structural but the computation hasn't been attempted.
+**Status:** BLOCKED-DECOMPOSED (2026-04-14). Does not close Link 6 independently. Productive content absorbed into Route A. Detail: `06b-E2-quasi-modular-obstruction.md`.
 
 ### Route C — ITPFI joint constraint
 

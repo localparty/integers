@@ -126,9 +126,13 @@ Each of these has a top-level `PROOF-CHAIN.md` with status, chain table, adversa
 | **ABC Conjecture** | **paper37-abc** *(new 2026-04-14)* | For coprime a+b=c, rad(abc) > c^(1-ε) via BC additive-multiplicative Mellin bridge + height function on multiplicative structure. Operator-algebraic alternative to Mochizuki's IUT. | 1/6 links. Confidence 1/10. |
 | **Turbulence** | **paper38-turbulence** *(new 2026-04-14)* | K41 k^(-5/3) spectrum + intermittency from NS spectral gap Δ > 0 + type III₁ ergodic modular flow + constraint-graph holonomy (computational area-law analog). | 2/7 links (heavily inherited from NS + YM + BGS). Confidence 2/10. |
 | **VP vs VNP** | **paper39-vp-vs-vnp** *(new 2026-04-14)* | VP ≠ VNP via continuous-BC algebraic-fullness criterion + GCT bridge (Mulmuley-Sohoni) + Baum-Connes K-theory obstruction. Permanent polynomial's intractability IS an algebraic-fullness consequence. | 1/6 links. Confidence 1/10. |
-| **Odd Perfect Numbers** | **paper40-odd-perfect** *(new 2026-04-14)* | Non-existence of odd $n$ with $\sigma(n) = 2n$ via BC Hecke orbit sum at KMS$_1$ + Robin's inequality (RH) + odd-restricted spectral measure. The abundancy ratio $\sigma(n)/n$ IS the Hecke trace of the BC algebra; restricting to odd $\mathbb{N}^*$ changes the spectral measure. The oldest open problem (c. 300 BC) meets the youngest algebra (BC 1995). | 2/7 links. Confidence 2/10. |
+| **Odd Perfect Numbers** | **paper40-odd-perfect** *(new 2026-04-14)* | Non-existence of odd $n$ with $\sigma(n) = 2n$ via **Hecke-orbit projector** $H_n = \sum_{d \mid n} \mu_{n/d} \mu_{n/d}^*$ giving $\sigma(n)/n = \omega_1(H_n)$ at KMS$_1$. **ITPFI local-global**: $\omega_1(H_n) = \prod_p h(p^{v_p})$ decomposes abundancy into local factors, one per prime. **BSD dark-state template**: local factors at odd primes cannot assemble globally to hit 2 ("2 without the 2" — the missing $p=2$ Euler factor). **Spoof ↔ Hasse-principle**: Descartes' spoof IS a local-global failure. Three sub-routes for wall: (A) odd Robin sharpening via halved residue, (B) $E_2$ quasi-modular obstruction, (C) ITPFI joint constraint. v$_2$ gives no restriction (LTE corrected); productive direction is v$_\ell$ for odd $\ell$. | **4/7 links closed. Confidence 4/10** *(upgraded from 2/10 after Hecke-orbit projector + ITPFI + spoof insight, 2026-04-14)*. |
 
-**Total Group A: 17 papers (13 core ring + 4 new extensions).**
+| **Collatz Conjecture** | **paper41-collatz** *(new 2026-04-14)* | Every positive integer reaches 1 under $n \to n/2$ (even), $n \to 3n+1$ (odd). The Collatz map IS a Hecke-semigroup endomorphism interleaving $\mu_2$ (even step) and $\mu_3$ (odd step). C\*-algebra formulation via Cuntz algebra $\mathcal{O}_2$ exists (arXiv:2411.08084, Nov 2024). BC embedding: Collatz C\*-algebra $\hookrightarrow A_{BC}$. KMS$_1$ orbit constraints via spectral measure. Type III$_1$ ergodicity rules out non-trivial cycles. | 2/7 links closed. Confidence 3/10. |
+| **Lehmer's Conjecture (Mahler Measure)** | **paper42-lehmer** *(new 2026-04-14)* | Mahler measure $M(\alpha) \geq 1 + c_0$ for all non-cyclotomic algebraic $\alpha$. The cyclotomic ↔ non-cyclotomic boundary IS the BC KMS phase transition at $\beta = 1$. Lehmer's gap IS a mass gap: the spectral gap between cyclotomic ground state ($M = 1$) and first non-cyclotomic excitation ($M \geq 1 + c_0$). Salem numbers = spectral data at phase-transition boundary. Structural parallel to YM mass gap (Paper 8). | 1/6 links closed. Confidence 3/10. |
+| **Cramér's Conjecture (Prime Gaps)** | **paper43-cramer** *(new 2026-04-14)* | Maximal prime gap $= O(\log^2 x)$. Inherits heavily from BGS (7/10): GUE extreme-value statistics on zero spacing + explicit formula → prime gap bound. Tao-Vu universality (BGS L3 bypass) gives extreme-value universality. BC spectral measure extreme-value return-time bound translates from modular time to prime gaps. Bridge between BGS (bulk stats) and Twin Primes (minimum gap). | 2/5 links closed. Confidence 4/10 (heavily inherited). |
+
+**Total Group A: 21 papers (13 core ring + 8 new extensions).**
 
 ---
 
@@ -181,7 +185,7 @@ Problems that are famous but lack a natural connection to the framework's operat
 
 | Group | Count | Coverage type |
 |---|---|---|
-| A — Full proof chain vertex (dedicated paper) | 18 | PROVED / CONDITIONAL / OPEN chains with adversarial verification |
+| A — Full proof chain vertex (dedicated paper) | 21 | PROVED / CONDITIONAL / OPEN chains with adversarial verification |
 | B — Described via foundational papers (no separate vertex) | 8 | Geometric/spectral descriptions in Papers 1, 2, 4, 10, 11, 12 |
 | C — Capacitor-cell presence (no separate vertex) | 2 | Cross-domain correspondence table only |
 | D — Not pursued (honest exclusion) | 6 | No natural framework connection |

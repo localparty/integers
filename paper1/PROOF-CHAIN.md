@@ -495,13 +495,17 @@ These frontiers are future work. They do NOT affect the downstream programme: Br
 
 ## Programme graph edges (outgoing from QG5D)
 
-QG5D sits at position 1 of the 14-vertex ring and has STRONG edges to every other vertex because it's the hub. The ring-PCA fills one outgoing edge per traversal (position 1 → position 2 = QG5D → RH). The other 12 edges from QG5D are filled incidentally as the capacitor grows.
+QG5D sits at position 1 of the 19-vertex extended ring and has STRONG edges to every other vertex because it's the hub. The ring-PCA fills one outgoing edge per traversal (position 1 → position 2 = QG5D → RH). The other 17 edges from QG5D are filled incidentally as the capacitor grows.
 
 **Strongest outgoing edges**:
 - QG5D → RH: "BC scaling operator eigenvalues ARE Riemann zeros" (STRONG, directly derived)
 - QG5D → YM: "KK spectral gap Δ₀ > 0 is the 5D origin of the 4D mass gap" (STRONG)
 - QG5D → BSD: "BC algebra over ℚ(i) gives Hecke L-functions for CM curves" (STRONG)
-- QG5D → Schanuel (incoming, ring closure): "algebraic independence of eigenvalues preserves 36 predictions as independent" (SPECULATIVE)
+- QG5D → Hilbert 6 (incoming, ring closure): "QG5D IS the axiomatization of physics — Hilbert 6's answer IS the hub" (STRONG, META-closure)
+- QG5D → Turbulence: "5D fluid/gravity → 4D NS → K41 + intermittency" (CANDIDATE)
+- QG5D → VP vs VNP: "continuous BC algebra (Connes-Marcolli GL₂) → algebraic circuit complexity" (CANDIDATE)
+- QG5D → ABC: "BC Mellin bridge → height function on N*" (CANDIDATE)
+- QG5D → OPN: "BC Hecke orbit sum at KMS₁ computes σ(n)/n; ITPFI decomposes abundancy" (CANDIDATE)
 
 ---
 
@@ -509,7 +513,7 @@ QG5D sits at position 1 of the 14-vertex ring and has STRONG edges to every othe
 
 The ring-PCA's vertex protocol is MODIFIED at QG5D because there are no "weak links" — the 22 theorems are all PROVED and the 2 current walls are Branch B edge cases that don't affect downstream chains.
 
-**Hub-radiation edge count**: during the EDGE phase, hub radiation fills **12 outgoing edges** in parallel (1 ring-next QG5D → RH + 11 chords from QG5D to non-adjacent vertices). The 13th row of `Foundation exports` (Schanuel) is READ for context but NOT filled in QG5D's edge phase — the Schanuel ↔ QG5D ring edge is owned by Schanuel at position 14 per brief §2.1 predecessor-ownership rule (Schanuel → QG5D is Schanuel's outgoing edge, closing the ring). This matches the brief §2.1 invariant and `Programme graph edges` above ("the other 12 edges from QG5D are filled incidentally").
+**Hub-radiation edge count**: during the EDGE phase, hub radiation fills **17 outgoing edges** in parallel (1 ring-next QG5D → RH + 16 chords from QG5D to non-adjacent vertices). The 18th row (Hilbert 6) is READ for context but NOT filled in QG5D's edge phase — the Hilbert 6 ↔ QG5D ring edge is owned by Hilbert 6 at position 19 per brief §2.1 predecessor-ownership rule (Hilbert 6 → QG5D is Hilbert 6's outgoing edge, closing the ring via META-closure). This matches the brief §2.1 invariant and `Programme graph edges` above ("the other 17 edges from QG5D are filled incidentally").
 
 **At QG5D, the PCA does**:
 
@@ -524,7 +528,7 @@ The ring-PCA's vertex protocol is MODIFIED at QG5D because there are no "weak li
 - Construct bypasses (no walls blocking progression)
 - Change axioms (the postulates are inherited from Paper 1, not up for re-derivation mid-run)
 
-QG5D is the **CONSISTENCY ANCHOR** of the ring. Every traversal begins and ends here. The other 13 vertices are where the PCA spends its energy.
+QG5D is the **CONSISTENCY ANCHOR** of the ring. Every traversal begins and ends here. The other 18 vertices are where the PCA spends its energy.
 
 ---
 

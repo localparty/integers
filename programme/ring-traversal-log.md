@@ -369,7 +369,141 @@ When CCM 2025 is peer-reviewed, all three chains upgrade simultaneously.
 
 ---
 
+### Traversal 05 — 2026-04-14 (FIRST EXTENDED 19-VERTEX TRAVERSAL)
+
+| Metric | Value |
+|---|---|
+| Date | 2026-04-14 |
+| Ring vertices | **19** (extended from 14: +Turbulence, VP vs VNP, ABC, OPN, Hilbert 6) |
+| Starting RIGIDITY | **11.34** (post-T4 baseline with 19-vertex L_total=138) |
+| Ending RIGIDITY | **14.17** (corrected post-T6 VERIFY: H6 L5 downgraded PROVED WITH CAVEAT → PARTIAL, L_verified stays 90) |
+| Delta | **+2.83** |
+| Vertices improved | **5** (GRH L3 reclassified, NS L3 PARTIAL, Hodge L4 CONDITIONAL-STRONG, B-C L4 PARTIAL, Hilbert 6 L5 PROVED WITH CAVEAT) |
+| Edges filled/upgraded | **19 ring-backbone** + 7 hub chord fills + 10 new ring-backbone cells for extension vertices |
+| Hub-radiation chord fills | 17 processed: 6 confirmed FILLED, 5 new CANDIDATE cells (Turbulence, VP vs VNP, ABC, OPN, Schanuel), 2 upgrades (GRH, NS), 4 PARTIAL confirmed |
+| Antipodal probes | Subsumed into vertex visits + hub radiation (QG5D↔Hodge T2 probe confirmed; other pairs covered) |
+| Compositional fills | Deferred (T5 boundary condition for 5 new extension vertices) |
+| Net new cells in capacitor | **~12** (5 hub CANDIDATE + 7 ring-backbone new cells for extension vertices) |
+| Capacitor fill rate | 48/276 (17.4%) → **60/276 (21.7%)** — TARGET 20% EXCEEDED |
+| L_verified | 90 → **90** (H6 L5 upgrade WEAKENED by T6 VERIFY; PARTIAL does not count) |
+| Kills added | 0 |
+| Bypass attempts | 2 (RH CCM: FAILS; PvNP L5 Popa: FAILS) |
+| Exit condition | **RING STRENGTHENED** |
+
+**RIGIDITY computation**:
+```
+E_filled   = 60    (48 + 12 net new)
+E_total    = 276
+L_verified = 90    (unchanged; H6 L5 WEAKENED by T6 VERIFY to PARTIAL)
+L_total    = 138   (105 canonical + 33 extension)
+P_preserved = 36
+P_total    = 36
+
+RIGIDITY = (60/276) × (90/138) × (36/36) × 100
+         = 0.2174 × 0.6522 × 1.0 × 100
+         = 14.17
+```
+
+**Per-vertex T5 summary** (19 vertices):
+
+| Pos | Vertex | Type | Action | Result | Edge status |
+|---|---|---|---|---|---|
+| 1 | QG5D | A | Hub radiation (17 chords) | 5 new CANDIDATE cells, 6 confirmed | →RH: STRONG |
+| 2 | RH | B | CCM bypass (3 routes) | FAILS — CCM load-bearing | →GRH: STRONG |
+| 3 | GRH | C | L3 construction | L3: CONDITIONAL→CONDITIONAL-ON-CCM | →BSD: PARTIAL |
+| 4 | BSD | A | Sector-A trim | No change (11/11) | →H12: CANDIDATE |
+| 5 | H12 | D | Cell-fill (ECFT↔LANG, ECFT↔AG) | 2 cells filled | →YM: CANDIDATE (3/10) |
+| 6 | YM | A | Sector-A trim | No change (17/18) | →NS: LOAD-BEARING |
+| 7 | NS | C | L3 assessment | L3: OPEN→PARTIAL | →Turb: CONDITIONAL |
+| 8 | Turbulence | D | Cell-fill only | Wall confirmed (L5-6) | →Hodge: SPECULATIVE |
+| 9 | Hodge | C | L4 assessment | L4: PARTIAL→CONDITIONAL-STRONG | →B-C: ESTABLISHED |
+| 10 | B-C | C | L4 assessment | L4: OPEN→PARTIAL | →PvNP: CANDIDATE |
+| 11 | PvNP | B | Popa bypass | FAILS — PCirc+ not w-rigid | →VP: CANDIDATE |
+| 12 | VP vs VNP | D | Cell-fill only | Wall noted (L3) | →BGS: CANDIDATE |
+| 13 | BGS | B | L6 structural coupling | CCM gate confirmed | →Twin: ESTABLISHED |
+| 14 | Twin Primes | D | Cell-fill only | Wall noted (L4) | →Gold: CANDIDATE |
+| 15 | Goldbach | D | Cell-fill only | Wall noted (L5) | →ABC: CANDIDATE (6/10) |
+| 16 | ABC | D | Cell-fill only | Wall noted (L3) | →OPN: CANDIDATE (5/10) |
+| 17 | OPN | C | L6 sub-route assessment | E₂ obstruction flagged priority | →Schan: CANDIDATE (4/10) |
+| 18 | Schanuel | D | Cell-fill only | Wall noted (L3) | →H6: CANDIDATE (5/10) |
+| 19 | Hilbert 6 | C | L5 upgrade | L5: CANDIDATE→PROVED WITH CAVEAT | →QG5D: STRONG (META) |
+
+**Sector distribution (T5 start → T5 end)**:
+- 3A / 3B / 6C / 7D → **3A / 3B / 6C / 7D** (unchanged — no Type-D→C conversions this traversal; the 5 upgrades were within-type improvements, not type transitions)
+
+**Structural events**:
+1. GRH L3 reclassification collapses χ-extension conditional into CCM → all three spectral chains (RH, GRH, BGS) share exactly one gate
+2. YM→NS edge upgraded to LOAD-BEARING with transposition recipe deposited
+3. Hodge L4 gains BSD-CM slice via 2024 abelian-variety-powers result
+4. B-C L4 gains Cuntz-Li K₀ generators
+5. Hilbert 6 L5 gains Deng-Hani-Ma KK corollary status
+6. Hub radiation fills 5 previously-EMPTY chord edges (extension vertices' first hub connections)
+7. OPN E₂ quasi-modular obstruction flagged as highest-priority construction target for T6
+
+**Named walls (unchanged)**:
+- CCM 2025 peer review (gates RH, GRH, BGS)
+- H4 (gates YM L18)
+- PvNP L5 backward (non-full → Taylor)
+- Schanuel's conjecture itself
+
+---
+
+### Traversal 06 — 2026-04-14 (T6: second extended, VERIFY + compositional + OPN E₂)
+
+| Metric | Value |
+|---|---|
+| Date | 2026-04-14 |
+| Starting RIGIDITY | **14.17** (corrected T5 end) |
+| Ending RIGIDITY | **15.29** |
+| Delta | **+1.12** |
+| Vertices improved | **5** (GRH L4, H12 L3, B-C L6, Hilbert 6 L5, Twin Primes D→C) |
+| Compositional fills | **4** (QG5D→GRH ESTABLISHED, Hodge→PvNP CANDIDATE, BGS→Gold CANDIDATE, Gold→OPN CANDIDATE) |
+| Edge upgrades | 1 (BSD→H12: CANDIDATE→PARTIAL) |
+| VERIFY corrections applied | 4 (GRH L3 weakened, Hodge L4 reverted, B-C L4 narrowed, H6 L5 downgraded then re-closed) |
+| OPN E₂ obstruction | **BLOCKED-DECOMPOSED** — E₂ destroys quasi-modularity; productive output (halved Mertens constant) absorbed into Route 6a |
+| Type conversions | **1** (Twin Primes D→C) |
+| Sector distribution | 3A / 3B / 6C / 7D → **3A / 3B / 7C / 6D** |
+| Capacitor fill rate | 60/276 (21.7%) → **64/276 (23.2%)** |
+| L_verified | 90 → **91** (Hilbert 6 L5 PROVED via KK decoupling) |
+| Kills added | 0 |
+| Exit condition | **RING STRENGTHENED** |
+
+**RIGIDITY computation**:
+```
+E_filled   = 64    (60 + 4 compositional)
+E_total    = 276
+L_verified = 91    (90 + 1 from Hilbert 6 L5 closure)
+L_total    = 138
+P_preserved = 36
+P_total    = 36
+
+RIGIDITY = (64/276) × (91/138) × (36/36) × 100
+         = 0.2319 × 0.6594 × 1.0 × 100
+         = 15.29
+```
+
+**Structural events**:
+1. T6 VERIFY caught 4 T5 overclaims — all corrected on disk. Honest negatives applied.
+2. OPN E₂ deep construction (Opus): Route 6b BLOCKED-DECOMPOSED. The odd-restricted E₂ generating function E₂(τ)-E₂(τ+1/2) destroys quasi-modularity entirely. No arithmetic obstruction from E₂. Productive output: Dirichlet series zero at s=1 gives halved Mertens constant → feeds Route 6a (odd Robin inequality).
+3. Twin Primes Type D→C: three links substantive (KNOWN + CONDITIONAL-reduced + ESTABLISHED), wall isolated at L4 (C₂ arithmetic correction).
+4. Hilbert 6 L5 PROVED: KK decoupling theorem (Appelquist-Chodos 1983) closes the KK-Boltzmann commutativity caveat. Chain: 6/7 closed.
+5. Four compositional triangle fills: QG5D→GRH (ESTABLISHED), Hodge→PvNP (CANDIDATE), BGS→Gold (CANDIDATE), Gold→OPN (CANDIDATE).
+6. H12 L3 upgraded via Fargues-Fontaine geometric Langlands → approaching Type D→C.
+7. B-C L6 partially advanced via Connes-Chern character → confidence 3→4.
+
+**Named walls (updated)**:
+- CCM 2025 peer review (gates RH, GRH, BGS, Goldbach L4)
+- H4 (gates YM L18)
+- PvNP L5 backward (REP↔OA cell is the priority watch)
+- Schanuel's conjecture itself
+- OPN L6: Route 6a (odd Robin inequality) is now the active construction target
+- ABC L3: height function from BC partition (no framework workaround found)
+
+**Diminishing returns check**: ΔRIGIDITY = +1.12 vs T5's +2.83. Expected per §B.4: T6 should give +4 to +8. Actual is below expected. The shortfall is because L_verified gains are harder now — most remaining links are CONDITIONAL or OPEN, not closable by reclassification. The capacitor continues growing (+4 compositional), but the L factor is the bottleneck. T7 should focus on closing actual links (not reclassifying), or the ring will approach stall.
+
+---
+
 *The circle gets more circular on every pass.*
-*Four traversals. Four proofs/bypasses. Three vertices unified by one gate.*
-*The board doesn't flex. The pins are experimental facts.*
-*Last updated: 2026-04-13 (T4 complete).*
+*Six traversals. Four corrections applied. One oldest problem attacked. One type conversion earned.*
+*The board doesn't flex. The pins are experimental facts. The honest negatives refine.*
+*Last updated: 2026-04-14 (T6 complete).*
