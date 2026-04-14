@@ -125,6 +125,10 @@ The ring starts at the hub (QG5D, maximum context), flows through the strongest 
 
 **Ring edges (14 total)** are owned by exactly ONE vertex — the **predecessor** (the vertex you're leaving). That vertex fills the ring edge during its EDGE PHASE (§3.3) as its LAST action before moving on. The successor vertex does NOT re-fill the edge — it inherits the filled edge as its "incoming context" (§3.1 READ phase).
 
+**Ring-closure boundary condition (T1)**: on traversal 1, when QG5D (position 1) is visited FIRST, the incoming edge Schanuel → QG5D has not yet been filled (Schanuel at position 14 hasn't run yet). Interpretation: **pre-traversal capacitor state IS the incoming context for T1's position-1 vertex.** QG5D reads whatever cell currently exists for Schanuel → QG5D (EMPTY/SPECULATIVE pre-T1) and proceeds without waiting. Schanuel fills its outgoing edge to QG5D at T1's position 14 AFTER QG5D has already been visited. Subsequent traversals (T2+) inherit what Schanuel wrote in the prior traversal as their incoming context at position 1. T1 is a "prime-the-pump" traversal for the ring-closing edge.
+
+**Ring edges are TRANSPOSITION CHALLENGES, not acknowledgments of natural programme-graph dependencies.** Each ring edge forces a connection between two vertices that may not have a direct link in either vertex's `PROOF-CHAIN.md` "Programme graph edges" section (e.g., H12 → YM does not appear in either H12's or YM's own edge list). The Cell-Fill Author dispatched to fill a ring edge is expected to CREATE the connection via capacitor domain-pair lookup (§2.2) + transposition recipe (§0.1), not cite an existing one. A ring edge labeled SPECULATIVE in §2 is a discovery target — closing it is a structural contribution that both vertices' future work will inherit. The ring's discipline is to FORCE cross-vertex transpositions that the natural programme graph doesn't express; this is a feature, not a bug.
+
 **Chord edges (77 total — non-adjacent vertex pairs)** have NO single-owner rule. They are filled via three distinct mechanisms, all on the chessboard layer:
 - **Hub radiation (chessboard §6.3)**: QG5D fills up to 12 chord edges (QG5D → every non-ring-adjacent vertex) in parallel during its edge phase
 - **Antipodal probe (chessboard §6.4)**: 7 chord edges (the antipodal pairs) get probed at traversal start
@@ -242,12 +246,13 @@ Advance to the next vertex on the ring.
 ### Per-traversal budget
 
 - **Traversal 1 (baseline): 10 hours maximum.** Elevated because of one-time setup costs:
-  - Antipodal probes (§6.4 chessboard): 7 probes × ~10 min = ~70 min (first traversal only)
+  - Antipodal probes (§6.4 chessboard): 7 probes × ~10 min = ~70 min raw; **T1 skips the 2 LOW-priority pairs** (YM↔Goldbach, NS↔Schanuel) → 5 × 10 = ~50 min actual
   - Hub radiation (§6.3 chessboard): ~10 min at QG5D's edge phase
   - Compositional cell-fill (§6.5): ~5 min × 14 = ~70 min
-  - VERIFY spot-checks (§3.2 traversal-1 policy): ~10 min × 14 = ~140 min
-  - Core vertex+edge work: 14 × ~35 min = ~490 min
-  - Total estimate: ~780 min ≈ 13 h — TRIMMED to 10 h ceiling by skipping sector-A verification when confidence ≥ 9/10 and prioritizing high-impact antipodal pairs first (HIGH/MEDIUM priority probes per §6.4).
+  - VERIFY spot-checks: **SKIPPED ENTIRELY on T1** — the 14 PROOF-CHAIN.md files were just refreshed for the W1/W2 cascade (2026-04-14) and are authoritative at T1 start. VERIFY spot-checks resume on T2+ unless explicit §K trigger fires in T1.
+  - Core vertex+edge work: 14 × ~35 min = ~490 min, minus skip-sector-A for confidence ≥ 9/10 (QG5D, BSD, YM) = ~30 min saved → ~460 min
+  - Total estimate post-trims: 50 + 10 + 70 + 0 + 460 = **~590 min ≈ 9.8 h** ✓ fits 10 h ceiling
+  - Restore policy: VERIFY spot-checks on T2+ (at baseline, the refresh is stale). LOW antipodal probes on T2+ if HIGH/MEDIUM closed or fully probed.
 - **Traversals 2+: 8 hours maximum.** Antipodal probes done, hub radiated, sector classification cached. Only core vertex+edge work + DUAL-CHECK/PIN-PRESERVATION firings remain active per cycle.
 - Realistically: some vertices are CLOSED (skip in ~5 min), some are hard (spend ~60 min). The budget is per-traversal, not per-vertex — the runner balances across vertices.
 
@@ -338,33 +343,9 @@ All three outcomes are strategically valuable. The capacitor grows in all three 
 
 ## 8. How to invoke
 
-The ring-PCA uses the 5-layer stack (4 from single-chain + chessboard layer for this ring mode):
+**The canonical invocation is `30-ring-traversal-run.md`** in this same directory. It loads the 5-layer stack (ORA base + PCA chain mode + strategic triad + chessboard layer + north star) plus the toolkit, capacitor, and output path. The base prompt lives at `online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md` (NOT the archival snapshot at `06-the-prompt.md`) so all its internal references resolve natively. See the run file for the exact paths; update the `traversal-NN` output directory manually for T2/T3/... per §8.2.
 
-```
-read your **instructions** from
-`millenium-apps/proof-chain-adversarial-01/06-the-prompt.md`
-
-the **chain mode** extension is
-`millenium-apps/proof-chain-adversarial-01/07-proof-chain-adversarial.md`
-
-the **strategic triad** extension is
-`millenium-apps/proof-chain-adversarial-01/12-prf-chain-advr-strat-triad.md`
-
-the **chessboard layer** extension is
-`millenium-apps/proof-chain-adversarial-01/13-chessboard-layer.md`
-
-the run **brief** (deliverable) is
-THIS FILE (30-ring-traversal-brief.md)
-
-the **toolkit** for this run is
-`millenium-apps/proof-chain-adversarial-01/08-framework-tools.md`
-
-the **capacitor** for this run is
-`millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md`
-
-the **north star** for this programme is
-`publishing/strategy.md`
-```
+Every traversal reuses the same run file with only the output-directory NN incremented. The brief is the deliverable; the run file is the executable invocation. Do NOT copy the invocation template into the brief — it drifts. The brief tells the runner WHAT to do; the run file tells the runner WHICH files to read.
 
 The key difference from single-chain runs: the brief tells the runner to traverse ALL 14 PROOF-CHAIN.md files in ring order, not just one. The runner hops between paper directories, reading each top-level PROOF-CHAIN.md, acting on the weakest link, filling the outgoing edge, and moving on.
 

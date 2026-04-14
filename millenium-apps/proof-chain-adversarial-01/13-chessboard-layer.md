@@ -133,21 +133,26 @@ where:
   P_total    = 36
 ```
 
-### Current value (2026-04-13)
+### Current value (2026-04-14, post-W1/W2 cascade)
+
+**Counting convention**: QG5D's 22 PROVED theorems ARE included in L_verified/L_total (QG5D is both the hub AND a chain vertex whose 22 theorems are the programme's foundation). The 13 downstream vertices contribute their own chain-link totals.
 
 ```
 E_filled   = 44    (post-H4-run capacitor)
 E_total    = 276
-L_verified = 47    (YM 17 + RH 6 + BSD 11 + PvNP 5 + Hodge 3 + NS 2 + 
-                     GRH 0 + BC 1 + BGS 2 + others 0)
-L_total    = 83    (sum across all 14 vertices)
+L_verified = 70    (QG5D 22 + YM 17 + RH 6 + BSD 11 + PvNP 5 + Hodge 3 +
+                     NS 3 [upgraded from 2 post-W1/W2] + GRH 0 + BC 1 + BGS 2 +
+                     H12 0 + Goldbach 0 + Twin Primes 0 + Schanuel 0)
+L_total    = 105   (QG5D 22 + 83 downstream chain-link slots)
 P_preserved = 36
 P_total    = 36
 
-RIGIDITY = (44/276) × (47/83) × (36/36) × 100
-         = 0.1594  ×  0.5663  ×  1.0    × 100
-         = 9.03
+RIGIDITY = (44/276) × (70/105) × (36/36) × 100
+         = 0.1594  ×  0.6667  ×  1.0    × 100
+         = 10.63
 ```
+
+**Δ from pre-cascade (9.03)**: +1.60 from QG5D inclusion + NS L-count upgrade. The cascade reflects W1/W2 closure (QG5D confidence 9/10 → 10/10) and NS Route B integration (Link 5 now OPEN-WITH-PUBLISHED-ROUTE via arXiv:2601.08854; Link 4 unconditional all-loop).
 
 ### Target values
 
@@ -405,9 +410,23 @@ CHORD-FILL-RATE = (filled chord edges) / 77
 
 Expected ratio: RING-FILL-RATE should grow faster than CHORD-FILL-RATE in early traversals (the ring-PCA fills one ring edge per vertex × 14 vertices = 14 per traversal). If CHORD-FILL-RATE catches up, that's evidence of compositional propagation + hub radiation working well.
 
-Current values (baseline, 2026-04-13):
-- RING-FILL-RATE: unknown pre-traversal (to be measured)
-- CHORD-FILL-RATE: 44/77 ≈ 57% (most of the 44 filled cells are chords because the ring is only one week old)
+Current values (baseline, 2026-04-14):
+- RING-FILL-RATE: **to be computed at T1 bootstrap** (not pre-computed; pseudo-code below)
+- CHORD-FILL-RATE: **to be computed at T1 bootstrap** (pseudo-code below)
+
+**Baseline computation protocol (run at T1 start)**:
+
+```
+ring_edges    = {(v_i, v_{(i mod 14) + 1}) : i = 1..14}  # 14 edges
+chord_edges   = all cell pairs (v_i, v_j) with i < j minus ring_edges  # 77 edges
+ring_fill     = count of filled capacitor cells whose domain pair matches a ring_edge
+                (per brief §2.2 vertex-to-domain mapping)
+chord_fill    = count of filled capacitor cells whose domain pair matches a chord_edge
+ring_rate     = ring_fill / 14
+chord_rate    = chord_fill / 77
+```
+
+Report both in the T1 baseline §K entry. The prior text ("most of the 44 are chords") was an unverified assumption — do NOT cite it; COMPUTE the actual split at T1 start. Expected outcome: most filled cells are chords (hub-radiation + H4 Wave 1 cell-fills targeted cross-domain correspondences, not ring-adjacent pairs), but the exact ratio determines the T2 prioritization.
 
 The PCA reports both rates at traversal-close to track progress.
 
@@ -478,13 +497,13 @@ Current assignment of vertices to Type A/B/C/D per §6.2. Reassessed at each tra
 
 | Ring position | Vertex | Current type | Current confidence | PCA focus at this vertex |
 |---|---|---|---|---|
-| 1 | QG5D | **A** | 9/10 | Verify chain holds; run hub radiation (§6.3) to fill 13 outgoing edges |
+| 1 | QG5D | **A** | **10/10** (upgraded post-W1/W2 2026-04-14) | Verify chain holds; run hub radiation (§6.3) to fill 13 outgoing edges |
 | 2 | RH | **B** | 8/10 | Try CCM bypass via capacitor (Phase 1 run is active) |
 | 3 | GRH | **C** | 5/10 | Construct character-modulated versions of RH's 6 layers |
 | 4 | BSD | **A** | 9/10 | Verify 11/11 chain; pin-preserve CKM predictions |
 | 5 | H12 | **D** | 2/10 | Fill cells ECFT ↔ {ANT, AG, LANG, OA} |
-| 6 | YM | **A** | 9/10 | Verify 17/17 chain; pin-preserve mass predictions; CCM bypass L14 residual |
-| 7 | NS | **C** | 2/10 | Construct gradient-flow-transfer links using capacitor |
+| 6 | YM | **A** | **9.5/10** (marginal upgrade post-W1/W2; Balaban UV setup now unconditional all-loop) | Verify 17/17 chain; pin-preserve mass predictions; CCM bypass L14 residual |
+| 7 | NS | **C** | **4/10** (upgraded post-W1/W2 + arXiv:2601.08854 Route B; Link 4 unconditional all-loop; 3/8 proved) | Compose Route A (Camlin) + Route B (cosphere-bundle microlocal) for Link 5 |
 | 8 | Hodge | **C** | 3/10 | Construct endomotive route + Langlands route composition |
 | 9 | Baum-Connes | **D** | 1/10 | Fill cells ATOP ↔ {OA, DTOP, NCG} |
 | 10 | PvNP | **B** | 7/10 | Try Link 5 backward bypass (7 routes active from prior runs) |

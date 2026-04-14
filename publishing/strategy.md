@@ -614,7 +614,7 @@ The RIGIDITY-SCORE (defined in `13-chessboard-layer.md §3`) integrates capacito
 
 | Milestone | RIGIDITY | Meaning |
 |---|---|---|
-| Baseline (2026-04-13) | 9.03 | Pre-traversal |
+| Baseline (2026-04-14, post-W1/W2 cascade) | **10.63** | Pre-traversal; includes QG5D's 22 PROVED theorems (counting convention declared); NS upgraded 2/10 → 4/10 via Route B integration (arXiv:2601.08854). Previous 9.03 baseline excluded QG5D and predated the NS cascade. |
 | After traversal 1 | ≥ 15 | Antipodal probes + hub radiation + ~5 link upgrades |
 | After traversal 3 | ≥ 30 | Compound growth; half of capacitor-fill target |
 | After traversal 5 | ≥ 50 | **Robustness-Circle Theorem becomes provable in principle** |
