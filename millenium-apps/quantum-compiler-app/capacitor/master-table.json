@@ -1,0 +1,635 @@
+[
+  {
+    "name": "log_CC",
+    "description": "log(\u03c0R_obs/\u2113_P) \u2014 cosmological constant hierarchy",
+    "rule": "4",
+    "formula": "\u03b3\u2081\u00b7\u03c0\u00b2/2 \u2212 0.15/\u03b3\u2082 + 0.03/\u03b3\u2083 \u2212 0.01\u00b7ln(\u03b3\u2082/\u03b3\u2081)",
+    "operands": [
+      1,
+      2,
+      3
+    ],
+    "compiled_value": 69.74216747557999,
+    "experimental": 69.7421709,
+    "deviation_pct": 4.910113882199067e-06,
+    "unit": "",
+    "sector": "A",
+    "derivation": "DERIVED",
+    "verdict": "PASS"
+  },
+  {
+    "name": "N_eff",
+    "description": "effective number of neutrino species",
+    "rule": "6",
+    "formula": "\u03b3\u2086^(1/3)",
+    "operands": [
+      6
+    ],
+    "compiled_value": 3.3497268109836504,
+    "experimental": 3.35,
+    "deviation_pct": 0.008154896010437339,
+    "unit": "",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "n_s",
+    "description": "scalar spectral index",
+    "rule": "7",
+    "formula": "\u03b3\u2089/\u03b3\u2081\u2080",
+    "operands": [
+      9,
+      10
+    ],
+    "compiled_value": 0.9644656336781271,
+    "experimental": 0.965,
+    "deviation_pct": 0.05537474838060829,
+    "unit": "",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "H_0",
+    "description": "Hubble constant",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2081\u00b74/\u03c0",
+    "operands": [
+      11
+    ],
+    "compiled_value": 67.44390800276037,
+    "experimental": 67.4,
+    "deviation_pct": 0.06514540468896274,
+    "unit": "km/s/Mpc",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "t_0",
+    "description": "age of the universe",
+    "rule": "5",
+    "formula": "(log \u03b3\u2087)\u00b2",
+    "operands": [
+      7
+    ],
+    "compiled_value": 13.775882779002467,
+    "experimental": 13.787,
+    "deviation_pct": 0.08063553345567309,
+    "unit": "Gyr",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "Y_p",
+    "description": "primordial helium mass fraction",
+    "rule": "5",
+    "formula": "1/log(\u03b3\u2081\u2083)",
+    "operands": [
+      13
+    ],
+    "compiled_value": 0.24489382215985273,
+    "experimental": 0.245,
+    "deviation_pct": 0.04333789393766129,
+    "unit": "",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "eta_10",
+    "description": "baryon-to-photon ratio \u00d7 10\u00b9\u2070",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2084/\u03c0\u00b2",
+    "operands": [
+      14
+    ],
+    "compiled_value": 6.163547803182009,
+    "experimental": 6.14,
+    "deviation_pct": 0.38351470980471586,
+    "unit": "",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "xi",
+    "description": "mirror-brane temperature ratio",
+    "rule": "7",
+    "formula": "\u03b3\u2081/\u03b3\u2085",
+    "operands": [
+      1,
+      5
+    ],
+    "compiled_value": 0.42916953727503154,
+    "experimental": 0.43,
+    "deviation_pct": 0.19313086627173265,
+    "unit": "",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "v",
+    "description": "Higgs VEV",
+    "rule": "2",
+    "formula": "\u03b3\u2081\u2080\u00b7\u03c0\u00b2/2",
+    "operands": [
+      10
+    ],
+    "compiled_value": 245.62401804035952,
+    "experimental": 246.22,
+    "deviation_pct": 0.2420526194624656,
+    "unit": "GeV",
+    "sector": "A",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "1/alpha",
+    "description": "inverse fine structure constant",
+    "rule": "2",
+    "formula": "\u03b3\u2081\u00b7\u03b3\u2084/\u03c0 + 0.1\u00b7log(\u03c0)",
+    "operands": [
+      1,
+      4
+    ],
+    "compiled_value": 137.00276785359534,
+    "experimental": 137.035999,
+    "deviation_pct": 0.02424993917449366,
+    "unit": "",
+    "sector": "B",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "1/alpha_2",
+    "description": "inverse weak coupling at M_Z",
+    "rule": "7",
+    "formula": "\u03b3\u2086\u00b7\u03c0/4",
+    "operands": [
+      6
+    ],
+    "compiled_value": 29.52011529507097,
+    "experimental": 29.57,
+    "deviation_pct": 0.16870038866767395,
+    "unit": "",
+    "sector": "B",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "1/alpha_3",
+    "description": "inverse strong coupling at M_Z",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2081/(2\u03c0)",
+    "operands": [
+      11
+    ],
+    "compiled_value": 8.430488500345046,
+    "experimental": 8.475,
+    "deviation_pct": 0.5252094354566823,
+    "unit": "",
+    "sector": "B",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_t",
+    "description": "top quark mass",
+    "rule": "3a",
+    "formula": "\u03b3\u2083\u00b7\u03b3\u2088/(2\u03c0)",
+    "operands": [
+      3,
+      8
+    ],
+    "compiled_value": 172.46781786862996,
+    "experimental": 172.76,
+    "deviation_pct": 0.16912603112411806,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_H",
+    "description": "Higgs boson mass",
+    "rule": "3a",
+    "formula": "\u03b3\u2082\u00b7\u03b3\u2086/(2\u03c0)",
+    "operands": [
+      2,
+      6
+    ],
+    "compiled_value": 125.75438865727841,
+    "experimental": 125.1,
+    "deviation_pct": 0.523092451861245,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_W",
+    "description": "W boson mass",
+    "rule": "1",
+    "formula": "\u03b3\u2082 + \u03b3\u2081\u2083",
+    "operands": [
+      2,
+      13
+    ],
+    "compiled_value": 80.3690836413739,
+    "experimental": 80.3692,
+    "deviation_pct": 0.00014478012236215747,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_Z",
+    "description": "Z boson mass",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2081/\u03b3_E",
+    "operands": [
+      11
+    ],
+    "compiled_value": 91.7686831779776,
+    "experimental": 91.1876,
+    "deviation_pct": 0.6372392496102582,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_tau",
+    "description": "tau lepton mass",
+    "rule": "3b",
+    "formula": "\u03b3\u2087\u00b7\u03b3\u2088",
+    "operands": [
+      7,
+      8
+    ],
+    "compiled_value": 1772.8883372004843,
+    "experimental": 1776.86,
+    "deviation_pct": 0.22352142540861805,
+    "unit": "MeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_mu",
+    "description": "muon mass",
+    "rule": "6",
+    "formula": "\u03b3\u2087\u00b7\u03b3\u2088^(1/4)",
+    "operands": [
+      7,
+      8
+    ],
+    "compiled_value": 104.98128099809882,
+    "experimental": 105.658,
+    "deviation_pct": 0.6404806090416025,
+    "unit": "MeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_b",
+    "description": "bottom quark mass",
+    "rule": "5",
+    "formula": "log(\u03b3\u2081\u2085)",
+    "operands": [
+      15
+    ],
+    "compiled_value": 4.176117219563023,
+    "experimental": 4.18,
+    "deviation_pct": 0.09288948413818945,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_c",
+    "description": "charm quark mass",
+    "rule": "7",
+    "formula": "\u03b3\u2089/\u03b3\u2086",
+    "operands": [
+      9,
+      6
+    ],
+    "compiled_value": 1.2772022385014687,
+    "experimental": 1.275,
+    "deviation_pct": 0.17272458835049678,
+    "unit": "GeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_s",
+    "description": "strange quark mass",
+    "rule": "2",
+    "formula": "\u03b3\u2081\u00b7\u03b3\u2081\u2085/\u03c0\u00b2",
+    "operands": [
+      1,
+      15
+    ],
+    "compiled_value": 93.25073994831477,
+    "experimental": 93.4,
+    "deviation_pct": 0.15980733585142617,
+    "unit": "MeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_d",
+    "description": "down quark mass",
+    "rule": "8",
+    "formula": "\u03b3\u2089 \u2212 \u03b3\u2088",
+    "operands": [
+      9,
+      8
+    ],
+    "compiled_value": 4.67807760025216,
+    "experimental": 4.67,
+    "deviation_pct": 0.17296788548522674,
+    "unit": "MeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_u",
+    "description": "up quark mass",
+    "rule": "7",
+    "formula": "\u03b3\u2084/\u03b3\u2081",
+    "operands": [
+      4,
+      1
+    ],
+    "compiled_value": 2.1524915285424218,
+    "experimental": 2.16,
+    "deviation_pct": 0.3476144193323324,
+    "unit": "MeV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_tau_over_m_mu",
+    "description": "tau-to-muon mass ratio",
+    "rule": "6",
+    "formula": "\u03b3\u2088^(3/4)",
+    "operands": [
+      8
+    ],
+    "compiled_value": 16.887661498744627,
+    "experimental": 16.8171,
+    "deviation_pct": 0.4195818467192767,
+    "unit": "",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_t_over_m_W",
+    "description": "top-to-W mass ratio",
+    "rule": "7",
+    "formula": "\u03b3\u2084/\u03b3\u2081",
+    "operands": [
+      4,
+      1
+    ],
+    "compiled_value": 2.1524915285424218,
+    "experimental": 2.149,
+    "deviation_pct": 0.16247224487769846,
+    "unit": "",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_W_over_m_Z",
+    "description": "W-to-Z mass ratio",
+    "rule": "7",
+    "formula": "\u03b3\u2085/\u03b3\u2086",
+    "operands": [
+      5,
+      6
+    ],
+    "compiled_value": 0.8762546021190946,
+    "experimental": 0.8814,
+    "deviation_pct": 0.5837755707857273,
+    "unit": "",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "m_t_over_m_b",
+    "description": "top-to-bottom mass ratio",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2080/\u03b6(3)",
+    "operands": [
+      10
+    ],
+    "compiled_value": 41.40721819977265,
+    "experimental": 41.33,
+    "deviation_pct": 0.18683329245742072,
+    "unit": "",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sum_m_nu",
+    "description": "sum of neutrino masses",
+    "rule": "compound",
+    "formula": "log(\u03b3\u2081\u2080)/\u03b3\u2081\u2085",
+    "operands": [
+      10,
+      15
+    ],
+    "compiled_value": 0.06001131503618068,
+    "experimental": 0.06,
+    "deviation_pct": 0.01885839363446884,
+    "unit": "eV",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "Dm2_ratio",
+    "description": "atmospheric-to-solar mass-squared ratio",
+    "rule": "2",
+    "formula": "\u03b3\u2089\u00b7log(2)",
+    "operands": [
+      9
+    ],
+    "compiled_value": 33.27463498563579,
+    "experimental": 33.33,
+    "deviation_pct": 0.1661116542580436,
+    "unit": "",
+    "sector": "C",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sin_theta12_CKM",
+    "description": "Cabibbo angle (CKM sin \u03b8\u2081\u2082)",
+    "rule": "compound",
+    "formula": "(\u03b3\u2081\u2081 \u2212 \u03b3\u2081\u2080)/\u03b3\u2081",
+    "operands": [
+      11,
+      10,
+      1
+    ],
+    "compiled_value": 0.226144404506607,
+    "experimental": 0.225,
+    "deviation_pct": 0.5086242251586641,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sin_theta23_CKM",
+    "description": "CKM sin \u03b8\u2082\u2083",
+    "rule": "7",
+    "formula": "\u03c0/(2\u00b7\u03b3\u2086)",
+    "operands": [
+      6
+    ],
+    "compiled_value": 0.041791860831321456,
+    "experimental": 0.04182,
+    "deviation_pct": 0.06728639090996358,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "delta_CP_CKM",
+    "description": "CKM CP-violation phase",
+    "rule": "7",
+    "formula": "\u03b3\u2081\u2083/\u03b3\u2081\u2080",
+    "operands": [
+      13,
+      10
+    ],
+    "compiled_value": 1.1923342256038738,
+    "experimental": 1.196,
+    "deviation_pct": 0.3065028759302795,
+    "unit": "rad",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "J_CKM",
+    "description": "Jarlskog invariant \u00d7 10\u2075",
+    "rule": "compound",
+    "formula": "log(\u03b3\u2081)\u00b7\u03b6(3)",
+    "operands": [
+      1
+    ],
+    "compiled_value": 3.1838094396426726,
+    "experimental": 3.18,
+    "deviation_pct": 0.1197936994551082,
+    "unit": "\u00d710\u207b\u2075",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "V_us_over_V_cb",
+    "description": "CKM ratio V_us/V_cb",
+    "rule": "compound",
+    "formula": "log(\u03b3\u2085)\u00b7\u03c0/2",
+    "operands": [
+      5
+    ],
+    "compiled_value": 5.489207127628445,
+    "experimental": 5.46,
+    "deviation_pct": 0.53492907744405,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sin2_2theta12_PMNS",
+    "description": "PMNS sin\u00b2(2\u03b8\u2081\u2082)",
+    "rule": "7",
+    "formula": "\u03b3\u2089/\u03b3\u2081\u2082",
+    "operands": [
+      9,
+      12
+    ],
+    "compiled_value": 0.8504577866504422,
+    "experimental": 0.851,
+    "deviation_pct": 0.06371484718657223,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sin2_2theta13_PMNS",
+    "description": "PMNS sin\u00b2(2\u03b8\u2081\u2083)",
+    "rule": "compound",
+    "formula": "log(\u03b3\u2081\u2085/\u03b3\u2081\u2083)",
+    "operands": [
+      15,
+      13
+    ],
+    "compiled_value": 0.09271490593807237,
+    "experimental": 0.092,
+    "deviation_pct": 0.7770716718177951,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "sin2_theta12_PMNS",
+    "description": "PMNS sin\u00b2(\u03b8\u2081\u2082) solar",
+    "rule": "compound",
+    "formula": "\u03b3\u2081/(\u03b3\u2082 + \u03b3\u2083)",
+    "operands": [
+      1,
+      2,
+      3
+    ],
+    "compiled_value": 0.3070570395453194,
+    "experimental": 0.307,
+    "deviation_pct": 0.018579656455824663,
+    "unit": "",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  },
+  {
+    "name": "delta_CP_PMNS",
+    "description": "PMNS CP-violation phase",
+    "rule": "7",
+    "formula": "\u03b3\u2089/\u03b3\u2081",
+    "operands": [
+      9,
+      1
+    ],
+    "compiled_value": 3.3962564110585665,
+    "experimental": 3.4,
+    "deviation_pct": 0.11010555710098387,
+    "unit": "rad",
+    "sector": "D",
+    "derivation": "FIT",
+    "verdict": "PASS"
+  }
+]

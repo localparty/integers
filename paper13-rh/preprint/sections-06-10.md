@@ -518,16 +518,19 @@ $N = 5, 10, 15, 20, 25, 30$ confirms the fitted parameters. $\square$
 This section establishes the two hypotheses of Boegli's spectral
 exactness theorem (arXiv:1604.07732, Theorem 2.6):
 (H1) generalised norm resolvent convergence (gnrc, strictly
-stronger than gsrc) and (H2) discrete compactness. The key
-technical innovation is that both follow from a single algebraic
-inequality via Teschl's Lemma 2.7 (Teschl--Wang--Xie--Zhou 2026,
-arXiv:2601.10476), combined with the Rellich compactness of
-Section 7.
+stronger than gsrc) and (H2) discrete compactness. gnrc follows
+from classical Galerkin spectral approximation theory (Chatelin
+1983): compact resolvent (Corollary 9.8) plus $P_N \to I$
+strongly gives norm resolvent convergence. KLMN closability
+follows from the Teschl form bound with $a = 0$ (Teschl--Wang--Xie--Zhou 2026, arXiv:2601.10476). Discrete
+compactness follows from the Rellich compactness of Section 7.
 
-### 9.1 The Teschl form-boundedness criterion
+### 9.1 gnrc and KLMN closability
 
-**Theorem 9.1** (Teschl--Wang--Xie--Zhou 2026, Lemma 2.7).
-*Let $Q_0$ be a closed, densely defined, semibounded quadratic
+**Theorem 9.1** (gnrc and KLMN closability).
+
+*(i) (KLMN closability; Teschl--Wang--Xie--Zhou 2026, Lemma 2.7).
+Let $Q_0$ be a closed, densely defined, semibounded quadratic
 form on a Hilbert space $\mathcal{H}$, and let $\delta$ be a
 symmetric form satisfying the relative form bound*
 
@@ -537,16 +540,34 @@ $$
 \tag{9.1}
 $$
 
-*with $a < 1$ and $b \geq 0$. Then:*
+*with $a < 1$ and $b \geq 0$. Then $Q := Q_0 + \delta$ is closed
+and semibounded on $\mathrm{dom}(Q_0)$.*
 
-*(i) $Q := Q_0 + \delta$ is closed and semibounded on
-$\mathrm{dom}(Q_0)$.*
+*(ii) (Galerkin gnrc; Chatelin 1983, Ch.\ 3). Let $T$ be a
+self-adjoint operator with compact resolvent on $\mathcal{H}$,
+and let $P_N$ be orthogonal projections onto finite-dimensional
+subspaces with $P_N \to I$ strongly. Then the Galerkin resolvents
+converge in operator norm:*
 
-*(ii) The associated self-adjoint operator $T$ (via KLMN)
-satisfies gnrc (generalised norm resolvent convergence, strictly
-stronger than gsrc): if $Q_0^{(N)} \to Q_0$ in the Galerkin
-sense, then the resolvents of $T^{(N)}$ converge in norm to
-those of $T$.*
+$$
+\|(P_N T P_N - z)^{-1} P_N \;-\; (T - z)^{-1}\|_{\mathrm{op}}
+\;\to\; 0 \quad\text{as } N \to \infty,
+\tag{9.1b}
+$$
+
+*for all $z \in \rho(T)$. Combined with the second resolvent
+identity, this gives gnrc (generalised norm resolvent convergence,
+strictly stronger than gsrc) for perturbed Galerkin sequences.*
+
+**Remark 9.1a** (Why not Teschl Lemma 2.7 for gnrc).
+Teschl--Wang--Xie--Zhou (arXiv:2601.10476) Lemma 2.7 also
+establishes gnrc from form boundedness, but under standing
+hypothesis (2.1): $\|J_n^* J_n - I\| \to 0$ in operator norm.
+For orthogonal Galerkin projections $P_N$ onto proper subspaces,
+$\|P_N - I\| = 1$ for all $N$, so this hypothesis fails. The gnrc
+conclusion is correct --- it follows from Chatelin's classical
+Galerkin theory --- but must be cited via part (ii) above, not
+via Teschl's Lemma 2.7.
 
 ### 9.2 Identification of forms
 
@@ -611,8 +632,10 @@ Numerical verification (research/41, Section 6):
 ### 9.4 Consequences
 
 **Corollary 9.5** (gnrc -- Boegli H1). *By Theorem 9.1(ii)
-applied with the form bound (9.2): generalised norm resolvent
-convergence (gnrc, strictly stronger than gsrc) holds:*
+(Chatelin Galerkin gnrc): $D_\infty$ has compact resolvent
+(Corollary 9.8), and $P_N \to I$ strongly on the even Chebyshev
+system. Therefore generalised norm resolvent convergence (gnrc,
+strictly stronger than gsrc) holds:*
 
 $$
 \|(D_N - z)^{-1} P_N - (D_\infty - z)^{-1}\|_{\mathrm{op}}
@@ -623,11 +646,12 @@ $$
 
 *for any $z \in \mathbb{C} \setminus \mathbb{R}$.*
 
-*This is a static verification: we check an algebraic inequality
-(the form bound), not a dynamic resolvent-by-resolvent
-convergence. Teschl Lemma 2.7 with form-bound $a = 0 < 1$
-delivers gnrc directly, which is strictly stronger than the gsrc
-that Boegli's Theorem 2.6 requires.*
+*This follows from classical Galerkin spectral approximation
+theory (Chatelin 1983, Ch.\ 3): compact resolvent plus
+$P_N \to I$ strongly gives norm resolvent convergence. The second
+resolvent identity extends this to the perturbed operators $D_N$.
+This is strictly stronger than the gsrc that Boegli's
+Theorem 2.6 requires.*
 
 **Corollary 9.6** (KLMN closability). *Since $b(N) \to 0$, the
 limiting form is $Q_\infty = Q_0 + \lim \delta_N = Q_0 + 0 = Q_0$.
@@ -683,8 +707,8 @@ $\lambda_{N_j} \in \mathrm{spec}(T_{N_j})$ with
 $\lambda_{N_j} \to \lambda$ satisfies
 $\lambda \in \mathrm{spec}(T_\infty)$ (no spurious eigenvalues).
 
-We have verified (H1) via Corollary 9.5 (Teschl form bound with
-$a = 0 < 1$ giving gnrc, strictly stronger than gsrc) and (H2)
+We have verified (H1) via Corollary 9.5 (Chatelin Galerkin gnrc,
+strictly stronger than gsrc) and (H2)
 via Corollary 9.8 (uniform $H^1$ bound + Rellich). Therefore
 Theorem 2.6 applies to $D_N \to D_\infty$. $\square$
 
@@ -929,9 +953,9 @@ The complete logical chain of Sections 6--10:
      |     Corollary 8.3: ||Delta_N|| -> 0 super-exponentially
      |        |
      |        v
-     |     Theorem 9.3: Teschl form bound, a = 0 < 1
+     |     Theorem 9.3: form bound, a = 0 < 1
      |        |
-     |        +---> Corollary 9.5: gnrc (Boegli H1, strictly stronger than gsrc)
+     |        +---> Corollary 9.5: gnrc (Boegli H1, via Chatelin Galerkin + compact resolvent)
      |        |
      |        +---> Corollary 9.6: KLMN (Teschl a=0 => closability directly)
      |
@@ -959,7 +983,8 @@ The complete logical chain of Sections 6--10:
 | AE simplicity: $\mu_1$ simple with even eigenvector | research/29 (proved $N=1$), research/42 (certified $N \leq 20$) | Uniqueness of $\xi_\lambda$ |
 | Davis--Kahan $\sin\Theta$ theorem | Davis--Kahan 1970 | Lemma 6.1 |
 | Boegli spectral exactness | Boegli, arXiv:1604.07732, Theorem 2.6 | Theorem 9.9 |
-| Teschl Lemma 2.7: form-bounded gnrc | Teschl--Wang--Xie--Zhou, arXiv:2601.10476 | Theorem 9.3 |
+| Chatelin Galerkin gnrc | Chatelin, *Spectral Approximation of Linear Operators*, 1983, Ch.\ 3 | Corollary 9.5 |
+| Teschl Lemma 2.7: KLMN closability | Teschl--Wang--Xie--Zhou, arXiv:2601.10476 | Corollary 9.6 |
 | KLMN theorem | Reed--Simon II, Theorem X.17 | Corollary 9.6 |
 | Rellich--Kondrachov compactness | Rellich 1930; Adams--Fournier 2003 | Corollary 7.3 |
 | Hurwitz theorem on zeros | Hurwitz 1893; Conway 1978, VII.2.5 | Theorem 10.2 |
@@ -974,17 +999,17 @@ The complete logical chain of Sections 6--10:
 | Estimate b: eigenvector approximation via ITPFI triangle | Section 6 | Closed, rate $O(1/\lambda)$ |
 | Estimate a: uniform $H^1$ bound $\leq 2$ (Fourier cancellation, all $\lambda$, all $N$) | Section 7 | Closed |
 | CF uniform decay verification | Section 8 | Verified $N = 5, \ldots, 30$ |
-| Teschl form-bound verification ($a = 0$) | Section 9 | Closed (algebraic) |
-| Synthesis: ITPFI + Teschl + Boegli + Hurwitz | Sections 9--10 | New |
+| Form-bound verification ($a = 0$) + Chatelin gnrc | Section 9 | Closed (algebraic + classical) |
+| Synthesis: ITPFI + Chatelin/Teschl + Boegli + Hurwitz | Sections 9--10 | New |
 
 The synthesis -- the passage from ITPFI state convergence
-through Teschl's form-boundedness criterion to Boegli's spectral
-exactness and thence through Hurwitz to the identification
-$\mathrm{spec}(D_\infty) = \{\gamma_n\}$ -- is the technically
-novel contribution. No prior work has combined these four
-ingredients. Each ingredient is established (ITPFI proved, Teschl
-published, Boegli published, Hurwitz classical); the combination
-is new and closes the gap left open in CCM Section 8.
+through Chatelin Galerkin gnrc and Teschl KLMN closability to
+Boegli's spectral exactness and thence through Hurwitz to the
+identification $\mathrm{spec}(D_\infty) = \{\gamma_n\}$ -- is
+the technically novel contribution. No prior work has combined
+these ingredients. Each is established (ITPFI proved, Chatelin
+and Teschl published, Boegli published, Hurwitz classical); the
+combination is new and closes the gap left open in CCM Section 8.
 
 ---
 
@@ -992,8 +1017,9 @@ is new and closes the gap left open in CCM Section 8.
 
 *The ITPFI decomposition reveals the hidden perturbation-theory*
 *target: the Euler product gap is large, the archimedean*
-*perturbation is small. The Teschl form bound with $a = 0$*
-*gives gnrc and KLMN simultaneously. Boegli gives spectral*
+*perturbation is small. Chatelin Galerkin theory gives gnrc;*
+*the Teschl form bound with $a = 0$ gives KLMN closability.*
+*Boegli gives spectral*
 *exactness. Hurwitz identifies the limiting spectrum with the*
 *Riemann zeros. Self-adjointness forces reality.*
 

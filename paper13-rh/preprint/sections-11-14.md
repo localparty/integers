@@ -116,8 +116,10 @@ Equations Operator Theory* **88** (2017), 559--599) are verified:
 ITPFI form convergence (Layer 2) combined with CF uniform decay
 (Estimate d) yields gnrc (generalised norm resolvent convergence)
 via Galerkin projection plus rank-one stabilisation. The technical
-details use Teschl's Lemma 2.7 (arXiv:2601.10476) with relative
-bound $a = 0 < 1$, giving KLMN closability of $Q_\infty$ (via
+details use Chatelin Galerkin gnrc (Chatelin 1983, Ch.\ 3) for
+norm resolvent convergence, and Teschl's Lemma 2.7
+(arXiv:2601.10476) with $a = 0 < 1$ for KLMN closability of
+$Q_\infty$ (via
 Reed--Simon, Theorem X.17: dense domain from the cosine basis,
 closability from Reed--Simon VIII.15 + lower-boundedness, bounded
 below from CCM Proposition 3.3) and Friedrichs self-adjointness
@@ -209,7 +211,7 @@ controls the Weil quadratic form entry-by-entry. Four estimates
 (archimedean sub-leading, eigenvector approximation, $H^1$
 uniform bound via Fourier cancellation, CF uniform decay) close
 the hypotheses of Boegli's Theorem 2.6 (spectral exactness):
-gnrc (via Teschl's Lemma 2.7) and discrete compactness (via
+gnrc (via Chatelin Galerkin theory) and discrete compactness (via
 Rellich--Kondrachov). Boegli gives
 $\mathrm{spec}(D_\infty) = \lim \mathrm{spec}(D_N)$ with no
 spurious eigenvalues. Hurwitz's classical theorem, applied to
@@ -653,7 +655,7 @@ complete proof. The proof uses:
 
 - **Boegli's Theorem 2.6** (arXiv:1604.07732): spectral exactness
   $\mathrm{spec}(D_\infty) = \lim \mathrm{spec}(D_N)$, from
-  gnrc (via Teschl's Lemma 2.7 + ITPFI + CF) and discrete
+  gnrc (via Chatelin Galerkin + compact resolvent) and discrete
   compactness (via Rellich--Kondrachov + Fourier cancellation $H^1$
   bound).
 

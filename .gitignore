@@ -17,3 +17,17 @@ __pycache__/
 **/.venv
 paper13-rh/code
 paper28-pvnp/code
+
+# JS / Node
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/out/
+**/.cache/
+**/.turbo/
+**/.parcel-cache/
+
+# Claude Code + Playwright MCP runtime state
+.claude/
+.playwright-mcp/
