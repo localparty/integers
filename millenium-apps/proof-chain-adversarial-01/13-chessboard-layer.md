@@ -217,7 +217,7 @@ PIN-PRESERVATION is the board's rigidity enforcement at the ACTION level. It pre
 
 ### What it is
 
-A 13×13 adjacency matrix where each entry counts the number of filled capacitor cells connecting two vertices. The ring-PCA uses WIRE-DENSITY to prioritize sparse edges (weak wiring = weak region = highest-value cell-fill target).
+A 14×14 adjacency matrix where each entry counts the number of filled capacitor cells connecting two vertices. The ring-PCA uses WIRE-DENSITY to prioritize sparse edges (weak wiring = weak region = highest-value cell-fill target).
 
 ### Computation
 
@@ -249,7 +249,7 @@ Schn   1     1    0    0    0    0    0    0    0    0    0    0    0    —
 
 ### How the ring-PCA uses it
 
-1. At the start of each traversal, compute WIRE-DENSITY for all 78 edges (13 choose 2).
+1. At the start of each traversal, compute WIRE-DENSITY for all 91 edges (14 choose 2).
 2. Sort edges by density (ascending). The SPARSEST edges are the highest-priority cell-fill targets.
 3. During the edge phase of each vertex visit: if the outgoing edge has WIRE-DENSITY = 0, fill it (mandatory). If WIRE-DENSITY ≥ 1, upgrade it (optional, if time permits).
 4. After each traversal, recompute the density map. It should be MORE UNIFORM than before (fewer zeros, more ones and twos).
