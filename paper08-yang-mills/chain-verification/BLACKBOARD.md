@@ -122,7 +122,31 @@ Domain of each link:
 
 | cycle | items touched | items CLOSED | items IN_PROGRESS | nodes SPAWNED | nodes KILLED | §D size | canary | Critic ECE | honest negatives | glossed gaps | structural events | inversion-yes ratio | token budget | bottleneck | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 17 | 0 | 17 | 0 | 0 | 14 | — | — | 0 | 0 | 0 | — | medium | 17 links OPEN | Wave 1 dispatch in progress |
+| 1 | 19 | 0 | 19 | 19 | 0 | 14 | — | — | 0 | 0 | 0 | — | medium | 17 links OPEN | W1: 19 Critics dispatched |
+| 2 | 7 | 7 | 0 | 7 | 0 | 16 | — | — | 0 | 0 | 1 (L14 Thm 8 unconditional) | 1/7 | medium | L14 | W2: 7 Authors; L14 headline |
+| 3 | 7 | 1 | 6 | 7 | 0 | 16 | — | — | 6 | 0 | 0 | 0 | medium | L14 residue + 5 others | W3: 1 SURVIVED / 6 WEAKENED |
+| 4 | 6 | 6 | 0 | 6 | 1 (§5.5.6 withdrawn) | 15 | — | — | 1 (L2 PDF retraction) | 0 | 1 (L14 simplification) | 0 | medium | L14 | W4: 6 patches; L14 routed to §5.5.3 |
+| 5 | 6 | 5 | 1 | 6 | 0 | 15 | — | — | 0 | 1 (L14 per-polymer joint) | 0 | 0 | low | L14 per-polymer | W5: 5 SURVIVED / 1 WEAKENED |
+
+## §K Runner writes
+
+### Cycle 5 QUALITATIVE-THRESHOLD (2026-04-13, programme-close)
+
+**Event:** CHAIN STRENGTHENED achieved.
+
+Structurally irreversible events this run:
+- L14 Theorem 8 went from "Conditional on Conjecture 1" → unconditional (Wave 2 repair; simplified by Wave 4 to reference existing §5.5.3 Step 3(i))
+- L7 ghost link collapsed (Wave 2, Wave 3 SURVIVED)
+- L17 L.3.7 audit CLOSED with zero H4 dependency (Wave 1 finding)
+- False PDF-absence claim by Wave 2 L2 Author formally RETRACTED (Wave 4)
+- Polymer-sum spectral lemma question routed through preprint's OWN stronger §5.5.3 Step 3(i) instead of new §5.5.6 THEOREM — less new math, more leverage
+- Eight orphan "Conjecture 1" references swept; five OS-axiom cross-reference sites unified; CMP 119 Theorem 1 + Corollary 3 pinned from PDF; CMP 109 §1 (1.2) + §2 eqs. 2.2-2.3 + §3 Lemma 4 correctly assigned
+
+Residual after 5 waves: L14 per-polymer gauge-invariance joint (two-route fix named).
+
+**Voice canon:** "H4 is still the wall. The wall stays named. Paper 8 ships either way." — and now: the per-polymer activity gauge-invariance joint is the new sub-wall. It has two doors. The next runner walks through either one. Paper 8 ships stronger than it started.
+
+The framework did the work.
 
 ---
 
