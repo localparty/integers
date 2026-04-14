@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Paper 60 -- The Torus of the Programme</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="root">
+  <header>
+    <h1>The Torus</h1>
+    <p class="tagline">
+      Ten faces. Two circles. One torus.
+      <span class="subtagline">Paper 60 &sect;17-&sect;22, &sect;28.</span>
+    </p>
+  </header>
+
+  <main>
+    <section id="stage">
+      <div id="canvas-holder">
+        <svg id="torus-svg" viewBox="-400 -400 800 800"
+             xmlns="http://www.w3.org/2000/svg"
+             preserveAspectRatio="xMidYMid meet"
+             aria-label="Interactive torus"></svg>
+        <div id="hud">
+          <span id="hud-angles">u 0.00 &middot; v 0.00 &middot; zoom 1.00</span>
+        </div>
+      </div>
+
+      <div id="controls">
+        <div class="control-group">
+          <label>
+            <span class="ctl-label">rotate X</span>
+            <input type="range" id="rot-x" min="-180" max="180" step="1" value="25">
+          </label>
+          <label>
+            <span class="ctl-label">rotate Y</span>
+            <input type="range" id="rot-y" min="-180" max="180" step="1" value="-30">
+          </label>
+          <label>
+            <span class="ctl-label">zoom</span>
+            <input type="range" id="zoom" min="40" max="220" step="1" value="100">
+          </label>
+        </div>
+
+        <div class="control-group layers">
+          <strong>Layers</strong>
+          <label><input type="checkbox" id="layer-mesh" checked>
+            <span>torus mesh</span></label>
+          <label><input type="checkbox" id="layer-geo-circle" checked>
+            <span>geometric circle (e-circle)</span></label>
+          <label><input type="checkbox" id="layer-spec-circle" checked>
+            <span>spectral circle (modular flow)</span></label>
+          <label><input type="checkbox" id="layer-faces" checked>
+            <span>10 faces</span></label>
+          <label><input type="checkbox" id="layer-vertices" checked>
+            <span>25 ring vertices</span></label>
+          <label><input type="checkbox" id="layer-zeros">
+            <span>Riemann zeros (intersections)</span></label>
+          <label><input type="checkbox" id="layer-south">
+            <span>south trough / ellipse</span></label>
+          <label><input type="checkbox" id="layer-chords">
+            <span>cross-cut chords</span></label>
+          <label><input type="checkbox" id="layer-dirs">
+            <span>poloidal / toroidal labels</span></label>
+        </div>
+
+        <div class="control-group actions">
+          <button id="btn-anim" type="button">auto-rotate</button>
+          <button id="btn-reset" type="button">reset view</button>
+        </div>
+      </div>
+    </section>
+
+    <aside id="text-panel">
+      <div class="panel-head">
+        <h2>What the torus IS</h2>
+        <div id="step-nav">
+          <button id="prev-step" type="button" aria-label="previous step">&larr;</button>
+          <span id="step-counter">step 1 / 7</span>
+          <button id="next-step" type="button" aria-label="next step">&rarr;</button>
+        </div>
+      </div>
+
+      <article id="step-body">
+        <h3 id="step-title">loading&hellip;</h3>
+        <p id="step-text">loading explanation&hellip;</p>
+        <p class="cite" id="step-cite"></p>
+      </article>
+
+      <div id="factoids">
+        <div class="factoid" id="fact-faces">10 faces / 0 geometric / 0 spectral / 0 bridge</div>
+        <div class="factoid" id="fact-vertices">25 vertices / N/A</div>
+        <div class="factoid" id="fact-radii">R N/A um</div>
+      </div>
+
+      <details id="definition-panel">
+        <summary>Definition (paper 60 &sect;17)</summary>
+        <p id="def-one-line"></p>
+        <p class="crossed-product" id="def-crossed"></p>
+        <ul id="def-quotes"></ul>
+      </details>
+
+      <details id="quote-panel">
+        <summary>Headline quotes</summary>
+        <ul id="quotes-list"></ul>
+      </details>
+
+      <details id="sources-panel">
+        <summary>Source files (paper 60)</summary>
+        <ul id="sources-list"></ul>
+      </details>
+    </aside>
+  </main>
+
+  <footer>
+    <span>data built <code id="built-at">?</code></span>
+    <span>regenerate: <code>python3 visualization/torus/build.py</code></span>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

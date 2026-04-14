@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Projections of the 5D Geometry — QG5D Programme Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="title-block">
+      <h1>Projections of the 5D Geometry</h1>
+      <p class="subtitle">Every shape we see is a projection of M&#8309; = M&#8308; &times; S&sup1; into 4D.</p>
+    </div>
+    <div class="build-info" id="build-info">build&nbsp;&hellip;</div>
+  </header>
+
+  <section class="slider-block">
+    <input id="shape-slider" type="range" min="0" max="42" value="0" step="1">
+    <div class="slider-readout">
+      <span id="shape-position">1/43</span>
+      <span class="sep">&middot;</span>
+      <span id="shape-name">&mdash;</span>
+      <span class="sep">&middot;</span>
+      <span id="shape-class" class="chip">&mdash;</span>
+    </div>
+    <div class="slider-controls">
+      <button type="button" id="prev-btn" class="step-btn" title="Previous shape (ArrowLeft)">&larr;</button>
+      <button type="button" id="next-btn" class="step-btn" title="Next shape (ArrowRight)">&rarr;</button>
+    </div>
+  </section>
+
+  <main class="panels">
+    <section class="panel canvas-panel">
+      <div id="shape-canvas" class="shape-canvas"></div>
+      <div id="canvas-caption" class="canvas-caption"></div>
+    </section>
+
+    <aside class="panel metrics-panel" id="metrics-panel">
+      <!-- Populated by app.js -->
+    </aside>
+
+    <section class="panel footnotes-panel" id="footnotes-panel">
+      <!-- Populated by app.js — requirements, walls, programme files -->
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <span id="shape-counter">43 shapes</span>
+    <span class="sep">&middot;</span>
+    <span id="pending-counter">0 AUDIT PENDING</span>
+    <span class="sep">&middot;</span>
+    <span class="muted">data extracted dynamically &mdash; regenerate with <code>python3 visualization/build.py</code></span>
+    <span class="sep">&middot;</span>
+    <span class="muted">click any SVG node for deep-dive</span>
+  </footer>
+
+  <div id="modal-root" class="modal-root" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h2 id="modal-title">&mdash;</h2>
+        <div class="modal-meta" id="modal-meta"></div>
+        <button type="button" class="modal-close" data-modal-close title="Close (Esc)">&times;</button>
+      </header>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
