@@ -320,10 +320,10 @@ Begin.
 
 ```
 read your **instructions** from
-<path>/ora-bundle-v8/01-the-prompt.md
+<path-to-ora-bundle>/01-the-prompt.md
 
 the **chain mode** extension is
-<path>/pca/01-proof-chain-adversarial.md
+<path-to-pca-bundle>/07-proof-chain-adversarial.md
 
 the run **brief** (deliverable) is
 <path-to-chain-deliverable>.md

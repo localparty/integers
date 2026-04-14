@@ -181,6 +181,8 @@ Edge `N → N+1` is filled by looking up the capacitor cell at the intersection 
 
 ## 3. What happens at each vertex (the vertex protocol)
 
+**Hub-special-case protocol (position 1 = QG5D only)**: QG5D has a MODIFIED vertex protocol per `paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` — PIN VALIDATION instead of EXCISE/CONSTRUCT (the 22 theorems are all PROVED; there are no weak links), plus hub radiation (chessboard §6.3) in the edge phase filling 12 outgoing edges (1 ring-next + 11 chords). The generic §3.1-§3.4 protocol below applies to vertices 2-14; QG5D's visit uses paper1's special-case procedure. The runner reads paper1's §"PCA traversal behavior at QG5D" at QG5D's read phase as context. **Paper 1 is a TREE (4 postulates → 22 theorems → 13 downstream chains), not a linear chain — "the chain" language in §3.1-§3.4 misfits at QG5D and should be read as "the tree root."**
+
 ### 3.1 Read phase (~5 min)
 
 ```
@@ -254,6 +256,9 @@ Advance to the next vertex on the ring.
   - Total estimate post-trims: 50 + 10 + 70 + 0 + 460 = **~590 min ≈ 9.8 h** ✓ fits 10 h ceiling
   - Restore policy: VERIFY spot-checks on T2+ (at baseline, the refresh is stale). LOW antipodal probes on T2+ if HIGH/MEDIUM closed or fully probed.
 - **Traversals 2+: 8 hours maximum.** Antipodal probes done, hub radiated, sector classification cached. Only core vertex+edge work + DUAL-CHECK/PIN-PRESERVATION firings remain active per cycle.
+  - **T2+ VERIFY quota (to fit the 8 h ceiling)**: spot-check 5 vertices per traversal, NOT all 14. Rotating schedule by position; every vertex gets at least one spot-check per 3 traversals. Cost: 5 × 10 = 50 min (vs 140 min if all 14 verified each traversal). Vertex selection at the runner's discretion — prioritize recently-edited vertices + vertices with adjacent cell-fills that might have cascaded.
+  - **T2+ core-work target average: 28 min per vertex** (not 35). CLOSED-AND-VERIFIED vertices skim-mode in ~15 min; hard-wall vertices spend 45-60 min. The runner balances across vertices per §4's per-traversal-not-per-vertex discipline.
+  - T2+ arithmetic: 14 × 28 (core) + 35 (chessboard overhead) + 50 (VERIFY quota) = 392 + 35 + 50 = **477 min ≈ 7.95 h** ✓ fits 8 h ceiling.
 - Realistically: some vertices are CLOSED (skip in ~5 min), some are hard (spend ~60 min). The budget is per-traversal, not per-vertex — the runner balances across vertices.
 
 ### Exit conditions (per traversal)
@@ -289,7 +294,7 @@ Expected: 3-5 traversals before convergence. Total: 24-40 hours of compute acros
 ### At the edge level
 - Filled/upgraded capacitor cells (14 per traversal)
 - The capacitor grows by ~5-10 cells per traversal (some edges are already FILLED)
-- After 3 traversals: capacitor target fill rate 20%+ (from current 16.3%)
+- After 3 traversals: capacitor target fill rate 20%+ (from current 16.0%)
 
 ### At the ring level
 - `programme/ring-traversal-log.md` — per-traversal summary
@@ -299,7 +304,7 @@ Expected: 3-5 traversals before convergence. Total: 24-40 hours of compute acros
   ```
   RIGIDITY = (E_filled / E_total) × (L_verified / L_total) × (P_preserved / P_total) × 100
   ```
-  where E_filled/E_total is filled capacitor cells over 276, L_verified/L_total is verified links over 83, and P_preserved/P_total is experimental pins preserved over 36. Current baseline: 9.03.
+  where E_filled/E_total is filled capacitor cells over 276, L_verified/L_total is verified links over 105 (QG5D 22 + 83 downstream, per the counting convention declared in `13-chessboard-layer.md §3`), and P_preserved/P_total is experimental pins preserved over 36. Current baseline: 10.63 (post-W1/W2 cascade 2026-04-14; see chessboard §3 + `publishing/strategy.md` Appendix B §B.3 + `programme/ring-traversal-log.md` baseline for the canonical computation).
 
 ### The chessboard metaphor in practice
 Every filled cell = a wire through the board. Every verified link = a pin through both faces. Every traversal adds wires and pins. The board gets more rigid. The conditionals get more forced. The circle gets more circular. **The chessboard layer (loaded via `13-chessboard-layer.md`) provides the DUAL-CHECK, SPIN, PIN-PRESERVATION, and WIRE-DENSITY primitives used throughout this brief** — the runner reads that extension at bootstrap and applies its primitives during every vertex visit.
@@ -356,7 +361,7 @@ The PCA chain-mode extension (`07-proof-chain-adversarial.md`) assumes SINGLE ch
 - **No unified chain-state file is created.** The runner does NOT write a single ring-wide chain-state.md.
 - **14 in-situ PROOF-CHAIN.md files are the source of truth** — one per vertex, at `paperNN-xxx/PROOF-CHAIN.md`. The runner UPDATES these in place as each vertex is visited (status columns, confidence scores, "last traversal" timestamps).
 - **Per-traversal log at `programme/ring-traversal-log.md`** — the runner APPENDS one entry per traversal to this file (traversal number, RIGIDITY before/after, per-vertex actions, per-edge fills, kills added, exit condition).
-- **Per-vertex blackboards at `${output-directory}/vertices/<vertex-name>.md`** — the runner creates these for each vertex visit, capturing the blackboard §A-§O state DURING the visit. These are ephemeral working state, not authoritative.
+- **Per-vertex blackboards at `${output-directory}/vertices/<short-name>.md`** — the runner creates these for each vertex visit, capturing the blackboard §A-§O state DURING the visit. These are ephemeral working state, not authoritative. **Short-name convention (lowercase hyphenated):** `qg5d.md`, `rh.md`, `grh.md`, `bsd.md`, `h12.md`, `ym.md`, `ns.md`, `hodge.md`, `baum-connes.md`, `pvnp.md`, `bgs.md`, `twin-primes.md`, `goldbach.md`, `schanuel.md` — matching the repo's `paperNN-shortname` directory-naming discipline. Case-sensitive; lowercase only; hyphenated for multi-word names.
 - **Per-cell updates at `${output-directory}/capacitor/updates/<cell-id>.md`** — one file per cell filled or upgraded during the traversal.
 
 At every cycle-close, the runner reconciles: in-situ PROOF-CHAIN.md files = CANONICAL STATE; log file = HISTORICAL RECORD; per-vertex blackboards = WORKING SCRATCH. If an Author returns work that changes a vertex's chain, the update goes to BOTH the in-situ PROOF-CHAIN.md (canonical) AND the per-vertex blackboard (working).

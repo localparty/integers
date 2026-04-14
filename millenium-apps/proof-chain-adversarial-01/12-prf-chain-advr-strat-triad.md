@@ -344,13 +344,13 @@ This composition discipline means: **no new spawn templates needed.** The Triad 
 
 ```
 read your **instructions** from
-<path>/ora-bundle-v8/01-the-prompt.md
+<path-to-ora-bundle>/01-the-prompt.md
 
 the **chain mode** extension is
-<path>/pca/01-proof-chain-adversarial.md
+<path-to-pca-bundle>/07-proof-chain-adversarial.md
 
 the **strategic triad** extension is
-<path>/pca/02-prf-chain-advr-strat-triad.md
+<path-to-pca-bundle>/12-prf-chain-advr-strat-triad.md
 
 the run **brief** (deliverable) is
 <path-to-chain-deliverable>.md

@@ -76,7 +76,7 @@ The distinction matters because the chessboard layer produces DIFFERENT PCA beha
 | Author proposes a bypass that works mathematically but shifts $m_t$ by 2% | ACCEPTED (math is valid) | REJECTED by PIN-PRESERVATION ($m_t$ is pinned at 0.17% deviation; 2% shift would break the pin) |
 | Author is stuck proving a spectral gap | Tries more math approaches (capacitor transposition only) | SPIN: "what does the lattice QCD measurement of the glueball mass constrain?" → physics-to-math reasoning opens a new route |
 | Ring-PCA choosing which edge to fill next | Fills edges in ring order (arbitrary sequence) | WIRE-DENSITY: fills the sparsest edge first (the board breaks at its weakest point) |
-| End of cycle: did we make progress? | Qualitative: "3 links strengthened" | Quantitative: "RIGIDITY: 9.03 → 9.47 (+0.44)" |
+| End of cycle: did we make progress? | Qualitative: "3 links strengthened" | Quantitative: "RIGIDITY: 10.63 → 11.07 (+0.44)" |
 | Proposed bypass changes the proof chain structure | Accepted if the math is valid | DUAL-CHECK: after acceptance, recomputes affected predictions; catches shifts that PIN-PRESERVATION's structural analysis missed |
 
 In every scenario, the chessboard layer produces BETTER behavior. Not because it adds a metaphor — because it adds CONSTRAINTS. More constraints = more rigid = more forced = more correct.

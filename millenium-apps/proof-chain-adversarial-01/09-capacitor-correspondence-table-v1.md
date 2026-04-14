@@ -220,19 +220,22 @@ The "transposition recipe" field is what makes the cell ACTIONABLE. Without it, 
 
 ---
 
-## Table statistics (v1)
+## Table statistics (v1 — pre-H4 baseline)
 
-| Metric | Count |
-|---|---|
-| Domains defined | 24 |
-| Maximum possible cells (upper triangle) | 276 |
-| Tier 1 filled cells (load-bearing) | 30 |
-| Tier 2 filled cells (framework-discovered) | 10 |
-| Priority cells to fill (escape routes) | 17 |
-| Candidate cells (unexplored) | 14 |
-| Total filled | 40 |
-| Fill rate | 14.5% |
-| Target fill rate (v2) | 40%+ |
+*These numbers reflect the state at v1 initial compile (2026-04-12). For the CURRENT state post-H4 Wave 1 integration, see the "Statistics update (v1 + H4 Wave 1)" section near the end of this file (44 filled cells, 16.0% fill rate, 8 kills). Readers consulting fill rates should use the post-H4 numbers as authoritative. This v1 block is preserved for historical reference only.*
+
+| Metric | v1 pre-H4 count | Current (see update section below) |
+|---|---|---|
+| Domains defined | 24 | 24 |
+| Maximum possible cells (upper triangle) | 276 | 276 |
+| Tier 1 filled cells (load-bearing) | 30 | 34 |
+| Tier 2 filled cells (framework-discovered) | 10 | 10 |
+| Priority cells to fill (escape routes) | 17 | 17 |
+| Candidate cells (unexplored) | 14 | 13 |
+| Total filled | 40 | **44** |
+| Fill rate | 14.5% | **~16.0%** |
+| Target fill rate (v2) | 40%+ | 40%+ |
+| Kill list entries | 7 | **8** (K-8 added) |
 
 ---
 

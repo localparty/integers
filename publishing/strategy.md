@@ -600,7 +600,7 @@ The capacitor has 276 cells (24 domains × 23 / 2 + diagonal). Current filled: 4
 
 | Timeframe | Fill rate | Description |
 |---|---|---|
-| Baseline (2026-04-13) | 44 / 276 = 16.0% | Post-H4-run state |
+| Baseline (2026-04-14, post-W1/W2 cascade) | 44 / 276 = 16.0% | Post-H4-run state, date-aligned with §B.3 baseline |
 | After traversal 1 | ≥ 55 / 276 = 20% | Adds 14 ring edges + 7 antipodal probes + ~3 hub chords = ~24, with overlap and partial fills reducing net gain to ~11 |
 | After 3 traversals | ≥ 85 / 276 = 31% | Compound from hub radiation + compositional fills |
 | After 5 traversals | ≥ 110 / 276 = 40% | **Programme capacitor-fill target** (the Robustness-Circle Theorem's prerequisites come within reach around here) |

@@ -121,13 +121,13 @@
 
 ---
 
-## Current state
+## Current state (2026-04-14, post-W1/W2 cascade)
 
 | Metric | Value |
 |---|---|
-| **RIGIDITY score** | 9.03 / 100 |
+| **RIGIDITY score** | 10.63 / 100 |
 | **Vertices total** | 14 |
-| **Proof chain links** | 83 total → 47 VERIFIED/PROVED (56.6%) |
+| **Proof chain links** | 105 total → 70 VERIFIED/PROVED (66.7%) (QG5D 22 + 83 downstream per `13-chessboard-layer.md §3` counting convention) |
 | **Capacitor cells filled** | 44 / 276 (16.0%) |
 | **Experimental pins** | 36 / 36 (100%) |
 | **Ring closure** | 0 traversals complete |
@@ -139,10 +139,10 @@
 
 | Tier | Vertices | Count |
 |---|---|---|
-| **Strong (8-9/10)** | QG5D, RH, BSD, YM | 4 |
-| **Tractable (5-7/10)** | GRH, PvNP | 2 |
-| **Upgrading (3/10)** | BGS ⭐, Hodge | 2 |
-| **Frontier (1-2/10)** | H12, NS, Baum-Connes, Goldbach, Twin Primes, Schanuel | 6 |
+| **Strong (8-10/10)** | QG5D (10/10), RH (8/10), BSD (9/10), YM (9.5/10) | 4 |
+| **Tractable (5-7/10)** | GRH (5/10), PvNP (7/10) | 2 |
+| **Upgrading (3-4/10)** | NS (4/10), BGS (3/10) ⭐, Hodge (3/10) | 3 |
+| **Frontier (1-2/10)** | H12 (2/10), Baum-Connes (1/10), Goldbach (1/10), Twin Primes (1/10), Schanuel (1/10) | 5 |
 
 ---
 
@@ -192,7 +192,7 @@ These 14 observables × 36 prediction pins form the experimental constraints tha
 
 The ring-traversal PCA walks from position 1 clockwise, stopping at each vertex for ~35 minutes. At each vertex: read PROOF-CHAIN.md, EXCISE the weakest link, fill the outgoing edge's capacitor cell, move to the next. One full traversal = 14 vertex fixes + 14 edge fills = ~8 hours.
 
-**First traversal outcome** (expected): RING STRENGTHENED. RIGIDITY climbs from 9.03 toward 15-25. BGS ⭐ likely advances first. Hodge's two routes (endomotives + Langlands) begin to compose. H12 starts wiring up. NS gets its first transfer lemma from YM's gradient flow.
+**First traversal outcome** (expected): RING STRENGTHENED. RIGIDITY climbs from 10.63 toward 15-25. BGS ⭐ likely advances first. Hodge's two routes (endomotives + Langlands) begin to compose. H12 starts wiring up. NS's Route A/B composition task advances (inherits YM gradient flow).
 
 **Second traversal** (next session): the 14 cells filled by traversal 1 become bypass routes for traversal 2. Compound effect. The circle gets more circular.
 

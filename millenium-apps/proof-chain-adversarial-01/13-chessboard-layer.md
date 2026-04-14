@@ -233,7 +233,7 @@ WIRE-DENSITY(i,j) = count of FILLED capacitor cells whose
                      "Load-bearing for" field names both V_i and V_j
 ```
 
-### Current density map (2026-04-13, estimated)
+### Current density map (estimated pre-T1; the runner recomputes from capacitor at T1 bootstrap per §5 protocol step 1)
 
 ```
        QG5D  RH   YM   BSD  PvNP Hodge NS   H12  GRH  BC   BGS  Gold Twin Schn
@@ -310,11 +310,11 @@ Total: 14 + 14×5 + 7 = 91 pairs = 14 choose 2. ✓
 
 Each vertex gets a STRATEGY TYPE based on the current state of its proof chain (not its ring position). The PCA applies different protocols per type.
 
-| Type | Name | Strategy | Current vertices (2026-04-13) |
+| Type | Name | Strategy | Current vertices (2026-04-14, post-W1/W2 cascade) |
 |---|---|---|---|
-| **A** | Verification-primary | Chain mostly PROVED. Focus: verify consistency with other chains, preserve pins, hold the line. | QG5D (9/10), YM (9/10), BSD (9/10) |
+| **A** | Verification-primary | Chain mostly PROVED. Focus: verify consistency with other chains, preserve pins, hold the line. | QG5D (10/10), YM (9.5/10), BSD (9/10) |
 | **B** | Excision-primary | Chain has a NAMED CONDITIONAL. Focus: eliminate the conditional via bypass or alternative proof. | RH (8/10, cond on CCM), PvNP (7/10, Link 5 wall) |
-| **C** | Construction-primary | Chain has PARTIAL LINKS. Focus: build missing links with construct+critique waves. | GRH (5/10), Hodge (3/10), NS (2/10), BGS (3/10) |
+| **C** | Construction-primary | Chain has PARTIAL LINKS. Focus: build missing links with construct+critique waves. | GRH (5/10), Hodge (3/10), NS (4/10), BGS (3/10) |
 | **D** | Cell-fill-primary | Chain is SKELETON-STAGE. Focus: fill capacitor cells around this vertex rather than close the chain itself. | H12 (2/10), Baum-Connes (1/10), Goldbach (1/10), Twin Primes (1/10), Schanuel (1/10) |
 
 **PCA behavior by type**:
@@ -340,11 +340,11 @@ When the traversal is AT QG5D (position 1):
 2. For each row (other vertex V, correspondence description), check: is the capacitor cell QG5D ↔ V filled?
    - If YES → upgrade with any new findings from this traversal
    - If NO → fill it using the canonical correspondence from Foundation exports
-3. This fills up to **13 outgoing edges in parallel** at QG5D's edge phase, instead of just 1 (the ring-next edge to RH).
+3. This fills up to **12 outgoing edges in parallel** (1 ring-next QG5D → RH + 11 chords from QG5D to non-adjacent vertices) at QG5D's edge phase, instead of just 1 (the ring-next edge to RH). The 13th row of Foundation exports (Schanuel) is READ for context but NOT filled here: the Schanuel ↔ QG5D ring edge is owned by Schanuel at position 14 per brief §2.1 predecessor-ownership rule.
 
 **Why**: QG5D is the hub. Treating it as a ring-order vertex (fill only the next edge) wastes its radiation potential. Hub radiation uses the ring's CENTER to fill many cells at once.
 
-**Cost**: dispatch 13 Cell-Fill agents in parallel (Sonnet max, ~10 min total). Benefit: 13 cells filled in one visit vs 1 cell per visit × 13 traversals = 13× faster hub-edge wiring.
+**Cost**: dispatch 12 Cell-Fill agents in parallel (Sonnet max, ~10 min total). Benefit: 12 cells filled in one visit vs 1 cell per visit × 12 traversals = 12× faster hub-edge wiring.
 
 ### §6.4 Antipodal probe
 
@@ -497,7 +497,7 @@ Current assignment of vertices to Type A/B/C/D per §6.2. Reassessed at each tra
 
 | Ring position | Vertex | Current type | Current confidence | PCA focus at this vertex |
 |---|---|---|---|---|
-| 1 | QG5D | **A** | **10/10** (upgraded post-W1/W2 2026-04-14) | Verify chain holds; run hub radiation (§6.3) to fill 13 outgoing edges |
+| 1 | QG5D | **A** | **10/10** (upgraded post-W1/W2 2026-04-14) | Verify chain holds; run hub radiation (§6.3) to fill 12 outgoing edges (1 ring-next + 11 chords) |
 | 2 | RH | **B** | 8/10 | Try CCM bypass via capacitor (Phase 1 run is active) |
 | 3 | GRH | **C** | 5/10 | Construct character-modulated versions of RH's 6 layers |
 | 4 | BSD | **A** | 9/10 | Verify 11/11 chain; pin-preserve CKM predictions |
