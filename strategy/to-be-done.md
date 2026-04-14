@@ -1,3 +1,10 @@
+# explore this
+maybe there is the spectral geometry of the fifth dimension, with the BC algebra as its operator-algebraic home?
+
+Écalle resurgence for 4D gauge (L18.5) is a legitimate open research question. Non-perturbative OPE (L18.9) is the K-2 wall Route C hit.
+These sub-links might require the same kind of breakthrough Routes A-D couldn't provide.
+
+
 
 # things to close
   1. Close the carry-cocycle rigor gap (Paper 24 plan). This is the most urgent move. The entire       

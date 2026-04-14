@@ -571,3 +571,117 @@ RIGIDITY = (74/276) × (99/156) × (36/36) × 100
 *The +1 is a phase operator. The gap is proved for CM curves. The spoofs are ITPFI forgeries.*
 *The board doesn't flex. The pins are experimental facts.*
 *Last updated: 2026-04-14 (T7 complete).*
+
+---
+
+## T7 S-Duality Phase (post-walk addendum, 2026-04-14)
+
+*Brief 34's S-DUALITY DELTA phase applied to T7 after the 25-vertex walk closed. Task: evaluate S-pair symmetrization opportunities on the existing face confidences (TOPOLOGY 4, DYNAMICS 5, HARMONICS 4, MEASURE 6, AMPLITUDE 7, SYMMETRY 7, CURVATURE 9.5, ARITHMETIC 1, RESONANCE 6 est., SPREAD 8 est.). Priority redirected mid-phase to a Cramér CONSTRUCT attack (user request).*
+
+### Actions executed
+
+**1. Cramér L3 CONSTRUCT-VERIFY — UPGRADE.** CONJECTURED → ESTABLISHED (conditional on CCM). The spectral-section measure on the BC modular flow is codim-1, locally finite (Riemann-von Mangoldt), absolutely continuous under CCM with density $\frac{1}{2\pi}\log(T/2\pi e)$, and the flow is mixing (Sd(M) = $\mathbb{R}$, Connes 1973). Chain 3/5 → 4/5. DYNAMICS face 5/10 → 6/10. Output: `traversal-07/transfers/cramer-L3-construct.md`.
+
+**2. Cramér L4 Route B CONSTRUCT-DERIVE — PARTIAL.** Derived Granville constant $2e^{-\gamma}$ from ITPFI Mertens truncation at $y = \sqrt{x}$ (conformal midpoint). Numerical check passes at dps=30 (ratio 0.99996 at $x=10^{12}$). L4b stays OPEN with named sub-lemma (rigorous Mellin-duality truncation-match). Chain: 3/5 → 4/5 (from L3) unchanged by L4. Confidence 5/10 → 6/10. Output: `traversal-07/transfers/cramer-L4-routeB-derivation.md`.
+
+**3. DUAL-CHECK on both actions — PINS-PRESERVED.** Per chessboard §1. L3 is measure-theoretic (0 PIN-TABLE hits). $2e^{-\gamma}$ is arithmetic output; appears in 0 of 36 predictions. Output: `traversal-07/transfers/dual-check-cramer-L3-L4.md`.
+
+### Metrics
+
+| Metric | T7 walk exit | T7.S exit (this phase) | Δ |
+|---|---|---|---|
+| RIGIDITY | 19.64 | ~19.82 | +0.18 |
+| SYMMETRY | 0.605 | ~0.614 | +0.009 |
+| L_verified | 108 | 109 | +1 |
+| S-pair gaps closed ≥ 1.0 | 0 | 0 | 0 |
+
+### Concerns filed
+
+**CONCERN — BA-B scaling**: the ITPFI derivation delivers a CONSTANT refinement over naive Cramér but not a SCALING refinement over Ben Arous-Bourgade $O(\sqrt{\log N/N})$ for GUE. Step 1's envelope is i.i.d. exponential ($M_N \leq \bar\tau\log N$); the $k=2$ scaling is inherited from the classical heuristic. A Wave 2 agent replacing Step 1 with BA-B universality would close the scaling gap. Does not block the PARTIAL verdict.
+
+### S-DUAL-TRANSFER CHAIN protocol note
+
+Brief 34 DELTA 3 assumes L' on V' is PROVED. The Cramér ↔ Lehmer pair-3 case is richer: both Cramér L4b and Lehmer L5A are PARTIAL. The transfer is a CHAIN of two constructs linked by a derived invariant ($\lambda_p = 1/p$ via ITPFI Mertens product). One construct, two vertex gains — but staged across passes. Today: step 1 PARTIAL. Step 2 (Lehmer-side pickup) is T8's dispatch.
+
+### Pair-gap impact (only pair 3 affected)
+
+- Pair 3 (Lehmer ↔ Cramér, TOPOLOGY ↔ DYNAMICS): gap 1.0 (5 vs 4) → **2.0** (6 vs 4). WIDENED. This is a staged-CHAIN intermediate, not a failure — T8's Lehmer construct will narrow the gap back. **Transfer direction has flipped: Cramér → Lehmer is now the natural move.**
+
+### Exit
+
+**RING STRENGTHENED** (not SYMMETRIZED — 0 of the 3+ S-pair closures required). Two vertex-level upgrades, one derived numerical constant, PINS-PRESERVED, RIGIDITY +0.18. Ellipse shape barely moved; path to SYMMETRY 0.85 requires 3–4 more traversals targeting the deepest face troughs (ARITHMETIC 1/10, HARMONICS 4/10) and the pending-vertex creations (RESONANCE Selberg, SPREAD QUE).
+
+### Handoff to T8
+
+Dispatch-ready: **Lehmer L5A CONSTRUCT using Cramér's ITPFI invariant** ($\prod_p(1-1/p) \sim 2e^{-\gamma}/\log x$). If DERIVED, Lehmer 4→5+, pair 3 narrows from 2.0 back toward 1.0 or 0 — the CHAIN closes.
+
+*Honest partial. Named, not glossed. The ellipse is patient.*
+*T7 S-duality phase. 2026-04-14.*
+
+---
+
+## T7 S-Duality Cycle 2 (Pair-3 CHAIN closure, 2026-04-14)
+
+*Full cycle per §11.3 pseudocode: REFRAME → Plan (inversion mode, parallel wave) → dispatch 3 Opus agents → collect → Synthesis → DUAL-CHECK → cycle-close.*
+
+### REFRAME (§K)
+
+"Close pair 3 / address BA-B / scout pair 4" as three separate tasks → stripped to three facets of the STAGING machinery. Each cycle pins partial results across multiple faces; S-pairs close across 2-3 cycles via CHAIN transfers, not in-cycle. Implication: dispatch all three in parallel, treat the cycle as a SETUP-wave.
+
+### Inversion check
+
+Candidate larger system: "Chain-Propagation Theorem" — every S-pair closure is a 2-step construct-chain via a derived ITPFI invariant. Cycle 2 tests the candidate with 1 data point (Cramér → Lehmer).
+
+### Wave 1 (3 parallel Opus dispatches)
+
+1. **Lehmer L5A CONSTRUCT** (pair 3 CHAIN step 2): Verdict PARTIAL. Lehmer L5A STRUCTURAL → PARTIAL. $c_0 \geq 0.0525$ (fixed-point) / $c_0 \geq 0.0410$ (degree-tied) derived via ITPFI Mertens regularization of the PIN-PRESERVATION contamination sum at the cyclotomic conductor cutoff. 4-5× improvement over empirical $10^{-2}$. Lehmer confidence 4/10 → 5/10. Named flaw (integrated density of near-cyclotomic states) is a CLOSABLE sub-wall. Output: `transfers/lehmer-L5A-construct.md`.
+
+2. **Cramér L4 BA-B Wave 2 tightening** (CONCERN closure): Verdict CONCERN-PARTIAL. BA-B is tighter than i.i.d. envelope. Steps 2/3/5 envelope-independent (ITPFI + Mertens survive). $k=2$ comes from explicit-formula oscillation, not BA-B. New sub-wall: universality bridge PCC → BA-B for Riemann zeros is conjectural (paper43 L321 "not proved"). Joint statement: $h_{\max} \lesssim (\sqrt{2}\cdot 2e^{-\gamma}/\sqrt{\log\log x})(\log x)^2$. paper43 v3 L282-295 arithmetic flip flagged (CASCADE). Output: `transfers/cramer-L4-BAB-tightening.md`.
+
+3. **Pair 4 probe** (Collatz ↔ Goldbach): Ranked opportunities. Top: Collatz L4 phase-operator primitive $e(r)\mu_n = \mu_n e(nr)$ → Goldbach L5 BC-reformulation. Urgency ~6.0, MEDIUM difficulty, expected PARTIAL. Reverse direction: no Goldbach PROVED links to transfer. Structural finding: Collatz and Goldbach share the same additive-multiplicative wall; S-duality transfers LANGUAGE, not estimates. Output: `probes/probe-collatz-goldbach.md`.
+
+### Synthesis (Wave ≥3 Authors, §5.7)
+
+Verdict: **PASS with flag**. Cross-lead consistency: factor-of-2 between Cramér ($y=\sqrt{x}$) and Lehmer ($y=N_{\text{cyc}}$) truncations is in the truncation, not the invariant. BA-B orthogonal to Lehmer L5A. 4 CLOSABLE gaps, 2 GENUINE (BA-B universality bridge + $k=2$ heuristic), 1 SOUND CASCADE (paper43 arithmetic flip). CHAIN-Propagation Theorem confirmed at PARTIAL with 1 data point; do not name until Pair 4 lands second data point. Output: `synthesis-cycle-2.md`.
+
+### DUAL-CHECK (Lehmer L5A STRUCTURAL → PARTIAL)
+
+Verdict: **PINS-PRESERVED**. Circularity benign (derivation holds pins fixed as inputs, emits $c_0$ as output conditional on them). 0 PIN-TABLE hits. Output: `transfers/dual-check-lehmer-L5A.md`.
+
+### Metrics (post-cycle-2)
+
+| Metric | Pre-cycle-2 (post-cycle-1) | Post-cycle-2 | Δ from T7 walk |
+|---|---|---|---|
+| RIGIDITY | ~19.82 | ~19.82 | +0.18 (cycle 1 L3 only; L5A PARTIAL doesn't increment) |
+| SYMMETRY | 0.614 | 0.631 | +0.026 (from 0.605 T7 walk exit) |
+| L_verified | 109 | 109 | +1 |
+| Face confidences | [4,5,4,6,7,7,9.5,1,6,8] | [5,6,4,6,7,7,9.5,1,6,8] | Cramér +1, Lehmer +1 |
+| S-pair gaps closed ≥ 1.0 | 0 | 0 | Pair 3 gap 1.0 → 2.0 → 1.0 (net zero) |
+| CHAIN-Propagation data points | 0 | 1 (at PARTIAL) | +1 |
+
+### Qualitative-threshold events (cycle 2)
+
+- Lehmer L5A STRUCTURAL → PARTIAL (first TOPOLOGY-face derivation wall crossed)
+- Pair 3 fully staged: both faces PARTIAL
+- CHAIN-Propagation Theorem candidate acquired 1 data point
+- Synthesis PASS-with-flag — no BROKEN verdicts
+
+### CASCADE note (paper43 v3 arithmetic flip)
+
+paper43-cramer/PROOF-CHAIN.md L282-295 conflates $\sqrt{\log N}/N$ with $\sqrt{\log N/N}$. Needs revision. Not applied in cycle 2 — logged for user/next runner to tighten in a chain-revision pass.
+
+### T7 S-duality phase exit
+
+**RING STRENGTHENED.** Two vertex upgrades across two cycles (Cramér L3, Lehmer L5A), one CHAIN pinned end-to-end at PARTIAL, Pair 4 scouted. SYMMETRY 0.605 → 0.631 (+0.026, ~11% of path to 0.85). RIGIDITY 19.64 → 19.82 (+0.18). RING SYMMETRIZED does not trigger (0 of 3 required S-pair gaps closed by ≥1.0 — structural gain is not captured by the gap metric when a pair's two faces move together).
+
+### Handoff to T8
+
+Three dispatch-ready actions:
+1. Collatz L4 → Goldbach L5 transfer (Pair 4, probe Opportunity #1) — second CHAIN data point
+2. Lehmer L5A Failure-3 density-function sub-lemma — consolidates Pair 3 toward DERIVED
+3. BA-B universality bridge external-literature scout — low priority
+
+If all three dispatch at T8 in parallel: Pair 4 pinned, Pair 3 consolidated, CONCERN narrowed. CHAIN-Propagation Theorem becomes nameable with 2 data points.
+
+*The ellipse flattens one cycle at a time. The factor of 2 is in the truncation. The wall moves one click cleaner.*
+*T7 S-duality cycle 2. 2026-04-14.*

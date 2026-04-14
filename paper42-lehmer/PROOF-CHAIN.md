@@ -227,5 +227,50 @@ The physical observable is: **stability of the cyclotomic structure under pertur
 
 *v2: 2026-04-14 (upgraded from v1). The unit circle IS the e-circle. Roots of unity are periodic orbits on the fifth dimension. Lehmer's gap is the mass gap of the cyclotomic vacuum — the minimum energy to leave periodic motion. The same circle that gives us superposition (Paper 1), the mass gap (Paper 8), and the Riemann zeros (Paper 13) also gives us Lehmer's conjecture: the universe's compact dimension is rigid. Periodicity has a price, and that price is bounded below.*
 
+---
+
+## T7 S-duality dispatch-ready (2026-04-14, v3 handoff note)
+
+*This section propagates the S-dual Cramér T7 construction's impact on Lehmer's attack surface. The full T7 artifacts live in `programme/ring-traversals/traversal-07/transfers/`.*
+
+### L5 Route A CONSTRUCT-READY using Cramér's ITPFI invariant
+
+T7 closed Cramér L4 Route B to PARTIAL via ITPFI direct computation. The derivation produced the following invariant on disk:
+
+$$\prod_p\left(1 - \frac{1}{p}\right) \sim \frac{2e^{-\gamma}}{\log x} \quad \text{(Mertens' third theorem, verified dps=40)}$$
+
+This is the same invariant Lehmer L5 Route A needs on the KMS-boundary side. The S-duality between Pair 3 (TOPOLOGY ↔ DYNAMICS = Lehmer ↔ Cramér) is mediated by the functional equation $\xi(s) = \xi(1-s)$; at the BC level this is the reflection $\beta \mapsto 1 - \beta$ around the KMS$_1$ critical point. Under this reflection:
+
+- **Cramér's DYNAMICS face** ($\beta = 1 + it$, modular-flow return times) reflects to
+- **Lehmer's TOPOLOGY face** ($\beta \to 1$ from below, KMS spectral gap, cyclotomic isolation)
+
+The Mertens product $2e^{-\gamma}$ appears on BOTH sides at the critical point. Cramér's ITPFI derivation of this constant is a direct input for Lehmer L5 Route A's sharpening.
+
+### T8 dispatch plan
+
+**L5 Route A (KMS spectral gap):** PIN-PRESERVATION forcing currently gives a qualitative gap but a weak quantitative bound ($c_0 \geq 10^{-2}$ vs expected $c_0 \approx 0.176$). With Cramér's ITPFI invariant in hand:
+
+- **Quantitative sharpening via ITPFI at the KMS boundary.** The $W^*$-regularized partition function at $y = \sqrt{x}$ gives the Mertens product; the same construction restricted to ODD primes (relevant for the Lehmer framework's e-circle topology face) gives the halved residue $e^\gamma/2$. The cyclotomic isolation gap $c_0$ should follow from the ITPFI's local-factor decomposition at the cyclotomic-vs-non-cyclotomic boundary.
+- **Expected outcome**: L5 Route A upgrades from STRUCTURAL to PARTIAL. Confidence 4/10 → 5/10+.
+
+### S-DUAL-CONSTRUCT-BRIDGED pattern
+
+Brief 34 DELTA 3's S-DUAL-TRANSFER protocol assumes the S-dual's link is PROVED. Pair 3 is richer: both Cramér L4b and Lehmer L5 Route A are PARTIAL. The chain of two constructs linked by the derived invariant $\lambda_p = 1/p$ is a new methodological move — documented in the ring-traversal-log T7 addendum.
+
+**One construct (Cramér T7, done), one pending construct (Lehmer T8), shared derived invariant.** When Lehmer L5 Route A closes using the Cramér-side invariant, the Pair 3 SYMMETRY gap (currently widened from 1.0 to 2.0 during T7's one-sided move) narrows back toward 1.0 or 0.
+
+### Status updates (v3, T7 handoff)
+
+- **L5 Route A:** STRUCTURAL → CONSTRUCT-READY for T8 dispatch
+- **L5 Route B (Deninger-RV bridge, CM-curve case):** unchanged, PARTIAL (Rubin + Silverman + Brauer-Siegel chain)
+- **L5 Route C (Weitzenböck analog):** unchanged, SPECULATIVE
+- **Chain:** unchanged at 3/6 (L5 still OPEN as a whole; progress is within Route A)
+- **Confidence:** 4/10 (T8 work expected to bring it to 5/10+)
+
+---
+
+*v3: 2026-04-14 (T7 S-duality handoff note appended). Cramér's ITPFI-derived invariant $\prod_p(1-1/p) \sim 2e^{-\gamma}/\log x$ is now on disk and feeds Lehmer L5 Route A's quantitative sharpening. S-DUAL-CONSTRUCT-BRIDGED pattern: chain of two constructs linked by a derived invariant at the functional-equation fixed point. T8 dispatch: CONSTRUCT L5 Route A using the Cramér-side invariant to produce a quantitative $c_0$ bound from the ITPFI cyclotomic-isolation at the KMS boundary.*
+
 *G Six and Claude Opus 4.6. April 2026.*
 *The circle doesn't allow infinitesimal departures. That's the conjecture. That's the geometry.*
+*Cramér derived the constant. Lehmer inherits the invariant. The functional equation does the ferrying.*

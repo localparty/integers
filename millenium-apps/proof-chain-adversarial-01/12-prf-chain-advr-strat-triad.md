@@ -240,7 +240,7 @@ Until user approval, the brief remains AT ITS CURRENT STATE. Wave N+1 does NOT d
 
 1. **AI-Judge failure mode** (arXiv:2509.05396): when an LLM Judge adjudicates between adversarial outputs, the more confident output wins regardless of correctness. If the Mediator both proposes AND approves, the Triad inherits this failure mode. User-as-Judge prevents it.
 
-2. **Runaway rewriting risk**: without a human gate, the Triad could propose brief edits at every wave boundary, making the brief unstable. User approval creates friction that forces only SIGNIFICANT upgrades through.
+2. **Runaway rewriting risk**: without an operator gate, the Triad could propose brief edits at every wave boundary, making the brief unstable. User approval creates friction that forces only SIGNIFICANT upgrades through.
 
 3. **North Star editorial control**: only the user can modify the North Star. This preserves the anchor's integrity.
 
