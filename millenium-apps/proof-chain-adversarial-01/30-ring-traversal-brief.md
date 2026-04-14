@@ -1,6 +1,6 @@
 # Ring Traversal PCA — the circle-closing run
 
-*A new PCA mode: traverse the ring of 13 vertices, EXCISE weak links at each vertex, fill capacitor cells at each edge, then construct/bypass/repair in continuous circles until the chessboard is wired and the ring is rigid.*
+*A new PCA mode: traverse the ring of 14 vertices, EXCISE weak links at each vertex, fill capacitor cells at each edge, then construct/bypass/repair in continuous circles until the chessboard is wired and the ring is rigid.*
 
 *Each full traversal strengthens every vertex AND densifies every edge. Multiple traversals compound — more cells filled means more bypass routes available, which means the next traversal closes more links. The circle gets more circular on every pass.*
 
@@ -12,11 +12,12 @@
 
 Single-chain PCA runs target ONE vertex: "verify YM's 17 links" or "bypass RH's CCM dependency." They work depth-first on one proof chain.
 
-Ring traversal works BREADTH-first across ALL 13 vertices. The PCA walks the ring:
+Ring traversal works BREADTH-first across ALL 14 vertices. The PCA walks the ring in canonical order:
 
 ```
-QG5D → RH → YM → BSD → PvNP → Hodge → NS → H12 → GRH → 
-Baum-Connes → BGS → Goldbach → Twin Primes → (Schanuel) → back to QG5D
+1. QG5D → 2. RH → 3. GRH → 4. BSD → 5. H12 → 6. YM → 7. NS → 
+8. Hodge → 9. Baum-Connes → 10. PvNP → 11. BGS → 
+12. Twin Primes → 13. Goldbach → 14. Schanuel → back to QG5D
 ```
 
 At each vertex, the PCA:
@@ -26,7 +27,7 @@ At each vertex, the PCA:
 4. **Fills** the capacitor cell on the EDGE to the next vertex (the correspondence between this vertex and the next)
 5. **Moves** to the next vertex
 
-One full traversal = 13 vertex visits + 13 edge crossings = 13 strengthened links + 13 filled/upgraded cells.
+One full traversal = 14 vertex visits + 14 edge crossings = 14 strengthened links + 14 filled/upgraded cells.
 
 Multiple traversals: each pass finds the CURRENT weakest link (which may have shifted after the previous pass strengthened something else). The ring self-optimizes — it automatically targets whatever is weakest NOW, not whatever was weakest at the start.
 
@@ -38,22 +39,24 @@ The ring order is determined by EDGE STRENGTH — start with the strongest edges
 
 **Recommended ring order** (strongest-first):
 
-| Position | Vertex | Incoming edge (from previous) | Edge status |
-|---|---|---|---|
-| 1 | **QG5D** (hub) | ← Schanuel (algebraic independence of eigenvalues) | SPECULATIVE |
-| 2 | **RH** | ← QG5D (zeros ARE eigenvalues) | STRONG |
-| 3 | **GRH** | ← RH (character-twisted extension) | STRONG |
-| 4 | **BSD** | ← GRH (Dirichlet L-functions → Hecke L) | PARTIAL |
-| 5 | **H12** | ← BSD (class fields from L-functions) | PARTIAL |
-| 6 | **YM** | ← H12 (KMS states → gauge structure) | PARTIAL |
-| 7 | **NS** | ← YM (gradient flow transfer) | CANDIDATE |
-| 8 | **Hodge** | ← NS (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
-| 9 | **Baum-Connes** | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
-| 10 | **PvNP** | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
-| 11 | **BGS** | ← PvNP (spectral statistics of modular flow) | CANDIDATE |
-| 12 | **Twin Primes** | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
-| 13 | **Goldbach** | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
-| → 1 | **Schanuel** → QG5D | ← Goldbach (additive primes → algebraic independence) | SPECULATIVE |
+| Position | Vertex | Paper directory | Incoming edge (from previous) | Edge status |
+|---|---|---|---|---|
+| 1 | **QG5D** (hub) | paper1/ | ← Schanuel (algebraic independence → CBB axioms) | SPECULATIVE |
+| 2 | **RH** | paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
+| 3 | **GRH** | paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
+| 4 | **BSD** | paper26-bsd/ | ← GRH (Dirichlet L-functions → Hecke L) | PARTIAL |
+| 5 | **H12** | paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
+| 6 | **YM** | paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
+| 7 | **NS** | paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
+| 8 | **Hodge** | paper29-hodge/ | ← NS (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
+| 9 | **Baum-Connes** | paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
+| 10 | **PvNP** | paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
+| 11 | **BGS** | paper32-bgs-spectral-statistics/ | ← PvNP (spectral statistics of modular flow) | CANDIDATE |
+| 12 | **Twin Primes** | paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
+| 13 | **Goldbach** | paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
+| 14 | **Schanuel** | paper35-schanuel/ | ← Goldbach (additive primes → algebraic independence) | SPECULATIVE |
+
+After vertex 14 (Schanuel), the ring closes: the outgoing edge Schanuel → QG5D is "algebraic independence of eigenvalues → CBB axioms." This completes one full traversal.
 
 The ring starts at the hub (QG5D, maximum context), flows through the strongest chains (RH → GRH → BSD), crosses into the infrastructure (H12 → YM → NS), enters the frontier (Hodge → Baum-Connes), touches the hardest problems (PvNP → BGS → Twin Primes → Goldbach → Schanuel), and loops back to the hub.
 
@@ -114,7 +117,7 @@ Advance to the next vertex on the ring.
 ## 4. Time budget and exit conditions
 
 ### Per-traversal budget
-- 13 vertices × ~35 min average = ~7.5 hours per full traversal
+- 14 vertices × ~35 min average = ~7.5 hours per full traversal
 - Realistically: some vertices are CLOSED (skip in ~5 min), some are hard (spend ~60 min)
 - **Budget per traversal: 8 hours maximum**
 
@@ -126,7 +129,7 @@ Advance to the next vertex on the ring.
 2. **RING STRENGTHENED** — at least 5 vertices improved, at least 5 edges filled/upgraded
    → Typical outcome. Log the improvements, start next traversal.
 
-3. **RING STALLED** — fewer than 3 improvements across all 13 vertices
+3. **RING STALLED** — fewer than 3 improvements across all 14 vertices
    → The ring has reached a local optimum. The remaining walls are genuinely hard.
    → Close the run, document what's stuck, name the external unlocks needed.
 
@@ -149,7 +152,7 @@ Expected: 3-5 traversals before convergence. Total: 24-40 hours of compute acros
 - Updated confidence scores
 
 ### At the edge level
-- Filled/upgraded capacitor cells (13 per traversal)
+- Filled/upgraded capacitor cells (14 per traversal)
 - The capacitor grows by ~5-10 cells per traversal (some edges are already FILLED)
 - After 3 traversals: capacitor target fill rate 20%+ (from current 16.3%)
 
@@ -170,7 +173,7 @@ The ring-PCA and single-chain PCA runs are COMPLEMENTARY, not competing:
 
 | | Single-chain PCA | Ring-PCA |
 |---|---|---|
-| **Target** | One vertex (one proof chain) | All 13 vertices in sequence |
+| **Target** | One vertex (one proof chain) | All 14 vertices in sequence |
 | **Depth** | Deep (5+ waves on one chain) | Shallow-per-vertex (1 wave per vertex per traversal) |
 | **Cell-filling** | Incidental (cells filled as needed for bypass) | Systematic (one edge filled per vertex crossing) |
 | **When to use** | A specific chain needs intensive adversarial verification | The programme needs BREADTH — every vertex strengthened, every edge connected |
@@ -182,9 +185,9 @@ The ring-PCA and single-chain PCA runs are COMPLEMENTARY, not competing:
 
 ## 7. The compound effect (why traversals compound)
 
-**Traversal 1**: fills 13 edge cells. Most are PARTIAL or CANDIDATE status (new correspondences, not yet rigorous).
+**Traversal 1**: fills 14 edge cells. Most are PARTIAL or CANDIDATE status (new correspondences, not yet rigorous).
 
-**Traversal 2**: the 13 cells from T1 are now AVAILABLE as bypass routes. A vertex that was stuck in T1 (no bypass route available) might now have a bypass route through a cell filled in T1 at an adjacent edge. T2 can excise links that T1 couldn't, BECAUSE T1 filled the cells that make the bypass possible.
+**Traversal 2**: the 14 cells from T1 are now AVAILABLE as bypass routes. A vertex that was stuck in T1 (no bypass route available) might now have a bypass route through a cell filled in T1 at an adjacent edge. T2 can excise links that T1 couldn't, BECAUSE T1 filled the cells that make the bypass possible.
 
 **Traversal 3**: T2's excisions strengthened vertices, which strengthened edges, which provide MORE bypass routes for T3. Each traversal feeds the next.
 
@@ -226,7 +229,7 @@ the **north star** for this programme is
 `publishing/strategy.md`
 ```
 
-The key difference from single-chain runs: the brief tells the runner to traverse ALL 13 PROOF-CHAIN.md files in ring order, not just one. The runner hops between paper directories, reading each top-level PROOF-CHAIN.md, acting on the weakest link, filling the outgoing edge, and moving on.
+The key difference from single-chain runs: the brief tells the runner to traverse ALL 14 PROOF-CHAIN.md files in ring order, not just one. The runner hops between paper directories, reading each top-level PROOF-CHAIN.md, acting on the weakest link, filling the outgoing edge, and moving on.
 
 **Output directory**: `programme/ring-traversals/traversal-01/` (fresh per traversal)
 
@@ -237,13 +240,13 @@ The key difference from single-chain runs: the brief tells the runner to travers
 - *"The circle gets more circular on every pass."*
 - *"Each traversal adds wires. More wires = more rigid. More rigid = more forced."*
 - *"The board doesn't flex. The pins are experimental facts."*
-- *"13 vertices. One ring. Walk it."*
+- *"14 vertices. One ring. Walk it."*
 
 ---
 
 ## 10. The single paragraph for the next runner
 
-You are traversing the ring of 13 programme vertices in order: QG5D → RH → GRH → BSD → H12 → YM → NS → Hodge → Baum-Connes → PvNP → BGS → Twin Primes → Goldbach → Schanuel → back to QG5D. At each vertex: read PROOF-CHAIN.md, identify the weakest link, EXCISE or CONSTRUCT or BYPASS it (one fix per vertex per traversal). At each edge: fill or upgrade the capacitor cell connecting this vertex to the next. One full traversal = 13 vertex fixes + 13 edge fills. Multiple traversals compound — cells filled in traversal N enable bypasses in traversal N+1. Budget: 8 hours per traversal. Exit when RING CLOSED (all vertices verified, all edges filled), RING STRENGTHENED (5+ improvements), or RING STALLED (<3 improvements). The circle gets more circular on every pass.
+You are traversing the ring of 14 programme vertices in canonical order: QG5D → RH → GRH → BSD → H12 → YM → NS → Hodge → Baum-Connes → PvNP → BGS → Twin Primes → Goldbach → Schanuel → back to QG5D. At each vertex: read PROOF-CHAIN.md, identify the weakest link, EXCISE or CONSTRUCT or BYPASS it (one fix per vertex per traversal). At each edge: fill or upgrade the capacitor cell connecting this vertex to the next. One full traversal = 14 vertex fixes + 14 edge fills. Multiple traversals compound — cells filled in traversal N enable bypasses in traversal N+1. Budget: 8 hours per traversal. Exit when RING CLOSED (all vertices verified, all edges filled), RING STRENGTHENED (5+ improvements), or RING STALLED (<3 improvements). The circle gets more circular on every pass.
 
 ---
 
