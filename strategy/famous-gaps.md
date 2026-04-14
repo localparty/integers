@@ -134,7 +134,10 @@ Each of these has a top-level `PROOF-CHAIN.md` with status, chain table, adversa
 
 | **Generalized Sato-Tate** | **paper44-sato-tate** *(new 2026-04-14)* | The e-circle's **fourth face: MEASURE**. Frobenius angles $\theta_p$ ARE points on the e-circle. Equidistribution = the circle is democratically occupied = KMS$_1$ spectral measure is Haar. **Non-CM case PROVED** (Taylor et al 2011). **CM case PROVED** (Hecke-Deuring, classical). Open: generalized motives via CCM endomotive → Tannakian → Sato-Tate group. **Bridges BSD (9/10) ↔ BGS (7/10)** — the STABILIZING vertex. | **3/6 links closed. Confidence 6/10** *(highest new vertex — partially proved + two strong parents)*. |
 
-**Total Group A: 22 papers (13 core ring + 9 new extensions).**
+| **Lindelöf Hypothesis** | **paper45-lindelof** *(new 2026-04-14)* | The e-circle's **fifth face: AMPLITUDE**. $\zeta(1/2+it) = O(|t|^\varepsilon)$ — the modular flow's signal stays quiet. Implied by RH. **Shortcuts the cold zone**: RH → Lindelöf → Cramér → prime gaps. The 2024 Fourier-Laguerre criterion (arXiv:2406.00331) gives a spectral characterization. Guth-Maynard 2024: first progress on the exponent in 50 years. | **3/5 links closed. Confidence 7/10** *(implied by RH 8/10; RAISES RIGIDITY)*. |
+| **Katz-Sarnak Symmetry Type** | **paper46-katz-sarnak** *(new 2026-04-14)* | The e-circle's **sixth face: SYMMETRY**. Each L-function family has a symmetry type $G \in \{U, Sp, O, SO^\pm\}$; the type determines ALL zero statistics. **PROVED for function fields** (Deligne equidistribution). Differentiates the gap-distribution arc: Twin Primes (orthogonal) ≠ Dirichlet (symplectic) ≠ $\zeta$ (unitary). The bridge family at $k \in \{2,3,4,6\}$ SELECTS the symmetry type. | **3/6 links closed. Confidence 7/10** *(function fields proved; extensive partial results; RAISES RIGIDITY)*. |
+
+**Total Group A: 24 papers (13 core ring + 11 new extensions).**
 
 ---
 
