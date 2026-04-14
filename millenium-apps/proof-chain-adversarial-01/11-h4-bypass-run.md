@@ -14,4 +14,4 @@ the **capacitor** for this run is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md`
 
 the run **output directory** is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/chain-verification/h4-bypass-attempt`
+`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/h4-capacitor-bypass`

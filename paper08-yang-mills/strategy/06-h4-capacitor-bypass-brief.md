@@ -193,7 +193,7 @@ This is a **single-link** bypass attempt, not a chain traversal. The bidirection
 - **Wave 2 (dispatch proofs + cell-fills)**: for each VIABLE cell, dispatch a proof Author + a Critic. For PARTIAL cells, dispatch a Cell-Fill Author to fill the cell rigorously.
 - **Wave 3 (adversarial pass)**: Critics on any proof from Wave 2. If SURVIVED → Tier 1 success. Otherwise → exit conditions.
 
-**Output directory:** create fresh at `paper08-yang-mills/chain-verification/h4-bypass-attempt/`. Do NOT write to the existing chain-verification/ files (that programme is closed at CHAIN STRENGTHENED; this is a new sub-programme targeting L18 specifically).
+**Output directory:** create fresh at `paper08-yang-mills/h4-capacitor-bypass/` (sibling of `chain-verification/`, NOT a subdirectory). Do NOT write to the existing `chain-verification/` files (that programme is closed at CHAIN STRENGTHENED; this is a new sibling programme targeting L18 specifically). CASCADE notes propagating new kills back to the `chain-verification/` §F are still allowed — they write to that §F via explicit CASCADE entries, not via the blackboard bootstrap.
 
 **Blackboard:** create fresh at `${output-directory}/blackboard.md`.
 
