@@ -60,6 +60,51 @@ After vertex 14 (Schanuel), the ring closes: the outgoing edge Schanuel → QG5D
 
 The ring starts at the hub (QG5D, maximum context), flows through the strongest chains (RH → GRH → BSD), crosses into the infrastructure (H12 → YM → NS), enters the frontier (Hodge → Baum-Connes), touches the hardest problems (PvNP → BGS → Twin Primes → Goldbach → Schanuel), and loops back to the hub.
 
+### 2.1 Edge ownership (disambiguation)
+
+Each edge in the ring is owned by exactly ONE vertex — the **predecessor** (the vertex you're leaving). That vertex fills the edge during its EDGE PHASE (§3.3) as its LAST action before moving on. The successor vertex does NOT re-fill the edge — it inherits the filled edge as its "incoming context" (§3.1 READ phase).
+
+Concretely, for traversal T:
+- Vertex N's edge phase fills edge `N → N+1` (exactly once).
+- Vertex N+1's read phase consults edge `N → N+1` (filled by N) as incoming context.
+- Vertex N+1's edge phase fills edge `N+1 → N+2` (exactly once).
+- Over the full traversal, all 14 edges are filled exactly once. No double-filling. No skipping.
+
+The §2 table's "Incoming edge (from previous)" column is DESCRIPTIVE (what the vertex inherits). §3.3 EDGE PHASE is PRESCRIPTIVE (what the vertex writes).
+
+### 2.2 Vertex-to-domain mapping (capacitor lookup)
+
+Each ring vertex maps to one or more domains in the capacitor's **24-domain index** (defined in `09-capacitor-correspondence-table-v1.md §"Domain index"`). This table uses ONLY the capacitor's actual domain codes (D1-D24) — no invented codes.
+
+| Position | Vertex | Primary domain(s) | Secondary domains (triangulation) |
+|---|---|---|---|
+| 1 | QG5D | **D2 GEOM** | ALL (hub — every domain connects to QG5D) |
+| 2 | RH | **D1 SPEC** + **D5 ANT** | D3 OA, D13 LANG |
+| 3 | GRH | **D1 SPEC** + **D5 ANT** | D20 REP, D13 LANG, D11 ECFT |
+| 4 | BSD | **D5 ANT** + **D8 AG** | D3 OA, D13 LANG |
+| 5 | H12 | **D5 ANT** + **D11 ECFT** | D3 OA, D13 LANG, D8 AG |
+| 6 | YM | **D7 QFT** | D1 SPEC, D2 GEOM |
+| 7 | NS | **D7 QFT** + **D2 GEOM** | D17 MICRO, D9 PROB |
+| 8 | Hodge | **D8 AG** + **D21 HOM** | D13 LANG, D24 NCG |
+| 9 | Baum-Connes | **D6 ATOP** + **D3 OA** | D19 DTOP, D24 NCG |
+| 10 | PvNP | **D4 INFO** + **D3 OA** | D22 MOD (Fagin's theorem), D18 CODE |
+| 11 | BGS | **D9 PROB** + **D23 ERG** | D1 SPEC, D3 OA |
+| 12 | Twin Primes | **D9 PROB** + **D5 ANT** | D1 SPEC |
+| 13 | Goldbach | **D5 ANT** + **D9 PROB** | D10 THERMO (partition function ζ(β) → prime density) |
+| 14 | Schanuel | **D5 ANT** + **D22 MOD** | D24 NCG (model-theoretic transcendence) |
+
+**Domain codes used** (all exist in capacitor v1 §Domain index): D1 SPEC, D2 GEOM, D3 OA, D4 INFO, D5 ANT, D6 ATOP, D7 QFT, D8 AG, D9 PROB, D10 THERMO, D11 ECFT, D13 LANG, D17 MICRO, D18 CODE, D19 DTOP, D20 REP, D21 HOM, D22 MOD, D23 ERG, D24 NCG.
+
+Edge `N → N+1` is filled by looking up the capacitor cell at the intersection of N's primary domain(s) and N+1's primary domain(s). If multiple primary-domain pairs exist (because a vertex has two primary domains), the runner picks the pair with the STRONGEST existing cell status (FILLED > PARTIAL > CANDIDATE > EMPTY). If all primary pairs are EMPTY, fall back to primary×secondary and secondary×secondary pairs in that order. If ALL pairs are EMPTY → new cell must be filled; start from the canonical correspondence recipe in the vertices' PROOF-CHAIN.md "Programme graph edges" sections.
+
+**Example** (edge 2 → 3, RH → GRH):
+- RH primary: {D1 SPEC, D5 ANT}
+- GRH primary: {D1 SPEC, D5 ANT}
+- Pairs to check: (SPEC, SPEC), (SPEC, ANT), (ANT, SPEC), (ANT, ANT)
+- The SPEC↔SPEC cell is the diagonal (same-domain upgrade); treat as "internal deepening" rather than a capacitor cell fill.
+- The SPEC↔ANT and ANT↔SPEC are the same off-diagonal cell (undirected). This is the canonical "spectral realization of zeros" cell — already FILLED at Tier 1 status.
+- Upgrade: add any new findings from RH's Phase 1 bypass run + the character-modulation extension in GRH's chain.
+
 ---
 
 ## 3. What happens at each vertex (the vertex protocol)
@@ -95,17 +140,24 @@ The ring starts at the hub (QG5D, maximum context), flows through the strongest 
 
 ### 3.3 Edge phase (~10 min)
 
-Before moving to the next vertex, fill or upgrade the EDGE between this vertex and the next:
+**Edge ownership**: the current vertex owns its OUTGOING edge (to the next vertex). It fills exactly this one edge during the edge phase, then moves on. It does NOT touch the incoming edge — that was filled by the previous vertex.
+
+Before moving to the next vertex, fill or upgrade the OUTGOING EDGE per §2.2 vertex-to-domain mapping:
 
 ```
-1. Read the capacitor cell for this edge
-2. If EMPTY: dispatch a Cell-Fill Author (Sonnet max) to fill it
+1. Determine the target domain pair: (current vertex's primary domain, next vertex's primary domain)
+2. Look up the capacitor cell at that domain pair (consult §2.2 table)
+3. If EMPTY: dispatch a Cell-Fill Author (Sonnet max) to fill it
    → Statement / Mechanism / Source / Status / Verification / 
      Load-bearing / Transposition recipe
-3. If PARTIAL: dispatch a Cell-Upgrade Author to strengthen it
-4. If FILLED: verify it's still current (no new literature invalidates it)
-5. Write the cell to capacitor/updates/ring-traversal-N.md
+4. If PARTIAL: dispatch a Cell-Upgrade Author to strengthen it with 
+   any new findings from the current vertex's act phase
+5. If FILLED: verify it's still current (no new literature invalidates it);
+   append a "traversal-T confirmation note" rather than re-filling
+6. Write the cell update to capacitor/updates/ring-traversal-N.md
 ```
+
+**Critical**: each of the 14 edges is filled EXACTLY ONCE per traversal. The predecessor vertex owns the edge. No double-filling by the successor.
 
 ### 3.4 Move phase
 
@@ -160,10 +212,14 @@ Expected: 3-5 traversals before convergence. Total: 24-40 hours of compute acros
 - `programme/ring-traversal-log.md` — per-traversal summary
 - Updated `programme/25-the-graph-structure.md` — edge inventory refreshed
 - Updated `programme/27-the-robustness-circle-theorem.md` — constraint count updated
-- Rigidity score: (filled edges / total edges) × (verified links / total links)
+- RIGIDITY-SCORE (per the chessboard layer `13-chessboard-layer.md` §3, the canonical formula):
+  ```
+  RIGIDITY = (E_filled / E_total) × (L_verified / L_total) × (P_preserved / P_total) × 100
+  ```
+  where E_filled/E_total is filled capacitor cells over 276, L_verified/L_total is verified links over 83, and P_preserved/P_total is experimental pins preserved over 36. Current baseline: 9.03.
 
 ### The chessboard metaphor in practice
-Every filled cell = a wire through the board. Every verified link = a pin through both faces. Every traversal adds wires and pins. The board gets more rigid. The conditionals get more forced. The circle gets more circular.
+Every filled cell = a wire through the board. Every verified link = a pin through both faces. Every traversal adds wires and pins. The board gets more rigid. The conditionals get more forced. The circle gets more circular. **The chessboard layer (loaded via `13-chessboard-layer.md`) provides the DUAL-CHECK, SPIN, PIN-PRESERVATION, and WIRE-DENSITY primitives used throughout this brief** — the runner reads that extension at bootstrap and applies its primitives during every vertex visit.
 
 ---
 
@@ -204,7 +260,7 @@ All three outcomes are strategically valuable. The capacitor grows in all three 
 
 ## 8. How to invoke
 
-The ring-PCA uses the same 4-layer stack as single-chain PCA runs:
+The ring-PCA uses the 5-layer stack (4 from single-chain + chessboard layer for this ring mode):
 
 ```
 read your **instructions** from
@@ -215,6 +271,9 @@ the **chain mode** extension is
 
 the **strategic triad** extension is
 `millenium-apps/proof-chain-adversarial-01/12-prf-chain-advr-strat-triad.md`
+
+the **chessboard layer** extension is
+`millenium-apps/proof-chain-adversarial-01/13-chessboard-layer.md`
 
 the run **brief** (deliverable) is
 THIS FILE (30-ring-traversal-brief.md)
@@ -231,7 +290,27 @@ the **north star** for this programme is
 
 The key difference from single-chain runs: the brief tells the runner to traverse ALL 14 PROOF-CHAIN.md files in ring order, not just one. The runner hops between paper directories, reading each top-level PROOF-CHAIN.md, acting on the weakest link, filling the outgoing edge, and moving on.
 
-**Output directory**: `programme/ring-traversals/traversal-01/` (fresh per traversal)
+### 8.1 State management (ring-mode override of 07-proof-chain-adversarial.md §P.2)
+
+The PCA chain-mode extension (`07-proof-chain-adversarial.md`) assumes SINGLE chain and mandates ONE `chain/chain-state.md` file. Ring mode overrides this. In ring mode:
+
+- **No unified chain-state file is created.** The runner does NOT write a single ring-wide chain-state.md.
+- **14 in-situ PROOF-CHAIN.md files are the source of truth** — one per vertex, at `paperNN-xxx/PROOF-CHAIN.md`. The runner UPDATES these in place as each vertex is visited (status columns, confidence scores, "last traversal" timestamps).
+- **Per-traversal log at `programme/ring-traversal-log.md`** — the runner APPENDS one entry per traversal to this file (traversal number, RIGIDITY before/after, per-vertex actions, per-edge fills, kills added, exit condition).
+- **Per-vertex blackboards at `${output-directory}/vertices/<vertex-name>.md`** — the runner creates these for each vertex visit, capturing the blackboard §A-§O state DURING the visit. These are ephemeral working state, not authoritative.
+- **Per-cell updates at `${output-directory}/capacitor/updates/<cell-id>.md`** — one file per cell filled or upgraded during the traversal.
+
+At every cycle-close, the runner reconciles: in-situ PROOF-CHAIN.md files = CANONICAL STATE; log file = HISTORICAL RECORD; per-vertex blackboards = WORKING SCRATCH. If an Author returns work that changes a vertex's chain, the update goes to BOTH the in-situ PROOF-CHAIN.md (canonical) AND the per-vertex blackboard (working).
+
+This multi-file architecture replaces the single chain-state.md of ordinary PCA runs. The runner MUST NOT create `chain/chain-state.md` in ring mode — it would be misleading (state lives in 14 places, not one).
+
+### 8.2 Output directory numbering
+
+The output directory is `programme/ring-traversals/traversal-NN/` where NN is the current traversal number (zero-padded 2-digit).
+
+Before invoking, the caller MUST set NN correctly. The invocation file (`30-ring-traversal-run.md`) hardcodes `traversal-01` — for traversal 2, change to `traversal-02`; for traversal 3, `traversal-03`; and so on. The runner checks `programme/ring-traversals/` at bootstrap and WARNS if the target directory already exists (unless explicitly resuming).
+
+**Resume semantics**: if `traversal-NN/` exists AND contains a `vertices/` subdirectory with partial work, the runner treats this as a RESUME of an interrupted traversal. It reads what was completed and continues from the next vertex. No work is lost.
 
 ---
 

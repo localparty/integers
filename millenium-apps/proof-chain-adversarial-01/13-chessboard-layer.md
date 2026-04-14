@@ -20,18 +20,19 @@ PCA chain mode (verify/construct/bypass, bidirectional traversal)
 Strategic triad (VERIFY/EXCISE/CONSTRUCT escalation + capacitor-first)
   ↓
 CHESSBOARD LAYER ← THIS FILE
-  ├── §1 DUAL-CHECK    (pin test after every action)
-  ├── §2 SPIN          (face-switching when stuck)
-  ├── §3 RIGIDITY-SCORE (quantitative board health)
+  ├── §1 DUAL-CHECK       (pin test after every action)
+  ├── §2 SPIN             (face-switching when stuck)
+  ├── §3 RIGIDITY-SCORE   (quantitative board health)
   ├── §4 PIN-PRESERVATION (constraint propagation before bypass acceptance)
-  └── §5 WIRE-DENSITY  (edge prioritization for ring traversal)
+  ├── §5 WIRE-DENSITY     (edge prioritization for ring traversal)
+  └── §6 RING-GEOMETRY    (geometric intuition for cell-filling priorities)
   ↓
 North star (publishing/strategy.md)
 ```
 
-Every strat-triad action (VERIFY / EXCISE / CONSTRUCT) passes through the chessboard layer for DUAL-CHECK and PIN-PRESERVATION before the action is accepted. When stuck, the chessboard layer provides SPIN as a new primitive alongside the capacitor's transposition recipes. The ring-PCA uses WIRE-DENSITY and RIGIDITY-SCORE to optimize its traversal path.
+Every strat-triad action (VERIFY / EXCISE / CONSTRUCT) passes through the chessboard layer for DUAL-CHECK and PIN-PRESERVATION before the action is accepted. When stuck, the chessboard layer provides SPIN as a new primitive alongside the capacitor's transposition recipes. The ring-PCA uses WIRE-DENSITY, RIGIDITY-SCORE, and RING-GEOMETRY to optimize its traversal path and prioritize cell-filling targets.
 
-**Read order for the runner**: read §1-§5 after the strat-triad extension and before starting the first cycle. The five primitives are available at all times during execution. The PIN-TABLE (Appendix A) and SPIN-TABLE (Appendix B) are reference tables consulted during DUAL-CHECK, PIN-PRESERVATION, and SPIN operations.
+**Read order for the runner**: read §1-§6 after the strat-triad extension and before starting the first cycle. The six primitives are available at all times during execution. The PIN-TABLE (Appendix A), SPIN-TABLE (Appendix B), and SECTOR-TABLE (Appendix C) are reference tables consulted during DUAL-CHECK, PIN-PRESERVATION, SPIN, and RING-GEOMETRY operations.
 
 ---
 
@@ -265,6 +266,167 @@ WIRE-DENSITY drives edge-filling priorities. RIGIDITY-SCORE measures the compoun
 
 ---
 
+## §6 RING-GEOMETRY — geometric intuition for cell-filling priorities
+
+### What it is
+
+The ring is not just an ordered sequence of 14 vertices — it is a GEOMETRIC OBJECT with structure: adjacency, antipodes, a hub, sectors. RING-GEOMETRY exploits that structure to prioritize cell-filling, radiate from the hub, detect compositional correspondences, and probe antipodal pairs that would otherwise be missed.
+
+WIRE-DENSITY counts cells (local density). RING-GEOMETRY interprets WHERE those cells live (global structure).
+
+### When to use it
+
+- **At traversal start**: compute ring-distance matrix + run antipodal probe + classify vertices by sector (~5 min)
+- **At each vertex visit** (edge phase): apply hub-radiation rule (if at QG5D) + compositional cell-fill check + ring-adjacency priority (~5 min additional)
+- **At traversal close**: update the ring-geometry statistics (mean cells at each ring-distance, sector fill rates)
+
+### §6.1 The ring-distance function
+
+For a 14-cycle, the distance between vertices at positions i and j is:
+
+```
+d(i, j) = min(|i - j|, 14 - |i - j|)
+```
+
+Values range from 0 (same vertex) to 7 (antipodal — maximally far on the ring).
+
+**Distance distribution** (for 14 vertices, 91 unordered pairs):
+- d = 1 (ring-adjacent): **14 pairs** — the cycle itself
+- d = 2: 14 pairs
+- d = 3: 14 pairs
+- d = 4: 14 pairs
+- d = 5: 14 pairs
+- d = 6: 14 pairs
+- d = 7 (antipodal): **7 pairs** — the surprising correspondences
+
+Total: 14 + 14×5 + 7 = 91 pairs = 14 choose 2. ✓
+
+### §6.2 Sector classification — Type A/B/C/D
+
+Each vertex gets a STRATEGY TYPE based on the current state of its proof chain (not its ring position). The PCA applies different protocols per type.
+
+| Type | Name | Strategy | Current vertices (2026-04-13) |
+|---|---|---|---|
+| **A** | Verification-primary | Chain mostly PROVED. Focus: verify consistency with other chains, preserve pins, hold the line. | QG5D (9/10), YM (9/10), BSD (9/10) |
+| **B** | Excision-primary | Chain has a NAMED CONDITIONAL. Focus: eliminate the conditional via bypass or alternative proof. | RH (8/10, cond on CCM), PvNP (7/10, Link 5 wall) |
+| **C** | Construction-primary | Chain has PARTIAL LINKS. Focus: build missing links with construct+critique waves. | GRH (5/10), Hodge (3/10), NS (2/10), BGS (3/10) |
+| **D** | Cell-fill-primary | Chain is SKELETON-STAGE. Focus: fill capacitor cells around this vertex rather than close the chain itself. | H12 (2/10), Baum-Connes (1/10), Goldbach (1/10), Twin Primes (1/10), Schanuel (1/10) |
+
+**PCA behavior by type**:
+
+- **Type A** (verification): at each traversal visit, RE-VERIFY the chain holds. PIN-PRESERVATION check on every prediction. If PINS-PRESERVED → move on. If PINS-SHIFTED → flag which downstream chain's action caused it and REJECT that action.
+
+- **Type B** (excision): at each traversal visit, try ONE bypass of the conditional using the current capacitor state. If the bypass succeeds → link upgrades, type flips to A. If bypass fails → log the failure route, add to kill list, move on.
+
+- **Type C** (construction): at each traversal visit, CONSTRUCT one missing link using adjacent cells. Dispatch a construct Author, verify the result with a Critic, commit if SOUND. Type flips to B when all links are LINKED but at least one is conditional.
+
+- **Type D** (cell-fill): at each traversal visit, do NOT attempt chain closure. Instead fill 2-3 capacitor cells adjacent to this vertex. Type flips to C when the vertex has enough structural context to attempt construction.
+
+Types are REASSESSED at every traversal start based on current PROOF-CHAIN.md confidence. A Type-C vertex that gains 3 links in a traversal may flip to Type B. A Type-D vertex with 3+ cells filled may flip to Type C.
+
+### §6.3 Hub radiation
+
+QG5D at position 1 is the HUB. It has natural correspondences to every other vertex via its `Foundation exports` section (see `paper1/PROOF-CHAIN.md`).
+
+**Hub radiation protocol**:
+
+When the traversal is AT QG5D (position 1):
+1. Read `paper1/PROOF-CHAIN.md §"Foundation exports"` — the 13-row table.
+2. For each row (other vertex V, correspondence description), check: is the capacitor cell QG5D ↔ V filled?
+   - If YES → upgrade with any new findings from this traversal
+   - If NO → fill it using the canonical correspondence from Foundation exports
+3. This fills up to **13 outgoing edges in parallel** at QG5D's edge phase, instead of just 1 (the ring-next edge to RH).
+
+**Why**: QG5D is the hub. Treating it as a ring-order vertex (fill only the next edge) wastes its radiation potential. Hub radiation uses the ring's CENTER to fill many cells at once.
+
+**Cost**: dispatch 13 Cell-Fill agents in parallel (Sonnet max, ~10 min total). Benefit: 13 cells filled in one visit vs 1 cell per visit × 13 traversals = 13× faster hub-edge wiring.
+
+### §6.4 Antipodal probe
+
+The 7 antipodal pairs (distance-7 vertices) are:
+
+| Pair | Ring positions | Vertices | Expected connection | Probe priority |
+|---|---|---|---|---|
+| 1↔8 | 1, 8 | QG5D ↔ Hodge | CCM endomotives → Grothendieck motives → Hodge classes | HIGH |
+| 2↔9 | 2, 9 | RH ↔ Baum-Connes | Connes' K-theoretic approach to RH via BC algebra | HIGH |
+| 3↔10 | 3, 10 | GRH ↔ PvNP | GRH-assumed complexity results (Miller primality, Ankeny) | MEDIUM |
+| 4↔11 | 4, 11 | BSD ↔ BGS | L-function zero statistics follow GUE (Katz-Sarnak) | MEDIUM |
+| 5↔12 | 5, 12 | H12 ↔ Twin Primes | Dirichlet's theorem + class field theory for primes in progressions | MEDIUM |
+| 6↔13 | 6, 13 | YM ↔ Goldbach | Both involve "existence via spectral data"; speculative | LOW |
+| 7↔14 | 7, 14 | NS ↔ Schanuel | Fluid regularity ↔ algebraic independence; least obvious | LOW |
+
+**Antipodal probe protocol**:
+
+At the START of each traversal:
+1. For each antipodal pair (in priority order), check: is the capacitor cell filled?
+2. If NO → dispatch a Probe Author (Sonnet max, ~10 min) to search for a correspondence.
+3. Verdict options:
+   - FILLED-VIABLE: the Probe Author found a correspondence. Promote to capacitor cell (log as Tier 1/2/CANDIDATE based on rigor).
+   - EMPTY-SPECULATIVE: no known correspondence. Log as NEGATIVE cell ("no correspondence known at this time"). Don't waste future probes here.
+   - PARTIAL: a weak correspondence exists. Log as CANDIDATE. Revisit in future traversals.
+
+**Why probe antipodes specifically**: these are the "corner to opposite corner" pairs from the chessboard intuition. Maximum ring-distance = maximum "apparent distance" on the board's top face. If a capacitor wire connects them, that wire is the MOST SURPRISING and HIGHEST-VALUE finding — it reveals structural unity across the greatest spread. Priority probe = priority discovery.
+
+**Cost**: 7 Probe Authors per traversal (one per antipodal pair). ~70 min if all empty; less if most are already filled.
+
+### §6.5 Compositional cell-fill (triangle closure)
+
+When two edges are filled, the third edge of the triangle is often IMPLIED by composition. The PCA should propose it automatically.
+
+**Protocol**:
+
+After each vertex visit's edge phase:
+1. Take the three vertices (A, B, C) = (previous vertex, current vertex, next vertex).
+2. Check the three edges: A↔B (filled by A last turn), B↔C (filled by B this turn), A↔C (chord edge, may or may not be filled).
+3. If A↔B and B↔C are both FILLED and A↔C is EMPTY → dispatch a Composition Author to propose the A↔C cell by composing the two known correspondences.
+4. Composition protocol: "Given correspondence A↔B: ⟨recipe 1⟩ and correspondence B↔C: ⟨recipe 2⟩, derive A↔C by transitive application. Verify the composition is well-defined (no circular dependencies, no structural mismatch). Output: a candidate cell-fill for A↔C."
+5. If composition SOUND → log A↔C as CANDIDATE cell. Future traversals can upgrade it.
+6. If composition FAILS → log the failure (the cells A↔B and B↔C don't compose for structural reasons — this itself is a finding).
+
+**Why**: the ring naturally generates triangles (three consecutive vertices). Filling the third edge by composition extracts MORE cells per traversal without dispatching separate Cell-Fill Authors.
+
+**Scaling**: 14 vertices → 14 triangles per traversal. Potentially 14 new CANDIDATE cells from composition alone, on top of the 14 ring-edge fills from the main edge phase.
+
+### §6.6 Chord awareness
+
+The 91-cell capacitor (14 choose 2) decomposes:
+
+- **Ring edges (14 cells)**: adjacent vertex pairs, d(i,j) = 1. These are the cycle itself. Expected to have HIGH fill rate (the ring-PCA fills one per traversal).
+- **Chord edges (77 cells)**: non-adjacent vertex pairs, d(i,j) ≥ 2. These are the "internal" connections. Expected to have LOWER fill rate unless hub radiation (§6.3) or antipodal probe (§6.4) or composition (§6.5) reaches them.
+
+**Chord-awareness protocol**:
+
+WIRE-DENSITY (§5) is updated to distinguish ring vs chord:
+
+```
+RING-FILL-RATE  = (filled ring edges) / 14
+CHORD-FILL-RATE = (filled chord edges) / 77
+```
+
+Expected ratio: RING-FILL-RATE should grow faster than CHORD-FILL-RATE in early traversals (the ring-PCA fills one ring edge per vertex × 14 vertices = 14 per traversal). If CHORD-FILL-RATE catches up, that's evidence of compositional propagation + hub radiation working well.
+
+Current values (baseline, 2026-04-13):
+- RING-FILL-RATE: unknown pre-traversal (to be measured)
+- CHORD-FILL-RATE: 44/77 ≈ 57% (most of the 44 filled cells are chords because the ring is only one week old)
+
+The PCA reports both rates at traversal-close to track progress.
+
+### §6.7 Geometric signature of a healthy ring
+
+A well-wired ring has these geometric properties:
+
+| Property | Healthy value | Current state |
+|---|---|---|
+| RING-FILL-RATE | > 80% within 3 traversals | pre-traversal |
+| CHORD-FILL-RATE | > 30% within 5 traversals | ~57% (starting unusual — due to H4 run already filling cross-domain chords) |
+| Antipodal fill rate | > 50% (at least 4 of 7 filled) within 3 traversals | pre-traversal (0 probed yet) |
+| Hub fill rate | ≥ 12 of 13 QG5D-edges filled | pre-traversal |
+| Sector D vertices converted to C | 2+ per traversal | pre-traversal |
+
+The ring-PCA reports these statistics after each traversal. Stagnation in any of them signals a structural issue: ring not ordering well, chords not composing, antipodes genuinely speculative, hub radiation not working, or Type-D vertices genuinely stuck without external unlocks.
+
+---
+
 ## Appendix A — PIN-TABLE (the 36 experimental pins)
 
 The full PIN-TABLE is at `paper12/research/23-framework-predictions-master-table.md`. The runner should read that file at bootstrap and hold it in context for PIN-PRESERVATION and DUAL-CHECK operations.
@@ -310,9 +472,41 @@ For each vertex, the SPIN-TABLE maps each mathematical link to its physical obse
 
 ---
 
+## Appendix C — SECTOR-TABLE (ring-geometry strategy classification)
+
+Current assignment of vertices to Type A/B/C/D per §6.2. Reassessed at each traversal start.
+
+| Ring position | Vertex | Current type | Current confidence | PCA focus at this vertex |
+|---|---|---|---|---|
+| 1 | QG5D | **A** | 9/10 | Verify chain holds; run hub radiation (§6.3) to fill 13 outgoing edges |
+| 2 | RH | **B** | 8/10 | Try CCM bypass via capacitor (Phase 1 run is active) |
+| 3 | GRH | **C** | 5/10 | Construct character-modulated versions of RH's 6 layers |
+| 4 | BSD | **A** | 9/10 | Verify 11/11 chain; pin-preserve CKM predictions |
+| 5 | H12 | **D** | 2/10 | Fill cells ECFT ↔ {ANT, AG, LANG, OA} |
+| 6 | YM | **A** | 9/10 | Verify 17/17 chain; pin-preserve mass predictions; CCM bypass L14 residual |
+| 7 | NS | **C** | 2/10 | Construct gradient-flow-transfer links using capacitor |
+| 8 | Hodge | **C** | 3/10 | Construct endomotive route + Langlands route composition |
+| 9 | Baum-Connes | **D** | 1/10 | Fill cells ATOP ↔ {OA, DTOP, NCG} |
+| 10 | PvNP | **B** | 7/10 | Try Link 5 backward bypass (7 routes active from prior runs) |
+| 11 | BGS | **C** | 3/10 | Construct ergodicity proof (Link 2) using capacitor; Nov 2025 Hardy Z lead is strong |
+| 12 | Twin Primes | **D** | 1/10 | Fill cells PROB ↔ ANT + SPEC; await BGS progress |
+| 13 | Goldbach | **D** | 1/10 | Fill cells ANT ↔ {PROB, THERMO}; circle method connection |
+| 14 | Schanuel | **D** | 1/10 | Fill cells ANT ↔ {MOD, NCG}; transcendence theory |
+
+**Type distribution**: 3 Type-A (verify), 2 Type-B (excise), 4 Type-C (construct), 5 Type-D (cell-fill).
+
+**Expected evolution**:
+- Type B → A when conditional closes (RH if CCM verifies or gets bypassed; PvNP if Link 5 closes)
+- Type C → B when all links LINKED but one remains conditional; or → A if all PROVED
+- Type D → C when 3+ adjacent cells filled and a chain skeleton emerges
+
+**Ring-health signal**: after 5 traversals, expect type distribution to shift toward A. If still dominated by D, the ring is not converging — external unlocks needed.
+
+---
+
 ## Summary
 
-The chessboard layer adds five primitives to the PCA:
+The chessboard layer adds six primitives to the PCA:
 
 | Primitive | What it does | When it fires | What it costs |
 |---|---|---|---|
@@ -321,8 +515,9 @@ The chessboard layer adds five primitives to the PCA:
 | **RIGIDITY-SCORE** | Quantifies board health | Every cycle-close | ~1 min computation |
 | **PIN-PRESERVATION** | Rejects pin-shifting bypasses | Before accepting any bypass/construct | ~5 min Sonnet per check |
 | **WIRE-DENSITY** | Prioritizes sparse edges | Start of each ring traversal | ~2 min computation |
+| **RING-GEOMETRY** | Exploits ring structure: sector classification, hub radiation, antipodal probe, compositional cell-fill, chord awareness | Start of each traversal + edge phase of each vertex visit | ~5 min geometry check + up to 70 min antipodal probes (first traversal only) + ~10 min per hub visit |
 
-Total overhead per cycle: ~30-40 min. Total value: the board MONOTONICALLY gets more rigid. No backsliding. No flexing. Only tightening.
+Total overhead per cycle (first traversal): ~100-110 min. After traversal 1, the antipodal probes and hub radiation are mostly done — overhead drops to ~30-40 min per subsequent cycle. Total value: the board MONOTONICALLY gets more rigid AND geometrically coherent. No backsliding. No flexing. Only tightening — and the ring becomes visibly more circular on every pass.
 
 **The chessboard layer is what makes the programme's intuition executable.** The two-faced board is not a metaphor — it's an operational constraint. The pins are not illustrations — they're hard rejection criteria. The rigidity score is not a feeling — it's a number that goes up on every traversal.
 
