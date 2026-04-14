@@ -18,7 +18,8 @@ arXiv:2511.22755) -- specifically Theorems 4.2, 5.10, and Lemmas 7.2,
 7.3. Proof: CCM construct self-adjoint operators D_N on even-sector
 Hilbert spaces E_N^+, one for each truncation level N (primes
 p <= P_N), whose eigenvalues approximate the Riemann zeros {gamma_n}
-to 55-digit accuracy at N = 6. By CCM Lemma 5.2(i), the operator T
+to 55-digit accuracy at lambda = sqrt(13) (6 primes, Fourier
+truncation N = 120). By CCM Lemma 5.2(i), the operator T
 commutes with the parity involution gamma, so Q_W, the T-inner product,
 and the perturbation all preserve E_N^+; the even-simple hypothesis
 becomes simple-on-E_N^+, supplied by AE certification (Section 12).
@@ -51,14 +52,14 @@ all n. QED.
 
 | Layer | Content | Status | Source |
 |:------|:--------|:-------|:-------|
-| 1. CCM operators | Self-adjoint D_N on E_N^+ (even sector); eigenvalues approximate {gamma_n} to 10^{-55} at N=6; Caratheodory-Fejer guarantees self-adjointness; T commutes with parity (Lemma 5.2(i)), so Q_W and perturbation preserve E_N^+ | Published preprint | arXiv:2511.22755 |
+| 1. CCM operators | Self-adjoint D_N on E_N^+ (even sector); eigenvalues approximate {gamma_n} to 10^{-55} at lambda=sqrt(13), N=120 (6 primes); Caratheodory-Fejer guarantees self-adjointness; T commutes with parity (Lemma 5.2(i)), so Q_W and perturbation preserve E_N^+ | Published preprint | arXiv:2511.22755 |
 | 2. ITPFI state convergence | omega_1 = tensor_p omega_1^p (ITPFI factorization); omega_1^{<=P_N} -> omega_1 weak-*; controls Weil quadratic form entry-by-entry | Proved (3 ways) | research/265 |
 | 3a. Archimedean estimate | norm(tau^{(R)}) / norm(Sigma_p tau^{(p)}) = O(1/lambda) | Closed | research/20 |
 | 3b. Eigenvector approximation | norm(xi_lambda - c . k_lambda) = O(1/lambda) via Davis-Kahan | Closed | research/37 |
 | 3c. Sobolev regularity | norm((D_N - i)^{-1})_{L^2 -> H^1} <= 1 + C rho^{-N} < 2, uniform in N for ALL lambda via Fourier-basis cancellation (corrected proof) | Closed | research/44 |
 | 3d. CF decay | Caratheodory-Fejer: rho >= 4.27, C ~ O(N), uniform in N | Verified | research/35 |
 | 4. Form convergence + spectral exactness | H1 (gsrc): ITPFI -> form convergence -> gsrc via Galerkin + rank-one CF stabilization. H2 (discrete compactness): uniform H^1 -> Rellich. Boegli: H1 + H2 -> spectral exactness | Proved/Closed | research/38, 40, 41; Boegli arXiv:1604.07732; Teschl arXiv:2601.10476 |
-| 5. Hurwitz eigenvalue convergence | hat{xi}_N -> Xi uniformly on compacts (Lemma 7.3 + Estimate b); Hurwitz -> zeros converge; zeros of hat{xi}_N = eigenvalues of D_N (CCM 5.10(iii)); zeros of Xi = {gamma_n} | Classical + closed | Hurwitz 1893; Connes-van Suijlekom arXiv:2511.23257 |
+| 5. Hurwitz eigenvalue convergence | hat{k}_lambda -> Xi uniformly on compact substrips (CCM Lemma 7.3); Estimate b bridges: norm(xi_lambda - c . k_lambda) = o(1); combined: hat{xi}_N -> Xi uniformly on compacts; Hurwitz -> zeros converge; zeros of hat{xi}_N = eigenvalues of D_N (CCM 5.10(iii)); zeros of Xi = {gamma_n} | Classical + closed | Hurwitz 1893; Connes-van Suijlekom arXiv:2511.23257 |
 | 6. Conclusion | spec(D_infinity) = lim spec(D_N) [Boegli] = {gamma_n} [Hurwitz]. D_infinity self-adjoint -> spec subset R. Therefore gamma_n in R for all n. RH. | QED | Synthesis |
 
 ---
@@ -114,7 +115,14 @@ L = 2 log(lambda) it is the bandwidth.
 - **Connes-Consani-Moscovici 2025** (arXiv:2511.22755): CCM zeta spectral
   triples. Operators D_N, self-adjointness via Caratheodory-Fejer,
   Theorem 5.10 (eigenvalue identification in even sector), Lemma 5.2(i)
-  (T commutes with parity involution gamma).
+  (T commutes with parity involution gamma). **Note**: CCM Section 8
+  identifies two steps as "essential steps still missing" in their
+  programme: (1) proving the even-simple hypothesis for QW_lambda^N
+  (addressed by our AE simplicity result, Section 12), and (2) proving
+  that k_lambda provides a sufficiently accurate approximation to
+  xi_lambda (addressed by our Estimate b, Section 6, via the ITPFI
+  triangle inequality). CCM Lemma 7.3 proves hat{k}_lambda -> Xi;
+  our Estimate b upgrades this to hat{xi}_N -> Xi.
 
 - **Boegli 2017** (arXiv:1604.07732): Spectral exactness for non-selfadjoint
   perturbations under generalized strong resolvent convergence (H1) and

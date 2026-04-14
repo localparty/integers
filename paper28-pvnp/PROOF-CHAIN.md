@@ -1,0 +1,24 @@
+# PROOF-CHAIN -- P vs NP (Paper 28)
+
+*P != NP via Boolean BC system + trinity dictionary + Bulatov-Zhuk CSP dichotomy + spectral gap = Taylor gap equivalence. 5/6 links closed; Link 5 backward direction is the wall.*
+*Status: 5/6 links closed | Confidence: 7/10*
+
+## Chain table
+
+| Link | Statement | Status | Depends on |
+|---|---|---|---|
+| 1 | Boolean BC system (A_BC^Bool, sigma_t^Bool) exists; unique KMS_1; M_Bool is type III_1 | PROOF OUTLINED | -- |
+| 2 | Trinity functor Phi_comp preserves cohomology: H^k(Sym(Phi(X)),A) = H^k(Sym(X),A) | PROOF OUTLINED | -- |
+| 3 | Bulatov-Zhuk CSP Dichotomy: Taylor polymorphism <-> tractable | PROVED (EXTERNAL) | -- |
+| 4 | Taylor gap = spectral gap of M_Bool^Gamma (verified 6/6 Schaefer classes) | COMPUTATIONALLY VERIFIED | 1, 2 |
+| 5 | Non-full <-> Taylor equivalence | OPEN (backward direction) | 1-4 |
+| 6 | P != NP: M_Bool^{3-SAT} full -> not P-time; 3-SAT NP-complete; done | CONDITIONAL on 5 | 3, 4, 5 |
+
+## Current wall
+**Link 5 backward: non-full -> Taylor polymorphism.** Going from infinite-dimensional operator-algebraic property (non-fullness of type III_1 factor) to finite-domain algebraic property (Taylor operation). Seven routes attempted: (A) direct spectral gap bypass [highest priority], (B) universal-algebraic, (C) channel correspondence via conditional expectation, (D) Popa cocycle superrigidity, (E) Kazhdan/Haagerup bridge, (F) trinity dictionary inversion, (G) conditional fallback [current state].
+
+## Programme graph edges
+- **RH (Paper 13):** Q5-RIEMANN exponent constrains spectral gap scaling
+- **BSD (Paper 26):** L-function channel capacity via Dirichlet L
+- **BGS:** spectral statistics of M_Bool connect to GUE universality
+- **Baum-Connes:** K-theory of M_Bool constrains anomaly structure

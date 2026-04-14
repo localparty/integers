@@ -11,7 +11,7 @@ Euler-Mascheroni elimination). Conditional on CCM
 
 | Step | Statement | Status | Source |
 |:-----|:----------|:-------|:-------|
-| 1 | CCM operators $D_N$ on $E_N^+$ (self-adjoint via CF theory, eigenvalues $\approx \{\gamma_n\}$ to $10^{-55}$ at $N=6$, $T\gamma = \gamma T$ preserves even sector) | **External** (Theorem) | arXiv:2511.22755 Thms 4.2, 5.10; Lemma 5.2(i) |
+| 1 | CCM operators $D_N$ on $E_N^+$ (self-adjoint via CF theory, eigenvalues $\approx \{\gamma_n\}$ to $10^{-55}$ at $\lambda=\sqrt{13}$, $N=120$ (6 primes), $T\gamma = \gamma T$ preserves even sector) | **External** (Theorem) | arXiv:2511.22755 Thms 4.2, 5.10; Lemma 5.2(i) |
 | 2 | ITPFI: $\omega_1 = \bigotimes_p \omega_1^{(p)}$ (KMS$_1$ uniqueness + Bratteli-Robinson 5.3.23; entry-by-entry Weil form convergence) | **Proved** (Theorem) | Section 4; Bost-Connes Thm 25, Laca-Raeburn 1996 |
 
 ### Layer 3: Four estimates (all closed)
@@ -30,7 +30,7 @@ Euler-Mascheroni elimination). Conditional on CCM
 | 4a | Boegli H1 (gsrc): ITPFI $\to$ Galerkin form convergence $\to$ gsrc via Teschl Lemma 2.7 ($a = 0 < 1$) | **Proved** (Theorem) | Section 9; Teschl arXiv:2601.10476 |
 | 4b | Boegli H2 (discrete compactness): uniform H$^1$ $\to$ Rellich-Kondrachov | **Proved** (Theorem) | Section 9; Reed-Simon II |
 | 4c | Spectral exactness: $\operatorname{spec}(D_\infty) = \lim \operatorname{spec}(D_N)$, no spurious eigenvalues | **Proved** (Theorem) | Section 9; Boegli arXiv:1604.07732 Thm 2.6 |
-| 5 | Hurwitz: $\hat{\xi}_N \to \Xi$ uniformly on compacts $\Rightarrow$ $\lim \operatorname{spec}(D_N) = \{\gamma_n\}$ | **Proved** (Theorem) | Section 10; Hurwitz 1893, CCM Lemma 7.3 + Estimate b |
+| 5 | Hurwitz: CCM Lemma 7.3 gives $\hat{k}_\lambda \to \Xi$ uniformly on compact substrips; Estimate b (Layer 3b) bridges $\|\xi_\lambda - c \cdot k_\lambda\| = o(1)$; combined: $\hat{\xi}_N \to \Xi$ uniformly on compacts $\Rightarrow$ $\lim \operatorname{spec}(D_N) = \{\gamma_n\}$ | **Proved** (Theorem) | Section 10; Hurwitz 1893, CCM Lemma 7.3 + Estimate b |
 | 6 | $\operatorname{spec}(D_\infty) = \{\gamma_n\} \subset \mathbb{R}$ ($D_\infty$ self-adjoint via KLMN/Friedrichs) $\Rightarrow$ **RH** | **QED** | Section 11; conditional on CCM |
 
 ### Supporting results
@@ -72,6 +72,18 @@ Theorems 4.2 (self-adjointness via CF), 5.10 (eigenvalue
 identification in even sector), Lemma 5.2(i) ($T$ commutes with
 parity), Lemma 7.2 (prolate approximation), Lemma 7.3 (Fourier
 transform convergence). All are used within their stated scope.
+
+**CCM Section 8 transparency note.** CCM identifies two "essential
+steps still missing" in their own programme: (1) proving the
+even-simple hypothesis for $QW_\lambda^N$ — addressed by our AE
+simplicity result (S1, Section 12) via certified computation for
+$N \leq 20$ and Slepian operator limit for $N > 20$; and (2) proving
+that $k_\lambda$ approximates $\xi_\lambda$ sufficiently — addressed
+by our Estimate b (Layer 3b, Section 6) via the ITPFI triangle
+inequality routing through $T_0$ and Davis-Kahan. CCM Lemma 7.3
+proves $\hat{k}_\lambda \to \Xi$; our Estimate b upgrades this to
+$\hat{\xi}_N \to \Xi$ uniformly on compacts. These two bridges are
+our contributions, not CCM's.
 
 Upon journal acceptance of CCM: chain upgrades from 8/10 to 9/10.
 With independent third-party verification: 10/10.

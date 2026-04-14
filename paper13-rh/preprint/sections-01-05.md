@@ -425,10 +425,14 @@ $\mathcal{E}_N^+$. Then:*
 match $\gamma_1, \ldots, \gamma_{10}$ to $10^{-55}$.*
 
 **Remark 3.5.** Theorem 3.4 is the starting point of our proof. The
-extraordinary numerical agreement -- 55 decimal digits at $N = 6$ -- is
+extraordinary numerical agreement -- 55 decimal digits at $N = 6$
+(6 primes; CCM's Fourier truncation level is $N_{\mathrm{CCM}} = 120$) -- is
 strong evidence but not a proof. A proof requires (i) the existence of
 a limit operator $D_\infty$, and (ii) the exact identification
 $\mathrm{spec}(D_\infty) = \{\gamma_n\}$. These are the gaps we close.
+CCM Section 8 identifies two further gaps in their programme: proving
+even-simplicity and proving $k_\lambda \approx \xi_\lambda$. We address
+both independently (Section 12 and Estimate b, respectively).
 
 ### 3.6. The two open steps
 
