@@ -125,6 +125,10 @@
     const rings = shape.rings || [];
     const pts = ringPoints(cx, cy, 170, rings.length);
     let out = svg(W, H);
+    // Background click-zone (opens bouquet aggregate); individual rings
+    // have their own data-jump-to zones on top.
+    out += '<rect data-open-self="1" x="0" y="0" width="' + W + '" height="' + H +
+           '" fill="rgba(0,0,0,0)" style="cursor:pointer"/>';
     // lines from center to each ring
     pts.forEach(p => {
       out += '<line x1="' + cx + '" y1="' + cy + '" x2="' + p.x + '" y2="' + p.y +
@@ -931,6 +935,561 @@
   }
 
   // ===========================================================================
+  //  MODAL (click-to-xray deep dive)
+  // ===========================================================================
+
+  function openModal(shape) {
+    if (!shape) return;
+    modalTitle.textContent = shape.name || "";
+    const meta = [];
+    if (shape.class) meta.push(shape.class);
+    if (shape.paper) meta.push(shape.paper);
+    if (shape.vertex) meta.push("vertex: " + shape.vertex);
+    if (shape.position) meta.push("#" + shape.position);
+    modalMeta.textContent = meta.join("  ·  ");
+
+    let body = "";
+    const isRingVertex = (shape.class === "ring-vertex");
+    const isConnecting = ["bouquet", "outer-ring-whole", "chord-graph",
+                          "face-graph", "inner-ring", "projection-operator",
+                          "36-pin"].includes(shape.class);
+
+    // Description
+    const desc = shape.description || shape.proofChainDescription || "";
+    if (desc) {
+      body += '<details class="modal-section" open><summary>Description</summary>';
+      body += '<p class="subsection" style="font-family:var(--sans);font-size:12.5px;color:var(--text);line-height:1.55">' + ESC(desc) + '</p>';
+      body += '</details>';
+    }
+
+    if (isRingVertex) {
+      body += renderModalRingVertex(shape);
+    } else if (isConnecting) {
+      body += renderModalAggregate(shape);
+    } else if (shape.faceConjectures) {
+      body += renderModalECircle(shape);
+    } else if (shape.class === "core") {
+      body += renderModalCore(shape);
+    } else if (shape.class === "south-trough") {
+      body += renderModalSouthTrough(shape);
+    } else {
+      body += '<p class="subsection" style="color:var(--text-2)">No deep-dive content available for this shape class.</p>';
+    }
+
+    modalBody.innerHTML = body;
+    modalRoot.hidden = false;
+    document.body.style.overflow = "hidden";
+    // Scroll to top
+    modalBody.scrollTop = 0;
+  }
+
+  function closeModal() {
+    modalRoot.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function renderModalRingVertex(shape) {
+    let h = "";
+
+    // Theorems
+    const thms = shape.theoremsDetailed || [];
+    if (thms.length) {
+      h += '<details class="modal-section" open><summary>Theorems ' +
+           '<span class="count">(' + thms.length + ')</span></summary>';
+      thms.forEach(t => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(t.kind || "Theorem") + ' ' + ESC(t.number || "") + '</span>';
+        if (t.name) h += '<span class="label">' + ESC(t.name) + '</span>';
+        if (t.statement) h += '<div class="sublabel">' + ESC(t.statement) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Requirements
+    const reqs = shape.requirementsDetailed || [];
+    if (reqs.length) {
+      h += '<details class="modal-section" open><summary>Requirements ' +
+           '<span class="count">(' + reqs.length + ')</span></summary>';
+      reqs.forEach(r => {
+        h += '<div class="item">';
+        h += '<span class="tag">#' + ESC(r.n || "") + '</span>';
+        h += '<span class="label">' + ESC(r.label || "") + '</span>';
+        if (r.description) h += '<div class="sublabel">' + ESC(r.description) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Proof-chain layers
+    const layers = shape.chainLayers || [];
+    const xrayLayers = shape.layerXray || [];
+    const xrayById = {};
+    xrayLayers.forEach(x => { xrayById[x.id] = x; });
+    if (layers.length) {
+      h += '<details class="modal-section" open><summary>Proof-chain layers ' +
+           '<span class="count">(' + layers.length + ')</span></summary>';
+      layers.forEach(l => {
+        const xr = xrayById["L" + l.id] || xrayById[l.id];
+        const statusClass = statusKind(l.status);
+        h += '<div class="item">';
+        h += '<span class="tag">L' + ESC(l.id) + '</span>';
+        if (l.status) h += '<span class="tag status ' + statusClass + '">' + ESC(l.status) + '</span>';
+        h += '<span class="label">' + ESC(l.statement) + '</span>';
+        if (l.depends && l.depends !== "--") h += '<div class="sublabel">depends on: ' + ESC(l.depends) + '</div>';
+        if (xr) {
+          const bits = [];
+          if (xr.face) bits.push("face: " + xr.face.split(" ")[0]);
+          if (xr.projection) bits.push("proj: " + xr.projection.split(" ")[0]);
+          if (xr.pattern) bits.push("pat: " + xr.pattern.split(" ")[0]);
+          if (xr.invariant) bits.push("inv: " + xr.invariant);
+          if (bits.length) h += '<div class="sublabel">' + ESC(bits.join("  ·  ")) + '</div>';
+        }
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // X-Ray face/projection/pattern per layer (if no chainLayers, show xrayLayers)
+    if (!layers.length && xrayLayers.length) {
+      h += '<details class="modal-section" open><summary>X-Ray layers ' +
+           '<span class="count">(' + xrayLayers.length + ')</span></summary>';
+      xrayLayers.forEach(x => {
+        h += '<div class="item">';
+        h += '<span class="tag">' + ESC(x.id) + '</span>';
+        if (x.status) h += '<span class="tag status ' + statusKind(x.status) + '">' + ESC(x.status) + '</span>';
+        h += '<span class="label">' + ESC(x.title) + '</span>';
+        const bits = [];
+        if (x.face) bits.push("face: " + x.face.split(" ")[0]);
+        if (x.projection) bits.push("proj: " + x.projection.split(" ")[0]);
+        if (x.pattern) bits.push("pat: " + x.pattern.split(" ")[0]);
+        if (x.invariant) bits.push("inv: " + x.invariant);
+        if (bits.length) h += '<div class="sublabel">' + ESC(bits.join("  ·  ")) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Named walls
+    const walls = shape.namedWalls || [];
+    if (walls.length) {
+      h += '<details class="modal-section" open><summary>Named walls ' +
+           '<span class="count">(' + walls.length + ')</span></summary>';
+      walls.forEach(w => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(w.name || "") + '</span>';
+        if (w.topic) h += '<span class="label">' + ESC(w.topic) + '</span>';
+        if (w.status) h += '<div class="sublabel"><strong>Status:</strong> ' +
+                           '<span class="tag status ' + statusKind(w.status) + '">' +
+                           ESC(w.status) + '</span></div>';
+        if (w.statement) h += '<div class="sublabel"><strong>Statement:</strong> ' + ESC(w.statement) + '</div>';
+        if (w.bypass) h += '<div class="sublabel"><strong>Bypass:</strong> ' + ESC(w.bypass) + '</div>';
+        if (w.confidence) h += '<div class="sublabel"><strong>Confidence:</strong> ' + ESC(w.confidence) + '</div>';
+        if (w.audit_pending) h += '<div class="sublabel"><strong>Audit pending:</strong> ' + ESC(w.audit_pending) + '</div>';
+        if (w.effect_pass) h += '<div class="sublabel"><strong>Effect if audit passes:</strong> ' + ESC(w.effect_pass) + '</div>';
+        if (w.effect_fail) h += '<div class="sublabel"><strong>Effect if audit fails:</strong> ' + ESC(w.effect_fail) + '</div>';
+        if (w.chain_location) h += '<div class="sublabel"><strong>Chain location:</strong> ' + ESC(w.chain_location) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Cross-cuts
+    const ccs = shape.crossCutsDetailed || [];
+    if (ccs.length) {
+      h += '<details class="modal-section"><summary>Cross-cut edges ' +
+           '<span class="count">(' + ccs.length + ')</span></summary>';
+      ccs.forEach(e => {
+        const targetPos = positionForVertex(e.from === shape.vertex ? e.to : e.from);
+        h += '<div class="item">';
+        h += '<span class="tag">' + ESC(e.from) + ':' + ESC(e.from_layer) + '</span>';
+        h += ' ↔ ';
+        if (targetPos) {
+          h += '<a class="jump-link" data-jump-to="' + targetPos + '">' +
+               ESC(e.to) + (e.to_layer ? ':' + ESC(e.to_layer) : "") + '</a>';
+        } else {
+          h += '<span>' + ESC(e.to) + (e.to_layer ? ':' + ESC(e.to_layer) : "") + '</span>';
+        }
+        if (e.shared) h += '<div class="sublabel">shared: ' + ESC(e.shared) + '</div>';
+        if (e.reason) h += '<div class="sublabel">' + ESC(e.reason) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Bonus theorems
+    const bonus = shape.bonusTheorems || [];
+    if (bonus.length) {
+      h += '<details class="modal-section"><summary>Bonus theorems (beyond bare) ' +
+           '<span class="count">(' + bonus.length + ')</span></summary>';
+      bonus.forEach(t => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(t.kind || "Theorem") + ' ' + ESC(t.number || "") + '</span>';
+        if (t.name) h += '<span class="label">' + ESC(t.name) + '</span>';
+        if (t.statement) h += '<div class="sublabel">' + ESC(t.statement) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Numbers table
+    const nums = shape.numbersTable || [];
+    if (nums.length) {
+      h += '<details class="modal-section"><summary>Numbers table ' +
+           '<span class="count">(' + nums.length + ')</span></summary>';
+      nums.forEach(n => {
+        h += '<div class="item">';
+        h += '<span class="tag">#' + ESC(n.n) + '</span>';
+        h += '<span class="label">' + ESC(n.quantity) + '</span>';
+        h += '<div class="sublabel"><strong>Value:</strong> ' + ESC(n.value) + '</div>';
+        if (n.citation) h += '<div class="sublabel"><strong>Citation:</strong> ' + ESC(n.citation) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    return h || '<p class="subsection" style="color:var(--text-2)">No deep-dive content collected for this vertex yet.</p>';
+  }
+
+  function renderModalAggregate(shape) {
+    let h = "";
+
+    // Connected nodes (with jump links)
+    const nodes = shape.connectedNodes || [];
+    if (nodes.length) {
+      h += '<details class="modal-section" open><summary>Connected nodes ' +
+           '<span class="count">(' + nodes.length + ')</span></summary>';
+      nodes.forEach(n => {
+        h += '<div class="item">';
+        h += '<span class="tag">' + ESC(n.class) + '</span>';
+        if (n.position) {
+          h += '<a class="jump-link" data-jump-to="' + n.position + '">' + ESC(n.name) + '</a>';
+        } else {
+          h += '<span class="label">' + ESC(n.name) + '</span>';
+        }
+        if (n.vertex) h += '<span class="src">(' + ESC(n.vertex) + ')</span>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Cross-cut edges (for chord graph)
+    const ccAll = shape.aggregatedCrossCutsAll;
+    if (ccAll && ccAll.length) {
+      h += '<details class="modal-section" open><summary>All cross-cut edges ' +
+           '<span class="count">(' + ccAll.length + ')</span></summary>';
+      ccAll.forEach(e => {
+        const fromPos = positionForVertex(e.from);
+        const toPos = positionForVertex(e.to);
+        h += '<div class="item">';
+        if (fromPos) h += '<a class="jump-link" data-jump-to="' + fromPos + '">' + ESC(e.from) + '</a>';
+        else h += ESC(e.from);
+        h += ':' + ESC(e.from_layer) + ' ↔ ';
+        if (toPos) h += '<a class="jump-link" data-jump-to="' + toPos + '">' + ESC(e.to) + '</a>';
+        else h += ESC(e.to);
+        if (e.to_layer) h += ':' + ESC(e.to_layer);
+        if (e.shared) h += '<div class="sublabel">shared: ' + ESC(e.shared) + '</div>';
+        if (e.reason) h += '<div class="sublabel">' + ESC(e.reason) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Face → vertices (for face-graph)
+    if (shape.faceVertices) {
+      h += '<details class="modal-section" open><summary>Face → vertices ' +
+           '<span class="count">(10 faces)</span></summary>';
+      Object.entries(shape.faceVertices).forEach(([face, vs]) => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(face) + '</span>';
+        vs.forEach(v => {
+          const p = positionForVertex(v);
+          h += ' ';
+          if (p) h += '<a class="jump-link" data-jump-to="' + p + '">' + ESC(v) + '</a>';
+          else h += ESC(v);
+        });
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Pins (for 36-pin)
+    const pins = shape.aggregatedPins || [];
+    if (pins.length) {
+      h += '<details class="modal-section" open><summary>Pins ' +
+           '<span class="count">(' + pins.length + ')</span></summary>';
+      pins.forEach((p, i) => {
+        h += '<div class="item">';
+        h += '<span class="tag">#' + (i+1) + '</span>';
+        h += '<span class="label">' + ESC(p.parameter || "") + '</span>';
+        if (p.measured) h += '<div class="sublabel"><strong>Measured:</strong> ' + ESC(p.measured) + '</div>';
+        if (p.formula) h += '<div class="sublabel"><strong>Formula:</strong> ' + ESC(p.formula) + '</div>';
+        if (p.error) h += '<div class="sublabel"><strong>Error:</strong> ' + ESC(p.error) + '</div>';
+        if (p.gammas) h += '<div class="sublabel"><strong>γ\'s:</strong> ' + ESC(p.gammas) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated walls
+    const walls = shape.aggregatedWalls || [];
+    if (walls.length) {
+      h += '<details class="modal-section"><summary>Aggregated walls ' +
+           '<span class="count">(' + walls.length + ')</span></summary>';
+      walls.forEach(w => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(w.name || "") + '</span>';
+        if (w._source) h += '<span class="src">← ' + ESC(w._source) + '</span>';
+        if (w.topic) h += '<span class="label">' + ESC(w.topic) + '</span>';
+        if (w.status) h += '<div class="sublabel"><strong>Status:</strong> ' + ESC(w.status) + '</div>';
+        if (w.statement) h += '<div class="sublabel">' + ESC(w.statement) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated theorems
+    const thms = shape.aggregatedTheorems || [];
+    if (thms.length) {
+      h += '<details class="modal-section"><summary>Aggregated theorems ' +
+           '<span class="count">(' + thms.length + ')</span></summary>';
+      thms.forEach(t => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(t.kind || "Theorem") + ' ' + ESC(t.number || "") + '</span>';
+        if (t._source) h += '<span class="src">← ' + ESC(t._source) + '</span>';
+        if (t.name) h += '<span class="label">' + ESC(t.name) + '</span>';
+        if (t.statement) h += '<div class="sublabel">' + ESC(t.statement) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated requirements
+    const reqs = shape.aggregatedRequirements || [];
+    if (reqs.length) {
+      h += '<details class="modal-section"><summary>Aggregated requirements ' +
+           '<span class="count">(' + reqs.length + ')</span></summary>';
+      reqs.forEach(r => {
+        h += '<div class="item">';
+        h += '<span class="tag">#' + ESC(r.n || "") + '</span>';
+        if (r._source) h += '<span class="src">← ' + ESC(r._source) + '</span>';
+        h += '<span class="label">' + ESC(r.label || "") + '</span>';
+        if (r.description) h += '<div class="sublabel">' + ESC(r.description) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated layers
+    const layers = shape.aggregatedLayers || [];
+    if (layers.length) {
+      h += '<details class="modal-section"><summary>Aggregated chain layers ' +
+           '<span class="count">(' + layers.length + ')</span></summary>';
+      layers.forEach(l => {
+        h += '<div class="item">';
+        h += '<span class="tag">L' + ESC(l.id) + '</span>';
+        if (l._source) h += '<span class="src">← ' + ESC(l._source) + '</span>';
+        if (l.status) h += '<span class="tag status ' + statusKind(l.status) + '">' + ESC(l.status) + '</span>';
+        h += '<span class="label">' + ESC(l.statement) + '</span>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated cross-cuts
+    const cc = shape.aggregatedCrossCuts || [];
+    if (cc.length) {
+      h += '<details class="modal-section"><summary>Aggregated cross-cuts ' +
+           '<span class="count">(' + cc.length + ')</span></summary>';
+      cc.forEach(e => {
+        h += '<div class="item">';
+        if (e._source) h += '<span class="src">← ' + ESC(e._source) + '</span>';
+        h += '<span class="label">' + ESC(e.from || "") + ':' + ESC(e.from_layer || "") +
+             ' ↔ ' + ESC(e.to || "") + (e.to_layer ? ':' + ESC(e.to_layer) : "") + '</span>';
+        if (e.shared) h += '<div class="sublabel">shared: ' + ESC(e.shared) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    // Aggregated bonus / numbers
+    const bonus = shape.aggregatedBonus || [];
+    if (bonus.length) {
+      h += '<details class="modal-section"><summary>Aggregated bonus theorems ' +
+           '<span class="count">(' + bonus.length + ')</span></summary>';
+      bonus.forEach(t => {
+        h += '<div class="item">';
+        h += '<span class="tag kind">' + ESC(t.kind || "Theorem") + ' ' + ESC(t.number || "") + '</span>';
+        if (t._source) h += '<span class="src">← ' + ESC(t._source) + '</span>';
+        if (t.name) h += '<span class="label">' + ESC(t.name) + '</span>';
+        if (t.statement) h += '<div class="sublabel">' + ESC(t.statement) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    const nums = shape.aggregatedNumbers || [];
+    if (nums.length) {
+      h += '<details class="modal-section"><summary>Aggregated numbers ' +
+           '<span class="count">(' + nums.length + ')</span></summary>';
+      nums.forEach(n => {
+        h += '<div class="item">';
+        h += '<span class="tag">#' + ESC(n.n) + '</span>';
+        if (n._source) h += '<span class="src">← ' + ESC(n._source) + '</span>';
+        h += '<span class="label">' + ESC(n.quantity) + '</span>';
+        h += '<div class="sublabel">' + ESC(n.value) + '</div>';
+        h += '</div>';
+      });
+      h += '</details>';
+    }
+
+    return h || '<p class="subsection" style="color:var(--text-2)">No aggregated content.</p>';
+  }
+
+  function renderModalECircle(shape) {
+    let h = "";
+    h += '<details class="modal-section" open><summary>Face → conjecture ' +
+         '<span class="count">(10 faces)</span></summary>';
+    Object.entries(shape.faceConjectures || {}).forEach(([face, conj]) => {
+      h += '<div class="item">';
+      h += '<span class="tag kind">' + ESC(face) + '</span>';
+      h += '<span class="label">' + ESC(conj) + '</span>';
+      h += '</div>';
+    });
+    h += '</details>';
+    return h;
+  }
+
+  function renderModalCore(shape) {
+    let h = "";
+    if (shape.proofChainStatus) {
+      h += '<details class="modal-section" open><summary>Core status</summary>';
+      h += '<div class="subsection"><strong>Status:</strong> ' + ESC(shape.proofChainStatus) + '</div>';
+      if (shape.theoremCount) h += '<div class="subsection"><strong>Theorems:</strong> ' + shape.theoremCount + '</div>';
+      if (shape.predictionCount) h += '<div class="subsection"><strong>Predictions:</strong> ' + shape.predictionCount + '</div>';
+      h += '</details>';
+    }
+    return h;
+  }
+
+  function renderModalSouthTrough(shape) {
+    let h = "";
+    h += '<details class="modal-section" open><summary>North pole (complete work)</summary>';
+    (shape.northVertices || []).forEach(v => {
+      const p = positionForVertex(v);
+      h += '<div class="item">';
+      if (p) h += '<a class="jump-link" data-jump-to="' + p + '">' + ESC(v) + '</a>';
+      else h += '<span class="label">' + ESC(v) + '</span>';
+      h += '</div>';
+    });
+    h += '</details>';
+    h += '<details class="modal-section" open><summary>South trough (frontier)</summary>';
+    (shape.southVertices || []).forEach(v => {
+      const p = positionForVertex(v);
+      h += '<div class="item">';
+      if (p) h += '<a class="jump-link" data-jump-to="' + p + '">' + ESC(v) + '</a>';
+      else h += '<span class="label">' + ESC(v) + '</span>';
+      h += '</div>';
+    });
+    h += '</details>';
+    return h;
+  }
+
+  function statusKind(s) {
+    if (!s) return "";
+    const u = s.toUpperCase();
+    if (u.includes("PROVED") || u.includes("QED")) return "proved";
+    if (u.includes("PARTIAL") || u.includes("LITERATURE") || u.includes("CONDITIONAL")) return "partial";
+    if (u.includes("OPEN")) return "open";
+    if (u.includes("SILENT") || u.includes("NEEDS") || u.includes("SPECULATIVE")) return "silent";
+    return "";
+  }
+
+  // Open raw-markdown artifact view
+  function openArtifact(path, label) {
+    const art = ARTIFACTS[path];
+    modalTitle.textContent = label;
+    modalMeta.textContent = path + (art ? "  ·  " + (art.lines || 0) + " lines  ·  " + (art.size || 0) + " chars" : "");
+    if (!art || !art.content) {
+      modalBody.innerHTML = '<p class="subsection" style="color:var(--red)">Artifact content not collected at build time.</p>';
+    } else {
+      modalBody.innerHTML = '<div class="raw-markdown">' + highlightMarkdown(art.content) + '</div>';
+    }
+    modalRoot.hidden = false;
+    document.body.style.overflow = "hidden";
+    modalBody.scrollTop = 0;
+  }
+
+  // Minimal custom markdown highlighter.
+  function highlightMarkdown(text) {
+    // Escape HTML first
+    let t = ESC(text);
+    // Highlight verdict tags (PROVED / PARTIAL / OPEN / SILENT / CONDITIONAL)
+    t = t.replace(/\b(PROVED|QED)\b/g, '<span class="md-tag-proved">$1</span>');
+    t = t.replace(/\b(PARTIAL|LITERATURE)\b/g, '<span class="md-tag-partial">$1</span>');
+    t = t.replace(/\b(OPEN-BUT-ADDRESSED|OPEN)\b/g, '<span class="md-tag-open">$1</span>');
+    t = t.replace(/\b(SILENT|NEEDS-CONSTRUCTION|NEEDS-NUMERICAL-EXTRACT|SPECULATIVE)\b/g, '<span class="md-tag-silent">$1</span>');
+    t = t.replace(/\bCONDITIONAL\b/g, '<span class="md-tag-conditional">CONDITIONAL</span>');
+    // Headings
+    t = t.replace(/^(####\s+)(.+)$/gm, '<span class="md-h4">$1$2</span>');
+    t = t.replace(/^(###\s+)(.+)$/gm, '<span class="md-h3">$1$2</span>');
+    t = t.replace(/^(##\s+)(.+)$/gm, '<span class="md-h2">$1$2</span>');
+    t = t.replace(/^(#\s+)(.+)$/gm, '<span class="md-h1">$1$2</span>');
+    // Inline code `foo`
+    t = t.replace(/`([^`]+)`/g, '<span class="md-code">$1</span>');
+    // Bold **foo**
+    t = t.replace(/\*\*([^*\n]+)\*\*/g, '<span class="md-bold">$1</span>');
+    // Italic *foo* (avoid ** already converted)
+    t = t.replace(/(^|[^\*])\*([^*\n]+)\*/g, '$1<span class="md-italic">$2</span>');
+    // Bullet lines — highlight the dash
+    t = t.replace(/^(\s*)-\s/gm, '$1<span class="md-bullet">-</span> ');
+    return t;
+  }
+
+  // Attach handlers to every `data-jump-to` element in the modal
+  function hookupJumpLinks() {
+    modalBody.querySelectorAll("[data-jump-to]").forEach(el => {
+      el.addEventListener("click", function(ev) {
+        ev.preventDefault();
+        const pos = parseInt(el.getAttribute("data-jump-to"), 10);
+        if (!isNaN(pos)) {
+          closeModal();
+          const idx = Math.max(0, Math.min(N - 1, pos - 1));
+          slider.value = idx;
+          render(idx);
+        }
+      });
+    });
+  }
+
+  // Attach handlers to ladder rungs (for file linking)
+  function hookupLadder() {
+    metricsEl.querySelectorAll(".ladder-rung").forEach(el => {
+      const rung = el.getAttribute("data-rung");
+      el.addEventListener("click", function() {
+        const shape = shapes[parseInt(slider.value, 10)];
+        const det = (shape && shape.ladderDetections) || {};
+        const path = det[rung];
+        // No-op; just flash. (Could open modal here in the future.)
+        if (path) {
+          // Could open a viewer — for now, show inline tooltip alert
+        }
+      });
+    });
+  }
+
+  // Attach handlers to mode toggle buttons
+  function hookupModeToggles() {
+    metricsEl.querySelectorAll("[data-mode-artifact]").forEach(el => {
+      el.addEventListener("click", function() {
+        const path = el.getAttribute("data-mode-artifact");
+        const label = el.getAttribute("data-mode-label") || "Artifact";
+        openArtifact(path, label);
+      });
+    });
+  }
+
+  // ===========================================================================
   function render(idx) {
     const shape = shapes[idx];
     if (!shape) return;
@@ -947,12 +1506,36 @@
     // Face-marker interactivity for e-circle
     if (shape.class === "e-circle") {
       canvas.querySelectorAll(".face-group .face-marker").forEach(el => {
-        el.addEventListener("click", function() {
+        el.addEventListener("click", function(ev) {
+          ev.stopPropagation();
           canvas.querySelectorAll(".face-marker").forEach(m => m.classList.remove("highlight"));
           el.classList.add("highlight");
         });
       });
     }
+
+    // Click-to-xray: "open-self" zones open THIS shape in modal
+    canvas.querySelectorAll("[data-open-self]").forEach(el => {
+      el.addEventListener("click", function(ev) {
+        ev.stopPropagation();
+        openModal(shape);
+      });
+    });
+    // "data-jump-to" zones (bouquet rings, chord endpoints, face nodes, outer-ring vertices)
+    canvas.querySelectorAll("[data-jump-to]").forEach(el => {
+      el.addEventListener("click", function(ev) {
+        ev.stopPropagation();
+        const pos = parseInt(el.getAttribute("data-jump-to"), 10);
+        if (!isNaN(pos)) {
+          const i = Math.max(0, Math.min(N - 1, pos - 1));
+          slider.value = i;
+          render(i);
+        }
+      });
+    });
+
+    hookupLadder();
+    hookupModeToggles();
   }
 
   slider.addEventListener("input", (e) => {
@@ -968,6 +1551,11 @@
     slider.value = v; render(v);
   });
   document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalRoot.hidden) {
+      closeModal();
+      return;
+    }
+    if (!modalRoot.hidden) return;  // don't navigate while modal open
     if (e.target && (e.target.tagName === "INPUT" && e.target !== slider)) return;
     if (e.key === "ArrowLeft") {
       const v = Math.max(0, parseInt(slider.value, 10) - 1);
@@ -977,6 +1565,14 @@
       slider.value = v; render(v);
     }
   });
+
+  // Modal close handlers
+  modalRoot.querySelectorAll("[data-modal-close]").forEach(el => {
+    el.addEventListener("click", closeModal);
+  });
+  // Observe the modal body for jump links after each content change
+  const modalObserver = new MutationObserver(hookupJumpLinks);
+  modalObserver.observe(modalBody, { childList: true, subtree: true });
 
   if (N > 0) render(0);
   else {

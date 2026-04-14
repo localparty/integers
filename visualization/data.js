@@ -273,7 +273,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group",
+        "statement": "Let G be any compact simple Lie group",
         "_source": "ym"
       },
       {
@@ -3128,7 +3128,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group",
+        "statement": "Let G be any compact simple Lie group",
         "_source": "ym"
       },
       {
@@ -5212,7 +5212,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group"
+        "statement": "Let G be any compact simple Lie group"
       },
       {
         "kind": "Definition",
@@ -9516,57 +9516,21 @@ const SHAPE_DATA = [
         "class": "ring-vertex"
       },
       {
-        "name": "RH",
-        "vertex": "rh",
-        "position": 16,
-        "class": "ring-vertex"
-      },
-      {
-        "name": "Twin Primes",
-        "vertex": "twin-primes",
-        "position": 29,
-        "class": "ring-vertex"
-      },
-      {
-        "name": "Lehmer",
-        "vertex": "lehmer",
-        "position": 35,
-        "class": "ring-vertex"
-      },
-      {
         "name": "PvNP",
         "vertex": "pvnp",
         "position": 25,
         "class": "ring-vertex"
       },
       {
-        "name": "Goldbach",
-        "vertex": "goldbach",
-        "position": 31,
+        "name": "H12",
+        "vertex": "h12",
+        "position": 20,
         "class": "ring-vertex"
       },
       {
-        "name": "NS",
-        "vertex": "ns",
-        "position": 21,
-        "class": "ring-vertex"
-      },
-      {
-        "name": "Katz-Sarnak",
-        "vertex": "katz-sarnak",
-        "position": 28,
-        "class": "ring-vertex"
-      },
-      {
-        "name": "Baum-Connes",
-        "vertex": "baum-connes",
-        "position": 24,
-        "class": "ring-vertex"
-      },
-      {
-        "name": "Collatz",
-        "vertex": "collatz",
-        "position": 34,
+        "name": "RH",
+        "vertex": "rh",
+        "position": 16,
         "class": "ring-vertex"
       },
       {
@@ -9582,15 +9546,51 @@ const SHAPE_DATA = [
         "class": "ring-vertex"
       },
       {
-        "name": "H12",
-        "vertex": "h12",
-        "position": 20,
-        "class": "ring-vertex"
-      },
-      {
         "name": "YM",
         "vertex": "ym",
         "position": 15,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "NS",
+        "vertex": "ns",
+        "position": 21,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Twin Primes",
+        "vertex": "twin-primes",
+        "position": 29,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Collatz",
+        "vertex": "collatz",
+        "position": 34,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Katz-Sarnak",
+        "vertex": "katz-sarnak",
+        "position": 28,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Lehmer",
+        "vertex": "lehmer",
+        "position": 35,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Goldbach",
+        "vertex": "goldbach",
+        "position": 31,
+        "class": "ring-vertex"
+      },
+      {
+        "name": "Baum-Connes",
+        "vertex": "baum-connes",
+        "position": 24,
         "class": "ring-vertex"
       }
     ],
@@ -9599,7 +9599,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group",
+        "statement": "Let G be any compact simple Lie group",
         "_source": "ym"
       },
       {
@@ -9761,6 +9761,42 @@ const SHAPE_DATA = [
       },
       {
         "n": "1",
+        "label": "Formal Turing machine model",
+        "description": "(Cook §1) — standard multi-tape TM per Cook Appendix; NOT RAM, NOT circuits, NOT quantum; equivalence to other TM variants is Cook's \"within polynomial overhead\" remark but the submission fixes the TM model",
+        "_source": "pvnp"
+      },
+      {
+        "n": "2",
+        "label": "Correct definitions of P and NP",
+        "description": "(Cook §1-§2) — \\mathbf{P} via polynomial-time TM; \\mathbf{NP} via polynomial-time checking relation R(w,y) with |y|\\leq|w|^k; \\leq_p many-one reduction; NP-completeness (Def.~4)",
+        "_source": "pvnp"
+      },
+      {
+        "n": "3",
+        "label": "NP-complete target",
+        "description": "(Cook §2) — the proof must separate \\mathbf{P} from a specific NP-complete language (3-SAT is canonical; any NP-complete language suffices via Proposition 1(b))",
+        "_source": "pvnp"
+      },
+      {
+        "n": "4",
+        "label": "Relativization barrier",
+        "description": "(Cook §3; Baker-Gill-Solovay 1975) — diagonalization with reduction relativizes; the proof must use non-relativizing machinery",
+        "_source": "pvnp"
+      },
+      {
+        "n": "5",
+        "label": "Natural proofs barrier",
+        "description": "(Cook §3; Razborov-Rudich 1997) — any proof giving a \"large, constructive\" property of hard functions contradicts standard pseudorandomness; the proof must fail to satisfy largeness or constructivity",
+        "_source": "pvnp"
+      },
+      {
+        "n": "6",
+        "label": "(implicit, Aaronson-Wigderson 2008)",
+        "description": "Algebrization barrier — extensions of algebrization handle arithmetized oracles; the proof must use machinery above polynomial extensions of finite oracles",
+        "_source": "pvnp"
+      },
+      {
+        "n": "1",
         "label": "RH for ζ(s)",
         "description": "all non-trivial zeros on critical line Re(s) = ½ — the minimum statement",
         "_source": "rh"
@@ -9800,42 +9836,6 @@ const SHAPE_DATA = [
         "label": "Explicit formula (Weil 1952) as witness",
         "description": "zero-sum ↔ prime-sum ↔ archimedean term consistency (Bombieri §V)",
         "_source": "rh"
-      },
-      {
-        "n": "1",
-        "label": "Formal Turing machine model",
-        "description": "(Cook §1) — standard multi-tape TM per Cook Appendix; NOT RAM, NOT circuits, NOT quantum; equivalence to other TM variants is Cook's \"within polynomial overhead\" remark but the submission fixes the TM model",
-        "_source": "pvnp"
-      },
-      {
-        "n": "2",
-        "label": "Correct definitions of P and NP",
-        "description": "(Cook §1-§2) — \\mathbf{P} via polynomial-time TM; \\mathbf{NP} via polynomial-time checking relation R(w,y) with |y|\\leq|w|^k; \\leq_p many-one reduction; NP-completeness (Def.~4)",
-        "_source": "pvnp"
-      },
-      {
-        "n": "3",
-        "label": "NP-complete target",
-        "description": "(Cook §2) — the proof must separate \\mathbf{P} from a specific NP-complete language (3-SAT is canonical; any NP-complete language suffices via Proposition 1(b))",
-        "_source": "pvnp"
-      },
-      {
-        "n": "4",
-        "label": "Relativization barrier",
-        "description": "(Cook §3; Baker-Gill-Solovay 1975) — diagonalization with reduction relativizes; the proof must use non-relativizing machinery",
-        "_source": "pvnp"
-      },
-      {
-        "n": "5",
-        "label": "Natural proofs barrier",
-        "description": "(Cook §3; Razborov-Rudich 1997) — any proof giving a \"large, constructive\" property of hard functions contradicts standard pseudorandomness; the proof must fail to satisfy largeness or constructivity",
-        "_source": "pvnp"
-      },
-      {
-        "n": "6",
-        "label": "(implicit, Aaronson-Wigderson 2008)",
-        "description": "Algebrization barrier — extensions of algebrization handle arithmetized oracles; the proof must use machinery above polynomial extensions of finite oracles",
-        "_source": "pvnp"
       },
       {
         "n": "1",
@@ -9939,6 +9939,90 @@ const SHAPE_DATA = [
       },
       {
         "id": "1",
+        "statement": "Boolean BC system (A_BC^Bool, sigma_t^Bool) exists; unique KMS_1; M_Bool is type III_1",
+        "status": "PROOF OUTLINED",
+        "depends": "--",
+        "_source": "pvnp"
+      },
+      {
+        "id": "2",
+        "statement": "Trinity functor Phi_comp preserves cohomology: H^k(Sym(Phi(X)),A) = H^k(Sym(X),A)",
+        "status": "PROOF OUTLINED",
+        "depends": "--",
+        "_source": "pvnp"
+      },
+      {
+        "id": "3",
+        "statement": "Bulatov-Zhuk CSP Dichotomy: Taylor polymorphism <-> tractable",
+        "status": "PROVED (EXTERNAL)",
+        "depends": "--",
+        "_source": "pvnp"
+      },
+      {
+        "id": "4",
+        "statement": "Taylor gap = spectral gap of M_Bool^Gamma (verified 6/6 Schaefer classes)",
+        "status": "COMPUTATIONALLY VERIFIED",
+        "depends": "1, 2",
+        "_source": "pvnp"
+      },
+      {
+        "id": "5",
+        "statement": "Non-full <-> Taylor equivalence",
+        "status": "FORWARD (Taylor -> non-full): numerically supported by paper28-pvnp/code/pvnp_nonfullness_test.py + Bulatov-Zhuk…",
+        "depends": "1-4",
+        "_source": "pvnp"
+      },
+      {
+        "id": "6",
+        "statement": "P != NP: M_Bool^{3-SAT} full -> not P-time; 3-SAT NP-complete; done",
+        "status": "CONDITIONAL on 5",
+        "depends": "3, 4, 5",
+        "_source": "pvnp"
+      },
+      {
+        "id": "1",
+        "statement": "BC algebra + Hecke semigroup N → crossed product C-algebra A_BC",
+        "status": "ESTABLISHED",
+        "depends": "—",
+        "_source": "h12"
+      },
+      {
+        "id": "2",
+        "statement": "KMS_β states for β > 1 exist and are parametrized by characters of Ẑ*",
+        "status": "LITERATURE",
+        "depends": "1",
+        "_source": "h12"
+      },
+      {
+        "id": "3",
+        "statement": "CBB Reciprocity: KMS_β symmetry is the Galois action Gal(ℚ^cyc/ℚ)",
+        "status": "CONJECTURED",
+        "depends": "2",
+        "_source": "h12"
+      },
+      {
+        "id": "4",
+        "statement": "Brauer-KMS duality: cyclotomic Brauer classes β_k ∈ H²(Z/kZ, U(1)) correspond to KMS phase structure at k ∈ {2,3,4,6}",
+        "status": "CONJECTURED",
+        "depends": "3",
+        "_source": "h12"
+      },
+      {
+        "id": "5",
+        "statement": "V-Hilbert 12: the generators of Gal(K^ab/K) for K a cyclotomic field are extracted from the unitary bridge V: H_CCM → H_R",
+        "status": "OPEN",
+        "depends": "3, 4",
+        "_source": "h12"
+      },
+      {
+        "id": "6",
+        "statement": "Spectral Kronecker-Weber: every abelian extension of ℚ appears in the spectrum of some BC-type system",
+        "status": "OPEN",
+        "depends": "5",
+        "_source": "h12"
+      },
+      {
+        "id": "1",
         "statement": "CCM operators D_N on E_N^+ (self-adjoint, eigenvalues ~ {gamma_n} to 10^{-55})",
         "status": "EXTERNAL (CCM 2025)",
         "depends": "--",
@@ -10037,377 +10121,6 @@ const SHAPE_DATA = [
       },
       {
         "id": "1",
-        "statement": "Explicit formula: prime gaps <-> zero spacing",
-        "status": "KNOWN",
-        "depends": "--",
-        "_source": "twin-primes"
-      },
-      {
-        "id": "2",
-        "statement": "Zero pair correlation -> gap statistics",
-        "status": "CONDITIONAL on BGS (cascades from Paper 32 L5, now LITERATURE via arXiv:2511.18275; effective dependency reduces to…",
-        "depends": "1",
-        "_source": "twin-primes"
-      },
-      {
-        "id": "3",
-        "statement": "GUE small-gap tail -> bounded prime gaps",
-        "status": "ESTABLISHED",
-        "depends": "--",
-        "_source": "twin-primes"
-      },
-      {
-        "id": "4",
-        "statement": "GUE -> Hardy-Littlewood twin prime constant C_2",
-        "status": "CONJECTURED",
-        "depends": "2, 3",
-        "_source": "twin-primes"
-      },
-      {
-        "id": "5",
-        "statement": "C_2 > 0 -> infinitely many twin primes",
-        "status": "CONDITIONAL on L4",
-        "depends": "4",
-        "_source": "twin-primes"
-      },
-      {
-        "id": "1",
-        "statement": "Kronecker: M(\\alpha) = 1 \\iff \\alpha is zero or a root of unity. Roots of unity = periodic orbits on the e-circle (U(1) fiber). The cyclotomic elements ARE the ground state of the BC algebra's KMS structure at \\beta > 1.",
-        "status": "LITERATURE",
-        "depends": "--",
-        "_source": "lehmer"
-      },
-      {
-        "id": "2",
-        "statement": "BC phase transition at \\beta = 1: spontaneous symmetry breaking by \\text{Gal}(\\mathbb{Q}^{\\text{cyc}}/\\mathbb{Q}). Above \\beta = 1: cyclotomic data parametrizes KMS states (M = 1 world). Below \\beta = 1: non-cyclotomic enters (M > 1 world). The transition IS the Lehmer boundary.",
-        "status": "LITERATURE",
-        "depends": "Paper 12 (CBB Axiom 2)",
-        "_source": "lehmer"
-      },
-      {
-        "id": "3",
-        "statement": "Mahler measure = L-function value (Deninger-Rodriguez Villegas-Boyd): for certain polynomials P defining elliptic curves E, m(P) = c \\cdot L'(E, 0) where L(E, s) is the Hasse-Weil L-function. The Beilinson regulator connects Mahler measure to K-theory and motivic cohomology. This links Lehmer DIRECTLY to BSD (Paper 26): same L-functions, same special values, same regulator machinery. If c_0 = 0, then L'(E, 0) \\to 0 for specific CM curves, destabilizing the BSD rank formula.",
-        "status": "LITERATURE",
-        "depends": "Paper 26 (BSD)",
-        "_source": "lehmer"
-      },
-      {
-        "id": "4",
-        "statement": "Salem numbers = abelian variety automorphism entropy: every Salem number \\lambda is realized as the first dynamical degree of an automorphism \\phi on a simple abelian variety A, with spectral radius on \\ell-adic cohomology = \\lambda (using Deligne's proof of Weil's RH). Salem numbers parametrize the \"interesting\" automorphisms of varieties where Hodge classes live. This links Lehmer to Hodge (Paper 29).",
-        "status": "LITERATURE",
-        "depends": "Paper 29 (Hodge)",
-        "_source": "lehmer"
-      },
-      {
-        "id": "5",
-        "statement": "KMS spectral gap forces Lehmer: the BC algebra's KMS_1 phase transition has a spectral gap c_0 > 0 separating cyclotomic from non-cyclotomic states. Three independent forcing mechanisms: (a) the 36-pin rigidity via PIN-PRESERVATION — near-cyclotomic perturbations would shift predictions, (b) the L-function connection — c_0 = 0 implies L'(E,0) \\to 0 destabilizing BSD, (c) the YM mass-gap structural parallel — the e-circle's curvature (positive for U(1)) generates a Weitzenböck-type gap",
-        "status": "OPEN — the wall",
-        "depends": "2, 3, 4, Papers 1/8/26/29",
-        "_source": "lehmer"
-      },
-      {
-        "id": "6",
-        "statement": "Lehmer's conjecture: M(\\alpha) \\geq 1 + c_0 for all non-cyclotomic algebraic \\alpha",
-        "status": "FOLLOWS",
-        "depends": "5",
-        "_source": "lehmer"
-      },
-      {
-        "id": "Smyth",
-        "statement": "M(\\alpha) \\geq M(\\theta_0) \\approx 1.32472 for non-reciprocal \\alpha",
-        "status": "1971",
-        "depends": "",
-        "_source": "lehmer"
-      },
-      {
-        "id": "1",
-        "statement": "Boolean BC system (A_BC^Bool, sigma_t^Bool) exists; unique KMS_1; M_Bool is type III_1",
-        "status": "PROOF OUTLINED",
-        "depends": "--",
-        "_source": "pvnp"
-      },
-      {
-        "id": "2",
-        "statement": "Trinity functor Phi_comp preserves cohomology: H^k(Sym(Phi(X)),A) = H^k(Sym(X),A)",
-        "status": "PROOF OUTLINED",
-        "depends": "--",
-        "_source": "pvnp"
-      },
-      {
-        "id": "3",
-        "statement": "Bulatov-Zhuk CSP Dichotomy: Taylor polymorphism <-> tractable",
-        "status": "PROVED (EXTERNAL)",
-        "depends": "--",
-        "_source": "pvnp"
-      },
-      {
-        "id": "4",
-        "statement": "Taylor gap = spectral gap of M_Bool^Gamma (verified 6/6 Schaefer classes)",
-        "status": "COMPUTATIONALLY VERIFIED",
-        "depends": "1, 2",
-        "_source": "pvnp"
-      },
-      {
-        "id": "5",
-        "statement": "Non-full <-> Taylor equivalence",
-        "status": "FORWARD (Taylor -> non-full): numerically supported by paper28-pvnp/code/pvnp_nonfullness_test.py + Bulatov-Zhuk…",
-        "depends": "1-4",
-        "_source": "pvnp"
-      },
-      {
-        "id": "6",
-        "statement": "P != NP: M_Bool^{3-SAT} full -> not P-time; 3-SAT NP-complete; done",
-        "status": "CONDITIONAL on 5",
-        "depends": "3, 4, 5",
-        "_source": "pvnp"
-      },
-      {
-        "id": "1",
-        "statement": "Primes generate BC algebra via mu_p",
-        "status": "KNOWN",
-        "depends": "--",
-        "_source": "goldbach"
-      },
-      {
-        "id": "2",
-        "statement": "Hecke semigroup N* encodes multiplicative structure",
-        "status": "KNOWN",
-        "depends": "--",
-        "_source": "goldbach"
-      },
-      {
-        "id": "3",
-        "statement": "Mellin bridge: additive <-> multiplicative",
-        "status": "ESTABLISHED",
-        "depends": "1, 2",
-        "_source": "goldbach"
-      },
-      {
-        "id": "4",
-        "statement": "Spectral prime density from explicit formula",
-        "status": "CONDITIONAL (cross-paper transport from Paper 13 RH; equivalently CONDITIONAL on CCM 2025, not an independent RH…",
-        "depends": "3",
-        "_source": "goldbach"
-      },
-      {
-        "id": "5",
-        "statement": "Circle method in BC/adelic setting",
-        "status": "OPEN",
-        "depends": "4",
-        "_source": "goldbach"
-      },
-      {
-        "id": "6",
-        "statement": "Even-indexed KMS_1 decomposition as prime convolution",
-        "status": "OPEN",
-        "depends": "5",
-        "_source": "goldbach"
-      },
-      {
-        "id": "1",
-        "statement": "5D Einstein → KK reduction to 4D Einstein+Maxwell+scalar",
-        "status": "LITERATURE",
-        "depends": "--",
-        "_source": "ns"
-      },
-      {
-        "id": "2",
-        "statement": "T_{μν} near-equilibrium → incompressible NS",
-        "status": "CONJECTURED",
-        "depends": "1",
-        "_source": "ns"
-      },
-      {
-        "id": "3",
-        "statement": "YM gradient-flow transfer (Lemmas 1.1-1.5) → NS velocity",
-        "status": "OPEN",
-        "depends": "2",
-        "_source": "ns"
-      },
-      {
-        "id": "4",
-        "statement": "KK spectral gap Δ₀ > 0 controls high-freq modes",
-        "status": "PROVED UNCONDITIONAL ALL-LOOP",
-        "depends": "--",
-        "_source": "ns"
-      },
-      {
-        "id": "5a",
-        "statement": "BKM Route A: temporal lifting + bounded vorticity-response",
-        "status": "OPEN-WITH-PUBLISHED-ROUTE",
-        "depends": "3, 4",
-        "_source": "ns"
-      },
-      {
-        "id": "5b",
-        "statement": "BKM Route B: cosphere-bundle microlocal regularity",
-        "status": "OPEN-WITH-PUBLISHED-ROUTE",
-        "depends": "3, 4",
-        "_source": "ns"
-      },
-      {
-        "id": "5",
-        "statement": "BKM criterion (composition of 5a + 5b adapted to M⁴×S¹/Z₂)",
-        "status": "PARTIAL",
-        "depends": "5a, 5b",
-        "_source": "ns"
-      },
-      {
-        "id": "6",
-        "statement": "Energy: KK conservation (5D) → NS dissipation (4D)",
-        "status": "CONJECTURED",
-        "depends": "5",
-        "_source": "ns"
-      },
-      {
-        "id": "7",
-        "statement": "Uniqueness via Galerkin + energy",
-        "status": "CONDITIONAL on L5",
-        "depends": "5",
-        "_source": "ns"
-      },
-      {
-        "id": "8",
-        "statement": "Global regularity: L3-6 compose",
-        "status": "OPEN",
-        "depends": "3-7",
-        "_source": "ns"
-      },
-      {
-        "id": "1",
-        "statement": "Every natural family of L-functions has a symmetry type G \\in \\{U, Sp, O, SO^+, SO^-\\} determined by the functional equation and geometric monodromy",
-        "status": "CONJECTURED (number fields) / PROVED (function fields)",
-        "depends": "--",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "2",
-        "statement": "Function-field proof: for L-functions over \\mathbb{F}_q(t), the symmetry type equals the monodromy group, and Deligne's equidistribution theorem gives the zero distribution",
-        "status": "PROVED",
-        "depends": "--",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "3",
-        "statement": "One-level density verification: for many number-field families (Dirichlet L, elliptic curve L, modular form L), the one-level density of low-lying zeros matches the random matrix prediction for the conjectured symmetry type, within the support constraint \\hat{\\phi} \\subset (-2, 2)",
-        "status": "PROVED (partial)",
-        "depends": "--",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "4",
-        "statement": "BC representation type = symmetry type: the Hecke semigroup \\mathbb{N}^* acts on each L-function family via a specific representation. The representation's bilinear invariant (Hermitian / alternating / symmetric) determines G. The bridge family at k \\in \\{2, 3, 4, 6\\} selects specific symmetry types.",
-        "status": "CONJECTURED",
-        "depends": "Paper 12 (CBB Axiom 4)",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "5",
-        "statement": "Generalized Katz-Sarnak for number fields: for ALL natural families over \\mathbb{Q}, the symmetry type determines the complete zero statistics (all n-level densities, not just one-level)",
-        "status": "OPEN — the wall",
-        "depends": "1, 2, 3, 4",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "6",
-        "statement": "Full Katz-Sarnak: every family has a symmetry type and the type determines all statistics",
-        "status": "FOLLOWS",
-        "depends": "5",
-        "_source": "katz-sarnak"
-      },
-      {
-        "id": "1",
-        "statement": "Identify G = Q/Z (s.d.p.) N* acting on BC algebra",
-        "status": "ESTABLISHED",
-        "depends": "--",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "2",
-        "statement": "Compute classifying space BG for proper G-actions",
-        "status": "OPEN",
-        "depends": "1",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "3",
-        "statement": "K-homology K_*(BG) via AHSS",
-        "status": "OPEN",
-        "depends": "2",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "4",
-        "statement": "K-theory K_(C_r(G))",
-        "status": "OPEN",
-        "depends": "--",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "5",
-        "statement": "Assembly map mu is isomorphism",
-        "status": "LITERATURE",
-        "depends": "3, 4",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "6",
-        "statement": "K-theoretic constraints on spectral structure",
-        "status": "OPEN",
-        "depends": "5",
-        "_source": "baum-connes"
-      },
-      {
-        "id": "1",
-        "statement": "Collatz map = Hecke \\mu_2 / \\mu_3 alternation on \\mathbb{N}^: even step = \\mu_2^ (halve frequency), odd step = \\mu_3 \\circ \\text{shift} \\circ \\mu_2^* (triple, shift, halve)",
-        "status": "ESTABLISHED",
-        "depends": "--",
-        "_source": "collatz"
-      },
-      {
-        "id": "2",
-        "statement": "Cuntz \\mathcal{O}_2 formulation (Mori 2024): Collatz \\iff no non-trivial reducing subspaces. Now PUBLISHED in Advances in Operator Theory (Springer), 2025. Journal reference: link.springer.com/article/10.1007/s43036-025-00425-1. Upgraded from arXiv-LITERATURE to JOURNAL-LITERATURE.",
-        "status": "JOURNAL-LITERATURE",
-        "depends": "--",
-        "_source": "collatz"
-      },
-      {
-        "id": "3",
-        "statement": "2-adic ergodicity: Collatz on \\mathbb{Z}_2 is continuous, measure-preserving, ergodic",
-        "status": "LITERATURE",
-        "depends": "--",
-        "_source": "collatz"
-      },
-      {
-        "id": "4",
-        "statement": "BC embedding: Cuntz \\mathcal{O}_2 \\hookrightarrow A_{BC} via p = 2 Hecke sector. The +1 shift IS the phase operator e(1) acting on \\hat{\\mathbb{Z}} (the profinite integers, spectrum of the abelian sub-C-algebra generated by \\{e(r) : r \\in \\mathbb{Q}/\\mathbb{Z}\\}). Embedding: s_0 \\mapsto \\mu_2^ \\mu_2 (even branch), s_1 \\mapsto \\mu_2^* e(1) \\mu_3 (odd branch). The key relation e(r)\\mu_n = \\mu_n e(nr) governs the Hecke-phase interleaving. Algebraically well-defined; spectral preservation (KMS…",
-        "status": "PARTIAL (upgraded T7: +1 identified as phase operator; algebraic embedding verified; spectral preservation open)",
-        "depends": "1, 2",
-        "_source": "collatz"
-      },
-      {
-        "id": "5",
-        "statement": "KMS_1 attractor (harmonic decay): Lyapunov \\approx 0 = marginal stability = KMS_1 critical point. Average Lyapunov per odd-even pair = \\log(3/4) = -0.288 < 0 (contracting). ITPFI \\omega_1^{(2)} \\otimes \\omega_1^{(3)} dominated by contracting factor (\\lambda_2 = 1/2 > \\lambda_3 = 1/3): p=2 beats p=3 in the long run. All harmonics decay to fundamental (n = 1).",
-        "status": "OPEN — the wall",
-        "depends": "4",
-        "_source": "collatz"
-      },
-      {
-        "id": "6",
-        "statement": "Cycle elimination: type III_1 ergodicity of modular flow (BGS L2 PROVED) rules out non-trivial periodic orbits of the Hecke sub-action, IF the BC embedding (Link 4) preserves the type classification. Non-trivial Collatz cycle would be a periodic orbit of the (2,3)-restricted modular flow — but type III_1 factors have Connes spectrum \\text{Sd}(M) = \\mathbb{R} (no periodic orbits except trivial).",
-        "status": "OPEN",
-        "depends": "4, Paper 32 (BGS L2)",
-        "_source": "collatz"
-      },
-      {
-        "id": "7",
-        "statement": "Collatz: every positive integer reaches 1",
-        "status": "FOLLOWS from 5 + 6",
-        "depends": "--",
-        "_source": "collatz"
-      },
-      {
-        "id": "1",
         "statement": "RH implies Lindelöf: if all zeros lie on \\text{Re}(s) = 1/2, then the Phragmén-Lindelöf principle gives $\\zeta(1/2 + it) = O(",
         "status": "t",
         "depends": "^\\varepsilon) for every \\varepsilon > 0$",
@@ -10496,48 +10209,6 @@ const SHAPE_DATA = [
         "status": "FOLLOWS",
         "depends": "4",
         "_source": "cramer"
-      },
-      {
-        "id": "1",
-        "statement": "BC algebra + Hecke semigroup N → crossed product C-algebra A_BC",
-        "status": "ESTABLISHED",
-        "depends": "—",
-        "_source": "h12"
-      },
-      {
-        "id": "2",
-        "statement": "KMS_β states for β > 1 exist and are parametrized by characters of Ẑ*",
-        "status": "LITERATURE",
-        "depends": "1",
-        "_source": "h12"
-      },
-      {
-        "id": "3",
-        "statement": "CBB Reciprocity: KMS_β symmetry is the Galois action Gal(ℚ^cyc/ℚ)",
-        "status": "CONJECTURED",
-        "depends": "2",
-        "_source": "h12"
-      },
-      {
-        "id": "4",
-        "statement": "Brauer-KMS duality: cyclotomic Brauer classes β_k ∈ H²(Z/kZ, U(1)) correspond to KMS phase structure at k ∈ {2,3,4,6}",
-        "status": "CONJECTURED",
-        "depends": "3",
-        "_source": "h12"
-      },
-      {
-        "id": "5",
-        "statement": "V-Hilbert 12: the generators of Gal(K^ab/K) for K a cyclotomic field are extracted from the unitary bridge V: H_CCM → H_R",
-        "status": "OPEN",
-        "depends": "3, 4",
-        "_source": "h12"
-      },
-      {
-        "id": "6",
-        "statement": "Spectral Kronecker-Weber: every abelian extension of ℚ appears in the spectrum of some BC-type system",
-        "status": "OPEN",
-        "depends": "5",
-        "_source": "h12"
       },
       {
         "id": "1",
@@ -10678,6 +10349,335 @@ const SHAPE_DATA = [
         "status": "CONDITIONAL on H4",
         "depends": "17",
         "_source": "ym"
+      },
+      {
+        "id": "1",
+        "statement": "5D Einstein → KK reduction to 4D Einstein+Maxwell+scalar",
+        "status": "LITERATURE",
+        "depends": "--",
+        "_source": "ns"
+      },
+      {
+        "id": "2",
+        "statement": "T_{μν} near-equilibrium → incompressible NS",
+        "status": "CONJECTURED",
+        "depends": "1",
+        "_source": "ns"
+      },
+      {
+        "id": "3",
+        "statement": "YM gradient-flow transfer (Lemmas 1.1-1.5) → NS velocity",
+        "status": "OPEN",
+        "depends": "2",
+        "_source": "ns"
+      },
+      {
+        "id": "4",
+        "statement": "KK spectral gap Δ₀ > 0 controls high-freq modes",
+        "status": "PROVED UNCONDITIONAL ALL-LOOP",
+        "depends": "--",
+        "_source": "ns"
+      },
+      {
+        "id": "5a",
+        "statement": "BKM Route A: temporal lifting + bounded vorticity-response",
+        "status": "OPEN-WITH-PUBLISHED-ROUTE",
+        "depends": "3, 4",
+        "_source": "ns"
+      },
+      {
+        "id": "5b",
+        "statement": "BKM Route B: cosphere-bundle microlocal regularity",
+        "status": "OPEN-WITH-PUBLISHED-ROUTE",
+        "depends": "3, 4",
+        "_source": "ns"
+      },
+      {
+        "id": "5",
+        "statement": "BKM criterion (composition of 5a + 5b adapted to M⁴×S¹/Z₂)",
+        "status": "PARTIAL",
+        "depends": "5a, 5b",
+        "_source": "ns"
+      },
+      {
+        "id": "6",
+        "statement": "Energy: KK conservation (5D) → NS dissipation (4D)",
+        "status": "CONJECTURED",
+        "depends": "5",
+        "_source": "ns"
+      },
+      {
+        "id": "7",
+        "statement": "Uniqueness via Galerkin + energy",
+        "status": "CONDITIONAL on L5",
+        "depends": "5",
+        "_source": "ns"
+      },
+      {
+        "id": "8",
+        "statement": "Global regularity: L3-6 compose",
+        "status": "OPEN",
+        "depends": "3-7",
+        "_source": "ns"
+      },
+      {
+        "id": "1",
+        "statement": "Explicit formula: prime gaps <-> zero spacing",
+        "status": "KNOWN",
+        "depends": "--",
+        "_source": "twin-primes"
+      },
+      {
+        "id": "2",
+        "statement": "Zero pair correlation -> gap statistics",
+        "status": "CONDITIONAL on BGS (cascades from Paper 32 L5, now LITERATURE via arXiv:2511.18275; effective dependency reduces to…",
+        "depends": "1",
+        "_source": "twin-primes"
+      },
+      {
+        "id": "3",
+        "statement": "GUE small-gap tail -> bounded prime gaps",
+        "status": "ESTABLISHED",
+        "depends": "--",
+        "_source": "twin-primes"
+      },
+      {
+        "id": "4",
+        "statement": "GUE -> Hardy-Littlewood twin prime constant C_2",
+        "status": "CONJECTURED",
+        "depends": "2, 3",
+        "_source": "twin-primes"
+      },
+      {
+        "id": "5",
+        "statement": "C_2 > 0 -> infinitely many twin primes",
+        "status": "CONDITIONAL on L4",
+        "depends": "4",
+        "_source": "twin-primes"
+      },
+      {
+        "id": "1",
+        "statement": "Collatz map = Hecke \\mu_2 / \\mu_3 alternation on \\mathbb{N}^: even step = \\mu_2^ (halve frequency), odd step = \\mu_3 \\circ \\text{shift} \\circ \\mu_2^* (triple, shift, halve)",
+        "status": "ESTABLISHED",
+        "depends": "--",
+        "_source": "collatz"
+      },
+      {
+        "id": "2",
+        "statement": "Cuntz \\mathcal{O}_2 formulation (Mori 2024): Collatz \\iff no non-trivial reducing subspaces. Now PUBLISHED in Advances in Operator Theory (Springer), 2025. Journal reference: link.springer.com/article/10.1007/s43036-025-00425-1. Upgraded from arXiv-LITERATURE to JOURNAL-LITERATURE.",
+        "status": "JOURNAL-LITERATURE",
+        "depends": "--",
+        "_source": "collatz"
+      },
+      {
+        "id": "3",
+        "statement": "2-adic ergodicity: Collatz on \\mathbb{Z}_2 is continuous, measure-preserving, ergodic",
+        "status": "LITERATURE",
+        "depends": "--",
+        "_source": "collatz"
+      },
+      {
+        "id": "4",
+        "statement": "BC embedding: Cuntz \\mathcal{O}_2 \\hookrightarrow A_{BC} via p = 2 Hecke sector. The +1 shift IS the phase operator e(1) acting on \\hat{\\mathbb{Z}} (the profinite integers, spectrum of the abelian sub-C-algebra generated by \\{e(r) : r \\in \\mathbb{Q}/\\mathbb{Z}\\}). Embedding: s_0 \\mapsto \\mu_2^ \\mu_2 (even branch), s_1 \\mapsto \\mu_2^* e(1) \\mu_3 (odd branch). The key relation e(r)\\mu_n = \\mu_n e(nr) governs the Hecke-phase interleaving. Algebraically well-defined; spectral preservation (KMS…",
+        "status": "PARTIAL (upgraded T7: +1 identified as phase operator; algebraic embedding verified; spectral preservation open)",
+        "depends": "1, 2",
+        "_source": "collatz"
+      },
+      {
+        "id": "5",
+        "statement": "KMS_1 attractor (harmonic decay): Lyapunov \\approx 0 = marginal stability = KMS_1 critical point. Average Lyapunov per odd-even pair = \\log(3/4) = -0.288 < 0 (contracting). ITPFI \\omega_1^{(2)} \\otimes \\omega_1^{(3)} dominated by contracting factor (\\lambda_2 = 1/2 > \\lambda_3 = 1/3): p=2 beats p=3 in the long run. All harmonics decay to fundamental (n = 1).",
+        "status": "OPEN — the wall",
+        "depends": "4",
+        "_source": "collatz"
+      },
+      {
+        "id": "6",
+        "statement": "Cycle elimination: type III_1 ergodicity of modular flow (BGS L2 PROVED) rules out non-trivial periodic orbits of the Hecke sub-action, IF the BC embedding (Link 4) preserves the type classification. Non-trivial Collatz cycle would be a periodic orbit of the (2,3)-restricted modular flow — but type III_1 factors have Connes spectrum \\text{Sd}(M) = \\mathbb{R} (no periodic orbits except trivial).",
+        "status": "OPEN",
+        "depends": "4, Paper 32 (BGS L2)",
+        "_source": "collatz"
+      },
+      {
+        "id": "7",
+        "statement": "Collatz: every positive integer reaches 1",
+        "status": "FOLLOWS from 5 + 6",
+        "depends": "--",
+        "_source": "collatz"
+      },
+      {
+        "id": "1",
+        "statement": "Every natural family of L-functions has a symmetry type G \\in \\{U, Sp, O, SO^+, SO^-\\} determined by the functional equation and geometric monodromy",
+        "status": "CONJECTURED (number fields) / PROVED (function fields)",
+        "depends": "--",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "2",
+        "statement": "Function-field proof: for L-functions over \\mathbb{F}_q(t), the symmetry type equals the monodromy group, and Deligne's equidistribution theorem gives the zero distribution",
+        "status": "PROVED",
+        "depends": "--",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "3",
+        "statement": "One-level density verification: for many number-field families (Dirichlet L, elliptic curve L, modular form L), the one-level density of low-lying zeros matches the random matrix prediction for the conjectured symmetry type, within the support constraint \\hat{\\phi} \\subset (-2, 2)",
+        "status": "PROVED (partial)",
+        "depends": "--",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "4",
+        "statement": "BC representation type = symmetry type: the Hecke semigroup \\mathbb{N}^* acts on each L-function family via a specific representation. The representation's bilinear invariant (Hermitian / alternating / symmetric) determines G. The bridge family at k \\in \\{2, 3, 4, 6\\} selects specific symmetry types.",
+        "status": "CONJECTURED",
+        "depends": "Paper 12 (CBB Axiom 4)",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "5",
+        "statement": "Generalized Katz-Sarnak for number fields: for ALL natural families over \\mathbb{Q}, the symmetry type determines the complete zero statistics (all n-level densities, not just one-level)",
+        "status": "OPEN — the wall",
+        "depends": "1, 2, 3, 4",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "6",
+        "statement": "Full Katz-Sarnak: every family has a symmetry type and the type determines all statistics",
+        "status": "FOLLOWS",
+        "depends": "5",
+        "_source": "katz-sarnak"
+      },
+      {
+        "id": "1",
+        "statement": "Kronecker: M(\\alpha) = 1 \\iff \\alpha is zero or a root of unity. Roots of unity = periodic orbits on the e-circle (U(1) fiber). The cyclotomic elements ARE the ground state of the BC algebra's KMS structure at \\beta > 1.",
+        "status": "LITERATURE",
+        "depends": "--",
+        "_source": "lehmer"
+      },
+      {
+        "id": "2",
+        "statement": "BC phase transition at \\beta = 1: spontaneous symmetry breaking by \\text{Gal}(\\mathbb{Q}^{\\text{cyc}}/\\mathbb{Q}). Above \\beta = 1: cyclotomic data parametrizes KMS states (M = 1 world). Below \\beta = 1: non-cyclotomic enters (M > 1 world). The transition IS the Lehmer boundary.",
+        "status": "LITERATURE",
+        "depends": "Paper 12 (CBB Axiom 2)",
+        "_source": "lehmer"
+      },
+      {
+        "id": "3",
+        "statement": "Mahler measure = L-function value (Deninger-Rodriguez Villegas-Boyd): for certain polynomials P defining elliptic curves E, m(P) = c \\cdot L'(E, 0) where L(E, s) is the Hasse-Weil L-function. The Beilinson regulator connects Mahler measure to K-theory and motivic cohomology. This links Lehmer DIRECTLY to BSD (Paper 26): same L-functions, same special values, same regulator machinery. If c_0 = 0, then L'(E, 0) \\to 0 for specific CM curves, destabilizing the BSD rank formula.",
+        "status": "LITERATURE",
+        "depends": "Paper 26 (BSD)",
+        "_source": "lehmer"
+      },
+      {
+        "id": "4",
+        "statement": "Salem numbers = abelian variety automorphism entropy: every Salem number \\lambda is realized as the first dynamical degree of an automorphism \\phi on a simple abelian variety A, with spectral radius on \\ell-adic cohomology = \\lambda (using Deligne's proof of Weil's RH). Salem numbers parametrize the \"interesting\" automorphisms of varieties where Hodge classes live. This links Lehmer to Hodge (Paper 29).",
+        "status": "LITERATURE",
+        "depends": "Paper 29 (Hodge)",
+        "_source": "lehmer"
+      },
+      {
+        "id": "5",
+        "statement": "KMS spectral gap forces Lehmer: the BC algebra's KMS_1 phase transition has a spectral gap c_0 > 0 separating cyclotomic from non-cyclotomic states. Three independent forcing mechanisms: (a) the 36-pin rigidity via PIN-PRESERVATION — near-cyclotomic perturbations would shift predictions, (b) the L-function connection — c_0 = 0 implies L'(E,0) \\to 0 destabilizing BSD, (c) the YM mass-gap structural parallel — the e-circle's curvature (positive for U(1)) generates a Weitzenböck-type gap",
+        "status": "OPEN — the wall",
+        "depends": "2, 3, 4, Papers 1/8/26/29",
+        "_source": "lehmer"
+      },
+      {
+        "id": "6",
+        "statement": "Lehmer's conjecture: M(\\alpha) \\geq 1 + c_0 for all non-cyclotomic algebraic \\alpha",
+        "status": "FOLLOWS",
+        "depends": "5",
+        "_source": "lehmer"
+      },
+      {
+        "id": "Smyth",
+        "statement": "M(\\alpha) \\geq M(\\theta_0) \\approx 1.32472 for non-reciprocal \\alpha",
+        "status": "1971",
+        "depends": "",
+        "_source": "lehmer"
+      },
+      {
+        "id": "1",
+        "statement": "Primes generate BC algebra via mu_p",
+        "status": "KNOWN",
+        "depends": "--",
+        "_source": "goldbach"
+      },
+      {
+        "id": "2",
+        "statement": "Hecke semigroup N* encodes multiplicative structure",
+        "status": "KNOWN",
+        "depends": "--",
+        "_source": "goldbach"
+      },
+      {
+        "id": "3",
+        "statement": "Mellin bridge: additive <-> multiplicative",
+        "status": "ESTABLISHED",
+        "depends": "1, 2",
+        "_source": "goldbach"
+      },
+      {
+        "id": "4",
+        "statement": "Spectral prime density from explicit formula",
+        "status": "CONDITIONAL (cross-paper transport from Paper 13 RH; equivalently CONDITIONAL on CCM 2025, not an independent RH…",
+        "depends": "3",
+        "_source": "goldbach"
+      },
+      {
+        "id": "5",
+        "statement": "Circle method in BC/adelic setting",
+        "status": "OPEN",
+        "depends": "4",
+        "_source": "goldbach"
+      },
+      {
+        "id": "6",
+        "statement": "Even-indexed KMS_1 decomposition as prime convolution",
+        "status": "OPEN",
+        "depends": "5",
+        "_source": "goldbach"
+      },
+      {
+        "id": "1",
+        "statement": "Identify G = Q/Z (s.d.p.) N* acting on BC algebra",
+        "status": "ESTABLISHED",
+        "depends": "--",
+        "_source": "baum-connes"
+      },
+      {
+        "id": "2",
+        "statement": "Compute classifying space BG for proper G-actions",
+        "status": "OPEN",
+        "depends": "1",
+        "_source": "baum-connes"
+      },
+      {
+        "id": "3",
+        "statement": "K-homology K_*(BG) via AHSS",
+        "status": "OPEN",
+        "depends": "2",
+        "_source": "baum-connes"
+      },
+      {
+        "id": "4",
+        "statement": "K-theory K_(C_r(G))",
+        "status": "OPEN",
+        "depends": "--",
+        "_source": "baum-connes"
+      },
+      {
+        "id": "5",
+        "statement": "Assembly map mu is isomorphism",
+        "status": "LITERATURE",
+        "depends": "3, 4",
+        "_source": "baum-connes"
+      },
+      {
+        "id": "6",
+        "statement": "K-theoretic constraints on spectral structure",
+        "status": "OPEN",
+        "depends": "5",
+        "_source": "baum-connes"
       }
     ],
     "aggregatedWalls": [
@@ -10716,87 +10716,6 @@ const SHAPE_DATA = [
         "shared": "scaling dimension (dim-6 stratum).",
         "reason": "",
         "_source": "hodge"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L2",
-        "to": "rh",
-        "to_layer": "",
-        "shared": "scaling dimension (Pattern 5 / Epstein-zeta)",
-        "reason": "same regulator-independence engine.",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L3",
-        "to": "rh",
-        "to_layer": "L_BC",
-        "shared": "ergodic property",
-        "reason": "BC-algebra ergodicity in cluster expansion.",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L16",
-        "to": "rh",
-        "to_layer": "L_KMS",
-        "shared": "BC-KMS state",
-        "reason": "paper61 §10 KMS state restriction.",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L4",
-        "to": "rh",
-        "to_layer": "L_resolvent",
-        "shared": "scaling dimension (Boegli H1 uniform H^1 bound).",
-        "reason": "",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L10b",
-        "to": "rh",
-        "to_layer": "L_uniform",
-        "shared": "spectral gap (uniform-constant lemmas).",
-        "reason": "",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L13",
-        "to": "rh",
-        "to_layer": "L_Weil",
-        "shared": "scaling dimension (Weil quadratic form convergence).",
-        "reason": "",
-        "_source": "rh"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L7",
-        "to": "twin-primes",
-        "to_layer": "L_int",
-        "shared": "KK mode index.",
-        "reason": "",
-        "_source": "twin-primes"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L1",
-        "to": "lehmer",
-        "to_layer": "L_top",
-        "shared": "(gap-above-ground-state per paper60 §13 adjacency table).",
-        "reason": "",
-        "_source": "lehmer"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L1b",
-        "to": "lehmer",
-        "to_layer": "",
-        "shared": "(same paper60 §13 adjacency).",
-        "reason": "",
-        "_source": "lehmer"
       },
       {
         "from": "ym",
@@ -10863,93 +10782,66 @@ const SHAPE_DATA = [
       },
       {
         "from": "ym",
-        "from_layer": "L7",
-        "to": "goldbach",
-        "to_layer": "L_int",
-        "shared": "KK mode index (integer-power-sum on circle).",
-        "reason": "",
-        "_source": "goldbach"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L8",
-        "to": "ns",
-        "to_layer": "L_regularity",
-        "shared": "(deviation analog).",
-        "reason": "",
-        "_source": "ns"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L11",
-        "to": "ns",
-        "to_layer": "L_form",
-        "shared": "(form-factor regularity).",
-        "reason": "",
-        "_source": "ns"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L14",
-        "to": "ns",
-        "to_layer": "L_regularity",
-        "shared": "(mass-gap-as-regularity-scale; explicit programme-graph-edge).",
-        "reason": "",
-        "_source": "ns"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L17",
-        "to": "ns",
-        "to_layer": "L_T_munu",
-        "shared": "C*-algebra structure (energy-momentum tensor regularity).",
-        "reason": "",
-        "_source": "ns"
-      },
-      {
-        "from": "ym",
         "from_layer": "L5",
-        "to": "katz-sarnak",
-        "to_layer": "L_bridge",
-        "shared": "gauge class (bridge family k=4)",
-        "reason": "paper61 §10 symmetry-type selector.",
-        "_source": "katz-sarnak"
+        "to": "h12",
+        "to_layer": "L_class",
+        "shared": "gauge class (Galois complexification).",
+        "reason": "",
+        "_source": "h12"
       },
       {
         "from": "ym",
-        "from_layer": "L9",
-        "to": "katz-sarnak",
-        "to_layer": "L_classify",
-        "shared": "scaling dimension (operator-family classification).",
-        "reason": "",
-        "_source": "katz-sarnak"
+        "from_layer": "L2",
+        "to": "rh",
+        "to_layer": "",
+        "shared": "scaling dimension (Pattern 5 / Epstein-zeta)",
+        "reason": "same regulator-independence engine.",
+        "_source": "rh"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L3",
+        "to": "rh",
+        "to_layer": "L_BC",
+        "shared": "ergodic property",
+        "reason": "BC-algebra ergodicity in cluster expansion.",
+        "_source": "rh"
       },
       {
         "from": "ym",
         "from_layer": "L16",
-        "to": "baum-connes",
+        "to": "rh",
         "to_layer": "L_KMS",
         "shared": "BC-KMS state",
-        "reason": "KMS on spectral triple.",
-        "_source": "baum-connes"
+        "reason": "paper61 §10 KMS state restriction.",
+        "_source": "rh"
       },
       {
         "from": "ym",
-        "from_layer": "L17",
-        "to": "baum-connes",
-        "to_layer": "L_local",
-        "shared": "C*-algebra structure",
-        "reason": "local algebra (paper08 PROOF-CHAIN.md programme-edge: anomaly = index(D_A)=0).",
-        "_source": "baum-connes"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L7",
-        "to": "collatz",
-        "to_layer": "L_harm",
-        "shared": "KK mode index (HARMONICS alternative reading).",
+        "from_layer": "L4",
+        "to": "rh",
+        "to_layer": "L_resolvent",
+        "shared": "scaling dimension (Boegli H1 uniform H^1 bound).",
         "reason": "",
-        "_source": "collatz"
+        "_source": "rh"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L10b",
+        "to": "rh",
+        "to_layer": "L_uniform",
+        "shared": "spectral gap (uniform-constant lemmas).",
+        "reason": "",
+        "_source": "rh"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L13",
+        "to": "rh",
+        "to_layer": "L_Weil",
+        "shared": "scaling dimension (Weil quadratic form convergence).",
+        "reason": "",
+        "_source": "rh"
       },
       {
         "from": "ym",
@@ -11004,15 +10896,6 @@ const SHAPE_DATA = [
         "shared": "(DYNAMICS canonical).",
         "reason": "",
         "_source": "cramer"
-      },
-      {
-        "from": "ym",
-        "from_layer": "L5",
-        "to": "h12",
-        "to_layer": "L_class",
-        "shared": "gauge class (Galois complexification).",
-        "reason": "",
-        "_source": "h12"
       },
       {
         "from": "ym",
@@ -11400,6 +11283,123 @@ const SHAPE_DATA = [
         "shared": "scaling dimension (asymptotic regime via spectral gap rigidity).",
         "reason": "",
         "_source": "ym"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L8",
+        "to": "ns",
+        "to_layer": "L_regularity",
+        "shared": "(deviation analog).",
+        "reason": "",
+        "_source": "ns"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L11",
+        "to": "ns",
+        "to_layer": "L_form",
+        "shared": "(form-factor regularity).",
+        "reason": "",
+        "_source": "ns"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L14",
+        "to": "ns",
+        "to_layer": "L_regularity",
+        "shared": "(mass-gap-as-regularity-scale; explicit programme-graph-edge).",
+        "reason": "",
+        "_source": "ns"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L17",
+        "to": "ns",
+        "to_layer": "L_T_munu",
+        "shared": "C*-algebra structure (energy-momentum tensor regularity).",
+        "reason": "",
+        "_source": "ns"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L7",
+        "to": "twin-primes",
+        "to_layer": "L_int",
+        "shared": "KK mode index.",
+        "reason": "",
+        "_source": "twin-primes"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L7",
+        "to": "collatz",
+        "to_layer": "L_harm",
+        "shared": "KK mode index (HARMONICS alternative reading).",
+        "reason": "",
+        "_source": "collatz"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L5",
+        "to": "katz-sarnak",
+        "to_layer": "L_bridge",
+        "shared": "gauge class (bridge family k=4)",
+        "reason": "paper61 §10 symmetry-type selector.",
+        "_source": "katz-sarnak"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L9",
+        "to": "katz-sarnak",
+        "to_layer": "L_classify",
+        "shared": "scaling dimension (operator-family classification).",
+        "reason": "",
+        "_source": "katz-sarnak"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L1",
+        "to": "lehmer",
+        "to_layer": "L_top",
+        "shared": "(gap-above-ground-state per paper60 §13 adjacency table).",
+        "reason": "",
+        "_source": "lehmer"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L1b",
+        "to": "lehmer",
+        "to_layer": "",
+        "shared": "(same paper60 §13 adjacency).",
+        "reason": "",
+        "_source": "lehmer"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L7",
+        "to": "goldbach",
+        "to_layer": "L_int",
+        "shared": "KK mode index (integer-power-sum on circle).",
+        "reason": "",
+        "_source": "goldbach"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L16",
+        "to": "baum-connes",
+        "to_layer": "L_KMS",
+        "shared": "BC-KMS state",
+        "reason": "KMS on spectral triple.",
+        "_source": "baum-connes"
+      },
+      {
+        "from": "ym",
+        "from_layer": "L17",
+        "to": "baum-connes",
+        "to_layer": "L_local",
+        "shared": "C*-algebra structure",
+        "reason": "local algebra (paper08 PROOF-CHAIN.md programme-edge: anomaly = index(D_A)=0).",
+        "_source": "baum-connes"
       }
     ],
     "aggregatedBonus": [
@@ -11931,7 +11931,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group",
+        "statement": "Let G be any compact simple Lie group",
         "_source": "ym"
       },
       {
@@ -13935,7 +13935,7 @@ const SHAPE_DATA = [
         "kind": "Theorem",
         "number": "2.1",
         "name": "YM Existence and Mass Gap",
-        "statement": "*Let G be any compact simple Lie group",
+        "statement": "Let G be any compact simple Lie group",
         "_source": "ym"
       },
       {
@@ -16710,6 +16710,6 @@ const ARTIFACT_BODIES = {
   }
 };
 const LADDER_NAMES = ["Strategy exists", "Brief exists", "X-Ray done", "Compliance locked", "Bare locked", "Full composed", "Full locked", "Zenodo published", "arXiv published", "Journal published", "Community accepted", "PROVED", "UNIVERSALLY PROVED"];
-const BUILD_TIMESTAMP = "2026-04-14T15:13:57";
+const BUILD_TIMESTAMP = "2026-04-14T15:24:44";
 const SHAPE_COUNT = 43;
 const AUDIT_PENDING_COUNT = 5;

@@ -100,6 +100,51 @@ Extract:
 - `paper2` — cosmology paper (published); extract all cosmological predictions
 - Any other paper with a `preprint/` subdirectory — scan for theorems
 
+### Derivables pipeline (MANDATORY — the code that realizes the predictions)
+
+The programme's master-table pin values are not just formulas — they are also executable code. This pipeline lives in the **sister project** `/Users/gsix/quantum-geometry-in-5d/paper2/camb/`.
+
+Scan and include in the Herald as a single programme element under `§9.X Derivables pipeline`, Herald ID `DERIVABLES-PIPELINE-CAMB`:
+
+**Specification:**
+- `/Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md` — the 36-pin table
+
+**De facto master driver:**
+- `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_age.py` — runs CAMB across 15+ scenarios (Planck LCDM baseline, raw Sector A, Laurent-shifted, Paper 2 A/B/C, TRGB, θ_*-matched); writes `results.json`
+
+**Supporting compute scripts (independent utilities, each with its own sub-ID):**
+
+| Script | Sub-ID | Validates |
+|---|---|---|
+| `compute_baryogenesis.py` | `DERIVABLES-BARYOGENESIS` | Mirror baryon asymmetry; Ω_DM/Ω_b from 1/ξ² |
+| `compute_mirror_matter.py` | `DERIVABLES-MIRROR-MATTER` | Dark-matter relic; Z₂ orbifold channels (mirror baryons, grav freeze-in, KK gravitons) |
+| `compute_g2_running.py` | `DERIVABLES-G2-RUNNING` | 2-loop SM RGE; m_ν/m_KK = 5/2 identity |
+| `compute_R_closure_surface.py` | `DERIVABLES-R-CLOSURE` | R from Casimir energy (R_A) + 5/2 topological identity (R_B); 2D intersection |
+| `compute_R_quantization.py` | `DERIVABLES-R-QUANTIZATION` | R_A(ξ) = R_B at ξ_obs = 0.432 |
+| `compute_xi_from_c_nu.py` | `DERIVABLES-XI-INVERSION` | ξ from bulk neutrino localization in RS S¹/Z₂ |
+| `neff_extended_analysis.py` | `DERIVABLES-NEFF-EXTENDED` | CMB degeneracy; time-varying N_eff at BBN |
+| `plot_results.py` | `DERIVABLES-PLOTS` | Visualization (~10 PNG outputs) |
+
+**Environment + invocation:**
+- venv: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/.venv/`
+- Python 3.14.2, CAMB 1.6.6
+- Canonical command: `cd /Users/gsix/quantum-geometry-in-5d/paper2/camb && ./.venv/bin/python3 compute_age.py`
+
+**Result artifacts:**
+- `results.json` — CAMB outputs across 15 scenarios (H₀, age, σ₈, S₈, θ_*, r_drag, Ω_m, z_star, z_drag, DA_*)
+- `neff_analysis_results.json` — N_eff degeneracy
+- PNG plots: `plot_ages.png`, `plot_Hz.png`, `plot_s8.png`, `plot_summary.png`, `plot_wz.png`, `closure_2D_surface.png`, `closure_dN_vs_MGUT.png`, `closure_mnu_test.png`, `closure_surface_combined.png`, `closure_xi_vs_MGUT.png`, `xi_vs_c_nu.png`
+
+**Validation state (round 2 Laurent-shifted, 2026-04-11):**
+- H₀, age, Ω_m all within ±0.4σ of Planck
+- θ_* tension −35σ is structural (framework's one falsifiable disagreement; testable by CMB-S4 + DESI DR3)
+- `paper12/research/271-camb-framework-rerun-round-1.md` (raw Sector A synthesis)
+- `paper12/research/272-camb-framework-rerun-round-2.md` (Laurent-shifted synthesis)
+
+**Cross-reference discipline:** every Sector A pin entry in Herald §8 carries a pointer to `DERIVABLES-PIPELINE-CAMB`. Every Sector B pin via `compute_g2_running.py` carries `DERIVABLES-G2-RUNNING`. Etc.
+
+**Load-bearing note:** this is the programme's EXECUTABLE bridge between theory (formulas in master table) and empirics (CAMB outputs vs Planck/DESI). Without the pipeline, the 36-pin precision claim has no implementation. With it, each pin is REPRODUCIBLE by any reader with the repo + venv.
+
 ---
 
 ## Category structure of `herald.md`
