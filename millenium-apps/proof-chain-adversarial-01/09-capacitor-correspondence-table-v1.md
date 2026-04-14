@@ -236,7 +236,48 @@ The "transposition recipe" field is what makes the cell ACTIONABLE. Without it, 
 
 ---
 
+## v1 + H4 Wave 1 updates (2026-04-13)
+
+The H4 Capacitor Bypass PCA Wave 1 (Track 2, 2026-04-13) produced 5 durable Millennium-grade cell-fills + 1 new kill + 5 structural insights. Full per-cell content lives at `paper08-yang-mills/h4-capacitor-bypass/capacitor/updates/wave1-cell-fills.md` and the per-Author nodes at `paper08-yang-mills/h4-capacitor-bypass/nodes/W1-*.md`. Summary integrated here; PCA runners should reference this section as authoritative for the listed cells.
+
+### New / promoted Tier 1 cells
+
+**LANG↔QFT — Geometric Langlands = Kapustin-Witten twisted N=4 SYM S-duality.** PROMOTED from v1 Candidate → Tier 1. Two-layer status: Layer A (mathematical geometric Langlands) PROVED by Gaitsgory-Raskin 2024 (arXiv:2405.03599 through 2409.09856, 5 papers, 2025 Breakthrough Prize); Layer B (Kapustin-Witten physics-level equivalence) ESTABLISHED (arXiv:hep-th/0604151). Load-bearing FRAMEWORK-WIDE for RH, BSD, PvNP chains that touch automorphic forms. Transposition recipe in W1-C node §2. UNLOCK-5 named: Gaitsgory-Raskin extension to function fields.
+
+**MICRO↔QFT — Non-perturbative microlocal OPE (4D gauge extension, characterized not constructed).** Tier 1 CONJECTURED-NEGATIVE for H4 load-bearing. 4-layer axiom structure NP-1′ through NP-7 characterizing what a non-perturbative 4D gauge OPE framework would require. BFR 2025 arXiv:2512.14227 §4 verified scalar-only. K-6 boundary confirmed (Hollands-Kopper 2011 is perturbative). Load-bearing for future framework work: NP-3 state-existence problem formulation reusable for BSD and PvNP scalar contexts.
+
+**ERG↔QFT — Cluster-expansion + Langevin lattice construction (Shen-Zhu-Zhu / Nissim programme).** Tier 1 ESTABLISHED for stated scope (lattice strong-coupling mass gap + infinite volume + large-N). CONJECTURED-NEGATIVE for H4 (lattice-only; three separate open steps: continuum limit / intrinsic UV extraction / $C_N$ derivation). Nissim arXiv:2510.22788 verified lattice-only. Sub-step diagnostic is the template for any ERG→OPE bypass attempt in any proof chain.
+
+**PROB↔SPEC — Lateral Borel summation via Écalle resurgence.** Tier 1 ESTABLISHED for framework scope (QM, CP(N-1), matrix models, 4D YM on $\mathbb{R} \times T^3$ twisted); CONJECTURED for uncompactified 4D YM on $\mathbb{R}^4$. Conditional on UNLOCK-1 (extension to $\mathbb{R}^4$) + UNLOCK-2 (Watson-type sectorial matching). CERN 2024 Summer School arXiv:2511.15528 + Dunne 2024-2025 lectures = live machinery. Transposition recipe reusable for RH (random-matrix spacing resurgence), BSD (Keating-Snaith moment resurgence), PvNP (Popa-rigidity ↔ Stokes-automorphism transfer). One of the broadest cell-fills in the wave.
+
+**PROB↔SPEC — Parisi-SVZ Renormalon-OPE Dictionary (complementary to lateral Borel).** Tier 1 ESTABLISHED. IR renormalon at Borel-plane $u=2$ encodes ambiguity magnitude (dimension-4 gluon condensate, $\Lambda^4/Q^4$ scale), NOT the Wilson coefficient $C_N$. Key structural insight (promoted to §K-S2): $C_N = 2(N^2-1)/\pi^6$ is one-loop perturbative and already in hand; transseries/lateral-Borel bypass tasks do NOT need to re-derive $C_N$, only Gevrey-sector analyticity.
+
+### New kill
+
+**K-8 — Transseries-reads-$C_N$ trap.** Pattern: structural-conflation (Borel-plane ambiguity magnitude vs Wilson coefficient). An argument claiming non-perturbative transseries structure of 4D SU(N) YM produces $C_N$ from renormalon cancellation conflates two structurally distinct objects at different $1/Q$ orders. Re-entry gate: requires independent derivation of $C_N$ from non-perturbative transseries structure; no candidate mechanism exists (Stokes constants for pure 4D SU(N) YM renormalons are currently unknown).
+
+### Structural insights (framework-level)
+
+- **S2 ($C_N$ orthogonality)**: lateral-Borel bypass tasks need Gevrey analyticity only, not $C_N$ re-derivation. Reframes future H4 work (and any similar AF-coefficient-structure problem).
+- **S3 (Gaitsgory-Raskin 2024 PROVED)**: Layer A of LANG↔QFT is now a theorem. Post-2024 toolkit (derived algebraic geometry, ~1000 pages) is available for future proof chains.
+- **S5 (Hastings-Koma wrong-observable)**: Hastings-Koma / Nachtergaele-Sims exponential long-distance decay is the wrong observable for short-distance polynomial-singularity problems (H4-like). Pre-kills "spectral-gap → UV asymptotics via Hastings-Koma extension" routes.
+
+### Statistics update (v1 + H4 Wave 1)
+
+| Metric | v1 count | v1 + H4 Wave 1 | Change |
+|---|---|---|---|
+| Tier 1 filled cells (load-bearing) | 30 | **34** | +4 (MICRO↔QFT, ERG↔QFT, 2× PROB↔SPEC sub-cells) |
+| Tier 2 filled cells | 10 | 10 | unchanged |
+| Candidate cells (unexplored) | 14 | 13 | -1 (LANG↔QFT promoted out) |
+| Total filled (Tier 1 + Tier 2) | 40 | **44** | +4 net |
+| Kill list entries | 7 (K-1 through K-7) | **8** (K-1 through K-8) | +1 |
+| Fill rate (Tier 1 + Tier 2 / 276) | 14.5% | **~16.0%** | +1.5 pp |
+| Priority cells to fill (escape routes) | 17 | 17 | unchanged structurally; sharper intelligence on each |
+
+---
+
 *The correspondence table is the capacitor. More filled cells = more escape routes. More escape routes = more bypass options when a link is stuck. The PCA reads this table and thinks in one domain while speaking in another. The cross-product is the method.*
 
 *v1: 2026-04-12. 24 domains, 40 filled cells, 17 priority targets.*
+*v1 + H4 Wave 1 updates: 2026-04-13. 44 filled cells, 8 kills. LANG↔QFT PROVED. K-8 + S2/S3/S5 integrated.*
 *G Six and Claude Opus 4.6.*
