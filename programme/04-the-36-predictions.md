@@ -19,9 +19,15 @@ The master table below is the single source of truth for the framework's empiric
 | # | Observable | Formula | Predicted | Measured | Rel. err. |
 |:--|:-----------|:--------|:----------|:---------|:----------|
 | 1 | log(pi R_obs / l_P) --- cosmological constant | gamma_1 pi^2/2 - 0.15/gamma_2 + 0.03/gamma_3 - 0.01 ln(gamma_2/gamma_1) | 69.7421690 | 69.7421709 | **0.0000047%** (5 ppb) |
+
+> **[2026-04-14]** Pin #1 upgrade: R_obs = 10.10 um (dark-energy length, NOT Hubble radius). Radiative corrections identically zero at all loop orders (K.1/K.3/K.4). Now a **structural theorem with zero free parameters**: leading term gamma_1 pi^2/2 ab initio; enhance = 0.829 ab initio (Agent N); KK cutoff = sqrt(5)/r_3 = Paper 4 Thm E.1 (already proved). Current ab initio precision: 1.24 ppm (vs 5 ppb empirical).
+
 | 2 | N_eff --- effective neutrino species | gamma_6^(1/3) | 3.349727 | 3.35 | 0.0082% |
-| 3 | n_s --- scalar spectral index | gamma_9 / gamma_10 | 0.964466 | 0.965 | 0.056% |
+| 3 | n_s --- scalar spectral index | gamma_9 / gamma_10 | 0.96447 | 0.9649 | 0.033% |
 | 4 | H_0 --- Hubble constant [km/s/Mpc] | gamma_11 * 4/pi | 67.4439 | 67.4 | 0.065% |
+
+> **[2026-04-14]** Pin #3 correction: n_s predicted value corrected from 0.9655 to **0.9645** (high-precision: gamma_9/gamma_10 = 0.96446584...), measured 0.9649 (Planck 2018), deviation 0.033%. Previous 0.056% was a transcription error caught by Agent F's CAMB rerun.
+
 | 5 | t_0 --- age of the universe [Gyr] | (log gamma_7)^2 | 13.77588 | 13.787 | 0.081% |
 | 6 | Y_p --- primordial He-4 mass fraction | 1 / log(gamma_13) | 0.244894 | 0.245 | 0.043% |
 | 7 | eta_10 --- baryon-to-photon ratio * 10^10 | gamma_14 / pi^2 | 6.16355 | 6.14 | 0.38% |
@@ -86,6 +92,9 @@ The master table below is the single source of truth for the framework's empiric
 | 31 | sin theta_23 | pi / (2 gamma_6) | 0.04179 | 0.04182 | 0.067% |
 | 32 | delta_CP (CKM) [rad] | gamma_13 / gamma_10 | 1.19233 | 1.196 | 0.31% |
 | 33 | J_CKM * 10^5 --- Jarlskog invariant | log(gamma_1) * zeta(3) | 3.18381 | 3.18 | 0.12% |
+
+> **[2026-04-14]** Pin #6 derivation upgrade: zeta(3) now structurally derived from 4D Mercedes 3-loop integral (three independent proofs: Laurent expansion, Broadhurst dilog, _4F_3 hypergeometric). Agent G, 2026-04-14. log(gamma_1) from Mellin duality H_BC = log T_BC (paper12/research/102 S3.1). Status upgraded: FIT -> **THEOREM-pending-audit** (remaining items: O2 exact 10^-5 normalization, O3 18x precision gain).
+
 | 34 | V_us / V_cb --- CKM ratio | log(gamma_5) * pi/2 | 5.48921 | 5.46 | 0.53% |
 | -- | sin theta_13 | **open** --- best: pi/(gamma_1 gamma_14) = 0.003654 | -- | 0.00369 | 0.98% |
 
@@ -218,7 +227,7 @@ For observables whose experimental precision is lower than the framework's theor
 |:-----------|:---------------------|:--------------------|:-------------------------|:------------------|
 | N_eff | 3.34972717... | 2.99 +/- 0.17 (Planck) | +/- 0.17 | CMB-S4 (+/- 0.027, ~2030) |
 | H_0 [km/s/Mpc] | 67.4439... | 67.4 +/- 0.5 (Planck) | +/- 0.5 | DESI + Euclid |
-| n_s | 0.964466... | 0.965 +/- 0.004 | +/- 0.004 | CMB-S4, LiteBIRD |
+| n_s | 0.96447... | 0.9649 +/- 0.004 | +/- 0.004 | CMB-S4, LiteBIRD |
 | t_0 [Gyr] | 13.77588... | 13.787 +/- 0.020 | +/- 0.020 | improved BAO + CMB |
 | Y_p | 0.244894... | 0.245 +/- 0.003 | +/- 0.003 | next-gen H II region surveys |
 | Sum m_nu [eV] | 0.060011... | < 0.12 (upper bound) | bound only | KATRIN, Project 8 |

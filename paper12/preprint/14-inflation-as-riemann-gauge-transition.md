@@ -234,7 +234,7 @@ pivot scale), the framework's prediction is testable.
 
 The framework's existing formula:
 ```
-n_s = γ_9 / γ_10 ≈ 0.9655
+n_s = γ_9 / γ_10 ≈ 0.9645
 ```
 
 This uses γ_9 and γ_10, NOT γ_5 and γ_2. So either:

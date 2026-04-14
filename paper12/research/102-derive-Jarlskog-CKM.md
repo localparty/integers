@@ -283,14 +283,29 @@ zeta(3) as the cubic BC normalisation (Section 3.2c).
 
 (O1) A rigorous derivation of the zeta(3) factor from the
 BC partition function's third-order expansion (Section 3.2).
+**CLOSED 2026-04-14 by Agent G (Mercedes 4d integral).** See
+`paper1/code/mercedes-4d-integral/FINDINGS.md`: zeta(3) arises
+from the 3-loop QFT Mercedes diagram, giving a first-principles
+origin for the cubic normalisation.
 
 (O2) The exact origin of the 10^{-5} factor from the BC
-energy hierarchy (Section 3.4).
+energy hierarchy (Section 3.4). **STILL OPEN.** The 10^{-5}
+factor origin remains to be derived -- it is the last audit
+item for Pin #6 theorem status.
 
 (O3) Understanding why the direct formula is 18x more precise
 than the factored form -- this is a strong structural clue that
 J couples to a *different* operator on H_R than the product
-of the individual CKM-angle operators.
+of the individual CKM-angle operators. **STILL OPEN.**
+
+**Pin #6 cross-reference.** This document is the structural
+anchor for Pin #6 (J_CKM × 10⁵ = log(γ_1) · ζ(3)), currently
+labeled THEOREM-pending-audit in Paper 1 Table E.1 row 6.
+With O1 closed, remaining audit items reduce to O2 (10⁻⁵
+normalisation origin) and O3 (18× precision gain). Agent L
+audit 2026-04-14 confirmed Papers 13 and 26 do **not** contain
+the load-bearing content for Pin #6 -- §3.1 of this document
+(Mellin duality H_BC = log T_BC) is the actual anchor.
 
 ---
 

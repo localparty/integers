@@ -13,7 +13,7 @@
 | 1 | Primes generate BC algebra via mu_p | KNOWN | -- | Bost-Connes 1995 |
 | 2 | Hecke semigroup N* encodes multiplicative structure | KNOWN | -- | BC construction |
 | 3 | Mellin bridge: additive <-> multiplicative | ESTABLISHED | 1, 2 | Paper 12 transposition |
-| 4 | Spectral prime density from explicit formula | CONDITIONAL on RH | 3 | Riemann-von Mangoldt explicit formula |
+| 4 | Spectral prime density from explicit formula | CONDITIONAL (cross-paper transport from Paper 13 RH; equivalently CONDITIONAL on CCM 2025, not an independent RH assumption) | 3 | Riemann-von Mangoldt explicit formula; see Paper 13 PROOF-CHAIN.md (RH at 8/10 conditional on CCM 2025). Tagged cross-paper 2026-04-14 per Agent-I audit item 6. |
 | 5 | Circle method in BC/adelic setting | OPEN | 4 | Hardy-Littlewood-Vinogradov + adelic reformulation |
 | 6 | Even-indexed KMS_1 decomposition as prime convolution | OPEN | 5 | Novel -- the core conjecture |
 

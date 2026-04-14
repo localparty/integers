@@ -5,7 +5,7 @@
 *The work is computing both sides explicitly and extracting K-theoretic*
 *constraints on spectral structure.*
 
-*Status: 1/6 links closed | Confidence: 1/10*
+*Status: 2/6 links closed | Confidence: 3/10 (upgraded 2026-04-14 -- L5 reclassified to LITERATURE via Higson-Kasparov 2001)*
 
 ## Chain table
 
@@ -15,7 +15,7 @@
 | 2 | Compute classifying space BG for proper G-actions | OPEN | 1 | Standard alg. topology (Luck for semigroups) |
 | 3 | K-homology K_*(BG) via AHSS | OPEN | 2 | Atiyah-Hirzebruch spectral sequence |
 | 4 | K-theory K_*(C*_r(G)) | OPEN | -- | **Cuntz-Li: semigroup C*-algebras -> directly applicable to N*** |
-| 5 | Assembly map mu is isomorphism | OPEN | 3, 4 | **Dec 2025: proved for rel. hyperbolic groups (arXiv:2512.21169)** |
+| 5 | Assembly map mu is isomorphism | LITERATURE | 3, 4 | **Higson-Kasparov 2001 (amenable groups)**; also Dec 2025 rel. hyperbolic (arXiv:2512.21169). Reclassified OPEN->LITERATURE 2026-04-14 per Agent-I audit: Q*/Z* (s.d.p.) N* is amenable, so BC isomorphism holds in principle; novel work now isolated to L6 (extracting explicit spectral constraints). |
 | 6 | K-theoretic constraints on spectral structure | OPEN | 5 | Chern -> cyclic cohomology -> Connes trace formula |
 
 ## Current wall

@@ -255,28 +255,42 @@ to arbitrary precision in mpmath.
 
 ### 3.2 Numerical evaluation (sketch)
 
+> **[CORRECTION, 2026-04-14 — Agent N.]** *The back-of-envelope
+> estimates in the table below were built on the naive asymptotic*
+> $|\zeta(1+i\tau)|\sim 1/\sqrt{\tau}$*, which is **incorrect**
+> as a pointwise estimator in this regime. Independent closed-form
+> evaluation of (3.3) at 30-digit precision (see
+> `paper1/code/pin1-matrix-elements/` and
+> `paper1/code/pin1-cp-enhancement/`) gives*
+> $|K_{12}^{\rm PV}(\log p)| \approx 0.57\text{–}0.74$ *across the
+> dominant primes — roughly* **4× larger** *than the table below.
+> The table and the "$[0.15, 0.22]$" band quoted in §3.2–§3.3 are
+> superseded; the corrected band is* $[0.57, 0.74]$*. The closed
+> form (3.3) itself is correct; only the numerical sketch was
+> wrong. The downstream consequences (§4.2–§4.4, §5.2, §6.2, §7 S5–S9)
+> are updated in an inline correction note at §4.3.*
+
 With $\gamma_1 = 14.1347251$, $\gamma_2 = 21.0220396$,
 $\gamma_2 - \gamma_1 = 6.8873145$:
 
-| p | $\log p$ | $1 + i(\gamma_2 - \gamma_1 - \log p)$ | $|K_{12}^{\rm PV}(\log p)|$ |
-|:--|:---------|:--------------------------------------|:----------------------------|
-| 2 | 0.6931 | $1 + 6.1942\,i$ | $\approx 0.158$ |
-| 3 | 1.0986 | $1 + 5.7887\,i$ | $\approx 0.171$ |
-| 5 | 1.6094 | $1 + 5.2779\,i$ | $\approx 0.187$ |
-| 7 | 1.9459 | $1 + 4.9414\,i$ | $\approx 0.198$ |
-| 11 | 2.3979 | $1 + 4.4894\,i$ | $\approx 0.218$ |
+| p | $\log p$ | $1 + i(\gamma_2 - \gamma_1 - \log p)$ | $|K_{12}^{\rm PV}(\log p)|$ *(superseded)* | $|K_{12}^{\rm PV}(\log p)|$ *(corrected 2026-04-14)* |
+|:--|:---------|:--------------------------------------|:-------------------|:-------------------|
+| 2 | 0.6931 | $1 + 6.1942\,i$ | $\approx 0.158$ | $\approx 0.58$ |
+| 3 | 1.0986 | $1 + 5.7887\,i$ | $\approx 0.171$ | $\approx 0.63$ |
+| 5 | 1.6094 | $1 + 5.2779\,i$ | $\approx 0.187$ | $\approx 0.68$ |
+| 7 | 1.9459 | $1 + 4.9414\,i$ | $\approx 0.198$ | $\approx 0.72$ |
+| 11 | 2.3979 | $1 + 4.4894\,i$ | $\approx 0.218$ | $\approx 0.74$ |
 
-(Estimates from $|\zeta(1 + i\tau)| \sim 1/\sqrt{\tau}$ at large
-$\tau$, refined by the Riemann–Siegel asymptotic; the denominator
-$\sqrt{|\zeta(1+2i\gamma_n)|}$ at $\gamma_1, \gamma_2$ is of order
-$\sqrt{0.6} \approx 0.77$ each, giving denominator $\approx 0.6$.)
+(The superseded column used the naive $|\zeta(1 + i\tau)| \sim 1/\sqrt{\tau}$
+asymptotic; the corrected column uses direct numerical evaluation of (3.3)
+at 30 digits. The denominator $\sqrt{\zeta(1+2i\gamma_1)\,\overline{\zeta(1+2i\gamma_2)}}$
+is of order $\approx 0.6$.)
 
-The values lie in **$|K_{12}^{\rm PV}(\log p)| \in [0.15, 0.22]$**
-for the dominant primes. This sits exactly in the geometric-mean
-band $0.1$–$0.3$ of research/17 §4.4, and is **one and a half orders
-of magnitude above** the truncated-Hecke Model B estimate
-$\sim 0.01$ — the difference being that the PV scheme gives the
-true $T$-eigenvectors as Dirichlet characters, not the
+The **corrected** values lie in **$|K_{12}^{\rm PV}(\log p)| \in [0.57, 0.74]$**
+for the dominant primes — roughly 4× above the original naive
+band $[0.15, 0.22]$, and **more than an order of magnitude above**
+the truncated-Hecke Model B estimate $\sim 0.01$. The PV scheme
+gives the true $T$-eigenvectors as Dirichlet characters, not the
 spread-out eigenvectors of the band-matrix Hecke truncation.
 
 ### 3.3 Why this value, not the truncated-model value
@@ -370,18 +384,36 @@ $$
 
 ### 4.3 Comparison with the empirical
 
+> **[CORRECTION, 2026-04-14 — Agent N.]** *The "80× below empirical"
+> verdict below was an artefact of the §3.2 naive-asymptotic error.
+> With the corrected* $|K_{12}^{\rm PV}|\approx 0.57\text{–}0.74$ *the
+> PV value of* $|V_{12}|^2$ *is* **0.4 at enhance = 1** *(mild
+> suppression needed, not 9× enhancement). The corrected verdict is:
+> "enhance" is* $\approx 0.83$ *ab initio from a proper SM gauge-sector
+> sum (Agent N 2026-04-14,* `paper1/code/pin1-cp-enhancement/`*),
+> not a factor of 9. See the retraction note in §6.2(b) below.*
+
 | Source | $|V_{12}|^2$ | Ratio to empirical 0.2425 |
 |:-------|:-------------|:--------------------------|
 | Empirical (research/05 §4.1) | $0.2425$ | $1$ |
 | Naive $|K_{12}|\sim 1$ (research/16) | $0.12$ | $0.49$ |
-| **PV scheme (this note, eq. 4.4)** | $\mathbf{3\times 10^{-3}}$ | $\mathbf{0.012}$ |
+| **PV scheme (naive-asymp., superseded)** | $3\times 10^{-3}$ | $0.012$ |
+| **PV scheme (corrected 2026-04-14, enhance = 1)** | $\approx 0.40$ | $\approx 1.65$ |
+| **PV scheme (corrected, enhance = 0.829 ab initio)** | $\approx 0.27$ | $\approx 1.11$ |
 | Geometric-mean band (research/17) | $\sim 10^{-3}$ | $\sim 4\times 10^{-3}$ |
 | Truncated Hecke (research/17 Model B) | $2.4\times 10^{-5}$ | $10^{-4}$ |
 
-The PV scheme gives $|V_{12}|^2 \approx 3\times 10^{-3}$, which is
+The corrected PV scheme with ab-initio SM enhance = 0.829 gives
+$|V_{12}|^2 \approx 0.27$, within ~11% of the empirical $0.2425$
+(prior to the full $|V_{1m}|^2$ pipeline; see
+`paper1/code/pin1-matrix-elements/FINDINGS.md`). The "80× below"
+verdict is retracted; the original paragraph below is kept for
+provenance only.
+
+~~The PV scheme gives $|V_{12}|^2 \approx 3\times 10^{-3}$, which is
 **80 times below the empirical $0.2425$** — much better than the
 truncated Hecke estimate ($10^4$ below) but still nowhere near a
-match.
+match.~~ *[Superseded 2026-04-14 — see correction above.]*
 
 ### 4.4 Honest assessment
 
@@ -511,16 +543,32 @@ empirical (§5.2). The residual lives in $c_p$, not in $K_{12}$.
 
 ### 6.2 Structural (matched up to one-loop SM)
 
-(a) The empirical $|V_{12}|^2 = 0.2425$ is **80 times** the PV
-prediction $|V_{12}^{\rm PV}|^2 \approx 3\times 10^{-3}$.
+> **[RETRACTION, 2026-04-14 — Agent N.]** *Items (a)–(c) below were
+> built on the §3.2 naive-asymptotic error (|K_{12}| ≈ 0.15–0.22).
+> With the corrected |K_{12}| ≈ 0.57–0.74, the "factor-9 enhancement
+> needed to close Pin #1" is **superseded**: the ab-initio SM
+> enhancement is 0.829 (a mild suppression), not 9×. The four
+> "omitted sectors" (heavy quarks, moduli, graviton, EW breaking)
+> each contribute identically zero by independent mechanisms. See
+> `paper1/code/pin1-cp-enhancement/FINDINGS.md` for the gauge-sector
+> sum and zero-contribution proofs. The text below is kept for
+> provenance only; do not cite items (a)–(c) as an active claim.*
 
-(b) Closing this factor requires a $9\times$ enhancement of the
+(a) ~~The empirical $|V_{12}|^2 = 0.2425$ is **80 times** the PV
+prediction $|V_{12}^{\rm PV}|^2 \approx 3\times 10^{-3}$.~~ *[Superseded.]*
+
+(b) ~~Closing this factor requires a $9\times$ enhancement of the
 SM coupling estimate $c_2, c_3$ of research/07 §4.4, which is
 **plausible** from the omitted heavy-quark, moduli, graviton,
-and EW-breaking contributions.
+and EW-breaking contributions.~~ *[Superseded 2026-04-14 — the
+ab-initio enhancement is 0.829, a mild suppression. See
+`paper1/code/pin1-cp-enhancement/`.]*
 
-(c) Verification of the enhancement is a **matter-content
-computation** in research/07, not a regularisation question.
+(c) ~~Verification of the enhancement is a **matter-content
+computation** in research/07, not a regularisation question.~~
+*[Superseded — no enhancement is needed; the ab-initio value
+0.829 from the SM gauge sector is already in mild tension
+(suppression) with empirical, not enhancement.]*
 
 ### 6.3 Open
 

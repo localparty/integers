@@ -11,8 +11,12 @@
 | 2 | Trinity functor Phi_comp preserves cohomology: H^k(Sym(Phi(X)),A) = H^k(Sym(X),A) | PROOF OUTLINED | -- |
 | 3 | Bulatov-Zhuk CSP Dichotomy: Taylor polymorphism <-> tractable | PROVED (EXTERNAL) | -- |
 | 4 | Taylor gap = spectral gap of M_Bool^Gamma (verified 6/6 Schaefer classes) | COMPUTATIONALLY VERIFIED | 1, 2 |
-| 5 | Non-full <-> Taylor equivalence | OPEN (backward direction) | 1-4 |
+| 5 | Non-full <-> Taylor equivalence | FORWARD (Taylor -> non-full): numerically supported by `paper28-pvnp/code/pvnp_nonfullness_test.py` + Bulatov-Zhuk external -- treat as numerically settled. BACKWARD (non-full -> Taylor): OPEN -- the genuine wall. | 1-4 |
 | 6 | P != NP: M_Bool^{3-SAT} full -> not P-time; 3-SAT NP-complete; done | CONDITIONAL on 5 | 3, 4, 5 |
+
+## L5 forward-direction sharpening (2026-04-14)
+
+Per Agent-I open-frontier audit (item 4): the forward direction (Taylor -> non-full) is numerically tested in `paper28-pvnp/code/pvnp_nonfullness_test.py` which iterates over P-time CSPs, and is consistent with Bulatov-Zhuk on the CSP side. The backward framing in the chain already presupposes the forward half; the row above now makes this explicit. No confidence change -- only a cleaner wall statement.
 
 ## Current wall
 **Link 5 backward: non-full -> Taylor polymorphism.** Going from infinite-dimensional operator-algebraic property (non-fullness of type III_1 factor) to finite-domain algebraic property (Taylor operation). Seven routes attempted: (A) direct spectral gap bypass [highest priority], (B) universal-algebraic, (C) channel correspondence via conditional expectation, (D) Popa cocycle superrigidity, (E) Kazhdan/Haagerup bridge, (F) trinity dictionary inversion, (G) conditional fallback [current state].

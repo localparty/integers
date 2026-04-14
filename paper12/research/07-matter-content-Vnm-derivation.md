@@ -461,6 +461,20 @@ moduli sector) is a substantial project deferred to later work.
 The claim (4.10) is an order-of-magnitude estimate, correct up to
 an O(1) prefactor.
 
+> **[UPDATE, 2026-04-14 — Agent N.]** *The "deferred to later work"
+> O(1) prefactor has been computed. The proper gauge-sector sum*
+> $\frac{1}{84}\sum_i N_i |b_i| = \frac{69.6}{84} = 0.8286$ *gives
+> an ab-initio enhancement factor of **0.829** (mild suppression,
+> not enhancement). The four omitted sectors cited above — heavy
+> quarks (already in* $b_3 = 7$*), EW breaking (BC spectral scale
+> is unbroken-phase), graviton/5D KK tower (Paper 1 K.1 + K.3 + K.4
+> cancellation), and moduli (Planck-heavy or absorbed in the gauge
+> sum) — each contribute exactly zero by an independent mechanism.
+> Consequently the "factor-of-9 enhancement needed to close Pin #1"
+> narrative that propagated through research/32 §6.2(b) is*
+> **retracted**. *See `paper1/code/pin1-cp-enhancement/FINDINGS.md`
+> for the full derivation and the zero-contribution arguments.*
+
 ---
 
 ## 5. (C3) Conversion to the Spectral Side
@@ -471,10 +485,21 @@ Substituting (3.4) into (2.2):
 
 $$
 V_{1m} \;=\; \sum_p\,\frac{c_p}{\sqrt p}\,
-\bigl[K_{1m}(\log p) + K_{m1}(\log p)\bigr]
+\bigl[K_{1m}(\log p) + \overline{K_{m1}(\log p)}\bigr]
 \;+\;\text{(k ≥ 2 BC-index corrections)},
 \tag{5.1}
 $$
+
+> **[HERMITICITY FIX, 2026-04-14 — Agent O.]** *The original
+> expression $[K_{1m}(\log p) + K_{m1}(\log p)]$ makes $V_{nm}$
+> non-Hermitian (numerical check: $V_{11}$ acquires a spurious
+> imaginary part $\sim 0.23\,i$). The physically correct form — with
+> $\mu_p^*$ acting as the adjoint of $\mu_p$ — is
+> $[K_{1m}(\log p) + \overline{K_{m1}(\log p)}]$, restoring $V = V^*$.
+> See `paper1/code/pin1-pt-cancellations/FINDINGS.md`. All downstream
+> computations that use (5.1) should carry the conjugate on the
+> second term. The corrected definition agrees with research/81
+> eq. (2.2).*
 
 where K_{1m}(u) is the Mellin kernel of (3.3). Using the explicit
 form (4.10) of c_p, the dominant contribution at small p is
@@ -503,8 +528,9 @@ $$
 \tag{5.3}
 $$
 
-where $\hat h_m(u) = K_{1m}(u) + K_{m1}(u)$ is the Mellin kernel
-of (5.1). The spectral-side sum is over the zeros γ_ρ, and its
+where $\hat h_m(u) = K_{1m}(u) + \overline{K_{m1}(u)}$ is the
+Hermitian-symmetrised Mellin kernel of (5.1) *(conjugate on the
+second term per Hermiticity fix 2026-04-14 — Agent O)*. The spectral-side sum is over the zeros γ_ρ, and its
 dominant terms come from small γ_ρ — i.e., γ_1 and γ_m themselves.
 Because h_m is peaked at γ = γ_m (by its construction from the
 eigenfunction product ψ_1 ψ_m), the spectral-side sum is dominated

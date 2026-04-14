@@ -12,7 +12,7 @@
 | 3a | Archimedean sub-leading: O(1/lambda) | PROVED | 2 |
 | 3b | Eigenvector approximation: O(log lambda / lambda) via ITPFI triangle + Davis-Kahan | PROVED | 2 |
 | 3c | H^1 bound: ||(D_N-i)^{-1}||_{L2->H1} < 2, all lambda, all N (Fourier cancellation) | PROVED | 1 |
-| 3d | CF decay: rho >= 4.27 uniform in N (with log N caveat, Remark 8.4) | PROVED (with caveat) | 1 |
+| 3d | CF decay: rho >= 4.27 uniform in N (log N caveat, Remark 8.4; caveat resolved by Slepian compatibility Lemma 12.1, 2026-04-14) | PROVED | 1 |
 | 4a | Boegli H1 (gsrc): ITPFI -> form convergence -> gsrc via Teschl Lemma 2.7 | PROVED | 2, 3a-3d |
 | 4b | Boegli H2 (discrete compactness): uniform H^1 -> Rellich-Kondrachov | PROVED | 3c |
 | 4c | Spectral exactness: spec(D_inf) = lim spec(D_N), no spurious eigenvalues | PROVED | 4a, 4b |
@@ -31,6 +31,10 @@
 - **GRH (Paper 13b):** character-twisted extension of every layer
 - **BGS:** GUE pair correlation of zeros = spectral statistics of D_inf
 - **PvNP (Paper 28):** Q5-RIEMANN exponent constrains spectral gap scaling
+
+## Known gap: Pin #6 CP-violation anchor (2026-04-14)
+
+Agent L audit (2026-04-14, `paper1/code/pin6-audits/FINDINGS.md`) confirms via ripgrep that Paper 13 has **no CP-violation section**, despite CKM being cited as a downstream prediction. Pin #6 (J_CKM × 10⁵ = log(γ_1) · ζ(3)) therefore does **not** anchor on any explicit Paper 13 content; the load-bearing document is `paper12/research/102 §3.1` (Mellin duality H_BC = log T_BC, giving log γ_1 as the BC Hamiltonian ground-state eigenvalue). Writing the CP-violation section would complete Pin #6's structural audit; until then the anchor is `paper12/research/102`. No chain-link status change — RH chain does not gate on CP-violation content.
 
 ## Cascading refinement from QG5D W1/W2 closure (2026-04-14)
 

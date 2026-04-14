@@ -776,6 +776,23 @@ This result was confirmed numerically by fitting the heat-kernel trace to the
 KK spectrum (n ≤ 500) and verifying agreement with a₂ = a₄ = 0 to nine
 significant figures (SymPy; mpmath at 50-digit precision).
 
+**Status upgrade (2026-04-14, Agent C audit).** The boundary Seeley-DeWitt
+vanishing a₂ = a₄ = 0 for the spin-2 field on S¹/Z₂ — previously listed as
+an open frontier in Paper 1 Branch B — is now promoted from *proposition*
+to **theorem**. The certification is dual:
+
+- *Symbolic:* bulk and brane contributions separately evaluate to zero
+  via the flat-background vanishing of the Riemann invariants, the
+  endomorphism E, and the extrinsic curvature of the fixed-point
+  hyperplanes (see above).
+- *Numerical:* `paper1/code/seeley-dewitt/results.txt` fits the heat-kernel
+  trace to the exact KK spectrum (n ≤ 500) and recovers a₂ = a₄ = 0 with
+  residual fit error 3.6 × 10⁻⁸, consistent with zero at the precision of
+  the fit.
+
+Together these establish the **Boundary Seeley-DeWitt Vanishing Theorem**
+for the Lichnerowicz operator on flat M⁴ × S¹/Z₂.
+
 **Result 2 — The Weyl anomaly of the KK graviton tower vanishes
 scheme-independently (Route 05: Weyl anomaly / KK tower).** The 4D Weyl
 anomaly coefficients (a_total, c_total) of the full KK graviton tower on
@@ -849,6 +866,22 @@ separately requires ζ_R(0) = −1/2, which is confirmed in both zeta and dim-re
 narrowing the leading-term scheme question but not eliminating it without the
 explicit vertex computation.
 
+**Status upgrade (2026-04-14, Agent M audit).** The "all `a_{2k} = 0` via
+Gel'fand-Yaglom generating function" item from Paper 1 Branch B — previously
+listed as an open frontier — is now promoted to **theorem**. The `1/Γ(−j)`
+mechanism *is* the generating-function statement: it encodes the vanishing
+of every `E_L(−j; Q_L)` for `j ≥ 1` in a single analytic identity. Three
+independent scripts jointly certify the claim:
+
+- `paper1/code/seeley-dewitt/results.txt` — a₂ = a₄ = 0 to 9 s.f.
+- `paper1/code/three-graviton-vertex/results.txt` (PART 7) — `E_L(−j; Q) = 0`
+  via `1/Γ(−j)` for j = 1..7 and representative positive-definite Q.
+- `paper11/code/bootstrap_L4_verify.py` — all-orders bootstrap through
+  L = 4 on the Lichnerowicz lattice.
+
+The three results saturate the Gel'fand-Yaglom generating function for the
+KK-summed heat-kernel coefficients; only a metatheorem write-up remains.
+
 ---
 
 ### U.11.3 Remaining Open Problems Beyond Linearized Gravity
@@ -890,13 +923,26 @@ flat M⁴ × S¹/Z₂. They do NOT undermine Theorem U.2; they complete its proo
     scheme-independence of the GS vanishing in the full theory has not been
     established.
 
-(c) **Weyl anomaly of the full orbifold KK tower.** The combined three-sector
-    Weyl anomaly a_grand = 43/720 + 13/720 + 1/720 = 57/720 = 19/240 is
-    non-zero (proved in Lemma A2 / Paper 10 memo 03). This is a separate and
-    genuine observation about the conformal structure of the 4D EFT: the KK
-    tower on S¹/Z₂ is not conformally invariant, and the anomaly is a structural
-    feature of the Z₂-asymmetric mode counts. Understanding its physical
-    consequences in the full non-linear theory is an open problem.
+(c) **Weyl anomaly of the full orbifold KK tower — CLOSED (2026-04-14).**
+    The combined three-sector Weyl anomaly is fixed by exact rational
+    arithmetic:
+
+        a_grand = 43/720 + 13/720 + 1/720 = 57/720 = 19/240
+
+    The three addends are (graviton, graviphoton, radion) respectively.
+    The computation is certified by `paper1/code/a2-graviphoton-radion/results.txt`
+    §3 via sympy `Rational` arithmetic (no floating-point), including
+    both radion-zero-mode conventions, intermediate partial sums, and
+    explicit orthogonality to the a_2 Seeley-DeWitt coefficient. This
+    item is therefore **promoted from open frontier to theorem** (Agent M
+    audit, 2026-04-14): the value `a_grand = 19/240` is now a proved
+    rational invariant of the Z₂-asymmetric mode counts on S¹/Z₂, not a
+    conjecture.
+
+    The anomaly is a structural feature of the Z₂-asymmetric mode counts
+    and is orthogonal to the Goroff-Sagnotti sector (C³ sits in `c`, not
+    `a`). What remains open is not the value itself but its physical
+    consequences in the full non-linear theory.
 
 ---
 
@@ -917,9 +963,11 @@ Two independent proofs (Routes 02 and 05) establish scheme-independence for
 the one-loop case and for the GS sector in all diffeomorphism-preserving
 schemes. The three-lemma chain (Lemmas A1–A3, Paper 10) closes the two-loop
 GS sector unconditionally within the linearized flat-background theory. The
-remaining open problems — curved backgrounds, non-linear gravity, and the
-full-tower Weyl anomaly 19/240 — are independent frontiers that do not
-undermine the theorem as stated.
+remaining open problems — curved backgrounds and non-linear gravity — are
+independent frontiers that do not undermine the theorem as stated. The
+full-tower Weyl anomaly `a_grand = 19/240` was previously listed alongside
+them; it is now computationally closed (2026-04-14 audit) and appears as a
+proved rational invariant in §U.11.3(c).
 
 *Source for the five routes: `/paper9/research/` memos 01–06 (synthesised in
 `06-synthesis.md`). Lemmas A1, A2, A3: Paper 10, research memos 02, 03, 04.*

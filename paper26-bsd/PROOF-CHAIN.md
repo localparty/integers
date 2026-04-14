@@ -30,6 +30,10 @@
 - **Hodge (Paper 29):** CM motives connect algebraic cycles to Hodge classes
 - **Schanuel:** algebraic independence of L-values at s=1
 
+## Known gap: Pin #6 J_CKM vertex anchor (2026-04-14)
+
+Agent L audit (2026-04-14, `paper1/code/pin6-audits/FINDINGS.md`) confirms via ripgrep that Paper 26 Step 4 is a **cocycle-shift INEQUALITY** (Hasse-Brauer-Noether reductio, Key Lemma C: |Δc(δ)| < 1/(k+1)), **not** a J_CKM vertex evaluation. The Paper 26 (k, N) = (4, 41) bridge-family row is a ℚ(i) Brauer invariant — a terminology coincidence with the CKM k=4 vertex, not a hidden identity. Pin #6's structural anchor for J_CKM × 10⁵ = log(γ_1) · ζ(3) is `paper12/research/102` via the Mellin bridge, not Paper 26 Step 4. Computing a genuine k=4 CKM-vertex evaluation at Step 4 would close Pin #6 audit item O3 (the 18× direct-vs-factored precision gain). No chain-link status change — BSD chain does not gate on CKM content.
+
 ## Cascading refinement from QG5D W1/W2 closure (2026-04-14)
 
 Paper 1 PROOF-CHAIN.md W1 (scheme independence) and W2 (Route-C 3-loop explicit) both closed 2026-04-13/14 via Paper 10 (Theorem 1 two-loop scheme-independence + Theorem U.2a one-loop Seeley-DeWitt) + Paper 11 (Theorem K.4 all-orders inductive bootstrap) + explicit L=3 numerical verification at 50-digit precision (`paper1/code/K-5-2-route-c-3loop.py`). Cascading impact on this chain: the CBB system's Axiom 5 (zeta regularization closure) no longer has a lingering regulator-scheme question. Effect is cosmetic-to-small — this chain never gated on the scheme question directly, but the underlying foundation is now strictly stronger. No link status changes required; confidence unchanged; mention included for completeness of the programme graph.

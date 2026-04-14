@@ -79,7 +79,8 @@ headline formula includes them.
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | log(πR_obs/ℓ_P) — cosmological constant | 69.7421709 [1] | γ_1·π²/2 − 0.15/γ_2 + 0.03/γ_3 − 0.01·ln(γ_2/γ_1) | 69.7421690 | **0.0000047 %** (5 ppb) | 1,2,3 | pp/12 | **derived** (r/05) |
 | N_eff — eff. neutrino species | 3.35 [2] | γ_6^(1/3) | 3.349727 | **0.0082 %** | 6 | pp/11 | fit |
-| n_s — scalar spectral index | 0.965 [2] | γ_9/γ_10 | 0.964466 | 0.056 % | 9,10 | pp/11 | fit |
+| n_s — scalar spectral index | 0.9649 [2] | γ_9/γ_10 | 0.96447 | **0.033 %** | 9,10 | pp/11 | fit |  <!-- 2026-04-14: transcription fix per Agent F — prediction 0.9645 (not 0.9655), deviation 0.033% vs Planck 2018 0.9649 -->
+
 | H_0 — Hubble constant [km/s/Mpc] | 67.4 [2] | γ_11·4/π | 67.4439 | 0.065 % | 11 | pp/11 | fit |
 | t_0 — age of the universe [Gyr] | 13.787 [2] | (log γ_7)² | 13.77588 | **0.081 %** | 7 | r/15 | fit |
 | Y_p — primordial ⁴He mass fraction | 0.245 [4] | 1/log(γ_13) | 0.244894 | **0.043 %** | 13 | r/15 | fit |

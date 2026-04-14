@@ -5,7 +5,7 @@ the ten-paper series. Organized by paper. For each result: its current name or
 number, its proposed name (where not yet named), its location, and what it
 establishes in one sentence.*
 
-*Total: ~18 theorems, ~13 corollaries/lemmas/propositions across Papers 1–8.
+*Total: ~27 theorems, ~14 corollaries/lemmas/propositions across Papers 1–8.
 Paper 10 (Riemann) theorems pending formalization.*
 
 ---
@@ -18,6 +18,16 @@ Paper 10 (Riemann) theorems pending formalization.*
 | 1 | **Theorem K.1** | Universal Epstein Vanishing | App K, §K.7b | E_L(−j; Q_L) = 0 for all j ≥ 1 and all loop orders L, forced by the pole structure of the completed Epstein zeta function — the engine of UV finiteness |
 | 2 | **Theorem K.3** | BPHZ Factorization | App K, §K.5.3 | BPHZ-subtracted amplitudes factor as (4D finite part) × E_L(−j; Q_L), inheriting universal vanishing — finiteness survives renormalization to all orders |
 | 3 | **Theorem S.1** | Perturbative Finiteness | App S | Linearized 5D gravity on M⁴ × S¹ is perturbatively UV finite to all loop orders under zeta regularization |
+| 3a | **Theorem V.1** — Complete Vanishing of the Two-Loop R³ Counterterm | Two-Loop Goroff-Sagnotti Vanishing | App V, §V.6 (line 422) | Under zeta regularization, the R³ counterterm coefficient of linearized 5D gravity on M⁴ × S¹ is identically zero at two loops — c_KK(R³) = 0 from every topology (sunset, figure-eight, vertex, ghost), upgrading Theorem S.1's conditional claim to unconditional at L=2 |
+| 3b | **Theorem P.1** — CPT Invariance | CPT Theorem | App P, §P.3 (line 98) | The 5D Einstein-Hilbert action on P(M⁴, U(1)) is invariant under (x, t, ψ) → (−x, −t, 2π − ψ); CPT is a consequence of 5D general covariance rather than a separate Streater-Wightman axiom chain |
+| 3c | **Theorem B.1.1** — Classification (d ≥ 3) | Half-Integer Winding Classification | App B, §B.1.2 (line 52) | In d ≥ 3 spatial dimensions, the rotation-e coupling constant s ∈ (1/2)ℤ; forced by π₁(SO(d)) = ℤ₂ via the contractibility of 4π rotations in Spin(d) |
+| 3d | **Theorem B.1.2** — Stability of the Boson-Fermion Dichotomy | Topological Stability of Statistics | App B, §B.1.4 (line 115) | The parity of 2s (boson vs. fermion) is a topological invariant: no continuous physical process can change s mod 1 ∈ {0, 1/2}, because compact Lie group representations are rigid |
+| 3e | **Theorem B.1.3** — Anyon Statistics (d = 2) | Anyons in Two Dimensions | App B, §B.1.5 (line 142) | In d = 2 spatial dimensions, π₁(SO(2)) = ℤ removes the half-integer constraint: s ∈ ℝ is unconstrained, giving the continuous anyon family observed in the fractional quantum Hall effect |
+| 3f | **Theorem B.2.1** — Exchange Phase (d ≥ 3) | Exchange Phase Theorem | App B, §B.2.3 (line 298) | For two identical particles in d ≥ 3 with rotation-e coupling s, exchange gives X ψ(r₁, r₂) = e^{i2πs} ψ(r₁, r₂); the phase is the holonomy of the e-connection around the non-contractible exchange loop in C₂(ℝᵈ) |
+| 3g | **Corollary B.2.2** — Pauli Exclusion | Pauli Exclusion Principle | App B, §B.2.6 (line 381) | Two identical fermions (half-integer s) at coincident positions yield ψ = 0; Pauli exclusion is a geometric packing constraint on the e-circle, not an independent postulate |
+| 3h | **Theorem B.3.1** — Spin as E-Momentum | Spin-Noether Identification | App B, §B.3.6 (line 578) | Ŝ_z = p̂_φ = −iℏ d/dφ on L²(S¹); the spin angular momentum is the Noether charge of rigid e-translation on the U(1) fiber, with the full SU(2) algebra inherited from the geometry of 3D rotations on the e-fiber |
+| 3i | **Theorem B.3.2** — Winding Number = Spin Projection | Winding-Spin Correspondence | App B, §B.3.7 (line 601) | The e-dimension winding number n equals the spin projection quantum number m_s, and the spin quantum number s = max{|n|} over allowed winding states |
+| 3j | **Theorem B.3.3** — Spin Determines Statistics | Spin-Statistics Theorem (geometric form) | App B, §B.3.8 (line 624) | The exchange phase e^{i2πn} = (−1)^{2s} is uniform across all spin projections m_s; integer spin ⇒ bosons, half-integer spin ⇒ fermions — the geometric conclusion of the full three-step B.1 → B.2 → B.3 chain |
 
 ---
 
@@ -176,7 +186,7 @@ effect, identified as an open frontier (§5.3).*
 
 | Paper | Theorems | Lemmas / Corollaries / Props | Named | Awaiting name |
 |-------|----------|------------------------------|-------|---------------|
-| 1 | 3 | — | K.1, K.3, S.1 | — |
+| 1 | 12 | 1 | K.1, K.3, S.1, V.1, P.1, B.1.1, B.1.2, B.1.3, B.2.1, B.2.2 (Cor), B.3.1, B.3.2, B.3.3 | — |
 | 2 | — | — | — | — |
 | 3 | 2 | 1 | Corollary 3.1, Theorem 9.1 | Theorem 6.1 |
 | 4 | 1 | 1 | Theorem 5.2 | Spectral Gap |
@@ -186,7 +196,7 @@ effect, identified as an open frontier (§5.3).*
 | 8 | 10 | 11 | Thms 1–7, F.1, I.4.1, D.1–2, I.1–3 | Thm 8, Cors 1.1 & 4.1, Prop I.4.2 |
 | 9 | — | — | — | — |
 | 10 | TBD | TBD | TBD | TBD |
-| **Total** | **18** | **13** | **~27** | **6** |
+| **Total** | **27** | **14** | **~36** | **6** |
 
 ---
 
@@ -197,6 +207,11 @@ effect, identified as an open frontier (§5.3).*
 | 1 | **Theorem K.1** — Universal Epstein Vanishing | Named | 1 | Cited by any future work on KK UV finiteness |
 | 2 | **Theorem K.3** — BPHZ Factorization | Named | 1 | Cited whenever all-orders renormalizability is discussed |
 | 3 | **Theorem S.1** — Perturbative Finiteness | Named | 1 | The headline finiteness result |
+| 3a | **Theorem V.1** — Two-Loop R³ Vanishing | Named | 1 | The unconditional two-loop Goroff-Sagnotti result; the bridge from conditional (S.1) to unconditional (Paper 10 Thm 1) |
+| 3b | **Theorem P.1** — CPT Invariance | Named | 1 | CPT from 5D general covariance; cited whenever CPT or the spin-statistics-CPT nexus is discussed |
+| 3c | **Theorem B.1.1** — Half-Integer Winding Classification | Named | 1 | The topological root of the spin-statistics chain: s ∈ (1/2)ℤ from π₁(SO(d)) = ℤ₂ |
+| 3d | **Theorem B.2.1** — Exchange Phase Theorem | Named | 1 | The exchange phase e^{i2πs} from e-bundle holonomy; unifies Aharonov-Bohm and Pauli exclusion |
+| 3e | **Theorem B.3.3** — Spin-Statistics (geometric form) | Named | 1 | The closing theorem of the B.1 → B.2 → B.3 chain; the geometric spin-statistics theorem |
 | 4 | **Corollary 3.1** — Hawking Temperature | Named | 3 | Ties Hawking's result to e-circle spin structure |
 | 5 | **Theorem 6.1** → *e-Unitarity Theorem* | **Proposed** | 3 | Central to any quantum gravity discussion of information |
 | 6 | **Theorem 9.1** — Horizon Vertex = 1 | Named | 3 | Sharp topological result; cited in quantum gravity |

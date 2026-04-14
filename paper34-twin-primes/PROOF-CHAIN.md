@@ -12,7 +12,7 @@
 | Link | Statement | Status | Depends on | Key reference |
 |---|---|---|---|---|
 | 1 | Explicit formula: prime gaps <-> zero spacing | KNOWN | -- | Riemann-Weil explicit formula |
-| 2 | Zero pair correlation -> gap statistics | CONDITIONAL on BGS | 1 | Montgomery 1973 |
+| 2 | Zero pair correlation -> gap statistics | CONDITIONAL on BGS (cascades from Paper 32 L5, now LITERATURE via arXiv:2511.18275; effective dependency reduces to Paper 32 L2 ergodicity + RH) | 1 | Montgomery 1973 + arXiv:2511.18275 (Hardy Z PCC, Nov 2025). Dependency cascade recorded 2026-04-14 per Agent-I audit item 7. |
 | 3 | GUE small-gap tail -> bounded prime gaps | ESTABLISHED | -- | Zhang 2013, Maynard-Tao 2014 (gap<=246) |
 | 4 | GUE -> Hardy-Littlewood twin prime constant C_2 | CONJECTURED | 2, 3 | **Nov 2025 Hardy Z PCC (arXiv:2511.18275): GUE sine-kernel proved** |
 | 5 | C_2 > 0 -> infinitely many twin primes | CONDITIONAL on L4 | 4 | Hardy-Littlewood conjecture |

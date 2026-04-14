@@ -258,7 +258,7 @@ multiplications by π and constants). Each measured value is also
 | Cosmological constant log(πR/ℓ_P) | γ_1·π²/2 + corrections | γ_1, γ_2, γ_3 | 69.7422 (5 ppb) |
 | N_eff | γ_6^{1/3} | γ_6 | 3.350 (8.2 × 10⁻⁵) |
 | H_0 | γ_11 · 4/π | γ_11 | 67.44 km/s/Mpc (6.5 × 10⁻⁴) |
-| n_s | γ_9 / γ_10 | γ_9, γ_10 | 0.9655 (5.5 × 10⁻⁴) |
+| n_s | γ_9 / γ_10 | γ_9, γ_10 | 0.9645 (3.3 × 10⁻⁴) |
 | Top quark mass | γ_3 · γ_8 / (2π) | γ_3, γ_8 | 173 GeV (1.7 × 10⁻³) |
 | Higgs mass | γ_2 · γ_6 / (2π) | γ_2, γ_6 | 125.75 GeV (5.2 × 10⁻³) |
 | ... | ... | ... | ... |

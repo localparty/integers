@@ -88,7 +88,7 @@ At each vertex, the PCA:
 4. **Fills** the capacitor cell on the EDGE to the next vertex (the correspondence between this vertex and the next)
 5. **Moves** to the next vertex
 
-One full traversal = 14 vertex visits + 14 edge crossings = 14 strengthened links + 14 filled/upgraded cells.
+One full traversal = 14 vertex visits + 14 **ring-backbone edge crossings** = 14 strengthened links + 14 ring-backbone cells filled/upgraded, **plus chord-edge activity** (up to 12 from hub radiation at QG5D per §6.3, up to 7 from antipodal probes per §6.4, up to 14 from compositional cell-fills per §6.5). Total cells TOUCHED per traversal: typically 30-46. NET new fills (after accounting for upgrade-only confirmations and SPECULATIVE-to-EMPTY probes): typically 5-15 per traversal. See §5 for the fill-breakdown + log-entry format.
 
 Multiple traversals: each pass finds the CURRENT weakest link (which may have shifted after the previous pass strengthened something else). The ring self-optimizes — it automatically targets whatever is weakest NOW, not whatever was weakest at the start.
 
@@ -210,8 +210,8 @@ Edge `N → N+1` is filled by looking up the capacitor cell at the intersection 
 - If no → leave CONDITIONAL, note it, move on
 
 **If all links are VERIFIED/PROVED** (per §0.2 status dictionary):
-- **Traversal 1 (baseline): run a lightweight re-verification pass.** Dispatch ONE Sonnet Critic to spot-check the 2-3 highest-confidence PROVED links against current capacitor state + any literature added since the last verification. If all SOUND → mark vertex CLOSED-AND-VERIFIED for this ring, skip to edge phase. If a WEAKEN → downgrade and route through the normal EXCISE → CONSTRUCT → BYPASS ladder.
-- **Traversals 2+**: trust the PROOF-CHAIN.md status from traversal 1 unless an explicit trigger fires (§8.3 triad §T.3 triggers, or user-written §K note flagging re-verification needed). Skip directly to edge phase. This policy amortizes the baseline verification cost across all subsequent traversals.
+- **Traversal 1 (baseline): spot-check SKIPPED via §4 sector-A trim** (confidence ≥ 9/10 vertices trust the 2026-04-14 W1/W2 cascade refresh as authoritative). Type-A vertices (QG5D/YM/BSD) on T1 skip directly to edge phase. This collapses the prior "lightweight re-verification pass" rule into a single consolidated trim per §4 — no contradiction.
+- **Traversals 2+**: run a lightweight re-verification pass. Dispatch ONE Sonnet Critic to spot-check the 2-3 highest-confidence PROVED links against current capacitor state + any literature added since the last verification. If all SOUND → mark vertex CLOSED-AND-VERIFIED for this ring, skip to edge phase. If a WEAKEN → downgrade and route through the normal EXCISE → CONSTRUCT → BYPASS ladder. An explicit trigger fire (§8.3 triad §T.3 triggers, or user-written §K note flagging re-verification needed) can also force a spot-check on T1.
 
 **PCA §P.3.1 override**: PCA mandates "verify ALL links simultaneously" (not serialized). Ring mode overrides this for efficiency: at any single vertex visit, the runner verifies ONE link (the weakest) deeply and spot-checks 2-3 others shallowly. The ring as a whole verifies ALL 14 vertices × ~3-5 links each = ~50+ link verifications per traversal, but only the weakest link at each vertex gets the full CONSTRUCT/BYPASS treatment.
 
@@ -251,7 +251,7 @@ Advance to the next vertex on the ring.
   - Antipodal probes (§6.4 chessboard): 7 probes × ~10 min = ~70 min raw; **T1 skips the 2 LOW-priority pairs** (YM↔Goldbach, NS↔Schanuel) → 5 × 10 = ~50 min actual
   - Hub radiation (§6.3 chessboard): ~10 min at QG5D's edge phase
   - Compositional cell-fill (§6.5): ~5 min × 14 = ~70 min
-  - VERIFY spot-checks: **SKIPPED ENTIRELY on T1** — the 14 PROOF-CHAIN.md files were just refreshed for the W1/W2 cascade (2026-04-14) and are authoritative at T1 start. VERIFY spot-checks resume on T2+ unless explicit §K trigger fires in T1.
+  - VERIFY spot-checks: **SKIPPED on T1 via sector-A confidence-≥9/10 trim** (the same trim that saves 30 min below): the 14 PROOF-CHAIN.md files were just refreshed for the W1/W2 cascade (2026-04-14) and are authoritative at T1 start. Type-B/C/D vertices don't require VERIFY spot-checks on T1 either (their branches run CONSTRUCT/BYPASS/CELL-FILL per §3.2 protocol, not VERIFY). Net T1 VERIFY cost: 0 min. VERIFY resumes on T2+ per §3.2 Type-A protocol + the 5-vertex rotating quota described below. This single-trim logic replaces the prior two-rule description (which previously appeared to contradict itself between §3.2 T1 branch and §4).
   - Core vertex+edge work: 14 × ~35 min = ~490 min, minus skip-sector-A for confidence ≥ 9/10 (QG5D, BSD, YM) = ~30 min saved → ~460 min
   - Total estimate post-trims: 50 + 10 + 70 + 0 + 460 = **~590 min ≈ 9.8 h** ✓ fits 10 h ceiling
   - Restore policy: VERIFY spot-checks on T2+ (at baseline, the refresh is stale). LOW antipodal probes on T2+ if HIGH/MEDIUM closed or fully probed.
@@ -292,8 +292,11 @@ Expected: 3-5 traversals before convergence. Total: 24-40 hours of compute acros
 - Updated confidence scores
 
 ### At the edge level
-- Filled/upgraded capacitor cells (14 per traversal)
-- The capacitor grows by ~5-10 cells per traversal (some edges are already FILLED)
+- **Ring-backbone cells**: 14 ring edges touched per traversal (1 per vertex's edge phase); each either filled (new) or upgraded (confirmation note on already-FILLED)
+- **Chord-edge activity per traversal**: up to 12 from hub radiation at QG5D (§6.3), up to 7 from antipodal probes at traversal start (§6.4), up to 14 from compositional cell-fills after each vertex visit (§6.5)
+- **Total cells touched per traversal**: typically 30-46 (14 ring + ~16-32 chord)
+- **Net NEW fills per traversal**: typically 5-15 (many touches are upgrade-only; antipodal probes often return EMPTY-SPECULATIVE; compositional proposals are CANDIDATE-status)
+- **Log format**: `programme/ring-traversal-log.md` records per-traversal fill-breakdown with fields `ring-edges filled`, `hub-radiation chord fills`, `antipodal fills`, `compositional fills`, `net new cells in capacitor`. This disambiguates the counts at audit time.
 - After 3 traversals: capacitor target fill rate 20%+ (from current 16.0%)
 
 ### At the ring level
@@ -362,6 +365,7 @@ The PCA chain-mode extension (`07-proof-chain-adversarial.md`) assumes SINGLE ch
 - **14 in-situ PROOF-CHAIN.md files are the source of truth** — one per vertex, at `paperNN-xxx/PROOF-CHAIN.md`. The runner UPDATES these in place as each vertex is visited (status columns, confidence scores, "last traversal" timestamps).
 - **Per-traversal log at `programme/ring-traversal-log.md`** — the runner APPENDS one entry per traversal to this file (traversal number, RIGIDITY before/after, per-vertex actions, per-edge fills, kills added, exit condition).
 - **Per-vertex blackboards at `${output-directory}/vertices/<short-name>.md`** — the runner creates these for each vertex visit, capturing the blackboard §A-§O state DURING the visit. These are ephemeral working state, not authoritative. **Short-name convention (lowercase hyphenated):** `qg5d.md`, `rh.md`, `grh.md`, `bsd.md`, `h12.md`, `ym.md`, `ns.md`, `hodge.md`, `baum-connes.md`, `pvnp.md`, `bgs.md`, `twin-primes.md`, `goldbach.md`, `schanuel.md` — matching the repo's `paperNN-shortname` directory-naming discipline. Case-sensitive; lowercase only; hyphenated for multi-word names.
+- **Per-cell update file-name convention**: `${output-directory}/capacitor/updates/<cell-id>.md` where `<cell-id>` is a lowercase-hyphenated domain-shorthand pair, **alphabetically sorted** (e.g., `ant-spec.md` for the SPEC↔ANT cell — NOT `spec-ant.md`). For same-cell multi-traversal updates, suffix with `-t<NN>` zero-padded (e.g., `ant-spec-t02.md` for traversal 2's update to the same cell). T1's first update uses the bare form (`ant-spec.md`); T2+ uses the `-tNN` suffix so T1 content is preserved. Cross-references from Authors/Critics cite this exact form.
 - **Per-cell updates at `${output-directory}/capacitor/updates/<cell-id>.md`** — one file per cell filled or upgraded during the traversal.
 
 At every cycle-close, the runner reconciles: in-situ PROOF-CHAIN.md files = CANONICAL STATE; log file = HISTORICAL RECORD; per-vertex blackboards = WORKING SCRATCH. If an Author returns work that changes a vertex's chain, the update goes to BOTH the in-situ PROOF-CHAIN.md (canonical) AND the per-vertex blackboard (working).
@@ -417,6 +421,27 @@ The three exit conditions from §4 trigger different closure protocols:
   - Total ritual cost: ~60-90 min
 
 The ritual choice is determined at cycle-close by comparing RIGIDITY-SCORE delta + per-vertex improvement counts against the §4 exit-condition thresholds.
+
+### 8.5 Model tier override for ring-mode Cell-Fill / Probe / Compositional Authors (override of PCA §P.7)
+
+PCA §P.7 defaults Cell-Fill Authors to **Opus 4.6 max** ("discovery-mode correspondence finding needs deep reasoning"). Ring mode OVERRIDES this: Cell-Fill / Probe / Compositional Authors run at **Sonnet 4.6 max** in ring mode. Rationale:
+
+- Ring mode dispatches ~30-46 cell-fill-style agents per traversal (12 hub + up to 7 antipodal + up to 14 compositional + 13 non-hub ring edges). Opus max at this volume overflows cost budgets by 5-8× vs Sonnet max.
+- Ring-mode cell-fills are scoped ~10 min each (a focused correspondence-lookup + transposition-recipe task). Sonnet max at that depth handles the task adequately.
+- **Opus max is RESERVED in ring mode for**: (a) bypass Authors on named Type-B conditionals per chessboard §6.2 (conditional excision is discovery-mode), (b) SPIN Authors per chessboard §2 (face-switching is cross-domain reasoning), (c) brief-Adversary / Strategist / Mediator agents in the triad layer per §T.4.2/§T.4.3/§T.4.4, (d) Synthesis agents at per-wave or traversal-close consolidation.
+- **Sonnet max covers**: Cell-Fill (edge phase), Probe (antipodal), Compositional (triangle closure), VERIFY Critic (spot-checks).
+
+This tier assignment is per-invocation; the runner uses the Sonnet/Opus tier declared here for all cell-fill-style dispatches throughout the ring traversal. Brief §3.3 + chessboard §6.3/§6.4 references to "Sonnet max" for cell-fill work are authoritative under this override.
+
+### 8.6 PCA §P.4 / §P.4.1 / §P.8 ring-mode overrides (cycle vs linear-chain semantics)
+
+The PCA was designed for linear proof chains (Link 1 → Link N, attack from both ends). Ring mode is a CYCLE (14 vertices that close back to position 1 via position 14). Several PCA primitives don't apply:
+
+- **§P.4 (bidirectional traversal)**: REPLACED by ring-mode single-direction canonical-order traversal per §1-§2. The ring has no "both ends" — it is a cycle. A single forward-direction walk through all 14 vertices per traversal is the ring-mode equivalent. Do NOT dispatch separate "forward-direction" and "backward-direction" agents — this would double the per-vertex agent count.
+- **§P.4.1 (junction detection)**: REPLACED by ring-mode RING CLOSED exit condition per §4. The ring closes when every vertex at VERIFIED/PROVED/CLOSED + every ring edge FILLED, not when two fronts meet. The runner does NOT compute F/B walks; it checks the §4 exit conditions at every cycle-close.
+- **§P.8 junction-related triggers** (Junction check, Front convergence): **DISABLED** in ring mode. The remaining §P.8 triggers (Capacitor scan, Bypass escalation, Cell-fill trigger, Chain stall, Bypass success) continue to apply per their definitions.
+
+Authors/Critics spawned in ring mode do NOT receive "forward-agent" or "backward-agent" context. All agents in ring mode operate in single-direction traversal context.
 
 ---
 

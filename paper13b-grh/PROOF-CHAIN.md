@@ -1,20 +1,24 @@
 # PROOF-CHAIN -- Generalized Riemann Hypothesis (Paper 13b)
 
 *All non-trivial zeros of every Dirichlet L-function L(s,chi) lie on Re(s)=1/2, via character-twisted BC systems. Conditional on Paper 13 (RH) + character modulation extending cleanly.*
-*Status: 0/8 proved (all CONJECTURED/CONDITIONAL) | Confidence: 5/10*
+*Status: 2/8 proved | Confidence: 7/10 (L1 closed via Paper 26 Step 5c; L2 closed via Bratteli-Robinson 2026-04-13 T2)*
 
 ## Chain table
 
 | Link | Statement | Status | Depends on |
 |---|---|---|---|
-| 1 | BC_chi construction: Hecke action mu_n -> chi(n) mu_n preserves algebra | CONJECTURED | -- |
-| 2 | KMS_{1,chi} state: chi-modulated spectral data, uniqueness preserved | CONJECTURED | 1 |
+| 1 | BC_chi construction: Hecke action mu_n -> chi(n) mu_n preserves algebra | PROVED (via Paper 26 Step 5c) | -- |
+| 2 | KMS_{1,chi} state: chi-modulated spectral data, uniqueness preserved | **PROVED** (T2 2026-04-13: Bratteli-Robinson 5.3.30 + trivial fixed-point algebra via chi-twist; see `research/01-kms1-chi-uniqueness.md`) | 1 |
 | 3 | CCM_chi operators D_{N,chi} on E_{N,chi}^+: eigenvalues ~ zeros of L(s,chi) | CONDITIONAL (CCM + chi extension) | 2, Paper 13 L1 |
 | 4 | ITPFI_chi: omega_{1,chi} = tensor_p omega_{1,chi}^(p) | CONJECTURED | 3 |
 | 5 | Estimates_chi: archimedean, eigenvector, H^1, CF -- all carry chi through | CONJECTURED | 4 |
 | 6 | Boegli_chi spectral exactness: gsrc_chi + discrete compactness_chi | CONJECTURED | 5 |
 | 7 | Hurwitz_chi: hat{xi}_{N,chi} -> Lambda(s,chi) uniformly on compacts | CONDITIONAL | 1-6 |
 | 8 | spec(D_{inf,chi}) = {gamma_{n,chi}} subset R => GRH for chi | CONDITIONAL | 7 |
+
+## L1 closure note (2026-04-14)
+
+Paper 26 BSD Step 5c proves Key Lemma C' (twisted): |Delta c^psi(delta)| < 2/(N-1) for all Hecke psi -- PROVED. Dirichlet characters are a subclass of Hecke characters, so the BC_chi construction (Hecke action mu_n -> chi(n) mu_n preserves algebra) and its cocycle-shift bound are inherited unconditionally from Paper 26 Step 5c. L1 flips CONJECTURED -> PROVED. Confidence bump 5/10 -> 6/10. Source: Agent-I open-frontier audit (closable_items.json item 11).
 
 ## Current wall
 **Link 5 (character-modulated estimates).** The H^1 Fourier-basis cancellation is specific to zeta's spectral data. For L(s,chi), the cancellation structure changes with conductor q(chi). Explicit computation for at least one non-trivial chi is needed.

@@ -46,10 +46,16 @@ $$
 V_{1m}
 \;=\;
 \sum_p\,\frac{c_p}{\sqrt p}\,
-\bigl[K_{1m}(\log p) + K_{m1}(\log p)\bigr]
+\bigl[K_{1m}(\log p) + \overline{K_{m1}(\log p)}\bigr]
 \;+\;\cdots
 \tag{1.2}
 $$
+
+> **[HERMITICITY FIX, 2026-04-14 — Agent O.]** *The conjugate on the
+> second term is required for $V = V^*$ (without it, $V_{11}$
+> acquires a spurious imaginary part $\sim 0.23\,i$). See
+> `paper1/code/pin1-pt-cancellations/FINDINGS.md` and the matching
+> fix in research/07 eq. (5.1).*
 
 (equation 5.1 of research/07). The previous agent
 (`research/16-sm-one-loop-V12.md`) computed

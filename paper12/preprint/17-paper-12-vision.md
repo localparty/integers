@@ -133,10 +133,10 @@ QG5D framework is the bridge.
    - Separation: **11σ**
    - DECISIVE TEST
 
-2. **n_s = γ_9 / γ_10 = 0.9655**
+2. **n_s = γ_9 / γ_10 = 0.9645**
    - Future CMB experiments will refine n_s
    - Current Planck: 0.965 ± 0.004
-   - Framework prediction: 0.9655
+   - Framework prediction: 0.9645
    - Within current precision
 
 3. **H_0 = γ_11 × 4/π = 67.44 km/s/Mpc**

@@ -13,7 +13,7 @@
 | 1 | BC encodes Artin motives as endomotives (CCM 2005) | LITERATURE | -- | Connes-Consani-Marcolli arXiv:math/0512138 |
 | 2 | Endomotives -> motivic Galois group (Tannakian) | LITERATURE | 1 | Standard (Deligne-Milne) |
 | 3 | Motivic Galois acts on de Rham -> Hodge filtration | CONJECTURED | 2 | **2025: L^2 Hodge theory + Lefschetz sl_2 + Chow-motivic integration** |
-| 4 | Standard conjecture D for BC-motivated varieties | CONJECTURED | 3 | **2024: Hodge-type std conj PROVED for abelian variety powers (arXiv:2510.21562)** |
+| 4 | Standard conjecture D for BC-motivated varieties | PARTIAL (LITERATURE-with-scope for abelian-variety-powers slice; OPEN for general BC-motivated class) | 3 | **2024: Hodge-type std conj PROVED for abelian variety powers (arXiv:2510.21562)**. Partial closure recorded 2026-04-14 per Agent-I audit item 8: BSD-CM slice (Paper 26, CM elliptic curves -> abelian varieties -> their powers) inherits the 2024 proof; extension to all BC-motivated varieties remains open. |
 | 5 | Lefschetz B for CP^2 x S^2 | KNOWN | -- | Classical (H^{1,1}=1) |
 | 6 | Geometric Langlands -> Hitchin -> Hodge structures | PARTIAL | -- | **Gaitsgory-Raskin 2024 PROVED geometric Langlands (arXiv:2405.03599)** |
 | 7 | Routes I+II compose: Hodge for BC-motivated varieties | OPEN | 5, 6 | 2025 preprint's 5-step algorithm may provide the composition |

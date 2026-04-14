@@ -392,6 +392,8 @@ After each vertex visit's edge phase:
 
 **Scaling**: 14 vertices → 14 triangles per traversal. Potentially 14 new CANDIDATE cells from composition alone, on top of the 14 ring-edge fills from the main edge phase.
 
+**T1 boundary condition at QG5D (position 1)**: at traversal 1 position 1, the compositional check considers (Schanuel, QG5D, RH). Schanuel hasn't been visited yet on T1, so A↔B (Schanuel↔QG5D) is in pre-traversal state (typically EMPTY or SPECULATIVE). The §6.5 fire condition ("A↔B and B↔C both FILLED") fails → SKIP compositional at QG5D on T1. Later at T1 position 14 (Schanuel), the triangle (Goldbach, Schanuel, QG5D) has A↔B filled by Goldbach's edge phase and B↔C filled by Schanuel's edge phase; compositional fires normally, producing the candidate Goldbach↔QG5D chord cell. T2+ QG5D compositional inherits Schanuel↔QG5D filled from T1 position 14 and fires normally on all subsequent traversals. Mirrors the §2.1 ring-closure READ-phase boundary pattern, but for compositional-fill semantics.
+
 ### §6.6 Chord awareness
 
 The 91-cell capacitor (14 choose 2) decomposes:

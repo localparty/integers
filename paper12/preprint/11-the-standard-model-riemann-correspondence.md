@@ -33,7 +33,7 @@ This is not a single coincidence. It is a structural pattern.
 | Quantity | Formula | Computed | Measured | Error |
 |----------|---------|----------|----------|-------|
 | **N_eff** (effective neutrino species) | γ_6^(1/3) | 3.34973 | ~3.35 | **0.0082%** |
-| **n_s** (spectral index) | γ_9 / γ_10 | 0.9655 | 0.965 | 0.0554% |
+| **n_s** (spectral index) | γ_9 / γ_10 | 0.9645 | 0.965 | 0.0332% |
 | **H_0** (Hubble constant, km/s/Mpc) | γ_11 × 4/π | 67.44 | 67.4 | 0.0651% |
 | **ξ** (mirror brane temperature) | γ_1 / γ_5 | 0.4292 | ~0.43 | 0.66% |
 

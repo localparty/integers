@@ -67,3 +67,5 @@ This means the NS chain's foundation (Links 1 + 4) is now AS STRONG as any class
 ---
 
 *v2: 2026-04-13. W1/W2 closure cascade + arXiv:2601.08854 Route B integration. Confidence 2/10 → 4/10.*
+
+*v2.1: 2026-04-14. Agent-I open-frontier audit (item 10) sync pass: L4 row status confirmed as PROVED UNCONDITIONAL ALL-LOOP and consistent with the body text. Downstream papers (31, 32) have been flagged to cascade this upgrade into their programme-graph edges referencing "spectral gap as K-theoretic statement about the KK operator" / "spectral statistics feed" — no L4 label change here, only consistency confirmation.*

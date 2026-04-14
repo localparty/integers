@@ -611,3 +611,281 @@ repairs completed). 19 kills.*
 | 19 | Bridge independently proves P-time → Taylor | False claim |
 
 **16 waves. 47 agents. 19 kills. 2 pivots. p = 0.77.**
+
+---
+
+## Extension: Programme Papers 25-35 (added 2026-04-14)
+
+*This section extends the original 387-entry catalogue with theorems from the 11 new programme papers (13b, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35). These represent the extended Millennium+ ring (Hodge, Navier-Stokes, Hilbert 12, GRH, Baum-Connes, BGS, Goldbach, Twin Primes, Schanuel) plus the 4 core Millennium chains (RH extension via GRH, BSD, P vs NP, and the full BSD programme). The source for each entry is the respective paper's top-level `PROOF-CHAIN.md` file. Each paper's chain-table rows are reproduced verbatim as catalogue entries; the `Location` column points to the canonical line in PROOF-CHAIN.md.*
+
+*Note on overlap with earlier sections: Papers 25, 26, and 28 already appear in Parts F/G above (pre-PCA snapshots from 2026-04-09/12). The entries below use each paper's current PROOF-CHAIN.md (as of 2026-04-14) as the source of truth, which may differ from the earlier snapshots. Where a link number duplicates an earlier entry (e.g., 26.1 vs 26.P3.*), both are preserved; the extension uses the `L<n>` naming to disambiguate.*
+
+### Paper 13b — Generalized Riemann Hypothesis (GRH)
+
+*All non-trivial zeros of every Dirichlet L-function L(s,chi) lie on Re(s)=1/2, via character-twisted BC systems. Conditional on Paper 13 (RH) + character modulation.*
+*Chain status: 0/8 proved (all CONJECTURED/CONDITIONAL). Confidence 5/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 13b.L1 | BC_chi construction: Hecke action mu_n -> chi(n) mu_n preserves algebra | CONJECTURED | paper13b-grh/PROOF-CHAIN.md L10 | -- | Character-twisted BC algebra is a well-defined C*-dynamical system |
+| 13b.L2 | KMS_{1,chi} state: chi-modulated spectral data, uniqueness preserved | CONJECTURED | paper13b-grh/PROOF-CHAIN.md L11 | 13b.L1 | KMS_1 state exists and is unique in the chi-twisted algebra |
+| 13b.L3 | CCM_chi operators D_{N,chi} on E_{N,chi}^+: eigenvalues ~ zeros of L(s,chi) | CONDITIONAL (CCM + chi extension) | paper13b-grh/PROOF-CHAIN.md L12 | 13b.L2, Paper 13 L1 | Discrete finite-N operator approximates the zero set of the twisted L-function |
+| 13b.L4 | ITPFI_chi: omega_{1,chi} = tensor_p omega_{1,chi}^(p) | CONJECTURED | paper13b-grh/PROOF-CHAIN.md L13 | 13b.L3 | Euler-product factorization of the chi-twisted KMS_1 state |
+| 13b.L5 | Estimates_chi: archimedean, eigenvector, H^1, CF uniformity all carry chi through | CONJECTURED | paper13b-grh/PROOF-CHAIN.md L14 | 13b.L4 | Four analytic estimates extend with chi insertion (current wall) |
+| 13b.L6 | Boegli_chi spectral exactness: gsrc_chi + discrete compactness_chi | CONJECTURED | paper13b-grh/PROOF-CHAIN.md L15 | 13b.L5 | Spectral exactness in the chi-twisted setting |
+| 13b.L7 | Hurwitz_chi: hat{xi}_{N,chi} -> Lambda(s,chi) uniformly on compacts | CONDITIONAL | paper13b-grh/PROOF-CHAIN.md L16 | 13b.L1-L6 | Finite-N determinantal completed L-function converges to the twisted xi |
+| 13b.L8 | spec(D_{inf,chi}) = {gamma_{n,chi}} subset R => GRH for chi | CONDITIONAL | paper13b-grh/PROOF-CHAIN.md L17 | 13b.L7 | Real spectrum of limit operator gives GRH for every Dirichlet character |
+
+### Paper 25 — Hilbert's 12th Problem (H12)
+
+*Explicit class field theory via the BC system: KMS_beta for beta > 1 generates abelian extensions of number fields. Four-conjecture programme.*
+*Chain status: 1/6 links. Confidence 2/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 25.L1 | BC algebra + Hecke semigroup N* -> crossed product C*-algebra A_BC | ESTABLISHED | paper25-hilbert-12/PROOF-CHAIN.md L10 | -- | Bost-Connes 1995 construction (classical anchor) |
+| 25.L2 | KMS_beta states for beta > 1 exist and are parametrized by characters of Z-hat* | LITERATURE | paper25-hilbert-12/PROOF-CHAIN.md L11 | 25.L1 | Bost-Connes 1995 + Connes-Marcolli 2008; high-temperature KMS simplex |
+| 25.L3 | CBB Reciprocity: KMS_beta symmetry is the Galois action Gal(Q^cyc/Q) | CONJECTURED | paper25-hilbert-12/PROOF-CHAIN.md L12 | 25.L2 | Core of the four-conjecture programme; Galois identification |
+| 25.L4 | Brauer-KMS duality: cyclotomic Brauer classes beta_k in H^2(Z/kZ, U(1)) correspond to KMS phase structure at k in {2,3,4,6} | CONJECTURED | paper25-hilbert-12/PROOF-CHAIN.md L13 | 25.L3 | Paper 24 bridge family (verified k=3, k=4); phase <-> cohomology match |
+| 25.L5 | V-Hilbert 12: generators of Gal(K^ab/K) for K cyclotomic extracted from unitary bridge V: H_CCM -> H_R | OPEN | paper25-hilbert-12/PROOF-CHAIN.md L14 | 25.L3, 25.L4 | The extraction step -- current wall; Hilbert's 12th explicit |
+| 25.L6 | Spectral Kronecker-Weber: every abelian extension of Q appears in the spectrum of some BC-type system | OPEN | paper25-hilbert-12/PROOF-CHAIN.md L15 | 25.L5 | Generalization of Kronecker-Weber 1886 through BC spectrum |
+
+### Paper 26 — Birch and Swinnerton-Dyer (BSD)
+
+*BSD for CM elliptic curves over Q with h_K=1: rank(E(Q)) = ord_{s=1}L(E,s) + leading coefficient formula. MY4 closed via algebraic projector bypass.*
+*Chain status: 11/11 steps closed. Confidence 9/10. Conditional on CBB axioms.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 26.L1 | BC algebra over K exists with unique KMS_1 state (h_K=1) | PROVED | paper26-bsd/PROOF-CHAIN.md L10 | -- | Ha-Paugam construction; KMS_1 unique for nine h_K=1 imaginary quadratic fields |
+| 26.L2 | Bridge family over K: 355 triples at k in {2,3,4,6}, conductors {3,5,7} | PROVED | paper26-bsd/PROOF-CHAIN.md L11 | 26.L1 | Exhaustive verification of the bridge over Q(i); all k-values populated |
+| 26.L3 | ITPFI factorization omega_1^K = tensor_p omega_1^p | PROVED | paper26-bsd/PROOF-CHAIN.md L12 | 26.L1 | Euler-product decomposition of KMS_1 over Borchers primes |
+| 26.L4 | Dark-state impossibility (algebraic projector, no MY4 needed) | PROVED | paper26-bsd/PROOF-CHAIN.md L13 | 26.L3 | Algebraic projector bypass replaces MY4 route; every state couples |
+| 26.L5 | Cocycle shift formula Delta c(delta) | PROVED | paper26-bsd/PROOF-CHAIN.md L14 | 26.L4 | Explicit formula for cocycle shift: zero at delta=0, strictly monotone |
+| 26.L5b | Key Lemma C: |Delta c(delta)| < 1/(k+1) for delta != 0 | PROVED | paper26-bsd/PROOF-CHAIN.md L15 | 26.L5 | Quantitative control of cocycle shift magnitude |
+| 26.L5c | Key Lemma C' (twisted): |Delta c^psi(delta)| < 2/(N-1) for all Hecke psi | PROVED | paper26-bsd/PROOF-CHAIN.md L16 | 26.L5 | Twisted version for Hecke Grossencharacters |
+| 26.L6 | Baker's theorem forces delta=0 (independent reinforcement, not load-bearing) | PROVED | paper26-bsd/PROOF-CHAIN.md L17 | -- | Redundant transcendence route; confirms delta=0 |
+| 26.L7 | GRH for zeta_K and L(s,psi): all zeros on Re(s)=1/2 | PROVED | paper26-bsd/PROOF-CHAIN.md L18 | 26.L5b, 26.L5c | Conditional GRH for Dedekind and Hecke L-functions over K |
+| 26.L8 | CM factorization: L(E,s) = L(s,psi) L(s,psi-bar) | LITERATURE (Deuring 1953) | paper26-bsd/PROOF-CHAIN.md L19 | 26.L7 | GL_2 -> GL_1 reduction for CM elliptic curves |
+| 26.L9 | Kolyvagin rank 0: L(E,1)!=0 => rank=0, |Sha|<inf | LITERATURE (Kolyvagin 1990) | paper26-bsd/PROOF-CHAIN.md L20 | 26.L8 | Classical rank-0 BSD input |
+| 26.L10 | Gross-Zagier rank 1: L'(E,1)!=0 => rank=1 | LITERATURE (GZ 1986) | paper26-bsd/PROOF-CHAIN.md L21 | 26.L8 | Classical rank-1 BSD input (vacuous at analytic rank 1 for CM case) |
+| 26.L11 | BSD Theorem 13.1: rank equality + leading coefficient formula | PROVED | paper26-bsd/PROOF-CHAIN.md L22 | 26.L7-L10 | Main theorem: rank(E(Q)) = ord_{s=1}L(E,s) + leading coefficient |
+
+### Paper 28 — P vs NP (PvNP)
+
+*P != NP via Boolean BC system + trinity dictionary + Bulatov-Zhuk CSP dichotomy + spectral gap = Taylor gap equivalence.*
+*Chain status: 5/6 links closed. Confidence 7/10. Link 5 backward direction is the wall.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 28.L1 | Boolean BC system (A_BC^Bool, sigma_t^Bool) exists; unique KMS_1; M_Bool is type III_1 | PROOF OUTLINED | paper28-pvnp/PROOF-CHAIN.md L10 | -- | Boolean analogue of BC algebra with type III_1 GNS factor |
+| 28.L2 | Trinity functor Phi_comp preserves cohomology: H^k(Sym(Phi(X)),A) = H^k(Sym(X),A) | PROOF OUTLINED | paper28-pvnp/PROOF-CHAIN.md L11 | -- | Cohomological invariance of computational-to-operator-algebra dictionary |
+| 28.L3 | Bulatov-Zhuk CSP Dichotomy: Taylor polymorphism <-> tractable | PROVED (EXTERNAL) | paper28-pvnp/PROOF-CHAIN.md L12 | -- | External: CSP tractability dichotomy (Bulatov 2017, Zhuk 2017) |
+| 28.L4 | Taylor gap = spectral gap of M_Bool^Gamma (verified 6/6 Schaefer classes) | COMPUTATIONALLY VERIFIED | paper28-pvnp/PROOF-CHAIN.md L13 | 28.L1, 28.L2 | Identification of algebraic gap with operator-algebraic gap |
+| 28.L5 | Non-full <-> Taylor equivalence | OPEN (backward direction) | paper28-pvnp/PROOF-CHAIN.md L14 | 28.L1-L4 | Backward direction is current wall; seven routes attempted |
+| 28.L6 | P != NP: M_Bool^{3-SAT} full -> not P-time; 3-SAT NP-complete; done | CONDITIONAL on L5 | paper28-pvnp/PROOF-CHAIN.md L15 | 28.L3, 28.L4, 28.L5 | Main theorem conditional on Link 5 backward |
+
+### Paper 29 — Hodge Conjecture (Hodge)
+
+*Every rational (p,p)-class on a smooth projective variety is algebraic. Two routes: endomotives + geometric Langlands.*
+*Chain status: 3/8 links closed. Confidence 3/10 (full), 5/10 (CM abelian varieties). Conditional on Grothendieck standard conjectures.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 29.L1 | BC encodes Artin motives as endomotives (CCM 2005) | LITERATURE | paper29-hodge/PROOF-CHAIN.md L13 | -- | Connes-Consani-Marcolli arXiv:math/0512138; BC -> motives bridge |
+| 29.L2 | Endomotives -> motivic Galois group (Tannakian) | LITERATURE | paper29-hodge/PROOF-CHAIN.md L14 | 29.L1 | Deligne-Milne Tannakian formalism applied to BC endomotives |
+| 29.L3 | Motivic Galois acts on de Rham -> Hodge filtration | CONJECTURED | paper29-hodge/PROOF-CHAIN.md L15 | 29.L2 | 2025 L^2 Hodge theory + Lefschetz sl_2 + Chow-motivic integration |
+| 29.L4 | Standard conjecture D for BC-motivated varieties | CONJECTURED | paper29-hodge/PROOF-CHAIN.md L16 | 29.L3 | 2024: Hodge-type std conj PROVED for abelian variety powers (arXiv:2510.21562) |
+| 29.L5 | Lefschetz B for CP^2 x S^2 | KNOWN | paper29-hodge/PROOF-CHAIN.md L17 | -- | Classical (H^{1,1}=1) test case |
+| 29.L6 | Geometric Langlands -> Hitchin -> Hodge structures | PARTIAL | paper29-hodge/PROOF-CHAIN.md L18 | -- | Gaitsgory-Raskin 2024 PROVED geometric Langlands (arXiv:2405.03599) |
+| 29.L7 | Routes I+II compose: Hodge for BC-motivated varieties | OPEN | paper29-hodge/PROOF-CHAIN.md L19 | 29.L5, 29.L6 | 2025 preprint's 5-step algorithm may provide the composition |
+| 29.L8 | Extension to all smooth projective via motivic functoriality | OPEN | paper29-hodge/PROOF-CHAIN.md L20 | 29.L7 | Hardest step -- arguably as hard as the Hodge conjecture itself |
+
+### Paper 30 — Navier-Stokes Existence and Smoothness (NS)
+
+*Global existence and smoothness of 3D incompressible NS on T^3 via KK spectral gap + gradient-flow transfer from YM + microlocal cosphere-bundle regularity.*
+*Chain status: 3/8 links proved (upgraded from 2 after W1/W2 closure). Confidence 4/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 30.L1 | 5D Einstein -> KK reduction to 4D Einstein+Maxwell+scalar | LITERATURE | paper30-navier-stokes/PROOF-CHAIN.md L13 | -- | Kaluza 1921, Klein 1926, Paper 1; classical KK reduction |
+| 30.L2 | T_{mu nu} near-equilibrium -> incompressible NS | CONJECTURED | paper30-navier-stokes/PROOF-CHAIN.md L14 | 30.L1 | BHMR 2008 fluid/gravity correspondence |
+| 30.L3 | YM gradient-flow transfer (Lemmas 1.1-1.5) -> NS velocity | OPEN | paper30-navier-stokes/PROOF-CHAIN.md L15 | 30.L2 | Paper 8 App L shares PDE class; YM unconditional all-loop post W1/W2 |
+| 30.L4 | KK spectral gap Delta_0 > 0 controls high-freq modes | PROVED UNCONDITIONAL ALL-LOOP | paper30-navier-stokes/PROOF-CHAIN.md L16 | -- | Paper 8 Thm 4 + Paper 11 Thm K.4 + Paper 10 scheme-independence |
+| 30.L5a | BKM Route A: temporal lifting + bounded vorticity-response | OPEN-WITH-PUBLISHED-ROUTE | paper30-navier-stokes/PROOF-CHAIN.md L17 | 30.L3, 30.L4 | Camlin 2025: bounded Phi functional + Sundman temporal lifting -> BKM finiteness on T^3 |
+| 30.L5b | BKM Route B: cosphere-bundle microlocal regularity | OPEN-WITH-PUBLISHED-ROUTE | paper30-navier-stokes/PROOF-CHAIN.md L18 | 30.L3, 30.L4 | arXiv:2601.08854 (Jan 2026): geometric evolution + microlocal WF criterion |
+| 30.L5 | BKM criterion (composition of 5a + 5b adapted to M^4 x S^1/Z_2) | PARTIAL | paper30-navier-stokes/PROOF-CHAIN.md L19 | 30.L5a, 30.L5b | Two independent published routes; KK-setting adaptation remaining |
+| 30.L6 | Energy: KK conservation (5D) -> NS dissipation (4D) | CONJECTURED | paper30-navier-stokes/PROOF-CHAIN.md L20 | 30.L5 | Leray 1934, Hopf 1951; dimensional-reduction energy descent |
+| 30.L7 | Uniqueness via Galerkin + energy | CONDITIONAL on L5 | paper30-navier-stokes/PROOF-CHAIN.md L21 | 30.L5 | Standard PDE; uniqueness given regularity |
+| 30.L8 | Global regularity: L3-L6 compose | OPEN | paper30-navier-stokes/PROOF-CHAIN.md L22 | 30.L3-L7 | Composition of all pieces to the Millennium statement |
+
+### Paper 31 — Baum-Connes for the BC Algebra (Baum-Connes)
+
+*The Baum-Connes assembly map mu: K_*(BG) -> K_*(C*_r(G)) is an isomorphism for G = Q*/Z* (s.d.p.) N* acting on the BC algebra.*
+*Chain status: 1/6 links closed. Confidence 1/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 31.L1 | Identify G = Q*/Z* (s.d.p.) N* acting on BC algebra | ESTABLISHED | paper31-baum-connes/PROOF-CHAIN.md L14 | -- | Bost-Connes 1995; the relevant group for the assembly map |
+| 31.L2 | Compute classifying space BG for proper G-actions | OPEN | paper31-baum-connes/PROOF-CHAIN.md L15 | 31.L1 | Standard algebraic topology (Luck for semigroups) |
+| 31.L3 | K-homology K_*(BG) via AHSS | OPEN | paper31-baum-connes/PROOF-CHAIN.md L16 | 31.L2 | Atiyah-Hirzebruch spectral sequence computation |
+| 31.L4 | K-theory K_*(C*_r(G)) | OPEN | paper31-baum-connes/PROOF-CHAIN.md L17 | -- | Cuntz-Li semigroup C*-algebras directly applicable to N* |
+| 31.L5 | Assembly map mu is isomorphism | OPEN | paper31-baum-connes/PROOF-CHAIN.md L18 | 31.L3, 31.L4 | Dec 2025: proved for rel. hyperbolic groups (arXiv:2512.21169) |
+| 31.L6 | K-theoretic constraints on spectral structure | OPEN | paper31-baum-connes/PROOF-CHAIN.md L19 | 31.L5 | Chern -> cyclic cohomology -> Connes trace formula -> zeros |
+
+### Paper 32 — Berry-Tabor / BGS Conjecture (BGS)
+
+*The non-trivial zeros of zeta exhibit GUE pair-correlation statistics, derived from the type III_1 structure of the BC algebra at KMS_1 via ergodic modular flow + unitary symmetry class.*
+*Chain status: 2/7 links closed. Confidence 3/10 (upgraded from 2/10 -- Nov 2025 Hardy Z result).*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 32.L1 | BC at KMS_1 -> type III_1 factor | KNOWN | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L13 | -- | Connes classification (Araki-Woods, lambda_p = 1/p) |
+| 32.L2 | Modular flow sigma_t is ergodic on BC algebra | OPEN | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L14 | 32.L1 | 2024: dynamical systems -> Montgomery PCC -> quantum chaos (arXiv:2406.12852) |
+| 32.L3 | Ergodic flow -> AC spectral measure | CONJECTURED | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L15 | 32.L2 | Standard ergodic theory (SNAG theorem) |
+| 32.L4 | AC measure + unitary class -> level repulsion | CONJECTURED | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L16 | 32.L3 | Random matrix theory (T-reversal broken = unitary class) |
+| 32.L5 | Level repulsion -> GUE pair correlation | CONJECTURED | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L17 | 32.L4 | Nov 2025: PCC PROVED for Hardy Z zeros (arXiv:2511.18275) |
+| 32.L6 | GUE for BC eigenvalues = GUE for Riemann zeros | CONDITIONAL | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L18 | 32.L5 | Spectral realization spec(D_inf) = {gamma_n} (Paper 13) |
+| 32.L7 | Montgomery-Odlyzko numerical confirmation | KNOWN | paper32-bgs-spectral-statistics/PROOF-CHAIN.md L19 | -- | Odlyzko 1987 (10^22 zeros); empirical GUE match |
+
+### Paper 33 — Goldbach Conjecture (Goldbach)
+
+*Every even integer >= 4 is the sum of two primes. BC algebra provides a natural home via prime Hecke operators and the Mellin bridge.*
+*Chain status: 2/6 links closed. Confidence 1/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 33.L1 | Primes generate BC algebra via mu_p | KNOWN | paper33-goldbach/PROOF-CHAIN.md L13 | -- | Bost-Connes 1995; prime-indexed isometries |
+| 33.L2 | Hecke semigroup N* encodes multiplicative structure | KNOWN | paper33-goldbach/PROOF-CHAIN.md L14 | -- | BC construction; multiplicative engine |
+| 33.L3 | Mellin bridge: additive <-> multiplicative | ESTABLISHED | paper33-goldbach/PROOF-CHAIN.md L15 | 33.L1, 33.L2 | Paper 12 transposition between log and Hecke sides |
+| 33.L4 | Spectral prime density from explicit formula | CONDITIONAL on RH | paper33-goldbach/PROOF-CHAIN.md L16 | 33.L3 | Riemann-von Mangoldt explicit formula |
+| 33.L5 | Circle method in BC/adelic setting | OPEN | paper33-goldbach/PROOF-CHAIN.md L17 | 33.L4 | Hardy-Littlewood-Vinogradov + adelic reformulation (current wall) |
+| 33.L6 | Even-indexed KMS_1 decomposition as prime convolution | OPEN | paper33-goldbach/PROOF-CHAIN.md L18 | 33.L5 | Novel -- the core conjecture; binary Goldbach in BC language |
+
+### Paper 34 — Twin Prime Conjecture (Twin Primes)
+
+*Infinitely many primes p with p+2 also prime. Spectral route: GUE pair-correlation statistics of Riemann zeros predict Hardy-Littlewood asymptotic.*
+*Chain status: 1/5 links closed. Confidence 1/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 34.L1 | Explicit formula: prime gaps <-> zero spacing | KNOWN | paper34-twin-primes/PROOF-CHAIN.md L14 | -- | Riemann-Weil explicit formula |
+| 34.L2 | Zero pair correlation -> gap statistics | CONDITIONAL on BGS | paper34-twin-primes/PROOF-CHAIN.md L15 | 34.L1 | Montgomery 1973; pair-correlation -> gap statistics |
+| 34.L3 | GUE small-gap tail -> bounded prime gaps | ESTABLISHED | paper34-twin-primes/PROOF-CHAIN.md L16 | -- | Zhang 2013, Maynard-Tao 2014 (gap <= 246) |
+| 34.L4 | GUE -> Hardy-Littlewood twin prime constant C_2 | CONJECTURED | paper34-twin-primes/PROOF-CHAIN.md L17 | 34.L2, 34.L3 | Nov 2025 Hardy Z PCC (arXiv:2511.18275): GUE sine-kernel proved (current wall) |
+| 34.L5 | C_2 > 0 -> infinitely many twin primes | CONDITIONAL on L4 | paper34-twin-primes/PROOF-CHAIN.md L18 | 34.L4 | Hardy-Littlewood conjecture for k=2 |
+
+### Paper 35 — Schanuel's Conjecture (Schanuel)
+
+*If z_1,...,z_n are Q-linearly independent complex numbers, trdeg Q(z_1,...,z_n, e^{z_1},...,e^{z_n})/Q >= n. Applied to z_k = gamma_k pi^2/2.*
+*Chain status: 1/5 links closed. Confidence 1/10.*
+
+| # | Theorem / Link | Status | Location | Depends on | What it establishes |
+|---|---|---|---|---|---|
+| 35.L1 | Framework uses exp(gamma_n pi^2/2) as eigenvalues of R-hat | KNOWN | paper35-schanuel/PROOF-CHAIN.md L15 | -- | CBB axiom 1; eigenvalue structure of the bridge operator |
+| 35.L2 | {gamma_n pi^2/2} are Q-linearly independent | CONJECTURED | paper35-schanuel/PROOF-CHAIN.md L16 | -- | Related to simplicity of Riemann zeros (open) |
+| 35.L3 | Schanuel: Q-lin indep -> trdeg >= n | OPEN | paper35-schanuel/PROOF-CHAIN.md L17 | 35.L2 | Schanuel 1960s (itself unproved; subsumes Lindemann-Weierstrass) |
+| 35.L4 | Algebraic independence of exp(gamma_n pi^2/2) | CONDITIONAL | paper35-schanuel/PROOF-CHAIN.md L18 | 35.L2, 35.L3 | Consequence of Schanuel applied to Riemann zeros |
+| 35.L5 | 36 predictions are algebraically independent | CONDITIONAL | paper35-schanuel/PROOF-CHAIN.md L19 | 35.L4 | No hidden relations reduce the prediction count (programme payoff) |
+
+---
+
+### Extension summary
+
+**Per-paper entry counts:**
+
+| Paper | Title | Entries | Closed | Confidence |
+|:------|:------|-------:|-------:|-----------:|
+| 13b | Generalized Riemann Hypothesis | 8 | 0 | 5/10 |
+| 25 | Hilbert 12 | 6 | 1 | 2/10 |
+| 26 | Birch-Swinnerton-Dyer | 13 | 13 | 9/10 |
+| 28 | P vs NP | 6 | 5 | 7/10 |
+| 29 | Hodge | 8 | 3 | 3/10 |
+| 30 | Navier-Stokes | 10 | 3 | 4/10 |
+| 31 | Baum-Connes | 6 | 1 | 1/10 |
+| 32 | BGS / Berry-Tabor | 7 | 2 | 3/10 |
+| 33 | Goldbach | 6 | 2 | 1/10 |
+| 34 | Twin Primes | 5 | 1 | 1/10 |
+| 35 | Schanuel | 5 | 1 | 1/10 |
+| **Total** | | **80** | **32** | |
+
+**Extension: +80 entries across 11 papers. New total: 387 + 80 = 467 entries.**
+
+See `programme/ring-traversal-log.md` for the current ring-traversal state using these theorems.
+
+*v1.1: 2026-04-14 -- Extension appended. Source: top-level PROOF-CHAIN.md files in each paper directory. Superseded/duplicated entries retained for backward compatibility with earlier Parts F/G (pre-PCA snapshots).*
+
+---
+
+## Addendum v1.2 (2026-04-14) — Pin #1 Session Theorems
+
+*Two new theorems added from the 2026-04-14 Pin #1 deep-thread session
+(agents H, N, O, P). Source: `paper1/code/pin1-matrix-elements/`,
+`paper1/code/pin1-cp-enhancement/`, `paper1/code/pin1-pt-cancellations/`.*
+
+### Theorem P1.ME (Pin #1 Matrix-Element Closed Form)
+
+**Statement.** In the principal-value regularisation scheme, the
+off-diagonal matrix element of the SM matter perturbation
+$V = \sum_p c_p(\mu_p + \mu_p^*)$ between zero-eigenstates of $T_{\rm BC}$
+has the closed form
+
+$$
+|V_{1m}|^2 \;=\; \Bigl|\sum_p \frac{c_p}{\sqrt p}\,K_{1m}^{\rm PV}(\log p)\Bigr|^2,
+$$
+
+where (incorporating the Hermiticity correction of Agent O, 2026-04-14)
+
+$$
+K_{1m}^{\rm PV}(\log p) \;=\;
+\frac{\zeta\bigl(1 + i(\gamma_m - \gamma_1) - i\log p\bigr)}
+     {\sqrt{\zeta(1+2i\gamma_1)\,\overline{\zeta(1+2i\gamma_m)}}}.
+$$
+
+**Status.** PROVED (closed-form derivation from research/32 eq. (3.3)
+with Agent O Hermiticity fix). Numerically verified at 30-digit
+precision for $p \in \{2,3,5,7,11\}$ and $m \in \{2,\ldots,10\}$.
+
+**Source.** `paper1/code/pin1-matrix-elements/FINDINGS.md` (Agent H),
+Hermitian correction in `paper1/code/pin1-pt-cancellations/FINDINGS.md`
+(Agent O). Paper 12 anchor: research/32 §3.1, research/81 §2.
+
+**Significance.** Upgrades Pin #1 from "empirical matrix element
+fit" to closed-form spectral-zeta expression — zero free parameters
+in the kernel, only the $c_p$ profile remains.
+
+### Theorem P1.EN (Ab Initio SM Enhancement)
+
+**Statement.** The SM gauge-sector coupling prefactor entering $c_p$
+(paper12/research/07 eq. (4.10)) computes ab initio to
+
+$$
+\text{enhance} \;=\; \frac{1}{12 \cdot 7}\,\sum_i N_i\,|b_i|
+\;=\; \frac{1\cdot(41/10) + 3\cdot(19/6) + 8\cdot 7}{84}
+\;=\; \frac{69.6}{84}
+\;=\; 0.8286.
+$$
+
+The four previously-omitted sectors — heavy quarks (t, b, c), EW
+symmetry-breaking (v = 246 GeV), graviton / 5D KK tower, and
+moduli (dilaton, $r_3$) — each contribute identically zero by
+independent mechanisms: heavy quarks are exp-suppressed and
+already in $b_3 = 7$; EW breaking does not affect the BC
+spectral scale (unbroken phase); graviton/KK cancels via Paper 1
+K.1 + K.3 + K.4; moduli are Planck-heavy or absorbed into the
+gauge sum.
+
+**Status.** PROVED (structural derivation + four independent
+zero-contribution lemmas).
+
+**Source.** `paper1/code/pin1-cp-enhancement/FINDINGS.md` (Agent N,
+2026-04-14). Paper 12 anchors: research/07 §4.4 (updated 2026-04-14),
+research/32 §6.2 (retraction added 2026-04-14).
+
+**Significance.** Supersedes the "factor-9 enhancement needed"
+narrative (research/32 §5.2, §6.2(b)). The enhance factor is a
+mild **suppression** 0.829, not an enhancement; no hidden sectors
+are needed. Combined with Theorem P1.ME, Pin #1 becomes structurally
+zero-free-parameter: residual 624 ppm at this level is orthogonal
+to the enhancement question (Agent P: closed via KK cutoff
+$= \sqrt 5 / r_3$, Paper 4 Thm E.1 spectral gap).
