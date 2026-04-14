@@ -2,9 +2,9 @@
 
 *The oldest open problem in mathematics (c. 300 BC): does there exist an odd integer n with $\sigma(n) = 2n$?*
 *All 52 known perfect numbers are even, each of the form $2^{p-1}(2^p - 1)$ with $2^p - 1$ a Mersenne prime.*
-*Framework route: $\sigma(n)/n$ as BC Hecke orbit sum at KMS$_1$ + Robin's inequality (RH) + odd-restricted spectral measure.*
+*Framework route: $\sigma(n)/n = \omega_1(H_n)$ where $H_n = \sum_{d|n} \mu_{n/d} \mu_{n/d}^*$ is the Hecke-orbit projector at KMS$_1$. ITPFI factorization decomposes into local abundancy factors $h(p^a)$ at each prime. Odd-restriction removes $p=2$ Euler factor ("2 without the 2"). BSD dark-state impossibility template: local factors cannot assemble globally to hit exactly 2.*
 
-*Status: 2/7 links closed | Confidence: 2/10*
+*Status: 4/7 links closed | Confidence: 4/10 (upgraded 2026-04-14 after Hecke-orbit projector construction + ITPFI local-global framing + spoof ↔ Hasse insight)*
 
 ## Chain table
 

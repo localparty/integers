@@ -42,7 +42,7 @@ We work with 17 mathematical objects, organized into four tiers. The first three
 | 12 | **Goldbach** | -- | Primes as BC algebra generators: $\mu_p$ operators. Goldbach as an additive-structure statement about the Hecke semigroup $\mathbb{N}^*$. The spectral-to-additive bridge: primes generate the multiplicative structure; Goldbach asks about their additive closure. |
 | 13 | **Twin Primes** | -- | Prime gaps from zero spacing via the explicit formula. The Riemann zeros control the distribution of primes; their pair correlation (Montgomery) controls the distribution of prime gaps. Twin primes are the $d = 2$ case of the gap distribution forced by the spectral statistics of $H_R$. |
 
-### Tier 3: Extension vertices (added 2026-04-14; scheduled for T2+ ring inclusion)
+### Tier 3: Extension vertices (added 2026-04-14; ALL IN RING as of T5)
 
 | # | Vertex | Paper | Content | Parent adjacency |
 |---|--------|-------|---------|------------------|
