@@ -7,6 +7,9 @@ the **chain mode** extension is
 the **strategic triad** extension is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/12-prf-chain-advr-strat-triad.md`
 
+the **chessboard layer** extension is
+`/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/13-chessboard-layer.md`
+
 the run **brief** (deliverable) is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/30-ring-traversal-brief.md`
 
@@ -25,6 +28,6 @@ the run **output directory** is
 the **ring** is the set of all `PROOF-CHAIN.md` files at the top level of:
 `paper1/`, `paper08-yang-mills/`, `paper13-rh/`, `paper13b-grh/`, `paper26-bsd/`,
 `paper28-pvnp/`, `paper29-hodge/`, `paper30-navier-stokes/`,
-`research-programmes/baum-connes/`, `research-programmes/bgs-spectral-statistics/`,
-`research-programmes/goldbach/`, `research-programmes/twin-primes/`,
-`research-programmes/schanuel/`
+`paper31-baum-connes/`, `paper32-bgs-spectral-statistics/`,
+`paper33-goldbach/`, `paper34-twin-primes/`,
+`paper35-schanuel/`
