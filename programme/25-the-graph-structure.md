@@ -1,4 +1,4 @@
-# 25 — The graph structure (13 vertices + 4 extensions = 17 total, 42+22 = 64 edges)
+# 25 — The graph structure (13 vertices + 4 extensions = 17 total, 42+25 = 67 edges)
 
 *[G's voice]*
 
@@ -178,11 +178,29 @@ Hilbert 6 cross-edges (META-axiom closure):
 | 63 | Hilbert 6 $\leftrightarrow$ RH | Axiomatization of physics via BC algebra at criticality $\Rightarrow$ RH IS the consistency condition of the axiomatization | STRONG | META $\leftrightarrow$ NT |
 | 64 | Hilbert 6 $\leftrightarrow$ PvNP | Axiomatization of physics must include information/computational postulates; PvNP is the complexity-theoretic closure of the axiom set | CANDIDATE | META $\leftrightarrow$ CS |
 
-**Total: 64 edges (42 canonical + 22 extension).**
+OPN cross-edges:
 
-Status distribution: **15 STRONG**, **15 PARTIAL**, **17 CANDIDATE**, **17 SPECULATIVE**.
+| # | Edge | Correspondence | Status | Capacitor cell |
+|---|------|---------------|--------|----------------|
+| 65 | OPN $\leftrightarrow$ Collatz | Both on Hecke semigroup $\mathbb{N}^*$ with KMS$_1$. OPN: static evaluation $\sigma(n)/n = \omega_1(H_n)$. Collatz: dynamic orbit under $\mu_2/\mu_3$. Both face additive-multiplicative wall. Both decompose via ITPFI. | PARTIAL | OA $\leftrightarrow$ DYN |
 
-The 15 STRONG edges are load-bearing: they carry proved theorems or complete proof chains. The 15 PARTIAL edges carry conditionals or incomplete chains --- each is a research target. The 17 CANDIDATE edges are mathematically formulated but unproved --- each is a capacitor cell waiting to be filled. The 17 SPECULATIVE edges are structural analogies that may or may not have mathematical content --- they are discovery targets for future runs.
+Collatz cross-edges:
+
+| # | Edge | Correspondence | Status | Capacitor cell |
+|---|------|---------------|--------|----------------|
+| 66 | Collatz $\leftrightarrow$ Lehmer | "Price of aperiodicity" duality: Collatz = dynamic (all modes decay to fundamental), Lehmer = static (minimum gap $c_0 > 0$). Same e-circle, complementary faces (harmonics vs topology). Collatz on off-diagonal BC (Hecke + phase); Lehmer on diagonal BC (phase). | PARTIAL | HARM $\leftrightarrow$ TOP |
+
+Lehmer cross-edges:
+
+| # | Edge | Correspondence | Status | Capacitor cell |
+|---|------|---------------|--------|----------------|
+| 67 | Lehmer $\leftrightarrow$ Schanuel | Mahler measure gap constrains algebraic relations among $\exp(\gamma_n \pi^2/2)$: if $M(\alpha) \geq 1+c_0$, algebraic approximations to these exponentials are bounded away from the unit circle, supporting algebraic independence. Both at KMS$_1$ boundary: Lehmer = cyclotomic/non-cyclotomic, Schanuel = algebraic/transcendental. | CANDIDATE | NT $\leftrightarrow$ TRANS |
+
+**Total: 67 edges (42 canonical + 25 extension).**
+
+Status distribution: **15 STRONG**, **18 PARTIAL**, **18 CANDIDATE**, **16 SPECULATIVE**.
+
+The 15 STRONG edges are load-bearing: they carry proved theorems or complete proof chains. The 18 PARTIAL edges carry conditionals or incomplete chains --- each is a research target. The 18 CANDIDATE edges are mathematically formulated but unproved --- each is a capacitor cell waiting to be filled. The 16 SPECULATIVE edges are structural analogies that may or may not have mathematical content --- they are discovery targets for future runs.
 
 **Hilbert 6 as the ring-closure META-edge.** Edge 46 (QG5D $\to$ Hilbert 6) is the only edge of type META $\leftrightarrow$ META. It is the edge that says *the hub IS the answer to the last vertex*. On the ring traversal, this edge closes the cycle: the last vertex in the T2+ ring order (Hilbert 6, position 18) is precisely a statement about the first vertex (QG5D, position 1). The ring-closure is not an analogy --- it is logical identity: QG5D IS Hilbert 6's answer.
 

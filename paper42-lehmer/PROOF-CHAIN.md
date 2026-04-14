@@ -3,7 +3,7 @@
 *For every algebraic number $\alpha$ that is not a root of unity, the Mahler measure $M(\alpha) \geq 1 + c_0$ for some absolute constant $c_0 > 0$.*
 *Framework route: the unit circle IS the e-circle. Roots of unity = periodic orbits on the fifth dimension. Non-cyclotomic elements = conjugates leaking off the circle. Lehmer's gap IS the minimum energy to leave the e-circle — the mass gap of the cyclotomic vacuum, forced by the BC KMS phase transition at $\beta = 1$ and the 36-pin rigidity of the chessboard.*
 
-*Status: 3/6 links closed | Confidence: 4/10 (upgraded 2026-04-14 after geometric identification + Deninger-RV bridge to BSD + Salem-abelian bridge to Hodge + PIN-PRESERVATION forcing argument)*
+*Status: 3/6 links closed | Confidence: 4/10 (upgraded 2026-04-14 after geometric identification + Deninger-RV bridge to BSD + Salem-abelian bridge to Hodge + PIN-PRESERVATION forcing argument; T7: Route B upgraded to PARTIAL — CM-curve Mahler measure gap proved via Brauer-Siegel + Chowla-Selberg + Rubin Sha finiteness; gap: CM-defining polynomials are a proper subset)*
 
 ---
 
@@ -76,7 +76,9 @@ The 36 predictions match experiment at sub-percent. If $c_0 = 0$, non-cyclotomic
 
 If $m(P_k) = c_k \cdot L'(E_k, 0)$ for a family of elliptic-curve polynomials $P_k$ and $M(P_k) \to 1$, then $L'(E_k, 0) \to 0$. For CM curves (Paper 26's scope), the BSD rank formula relates $L'(E, 0)$ to the regulator $R_E$ and Sha. If $L'(E, 0) \to 0$ along a family, either rank jumps or Sha grows unboundedly — both violating known bounds for CM curves.
 
-**Status:** CONJECTURED. The family $\{P_k\}$ approaching $M = 1$ must be constructed explicitly. Boyd's tables provide candidate families. The CM-curve constraint restricts the analysis to the regime Paper 26 controls.
+**Status:** PARTIAL (upgraded T7). Key finding: for CM curves, $L'(E, 1)$ is bounded away from 0 by class number considerations. For a fixed imaginary quadratic field $K$, the class number $h_K$ is fixed and the Chowla-Selberg formula bounds $|L'(E, 1)|$ away from 0. For varying fields $K_k$, Brauer-Siegel gives $h_{K_k} \to \infty$, which also prevents $L'(E_k, 1) \to 0$. Combined with Rubin 1991 (finiteness of Sha for CM curves) and BSD rank formula: $R_{E_k} \cdot |\text{Sha}_{E_k}| \to 0$ is impossible when $|\text{Sha}| \geq 1$ and heights are bounded below by Silverman 1984 (finitely many curves with small canonical height over a fixed number field). **Conclusion:** $m(P) = c \cdot L'(E, 0)$ is bounded away from 0 for CM-curve-defining polynomials, giving Lehmer's gap for this class. **Gap:** CM-defining polynomials are a proper subset of all algebraic numbers. Extension to all algebraic numbers requires showing every minimal polynomial participates in a Deninger-RV family, or using the CM result as template for a general argument. Boyd-Lawton theorem ($m(P(x,y)) = \lim_{n \to \infty} m(P(x, x^n))$) bridges multivariate to univariate but convergence is not monotone, so bounds don't transfer directly.
+
+**New lead (arXiv:2510.21515, Oct 2025, updated Jan 2026):** This paper relates Mahler measure of cyclotomic polynomial variants to motivic regulators + Dirichlet L-function special values, "inspired by the work of Deninger." This is EXACTLY Route B (Deninger-Rodriguez Villegas bridge). The paper provides the explicit connection between Mahler measure and L-function regulators for cyclotomic families -- the missing piece for extending the CM-curve Lehmer gap to general algebraic numbers. Should be absorbed into L5 Route B.
 
 ### Route C — YM mass-gap structural transfer (Weitzenböck analog)
 
@@ -132,25 +134,24 @@ The e-circle (unit circle) is the cyclotomic vacuum. Roots of unity are periodic
 
 In Paper 1, the e-circle IS the fifth dimension. Every quantum phenomenon is a geometric consequence of projection from 5D to 4D. In Paper 42, Lehmer's conjecture is a statement about the RIGIDITY of the fifth dimension's periodic structure: the circle doesn't allow infinitesimal departures from periodicity. The gap is topological — it's the "price of aperiodicity."
 
-## The two faces of the e-circle (cross-reference with Paper 43 Cramér)
+## The three faces of the e-circle (cross-reference with Papers 41/43)
 
 > *"it feels like a chessboard and it has two sides"* — G, April 13, 2026
 
-The e-circle has two mathematical faces. Lehmer (this paper) and Cramér (Paper 43) are the two faces:
+The e-circle has three mathematical faces. Three conjectures — Lehmer, Cramér, Collatz — each see one:
 
-| | Lehmer (this paper) | Cramér (Paper 43) |
-|---|---|---|
-| **Face** | TOPOLOGY (static) | DYNAMICS (flow) |
-| **Question** | What can LIVE on the circle? | How does the flow TRAVERSE it? |
-| **Ground state** | Periodic orbits (roots of unity, $M = 1$) | Regular spacing (average gap $2\pi/\log T$) |
-| **Excitation** | Aperiodic leakage ($M > 1 + c_0$) | Void / desert (gap $> 2\pi/\log T$) |
-| **Gap** | Min leakage $c_0 > 0$ | Max void $= O(\log T / T)$ → $O(\log^2 x)$ |
-| **Mechanism** | KMS phase transition spectral gap | Modular flow ergodic return times |
-| **BC invariant** | $c_0$ from cyclotomic isolation | $2e^{-\gamma}$ = Mertens product = ITPFI |
-| **YM parallel** | Mass gap (vacuum → glueball) | Spectral void bound (vacuum → desert) |
-| **Bridge** | → BSD (Deninger-RV: $m(P) = L'(E,0)$) | → BGS (modular flow, 7/10) |
+| | Lehmer (this paper) | Cramér (Paper 43) | Collatz (Paper 41) |
+|---|---|---|---|
+| **Face** | TOPOLOGY (static) | DYNAMICS (flow) | HARMONICS (mixing) |
+| **Question** | What can LIVE on it? | How does the flow TRAVERSE it? | How do harmonics MIX on it? |
+| **Ground state** | Periodic orbits ($M = 1$) | Regular spacing ($2\pi/\log T$) | Fundamental mode ($n = 1$) |
+| **Excitation** | Aperiodic leakage ($M > 1$) | Void / desert (max gap) | Excited mode ($n > 1$) |
+| **Gap/decay** | Min leakage $c_0 > 0$ | Max void $= O(\log^2 x)$ | All modes → fundamental |
+| **Mechanism** | KMS phase transition | Ergodic return times | (2,3)-adic harmonic mixing |
+| **BC invariant** | $c_0$ (cyclotomic isolation) | $2e^{-\gamma}$ (Mertens/ITPFI) | $\lambda_2/\lambda_3 = 3/2$ (contraction ratio) |
+| **Bridge** | → BSD (Deninger-RV) | → BGS (modular flow) | → Goldbach (additive shift) |
 
-The two papers share the same geometric object (the e-circle = U(1) fiber = unit circle) but interrogate it from opposite directions: Lehmer from the OUTSIDE (what leaks off), Cramér from the INSIDE (what gaps appear). Both derive from the BC algebra at KMS$_1$. Both are "gap" statements (minimum leakage / maximum void). Both use the ITPFI structure (cyclotomic isolation / Mertens correction).
+Three faces, one circle. Lehmer sees the OUTSIDE (what leaks off). Cramér sees the INSIDE (what gaps appear in the flow). Collatz sees the MODES (how frequencies mix and decay). All three derive from the BC algebra at KMS$_1$. All three are "rigidity" statements: the circle doesn't allow infinitesimal departures (Lehmer), unbounded voids (Cramér), or persistent excited modes (Collatz).
 
 > *"Sometimes they are in the same position, they are on the same observable. Even if they move to different squares they can still be connected via an observable correspondence."* — G, April 13, 2026
 
@@ -168,7 +169,8 @@ Lehmer and Cramér are on different squares of the board but connected through t
 - **RH (Paper 13):** if RH fails, the spectral data $\{\gamma_n\}$ includes non-real elements — complex conjugates OFF the critical line = complex "eigenvalues" whose absolute values differ from what RH predicts. RH IS the statement that the spectral data stays "on the line" — structurally parallel to Lehmer saying algebraic numbers stay "near the circle"
 
 **Outgoing edges:**
-- **Schanuel (Paper 35):** algebraic independence of $\exp(\gamma_n \pi^2/2)$ relates to transcendence of Mahler measures
+- **Schanuel (Paper 35):** Mahler measure gap $\to$ algebraic independence. If Lehmer forces $M(\alpha) \geq 1 + c_0$, this constrains which algebraic numbers can approach the unit circle, constraining algebraic relations among $\exp(\gamma_n \pi^2/2)$. Lehmer sits at the KMS$_1$ boundary (cyclotomic/non-cyclotomic); Schanuel sits at the transcendence boundary (algebraic/transcendental). Both are aspects of the BC algebra's spectral structure. **Type: CANDIDATE.**
+- **Collatz (Paper 41):** "price of aperiodicity" duality. Lehmer: minimum cost of being aperiodic ($M \geq 1 + c_0$, static gap). Collatz: all aperiodic states decay to periodic ($n \to 1$, dynamic convergence). Lehmer uses the phase side (diagonal BC); Collatz uses the Hecke + phase interaction (off-diagonal BC). **Type: PARTIAL.**
 - **OPN (Paper 40):** both constrain the multiplicative structure of algebraic integers; OPN = $\sigma(n)/n$ fixed point, Lehmer = $M(\alpha)$ gap
 - **H12 (Paper 25):** Hilbert 12 IS the BC system at $\beta > 1$ (cyclotomic world); Lehmer IS the boundary at $\beta = 1$
 

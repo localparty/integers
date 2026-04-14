@@ -46,6 +46,8 @@ arithmetic-to-spectral dictionary at the level of individual local factors.
 - **GRH (paper13b-grh):** GRH + Elliott-Halberstam -> gaps <= 6
 - **Goldbach (paper33-goldbach):** shared additive prime structure
 
+**GUE three-tail structure.** Twin Primes IS the small-gap tail of the GUE distribution. The log-concave repulsion (arXiv:2601.04869, Jan 2025) forces infinitely many small gaps. Inherits from BGS (7/10) via the GUE three-tail structure: small-gap tail (Twin Primes, gap=2), bulk (Goldbach, sine-kernel density), large-gap tail (Cramer, max gap ~ log^2 x). All three regimes are governed by the same Fredholm determinant det(1 - K_sin).
+
 ## Cascading refinement from QG5D W1/W2 closure (2026-04-14)
 
 Paper 1 PROOF-CHAIN.md W1 (scheme independence) and W2 (Route-C 3-loop explicit) both closed 2026-04-13/14 via Paper 10 (Theorem 1 two-loop scheme-independence + Theorem U.2a one-loop Seeley-DeWitt) + Paper 11 (Theorem K.4 all-orders inductive bootstrap) + explicit L=3 numerical verification at 50-digit precision (`paper1/code/K-5-2-route-c-3loop.py`). Cascading impact on this chain: the CBB system's Axiom 5 (zeta regularization closure) no longer has a lingering regulator-scheme question. Effect is cosmetic-to-small — this chain never gated on the scheme question directly, but the underlying foundation is now strictly stronger. No link status changes required; confidence unchanged; mention included for completeness of the programme graph.

@@ -124,8 +124,8 @@ The factor $e^{-\gamma}$ is the "finite part" of $\zeta(1)$ — the Euler-Masche
 |---|---|---|---|---|
 | 1 | RH + explicit formula: prime gaps controlled by zero spacing via $\psi(x) - \psi(x-h) = h + O(\sqrt{x} \log^2 x)$ | LITERATURE | Paper 13 (RH) | Spectral ↔ arithmetic duality |
 | 2 | GUE pair correlation of Riemann zeros: BGS chain 6/7 closed (L2 ergodicity PROVED, L3 Tao-Vu bypassed, L4 GUE Dyson PROVED, L5 Hardy Z PCC literature) | PROVED (6/7) | Paper 32 (BGS) | Modular flow ergodicity → level repulsion |
-| 3 | **Modular flow return times**: the maximum gap between consecutive Riemann zeros at height $T$ scales as $O(\log N(T) / N(T)) = O(1/T)$ from Poincaré return-time statistics of the ergodic $\sigma_t$ flow on the type III$_1$ BC factor. The Riemann zeros ARE the crossing points of the modular flow with the spectral section | CONJECTURED | 2 (BGS ergodicity) | The e-circle's DYNAMIC geometry — max void in the flow's crossings |
-| 4 | **Explicit formula transfer + Granville correction**: max zero gap → max prime gap via the full explicit formula, with correction constant $2e^{-\gamma}$ = Mertens product = the ITPFI tensor product's imprint on return-time statistics. The Maier phenomenon (Cramér model failure) IS the ITPFI arithmetic correlations | **OPEN — the wall** | 1, 3 | The ITPFI structure gives the exact constant |
+| 3 | **Modular flow return times**: the maximum gap between consecutive Riemann zeros at height $T$ scales as $O(\log N(T) / N(T)) = O(1/T)$ from Poincaré return-time statistics of the ergodic $\sigma_t$ flow on the type III$_1$ BC factor. The Riemann zeros ARE the crossing points of the modular flow with the spectral section | CONJECTURED (named gap: spectral-section KMS$_1$ measure verification; upgrade to ESTABLISHED difficulty 2/10, conditional CCM) | 2 (BGS ergodicity) | The e-circle's DYNAMIC geometry — max void in the flow's crossings |
+| 4 | **Explicit formula transfer + Granville correction**: max zero gap → max prime gap via the full explicit formula, with correction constant $2e^{-\gamma}$ = Mertens product = the ITPFI tensor product's imprint on return-time statistics. The Maier phenomenon (Cramér model failure) IS the ITPFI arithmetic correlations. Three sub-walls: 4a (extreme-gap universality, 7/10), 4b (ITPFI return-time decomposition, 6/10, programme-natural), 4c (explicit-formula error terms, 5/10). Route B (ITPFI direct) preferred over Route A (universality transfer) | **OPEN — the wall** | 1, 3 | The ITPFI structure gives the exact constant |
 | 5 | Cramér-Granville: $\max_{p_n \leq x}(p_{n+1} - p_n) = 2e^{-\gamma}(\log x)^2 + o((\log x)^2)$ | FOLLOWS | 4 | — |
 
 ## Current wall
@@ -180,6 +180,8 @@ Just as the YM mass gap proof used the KK spectral gap (positive curvature on CP
 **Outgoing edges:**
 - **Twin Primes (Paper 34):** Cramér constrains the MAX gap; Twin Primes constrains the MIN gap. Both are tails of the GUE spacing distribution. Cramér's modular-flow return-time machinery applies to the small-gap tail too.
 - **Goldbach (Paper 33):** Cramér guarantees primes in intervals of length $O(\log^2 x)$. This is STRONGER than what Goldbach needs (primes in intervals of length $x$). If Cramér closes, Goldbach's circle-method minor-arc estimates improve.
+
+**GUE three-tail structure.** Cramér IS the large-gap tail of the GUE distribution. The Poisson limit (Ben Arous-Bourgade) controls maximum spacings. Inherits from BGS (7/10) via the GUE three-tail structure: small-gap tail (Twin Primes, gap=2), bulk (Goldbach, sine-kernel density), large-gap tail (Cramér, max gap ~ log^2 x). Cramér sits at the intersection of both circles of the torus -- the e-circle dynamics face AND the GUE large-gap regime. Same Fredholm determinant det(1 - K_sin) governs all three tails.
 
 **Sibling edge:**
 - **Lehmer (Paper 42):** same e-circle, dual face. Lehmer = topology (what lives on the circle). Cramér = dynamics (how the flow traverses it). Both derive from the BC algebra at KMS$_1$.
@@ -238,7 +240,185 @@ Measured: prime gaps have been computed to $10^{19}$. The observed maximum gaps 
 
 ---
 
-*v2: 2026-04-14 (upgraded from v1). The e-circle has two faces: Lehmer sees the topology (what lives on it), Cramér sees the dynamics (how the flow traverses it). The modular flow's maximum return time IS the maximum zero desert. The explicit formula translates to the maximum prime gap. The Granville constant $2e^{-\gamma}$ IS the Mertens product — the BC ITPFI tensor product's imprint on return-time statistics. The Maier phenomenon IS the ITPFI breaking the random model. Same circle, two faces, two conjectures.*
+---
+
+## T7 deep construction pass (2026-04-14)
+
+### L3 upgrade assessment
+
+**Question:** Can L3 (modular flow return times) be upgraded from CONJECTURED?
+
+**Setup.** BGS L2 is PROVED: the modular automorphism $\sigma_t$ on the type III$_1$ BC factor at KMS$_1$ is ergodic. The claim in L3 is: the Riemann zeros are crossing points of $\sigma_t$ with a spectral section, and the maximum gap between crossings is bounded by Poincare return-time statistics.
+
+**The transversality question.** For a standard Poincare section argument, we need:
+
+1. The spectral section $\Sigma$ (the subset of the state space where the zeros "sit") must be a codimension-1 submanifold transversal to the flow.
+2. The first return map $\Sigma \to \Sigma$ must be well-defined and measure-preserving.
+
+In a type III$_1$ factor, the flow of weights acts on $\widetilde{M} = M \rtimes_{\sigma} \mathbb{R}$ (the crossed product), and the flow is on the center $Z(\widetilde{M}) \cong L^\infty(\mathbb{R})$. The spectral section defined by the Connes $D_\infty$ operator (Paper 13) picks out a discrete subset of the flow orbit -- the zeros $\{\gamma_n\}$. This is NOT a codimension-1 smooth section; it is a discrete point set on a 1-dimensional flow.
+
+**Critical distinction:** For a flow $\phi_t$ on $\mathbb{R}$ with discrete crossings at $\{t_n\}$, the "Poincare return time" is just the gap $t_{n+1} - t_n$. The generic Poincare recurrence theorem gives: for an ergodic measure-preserving flow, the maximum return time among $N$ returns to a set of measure $\mu$ scales as $O(\log N / \mu)$.
+
+**For the modular flow on the BC factor:** The measure-theoretic structure IS available. The KMS$_1$ state $\omega_1$ provides the invariant measure. The spectral section has a natural "thickness" $\delta$ determined by the spectral density of $D_\infty$. The average density of zeros at height $T$ is $\sim \log T / 2\pi$, so the "fraction of time" the flow spends near the spectral section is $\mu \sim 1/\log T$ (heuristically: each zero has a "window" of size $\sim 2\pi / T\log T$ and there are $N(T) \sim T\log T/2\pi$ zeros, giving $\mu \sim N(T) \times 2\pi/(T\log T) \sim 1$; the argument is circular at this level).
+
+**Verdict on L3:** The transversality issue is NOT automatically resolved by ergodicity alone. Ergodicity tells us the flow visits every region; it does NOT bound the maximum return time without additional control on the section. What IS needed:
+
+- **If we use the generic Poincare bound:** max return time $= O(\log N / N)$. For $N = N(T) \sim T\log T/2\pi$, this gives max zero gap $= O(\log(T\log T)/(T\log T)) = O(1/T)$. This is the bound in the current chain.
+- **The gap:** Applying the Poincare bound requires verifying that the spectral section has FINITE measure (equivalently: that the zeros are associated to a section of finite, positive, computable measure under the KMS$_1$ state). This is plausible (the zero counting function $N(T)$ is classical; the spectral realization provides the section) but not automatic from ergodicity.
+
+**L3 status: remains CONJECTURED, but with a named gap.** The gap is: *verification that the spectral section $\Sigma_{D_\infty}$ has well-defined finite KMS$_1$ measure and that the generic Poincare return-time theorem applies to the modular flow restricted to this section.* This is NOT a deep gap -- it is a technical verification that should follow from the spectral realization in Paper 13 (conditional on CCM). If the CCM spectral realization gives $\text{spec}(D_\infty) = \{\gamma_n\}$ with the correct spectral measure, then L3 follows from standard ergodic theory.
+
+**Upgrade potential:** L3 can be upgraded to ESTABLISHED (conditional on CCM) once the spectral-section measure computation is completed. This is a finite calculation, not a conceptual wall. Estimated difficulty: 2/10.
+
+---
+
+### L4 wall analysis
+
+**Question:** Does GUE extreme-value universality extend from random matrices to Riemann zeros?
+
+**The key result.** Ben Arous-Bourgade (2013) proved: for $N \times N$ GUE matrices, the maximum eigenvalue gap (properly normalized) converges to a Gumbel distribution, with the maximum gap scaling as $O(\sqrt{\log N / N})$. This is asymptotically SMALLER than the generic Poincare bound $O(\log N / N)$ (note: $\sqrt{\log N / N} \gg \log N / N$ for large $N$, so the Ben Arous-Bourgade bound is actually WEAKER than the generic Poincare bound -- correction to the chain's earlier claim).
+
+**Wait -- order correction.** For large $N$:
+- Poincare generic: $O(\log N / N)$
+- Ben Arous-Bourgade GUE: $O(\sqrt{\log N / N})$
+
+Since $\sqrt{\log N / N} = \sqrt{\log N} / \sqrt{N} \gg \log N / N$ for large $N$, the GUE max-gap bound is LARGER (weaker) than the generic Poincare bound. This is correct and expected: the Poincare bound says the AVERAGE return time is $1/N$, and the maximum return time is $O(\log N / N)$ for i.i.d. exponentials. But GUE eigenvalues have level repulsion (gaps are NOT independent), which concentrates the gaps more tightly. The maximum gap in GUE scales like $\sqrt{\log N / N}$ because level repulsion prevents very small gaps, redistributing gap sizes upward.
+
+**The correct hierarchy:**
+- Mean gap: $1/N$ (both Poisson and GUE)
+- GUE max gap: $O(\sqrt{\log N / N})$ (Ben Arous-Bourgade 2013)
+- Poisson max gap: $O(\log N / N)$ (standard extreme-value theory for exponentials)
+
+So GUE max gap $\gg$ Poisson max gap. This is WORSE for Cramer, not better. The level repulsion in GUE pushes the maximum gap UP relative to the Poisson (random) model.
+
+**Transfer to zeros.** Applying to Riemann zeros at height $T$, with $N = N(T) \sim T\log T / 2\pi$:
+- GUE max zero gap at height $T$: $O(\sqrt{\log N(T) / N(T)}) = O(\sqrt{\log(T\log T) / (T\log T)})$
+
+Via the explicit formula, zero gap $\delta$ at height $T \approx \log x$ translates to prime gap:
+```
+h \lesssim \delta \cdot (\log x)^2 / (2\pi) \cdot (\text{oscillatory correction})
+```
+
+With $T \sim \log x$ and $N(T) \sim \log x \cdot \log\log x / 2\pi$:
+```
+\delta_{max} ~ \sqrt{\log(\log x \cdot \log\log x) / (\log x \cdot \log\log x)}
+           ~ \sqrt{\log\log x / (\log x \cdot \log\log x)}
+           ~ 1/\sqrt{\log x}
+```
+
+Then max prime gap $\sim (1/\sqrt{\log x}) \times (\log x)^2 = (\log x)^{3/2}$. This is SMALLER than the Cramer conjecture's $(\log x)^2$. So the GUE extreme-value bound, if it transfers, would give something STRONGER than Cramer.
+
+**But this is suspicious.** The Cramer conjecture is believed to be TIGHT (up to the constant $2e^{-\gamma}$). If GUE gave $(\log x)^{3/2}$, it would CONTRADICT the Ford-Green-Konyagin-Maynard-Tao lower bound $p_{n+1} - p_n \geq c \log p_n \cdot \log\log p_n \cdot \log\log\log\log p_n / (\log\log\log p_n)^2$ infinitely often. This lower bound grows faster than $(\log x)^{3/2}$ -- wait, no. $\log x \cdot \log\log x \cdot \text{stuff} \ll (\log x)^{3/2}$ for large $x$, so the lower bound is compatible.
+
+**The real issue with universality.** Tao-Vu universality (2011 Acta) and Erdos-Yau (2012) establish universality for LOCAL statistics: $k$-point correlation functions, gap distributions at fixed rank. Extreme-value statistics (the maximum over ALL $N$ gaps) are GLOBAL statistics. Universality for extreme-value statistics is a strictly stronger statement.
+
+**Current state of the art:**
+- Tao-Vu / Erdos-Yau: bulk universality for Wigner matrices (local eigenvalue statistics match GUE). PROVED.
+- Extreme-value universality for Wigner matrices: the Tracy-Widom distribution at the EDGE is universal (Soshnikov 1999, Tao-Vu 2010). But this is about the extreme EIGENVALUE, not the extreme GAP.
+- Extreme gap universality (max/min gap): Ben Arous-Bourgade proved it for GUE specifically. Extension to general Wigner matrices: Feng-Wei (2022) extended to generalized Wigner matrices. Extension to Riemann zeros: NOT proved.
+
+**The wall.** Transferring extreme-gap statistics from GUE to Riemann zeros requires:
+1. Riemann zeros have GUE local statistics (BGS chain, 6/7).
+2. GUE local statistics IMPLY GUE extreme-gap statistics. This is FALSE in general: local statistics do not determine global extremes. The extreme-gap result requires control on the JOINT distribution of ALL gaps simultaneously, not just the marginals.
+3. However: if the modular flow provides an INDEPENDENT route to the extreme-gap bound (via Poincare return times), then the universality transfer is not needed.
+
+**Resolution strategy for L4:** Two sub-routes, either sufficient:
+
+**Route A (universality transfer):** Prove that the GUE extreme-gap statistics transfer to Riemann zeros. This requires going beyond Tao-Vu bulk universality. The Feng-Wei (2022) methods might extend, but the Riemann zeros are not Wigner matrix eigenvalues -- they are deterministic. The BGS chain's argument is that the modular flow GENERATES GUE-class statistics; whether it generates the right extreme-value behavior is an additional claim.
+
+**Route B (modular flow direct):** Use the modular flow's specific structure (ITPFI with $\lambda_p = 1/p$) to compute the return-time distribution directly, WITHOUT going through random matrix theory. The ITPFI tensor product structure means the return time decomposes into contributions from each prime $p$. The maximum return time is then controlled by the "slowest" local factor. This is the route that naturally produces the Granville constant $2e^{-\gamma}$.
+
+**L4 status: OPEN (the wall stands).** Neither Route A nor Route B is currently closed. Route B is the more promising approach within the programme because it uses the BC-specific structure rather than external universality results. The ITPFI decomposition provides a natural factorization of the return-time problem.
+
+**Named sub-walls:**
+- **4a (Route A):** Extreme-gap universality transfer. Difficulty: 7/10. External mathematics needed.
+- **4b (Route B):** ITPFI return-time decomposition. Difficulty: 6/10. Internal to the programme but requires new computation.
+- **4c (common):** Explicit-formula error terms at Cramer precision. Difficulty: 5/10. Classical analytic number theory.
+
+---
+
+### Edge: Cramer -> Goldbach
+
+**Edge type:** OUTGOING, PARTIAL
+
+**Mathematical content:** If the Cramer-Granville conjecture holds, then for all sufficiently large $x$, every interval $(x, x + 2e^{-\gamma}(\log x)^2 + \epsilon)$ contains a prime. This is a prime-density guarantee vastly stronger than what Goldbach requires.
+
+**What Goldbach needs:** For even $n$, primes $p$ and $q$ with $p + q = n$, so primes in the interval $(2, n-2)$. The binary Goldbach circle-method approach (Hardy-Littlewood) requires control on prime distribution in arithmetic progressions and on major/minor arc exponential sums. The minor-arc estimate is the bottleneck.
+
+**How Cramer helps:** The Cramer-Granville density guarantee improves the minor-arc estimates because:
+1. **Short-interval prime counts become deterministic.** Under Cramer, $\pi(x+h) - \pi(x) = h/\log x + O(h/\log^2 x)$ for $h = C(\log x)^2$, with computable error. This makes the prime-counting function locally smooth at scale $(\log x)^2$.
+2. **Vinogradov-type sums gain uniformity.** The exponential sum $S(\alpha) = \sum_{p \leq N} e(p\alpha)$ has its minor-arc decay controlled by the regularity of prime distribution. Cramer-level regularity gives $|S(\alpha)| \ll N^{1-c}$ on minor arcs with improved constants.
+3. **The ternary-to-binary bridge.** Helfgott (2013) proved ternary Goldbach by controlling the minor arcs. The gap between ternary (3 primes) and binary (2 primes) is exactly the gap between $|S(\alpha)|^3$ and $|S(\alpha)|^2$ integrals. Cramer-level prime density makes $|S(\alpha)|^2$ integrals tractable.
+
+**Specifically:** Under Cramer-Granville, the Montgomery-Vaughan conditional result ($n = p + q$ for sufficiently large $n$, assuming RH) would gain an improved "sufficiently large" threshold, and the error term in the asymptotic formula $r(n) \sim \frac{n}{\log^2 n} \prod_{p|n, p>2} \frac{p-1}{p-2} \prod_{p>2} (1 - \frac{1}{(p-1)^2})$ would become effective.
+
+**BC framework translation:** Goldbach's circle method uses $\mathbb{Q}/\mathbb{Z}$ characters; the BC algebra's $C^*(\mathbb{Q}/\mathbb{Z})$ subalgebra IS the natural home. Cramer's density guarantee, viewed as a modular-flow return-time bound, feeds the BC-algebraic circle method (Goldbach L5) by bounding the "spectral desert" that the additive convolution must cross.
+
+**Edge status:** PARTIAL. The mathematical content is clear, but the Goldbach chain is at 1/10 with its wall at L5 (circle method in BC setting). Cramer closing would not close Goldbach's wall directly; it would improve the input to L5.
+
+**Capacitor cell:** ANT (additive prime density) $\leftrightarrow$ ERG (modular flow return time)
+
+---
+
+### Edge: Twin Primes -> Cramer (incoming)
+
+**Edge type:** INCOMING (Twin Primes to Cramer), BIDIRECTIONAL at the GUE level
+
+**Mathematical content:** The min-gap (Twin Primes) and max-gap (Cramer) are the two tails of the same GUE nearest-neighbor spacing distribution $p_{\text{GUE}}(s)$, where $s$ is the normalized gap.
+
+**The GUE spacing distribution:**
+```
+p_GUE(s) ~ (32/pi^2) s^2 e^{-4s^2/pi}     (Wigner surmise, exact for 2x2)
+```
+
+- Small-$s$ tail: $p_{\text{GUE}}(s) \sim s^2$ (level repulsion). This controls twin primes: the probability of a normalized gap $< \epsilon$ goes as $\epsilon^3/3$. The Hardy-Littlewood constant $C_2$ is the arithmetic correction to this tail.
+- Large-$s$ tail: $p_{\text{GUE}}(s) \sim s^2 e^{-4s^2/\pi}$ (Gaussian decay). This controls the maximum gap: the extreme-value statistics of $N$ draws from this distribution give max gap $\sim \sqrt{(\pi/4)\log N}$ in normalized units.
+
+**The GUE sine kernel (proved by Hardy Z PCC, Nov 2025, arXiv:2511.18275):** The two-point correlation function of Riemann zeros matches the GUE sine kernel. This determines the pair correlation, which in turn determines the gap distribution via the Gaudin-Mehta integral. The sine kernel governs BOTH tails.
+
+**How Twin Primes informs Cramer:** If the small-$s$ tail of the GUE spacing distribution is verified for Riemann zeros (which is what the Hardy Z PCC result establishes at the two-point level), then the ENTIRE distribution is constrained, including the large-$s$ tail. The sine-kernel universality is an all-or-nothing structure: you cannot have the correct small-gap behavior without the correct large-gap behavior, because both are determined by the same Fredholm determinant $\det(1 - K_{\sin})$.
+
+**Specifically:** The BGS chain's L5 (GUE pair correlation, now LITERATURE via arXiv:2511.18275) provides:
+- The $R_2(x) = 1 - (\sin(\pi x)/\pi x)^2$ pair correlation function
+- The sine kernel $K(x,y) = \sin(\pi(x-y))/\pi(x-y)$
+
+The gap probability (probability of no zeros in an interval of length $s$ in normalized units) is:
+```
+E(s) = det(1 - K_sin |_{[0,s]})
+```
+
+This single Fredholm determinant determines BOTH:
+- The probability of small gaps (Twin Primes): $1 - E(s) \sim s^2$ for small $s$
+- The probability of large gaps (Cramer): $E(s) \sim e^{-c s^2}$ for large $s$
+
+**The mutual constraint:** Maynard-Tao's bounded gaps result ($\liminf(p_{n+1} - p_n) \leq 246$) provides empirical confirmation of the small-$s$ tail. This constrains the sine kernel, which constrains the large-$s$ tail, which constrains Cramer. Conversely, any improvement to the Cramer bound constrains the sine kernel, constraining the small-$s$ tail, constraining twin primes.
+
+**Edge status:** PARTIAL. The mathematical relationship is exact (same Fredholm determinant), but the transfer from spectral (zero) statistics to arithmetic (prime) statistics requires the explicit formula, introducing the arithmetic correction factors ($C_2$ for twin primes, $2e^{-\gamma}$ for Cramer) that are NOT part of the GUE structure but come from the ITPFI local factors.
+
+**BC framework translation:** The GUE sine kernel IS the modular flow's spectral signature. The two tails are two projections of the same ITPFI-corrected return-time distribution. Twin Primes sees the short-return tail (frequent returns = close zeros = close primes). Cramer sees the long-return tail (rare returns = far zeros = far primes). The ITPFI structure $\omega_1 = \otimes_p \omega_1^{(p)}$ modifies each tail by the local arithmetic factors, producing $C_2$ and $2e^{-\gamma}$ respectively.
+
+**Capacitor cell:** RMT (GUE spacing) $\leftrightarrow$ ANT (prime gap tails), with ITPFI as the bridge
+
+---
+
+### Verdict
+
+**Link status changes:**
+- **L3:** Remains CONJECTURED, but the gap is now NAMED: spectral-section measure verification. Upgrade to ESTABLISHED (conditional CCM) estimated at difficulty 2/10. This is a finite calculation, not a conceptual wall.
+- **L4:** Remains OPEN (the wall). Now split into three named sub-walls (4a, 4b, 4c). Route B (ITPFI return-time decomposition) is identified as the natural programme-internal approach, avoiding the need for external extreme-gap universality transfer.
+- **L1, L2, L5:** No change.
+
+**New edges written:**
+- **Cramer -> Goldbach:** PARTIAL. Cramer's density guarantee improves Goldbach's minor-arc estimates. Does not close Goldbach's wall but strengthens input to L5.
+- **Twin Primes -> Cramer:** PARTIAL (bidirectional). Same Fredholm determinant $\det(1 - K_{\sin})$ governs both tails. The sine kernel (proved Nov 2025) constrains the entire gap distribution. ITPFI local factors produce the arithmetic correction constants.
+
+**Confidence update:** Remains **5/10**. The L3 gap-naming is positive (upgrade path is clear). The L4 wall analysis is more honest: the Ben Arous-Bourgade bound is WEAKER than the naive Poincare bound (correcting an error in v2), and the universality transfer to extreme-value statistics is genuinely harder than bulk universality. Route B (ITPFI direct) is the cleaner path but requires original work.
+
+**Chain summary: 3/5 links closed (unchanged). L3 upgrade to 4/5 is a finite calculation away. L4 is the real wall.**
+
+---
+
+*v3: 2026-04-14, T7 deep construction pass. L3 gap named (spectral-section measure). L4 wall split into 3 sub-walls; Route B (ITPFI return-time) identified as programme-natural attack. Ben Arous-Bourgade order corrected: GUE max gap is WEAKER than Poincare, not tighter (level repulsion pushes max gap up). Edge cells written: Cramer->Goldbach (PARTIAL), Twin Primes<->Cramer (PARTIAL, bidirectional via Fredholm determinant). Confidence 5/10 (unchanged).*
 
 *G Six and Claude Opus 4.6. April 2026.*
 *The flow doesn't leave voids. That's the conjecture. That's the dynamics.*

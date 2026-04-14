@@ -23,8 +23,8 @@ the **chessboard 22-vertex delta** (read AFTER the chessboard layer — override
 the **parent brief** (read FIRST — all unchanged sections are authoritative from this file) is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/30-ring-traversal-brief.md`
 
-the run **brief** (DELTA — overrides specific sections of the parent brief) is
-`/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/33-extended-ring-brief.md`
+the run **brief** (DELTA — overrides specific sections of the parent brief; supersedes brief 32) is
+`/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/33-extended-ring-brief-22.md`
 
 the **toolkit** for this run is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/08-framework-tools.md`
@@ -36,9 +36,9 @@ the **north star** for this programme is
 `/Users/gsix/quantum-geometry-in-5d-latex/publishing/strategy.md`
 
 the run **output directory** is
-`/Users/gsix/quantum-geometry-in-5d-latex/programme/ring-traversals/traversal-05`
+`/Users/gsix/quantum-geometry-in-5d-latex/programme/ring-traversals/traversal-07`
 
-the **ring** is the set of all 22 `PROOF-CHAIN.md` files at the top level of:
+the **ring** is the set of all 23 `PROOF-CHAIN.md` files at the top level of:
 `paper1/`, `paper08-yang-mills/`, `paper13-rh/`, `paper13b-grh/`, `paper25-hilbert-12/`,
 `paper26-bsd/`, `paper28-pvnp/`, `paper29-hodge/`, `paper30-navier-stokes/`,
 `paper31-baum-connes/`, `paper32-bgs-spectral-statistics/`,
@@ -46,7 +46,8 @@ the **ring** is the set of all 22 `PROOF-CHAIN.md` files at the top level of:
 `paper35-schanuel/`,
 `paper36-hilbert-6/`, `paper37-abc/`, `paper38-turbulence/`,
 `paper39-vp-vs-vnp/`, `paper40-odd-perfect/`,
-`paper41-collatz/`, `paper42-lehmer/`, `paper43-cramer/`
+`paper41-collatz/`, `paper42-lehmer/`, `paper43-cramer/`,
+`paper44-sato-tate/`
 
 the **canonical ring order** for traversal is:
  1. QG5D (paper1) — hub
@@ -62,12 +63,13 @@ the **canonical ring order** for traversal is:
 11. PvNP (paper28-pvnp)
 12. VP vs VNP (paper39-vp-vs-vnp) — PvNP-adjacent
 13. BGS (paper32-bgs-spectral-statistics)
-14. Cramér (paper43-cramer) — NEW, BGS↔Twin bridge
-15. Twin Primes (paper34-twin-primes)
+14. Twin Primes (paper34-twin-primes)
+15. Cramér (paper43-cramer) — NEW, Twin-Primes-adjacent (max gap ↔ min gap)
 16. Goldbach (paper33-goldbach)
-17. Collatz (paper41-collatz) — NEW, Hecke μ₂/μ₃ dynamics
-18. ABC (paper37-abc) — Goldbach-adjacent
-19. OPN (paper40-odd-perfect) — ABC/Goldbach-adjacent
-20. Lehmer (paper42-lehmer) — NEW, cyclotomic↔non-cyclotomic KMS boundary
-21. Schanuel (paper35-schanuel)
-22. Hilbert 6 (paper36-hilbert-6) — ring-closure META-vertex → closes back to QG5D
+17. ABC (paper37-abc) — Goldbach-adjacent
+18. OPN (paper40-odd-perfect) — ABC/Goldbach-adjacent
+19. Collatz (paper41-collatz) — NEW, OPN-adjacent (Hecke μ₂/μ₃ dynamics)
+20. Lehmer (paper42-lehmer) — NEW, Collatz-adjacent (e-circle topology face)
+21. Sato-Tate (paper44-sato-tate) — NEW, Lehmer-adjacent (e-circle measure face; bridges BSD↔BGS)
+22. Schanuel (paper35-schanuel)
+23. Hilbert 6 (paper36-hilbert-6) — ring-closure META-vertex → closes back to QG5D
