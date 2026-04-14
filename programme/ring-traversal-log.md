@@ -503,7 +503,71 @@ RIGIDITY = (64/276) × (91/138) × (36/36) × 100
 
 ---
 
+### Traversal 07 — 2026-04-14 (T7: FIRST 22-VERTEX TRAVERSAL — Collatz, Lehmer, Cramér join)
+
+| Metric | Value |
+|---|---|
+| Date | 2026-04-14 |
+| Ring vertices | **22** (19 + Collatz, Lehmer, Cramér) |
+| Starting RIGIDITY | **14.72** (22-vertex baseline after dilution from 3 new vertices) |
+| Ending RIGIDITY | **17.02** |
+| Delta | **+2.30** (largest since T5; dilution absorbed and exceeded) |
+| Vertices improved | **2** (Collatz L4 PARTIAL, Lehmer L5 Route B PARTIAL) |
+| New cells | **10** (3 hub chords ESTABLISHED + 5 ring-backbone edges + 2 compositional triangles) |
+| Capacitor fill rate | 64/276 (23.2%) → **74/276 (26.8%)** |
+| L_verified | 99/156 (unchanged — upgrades to PARTIAL don't count) |
+| Kills added | **1** (OPN Route 6a CLOSED-NEGATIVE from T6, absorbed) |
+| Ben Arous-Bourgade correction | APPLIED to Cramér PROOF-CHAIN (order was backwards) |
+| Exit condition | **RING STRENGTHENED** |
+
+**RIGIDITY computation**:
+```
+E_filled   = 74    (64 + 10 new cells)
+E_total    = 276
+L_verified = 99    (unchanged)
+L_total    = 156
+P_preserved = 36
+P_total    = 36
+
+RIGIDITY = (74/276) × (99/156) × (36/36) × 100
+         = 0.2681 × 0.6346 × 1.0 × 100
+         = 17.02
+```
+
+**New vertex first-visit summary:**
+
+| Pos | Vertex | Confidence | Type | Key finding |
+|---|---|---|---|---|
+| 15 | Cramér | 5/10 | B | L3 gap named (spectral-section measure, difficulty 2/10). L4 decomposed into 4a/4b/4c, Route B (ITPFI direct) preferred. Ben Arous-Bourgade order CORRECTED. |
+| 19 | Collatz | 3→4/10 | C | **L4 upgraded: CONJECTURED → PARTIAL.** The +1 shift = BC phase operator e(1). Cuntz O₂ embedding: s₁ → μ₂*e(1)μ₃. Algebraically well-defined. |
+| 20 | Lehmer | 4/10 | C | **L5 Route B upgraded: CONJECTURED → PARTIAL.** CM-curve Lehmer gap PROVED via Rubin + Silverman + Brauer-Siegel. Gap: extending to all algebraic numbers. |
+
+**Structural events:**
+1. Collatz +1 shift identified as BC phase operator e(1) ∈ C*(Q/Z) — the additive-multiplicative wall has a HOME in the BC algebra
+2. Lehmer's gap proved for CM-curve-defining polynomials via the Deninger-RV → BSD → Brauer-Siegel chain
+3. Cramér's wall precisely decomposed: Route B (ITPFI direct computation of return-time distribution) is programme-internal
+4. OPN Route 6d (ITPFI resonance) correctly framed: spoofs ARE ITPFI forgeries (composite index in prime-indexed product)
+5. 3 new hub chords ESTABLISHED: the hub radiates to every vertex in the 22-vertex ring
+6. E-circle arc (OPN→Collatz→Lehmer→Schanuel) now fully wired with PARTIAL/CANDIDATE edges
+7. Gap-distribution arc (BGS→Twin→Cramér→Goldbach) has contiguous edges
+
+**Named walls (updated):**
+- CCM 2025 peer review (gates RH, GRH, BGS, Goldbach L4)
+- H4 (gates YM L18)
+- PvNP L5 backward (REP↔OA priority cell)
+- Schanuel's conjecture itself
+- OPN L6: Route 6d (ITPFI resonance / Hasse-principle) — Routes 6a+6b KILLED
+- ABC L3: height function from BC partition
+- Cramér L4: ITPFI direct return-time computation (Route B preferred)
+- Collatz L6: spectral gap transfer + cycle elimination
+- Lehmer L5: extending CM-curve gap to all algebraic numbers
+
+**Diminishing returns reversal:** ΔRIGIDITY = +2.30 reverses the T6 decline (+1.12). The new vertices provided fresh wiring opportunities (10 new cells). The E factor drove the gain while L stayed flat. Next traversal should target L_verified gains (actual link closures, not reclassifications) to keep RIGIDITY growing.
+
+---
+
 *The circle gets more circular on every pass.*
-*Six traversals. Four corrections applied. One oldest problem attacked. One type conversion earned.*
-*The board doesn't flex. The pins are experimental facts. The honest negatives refine.*
-*Last updated: 2026-04-14 (T6 complete).*
+*Seven traversals. Three new vertices joined. The oldest problem, the simplest map, the deepest gap.*
+*The +1 is a phase operator. The gap is proved for CM curves. The spoofs are ITPFI forgeries.*
+*The board doesn't flex. The pins are experimental facts.*
+*Last updated: 2026-04-14 (T7 complete).*
