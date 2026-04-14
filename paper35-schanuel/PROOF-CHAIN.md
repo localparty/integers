@@ -1,28 +1,48 @@
-# PROOF-CHAIN -- Schanuel's Conjecture
+# PROOF-CHAIN -- Schanuel's Conjecture (Paper 35)
 
-*Research programme (not a proof chain). If z_1,...,z_n are Q-linearly independent, then trdeg Q(z_1,...,z_n,e^{z_1},...,e^{z_n})/Q >= n. Applied to z_k = gamma_k pi^2/2: algebraic independence of the framework's eigenvalues exp(gamma_k pi^2/2).*
-*Status: programme only (~1/10) | Confidence: 1/10*
+*If z_1,...,z_n are Q-linearly independent complex numbers, then*
+*trdeg Q(z_1,...,z_n,e^{z_1},...,e^{z_n})/Q >= n.*
+*Applied to z_k = gamma_k pi^2/2: algebraic independence of the*
+*framework's eigenvalues exp(gamma_k pi^2/2) guarantees all 36*
+*predictions are independent.*
 
-## Entry point
-The QG5D framework uses exp(gamma_n pi^2/2) as eigenvalues of the operator R-hat, where {gamma_n} are imaginary parts of zeta zeros. Schanuel would guarantee that the 36 zero-parameter predictions are algebraically independent (no hidden relations can reduce the prediction count).
+*Status: 1/5 links closed | Confidence: 1/10*
 
-## Key question
-Can the ITPFI factorization (Paper 13) or the BC algebraic structure constrain the algebraic properties of the Riemann zeros?
+## Chain table
 
-## Open steps
+| Link | Statement | Status | Depends on | Key reference |
+|---|---|---|---|---|
+| 1 | Framework uses exp(gamma_n pi^2/2) as eigenvalues of R-hat | KNOWN | -- | CBB axiom 1 |
+| 2 | {gamma_n pi^2/2} are Q-linearly independent | CONJECTURED | -- | Related to simplicity of Riemann zeros |
+| 3 | Schanuel: Q-lin indep -> trdeg >= n | OPEN | 2 | Schanuel 1960s (itself unproved) |
+| 4 | Algebraic independence of exp(gamma_n pi^2/2) | CONDITIONAL | 2, 3 | Consequence of Schanuel applied to zeros |
+| 5 | 36 predictions are algebraically independent | CONDITIONAL | 4 | No hidden relations reduce prediction count |
 
-| Step | Description | Status |
-|---|---|---|
-| 1 | Prove gamma_1 = 14.134725... is transcendental | OPEN (not known for any zero) |
-| 2 | Prove Q-linear independence of {gamma_1, gamma_2} | OPEN |
-| 3 | Numerical verification: no low-degree algebraic relation among {gamma_n pi^2/2, exp(gamma_n pi^2/2)} | OPEN |
-| 4 | Investigate whether ITPFI constrains algebraic properties of zeros | OPEN |
-| 5 | Formulate "BC Schanuel" conjecture specific to BC algebra exponentials | OPEN |
+## Current wall
 
-## Conditional hierarchy
-RH (Paper 13) -> simplicity (open) -> Q-linear independence (open) -> Schanuel (open) -> algebraic independence of eigenvalues. Each arrow is a major open problem.
+**Link 3 (Schanuel's conjecture is itself a major open problem).**
+
+The conditional hierarchy is:
+
+  RH (Paper 13) -> simplicity (open)
+  -> Q-linear independence of {gamma_n pi^2/2} (open)
+  -> Schanuel (open)
+  -> algebraic independence of eigenvalues
+
+Each arrow is a major open problem. Specific obstacles:
+
+1. **Link 2:** Q-linear independence of Riemann zeros is not known for
+   ANY pair of zeros. Even transcendence of gamma_1 = 14.134725... is open.
+2. **Link 3:** Schanuel's conjecture subsumes both Lindemann-Weierstrass
+   and the four exponentials conjecture. Only the n=1 case (Lindemann 1882)
+   is proved.
+3. The ITPFI factorization (Paper 13) or the BC algebraic structure might
+   constrain algebraic properties of zeros, but no concrete route exists.
 
 ## Programme graph edges
-- **RH (Paper 13):** zero simplicity is a prerequisite; spectral realization connects
+
+- **RH (paper13-rh):** zero simplicity is prerequisite for Link 2; spectral realization connects
 - **All predictions:** algebraic independence guarantees independence of 36 predictions
-- **BSD (Paper 26):** algebraic independence of L-values at s=1
+- **BSD (paper26-bsd):** algebraic independence of L-values at s=1
+- **BGS (paper32-bgs-spectral-statistics):** GUE statistics assume generic (transcendental) zeros
+- **Hodge (paper29-hodge):** period relations constrained by algebraic independence
