@@ -128,7 +128,7 @@ where:
   E_filled   = number of filled capacitor cells (edges)
   E_total    = total possible capacitor cells (276 for 24 domains)
   L_verified = number of proof chain links at VERIFIED / PROVED / LITERATURE status
-  L_total    = total proof chain links across all 13 vertices
+  L_total    = total proof chain links across all 14 vertices
   P_preserved = number of 36 predictions still matching experiment
   P_total    = 36
 ```
@@ -140,7 +140,7 @@ E_filled   = 44    (post-H4-run capacitor)
 E_total    = 276
 L_verified = 47    (YM 17 + RH 6 + BSD 11 + PvNP 5 + Hodge 3 + NS 2 + 
                      GRH 0 + BC 1 + BGS 2 + others 0)
-L_total    = 83    (sum across all 13 vertices)
+L_total    = 83    (sum across all 14 vertices)
 P_preserved = 36
 P_total    = 36
 

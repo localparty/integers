@@ -34,6 +34,10 @@ Link 5 (V-Hilbert 12 extraction). The unitary bridge V exists as a formal object
 
 Class field generation = physical predictions from the bridge family. Each bridge at k ∈ {2,3,4,6} produces a concrete physical prediction (CP symmetry, 3 generations, Pati-Salam α_PS⁻¹ = 17, 6 quarks + CKM). These predictions VERIFY that the KMS structure generates the correct class fields. H12's truth is empirically constrained by the 36-prediction master table.
 
+## Cascading refinement from QG5D W1/W2 closure (2026-04-14)
+
+Paper 1 PROOF-CHAIN.md W1 (scheme independence) and W2 (Route-C 3-loop explicit) both closed 2026-04-13/14 via Paper 10 (Theorem 1 two-loop scheme-independence + Theorem U.2a one-loop Seeley-DeWitt) + Paper 11 (Theorem K.4 all-orders inductive bootstrap) + explicit L=3 numerical verification at 50-digit precision (`paper1/code/K-5-2-route-c-3loop.py`). Cascading impact on this chain: the CBB system's Axiom 5 (zeta regularization closure) no longer has a lingering regulator-scheme question. Effect is cosmetic-to-small — this chain never gated on the scheme question directly, but the underlying foundation is now strictly stronger. No link status changes required; confidence unchanged; mention included for completeness of the programme graph.
+
 ---
 
 *Paper 25 is the publishing strategy's Wave 2 deliverable. The four-conjecture programme (CBB Reciprocity, Brauer-KMS duality, Level-jump Rigidity, Spectral Kronecker-Weber, V-Hilbert 12) provides the research roadmap.*

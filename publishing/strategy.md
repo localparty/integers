@@ -578,3 +578,94 @@ The path:
 *This is the framework's first publishing strategy document. Future revisions append below as `strategy-v2.md`, `strategy-v3.md`, etc., with each version preserving the prior as historical record. The strategy is expected to evolve as Wave 1 lands and the community's response calibrates the Wave 2 and Wave 3 plans.*
 
 *Appendix A (proposed extensions from `03-global-strategy.md`) is the roadmap for the next editing pass on this file. The extensions are pending and explicitly TODO; they are written here so they are not forgotten when the framework moves into Wave 1 ship preparation.*
+
+---
+
+## Appendix B — Ring-mode strategic anchors (added 2026-04-13)
+
+*Added specifically to serve as the north star for the ring-traversal PCA runs (`millenium-apps/proof-chain-adversarial-01/30-ring-traversal-run.md`). The ring-mode triad Strategist (§T.4.2) reads this appendix when answering alignment questions.*
+
+### B.1 The ring-mode meta-goal
+
+The ring-traversal PCA produces TWO deliverables simultaneously:
+
+1. **Strengthened proof chains** at each of the 14 vertices (per-vertex PROOF-CHAIN.md updated in-situ)
+2. **Capacitor growth** at each edge crossing (filled/upgraded cells in `millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md`)
+
+These are COMPLEMENTARY, not competing. A strong chain enables edge-fills around the vertex. A filled edge enables bypass routes that strengthen the chain. Ring-mode optimizes for BOTH.
+
+### B.2 Capacitor-fill target
+
+The capacitor has 276 cells (24 domains × 23 / 2 + diagonal). Current filled: 44. Target trajectory:
+
+| Timeframe | Fill rate | Description |
+|---|---|---|
+| Baseline (2026-04-13) | 44 / 276 = 16.0% | Post-H4-run state |
+| After traversal 1 | ≥ 55 / 276 = 20% | Adds 14 ring edges + 7 antipodal probes + ~3 hub chords = ~24, with overlap and partial fills reducing net gain to ~11 |
+| After 3 traversals | ≥ 85 / 276 = 31% | Compound from hub radiation + compositional fills |
+| After 5 traversals | ≥ 110 / 276 = 40% | **Programme capacitor-fill target** (the Robustness-Circle Theorem's prerequisites come within reach around here) |
+| Full convergence | > 200 / 276 = 72% | All meaningful cells filled; remaining ~76 are domain pairs with no natural correspondence |
+
+40% is the strategic target. Above 40%, the capacitor has enough wiring to support bypass routing for most conditionals.
+
+### B.3 Cross-chain rigidity target
+
+The RIGIDITY-SCORE (defined in `13-chessboard-layer.md §3`) integrates capacitor fills + verified links + preserved pins. Targets:
+
+| Milestone | RIGIDITY | Meaning |
+|---|---|---|
+| Baseline (2026-04-13) | 9.03 | Pre-traversal |
+| After traversal 1 | ≥ 15 | Antipodal probes + hub radiation + ~5 link upgrades |
+| After traversal 3 | ≥ 30 | Compound growth; half of capacitor-fill target |
+| After traversal 5 | ≥ 50 | **Robustness-Circle Theorem becomes provable in principle** |
+| Full convergence | ≥ 80 | **Conditionals are forced** (the dream outcome) |
+
+**Hard constraint**: P_preserved = 36/36 (all 36 predictions match experiment) is enforced by PIN-PRESERVATION at every action. A RIGIDITY score that climbed while a pin shifted would be REJECTED retroactively. The pin factor is the safety net.
+
+### B.4 Per-traversal deltas expected
+
+| Traversal | ΔRIGIDITY | ΔFilled cells | ΔVerified links | Vertex-type churn |
+|---|---|---|---|---|
+| T1 | +6 to +10 | +10 to +15 | +5 to +10 | 2-3 Type-D → Type-C |
+| T2 | +4 to +8 | +6 to +10 | +3 to +6 | 1-2 Type-C → Type-B |
+| T3 | +3 to +6 | +4 to +8 | +2 to +4 | 1-2 Type-B → Type-A |
+| T4 | +2 to +4 | +3 to +6 | +1 to +3 | diminishing returns |
+| T5 | +1 to +3 | +2 to +4 | +0 to +2 | convergence check |
+
+If any traversal produces a NEGATIVE ΔRIGIDITY, something is wrong (a pin shifted; the runner should diagnose and halt). If any traversal produces zero improvement, RING STALLED fires and the programme reports its local optimum.
+
+### B.5 Closure ladder (when to trigger which closure)
+
+The ring-PCA's closure triggers are graded per `30-ring-traversal-brief.md §8.4`:
+
+1. **Per-traversal RING STRENGTHENED**: abbreviated ritual (log entry + commit memo). Continue to next traversal.
+2. **Per-traversal RING STALLED**: medium ritual + stall diagnosis. Do NOT start the next traversal until user review.
+3. **Programme-level RING CLOSED**: full 5-file closure ritual per ORA §13.3. Trigger Robustness-Circle Theorem draft pass.
+4. **Programme-level RING CONVERGED (soft)**: when 5 traversals of diminishing returns are observed without stalling, declare convergence without CLOSED. Ship what's proved, name what's remaining.
+
+Each closure level has a different deliverable and a different next-action. See brief §8.4 for details.
+
+### B.6 Walk-back contract
+
+If the ring-PCA produces a result that would shift a pin (any of the 36 predictions outside experimental error), the result MUST be WALKED BACK. PIN-PRESERVATION rejects such results at the action level; DUAL-CHECK catches them post-action. The walk-back protocol:
+
+1. Log the rejection in `${output-directory}/walk-backs/rejected-N.md` with explanation
+2. Do NOT apply the rejected action to any state file
+3. Add a new kill (K-N) to the chessboard kill list with pattern + re-entry gate
+4. Continue to next vertex / next traversal
+
+The walk-back contract is load-bearing for the chessboard intuition: "the board doesn't flex." Without this contract, RIGIDITY could be gamed by accepting actions that superficially improve the score while breaking the physical foundation. The contract prevents gaming.
+
+### B.7 Alignment check questions for the triad Strategist
+
+When the triad Strategist (§T.4.2) fires at traversal-close, it should answer these three questions using THIS appendix as the north star:
+
+1. **Capacitor-fill alignment**: did the traversal move the fill rate closer to the 40% target? If yes, aligned. If stalled below 20%, FLAG: the ring is not fundamentally wiring.
+2. **Rigidity alignment**: did RIGIDITY increase by at least the expected Δ for this traversal number? If no, FLAG: the board may have structural issues (pin shifts caught, but deeper issues suspected).
+3. **Vertex-type churn**: did at least 1-2 vertices climb the Type D → C → B → A ladder? If no, FLAG: vertices are not maturing.
+
+Three YES answers → ALIGNED. Any FLAG → triad proposes a brief edit for the next traversal.
+
+---
+
+*Appendix B is specifically designed to anchor ring-mode runs. It does NOT replace the publishing-sequence content of the main document — those concerns (Waves 1/2/3, paper ordering, community distrust mitigation) remain primary for the Clay-submission timeline. Appendix B addresses the orthogonal question: how does the ring-PCA know it's making progress?*

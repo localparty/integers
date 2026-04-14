@@ -550,4 +550,4 @@ This is a real gap. The Author can be told "execute the 6-step method loop" with
 
 ---
 
-*End of `05-framework-tools.md`. This file is the inventory; selective inclusion of these tools in Author / Critic / Synthesis / Referee spawn contexts is implemented in `01-the-prompt.md` §6.1 / §6.2 / §6.5 / §6.6.*
+*End of `08-framework-tools.md` (a snapshot of `online-researcher-adversarial/ora-bundle-v8/05-framework-tools.md` renamed to fit the ring-mode bundle numbering). This file is the inventory; selective inclusion of these tools in Author / Critic / Synthesis / Referee spawn contexts is implemented in `online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md` §6.1 / §6.2 / §6.5 / §6.6.*

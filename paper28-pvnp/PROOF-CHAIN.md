@@ -22,3 +22,7 @@
 - **BSD (Paper 26):** L-function channel capacity via Dirichlet L
 - **BGS:** spectral statistics of M_Bool connect to GUE universality
 - **Baum-Connes:** K-theory of M_Bool constrains anomaly structure
+
+## Cascading refinement from QG5D W1/W2 closure (2026-04-14)
+
+Paper 1 PROOF-CHAIN.md W1 (scheme independence) and W2 (Route-C 3-loop explicit) both closed 2026-04-13/14 via Paper 10 (Theorem 1 two-loop scheme-independence + Theorem U.2a one-loop Seeley-DeWitt) + Paper 11 (Theorem K.4 all-orders inductive bootstrap) + explicit L=3 numerical verification at 50-digit precision (`paper1/code/K-5-2-route-c-3loop.py`). Cascading impact on this chain: the CBB system's Axiom 5 (zeta regularization closure) no longer has a lingering regulator-scheme question. Effect is cosmetic-to-small — this chain never gated on the scheme question directly, but the underlying foundation is now strictly stronger. No link status changes required; confidence unchanged; mention included for completeness of the programme graph.

@@ -8,6 +8,67 @@
 
 ---
 
+## 0. Glossary and conventions (read first)
+
+### 0.1 Action vocabulary (EXCISE / CONSTRUCT / BYPASS)
+
+Ring mode distinguishes three capacitor-aware moves that sit ABOVE PCA's underlying triad (verify / construct / bypass):
+
+- **EXCISE** — attempt to replace a conditional or open link with an INDEPENDENT, already-published result. Primary mode: literature search + direct adaptation. If no independent result exists, fall through to CONSTRUCT.
+- **CONSTRUCT** — build the missing proof via the capacitor toolkit. Dispatch a construct Author with access to the relevant capacitor cells + framework tools. If the construct can't close the link within a capacitor transposition, fall through to BYPASS.
+- **BYPASS** — transpose to a different domain via the capacitor. The link becomes unnecessary (rather than proved directly); an alternative path reaches the downstream conclusion.
+
+EXCISE → CONSTRUCT → BYPASS is the escalation ladder. Ring mode's naming is ADDITIVE — PCA's underlying primitives (verify/construct/bypass) still apply internally. "EXCISE" is NOT a rename of PCA's BYPASS; EXCISE precedes it in the escalation order.
+
+When the chessboard layer §6.2 classifies a vertex as "Type B — Excision-primary," it means: try EXCISE first at this vertex, then fall through to CONSTRUCT (Type C fallback) and BYPASS (capacitor-driven) if EXCISE fails.
+
+### 0.2 Status dictionary (cross-layer mapping)
+
+Five partially-overlapping status taxonomies exist across the 5-layer stack. This dictionary defines the canonical ring-mode mapping.
+
+**Link-level status** (applies to proof chain links per vertex):
+
+| Ring-mode name | PCA equivalent (P.2) | Capacitor equivalent | Meaning |
+|---|---|---|---|
+| PROVED / LITERATURE | VERIFIED | ESTABLISHED | Rigorous published proof exists |
+| CLOSED | VERIFIED | ESTABLISHED | Proof complete in framework |
+| CONJECTURED | OPEN | CANDIDATE | Statement plausible but unproved |
+| OPEN | OPEN | — | No proof attempted yet |
+| CONDITIONAL | CONDITIONAL | — | Proof depends on external hypothesis |
+| WEAKENED | WEAKENED | — | Existing proof has a caught gap |
+| BROKEN | BROKEN | — | Existing proof has a fatal gap |
+| BYPASSED | BYPASSED | ESTABLISHED (via alt. path) | Link replaced by capacitor-routed alternative |
+| HONEST-STALL | HONEST-STALL | — | No viable route after EXCISE + CONSTRUCT + BYPASS all attempted |
+
+**Edge-level status** (applies to capacitor cells between vertices):
+
+| Ring-mode (brief §2) | Capacitor file | Meaning |
+|---|---|---|
+| STRONG | VERIFIED | Rigorous correspondence, computational verification |
+| PARTIAL | ESTABLISHED | Published correspondence but one-sided or scope-limited |
+| CANDIDATE | CANDIDATE | Plausible correspondence, not yet demonstrated |
+| SPECULATIVE | (no cell or CANDIDATE) | Correspondence hypothesized but not filled |
+
+**Cell-level status** (applies within the capacitor lookup protocol):
+
+| Ring-mode (brief §3.3) | Capacitor | Action |
+|---|---|---|
+| FILLED | VERIFIED or ESTABLISHED | Upgrade with new findings if any |
+| PARTIAL | CANDIDATE | Upgrade-Author dispatched to strengthen |
+| EMPTY | (no cell) | Cell-Fill Author dispatched to create |
+
+Authors and Critics should use the RING-MODE names in their outputs; the runner's reconciliation pass at cycle-close translates to PCA/capacitor native names for the respective state files.
+
+### 0.3 Canonical paper locations
+
+The 14 ring vertices point to canonical paper directories under `/Users/gsix/quantum-geometry-in-5d-latex/`. NOTE: older directories `paper27-hodge/` and `paper27-navier/` exist and contain historical research — they are NOT canonical. The ring uses `paper29-hodge/` and `paper30-navier-stokes/` (the scaffolds built in this session). If a Glob surfaces `paper27-*/`, treat those as archive only; do not update them.
+
+### 0.4 Ring mode is CONTINUOUS-RUN
+
+Ring traversals take hours. The invocation is structurally async — no interactive user presence is assumed between cycle-opens. Triad proposals do NOT block dispatch (they land in `triad/traversal-N/mediator-proposal.md` and the runner continues). The user applies approved edits BETWEEN traversals. See §8.3.
+
+---
+
 ## 1. What ring traversal IS
 
 Single-chain PCA runs target ONE vertex: "verify YM's 17 links" or "bypass RH's CCM dependency." They work depth-first on one proof chain.
@@ -62,7 +123,14 @@ The ring starts at the hub (QG5D, maximum context), flows through the strongest 
 
 ### 2.1 Edge ownership (disambiguation)
 
-Each edge in the ring is owned by exactly ONE vertex — the **predecessor** (the vertex you're leaving). That vertex fills the edge during its EDGE PHASE (§3.3) as its LAST action before moving on. The successor vertex does NOT re-fill the edge — it inherits the filled edge as its "incoming context" (§3.1 READ phase).
+**Ring edges (14 total)** are owned by exactly ONE vertex — the **predecessor** (the vertex you're leaving). That vertex fills the ring edge during its EDGE PHASE (§3.3) as its LAST action before moving on. The successor vertex does NOT re-fill the edge — it inherits the filled edge as its "incoming context" (§3.1 READ phase).
+
+**Chord edges (77 total — non-adjacent vertex pairs)** have NO single-owner rule. They are filled via three distinct mechanisms, all on the chessboard layer:
+- **Hub radiation (chessboard §6.3)**: QG5D fills up to 12 chord edges (QG5D → every non-ring-adjacent vertex) in parallel during its edge phase
+- **Antipodal probe (chessboard §6.4)**: 7 chord edges (the antipodal pairs) get probed at traversal start
+- **Compositional cell-fill (chessboard §6.5)**: when triangle (A, B, C) has A↔B and B↔C filled, the chord A↔C is proposed
+
+Before dispatching any chord-fill action, the runner checks WIRE-DENSITY (chessboard §5) to avoid duplicate work. If a chord is already FILLED, the runner SKIPS the fill (or upgrades if new findings warrant). Ring edges (owned by predecessor) and chord edges (owned by nobody, filled by mechanisms) do NOT conflict — they're distinct subsets of the 91-cell capacitor.
 
 Concretely, for traversal T:
 - Vertex N's edge phase fills edge `N → N+1` (exactly once).
@@ -135,8 +203,11 @@ Edge `N → N+1` is filled by looking up the capacitor cell at the intersection 
 - If yes → attempt bypass via the relevant cell
 - If no → leave CONDITIONAL, note it, move on
 
-**If all links are VERIFIED/PROVED:**
-- This vertex is CLOSED. Skip to edge phase.
+**If all links are VERIFIED/PROVED** (per §0.2 status dictionary):
+- **Traversal 1 (baseline): run a lightweight re-verification pass.** Dispatch ONE Sonnet Critic to spot-check the 2-3 highest-confidence PROVED links against current capacitor state + any literature added since the last verification. If all SOUND → mark vertex CLOSED-AND-VERIFIED for this ring, skip to edge phase. If a WEAKEN → downgrade and route through the normal EXCISE → CONSTRUCT → BYPASS ladder.
+- **Traversals 2+**: trust the PROOF-CHAIN.md status from traversal 1 unless an explicit trigger fires (§8.3 triad §T.3 triggers, or user-written §K note flagging re-verification needed). Skip directly to edge phase. This policy amortizes the baseline verification cost across all subsequent traversals.
+
+**PCA §P.3.1 override**: PCA mandates "verify ALL links simultaneously" (not serialized). Ring mode overrides this for efficiency: at any single vertex visit, the runner verifies ONE link (the weakest) deeply and spot-checks 2-3 others shallowly. The ring as a whole verifies ALL 14 vertices × ~3-5 links each = ~50+ link verifications per traversal, but only the weakest link at each vertex gets the full CONSTRUCT/BYPASS treatment.
 
 ### 3.3 Edge phase (~10 min)
 
@@ -169,9 +240,16 @@ Advance to the next vertex on the ring.
 ## 4. Time budget and exit conditions
 
 ### Per-traversal budget
-- 14 vertices × ~35 min average = ~7.5 hours per full traversal
-- Realistically: some vertices are CLOSED (skip in ~5 min), some are hard (spend ~60 min)
-- **Budget per traversal: 8 hours maximum**
+
+- **Traversal 1 (baseline): 10 hours maximum.** Elevated because of one-time setup costs:
+  - Antipodal probes (§6.4 chessboard): 7 probes × ~10 min = ~70 min (first traversal only)
+  - Hub radiation (§6.3 chessboard): ~10 min at QG5D's edge phase
+  - Compositional cell-fill (§6.5): ~5 min × 14 = ~70 min
+  - VERIFY spot-checks (§3.2 traversal-1 policy): ~10 min × 14 = ~140 min
+  - Core vertex+edge work: 14 × ~35 min = ~490 min
+  - Total estimate: ~780 min ≈ 13 h — TRIMMED to 10 h ceiling by skipping sector-A verification when confidence ≥ 9/10 and prioritizing high-impact antipodal pairs first (HIGH/MEDIUM priority probes per §6.4).
+- **Traversals 2+: 8 hours maximum.** Antipodal probes done, hub radiated, sector classification cached. Only core vertex+edge work + DUAL-CHECK/PIN-PRESERVATION firings remain active per cycle.
+- Realistically: some vertices are CLOSED (skip in ~5 min), some are hard (spend ~60 min). The budget is per-traversal, not per-vertex — the runner balances across vertices.
 
 ### Exit conditions (per traversal)
 
@@ -311,6 +389,48 @@ The output directory is `programme/ring-traversals/traversal-NN/` where NN is th
 Before invoking, the caller MUST set NN correctly. The invocation file (`30-ring-traversal-run.md`) hardcodes `traversal-01` — for traversal 2, change to `traversal-02`; for traversal 3, `traversal-03`; and so on. The runner checks `programme/ring-traversals/` at bootstrap and WARNS if the target directory already exists (unless explicitly resuming).
 
 **Resume semantics**: if `traversal-NN/` exists AND contains a `vertices/` subdirectory with partial work, the runner treats this as a RESUME of an interrupted traversal. It reads what was completed and continues from the next vertex. No work is lost.
+
+### 8.3 Strategic triad handling in ring mode (override of `12-prf-chain-advr-strat-triad.md` §T.3 and §T.6)
+
+The strategic triad layer is LOADED in ring mode (per §8's invoke template), but its firing semantics are modified:
+
+**§T.3 triggers fire PER-TRAVERSAL, not per-vertex.** At traversal-close (after all 14 vertices visited), the runner checks the 6 triad triggers against the traversal's AGGREGATE findings. The triad does NOT fire after each individual vertex visit — that would produce 14× user-approval requests per traversal, overwhelming the user-out-of-loop budget.
+
+**§T.6 approval gates are NON-BLOCKING in ring mode** (ring mode is CONTINUOUS-RUN per §0.4). Triad proposals land in `${output-directory}/triad/traversal-N/mediator-proposal.md` and the runner CONTINUES to the next traversal. The user applies approved edits to the brief/chessboard/capacitor BETWEEN traversals, not during. Traversal N+1 picks up whatever edits are in place at its bootstrap — the triad proposal from traversal N is either applied (incorporated) or deferred (still in queue).
+
+**§T.10 backward-compat**: if the user wants a pure-PCA ring run without the triad layer, they can invoke by REMOVING the `strategic triad` line from `30-ring-traversal-run.md`. The runner detects the omission and proceeds without triad. This is the recommended FALLBACK if the triad is producing noise-level proposals early in the programme.
+
+**Expected triad activity per traversal**:
+- Traversal 1: few triggers (baseline; most findings are NEW, nothing to compare to)
+- Traversals 2-3: moderate triggers (cell-fills plateauing, rigidity delta stabilizing, one-liner brief edits proposed)
+- Traversals 4+: rare triggers (either the ring is converging smoothly, or it has stalled — triad should name which)
+
+### 8.4 Closure ritual on ring exit (override of ORA §13.3 and PCA §P.9)
+
+The three exit conditions from §4 trigger different closure protocols:
+
+- **RING STRENGTHENED (typical outcome)**: ABBREVIATED ritual.
+  - Append a `programme/ring-traversal-log.md` entry with before/after RIGIDITY, per-vertex actions, per-edge fills, kills added
+  - Write a commit memo to `${output-directory}/commit-memo.md`
+  - Do NOT spawn a final-adversarial-pass or referee — the next traversal performs that role implicitly
+  - Total ritual cost: ~15 min
+
+- **RING CLOSED (dream outcome, rare until convergence)**: FULL 5-FILE ritual per ORA §13.3 + PCA §P.9.
+  - `lockdown.md` — freeze the current state
+  - `final-adversarial-pass.md` — a dedicated Critic sweep across all 14 vertices
+  - `referee.md` — formal referee-style review of the ring as a whole
+  - `closure.md` — per-vertex + per-edge closure summaries
+  - `backup.md` + commit memo
+  - Trigger the Robustness-Circle Theorem draft pass (§27 in programme document)
+  - Total ritual cost: ~4-6 hours (within the 8-hour traversal budget if RING CLOSED emerges mid-traversal)
+
+- **RING STALLED (honest-named outcome)**: MEDIUM ritual.
+  - Append to `programme/ring-traversal-log.md` with explicit stall diagnosis
+  - Write `${output-directory}/stall-diagnosis.md` naming: which walls resisted, which external unlocks are needed, what the capacitor would need to fill before resuming
+  - Do NOT spawn final-adversarial-pass (premature), but DO spawn a referee-style summary for the stall report
+  - Total ritual cost: ~60-90 min
+
+The ritual choice is determined at cycle-close by comparing RIGIDITY-SCORE delta + per-vertex improvement counts against the §4 exit-condition thresholds.
 
 ---
 

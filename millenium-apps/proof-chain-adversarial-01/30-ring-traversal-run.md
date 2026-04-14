@@ -1,5 +1,12 @@
 read your **instructions** from
-`/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/06-the-prompt.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md`
+
+the base prompt's companion files (`02-rationale.md`, `03-synthesis-spawn.md`,
+`04-closure-templates.md`, `06-anti-overfit-discipline.md`, `08-changelog.md`)
+live alongside it in `online-researcher-adversarial/ora-bundle-v8/`.
+All internal references inside the base prompt resolve natively there.
+The local `proof-chain-adversarial-01/06-the-prompt.md` is now an archival
+snapshot — do not use it as the active base prompt.
 
 the **chain mode** extension is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/07-proof-chain-adversarial.md`

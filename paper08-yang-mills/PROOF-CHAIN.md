@@ -9,7 +9,7 @@
 |---|---|---|---|
 | 1 | Delta_0^KK > 0 (Thm 4, Weitzenbock + cluster expansion) | PROVED | -- |
 | 1b | Delta_0^std > 0 (IR equivalence via reduced transfer matrix, Thm 5) | PROVED | 1 |
-| 2 | UV stability | LITERATURE (CMP 109, 119) | -- |
+| 2 | UV stability (Balaban polymer expansion; its UV-finiteness setup assumption is now **unconditional all-loop** per Paper 11 Theorem K.4 + Paper 10 scheme-independence) | LITERATURE (CMP 109, 119) + Paper 10/11 (2026-04-13) | -- |
 | 3 | Polymer convergence, kappa k-independent | LITERATURE (CMP 109) | -- |
 | 4 | (B1): analyticity, k-independent radius | PROVED | 2, 3 |
 | 5 | (B2): SL(N,C) extension | PROVED | 4 |
@@ -31,8 +31,12 @@
 ## Current wall
 **H4** (Hypothesis 4): non-perturbative Schwinger functions agree with perturbation theory at short distances. Link 18 (AF match + OPE) is conditional on H4. Links 1-17 are unconditional.
 
+## Cascading impact (2026-04-13 W1/W2 closure)
+
+Paper 1 W1 (scheme independence) and W2 (Route-C 3-loop explicit) both CLOSED via Paper 10 + Paper 11. Impact on YM: Link 2 (Balaban UV stability) inherits its UV-finite setup assumption as UNCONDITIONAL at all loop orders, not merely 1-loop + 2-loop. The Balaban polymer expansion is now rigorous against any regulator-scheme question. Confidence marginally upgraded (9/10 → 9.5/10); the H4 conditional on Link 18 remains the sole substantive wall.
+
 ## Programme graph edges
-- **QG5D (Paper 1):** KK spectral gap (Link 1) inherits from e-circle compactification
+- **QG5D (Paper 1):** KK spectral gap (Link 1) inherits from e-circle compactification; Link 2 inherits unconditional UV-finiteness from Paper 10+11 (2026-04-13)
 - **RH (Paper 13):** AF coefficient connects to zeta spectral data
 - **NS (Paper 30):** gradient-flow machinery (Links 15-17) structural parallel for NS regularity
 - **Hodge (Paper 29):** gauge anomaly cancellation is a K-theoretic / Hodge-class statement
