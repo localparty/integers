@@ -190,7 +190,7 @@ Problems that are famous but lack a natural connection to the framework's operat
 
 | Group | Count | Coverage type |
 |---|---|---|
-| A — Full proof chain vertex (dedicated paper) | 22 | PROVED / CONDITIONAL / OPEN chains with adversarial verification |
+| A — Full proof chain vertex (dedicated paper) | 24 | PROVED / CONDITIONAL / OPEN chains with adversarial verification |
 | B — Described via foundational papers (no separate vertex) | 8 | Geometric/spectral descriptions in Papers 1, 2, 4, 10, 11, 12 |
 | C — Capacitor-cell presence (no separate vertex) | 2 | Cross-domain correspondence table only |
 | D — Not pursued (honest exclusion) | 6 | No natural framework connection |

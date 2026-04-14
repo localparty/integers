@@ -46,7 +46,7 @@ The bridge family (Axiom 4 of the CBB system) lives at specific symmetry types:
 - Bridge $k = 2$: $\mathbb{Z}/2\mathbb{Z}$ character → symplectic type
 - Bridge $k = 3$: $\mathbb{Z}/3\mathbb{Z}$ character → unitary type
 - Bridge $k = 4$: $\mathbb{Z}/4\mathbb{Z}$ character → orthogonal type (Pati-Salam)
-- Bridge $k = 6$: $\mathbb{Z}/6\mathbb{Z}$ character → mixed type
+- Bridge $k = 6$: $\mathbb{Z}/6\mathbb{Z}$ character → unitary type $U$ (non-self-dual; cubic factor forces $\chi \neq \bar{\chi}$)
 
 **The bridge family's four values of $k$ correspond to four symmetry types.** This is NOT a coincidence — the bridge IS the symmetry-type selector.
 
