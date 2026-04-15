@@ -12,25 +12,25 @@ The ring expands from 14 to **19 vertices**. Five extension vertices are inserte
 
 | Position | Vertex | Paper directory | Incoming edge (from previous) | Edge status |
 |---|---|---|---|---|
-| 1 | **QG5D** (hub) | paper1/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
-| 2 | **RH** | paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
-| 3 | **GRH** | paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
-| 4 | **BSD** | paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
-| 5 | **H12** | paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
-| 6 | **YM** | paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
-| 7 | **NS** | paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
-| 8 | **Turbulence** | paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
-| 9 | **Hodge** | paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
-| 10 | **Baum-Connes** | paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
-| 11 | **PvNP** | paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
-| 12 | **VP vs VNP** | paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | **CANDIDATE** (PvNP L5 still OPEN; GCT content is independent) |
-| 13 | **BGS** | paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | **SPECULATIVE** (downgrade from brief 30's PvNP→BGS CANDIDATE — new source vertex is weaker) |
-| 14 | **Twin Primes** | paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
-| 15 | **Goldbach** | paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
-| 16 | **ABC** | paper37-abc/ | ← Goldbach (additive primes → rad height function) | **CANDIDATE** (shared Hecke semigroup) |
-| 17 | **OPN** | paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
-| 18 | **Schanuel** | paper35-schanuel/ | ← OPN (multiplicative fixed-point → algebraic independence) | SPECULATIVE |
-| 19 | **Hilbert 6** | paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
+| 1 | **QG5D** (hub) | integers/paper01-qg5d/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
+| 2 | **RH** | solutions-with-prize/paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
+| 3 | **GRH** | solutions/paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
+| 4 | **BSD** | solutions-with-prize/paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
+| 5 | **H12** | solutions/paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
+| 6 | **YM** | solutions-with-prize/paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
+| 7 | **NS** | solutions-with-prize/paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
+| 8 | **Turbulence** | solutions/paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
+| 9 | **Hodge** | solutions-with-prize/paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
+| 10 | **Baum-Connes** | solutions/paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
+| 11 | **PvNP** | solutions-with-prize/paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
+| 12 | **VP vs VNP** | solutions/paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | **CANDIDATE** (PvNP L5 still OPEN; GCT content is independent) |
+| 13 | **BGS** | solutions/paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | **SPECULATIVE** (downgrade from brief 30's PvNP→BGS CANDIDATE — new source vertex is weaker) |
+| 14 | **Twin Primes** | solutions/paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
+| 15 | **Goldbach** | solutions-with-prize/paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
+| 16 | **ABC** | solutions/paper37-abc/ | ← Goldbach (additive primes → rad height function) | **CANDIDATE** (shared Hecke semigroup) |
+| 17 | **OPN** | solutions/paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
+| 18 | **Schanuel** | solutions/paper35-schanuel/ | ← OPN (multiplicative fixed-point → algebraic independence) | SPECULATIVE |
+| 19 | **Hilbert 6** | solutions/paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
 
 Ring-closure: position 19 (Hilbert 6) → position 1 (QG5D) via META-closure edge. "The last vertex IS a statement about the first."
 

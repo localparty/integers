@@ -1,6 +1,6 @@
 # paper13b-grh — Generalized Riemann Hypothesis
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper13b-grh/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper13b-grh/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

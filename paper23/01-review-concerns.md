@@ -36,7 +36,7 @@ The carry cocycle correction is presented as a theorem of the cocycle structure,
 **Fix:** Provide the explicit norm computation: show how the trace of the cocycle over the group algebra produces the factor (kN-1)/(kN) when evaluated on the relevant physical operator (e.g., the off-diagonal CKM amplitude or the PS coupling).
 
 **M4. The geometric sector's moduli construction (Section 6.3--6.4) depends heavily on Paper 11**
-The dimension count dim_R M_geom = 9 and the identification of moduli with observables rely on Paper 11's spectral action on CP^2 x S^2 x S^1. But Paper 11 is part of the QG5D programme that Paper 23 claims to supersede. If the CBB system truly starts from "the integers exist," then the CP^2 x S^2 topology should be derived, not assumed. Currently it is an axiom (Axiom 3).
+The dimension count dim_R M_geom = 9 and the identification of moduli with observables rely on Paper 11's spectral action on CP^2 x S^2 x S^1. But Paper 11 is part of the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme that Paper 23 claims to supersede. If the CBB system truly starts from "the integers exist," then the CP^2 x S^2 topology should be derived, not assumed. Currently it is an axiom (Axiom 3).
 **Fix:** Acknowledge explicitly that the geometric axiom is the one remaining topological input beyond the integers. Discuss whether the topology could be derived from the BC algebra (e.g., via noncommutative geometry a la Connes' reconstruction theorem) and flag this as an open problem.
 
 **M5. Interface coefficient lambda matches fitted value at only 2.7% (Section 7.4)**

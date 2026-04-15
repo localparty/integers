@@ -7,7 +7,7 @@ This is a **framework-claim target**. The outlet is paper12 (research table) plu
 ## 1. Official outlet
 
 **Programme-internal:**
-- Main: `/Users/gsix/quantum-geometry-in-5d-latex/paper12/` (research table).
+- Main: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/` (research table).
 - Pin papers: individual papers for each pin (see paper12 index).
 - Related strategy files: `/Users/gsix/quantum-geometry-in-5d-latex/strategy/the-ring.md`, `strategy/famous-gaps.md`.
 

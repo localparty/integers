@@ -276,7 +276,7 @@ Evaluate papers >200 md files for potential splitting.
 - Fragments the narrative (readers of Option 1 miss the attack-plan context)
 - Forces editorial decisions about what goes where (will introduce merge/split disputes)
 
-**Reversibility:** Keep original `paper08-yang-mills/` as `/archive/paper08-yang-mills-v1/`. New structure preserves all content, just reorganized.
+**Reversibility:** Keep original `solutions-with-prize/paper08-yang-mills/` as `/archive/paper08-yang-mills-v1/`. New structure preserves all content, just reorganized.
 
 **Recommendation:** **DON'T SPLIT** — The paper is already well-organized by subdirectory. Splitting adds maintenance cost without offsetting benefit. Readers use search/navigation, not linear reading of 625 files. The monolithic presentation is appropriate for a Millennium Prize attack. If future updates become unwieldy, revisit.
 
@@ -695,7 +695,7 @@ Every structural change carries risk. Below are the preservation strategies for 
   paper27-navier/00-INTENT.md   "Empty. Reserved for Navier-Stokes regularity (Item 40). 
                                  Start writing Q2 2026 if attack plan develops. See paper9 §7.2."
   
-  paper28-pvnp/00-INTENT.md     "Empty. Reserved for P vs NP (Item 42, speculative). 
+  solutions-with-prize/paper28-pvnp/00-INTENT.md     "Empty. Reserved for P vs NP (Item 42, speculative). 
                                  Defer writing until BC Hecke tools sufficiently developed."
   ```
 - No content to preserve (directories are empty).

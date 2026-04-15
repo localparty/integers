@@ -91,12 +91,12 @@ For each numbered theorem/lemma/proposition/corollary in CCM 2025:
 
 1. Extract the formal statement (verbatim, with page + section reference)
 2. Cross-reference against framework papers that cite CCM 2025:
-   - `paper13-rh/PROOF-CHAIN.md` — which specific CCM claims feed Layer 1?
-   - `paper13b-grh/PROOF-CHAIN.md` — which for the χ-twisted extension?
-   - `paper26-bsd/PROOF-CHAIN.md` — which via the L-function framework?
-   - `paper32-bgs-spectral-statistics/PROOF-CHAIN.md` — which for Link 6 spectral identification?
-   - `paper33-goldbach/PROOF-CHAIN.md` — which for Link 4 spectral prime density?
-   - `paper44-sato-tate/PROOF-CHAIN.md` — which for the endomotive extension?
+   - `solutions-with-prize/solutions-with-prize/paper13-rh/PROOF-CHAIN.md` — which specific CCM claims feed Layer 1?
+   - `solutions/solutions/paper13b-grh/PROOF-CHAIN.md` — which for the χ-twisted extension?
+   - `solutions-with-prize/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md` — which via the L-function framework?
+   - `solutions/solutions/paper32-bgs-spectral-statistics/PROOF-CHAIN.md` — which for Link 6 spectral identification?
+   - `solutions-with-prize/solutions-with-prize/paper33-goldbach/PROOF-CHAIN.md` — which for Link 4 spectral prime density?
+   - `solutions/solutions/paper44-sato-tate/PROOF-CHAIN.md` — which for the endomotive extension?
 3. If a CCM claim has at least one framework paper that load-bearingly depends on it → ENUMERATE it
 4. If no framework paper depends on it → skip (out of scope for this bundle)
 

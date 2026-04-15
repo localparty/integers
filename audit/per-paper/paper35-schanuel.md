@@ -1,6 +1,6 @@
 # paper35-schanuel — Schanuel's Conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper35-schanuel/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper35-schanuel/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

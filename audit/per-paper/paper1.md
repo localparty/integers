@@ -1,6 +1,6 @@
 # paper1 — QG5D Foundation
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper1/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

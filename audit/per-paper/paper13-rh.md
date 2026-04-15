@@ -1,6 +1,6 @@
 # Paper 13 — Riemann Hypothesis
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/`
 **PROOF-CHAIN:** 6/6 main layers closed (+ 3 subsidiary S1-S3). Confidence 8/10.
 **External dependency:** Layer 1 (CCM operators D_N) cites arXiv:2511.22755.
 **Replacement route:** paper49-ccm-replacement (Tomita-Takesaki on BC algebra).

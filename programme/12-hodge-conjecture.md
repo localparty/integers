@@ -22,7 +22,7 @@ The difficulty is that the Hodge decomposition is transcendental (it depends on 
 
 ## 12.2 Two routes from the framework
 
-The QG5D framework connects to the Hodge conjecture through two independent pathways, each grounded in published mathematics. Neither pathway constitutes a proof chain in the sense of the Yang-Mills, Riemann Hypothesis, or BSD papers. Both identify structural correspondences that a future proof chain would need to traverse.
+The ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework connects to the Hodge conjecture through two independent pathways, each grounded in published mathematics. Neither pathway constitutes a proof chain in the sense of the Yang-Mills, Riemann Hypothesis, or BSD papers. Both identify structural correspondences that a future proof chain would need to traverse.
 
 ### Route 1: BC algebra --> endomotives --> motives --> Hodge
 
@@ -205,7 +205,7 @@ The Donaldson-Uhlenbeck-Yau edge (17) connects through the correspondence betwee
 
 ## 12.7 Honest assessment
 
-**Status: no proof chain exists.** The Hodge conjecture is the Millennium problem with the weakest connection to the QG5D framework. Both routes are mathematically grounded in published work, but neither provides a chain of the type that exists for Yang-Mills (17 links, adversarially verified), Riemann Hypothesis (12 nodes, 6 layers), or BSD (11 steps). The connection is structural, not chain-level.
+**Status: no proof chain exists.** The Hodge conjecture is the Millennium problem with the weakest connection to the ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework. Both routes are mathematically grounded in published work, but neither provides a chain of the type that exists for Yang-Mills (17 links, adversarially verified), Riemann Hypothesis (12 nodes, 6 layers), or BSD (11 steps). The connection is structural, not chain-level.
 
 **What exists:**
 
@@ -232,4 +232,4 @@ The two routes are genuine. They are grounded in major published works (Connes-C
 
 ---
 
-*Source files: paper27-hodge/strategy/00-hodge-attack-plan.md, paper27-hodge/strategy/01-path-synthesis.md, paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md (LANG<->QFT cell), Connes-Consani-Marcolli arXiv:math/0512138, Gaitsgory-Raskin arXiv:2405.03599, programme graph Section 25.*
+*Source files: paper27-hodge/strategy/00-hodge-attack-plan.md, paper27-hodge/strategy/01-path-synthesis.md, solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md (LANG<->QFT cell), Connes-Consani-Marcolli arXiv:math/0512138, Gaitsgory-Raskin arXiv:2405.03599, programme graph Section 25.*

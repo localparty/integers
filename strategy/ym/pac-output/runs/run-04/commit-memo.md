@@ -117,7 +117,7 @@ All walls honestly flagged; no SILENT walls in C_bare.
 
 ### Parallel track (non-blocking)
 
-- **H4 L.3.7 audit**: Continuing independently per `paper08-yang-mills/h4-capacitor-bypass/`. Closure during 2-year Clay window upgrades the B_bare disclosure from OPEN-BUT-ADDRESSED to PROVED.
+- **H4 L.3.7 audit**: Continuing independently per `solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/`. Closure during 2-year Clay window upgrades the B_bare disclosure from OPEN-BUT-ADDRESSED to PROVED.
 
 ## §9 Lock assertion
 

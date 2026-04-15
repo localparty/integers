@@ -15,8 +15,8 @@ This is a **framework-claim target**. The outlets are specific sections of paper
 - paper1 §8–§9 — inter-branch integration
 
 Files:
-- `/Users/gsix/quantum-geometry-in-5d-latex/paper1/paper1.tex`
-- `/Users/gsix/quantum-geometry-in-5d-latex/paper1/src/` (section sources)
+- `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/paper1.tex`
+- `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/src/` (section sources)
 - `/Users/gsix/quantum-geometry-in-5d-latex/strategy/inner-rings/` (branch strategy notes)
 
 ## 2. Problem statement
@@ -44,7 +44,7 @@ Framework-internal. See paper1 §3–§9.
 ## 6. Known partial results + named walls
 
 See programme-internal PROOF-CHAIN files per branch:
-- `paper1/PROOF-CHAIN.md`
+- `integers/paper01-qg5d/PROOF-CHAIN.md`
 - `strategy/the-ring.md`
 
 ## 7. Key references

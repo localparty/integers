@@ -25,7 +25,7 @@
 - MathSciNet-indexed (AMS publishes MathSciNet itself).
 - Worldwide repute.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Premier Clay-qualifying outlet (likely the single best match for AMS-style presentation).
 - Primary venue for: Paper 13 (RH), Paper 26 (BSD), Paper 33 (Goldbach), Paper 34 (Twin primes), and number-theory papers.
 - Publication times shorter than Annals in some cases.

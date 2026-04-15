@@ -1,6 +1,6 @@
 # paper37-abc — ABC Conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper37-abc/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper37-abc/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

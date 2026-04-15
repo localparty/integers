@@ -1,6 +1,6 @@
 # paper38-turbulence — Turbulence theory
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper38-turbulence/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper38-turbulence/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

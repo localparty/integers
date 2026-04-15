@@ -78,8 +78,8 @@ Variants A, B, C, D are **alternatives** — any ONE resolves the Problem. But e
 | 8 | Caffarelli-Kohn-Nirenberg partial regularity (P_1(E) = 0) | addressed | addressed | ✓ | ✓ |
 
 **Programme target: variant (B)** — existence + smoothness on R^3/Z^3 (equivalently T^3). This is structurally natural for our framework because:
-- The 5D ambient geometry is M^4 × S^1/Z_2; compactification of the fifth dimension gives NS on a base with natural periodic structure.
-- The KK spectral gap Δ_0^KK > 0 requires a compact extra dimension; the periodic base is consistent.
+- The 4+1 coordinate ambient geometry <!-- legacy 2026-04-15: was "5D ambient geometry" per §0.10 canon entry 1, Intervention 8 --> is M^4 × S^1/Z_2; compactification of the ~~fifth dimension~~ internal-phase S^1/Z_2 factor <!-- legacy 2026-04-15: "fifth dimension" migrated to "internal-phase S^1/Z_2 factor" per §0.10 canon entry 2, Intervention 8 --> gives NS on a base with natural periodic structure.
+- The KK spectral gap Δ_0^KK > 0 requires a compact ~~extra dimension~~ internal phase fiber <!-- legacy 2026-04-15: "extra dimension" migrated to "internal phase fiber" per §0.10 canon entry 2, Intervention 8 -->; the periodic base is consistent.
 - Fefferman §Main-Results: variants (A) and (B) are "equally fundamental" — neither is strictly easier, both are open, either closes the Problem. Our chain targets (B) first; (A) follows by standard decay truncation arguments (Paper 30 Appendix B, programmed).
 
 Sub-requirements for variant (B) that the live chain must address: 1, 2, 3, 4, 5, 6, 8. (Sub-requirement 7 is for (C)/(D) only.)

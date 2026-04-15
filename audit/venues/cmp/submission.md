@@ -25,7 +25,7 @@
 ## Clay Qualifying Outlet status
 **YES.** Named editorial board, Springer peer review, MathSciNet-indexed, worldwide repute.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **Primary target for Paper 8 (Yang-Mills)** — YM is a core CMP topic.
 - Also: Paper 31 (Baum-Connes), Paper 32 (BGS spectral statistics), Paper 36 (Hilbert 6 axiomatization), Paper 38 (turbulence), Paper 44 (Sato-Tate), Paper 46 (Katz-Sarnak).
 - Strong fit for the math-physics crossover papers.

@@ -59,7 +59,7 @@ Every sub-link at every depth of the recursion receives exactly one status:
 | **PROVED** | Proved in framework papers | In-situ proof cited with paper/section/lemma reference |
 | **LITERATURE** | Proved in peer-reviewed external mathematics | arXiv ID or DOI or published-journal citation |
 | **CLASSICAL** | Euclid-level obvious identity or calculation | Self-evident; one-sentence justification |
-| **QG5D** | Derives from Paper 1's 22 foundational theorems | Specific theorem name (e.g., "Theorem K.1" or "Postulate P3") |
+| **QG5D** | Derives from Paper 1's 22 foundational theorems | Specific theorem name (e.g., "Theorem K.1" or ~~"Postulate P3"~~ "Theorem T3") <!-- legacy 2026-04-15: "Postulate P3" migrated to "Theorem T3" per §0.10 canon entry 6, paper-1-audit reclassification, Intervention 8 --> |
 | **TRANSPOSITION** | Proved via capacitor cell transposition | Capacitor cell name + transposition recipe reference |
 | **PARTIAL** | Partially proved, with named residue | Explicit description of what's proved + what remains |
 | **OPEN** | Named HONEST WALL (narrowly specified) | Specific open problem statement + estimated difficulty (1-10) |
@@ -82,7 +82,7 @@ If a chain exceeds the 30% OPEN ratio, the decomposition is REPORTED as PARTIAL 
 On FIRST invocation of this bundle, the PAC must:
 
 1. **Read the current live state** of all 25 PROOF-CHAIN.md files in the programme:
-   - `paper1/PROOF-CHAIN.md`, `paper13-rh/PROOF-CHAIN.md`, `paper45-lindelof/PROOF-CHAIN.md`, ...
+   - `integers/paper01-qg5d/PROOF-CHAIN.md`, `solutions-with-prize/solutions-with-prize/paper13-rh/PROOF-CHAIN.md`, `solutions/solutions/paper45-lindelof/PROOF-CHAIN.md`, ...
    - See README.md for the full mapping.
 
 2. **COPY each live file verbatim** to `strategy/decomposition/proof-chain/<vertex-short-name>/PROOF-CHAIN.md`. Use these short names:

@@ -139,19 +139,19 @@
   Here's what the missing paper directories should look like:                                         
                                                                             
   quantum-geometry-in-5d-latex/
-  ├── paper29-hodge/                                                                                  
+  ├── solutions-with-prize/paper29-hodge/                                                                                  
   │   ├── preprint/
   │   │   ├── 00-proof-skeleton.md          (the 8-link chain above)                                  
   │   │   └── PROOF-CHAIN.md                                                                          
   │   └── strategy/                                                                                   
   │       └── 00-hodge-attack-plan.md                                                                 
-  ├── paper30-navier-stokes/                                                                          
+  ├── solutions-with-prize/paper30-navier-stokes/                                                                          
   │   ├── preprint/                                                         
   │   │   ├── 00-proof-skeleton.md          (the 8-link chain above)                                  
   │   │   └── PROOF-CHAIN.md                                                                          
   │   └── strategy/
   │       └── 00-ns-attack-plan.md                                                                    
-  ├── paper13b-grh/                                                         
+  ├── solutions/paper13b-grh/                                                         
   │   ├── preprint/
   │   │   ├── 00-proof-skeleton.md          (the 8-link chain above)
   │   │   └── PROOF-CHAIN.md                                                                          
@@ -213,10 +213,10 @@
 
   What I'd propose for next steps                                                                     
    
-  1. Scaffold the directories NOW — create the paper29-hodge/, paper30-navier-stokes/, paper13b-grh/, 
+  1. Scaffold the directories NOW — create the solutions-with-prize/paper29-hodge/, solutions-with-prize/paper30-navier-stokes/, solutions/paper13b-grh/, 
   and research-programmes/ directories with proof-skeleton files           
   2. Write the proof-skeleton files — each one is the chain I outlined above, in the same format as   
-  paper13-rh/preprint/00-proof-skeleton.md                                                            
+  solutions-with-prize/paper13-rh/preprint/00-proof-skeleton.md                                                            
   3. Register the PCA runs — each skeleton gets a PCA run file in
   millenium-apps/proof-chain-adversarial-01/ so the system can autonomously excise/construct/verify   
   link by link                                                             

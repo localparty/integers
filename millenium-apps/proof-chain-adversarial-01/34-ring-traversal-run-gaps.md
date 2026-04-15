@@ -24,7 +24,7 @@
 | 12 | Prior audit 2 | `millenium-apps/proof-chain-adversarial-01/32-ring-traversal-run-gaps.md` | re-read selectively | 2 items B-4 (companion files) + B-5 (self-name drift). B-4 is FIXED. B-5 remains open (cosmetic). |
 | 13 | Prior audit 3 | `millenium-apps/proof-chain-adversarial-01/33-ring-traversal-run-gaps.md` | read end-to-end | 3 blockers (B-6, B-7, B-8) + 5 important items (A-6..A-10) + 4 minor items (M-5..M-8) + 2 info items (M-9, M-10). Of the three BLOCKERS: B-6 ✅ FIXED (brief §8 now a pointer to run.md). B-7 ✅ FIXED (chessboard §3 now declares convention + 10.63 computed). B-8 ✅ FIXED (log baseline refreshed, Appendix B §B.3 refreshed, SECTOR-TABLE refreshed). Of the A-items: A-6 ✅ FIXED (§2.1 ring-closure boundary), A-7 ✅ PARTIAL (trims documented — budget now 9.8h after trims; see verification in B-10 below), A-8 ✅ FIXED (§6.6 T1-compute), A-9 ✅ FIXED (§2.1 transposition-challenges paragraph), A-10 ✅ FIXED (08-framework-tools.md RING-MODE EXCEPTION paragraph). Of the M-items: M-5 ❌ UNFIXED, M-6 ❌ UNFIXED, M-7 ✅ FIXED (log baseline refreshed), M-8 ✅ FIXED (SECTOR-TABLE refreshed). |
 | 14 | 14 PROOF-CHAIN.md files | paper{1,08-yang-mills,13-rh,13b-grh,25-hilbert-12,26-bsd,28-pvnp,29-hodge,30-navier-stokes,31-baum-connes,32-bgs-spectral-statistics,33-goldbach,34-twin-primes,35-schanuel}/PROOF-CHAIN.md | `Glob paper*/PROOF-CHAIN.md` returns exactly 14 entries | Confirmed via glob. No `paper27-*/PROOF-CHAIN.md` at top level (concern from audits 31/32 stays resolved). |
-| 15 | PIN-TABLE | `paper12/research/23-framework-predictions-master-table.md` | presence-only check | Present. Load-bearing for PIN-PRESERVATION / DUAL-CHECK per chessboard Appendix A. |
+| 15 | PIN-TABLE | `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` | presence-only check | Present. Load-bearing for PIN-PRESERVATION / DUAL-CHECK per chessboard Appendix A. |
 | 16 | Output dir (parent) | `programme/ring-traversals/` | exists, EMPTY | `traversal-01/` not yet created — runner creates at bootstrap per ORA v8 §14.1. |
 | 17 | Archive dirs | `paper27-hodge/`, `paper27-navier/` | exist on disk; no top-level PROOF-CHAIN.md | The ring Glob is clean. Only deep Globs inside their subdirs would surface paper27 content. Discipline from brief §0.3 still adequate. |
 
@@ -39,9 +39,9 @@
 **Where it conflicts:**
 
 - `13-chessboard-layer.md` §6.3 "Hub radiation" (line 343): *"This fills up to **13 outgoing edges in parallel** at QG5D's edge phase, instead of just 1 (the ring-next edge to RH)."*
-- `13-chessboard-layer.md` §6.3 (line 339): *"Read `paper1/PROOF-CHAIN.md §"Foundation exports"` — the 13-row table."* (The 13 rows enumerate all 13 downstream vertices: RH, YM, BSD, PvNP, Hodge, NS, H12, GRH, Baum-Connes, BGS, Goldbach, Twin Primes, Schanuel.)
+- `13-chessboard-layer.md` §6.3 (line 339): *"Read `integers/paper01-qg5d/PROOF-CHAIN.md §"Foundation exports"` — the 13-row table."* (The 13 rows enumerate all 13 downstream vertices: RH, YM, BSD, PvNP, Hodge, NS, H12, GRH, Baum-Connes, BGS, Goldbach, Twin Primes, Schanuel.)
 - Brief §2.1 "Edge ownership (disambiguation)" (lines 124-145): *"Ring edges (14 total) are owned by exactly ONE vertex — the **predecessor** (the vertex you're leaving). That vertex fills the ring edge during its EDGE PHASE … The successor vertex does NOT re-fill the edge — it inherits the filled edge as its 'incoming context'."* Schanuel (position 14, last in the ring) OWNS the ring-closing edge Schanuel → QG5D.
-- `paper1/PROOF-CHAIN.md` §"Programme graph edges (outgoing from QG5D)" (line 377-379): *"The ring-PCA fills one outgoing edge per traversal (position 1 → position 2 = QG5D → RH). **The other 12 edges from QG5D are filled incidentally** as the capacitor grows."* Paper 1 itself says 12, not 13.
+- `integers/paper01-qg5d/PROOF-CHAIN.md` §"Programme graph edges (outgoing from QG5D)" (line 377-379): *"The ring-PCA fills one outgoing edge per traversal (position 1 → position 2 = QG5D → RH). **The other 12 edges from QG5D are filled incidentally** as the capacitor grows."* Paper 1 itself says 12, not 13.
 
 **The arithmetic:**
 
@@ -224,11 +224,11 @@ So the brief §5 "16.3%" is either a typo (off-by-0.3 percentage-points) or impl
 
 ---
 
-### M-13. `paper1/PROOF-CHAIN.md` structure is a TREE (22 theorems + 13 downstream chains), not a linear chain — brief §3 "the chain" language mildly misfits
+### M-13. `integers/paper01-qg5d/PROOF-CHAIN.md` structure is a TREE (22 theorems + 13 downstream chains), not a linear chain — brief §3 "the chain" language mildly misfits
 
 **Where:**
 
-- `paper1/PROOF-CHAIN.md` line 3: *"The programme's root. Four postulates on M⁴ × S¹ generate 22 theorems plus the CBB system plus 36 sub-percent predictions plus 13 downstream proof chains. **Not a linear chain — a tree whose root is axiomatic and whose leaves touch every Millennium problem.**"*
+- `integers/paper01-qg5d/PROOF-CHAIN.md` line 3: *"The programme's root. Four postulates on M⁴ × S¹ generate 22 theorems plus the CBB system plus 36 sub-percent predictions plus 13 downstream proof chains. **Not a linear chain — a tree whose root is axiomatic and whose leaves touch every Millennium problem.**"*
 - Brief §3 "What happens at each vertex (the vertex protocol)" (lines 182-241): the protocol is explicitly CHAIN-centric ("identify the weakest link," "target the NEXT weakest link," "construct via capacitor").
 - Paper 1's own §"PCA traversal behavior at QG5D (the hub special case)" (lines 389-404) modifies the vertex protocol for QG5D: *"The ring-PCA's vertex protocol is MODIFIED at QG5D because there are no 'weak links' — the 22 theorems are all PROVED. … At QG5D, the PCA does: 1. READ phase (~5 min): verify all 22 theorems are still valid. Check Branch E's 36 pins. … 2. ACT phase (~20 min): PIN VALIDATION instead of EXCISE/CONSTRUCT."*
 
@@ -241,13 +241,13 @@ So the brief §5 "16.3%" is either a typo (off-by-0.3 percentage-points) or impl
 
 **Why it matters:**
 
-- The runner reading brief §3 in isolation may not know to consult paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D" for the special-case protocol.
+- The runner reading brief §3 in isolation may not know to consult integers/paper01-qg5d/PROOF-CHAIN.md §"PCA traversal behavior at QG5D" for the special-case protocol.
 - An Author spawned with "execute the vertex protocol at QG5D" context has the wrong mental model unless the spawn context includes paper1's §"PCA traversal behavior at QG5D" verbatim.
 - The chessboard §6.3 hub-radiation protocol is ADDITIONAL to (not a replacement for) the standard §3 vertex protocol. All three (brief §3, chessboard §6.3, paper1's special case) must compose coherently at position 1.
 
 **Recommendation:** add one cross-reference paragraph to brief §3 (before §3.1 "Read phase"):
 
-> **Hub-special-case protocol**: position 1 (QG5D) has a MODIFIED vertex protocol per `paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` — PIN VALIDATION instead of EXCISE/CONSTRUCT, and hub radiation (chessboard §6.3) in the edge phase. The generic §3.1-§3.4 protocol applies to vertices 2-14; QG5D's visit uses paper1's special-case procedure. The runner reads paper1's §"PCA traversal behavior at QG5D" at QG5D's read phase as context.
+> **Hub-special-case protocol**: position 1 (QG5D) has a MODIFIED vertex protocol per `integers/paper01-qg5d/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` — PIN VALIDATION instead of EXCISE/CONSTRUCT, and hub radiation (chessboard §6.3) in the edge phase. The generic §3.1-§3.4 protocol applies to vertices 2-14; QG5D's visit uses paper1's special-case procedure. The runner reads paper1's §"PCA traversal behavior at QG5D" at QG5D's read phase as context.
 
 One-paragraph cross-reference in brief §3. No structural change.
 
@@ -297,7 +297,7 @@ One-paragraph cross-reference in brief §3. No structural change.
 
 | # | Severity | Fix size | Location of fix | Priority |
 |---|---|---|---|---|
-| **B-9** hub-radiation 13 vs 12 edges | **blocker** | 1 line in chessboard §6.3 + 1 line in paper1 special case | `13-chessboard-layer.md` §6.3 + `paper1/PROOF-CHAIN.md` §"PCA traversal behavior at QG5D" | **do before T1 bootstrap** |
+| **B-9** hub-radiation 13 vs 12 edges | **blocker** | 1 line in chessboard §6.3 + 1 line in paper1 special case | `13-chessboard-layer.md` §6.3 + `integers/paper01-qg5d/PROOF-CHAIN.md` §"PCA traversal behavior at QG5D" | **do before T1 bootstrap** |
 | **B-10** T2+ budget under-funded | **blocker** | ~6 lines in brief §4 declaring T2+ VERIFY quota + core-work average | `30-ring-traversal-brief.md` §4 | decide before T2 (can defer past T1) |
 | **A-11** vertex-name naming convention | important | 1 line in brief §8.1 + supplementary short-name list in §2 or §8.1 | `30-ring-traversal-brief.md` §8.1 | **do before T1 bootstrap** (otherwise the runner invents its own convention silently) |
 | M-11 WIRE-DENSITY matrix label | minor | 1-word label change | `13-chessboard-layer.md` §5 | optional; do anytime before cycle 2 |
@@ -341,7 +341,7 @@ Total patch budget: ~30 min (same as audit 33's conclusion — the ring is now a
 - RIGIDITY formula matches brief §5 / chessboard §3 / Appendix B §B.3; numeric baseline 10.63 now reproducible per the declared convention (audit 33 verified the convention; this audit verifies the cross-site consistency).
 - The 5-layer read order (ORA v8 → PCA → Triad → Chessboard → Brief) is consistent: each layer declares which prior layers it extends, and all extensions preserve prior-layer invariants.
 - Brief §8.1 correctly overrides PCA §P.2 (chain-state.md mandate); §8.3 correctly overrides Triad §T.3 + §T.6; §8.4 correctly overrides ORA §13.3 + PCA §P.9.
-- PIN-TABLE exists at `paper12/research/23-framework-predictions-master-table.md` (load-bearing for PIN-PRESERVATION / DUAL-CHECK per chessboard Appendix A).
+- PIN-TABLE exists at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` (load-bearing for PIN-PRESERVATION / DUAL-CHECK per chessboard Appendix A).
 
 ---
 

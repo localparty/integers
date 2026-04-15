@@ -1,6 +1,6 @@
 # paper5 — Color confinement via CP² holonomy
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper5/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper05-cp2-flux-tubes/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

@@ -25,7 +25,7 @@ Produce a Clay-compliance-audited NS deliverable in **bare mode only** this run.
 - Structure mirrors Fefferman variant (B) sub-requirements 1:1
 
 **C_bare. Beyond-Clay X-RAY** — `strategy/ns/deliverables/ns-beyond-bare.md`:
-- Bonus theorem skeleton (5D derivation, pins, cross-Clay, turbulence/K41, vorticity control, CKN subsumption, any-4-manifold)
+- Bonus theorem skeleton (~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" -->, pins, cross-Clay, turbulence/K41, vorticity control, CKN subsumption, any-4-manifold)
 - ZERO prose, ≤ 15 pages
 
 **B_full and C_full are DEFERRED.** Do not write them this run. They are composed later by parallel agents from the 60-project reservoir once B_bare + C_bare LOCK.
@@ -143,8 +143,8 @@ Fixed 16-section structure for `strategy/ns/deliverables/ns-clay-bare.md`:
  Leray-Hopf class, weak solution (12)(13), KK decomposition, spectral gap Δ_0^KK,
  compactification radius R, BKM integrand sup_x |ω(x,t)|, parabolic Hausdorff P_K]
 
-## §5 5D Setup and KK Reduction (Link 1 — LITERATURE)
-[formal statement: 5D Einstein on M^4 × S^1/Z_2 → 4D Einstein + Maxwell + scalar;
+## §5 ~~5D Setup~~ M⁵ Setup<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Setup" → "M⁵ Setup" --> and KK Reduction (Link 1 — LITERATURE)
+[formal statement: ~~5D Einstein~~ M⁵ Einstein<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein" → "M⁵ Einstein" --> on M^4 × S^1/Z_2 → 4D Einstein + Maxwell + scalar;
  citation: Kaluza 1921, Klein 1926, paper1 §N Theorem T.N.M]
 
 ## §6 Fluid/Gravity Dictionary (Link 2 — CONJECTURED, bypass disclosed)
@@ -162,7 +162,7 @@ Fixed 16-section structure for `strategy/ns/deliverables/ns-clay-bare.md`:
  with divergence-free/gauge constraint; citation: paper08 §L]
 
 ## §9 Energy Descent (Link 6 — CONJECTURED)
-[formal statement: 5D KK energy conservation (Killing S^1/Z_2) → 4D NS energy dissipation;
+[formal statement: ~~5D KK~~ M⁵ KK<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D KK" → "M⁵ KK" --> energy conservation (Killing S^1/Z_2) → 4D NS energy dissipation;
  Leray-Hopf regularity upgrade; citation: Leray 1934, Hopf 1951, paper30 §6]
 
 ## §10 BKM Criterion (Link 5) — NAMED WALL with TWO PUBLISHED BYPASS ROUTES
@@ -230,9 +230,9 @@ Fixed 10-section structure for `strategy/ns/deliverables/ns-beyond-bare.md`:
 ```
 # NS Beyond-Clay X-Ray (BARE MODE)
 
-## §1 The 5D Geometric Derivation of NS Regularity
+## §1 The ~~5D Geometric Derivation~~ M⁵ Geometric Derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric" → "M⁵ Geometric" --> of NS Regularity
 [theorem statement: NS C^∞ regularity on T^3 ⟹ spectral gap Δ_0^KK = (2π/R)^2 on M^4 × S^1/Z_2
- ⟹ fluid/gravity near-equilibrium dictionary (BHMR) gives NS sub-sector of 5D Einstein;
+ ⟹ fluid/gravity near-equilibrium dictionary (BHMR) gives NS sub-sector of ~~5D Einstein~~ M⁵ Einstein<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein" → "M⁵ Einstein" -->;
  citation: paper1 §KK, paper30 §Links-1-2-4, BHMR 2008]
 
 ## §2 Zero Free Parameters
@@ -355,9 +355,9 @@ Do NOT attempt to address variants (C), (D) counterexample construction — they
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/ns/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper30-navier-stokes/PROOF-CHAIN.md` — the 8-link live chain
-3. `paper30-navier-stokes/preprint/00-proof-skeleton.md` — original 8-link detailed skeleton
-4. `paper30-navier-stokes/strategy/00-ns-attack-plan.md` — attack plan with Route A/B/C breakdown
+2. `solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md` — the 8-link live chain
+3. `solutions-with-prize/paper30-navier-stokes/preprint/00-proof-skeleton.md` — original 8-link detailed skeleton
+4. `solutions-with-prize/paper30-navier-stokes/strategy/00-ns-attack-plan.md` — attack plan with Route A/B/C breakdown
 5. Fefferman §Main-Results (extract from the Clay PDF: all four variants (A)-(D), equations (1)-(11), BKM quote, CKN P_1(E)=0 theorem)
 6. Clay Rules §4-§8 (summary in strategy doc §2) — especially §5b four-variants alternative provision
 
@@ -392,7 +392,7 @@ Write to `strategy/ns/deliverables/ns-clay-bare.md`.
 ### Step 5 — Synthesize C_bare
 
 Walk the 10-section structure. Draw from:
-- Paper 1 (QG5D hub, 5D geometric foundation, KK reduction)
+- Paper 1 (QG5D hub, ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> foundation, KK reduction)
 - Paper 8 §L (Appendix L: NS structural parallel)
 - Paper 30 (NS chain itself)
 - Paper 38 (turbulence, K41, type III_1 modular flow)
@@ -400,9 +400,9 @@ Walk the 10-section structure. Draw from:
 - Paper 31 (Baum-Connes, spectral K-theory of KK operator)
 - Paper 11 (Theorem K.4 all-orders inductive bootstrap)
 - Paper 10 (scheme independence)
-- Paper 61 (projections — 5D geometric derivation bonus)
+- Paper 61 (projections — ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation bonus)
 - Paper 60 (e-circle geometry)
-- Programme 36-pins table (`paper12/research/23-framework-predictions-master-table.md`)
+- Programme 36-pins table (`integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`)
 - Capacitor MICRO↔QFT cell (Route B landing)
 
 Enforce bare discipline. Zero prose.
@@ -481,13 +481,13 @@ the strategy document is
 strategy/ns/00-millenium-strategy.md
 
 the ns proof chain is
-paper30-navier-stokes/PROOF-CHAIN.md
+solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md
 
 the paper30 preprint skeleton is
-paper30-navier-stokes/preprint/00-proof-skeleton.md
+solutions-with-prize/paper30-navier-stokes/preprint/00-proof-skeleton.md
 
 the paper30 attack plan is
-paper30-navier-stokes/strategy/00-ns-attack-plan.md
+solutions-with-prize/paper30-navier-stokes/strategy/00-ns-attack-plan.md
 
 the toolkit is
 <pca-extension>/08-framework-tools.md
@@ -545,21 +545,21 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/n
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ns/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ns/ns-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper30-navier-stokes/PROOF-CHAIN.md (8-link live chain)
-4. /Users/gsix/quantum-geometry-in-5d-latex/paper30-navier-stokes/preprint/00-proof-skeleton.md
-5. /Users/gsix/quantum-geometry-in-5d-latex/paper30-navier-stokes/strategy/00-ns-attack-plan.md
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md (8-link live chain)
+4. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper30-navier-stokes/preprint/00-proof-skeleton.md
+5. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper30-navier-stokes/strategy/00-ns-attack-plan.md
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for 5D KK reduction + Link 1)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/PROOF-CHAIN.md (YM chain; Appendix L = NS structural parallel; Lemmas 1.1-1.5; Links 15-17 Balaban)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper38-turbulence/PROOF-CHAIN.md (turbulence; inherited Links 1-4; K41 cascade)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for ~~5D KK~~ M⁵ KK<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D KK" → "M⁵ KK" --> reduction + Link 1)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md (YM chain; Appendix L = NS structural parallel; Lemmas 1.1-1.5; Links 15-17 Balaban)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions/paper38-turbulence/PROOF-CHAIN.md (turbulence; inherited Links 1-4; K41 cascade)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper32-bgs/PROOF-CHAIN.md (type III_1 modular flow; GUE universality)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper31-baum-connes/PROOF-CHAIN.md (spectral K-theory of KK operator)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions/paper31-baum-connes/PROOF-CHAIN.md (spectral K-theory of KK operator)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper11-scheme-independence/ (Theorem K.4 all-orders bootstrap)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper10-all-orders/ (scheme independence)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/ (5D derivation bonus)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (pins table — Kolmogorov constants etc.)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/ (~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> bonus)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (pins table — Kolmogorov constants etc.)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor; MICRO↔QFT cell filled with Hollands-Wald 2024 + Dappiaggi 2023-2024 + BFR 2025 + arXiv:2601.08854)
 

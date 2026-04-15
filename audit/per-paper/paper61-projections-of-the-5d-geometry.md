@@ -1,6 +1,6 @@
 # paper61-projections-of-the-5d-geometry — Projections of 5D geometry
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

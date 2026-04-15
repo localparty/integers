@@ -1,6 +1,6 @@
 # paper2 — Cosmology (PUBLISHED)
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper2/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper02-cosmology/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

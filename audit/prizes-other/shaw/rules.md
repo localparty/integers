@@ -26,7 +26,7 @@
 ## Prize amount
 US$1.2 million (shared if multiple laureates).
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Requires an invited nominator — must cultivate a relationship with a nominator (Shaw laureate, major-prize holder, senior academic).
 - Confidentiality rule means we cannot reach out to the prize committee directly.
 

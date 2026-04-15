@@ -18,18 +18,18 @@
 Mandatory files read (in order):
 1. `/strategy/ym/00-millenium-strategy.md` — §7.C "Beyond-Clay" architecture: C_bare covers bonuses beyond Clay's ask (5D derivation, 0 free params, 36 pins, cross-Clay, confinement, chiral, any-4-mfd).
 2. `/strategy/ym/ym-millenium-brief.md` — DELTA 3 bare discipline, DELTA 6 C_bare structure (10 sections).
-3. `/paper1/PROOF-CHAIN.md` — QG5D hub, 5 branches, 5D geometric foundation, Branch B KK spectral gap (load-bearing for YM).
-4. `/paper61-projections-of-the-5d-geometry/table-of-contents.md` — 6 projections, P_A..P_O, §13-18 mathematical structure.
-5. `/paper61-projections-of-the-5d-geometry/sections/06-12-the-six-projections.md` (partial) — §08 P_B, §10 P_D, operator dictionary.
-6. `/paper60-the-geometry-of-the-circle/13-face-7-curvature-yang-mills.md` — YM is the CURVATURE-canonical face of the e-circle.
+3. `/integers/paper01-qg5d/PROOF-CHAIN.md` — QG5D hub, 5 branches, 5D geometric foundation, Branch B KK spectral gap (load-bearing for YM).
+4. `/integers/paper61-projections-5d/table-of-contents.md` — 6 projections, P_A..P_O, §13-18 mathematical structure.
+5. `/integers/paper61-projections-5d/sections/06-12-the-six-projections.md` (partial) — §08 P_B, §10 P_D, operator dictionary.
+6. `/integers/paper60-geometry-of-circle/13-face-7-curvature-yang-mills.md` — YM is the CURVATURE-canonical face of the e-circle.
 
 Supporting reads:
-- `/paper08-yang-mills/PROOF-CHAIN.md` — 18-link chain, SU(N) + compact simple G via Appendix K.
-- `/paper13-rh/PROOF-CHAIN.md` — RH chain; programme-graph edge to YM via AF coefficient + BC-KMS state.
-- `/paper28-pvnp/PROOF-CHAIN.md` — PvNP chain; graph-edge to YM via spectral gap of M_Bool^Γ.
-- `/paper26-bsd/PROOF-CHAIN.md` — BSD chain; graph-edge to YM via shared BC algebra (not via direct L-value).
+- `/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md` — 18-link chain, SU(N) + compact simple G via Appendix K.
+- `/solutions-with-prize/paper13-rh/PROOF-CHAIN.md` — RH chain; programme-graph edge to YM via AF coefficient + BC-KMS state.
+- `/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md` — PvNP chain; graph-edge to YM via spectral gap of M_Bool^Γ.
+- `/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md` — BSD chain; graph-edge to YM via shared BC algebra (not via direct L-value).
 - `/strategy/x-ray/proof-chain/ym/X-RAY.md` §7 — 38 cross-cut edges; densest partners qg5d (8), rh (7), pvnp (6), ns (5).
-- `/paper12/research/23-framework-predictions-master-table.md` — 36-pin master table (headline format, Sectors A-E).
+- `/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` — 36-pin master table (headline format, Sectors A-E).
 - `/strategy/ym/pac-output/runs/run-02/compliance-map.md` — run-02 LOCKED output A; H4 disclosure; 7 ADR pointers.
 
 ## §3 Strategy per section (mandatory 10-section structure from DELTA 6)
@@ -106,7 +106,7 @@ Supporting reads:
 - paper1 (QG5D hub)
 - paper08-yang-mills
 - paper13-rh, paper26-bsd, paper28-pvnp, paper29-hodge, paper30-navier-stokes, paper31-baum-connes
-- paper12/research/23 (36 pins)
+- integers/paper12-cbb-system/research/23 (36 pins)
 - paper60 (e-circle)
 - paper61 (projections)
 

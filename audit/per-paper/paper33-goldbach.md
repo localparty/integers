@@ -1,6 +1,6 @@
 # paper33-goldbach — Goldbach Conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper33-goldbach/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper33-goldbach/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

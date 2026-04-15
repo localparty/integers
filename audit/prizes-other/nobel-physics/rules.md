@@ -23,7 +23,7 @@
 ## Confidentiality
 - Names of nominees and other information not revealed until 50 years later.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **Paper 2 (cosmology)** is PUBLISHED — the only programme paper on the Nobel-ready track.
 - Papers 3-7 (5D physics) would need experimental confirmation before Nobel consideration (Nobel typically rewards experimentally confirmed physics).
 - QG5D has 36 experimental predictions (per strategy docs) — pin-confirmation pathway.

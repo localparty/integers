@@ -14,28 +14,28 @@ The ring expands from 14 to **22 vertices**. Eight extension vertices are insert
 
 | Position | Vertex | Paper directory | Incoming edge (from previous) | Edge status |
 |---|---|---|---|---|
-| 1 | **QG5D** (hub) | paper1/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
-| 2 | **RH** | paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
-| 3 | **GRH** | paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
-| 4 | **BSD** | paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
-| 5 | **H12** | paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
-| 6 | **YM** | paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
-| 7 | **NS** | paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
-| 8 | **Turbulence** | paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
-| 9 | **Hodge** | paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
-| 10 | **Baum-Connes** | paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
-| 11 | **PvNP** | paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
-| 12 | **VP vs VNP** | paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | CANDIDATE |
-| 13 | **BGS** | paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | SPECULATIVE |
-| 14 | **Cramér** | paper43-cramer/ | ← BGS (GUE extreme-value → max prime gap) | **PARTIAL** (inherits BGS 7/10; GUE extreme-value is classical) |
-| 15 | **Twin Primes** | paper34-twin-primes/ | ← Cramér (max gap → min gap: two faces of same distribution) | CANDIDATE |
-| 16 | **Goldbach** | paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
-| 17 | **Collatz** | paper41-collatz/ | ← Goldbach (additive Hecke → multiplicative Hecke μ₂/μ₃ dynamics) | **CANDIDATE** (same semigroup N*) |
-| 18 | **ABC** | paper37-abc/ | ← Collatz (Hecke dynamics → rad height function) | CANDIDATE |
-| 19 | **OPN** | paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
-| 20 | **Lehmer** | paper42-lehmer/ | ← OPN (multiplicative Hecke fixed-point → cyclotomic boundary gap) | **CANDIDATE** (both are gap questions on N*) |
-| 21 | **Schanuel** | paper35-schanuel/ | ← Lehmer (Mahler measure gap → algebraic independence) | SPECULATIVE |
-| 22 | **Hilbert 6** | paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
+| 1 | **QG5D** (hub) | integers/paper01-qg5d/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
+| 2 | **RH** | solutions-with-prize/paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
+| 3 | **GRH** | solutions/paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
+| 4 | **BSD** | solutions-with-prize/paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
+| 5 | **H12** | solutions/paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
+| 6 | **YM** | solutions-with-prize/paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
+| 7 | **NS** | solutions-with-prize/paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
+| 8 | **Turbulence** | solutions/paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
+| 9 | **Hodge** | solutions-with-prize/paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
+| 10 | **Baum-Connes** | solutions/paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
+| 11 | **PvNP** | solutions-with-prize/paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
+| 12 | **VP vs VNP** | solutions/paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | CANDIDATE |
+| 13 | **BGS** | solutions/paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | SPECULATIVE |
+| 14 | **Cramér** | solutions/paper43-cramer/ | ← BGS (GUE extreme-value → max prime gap) | **PARTIAL** (inherits BGS 7/10; GUE extreme-value is classical) |
+| 15 | **Twin Primes** | solutions/paper34-twin-primes/ | ← Cramér (max gap → min gap: two faces of same distribution) | CANDIDATE |
+| 16 | **Goldbach** | solutions-with-prize/paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
+| 17 | **Collatz** | solutions-with-prize/paper41-collatz/ | ← Goldbach (additive Hecke → multiplicative Hecke μ₂/μ₃ dynamics) | **CANDIDATE** (same semigroup N*) |
+| 18 | **ABC** | solutions/paper37-abc/ | ← Collatz (Hecke dynamics → rad height function) | CANDIDATE |
+| 19 | **OPN** | solutions/paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
+| 20 | **Lehmer** | solutions/paper42-lehmer/ | ← OPN (multiplicative Hecke fixed-point → cyclotomic boundary gap) | **CANDIDATE** (both are gap questions on N*) |
+| 21 | **Schanuel** | solutions/paper35-schanuel/ | ← Lehmer (Mahler measure gap → algebraic independence) | SPECULATIVE |
+| 22 | **Hilbert 6** | solutions/paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
 
 Ring-closure: position 22 (Hilbert 6) → position 1 (QG5D) via META-closure edge.
 

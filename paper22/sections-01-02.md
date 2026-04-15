@@ -508,7 +508,7 @@ of which were constructed from $\mathbb{Z}$ in Steps 1--8.
 > (a) **Time.** The physical time evolution is the modular
 >     automorphism $\sigma_t = \Delta^{it}$ restricted to the
 >     observer's sector (Paper 17, Section 3). This dissolves the
->     last dynamical postulate of the QG5D programme.
+>     last dynamical postulate of the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme.
 >
 > (b) **The observer's sector.** A sector $\mathcal{H}_{\mathrm{obs}}
 >     \subset \mathcal{H}_R$ is selected by a conditional expectation

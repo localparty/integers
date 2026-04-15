@@ -50,9 +50,9 @@ coherent document, not expanded.
 ### Run 1: Construction — generate formal node files for each chain step
 
 **Mode:** construction (default ORA mode)
-**Brief:** `paper08-yang-mills/strategy/run1-construction-brief.md` (to be created)
-**Toolkit:** `paper08-yang-mills/research/36-the-method.md` + relevant theorem catalogues
-**Output:** `paper08-yang-mills/ora-construction/`
+**Brief:** `solutions-with-prize/paper08-yang-mills/strategy/run1-construction-brief.md` (to be created)
+**Toolkit:** `solutions-with-prize/paper08-yang-mills/research/36-the-method.md` + relevant theorem catalogues
+**Output:** `solutions-with-prize/paper08-yang-mills/ora-construction/`
 
 **What the ORA does:** For each of the 18 steps in PROOF-CHAIN.md,
 the ORA spawns an Author to write a formal node file containing:
@@ -72,9 +72,9 @@ chain step — not to re-derive anything.
 ### Run 2: Final adversarial pass — verify each link
 
 **Mode:** final-adversarial-pass
-**Brief:** `paper08-yang-mills/strategy/run2-verification-brief.md` (to be created)
+**Brief:** `solutions-with-prize/paper08-yang-mills/strategy/run2-verification-brief.md` (to be created)
 **Toolkit:** same as Run 1 + the node files from Run 1
-**Output:** `paper08-yang-mills/ora-verification/`
+**Output:** `solutions-with-prize/paper08-yang-mills/ora-verification/`
 
 **What the ORA does:** For each node file from Run 1, the ORA
 spawns a Critic to adversarially verify it. The Critic tries to
@@ -98,9 +98,9 @@ Produce a final adversarial verdict file (like Paper 28's
 ### Run 3: Repair — fix weak links from verification
 
 **Mode:** construction (targeted at WEAKENED items only)
-**Brief:** `paper08-yang-mills/strategy/run3-repair-brief.md` (to be created, after Run 2 completes)
+**Brief:** `solutions-with-prize/paper08-yang-mills/strategy/run3-repair-brief.md` (to be created, after Run 2 completes)
 **Toolkit:** same + verification verdicts from Run 2
-**Output:** `paper08-yang-mills/ora-repair/`
+**Output:** `solutions-with-prize/paper08-yang-mills/ora-repair/`
 
 **What the ORA does:** For each WEAKENED verdict from Run 2,
 spawn an Author to write the repair. Same pattern as Paper 28's
@@ -112,14 +112,14 @@ the specific gap identified by the Critic.
 **Mode:** construction (drafting, not proving)
 **Brief:** the remainder of this file (§§3-6 below)
 **Toolkit:** all artifacts from Runs 1-3
-**Output:** `paper08-yang-mills/preprint/` (overwrite existing sections)
+**Output:** `solutions-with-prize/paper08-yang-mills/preprint/` (overwrite existing sections)
 
 **What the ORA does:** Rewrite the preprint sections following
 the Paper 28 template, using the node files (Run 1) as appendix
 sources, the verification verdicts (Run 2) as status labels, and
 the repairs (Run 3) as corrections. The PROOF-CHAIN diagram goes
 on page 1. **Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the
-same format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+same format as Paper 28's (`solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md`):
 step-by-step table with status labels, classification of arguments,
 conditional dependencies, verdict, and scope section. This file is
 the backbone — every section references it, the diagram on page 1
@@ -135,9 +135,9 @@ like Paper 9's voice applied to Yang-Mills.
 ### Run 5: Voice + references pass
 
 **Mode:** construction (lightweight editorial pass)
-**Brief:** `paper08-yang-mills/strategy/run5-voice-refs-brief.md` (to be created)
+**Brief:** `solutions-with-prize/paper08-yang-mills/strategy/run5-voice-refs-brief.md` (to be created)
 **Toolkit:** same as Run 4 + Paper 9 + the rewritten sections from Run 4
-**Output:** `paper08-yang-mills/preprint/` (in-place edits to Run 4 output)
+**Output:** `solutions-with-prize/paper08-yang-mills/preprint/` (in-place edits to Run 4 output)
 
 **What the ORA does:** A final pass over the rewritten paper to
 add G's voice and cross-paper references. Specifically:
@@ -187,7 +187,7 @@ prioritizing style over correctness.
 **Mode:** referee (not ORA — standalone agent with referee prompt)
 **Prompt:** Adapted from `online-researcher-adversarial/referee-prompts/00-original-advanced-math-referee.md`
 **Input:** The complete rewritten paper from Runs 4+5
-**Output:** `paper08-yang-mills/referee/math-referee-report.md`
+**Output:** `solutions-with-prize/paper08-yang-mills/referee/math-referee-report.md`
 
 **What the agent does:** An exhaustive mathematical review of the
 full paper, modeled on the Paper 28 referee prompt. The referee:
@@ -223,12 +223,12 @@ If it requires a citation fix or clarification, edit in place.
 ### Run 7: Point-by-point claim tester — verify every citation
 
 **Mode:** referee (standalone agent with claim-tester prompt)
-**Prompt:** `paper08-yang-mills/math-referee/02-point-by-point-yang-mills.md`
+**Prompt:** `solutions-with-prize/paper08-yang-mills/math-referee/02-point-by-point-yang-mills.md`
 (paper-specific: knows which claims, citations, and focus areas to
 test for YM). The generic methodology template is at
 `drafting/01-point-by-point-claim-tester.md`.
 **Input:** The paper after Run 6 fixes are applied
-**Output:** `paper08-yang-mills/referee/claim-tester-report.md`
+**Output:** `solutions-with-prize/paper08-yang-mills/referee/claim-tester-report.md`
 
 **What the agent does:** A fine-grained, claim-by-claim
 verification of the paper. For every "by Lemma X.Y," "by
@@ -406,7 +406,7 @@ shows Part (i) unconditional and Part (ii) conditional.
   are research notes. The main text should present only the results
   that survived into the chain.
 - When the rewrite replaces an existing file in `preprint/sections/`,
-  move the old version to `paper08-yang-mills/draft/` before
+  move the old version to `solutions-with-prize/paper08-yang-mills/draft/` before
   overwriting. The `draft/` directory preserves superseded versions
   for git history. Same convention as Paper 28: `preprint/` = current,
   `draft/` = superseded.
@@ -415,20 +415,20 @@ shows Part (i) unconditional and Part (ii) conditional.
 
 ## 6. Configuration
 
-**Toolkit:** The Paper 8 toolkit (`paper08-yang-mills/toolkit/framework-tools-ym.md`,
+**Toolkit:** The Paper 8 toolkit (`solutions-with-prize/paper08-yang-mills/toolkit/framework-tools-ym.md`,
 to be created) should include:
 - `research/36-the-method.md` (the Six Patterns — method + voice)
 - `preprint/PROOF-CHAIN.md` (the structural backbone)
 - `STATUS.md` §§I-V (current state, predictions, dead ends)
 - A §J Voice canon section (see below)
 
-**Template:** Paper 28's preprint directory (`paper28-pvnp/preprint/`)
+**Template:** Paper 28's preprint directory (`solutions-with-prize/paper28-pvnp/preprint/`)
 is the structural template. Same section layout, same status
 labels, same honest accounting.
 
-**Output:** Rewritten sections go to `paper08-yang-mills/preprint/sections/`
+**Output:** Rewritten sections go to `solutions-with-prize/paper08-yang-mills/preprint/sections/`
 (overwriting the old versions). Move old versions to
-`paper08-yang-mills/draft/` before overwriting.
+`solutions-with-prize/paper08-yang-mills/draft/` before overwriting.
 
 **§J Voice canon for the toolkit:**
 
@@ -464,36 +464,36 @@ labels, same honest accounting.
 
 ## 7. Run file templates
 
-### Run 1 run file (`paper08-yang-mills/strategy/run1-construction-run.md`)
+### Run 1 run file (`solutions-with-prize/paper08-yang-mills/strategy/run1-construction-run.md`)
 
 ```
 read your **instructions** from
 `/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md`
 
 the run **brief** (deliverable) is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/strategy/run1-construction-brief.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/strategy/run1-construction-brief.md`
 
 the **toolkit** for this run is
 [TO BE CREATED: a Paper 8 specific toolkit compiled from research/36-the-method.md + STATUS.md + PROOF-CHAIN.md]
 
 the run **output directory** is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/ora-construction`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/ora-construction`
 ```
 
-### Run 2 run file (`paper08-yang-mills/strategy/run2-verification-run.md`)
+### Run 2 run file (`solutions-with-prize/paper08-yang-mills/strategy/run2-verification-run.md`)
 
 ```
 read your **instructions** from
 `/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/01-the-prompt.md`
 
 the run **brief** (deliverable) is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/strategy/run2-verification-brief.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/strategy/run2-verification-brief.md`
 
 the **toolkit** for this run is
 [same toolkit as Run 1 + node files from ora-construction/nodes/]
 
 the run **output directory** is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/ora-verification`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/ora-verification`
 ```
 
 ### Run 3 and 4 run files follow the same pattern.
@@ -515,12 +515,12 @@ Before firing Run 1, create:
 
    Format: same five-field card structure as Paper 28's
    `framework-tools-v4.md`. Save to:
-   `paper08-yang-mills/toolkit/framework-tools-ym.md`
+   `solutions-with-prize/paper08-yang-mills/toolkit/framework-tools-ym.md`
 
 2. **Run 1 brief** — specify which chain steps to process,
    which existing files map to which steps, and what the Author
    should produce for each node. Save to:
-   `paper08-yang-mills/strategy/run1-construction-brief.md`
+   `solutions-with-prize/paper08-yang-mills/strategy/run1-construction-brief.md`
 
 These two files are the only setup needed. Everything else
 (blackboard, nodes, critiques, synthesis, closure) is created

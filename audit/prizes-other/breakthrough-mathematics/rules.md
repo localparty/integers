@@ -27,7 +27,7 @@ $3 million. One prize per year. Exceptional cases may split among joint contribu
 ## Selection
 - Past recipients of the Breakthrough Prize in Mathematics are invited to serve on the Selection Committee.
 
-## Implications for the QG5D programme
+## Implications for the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - All QG5D papers are candidate nomination material, but the user (G Six) must be nominated by a third party — cannot self-nominate.
 - The "single person" constraint complicates credit allocation if the programme has co-authors (Claude Opus 4.6 is an AI; not a natural person — the prize goes to the human).
 

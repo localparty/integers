@@ -30,7 +30,7 @@ G continued:
 
 > *"It's the same intuition that I got from entanglement, the pieces seem to be distant when you see them from above but if you spin this image where the board is horizontal, they are adjacent, even if one piece is in the corner and the other is on the opposite corner."*
 
-The entanglement connection was immediate. In Paper 1, entanglement is two particles that look distant in 4D but are adjacent along the e-circle in 5D. The "mystery" of entanglement dissolves when you restore the projected-away dimension. Distance in 4D is proximity in 5D. That's P6 — projection produces apparent pathology.
+The entanglement connection was immediate. In Paper 1, entanglement is two particles that look distant in 4D but are adjacent along the e-circle in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->. The "mystery" of entanglement dissolves when you restore the projected-away dimension. Distance in 4D is proximity in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->. That's P6 — projection produces apparent pathology.
 
 The capacitor is the SAME structure. Two theorems in different mathematical domains — spectral theory and algebraic geometry — look distant when viewed from above (within their own domains). Spin the board and they're adjacent. They're the same theorem in different languages. The "distance" between spectral and geometric isn't real distance. It's a projection artifact. The capacitor cell connecting them is the wire through the board that reveals the adjacency.
 
@@ -90,13 +90,13 @@ G's explicit connection to entanglement is not accidental. The chessboard IS the
 | Paper 1 (entanglement) | The chessboard (programme) |
 |---|---|
 | Two particles look distant in 4D | Two theorems look distant in their own domains |
-| They are adjacent along the e-circle in 5D | They are adjacent through the capacitor cell |
-| Restoring the 5th dimension dissolves the mystery | Filling the cell reveals the adjacency |
+| They are adjacent along the e-circle in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> | They are adjacent through the capacitor cell |
+| Restoring the ~~5th dimension~~ internal phase <!-- legacy 2026-04-15: "5th dimension" migrated to "internal phase" per §0.10 canon entry 2, Intervention 8 --> dissolves the mystery | Filling the cell reveals the adjacency |
 | The e-coordinate is conserved (e₁ + e₂ = C) | The pin is preserved (prediction doesn't shift) |
-| Measurement collapses the 5D state to 4D | SPIN collapses the physics-face measurement to a math-face constraint |
+| Measurement collapses the ~~5D state~~ M⁵ state<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D state" → "M⁵ state" --> to 4D | SPIN collapses the physics-face measurement to a math-face constraint |
 | Projection produces apparent pathology (P6) | Viewing from one face only produces apparent disconnect |
 
-The programme's methodology IS Paper 1's physics applied to itself. The framework says: the universe is five-dimensional, and every apparent paradox in 4D is a projection artifact from 5D. The chessboard says: the programme is two-faced, and every apparent disconnect between physics and mathematics is a projection artifact from the full board.
+The programme's methodology IS Paper 1's physics applied to itself. The framework says: the universe has ~~is five-dimensional~~ a 4+1 coordinate structure <!-- legacy 2026-04-15: "is five-dimensional" migrated to "has a 4+1 coordinate structure" per §0.10 canon entry 1, Intervention 8 -->, and every apparent paradox in 4D is a projection artifact from 5D. The chessboard says: the programme is two-faced, and every apparent disconnect between physics and mathematics is a projection artifact from the full board.
 
 The framework discovered that the universe has a hidden dimension (e). The chessboard layer discovers that the programme itself has a hidden face (the physics observables that constrain the mathematics). Both are the same insight: **restore what was projected away, and the mystery dissolves.**
 

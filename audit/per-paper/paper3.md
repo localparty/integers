@@ -1,6 +1,6 @@
 # paper3 — Black hole information preservation via e-dimension
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper3/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper03-bh-info/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

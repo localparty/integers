@@ -1,6 +1,6 @@
 # paper6 — Complete thermal history inflation→dark energy
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper6/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper06-thermal-history/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

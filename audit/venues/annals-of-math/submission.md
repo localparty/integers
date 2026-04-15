@@ -46,7 +46,7 @@
 - MathSciNet-indexed.
 - Worldwide repute.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Top target for: Paper 13 (RH), Paper 8 (YM), Paper 26 (BSD), Paper 29 (Hodge), Paper 30 (NS), Paper 28 (PvNP).
 - AI-declaration policy is a significant constraint — must ensure math is verifiable independently.
 

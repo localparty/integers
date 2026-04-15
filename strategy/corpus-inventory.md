@@ -474,7 +474,7 @@
 - **Papers with real content:** 24
 - **Total md files (including subdirectories):** ~1,870+
 - **Largest by file count:** paper08-yang-mills (625), paper13-rh (363), paper12 (343), paper26-bsd (246)
-- **Where 50+ items most likely live:** paper12/research/ (278 files), paper13-rh/strategy+research/ (254 files), paper11/research/ (30 files), paper08-yang-mills/gradient-flow-attack-plan/ (87 files)
+- **Where 50+ items most likely live:** integers/paper12-cbb-system/research/ (278 files), solutions-with-prize/paper13-rh/strategy+research/ (254 files), integers/paper11b-sm-gauge-entanglement/research/ (30 files), solutions-with-prize/paper08-yang-mills/gradient-flow-attack-plan/ (87 files)
 - **Published content:** paper1, paper2 (top-level + appendices/)
 - **TOC-only placeholder papers:** paper14, paper15, paper16, paper21
 - **Empty reservations:** paper27-navier, paper28-pvnp (Clay-problem slots)

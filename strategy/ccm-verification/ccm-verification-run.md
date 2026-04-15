@@ -49,12 +49,12 @@ the **verification targets** are the ~15-25 CCM 2025 sub-claims (enumerated at b
 The framework papers that depend on CCM 2025 are:
 
 ```
-paper13-rh/PROOF-CHAIN.md            (Layer 1 spectral realization)
-paper13b-grh/PROOF-CHAIN.md          (Layer 3 χ-twisted extension)
-paper26-bsd/PROOF-CHAIN.md           (L-function infrastructure via CCM)
-paper32-bgs-spectral-statistics/PROOF-CHAIN.md (Link 6 eigenvalue identification)
-paper33-goldbach/PROOF-CHAIN.md      (Link 4 spectral prime density)
-paper44-sato-tate/PROOF-CHAIN.md     (Link 5 endomotive extension)
+solutions-with-prize/paper13-rh/PROOF-CHAIN.md            (Layer 1 spectral realization)
+solutions/paper13b-grh/PROOF-CHAIN.md          (Layer 3 χ-twisted extension)
+solutions-with-prize/paper26-bsd/PROOF-CHAIN.md           (L-function infrastructure via CCM)
+solutions/paper32-bgs-spectral-statistics/PROOF-CHAIN.md (Link 6 eigenvalue identification)
+solutions-with-prize/paper33-goldbach/PROOF-CHAIN.md      (Link 4 spectral prime density)
+solutions/paper44-sato-tate/PROOF-CHAIN.md     (Link 5 endomotive extension)
 ```
 
 These six files form the "framework dependency scan" at bootstrap.

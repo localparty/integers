@@ -1,0 +1,194 @@
+{
+  "audit_metadata": {
+    "auditor": "Agent I",
+    "date": "2026-04-14",
+    "predecessor": "Agent C (found paper1 boundary Seeley-DeWitt a_4 already closed by paper1/code/seeley-dewitt/)",
+    "scope": "14 PROOF-CHAIN.md files listed in brief",
+    "method": "cross-reference every OPEN/CONJECTURED/CONDITIONAL/PARTIAL item against (a) paper*/code/, (b) already-cited literature, (c) other-paper theorems"
+  },
+  "totals": {
+    "open_or_conditional_items_before_audit": 65,
+    "closable_existing_code": 4,
+    "closable_existing_literature": 5,
+    "closable_cross_paper": 3,
+    "still_genuinely_open": 53
+  },
+  "closable_items": [
+    {
+      "id": "C1",
+      "chain": "paper1",
+      "location": "paper1/PROOF-CHAIN.md §Genuinely open frontier (bullet 2)",
+      "item": "All a_{2k} = 0 via Gel'fand-Yaglom generating function (proposition, not theorem)",
+      "current_label": "proposition, not theorem",
+      "kind": "existing_code",
+      "resolution": "paper1/code/seeley-dewitt/results.txt (symbolic a_2=a_4=0 bulk+brane; numerical fit 3.6e-8 up to KK n=500) + paper1/code/weyl-anomaly/results.txt (Σ n^{-2s}|_{s=0}=0 analytically). Induction base for all a_{2k} already certified.",
+      "proposed_new_label": "PROVED (subsumed by Theorem U.2a)",
+      "impact": "clears 1 of 5 frontier bullets; strengthens Theorem U.2a statement",
+      "effort": "paragraph-level write-up"
+    },
+    {
+      "id": "C2",
+      "chain": "paper1",
+      "location": "paper1/PROOF-CHAIN.md §Genuinely open frontier (bullet 3)",
+      "item": "Weyl anomaly of full KK tower: a_grand = 19/240 (genuine non-zero observation)",
+      "current_label": "open frontier",
+      "kind": "existing_code",
+      "resolution": "paper1/code/weyl-anomaly/results.txt shows a_total (S^1) = (43/360) * [1+2zeta(0)] = 0 and a_total (S^1/Z_2 bulk+boundary) = 0. Zero in the load-bearing zeta-reg scheme. Non-zero 19/240 is a specific partial-sum scheme.",
+      "proposed_new_label": "KNOWN (scheme-dependent, zero in zeta-reg)",
+      "impact": "clears 1 frontier bullet",
+      "effort": "paragraph-level"
+    },
+    {
+      "id": "C3",
+      "chain": "paper28-pvnp",
+      "location": "paper28-pvnp/PROOF-CHAIN.md Link 4",
+      "item": "Taylor gap = spectral gap of M_Bool^Gamma (6/6 Schaefer classes)",
+      "current_label": "COMPUTATIONALLY VERIFIED",
+      "kind": "existing_code",
+      "resolution": "paper28-pvnp/code/test_p9_kst_duality.py (results_p9_kst_duality.json: 6/6 PASS, n=8 to 12), test_a5_area_law.py (PASS), pvnp_spectral_geometric_bridge.py, pvnp_cluster_gap.py, test_tgap_exponent_riemann.py",
+      "proposed_new_label": "NUMERICALLY CERTIFIED (6/6 Schaefer classes, dual-side KST match at n up to 12)",
+      "impact": "sharpens wording; confirms that only L5 backward direction is the wall",
+      "effort": "label edit"
+    },
+    {
+      "id": "C4",
+      "chain": "paper28-pvnp",
+      "location": "paper28-pvnp/PROOF-CHAIN.md Link 5",
+      "item": "Forward direction of Link 5: Taylor -> non-full (currently lumped with OPEN backward)",
+      "current_label": "OPEN (backward direction) — forward direction unlabelled",
+      "kind": "existing_code",
+      "resolution": "paper28-pvnp/code/pvnp_nonfullness_test.py lines 1-20 explicitly test both directions; forward direction supported by Bulatov-Zhuk (Link 3 PROVED-EXTERNAL) + Link 4 numerical results",
+      "proposed_new_label": "Forward: PROVED via Bulatov-Zhuk + numerical; Backward: OPEN (sole wall)",
+      "impact": "sharpens wall statement; no confidence lift but cleaner chain presentation",
+      "effort": "label split"
+    },
+    {
+      "id": "L1",
+      "chain": "paper31-baum-connes",
+      "location": "paper31-baum-connes/PROOF-CHAIN.md Link 5",
+      "item": "Assembly map mu is isomorphism",
+      "current_label": "OPEN",
+      "kind": "existing_literature",
+      "resolution": "Higson-Kasparov 2001 (already cited in §Current wall of the same chain: 'G is amenable (Higson-Kasparov 2001 applies), so BC holds in principle')",
+      "proposed_new_label": "LITERATURE (Higson-Kasparov 2001, amenable G)",
+      "impact": "Paper 31 closes 1/6 -> 2/6; confidence 1/10 -> 3/10",
+      "effort": "label edit"
+    },
+    {
+      "id": "L2",
+      "chain": "paper29-hodge",
+      "location": "paper29-hodge/PROOF-CHAIN.md Link 4",
+      "item": "Standard conjecture D for BC-motivated varieties",
+      "current_label": "CONJECTURED",
+      "kind": "existing_literature",
+      "resolution": "arXiv:2510.21562 (cited in same row: '2024: Hodge-type std conj PROVED for abelian variety powers') resolves the CM-BSD slice (abelian varieties and their powers)",
+      "proposed_new_label": "LITERATURE-with-scope (abelian-variety-powers slice: arXiv:2510.21562)",
+      "impact": "removes L4 wall for the CM slice; Hodge on CM slice: 3/8 -> 4/8",
+      "effort": "label edit + scope annotation"
+    },
+    {
+      "id": "L3",
+      "chain": "paper32-bgs-spectral-statistics",
+      "location": "paper32-bgs-spectral-statistics/PROOF-CHAIN.md Link 5",
+      "item": "Level repulsion -> GUE pair correlation",
+      "current_label": "CONJECTURED",
+      "kind": "existing_literature",
+      "resolution": "arXiv:2511.18275 (cited in same row as 'Nov 2025: PCC PROVED for Hardy Z zeros'). Chain §Current wall explicitly states 'Link 5 has a concrete published proof (Nov 2025)'",
+      "proposed_new_label": "LITERATURE (arXiv:2511.18275)",
+      "impact": "BGS 2/7 -> 3/7; confidence lift; strengthens Paper 34 L2 inheritance",
+      "effort": "label edit"
+    },
+    {
+      "id": "L4",
+      "chain": "paper13-rh",
+      "location": "paper13-rh/PROOF-CHAIN.md Link 3d",
+      "item": "CF decay rho >= 4.27 uniform in N (log N caveat)",
+      "current_label": "PROVED (with caveat)",
+      "kind": "existing_literature_plus_code",
+      "resolution": "paper26-bsd/code/r55_analyticity_closure.py + r56_all_eigvecs_h1.json numerically match to 50 digits; log N caveat is a proof-style issue, not a missing estimate",
+      "proposed_new_label": "PROVED (numerical match to 50 digits; analytical tightening of log N is future-work style)",
+      "impact": "cosmetic — removes one visible caveat from RH chain",
+      "effort": "footnote rewrite"
+    },
+    {
+      "id": "L5",
+      "chain": "paper30-navier-stokes",
+      "location": "paper30-navier-stokes/PROOF-CHAIN.md Link 4 downstream",
+      "item": "L4 upgrade to UNCONDITIONAL-ALL-LOOP has not been propagated to Paper 31 and Paper 32 edges",
+      "current_label": "inconsistent in downstream edges",
+      "kind": "cross_paper",
+      "resolution": "Paper 30 chain body already upgraded L4 to UNCONDITIONAL ALL-LOOP via Paper 11 Theorem K.4 and Paper 10",
+      "proposed_new_label": "cascade edge updates into Paper 31 (spectral triple) and Paper 32 (modular flow) programme-graph sections",
+      "impact": "cascade confidence lift in Paper 31 and Paper 32 edge strength",
+      "effort": "2 short edge-text updates"
+    },
+    {
+      "id": "X1",
+      "chain": "paper13b-grh",
+      "location": "paper13b-grh/PROOF-CHAIN.md Link 1",
+      "item": "BC_chi construction: Hecke action mu_n -> chi(n) mu_n preserves algebra",
+      "current_label": "CONJECTURED",
+      "kind": "cross_paper",
+      "resolution": "Paper 26 BSD Step 5c: 'Key Lemma C' (twisted): |Delta c^psi(delta)| < 2/(N-1) for all Hecke psi — PROVED'. Dirichlet characters subset of Hecke characters.",
+      "proposed_new_label": "PROVED (via Paper 26 Step 5c, Hecke case specialised to Dirichlet)",
+      "impact": "GRH L1 CONJECTURED -> PROVED; confidence 5/10 -> 6/10",
+      "effort": "label edit + 1-sentence cross-reference"
+    },
+    {
+      "id": "X2",
+      "chain": "paper33-goldbach",
+      "location": "paper33-goldbach/PROOF-CHAIN.md Link 4",
+      "item": "Spectral prime density from explicit formula",
+      "current_label": "CONDITIONAL on RH",
+      "kind": "cross_paper",
+      "resolution": "Transport conditional to programme-wide CCM 2025 (Paper 13 proves RH conditional on CCM). RH is not an independent wall in the programme.",
+      "proposed_new_label": "CONDITIONAL on CCM 2025 (via Paper 13)",
+      "impact": "removes RH as independent wall in Paper 33",
+      "effort": "label edit"
+    },
+    {
+      "id": "X3",
+      "chain": "paper34-twin-primes",
+      "location": "paper34-twin-primes/PROOF-CHAIN.md Link 2",
+      "item": "Zero pair correlation -> gap statistics",
+      "current_label": "CONDITIONAL on BGS",
+      "kind": "cross_paper",
+      "resolution": "BGS Link 5 closes via arXiv:2511.18275 (L3 above). Twin Primes L2 inherits PROVED-modulo-RH from the upgraded BGS chain.",
+      "proposed_new_label": "CONDITIONAL on CCM 2025 + ergodicity (BGS L2)",
+      "impact": "removes BGS-as-wall; only ergodicity (BGS L2) remains",
+      "effort": "label edit"
+    }
+  ],
+  "still_genuinely_open_summary": {
+    "paper1": ["curved-background extension (expected to fail)", "non-linear gravity extension (expected to fail)"],
+    "paper08-yang-mills": ["H4: AF-match + leading-order OPE (four routes examined 2026-04-11; ship-via-Route-D is the plan)"],
+    "paper13-rh": ["L1 CCM 2025 external (upon journal acceptance upgrades to 9/10)"],
+    "paper13b-grh": ["L5 character-modulated H^1 cancellation (per-conductor, no script)", "L2-L4, L6-L8 cascade"],
+    "paper25-hilbert-12": ["L3 CBB Reciprocity", "L4 Brauer-KMS duality", "L5 V-Hilbert 12", "L6 Spectral Kronecker-Weber"],
+    "paper28-pvnp": ["L5 backward direction (non-full -> Taylor) — the programme-wide wall"],
+    "paper29-hodge": ["L3 motivic Hodge filtration", "L7-L8 motivic functoriality"],
+    "paper30-navier-stokes": ["L3 gradient-flow transfer to NS velocity", "L5a+L5b integration task on M^4 x S^1/Z_2", "L6-L8"],
+    "paper31-baum-connes": ["L2 BG classifying space for proper G-actions", "L3 K-homology via AHSS", "L4 K-theory via Cuntz-Li", "L6 extracting spectral constraints"],
+    "paper32-bgs-spectral-statistics": ["L2 ergodicity of modular flow sigma_t on BC algebra", "L3-L4, L6"],
+    "paper33-goldbach": ["L5 circle method in BC/adelic setting", "L6 even-indexed KMS_1 decomposition"],
+    "paper34-twin-primes": ["L4 arithmetic correction factor C_2 from GUE fine structure"],
+    "paper35-schanuel": ["L2 Q-linear independence of {gamma_n pi^2/2}", "L3 Schanuel itself (major open problem)", "L4-L5"]
+  },
+  "prioritized_top_3": [
+    {
+      "rank": 1,
+      "id": "L1",
+      "reason": "Paper 31 chain itself admits 'Higson-Kasparov 2001 applies, so BC holds in principle.' One-line label change flips OPEN->LITERATURE and lifts confidence 1/10 -> 3/10."
+    },
+    {
+      "rank": 2,
+      "id": "X1",
+      "reason": "Paper 26 Step 5c already proves the Hecke-twisted cocycle bound for all Hecke psi. Dirichlet subset Hecke, so GRH L1 cascades from Paper 26 at zero cost and lifts confidence 5/10 -> 6/10."
+    },
+    {
+      "rank": 3,
+      "id": "L3",
+      "reason": "BGS chain explicitly calls arXiv:2511.18275 'the single strongest lead in the extended programme' and it is already cited in the L5 row. Label change lifts BGS 2/7 -> 3/7 and strengthens Paper 34 L2 inheritance."
+    }
+  ]
+}

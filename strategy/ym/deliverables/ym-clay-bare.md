@@ -134,7 +134,7 @@ $$S_2^\mathrm{ren}(x,y)\;=\;\frac{C_N}{|x-y|^8}\,\Bigl(\ln\frac{1}{|x-y|\Lambda}
 
 *Proof (conditional on H4).* Paper08-yang-mills Appendix L §L.4 Lemma L.4.2 (combines unconditional existence of $[\mathrm{Tr}\,F^2]_R$ from Lemma L.3.8, perturbative trace-anomaly prediction, Reisz power counting, and Hypothesis H4); KK-decoupling at short distances from paper1 Appendix K Weyl-anomaly vanishing (Wess-Zumino cohomological protection).  $\square$
 
-*Proof sketch (bypass Step 18', unconditional modulo L.3.7 audit).* Paper08-yang-mills §36 (Lüscher-test plan); paper08-yang-mills Appendix L §L.3 (gradient-flow + Balaban analyticity Lemmas L.3.1-L.3.9); capacitor cells cap§74 (GEOM$\leftrightarrow$QFT Balaban polymer expansion) and cap§110 (gradient-flow Lüscher coupling); paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md 2026-04-13 Step 18' (Balaban RG $g_k\to 0$ unconditional + polymer bounds SL-1 + Reisz matching CMP 116-117 + trace anomaly $\gamma = -2\beta/g$ unconditional + Callan-Symanzik $\Rightarrow S_2\sim |x|^{-8}(\log)^{-2}$).  $\square$
+*Proof sketch (bypass Step 18', unconditional modulo L.3.7 audit).* Paper08-yang-mills §36 (Lüscher-test plan); paper08-yang-mills Appendix L §L.3 (gradient-flow + Balaban analyticity Lemmas L.3.1-L.3.9); capacitor cells cap§74 (GEOM$\leftrightarrow$QFT Balaban polymer expansion) and cap§110 (gradient-flow Lüscher coupling); solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md 2026-04-13 Step 18' (Balaban RG $g_k\to 0$ unconditional + polymer bounds SL-1 + Reisz matching CMP 116-117 + trace anomaly $\gamma = -2\beta/g$ unconditional + Callan-Symanzik $\Rightarrow S_2\sim |x|^{-8}(\log)^{-2}$).  $\square$
 
 ### NAMED WALL W1 — H4
 
@@ -357,7 +357,7 @@ Zero new named walls this run (run-02 commit-memo.md §"New named walls created"
 
 ### §17.3 External (cited via programme papers only)
 
-External references (Jaffe-Witten 2000; Streater-Wightman 1964; Osterwalder-Schrader CMP 31/42 (1973/75); Balaban CMP 95-119 (1982-1989); Dimock arXiv:1108.1335; Besse 1987; Glimm-Jaffe 1987; Haag 1996; Strocchi 2013; Lüscher 2010; Harlander et al.\ arXiv:2111.14376; Magnen-Rivasseau-Seneor 1993; Bump 2004; Gaitsgory-Raskin 2024; Kapustin-Witten 2007; Osterwalder-Seiler 1978; Ruelle 1969) appear in `paper08-yang-mills/preprint/sections/references.md` and are not duplicated here per brief DELTA 8 (programme papers cited at §-level; external references inherited via programme papers' bibliographies).
+External references (Jaffe-Witten 2000; Streater-Wightman 1964; Osterwalder-Schrader CMP 31/42 (1973/75); Balaban CMP 95-119 (1982-1989); Dimock arXiv:1108.1335; Besse 1987; Glimm-Jaffe 1987; Haag 1996; Strocchi 2013; Lüscher 2010; Harlander et al.\ arXiv:2111.14376; Magnen-Rivasseau-Seneor 1993; Bump 2004; Gaitsgory-Raskin 2024; Kapustin-Witten 2007; Osterwalder-Seiler 1978; Ruelle 1969) appear in `solutions-with-prize/paper08-yang-mills/preprint/sections/references.md` and are not duplicated here per brief DELTA 8 (programme papers cited at §-level; external references inherited via programme papers' bibliographies).
 
 ---
 

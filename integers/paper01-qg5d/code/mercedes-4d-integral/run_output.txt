@@ -1,0 +1,69 @@
+
+========================================================================
+PART A  3-loop massless sunset p-integral -- Feynman-parametric form
+========================================================================
+Computing symbolic Laurent expansions of three bubbles...
+  G(1,1; 4-2eps)       = eps*(-3*gamma_E**2/2 + gamma_E*(2 - 2*gamma_E) + 4*gamma_E - zeta2/2 + (2*gamma_E - 2)**2) - gamma_E + 2 + 1/eps
+  G(1,1+eps; 4-2eps)   = eps*(-5*gamma_E**2/4 + gamma_E*(3 - 3*gamma_E) + 9*gamma_E/2 - zeta2/4 + (3*gamma_E - 3)**2/2) - gamma_E/2 + 3/2 + 1/(2*eps)
+  G(1,1+2eps; 4-2eps)  = eps*(-7*gamma_E**2/6 + gamma_E*(4 - 4*gamma_E) + 16*gamma_E/3 - zeta2/6 + (4*gamma_E - 4)**2/3) - gamma_E/3 + 4/3 + 1/(3*eps)
+
+Triple product G(1,1) G(1,1+eps) G(1,1+2eps) expanded:
+  eps^-3: 1/6
+  eps^-2: 3/2 - gamma_E/2
+  eps^-1: 3*gamma_E**2/4 - 9*gamma_E/2 - zeta2/4 + 55/6
+  eps^0: -3*gamma_E**3/4 + 27*gamma_E**2/4 + 3*gamma_E*zeta2/4 - 55*gamma_E/2 - 9*zeta2/4 - 29*zeta3/6 + 95/2
+  eps^1: 7*gamma_E**4/4 - 149*gamma_E**3/9 + 6*gamma_E**2*zeta2 + 165*gamma_E**2/4 - 68*gamma_E*zeta2/3 + 24*gamma_E*zeta3 - 285*gamma_E/2 + 15*zeta2**2/4 - 55*zeta2/4 - 568*zeta3/9 + 1351/6
+  eps^2: -65*gamma_E**5/24 + 2237*gamma_E**4/72 - 79*gamma_E**3*zeta2/6 - 1667*gamma_E**3/18 + 527*gamma_E**2*zeta2/6 - 115*gamma_E**2*zeta3/3 + 411*gamma_E**2/2 - 61*gamma_E*zeta2**2/8 - 353*gamma_E*zeta2/3 + 1838*gamma_E*zeta3/9 - 1850*gamma_E/3 + 167*zeta2**2/8 + 29*zeta2*zeta3/6 - 63*zeta2 - 2765*zeta3/9 + 795
+  eps^3: 365*gamma_E**6/144 - 2549*gamma_E**5/72 + 197*gamma_E**4*zeta2/16 + 11545*gamma_E**4/72 - 4231*gamma_E**3*zeta2/36 + 316*gamma_E**3*zeta3/9 - 3641*gamma_E**3/9 + 11*gamma_E**2*zeta2**2/16 + 2537*gamma_E**2*zeta2/6 - 2540*gamma_E**2*zeta3/9 + 2464*gamma_E**2/3 - 323*gamma_E*zeta2**2/24 - 24*gamma_E*zeta2*zeta3 - 2809*gamma_E*zeta2/6 + 8494*gamma_E*zeta3/9 - 2072*gamma_E - 175*zeta2**3/48 + 723*zeta2**2/8 + 568*zeta2*zeta3/9 - 527*zeta2/2 + 215*zeta3**2/6 - 11161*zeta3/9 + 7322/3
+
+eps^0 coefficient (symbolic): -3*gamma_E**3/4 + 27*gamma_E**2/4 + 3*gamma_E*zeta2/4 - 55*gamma_E/2 - 9*zeta2/4 - 29*zeta3/6 + 95/2
+eps^0 coefficient contains zeta(3) symbol?  True
+
+eps^0 coefficient (numeric, 30 dp): (24.93235149761708+0j)
+
+zeta(3) = 1.2020569031595942854
+
+========================================================================
+PART B  Mercedes master via Broadhurst's one-fold dilogarithm integral
+========================================================================
+  int_0^1 Li_2(x)/x dx = 1.20205690315959428539973816151
+  zeta(3)              = 1.20205690315959428539973816151
+  ratio                = 1.0
+  |diff|               = 0.0
+
+  Mercedes finite part M = 6 * int = 7.21234141895756571239842896907
+  6 * zeta(3)            = 7.21234141895756571239842896907
+
+========================================================================
+PART C  3F2(1,1,1; 2,2; 1) cross-check
+========================================================================
+  4F3(1,1,1,1; 2,2,2; 1) = 1.20205690315959428539973816151
+  zeta(3)                = 1.20205690315959428539973816151
+  |diff|                 = 0.0
+  [sanity] 3F2(1,1,1; 2,2; 1) = 1.64493406684823 (= zeta(2) = 1.64493406684823)
+
+========================================================================
+PART D  Pin #6 structural decomposition
+========================================================================
+  gamma_1              = 14.1347251417346937904572519836
+  log(gamma_1)         = 2.6486345457307902156897356955
+  zeta(3)              = 1.20205690315959428539973816151
+  log(gamma_1)*zeta(3) = 3.18380943964267249602567126981
+  J_CKM * 10^5 meas.   = 3.18
+  relative gap         = 0.0011979
+
+  4D Mercedes transcendental content: zeta(3) [verified Parts A,B,C].
+  Rational prefactor: 6 (in Broadhurst's standard loop measure) --
+  absorbed into the KK-sector normalisation (the zero of E_3(-j;Q_3)
+  removes any would-be competing polynomial-in-p piece).
+
+========================================================================
+PART E  Where does the rational '6' in '6 zeta(3)' come from?
+========================================================================
+Symmetry factor of Mercedes diagram: 3! = 6  (S_3 permutation of
+3 internal propagators).  The '6 zeta(3)' prefactor is diagrammatic.
+
+========================================================================
+DONE
+========================================================================
+Results written to /Users/gsix/quantum-geometry-in-5d-latex/paper1/code/mercedes-4d-integral/mercedes_4d_results.json

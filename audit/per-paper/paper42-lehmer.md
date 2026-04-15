@@ -1,6 +1,6 @@
 # paper42-lehmer — Lehmer / Mahler measure
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper42-lehmer/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper42-lehmer/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

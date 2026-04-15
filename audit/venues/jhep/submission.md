@@ -28,7 +28,7 @@
 **For physics-heavy programme papers** (Papers 2-7, 11-12, framework papers): JHEP is the primary target.
 **For Clay submissions:** use a mathematics journal (Annals, Inventiones, JAMS, CMP).
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Paper 2 (cosmology, already published elsewhere).
 - Paper 4 (Standard Model from e-circle).
 - Paper 5 (color confinement).

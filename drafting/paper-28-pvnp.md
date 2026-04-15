@@ -76,7 +76,7 @@ multiplier attempt through 12 kills to the phase transition.
 **Theorem catalogue:** UA1 (28.T2.1), UA2 (28.T2.2), non-injectivity
 (28.T3.1), KEY LEMMA 3.4.3 (28.T3.2), CP-1 (28.T4.1), Bridge
 Parts (28.B1, 28.B2), Corollary (28.C1), plus 6 supporting results
-— all entered in `paper12/29-theorem-catalogue.md` Part G.
+— all entered in `integers/paper12-cbb-system/29-theorem-catalogue.md` Part G.
 
 ---
 
@@ -192,13 +192,13 @@ transcript (the brainstorm where the trinity was discovered).
 
 ### Run 6: Mathematical referee — NOT YET RUN
 
-**Prompt:** `paper28-pvnp/referee/00-original-advanced-math-referee.md`
+**Prompt:** `solutions-with-prize/paper28-pvnp/referee/00-original-advanced-math-referee.md`
 (already written, 60+ lines, skeptical profile, reads Cook's Clay
 statement + Aaronson survey + three barrier papers + Bost-Connes +
 Mulmuley GCT before touching the preprint).
 
 **Input:** The rewritten preprint (§§1-5, 7 + PROOF-CHAIN.md)
-**Output:** `paper28-pvnp/referee/runs/math-referee-report.md`
+**Output:** `solutions-with-prize/paper28-pvnp/referee/runs/math-referee-report.md`
 
 Focus areas:
 - The Boolean BC construction (§3): is it rigorous or hand-wavy?
@@ -213,7 +213,7 @@ Focus areas:
 
 ### Run 7: Point-by-point claim tester — NOT YET RUN
 
-**Prompt:** `paper28-pvnp/referee/01-point-by-point-claim-tester.md`
+**Prompt:** `solutions-with-prize/paper28-pvnp/referee/01-point-by-point-claim-tester.md`
 (paper-specific: knows which claims, citations, and focus areas to
 test for P vs NP). The generic methodology template is at
 `drafting/01-point-by-point-claim-tester.md`.
@@ -224,7 +224,7 @@ DEFERRED, or UNLOCATED findings. Each fix is a targeted edit. The
 paper is DONE when every citation is VERIFIED.
 
 **Input:** The rewritten preprint after Run 6 fixes
-**Output:** `paper28-pvnp/referee/runs/claim-tester-report.md`
+**Output:** `solutions-with-prize/paper28-pvnp/referee/runs/claim-tester-report.md`
 
 Every citation to Bulatov 2017, Zhuk 2020, Barto et al. 2024,
 Houdayer-Marrakchi 2016, Marrakchi 2018/2019, Chakraborty 2024,
@@ -238,14 +238,14 @@ be located, read, and verified.
 ## 4. Configuration
 
 **ORA bundle:** `online-researcher-adversarial/ora-bundle-v8/`
-**Toolkit:** `paper28-pvnp/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`
+**Toolkit:** `solutions-with-prize/paper28-pvnp/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`
 (the v4 toolkit compiled from the 16-wave bridge run, 10 parallel
 tests, and the CP-1 verification)
-**Referee prompts:** `paper28-pvnp/referee/00-original-advanced-math-referee.md`
-and `paper28-pvnp/referee/01-point-by-point-claim-tester.md`
+**Referee prompts:** `solutions-with-prize/paper28-pvnp/referee/00-original-advanced-math-referee.md`
+and `solutions-with-prize/paper28-pvnp/referee/01-point-by-point-claim-tester.md`
 **Template:** Paper 28's own preprint directory (self-referential —
 the template IS the paper)
-**Output:** `paper28-pvnp/preprint/` (already populated)
+**Output:** `solutions-with-prize/paper28-pvnp/preprint/` (already populated)
 
 ---
 

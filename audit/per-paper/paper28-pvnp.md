@@ -1,6 +1,6 @@
 # Paper 28 — P vs NP
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/`
 **PROOF-CHAIN:** 5/6 links closed. Confidence 7/10. Link 5 backward is the wall.
 
 ## Claim

@@ -1,6 +1,6 @@
 # paper31-baum-connes — Baum-Connes for BC algebra
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper31-baum-connes/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper31-baum-connes/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

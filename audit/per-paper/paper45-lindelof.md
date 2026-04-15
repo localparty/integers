@@ -1,6 +1,6 @@
 # paper45-lindelof — Lindelöf Hypothesis
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper45-lindelof/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper45-lindelof/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

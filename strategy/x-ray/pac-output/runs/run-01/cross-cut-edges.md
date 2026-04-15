@@ -8,7 +8,7 @@
 
 ## YM cross-cuts (38 edges)
 
-### Verified (capacitor cell or paper60/61 explicit citation) — 14 edges
+### Verified (capacitor cell or integers/paper60-geometry-of-circle/61 explicit citation) — 14 edges
 
 - ym:L1 ↔ qg5d:Branch B — shared spectral gap — paper61 §08 explicit derivation chain (S^1 → KK gap → CP^{N-1} Weitzenböck → YM). Capacitor 09 §49 SPEC↔QFT.
 - ym:L1b ↔ qg5d:Branch B — shared spectral gap — IR equivalence within KK / standard-lattice transfer.

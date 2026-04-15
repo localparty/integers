@@ -134,7 +134,7 @@ Specifically:
 - Target: `strategy/ym/deliverables/ym-beyond-bare.md`
 - Structure: 10-section per brief DELTA 6 (§1 5D derivation, §2 Zero free parameters, …, §10 References)
 - Target: ≤ 15 pages, zero prose
-- Inputs: paper1 QG5D hub, paper60/61 projections, paper12 36-pins table, cross-Clay x-rays
+- Inputs: paper1 QG5D hub, integers/paper60-geometry-of-circle/61 projections, paper12 36-pins table, cross-Clay x-rays
 
 ### run-05 (future, after bare locks): Verification + composition-backward
 
@@ -145,7 +145,7 @@ Specifically:
 
 ### Parallel track (non-blocking)
 
-- **H4 L.3.7 audit** (paper08-yang-mills/h4-capacitor-bypass/): continues independently. Closure within 2-year Clay window upgrades H4 from OPEN-BUT-ADDRESSED to PROVED.
+- **H4 L.3.7 audit** (solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/): continues independently. Closure within 2-year Clay window upgrades H4 from OPEN-BUT-ADDRESSED to PROVED.
 
 ---
 

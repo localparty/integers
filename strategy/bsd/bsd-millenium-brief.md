@@ -25,7 +25,7 @@ Produce a Clay-compliance-audited BSD deliverable in **bare mode only** this run
 - Structure mirrors Wiles §§0-3 / Remarks 1-4 requirements 1:1
 
 **C_bare. Beyond-Clay X-RAY** — `strategy/bsd/deliverables/bsd-beyond-bare.md`:
-- Bonus theorem skeleton (5D derivation, pins, cross-Clay, congruent number, effective generators, Euler quartic)
+- Bonus theorem skeleton (~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" -->, pins, cross-Clay, congruent number, effective generators, Euler quartic)
 - ZERO prose, ≤ 15 pages
 
 **B_full and C_full are DEFERRED.** Do not write them this run. They are composed later by parallel agents from the 60-project reservoir once B_bare + C_bare LOCK.
@@ -196,15 +196,15 @@ Fixed 10-section structure for `strategy/bsd/deliverables/bsd-beyond-bare.md`:
 ```
 # BSD Beyond-Clay X-Ray (BARE MODE)
 
-## §1 The 5D Geometric Reading of L-Values at s = 1
-[theorem statement: L(E,1) = f(KK-spectral data on 5D geometry for CM-realisable E); citation paper61 / paper1]
+## §1 The ~~5D Geometric Reading~~ M⁵ Geometric Reading<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric" → "M⁵ Geometric" --> of L-Values at s = 1
+[theorem statement: L(E,1) = f(KK-spectral data on ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> for CM-realisable E); citation paper61 / paper1]
 
 ## §2 Zero Free Parameters
 [table: parameter | value | determined by | programme citation]
 
 ## §3 Pins Relevant to BSD
 [table: pin ID | observable | predicted | measured | source paper]
-[J_CKM Pin #6 audit note: Paper 26 Step 4 is a Hasse-Brauer-Noether inequality, NOT a J_CKM vertex evaluation; see paper1/code/pin6-audits/FINDINGS.md]
+[J_CKM Pin #6 audit note: Paper 26 Step 4 is a Hasse-Brauer-Noether inequality, NOT a J_CKM vertex evaluation; see integers/paper01-qg5d/code/pin6-audits/FINDINGS.md]
 
 ## §4 Cross-Clay Connections
 [sub-theorems:
@@ -281,7 +281,7 @@ Four walls must be explicitly disclosed in B_bare §16 as NAMED WALLS. Required 
 
 **W_rank** — high rank r ≥ 2
 - **Status**: OPEN-BUT-ADDRESSED
-- **Bypass routes (candidates)**: p-adic L-functions (Perrin-Riou); Iwasawa main conjecture (Skinner-Urban, Kato); 5D KK-spectral reading of rank as mode count
+- **Bypass routes (candidates)**: p-adic L-functions (Perrin-Riou); Iwasawa main conjecture (Skinner-Urban, Kato); ~~5D KK-spectral~~ M⁵ KK-spectral<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D KK-spectral" → "M⁵ KK-spectral" --> reading of rank as mode count
 - **Bypass citation**: paper26-bsd §scope-discussion; paper13-rh infrastructure
 - **Aggregate confidence**: TBD at first construction attempt
 - **Effect if all bypasses fail**: result remains CM-rank-{0,1}-h_K=1; §5d still satisfied via disclosure
@@ -327,10 +327,10 @@ These are citation and framing fixes; no mathematical gap inside scope.
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/bsd/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper26-bsd/PROOF-CHAIN.md` — the 11-layer live chain
-3. `paper26-bsd/01-adversarial-proof-review.md` — 15-attack adversarial run-01
-4. `paper26-bsd/strategy/00-bsd-attack-plan.md` — Paper 26 attack plan (paths A-E, Phase plan)
-5. `paper26-bsd/research/01-bsd-scoping.md` — Paper 26 scoping summary
+2. `solutions-with-prize/paper26-bsd/PROOF-CHAIN.md` — the 11-layer live chain
+3. `solutions-with-prize/paper26-bsd/01-adversarial-proof-review.md` — 15-attack adversarial run-01
+4. `solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md` — Paper 26 attack plan (paths A-E, Phase plan)
+5. `solutions-with-prize/paper26-bsd/research/01-bsd-scoping.md` — Paper 26 scoping summary
 6. Wiles Clay PDF (summary in strategy doc §1)
 7. Clay Rules §4-§8 (summary in strategy doc §2)
 
@@ -367,13 +367,13 @@ Write to `strategy/bsd/deliverables/bsd-clay-bare.md`.
 ### Step 5 — Synthesize C_bare
 
 Walk the 10-section structure. Draw from:
-- Paper 1 (QG5D hub, 5D geometric foundation)
-- Paper 61 (projections — 5D geometric reading of L-values)
+- Paper 1 (QG5D hub, ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> foundation)
+- Paper 61 (projections — ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> reading of L-values)
 - Paper 60 (e-circle geometry)
 - Paper 29 (Hodge CM motives cross-connection)
 - paper13-rh (GRH for Hecke L-functions feeds Step 7)
-- Programme pins table (search `paper12/research/23-framework-predictions-master-table.md`)
-- Pin 6 audit note (`paper1/code/pin6-audits/FINDINGS.md`)
+- Programme pins table (search `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`)
+- Pin 6 audit note (`integers/paper01-qg5d/code/pin6-audits/FINDINGS.md`)
 - Cross-Clay x-ray cross-cuts
 - Tunnell congruent-number theorem; Elkies Euler-quartic (Wiles §1, §3)
 
@@ -453,10 +453,10 @@ the strategy document is
 strategy/bsd/00-millenium-strategy.md
 
 the live bsd proof-chain is
-paper26-bsd/PROOF-CHAIN.md
+solutions-with-prize/paper26-bsd/PROOF-CHAIN.md
 
 the adversarial run-01 is
-paper26-bsd/01-adversarial-proof-review.md
+solutions-with-prize/paper26-bsd/01-adversarial-proof-review.md
 
 the toolkit is
 <pca-extension>/08-framework-tools.md
@@ -511,21 +511,21 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/b
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/bsd/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/bsd/bsd-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/PROOF-CHAIN.md (11-layer live chain)
-4. /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/01-adversarial-proof-review.md (run-01, 15 attacks)
-5. /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/strategy/00-bsd-attack-plan.md (Phase plan, paths A-E)
-6. /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/research/01-bsd-scoping.md (scoping summary)
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md (11-layer live chain)
+4. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/01-adversarial-proof-review.md (run-01, 15 attacks)
+5. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md (Phase plan, paths A-E)
+6. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/research/01-bsd-scoping.md (scoping summary)
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for 5D derivation + cross-Clay)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/PROOF-CHAIN.md (RH chain; Step 7 GRH feeds BSD Step 7)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/ (5D projections)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper29-hodge/PROOF-CHAIN.md (CM motives cross-connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/PROOF-CHAIN.md (Popa rigidity cross-connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (pins table)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/code/pin6-audits/FINDINGS.md (J_CKM / Pin 6 audit note)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/referee/runs/r00/points/ (per-point referee verdicts A1-E1)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for ~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> + cross-Clay)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/PROOF-CHAIN.md (RH chain; Step 7 GRH feeds BSD Step 7)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/ (~~5D projections~~ M⁵ projections<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D projections" → "M⁵ projections" -->)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper29-hodge/PROOF-CHAIN.md (CM motives cross-connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md (Popa rigidity cross-connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (pins table)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/code/pin6-audits/FINDINGS.md (J_CKM / Pin 6 audit note)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/referee/runs/r00/points/ (per-point referee verdicts A1-E1)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor)
 

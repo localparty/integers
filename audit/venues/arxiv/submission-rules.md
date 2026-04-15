@@ -38,7 +38,7 @@ Explicitly rejected:
 ## Back-catalog submission rate limit
 > Authors are asked not to exceed three papers per day.
 
-## Relevant categories for QG5D programme
+## Relevant categories for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **math.NT** — Number Theory (RH, BSD, GRH, abc, Goldbach, primes)
 - **math.MP** — Mathematical Physics (YM, physics-math crossover)
 - **math.AG** — Algebraic Geometry (Hodge)

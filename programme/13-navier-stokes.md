@@ -32,7 +32,7 @@ Therefore, global regularity reduces to proving that the vorticity remains contr
 
 ## 13.2 Connection 1: Yang-Mills gradient flow
 
-The most direct connection between the QG5D framework and Navier-Stokes is through the Yang-Mills gradient flow, which occupies Links 15-17 of the YM proof chain (Paper 8).
+The most direct connection between the ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework and Navier-Stokes is through the Yang-Mills gradient flow, which occupies Links 15-17 of the YM proof chain (Paper 8).
 
 **The YM gradient flow.** Given a gauge connection A on a principal G-bundle over a Riemannian manifold M, the Yang-Mills gradient flow is the parabolic evolution equation:
 
@@ -73,7 +73,7 @@ The reason the YM gradient flow is better behaved is precisely the spectral gap.
 
 The spectral gap Delta > 0, which is the content of the Yang-Mills mass gap theorem (Link 14 of the YM proof chain, VERIFIED at 10/10 confidence after the Wave 7 closure), plays a specific role in controlling long-time regularity of the gradient flow. The mechanism is:
 
-1. The transfer matrix T of the KK-reduced 5D theory has a spectral gap: the ratio of its two largest eigenvalues satisfies lambda_2 / lambda_1 < 1 - delta for some delta > 0.
+1. The transfer matrix T of the KK-reduced ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> theory has a spectral gap: the ratio of its two largest eigenvalues satisfies lambda_2 / lambda_1 < 1 - delta for some delta > 0.
 
 2. This spectral gap implies exponential decay of correlations in the Euclidean theory: connected Schwinger functions decay as exp(-Delta * |x - y|) at large separations.
 
@@ -95,7 +95,7 @@ The difficulty is that the Navier-Stokes nonlinearity (u . nabla)u is not a grad
 
 ## 13.4 Connection 3: Fluid/gravity correspondence
 
-The third connection is through the fluid/gravity correspondence, which relates five-dimensional Einstein equations to four-dimensional fluid dynamics. This connection is geometrically natural within the QG5D framework because the framework IS five-dimensional Einstein gravity.
+The third connection is through the fluid/gravity correspondence, which relates five-dimensional Einstein equations to four-dimensional fluid dynamics <!-- "five-dimensional Einstein equations" retained here as canonical nomenclature for the BHMR/AdS_5 literature being described; not a programme claim -->. This connection is geometrically natural within the QG5D framework because the framework IS ~~five-dimensional~~ 4+1 coordinate <!-- legacy 2026-04-15: programme-voice "five-dimensional" migrated to "4+1 coordinate" per §0.10 canon entry 1, Intervention 8 --> Einstein gravity.
 
 **The Bhattacharyya-Hubeny-Minwalla-Rangamani correspondence (2008).** Bhattacharyya, Hubeny, Minwalla, and Rangamani (arXiv:0712.2456) showed that the long-wavelength dynamics of a black brane in five-dimensional anti-de Sitter space, when projected onto the stretched horizon, produces the four-dimensional incompressible Navier-Stokes equations for the dual fluid. The correspondence is:
 
@@ -113,17 +113,17 @@ The correspondence was extended by subsequent work:
 
 - Lysov and Strominger (2011, arXiv:1104.5502) extended the correspondence to include higher-order corrections, showing that the NS equations arise at first order in the gradient expansion and that higher-order fluid dynamics (Burnett equations) arise at second order.
 
-**The QG5D connection.** The QG5D framework postulates that spacetime is five-dimensional: M^5 = M^4 x S^1, where S^1 is the fifth dimension with compactification radius R_e (the "e-circle"). The five-dimensional Einstein equations on M^5 are the framework's dynamical equations. Under Kaluza-Klein reduction on S^1, the 5D metric decomposes as:
+**The QG5D connection.** The QG5D framework ~~postulates~~ derives <!-- legacy 2026-04-15: "postulates" migrated to "derives" per §0.10 canon entry 4, Intervention 8; QG5D has no postulates beyond ℤ + ZFC per north-star §0.1 --> that spacetime has ~~is five-dimensional~~ a 4+1 coordinate structure <!-- legacy 2026-04-15: "is five-dimensional" migrated to "has a 4+1 coordinate structure" per §0.10 canon entry 1, Intervention 8 -->: M^5 = M^4 x S^1, where S^1 is the ~~fifth dimension~~ internal-phase U(1) fiber <!-- legacy 2026-04-15: "fifth dimension" migrated to "internal-phase U(1) fiber" per §0.10 canon entry 2, Intervention 8 --> with compactification radius R_e (the "e-circle"). The ~~five-dimensional~~ M^5 <!-- legacy 2026-04-15: "five-dimensional" → "M^5" per §0.10 canon entry 1 --> Einstein equations on M^5 are the framework's dynamical equations. Under Kaluza-Klein reduction on S^1, the 5D metric decomposes as:
 
 ```
 ds^2_{5D} = g_{mu nu}(x) dx^mu dx^nu + phi(x)^2 (de + A_mu dx^mu)^2
 ```
 
-producing a 4D metric g_{mu nu}, a gauge field A_mu (the KK photon), and a scalar phi (the dilaton). The 5D Einstein equations reduce to 4D Einstein-Maxwell-dilaton equations.
+producing a 4D metric g_{mu nu}, a gauge field A_mu (the KK photon), and a scalar phi (the dilaton). The ~~5D Einstein equations~~ M⁵ Einstein equations<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein equations" → "M⁵ Einstein equations" --> reduce to 4D Einstein-Maxwell-dilaton equations.
 
-The fluid/gravity correspondence then states that long-wavelength perturbations of the 5D metric --- specifically, perturbations that vary slowly compared to the compactification scale R_e --- produce effective 4D fluid dynamics. The velocity field u^mu of the fluid is identified with the timelike eigenvector of the 4D stress-energy tensor, and the fluid's viscosity is determined by the 5D geometry.
+The fluid/gravity correspondence then states that long-wavelength perturbations of the ~~5D metric~~ M⁵ metric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D metric" → "M⁵ metric" --> --- specifically, perturbations that vary slowly compared to the compactification scale R_e --- produce effective 4D fluid dynamics. The velocity field u^mu of the fluid is identified with the timelike eigenvector of the 4D stress-energy tensor, and the fluid's viscosity is determined by the ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" -->.
 
-This means the QG5D framework contains Navier-Stokes dynamics as a long-wavelength effective description of its own gravitational degrees of freedom. The 5D Einstein equations are the "UV completion" of the 4D fluid dynamics, and regularity of the 5D geometry implies regularity of the 4D fluid.
+This means the ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework contains Navier-Stokes dynamics as a long-wavelength effective description of its own gravitational degrees of freedom. The ~~5D Einstein equations~~ M⁵ Einstein equations<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein equations" → "M⁵ Einstein equations" --> are the "UV completion" of the 4D fluid dynamics, and regularity of the ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> implies regularity of the 4D fluid.
 
 The potential pathway to NS regularity via the fluid/gravity correspondence would be:
 
@@ -136,7 +136,7 @@ The potential pathway to NS regularity via the fluid/gravity correspondence woul
                     --> global existence and smoothness of NS solutions
 ```
 
-The first three arrows are established physics (Kaluza-Klein reduction, Bhattacharyya-Hubeny-Minwalla-Rangamani). The fourth arrow requires an explicit dictionary between the KK variables and the fluid variables. The fifth arrow --- the implication from 5D regularity to 4D regularity --- is the hard step and requires proving two things: (a) the 5D Einstein equations on M^4 x S^1 have globally regular solutions for appropriate initial data, and (b) the KK-to-NS dictionary preserves regularity (smooth 5D metric implies smooth velocity field).
+The first three arrows are established physics (Kaluza-Klein reduction, Bhattacharyya-Hubeny-Minwalla-Rangamani). The fourth arrow requires an explicit dictionary between the KK variables and the fluid variables. The fifth arrow --- the implication from ~~5D regularity~~ M⁵ regularity<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D regularity" → "M⁵ regularity" --> to 4D regularity --- is the hard step and requires proving two things: (a) the ~~5D Einstein equations~~ M⁵ Einstein equations<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein equations" → "M⁵ Einstein equations" --> on M^4 x S^1 have globally regular solutions for appropriate initial data, and (b) the KK-to-NS dictionary preserves regularity (smooth ~~5D metric~~ M⁵ metric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D metric" → "M⁵ metric" --> implies smooth velocity field).
 
 ---
 
@@ -187,7 +187,7 @@ Both kills were repaired (R1-R4 applied): the spectral exponent is now an input 
 
 ## 13.6 The fluid/gravity route vs. the operator-algebraic route
 
-The candidate proof chain (Section 13.5) takes the operator-algebraic route: it attempts to control vorticity through the modular theory of von Neumann algebras. The fluid/gravity correspondence (Section 13.4) offers an alternative route that is geometrically natural for the QG5D framework.
+The candidate proof chain (Section 13.5) takes the operator-algebraic route: it attempts to control vorticity through the modular theory of von Neumann algebras. The fluid/gravity correspondence (Section 13.4) offers an alternative route that is geometrically natural for the ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework.
 
 The two routes have different strengths:
 
@@ -199,11 +199,11 @@ The two routes have different strengths:
 | Feasibility | 5/10 (chain at 16 steps) | Not yet estimated (no chain constructed) |
 | Scope of result | Would establish new OA-PDE bridge | Would establish new gravity-NS bridge |
 
-The fluid/gravity route has a notable advantage: the 5D Einstein equations are the framework's home territory. The framework already works with M^4 x S^1 geometry (Paper 1), KK reduction (Paper 8 Link 1), and 5D spectral theory (the spectral gap). A proof of NS regularity via the fluid/gravity correspondence would not require importing new mathematical structures (type III_1 factors from PDE solutions) but would instead use the framework's existing 5D toolkit to derive 4D consequences.
+The fluid/gravity route has a notable advantage: the ~~5D Einstein equations~~ M⁵ Einstein equations<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein equations" → "M⁵ Einstein equations" --> are the framework's home territory. The framework already works with M^4 x S^1 geometry (Paper 1), KK reduction (Paper 8 Link 1), and ~~5D spectral~~ M⁵ spectral<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D spectral" → "M⁵ spectral" --> theory (the spectral gap). A proof of NS regularity via the fluid/gravity correspondence would not require importing new mathematical structures (type III_1 factors from PDE solutions) but would instead use the framework's existing ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> toolkit to derive 4D consequences.
 
-The disadvantage is that 5D Einstein regularity is itself an open problem. The global existence of solutions to the 5D Einstein equations with compact extra dimensions and generic initial data is not established. Christodoulou-Klainerman (1993) proved global nonlinear stability of Minkowski spacetime in 4D, and Andersson-Moncrief (2004) extended this to certain higher-dimensional settings, but the specific case of M^4 x S^1 with the framework's boundary conditions has not been treated.
+The disadvantage is that 5D Einstein regularity is itself an open problem. The global existence of solutions to the 5D Einstein equations with compact ~~extra dimensions~~ internal phase fiber <!-- legacy 2026-04-15: "extra dimensions" migrated to "internal phase fiber" per §0.10 canon entry 2, Intervention 8; describing the framework's own M^4 × S^1 case --> and generic initial data is not established. Christodoulou-Klainerman (1993) proved global nonlinear stability of Minkowski spacetime in 4D, and Andersson-Moncrief (2004) extended this to certain higher-dimensional settings, but the specific case of M^4 x S^1 with the framework's boundary conditions has not been treated.
 
-A combined approach may be more promising than either route alone: use the fluid/gravity dictionary (Section 13.4) to translate the problem into 5D geometry, then use the spectral gap and KK tower structure to control the 5D evolution, thereby establishing 4D regularity indirectly. This approach would unify Connections 1-3 (gradient flow, spectral gap, fluid/gravity) into a single argument.
+A combined approach may be more promising than either route alone: use the fluid/gravity dictionary (Section 13.4) to translate the problem into ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" -->, then use the spectral gap and KK tower structure to control the ~~5D evolution~~ M⁵ evolution<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D evolution" → "M⁵ evolution" -->, thereby establishing 4D regularity indirectly. This approach would unify Connections 1-3 (gradient flow, spectral gap, fluid/gravity) into a single argument.
 
 ---
 
@@ -217,7 +217,7 @@ The gap between the framework's structural connections and a proof of Navier-Sto
 - The spectral gap Delta > 0 controls long-time regularity of the YM gradient flow. VERIFIED (Link 14, 10/10 confidence).
 - The fluid/gravity correspondence (BHMR 2008, BKMS 2011) derives Navier-Stokes from 5D Einstein equations in appropriate limits. ESTABLISHED in the literature.
 - The candidate proof chain (16 steps) is logically coherent and has survived adversarial attack at the WEAKENED level. CONSTRUCTED.
-- The QG5D framework's 5D geometry naturally produces 4D effective fluid dynamics via KK reduction. STRUCTURAL.
+- The ~~QG5D~~ 4+1<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D framework" (derivation shorthand) → "4+1 framework" --> framework's ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> naturally produces 4D effective fluid dynamics via KK reduction. STRUCTURAL.
 
 **Constructed but not proved:**
 
@@ -261,7 +261,7 @@ The BGS and Baum-Connes edges are speculative but point toward the deeper struct
 
 **Status: candidate proof chain at 5/10 feasibility. No proved results specific to NS.**
 
-The Navier-Stokes problem is the frontier of the QG5D programme. Unlike the Yang-Mills mass gap (17 proved links), the Riemann Hypothesis (12 nodes, 6 layers), or BSD (11 steps with closable gaps), the NS connection is at the stage of structural identification and chain construction, not chain verification. The programme has identified three genuine mathematical connections (gradient flow, spectral gap, fluid/gravity) and constructed a 16-step candidate chain, but the chain's key steps are open problems of independent difficulty.
+The Navier-Stokes problem is the frontier of the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme. Unlike the Yang-Mills mass gap (17 proved links), the Riemann Hypothesis (12 nodes, 6 layers), or BSD (11 steps with closable gaps), the NS connection is at the stage of structural identification and chain construction, not chain verification. The programme has identified three genuine mathematical connections (gradient flow, spectral gap, fluid/gravity) and constructed a 16-step candidate chain, but the chain's key steps are open problems of independent difficulty.
 
 The honest comparison with the other Millennium vertices:
 
@@ -280,4 +280,4 @@ The programme's position on Navier-Stokes is: the structural connections are rea
 
 ---
 
-*Source files: paper27-navier/strategy/00-navier-attack-plan.md, paper27-navier/strategy/01-navier-proof-chain.md, paper08-yang-mills/chain-verification/chain/chain-state.md (Links 15-17), paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md, Bhattacharyya-Hubeny-Minwalla-Rangamani arXiv:0712.2456, Bredberg-Keeler-Maloney-Strominger arXiv:1101.2451, programme graph Section 25.*
+*Source files: paper27-navier/strategy/00-navier-attack-plan.md, paper27-navier/strategy/01-navier-proof-chain.md, solutions-with-prize/paper08-yang-mills/chain-verification/chain/chain-state.md (Links 15-17), solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md, Bhattacharyya-Hubeny-Minwalla-Rangamani arXiv:0712.2456, Bredberg-Keeler-Maloney-Strominger arXiv:1101.2451, programme graph Section 25.*

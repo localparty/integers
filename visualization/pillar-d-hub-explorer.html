@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pillar D — Hub Explorer (Integers programme)</title>
+<style>
+  :root{
+    --bg:#0a0a14;
+    --panel:#12121f;
+    --panel2:#1a1a2e;
+    --border:#242438;
+    --text:#e8e8f0;
+    --dim:#8a8aa0;
+    --accent:#f5c26b;
+    --warm:#ff6b5a;
+    --cool:#5ab0ff;
+    --cluster:#7dd3fc;
+    --derived:#a5f3a2;
+    --hub:#f5c26b;
+    --outer:#6a6a80;
+    --retained:#ff6b5a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;overflow:hidden}
+  #app{display:grid;grid-template-columns:65% 35%;grid-template-rows:1fr 140px;height:100vh;width:100vw}
+  #canvas-wrap{grid-column:1;grid-row:1;position:relative;background:radial-gradient(ellipse at center,#12122a 0%,#0a0a14 70%)}
+  #canvas-wrap canvas{display:block;width:100%;height:100%}
+  #tooltip{position:absolute;pointer-events:none;background:rgba(20,20,35,0.95);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;display:none;z-index:10;white-space:nowrap}
+  #hud{position:absolute;top:14px;left:14px;font-size:11px;color:var(--dim);background:rgba(20,20,35,0.7);padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0.05em}
+
+  #panel{grid-column:2;grid-row:1;background:var(--panel);border-left:1px solid var(--border);padding:22px 20px;overflow-y:auto;font-size:14px;line-height:1.55}
+  #panel h1{font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--dim);text-transform:uppercase;margin:0 0 6px}
+  #panel h2{font-size:20px;font-weight:700;margin:0 0 8px;color:var(--text);line-height:1.2}
+  #panel h3{font-size:12px;font-weight:600;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin:18px 0 8px}
+  #panel .desc{color:#c8c8d8;margin-bottom:12px;font-size:13px}
+  #panel .stat-row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--border);padding:5px 0;font-size:12.5px}
+  #panel .stat-row .label{color:var(--dim)}
+  #panel .stat-row .value{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
+
+  .hub-picker{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .hub-btn{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:7px 11px;border-radius:6px;font-size:12px;cursor:pointer;transition:all 0.15s;font-family:inherit}
+  .hub-btn:hover{background:#222234;border-color:var(--accent)}
+  .hub-btn.active{background:var(--accent);color:#0a0a14;border-color:var(--accent);font-weight:600}
+
+  .cluster-list{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+  .chip{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:3px 8px;border-radius:999px;font-size:11px;font-variant-numeric:tabular-nums}
+  .chip.in-cluster{background:rgba(125,211,252,0.15);border-color:var(--cluster);color:var(--cluster)}
+  .chip.dep-free{background:rgba(165,243,162,0.15);border-color:var(--derived);color:var(--derived)}
+  .chip.retained{background:rgba(255,107,90,0.12);border-color:var(--retained);color:var(--retained)}
+
+  #bottom{grid-column:1 / span 2;grid-row:2;background:var(--panel);border-top:1px solid var(--border);padding:14px 24px;display:flex;gap:24px;align-items:center;font-size:12px;color:var(--dim)}
+  #bottom .section{display:flex;gap:10px;align-items:center}
+  #bottom .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+  #bottom .legend-dot.hub{background:var(--hub)}
+  #bottom .legend-dot.cluster{background:var(--cluster)}
+  #bottom .legend-dot.outer{background:var(--outer)}
+  #bottom .legend-dot.ext{background:var(--retained)}
+  #bottom .legend-dot.derived{background:var(--derived)}
+
+  .compare-block{background:var(--panel2);border:1px solid var(--border);border-left-width:4px;border-radius:6px;padding:10px 12px;margin-bottom:10px;font-size:12.5px}
+  .compare-block.flat{border-left-color:var(--outer)}
+  .compare-block.cluster{border-left-color:var(--hub)}
+  .compare-block .label{font-size:10px;color:var(--dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px}
+  .compare-block .val{font-size:15px;font-weight:700;color:var(--text)}
+  .compare-block .sub{font-size:11px;color:var(--dim);margin-top:3px}
+
+  @media (max-width:900px){
+    #app{grid-template-columns:1fr;grid-template-rows:60vh 1fr 140px}
+    #canvas-wrap{grid-column:1;grid-row:1}
+    #panel{grid-column:1;grid-row:2}
+    #bottom{grid-column:1;grid-row:3}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="canvas-wrap">
+    <div id="tooltip"></div>
+    <div id="hud">drag to rotate · scroll to zoom · click vertex for focus</div>
+  </div>
+  <aside id="panel">
+    <h1>Pillar D — Hub Explorer</h1>
+    <h2 id="hub-title">Pick a hub candidate</h2>
+    <div class="desc" id="hub-desc">Each hub candidate represents a cluster of ring vertices whose externals derive from ONE foundational Pillar D paper. Click a button below to explore.</div>
+
+    <h3>Hub candidates</h3>
+    <div class="hub-picker" id="hub-picker"></div>
+
+    <h3>Cluster composition</h3>
+    <div class="cluster-list" id="cluster-list"></div>
+
+    <h3>Pillar D output</h3>
+    <div id="stats"></div>
+
+    <h3>Flat-roster vs Hub-cluster</h3>
+    <div id="compare"></div>
+
+    <h3>Source externals in this hub</h3>
+    <div id="externals"></div>
+
+    <div class="desc" style="margin-top:20px;font-size:11px;color:var(--dim);font-style:italic">
+      Dot = ring vertex. Halo ring = cluster membership. Dashed line = cross-cut chord (full atlas: 25 X-RAY.md files + qg5d hub). Green = vertex becomes dep-free after this hub's Pillar D paper lands. G Six + Claude Opus 4.6, April 2026.
+    </div>
+    <div class="desc" id="atlas-stats" style="margin-top:10px;font-size:11px;color:var(--dim);font-family:ui-monospace,SFMono-Regular,Menlo,monospace"></div>
+  </aside>
+  <div id="bottom">
+    <div class="section"><span class="legend-dot hub"></span> hub vertex</div>
+    <div class="section"><span class="legend-dot cluster"></span> in cluster</div>
+    <div class="section"><span class="legend-dot derived"></span> dep-free after Pillar D</div>
+    <div class="section"><span class="legend-dot ext"></span> retained external</div>
+    <div class="section"><span class="legend-dot outer"></span> ring vertex (unclustered)</div>
+  </div>
+</div>
+
+<script type="importmap">
+{"imports":{
+  "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"
+}}
+</script>
+
+<!-- Atlas cross-cut sidecar: aggregated from all 25 X-RAY.md files + qg5d hub.
+     Classic (non-module) script makes ATLAS_EDGES / ATLAS_COUNTS available as globals. -->
+<script src="atlas-edges.js"></script>
+
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+// ============ DATA ============
+// 25 ring vertices + Integers hub (internal id "qg5d" preserved for path-consistency with integers/paper01-qg5d/; user-visible label is "Integers" per north-star §0.1 — programme name), per strategy/north-star.md §0.1
+const VERTICES = [
+  // Millennium (6)
+  {id:"qg5d",  label:"Integers",   type:"hub",   branch:"all"},
+  {id:"ym",    label:"YM",         type:"mill",  branch:"B",  external:"Balaban RG"},
+  {id:"rh",    label:"RH",         type:"mill",  branch:"D",  external:"CCM 2025"},
+  {id:"bsd",   label:"BSD",        type:"mill",  branch:"D",  external:"Kolyvagin + modularity + Gross-Zagier"},
+  {id:"pvnp",  label:"P vs NP",    type:"mill",  branch:"D",  external:"Bulatov-Zhuk CSP dichotomy"},
+  {id:"hodge", label:"Hodge",      type:"mill",  branch:"D",  external:"Standard Conjecture D"},
+  {id:"ns",    label:"NS",         type:"mill",  branch:"B",  external:"inherits YM gradient flow"},
+  // Non-Millennium (19)
+  {id:"lindelof",    label:"Lindelöf",       type:"nonmill", branch:"D", external:"subconvexity bounds"},
+  {id:"grh",         label:"GRH",            type:"nonmill", branch:"D", external:"CCM 2025 + bridge family"},
+  {id:"h12",         label:"Hilbert 12",     type:"nonmill", branch:"D", external:"class field theory"},
+  {id:"turbulence",  label:"Turbulence",     type:"nonmill", branch:"B", external:"K41 + inherits NS/YM"},
+  {id:"baum-connes", label:"Baum-Connes",    type:"nonmill", branch:"D", external:"BC C*-algebra + assembly"},
+  {id:"vp-vs-vnp",   label:"VP vs VNP",      type:"nonmill", branch:"D", external:"Mulmuley GCT"},
+  {id:"bgs",         label:"BGS",            type:"nonmill", branch:"D", external:"CCM 2025 + GUE universality"},
+  {id:"katz-sarnak", label:"Katz-Sarnak",    type:"nonmill", branch:"D", external:"Deligne + bridge family"},
+  {id:"twin-primes", label:"Twin Primes",    type:"nonmill", branch:"D", external:"CCM + explicit formula"},
+  {id:"cramer",      label:"Cramér",         type:"nonmill", branch:"D", external:"CCM + random-matrix"},
+  {id:"goldbach",    label:"Goldbach",       type:"nonmill", branch:"D", external:"CCM + Hecke semigroup"},
+  {id:"abc",         label:"abc",            type:"nonmill", branch:"D", external:"Vojta / Mochizuki"},
+  {id:"opn",         label:"Odd Perfect",    type:"nonmill", branch:"A", external:"elementary"},
+  {id:"collatz",     label:"Collatz",        type:"nonmill", branch:"D", external:"ergodic-theoretic"},
+  {id:"lehmer",      label:"Lehmer",         type:"nonmill", branch:"A", external:"Mahler measure"},
+  {id:"sato-tate",   label:"Sato-Tate",      type:"nonmill", branch:"B", external:"automorphy lifting"},
+  {id:"schanuel",    label:"Schanuel",       type:"nonmill", branch:"D", external:"transcendence theory"},
+  {id:"hilbert-6",   label:"Hilbert 6",      type:"nonmill", branch:"B", external:"axiomatic derivations"},
+];
+
+// Hub candidates with clusters (each cluster = vertices whose externals one Pillar D paper discharges)
+const HUBS = [
+  {
+    id:"bc",
+    label:"BC (Bost-Connes)",
+    desc:"One monograph derives Tomita-Takesaki + CCM 2025 + Connes trace formula + Kolyvagin-via-BC + Standard Conjecture D connections — all as chapters of a single foundational text. The BC system itself becomes cited infrastructure for decades.",
+    paperTitle:"Bost-Connes Systems: Constructive Infrastructure from ℤ",
+    cluster:["rh","bsd","bgs","grh","baum-connes","pvnp","goldbach","twin-primes","cramer","schanuel","hodge","lindelof","h12","katz-sarnak"],
+    externals:["Tomita-Takesaki modular theory","CCM 2025 spectral realization","Connes trace formula","Kolyvagin Euler systems via BC","Standard Conjecture D (motivic)","Gross-Zagier formula"],
+    fieldImpact:"Defines a reusable infrastructure. 14 ring vertices lose their Branch-D external dep simultaneously. Community: operator algebras + analytic number theory + arithmetic geometry + noncommutative geometry. Cited for 20+ years like Connes' monograph.",
+    paperCount:1,
+    precedent:"Connes 'Noncommutative Geometry' 1994 (defined the field)"
+  },
+  {
+    id:"kk",
+    label:"KK (Kaluza-Klein + Branch B)",
+    desc:"One paper derives Balaban RG + Epstein-zeta universality + gradient flow regularity + KK spectral gap engineering — discharging YM, NS, turbulence, and Hilbert 6's external deps together. Produces the 4D ↔ 5D reduction machinery as a community tool.",
+    paperTitle:"Kaluza-Klein Reduction and Universal Finiteness from M⁵ = M⁴ × S¹",
+    cluster:["ym","ns","turbulence","hilbert-6","sato-tate"],
+    externals:["Balaban RG polymer expansion","Epstein-zeta universal vanishing (Thm K.1)","BPHZ factorization (Thm K.3)","Gradient flow regularity","K41 turbulence cascade"],
+    fieldImpact:"Discharges YM H4 wall, NS regularity wall, turbulence K41, and Hilbert-6 axiomatic gap via a single KK-foundation paper. Community: constructive QFT + mathematical physics + PDE.",
+    paperCount:1,
+    precedent:"Balaban's Lattice QFT Papers (CMP 1980s-90s, ~800 pages total)"
+  },
+  {
+    id:"branch-d",
+    label:"Branch-D axioms",
+    desc:"Broadest hub: derive the 5 CBB axioms as theorems from ℤ + ZFC in one paper. Every vertex Branch-D-derived inherits unconditionality. 13 ring vertices become dep-free via one foundational derivation.",
+    paperTitle:"The Branch-D Axioms as Theorems: Spectral, Critical, Geometric, Bridge, and Closure",
+    cluster:["rh","bsd","hodge","pvnp","grh","baum-connes","bgs","goldbach","twin-primes","cramer","schanuel","katz-sarnak","h12","lindelof"],
+    externals:["H_R spectral realization","KMS₁ fixed-point uniqueness","CP² × S² 9-d moduli derivation","Bridge family Brauer classes","36-pin closure theorem"],
+    fieldImpact:"Would be the programme's Grothendieck-EGA moment: the architectural backbone offered as theorem-set. Community: noncommutative geometry + motives + analytic number theory + arithmetic geometry. Positioned as foundational monograph for the next generation.",
+    paperCount:1,
+    precedent:"Grothendieck EGA/SGA (defined modern algebraic geometry)"
+  },
+  {
+    id:"bgs",
+    label:"BGS + spectral-statistics",
+    desc:"Narrower spectral-statistics hub: GUE universality + Berry-Tabor + AC spectrum + modular-flow ergodicity → discharges externals for rh, twin-primes, katz-sarnak, cramer, lindelof, ym spectral statistics.",
+    paperTitle:"GUE Universality from Type III₁ Modular Flow",
+    cluster:["rh","twin-primes","katz-sarnak","cramer","lindelof","ym","sato-tate"],
+    externals:["GUE pair-correlation (BGS conjecture)","Type III₁ factor classification","Modular-flow ergodicity","AC spectrum / Hecke-Selberg","Tao-Vu universality"],
+    fieldImpact:"Tight infrastructure for spectral-statistics cluster. Community: random matrix theory + analytic number theory + mathematical physics.",
+    paperCount:1,
+    precedent:"Deift-Gioev 'Random Matrix Theory: Invariant Ensembles and Universality' 2009"
+  },
+  {
+    id:"integers-atlas",
+    label:"Integers (atlas-only, no Pillar D papers)",
+    desc:"The programme ships the atlas, the notation (projection operators P_A..P_E, the 10 faces, the 5 patterns, the 16 invariants), the PAC discipline, and the pilot monograph as infrastructure. Every ring vertex is ALREADY a projection of Integers (M⁵) — the atlas makes this visible. The community's researchers pick up the tools and derive externals as contributions they choose to make. Grothendieck's actual dynamic: EGA defined the tools; most of modern algebraic geometry was done by others using EGA.",
+    paperTitle:"(atlas + notation + pilot only — community-led derivations)",
+    cluster:["ym","rh","bsd","pvnp","hodge","ns","lindelof","grh","h12","turbulence","baum-connes","vp-vs-vnp","bgs","katz-sarnak","twin-primes","cramer","goldbach","abc","opn","collatz","lehmer","sato-tate","schanuel","hilbert-6"],
+    externals:[],
+    fieldImpact:"Zero-paper derivation obligation for the programme beyond the pilot. Infrastructure IS the contribution. Field researchers derive whichever externals they need using the atlas + PAC discipline. Scales with community engagement rather than programme-internal writing capacity. Same Grothendieck-EGA dynamic: the book defined the tools; others did the mathematics for 60+ years.",
+    paperCount:1,
+    precedent:"Grothendieck EGA — defined the tools; community did the mathematics"
+  },
+  {
+    id:"flat",
+    label:"Flat roster (no hub)",
+    desc:"One external per paper. TT-paper, CCM-paper, Connes-trace paper, Balaban-paper, Kolyvagin-paper, Bulatov-Zhuk-paper, ... 10+ papers over 2-3 years. Each is target-community-flagship paced.",
+    paperTitle:"(multiple standalone papers)",
+    cluster:[],
+    externals:["TT","CCM","Connes trace","Kolyvagin","Balaban","Bulatov-Zhuk","Bögli","Standard Conj D","Gross-Zagier","..."],
+    fieldImpact:"Cumulative contribution: each paper extends its target community by one new proof. Higher citation-count per-paper, but no single citable infrastructure. Extends disciplines; does not define them.",
+    paperCount:10,
+    precedent:"Kolyvagin's Euler systems series (extended BSD; didn't define a discipline)"
+  }
+];
+
+// Cross-cut chords — now sourced from atlas-edges.js sidecar (ATLAS_EDGES global).
+// The sidecar aggregates cross-cut enumerations from all 25 X-RAY.md files + the qg5d hub
+// (see strategy/x-ray/proof-chain/*/X-RAY.md §4 / §7). Each ATLAS_EDGES entry is
+// {from, to, shared}; the chord graph only needs the [from, to] endpoint pair, so we map.
+//
+// Fallback: if the sidecar fails to load (e.g. file:// CORS edge case), keep the
+// previous hardcoded partial set commented below so the viz still renders something.
+const CHORDS = (typeof ATLAS_EDGES !== 'undefined' && Array.isArray(ATLAS_EDGES))
+  ? ATLAS_EDGES.map(e => [e.from, e.to])
+  : [
+      // ---- fallback (YM atlas run-01 + batch-1 partial data) ----
+      // ["ym","qg5d"],["ym","rh"],["ym","bsd"],["ym","pvnp"],["ym","ns"],["ym","hodge"],
+      // ["ym","bgs"],["ym","baum-connes"],["ym","cramer"],["ym","goldbach"],
+      // ["ym","twin-primes"],["ym","katz-sarnak"],["ym","collatz"],["ym","lehmer"],
+      // ["ym","lindelof"],["ym","h12"],
+      // ["rh","qg5d"],["rh","bgs"],["rh","baum-connes"],["rh","twin-primes"],["rh","goldbach"],
+      // ["rh","grh"],["rh","cramer"],["rh","bsd"],
+      // ["bsd","qg5d"],["bsd","hodge"],["bsd","h12"],["bsd","katz-sarnak"],["bsd","sato-tate"],
+      // ["bgs","qg5d"],["bgs","katz-sarnak"],["bgs","sato-tate"],["bgs","lindelof"],
+      // ["baum-connes","qg5d"],["baum-connes","goldbach"],["baum-connes","hodge"],
+      // ["hodge","qg5d"],["hodge","schanuel"],
+      // ["pvnp","qg5d"],["pvnp","ym"],
+      // ["ns","qg5d"],["ns","turbulence"],
+      // ["grh","qg5d"],["grh","goldbach"]
+      ["ym","qg5d"],["rh","qg5d"],["bsd","qg5d"],["pvnp","qg5d"],["hodge","qg5d"],["ns","qg5d"]
+    ];
+
+// ============ LAYOUT ============
+const N = VERTICES.length;
+const R = 4.0;  // ring radius
+const positions = {};
+
+// qg5d at center; others evenly spaced on ring
+const outerRing = VERTICES.filter(v=>v.id!=="qg5d");
+outerRing.forEach((v,i)=>{
+  const t = (i/outerRing.length)*Math.PI*2;
+  positions[v.id] = new THREE.Vector3(Math.cos(t)*R, 0, Math.sin(t)*R);
+});
+positions["qg5d"] = new THREE.Vector3(0,0,0);
+
+// ============ SCENE ============
+const wrap = document.getElementById('canvas-wrap');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0a14);
+
+const camera = new THREE.PerspectiveCamera(50,1,0.01,100);
+camera.position.set(0,5.5,9);
+camera.lookAt(0,0,0);
+
+const renderer = new THREE.WebGLRenderer({antialias:true});
+wrap.appendChild(renderer.domElement);
+
+const resize = ()=>{
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(w,h,false);
+  camera.aspect = w/h;
+  camera.updateProjectionMatrix();
+};
+resize(); window.addEventListener('resize',resize);
+
+scene.add(new THREE.AmbientLight(0xffffff,0.6));
+const dl = new THREE.DirectionalLight(0xffffff,0.8);
+dl.position.set(4,6,3); scene.add(dl);
+const dl2 = new THREE.DirectionalLight(0x88aaff,0.25);
+dl2.position.set(-4,-2,-3); scene.add(dl2);
+
+const controls = new OrbitControls(camera,renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 3.5;
+controls.maxDistance = 18;
+
+// ============ GROUPS ============
+const ringGroup = new THREE.Group(); scene.add(ringGroup);
+const chordGroup = new THREE.Group(); scene.add(chordGroup);
+const haloGroup = new THREE.Group(); scene.add(haloGroup);
+const labelGroup = new THREE.Group(); scene.add(labelGroup);
+
+// Central ring (paper61 bouquet visualization)
+const ringCircleGeom = new THREE.TorusGeometry(R,0.008,12,180);
+const ringCircle = new THREE.Mesh(ringCircleGeom,new THREE.MeshBasicMaterial({color:0x242438}));
+ringCircle.rotation.x = Math.PI/2; scene.add(ringCircle);
+
+// ============ VERTEX MESHES ============
+const vertexMeshes = {};
+const baseGeom = new THREE.SphereGeometry(0.13,24,18);
+const hubGeom = new THREE.SphereGeometry(0.26,32,24);
+
+const baseMat = new THREE.MeshStandardMaterial({color:0x6a6a80,roughness:0.6,metalness:0.2});
+const hubMat = new THREE.MeshStandardMaterial({color:0xf5c26b,emissive:0xf5c26b,emissiveIntensity:0.35,roughness:0.3,metalness:0.4});
+const clusterMat = new THREE.MeshStandardMaterial({color:0x7dd3fc,emissive:0x7dd3fc,emissiveIntensity:0.25,roughness:0.4});
+const derivedMat = new THREE.MeshStandardMaterial({color:0xa5f3a2,emissive:0xa5f3a2,emissiveIntensity:0.3,roughness:0.35});
+
+VERTICES.forEach(v=>{
+  const m = new THREE.Mesh(v.id==="qg5d"?hubGeom:baseGeom, baseMat.clone());
+  m.position.copy(positions[v.id]);
+  m.userData = v;
+  ringGroup.add(m);
+  vertexMeshes[v.id] = m;
+});
+
+// ============ LABELS (sprite text) ============
+function makeLabel(text, color="#c8c8d8"){
+  // Render text to an offscreen canvas at a crisp pixel size, then create a sprite
+  // scaled to a sensible world-space size (~0.5 units wide) independent of text length.
+  const cvs = document.createElement('canvas');
+  const ctx = cvs.getContext('2d');
+  const fontPx = 44;               // font pixel height (texture resolution)
+  const pad = 10;                  // px padding around text
+  // First measure at target font size (no dpr scaling yet) so width is correct
+  ctx.font = `600 ${fontPx}px Inter, system-ui, sans-serif`;
+  const textW = Math.ceil(ctx.measureText(text).width);
+  const cw = textW + pad*2;
+  const ch = fontPx + pad*2;
+  cvs.width = cw; cvs.height = ch;
+  // After resizing, context state resets — re-apply font
+  ctx.font = `600 ${fontPx}px Inter, system-ui, sans-serif`;
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = color;
+  ctx.fillText(text, cw/2, ch/2);
+  const tex = new THREE.CanvasTexture(cvs);
+  tex.needsUpdate = true; tex.anisotropy = 8;
+  const mat = new THREE.SpriteMaterial({map:tex,transparent:true,depthWrite:false});
+  const spr = new THREE.Sprite(mat);
+  // World-space scale: keep aspect ratio of the canvas, target ~0.55 world units tall
+  const worldH = 0.38;
+  const worldW = worldH * (cw/ch);
+  spr.scale.set(worldW, worldH, 1);
+  return spr;
+}
+
+const labels = {};
+VERTICES.forEach(v=>{
+  const lbl = makeLabel(v.label, v.id==="qg5d" ? "#f5c26b" : "#c8c8d8");
+  const p = positions[v.id].clone();
+  if (v.id === "qg5d") { lbl.position.set(p.x, p.y+0.45, p.z); }
+  else { const dir = p.clone().normalize(); lbl.position.copy(p).add(dir.multiplyScalar(0.45)); lbl.position.y += 0.15; }
+  labelGroup.add(lbl); labels[v.id] = lbl;
+});
+
+// ============ CHORDS ============
+function makeChord(a,b,color=0x242438,opacity=0.35){
+  const pa = positions[a], pb = positions[b];
+  if (!pa || !pb) return null;
+  const mid = pa.clone().lerp(pb,0.5);
+  // arc up in Y a bit for visual separation
+  const arcHeight = 0.4 + Math.random()*0.3;
+  mid.y += arcHeight;
+  const curve = new THREE.QuadraticBezierCurve3(pa,mid,pb);
+  const pts = curve.getPoints(40);
+  const geom = new THREE.BufferGeometry().setFromPoints(pts);
+  const mat = new THREE.LineBasicMaterial({color,transparent:true,opacity});
+  const line = new THREE.Line(geom,mat);
+  line.userData = {a,b};
+  return line;
+}
+
+const chordObjs = [];
+CHORDS.forEach(([a,b])=>{
+  const line = makeChord(a,b);
+  if (line) { chordGroup.add(line); chordObjs.push(line); }
+});
+
+// ============ HALOS (cluster indicator rings around vertices) ============
+const haloObjs = {};
+function makeHalo(pos, color=0x7dd3fc){
+  const g = new THREE.TorusGeometry(0.28,0.012,12,64);
+  const m = new THREE.MeshBasicMaterial({color,transparent:true,opacity:0.7});
+  const mesh = new THREE.Mesh(g,m);
+  mesh.position.copy(pos);
+  mesh.rotation.x = Math.PI/2;
+  return mesh;
+}
+
+// ============ HUB SELECTION ============
+let currentHub = null;
+
+function selectHub(hubId){
+  // reset materials
+  VERTICES.forEach(v=>{
+    const mesh = vertexMeshes[v.id];
+    if (v.id==="qg5d") mesh.material = hubMat;
+    else mesh.material = baseMat.clone();
+  });
+  haloGroup.clear();
+  chordObjs.forEach(l=>{l.material.opacity=0.25; l.material.color.setHex(0x242438);});
+
+  const hub = HUBS.find(h=>h.id===hubId);
+  currentHub = hub;
+  if (!hub || hub.id==="flat"){
+    updatePanel(hub);
+    return;
+  }
+
+  // highlight cluster members
+  hub.cluster.forEach(vid=>{
+    const mesh = vertexMeshes[vid];
+    if (mesh) mesh.material = derivedMat;
+    // add halo
+    const halo = makeHalo(positions[vid],0xa5f3a2);
+    haloGroup.add(halo);
+  });
+
+  // highlight chords that stay INSIDE the cluster (these are intra-cluster cross-cuts)
+  chordObjs.forEach(l=>{
+    const {a,b} = l.userData;
+    if (hub.cluster.includes(a) && hub.cluster.includes(b)){
+      l.material.opacity = 0.9;
+      l.material.color.setHex(0x7dd3fc);
+    } else if (hub.cluster.includes(a) || hub.cluster.includes(b)) {
+      l.material.opacity = 0.5;
+      l.material.color.setHex(0x5ab0ff);
+    }
+  });
+
+  updatePanel(hub);
+}
+
+// ============ PANEL ============
+function updatePanel(hub){
+  if (!hub){
+    document.getElementById('hub-title').textContent = "Pick a hub candidate";
+    document.getElementById('hub-desc').textContent = "Each hub represents a cluster of ring vertices whose externals derive from ONE foundational Pillar D paper. Click a button below to explore.";
+    document.getElementById('cluster-list').innerHTML = "";
+    document.getElementById('stats').innerHTML = "";
+    document.getElementById('compare').innerHTML = "";
+    document.getElementById('externals').innerHTML = "";
+    return;
+  }
+  document.getElementById('hub-title').textContent = hub.label;
+  document.getElementById('hub-desc').innerHTML = `<span style="color:var(--accent);font-weight:600">${hub.paperTitle}</span><br><br>${hub.desc}`;
+
+  const list = document.getElementById('cluster-list');
+  if (hub.cluster.length === 0){
+    list.innerHTML = '<span class="chip">no clustering — 10+ standalone papers</span>';
+  } else {
+    list.innerHTML = hub.cluster.map(vid=>{
+      const v = VERTICES.find(x=>x.id===vid);
+      return `<span class="chip dep-free">${v?.label||vid}</span>`;
+    }).join('');
+  }
+
+  // stats
+  const paperCount = hub.paperCount;
+  const depFreeCount = hub.cluster.length;
+  const fieldImpactScore = depFreeCount === 0 ? 'low (incremental)' : (depFreeCount >= 13 ? 'very high' : depFreeCount >= 7 ? 'high' : 'moderate');
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-row"><span class="label">papers to write</span><span class="value">${paperCount}</span></div>
+    <div class="stat-row"><span class="label">ring vertices made dep-free</span><span class="value">${depFreeCount}</span></div>
+    <div class="stat-row"><span class="label">externals discharged</span><span class="value">${hub.externals.length}</span></div>
+    <div class="stat-row"><span class="label">field-impact character</span><span class="value">${fieldImpactScore}</span></div>
+    <div class="stat-row"><span class="label">precedent</span><span class="value" style="font-size:11px">${hub.precedent}</span></div>
+    <div class="desc" style="margin-top:10px;color:#c8c8d8">${hub.fieldImpact}</div>
+  `;
+
+  // compare vs flat
+  const flat = HUBS.find(h=>h.id==="flat");
+  const isFlat = hub.id === "flat";
+  document.getElementById('compare').innerHTML = `
+    <div class="compare-block ${isFlat?'flat':'cluster'}">
+      <div class="label">${isFlat?'flat roster':'this hub'}</div>
+      <div class="val">${paperCount} paper${paperCount>1?'s':''} → ${depFreeCount||hub.externals.length} external${hub.externals.length>1?'s':''} discharged</div>
+      <div class="sub">${isFlat?'cumulative contribution':'infrastructural contribution'}</div>
+    </div>
+    ${!isFlat?`
+    <div class="compare-block flat">
+      <div class="label">flat-roster equivalent</div>
+      <div class="val">${hub.externals.length} papers → ${hub.externals.length} externals (1:1)</div>
+      <div class="sub">same contribution, ${hub.externals.length}× writing cost, no infrastructure produced</div>
+    </div>`:''}
+  `;
+
+  // externals
+  document.getElementById('externals').innerHTML = hub.externals.map(e=>`<span class="chip retained">${e}</span>`).join(' ');
+}
+
+// ============ PICKER ============
+const picker = document.getElementById('hub-picker');
+HUBS.forEach(h=>{
+  const b = document.createElement('button');
+  b.className = 'hub-btn';
+  b.textContent = h.label;
+  b.dataset.hub = h.id;
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.hub-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    selectHub(h.id);
+  });
+  picker.appendChild(b);
+});
+
+// ============ TOOLTIP ============
+const tooltip = document.getElementById('tooltip');
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+renderer.domElement.addEventListener('pointermove',(e)=>{
+  const rect = renderer.domElement.getBoundingClientRect();
+  mouse.x = ((e.clientX-rect.left)/rect.width)*2-1;
+  mouse.y = -((e.clientY-rect.top)/rect.height)*2+1;
+  raycaster.setFromCamera(mouse,camera);
+  const hits = raycaster.intersectObjects(ringGroup.children,false);
+  if (hits.length){
+    const v = hits[0].object.userData;
+    tooltip.style.display='block';
+    tooltip.style.left = (e.clientX-rect.left+14)+'px';
+    tooltip.style.top = (e.clientY-rect.top+10)+'px';
+    const ext = v.external || '(hub)';
+    const cls = currentHub && currentHub.cluster.includes(v.id) ? ' — IN CURRENT CLUSTER' : '';
+    tooltip.innerHTML = `<strong>${v.label}</strong><br><span style="color:var(--dim)">branch: ${v.branch||'—'}</span><br><span style="color:var(--retained)">external: ${ext}</span>${cls}`;
+  } else {
+    tooltip.style.display='none';
+  }
+});
+
+// ============ ANIM ============
+let rotation = 0;
+function animate(){
+  requestAnimationFrame(animate);
+  controls.update();
+  // subtle auto-rotate
+  rotation += 0.0015;
+  labelGroup.rotation.y = 0; // keep labels locked (sprites face camera)
+  renderer.render(scene,camera);
+}
+animate();
+
+// ============ ATLAS STATS (panel footer) ============
+(function populateAtlasStats(){
+  const el = document.getElementById('atlas-stats');
+  if (!el) return;
+  const edgeCount = CHORDS.length;
+  const vertexCount = VERTICES.length;
+  if (typeof ATLAS_EDGES === 'undefined'){
+    el.textContent = `atlas: sidecar missing → ${edgeCount} fallback chords, ${vertexCount} vertices`;
+    return;
+  }
+  // Compute top connectivity from ATLAS_COUNTS if present
+  let topLine = '';
+  if (typeof ATLAS_COUNTS !== 'undefined'){
+    const sorted = Object.entries(ATLAS_COUNTS).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    topLine = ' · top5: ' + sorted.map(([v,c])=>`${v}(${c})`).join(', ');
+  }
+  el.textContent = `atlas: ${edgeCount} cross-cut chords across ${vertexCount} vertices${topLine}`;
+})();
+
+// default: show BC hub
+setTimeout(()=>{
+  document.querySelector('.hub-btn[data-hub="bc"]').click();
+}, 150);
+
+</script>
+</body>
+</html>

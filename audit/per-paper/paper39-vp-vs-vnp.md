@@ -1,6 +1,6 @@
 # paper39-vp-vs-vnp — VP vs VNP
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper39-vp-vs-vnp/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper39-vp-vs-vnp/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

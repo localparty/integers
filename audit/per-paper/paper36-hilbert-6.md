@@ -1,6 +1,6 @@
 # paper36-hilbert-6 — Hilbert's 6th Problem — axiomatization of physics
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper36-hilbert-6/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper36-hilbert-6/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

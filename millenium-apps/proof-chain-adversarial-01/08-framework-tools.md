@@ -20,8 +20,8 @@ The verbatim-shared method file. **Strongest single calibration prior in the fra
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper08-yang-mills/research/36-the-method.md` | 339 | The Six Patterns method as YM applied it: Diagnose / Reinterpret / Unify / Lock / Compute / Verify |
-| `paper12/research/214-the-method-six-patterns.md` | 339 | **Verbatim copy** of the above, in the Integers programme |
+| `solutions-with-prize/paper08-yang-mills/research/36-the-method.md` | 339 | The Six Patterns method as YM applied it: Diagnose / Reinterpret / Unify / Lock / Compute / Verify |
+| `integers/paper12-cbb-system/research/214-the-method-six-patterns.md` | 339 | **Verbatim copy** of the above, in the Integers programme |
 
 **Why an Author needs this**: every Research primitive (`§7` of v3) executes this 6-step inner loop. An Author who has not read the method file is executing the loop blindly. The "stuck-where-why" diagnostic table that tells the runner what to do next when an Author gets stuck is *defined* by these files.
 
@@ -36,28 +36,28 @@ The framework's canonical-name index. Every Author who needs to cite an existing
 ### B.1 Integers programme — the master catalogue
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/29-theorem-catalogue.md` | 545 | **Master theorem catalogue for Integers** — every named result with statement + status. The single most load-bearing reference for citing Integers theorems by canonical name. |
+| `integers/paper12-cbb-system/29-theorem-catalogue.md` | 545 | **Master theorem catalogue for Integers** — every named result with statement + status. The single most load-bearing reference for citing Integers theorems by canonical name. |
 
 ### B.2 Sub-catalogues by paper range
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/research/209-theorem-catalogue-papers-1-12.md` | 422 | Theorems from papers 1-12 (the QG5D foundational papers) |
-| `paper12/research/210-theorem-catalogue-papers-17-25.md` | 173 | Theorems from papers 17-25 (later programme expansion) |
-| `paper12/research/211-theorem-catalogue-ym-convergence.md` | 451 | Yang-Mills convergence theorems (the run-up to the YM proof) |
-| `paper12/research/212-theorem-catalogue-ym-preprint.md` | 585 | Yang-Mills preprint theorems (the final YM corpus) |
+| `integers/paper12-cbb-system/research/209-theorem-catalogue-papers-1-12.md` | 422 | Theorems from papers 1-12 (the QG5D foundational papers) |
+| `integers/paper12-cbb-system/research/210-theorem-catalogue-papers-17-25.md` | 173 | Theorems from papers 17-25 (later programme expansion) |
+| `integers/paper12-cbb-system/research/211-theorem-catalogue-ym-convergence.md` | 451 | Yang-Mills convergence theorems (the run-up to the YM proof) |
+| `integers/paper12-cbb-system/research/212-theorem-catalogue-ym-preprint.md` | 585 | Yang-Mills preprint theorems (the final YM corpus) |
 
 ### B.3 Yang-Mills programme — the rigor catalogue
 | Path | Lines | What it is |
 |---|---|---|
-| `paper08-yang-mills/research/21-the-rigorous-proof.md` | — | YM's THEOREM / LEMMA / KEY LEMMA — OPEN / GAP rigor labels and definitions. The same labels the BSD test case `04-closing-my4.md` uses. |
+| `solutions-with-prize/paper08-yang-mills/research/21-the-rigorous-proof.md` | — | YM's THEOREM / LEMMA / KEY LEMMA — OPEN / GAP rigor labels and definitions. The same labels the BSD test case `04-closing-my4.md` uses. |
 
 ### B.4 Riemann Hypothesis programme — methodology files (no single catalogue)
 | Path | What it is |
 |---|---|
-| `paper13-rh/strategy/16-the-arithmetic-theorem.md` | The arithmetic theorem statement |
-| `paper13-rh/strategy/22-estimates-not-conjectures.md` | The "estimate not conjecture" reframing discipline (the methodology G's RH meta §3 calls out as the most load-bearing pattern) |
-| `paper13-rh/strategy/28-all-gaps-closed.md` | The closing artifact with the 6-layer chain status |
-| `paper13-rh/research/01` through `60+` | Individual research files (no single compiled catalogue; the strategy progression files serve as the index) |
+| `solutions-with-prize/paper13-rh/strategy/16-the-arithmetic-theorem.md` | The arithmetic theorem statement |
+| `solutions-with-prize/paper13-rh/strategy/22-estimates-not-conjectures.md` | The "estimate not conjecture" reframing discipline (the methodology G's RH meta §3 calls out as the most load-bearing pattern) |
+| `solutions-with-prize/paper13-rh/strategy/28-all-gaps-closed.md` | The closing artifact with the 6-layer chain status |
+| `solutions-with-prize/paper13-rh/research/01` through `60+` | Individual research files (no single compiled catalogue; the strategy progression files serve as the index) |
 
 **Why a Critic needs the catalogues**: the Critic's canonical-name verification (v3 §6.2) checks that every §D citation in the Author's research file matches a real theorem. Without the catalogues, the Critic can't verify — both Author and Critic operate on a shared `§D Toolkit` table that needs the catalogues as its source of truth.
 
@@ -71,7 +71,7 @@ The grammar that says "linear → SUM, quadratic → PRODUCT, bilinear Yukawa �
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/research/213-theorem-catalogue-grammar.md` | 297 | **The compiled grammar file** — 8 grammar rules with operator order, formula shape, matrix element form, examples, and RH relevance. This is the single file the user remembered as "compiled in a file somewhere" |
+| `integers/paper12-cbb-system/research/213-theorem-catalogue-grammar.md` | 297 | **The compiled grammar file** — 8 grammar rules with operator order, formula shape, matrix element form, examples, and RH relevance. This is the single file the user remembered as "compiled in a file somewhere" |
 | `paper19/sections-01-02.md` | — | Paper 19 §§1-2 (the formal grammar paper, sections on the operator-order correspondence) |
 | `paper19/sections-03.md` | — | Paper 19 §3 |
 | `paper19/sections-04.md` | — | Paper 19 §4 |
@@ -89,8 +89,8 @@ How G ported theorems between the SM, GR, QM, and Riemann frameworks. The transp
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/research/14-transposition-CCM-and-reasoning-patterns.md` | 755 | **Transposition mechanics + reasoning patterns** — the largest single methodology file. How to port a CCM-side theorem to the BC side, and the general reasoning patterns for transpositions across frameworks. |
-| `paper12/research/13-transposition-CP2-area-and-theorem-U.md` | — | Transposition example: CP² area → Theorem U |
+| `integers/paper12-cbb-system/research/14-transposition-CCM-and-reasoning-patterns.md` | 755 | **Transposition mechanics + reasoning patterns** — the largest single methodology file. How to port a CCM-side theorem to the BC side, and the general reasoning patterns for transpositions across frameworks. |
+| `integers/paper12-cbb-system/research/13-transposition-CP2-area-and-theorem-U.md` | — | Transposition example: CP² area → Theorem U |
 
 **Why an Author needs the transposition mechanics**: the BSD test case is a transposition problem (BC algebra over `K = ℚ(i)` instead of `ℚ`). The Author working on a sub-lemma over K should know the canonical transposition discipline from these files — what changes (`p → N(𝔭)`, `Λ → Λ_K`, etc.), what stays the same, what subtleties to watch for. The Author who attempted MY4 in Q-1 was effectively doing a transposition without knowing the transposition canon.
 
@@ -104,19 +104,19 @@ The canonical-names dictionary and the operational anchor documents. **v4 adds t
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/18-master-dictionary.md` | 417 | **Master dictionary for Integers** — every Identity, R-Theorem, named object with file pointer, status code (R/C/S/E/O/D/N), and completeness percentage. This is the prototype for v3's `§D Toolkit` table. |
-| `paper12/27-anchor-document.md` | 426 | **The legacy operational anchor** — SP1-SP5 strategic principles, 13 G-voice quotes, the 5-axiom CBB system definition, the "How to use this anchor" 9-step procedure for fresh agents joining the programme. **Always-include for any spawn (legacy operational stance).** |
-| **NEW in v4** — `paper12/relaxation/04-geometric-spectral-cross-formula-cross-forms-cross-integers-cocycle-ccm-predictions-etc-strategy.md` | ~700 | **The seven-anchor strategy doc** — the framework's foundation reframed around the geometric-spectral duality of Riemann (NOT the Clay bundle, which the prior `03-global-strategy.md` mistakenly anchored to). Lists the seven anchors: (1) geometric-spectral duality of Riemann itself, (2) cross-formula γ_n consistency [verified by Lead 7a, 159/159 at 50 dps], (3) cross-functional-form agreement, (4) cross-integer agreement (cyclotomic levels 7, 13, 19), (5) cocycle equality at k=3 from research/162, (6) CCM 2025 timeline-independent confirmation [10/10, since CCM Papers 1 and 2 are the only published ones and don't mention our content], (7) predictions (Theoretical-Precision Table). Plus the Robustness Theorem statement, the ORA queueing rules with 6-slot priority list, the corrected hypothesis-space math (~10⁻⁵⁰ exponent reduction), the Q3 rule (no precision number for open-derivation observables), and the audit-first methodology. **Always-include for any node in the seven-anchor relaxation context** (postulate-relaxation rounds, anchor verification, precision propagation, ORA queue management). Supersedes the prior framing of `27-anchor-document.md` for relaxation work. |
-| **NEW in v4** — `paper12/relaxation/01-strategy-rationale.md` | ~1000 | **The relaxation philosophy + 5-layer dependency graph + 15 arithmetic tests + worked m_t example** — the longer rationale companion to the strategy doc. Explains the philosophy ("the framework is a description of the geometric-spectral duality, not a claimant on Clay proofs"), the 5-layer dependency-graph architecture (postulates → Clay theorems → proof-chain steps → arithmetic tests → observables), the 15 named arithmetic tests (T1 Brauer integrality through T15 Type III_1 modular flow uniqueness with explicit Clay-proof underwriting), the worked example of how m_t = γ_3·γ_8/(2π) is constrained by 8 independent paths to ~50 digits of theoretical precision, the Robustness Theorem statement, the Theoretical-Precision Table strategy, and 7 named failure modes with recovery procedures. Conditional include for any node that needs the deeper philosophical or architectural context. |
-| **NEW in v4** — `paper12/relaxation/03-global-strategy.md` | ~1100 | **Prior global-strategy doc, superseded by 04** — preserved as historical record of the Clay-bundle-anchored framing (which was wrong). Explains the 6 implementation leads from the recon (T7 Stark verification, CODATA framing, multi-agent theorem proving citations, spectral-BSD differentiation, Lean formalization, Connes engagement) plus the comprehensive sources organized by category. Optional include for runners interested in the strategic evolution and the implementation leads. |
-| **NEW in v4** — `paper12/relaxation/research/T5-cross-formula-verification.md` | ~variable | **The Lead 7a Anchor 2 verification result** — produced by a regular agent (not the ORA) on 2026-04-11, this file documents the 159/159 cross-formula γ_n consistency verification at 50 dps via mpmath. Contains: the master mpmath script, the complete table of cross-uses, residuals, the headline finding (γ_13 in m_W = γ_2 + γ_13 AND in Y_p = 1/log γ_13, with random-formula probability ~5 × 10⁻⁸), and the verdict (PASS, all 159 pairs at 50 dps). **Conditional include for any node verifying Anchor 2 or working with γ_n cross-uses.** |
-| **NEW in v4** — `paper12/relaxation/research/T1-T2-brauer-cohomology-verification.md` | ~variable | **The Lead 7b Anchors 4+5 verification result** — produced by a regular agent on 2026-04-11, this file documents the 4/4 cyclotomic Brauer cohomology class verification for the four bridges of the framework. Computed in Python with sympy (exact integer arithmetic, no precision issues). Verifies: **k=3 at (5,13)** (ord_13(5)=4, quotient Z/3Z, inv_5=1/3), **k=4 at (3,13)** (ord_13(3)=3, quotient Z/4Z, inv_3=1/4), **k=6 at (7,19)** (ord_19(7)=3, quotient Z/6Z ≅ Z/2Z × Z/3Z, inv_7=1/6), and **k=2 at (2,7)** (ord_7(2)=3, quotient Z/2Z, inv_2=1/2 ≡ trivial in H²(Z/2,U(1))=0). **Headline finding**: k=3 and k=4 share the same cyclotomic level N=13 and realize **dual splittings** of (Z/13Z)* ≅ Z/4Z × Z/3Z — ⟨5⟩ of order 4 gives the generation quotient Z/3Z while ⟨3⟩ of order 3 gives the Pati-Salam quotient Z/4Z. **Pati-Salam SU(4)_c and three generations are CRT factors of the same cyclic group, unified natively, not as an add-on.** Verdict: PASS, all 4 bridges verified. **Conditional include for any node verifying Anchors 4 or 5, working with the bridge family, or checking cocycle equality.** |
-| **NEW in v4** — `paper12/26-convergence-prompt.md` | ~variable | **The empirical-tracking convergence prompt** — sibling to the relaxation prompt; watches the framework as experimental data improves, re-tallies σ-distances when CMB-S4, Belle II, FLAG, etc. publish new central values. Production-ready (4-round test loop, quality 9/10). Conditional include for any node working on empirical tracking or the σ-tally tables. |
-| **NEW in v4** — `paper12/relaxation/02-prompt.md` | ~330 | **The postulate-relaxation cycle prompt** — the executable prompt for the postulate-relaxation cycle (re-runnable). Sibling to the convergence prompt at `paper12/26-convergence-prompt.md`. Conditional include for any node running a relaxation cycle. |
+| `integers/paper12-cbb-system/18-master-dictionary.md` | 417 | **Master dictionary for Integers** — every Identity, R-Theorem, named object with file pointer, status code (R/C/S/E/O/D/N), and completeness percentage. This is the prototype for v3's `§D Toolkit` table. |
+| `integers/paper12-cbb-system/27-anchor-document.md` | 426 | **The legacy operational anchor** — SP1-SP5 strategic principles, 13 G-voice quotes, the 5-axiom CBB system definition, the "How to use this anchor" 9-step procedure for fresh agents joining the programme. **Always-include for any spawn (legacy operational stance).** |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/04-geometric-spectral-cross-formula-cross-forms-cross-integers-cocycle-ccm-predictions-etc-strategy.md` | ~700 | **The seven-anchor strategy doc** — the framework's foundation reframed around the geometric-spectral duality of Riemann (NOT the Clay bundle, which the prior `03-global-strategy.md` mistakenly anchored to). Lists the seven anchors: (1) geometric-spectral duality of Riemann itself, (2) cross-formula γ_n consistency [verified by Lead 7a, 159/159 at 50 dps], (3) cross-functional-form agreement, (4) cross-integer agreement (cyclotomic levels 7, 13, 19), (5) cocycle equality at k=3 from research/162, (6) CCM 2025 timeline-independent confirmation [10/10, since CCM Papers 1 and 2 are the only published ones and don't mention our content], (7) predictions (Theoretical-Precision Table). Plus the Robustness Theorem statement, the ORA queueing rules with 6-slot priority list, the corrected hypothesis-space math (~10⁻⁵⁰ exponent reduction), the Q3 rule (no precision number for open-derivation observables), and the audit-first methodology. **Always-include for any node in the seven-anchor relaxation context** (postulate-relaxation rounds, anchor verification, precision propagation, ORA queue management). Supersedes the prior framing of `27-anchor-document.md` for relaxation work. |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/01-strategy-rationale.md` | ~1000 | **The relaxation philosophy + 5-layer dependency graph + 15 arithmetic tests + worked m_t example** — the longer rationale companion to the strategy doc. Explains the philosophy ("the framework is a description of the geometric-spectral duality, not a claimant on Clay proofs"), the 5-layer dependency-graph architecture (postulates → Clay theorems → proof-chain steps → arithmetic tests → observables), the 15 named arithmetic tests (T1 Brauer integrality through T15 Type III_1 modular flow uniqueness with explicit Clay-proof underwriting), the worked example of how m_t = γ_3·γ_8/(2π) is constrained by 8 independent paths to ~50 digits of theoretical precision, the Robustness Theorem statement, the Theoretical-Precision Table strategy, and 7 named failure modes with recovery procedures. Conditional include for any node that needs the deeper philosophical or architectural context. |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/03-global-strategy.md` | ~1100 | **Prior global-strategy doc, superseded by 04** — preserved as historical record of the Clay-bundle-anchored framing (which was wrong). Explains the 6 implementation leads from the recon (T7 Stark verification, CODATA framing, multi-agent theorem proving citations, spectral-BSD differentiation, Lean formalization, Connes engagement) plus the comprehensive sources organized by category. Optional include for runners interested in the strategic evolution and the implementation leads. |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/research/T5-cross-formula-verification.md` | ~variable | **The Lead 7a Anchor 2 verification result** — produced by a regular agent (not the ORA) on 2026-04-11, this file documents the 159/159 cross-formula γ_n consistency verification at 50 dps via mpmath. Contains: the master mpmath script, the complete table of cross-uses, residuals, the headline finding (γ_13 in m_W = γ_2 + γ_13 AND in Y_p = 1/log γ_13, with random-formula probability ~5 × 10⁻⁸), and the verdict (PASS, all 159 pairs at 50 dps). **Conditional include for any node verifying Anchor 2 or working with γ_n cross-uses.** |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/research/T1-T2-brauer-cohomology-verification.md` | ~variable | **The Lead 7b Anchors 4+5 verification result** — produced by a regular agent on 2026-04-11, this file documents the 4/4 cyclotomic Brauer cohomology class verification for the four bridges of the framework. Computed in Python with sympy (exact integer arithmetic, no precision issues). Verifies: **k=3 at (5,13)** (ord_13(5)=4, quotient Z/3Z, inv_5=1/3), **k=4 at (3,13)** (ord_13(3)=3, quotient Z/4Z, inv_3=1/4), **k=6 at (7,19)** (ord_19(7)=3, quotient Z/6Z ≅ Z/2Z × Z/3Z, inv_7=1/6), and **k=2 at (2,7)** (ord_7(2)=3, quotient Z/2Z, inv_2=1/2 ≡ trivial in H²(Z/2,U(1))=0). **Headline finding**: k=3 and k=4 share the same cyclotomic level N=13 and realize **dual splittings** of (Z/13Z)* ≅ Z/4Z × Z/3Z — ⟨5⟩ of order 4 gives the generation quotient Z/3Z while ⟨3⟩ of order 3 gives the Pati-Salam quotient Z/4Z. **Pati-Salam SU(4)_c and three generations are CRT factors of the same cyclic group, unified natively, not as an add-on.** Verdict: PASS, all 4 bridges verified. **Conditional include for any node verifying Anchors 4 or 5, working with the bridge family, or checking cocycle equality.** |
+| **NEW in v4** — `integers/paper12-cbb-system/26-convergence-prompt.md` | ~variable | **The empirical-tracking convergence prompt** — sibling to the relaxation prompt; watches the framework as experimental data improves, re-tallies σ-distances when CMB-S4, Belle II, FLAG, etc. publish new central values. Production-ready (4-round test loop, quality 9/10). Conditional include for any node working on empirical tracking or the σ-tally tables. |
+| **NEW in v4** — `integers/paper12-cbb-system/relaxation/02-prompt.md` | ~330 | **The postulate-relaxation cycle prompt** — the executable prompt for the postulate-relaxation cycle (re-runnable). Sibling to the convergence prompt at `integers/paper12-cbb-system/26-convergence-prompt.md`. Conditional include for any node running a relaxation cycle. |
 
 **Why every role needs an operational anchor document**: §J (voice canon) in v3/v4 is seeded with 13 quotes from `27-anchor-document.md §13`. The runner reads these on every cycle-open. **In v4, for relaxation-context work, the Author and Critic and Synthesis additionally need the seven-anchor strategy doc (`04-...-strategy.md`)** because the operational stance is now the seven anchors and the Theoretical-Precision Table, not the prior Clay-bundle framing. The legacy anchor remains included for non-relaxation contexts (BSD, RH, YM proper) where the prior framing is still operative.
 
-**Action for v4 (replaces v3.1 action)**: include `27-anchor-document.md` in every spawn (legacy operational anchor, always). For nodes in the seven-anchor relaxation context, ALSO include `paper12/relaxation/04-...-strategy.md` (the new operational anchor for relaxation work). For deeper philosophical / architectural context, include `paper12/relaxation/01-strategy-rationale.md`. For Anchor-2 verification context, include `paper12/relaxation/research/T5-cross-formula-verification.md`. `18-master-dictionary.md` should be included for Author and Critic spawns where the node cites Integers theorems.
+**Action for v4 (replaces v3.1 action)**: include `27-anchor-document.md` in every spawn (legacy operational anchor, always). For nodes in the seven-anchor relaxation context, ALSO include `integers/paper12-cbb-system/relaxation/04-...-strategy.md` (the new operational anchor for relaxation work). For deeper philosophical / architectural context, include `integers/paper12-cbb-system/relaxation/01-strategy-rationale.md`. For Anchor-2 verification context, include `integers/paper12-cbb-system/relaxation/research/T5-cross-formula-verification.md`. `18-master-dictionary.md` should be included for Author and Critic spawns where the node cites Integers theorems.
 
 ---
 
@@ -126,7 +126,7 @@ The 36/37 sub-percent prediction table — the empirical scoreboard.
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper12/research/23-framework-predictions-master-table.md` | 457 | **The 36/37 sub-percent prediction master table** — every measured Standard Model and cosmology constant, the framework's predicted value, the experimental value, the deviation, and the formula shape (cited via the grammar in §C). |
+| `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` | 457 | **The 36/37 sub-percent prediction master table** — every measured Standard Model and cosmology constant, the framework's predicted value, the experimental value, the deviation, and the formula shape (cited via the grammar in §C). |
 
 **Why an Author needs this**: any node that produces a prediction (Block A through Block E in 50+) must be checked against the master table. If the Author's predicted value contradicts the table, that's a CASCADE note (the master table needs an update OR the new node has a bug). If the Author's predicted value agrees, that's confirmation evidence.
 
@@ -140,12 +140,12 @@ Additional files that compile specific sub-areas of the framework.
 
 | Path | What it is |
 |---|---|
-| `paper12/research/154-two-term-laurent-master-sweep.md` | Master sweep of two-term Laurent expansions across the framework |
-| `paper12/research/158-bridge-theorem-z3.md` | Bridge theorem for Z₃ (the cocycle for the SM gauge group structure) |
-| `paper12/research/167-log-R-master-reformulation.md` | Master reformulation of the log R compactification scale |
-| `paper12/research/08-rh-as-physical-theorem.md` | RH as a physical theorem — the framework's RH closure argument |
-| `paper12/research/09-pattern-of-zero-indices.md` | Pattern catalogue for the indices of γ_n appearing in physical formulas |
-| `paper08-yang-mills/research/34-six-agent-synthesis.md` | Synthesis of 6 parallel agents on YM (an example of the Synthesis primitive's output) |
+| `integers/paper12-cbb-system/research/154-two-term-laurent-master-sweep.md` | Master sweep of two-term Laurent expansions across the framework |
+| `integers/paper12-cbb-system/research/158-bridge-theorem-z3.md` | Bridge theorem for Z₃ (the cocycle for the SM gauge group structure) |
+| `integers/paper12-cbb-system/research/167-log-R-master-reformulation.md` | Master reformulation of the log R compactification scale |
+| `integers/paper12-cbb-system/research/08-rh-as-physical-theorem.md` | RH as a physical theorem — the framework's RH closure argument |
+| `integers/paper12-cbb-system/research/09-pattern-of-zero-indices.md` | Pattern catalogue for the indices of γ_n appearing in physical formulas |
+| `solutions-with-prize/paper08-yang-mills/research/34-six-agent-synthesis.md` | Synthesis of 6 parallel agents on YM (an example of the Synthesis primitive's output) |
 
 These are reference files. Include in spawn context only when the node specifically needs them (e.g., a Block C item involving the SU(3) gauge group needs `158-bridge-theorem-z3.md`).
 
@@ -153,63 +153,63 @@ These are reference files. Include in spawn context only when the node specifica
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper11/29-the-standard-model-riemann-correspondence.md` | 559 | **The SM-Riemann correspondence** — the 23/37 sub-percent parameter table, the distribution of Riemann zeros across physical channels, the exponent catalogue, the statistical significance analysis, the BC spectral interpretation, and the selection-rule pattern (which gamma_n indexes which observable, and why). |
+| `integers/paper11b-sm-gauge-entanglement/29-the-standard-model-riemann-correspondence.md` | 559 | **The SM-Riemann correspondence** — the 23/37 sub-percent parameter table, the distribution of Riemann zeros across physical channels, the exponent catalogue, the statistical significance analysis, the BC spectral interpretation, and the selection-rule pattern (which gamma_n indexes which observable, and why). |
 
 **Why an Author needs this for transposition-mode work**: the SM-Riemann correspondence is the empirical evidence that the BC spectral structure maps to physical observables via specific channel selections. Any node working on a transposition problem (P vs NP, BSD, or any 50+ Block F item) where the BC algebra's spectral properties need to be projected onto a specific domain should know this file — it is the canonical example of how the projection from the infinite-dimensional BC spectrum to finite-dimensional observables works in practice. The channel-selection pattern (each observable selects a specific gamma_n; the operator algebra controls existence but not the specific value) is directly relevant to any operator-algebraic characterization of a combinatorial or algebraic property.
 
-**Action for v4**: include `paper11/29-the-standard-model-riemann-correspondence.md` in Author spawn context for any node involving BC spectral projections onto finite-domain structures (P vs NP non-fullness ↔ Taylor, BSD Hecke L-function twist, any Block F mathematical structure item that connects BC eigenvalues to discrete algebraic objects).
+**Action for v4**: include `integers/paper11b-sm-gauge-entanglement/29-the-standard-model-riemann-correspondence.md` in Author spawn context for any node involving BC spectral projections onto finite-domain structures (P vs NP non-fullness ↔ Taylor, BSD Hecke L-function twist, any Block F mathematical structure item that connects BC eigenvalues to discrete algebraic objects).
 
 ---
 
 ## H. Programme-specific master files
 
-For the BSD test case currently running (`paper26-bsd/strategy/04-closing-my4.md`), the programme-specific files the Author needs are:
+For the BSD test case currently running (`solutions-with-prize/paper26-bsd/strategy/04-closing-my4.md`), the programme-specific files the Author needs are:
 
 | Path | What it is |
 |---|---|
-| `paper26-bsd/strategy/00-bsd-attack-plan.md` | The BSD attack plan |
-| `paper26-bsd/strategy/01-bc-over-qi-bridge-test.md` | The BC over `ℚ(i)` bridge test |
-| `paper26-bsd/strategy/02-baker-theorem-step.md` | The Baker theorem step |
-| `paper26-bsd/strategy/03-adversarial-review-results.md` | The prior adversarial review |
-| `paper26-bsd/strategy/04-closing-my4.md` | The MY4 closure deliverable (input to the BSD MY4 ORA run) |
-| `paper26-bsd/strategy/05-route3-kms-projector-bypass.md` | **The Route 3 closure** — G's projector P_k^𝔭 + Hasse-Brauer-Noether bypass that closed MY4. The empirical proof that the ORA finds single-object structural bypasses when given the right framework tools. |
-| `paper26-bsd/closing-my4/` (~27 files) | The full output directory of the BSD MY4 ORA run (blackboard, nodes, critiques, synthesis, code, closure) — the canonical example of what an ORA run produces |
-| `paper26-bsd/research/` (14+ files) | The BSD research files |
-| `paper26-bsd/preprint/` | The BSD preprint sections |
+| `solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md` | The BSD attack plan |
+| `solutions-with-prize/paper26-bsd/strategy/01-bc-over-qi-bridge-test.md` | The BC over `ℚ(i)` bridge test |
+| `solutions-with-prize/paper26-bsd/strategy/02-baker-theorem-step.md` | The Baker theorem step |
+| `solutions-with-prize/paper26-bsd/strategy/03-adversarial-review-results.md` | The prior adversarial review |
+| `solutions-with-prize/paper26-bsd/strategy/04-closing-my4.md` | The MY4 closure deliverable (input to the BSD MY4 ORA run) |
+| `solutions-with-prize/paper26-bsd/strategy/05-route3-kms-projector-bypass.md` | **The Route 3 closure** — G's projector P_k^𝔭 + Hasse-Brauer-Noether bypass that closed MY4. The empirical proof that the ORA finds single-object structural bypasses when given the right framework tools. |
+| `solutions-with-prize/paper26-bsd/closing-my4/` (~27 files) | The full output directory of the BSD MY4 ORA run (blackboard, nodes, critiques, synthesis, code, closure) — the canonical example of what an ORA run produces |
+| `solutions-with-prize/paper26-bsd/research/` (14+ files) | The BSD research files |
+| `solutions-with-prize/paper26-bsd/preprint/` | The BSD preprint sections |
 
-**Action**: any Author working on a BSD sub-node should have read `paper26-bsd/strategy/00-bsd-attack-plan.md` and `paper26-bsd/research/distributional-to-genuine.md` (the file Q-1 referenced) at minimum.
+**Action**: any Author working on a BSD sub-node should have read `solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md` and `solutions-with-prize/paper26-bsd/research/distributional-to-genuine.md` (the file Q-1 referenced) at minimum.
 
 ### NEW in v4 — Yang-Mills Hypothesis H4 closure context
 
-For the upcoming H4 closure run (`paper08-yang-mills/strategy/04-closing-H4.md`, to be drafted), the programme-specific files an Author / Critic / Synthesis needs:
+For the upcoming H4 closure run (`solutions-with-prize/paper08-yang-mills/strategy/04-closing-H4.md`, to be drafted), the programme-specific files an Author / Critic / Synthesis needs:
 
 | Path | What it is |
 |---|---|
-| `paper08-yang-mills/preprint/PROOF-CHAIN.md` | The 18-step YM proof chain (already in §I.2 below). 17/18 unconditional + Step 18 conditional on H4. |
-| `paper08-yang-mills/preprint/sections/L-clay-conjectures.md` | **The Appendix L statement of H4** with the four Clay structural conjectures L.1-L.4 (renormalized composite operators, stress-energy tensor as operator-valued distribution, AF short-distance match, leading-order OPE). The H4 hypothesis is stated here. |
-| `paper08-yang-mills/notation-math-referee/runs/r00/gap-closing-work/tier-3-clay/G4b-af-short-distance-match.md` | **The math referee's formal G4b gap statement** — AF short-distance match, classified as tier-3 Clay. G4b is one half of H4. |
-| `paper08-yang-mills/notation-math-referee/runs/r00/gap-closing-work/tier-3-clay/G4d-operator-product-expansion.md` | **The math referee's formal G4d gap statement** — leading-order OPE, classified as tier-3 Clay. G4d is the other half of H4. |
-| `paper08-yang-mills/gradient-flow-attack-plan/research/W7-14-af-match.md` | **The prior Wave 7 attack on G4b** — the previous AF match attempt. Read this first to avoid re-attempting an approach already tried. |
-| `paper08-yang-mills/gradient-flow-attack-plan/research/W7-15-ope-leading.md` | **The prior Wave 7 attack on G4d** — the previous leading-order OPE attempt. Same: read first to avoid re-attempting. |
-| `paper08-yang-mills/gradient-flow-attack-plan/research/appendix-L/L4-phase4.md` | The L4 phase 4 work (additional context on the gradient-flow approach to H4) |
+| `solutions-with-prize/paper08-yang-mills/preprint/PROOF-CHAIN.md` | The 18-step YM proof chain (already in §I.2 below). 17/18 unconditional + Step 18 conditional on H4. |
+| `solutions-with-prize/paper08-yang-mills/preprint/sections/L-clay-conjectures.md` | **The Appendix L statement of H4** with the four Clay structural conjectures L.1-L.4 (renormalized composite operators, stress-energy tensor as operator-valued distribution, AF short-distance match, leading-order OPE). The H4 hypothesis is stated here. |
+| `solutions-with-prize/paper08-yang-mills/notation-math-referee/runs/r00/gap-closing-work/tier-3-clay/G4b-af-short-distance-match.md` | **The math referee's formal G4b gap statement** — AF short-distance match, classified as tier-3 Clay. G4b is one half of H4. |
+| `solutions-with-prize/paper08-yang-mills/notation-math-referee/runs/r00/gap-closing-work/tier-3-clay/G4d-operator-product-expansion.md` | **The math referee's formal G4d gap statement** — leading-order OPE, classified as tier-3 Clay. G4d is the other half of H4. |
+| `solutions-with-prize/paper08-yang-mills/gradient-flow-attack-plan/research/W7-14-af-match.md` | **The prior Wave 7 attack on G4b** — the previous AF match attempt. Read this first to avoid re-attempting an approach already tried. |
+| `solutions-with-prize/paper08-yang-mills/gradient-flow-attack-plan/research/W7-15-ope-leading.md` | **The prior Wave 7 attack on G4d** — the previous leading-order OPE attempt. Same: read first to avoid re-attempting. |
+| `solutions-with-prize/paper08-yang-mills/gradient-flow-attack-plan/research/appendix-L/L4-phase4.md` | The L4 phase 4 work (additional context on the gradient-flow approach to H4) |
 
-**Action**: any Author or Critic working on the H4 closure should have read the L-clay-conjectures appendix + both G4b and G4d gap statements + both Wave 7 prior attempts BEFORE attempting any closure. The pattern from BSD MY4 cycle 1 (Author attempting from scratch instead of porting) MUST NOT recur. The H4 closure is structurally a transposition: port from `paper13-rh/preprint/sections-06-10.md` (the CCM 2025 short-distance asymptotics on the spectral side) and look for a single algebraic object that bypasses both G4b and G4d simultaneously, the way G's projector bypassed MY4 + the Meyer eigenstate framing.
+**Action**: any Author or Critic working on the H4 closure should have read the L-clay-conjectures appendix + both G4b and G4d gap statements + both Wave 7 prior attempts BEFORE attempting any closure. The pattern from BSD MY4 cycle 1 (Author attempting from scratch instead of porting) MUST NOT recur. The H4 closure is structurally a transposition: port from `solutions-with-prize/paper13-rh/preprint/sections-06-10.md` (the CCM 2025 short-distance asymptotics on the spectral side) and look for a single algebraic object that bypasses both G4b and G4d simultaneously, the way G's projector bypassed MY4 + the Meyer eigenstate framing.
 
 ### NEW in v7 — P vs NP programme (the spectral-geometric-information toolkit)
 
-For the P vs NP run (`paper28-pvnp/strategy/04-ora-v6.md`), the programme-specific files and **verified structural knowledge** the Authors need. This section is unique among programme-specific sections because it includes not just file pointers but **deployable results** — verified identifications from 10 parallel computational tests (2026-04-11) that Authors must know to avoid re-deriving from scratch.
+For the P vs NP run (`solutions-with-prize/paper28-pvnp/strategy/04-ora-v6.md`), the programme-specific files and **verified structural knowledge** the Authors need. This section is unique among programme-specific sections because it includes not just file pointers but **deployable results** — verified identifications from 10 parallel computational tests (2026-04-11) that Authors must know to avoid re-deriving from scratch.
 
 #### H.3a Programme files
 
 | Path | What it is |
 |---|---|
-| `paper28-pvnp/strategy/07-toolkit-complete.md` | **The complete P vs NP toolkit** — 10 five-field cards (WHAT/WHY/DATA/USE/STATUS), 8 kills, the spectral-geometric-information trinity, Rule 9 v3 (gate-amplifier), the five-piece argument. **Always include for any P vs NP Author spawn.** |
-| `paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md` | The proof chain (6 links, 5/6 closed) + wall + 4 routes A-D |
-| `paper28-pvnp/strategy/08-clone-growth-fullness-bridge.md` | The clone growth ↔ fullness bridge strategy (the current ORA brief) |
-| `paper28-pvnp/strategy/06-transposition-dictionary.md` | The full transposition dictionary with three layers + seven cross-product entries |
-| `paper28-pvnp/strategy/03-non-fullness-iff-taylor.md` | Strategy 03: the non-fullness ↔ Taylor equivalence after four adversarial rounds |
-| `paper28-pvnp/preprint/sections-03-boolean-bc-system.md` | M_Bool construction (the operator algebra every route touches) |
-| `paper28-pvnp/preprint/sections-04-rtheorem-pnp1.md` | The theorem statement |
+| `solutions-with-prize/paper28-pvnp/strategy/07-toolkit-complete.md` | **The complete P vs NP toolkit** — 10 five-field cards (WHAT/WHY/DATA/USE/STATUS), 8 kills, the spectral-geometric-information trinity, Rule 9 v3 (gate-amplifier), the five-piece argument. **Always include for any P vs NP Author spawn.** |
+| `solutions-with-prize/paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md` | The proof chain (6 links, 5/6 closed) + wall + 4 routes A-D |
+| `solutions-with-prize/paper28-pvnp/strategy/08-clone-growth-fullness-bridge.md` | The clone growth ↔ fullness bridge strategy (the current ORA brief) |
+| `solutions-with-prize/paper28-pvnp/strategy/06-transposition-dictionary.md` | The full transposition dictionary with three layers + seven cross-product entries |
+| `solutions-with-prize/paper28-pvnp/strategy/03-non-fullness-iff-taylor.md` | Strategy 03: the non-fullness ↔ Taylor equivalence after four adversarial rounds |
+| `solutions-with-prize/paper28-pvnp/preprint/sections-03-boolean-bc-system.md` | M_Bool construction (the operator algebra every route touches) |
+| `solutions-with-prize/paper28-pvnp/preprint/sections-04-rtheorem-pnp1.md` | The theorem statement |
 
 #### H.3b The spectral-geometric-information trinity (verified knowledge)
 
@@ -284,13 +284,13 @@ Evolution: v1 (Mandelstam-Tamm) → wrong direction, caught in brainstorm → v2
 
 **The correspondence IS the tool.** An Author who gets stuck on one column should transpose to another — the same structural fact looks different from each angle, and the easier proof may be on a different side.
 
-**Action for v7**: include `paper28-pvnp/strategy/07-toolkit-complete.md` in every P vs NP Author spawn (~15K tokens for the five-field cards + trinity + kills + Rule 9). For Critic spawns: include §H.3d (kill list) + §H.3e (Rule 9 v3) + §H.3f (citable results). For deep work on specific routes: also include the relevant preprint sections and Strategy 03.
+**Action for v7**: include `solutions-with-prize/paper28-pvnp/strategy/07-toolkit-complete.md` in every P vs NP Author spawn (~15K tokens for the five-field cards + trinity + kills + Rule 9). For Critic spawns: include §H.3d (kill list) + §H.3e (Rule 9 v3) + §H.3f (citable results). For deep work on specific routes: also include the relevant preprint sections and Strategy 03.
 
 #### H.3h Amplification results (Wave 2 testing, 2026-04-12)
 
 Six additional entries were tested by transposing tools from Papers 1, 3, 5, 7, 10, and 19 into the P vs NP setting. One PASS, one FAIL, three KILLS. Each result is a tool — the passes tell Authors what WORKS, the kills tell Authors what DOESN'T and WHY.
 
-**Full amplification file:** `paper28-pvnp/strategy/10-amplification-entries.md` (six five-field cards). Include for any Author exploring new routes beyond the original seven.
+**Full amplification file:** `solutions-with-prize/paper28-pvnp/strategy/10-amplification-entries.md` (six five-field cards). Include for any Author exploring new routes beyond the original seven.
 
 **PASS — A5: Computational area law (Paper 5 confinement analog)**
 
@@ -352,47 +352,47 @@ A 6-layer chain: CCM operators → ITPFI factorization → Estimates (archimedea
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper13-rh/preprint/00-proof-skeleton.md` | 234 | **The proof skeleton** — the 6-layer chain laid out with each layer's load-bearing lemma + the explicit dependency graph |
-| `paper13-rh/preprint/sections-01-05.md` | 705 | Preprint §§1–5: setup, BC algebra, GNS construction, Nelson self-adjointness, Meyer distributional spectral inclusion |
-| `paper13-rh/preprint/sections-06-10.md` | 1,002 | **Preprint §§6–10**: CCM operators, ITPFI factorization, Bögli discrete compactness, Hurwitz convergence, the chain assembly. **The most load-bearing single file for BSD** — the BSD chain is porting exactly these layers. |
-| `paper13-rh/preprint/sections-11-14.md` | 834 | Preprint §§11–14: the closing argument, conditional theorem, confidence ladder, open dependencies |
-| `paper13-rh/preprint/appendices.md` | 1,072 | Appendices — explicit proofs of the load-bearing lemmas (CF rate, Slepian compatibility, Boegli verification, etc.) |
-| `paper13-rh/research/27-arithmetic-theorem-attack.md` | 248 | **The arithmetic theorem attack** — the methodology file for porting RH-style chains to other arithmetic contexts. Reads as "how to do a transposition like this one." |
-| `paper13-rh/research/47-continuous-cartwright.md` | 116 | Continuous Cartwright (the lemma that closed L4 in the RH chain) |
-| `paper13-rh/research/48-FINAL-adversarial-hybrid.md` | 119 | **Final adversarial verdict** on the RH chain — the SURVIVED/WEAKENED/BROKEN tabulation that the BSD `final-adversarial-pass` should mirror |
+| `solutions-with-prize/paper13-rh/preprint/00-proof-skeleton.md` | 234 | **The proof skeleton** — the 6-layer chain laid out with each layer's load-bearing lemma + the explicit dependency graph |
+| `solutions-with-prize/paper13-rh/preprint/sections-01-05.md` | 705 | Preprint §§1–5: setup, BC algebra, GNS construction, Nelson self-adjointness, Meyer distributional spectral inclusion |
+| `solutions-with-prize/paper13-rh/preprint/sections-06-10.md` | 1,002 | **Preprint §§6–10**: CCM operators, ITPFI factorization, Bögli discrete compactness, Hurwitz convergence, the chain assembly. **The most load-bearing single file for BSD** — the BSD chain is porting exactly these layers. |
+| `solutions-with-prize/paper13-rh/preprint/sections-11-14.md` | 834 | Preprint §§11–14: the closing argument, conditional theorem, confidence ladder, open dependencies |
+| `solutions-with-prize/paper13-rh/preprint/appendices.md` | 1,072 | Appendices — explicit proofs of the load-bearing lemmas (CF rate, Slepian compatibility, Boegli verification, etc.) |
+| `solutions-with-prize/paper13-rh/research/27-arithmetic-theorem-attack.md` | 248 | **The arithmetic theorem attack** — the methodology file for porting RH-style chains to other arithmetic contexts. Reads as "how to do a transposition like this one." |
+| `solutions-with-prize/paper13-rh/research/47-continuous-cartwright.md` | 116 | Continuous Cartwright (the lemma that closed L4 in the RH chain) |
+| `solutions-with-prize/paper13-rh/research/48-FINAL-adversarial-hybrid.md` | 119 | **Final adversarial verdict** on the RH chain — the SURVIVED/WEAKENED/BROKEN tabulation that the BSD `final-adversarial-pass` should mirror |
 
 **Total RH proof chain**: ~4,330 lines (~70K tokens).
 
-**Why this is critical for BSD**: BSD over `K = ℚ(i)` is structurally a transposition of the RH proof chain. Same machinery (BC algebra → GNS → Nelson self-adjointness → Meyer distributional inclusion → spectral upgrade) applied with `p ↦ N(𝔭)`, `ζ ↦ ζ_K`, and then twisted to `L(s, ψ)` for the CM elliptic curve L-function. **The RH proof chain literally IS the template the BSD chain is porting.** Author M.1.1 attempting MY4 from scratch in Q-1 is the exact architectural failure mode caused by NOT having this file in spawn context — the answer was already written, in a different alphabet, in `paper13-rh/preprint/sections-06-10.md`.
+**Why this is critical for BSD**: BSD over `K = ℚ(i)` is structurally a transposition of the RH proof chain. Same machinery (BC algebra → GNS → Nelson self-adjointness → Meyer distributional inclusion → spectral upgrade) applied with `p ↦ N(𝔭)`, `ζ ↦ ζ_K`, and then twisted to `L(s, ψ)` for the CM elliptic curve L-function. **The RH proof chain literally IS the template the BSD chain is porting.** Author M.1.1 attempting MY4 from scratch in Q-1 is the exact architectural failure mode caused by NOT having this file in spawn context — the answer was already written, in a different alphabet, in `solutions-with-prize/paper13-rh/preprint/sections-06-10.md`.
 
 **Action for BSD**: include `00-proof-skeleton.md` + `sections-06-10.md` + `27-arithmetic-theorem-attack.md` + `48-FINAL-adversarial-hybrid.md` in every BSD Author spawn (~5K + 17K + 4K + 2K = ~28K tokens). Full preprint sections (`sections-01-05` + `sections-11-14` + `appendices`) available for retrieval when the Author is working on a specific layer that needs the deeper context.
 
 ### I.2 — Yang-Mills proof chain (proved, full Clay Millennium compliance)
 
-The YM proof chain has existed since the manual run closed on 2026-04-09. The compiled core is `paper08-yang-mills/preprint/PROOF-CHAIN.md` — short (165 lines) and load-bearing. The user's intuition that "yang mills i think is there already because its old" was correct: it IS there, and it IS load-bearing.
+The YM proof chain has existed since the manual run closed on 2026-04-09. The compiled core is `solutions-with-prize/paper08-yang-mills/preprint/PROOF-CHAIN.md` — short (165 lines) and load-bearing. The user's intuition that "yang mills i think is there already because its old" was correct: it IS there, and it IS load-bearing.
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper08-yang-mills/preprint/PROOF-CHAIN.md` | 165 | **THE compiled YM proof chain** — the L.1 → L.2 → L.3 → L.4 → mass gap chain in compressed form. The single file an Author needs to know "what does the YM proof chain look like." |
-| `paper08-yang-mills/preprint/TABLE-OF-CONTENTS.md` | 47 | Preprint TOC |
-| `paper08-yang-mills/preprint/sections/` | — | Full preprint sections directory (multiple files) |
-| `paper08-yang-mills/research/21-the-rigorous-proof.md` | — | **Rigor labels** (THEOREM / LEMMA / KEY LEMMA — OPEN / GAP definitions) — same labels the BSD test case uses. Already in B.3 above. |
-| `paper08-yang-mills/research/23-key-lemma-proof.md` | 423 | **The key lemma proof** — the load-bearing step in the YM chain (proof-chain assembly template) |
-| `paper08-yang-mills/research/30-final-synthesis.md` | 282 | **Final synthesis** — the wave-by-wave summary of how the YM chain was assembled. The canonical example of what a Synthesis primitive output should look like (the dedicated synthesis agent's product). |
-| `paper08-yang-mills/research/35-final-verdict.md` | 172 | **Final verdict** — the YM closing artifact in the voice canon register ("Integration Complete: The Final Report"). The canonical example of a closure-digest in §J register. |
-| `paper08-yang-mills/research/26-proof-status.md` | — | Per-lemma proof status (the rigor table in operational form) |
-| `paper08-yang-mills/research/31-decoupling-proof.md` | — | Decoupling proof (the wave that closed the L.2 → L.3 transition) |
-| `paper08-yang-mills/research/47-spectral-estimate-proof.md` | — | Spectral estimate proof |
-| `paper08-yang-mills/research/52-power-counting-lemma-rigorous.md` | — | Power counting lemma (rigorous form) |
+| `solutions-with-prize/paper08-yang-mills/preprint/PROOF-CHAIN.md` | 165 | **THE compiled YM proof chain** — the L.1 → L.2 → L.3 → L.4 → mass gap chain in compressed form. The single file an Author needs to know "what does the YM proof chain look like." |
+| `solutions-with-prize/paper08-yang-mills/preprint/TABLE-OF-CONTENTS.md` | 47 | Preprint TOC |
+| `solutions-with-prize/paper08-yang-mills/preprint/sections/` | — | Full preprint sections directory (multiple files) |
+| `solutions-with-prize/paper08-yang-mills/research/21-the-rigorous-proof.md` | — | **Rigor labels** (THEOREM / LEMMA / KEY LEMMA — OPEN / GAP definitions) — same labels the BSD test case uses. Already in B.3 above. |
+| `solutions-with-prize/paper08-yang-mills/research/23-key-lemma-proof.md` | 423 | **The key lemma proof** — the load-bearing step in the YM chain (proof-chain assembly template) |
+| `solutions-with-prize/paper08-yang-mills/research/30-final-synthesis.md` | 282 | **Final synthesis** — the wave-by-wave summary of how the YM chain was assembled. The canonical example of what a Synthesis primitive output should look like (the dedicated synthesis agent's product). |
+| `solutions-with-prize/paper08-yang-mills/research/35-final-verdict.md` | 172 | **Final verdict** — the YM closing artifact in the voice canon register ("Integration Complete: The Final Report"). The canonical example of a closure-digest in §J register. |
+| `solutions-with-prize/paper08-yang-mills/research/26-proof-status.md` | — | Per-lemma proof status (the rigor table in operational form) |
+| `solutions-with-prize/paper08-yang-mills/research/31-decoupling-proof.md` | — | Decoupling proof (the wave that closed the L.2 → L.3 transition) |
+| `solutions-with-prize/paper08-yang-mills/research/47-spectral-estimate-proof.md` | — | Spectral estimate proof |
+| `solutions-with-prize/paper08-yang-mills/research/52-power-counting-lemma-rigorous.md` | — | Power counting lemma (rigorous form) |
 
 **Total YM proof chain compiled core**: ~1,100+ lines (~18K tokens). Full preprint + research available for deep work.
 
 **Why this is critical for any transposition-mode programme** (including BSD):
-- **Rigor label discipline**: the THEOREM/LEMMA/KEY LEMMA/GAP labels in `04-closing-my4.md` come directly from `paper08-yang-mills/research/21-the-rigorous-proof.md`. Any Critic verifying a BSD node's rigor classification must read this file as the reference.
+- **Rigor label discipline**: the THEOREM/LEMMA/KEY LEMMA/GAP labels in `04-closing-my4.md` come directly from `solutions-with-prize/paper08-yang-mills/research/21-the-rigorous-proof.md`. Any Critic verifying a BSD node's rigor classification must read this file as the reference.
 - **Closure-digest register**: `35-final-verdict.md` is the canonical example of writing a closure artifact in §J voice canon register. The BSD closure should match its rhythm and terse-declaration shape.
 - **Proof-chain assembly template**: `30-final-synthesis.md` shows how the wave-by-wave assembly is documented at closure. This is the template for BSD's eventual closure-reflection.md.
 
-**Action for any BSD or 50+ Critic spawn**: include `paper08-yang-mills/preprint/PROOF-CHAIN.md` + `paper08-yang-mills/research/21-the-rigorous-proof.md` + `paper08-yang-mills/research/35-final-verdict.md`. Total ~12K tokens. Critic uses these for rigor verification + voice register check + closure shape reference.
+**Action for any BSD or 50+ Critic spawn**: include `solutions-with-prize/paper08-yang-mills/preprint/PROOF-CHAIN.md` + `solutions-with-prize/paper08-yang-mills/research/21-the-rigorous-proof.md` + `solutions-with-prize/paper08-yang-mills/research/35-final-verdict.md`. Total ~12K tokens. Critic uses these for rigor verification + voice register check + closure shape reference.
 
 ### I.3 — BSD proof chain (closed 10/11, MY4 resolved via Route 3)
 
@@ -400,14 +400,14 @@ The BSD chain closed at 10/11 during the ORA v6 BSD run (2026-04-10). The single
 
 | Path | Lines | What it is |
 |---|---|---|
-| `paper26-bsd/strategy/04-closing-my4.md` | 500+ | **The MY4 closure deliverable** — the 11-link chain with rigor labels, the wall named, two routes, punch list. The input that produced the closure. |
-| `paper26-bsd/strategy/05-route3-kms-projector-bypass.md` | — | **The Route 3 closure** — G's projector bypass. The empirical proof that the ORA finds single-object structural bypasses when given the right framework tools. **The most load-bearing file for any future wall-closure attempt.** |
-| `paper26-bsd/closing-my4/` (~27 files) | — | The full ORA run output (blackboard, nodes, critiques, synthesis, code, closure) — the canonical example of what an ORA run produces end-to-end. |
-| `paper26-bsd/preprint/` | — | The BSD preprint sections |
+| `solutions-with-prize/paper26-bsd/strategy/04-closing-my4.md` | 500+ | **The MY4 closure deliverable** — the 11-link chain with rigor labels, the wall named, two routes, punch list. The input that produced the closure. |
+| `solutions-with-prize/paper26-bsd/strategy/05-route3-kms-projector-bypass.md` | — | **The Route 3 closure** — G's projector bypass. The empirical proof that the ORA finds single-object structural bypasses when given the right framework tools. **The most load-bearing file for any future wall-closure attempt.** |
+| `solutions-with-prize/paper26-bsd/closing-my4/` (~27 files) | — | The full ORA run output (blackboard, nodes, critiques, synthesis, code, closure) — the canonical example of what an ORA run produces end-to-end. |
+| `solutions-with-prize/paper26-bsd/preprint/` | — | The BSD preprint sections |
 
 **Why the BSD chain is critical for P vs NP**: The P vs NP programme has the same shape as BSD — a proof chain with most links closed and one wall remaining (Link 5 backward for P vs NP; MY4 for BSD). The BSD closure pattern was: (a) name the wall precisely, (b) identify multiple routes, (c) the ORA explores routes in parallel, (d) G finds a single algebraic object (the projector P_k^𝔭) that bypasses the wall entirely. **For P vs NP, the analogous "single algebraic object" might be the spectral-geometric-information trinity equivalence — proving the three columns are equivalent would close Link 5 backward the way the projector closed MY4.**
 
-**Action for P vs NP Authors**: include `paper26-bsd/strategy/05-route3-kms-projector-bypass.md` as a closure-pattern template. The Author should ask: "is there a single algebraic object that bypasses Link 5's backward direction the way G's projector bypassed MY4?" This is the inversion question (Signature 5) made concrete by a worked example.
+**Action for P vs NP Authors**: include `solutions-with-prize/paper26-bsd/strategy/05-route3-kms-projector-bypass.md` as a closure-pattern template. The Author should ask: "is there a single algebraic object that bypasses Link 5's backward direction the way G's projector bypassed MY4?" This is the inversion question (Signature 5) made concrete by a worked example.
 
 ---
 
@@ -450,7 +450,7 @@ All three Millennium-class proof chains compose. The BSD chain is structurally t
 | **I. Completed proof chains (RH + YM + BSD)** | **~6,000+** (RH 4,330 + YM 1,100 + BSD 500+) | **~17** |
 | **Subtotal (compiled)** | **~12,000+** | **~45+** |
 
-**Note**: Section I (proof chains) was added in the patch round after the user observed "the RH proof chain didn't exist when the manual runs were happening; it exists now and we have to include it." The Yang-Mills proof chain at `paper08-yang-mills/preprint/PROOF-CHAIN.md` was verified present (the user's "yang mills i think is there already because it's old" intuition was correct). Both are now in the inventory and are arguably the **most load-bearing teaching files** for any transposition-mode programme — they are the actual *templates* the framework's other programmes are porting from.
+**Note**: Section I (proof chains) was added in the patch round after the user observed "the RH proof chain didn't exist when the manual runs were happening; it exists now and we have to include it." The Yang-Mills proof chain at `solutions-with-prize/paper08-yang-mills/preprint/PROOF-CHAIN.md` was verified present (the user's "yang mills i think is there already because it's old" intuition was correct). Both are now in the inventory and are arguably the **most load-bearing teaching files** for any transposition-mode programme — they are the actual *templates* the framework's other programmes are porting from.
 
 **For comparison**: the v3 Author spawn template (`01-the-prompt.md` §6.1) currently allocates ≤25K tokens to Author context (bumped from ≤20K in the I-8 patch round). The compiled framework tools above are roughly 80-120K tokens total — too big to include all of them in every spawn. The right move is **selective inclusion based on the node's type**:
 
@@ -546,7 +546,7 @@ This is a real gap. The Author can be told "execute the 6-step method loop" with
 
 - **Paper 19 (the formal grammar paper)** is split into 4 sections-files. If the formal grammar is needed, include all 4. Otherwise, the compiled form in `213-theorem-catalogue-grammar.md` (Category C) is sufficient.
 
-- **`paper12/29-theorem-catalogue.md` is the single most important catalogue** at 545 lines. If you can only include one Integers reference, include this one. The 209/210/211/212 sub-catalogues are for deep work on specific paper ranges.
+- **`integers/paper12-cbb-system/29-theorem-catalogue.md` is the single most important catalogue** at 545 lines. If you can only include one Integers reference, include this one. The 209/210/211/212 sub-catalogues are for deep work on specific paper ranges.
 
 ---
 

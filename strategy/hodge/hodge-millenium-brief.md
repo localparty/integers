@@ -25,7 +25,7 @@ Produce a Clay-compliance-audited Hodge deliverable in **bare mode only** this r
 - Structure mirrors Deligne §1-§2 requirements 1:1
 
 **C_bare. Beyond-Clay X-RAY** — `strategy/hodge/deliverables/hodge-beyond-bare.md`:
-- Bonus theorem skeleton (5D derivation, pins, cross-Clay, Tate parallel, André motivated, intermediate Jacobian)
+- Bonus theorem skeleton (~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" -->, pins, cross-Clay, Tate parallel, André motivated, intermediate Jacobian)
 - ZERO prose, ≤ 15 pages
 
 **B_full and C_full are DEFERRED.** Do not write them this run. They are composed later by parallel agents from the 60-project reservoir once B_bare + C_bare LOCK.
@@ -194,8 +194,8 @@ Fixed 10-section structure for `strategy/hodge/deliverables/hodge-beyond-bare.md
 ```
 # Hodge Beyond-Clay X-Ray (BARE MODE)
 
-## §1 The 5D Geometric Derivation of Hodge Filtration
-[theorem statement: F^p on H^n(X, C) arises from the 5D geometric projection P_B / P_D / P_O filter; KK-spectrum decomposition induces Hodge grading; citation paper1 + paper61]
+## §1 The ~~5D Geometric Derivation~~ M⁵ Geometric Derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric" → "M⁵ Geometric" --> of Hodge Filtration
+[theorem statement: F^p on H^n(X, C) arises from the ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> projection P_B / P_D / P_O filter; KK-spectrum decomposition induces Hodge grading; citation paper1 + paper61]
 
 ## §2 Zero Free Parameters
 [table: parameter | value | determined by | programme citation; emphasize that codimension-p grading is geometric not chosen]
@@ -320,8 +320,8 @@ Transparency on all three walls is what makes §5d compliance work. Silence here
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/hodge/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper29-hodge/PROOF-CHAIN.md` — the 8-link live chain
-3. `paper31-baum-connes/PROOF-CHAIN.md` — motivic BC extension (Route A support)
+2. `solutions-with-prize/paper29-hodge/PROOF-CHAIN.md` — the 8-link live chain
+3. `solutions/paper31-baum-connes/PROOF-CHAIN.md` — motivic BC extension (Route A support)
 4. Deligne's "The Hodge Conjecture" §1-§6 (extract from the Clay PDF or verbatim in strategy doc §1)
 5. Clay Rules §4-§8 (summary in strategy doc §2)
 6. If hodge x-ray exists under `strategy/x-ray/proof-chain/hodge/` — read it; if not, note absence and proceed
@@ -357,14 +357,14 @@ Write to `strategy/hodge/deliverables/hodge-clay-bare.md`.
 ### Step 5 — Synthesize C_bare
 
 Walk the 10-section structure. Draw from:
-- Paper 1 (QG5D hub, 5D geometric foundation)
-- Paper 61 (projections — the 5D geometric derivation of filtrations)
+- Paper 1 (QG5D hub, ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> foundation)
+- Paper 61 (projections — the ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation of filtrations)
 - Paper 60 (e-circle geometry)
 - Paper 26 (BSD, CM abelian-variety link)
 - Paper 31 (Baum-Connes, Chern-character bridge)
 - Paper 13 (RH, endomotive spectral data)
 - Paper 35 (Schanuel, period relations)
-- Programme 36-pins table if applicable (search `paper12/research/23-framework-predictions-master-table.md`)
+- Programme 36-pins table if applicable (search `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`)
 - Cross-Clay x-ray cross-cuts (when hodge x-ray lands)
 
 Enforce bare discipline. Zero prose.
@@ -437,10 +437,10 @@ the strategy document is
 strategy/hodge/00-millenium-strategy.md
 
 the hodge live proof chain is
-paper29-hodge/PROOF-CHAIN.md
+solutions-with-prize/paper29-hodge/PROOF-CHAIN.md
 
 the motivic BC support chain is
-paper31-baum-connes/PROOF-CHAIN.md
+solutions/paper31-baum-connes/PROOF-CHAIN.md
 
 the toolkit is
 <pca-extension>/08-framework-tools.md
@@ -495,20 +495,20 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/h
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/hodge/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/hodge/hodge-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper29-hodge/PROOF-CHAIN.md (8-link live chain)
-4. /Users/gsix/quantum-geometry-in-5d-latex/paper31-baum-connes/PROOF-CHAIN.md (motivic BC extension — Route A)
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper29-hodge/PROOF-CHAIN.md (8-link live chain)
+4. /Users/gsix/quantum-geometry-in-5d-latex/solutions/paper31-baum-connes/PROOF-CHAIN.md (motivic BC extension — Route A)
 5. Deligne's "The Hodge Conjecture" §1-§6 (verbatim in strategy doc §1)
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for group/5D derivation + scheme independence)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/ (for 5D derivation bonus / Hodge filtration geometry)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/PROOF-CHAIN.md (for CM-abelian slice + BSD cross-Clay)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/PROOF-CHAIN.md (for RH cross-Clay endomotive connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper35-schanuel/PROOF-CHAIN.md (for period-relation cross-cut)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/PROOF-CHAIN.md (for YM cross-Clay Chern-K connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/PROOF-CHAIN.md (for potential PvNP cross-cut)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (pins table)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for group/~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> + scheme independence)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/ (for ~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> bonus / Hodge filtration geometry)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md (for CM-abelian slice + BSD cross-Clay)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/PROOF-CHAIN.md (for RH cross-Clay endomotive connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions/paper35-schanuel/PROOF-CHAIN.md (for period-relation cross-cut)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md (for YM cross-Clay Chern-K connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md (for potential PvNP cross-cut)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (pins table)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor)
 

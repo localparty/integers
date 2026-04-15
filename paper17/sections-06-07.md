@@ -123,7 +123,7 @@ Every prediction is a spectral lock: it succeeds if and only if the correspondin
 
 We state the result plainly.
 
-Papers 1--11 of the QG5D programme described fundamental physics from a single postulate -- a compact extra dimension $S^1$ carrying unitary time evolution -- and a single parameter -- the compactification radius $R$. Paper 12 dissolved $R$ into a spectral eigenvalue of the Bost--Connes algebra, reducing the parameter count to zero. This paper dissolves the remaining postulate.
+Papers 1--11 of the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme described fundamental physics from a single postulate -- a compact extra dimension $S^1$ carrying unitary time evolution -- and a single parameter -- the compactification radius $R$. Paper 12 dissolved $R$ into a spectral eigenvalue of the Bost--Connes algebra, reducing the parameter count to zero. This paper dissolves the remaining postulate.
 
 The $S^1$ time evolution of Papers 1--11 is not a postulate. It is the restriction of the modular automorphism $\sigma_t = \Delta_{\omega_1}^{it}$ to the abelian centre of the type III$_1$ factor $\pi_1(\mathcal{A}_{\mathrm{BC}})''$. The state $\omega_1$ is the unique KMS$_1$ state of the Bost--Connes system -- selected not by fiat but by the zeta function's simple pole at $s=1$. The flow is not imposed; it is *generated* by the entropy operator $S_{\mathrm{BC}} = -\log\Delta_{\omega_1}$, whose spectrum is the Riemann zeros.
 

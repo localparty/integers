@@ -6,10 +6,10 @@ This is a **framework-claim target**: the outlet is internal to the programme. N
 
 ## 1. Official outlet
 
-**Programme-internal:** `paper1/` — Quantum Geometry in 5D foundational paper.
-- Main file: `/Users/gsix/quantum-geometry-in-5d-latex/paper1/paper1.tex`
-- PROOF-CHAIN: `/Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md`
-- Supporting chain: `/Users/gsix/quantum-geometry-in-5d-latex/paper1/app/` and `/Users/gsix/quantum-geometry-in-5d-latex/paper1/src/`
+**Programme-internal:** `integers/paper01-qg5d/` — Quantum Geometry in 5D foundational paper.
+- Main file: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/paper1.tex`
+- PROOF-CHAIN: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md`
+- Supporting chain: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/app/` and `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/src/`
 
 No external foundation, Wikipedia page, or prize corresponds to the QG5D framework claim itself. The framework is the object being proposed.
 
@@ -43,7 +43,7 @@ See paper1 for variants of the QG5D construction. Framework-internal.
 ## 6. Known partial results + named walls
 
 Programme-internal chain verification. See:
-- `paper1/PROOF-CHAIN.md`
+- `integers/paper01-qg5d/PROOF-CHAIN.md`
 - `strategy/the-ring.md`
 - `strategy/famous-gaps.md`
 

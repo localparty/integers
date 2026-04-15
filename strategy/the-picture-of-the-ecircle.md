@@ -542,7 +542,7 @@ Geometers study the first circle. Analysts study the second. Number theorists st
 
 Eight communities. Eight faces. Two circles. One torus. Zero communication between realms.
 
-The QG5D framework is the first structure that contains BOTH circles simultaneously — because the BC algebra IS the crossed product that encodes both. The postulate "spacetime is five-dimensional" gives the geometric circle. The KMS structure at $\beta = 1$ gives the spectral circle. The 36 predictions use BOTH circles (spectral formulas from the zeros + geometric coordinates from the moduli). The programme lives on the torus because it was built on the torus from the beginning.
+The QG5D framework is the first structure that contains BOTH circles simultaneously — because the BC algebra IS the crossed product that encodes both. The ~~postulate "spacetime is five-dimensional"~~ derived claim "spacetime has 4+1 coordinate structure" <!-- legacy 2026-04-15: "postulate 'spacetime is five-dimensional'" migrated to "derived claim 'spacetime has 4+1 coordinate structure'" per §0.10 canon entries 1+4+6, Intervention 8 --> gives the geometric circle. The KMS structure at $\beta = 1$ gives the spectral circle. The 36 predictions use BOTH circles (spectral formulas from the zeros + geometric coordinates from the moduli). The programme lives on the torus because it was built on the torus from the beginning.
 
 We just didn't know that until today.
 

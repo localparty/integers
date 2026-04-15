@@ -159,9 +159,9 @@ Produce ONE file: `/Users/gsix/quantum-geometry-in-5d-latex/strategy/x-ray/proof
 
 ## READ AS NEEDED
 
-- `/Users/gsix/quantum-geometry-in-5d-latex/paper60-the-geometry-of-the-circle/` — defines the 10 e-circle faces. Cite sections when assigning faces.
-- `/Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/` — defines the 6 projections P_A..P_O. Cite sections when assigning projections.
-- `/Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md` — QG5D hub, for cross-cut detection and branch-A/B/C/D/E assignment.
+- `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper60-geometry-of-circle/` — defines the 10 e-circle faces. Cite sections when assigning faces.
+- `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/` — defines the 6 projections P_A..P_O. Cite sections when assigning projections.
+- `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md` — QG5D hub, for cross-cut detection and branch-A/B/C/D/E assignment.
 - `/Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/` — base ORA instructions and patterns P1–P5.
 - `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/` — chain extensions. Capacitor at 09-capacitor-correspondence-table-v1.md.
 - `/Users/gsix/quantum-geometry-in-5d-latex/strategy/decomposition/proof-chain/<VERTEX>/` — if <VERTEX> has been decomposed already, reference it in §9 Cascading Refinements.

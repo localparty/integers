@@ -1,6 +1,6 @@
 # paper4 — Standard Model from e-circle
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper4/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper04-sm-gauge-group/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

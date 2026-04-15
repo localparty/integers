@@ -1,0 +1,294 @@
+{
+  "2-SAT": {
+    "type": "P",
+    "known_threshold": 1.0,
+    "estimated_threshold": 2.25,
+    "max_drop_rate": 0.5536546824812272,
+    "s_max": 0.7909877580274728,
+    "transition_width": 2.0,
+    "curve": [
+      {
+        "alpha": 0.5,
+        "median_sol": 720,
+        "pct_sat": 100.0,
+        "s_alpha": 0.790988,
+        "s_per_constraint": 1.581976
+      },
+      {
+        "alpha": 1.0,
+        "median_sol": 112,
+        "pct_sat": 100.0,
+        "s_alpha": 0.56728,
+        "s_per_constraint": 0.56728
+      },
+      {
+        "alpha": 1.5,
+        "median_sol": 20,
+        "pct_sat": 74.0,
+        "s_alpha": 0.360161,
+        "s_per_constraint": 0.240107
+      },
+      {
+        "alpha": 2.0,
+        "median_sol": 2,
+        "pct_sat": 58.0,
+        "s_alpha": 0.083333,
+        "s_per_constraint": 0.041667
+      },
+      {
+        "alpha": 2.5,
+        "median_sol": 0,
+        "pct_sat": 20.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 3.0,
+        "median_sol": 0,
+        "pct_sat": 4.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 3.5,
+        "median_sol": 0,
+        "pct_sat": 0.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 4.0,
+        "median_sol": 0,
+        "pct_sat": 0.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 4.5,
+        "median_sol": 0,
+        "pct_sat": 0.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 5.0,
+        "median_sol": 0,
+        "pct_sat": 0.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      }
+    ]
+  },
+  "Horn-SAT": {
+    "type": "P",
+    "known_threshold": null,
+    "estimated_threshold": 5.0,
+    "max_drop_rate": 0.2379035372891125,
+    "s_max": 0.857116851571854,
+    "transition_width": null,
+    "curve": [
+      {
+        "alpha": 0.5,
+        "median_sol": 1248,
+        "pct_sat": 100.0,
+        "s_alpha": 0.857117,
+        "s_per_constraint": 1.714234
+      },
+      {
+        "alpha": 1.0,
+        "median_sol": 464,
+        "pct_sat": 100.0,
+        "s_alpha": 0.738165,
+        "s_per_constraint": 0.738165
+      },
+      {
+        "alpha": 1.5,
+        "median_sol": 186,
+        "pct_sat": 100.0,
+        "s_alpha": 0.628263,
+        "s_per_constraint": 0.418842
+      },
+      {
+        "alpha": 2.0,
+        "median_sol": 71,
+        "pct_sat": 100.0,
+        "s_alpha": 0.512479,
+        "s_per_constraint": 0.256239
+      },
+      {
+        "alpha": 2.5,
+        "median_sol": 41,
+        "pct_sat": 100.0,
+        "s_alpha": 0.446463,
+        "s_per_constraint": 0.178585
+      },
+      {
+        "alpha": 3.0,
+        "median_sol": 18,
+        "pct_sat": 100.0,
+        "s_alpha": 0.347494,
+        "s_per_constraint": 0.115831
+      },
+      {
+        "alpha": 3.5,
+        "median_sol": 12,
+        "pct_sat": 100.0,
+        "s_alpha": 0.298747,
+        "s_per_constraint": 0.085356
+      },
+      {
+        "alpha": 4.0,
+        "median_sol": 9,
+        "pct_sat": 100.0,
+        "s_alpha": 0.26416,
+        "s_per_constraint": 0.06604
+      },
+      {
+        "alpha": 4.5,
+        "median_sol": 6,
+        "pct_sat": 100.0,
+        "s_alpha": 0.215414,
+        "s_per_constraint": 0.04787
+      },
+      {
+        "alpha": 5.0,
+        "median_sol": 4,
+        "pct_sat": 100.0,
+        "s_alpha": 0.166667,
+        "s_per_constraint": 0.033333
+      }
+    ]
+  },
+  "3-SAT": {
+    "type": "NPC",
+    "known_threshold": 4.267,
+    "estimated_threshold": 4.75,
+    "max_drop_rate": 0.5668678471821025,
+    "s_max": 0.8054446597654313,
+    "transition_width": 3.5,
+    "curve": [
+      {
+        "alpha": 1.0,
+        "median_sol": 812,
+        "pct_sat": 100.0,
+        "s_alpha": 0.805445,
+        "s_per_constraint": 0.805445
+      },
+      {
+        "alpha": 2.0,
+        "median_sol": 185,
+        "pct_sat": 100.0,
+        "s_alpha": 0.627615,
+        "s_per_constraint": 0.313808
+      },
+      {
+        "alpha": 3.0,
+        "median_sol": 27,
+        "pct_sat": 100.0,
+        "s_alpha": 0.396241,
+        "s_per_constraint": 0.13208
+      },
+      {
+        "alpha": 3.5,
+        "median_sol": 13,
+        "pct_sat": 90.0,
+        "s_alpha": 0.30837,
+        "s_per_constraint": 0.088106
+      },
+      {
+        "alpha": 4.0,
+        "median_sol": 7,
+        "pct_sat": 96.0,
+        "s_alpha": 0.233946,
+        "s_per_constraint": 0.058487
+      },
+      {
+        "alpha": 4.267,
+        "median_sol": 3,
+        "pct_sat": 80.0,
+        "s_alpha": 0.13208,
+        "s_per_constraint": 0.030954
+      },
+      {
+        "alpha": 4.5,
+        "median_sol": 1,
+        "pct_sat": 56.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 5.0,
+        "median_sol": 0,
+        "pct_sat": 38.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 6.0,
+        "median_sol": 0,
+        "pct_sat": 22.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 7.0,
+        "median_sol": 0,
+        "pct_sat": 2.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      }
+    ]
+  },
+  "NAE-3-SAT": {
+    "type": "NPC",
+    "known_threshold": 2.11,
+    "estimated_threshold": 2.25,
+    "max_drop_rate": 0.5974937501201927,
+    "s_max": 0.7909877580274728,
+    "transition_width": 2.0,
+    "curve": [
+      {
+        "alpha": 0.5,
+        "median_sol": 720,
+        "pct_sat": 100.0,
+        "s_alpha": 0.790988,
+        "s_per_constraint": 1.581976
+      },
+      {
+        "alpha": 1.0,
+        "median_sol": 120,
+        "pct_sat": 100.0,
+        "s_alpha": 0.575574,
+        "s_per_constraint": 0.575574
+      },
+      {
+        "alpha": 1.5,
+        "median_sol": 24,
+        "pct_sat": 94.0,
+        "s_alpha": 0.38208,
+        "s_per_constraint": 0.25472
+      },
+      {
+        "alpha": 2.0,
+        "median_sol": 2,
+        "pct_sat": 62.0,
+        "s_alpha": 0.083333,
+        "s_per_constraint": 0.041667
+      },
+      {
+        "alpha": 2.5,
+        "median_sol": 0,
+        "pct_sat": 18.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      },
+      {
+        "alpha": 3.0,
+        "median_sol": 0,
+        "pct_sat": 6.0,
+        "s_alpha": 0.0,
+        "s_per_constraint": 0.0
+      }
+    ]
+  }
+}

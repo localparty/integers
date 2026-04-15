@@ -21,7 +21,7 @@
 | 9 | North star | `publishing/strategy.md` | spot-checked Appendix B | Stable at 10.63 / 16.0%; matches chessboard §3 and log baseline. |
 | 10 | Prior audits 1-4 | 31/32/33/34 gaps files | read | All 31-audit items closed. 32-audit items closed. 33-audit items: 9/11 closed (M-5, M-6 were still open at audit 34; BOTH are now FIXED in this audit — see capacitor and PCA/Triad above). **34-audit items: 2/3 blockers FIXED (A-11, B-10). B-9 partially FIXED (line 343 fixed, line 347 not). All three minors (M-11, M-12, M-13) fixed.** |
 | 11 | 14 PROOF-CHAIN.md files | paper{1,08-yang-mills,13-rh,13b-grh,25-hilbert-12,26-bsd,28-pvnp,29-hodge,30-navier-stokes,31-baum-connes,32-bgs-spectral-statistics,33-goldbach,34-twin-primes,35-schanuel}/PROOF-CHAIN.md | paper1 re-read §"Programme graph edges" + §"PCA traversal behavior at QG5D" | **Paper 1 line 412 ADDED**: new "Hub-radiation edge count" paragraph explicitly says "hub radiation fills **12 outgoing edges** in parallel" + cross-references brief §2.1 predecessor-ownership rule. Audit 34 B-9 paper1-side fix applied cleanly. |
-| 12 | PIN-TABLE | `paper12/research/23-framework-predictions-master-table.md` | presence-only | Present; unchanged. |
+| 12 | PIN-TABLE | `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` | presence-only | Present; unchanged. |
 | 13 | Output dir (parent) | `programme/ring-traversals/` | exists, EMPTY | `traversal-01/` not yet created. |
 | 14 | Log baseline | `programme/ring-traversal-log.md` | re-read | Stable at 10.63 baseline with cascade deltas. |
 | 15 | Adjacent docs (non-invocation) | `strategy/the-ring.md`, `programme/26c-the-chessboard-rationale.md` | spot-checked | **NEW ISSUE — M-14 below**: `strategy/the-ring.md` lines 124-145 "Current state" block is stale (RIGIDITY 9.03 / 83 links / 47 verified / pre-cascade confidence distribution). Not in the canonical run.md invocation chain, but documents the ring and is a likely reference. **NEW ISSUE — M-15 below**: `programme/26c-the-chessboard-rationale.md` line 79 has illustrative "RIGIDITY: 9.03 → 9.47 (+0.44)" example. Not load-bearing but drift-smell. |
@@ -133,7 +133,7 @@ Two tables in the same chessboard file describing the same sector classification
 
 - `§6.2` is cited earlier in the file (it's in §6, the ring-geometry primitive section) and is part of the core sector-classification protocol. The runner encountering §6.2 first internalizes the stale confidences before it gets to Appendix C.
 - A Type-A "Verification-primary" vertex has a DIFFERENT PCA protocol than a Type-C "Construction-primary" vertex. NS at 2/10 in §6.2's Type-C table (legacy) vs 4/10 in Appendix C's Type-C table (still Type-C but upgraded confidence) produces the same type assignment — BUT a cascade-aware runner would correctly expect NS's type to potentially flip C→B in 1-2 more traversals (given 3/8 links proved). The §6.2 staleness obscures that trajectory.
-- QG5D in §6.2 at 9/10 Type-A vs Appendix C at 10/10 Type-A: same type, but the §6.2 labeling "QG5D (9/10)" now disagrees with paper1/PROOF-CHAIN.md line 5 ("Confidence: **10/10** (upgraded 2026-04-13)").
+- QG5D in §6.2 at 9/10 Type-A vs Appendix C at 10/10 Type-A: same type, but the §6.2 labeling "QG5D (9/10)" now disagrees with integers/paper01-qg5d/PROOF-CHAIN.md line 5 ("Confidence: **10/10** (upgraded 2026-04-13)").
 - Drift-sediment: audit 33 B-8 explicitly named three sites that needed cascade propagation (chessboard §3, Appendix C SECTOR-TABLE, log baseline). Missing from that enumeration: chessboard §6.2's inline duplicate. The fix landed at 2 of 3 sites + north star + log, but §6.2 was the 4th site and got missed.
 
 **Recommended fix:** update §6.2 lines 313-318 to post-cascade confidences + refresh the date annotation. Specifically:
@@ -232,7 +232,7 @@ Two tables in the same chessboard file describing the same sector classification
 | 34 | A-11 vertex-name convention | NEW | ✅ **FIXED in this round** | Brief §8.1 line 364 declares lowercase-hyphenated short names with the full 14-entry list inline. |
 | 34 | M-11 WIRE-DENSITY matrix label | NEW | ✅ **FIXED in this round** | Chessboard §5 line 236 label now reads "estimated pre-T1; the runner recomputes from capacitor at T1 bootstrap per §5 protocol step 1." |
 | 34 | M-12 brief §5 16.3→16.0 | NEW | ✅ **FIXED in this round** | Brief §5 line 297 "from current 16.0%." |
-| 34 | M-13 tree-vs-chain cross-ref | NEW | ✅ **FIXED in this round** | Brief §3 opening "Hub-special-case protocol" paragraph cross-references `paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` and explicitly flags tree-not-chain structure. |
+| 34 | M-13 tree-vs-chain cross-ref | NEW | ✅ **FIXED in this round** | Brief §3 opening "Hub-special-case protocol" paragraph cross-references `integers/paper01-qg5d/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` and explicitly flags tree-not-chain structure. |
 
 **Summary of prior-audit status after this round:**
 - 31 items: 12/12 stable.
@@ -273,7 +273,7 @@ Total patch budget for T1 readiness: ~5 min. Extended patch budget for full cros
 - **B-10 T2+ budget FIXED with arithmetic verification**: brief §4 lines 259-261 provide the declared T2+ VERIFY quota (5 vertices rotating) + 28-min core-work target + the explicit arithmetic `14 × 28 (core) + 35 (chessboard) + 50 (VERIFY) = 477 min ≈ 7.95 h ✓ 8 h`. Arithmetic reproduces cleanly.
 - **M-11 WIRE-DENSITY matrix label FIXED**: chessboard §5 line 236 now reads "estimated pre-T1; the runner recomputes from capacitor at T1 bootstrap per §5 protocol step 1." Aligns §5 with §6.6's T1-bootstrap discipline.
 - **M-12 16.3% → 16.0% FIXED**: brief §5 line 297 now matches the 5 other cite-sites.
-- **M-13 tree-vs-chain FIXED**: brief §3 opening paragraph cross-references `paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` + explicitly flags tree-not-chain structure.
+- **M-13 tree-vs-chain FIXED**: brief §3 opening paragraph cross-references `integers/paper01-qg5d/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` + explicitly flags tree-not-chain structure.
 - **M-5 PCA/Triad invocation placeholders FIXED**: both 07-proof-chain-adversarial.md §P.11 and 12-prf-chain-advr-strat-triad.md §T.10 use `<path-to-ora-bundle>/01-the-prompt.md` + `<path-to-pca-bundle>/07-proof-chain-adversarial.md` (+ `/12-prf-chain-advr-strat-triad.md` for the triad) — meaningful path-placeholder names + correct local file numbers. Audit 33's long-standing M-5 finally closed.
 - **M-6 capacitor top-of-file stats FIXED** with in-file reconciliation: top-of-file "Table statistics (v1 — pre-H4 baseline)" + prefatory warning + inline "Current" column with post-H4 numbers. Reader cannot land on stale numbers without seeing the pointer to the update section. Audit 33's M-6 finally closed.
 - **B-9 partial fix at 3/4 sites**: chessboard §6.3 line 343 "12 outgoing edges" + paper1 line 412 explicit 12-count paragraph + Appendix C row 1 "fill 12 outgoing edges (1 ring-next + 11 chords)." Three of four B-9 sites fully synchronized; only chessboard §6.3 line 347 Cost sentence still reads 13 (see P-1).

@@ -51,7 +51,7 @@ rerun:
 python3 visualization/torus/build.py
 ```
 
-This reads every markdown file in `paper60-the-geometry-of-the-circle/`
+This reads every markdown file in `integers/paper60-geometry-of-circle/`
 and rewrites `data.js`. Parse uncertainties are logged to `build.log`.
 
 ## What the torus means (paper 60 summary)

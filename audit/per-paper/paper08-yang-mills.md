@@ -1,6 +1,6 @@
 # Paper 08 — Yang-Mills Mass Gap
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/`
 **PROOF-CHAIN:** 18 layers, 1 open wall (H4 — addressed via Balaban RG + gradient flow bypass Step 18')
 **STATUS.md:** 103 files, 166,000 words, 9 agent explorations
 **Strategy:** `/strategy/ym/00-millenium-strategy.md`

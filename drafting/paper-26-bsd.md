@@ -129,7 +129,7 @@ Convert the current TABLE-format sections into PROSE-format
 mathematical writing following the Paper 28 template:
 
 **Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the same
-format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+format as Paper 28's (`solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md`):
 step-by-step table with status labels, classification of arguments,
 conditional dependencies, verdict, and scope section. This file is
 the backbone — every section references it, the diagram on page 1
@@ -213,7 +213,7 @@ Focus areas for BSD:
 
 ### Run 7: Point-by-point claim tester
 
-**Prompt:** `paper26-bsd/referee/02-point-by-point-referee.md`
+**Prompt:** `solutions-with-prize/paper26-bsd/referee/02-point-by-point-referee.md`
 (paper-specific: knows which claims, citations, and focus areas to
 test for BSD). The generic methodology template is at
 `drafting/01-point-by-point-claim-tester.md`.
@@ -233,12 +233,12 @@ paper is DONE when every citation is VERIFIED.
 ## 4. Configuration
 
 **ORA bundle:** `online-researcher-adversarial/ora-bundle-v8/` (same ORA for all papers)
-**Toolkit:** `paper26-bsd/toolkit/framework-tools-bsd.md` (to be created,
+**Toolkit:** `solutions-with-prize/paper26-bsd/toolkit/framework-tools-bsd.md` (to be created,
 compiled from: closing-my4/closure/closure-digest.md + Paper 13 RH
 proof skeleton + Paper 23 CBB bridge family §8 + Baker's theorem +
 the §J voice canon above)
 **Template:** Paper 28's preprint directory (structural template)
-**Output:** `paper26-bsd/preprint/` (overwrite existing; move old to `paper26-bsd/draft/`)
+**Output:** `solutions-with-prize/paper26-bsd/preprint/` (overwrite existing; move old to `solutions-with-prize/paper26-bsd/draft/`)
 
 ---
 

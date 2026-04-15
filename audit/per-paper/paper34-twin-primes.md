@@ -1,6 +1,6 @@
 # paper34-twin-primes — Twin Primes Conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper34-twin-primes/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper34-twin-primes/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

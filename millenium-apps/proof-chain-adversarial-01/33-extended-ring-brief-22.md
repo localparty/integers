@@ -21,29 +21,29 @@ The ring expands from 19 to **23 vertices**. Four extension vertices are inserte
 
 | Position | Vertex | Paper directory | Incoming edge (from previous) | Edge status |
 |---|---|---|---|---|
-| 1 | **QG5D** (hub) | paper1/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
-| 2 | **RH** | paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
-| 3 | **GRH** | paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
-| 4 | **BSD** | paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
-| 5 | **H12** | paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
-| 6 | **YM** | paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
-| 7 | **NS** | paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
-| 8 | **Turbulence** | paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
-| 9 | **Hodge** | paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
-| 10 | **Baum-Connes** | paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
-| 11 | **PvNP** | paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
-| 12 | **VP vs VNP** | paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | CANDIDATE |
-| 13 | **BGS** | paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | SPECULATIVE |
-| 14 | **Twin Primes** | paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
-| 15 | **Cramér** | paper43-cramer/ | ← Twin Primes (min gap ↔ max gap: two faces of prime-gap distribution) | **CANDIDATE** (GUE extreme-value classical; Granville correction well-understood) |
-| 16 | **Goldbach** | paper33-goldbach/ | ← Cramér (prime density → additive structure; Cramér model underpins circle method) | SPECULATIVE |
-| 17 | **ABC** | paper37-abc/ | ← Goldbach (additive primes → rad height function) | CANDIDATE |
-| 18 | **OPN** | paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
-| 19 | **Collatz** | paper41-collatz/ | ← OPN (multiplicative structure → Hecke μ₂/μ₃ dynamics on N*) | **CANDIDATE** (same Hecke semigroup N*; endomorphism upgrade of multiplicative fixed-point) |
-| 20 | **Lehmer** | paper42-lehmer/ | ← Collatz (orbit convergence → cyclotomic boundary gap) | **CANDIDATE** (both are gap questions; Collatz aperiodicity → Mahler leakage) |
-| 21 | **Sato-Tate** | paper44-sato-tate/ | ← Lehmer (cyclotomic boundary → Frobenius equidistribution; topology face → measure face of the e-circle) | **PARTIAL** (classical ST proved 2011; BC framing via ITPFI inherits from BSD 9/10) |
-| 22 | **Schanuel** | paper35-schanuel/ | ← Sato-Tate (equidistribution → algebraic independence of spectral data) | SPECULATIVE |
-| 23 | **Hilbert 6** | paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
+| 1 | **QG5D** (hub) | integers/paper01-qg5d/ | ← Hilbert 6 (META-closure: axiomatization IS the hub) | **STRONG** |
+| 2 | **RH** | solutions-with-prize/paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
+| 3 | **GRH** | solutions/paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
+| 4 | **BSD** | solutions-with-prize/paper26-bsd/ | ← GRH (Dirichlet L → Hecke L) | PARTIAL |
+| 5 | **H12** | solutions/paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
+| 6 | **YM** | solutions-with-prize/paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
+| 7 | **NS** | solutions-with-prize/paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
+| 8 | **Turbulence** | solutions/paper38-turbulence/ | ← NS (NS regularity → K41 spectrum) | **STRONG** (inherits directly) |
+| 9 | **Hodge** | solutions-with-prize/paper29-hodge/ | ← Turbulence (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
+| 10 | **Baum-Connes** | solutions/paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
+| 11 | **PvNP** | solutions-with-prize/paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
+| 12 | **VP vs VNP** | solutions/paper39-vp-vs-vnp/ | ← PvNP (discrete fullness → continuous fullness) | CANDIDATE |
+| 13 | **BGS** | solutions/paper32-bgs-spectral-statistics/ | ← VP vs VNP (algebraic circuit matrix → GUE) | SPECULATIVE |
+| 14 | **Twin Primes** | solutions/paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
+| 15 | **Cramér** | solutions/paper43-cramer/ | ← Twin Primes (min gap ↔ max gap: two faces of prime-gap distribution) | **CANDIDATE** (GUE extreme-value classical; Granville correction well-understood) |
+| 16 | **Goldbach** | solutions-with-prize/paper33-goldbach/ | ← Cramér (prime density → additive structure; Cramér model underpins circle method) | SPECULATIVE |
+| 17 | **ABC** | solutions/paper37-abc/ | ← Goldbach (additive primes → rad height function) | CANDIDATE |
+| 18 | **OPN** | solutions/paper40-odd-perfect/ | ← ABC (rad bounds → abundancy constraints) | **PARTIAL** (Luca-Pomerance) |
+| 19 | **Collatz** | solutions-with-prize/paper41-collatz/ | ← OPN (multiplicative structure → Hecke μ₂/μ₃ dynamics on N*) | **CANDIDATE** (same Hecke semigroup N*; endomorphism upgrade of multiplicative fixed-point) |
+| 20 | **Lehmer** | solutions/paper42-lehmer/ | ← Collatz (orbit convergence → cyclotomic boundary gap) | **CANDIDATE** (both are gap questions; Collatz aperiodicity → Mahler leakage) |
+| 21 | **Sato-Tate** | solutions/paper44-sato-tate/ | ← Lehmer (cyclotomic boundary → Frobenius equidistribution; topology face → measure face of the e-circle) | **PARTIAL** (classical ST proved 2011; BC framing via ITPFI inherits from BSD 9/10) |
+| 22 | **Schanuel** | solutions/paper35-schanuel/ | ← Sato-Tate (equidistribution → algebraic independence of spectral data) | SPECULATIVE |
+| 23 | **Hilbert 6** | solutions/paper36-hilbert-6/ | ← Schanuel (eigenvalue independence → axiom closure) | CANDIDATE |
 
 Ring-closure: position 23 (Hilbert 6) → position 1 (QG5D) via META-closure edge. "The last vertex IS a statement about the first."
 

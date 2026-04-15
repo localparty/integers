@@ -1,6 +1,6 @@
 # paper7 — Gauge coupling unification / moduli stabilization G4 flux
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper7/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper07-moduli-gut/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

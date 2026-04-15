@@ -27,7 +27,7 @@
 ## AI policy
 APS has its own author policy page; AI tool use must be declared. Verify latest guidance at https://journals.aps.org/authors.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **PRL** is the aspirational target for the headline-grabbing cosmology / physics results (Paper 2 already published; Paper 11 cosmological constant result).
 - **PRD** for detailed physics papers (Papers 3-7, parts of Papers 11-12).
 - The 3750-word PRL limit forces extreme concision — pair with PRD companion paper.

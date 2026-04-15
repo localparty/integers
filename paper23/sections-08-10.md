@@ -376,7 +376,7 @@ The Pati--Salam coupling at the unification scale is derived to exact integer pr
 
 ### 10.5 Cross-validation against Paper 10's KK integer 17
 
-The integer 17 has an independent derivation in the QG5D programme. In Paper 10 (research/117), the geometry $M^4 \times CP^2 \times S^2 \times S^1$ produces a Kaluza--Klein integer counting of $16$ Weyl fermions per generation (the SO(10) spinor) plus $1$ physical Higgs boson, totalling $17$ field-content modes. The near-integrality $\gamma_8^{3/4} = 16.888 \approx 17$ (to $0.66\%$) was noted as the lepton hierarchy's encoding of this field count.
+The integer 17 has an independent derivation in the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme. In Paper 10 (research/117), the geometry $M^4 \times CP^2 \times S^2 \times S^1$ produces a Kaluza--Klein integer counting of $16$ Weyl fermions per generation (the SO(10) spinor) plus $1$ physical Higgs boson, totalling $17$ field-content modes. The near-integrality $\gamma_8^{3/4} = 16.888 \approx 17$ (to $0.66\%$) was noted as the lepton hierarchy's encoding of this field count.
 
 We now have two independent routes to the same integer:
 

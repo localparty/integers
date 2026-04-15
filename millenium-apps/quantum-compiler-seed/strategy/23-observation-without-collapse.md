@@ -265,7 +265,7 @@ G's original intuition went further than the mass formula:
 
 The key phrase is "phase correspondences." In the compiler's
 architecture, Pattern P2 (holonomy correspondence) is the
-phase channel: a compact extra dimension (the e-circle in
+phase channel: a compact internal phase fiber <!-- legacy 2026-04-15: "compact extra dimension" migrated to "compact internal phase fiber" per §0.10 canon entry 2, Intervention 8 --> (the e-circle in
 QG5D, or the S^1 Kaluza-Klein factor) gives rise to
 *quantised phases* — holonomies around the compact direction.
 These phases are Hecke character expectations in the BC

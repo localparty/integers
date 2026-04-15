@@ -38,7 +38,7 @@ The framework has four Millennium-class papers in the pipeline (YM, RH, BSD, P v
 
 ### 3.1 Paper 1 files (migrate)
 
-Location: `/Users/gsix/quantum-geometry-in-5d-latex/paper1/`
+Location: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/`
 
 Files to migrate (backtick counts from preliminary survey):
 - `preprint/00-abstract.md` (~46 backticks)
@@ -57,7 +57,7 @@ Files to migrate (backtick counts from preliminary survey):
 
 ### 3.2 Paper 2 files (migrate)
 
-Location: `/Users/gsix/quantum-geometry-in-5d-latex/paper2/`
+Location: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper02-cosmology/`
 
 - `preprint/00-abstract.md` (~63 backticks)
 - `preprint/01-introduction.md` (~45)
@@ -69,9 +69,9 @@ Location: `/Users/gsix/quantum-geometry-in-5d-latex/paper2/`
 ### 3.3 Explicitly EXCLUDED from migration
 
 Do NOT touch these — they are documentation / tooling files, not paper content:
-- `paper1/etc/*.md` (e.g., `01-journal-referee.md`, `hostile-reviewer.md`, `latex-conversion-for-arxiv.md`)
-- `paper2/etc/*.md` (same)
-- Any file under `paper1/journals/`, `paper2/camb/`, `reviewer-runs/`, `journal-reviewer/`
+- `integers/paper01-qg5d/etc/*.md` (e.g., `01-journal-referee.md`, `hostile-reviewer.md`, `latex-conversion-for-arxiv.md`)
+- `integers/paper02-cosmology/etc/*.md` (same)
+- Any file under `integers/paper01-qg5d/journals/`, `integers/paper02-cosmology/camb/`, `reviewer-runs/`, `journal-reviewer/`
 - Any `.tex`, `.bib`, `.py`, `.sh`, or non-`.md` file
 - Any markdown file that is NOT in `paperN/preprint/` or `paperN/appendices/`
 
@@ -174,7 +174,7 @@ Requirements:
   - List of flagged ambiguous spans (line number + content)
 - DOES NOT modify files on dry-run mode (`--dry-run` flag)
 
-Test the script on ONE file first (e.g., `paper1/preprint/00-abstract.md`), dry-run. Inspect the diff. If it looks right, apply in-place and inspect the file. If the file looks right, continue.
+Test the script on ONE file first (e.g., `integers/paper01-qg5d/preprint/00-abstract.md`), dry-run. Inspect the diff. If it looks right, apply in-place and inspect the file. If the file looks right, continue.
 
 ### 5.3 Phase 1c — Run migration on all scope files
 
@@ -245,8 +245,8 @@ If ANY of these fail:
 | `/Users/gsix/quantum-geometry-in-5d-latex/etc/unicode2math.py` | The Phase 0 backtick-insertion script (the opposite of what you're doing). Reference for token classification logic. |
 | `/Users/gsix/quantum-geometry-in-5d-latex/etc/md2latex-recipe.md` | The author-facing recipe explaining the backtick convention. Will need updating to document the new dollar-sign convention after migration. |
 | `/Users/gsix/quantum-geometry-in-5d-latex/build.sh` | The 44-line build pipeline. Run this for verification. |
-| `/Users/gsix/quantum-geometry-in-5d-latex/paper1/etc/arxiv/main.pdf` | The pre-migration Paper 1 PDF (1406+ pages). Your baseline. |
-| `/Users/gsix/quantum-geometry-in-5d-latex/paper2/etc/arxiv/paper2.pdf` | The pre-migration Paper 2 PDF (60 pages). Your baseline. |
+| `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/etc/arxiv/main.pdf` | The pre-migration Paper 1 PDF (1406+ pages). Your baseline. |
+| `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper02-cosmology/etc/arxiv/paper2.pdf` | The pre-migration Paper 2 PDF (60 pages). Your baseline. |
 
 ---
 

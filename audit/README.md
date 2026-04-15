@@ -8,7 +8,7 @@
 
 ## What is this?
 
-A compliance-audit home for the QG5D programme's target prizes and target venues.
+A compliance-audit home for the ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme's target prizes and target venues.
 
 Goal: for every programme paper (50+ of them) and every prize/venue (20+ of them), a clean "does this paper qualify here, and what's the gap?" answer.
 

@@ -147,7 +147,7 @@ The connection to the Riemann subspace and the operator $\hat{R}$ requires a fin
 
 ## 3.1 Identity 12 (Paper 12, Section 2)
 
-The bridge between the geometric QG5D programme and the Bost--Connes algebra is *Identity 12*, proved as a unitary equivalence in research/04:
+The bridge between the geometric ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme and the Bost--Connes algebra is *Identity 12*, proved as a unitary equivalence in research/04:
 
 **Theorem 3.1 (Identity 12, rigorous).** *Let $H_e$ be the positive-frequency Hilbert space of the QG5D e-circle (the closed span of KK modes $\{|n\rangle_e : n \in \mathbb{N}^*\}$ on $S^1_R/\mathbb{Z}_2$) and $H_1^{(\mathbb{N}^*)}$ the $\mathbb{N}^*$-labelled subspace of the GNS Hilbert space at $\omega_1$. There exists a unitary*
 

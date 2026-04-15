@@ -53,7 +53,7 @@ Topologically: bouquet (wedge sum) of six rings at QG5D.
 
 ### Branch A — Quantum (`branch-a-quantum/`)
 
-- **Source**: `paper1/PROOF-CHAIN.md` Branch A (Paper 1 §3-§4, §9)
+- **Source**: `integers/paper01-qg5d/PROOF-CHAIN.md` Branch A (Paper 1 §3-§4, §9)
 - **Items**: 5 geometric interpretations (superposition, entanglement, momentum, spin, measurement) + 4 derivations (Born rule, Aharonov-Bohm, spin-statistics, Bell)
 - **Attack pattern**: P1 (Geometric Reinterpretation) — "restore the e-circle, the mystery dissolves"
 - **Capacitor priority**: GEOM↔QFT, SPEC↔GEOM
@@ -62,7 +62,7 @@ Topologically: bouquet (wedge sum) of six rings at QG5D.
 
 ### Branch B — Gravity (`branch-b-gravity/`)
 
-- **Source**: `paper1/PROOF-CHAIN.md` Branch B (Paper 1 §6-§7, Appendices J-K)
+- **Source**: `integers/paper01-qg5d/PROOF-CHAIN.md` Branch B (Paper 1 §6-§7, Appendices J-K)
 - **Items**: Universal Epstein Vanishing K.1 + BPHZ K.3 + Goroff-Sagnotti R³=0 + KK spectral gap
 - **Attack pattern**: P5 (Zeta Regularization) — "KK sums zeta-regularize; divergences factorize"
 - **Capacitor priority**: SPEC↔GEOM, HOM↔ATOP
@@ -71,7 +71,7 @@ Topologically: bouquet (wedge sum) of six rings at QG5D.
 
 ### Branch C — Cosmology (`branch-c-cosmology/`)
 
-- **Source**: `paper2/` and `paper1/PROOF-CHAIN.md` Branch C
+- **Source**: `integers/paper02-cosmology/` and `integers/paper01-qg5d/PROOF-CHAIN.md` Branch C
 - **Items**: 10 predictions (dark energy, ν masses, kinetic mixing, Ω_DM/Ω_b, H₀, S₈, N_eff, w, short-range gravity, 3 generations)
 - **Attack pattern**: P3 (Scale-Setting) — "identify the scale; derive from 5D radius"
 - **Capacitor priority**: PROB↔GEOM, SPEC↔GEOM
@@ -80,7 +80,7 @@ Topologically: bouquet (wedge sum) of six rings at QG5D.
 
 ### Branch D — CBB System (`branch-d-cbb/`)
 
-- **Source**: `paper12/27-anchor-document.md` and `paper1/PROOF-CHAIN.md` Branch D
+- **Source**: `integers/paper12-cbb-system/27-anchor-document.md` and `integers/paper01-qg5d/PROOF-CHAIN.md` Branch D
 - **Items**: 5 axioms (Spectral H_R, Criticality β=1, Geometric M_geom, Bridge β_k, Closure) + operator dictionary + 3 sectors (spectral, geometric, interface) + bridge family at k ∈ {2,3,4,6}
 - **Attack pattern**: P4 (Topological Rigidity) — "5 axioms form rigid structure; decomposition deepens each"
 - **Capacitor priority**: OA↔AG (BC-KMS), SPEC↔OA (Tomita-Takesaki), OA↔ERG (ergodic)
@@ -90,7 +90,7 @@ Topologically: bouquet (wedge sum) of six rings at QG5D.
 
 ### Branch E — 36 Pins (`branch-e-pins/`)
 
-- **Source**: `paper12/research/23-framework-predictions-master-table.md` and `paper1/PROOF-CHAIN.md` Branch E
+- **Source**: `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` and `integers/paper01-qg5d/PROOF-CHAIN.md` Branch E
 - **Items**: 36 sub-percent experimental predictions with operator-dictionary formulas
 - **Attack pattern**: P3 + P4 (Scale + Rigidity) — "each pin is a product of scale (from 5D radius) and rigidity (from CBB axioms)"
 - **Capacitor priority**: DUAL-CHECK primitive; PIN-PRESERVATION enforced
@@ -163,7 +163,7 @@ All three feed the **same Zenodo priority release**. The outer ring gets wide co
 ### Phase 1 — Bootstrap (same for all 5 branches)
 
 For each branch:
-1. Extract the branch's items from `paper1/PROOF-CHAIN.md` (or `paper2/`, `paper12/`, etc.)
+1. Extract the branch's items from `integers/paper01-qg5d/PROOF-CHAIN.md` (or `integers/paper02-cosmology/`, `integers/paper12-cbb-system/`, etc.)
 2. Create `proof-chain/item-NN-<short-name>/PROOF-CHAIN.md` per item
 3. Record: source reference, current status (most are PROVED), framework dependents, cross-cut to e-circle faces
 

@@ -398,9 +398,9 @@ regex engine drives both a lexer and a search-and-replace optimizer.
 | **Constant folding** | P1: Geometric Reinterpretation | Replace a complex 4D expression with a simpler higher-dim geometric constant. The 4D non-perturbative mass gap folds to mu_1 >= 6/r_3^2 -- a single number from the radius. |
 | **CSE** | P2: Holonomy Correspondence | Recognize shared spectral data across formulas. gamma_8 appears in m_t, m_tau, m_mu, m_d -- the SU(3) adjoint datum computed once and reused. |
 | **Strength reduction** | P3: Casimir Scale-Setting | Replace an expensive scale (Lambda_QCD via RG running) with a geometric formula: sigma = (3 g_3^2)/(8 pi^2 r_3^2), determined by the single radius r_3. |
-| **DCE** | P4: Topological Rigidity | Remove topologically forbidden terms. theta-QCD is dead code (pi_4(SU(3)) = 0 in 5D). CC radiative corrections are dead (c_2 is integer, no continuous deformation). |
+| **DCE** | P4: Topological Rigidity | Remove topologically forbidden terms. theta-QCD is dead code (pi_4(SU(3)) = 0 in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->). CC radiative corrections are dead (c_2 is integer, no continuous deformation). |
 | **Overflow handling** | P5: Zeta Regularization | Make divergent sums finite. The KK sum Sum n^3 overflows; P5 replaces it with zeta(-3) = 1/120 via analytic continuation. 1 + 2*zeta(0) = 0 kills the leading divergence. |
-| **Decompilation** | P6: Projection Diagnosis | Reverse a lossy projection. The 4D mass gap "can't be derived perturbatively" -- P6 inlines the 5D source where it is a geometric fact (positive Ricci curvature). |
+| **Decompilation** | P6: Projection Diagnosis | Reverse a lossy projection. The 4D mass gap "can't be derived perturbatively" -- P6 inlines the ~~5D source~~ M⁵ source<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D source" → "M⁵ source" --> where it is a geometric fact (positive Ricci curvature). |
 
 The LOCK verification adds a META-OPTIMIZATION: every formula is
 checked against independent derivations. A second derivation confirms

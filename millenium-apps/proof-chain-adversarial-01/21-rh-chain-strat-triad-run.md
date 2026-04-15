@@ -6,7 +6,7 @@
 *If Phase 1 lands Tier 2 (capacitor grew, CCM conditional): Phase 2 includes Tier 1 CCM verification as mandatory critical path.*
 *If Phase 1 lands Tier 3 (LOCK confirmed): Phase 2 treats CCM as load-bearing, runs strat-triad on internal layers + Tier 1 CCM verification with the LOCK anatomy inherited.*
 
-*The path below (`paper13-rh/strategy/30-chain-strat-triad-brief.md`) is the intended location. DO NOT invoke this run file until that brief has been drafted.*
+*The path below (`solutions-with-prize/paper13-rh/strategy/30-chain-strat-triad-brief.md`) is the intended location. DO NOT invoke this run file until that brief has been drafted.*
 
 ---
 
@@ -20,7 +20,7 @@ the **strategic triad** extension is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/12-prf-chain-advr-strat-triad.md`
 
 the run **brief** (deliverable) is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/strategy/30-chain-strat-triad-brief.md`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/strategy/30-chain-strat-triad-brief.md`
 
 the **toolkit** for this run is
 `/Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/08-framework-tools.md`
@@ -32,4 +32,4 @@ the **north star** for this programme is
 `/Users/gsix/quantum-geometry-in-5d-latex/publishing/strategy.md`
 
 the run **output directory** is
-`/Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/chain-strat-triad`
+`/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/chain-strat-triad`

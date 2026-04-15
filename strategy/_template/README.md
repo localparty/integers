@@ -24,7 +24,7 @@ Every one of these gets the **same protocol**. What varies is only **six paramet
 Every projection-audit target customizes these:
 
 1. **`{{SHAPE_NAME}}`** — the target's name (`lindelof`, `qg5d`, `e-circle`, `bouquet`, `p-A-quantum`, etc.)
-2. **`{{PAPER_REFERENCE}}`** — path to the live proof-chain (`paper45-lindelof/PROOF-CHAIN.md`, `paper1/PROOF-CHAIN.md`, `paper60`, etc.)
+2. **`{{PAPER_REFERENCE}}`** — path to the live proof-chain (`solutions/paper45-lindelof/PROOF-CHAIN.md`, `integers/paper01-qg5d/PROOF-CHAIN.md`, `paper60`, etc.)
 3. **`{{SOURCE_OF_REQUIREMENTS}}`** — one of four classes:
    - `CLAY-OFFICIAL` — the target is a Clay Millennium Prize problem; requirements from the Clay PDF (Bombieri, Wiles, Cook, Deligne, Fefferman, Jaffe-Witten)
    - `COMMUNITY-STANDARD` — the target is a widely-studied conjecture; requirements from community-accepted formulation (e.g., "Lindelöf: ζ(1/2 + it) = O(t^ε) for all ε > 0")

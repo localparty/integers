@@ -71,7 +71,7 @@ The Robustness-Circle Theorem is not a slogan. It is a mathematical claim with f
 
 Each conditional C_j must be expressed as a statement about the quintuple C = (H_R, R-hat, omega_1, M_geom, {beta_k}) or its derived structures. Concretely:
 
-- **H4** (Yang-Mills): the transfer matrix T built from the KK tower of the e-circle has an analytic continuation that matches non-perturbative Schwinger-function asymptotics. This is a statement about the spectral data of R-hat composed with the KK decomposition of the 5D metric.
+- **H4** (Yang-Mills): the transfer matrix T built from the KK tower of the e-circle has an analytic continuation that matches non-perturbative Schwinger-function asymptotics. This is a statement about the spectral data of R-hat composed with the KK decomposition of the ~~5D metric~~ M⁵ metric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D metric" → "M⁵ metric" -->.
 
 - **CCM** (Riemann Hypothesis): there exist self-adjoint operators D_N on H_R whose spectra approximate the Riemann zeros, with Hurwitz-uniform convergence. This is a statement about the existence of specific operators in the BC algebra's enveloping von Neumann algebra.
 

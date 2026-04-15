@@ -1,6 +1,6 @@
 # paper12 — Riemann zeros → physics transposition programme
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper12/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

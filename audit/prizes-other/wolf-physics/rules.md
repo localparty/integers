@@ -4,7 +4,7 @@ See `../wolf-mathematics/rules.md`. Identical rule structure (nomination, eligib
 
 **Rotation note:** Physics is one of the five rotating fields (Physics, Medicine, Mathematics, Chemistry, Arts). Verify the year's available field via https://wolffund.org.il/the-wolf-prize/call-for-proposal/.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Paper 2 (cosmology, PUBLISHED) and Papers 3-7 (5D physics) are breakthrough-candidate material.
 - Paper 1 (QG5D foundation) is the flagship.
 - Same no-self-nomination, invited-nominator constraint as the mathematics prize.

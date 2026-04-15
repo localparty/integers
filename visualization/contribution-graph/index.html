@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contribution Graph &mdash; The Programme's Gift Back to the Field</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="root">
+  <header>
+    <h1>Contribution Graph</h1>
+    <p class="tagline">
+      Per vertex, three pillars. Per pillar, what's new.
+      <span class="subtagline">COMPLY &middot; INDEPENDENT &middot; CONTRIBUTE.</span>
+    </p>
+  </header>
+
+  <main>
+    <section id="stage">
+      <div id="canvas-holder">
+        <svg id="ring-svg" viewBox="-500 -500 1000 1000"
+             xmlns="http://www.w3.org/2000/svg"
+             preserveAspectRatio="xMidYMid meet"
+             aria-label="Contribution ring"></svg>
+        <div id="hud">
+          <span id="hud-label">hover a vertex</span>
+        </div>
+        <div id="tooltip" class="tooltip" hidden></div>
+      </div>
+
+      <div id="legend">
+        <strong>Legend</strong>
+        <ul>
+          <li><span class="swatch" style="background:#475569"></span>
+              <b>COMPLY</b> &mdash; what the prize requires (Pillar A baseline)</li>
+          <li><span class="swatch" style="background:#fbbf24"></span>
+              <b>INDEPENDENT</b> &mdash; what we lifted (Pillar B, PAC primitives)</li>
+          <li><span class="swatch" style="background:#7dd3fc"></span>
+              <b>CONTRIBUTE</b> &mdash; what we gave back (Pillar C, harden externals)</li>
+          <li><span class="swatch" style="background:#a78bfa"></span>
+              <b>BEYOND</b> &mdash; cross-Clay theorems (bonus)</li>
+          <li><span class="swatch" style="background:#f472b6"></span>
+              <b>cross-cut chord</b> &mdash; verified shared invariant</li>
+          <li><span class="swatch" style="background:#f472b6;opacity:0.4"></span>
+              <b>cross-cut chord</b> &mdash; speculative</li>
+          <li><span class="swatch" style="background:#27273a;border:1px dashed #555"></span>
+              <b>AUDIT PENDING</b> &mdash; brief drafted, deliverables queued</li>
+        </ul>
+        <div class="legend-actions">
+          <label><input type="checkbox" id="toggle-edges" checked> chords</label>
+          <label><input type="checkbox" id="toggle-spec" checked> speculative</label>
+          <label><input type="checkbox" id="toggle-labels" checked> labels</label>
+        </div>
+      </div>
+    </section>
+
+    <aside id="text-panel">
+      <div class="panel-head">
+        <h2 id="comparison-title">Three pillars across 25 vertices</h2>
+      </div>
+
+      <div id="programme-summary">
+        <div class="factoid"><span class="factoid-num" id="ct-vertices">0</span><span>vertices</span></div>
+        <div class="factoid"><span class="factoid-num" id="ct-mill">0</span><span>Millennium full-stack</span></div>
+        <div class="factoid"><span class="factoid-num" id="ct-edges">0</span><span>cross-cut edges</span></div>
+        <div class="factoid"><span class="factoid-num" id="ct-pending">0</span><span>audit pending</span></div>
+      </div>
+
+      <article id="comparison" hidden>
+        <div class="cmp-vertex-head">
+          <h3 id="cmp-name">&mdash;</h3>
+          <span class="cmp-status" id="cmp-status">&mdash;</span>
+        </div>
+
+        <p class="cmp-thm" id="cmp-thm"></p>
+
+        <div class="three-pillars">
+          <div class="pillar pillar-comply">
+            <header><span class="dot dot-comply"></span>COMPLY <small>(Pillar A)</small></header>
+            <ul id="comply-stats"></ul>
+            <div class="walls" id="comply-walls"></div>
+          </div>
+
+          <div class="pillar pillar-indep">
+            <header><span class="dot dot-indep"></span>INDEPENDENT <small>(Pillar B)</small></header>
+            <ul id="indep-stats"></ul>
+            <div class="primitive-bar" id="indep-prims"></div>
+            <div class="walls" id="indep-walls"></div>
+          </div>
+
+          <div class="pillar pillar-contrib">
+            <header><span class="dot dot-contrib"></span>CONTRIBUTE <small>(Pillar C)</small></header>
+            <ul id="contrib-stats"></ul>
+            <div class="externals" id="contrib-externals"></div>
+          </div>
+        </div>
+
+        <details class="cmp-extras">
+          <summary>Beyond-bonus &amp; acknowledgments</summary>
+          <ul id="cmp-beyond"></ul>
+          <div class="acks">
+            <h4>Acknowledgments (landscape candidates)</h4>
+            <ul id="cmp-acks"></ul>
+          </div>
+        </details>
+      </article>
+
+      <article id="placeholder">
+        <p class="dim">
+          Click a vertex on the ring to compare its three pillars side-by-side.
+          The Millennium six (YM, RH, BSD, P vs NP, Hodge, NS) ship a full
+          four-deliverable stack today; the rest carry brief + strategy and
+          render as <em>AUDIT PENDING</em>.
+        </p>
+
+        <div class="annot-key">
+          <h4>Annotation tags</h4>
+          <ul>
+            <li><span class="tag tag-new">NEW LEMMA</span> theorem produced by the programme</li>
+            <li><span class="tag tag-orig">ORIGINAL</span> new proof route</li>
+            <li><span class="tag tag-strg">STRENGTHENS X</span> hardening of an external</li>
+            <li><span class="tag tag-lift">LIFTED FROM PARTIAL</span> Pillar-B promotion</li>
+            <li><span class="tag tag-gift">CONTRIBUTED TO FIELD</span> external improved with attribution</li>
+          </ul>
+        </div>
+      </article>
+    </aside>
+  </main>
+
+  <footer>
+    <span>data built <code id="built-at">?</code></span>
+    <span>regenerate: <code>python3 visualization/contribution-graph/build.py</code></span>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

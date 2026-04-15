@@ -48,7 +48,7 @@ Every file referenced by the run file and its transitive dependencies exists on 
 
 ### 1.3 Wrong path reference for graph-structure file
 
-Brief 32 line 41 references `25-the-graph-structure.md` without a full path. The actual file lives at `programme/25-the-graph-structure.md`, NOT at `paper12/research/25-the-graph-structure.md`. Edge 46 (QG5D → Hilbert 6, type STRONG) is confirmed present at line 141 of the actual file.
+Brief 32 line 41 references `25-the-graph-structure.md` without a full path. The actual file lives at `programme/25-the-graph-structure.md`, NOT at `integers/paper12-cbb-system/research/25-the-graph-structure.md`. Edge 46 (QG5D → Hilbert 6, type STRONG) is confirmed present at line 141 of the actual file.
 
 **Severity: MINOR.** The file exists at a different path. A runner grepping for it would find it.
 

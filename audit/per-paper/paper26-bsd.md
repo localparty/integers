@@ -1,6 +1,6 @@
 # Paper 26 — BSD (CM, h_K = 1 slice)
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/`
 **PROOF-CHAIN:** 11/11 steps closed. Confidence 9/10. Conditional on CBB axioms.
 
 ## Claim

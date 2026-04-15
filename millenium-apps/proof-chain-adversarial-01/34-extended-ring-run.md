@@ -45,15 +45,15 @@ the run **output directory** is
 `/Users/gsix/quantum-geometry-in-5d-latex/programme/ring-traversals/traversal-07`
 
 the **ring** is the set of all 25 `PROOF-CHAIN.md` files at the top level of:
-`paper1/`, `paper08-yang-mills/`, `paper13-rh/`, `paper13b-grh/`, `paper25-hilbert-12/`,
-`paper26-bsd/`, `paper28-pvnp/`, `paper29-hodge/`, `paper30-navier-stokes/`,
-`paper31-baum-connes/`, `paper32-bgs-spectral-statistics/`,
-`paper33-goldbach/`, `paper34-twin-primes/`,
-`paper35-schanuel/`,
-`paper36-hilbert-6/`, `paper37-abc/`, `paper38-turbulence/`,
-`paper39-vp-vs-vnp/`, `paper40-odd-perfect/`,
-`paper41-collatz/`, `paper42-lehmer/`, `paper43-cramer/`,
-`paper44-sato-tate/`, `paper45-lindelof/`, `paper46-katz-sarnak/`
+`integers/paper01-qg5d/`, `solutions-with-prize/paper08-yang-mills/`, `solutions-with-prize/paper13-rh/`, `solutions/paper13b-grh/`, `solutions/paper25-hilbert-12/`,
+`solutions-with-prize/paper26-bsd/`, `solutions-with-prize/paper28-pvnp/`, `solutions-with-prize/paper29-hodge/`, `solutions-with-prize/paper30-navier-stokes/`,
+`solutions/paper31-baum-connes/`, `solutions/paper32-bgs-spectral-statistics/`,
+`solutions-with-prize/paper33-goldbach/`, `solutions/paper34-twin-primes/`,
+`solutions/paper35-schanuel/`,
+`solutions/paper36-hilbert-6/`, `solutions/paper37-abc/`, `solutions/paper38-turbulence/`,
+`solutions/paper39-vp-vs-vnp/`, `solutions/paper40-odd-perfect/`,
+`solutions-with-prize/paper41-collatz/`, `solutions/paper42-lehmer/`, `solutions/paper43-cramer/`,
+`solutions/paper44-sato-tate/`, `solutions/paper45-lindelof/`, `solutions/paper46-katz-sarnak/`
 
 **NEW for T7**: two pending vertices may be created on-demand during the traversal at their S-dual parent's edge phase:
 - `paper47-selberg/` — triggered when YM's edge fires (RESONANCE face, S-dual of CURVATURE)

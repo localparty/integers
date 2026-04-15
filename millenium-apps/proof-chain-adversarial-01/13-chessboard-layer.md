@@ -331,12 +331,12 @@ Types are REASSESSED at every traversal start based on current PROOF-CHAIN.md co
 
 ### §6.3 Hub radiation
 
-QG5D at position 1 is the HUB. It has natural correspondences to every other vertex via its `Foundation exports` section (see `paper1/PROOF-CHAIN.md`).
+QG5D at position 1 is the HUB. It has natural correspondences to every other vertex via its `Foundation exports` section (see `integers/paper01-qg5d/PROOF-CHAIN.md`).
 
 **Hub radiation protocol**:
 
 When the traversal is AT QG5D (position 1):
-1. Read `paper1/PROOF-CHAIN.md §"Foundation exports"` — the 13-row table.
+1. Read `integers/paper01-qg5d/PROOF-CHAIN.md §"Foundation exports"` — the 13-row table.
 2. For each row (other vertex V, correspondence description), check: is the capacitor cell QG5D ↔ V filled?
    - If YES → upgrade with any new findings from this traversal
    - If NO → fill it using the canonical correspondence from Foundation exports
@@ -450,7 +450,7 @@ The ring-PCA reports these statistics after each traversal. Stagnation in any of
 
 ## Appendix A — PIN-TABLE (the 36 experimental pins)
 
-The full PIN-TABLE is at `paper12/research/23-framework-predictions-master-table.md`. The runner should read that file at bootstrap and hold it in context for PIN-PRESERVATION and DUAL-CHECK operations.
+The full PIN-TABLE is at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`. The runner should read that file at bootstrap and hold it in context for PIN-PRESERVATION and DUAL-CHECK operations.
 
 **Quick reference (top 10 most-constraining pins):**
 

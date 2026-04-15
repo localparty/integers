@@ -25,7 +25,7 @@ Produce a Clay-compliance-audited RH deliverable in **bare mode only** this run.
 - Structure mirrors Bombieri §I + §III-§V requirements 1:1
 
 **C_bare. Beyond-Clay X-RAY** — `strategy/rh/deliverables/rh-beyond-bare.md`:
-- Bonus theorem skeleton (5D spectral derivation, pins, cross-Clay, GRH extension, Weil explicit formula, Montgomery-Odlyzko GUE)
+- Bonus theorem skeleton (~~5D spectral derivation~~ M⁵ spectral derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D spectral derivation" → "M⁵ spectral derivation" -->, pins, cross-Clay, GRH extension, Weil explicit formula, Montgomery-Odlyzko GUE)
 - ZERO prose, ≤ 15 pages
 
 **B_full and C_full are DEFERRED.** Do not write them this run. They are composed later by parallel agents from the 60-project reservoir once B_bare + C_bare LOCK.
@@ -198,8 +198,8 @@ Fixed 10-section structure for `strategy/rh/deliverables/rh-beyond-bare.md`:
 ```
 # RH Beyond-Clay X-Ray (BARE MODE)
 
-## §1 The 5D Geometric Derivation of Spectral Data
-[theorem statement: BC algebra emerges from 5D geometry of projected e-circle; D_∞ spectrum = {γ_n} as geometric output; citations paper1, paper60, paper61]
+## §1 The ~~5D Geometric Derivation~~ M⁵ Geometric Derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric" → "M⁵ Geometric" --> of Spectral Data
+[theorem statement: BC algebra emerges from ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> of projected e-circle; D_∞ spectrum = {γ_n} as geometric output; citations paper1, paper60, paper61]
 
 ## §2 Zero Free Parameters
 [table: parameter | value | determined by | programme citation — includes γ_1 = 14.134725…, ζ(3), AE precision 10^{-55}, CF decay ρ ≥ 4.27]
@@ -215,10 +215,10 @@ Fixed 10-section structure for `strategy/rh/deliverables/rh-beyond-bare.md`:
 [theorem statement: character-twisted D_N^χ yields GRH for primitive Dirichlet L-functions; citation paper13b; list of L-function classes: Dirichlet, automorphic over ℚ, elliptic-curve, Maass]
 
 ## §6 Weil Explicit Formula as Witness (bonus)
-[theorem statement: zero-sum ↔ prime-sum ↔ archimedean term consistency via BC algebra trace formula; citation paper12/research/102 §3.1 (Mellin duality), Bombieri §V]
+[theorem statement: zero-sum ↔ prime-sum ↔ archimedean term consistency via BC algebra trace formula; citation integers/paper12-cbb-system/research/102 §3.1 (Mellin duality), Bombieri §V]
 
 ## §7 Montgomery-Odlyzko GUE Match (bonus)
-[theorem statement: pair correlation of {γ_n} matches GUE eigenvalue spacing; D_∞ random-matrix character via 5D construction; citations (Montgomery 1973, Odlyzko supercomputer data, Katz-Sarnak)]
+[theorem statement: pair correlation of {γ_n} matches GUE eigenvalue spacing; D_∞ random-matrix character via ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> construction; citations (Montgomery 1973, Odlyzko supercomputer data, Katz-Sarnak)]
 
 ## §8 Computed Zeros (numerical)
 [value for γ_1, γ_2, γ_3; error bar vs CCM operator D_N; experimental comparison vs Odlyzko tables]
@@ -297,7 +297,7 @@ Transparency here is what makes §5d compliance work. Silence here fails §5d.
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/rh/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper13-rh/PROOF-CHAIN.md` — the 6-layer + 3-supporting live chain
+2. `solutions-with-prize/paper13-rh/PROOF-CHAIN.md` — the 6-layer + 3-supporting live chain
 3. Bombieri "Problems of the Millennium: the Riemann Hypothesis" (Clay official problem description, 11 pages) — extract via summary in strategy doc §1 and §3
 4. Clay Rules §4-§8 (summary in strategy doc §2)
 5. `strategy/ym/00-millenium-strategy.md` + `strategy/ym/ym-millenium-brief.md` (sibling bundle; template)
@@ -340,12 +340,12 @@ Write to `strategy/rh/deliverables/rh-clay-bare.md`.
 ### Step 5 — Synthesize C_bare
 
 Walk the 10-section structure. Draw from:
-- Paper 1 (QG5D hub, 5D geometric foundation)
-- Paper 61 (projections — the 5D geometric derivation of BC algebra)
+- Paper 1 (QG5D hub, ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> foundation)
+- Paper 61 (projections — the ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation of BC algebra)
 - Paper 60 (e-circle geometry)
-- Programme 36-pins table (search `paper12/research/23-framework-predictions-master-table.md`)
+- Programme 36-pins table (search `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`)
 - Paper 13b (GRH character-twisted extension)
-- paper12/research/102 (Mellin duality H_BC = log T_BC; Weil explicit formula anchor)
+- integers/paper12-cbb-system/research/102 (Mellin duality H_BC = log T_BC; Weil explicit formula anchor)
 - Cross-Clay x-ray cross-cuts (from ym x-ray §7, paper26-bsd, paper28-pvnp PROOF-CHAINs)
 
 Enforce bare discipline. Zero prose.
@@ -418,7 +418,7 @@ the strategy document is
 strategy/rh/00-millenium-strategy.md
 
 the live RH proof chain is
-paper13-rh/PROOF-CHAIN.md
+solutions-with-prize/paper13-rh/PROOF-CHAIN.md
 
 the sibling YM bundle (template) is
 strategy/ym/00-millenium-strategy.md
@@ -480,21 +480,21 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/r
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/rh/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/rh/rh-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/PROOF-CHAIN.md (6-layer + 3-supporting live chain)
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/PROOF-CHAIN.md (6-layer + 3-supporting live chain)
 4. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ym/00-millenium-strategy.md (sibling bundle — template)
 5. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ym/ym-millenium-brief.md (sibling bundle — template)
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for 5D geometric derivation of BC algebra)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/ (for 5D derivation bonus)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation of BC algebra)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/ (for ~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> bonus)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper60-e-circle-geometry/ (e-circle foundation)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (36 pins table)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/102 (Mellin duality; Weil explicit formula anchor)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper13b* (GRH character twist — if present; else search paper13-rh/ for GRH notes)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/PROOF-CHAIN.md (for cross-Clay YM↔RH spectral-gap connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/PROOF-CHAIN.md (for cross-Clay RH↔BSD BC-algebra connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/PROOF-CHAIN.md (for cross-Clay RH↔PvNP Q5-RIEMANN connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (36 pins table)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/102 (Mellin duality; Weil explicit formula anchor)
+- /Users/gsix/quantum-geometry-in-5d-latex/paper13b* (GRH character twist — if present; else search solutions-with-prize/paper13-rh/ for GRH notes)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md (for cross-Clay YM↔RH spectral-gap connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md (for cross-Clay RH↔BSD BC-algebra connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md (for cross-Clay RH↔PvNP Q5-RIEMANN connection)
 - /Users/gsix/quantum-geometry-in-5d-latex/strategy/ccm-verification/ (CCM W1 bypass-route citation)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor)

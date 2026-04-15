@@ -1,6 +1,6 @@
 # paper10 — Scheme-independence
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper10/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper10-scheme-independence/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

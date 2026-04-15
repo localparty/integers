@@ -1,6 +1,6 @@
 # paper11 — Cosmological constant discovery + all-orders inductive proof
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper11/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper11b-sm-gauge-entanglement/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

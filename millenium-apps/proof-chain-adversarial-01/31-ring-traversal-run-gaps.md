@@ -2,7 +2,7 @@
 
 *A recursive audit of the 5-layer instruction stack for the ring-traversal PCA run, before first invocation. Date: 2026-04-13. Audit by: Claude Opus 4.6.*
 
-*Scope: every file listed in `30-ring-traversal-run.md`, read end-to-end, plus the 14 target PROOF-CHAIN.md files verified to exist and the referenced PIN-TABLE at `paper12/research/23-framework-predictions-master-table.md` verified to exist. The output directory `programme/ring-traversals/` does **not** exist yet — traversal-01 will be a fresh start.*
+*Scope: every file listed in `30-ring-traversal-run.md`, read end-to-end, plus the 14 target PROOF-CHAIN.md files verified to exist and the referenced PIN-TABLE at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` verified to exist. The output directory `programme/ring-traversals/` does **not** exist yet — traversal-01 will be a fresh start.*
 
 ---
 
@@ -20,7 +20,7 @@
 | 8 | Capacitor | `millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md` | read (domain index + Tier 1 + priority cells) |
 | 9 | North star | `publishing/strategy.md` | read |
 | 10 | 14 PROOF-CHAIN.md files | `paper{1,08-yang-mills,13-rh,13b-grh,25-hilbert-12,26-bsd,28-pvnp,29-hodge,30-navier-stokes,31-baum-connes,32-bgs-spectral-statistics,33-goldbach,34-twin-primes,35-schanuel}/PROOF-CHAIN.md` | all 14 present ✓ |
-| 11 | PIN-TABLE | `paper12/research/23-framework-predictions-master-table.md` | present ✓ |
+| 11 | PIN-TABLE | `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` | present ✓ |
 | 12 | Output dir | `programme/ring-traversals/` | does NOT exist (fresh start) |
 
 ---
@@ -188,8 +188,8 @@ But the ring has 14 vertices (QG5D through Schanuel). The arithmetic (83 = YM 17
 ### M-2. Duplicate paper directories in the repo
 
 `/Users/gsix/quantum-geometry-in-5d-latex/` contains both:
-- `paper27-hodge/` AND `paper29-hodge/` (invocation uses paper29)
-- `paper27-navier/` AND `paper30-navier-stokes/` (invocation uses paper30)
+- `paper27-hodge/` AND `solutions-with-prize/paper29-hodge/` (invocation uses paper29)
+- `paper27-navier/` AND `solutions-with-prize/paper30-navier-stokes/` (invocation uses paper30)
 
 The invocation is unambiguous, but an Author doing a Glob for Hodge-related files could surface both. Low-priority: either delete the old `paper27-*/` directories or add a note to the brief that paper29/paper30 are canonical.
 
@@ -248,7 +248,7 @@ Worth recording:
 - **Brief §8.1 explicitly overrides PCA §P.2** (`chain/chain-state.md` mandate) with ring-mode state-management architecture. This is the *right* way to override; other overrides in the stack (e.g., A-1) should follow this pattern.
 - **Brief §8.2 already handles output-directory resume semantics** — no data loss on interruption.
 - **Capacitor has 44+ filled cells** across Tier 1 + Tier 2, including the critical ring-edge SPEC ↔ ANT, OA ↔ AG, and SPEC ↔ OA cells. Traversal-1 has real material to work with.
-- **The PIN-TABLE referenced by chessboard Appendix A exists** at `paper12/research/23-framework-predictions-master-table.md`.
+- **The PIN-TABLE referenced by chessboard Appendix A exists** at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`.
 
 The stack is *close* to ready. The blockers above are surface-level fixes (1 paragraph + 1 table + 3 decisions), not structural redesigns.
 

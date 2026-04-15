@@ -1,6 +1,6 @@
 # paper46-katz-sarnak — Katz-Sarnak symmetry-type
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper46-katz-sarnak/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper46-katz-sarnak/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

@@ -61,7 +61,7 @@ Authors and Critics should use the RING-MODE names in their outputs; the runner'
 
 ### 0.3 Canonical paper locations
 
-The 14 ring vertices point to canonical paper directories under `/Users/gsix/quantum-geometry-in-5d-latex/`. NOTE: older directories `paper27-hodge/` and `paper27-navier/` exist and contain historical research — they are NOT canonical. The ring uses `paper29-hodge/` and `paper30-navier-stokes/` (the scaffolds built in this session). If a Glob surfaces `paper27-*/`, treat those as archive only; do not update them.
+The 14 ring vertices point to canonical paper directories under `/Users/gsix/quantum-geometry-in-5d-latex/`. NOTE: older directories `paper27-hodge/` and `paper27-navier/` exist and contain historical research — they are NOT canonical. The ring uses `solutions-with-prize/paper29-hodge/` and `solutions-with-prize/paper30-navier-stokes/` (the scaffolds built in this session). If a Glob surfaces `paper27-*/`, treat those as archive only; do not update them.
 
 ### 0.4 Ring mode is CONTINUOUS-RUN
 
@@ -102,20 +102,20 @@ The ring order is determined by EDGE STRENGTH — start with the strongest edges
 
 | Position | Vertex | Paper directory | Incoming edge (from previous) | Edge status |
 |---|---|---|---|---|
-| 1 | **QG5D** (hub) | paper1/ | ← Schanuel (algebraic independence → CBB axioms) | SPECULATIVE |
-| 2 | **RH** | paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
-| 3 | **GRH** | paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
-| 4 | **BSD** | paper26-bsd/ | ← GRH (Dirichlet L-functions → Hecke L) | PARTIAL |
-| 5 | **H12** | paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
-| 6 | **YM** | paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
-| 7 | **NS** | paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
-| 8 | **Hodge** | paper29-hodge/ | ← NS (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
-| 9 | **Baum-Connes** | paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
-| 10 | **PvNP** | paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
-| 11 | **BGS** | paper32-bgs-spectral-statistics/ | ← PvNP (spectral statistics of modular flow) | CANDIDATE |
-| 12 | **Twin Primes** | paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
-| 13 | **Goldbach** | paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
-| 14 | **Schanuel** | paper35-schanuel/ | ← Goldbach (additive primes → algebraic independence) | SPECULATIVE |
+| 1 | **QG5D** (hub) | integers/paper01-qg5d/ | ← Schanuel (algebraic independence → CBB axioms) | SPECULATIVE |
+| 2 | **RH** | solutions-with-prize/paper13-rh/ | ← QG5D (zeros ARE eigenvalues) | STRONG |
+| 3 | **GRH** | solutions/paper13b-grh/ | ← RH (character-twisted extension) | STRONG |
+| 4 | **BSD** | solutions-with-prize/paper26-bsd/ | ← GRH (Dirichlet L-functions → Hecke L) | PARTIAL |
+| 5 | **H12** | solutions/paper25-hilbert-12/ | ← BSD (class fields from L-functions) | PARTIAL |
+| 6 | **YM** | solutions-with-prize/paper08-yang-mills/ | ← H12 (KMS states → gauge structure) | PARTIAL |
+| 7 | **NS** | solutions-with-prize/paper30-navier-stokes/ | ← YM (gradient flow transfer) | CANDIDATE |
+| 8 | **Hodge** | solutions-with-prize/paper29-hodge/ | ← NS (PDE regularity → algebraic cycle regularity) | SPECULATIVE |
+| 9 | **Baum-Connes** | solutions/paper31-baum-connes/ | ← Hodge (K-theory ↔ algebraic cycles) | CANDIDATE |
+| 10 | **PvNP** | solutions-with-prize/paper28-pvnp/ | ← Baum-Connes (K-theory of polymorphism algebra) | SPECULATIVE |
+| 11 | **BGS** | solutions/paper32-bgs-spectral-statistics/ | ← PvNP (spectral statistics of modular flow) | CANDIDATE |
+| 12 | **Twin Primes** | solutions/paper34-twin-primes/ | ← BGS (GUE small-gap tail → prime gaps) | CANDIDATE |
+| 13 | **Goldbach** | solutions-with-prize/paper33-goldbach/ | ← Twin Primes (prime gaps → additive structure) | SPECULATIVE |
+| 14 | **Schanuel** | solutions/paper35-schanuel/ | ← Goldbach (additive primes → algebraic independence) | SPECULATIVE |
 
 After vertex 14 (Schanuel), the ring closes: the outgoing edge Schanuel → QG5D is "algebraic independence of eigenvalues → CBB axioms." This completes one full traversal.
 
@@ -181,7 +181,7 @@ Edge `N → N+1` is filled by looking up the capacitor cell at the intersection 
 
 ## 3. What happens at each vertex (the vertex protocol)
 
-**Hub-special-case protocol (position 1 = QG5D only)**: QG5D has a MODIFIED vertex protocol per `paper1/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` — PIN VALIDATION instead of EXCISE/CONSTRUCT (the 22 theorems are all PROVED; there are no weak links), plus hub radiation (chessboard §6.3) in the edge phase filling 12 outgoing edges (1 ring-next + 11 chords). The generic §3.1-§3.4 protocol below applies to vertices 2-14; QG5D's visit uses paper1's special-case procedure. The runner reads paper1's §"PCA traversal behavior at QG5D" at QG5D's read phase as context. **Paper 1 is a TREE (4 postulates → 22 theorems → 13 downstream chains), not a linear chain — "the chain" language in §3.1-§3.4 misfits at QG5D and should be read as "the tree root."**
+**Hub-special-case protocol (position 1 = QG5D only)**: QG5D has a MODIFIED vertex protocol per `integers/paper01-qg5d/PROOF-CHAIN.md §"PCA traversal behavior at QG5D"` — PIN VALIDATION instead of EXCISE/CONSTRUCT (the 22 theorems are all PROVED; there are no weak links), plus hub radiation (chessboard §6.3) in the edge phase filling 12 outgoing edges (1 ring-next + 11 chords). The generic §3.1-§3.4 protocol below applies to vertices 2-14; QG5D's visit uses paper1's special-case procedure. The runner reads paper1's §"PCA traversal behavior at QG5D" at QG5D's read phase as context. **Paper 1 is a TREE (4 postulates → 22 theorems → 13 downstream chains), not a linear chain — "the chain" language in §3.1-§3.4 misfits at QG5D and should be read as "the tree root."**
 
 ### 3.1 Read phase (~5 min)
 

@@ -1,6 +1,6 @@
 # YM Compliance Map — 20 layers × 7 Jaffe-Witten requirements
 
-*Snapshot: paper08-yang-mills/PROOF-CHAIN.md + strategy/x-ray/proof-chain/ym/X-RAY.md*
+*Snapshot: solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md + strategy/x-ray/proof-chain/ym/X-RAY.md*
 *Date: 2026-04-14 (run-02, PILOT Output A only)*
 *Author: G Six and Claude Opus 4.6*
 
@@ -20,7 +20,7 @@ PROOF-CHAIN.md lists 18 primary links (L1–L18) with 2 sub-links (L1b, L10b); t
 - `p8F.N` = §F.N of Appendix F (area law)
 - `p8I.3` = Appendix I.3 (N-dependence tracking)
 - `p1§N` = paper1 PROOF-CHAIN or §N
-- `h4CB/cyc5` = paper08-yang-mills/h4-capacitor-bypass/cycle-5-final-synthesis.md (2026-04-13)
+- `h4CB/cyc5` = solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/cycle-5-final-synthesis.md (2026-04-13)
 - `cap§N` = millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md §N
 
 ## Verdict codes

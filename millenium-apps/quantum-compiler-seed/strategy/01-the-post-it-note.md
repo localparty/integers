@@ -332,7 +332,7 @@ Six Patterns classify it:
 
 The lexer does not compute anything. It classifies. It takes the
 natural-language description "mass of the top quark" and produces
-tokens: `GEOMETRIC` (mass is a geometric quantity in 5D), `PHASE`
+tokens: `GEOMETRIC` (mass is a geometric quantity in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->), `PHASE`
 (Yukawa coupling is a holonomy), `SCALE` (set by KK Casimir energy),
 `TOPOLOGICAL` (generation number is topological). These tokens feed
 into the parser.

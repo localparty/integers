@@ -208,7 +208,7 @@ reduction. This integration produces the circumference factor 1/(2pi).
 normalization.
 
 **Why 2pi specifically.** The factor 1/(2*pi) is the circumference of
-the unit circle S^1. In the 5D-to-4D reduction, every field that
+the unit circle S^1. In the ~~5D-to-4D~~ M⁵-to-4D<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D-to-4D" → "M⁵-to-4D" --> reduction, every field that
 carries SU(3) colour charge is integrated over S^1. The integration
 measure d(theta)/(2pi) produces the normalization. This is a geometric
 constant, not a free parameter. If the compact dimension had a

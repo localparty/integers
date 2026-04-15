@@ -39,7 +39,7 @@ the commutant swap and fixing the cyclic-separating vector.
 
 ## The programme's S-duality
 
-The QG5D programme identified (Paper 60 §21, `strategy/the-picture-of-the-ecircle.md`)
+The ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme identified (Paper 60 §21, `strategy/the-picture-of-the-ecircle.md`)
 the Riemann zeta functional equation as a specific symmetry of the
 BC-algebra torus. We briefly recall that identification; §12's novelty
 is to lift it from the partition-function level to the Hilbert-space level.
@@ -253,6 +253,6 @@ Bost-Connes 1995, *Hecke algebras, type III factors and phase
 transitions*, Selecta Math. 1 (partition function of BC system = $\zeta$).
 Connes-Marcolli 2008, *Noncommutative Geometry, Quantum Fields and
 Motives*, Ch. 3 (BC system, KMS states, analytic continuation).
-QG5D programme: `paper60-the-geometry-of-the-circle/21-the-s-duality.md`
+~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme: `paper60-the-geometry-of-the-circle/21-the-s-duality.md`
 (the S-duality diagnostic); `strategy/the-picture-of-the-ecircle.md`
 (the ten-face picture, the torus interpretation).

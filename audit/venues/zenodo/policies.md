@@ -40,7 +40,7 @@
 - Each release gets a DOI; a "concept DOI" represents the software.
 - Setup via https://zenodo.org/account/settings/github/.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **Zenodo is the FIRST step in the publication cascade** (strategy/ym §9).
 - Establishes priority timestamp.
 - DOI is citable.

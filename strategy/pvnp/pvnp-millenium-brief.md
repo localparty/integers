@@ -282,7 +282,7 @@ Format: `(paperNN-short §X Theorem T.Y)` or `(paperNN-short Eq. (Z.W))`.
 
 Examples:
 - `[M_Bool^NP : M_Bool^P] > 1` (paper28-pvnp §4.4 Theorem PNP.1)
-- `λ ≥ 2^{2/9}` (paper28-pvnp/preprint §2 Theorem UA1; Step 2)
+- `λ ≥ 2^{2/9}` (solutions-with-prize/paper28-pvnp/preprint §2 Theorem UA1; Step 2)
 - `Bulatov-Zhuk forward (¬Taylor ⇒ NPC)` (Bulatov 2017 / Zhuk 2020; cited paper28 preprint Step 20)
 
 Uncited claim = FAIL. Arbiter returns B_bare for revision.
@@ -306,7 +306,7 @@ W1 must be explicitly disclosed in B_bare §11 and §16 as NAMED WALL. Required 
 - **Status**: OPEN-BUT-ADDRESSED
 - **Forward direction**: UNCONDITIONAL (Path B, Steps 1-10, 6/6 Schaefer computationally verified)
 - **Backward bypass route**: Route C via CP-1 (Laca-Raeburn dilation → Feldman-Moore groupoid → Jones-Schmidt strong ergodicity → Marrakchi 2018 fullness)
-- **Bypass citation**: paper28-pvnp/preprint Steps 11-15 + CP-1; independent 6-Critic verification (Wave 1, 2 SURVIVED / 3 WEAKENED repaired / 1 BROKEN on Route D only)
+- **Bypass citation**: solutions-with-prize/paper28-pvnp/preprint Steps 11-15 + CP-1; independent 6-Critic verification (Wave 1, 2 SURVIVED / 3 WEAKENED repaired / 1 BROKEN on Route D only)
 - **Aggregate confidence**: p = 0.82 (Part (i) 0.85 × Part (ii) 0.90)
 - **Alternate bypass routes enumerated** (A-G from paper28 PROOF-CHAIN.md): (A) direct spectral gap [highest priority if C fails]; (B) universal-algebraic; (D) Popa cocycle superrigidity; (E) Kazhdan/Haagerup bridge; (F) trinity dictionary inversion; (G) conditional fallback
 - **Effect if CP-1 audit regresses**: Route A (direct spectral gap bypass) takes over; does not invalidate chain; Part (i) remains UNCONDITIONAL
@@ -329,9 +329,9 @@ Additional translation-layer disclosure (DELTA 10 continued):
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/pvnp/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper28-pvnp/PROOF-CHAIN.md` — the 6-link live chain (top-level)
-3. `paper28-pvnp/preprint/PROOF-CHAIN.md` — the 23-node expanded chain (Part (i) Path B + Part (ii) Route C + Corollary)
-4. `paper28-pvnp/draft/00-table-of-contents.md` — the 7-section paper skeleton
+2. `solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md` — the 6-link live chain (top-level)
+3. `solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md` — the 23-node expanded chain (Part (i) Path B + Part (ii) Route C + Corollary)
+4. `solutions-with-prize/paper28-pvnp/draft/00-table-of-contents.md` — the 7-section paper skeleton
 5. Cook §1-§3 (the Clay PDF; summary in strategy doc §1)
 6. Clay Rules §4-§8 (summary in strategy doc §2)
 
@@ -449,8 +449,8 @@ the strategy document is
 strategy/pvnp/00-millenium-strategy.md
 
 the live chain files are
-paper28-pvnp/PROOF-CHAIN.md
-paper28-pvnp/preprint/PROOF-CHAIN.md
+solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md
+solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md
 
 the toolkit is
 <pca-extension>/08-framework-tools.md
@@ -505,9 +505,9 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/p
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/pvnp/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/pvnp/pvnp-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/PROOF-CHAIN.md (6-link top-level chain)
-4. /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/preprint/PROOF-CHAIN.md (23-node expanded chain)
-5. /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/draft/00-table-of-contents.md (paper skeleton)
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md (6-link top-level chain)
+4. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md (23-node expanded chain)
+5. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/draft/00-table-of-contents.md (paper skeleton)
 
 ## READ AS NEEDED
 
@@ -515,10 +515,10 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/p
 - /Users/gsix/quantum-geometry-in-5d-latex/paper17/ (entropy operator + order-counting principle)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper23/ (CBB quintuple + bridge family)
 - /Users/gsix/quantum-geometry-in-5d-latex/paper26/ (BSD transposition mechanics)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for trinity dictionary + cube-shadow)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/PROOF-CHAIN.md (for cross-Clay RH connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/PROOF-CHAIN.md (for cross-Clay YM connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper26-bsd/PROOF-CHAIN.md (for cross-Clay BSD connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for trinity dictionary + cube-shadow)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/PROOF-CHAIN.md (for cross-Clay RH connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md (for cross-Clay YM connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper26-bsd/PROOF-CHAIN.md (for cross-Clay BSD connection)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor)
 

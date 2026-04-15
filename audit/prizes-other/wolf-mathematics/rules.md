@@ -24,7 +24,7 @@ The Wolf Prize is awarded in five fields (Physics, Medicine, Mathematics, Chemis
 ## Prize amount
 $100,000 (split if multiple laureates).
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Wolf Prize rewards breakthroughs — the QG5D mass-gap / RH / BSD / PvNP programme individually qualifies.
 - Requires invited nominator.
 - Collaborative (G Six + human co-author) possible for up to 3 people.

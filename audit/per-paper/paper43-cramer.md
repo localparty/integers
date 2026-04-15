@@ -1,6 +1,6 @@
 # paper43-cramer — Cramér's Conjecture (Granville refined)
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper43-cramer/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper43-cramer/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

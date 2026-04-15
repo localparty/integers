@@ -46,7 +46,7 @@
 **Also cross-referenced but outside the per-prompt-bundle scope:**
 - `15-v5-predictions.md` (cited at §2 Signature 17 as "refutes the prediction in `15-v5-predictions.md` P5-2") — not in either directory; a v5-era file.
 - `07-changelog-v5-to-v6.md` (cited at §14.10) — not in either directory; a v5→v6 migration artifact.
-- `paper08-yang-mills/research/36-the-method.md` + `paper12/research/214-the-method-six-patterns.md` (§7) — these EXIST and are load-bearing (they ARE the 6-step inner loop). Not part of this blocker.
+- `solutions-with-prize/paper08-yang-mills/research/36-the-method.md` + `integers/paper12-cbb-system/research/214-the-method-six-patterns.md` (§7) — these EXIST and are load-bearing (they ARE the 6-step inner loop). Not part of this blocker.
 
 **Why the missing five matter**:
 
@@ -136,7 +136,7 @@ All of the following were flagged in `31-ring-traversal-run-gaps.md` and claimed
 | A-4 north star mismatch | important | `publishing/strategy.md` gains Appendix B (B.1 meta-goal, B.2 capacitor-fill target, B.3 rigidity target, B.4 per-traversal deltas, B.5 closure ladder, B.6 walk-back contract, B.7 alignment check questions) | **FIXED** |
 | A-5 closure ritual on exits | important | Brief §8.4 — ABBREVIATED / FULL / MEDIUM ritual by exit condition; explicit override of ORA §13.3 and PCA §P.9 | **FIXED** |
 | M-1 "13 vertices" typo | minor | Chessboard §3 now says "14 vertices" at both call sites (lines 131, 143) | **FIXED** |
-| M-2 duplicate paper dirs | minor | Brief §0.3 adds a paragraph noting `paper27-hodge/` and `paper27-navier/` are archive-only (canonical are `paper29-hodge/` and `paper30-navier-stokes/`); the old directories remain on disk | **DOCUMENTED, NOT DELETED** |
+| M-2 duplicate paper dirs | minor | Brief §0.3 adds a paragraph noting `paper27-hodge/` and `paper27-navier/` are archive-only (canonical are `solutions-with-prize/paper29-hodge/` and `solutions-with-prize/paper30-navier-stokes/`); the old directories remain on disk | **DOCUMENTED, NOT DELETED** |
 | M-3 hardcoded traversal-01 | minor | Brief §8.2 documents the NN-swap for subsequent traversals + resume semantics | **DOCUMENTED** |
 | M-4 edge ownership vs hub | minor | Brief §2.1 adds an "Edge ownership (disambiguation)" subsection with the ring-edges vs chord-edges split | **FIXED** |
 
@@ -155,7 +155,7 @@ All twelve items from the prior audit are either fixed or adequately documented.
 - **Brief §8.1 explicitly overrides PCA §P.2** (`chain/chain-state.md` mandate) with ring-mode state-management architecture. The override is the *right* way — ring-mode tracks state across 14 in-situ PROOF-CHAIN.md files rather than one unified chain-state file.
 - **Brief §8.2 handles output-directory resume semantics** — no data loss on interruption.
 - **Capacitor has 44 filled cells** across Tier 1 + Tier 2, including the ring-edge SPEC ↔ ANT, OA ↔ AG, and SPEC ↔ OA cells. Traversal-1 has real material to work with.
-- **The PIN-TABLE** referenced by chessboard Appendix A exists at `paper12/research/23-framework-predictions-master-table.md`.
+- **The PIN-TABLE** referenced by chessboard Appendix A exists at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`.
 - **Brief § status dictionary (§0.2)** covers all five partially-overlapping taxonomies identified in the prior audit. A runner who reads §0 internalizes the canonical mapping before hitting any section that uses a status code.
 - **Brief § EXCISE glossary (§0.1)** defines the capacitor-aware triad EXCISE / CONSTRUCT / BYPASS and explicitly states the relationship to PCA's underlying verify / construct / bypass. The definition survives grep against the chessboard file (§6.2 Type B is consistent with "try EXCISE first at this vertex").
 - **Appendix B of `publishing/strategy.md`** supplies the ring-mode north star content the Triad Strategist (§T.4.2) needs: capacitor-fill target (40% of 276), rigidity target (≥50 after T5), per-traversal deltas, walk-back contract, and three explicit alignment-check questions. The Triad can now fire without falling through to vacuous ALIGNED verdicts.

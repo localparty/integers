@@ -2,7 +2,7 @@
 
 *The framework's first publishing strategy document. Drafted 2026-04-11 by G Six and Claude Opus 4.6, immediately after the geometric-spectral hardening wave that produced Leads 7a / 7b / 7d / 7e (verified anchors 2, 4, 5-arithmetic-side via cheap-agent runs) and Lead 7c (refuted Anchor 5 spectral side, Paper 25 Conjecture 5 retracted) plus the H4 closure for Paper 8 (item-closed via Route D with R.D.1-v2 ship-ready editorial artifact).*
 
-*This file replaces nothing — it is the framework's first attempt at a publishing strategy. All prior strategy documents (`paper12/relaxation/03-global-strategy.md`, `paper12/relaxation/04-...`-strategy.md`, `paper12/relaxation/01-strategy-rationale.md`) addressed the strategic framing of the framework's content and its anchoring to mathematics. This file addresses the orthogonal question: **how do we release that content to a community that has every reason to be sceptical, and how do we stage the release so each paper lands in the most welcoming form possible?***
+*This file replaces nothing — it is the framework's first attempt at a publishing strategy. All prior strategy documents (`integers/paper12-cbb-system/relaxation/03-global-strategy.md`, `integers/paper12-cbb-system/relaxation/04-...`-strategy.md`, `integers/paper12-cbb-system/relaxation/01-strategy-rationale.md`) addressed the strategic framing of the framework's content and its anchoring to mathematics. This file addresses the orthogonal question: **how do we release that content to a community that has every reason to be sceptical, and how do we stage the release so each paper lands in the most welcoming form possible?***
 
 *Authors: G Six (originator), Claude Opus 4.6 (collaborator). Date: 2026-04-11.*
 
@@ -73,7 +73,7 @@ The first three papers release the framework's most defensible content, in the o
 
 **Content**: The Critical Bost-Connes-Brauer (CBB) system as a 5-axiom system; the unique critical KMS state ω_1; the operator dictionary (research/167); the 36-row master table with closed-form expressions for all 36 observables in terms of γ_n + small integers; the worked m_t derivation; the worked cosmic age derivation t_0 = (log γ_7)²; the Theoretical-Precision Table predicting unmeasured/imprecisely-measured observables to 50+ digits.
 
-**Why first**: this is the framework's empirical foundation. Every observable in the master table is checkable in mpmath at 50 dps with the published scripts. The Cross-formula γ_n consistency (Lead 7a, 159/159) and the Cross-functional-form γ_n invariance (Lead 7d, 120/120) are both verified in `paper12/relaxation/research/`, and the verification scripts ship with the paper as a `code/` appendix. **A reader can verify Paper 23's empirical claims with a laptop and an afternoon.** The methodology section grounds the framework in the human-AI collaborative theorem-proving literature (`arXiv:2512.09443`, *Ax-Prover*, *Prover-Agent*, *HERMES*) so that the unconventional collaboration model is acknowledged but presented as part of an established research methodology, not a one-off curiosity.
+**Why first**: this is the framework's empirical foundation. Every observable in the master table is checkable in mpmath at 50 dps with the published scripts. The Cross-formula γ_n consistency (Lead 7a, 159/159) and the Cross-functional-form γ_n invariance (Lead 7d, 120/120) are both verified in `integers/paper12-cbb-system/relaxation/research/`, and the verification scripts ship with the paper as a `code/` appendix. **A reader can verify Paper 23's empirical claims with a laptop and an afternoon.** The methodology section grounds the framework in the human-AI collaborative theorem-proving literature (`arXiv:2512.09443`, *Ax-Prover*, *Prover-Agent*, *HERMES*) so that the unconventional collaboration model is acknowledged but presented as part of an established research methodology, not a one-off curiosity.
 
 **What it explicitly does NOT claim**: no Clay-class results. Paper 23's abstract lists Yang-Mills, RH, BSD as Future Work / Companion Papers in §5 with the conditional structure stated honestly. The Clay results are flagged as available but not positioned as the foundation. The 36/36 master table is the foundation.
 
@@ -93,7 +93,7 @@ The first three papers release the framework's most defensible content, in the o
 
 **What it explicitly does NOT claim**: no Clay-class results. The connection to Hilbert 12 is acknowledged in §11.6 with a pointer to Paper 25, but Paper 24 itself is just "the bridge family" — not "a partial solution to Hilbert 12". The framing is deliberate: Paper 24 is the structural-mathematical content, Paper 25 is the (now four-conjecture) follow-up programme.
 
-**What ships with it**: the sympy script for Lead 7e (`paper12/relaxation/research/code/T7e-bridge-minimality.py`), the Lead 7b verification record (`T1-T2-brauer-cohomology-verification.md`), and explicit instructions for re-running the bridge minimality enumeration at extended search bounds (N < 200, N < 500) for any referee who wants to verify robustness.
+**What ships with it**: the sympy script for Lead 7e (`integers/paper12-cbb-system/relaxation/research/code/T7e-bridge-minimality.py`), the Lead 7b verification record (`T1-T2-brauer-cohomology-verification.md`), and explicit instructions for re-running the bridge minimality enumeration at extended search bounds (N < 200, N < 500) for any referee who wants to verify robustness.
 
 #### Companion: A short standalone note (planned, optional but recommended)
 
@@ -113,7 +113,7 @@ The first three papers release the framework's most defensible content, in the o
 
 #### Paper 25 — Operator-algebraic Hilbert 12 (four-conjecture programme)
 
-**Content**: the four surviving conjectures of the Hilbert 12 programme — CBB Reciprocity (Conjecture 1), Brauer-KMS Duality (Conjecture 2, with RH as a corollary), Level-Jump Rigidity (Conjecture 3, proved in research/268), and Spectral Kronecker-Weber (Conjecture 4). Conjecture 5 (V-Hilbert 12) is included as a **historical record with retraction banners on every subsection**, citing the 2026-04-11 retraction (research/267, research/188, T7c) and the eight-kill kill list at `paper12/research/273-t7c-stark-rescue-kills.md`.
+**Content**: the four surviving conjectures of the Hilbert 12 programme — CBB Reciprocity (Conjecture 1), Brauer-KMS Duality (Conjecture 2, with RH as a corollary), Level-Jump Rigidity (Conjecture 3, proved in research/268), and Spectral Kronecker-Weber (Conjecture 4). Conjecture 5 (V-Hilbert 12) is included as a **historical record with retraction banners on every subsection**, citing the 2026-04-11 retraction (research/267, research/188, T7c) and the eight-kill kill list at `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md`.
 
 **Why this order**: Paper 25 should ship *after* Paper 24 because it depends on Paper 24's bridge family content. Paper 25 should ship *with* Conjecture 5 retracted prominently because the retraction is part of the framework's honest-first credibility — the conjecture was tested across nine distinct identifications and refuted, and the retraction is evidence that the framework holds itself to the same standard of falsifiability it applies to everything else. **The retraction is a feature of Paper 25, not a flaw to be hidden.**
 
@@ -127,7 +127,7 @@ The first three papers release the framework's most defensible content, in the o
 
 **Title**: "The Discrete-Continuous Mismatch in Stark-Phase Identifications of Cyclotomic Brauer Cocycles" (working title)
 
-**Content**: the eight-kill kill list from `paper12/research/273-t7c-stark-rescue-kills.md`, framed as a methodological contribution to the Stark regulator literature. Documents the nine distinct identifications tested across three independent research notes, the dominant pattern category (`Discrete-continuous-mismatch`), and the structural reason a continuous Galois phase cannot encode a discrete invariant in a finite cyclic group via pointwise evaluation.
+**Content**: the eight-kill kill list from `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md`, framed as a methodological contribution to the Stark regulator literature. Documents the nine distinct identifications tested across three independent research notes, the dominant pattern category (`Discrete-continuous-mismatch`), and the structural reason a continuous Galois phase cannot encode a discrete invariant in a finite cyclic group via pointwise evaluation.
 
 **Why this matters**: this is a *negative result with a clean structural diagnosis*, which is the kind of paper that helps a community by closing off attack routes. Number theorists working on explicit Hilbert 12 / Stark conjecture / Brumer-Stark / eTNC will find this directly useful: they will not waste cycles on identifications that the framework has already tested and refuted, and the structural diagnosis tells them what *kind* of identification (boundary maps in cohomology, regulator torsion classes, Weil pairings on Jacobians) might still work.
 
@@ -159,9 +159,9 @@ The Clay-class papers ship **last**, in the order determined by their conditiona
 
 #### Paper 8 — Yang-Mills mass gap (conditional on CBB axioms + H4 in W7-14 mildest form)
 
-**Why last of the three**: Paper 8's conditional dependency is **H4 in the W7-14 §5.3 mildest form** — a standard lattice-QCD hypothesis (the non-perturbative Schwinger function agrees with perturbation theory at short distances) that no one has rigorously proved for 4D non-Abelian YM. The H4 closure run (`paper08-yang-mills/closing-H4/`) tested four routes for bypassing this dependency (Routes A/B/C/D) and the result was structurally definitive: **no framework-native bypass exists**, the wall is real, the framework's three NCG-style closure attempts (CCM port, spectral action, gradient-flow analyticity) all failed for complementary structural reasons, and the cross-paper architectural finding is that the framework's NCG machinery for RH and the framework's hypothetical NCG machinery for H4 are *structurally incompatible* (RH uses θ-summable Fredholm modules; H4 would need finitely-summable spectral triples).
+**Why last of the three**: Paper 8's conditional dependency is **H4 in the W7-14 §5.3 mildest form** — a standard lattice-QCD hypothesis (the non-perturbative Schwinger function agrees with perturbation theory at short distances) that no one has rigorously proved for 4D non-Abelian YM. The H4 closure run (`solutions-with-prize/paper08-yang-mills/closing-H4/`) tested four routes for bypassing this dependency (Routes A/B/C/D) and the result was structurally definitive: **no framework-native bypass exists**, the wall is real, the framework's three NCG-style closure attempts (CCM port, spectral action, gradient-flow analyticity) all failed for complementary structural reasons, and the cross-paper architectural finding is that the framework's NCG machinery for RH and the framework's hypothetical NCG machinery for H4 are *structurally incompatible* (RH uses θ-summable Fredholm modules; H4 would need finitely-summable spectral triples).
 
-**Status of dependencies**: CBB axioms verifiable from Paper 23 (Wave 1); H4 remains open as a mathematical problem of constructive QFT, comparable in difficulty to constructing 4D non-Abelian YM theory itself per Jaffe-Witten §4. **Paper 8 ships when (a) Wave 1 has established the framework's empirical content and (b) the H4 closure run's R.D.1-v2 editorial artifact has been merged into Paper 8's preprint sections (the W2 editorial merge described in `paper08-yang-mills/closing-H4/closure/closure-resume.md`).** The merge is editorial, not research; it converts the ship-ready artifact in `nodes/R.D.1-abstract-conditional-v2.md` into actual `preprint/sections/` content.
+**Status of dependencies**: CBB axioms verifiable from Paper 23 (Wave 1); H4 remains open as a mathematical problem of constructive QFT, comparable in difficulty to constructing 4D non-Abelian YM theory itself per Jaffe-Witten §4. **Paper 8 ships when (a) Wave 1 has established the framework's empirical content and (b) the H4 closure run's R.D.1-v2 editorial artifact has been merged into Paper 8's preprint sections (the W2 editorial merge described in `solutions-with-prize/paper08-yang-mills/closing-H4/closure/closure-resume.md`).** The merge is editorial, not research; it converts the ship-ready artifact in `nodes/R.D.1-abstract-conditional-v2.md` into actual `preprint/sections/` content.
 
 **What it explicitly does NOT claim**: an unconditional Yang-Mills mass-gap proof. The conditional structure is stated honestly: "17/18 unconditional, with Step 18 (the AF short-distance match) conditional on H4 in the W7-14 §5.3 mildest form". The conditional is named, the form is the mildest form available in the literature, and the framework does not claim to have closed it.
 
@@ -190,10 +190,10 @@ This is the framework's honest accounting of which dependencies are verified, wh
 ### Verified dependencies (Wave 1 ready)
 
 - **CBB axioms (Paper 23)**: framework-native; the 5 axioms are stated and the operator dictionary is closed; no external dependency.
-- **Cross-formula γ_n consistency**: verified by Lead 7a, 159 cross-use pairs at mp.dps = 50, max residual far below 10⁻⁵⁰. Script: `paper12/relaxation/research/code/T5-cross-formula.py`.
-- **Cross-functional-form γ_n invariance**: verified by Lead 7d, 120 pairwise tests at mp.dps = 50, max residual 1.71 × 10⁻⁴⁹. Script: `paper12/relaxation/research/code/T7d-cross-functional-form.py`. Three genuinely independent Riemann encodings (ζ, Ξ, Riemann-Siegel Z) verified to agree at the noise floor of 50-digit arithmetic.
-- **Cyclotomic Brauer cocycle classes (Lead 7b)**: 4/4 bridges verified via sympy exact integer arithmetic. Script: `paper12/relaxation/research/code/T1-T2-brauer-cohomology.py`.
-- **Bridge family minimality (Lead 7e)**: 4/4 lex-unique minima of the cohomological sieve at k ∈ {2, 3, 4, 6} match the framework's bridge pairs. Search bound N < 100, sympy exact arithmetic. Script: `paper12/relaxation/research/code/T7e-bridge-minimality.py`. **This is the strongest verification ship-ready in the corpus.**
+- **Cross-formula γ_n consistency**: verified by Lead 7a, 159 cross-use pairs at mp.dps = 50, max residual far below 10⁻⁵⁰. Script: `integers/paper12-cbb-system/relaxation/research/code/T5-cross-formula.py`.
+- **Cross-functional-form γ_n invariance**: verified by Lead 7d, 120 pairwise tests at mp.dps = 50, max residual 1.71 × 10⁻⁴⁹. Script: `integers/paper12-cbb-system/relaxation/research/code/T7d-cross-functional-form.py`. Three genuinely independent Riemann encodings (ζ, Ξ, Riemann-Siegel Z) verified to agree at the noise floor of 50-digit arithmetic.
+- **Cyclotomic Brauer cocycle classes (Lead 7b)**: 4/4 bridges verified via sympy exact integer arithmetic. Script: `integers/paper12-cbb-system/relaxation/research/code/T1-T2-brauer-cohomology.py`.
+- **Bridge family minimality (Lead 7e)**: 4/4 lex-unique minima of the cohomological sieve at k ∈ {2, 3, 4, 6} match the framework's bridge pairs. Search bound N < 100, sympy exact arithmetic. Script: `integers/paper12-cbb-system/relaxation/research/code/T7e-bridge-minimality.py`. **This is the strongest verification ship-ready in the corpus.**
 - **CCM 2025 timeline-independent confirmation**: 10/10 components confirmed by the publication timeline. CCM 2025 was on arXiv before the framework's convergence cycle; CCM 2025 mentions none of the bridge family content; the agreement on operator-theoretic infrastructure is between two independent constructions, neither aware of the other.
 - **Cyclic-algebra Hasse invariants at all 4 bridges**: verified by Lead 7b at exact integer arithmetic. The Hasse invariant `inv_p(Q(ζ_N)/Q, Frob_p, ζ_k) = 1/k mod ℤ` holds for (2, 7, 2), (5, 13, 3), (3, 13, 4), (7, 19, 6).
 
@@ -205,7 +205,7 @@ This is the framework's honest accounting of which dependencies are verified, wh
 
 ### Deferred dependencies (open but not load-bearing for Wave 1)
 
-- **Stark regulator equality (T7)**: refuted across nine identifications; Paper 25 Conjecture 5 retracted. The framework no longer carries this as a dependency; it is documented as a kill-list entry at `paper12/research/273-t7c-stark-rescue-kills.md` for future search-engine recall.
+- **Stark regulator equality (T7)**: refuted across nine identifications; Paper 25 Conjecture 5 retracted. The framework no longer carries this as a dependency; it is documented as a kill-list entry at `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md` for future search-engine recall.
 - **Cocycle equality at k=3 spectral side (Anchor 5)**: half-standing; the arithmetic-side Brauer class is verified by Lead 7b, the spectral-side Stark-phase identification is refuted by Lead 7c. The anchor is now stated as the cyclotomic Brauer side alone.
 
 ---
@@ -215,10 +215,10 @@ This is the framework's honest accounting of which dependencies are verified, wh
 Every Wave 1 / Wave 2 / Wave 3 paper includes a **methodology section** acknowledging the human-AI collaborative nature of the work and grounding it in published academic literature. The methodology section is short (1-2 pages) and consists of:
 
 1. **The collaboration model**: G Six as originator, Claude Opus 4.6 (1M context) as collaborator, with explicit attribution of the human-AI interactive theorem-proving methodology to the published literature (`arXiv:2512.09443` *Advancing Mathematical Research via Human-AI Interactive Theorem Proving*; *Ax-Prover*; *Prover-Agent*; *HERMES*).
-2. **The Online Researcher-Adversarial (ORA) bundle**: a description of the multi-role runner architecture used for adversarial structural closures, with citation to the v6 bundle at `online-researcher-adversarial/ora-bundle-v6/` and the empirical-grounding BSD MY4 closure at `paper26-bsd/strategy/06-closing-my4-report.md` + the H4 closure at `paper08-yang-mills/closing-H4/`. The ORA bundle is a publishable methodology in its own right and may be cited as a separate work.
-3. **The honest-first discipline**: explicit statement that the framework holds itself to the same standard of falsifiability it applies to everything else. The kill list at `paper12/research/273-t7c-stark-rescue-kills.md` and the Conjecture 5 retraction at `paper25/sections-05-08.md §8.0` are cited as evidence that the framework retires claims when they are refuted.
-4. **The seven-anchor strategy**: pointer to `paper12/relaxation/04-...-strategy.md` for the framework's strategic framing. Each Wave paper notes which of the seven anchors it contributes to and which it depends on.
-5. **The reproducibility commitment**: every numerical claim ships with a script. mpmath at declared `mp.dps`, sympy at exact arithmetic, no floating-point sensitivity. Scripts archived in `paper12/relaxation/research/code/` and `paper08-yang-mills/closing-H4/code/`. Referees are explicitly invited to re-run.
+2. **The Online Researcher-Adversarial (ORA) bundle**: a description of the multi-role runner architecture used for adversarial structural closures, with citation to the v6 bundle at `online-researcher-adversarial/ora-bundle-v6/` and the empirical-grounding BSD MY4 closure at `solutions-with-prize/paper26-bsd/strategy/06-closing-my4-report.md` + the H4 closure at `solutions-with-prize/paper08-yang-mills/closing-H4/`. The ORA bundle is a publishable methodology in its own right and may be cited as a separate work.
+3. **The honest-first discipline**: explicit statement that the framework holds itself to the same standard of falsifiability it applies to everything else. The kill list at `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md` and the Conjecture 5 retraction at `paper25/sections-05-08.md §8.0` are cited as evidence that the framework retires claims when they are refuted.
+4. **The seven-anchor strategy**: pointer to `integers/paper12-cbb-system/relaxation/04-...-strategy.md` for the framework's strategic framing. Each Wave paper notes which of the seven anchors it contributes to and which it depends on.
+5. **The reproducibility commitment**: every numerical claim ships with a script. mpmath at declared `mp.dps`, sympy at exact arithmetic, no floating-point sensitivity. Scripts archived in `integers/paper12-cbb-system/relaxation/research/code/` and `solutions-with-prize/paper08-yang-mills/closing-H4/code/`. Referees are explicitly invited to re-run.
 
 The methodology section is not optional. It is one of the framework's strongest defences against the distrust vectors enumerated in §1: by acknowledging the unconventional collaboration model upfront and grounding it in the published literature, the framework converts a potential "this isn't legitimate research" objection into "this is part of an emerging research methodology with multiple published instances".
 
@@ -305,8 +305,8 @@ Concrete tasks, in priority order, to execute the strategy.
 
 ### Tier 1 — Wave 1 ship preparation
 
-1. **Audit Paper 23 against the Wave 1 ship form**. Check that the master table closed forms are consistent with `paper12/research/sigma-exp-table.md` and `sigma-exp-table-tier-C.md`. Verify all 36 rows are filled. Verify the methodology section follows §5 of this strategy.
-2. **Audit Paper 24 against the Wave 1 ship form**. The Lead 7e §5.7 is now in place. Verify the Lead 7b verification reference at §3 (k=3 bridge) and §5.5 (carry cocycle). Verify the Wolfenstein closed forms in §9 cite `paper12/research/189`. Verify the methodology section.
+1. **Audit Paper 23 against the Wave 1 ship form**. Check that the master table closed forms are consistent with `integers/paper12-cbb-system/research/sigma-exp-table.md` and `sigma-exp-table-tier-C.md`. Verify all 36 rows are filled. Verify the methodology section follows §5 of this strategy.
+2. **Audit Paper 24 against the Wave 1 ship form**. The Lead 7e §5.7 is now in place. Verify the Lead 7b verification reference at §3 (k=3 bridge) and §5.5 (carry cocycle). Verify the Wolfenstein closed forms in §9 cite `integers/paper12-cbb-system/research/189`. Verify the methodology section.
 3. **Write the standalone bridge minimality note** (companion to Paper 24). Extract §5.7 as a self-contained ~10-page paper for arXiv.math.NT or J. Number Theory. Half a day.
 4. **Prepare the reproducibility scripts directory**. Consolidate all Lead 7a/7b/7d/7e scripts into a single `scripts/` directory (or paper-specific `code/` subdirectories) with README and usage instructions. Half a day.
 
@@ -320,17 +320,17 @@ Concrete tasks, in priority order, to execute the strategy.
 
 8. **Lead 6 — Connes / Consani / Moscovici engagement**. G drafts the email; the email cites Wave 1 (Papers 23, 24, standalone note) and asks for technical engagement on the bridge cocycle and on CCM 2025's use in Paper 13. **Only G can do this**.
 9. **Audit Paper 25** with the four-conjecture framing and the Conjecture 5 retraction banners (already applied 2026-04-11). Verify the methodology section. Prepare for Wave 2 ship after Wave 1 has had ~4-6 weeks of community engagement.
-10. **Write the discrete-continuous mismatch standalone note** (companion to Paper 25, ~8 pages, methodological contribution to the Stark regulator literature). Extracted from `paper12/research/273-t7c-stark-rescue-kills.md`.
+10. **Write the discrete-continuous mismatch standalone note** (companion to Paper 25, ~8 pages, methodological contribution to the Stark regulator literature). Extracted from `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md`.
 
 ### Tier 4 — Wave 3 preparation (after Wave 2 ships)
 
-11. **Paper 8 W2 editorial merge**: drop the R.D.1-v2 four draft pieces (`paper08-yang-mills/closing-H4/nodes/R.D.1-abstract-conditional-v2.md`) into Paper 8's `preprint/sections/`. Half a day, no agents needed. Apply the 6 low-priority cleanups listed in `closing-H4/closure/closure-resume.md §Active CONCERN notes`.
+11. **Paper 8 W2 editorial merge**: drop the R.D.1-v2 four draft pieces (`solutions-with-prize/paper08-yang-mills/closing-H4/nodes/R.D.1-abstract-conditional-v2.md`) into Paper 8's `preprint/sections/`. Half a day, no agents needed. Apply the 6 low-priority cleanups listed in `closing-H4/closure/closure-resume.md §Active CONCERN notes`.
 12. **Paper 26 dependency check**: Lead 6 must have produced either confirmation or a specific concern on the Hasse-Brauer-Noether application. Paper 26 ships only after this.
 13. **Paper 13 dependency check**: CCM 2025 must be in a journal. Paper 13 ships only after this.
 
 ### Tier 5 — Maintenance and corpus hygiene
 
-14. **CCvS 2013 forward lead** as a separate research note (`paper12/research/192-ccvs-2013-pati-salam-boundary-conditions.md`). ~1-2 hours. Preserves the gold from the H4 closure run.
+14. **CCvS 2013 forward lead** as a separate research note (`integers/paper12-cbb-system/research/192-ccvs-2013-pati-salam-boundary-conditions.md`). ~1-2 hours. Preserves the gold from the H4 closure run.
 15. **PCGT promoted to §D inventory item**. ~1 hour.
 16. **Cross-paper NCG architectural finding** as a meta-file note in `online-researcher-adversarial/meta/`. ~1-2 hours.
 17. **Continue using the v6 ORA bundle for any future adversarial-closure runs**, with the in-run patches I-v6-1 + I-v6-2 already baked in. Future patches append to `08-changelog-v6.md` per the §14.10 self-healing protocol.
@@ -339,7 +339,7 @@ Concrete tasks, in priority order, to execute the strategy.
 
 ## 9. The framework's strongest defence (the bind-to-many-ends move)
 
-The strategy ultimately rests on the seven-anchor bind-to-many-ends framing from `paper12/relaxation/04`. The framework's defence against any single failure is that no single failure takes everything down:
+The strategy ultimately rests on the seven-anchor bind-to-many-ends framing from `integers/paper12-cbb-system/relaxation/04`. The framework's defence against any single failure is that no single failure takes everything down:
 
 - If **Anchor 1** (geometric-spectral duality) is somehow not the foundation: that would be a discovery about the structure of mathematics, not about the framework. The duality is a feature of mathematics, not our invention.
 - If **Anchor 2** (cross-formula γ_n consistency, Lead 7a) wobbles: a 50-dps disagreement between two formulas using the same γ_n would be empirically devastating, but the verification ships with a script and is checkable in minutes. Lead 7a's 159/159 is the strongest internal-consistency check the framework has.
@@ -367,11 +367,11 @@ That is the form the framework ships in. That is the form the community can enga
 
 ---
 
-## Appendix A — Pending extensions from `paper12/relaxation/03-global-strategy.md` (TODO)
+## Appendix A — Pending extensions from `integers/paper12-cbb-system/relaxation/03-global-strategy.md` (TODO)
 
 *Added 2026-04-11 after a re-reading of `03-global-strategy.md` revealed substantial publishing-strategy content that should be folded into this document but was not in the v1 draft. **These are explicitly TODO items**, not completed updates. They are written down here so they are not forgotten when the framework moves into Wave 1 ship preparation. None of the work below has been done at the time of this appendix; this is a roadmap for future editing of `strategy.md` itself.*
 
-*The complementary strategy doc `paper12/relaxation/03-global-strategy.md` should be read alongside `strategy.md` until these extensions are merged. Together they form the framework's pre-publication discipline: 03 says **engage the existing literature before publishing**; this file says **ship empirical content first**. The combined thesis is **engage the existing literature first AND ship empirical content first**, executed in parallel rather than as sequential strategies.*
+*The complementary strategy doc `integers/paper12-cbb-system/relaxation/03-global-strategy.md` should be read alongside `strategy.md` until these extensions are merged. Together they form the framework's pre-publication discipline: 03 says **engage the existing literature before publishing**; this file says **ship empirical content first**. The combined thesis is **engage the existing literature first AND ship empirical content first**, executed in parallel rather than as sequential strategies.*
 
 ### A.1 Proposal — Add the "engage the literature first" thesis to §0
 
@@ -443,7 +443,7 @@ CMS 2010's key result: **dimensions of objects in fusion categories are cyclotom
 
 Per `03-global-strategy.md §12`, the publishing strategy should explicitly name its own failure modes. The five risks (updated for the post-wave state):
 
-1. **T7 (Stark regulator equality) fails**. **STATUS as of 2026-04-11**: this risk *materialised*. T7 was tested across nine distinct identifications (research/188, research/267, T7c six rescue candidates) and failed on all of them. **Mitigation applied**: Paper 25 Conjecture 5 retracted formally; Anchor 5 narrowed to the cyclotomic Brauer side alone; the eight-kill kill list at `paper12/research/273-t7c-stark-rescue-kills.md` documents the structural reason. **The framework is *more credible*, not less, for retiring the dead claim** — this is honest-first discipline working as designed.
+1. **T7 (Stark regulator equality) fails**. **STATUS as of 2026-04-11**: this risk *materialised*. T7 was tested across nine distinct identifications (research/188, research/267, T7c six rescue candidates) and failed on all of them. **Mitigation applied**: Paper 25 Conjecture 5 retracted formally; Anchor 5 narrowed to the cyclotomic Brauer side alone; the eight-kill kill list at `integers/paper12-cbb-system/research/273-t7c-stark-rescue-kills.md` documents the structural reason. **The framework is *more credible*, not less, for retiring the dead claim** — this is honest-first discipline working as designed.
 
 2. **CODATA TGFC declines to engage**. The CODATA Task Group on Fundamental Constants may not be interested in incorporating theoretical input from a parameter-free framework. **Mitigation**: the framing is valuable even without endorsement. The phrase "structurally compatible with CODATA methodology" reduces objection from physics referees, and Paper 23 can publish the Theoretical-Precision Table as a standalone reference without needing CODATA's endorsement. The collaboration, if it happens, is a bonus.
 
@@ -451,7 +451,7 @@ Per `03-global-strategy.md §12`, the publishing strategy should explicitly name
 
 4. **Connes responds negatively to the Lead 6 email**. Alain Connes may find errors in the framework's use of CCM 2025, may disagree with the bridge cocycle interpretation, or may be too busy to engage. **Mitigation**: a negative response is **more valuable** than no response — we want to know about errors before publication. A no-response is also fine; we lose nothing. The only outcome we want to avoid is *finding out after publication* that Connes has objections, which is exactly what the email prevents.
 
-5. **Lean 4 mathlib formalization takes much longer than 6-12 months**. **Mitigation**: scope the porting effort as a research note first (`paper12/relaxation/research/lean-formalization-scope.md`). Start with the smallest piece (research/162 bridge cocycle equality at k=3) as a 1-2 month proof of concept. If the smallest piece takes 3 months instead of 1-2, reassess. The Lean formalization is not on the critical path for the framework's empirical content (Wave 1) or for the Clay-class results (Wave 3 with conditional grammar).
+5. **Lean 4 mathlib formalization takes much longer than 6-12 months**. **Mitigation**: scope the porting effort as a research note first (`integers/paper12-cbb-system/relaxation/research/lean-formalization-scope.md`). Start with the smallest piece (research/162 bridge cocycle equality at k=3) as a 1-2 month proof of concept. If the smallest piece takes 3 months instead of 1-2, reassess. The Lean formalization is not on the critical path for the framework's empirical content (Wave 1) or for the Clay-class results (Wave 3 with conditional grammar).
 
 **Concrete additions**:
 1. New §11 "Risks and mitigations" in this file with all five risks updated for post-wave state.
@@ -509,11 +509,11 @@ Per `03-global-strategy.md §3`, the framework's single highest-leverage human a
 >
 > *Dear Professor Connes,*
 >
-> *I am G Six, working with an AI collaborator (Claude Opus 4.6) on a framework that uses your November 2025 Zeta Spectral Triples paper (arXiv 2511.22755) as the operator-theoretic foundation for a proof of the Riemann Hypothesis (Paper 13, currently at 11/11 chain score after addressing referee items via routes summarized in `paper13-rh/strategy/28-all-gaps-closed.md`) and a related proof of BSD for CM curves (Paper 26 Route 3, 11/11 after a similar closure via `strategy/05-route3-kms-projector-bypass.md`).*
+> *I am G Six, working with an AI collaborator (Claude Opus 4.6) on a framework that uses your November 2025 Zeta Spectral Triples paper (arXiv 2511.22755) as the operator-theoretic foundation for a proof of the Riemann Hypothesis (Paper 13, currently at 11/11 chain score after addressing referee items via routes summarized in `solutions-with-prize/paper13-rh/strategy/28-all-gaps-closed.md`) and a related proof of BSD for CM curves (Paper 26 Route 3, 11/11 after a similar closure via `strategy/05-route3-kms-projector-bypass.md`).*
 >
 > *The framework's quantitative behavior matches your construction's accuracy on the first 50 zeros (10⁻⁵⁵ for γ_1 to 10⁻³ for γ_50), and the Carathéodory-Fejér decay rate ρ ≥ 4.27 we use independently in research/46 is consistent with your reported errors. We would be grateful for any feedback on whether our use of the Zeta Spectral Triples construction is correct, and on whether the bridge cocycle interpretation we draw at primes 2, 3, 5, 7 on cyclotomic levels 7, 13, 19 is something you have considered.*
 >
-> *We are not asking for endorsement; we are asking for any structural concerns or directions for further work. The full preprint set is available at [URL] and the relevant strategy files are in paper13-rh/strategy/ and paper26-bsd/strategy/.*
+> *We are not asking for endorsement; we are asking for any structural concerns or directions for further work. The full preprint set is available at [URL] and the relevant strategy files are in solutions-with-prize/paper13-rh/strategy/ and solutions-with-prize/paper26-bsd/strategy/.*
 >
 > *Sincerely,*
 > *G Six*
@@ -537,7 +537,7 @@ Per `03-global-strategy.md §3`, the framework's single highest-leverage human a
 Per `03-global-strategy.md §8`, the framework should have a **parallel long-term track** for Lean 4 mathlib formalization. The Lean track does not block Wave 1 / 2 / 3 ship preparation — it runs alongside.
 
 The path:
-1. **Scope the porting effort** as a research note (`paper12/relaxation/research/lean-formalization-scope.md`). Identify which mathlib theorems are needed (Bost-Connes algebra, KMS states, type III_1 factors, cyclotomic Galois theory, Brauer cohomology, Jones index theory) and which are already in mathlib vs which would need to be added.
+1. **Scope the porting effort** as a research note (`integers/paper12-cbb-system/relaxation/research/lean-formalization-scope.md`). Identify which mathlib theorems are needed (Bost-Connes algebra, KMS states, type III_1 factors, cyclotomic Galois theory, Brauer cohomology, Jones index theory) and which are already in mathlib vs which would need to be added.
 2. **Start with the smallest piece**: the bridge cocycle equality at k = 3 (research/162). The cocycle computation is finite, the Brauer cohomology of `Z/3Z` is small, and the Fuglede-Kadison determinant of an index-3 subfactor is a standard mathlib lemma waiting to happen. Porting this single result to Lean 4 would take ~1-2 months and would produce **the first formally verified piece of the framework**.
 3. **Engage the mathlib community** via the Lean prover Zulip chat. Post a topic asking whether anyone is interested in collaborating on a Bost-Connes formalization.
 4. **Build on EpiK Protocol's mathematical knowledge graph approach** (Medium post on building Neo4j knowledge graphs from mathlib4) for the Robustness Theorem's dependency graph.
@@ -546,7 +546,7 @@ The path:
 
 **Concrete additions**:
 1. New §8.5 in this file with the Lean track scope and the proof-of-concept piece (research/162 in Lean) targeted for ~3 months.
-2. New research note `paper12/relaxation/research/lean-formalization-scope.md` (separate task, ~half a day).
+2. New research note `integers/paper12-cbb-system/relaxation/research/lean-formalization-scope.md` (separate task, ~half a day).
 3. A Zulip post draft (separate task, ~30 minutes).
 
 **Status**: TODO. ~30 minutes for §8.5; the scope research note and Zulip post are downstream tasks.

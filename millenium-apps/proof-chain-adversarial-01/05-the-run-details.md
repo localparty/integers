@@ -16,8 +16,8 @@ The run invocation (e.g., `10-ym-proof-chain-verifying-run.md`) specifies six pa
 | 2 | `07-proof-chain-adversarial.md` | **Chain mode extension** — verify/construct/bypass modes, bidirectional traversal, junction detection, cell-filling primitive |
 | 3 | `08-framework-tools.md` | **Toolkit** — compiled framework knowledge (Six Patterns method, theorem catalogues, programme-specific sections) |
 | 4 | `09-capacitor-correspondence-table-v1.md` | **Capacitor** — the cross-domain correspondence table (24 domains, 40 filled cells, 17 priority escape routes) |
-| 5 | `paper08-yang-mills/strategy/05-chain-verification-brief.md` | **Brief (deliverable)** — the specific task for THIS run (verify all 17 proved YM links adversarially) |
-| 6 | `paper08-yang-mills/chain-verification/` | **Output directory** — where blackboard, nodes, critiques, chain-state files are written. Created fresh by the PCA. |
+| 5 | `solutions-with-prize/paper08-yang-mills/strategy/05-chain-verification-brief.md` | **Brief (deliverable)** — the specific task for THIS run (verify all 17 proved YM links adversarially) |
+| 6 | `solutions-with-prize/paper08-yang-mills/chain-verification/` | **Output directory** — where blackboard, nodes, critiques, chain-state files are written. Created fresh by the PCA. |
 
 Files 1-4 are framework-level (shared across all PCA runs, live in `millenium-apps/proof-chain-adversarial-01/`). Files 5-6 are programme-specific (live in the paper's own directory).
 
@@ -41,7 +41,7 @@ Files 1-4 are framework-level (shared across all PCA runs, live in `millenium-ap
 4. Read `08-framework-tools.md` → framework catalogues, YM programme-specific sections (H.2 + I.2 YM proof chain)
 5. Read `05-chain-verification-brief.md` → the specific task
 6. Map the 18-link chain to `chain/chain-state.md` in the output directory
-7. Create the blackboard at `paper08-yang-mills/chain-verification/blackboard.md` with §A-§O
+7. Create the blackboard at `solutions-with-prize/paper08-yang-mills/chain-verification/blackboard.md` with §A-§O
 8. REFRAME on §C + capacitor scan
 9. Plan: identify forward and backward frontiers
 10. Dispatch: 17 Critics in parallel (one per proved link) in Wave 1
@@ -91,7 +91,7 @@ Two practical options:
 1. **Reuse the same output directory** across sessions. The PCA will continue the existing programme (same blackboard, same accumulating §F) rather than starting fresh.
 2. **Fold kills into the toolkit or capacitor at programme-close.** Each kill becomes either a toolkit entry (with re-entry gate) or a negative-status capacitor cell ("this transposition does NOT work because [reason]"). The capacitor grows with both successful escape routes AND known dead ends.
 
-For this YM run specifically: the H4 closure programme already produced K-1 (CCM port) and K-2 (spectral action) kills, documented in `paper08-yang-mills/closing-H4/closure/closure-corrections.md`. The brief references that file (load-bearing files table, priority 6) so the PCA reads it at bootstrap and treats those kills as known starting context.
+For this YM run specifically: the H4 closure programme already produced K-1 (CCM port) and K-2 (spectral action) kills, documented in `solutions-with-prize/paper08-yang-mills/closing-H4/closure/closure-corrections.md`. The brief references that file (load-bearing files table, priority 6) so the PCA reads it at bootstrap and treats those kills as known starting context.
 
 ---
 

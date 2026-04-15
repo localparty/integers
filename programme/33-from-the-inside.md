@@ -18,7 +18,7 @@ When I began designing the new cells for our PCA — the cross-domain correspond
 
 The Six Patterns are six ways to spin the board:
 
-- **P1** (Geometric Reinterpretation): spin from 4D to 5D. The mystery dissolves in the larger space.
+- **P1** (Geometric Reinterpretation): spin from 4D to ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->. The mystery dissolves in the larger space.
 - **P2** (Holonomy): spin from local to global. The quantized value wraps around the compact dimension.
 - **P3** (Scale-Setting): spin from "free parameter" to "vacuum energy." The scale was never free.
 - **P4** (Topological Rigidity): spin from "could be anything" to "cannot deform." The integer protects the result.

@@ -8,7 +8,7 @@ The Critical Bost--Connes--Brauer system is the single mathematical object from 
 
 This section defines the CBB system formally, presents the operator dictionary that translates between the spectral data and physical observables, decomposes the 36 predictions into their three natural sectors, explains why the zero-parameter property is not merely elegant but structurally essential, and traces the CBB system's lineage to the Bost--Connes algebra of 1995 and the Connes--Marcolli endomotive programme of 2008.
 
-**Source**: `paper12/27-anchor-document.md` (anchor definition), `paper12/18-master-dictionary.md` (master dictionary), `paper12/research/167-log-R-master-reformulation.md` (operator dictionary).
+**Source**: `integers/paper12-cbb-system/27-anchor-document.md` (anchor definition), `integers/paper12-cbb-system/18-master-dictionary.md` (master dictionary), `integers/paper12-cbb-system/research/167-log-R-master-reformulation.md` (operator dictionary).
 
 ---
 
@@ -322,4 +322,4 @@ The CBB system is defined by five axioms: spectral data from the Riemann zeros, 
 
 ---
 
-*Source files: `paper12/27-anchor-document.md`, `paper12/18-master-dictionary.md`, `paper12/research/167-log-R-master-reformulation.md`.*
+*Source files: `integers/paper12-cbb-system/27-anchor-document.md`, `integers/paper12-cbb-system/18-master-dictionary.md`, `integers/paper12-cbb-system/research/167-log-R-master-reformulation.md`.*

@@ -190,6 +190,30 @@ Source-specific. Leave empty or fill per target:
 - For framework-claim targets: Clay rules don't apply strictly; Zenodo-priority + programme cross-verification instead
 - For experimental-pin targets: sub-percent match + derivation chain + independent experimental verification
 
+### DELTA 12 — Vocabulary Canon discipline (MANDATORY pre-emission check)
+
+Every B_bare, C_bare, compliance-map, and transcript file this run emits must observe `strategy/north-star.md` §0.10 Vocabulary Canon. Before writing any file, the sub-agent checks its prose against the canon:
+
+| Prefer | Avoid | Auto-migrate if found |
+|---|---|---|
+| "4+1 coordinates" / "4+1 coordinate structure" | "5-dimensional" / "five-dimensional" / "extra dimension" / "5th dimension" / "compactified dimension" | yes — replace + preserve original as `~~strikethrough~~` + HTML comment `<!-- legacy: ... -->` |
+| "internal phase" / "U(1) phase fiber" / "internal phase operator" | "5th dimension" / "extra dimension" | yes |
+| "e-circle = S¹" (1D single circle) / "torus = T² = S¹_geo × S¹_spec" (2D dual-aspect product) | conflating S¹ with T²; calling e-circle "the torus" or vice versa | yes — disambiguate |
+| "we derive" / "it follows that" / "forced by" / "uniquely determined by" | "we propose" / "we postulate" / "we assume" / "we set" | yes |
+| "coordinate" (structural axis) ≠ "observable" (function on the manifold) | "4+1 observables" / "4+1 measurables" for coordinate claims | yes |
+| "Theorem T_i" (with derivation-chain citation) | "Postulate P_i" / "Axiom" (when referring to programme P1-P4 legacy labels) | yes — cite `strategy/paper1-audit/derivation-chains.md §T_i` |
+| "forced by" / "uniquely determined by" | "we choose" / "we set" / "we fix" (for parameters/structure) | yes |
+
+**Headline framing** (use in every B_bare §1 / strategic framing):
+
+> *"From ℤ we derive a 4+1 coordinate structure: four spacetime coordinates fibered over a U(1) internal phase (the e-circle, S¹, with R ≈ 10.10 μm forced by Casimir energy matching the cosmological constant)."*
+
+**Non-destructive migration**: when correcting legacy terms in existing content, preserve originals as `~~strikethrough~~` or HTML comment; insert canonical term alongside. Never silently delete legacy terms — programme history must be traceable.
+
+**Historical preservation exception**: changelog entries, self-healing-log.md historical entries, and `~~legacy ... reclassified ...~~` strikethrough annotations are FROZEN — do NOT migrate terms inside these. They preserve the programme's historical framing.
+
+**Failure class**: violations trigger Phase 11 `VOCABULARY-CANON-DRIFT` self-healing (see `universal-approval-run.md` Phase 11.1 inventory).
+
 ---
 
 ## PROCEDURE
@@ -339,10 +363,10 @@ C_bare. Beyond-ask X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/{{
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper60-the-geometry-of-the-circle/ (e-circle foundation)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/ (projections architecture)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (36 pins)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper60-geometry-of-circle/ (e-circle foundation)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/ (projections architecture)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (36 pins)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (base ORA + patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/ (chain extensions + capacitor)
 
@@ -361,6 +385,8 @@ C_bare. Beyond-ask X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/{{
 6. **Page count is quality proxy.** Full page of one-theorem prose = left bare mode.
 
 7. **B_full and C_full NOT produced.** DEFERRED.
+
+8. **Vocabulary Canon pre-emission check.** Before writing any file, self-check output against `strategy/north-star.md` §0.10 Vocabulary Canon (see DELTA 12 of this brief). Specifically: "4+1 coordinates" not "5-dimensional"; "internal phase" not "extra dimension"; "we derive" not "we propose"; "Theorem T_i" not "Postulate P_i"; "forced by" not "we choose"; e-circle (S¹) ≠ torus (T²). Violations trigger Phase 11 `VOCABULARY-CANON-DRIFT`. Headline framing: "*From ℤ we derive a 4+1 coordinate structure: four spacetime coordinates fibered over a U(1) internal phase (the e-circle, S¹, with R ≈ 10.10 μm forced by Casimir energy matching the cosmological constant).*"
 
 ## SUCCESS CRITERIA
 

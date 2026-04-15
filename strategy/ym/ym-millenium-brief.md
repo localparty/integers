@@ -25,7 +25,7 @@ Produce a Clay-compliance-audited YM deliverable in **bare mode only** this run.
 - Structure mirrors Jaffe-Witten §4 requirements 1:1
 
 **C_bare. Beyond-Clay X-RAY** — `strategy/ym/deliverables/ym-beyond-bare.md`:
-- Bonus theorem skeleton (5D derivation, pins, cross-Clay, confinement, chiral, any-4-manifold)
+- Bonus theorem skeleton (~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" -->, pins, cross-Clay, confinement, chiral, any-4-manifold)
 - ZERO prose, ≤ 15 pages
 
 **B_full and C_full are DEFERRED.** Do not write them this run. They are composed later by parallel agents from the 60-project reservoir once B_bare + C_bare LOCK.
@@ -188,7 +188,7 @@ Fixed 10-section structure for `strategy/ym/deliverables/ym-beyond-bare.md`:
 ```
 # YM Beyond-Clay X-Ray (BARE MODE)
 
-## §1 The 5D Geometric Derivation of YM Mass Gap
+## §1 The ~~5D Geometric Derivation~~ M⁵ Geometric Derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric" → "M⁵ Geometric" --> of YM Mass Gap
 [theorem statement: Δ_YM = f(R, KK spectrum, gauge group); citation]
 
 ## §2 Zero Free Parameters
@@ -283,7 +283,7 @@ Transparency here is what makes §5d compliance work. Silence here fails §5d.
 ### Step 1 — Read inputs (mandatory, in order)
 
 1. `strategy/ym/00-millenium-strategy.md` — the strategy doc (sibling of this brief)
-2. `paper08-yang-mills/PROOF-CHAIN.md` — the 18-layer live chain
+2. `solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md` — the 18-layer live chain
 3. `strategy/x-ray/proof-chain/ym/X-RAY.md` — the completed run-01 x-ray
 4. `strategy/x-ray/pac-output/runs/run-01/vertices/ym/arbiter-decisions.md` — x-ray arbiter record
 5. Jaffe-Witten §4 (extract from the Clay PDF or summary in strategy doc §1)
@@ -320,10 +320,10 @@ Write to `strategy/ym/deliverables/ym-clay-bare.md`.
 ### Step 5 — Synthesize C_bare
 
 Walk the 10-section structure. Draw from:
-- Paper 1 (QG5D hub, 5D geometric foundation)
-- Paper 61 (projections — the 5D geometric derivation)
+- Paper 1 (QG5D hub, ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> foundation)
+- Paper 61 (projections — the ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation)
 - Paper 60 (e-circle geometry)
-- Programme 36-pins table (search `paper12/research/23-framework-predictions-master-table.md`)
+- Programme 36-pins table (search `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`)
 - Cross-Clay x-ray cross-cuts (from ym x-ray §7)
 
 Enforce bare discipline. Zero prose.
@@ -451,17 +451,17 @@ C_bare. Beyond-Clay X-Ray at /Users/gsix/quantum-geometry-in-5d-latex/strategy/y
 
 1. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ym/00-millenium-strategy.md (strategy doc)
 2. /Users/gsix/quantum-geometry-in-5d-latex/strategy/ym/ym-millenium-brief.md (this brief)
-3. /Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/PROOF-CHAIN.md (18-layer live chain)
+3. /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md (18-layer live chain)
 4. /Users/gsix/quantum-geometry-in-5d-latex/strategy/x-ray/proof-chain/ym/X-RAY.md (run-01 x-ray)
 5. /Users/gsix/quantum-geometry-in-5d-latex/strategy/x-ray/pac-output/runs/run-01/vertices/ym/arbiter-decisions.md
 
 ## READ AS NEEDED
 
-- /Users/gsix/quantum-geometry-in-5d-latex/paper1/PROOF-CHAIN.md (QG5D hub; for group generality + 5D derivation)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper61-projections-of-the-5d-geometry/sections/ (for 5D derivation bonus)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md (36 pins table)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper13-rh/PROOF-CHAIN.md (for cross-Clay RH connection)
-- /Users/gsix/quantum-geometry-in-5d-latex/paper28-pvnp/PROOF-CHAIN.md (for cross-Clay PvNP connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper01-qg5d/PROOF-CHAIN.md (QG5D hub; for group generality + ~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" -->)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/sections/ (for ~~5D derivation~~ M⁵ derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D derivation" → "M⁵ derivation" --> bonus)
+- /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md (36 pins table)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper13-rh/PROOF-CHAIN.md (for cross-Clay RH connection)
+- /Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md (for cross-Clay PvNP connection)
 - /Users/gsix/quantum-geometry-in-5d-latex/online-researcher-adversarial/ora-bundle-v8/ (ORA patterns)
 - /Users/gsix/quantum-geometry-in-5d-latex/millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-table-v1.md (capacitor)
 

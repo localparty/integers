@@ -33,7 +33,7 @@
 - Cambridge University Press publisher with worldwide repute.
 - MathSciNet-indexed.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Open-access is attractive for cascade priority (anyone can read immediately).
 - Suitable for papers with broad mathematical interest (not strictly specialized).
 - Competing target alongside Annals / Inventiones / JAMS.

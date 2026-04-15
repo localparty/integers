@@ -1,0 +1,46 @@
+PSLQ on expanded basis at s=3:
+  E_3(3)                         = 14.4539210437444718628208366681
+  zeta(3)                        = 1.20205690315959428539973816151
+  z3*L(3,chi_-3)                 = 1.06264692546978612523284164881
+  z3*L(3,chi_-4)                 = 1.16472840389817832137635309114
+  z3*L(3,chi_-8)                 = 1.23538102895286513987288538774
+  L(3,chi_-3)*L(3,chi_-4)        = 0.856571465593216462598188657653
+  L(3,chi_-3)^2                  = 0.781498099738412160335665300426
+  L(3,chi_-4)^2                  = 0.938856634346397378246734584376
+  pi*L(2,chi_-3)                 = 2.45453389149876142954724858154
+  pi*L(2,chi_-4)                 = 2.87759073797493348802110737493
+  pi^3                           = 31.0062766802998201754763150671
+  log(2)*z2                      = 1.14018141064285275747457985899
+  log(3)*z2                      = 1.80714477988827138588254093846
+  maxcoeff=1000000: relation = None
+  maxcoeff=100000000: relation = None
+  maxcoeff=10000000000: relation = None
+  maxcoeff=1000000000000: relation = None
+
+Subset (L=2 analogue): E_3(3), z3, z3*L(3,chi_-3):
+  maxcoeff=10000: relation = None
+  maxcoeff=1000000: relation = None
+  maxcoeff=100000000: relation = None
+  maxcoeff=10000000000: relation = None
+  maxcoeff=1000000000000: relation = None
+  maxcoeff=100000000000000: relation = None
+
+Subset: E_3(3), z3, z3*L(3,chi_-3), z3*L(3,chi_-4):
+  maxcoeff=10000: relation = None
+  maxcoeff=1000000: relation = None
+  maxcoeff=100000000: relation = None
+  maxcoeff=10000000000: relation = None
+  maxcoeff=1000000000000: relation = None
+  maxcoeff=100000000000000: relation = None
+
+Does 24 · zeta(3) · L(3,chi) match E_3(3) for some chi?
+   E_3(3) / (24*z3*L(3,chi_-3)) = (0.5667420624115315662764332 + 0.0j)
+   E_3(3) / (24*z3*L(3,chi_-4)) = (0.517070510292688498971006 + 0.0j)
+   E_3(3) / (24*z3*L(3,chi_-8)) = (0.4874987522404294962261912 + 0.0j)
+   12*z3*L(3,chi_-4) = (13.97674084677813985651624 + 0.0j)  (close to E_3(3) = (14.4539210437445 + 0.0j))
+   12*z3*L(3,chi_-8) = (14.82457234743438167847462 + 0.0j)  (close to E_3(3) = (14.4539210437445 + 0.0j))
+
+Brute-force search: integer combos with small coefficients
+   a=6, b=-2, c=9: combo = (14.454323381583133073 + 0.0j), diff = 0.0004023378387
+
+No-op if nothing found.

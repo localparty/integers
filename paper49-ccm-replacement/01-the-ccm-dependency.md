@@ -38,7 +38,7 @@ is littered with preprints that looked correct and turned out to need
 substantial repair — sometimes the repair succeeds, sometimes it
 produces a different (weaker) theorem.
 
-The QG5D programme has a policy, inherited from Paper 1: every
+The ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme has a policy, inherited from Paper 1: every
 external input to a proof chain is classified by its peer-review
 status. We distinguish four tiers:
 

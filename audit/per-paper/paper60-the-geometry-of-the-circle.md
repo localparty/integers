@@ -1,6 +1,6 @@
 # paper60-the-geometry-of-the-circle — Geometry of the e-circle — ten faces
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper60-the-geometry-of-the-circle/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper60-geometry-of-circle/`
 **No PROOF-CHAIN.md** (scaffold / draft only)
 
 ## Claim

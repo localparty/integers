@@ -1,6 +1,6 @@
 # Paper 29 — Hodge Conjecture (LIVE)
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper29-hodge/` (LIVE — has PROOF-CHAIN.md)
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper29-hodge/` (LIVE — has PROOF-CHAIN.md)
 **PROOF-CHAIN:** 3/8 links closed. Confidence 3/10 (full) / 5/10 (CM abelian varieties slice).
 
 ## Claim

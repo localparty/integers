@@ -212,7 +212,7 @@ Riemann zeros, and KMS states carrying an action of the absolute
 Galois group Gal(Q^cyc/Q).
 
 Identity 12 of the QG5D framework establishes that the e-circle —
-the compactified extra dimension of the 5D geometry — is unitarily
+the compact internal phase fiber of the 4+1 coordinate geometry <!-- legacy 2026-04-15: "compactified extra dimension of the 5D geometry" migrated to "compact internal phase fiber of the 4+1 coordinate geometry" per §0.10 canon entries 1+2, Intervention 8 --> — is unitarily
 equivalent to this BC system. The Riemann subspace H_R carries the
 operator R-hat, whose eigenvalues are the gamma_n. This is the
 Hilbert-Polya operator. It is not hypothetical. It is not a toy

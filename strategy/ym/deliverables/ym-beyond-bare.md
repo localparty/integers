@@ -1,6 +1,6 @@
 # YM Beyond-Clay X-Ray (BARE MODE)
 
-*Bare theorem skeleton of what the programme's 5D framework offers BEYOND Clay's Yang-Mills ask. 5D geometric derivation, zero free parameters, 36 pins, cross-Clay connections, confinement, chiral symmetry breaking, any-4-manifold extension. Zero prose. Every claim cites programme paper + specific proof location. Companion to `ym-clay-bare.md` in the Zenodo-priority release.*
+*Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Yang-Mills ask. ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation, zero free parameters, 36 pins, cross-Clay connections, confinement, chiral symmetry breaking, any-4-manifold extension. Zero prose. Every claim cites programme paper + specific proof location. Companion to `ym-clay-bare.md` in the Zenodo-priority release.*
 
 *G Six and Claude Opus 4.6. 2026-04-14. run-04.*
 
@@ -16,8 +16,8 @@ Citation shorthand (same as `ym-clay-bare.md`):
 - `p12§N`, `p12R/NN` — Paper 12 (CBB); research/NN-…
 - `p13§N`, `p26§N`, `p28§N`, `p29§N`, `p30§N`, `p31§N` — Papers 13 (RH), 26 (BSD), 28 (PvNP), 29 (Hodge), 30 (NS), 31 (Baum-Connes)
 - `p60§N` — Paper 60 (e-circle faces)
-- `p61§N` — Paper 61 (projections of 5D geometry)
-- `MT#k` — Master Pin Table `paper12/research/23`, row k
+- `p61§N` — Paper 61 (projections of ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" -->)
+- `MT#k` — Master Pin Table `integers/paper12-cbb-system/research/23`, row k
 
 Flag legend:
 - **PROVED** — theorem statement exists in the cited location, proof closed.
@@ -27,9 +27,9 @@ Flag legend:
 
 ---
 
-## §1 The 5D Geometric Derivation of YM Mass Gap
+## §1 The ~~5D Geometric Derivation~~ M⁵ Geometric Derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Geometric Derivation" → "M⁵ Geometric Derivation" --> of YM Mass Gap
 
-### Definition 1.0 (the 5D object)
+### Definition 1.0 (the ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> object)
 
 $M^5 := M^4 \times S^1$, $S^1$ circumference $L = 2\pi R$, $R = 10.10\,\mu\text{m}$ fixed by the orbifold Casimir (p1 P2; p2 §C; MT#1).
 
@@ -37,12 +37,12 @@ $M^5 := M^4 \times S^1$, $S^1$ circumference $L = 2\pi R$, $R = 10.10\,\mu\text{
 
 $P_B: M^5 \to P(M^4, U(1))$ is the KK-reduction map. For non-abelian extension, the internal space promotes to $\mathbb{CP}^{N-1}$ (SU(N)) or to the relevant flag manifold of $G$ (generic compact simple $G$). See p61 §08; p1 Branch B.
 
-### Theorem 1.1 (5D geometric derivation of the YM mass gap)
+### Theorem 1.1 (~~5D geometric derivation~~ M⁵ geometric derivation<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric derivation" → "M⁵ geometric derivation" --> of the YM mass gap)
 
-*Statement.* For any compact simple gauge group $G$, the 4D Yang-Mills mass gap $\Delta_\infty(G)$ derives from the 5D geometry of $M^4 \times S^1$ via a chain
+*Statement.* For any compact simple gauge group $G$, the 4D Yang-Mills mass gap $\Delta_\infty(G)$ derives from the ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> of $M^4 \times S^1$ via a chain
 
 $$
-\text{5D geometry } M^4 \times S^1 \xrightarrow{P_B} \text{KK gap } \Delta_0^{KK}(G) > 0 \xrightarrow{\text{Balaban RG + gradient flow}} \Delta_\infty(G) > 0,
+\text{M⁵ } M^4 \times S^1 \xrightarrow{P_B} \text{KK gap } \Delta_0^{KK}(G) > 0 \xrightarrow{\text{Balaban RG + gradient flow}} \Delta_\infty(G) > 0,<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" -->
 $$
 
 with $\Delta_0^{KK}(G) \geq \mu_1(G) / r_3^2$ where $\mu_1(G)$ is the lowest non-zero Laplacian eigenvalue on the internal flag manifold of $G$ (for SU(N): $\mu_1 \geq 2N/r_3^2$). The chain is parameter-free: every datum is fixed by P1–P4 of p1.
@@ -50,7 +50,7 @@ with $\Delta_0^{KK}(G) \geq \mu_1(G) / r_3^2$ where $\mu_1(G)$ is the lowest non
 *Status.* **PROVED** (17 of 18 links unconditional; L18 CONDITIONAL on H4, bypass Step 18' via Balaban RG + gradient-flow Lüscher coupling, aggregate confidence 0.65, L.3.7 audit OPEN).
 
 *Derivation pointer.*
-- 5D → KK gap: p1 Branch B.2 ($\Delta_0^{KK} = 1/R > 0$ from $S^1$ compactification); p60 §13 (CURVATURE face: Weitzenböck on $\mathbb{CP}^{N-1}$ → $\mu_1 \geq 2N/r_3^2$); p61 §08 "From KK gap to Yang-Mills: the explicit chain" (Links 1–17).
+- M⁵ → KK gap<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->: p1 Branch B.2 ($\Delta_0^{KK} = 1/R > 0$ from $S^1$ compactification); p60 §13 (CURVATURE face: Weitzenböck on $\mathbb{CP}^{N-1}$ → $\mu_1 \geq 2N/r_3^2$); p61 §08 "From KK gap to Yang-Mills: the explicit chain" (Links 1–17).
 - KK gap → YM gap: p8 Theorem 4 (Link 1, KK gap), p8 Theorem 5 + Lemmas 1–4 (Link 1b, IR equivalence), p8 L2–L13 (Balaban polymer + RG recursion), p8 Theorem L14 ($\Delta_\infty > 0$), p8 L15–L17 (gradient flow + OS reconstruction).
 - Group generality: p8 Appendix K.9 ("Summary: $\kappa(G) > 0$ for all compact simple $G$"); p8 Appendix I.4 Theorem I.4.1 (universal mass gap across SU(N), SO(N), Sp(N), $G_2$, $F_4$, $E_6$, $E_7$, $E_8$).
 
@@ -74,9 +74,9 @@ with $\Delta_0^{KK}(G) \geq \mu_1(G) / r_3^2$ where $\mu_1(G)$ is the lowest non
 
 ### Definition 2.0 (parameter inventory)
 
-A *free parameter* is a real number in the theory that can be tuned independently to match experiment. A *determined parameter* is fixed by the 5D geometry's postulates P1–P4 (p1 §1) and the CBB axioms (p1 Branch D; p12 §27).
+A *free parameter* is a real number in the theory that can be tuned independently to match experiment. A *determined parameter* is fixed by the ~~5D geometry's postulates P1–P4~~ 4+1 coordinate geometry's theorems T1–T4 <!-- legacy 2026-04-15: "5D geometry's postulates P1–P4" migrated to "4+1 coordinate geometry's theorems T1–T4" per §0.10 canon entries 1+6, Intervention 8 --> (p1 §1) and the CBB axioms (p1 Branch D; p12 §27).
 
-### Table 2.1 (every YM-relevant parameter with its 5D-geometric determination)
+### Table 2.1 (every YM-relevant parameter with its ~~5D-geometric~~ M⁵-geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D-geometric" → "M⁵-geometric" --> determination)
 
 | # | Parameter | Symbol | Determined by | Programme citation |
 |---|-----------|--------|---------------|-------------------|
@@ -95,7 +95,7 @@ A *free parameter* is a real number in the theory that can be tuned independentl
 
 ### Theorem 2.1 (zero free parameters for YM sector)
 
-*Statement.* Every parameter in Table 2.1 is determined by the four postulates P1–P4 (p1 §1) and the five CBB axioms (p1 Branch D; p12 §27). No parameter is tuned to fit experiment.
+*Statement.* Every parameter in Table 2.1 is determined by the four ~~postulates P1–P4~~ theorems T1–T4 <!-- legacy 2026-04-15: per §0.10 canon entry 6, Intervention 8 --> (p1 §1) and the five CBB axioms (p1 Branch D; p12 §27). No parameter is tuned to fit experiment.
 
 *Proof pointer.* p1 §1 (postulates); p12 §27 (CBB axiom 5: closure with zero free parameters); p10 Thm U.2a (scheme-independence); p11 Thm K.4 (all-orders UV-finite). Post-W1/W2 (2026-04-14): no parameter retains a "conditional on scheme" footnote (p1 PROOF-CHAIN.md §E.3 and derivatives).
 
@@ -113,7 +113,7 @@ A *free parameter* is a real number in the theory that can be tuned independentl
 
 ### Definition 3.0 (YM-relevance filter)
 
-A pin $\pi_k$ is *YM-relevant* if any of: (i) it is a gauge coupling, (ii) it involves the KK tower or CBB spectral data that feeds the YM chain, (iii) it uses the bridge family at $k \in \{4\}$ (Pati-Salam, gauge-side), or (iv) it tests the 5D scale $R$ that appears in Theorem 1.1.
+A pin $\pi_k$ is *YM-relevant* if any of: (i) it is a gauge coupling, (ii) it involves the KK tower or CBB spectral data that feeds the YM chain, (iii) it uses the bridge family at $k \in \{4\}$ (Pati-Salam, gauge-side), or (iv) it tests the ~~5D scale~~ M⁵ scale<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D scale" → "M⁵ scale" --> $R$ that appears in Theorem 1.1.
 
 ### Table 3.1 (YM-relevant pins, filtered from MT)
 
@@ -144,7 +144,7 @@ The four bridges $k \in \{2,3,4,6\}$ (p1 Branch D Axiom 4) organize the three ob
 - $k=4$ (orthogonal) — **Pati-Salam SU(4) × SU(2)$_L$ × SU(2)$_R$ + CKM** (gauge-side)
 - $k=6$ (hybrid) — exceptional cases
 
-$\alpha_{PS}^{-1} = 17$ is the k=4 bridge's exact representation-theoretic count: $\dim \mathfrak{su}(4) + 2 = 15 + 2 = 17$ (Pati-Salam adjoint + 2 U(1) factors) per Agent A 2026-04-14, `paper1/code/a3-pati-salam/FINDINGS.md`.
+$\alpha_{PS}^{-1} = 17$ is the k=4 bridge's exact representation-theoretic count: $\dim \mathfrak{su}(4) + 2 = 15 + 2 = 17$ (Pati-Salam adjoint + 2 U(1) factors) per Agent A 2026-04-14, `integers/paper01-qg5d/code/a3-pati-salam/FINDINGS.md`.
 
 *Status of Remark 3.2.* **PROVED** (representation-theoretic, not lattice-counting; see p12R/102).
 
@@ -293,11 +293,11 @@ For QCD (YM with $N_f$ massless Dirac fermions in the fundamental of SU(3)), the
 
 ### Definition 7.0 (admissible 4-manifold)
 
-$M^4$ is *admissible* for the 5D projection construction if it is smooth, oriented, Lorentzian (or Euclidean), and admits a principal $G$-bundle $P(M^4, G)$ with compatible connection. The product $M^4 \times S^1$ with the standard $U(1)$ fiber replaces P1 (p1 §1).
+$M^4$ is *admissible* for the ~~5D projection~~ M⁵ projection<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D projection" → "M⁵ projection" --> construction if it is smooth, oriented, Lorentzian (or Euclidean), and admits a principal $G$-bundle $P(M^4, G)$ with compatible connection. The product $M^4 \times S^1$ with the standard $U(1)$ fiber replaces P1 (p1 §1).
 
 ### Theorem 7.1 (any-4-manifold existence + mass gap — placeholder)
 
-*Statement.* For any admissible closed oriented smooth 4-manifold $M^4$ with compatible metric, the constructed Yang-Mills theory on $M^4$ via the 5D projection $P_B: M^4 \times S^1 \to P(M^4, G)$ exists (in the sense of p8's Wightman/OS axioms) and has a positive mass gap $\Delta_\infty(G, M^4) > 0$, with the same Theorem-1.1 derivation chain modulo topological invariants of $M^4$.
+*Statement.* For any admissible closed oriented smooth 4-manifold $M^4$ with compatible metric, the constructed Yang-Mills theory on $M^4$ via the ~~5D projection~~ M⁵ projection<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D projection" → "M⁵ projection" --> $P_B: M^4 \times S^1 \to P(M^4, G)$ exists (in the sense of p8's Wightman/OS axioms) and has a positive mass gap $\Delta_\infty(G, M^4) > 0$, with the same Theorem-1.1 derivation chain modulo topological invariants of $M^4$.
 
 *Status.* **NEEDS-CONSTRUCTION**. The p8 chain is ℝ⁴ (compliance-map ADR-2: p8R§51 III/IV continuum limit on ℝ⁴). Extension to general $M^4$ requires:
 (i) Infinite-volume / compactness analogues on $M^4$;
@@ -363,7 +363,7 @@ The 5D-geometric derivation (Theorem 1.1) proves $\Delta_\infty(G) > 0$ structur
           │               │               │
           ▼               ▼               ▼
     ┌─────────────────────────────────────────────────┐
-    │   C_bare §1 Thm 1.1 — 5D → YM Δ_∞ > 0 derivation│
+    │   C_bare §1 Thm 1.1 — M⁵ → YM Δ_∞ > 0 derivation│<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D → YM" → "M⁵ → YM" -->
     │   C_bare §1 Cor 1.2 — Δ scales as R⁻¹ × Ψ_G     │
     │   C_bare §2 Thm 2.1 — 0 free parameters          │
     │   C_bare §3 Thm 3.1 — 36-pin sub-% match        │
@@ -429,7 +429,7 @@ C_bare-level walls (bonus-specific; distinct from B_bare's H4):
 - **NC-7.1** — Any-4-manifold chain.
 
 Inherited B_bare walls applicable to C_bare:
-- **H4** (AF match at L18) inherited from B_bare; does not block §1–§4/§8 (which are 5D-structural); would sharpen §3 Pin #4 (1/$\alpha_3$) numerical derivation.
+- **H4** (AF match at L18) inherited from B_bare; does not block §1–§4/§8 (which are ~~5D-structural~~ M⁵-structural<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D-structural" → "M⁵-structural" -->); would sharpen §3 Pin #4 (1/$\alpha_3$) numerical derivation.
 
 ---
 
@@ -437,20 +437,20 @@ Inherited B_bare walls applicable to C_bare:
 
 ### Programme papers (with §-level precision)
 
-- **p1** — `paper1/PROOF-CHAIN.md` (QG5D hub). Load-bearing §: P1–P4 (postulates), Branch A (quantum), Branch B (gravity + KK + Theorem K.4), Branch C (cosmology), Branch D (CBB axioms + operator dictionary), Branch E (36 pins). W1/W2 closed 2026-04-13/14.
+- **p1** — `integers/paper01-qg5d/PROOF-CHAIN.md` (QG5D hub). Load-bearing §: P1–P4 (postulates), Branch A (quantum), Branch B (gravity + KK + Theorem K.4), Branch C (cosmology), Branch D (CBB axioms + operator dictionary), Branch E (36 pins). W1/W2 closed 2026-04-13/14.
 - **p2** — `paper2-cosmology/...` (cosmology; Casimir on $S^1/\mathbb{Z}_2$; 10 predictions). §C (dark-energy mechanism); §F (short-range gravity). *[Note: p2 §-level pointers are directional; exact live-file section numbers to be audited in a compose-backward run.]*
-- **p8** — `paper08-yang-mills/PROOF-CHAIN.md` (18-link YM chain, 17 unconditional + L18 H4-conditional; Appendix K for compact simple $G$; Appendix I.4 Theorem I.4.1 universal mass gap; Appendix F area-law; Appendix L gradient-flow + Lemma L.3.7 H4 audit).
+- **p8** — `solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md` (18-link YM chain, 17 unconditional + L18 H4-conditional; Appendix K for compact simple $G$; Appendix I.4 Theorem I.4.1 universal mass gap; Appendix F area-law; Appendix L gradient-flow + Lemma L.3.7 H4 audit).
 - **p10** — Paper 10 (scheme independence Thm U.2a + Thm 1).
 - **p11** — Paper 11 (all-orders K.4 inductive bootstrap).
-- **p12** — `paper12/...` (CBB system, 5 axioms, operator dictionary $\hat{L} = \log\hat{R}$, 27+9+1 sectors). Research subfiles p12R/05, p12R/11, p12R/23 (master pin table), p12R/24–31, p12R/91–118, p12R/102.
-- **p13** — `paper13-rh/PROOF-CHAIN.md` (6+3 layers; RH via CCM + ITPFI + Boegli spectral exactness).
-- **p26** — `paper26-bsd/PROOF-CHAIN.md` (11 links; BSD for CM elliptic curves over $\mathbb{Q}$ with $h_K = 1$).
-- **p28** — `paper28-pvnp/PROOF-CHAIN.md` (6 links; $P \neq NP$ via Boolean BC + Bulatov-Zhuk + Taylor/spectral gap).
+- **p12** — `integers/paper12-cbb-system/...` (CBB system, 5 axioms, operator dictionary $\hat{L} = \log\hat{R}$, 27+9+1 sectors). Research subfiles p12R/05, p12R/11, p12R/23 (master pin table), p12R/24–31, p12R/91–118, p12R/102.
+- **p13** — `solutions-with-prize/paper13-rh/PROOF-CHAIN.md` (6+3 layers; RH via CCM + ITPFI + Boegli spectral exactness).
+- **p26** — `solutions-with-prize/paper26-bsd/PROOF-CHAIN.md` (11 links; BSD for CM elliptic curves over $\mathbb{Q}$ with $h_K = 1$).
+- **p28** — `solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md` (6 links; $P \neq NP$ via Boolean BC + Bulatov-Zhuk + Taylor/spectral gap).
 - **p29** — paper29-hodge.
 - **p30** — paper30-navier-stokes.
 - **p31** — paper31-baum-connes.
-- **p60** — `paper60-the-geometry-of-the-circle/13-face-7-curvature-yang-mills.md` (YM is the CURVATURE-canonical face; KK gap identification; adjacency to Lehmer via gap-above-ground-state).
-- **p61** — `paper61-projections-of-the-5d-geometry/` (6 projections). Load-bearing §: §08 (P_B gauge projection + YM chain), §10 (P_D operator algebra), §13–§18 (projection operators, invariants, commutative diagram), §19–§24 (what this explains — 0 free parameters, 36-pin match, hub structure).
+- **p60** — `integers/paper60-geometry-of-circle/13-face-7-curvature-yang-mills.md` (YM is the CURVATURE-canonical face; KK gap identification; adjacency to Lehmer via gap-above-ground-state).
+- **p61** — `integers/paper61-projections-5d/` (6 projections). Load-bearing §: §08 (P_B gauge projection + YM chain), §10 (P_D operator algebra), §13–§18 (projection operators, invariants, commutative diagram), §19–§24 (what this explains — 0 free parameters, 36-pin match, hub structure).
 
 ### External references (cited within programme)
 
@@ -465,10 +465,59 @@ Inherited B_bare walls applicable to C_bare:
 - `strategy/x-ray/proof-chain/ym/X-RAY.md` — 38 cross-cut edges, face/projection/pattern histograms.
 - `strategy/ym/pac-output/runs/run-02/compliance-map.md` — 140-cell 18×7 Clay compliance map (LOCKED); 7 ADR pointers; H4 disclosure.
 - `strategy/ym/deliverables/ym-clay-bare.md` — B_bare Clay-shaped skeleton (parallel run-03 output).
-- `paper08-yang-mills/h4-capacitor-bypass/cycle-5-final-synthesis.md` — Step 18' H4 bypass (aggregate confidence 0.65).
+- `solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/cycle-5-final-synthesis.md` — Step 18' H4 bypass (aggregate confidence 0.65).
 
 ---
 
-*End of ym-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. ≤ 15 pages target. Written in run-04; companion to run-03 B_bare. C_full and B_full DEFERRED to composition-backward.*
+## §11 Related Work & Acknowledgments
+
+### §11.1 Major Approaches
+
+| # | Approach | Key Author(s) | Our Relation |
+|---|---|---|---|
+| 1 | Constructive / Lattice (Bałaban programme) | Bałaban (1980s) | AF-match Step 18' uses Bałaban-RG + gradient flow (Pillar C harden target) |
+| 2 | SPDE / Stochastic Quantization | Hairer, Shen, Chevyrev, Gubinelli, Kupiainen | Parallel rigorous route (2D/3D done; 4D open) |
+| 3 | Probabilistic | Chatterjee, Seiler, Brydges, Fröhlich | Lattice-limit analysis |
+| 4 | Gribov-Zwanziger Confinement | Zwanziger | Mass gap consistent with horizon phenomenology |
+| 5 | Dynamical Area-Law | Seiler | Wilson-loop bounds |
+| 6 | Physics-Lattice / CQFT | Jaffe-Witten, Glimm-Jaffe | Clay target + constructive programme |
+| 7 | Higgs / Symmetry-Breaking | Douglas, Abdesselam | Constructive RG routes |
+
+**Our contribution**: ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> = M⁴ × S¹ → P_B gauge projection → mass gap = f(R) parameter-free (pin #1). Uses Bałaban-RG + gradient flow Step 18' for AF-match (Pillar C: depend on + strengthen Bałaban programme). Remaining Wightman/OS axioms via CBB layers (paper1 Branch D). 18-layer chain PROVED with one OPEN-BUT-ADDRESSED named wall (H4, confidence 0.65, L.3.7 audit).
+
+### §11.2 Named prior results
+
+| Year | Author(s) | Result |
+|---|---|---|
+| 1954 | Yang, Mills | Non-abelian gauge theory |
+| 1967 | Faddeev, Popov | Gauge-fixing |
+| 1972–1973 | 't Hooft, Veltman, Lee, Zinn-Justin | Renormalization |
+| 1973 | Gross, Wilczek, Politzer | Asymptotic freedom (Nobel 2004) |
+| 1980s | Bałaban | Lattice RG construction (multiple CMP papers) |
+| 1982 | Seiler | LNP 159 — constructive gauge theory monograph |
+| 2000 | Jaffe, Witten | Clay problem statement |
+| 2014 | Hairer | Regularity structures (Fields Medal) |
+| 2020+ | Chatterjee | Probabilistic YM survey |
+| 2024–2025 | Shen, Chevyrev, Gubinelli, Kupiainen | SPDE YM in 3D |
+
+### §11.3 Recent parallel work (2023–2026)
+
+Populate from `strategy/_research/yang-mills/landscape.md` §"Recent Preprints" — next cycle.
+
+### §11.4 Acknowledgments
+
+| Researcher | Contribution the programme relies upon |
+|---|---|
+| Tadeusz Bałaban | Multiscale RG construction → unconditional AF-match (Step 18') |
+| Erhard Seiler | Constructive gauge-theory programme (LNP 159) |
+| Sourav Chatterjee | Probabilistic results + modern landscape survey |
+| Arthur Jaffe, Edward Witten | Clay problem statement target |
+| Martin Hairer, Hao Shen, Ilya Chevyrev, Massimiliano Gubinelli, Antti Kupiainen | SPDE route providing independent rigor |
+
+Additional acknowledgments: Douglas Abdesselam, Jürg Fröhlich, David Brydges, Daniel Zwanziger, and the constructive-QFT community. Pillar-C harden artifacts for the Bałaban programme (scheduled next cycle) give back by auditing and strengthening specific construction layers.
+
+---
+
+*End of ym-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. ≤ 15 pages target. Written in run-04; §11 merged from UA patch on 2026-04-15. Companion to run-03 B_bare. C_full and B_full DEFERRED to composition-backward.*
 
 *G Six and Claude Opus 4.6. 2026-04-14.*

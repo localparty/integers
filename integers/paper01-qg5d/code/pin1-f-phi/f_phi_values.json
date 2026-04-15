@@ -1,0 +1,119 @@
+{
+  "definition_F_phi_per_research07_eq43": "F_phi(p) is the dimensionless KK-overlap integral of a 4D field's internal-manifold zero-mode profile with the p-th e-circle KK mode, appearing as the geometric factor in g_phi^(p) ~ alpha_phi/(4pi) * m_phi/m_KK * F_phi(p) (research/07 eq. 4.3). 'Of order 1 for p = O(1) and decaying for large p.'",
+  "zero_mode_wavefunctions": {
+    "CP^2": "Constant scalar: 1/sqrt(Vol(CP^2)) with Vol(CP^2) = (pi^2/2) r_3^4. Gauge zero-mode: Killing vectors K_I^a (SU(3), 8 of them).",
+    "S^2": "Constant scalar: 1/sqrt(4 pi r_2^2). Gauge zero-mode: Killing vectors L_J^i (SU(2), 3 of them).",
+    "S^1": "p-th Fourier mode: (1/sqrt(L)) exp(2 pi i p psi / L), L = 2 pi R."
+  },
+  "F_phi_p_tables": {
+    "p": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "A_casimir": [
+      0.0625,
+      0.012345679012345678,
+      0.0016,
+      0.00041649312786339027,
+      6.830134553650706e-05
+    ],
+    "B_rg": [
+      1.0059633083367032,
+      1.014980463419914,
+      1.0321502828651932,
+      1.0469982740851163,
+      1.0713668891316028
+    ],
+    "C_cutoff": [
+      0.8521437889662113,
+      0.697676326071031,
+      0.36787944117144233,
+      0.140858420921045,
+      0.00790705405159344
+    ],
+    "D_massive": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "pipeline_propagation_with_enhance_agent_N": {
+    "A_pure_casimir_1_over_p4": {
+      "Delta": "-1.997025444e-5",
+      "total": "69.75205276327214",
+      "empirical": "69.74217094",
+      "ppm_residual": "-141.691",
+      "|V_12|^2": "0.000120944",
+      "|V_13|^2": "0.000278386",
+      "|V_14|^2": "0.000309277",
+      "|V_15|^2": "0.000246645"
+    },
+    "B_rg_running_shift": {
+      "Delta": "-0.04470133049",
+      "total": "69.70737140303402",
+      "empirical": "69.74217094",
+      "ppm_residual": "498.974",
+      "|V_12|^2": "0.365809",
+      "|V_13|^2": "0.601067",
+      "|V_14|^2": "0.629268",
+      "|V_15|^2": "0.438436"
+    },
+    "C_kk_cutoff_gaussian": {
+      "Delta": "-0.009988311041",
+      "total": "69.74208442248561",
+      "empirical": "69.74217094",
+      "ppm_residual": "1.24053",
+      "|V_12|^2": "0.0657216",
+      "|V_13|^2": "0.140672",
+      "|V_14|^2": "0.151948",
+      "|V_15|^2": "0.115194"
+    },
+    "D_massive_cp2_s2_dressing": {
+      "Delta": "-0.04160363814",
+      "total": "69.71046909539019",
+      "empirical": "69.74217094",
+      "ppm_residual": "454.558",
+      "|V_12|^2": "0.337397",
+      "|V_13|^2": "0.561692",
+      "|V_14|^2": "0.587121",
+      "|V_15|^2": "0.410713"
+    },
+    "E_unity": {
+      "Delta": "-0.04160363814",
+      "total": "69.71046909539019",
+      "empirical": "69.74217094",
+      "ppm_residual": "454.558",
+      "|V_12|^2": "0.337397",
+      "|V_13|^2": "0.561692",
+      "|V_14|^2": "0.587121",
+      "|V_15|^2": "0.410713"
+    },
+    "F_gauge_geometric_3over16": {
+      "F_phi_value": "0.1875",
+      "Delta": "-0.001462627903",
+      "total": "69.75061010562334",
+      "ppm_residual": "-121.005",
+      "|V_12|^2": "0.0118616",
+      "|V_13|^2": "0.019747"
+    }
+  },
+  "inverse_problem_what_F_closes_Pin1_to_5ppb": {
+    "Delta_target_from_empirical": "-0.009901793527",
+    "Delta_at_F_phi_equals_1": "-0.04160363814",
+    "ratio_Delta_target_over_unity": "0.238003",
+    "implied_uniform_F_phi_value": "0.487856",
+    "sign": "positive",
+    "interpretation": "If F_phi(p) = constant * F_eff, then F_eff ~ 0.4879 is required to close Pin #1 to 5 ppb with Agent N enhance = 0.8286. Values < 1 are a SUPPRESSION of c_p \u2014 possible from CP^2/S^2 internal-wavefunction normalization if the gauge zero-modes are NOT constant (e.g., Killing vectors have non-trivial norms)."
+  },
+  "pin1_status_upgrade": {
+    "before_F_phi": "Agent N: 0 free parameters + 1 unevaluated integral F_phi(p). Residual 624 ppm with enhance=0.829, F_phi=1.",
+    "after_F_phi_this_work": "F_phi(p) computed geometrically. For pure massless-boson S^1 Casimir, F_phi(p) = 1/p^4 (variant A) OVERSUPPRESSES. For canonical zero-mode gauge-boson overlap with constant profile, F_phi(p) = 1 (variant E) \u2014 reproduces Agent N. For Killing-vector Dynkin-index geometric factor, F_phi = 3/16 (variant F_gauge_geometric_3over16) \u2014 undershoots. No single GEOMETRIC F_phi(p) closes the 624 ppm to 5 ppb.",
+    "diagnosis": "F_phi(p) as defined in eq. (4.3) is a p-INDEPENDENT O(1) geometric prefactor for SM gauge bosons (their 4D zero-mode profile is a Killing vector, which is covariantly constant on the homogeneous spaces CP^2 and S^2). The p-dependence lives entirely in the log(p)/p running-coupling factor of eq. (4.8). No geometric choice of F_phi(p) in the research/07 framework can produce a p-DEPENDENT modulation that closes the gap \u2014 the residual is NOT in F_phi(p). The remaining 624 ppm thus lies in: (a) the Agent O HARDER-KK-CUTOFF hypothesis, (b) a missing counterterm, or (c) subleading running at the BC spectral scale that modifies the |b_i| prefactor slightly.",
+    "final_status": "Pin #1 as a STRUCTURAL theorem (zero free parameters, closed-form matrix-element structure, ab initio enhance = 0.829, all sectors accounted for): COMPLETE. Pin #1 as a FULL QUANTITATIVE theorem to 5 ppb: NOT CLOSED. The 624 ppm residual does not come from F_phi(p) \u2014 it comes from subleading non-geometric physics (scheme choice, higher-loop running, or KK-cutoff prescription) that this thread cannot pin down from first principles without further input."
+  }
+}

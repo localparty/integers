@@ -1,6 +1,6 @@
 # paper25-hilbert-12 — Hilbert's 12th Problem
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper25-hilbert-12/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper25-hilbert-12/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

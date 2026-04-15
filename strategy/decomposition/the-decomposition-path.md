@@ -71,7 +71,7 @@ So the full argument structure becomes:
   ↓
 QG5D 22 THEOREMS (grounded in the pins)
   ↓ (every theorem in the programme derives via a PROVED chain)
-EVERY MILLENNIUM CLAIM (rooted in QG5D via proved chain)
+EVERY MILLENNIUM CLAIM (rooted in ~~QG5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "rooted in QG5D" (compliance-chain root, geometry) → "M⁵" --> via proved chain)
 ```
 
 ### The critic test — why the graph is UNDENIABLE
@@ -343,7 +343,7 @@ Same cascade applies to Paper 13 (CCM decomposes), Paper 26 (CBB decomposes), Pa
 
 ### Phase 0 — Proof of concept (H4 first)
 
-**Target**: paper47-h4-decomposition/ (new directory) or paper08-yang-mills/h4-decomposition-chain/ (as sub-directory of Paper 8).
+**Target**: paper47-h4-decomposition/ (new directory) or solutions-with-prize/paper08-yang-mills/h4-decomposition-chain/ (as sub-directory of Paper 8).
 
 **Steps**:
 

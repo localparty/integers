@@ -241,7 +241,7 @@ The "transposition recipe" field is what makes the cell ACTIONABLE. Without it, 
 
 ## v1 + H4 Wave 1 updates (2026-04-13)
 
-The H4 Capacitor Bypass PCA Wave 1 (Track 2, 2026-04-13) produced 5 durable Millennium-grade cell-fills + 1 new kill + 5 structural insights. Full per-cell content lives at `paper08-yang-mills/h4-capacitor-bypass/capacitor/updates/wave1-cell-fills.md` and the per-Author nodes at `paper08-yang-mills/h4-capacitor-bypass/nodes/W1-*.md`. Summary integrated here; PCA runners should reference this section as authoritative for the listed cells.
+The H4 Capacitor Bypass PCA Wave 1 (Track 2, 2026-04-13) produced 5 durable Millennium-grade cell-fills + 1 new kill + 5 structural insights. Full per-cell content lives at `solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/capacitor/updates/wave1-cell-fills.md` and the per-Author nodes at `solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/nodes/W1-*.md`. Summary integrated here; PCA runners should reference this section as authoritative for the listed cells.
 
 ### New / promoted Tier 1 cells
 

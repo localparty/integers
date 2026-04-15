@@ -22,7 +22,7 @@ The ITPFI spectral measure is mu = *_p mu_p where each mu_p = (p/(p+1)) delta_0 
 
 **Step 3 (Tail convolution preserves positivity).** mu = mu_{<=P} * mu_{>P}. Since mu_{>P} is a probability measure, mu([a,b]) >= mu_{<=P}([a,b]) * mu_{>P}(R) = mu_{<=P}([a,b]) > 0. The density inherits the lower bound: for any compact K subset [T_0, T], rho_mu(t) >= c_0(K) > 0.
 
-**Step 4 (Uniformity in T).** The lower bound c_0(K) depends on K only through its length |K| and distance from 0. For the thickened section, K = union of intervals of width 2c/log T around each gamma_n <= T. The per-interval density bound c_0 ~ 1/sqrt(V_P) is INDEPENDENT of T (it depends only on P, which we fix). The N(T) ~ (T/2pi)log T intervals contribute mu(Sigma_epsilon) >= N(T) * (2c/log T) * c_0 > 0.
+**Step 4 (Uniformity in T).** The lower bound c_0(K) depends on K only through its length |K| and distance from 0. For the thickened section, K = union of intervals of width 2c/log T around each gamma_n <= T. The per-interval density bound c_0 ~ 1/sqrt(V_P) is INDEPENDENT of T (it depends only on P, which ~~we fix~~ is held constant <!-- legacy 2026-04-15: "we fix" in parameter-holding context softened to "is held constant" per §0.10 canon entry 7, Intervention 8; idiomatic math usage preserved as strikethrough for traceability -->). The N(T) ~ (T/2pi)log T intervals contribute mu(Sigma_epsilon) >= N(T) * (2c/log T) * c_0 > 0.
 
 ### Verdict
 

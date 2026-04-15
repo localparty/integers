@@ -33,7 +33,7 @@
 ## AI policy
 Springer's umbrella policy requires declaration of AI tool usage. Should be checked against Inventiones-specific guidelines before submission.
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - Primary backup target to Annals for: Paper 13 (RH), Paper 8 (YM), Paper 26 (BSD), Paper 29 (Hodge), Paper 30 (NS), Paper 28 (PvNP).
 - Submission format essentially the same as Annals.
 

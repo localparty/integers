@@ -1,0 +1,122 @@
+{
+  "test1_relativization": {
+    "2sat": {
+      "2.0": {
+        "frac_has_poly": 1.0,
+        "median_n_preserving": 15,
+        "avg_n_preserving": 33.2,
+        "median_tgap": 0.7540983606557377,
+        "n": 15
+      },
+      "3.0": {
+        "frac_has_poly": 1.0,
+        "median_n_preserving": 17,
+        "avg_n_preserving": 9.0,
+        "median_tgap": 0.9836065573770492,
+        "n": 2
+      },
+      "4.0": {
+        "frac_has_poly": null,
+        "n": 0
+      },
+      "5.0": {
+        "frac_has_poly": null,
+        "n": 0
+      }
+    },
+    "3sat": {
+      "2.0": {
+        "frac_has_poly_3": 0.0,
+        "frac_has_poly_10": 0.0,
+        "n_inst_3": 50,
+        "n_inst_10": 50,
+        "median_n_preserving": 0,
+        "median_tgap": 1.0,
+        "avg_sol_size": 75.06,
+        "n": 50
+      },
+      "3.0": {
+        "frac_has_poly_3": 0.12,
+        "frac_has_poly_10": 0.047619047619047616,
+        "n_inst_3": 50,
+        "n_inst_10": 42,
+        "median_n_preserving": 0,
+        "median_tgap": 1.0,
+        "avg_sol_size": 20.14,
+        "n": 50
+      },
+      "4.0": {
+        "frac_has_poly_3": 0.5588235294117647,
+        "frac_has_poly_10": 0.25,
+        "n_inst_3": 34,
+        "n_inst_10": 8,
+        "median_n_preserving": 1,
+        "median_tgap": 0.9836065573770492,
+        "avg_sol_size": 7.823529411764706,
+        "n": 34
+      },
+      "4.267": {
+        "frac_has_poly_3": 0.56,
+        "frac_has_poly_10": 0.0,
+        "n_inst_3": 25,
+        "n_inst_10": 6,
+        "median_n_preserving": 1,
+        "median_tgap": 0.9836065573770492,
+        "avg_sol_size": 6.84,
+        "n": 25
+      },
+      "5.0": {
+        "frac_has_poly_3": 0.75,
+        "frac_has_poly_10": NaN,
+        "n_inst_3": 8,
+        "n_inst_10": 0,
+        "median_n_preserving": 5,
+        "median_tgap": 0.9836065573770492,
+        "avg_sol_size": 5.0,
+        "n": 8
+      }
+    },
+    "twosat_pass": true,
+    "threesat_pass": true,
+    "verdict": "PASS"
+  },
+  "test2_natural_proofs": {
+    "n_bits": 8,
+    "n_functions": 2000,
+    "n_tested": 2000,
+    "n_skipped": 0,
+    "n_has_poly": 0,
+    "n_no_poly": 2000,
+    "frac_has_poly": 0.0,
+    "threshold": 0.015625,
+    "is_not_natural": true,
+    "verdict": "PASS"
+  },
+  "test3_algebrization": {
+    "2sat_summary": {
+      "n_instances": 1,
+      "avg_tgap_full": 0.7213114754098361,
+      "avg_tgap_sym": 0.5,
+      "avg_commutator": 0.7764749471172602
+    },
+    "3sat_summary": {
+      "n_instances": 29,
+      "avg_tgap_full": 0.9892594686263426,
+      "avg_tgap_sym": 0.9396551724137931,
+      "avg_commutator": 2.5169869062173644
+    },
+    "n_asym_tgap_diff": 5,
+    "n_asym_class_change": 0,
+    "n_2sat_class_change": 0,
+    "asym_pass": true,
+    "comm_pass": "True",
+    "verdict": "PASS"
+  },
+  "verdicts": {
+    "Relativization": "PASS",
+    "Natural Proofs": "PASS",
+    "Algebrization": "PASS"
+  },
+  "overall": "PASS",
+  "total_time_s": 3.0791029930114746
+}

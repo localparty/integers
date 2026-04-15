@@ -1,6 +1,6 @@
 # Paper 30 — Navier-Stokes Existence and Smoothness (LIVE)
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper30-navier-stokes/` (LIVE — has PROOF-CHAIN.md)
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper30-navier-stokes/` (LIVE — has PROOF-CHAIN.md)
 **PROOF-CHAIN:** 3/8 links proved (upgraded from 2 after W1/W2 closure). Confidence 4/10.
 
 ## Claim

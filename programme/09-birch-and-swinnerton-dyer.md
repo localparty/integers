@@ -8,7 +8,7 @@ Paper 26 proves the Birch and Swinnerton-Dyer conjecture for CM elliptic curves 
 
 The proof chain has 11 steps, all at [THEOREM] or [LEMMA] rigor level, with zero [KEY LEMMA --- OPEN] items and zero [GAP] items. It was the first programme to be run through the Online Researcher-Adversarial pipeline, validating both the proof and the ORA methodology.
 
-**Source**: `paper26-bsd/preprint/PROOF-CHAIN.md`, `paper26-bsd/strategy/00-bsd-attack-plan.md`, `paper26-bsd/strategy/05-route3-kms-projector-bypass.md`.
+**Source**: `solutions-with-prize/paper26-bsd/preprint/PROOF-CHAIN.md`, `solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md`, `solutions-with-prize/paper26-bsd/strategy/05-route3-kms-projector-bypass.md`.
 
 ---
 
@@ -240,4 +240,4 @@ If the BSD chain closes unconditionally (via independent verification of the CBB
 
 *11 steps. 11 proved. Zero gaps. One conditional (CBB axioms). 4 critics. 15 attacks. 5 repaired. 0 broken. The first ORA run. The projector that closed the wall. The bridge extends.*
 
-*Source files: `paper26-bsd/preprint/PROOF-CHAIN.md`, `paper26-bsd/strategy/00-bsd-attack-plan.md`, `paper26-bsd/strategy/05-route3-kms-projector-bypass.md`.*
+*Source files: `solutions-with-prize/paper26-bsd/preprint/PROOF-CHAIN.md`, `solutions-with-prize/paper26-bsd/strategy/00-bsd-attack-plan.md`, `solutions-with-prize/paper26-bsd/strategy/05-route3-kms-projector-bypass.md`.*

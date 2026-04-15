@@ -19,7 +19,7 @@ In practice: recipients must be UNDER 40 on 1 January of the Congress year. The 
 - Individual award, not shared.
 - The prize is person-oriented, not paper-oriented — "for outstanding mathematical achievement for existing work and for the promise of future achievement."
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - **Person-oriented**, not paper-oriented. G Six's personal age on 1 January of the Congress year is the binding constraint.
 - If G Six is under 40 in 2026 or 2030, Fields-eligible.
 - If over 40, ineligible — programme targets shift to Abel / Wolf / Shaw / Breakthrough.

@@ -10,7 +10,7 @@ I had been looking at the Bulatov--Zhuk CSP dichotomy theorem --- the result tha
 
 The move was: step back and add tools from inside the geometries. Not try to break the wall from outside, which is always not applicable. Build the toolkit from inside the operator algebra, the way we built the mass gap from inside the gradient flow, the way we built the Riemann zeros from inside the BC spectral realization. From the inside out.
 
-**Source**: `paper28-pvnp/strategy/07-toolkit-complete.md`, `paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md`, `online-researcher-adversarial/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`.
+**Source**: `solutions-with-prize/paper28-pvnp/strategy/07-toolkit-complete.md`, `solutions-with-prize/paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md`, `online-researcher-adversarial/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`.
 
 ---
 
@@ -297,4 +297,4 @@ The answer might be: the three columns of the trinity are not merely correlated.
 
 *6 links. 5 closed. 1 wall. 10 agents. 18 kills. 3 barriers bypassed. 1 area law. 1 trinity. 1 gate-amplifier. 7 routes to the wall. The toolkit is complete. The ORA runs on this. From inside the geometry, step by step, same reflex.*
 
-*Source files: `paper28-pvnp/strategy/07-toolkit-complete.md`, `paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md`, `online-researcher-adversarial/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`.*
+*Source files: `solutions-with-prize/paper28-pvnp/strategy/07-toolkit-complete.md`, `solutions-with-prize/paper28-pvnp/strategy/04-ora--seven-routes-one-wall.md`, `online-researcher-adversarial/ora-bundle-v8/p-v-np-toolkit/framework-tools-v4.md`.*

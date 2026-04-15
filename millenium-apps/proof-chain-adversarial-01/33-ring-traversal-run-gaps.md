@@ -23,7 +23,7 @@
 | 11 | Prior audit 1 | `millenium-apps/proof-chain-adversarial-01/31-ring-traversal-run-gaps.md` | read (257 lines) | Twelve items B-1…A-5 + M-1…M-4. All marked FIXED/DOCUMENTED by audit 32. |
 | 12 | Prior audit 2 | `millenium-apps/proof-chain-adversarial-01/32-ring-traversal-run-gaps.md` | read (205 lines) | Two new items B-4 (companion files) + B-5 (self-name drift). B-4 is FIXED in run.md (confirmed in this audit); B-5 is still open (optional; cosmetic). |
 | 13 | 14 PROOF-CHAIN.md files | `paper{1,08-yang-mills,13-rh,13b-grh,25-hilbert-12,26-bsd,28-pvnp,29-hodge,30-navier-stokes,31-baum-connes,32-bgs-spectral-statistics,33-goldbach,34-twin-primes,35-schanuel}/PROOF-CHAIN.md` | all 14 present ✓ | Modified 2026-04-14 — all include a W1/W2 cascade section. |
-| 14 | PIN-TABLE | `paper12/research/23-framework-predictions-master-table.md` | present ✓ (22404 bytes, modified 2026-04-09) | Load-bearing for PIN-PRESERVATION / DUAL-CHECK. |
+| 14 | PIN-TABLE | `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` | present ✓ (22404 bytes, modified 2026-04-09) | Load-bearing for PIN-PRESERVATION / DUAL-CHECK. |
 | 15 | Output dir (parent) | `programme/ring-traversals/` | exists, EMPTY (created 2026-04-13 23:11) | `traversal-01/` subdirectory does NOT yet exist — T1 runner creates it at bootstrap. |
 | 16 | Archive dirs | `paper27-hodge/`, `paper27-navier/` | exist, NEITHER has a top-level `PROOF-CHAIN.md` | Glob `paper*/PROOF-CHAIN.md` at top level returns exactly the 14 canonical ring vertices. The 31/32 concern about Glob confusion only applies to deep searches inside paper27 research/preprint directories. |
 
@@ -74,7 +74,7 @@ Two distinct failure modes:
 
 **Where it conflicts:**
 
-- `paper1/PROOF-CHAIN.md` line 5: **"Status: 22/22 theorems PROVED | Confidence: 10/10 (upgraded 2026-04-13 after W1/W2 resolution via Paper 10 + Paper 11)"**
+- `integers/paper01-qg5d/PROOF-CHAIN.md` line 5: **"Status: 22/22 theorems PROVED | Confidence: 10/10 (upgraded 2026-04-13 after W1/W2 resolution via Paper 10 + Paper 11)"**
 - `13-chessboard-layer.md` §3 current-value block (lines 139-150):
   ```
   E_filled   = 44    (post-H4-run capacitor)
@@ -99,7 +99,7 @@ If QG5D's 22 PROVED theorems count as chain links:
 - L_total could be 83 + 22 = 105
 - RIGIDITY = (44/276) × (69/105) × (36/36) × 100 = 0.1594 × 0.6571 × 1.0 × 100 = **10.48**
 
-If QG5D is deliberately excluded (treating it as a hub-only "consistency anchor" rather than a chain vertex, which `paper1/PROOF-CHAIN.md` §"PCA traversal behavior at QG5D" could be read to suggest), then L_total = 83 is correct but the enumeration should name what those 83 are across the other 13 vertices.
+If QG5D is deliberately excluded (treating it as a hub-only "consistency anchor" rather than a chain vertex, which `integers/paper01-qg5d/PROOF-CHAIN.md` §"PCA traversal behavior at QG5D" could be read to suggest), then L_total = 83 is correct but the enumeration should name what those 83 are across the other 13 vertices.
 
 Either interpretation must be DECLARED. The current numbers are silent on which convention applies and are therefore un-reproducible.
 
@@ -127,8 +127,8 @@ Multiple `PROOF-CHAIN.md` files have a "Cascading refinement from QG5D W1/W2 clo
 | Vertex | Paper PROOF-CHAIN.md current state | Chessboard §3 / log baseline |
 |---|---|---|
 | QG5D | 22/22 PROVED, 10/10 (upgraded 2026-04-13) | counted as "other 0" in §3; 9/10 in SECTOR-TABLE Appendix C |
-| YM | 9/10 → 9.5/10 "marginally upgraded" per `paper08-yang-mills/PROOF-CHAIN.md` line 36 | 9/10 in SECTOR-TABLE; "YM 17" in §3 breakdown unchanged |
-| NS | **3/8 links proved (upgraded from 2 after W1/W2 closure) \| Confidence 4/10 (upgraded from 2/10)** per `paper30-navier-stokes/PROOF-CHAIN.md` line 7, plus arXiv:2601.08854 Route B integration | "NS 2" in §3 breakdown (pre-cascade); "2/10" in SECTOR-TABLE |
+| YM | 9/10 → 9.5/10 "marginally upgraded" per `solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md` line 36 | 9/10 in SECTOR-TABLE; "YM 17" in §3 breakdown unchanged |
+| NS | **3/8 links proved (upgraded from 2 after W1/W2 closure) \| Confidence 4/10 (upgraded from 2/10)** per `solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md` line 7, plus arXiv:2601.08854 Route B integration | "NS 2" in §3 breakdown (pre-cascade); "2/10" in SECTOR-TABLE |
 | RH | 6/6, 8/10 | matches §3 (RH 6) and SECTOR-TABLE (8/10) ✓ |
 | BSD | 11/11, 9/10 | matches §3 (BSD 11) and SECTOR-TABLE (9/10) ✓ |
 | All others | — | ring-traversal-log.md line 24: "Frontier vertices (confidence 1-2/10): H12, NS, Baum-Connes, Goldbach, Twin Primes, Schanuel" — groups NS with Frontier pre-cascade |
@@ -143,7 +143,7 @@ Multiple `PROOF-CHAIN.md` files have a "Cascading refinement from QG5D W1/W2 clo
 **Why it matters:**
 
 - The brief §4 exit condition `RING STRENGTHENED` requires "at least 5 vertices improved." If NS has already improved outside any traversal (W1/W2 cascade + arXiv:2601.08854), it will be double-counted if T1 re-declares NS as "improved" against the stale baseline.
-- `paper30-navier-stokes/PROOF-CHAIN.md` line 54-59 adds a new edge to the programme graph: "Capacitor MICRO↔QFT — provides Route B directly." This is a CAPACITOR-LEVEL finding, not a ring-traversal-level finding. The chessboard §6.4 antipodal table should reflect this (pair 7↔14 NS↔Schanuel is LOW priority, but the NS-related MICRO↔QFT cell already upgraded).
+- `solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md` line 54-59 adds a new edge to the programme graph: "Capacitor MICRO↔QFT — provides Route B directly." This is a CAPACITOR-LEVEL finding, not a ring-traversal-level finding. The chessboard §6.4 antipodal table should reflect this (pair 7↔14 NS↔Schanuel is LOW priority, but the NS-related MICRO↔QFT cell already upgraded).
 - Ring-traversal-log.md baseline line 23: "Upgrading vertices (confidence 3/10): BGS ⭐ (Nov 2025 Hardy Z PCC lead), Hodge (2 routes) (2 total)" — NS should now be in this bucket at 4/10, not "Frontier 1-2/10."
 
 **Recommended fix:**
@@ -256,9 +256,9 @@ Brief §2 "Position/Vertex" table declares ring edges with "Incoming edge (from 
 
 | Ring edge | Brief §2 label | Acknowledged in predecessor's §Programme graph edges? | In successor's? |
 |---|---|---|---|
-| 5 → 6 (H12 → YM) | "KMS states → gauge structure" | `paper25-hilbert-12/PROOF-CHAIN.md` §"Programme graph edges" lists: RH, BSD, Hodge, GRH, LANG↔QFT — **NOT YM** | `paper08-yang-mills/PROOF-CHAIN.md` §"Programme graph edges" lists: QG5D, RH, NS, Hodge, Baum-Connes — **NOT H12** |
-| 9 → 10 (Baum-Connes → PvNP) | "K-theory of polymorphism algebra" | `paper31-baum-connes/PROOF-CHAIN.md` §"Programme graph edges" lists: QG5D, YM, RH, Hodge, BGS — **NOT PvNP** | `paper28-pvnp/PROOF-CHAIN.md` mentions BGS only (no Baum-Connes) |
-| 13 → 14 (Goldbach → Schanuel) | "additive primes → algebraic independence" | `paper33-goldbach/PROOF-CHAIN.md` §"Programme graph edges" — did not grep this specifically (not spot-checked) | same |
+| 5 → 6 (H12 → YM) | "KMS states → gauge structure" | `solutions/paper25-hilbert-12/PROOF-CHAIN.md` §"Programme graph edges" lists: RH, BSD, Hodge, GRH, LANG↔QFT — **NOT YM** | `solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md` §"Programme graph edges" lists: QG5D, RH, NS, Hodge, Baum-Connes — **NOT H12** |
+| 9 → 10 (Baum-Connes → PvNP) | "K-theory of polymorphism algebra" | `solutions/paper31-baum-connes/PROOF-CHAIN.md` §"Programme graph edges" lists: QG5D, YM, RH, Hodge, BGS — **NOT PvNP** | `solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md` mentions BGS only (no Baum-Connes) |
+| 13 → 14 (Goldbach → Schanuel) | "additive primes → algebraic independence" | `solutions-with-prize/paper33-goldbach/PROOF-CHAIN.md` §"Programme graph edges" — did not grep this specifically (not spot-checked) | same |
 
 **Why it matters:**
 
@@ -468,7 +468,7 @@ Post-W1/W2 cascade (2026-04-13/14):
 - **Brief §0 status dictionary (§0.2)** tabulates all five partially-overlapping taxonomies — closes audit 31's B-3.
 - **Brief §3.2 VERIFY policy** distinguishes T1 (lightweight spot-check, 1 Sonnet Critic, 2-3 links) from T2+ (trust PROOF-CHAIN.md unless explicit trigger) — closes audit 31's A-1.
 - **Appendix B of `publishing/strategy.md`** supplies the ring-mode north star content the Triad Strategist (§T.4.2) needs: capacitor-fill target 40%, rigidity target ≥50 after T5, per-traversal Δ expectations, walk-back contract, three alignment-check questions. Closes audit 31's A-4.
-- **PIN-TABLE** at `paper12/research/23-framework-predictions-master-table.md` exists and is load-bearing for PIN-PRESERVATION / DUAL-CHECK (chessboard §1, §4).
+- **PIN-TABLE** at `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` exists and is load-bearing for PIN-PRESERVATION / DUAL-CHECK (chessboard §1, §4).
 - **Capacitor has 44 filled cells** (post-H4 state) including 5 new Tier 1 cells from the H4 Wave 1 run (LANG↔QFT, MICRO↔QFT, ERG↔QFT, 2× PROB↔SPEC) and a new NS application at MICRO↔QFT (arXiv:2601.08854). Capacitor growth is validated across the framework.
 - **14 `PROOF-CHAIN.md` files all have a "Cascading refinement from QG5D W1/W2 closure (2026-04-14)" section** — consistency of the cascade propagation at the per-vertex level. The gap is that the *aggregate* baselines (chessboard §3, Appendix C, log baseline) haven't been refreshed to match — the per-vertex work is done; the roll-up is pending.
 - **Output directory parent** (`programme/ring-traversals/`) exists and is empty — T1 can start from a clean slate.

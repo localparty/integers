@@ -1,7 +1,7 @@
 # YM Clay Compliance Checklist — paper08-yang-mills
 
-**Programme paper:** `/Users/gsix/quantum-geometry-in-5d-latex/paper08-yang-mills/`
-**Source of truth for claims:** `paper08-yang-mills/PROOF-CHAIN.md`, `paper08-yang-mills/STATUS.md`
+**Programme paper:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper08-yang-mills/`
+**Source of truth for claims:** `solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md`, `solutions-with-prize/paper08-yang-mills/STATUS.md`
 **Strategy file:** `strategy/ym/00-millenium-strategy.md`
 **Last programme state:** 18 layers, 1 open wall (H4, addressed via Balaban RG + gradient flow bypass, Step 18', confidence 0.65, L.3.7 audit pending)
 **This file appended:** 2026-04-14
@@ -23,10 +23,10 @@ Verdict classes: **PROVED** / **PARTIAL** / **OPEN-BUT-ADDRESSED (OBA)** / **SIL
 
 | # | Requirement | Verdict | Programme citation | Notes |
 |---|---|---|---|---|
-| 1 | Any compact simple gauge group G | [ ] AUDIT NEEDED | paper08-yang-mills/PROOF-CHAIN.md | Likely tacitly SU(N); need explicit generality statement |
+| 1 | Any compact simple gauge group G | [ ] AUDIT NEEDED | solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md | Likely tacitly SU(N); need explicit generality statement |
 | 2 | On R^4 (infinite volume) | [ ] AUDIT NEEDED | PROOF-CHAIN.md | Explicit infinite-volume limit T^4 → R^4 is J-W §6-named hard problem |
 | 3 | Mass gap Δ > 0, uniform in volume | [ ] PARTIAL/AUDIT | STATUS.md I.1 (lattice σ > 0, Δ > 0 for β < 10^14); PROOF-CHAIN layer for spectral gap | Uniformity in V = J-W §6-named hard problem |
-| 4 | Full Wightman OR OS axioms | [ ] PARTIAL | Partial via CBB axioms (paper1/paper8 axioms) | Need explicit Wightman/OS axiom verification |
+| 4 | Full Wightman OR OS axioms | [ ] PARTIAL | Partial via CBB axioms (integers/paper01-qg5d/paper8 axioms) | Need explicit Wightman/OS axiom verification |
 | 5 | AF match at short distance | [x] OPEN-BUT-ADDRESSED | H4 (Step 18') via Balaban RG + gradient flow, confidence 0.65 | L.3.7 audit pending; paper50-h4-replacement backup |
 | 6 | Stress tensor + OPE with AF-prescribed singularities | [ ] AUDIT NEEDED | PROOF-CHAIN.md | Need explicit stress tensor + OPE construction |
 | 7 | Non-triviality | [x] PROVED | SU(2) exact area law (STATUS.md I.2); lattice confinement | F ≠ 0; coupling nonzero |

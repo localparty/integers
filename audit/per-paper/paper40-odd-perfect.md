@@ -1,6 +1,6 @@
 # paper40-odd-perfect — Odd Perfect Numbers
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper40-odd-perfect/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper40-odd-perfect/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

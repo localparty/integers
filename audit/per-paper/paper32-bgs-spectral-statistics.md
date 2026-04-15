@@ -1,6 +1,6 @@
 # paper32-bgs-spectral-statistics — Berry-Tabor / BGS conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper32-bgs-spectral-statistics/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper32-bgs-spectral-statistics/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

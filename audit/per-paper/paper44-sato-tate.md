@@ -1,6 +1,6 @@
 # paper44-sato-tate — Generalized Sato-Tate
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper44-sato-tate/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions/paper44-sato-tate/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

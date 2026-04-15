@@ -68,7 +68,7 @@ These items were done as part of the Phase A–E corpus mapping + TOC reading pa
 - The 8→10 climb has two explicit gates, both non-math: (a) 8→9 = CCM journal acceptance; (b) 9→10 = independent third-party verification
 - Load-bearing for the Integers programme: if math chain is 10/10, then Integers' 36/36 headline is mathematically unconditional
 
-**Artifacts:** Item 43 in `program/50+.md`. `paper13-rh/strategy/23-the-proof-architecture.md` cited as the pre-adversarial 10/10 snapshot (commit `49b5eeb` "THE PROOF ARCHITECTURE IS ON DISK").
+**Artifacts:** Item 43 in `program/50+.md`. `solutions-with-prize/paper13-rh/strategy/23-the-proof-architecture.md` cited as the pre-adversarial 10/10 snapshot (commit `49b5eeb` "THE PROOF ARCHITECTURE IS ON DISK").
 
 ### 6. Paper 23 promoted to #1 write priority
 
@@ -153,7 +153,7 @@ plans for the three remaining Clay problems (navier, pvnp were new;
 hodge was already drafted), and the CAMB framework-input rerun rounds
 1 and 2 that reshaped HP-3.
 
-### 16. HP-5 — CAMB venv and driver scripts moved to `paper2/camb/`
+### 16. HP-5 — CAMB venv and driver scripts moved to `integers/paper02-cosmology/camb/`
 
 **What:** The working CAMB v1.6.6 venv plus all 5D driver scripts
 (`compute_age.py`, `compute_baryogenesis.py`, `compute_mirror_matter.py`,
@@ -162,16 +162,16 @@ hodge was already drafted), and the CAMB framework-input rerun rounds
 `compute_g2_running.py`, `plot_results.py`) plus all artifacts
 (`results.json`, `neff_analysis_results.json`, PNGs) moved from
 `/Users/gsix/quantum-geometry-in-5d/etc/age/` to
-`/Users/gsix/quantum-geometry-in-5d/paper2/camb/`. Fixed 7 hardcoded
+`/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/`. Fixed 7 hardcoded
 path references in 2 Python scripts (`compute_xi_from_c_nu.py` ×1,
 `compute_R_closure_surface.py` ×6). Verified venv still imports
 camb 1.6.6 from the new location. Updated 7 stale narrative
 references in the latex tree (`paper27-navier/strategy/00-`,
 `paper9/preprint/04b-`, `etc/35d-`, `etc/36-`, `etc/36b-`,
 `paper9/etc/03-`, `paper9/etc/04-`) and 2 in the sister project
-(`paper2/etc/hostile-reviewer.md`, `paper2/etc/latex-conversion-for-arxiv.md`).
+(`integers/paper02-cosmology/etc/hostile-reviewer.md`, `integers/paper02-cosmology/etc/latex-conversion-for-arxiv.md`).
 
-**Artifacts:** `/Users/gsix/quantum-geometry-in-5d/paper2/camb/`
+**Artifacts:** `/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/`
 (new canonical home); `program/50+.md` Block H HP-5 entry
 (marked COMPLETED).
 
@@ -192,7 +192,7 @@ BRAINSTORMING → SCOPING. Research/preprint dirs not yet created.
 
 ### 18. Paper 28-pvnp attack plan drafted
 
-**What:** Created `paper28-pvnp/strategy/00-pvnp-attack-plan.md`
+**What:** Created `solutions-with-prize/paper28-pvnp/strategy/00-pvnp-attack-plan.md`
 (~220 lines) following the same template. Four attack paths:
 (A) **GCT bridge — Mulmuley–Sohoni plethysm coefficients via the
 cyclotomic Brauer bridge family k=4,6** at 5/10 (depends on HP-2
@@ -206,7 +206,7 @@ Baker–Gill–Solovay relativisation, Aaronson–Wigderson algebrisation)
 and argues framework cocycles clear all three. Status:
 BRAINSTORMING → SCOPING.
 
-**Artifacts:** `paper28-pvnp/strategy/00-pvnp-attack-plan.md`.
+**Artifacts:** `solutions-with-prize/paper28-pvnp/strategy/00-pvnp-attack-plan.md`.
 
 ### 19. HP-3 reframed + CAMB framework-input rerun rounds 1 and 2
 
@@ -217,7 +217,7 @@ derives ξ = γ_1/γ_5 = 0.42917 independently in research/23 Sector A.
 The real work was to run paper 2's CAMB pipeline with framework-derived
 inputs for the first time. Reframed HP-3 accordingly and executed
 rounds 1 and 2 of a specialized CAMB convergence cycle (modelled on
-`paper12/26-convergence-prompt.md`).
+`integers/paper12-cbb-system/26-convergence-prompt.md`).
 
 **Round 1 (research/271 — raw Sector A):** Added `5D_framework_derived`
 scenario to `compute_age.py` with H_0 = γ_11·4/π = 67.4439,
@@ -258,10 +258,10 @@ scenario table leading with `framework_derived_laurent`, new §N
 Rounds 1 and 2 execution is done; the writing is still open.
 
 **Artifacts:**
-- `paper12/research/271-camb-framework-rerun-round-1.md` (~180 lines, round 1 synthesis)
-- `paper12/research/272-camb-framework-rerun-round-2.md` (~210 lines, round 2 synthesis)
-- `/Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_age.py` (two new scenarios, `tau`/`As`/`ns` now read per-scenario via `params.get()`)
-- `/Users/gsix/quantum-geometry-in-5d/paper2/camb/results.json` (regenerated with 12 scenarios total)
+- `integers/paper12-cbb-system/research/271-camb-framework-rerun-round-1.md` (~180 lines, round 1 synthesis)
+- `integers/paper12-cbb-system/research/272-camb-framework-rerun-round-2.md` (~210 lines, round 2 synthesis)
+- `/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/compute_age.py` (two new scenarios, `tau`/`As`/`ns` now read per-scenario via `params.get()`)
+- `/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/results.json` (regenerated with 12 scenarios total)
 - `program/50+.md` Block H HP-3 entry (fully rewritten)
 
 ---
@@ -272,7 +272,7 @@ Historical COMPLETED items that had been living in `program/50+.md` despite
 already being closed. Moved here (deleted from `50+.md`) so the open queue
 only shows open work. Entries are deliberately compact — the full
 where-it-lives / description / QG5D-relevance content is preserved in
-`50+.md`'s git history, in `paper12/research/23-framework-predictions-master-table.md`,
+`50+.md`'s git history, in `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`,
 and in the paper sources themselves.
 
 **Legend:** each entry gives the original item number, title, and a
@@ -283,11 +283,11 @@ one-line status anchor + the primary artifacts in the corpus.
 **What:** Inflationary e-fold count derived as (γ_5 − γ_2)·π²/2 ≈ 58.79,
 matching measured 50–60 range. Rigorous (Theorem A in research/06);
 slow-roll derived in research/43 and 128; predicts n_s ≈ 0.965 and r.
-**Artifacts:** `paper12/research/06-cosmic-transition-amplitudes.md`,
-`paper12/research/43-deduction-inflation-initial-conditions.md`,
-`paper12/research/71-deduction-inflation-detailed.md`,
-`paper12/research/72-deduction-primordial-gravitational-waves.md`,
-`paper12/research/128-transposition-slow-roll.md`.
+**Artifacts:** `integers/paper12-cbb-system/research/06-cosmic-transition-amplitudes.md`,
+`integers/paper12-cbb-system/research/43-deduction-inflation-initial-conditions.md`,
+`integers/paper12-cbb-system/research/71-deduction-inflation-detailed.md`,
+`integers/paper12-cbb-system/research/72-deduction-primordial-gravitational-waves.md`,
+`integers/paper12-cbb-system/research/128-transposition-slow-roll.md`.
 
 ### 21. Item 5 — Baryogenesis as the same level crossing
 
@@ -295,9 +295,9 @@ slow-roll derived in research/43 and 128; predicts n_s ≈ 0.965 and r.
 Hecke operator on the modular phase of the BC KMS state; same γ_5 → γ_2
 transition that drives inflation also drives baryon asymmetry. Structurally
 closed at ~85% in research/44.
-**Artifacts:** `paper12/research/44-deduction-baryogenesis.md`,
-`paper12/research/06-cosmic-transition-amplitudes.md`,
-`paper2/` (published).
+**Artifacts:** `integers/paper12-cbb-system/research/44-deduction-baryogenesis.md`,
+`integers/paper12-cbb-system/research/06-cosmic-transition-amplitudes.md`,
+`integers/paper02-cosmology/` (published).
 
 ### 22. Item 6 — The cosmic ladder of γ_{n+1} − γ_n as cosmic transition e-folds
 
@@ -305,9 +305,9 @@ closed at ~85% in research/44.
 crossing at a specific γ_n; e-folds between boundaries are (γ_{n+1} − γ_n)·π²/2.
 All 10 cosmic parameters fitted sub-percent in research/23; paper18
 extends to the first 100+ rungs including Pop III mass candidates.
-**Artifacts:** `paper12/research/06-cosmic-transition-amplitudes.md`,
-`paper12/research/15-find-gamma-7-12-13-14.md`,
-`paper12/research/23-framework-predictions-master-table.md`,
+**Artifacts:** `integers/paper12-cbb-system/research/06-cosmic-transition-amplitudes.md`,
+`integers/paper12-cbb-system/research/15-find-gamma-7-12-13-14.md`,
+`integers/paper12-cbb-system/research/23-framework-predictions-master-table.md`,
 `paper18/00-table-of-contents.md`.
 
 ### 23. Item 8 — The black hole interior via M_int = J·M_ext·J (Tomita–Takesaki)
@@ -317,10 +317,10 @@ conjugation J at β=1: M_int = J(M_ext), anti-linear involution on
 type III_1 factor. Information not destroyed, modularly conjugated — a
 theorem of Tomita–Takesaki, not an interpretation. Paper 3 addendum
 applied 2026-04-09.
-**Artifacts:** `paper12/research/121-transposition-tomita-takesaki-explicit.md`,
-`paper12/research/62-transposition-BH-no-hair.md`,
-`paper12/research/64-transposition-hawking-area.md`,
-`paper3/addendum-tomita-takesaki-identification.md`,
+**Artifacts:** `integers/paper12-cbb-system/research/121-transposition-tomita-takesaki-explicit.md`,
+`integers/paper12-cbb-system/research/62-transposition-BH-no-hair.md`,
+`integers/paper12-cbb-system/research/64-transposition-hawking-area.md`,
+`integers/paper03-bh-info/addendum-tomita-takesaki-identification.md`,
 `paper19/00-table-of-contents.md` (Block B primary synthesis home).
 
 ### 24. Item 12 — The firewall paradox dissolved by modular conjugation
@@ -328,8 +328,8 @@ applied 2026-04-09.
 **What:** AMPS firewall paradox: smoothness-vs-unitarity forced choice
 dissolved because M_int is not a separate Hilbert space — it is J(M_ext).
 Smoothness becomes J-continuity, which holds. Closed rigorously.
-**Artifacts:** `paper12/research/121-transposition-tomita-takesaki-explicit.md`,
-`paper3/09-the-firewall-paradox-resolution-via-e-dimension-ge.md`,
+**Artifacts:** `integers/paper12-cbb-system/research/121-transposition-tomita-takesaki-explicit.md`,
+`integers/paper03-bh-info/09-the-firewall-paradox-resolution-via-e-dimension-ge.md`,
 `paper19/00-table-of-contents.md`.
 
 ### 25. Item 15 — The Standard Model gauge group SU(3)×SU(2)×U(1)/Z_6 from three primes
@@ -338,12 +338,12 @@ Smoothness becomes J-continuity, which holds. Closed rigorously.
 acting on the BC algebra: SU(2) from p=2, SU(3) from p=3, U(1)/Z_6 from
 p=5 + charge quantisation lattice. BC-intrinsic SU(3) fully derived via
 Kirillov orbit method in research/33 (Round 3 closure).
-**Artifacts:** `paper12/research/10-transposition-gauge-group-3primes.md`,
-`paper12/research/33-BC-intrinsic-SU3-Kirillov.md`,
-`paper12/research/40-deduction-generation-count.md`,
-`paper4/02-gauge-groups-from-isometries.md`,
-`paper4/05-entanglement-geometry-and-gauge-group-selection.md`,
-`paper11/`.
+**Artifacts:** `integers/paper12-cbb-system/research/10-transposition-gauge-group-3primes.md`,
+`integers/paper12-cbb-system/research/33-BC-intrinsic-SU3-Kirillov.md`,
+`integers/paper12-cbb-system/research/40-deduction-generation-count.md`,
+`integers/paper04-sm-gauge-group/02-gauge-groups-from-isometries.md`,
+`integers/paper04-sm-gauge-group/05-entanglement-geometry-and-gauge-group-selection.md`,
+`integers/paper11b-sm-gauge-entanglement/`.
 
 ### 26. Item 16 — Three fermion generations (no fourth) forced by arithmetic
 
@@ -352,10 +352,10 @@ acting as multiplicities on H_R. A fourth generation would require
 p=7 but the β=1 KMS structure excludes it — Hecke algebra is generated
 by the three smallest primes alone. Any extra generation violates the
 modular constraint. Closed structurally.
-**Artifacts:** `paper12/research/40-deduction-generation-count.md`,
-`paper12/research/10-transposition-gauge-group-3primes.md`,
-`paper4/05-entanglement-geometry-and-gauge-group-selection.md`,
-`paper11/`.
+**Artifacts:** `integers/paper12-cbb-system/research/40-deduction-generation-count.md`,
+`integers/paper12-cbb-system/research/10-transposition-gauge-group-3primes.md`,
+`integers/paper04-sm-gauge-group/05-entanglement-geometry-and-gauge-group-selection.md`,
+`integers/paper11b-sm-gauge-entanglement/`.
 
 ### 27. Item 17 — Yukawa couplings from matrix elements on H_R
 
@@ -363,11 +363,11 @@ modular constraint. Closed structurally.
 H_R. Quark Yukawas carry a 1/(2π) colour-singlet factor; leptons don't.
 The 12-order-of-magnitude hierarchy is the ratio of exponentials of γ_n
 differences. Closed structurally; 36/37 fits sub-percent in research/23.
-**Artifacts:** `paper12/research/26-derive-mt.md`,
-`paper12/research/27-derive-mH.md`,
-`paper12/research/47-deduction-fermion-mass-hierarchies.md`,
-`paper12/research/56-matter-content-extension-c_p-full.md`,
-`paper4/06-the-higgs-mechanism-electroweak-symmetry-breaking-.md`.
+**Artifacts:** `integers/paper12-cbb-system/research/26-derive-mt.md`,
+`integers/paper12-cbb-system/research/27-derive-mH.md`,
+`integers/paper12-cbb-system/research/47-deduction-fermion-mass-hierarchies.md`,
+`integers/paper12-cbb-system/research/56-matter-content-extension-c_p-full.md`,
+`integers/paper04-sm-gauge-group/06-the-higgs-mechanism-electroweak-symmetry-breaking-.md`.
 
 ### 28. Item 18 — Neutrino mass hierarchy from γ_n differences
 
@@ -375,24 +375,24 @@ differences. Closed structurally; 36/37 fits sub-percent in research/23.
 Wolfenstein-hierarchy pattern (Rayleigh–Schrödinger PT on H_R). Predicts
 normal hierarchy and a specific absolute scale Σm_ν ≈ 0.06 eV (testable
 at KATRIN/DUNE/JUNO). Published in paper1 Appendix Z and paper2.
-**Artifacts:** `paper12/research/108-derive-neutrino-mass-sum.md`,
-`paper12/research/105-derive-PMNS-theta12.md`,
-`paper12/research/106-derive-PMNS-theta13.md`,
-`paper12/research/107-derive-PMNS-theta23.md`,
-`paper12/research/46-deduction-neutrino-mass-scale.md`,
-`paper1/appendices/37-appendix-z-neutrino-mass-ordering.md`,
-`paper2/`.
+**Artifacts:** `integers/paper12-cbb-system/research/108-derive-neutrino-mass-sum.md`,
+`integers/paper12-cbb-system/research/105-derive-PMNS-theta12.md`,
+`integers/paper12-cbb-system/research/106-derive-PMNS-theta13.md`,
+`integers/paper12-cbb-system/research/107-derive-PMNS-theta23.md`,
+`integers/paper12-cbb-system/research/46-deduction-neutrino-mass-scale.md`,
+`integers/paper01-qg5d/appendices/37-appendix-z-neutrino-mass-ordering.md`,
+`integers/paper02-cosmology/`.
 
 ### 29. Item 29 — The Planck mass from R's eigenvalue
 
 **What:** R = smallest eigenvalue of R̂ (Phase 2 quantisation); ℓ_P = R/π;
 M_Pl = ℏ/(ℓ_P c). Planck mass depends only on γ_1. Not a free parameter —
 γ_1 in disguise. Closed rigorously.
-**Artifacts:** `paper12/research/02-quantize-R-construction.md`,
-`paper12/research/29-derive-H0.md`,
-`paper12/research/81-derive-third-order-PT-for-CC.md`,
-`paper12/research/89-PV-Sobolev-constant-alpha.md`,
-`paper1/` §5.
+**Artifacts:** `integers/paper12-cbb-system/research/02-quantize-R-construction.md`,
+`integers/paper12-cbb-system/research/29-derive-H0.md`,
+`integers/paper12-cbb-system/research/81-derive-third-order-PT-for-CC.md`,
+`integers/paper12-cbb-system/research/89-PV-Sobolev-constant-alpha.md`,
+`integers/paper01-qg5d/` §5.
 
 ### 30. Item 33 — The cosmological constant = γ_1, exactly
 
@@ -400,10 +400,10 @@ M_Pl = ℏ/(ℓ_P c). Planck mass depends only on γ_1. Not a free parameter —
 Riemann zero, exponentiated. Third-order PT reproduces the −0.0099
 empirical deviation; α = asinh(γ_1)/γ_1 = 0.2365 derived from first
 principles. **5 parts per billion** precision. Published in papers 1 and 2.
-**Artifacts:** `paper12/research/05-derive-cc-formula.md`,
-`paper12/research/81-derive-third-order-PT-for-CC.md`,
-`paper12/research/89-PV-Sobolev-constant-alpha.md`,
-`paper1/` §5, `paper2/`.
+**Artifacts:** `integers/paper12-cbb-system/research/05-derive-cc-formula.md`,
+`integers/paper12-cbb-system/research/81-derive-third-order-PT-for-CC.md`,
+`integers/paper12-cbb-system/research/89-PV-Sobolev-constant-alpha.md`,
+`integers/paper01-qg5d/` §5, `integers/paper02-cosmology/`.
 
 ### 31. Item 38 — Class field theory as BC ↔ Galois correspondence
 
@@ -412,9 +412,9 @@ class field theory of ℚ (Bost–Connes 1995 original theorem). At β=1 it
 extends to a larger structure. The pre-Big-Bang Galois phase of the
 universe is literally the class field theory of the rationals,
 physically instantiated. Closed rigorously.
-**Artifacts:** `paper12/research/02-quantize-R-construction.md`,
-`paper12/research/19-galois-orbit-decomposition-HR.md`,
-`paper11/`.
+**Artifacts:** `integers/paper12-cbb-system/research/02-quantize-R-construction.md`,
+`integers/paper12-cbb-system/research/19-galois-orbit-decomposition-HR.md`,
+`integers/paper11b-sm-gauge-entanglement/`.
 
 ### 32. Item 43 — The Riemann Hypothesis as the consistency condition of the framework
 
@@ -434,16 +434,16 @@ depending on HP-2 via the bridge family.
 "36/36 sub-experimental at zero parameters" headline is
 *mathematically* unconditional. Residual conditionality is
 CCM publication status only.
-**Artifacts:** `paper13-rh/preprint/sections-01-05.md` / `-06-10.md` /
-`-11-14.md` / `appendices.md`; `paper13-rh/preprint/00-table-of-contents.md`
+**Artifacts:** `solutions-with-prize/paper13-rh/preprint/sections-01-05.md` / `-06-10.md` /
+`-11-14.md` / `appendices.md`; `solutions-with-prize/paper13-rh/preprint/00-table-of-contents.md`
 (14 sections, v2 post-coboundary with 9 referee fixes);
-`paper13-rh/strategy/23-the-proof-architecture.md`
+`solutions-with-prize/paper13-rh/strategy/23-the-proof-architecture.md`
 (pre-adversarial 10/10 snapshot, commit `49b5eeb`);
-`paper13-rh/strategy/28-all-gaps-closed.md`;
-`paper13-rh/research/` (~114 files);
-`paper12/research/08-rh-as-physical-theorem.md`;
+`solutions-with-prize/paper13-rh/strategy/28-all-gaps-closed.md`;
+`solutions-with-prize/paper13-rh/research/` (~114 files);
+`integers/paper12-cbb-system/research/08-rh-as-physical-theorem.md`;
 `paper25/` (Conjecture 2 / second path);
-`paper12/research/265-itpfi-factorization.md`.
+`integers/paper12-cbb-system/research/265-itpfi-factorization.md`.
 
 ### 33. Item 44 — Why something exists rather than nothing
 
@@ -452,8 +452,8 @@ algebra is uniquely determined by ℤ ⊂ ℚ. ω_1 is uniquely determined by
 BC at β=1. The 10D geometry is uniquely determined by ω_1. The SM is
 uniquely determined by the geometry. **The universe exists because the
 integers exist.** Closed operationally.
-**Artifacts:** `paper12/24-the-moment.md`, `paper12/27-anchor-document.md`,
-`paper1/sections/09-philosophy.md`,
+**Artifacts:** `integers/paper12-cbb-system/24-the-moment.md`, `integers/paper12-cbb-system/27-anchor-document.md`,
+`integers/paper01-qg5d/sections/09-philosophy.md`,
 `paper22/00-table-of-contents.md` (primary synthesis — 10-step existence
 theorem formalising this),
 `the integers exist.md`.
@@ -465,12 +465,12 @@ operator-algebraically precise: the matrix elements of BC operators on
 H_R at β=1 ARE the physical observables; every measurable quantity is
 a projection of an arithmetic structure. Not metaphor — operator-algebraic
 identity. Closed in papers 1, 11, 12.
-**Artifacts:** `paper12/research/05-derive-cc-formula.md`,
-`paper12/research/14-transposition-CCM-and-reasoning-patterns.md`,
-`paper12/research/208-uniqueness-decomposition.md`,
-`paper1/sections/09-philosophy.md`,
-`paper11/sections/30-reality-is-a-projection-of-riemann.md`,
-`paper12/preprint/15`.
+**Artifacts:** `integers/paper12-cbb-system/research/05-derive-cc-formula.md`,
+`integers/paper12-cbb-system/research/14-transposition-CCM-and-reasoning-patterns.md`,
+`integers/paper12-cbb-system/research/208-uniqueness-decomposition.md`,
+`integers/paper01-qg5d/sections/09-philosophy.md`,
+`integers/paper11b-sm-gauge-entanglement/sections/30-reality-is-a-projection-of-riemann.md`,
+`integers/paper12-cbb-system/preprint/15`.
 
 ### 35. Item 48 — The anthropic principle dissolved
 
@@ -479,9 +479,9 @@ apparent "fine tuning" is a necessary consequence of γ_n structure. The
 anthropic question dissolves: the constants are what they are because
 the integers are what they are. No multiverse needed, no selection
 effect needed. Closed in papers 1 and 12.
-**Artifacts:** `paper12/26-convergence-prompt.md`,
-`paper12/27-anchor-document.md`,
-`paper1/sections/09-philosophy.md`.
+**Artifacts:** `integers/paper12-cbb-system/26-convergence-prompt.md`,
+`integers/paper12-cbb-system/27-anchor-document.md`,
+`integers/paper01-qg5d/sections/09-philosophy.md`.
 
 ---
 

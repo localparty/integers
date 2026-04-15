@@ -7,8 +7,8 @@ This is a **framework-claim target**. The outlets are paper60 and paper61, progr
 ## 1. Official outlet
 
 **Programme-internal:**
-- e-Circle: `/Users/gsix/quantum-geometry-in-5d-latex/paper60/`
-- Bouquet: `/Users/gsix/quantum-geometry-in-5d-latex/paper61/`
+- e-Circle: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper60-geometry-of-circle/`
+- Bouquet: `/Users/gsix/quantum-geometry-in-5d-latex/integers/paper61-projections-5d/`
 - Strategy discussion: `/Users/gsix/quantum-geometry-in-5d-latex/strategy/the-picture-of-the-ecircle.md`
 
 ## 2. Problem statement
@@ -49,4 +49,4 @@ See programme-internal documentation in paper60, paper61, and strategy/the-pictu
 
 **External** (for Schanuel connection): see `strategy/_research/schanuel/outlet.md`.
 
-## Status: FRAMEWORK-CLAIM — programme-internal. No external outlet. Target: paper60/61 self-contained; downstream connection to Schanuel (paper35) may use external venues.
+## Status: FRAMEWORK-CLAIM — programme-internal. No external outlet. Target: integers/paper60-geometry-of-circle/61 self-contained; downstream connection to Schanuel (paper35) may use external venues.

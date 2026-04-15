@@ -15,15 +15,15 @@
 
 1. strategy/ym/00-millenium-strategy.md — §3 the 7 JW requirements, §5 audit scaffold
 2. strategy/ym/ym-millenium-brief.md — DELTA 4 compliance-map format, DELTA 10 H4 discipline
-3. paper08-yang-mills/PROOF-CHAIN.md — the 18-layer live chain (L1…L18 plus L1b, L10b)
+3. solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md — the 18-layer live chain (L1…L18 plus L1b, L10b)
 4. strategy/x-ray/proof-chain/ym/X-RAY.md — run-01 x-ray, face/projection/pattern assignments
 5. strategy/x-ray/pac-output/runs/run-01/vertices/ym/arbiter-decisions.md
-6. paper08-yang-mills/preprint/sections/L-clay-conjectures.md — Theorem L.0, L.5 sub-clause map, L.6 status, L.7 H4 statement
-7. paper08-yang-mills/preprint/sections/I4-other-gauge-groups.md — Theorem I.4.1 universal mass gap
-8. paper08-yang-mills/preprint/sections/K-balaban-general-groups.md — K.9 Balaban for general G
-9. paper08-yang-mills/research/51-infinite-volume.md — L→∞, a→0, interchange, OS axioms
-10. paper08-yang-mills/preprint/sections/F-area-law-mass-gap.md — F.5 Remark uniform in lattice volume
-11. paper08-yang-mills/preprint/sections/05-continuum-limit.md — OS1–OS5 verified, W0–W5 via reconstruction, Proposition Non-triviality
+6. solutions-with-prize/paper08-yang-mills/preprint/sections/L-clay-conjectures.md — Theorem L.0, L.5 sub-clause map, L.6 status, L.7 H4 statement
+7. solutions-with-prize/paper08-yang-mills/preprint/sections/I4-other-gauge-groups.md — Theorem I.4.1 universal mass gap
+8. solutions-with-prize/paper08-yang-mills/preprint/sections/K-balaban-general-groups.md — K.9 Balaban for general G
+9. solutions-with-prize/paper08-yang-mills/research/51-infinite-volume.md — L→∞, a→0, interchange, OS axioms
+10. solutions-with-prize/paper08-yang-mills/preprint/sections/F-area-law-mass-gap.md — F.5 Remark uniform in lattice volume
+11. solutions-with-prize/paper08-yang-mills/preprint/sections/05-continuum-limit.md — OS1–OS5 verified, W0–W5 via reconstruction, Proposition Non-triviality
 
 ## The 7 Jaffe-Witten requirement columns
 

@@ -27,7 +27,7 @@ The Abel committee assesses:
 - Academic quality
 - Academic width
 
-## Implications for QG5D programme
+## Implications for ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme
 - The Abel Prize is lifetime-achievement in flavor but awarded for specific contributions.
 - Any of the major programme proofs (RH, YM, BSD, PvNP) could anchor an Abel nomination.
 - Requires a nominator — researcher network needed.

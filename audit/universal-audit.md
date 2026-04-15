@@ -44,9 +44,14 @@
 
 ```
 Phase 0 — Scaffold + mode dispatch                                  [serial, always]
-Phase 1 — Universal Approval pipeline                               [delegate]
-            invokes strategy/universal-approval-run.md (phases 1-9)
-            → bare skeletons, compliance maps, acknowledgments, viz rebuild
+Phase 1 — Universal Approval pillar audit + remediation             [audit-then-remediate]
+            1.A audit matrix:  10 pillars of UA output (state /
+                               outlet / landscape / brief / compliance /
+                               bare / viz / acknowledgments / convergence / report)
+            1.B mode-based dispatch decision
+            1.C targeted remediation — one sub-agent per stale pillar,
+                                         NOT a full UA pipeline replay
+            1.D re-audit exit criteria
 Phase 2 — Audit home refresh                                        [parallel with 1, 3]
             /audit/clay-millennium/, /audit/prizes-other/,
             /audit/venues/, /audit/per-paper/
@@ -107,24 +112,77 @@ Parse mode argument from the invocation. Route accordingly:
 
 Write `_logs/state-<timestamp>.md` snapshotting current artifact state.
 
-### Phase 1 — Universal Approval pipeline
+### Phase 1 — Universal Approval pillar audit + remediation
 
-Delegate to `strategy/universal-approval-run.md`. That file's 9 phases cover:
-1. State inspection
-2. Web research (outlet + landscape per vertex, parallel)
-3. Brief generation / update per vertex
-4. Compliance audit dispatch (parallel)
-5. Bare synthesis dispatch (B_bare + C_bare in parallel)
-6. Visualization rebuild
-7. Universal Approval acknowledgments integration
-8. Convergence check
-9. Report
+Universal Approval Run (`strategy/universal-approval-run.md`) defines 9 pillars. This phase AUDITS each pillar (is its output present? fresh? complete?) then REMEDIATES only the failing pillars. Do not blindly re-run the whole UA pipeline; run only what is STALE or MISSING.
 
-**Invocation:** dispatch one sub-agent with prompt "Read `strategy/universal-approval-run.md` and execute it in `resume` mode. Report completion status." Wait for return.
+#### 1.A — Pillar audit matrix
 
-If that run was already executed recently and is in `CONVERGED` state, skip (resume mode). If no recent `run-report-*.md` in `strategy/_research/`, fire it.
+| # | Pillar (UA phase) | Expected artifact | Fresh if | Verdict codes |
+|---|---|---|---|---|
+| 1.1 | State inspection | `strategy/_research/state-<timestamp>.md` most recent | mtime within 72 h | FRESH / STALE / MISSING |
+| 1.2 | Outlet research | `strategy/_research/<vertex>/outlet.md` for each of 30 vertices | mtime within 90 days; every non-framework vertex covered | COMPLETE-FRESH / PARTIAL / MISSING |
+| 1.3 | Landscape research | `strategy/_research/<vertex>/landscape.md` for each of 30 vertices | mtime within 90 days; every non-framework vertex covered | COMPLETE-FRESH / PARTIAL / MISSING |
+| 1.4 | Brief generation | `strategy/<vertex>/00-*-strategy.md` + `<vertex>-*-brief.md` for each vertex | strategy doc mtime > outlet.md and landscape.md mtimes | PRESENT-CURRENT / STALE / MISSING |
+| 1.5 | Compliance audit | `strategy/<vertex>/pac-output/runs/run-NN/compliance-map.md` with commit-memo.md stating LOCKED | LOCKED + inputs not newer than compliance-map.md | LOCKED / PARTIAL / MISSING |
+| 1.6 | Bare synthesis | `strategy/<vertex>/deliverables/<vertex>-bare.md` + `<vertex>-beyond-bare.md`, both marked PUBLISH-READY | both PUBLISH-READY + compliance-map LOCKED | BOTH-READY / ONE-READY / NOT-READY / MISSING |
+| 1.7 | Visualization | `visualization/data.js` + `visualization/torus/data.js` | build timestamp within 24 h of the latest strategy-artifact mtime | FRESH / STALE / MISSING |
+| 1.8 | UA acknowledgments | "Related Work & Acknowledgments" section grep-matches in every `<vertex>-beyond-bare.md` | every C_bare passes grep; named researcher count ≥ 1 | ALL-PRESENT / PARTIAL / NONE |
+| 1.9 | Convergence check | `strategy/_research/delta-<timestamp>.md` comparing two consecutive state-*.md snapshots | most recent delta shows CONVERGED | CONVERGED / NOT-YET / MISSING |
+| 1.10 | Run report | `strategy/_research/run-report-<timestamp>.md` for most recent UA run | mtime within 72 h | PRESENT-FRESH / STALE / MISSING |
 
-**Output:** bare skeletons per vertex at `strategy/<vertex>/deliverables/<vertex>-bare.md` and `<vertex>-beyond-bare.md`; compliance maps per vertex at `strategy/<vertex>/pac-output/runs/run-NN/`.
+Write the audit result to `audit/_logs/ua-pillar-audit-<timestamp>.md` — one row per pillar + overall verdict.
+
+#### 1.B — Remediation dispatch
+
+Decide per-mode what to do with the audit result:
+
+| Current mode | Pillar audit verdict | Action |
+|---|---|---|
+| `fresh` | (any) | Dispatch UA pipeline in fresh mode; all pillars rebuilt |
+| `resume` | all FRESH / COMPLETE-FRESH / LOCKED / BOTH-READY / CONVERGED | Skip Phase 1 entirely; log "UA: converged" |
+| `resume` | any STALE / PARTIAL / NOT-YET | Dispatch targeted sub-agents per stale pillar (see §1.C below) |
+| `resume` | any MISSING / NONE | Dispatch the specific UA phase for that pillar; do not fire the full UA pipeline unless ≥ 4 pillars are MISSING |
+| `refresh <N>` where N ∈ {1..9} | (any) | Force that specific UA phase regardless of freshness |
+| `lock` | (any STALE/MISSING) | Record in LOCK gate report; block LOCK; do not remediate |
+| `lock` | all FRESH | Proceed to Phase 7 LOCK check |
+| `herald-only` | (any) | Skip Phase 1 entirely |
+| `read-only` | (any) | Audit only; no remediation |
+
+#### 1.C — Targeted remediation dispatch per pillar
+
+Each pillar has its own UA-run-phase number. Targeted remediation fires one sub-agent per stale pillar with a prompt scoped to that phase only. Max 5 concurrent.
+
+**Pillar 1.1 (state inspection) STALE/MISSING:** dispatch agent with prompt "Execute UA Phase 1 only (state inspection). Read `strategy/universal-approval-run.md §PHASE 1`. Write `strategy/_research/state-<timestamp>.md`. Do nothing else."
+
+**Pillar 1.2 (outlet research) PARTIAL/MISSING:** identify which vertices are missing `outlet.md`; dispatch outlet-research sub-agents in parallel (batch 5-8) using UA Phase 2.2 template. Only for gap vertices.
+
+**Pillar 1.3 (landscape research) PARTIAL/MISSING:** analogous to 1.2 using UA Phase 2.3 template.
+
+**Pillar 1.4 (brief generation) STALE/MISSING:** identify stale vertices (strategy doc older than its research inputs); dispatch brief-gen sub-agents in parallel using UA Phase 3.2 template. Strict diff-then-merge; never wholesale overwrite.
+
+**Pillar 1.5 (compliance audit) PARTIAL/MISSING:** identify unlocked vertices; dispatch compliance-audit sub-agents using UA Phase 4.2 template (derived from YM run-02). Batch 3-5.
+
+**Pillar 1.6 (bare synthesis) NOT-READY/MISSING:** identify vertices with LOCKED compliance but no PUBLISH-READY bare files; dispatch B_bare + C_bare pairs in parallel using UA Phase 5.2 templates. Batch 2-4 vertex-pairs.
+
+**Pillar 1.7 (visualization) STALE/MISSING:** run `python3 visualization/build.py` and `python3 visualization/torus/build.py`. Verify no errors; shape count = 43.
+
+**Pillar 1.8 (acknowledgments) PARTIAL/NONE:** identify C_bare files missing the UA section; dispatch small sub-agents to ADD the section using UA Phase 7.2 template.
+
+**Pillar 1.9 (convergence check) NOT-YET/MISSING:** run UA Phase 8 — diff the latest two state-*.md snapshots; emit delta-*.md.
+
+**Pillar 1.10 (run report) STALE/MISSING:** write run-report-<timestamp>.md summarizing this phase's remediation.
+
+#### 1.D — Phase 1 exit criteria
+
+After remediation, re-audit the matrix. Phase 1 is complete when:
+
+- All 10 pillars are FRESH / COMPLETE-FRESH / LOCKED / BOTH-READY / ALL-PRESENT / CONVERGED / PRESENT-FRESH.
+- OR: the mode is `lock` and the LOCK gate report explicitly records which pillars are stale and blocks ship.
+
+If remediation fires 3+ sub-agent batches and audit still fails, escalate: write a `PHASE-1-STALLED` entry in `audit/_logs/` with the stuck pillars + diagnosis. Do not proceed to Phase 4 (Herald audit) until Phase 1 is green OR the stall is acknowledged by user.
+
+**Output of Phase 1:** `audit/_logs/ua-pillar-audit-<timestamp>.md` + whatever artifacts were regenerated under `strategy/`.
 
 ### Phase 2 — Audit home refresh
 
@@ -163,16 +221,16 @@ The Herald must include the programme's derivables pipeline. Confirmed via scrip
 **Location (sister project — note the path):**
 
 ```
-/Users/gsix/quantum-geometry-in-5d/paper2/camb/
+/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/
 ```
 
 **Specification → driver → results chain:**
 
 ```
 Framework inputs (Riemann-zero formulas)
-  → /Users/gsix/quantum-geometry-in-5d-latex/paper12/research/23-framework-predictions-master-table.md
+  → /Users/gsix/quantum-geometry-in-5d-latex/integers/paper12-cbb-system/research/23-framework-predictions-master-table.md
 De facto master driver:
-  → /Users/gsix/quantum-geometry-in-5d/paper2/camb/compute_age.py
+  → /Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/compute_age.py
 Supporting compute scripts (independent utilities):
   compute_baryogenesis.py   (mirror baryon asymmetry; Ω_DM/Ω_b from 1/ξ²)
   compute_mirror_matter.py  (dark-matter relic; Z₂ orbifold channels)
@@ -183,23 +241,23 @@ Supporting compute scripts (independent utilities):
   neff_extended_analysis.py (CMB degeneracy + time-varying N_eff)
   plot_results.py           (visualization)
 Results:
-  → /Users/gsix/quantum-geometry-in-5d/paper2/camb/results.json
-  → /Users/gsix/quantum-geometry-in-5d/paper2/camb/neff_analysis_results.json
+  → /Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/results.json
+  → /Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/neff_analysis_results.json
   → ~10 PNG plots (plot_*.png, closure_*.png, xi_vs_c_nu.png)
 Validation rounds:
-  → paper12/research/271-camb-framework-rerun-round-1.md (raw Sector A)
-  → paper12/research/272-camb-framework-rerun-round-2.md (Laurent-shifted)
+  → integers/paper12-cbb-system/research/271-camb-framework-rerun-round-1.md (raw Sector A)
+  → integers/paper12-cbb-system/research/272-camb-framework-rerun-round-2.md (Laurent-shifted)
 ```
 
 **Environment:**
-- venv: `/Users/gsix/quantum-geometry-in-5d/paper2/camb/.venv/`
+- venv: `/Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb/.venv/`
 - Python 3.14.2 (via homebrew)
 - CAMB 1.6.6
 
 **Canonical invocation:**
 
 ```bash
-cd /Users/gsix/quantum-geometry-in-5d/paper2/camb && \
+cd /Users/gsix/quantum-geometry-in-5d/integers/paper02-cosmology/camb && \
   ./.venv/bin/python3 compute_age.py
 ```
 

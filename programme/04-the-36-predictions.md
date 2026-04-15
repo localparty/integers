@@ -93,7 +93,7 @@ The master table below is the single source of truth for the framework's empiric
 | 32 | delta_CP (CKM) [rad] | gamma_13 / gamma_10 | 1.19233 | 1.196 | 0.31% |
 | 33 | J_CKM * 10^5 --- Jarlskog invariant | log(gamma_1) * zeta(3) | 3.18381 | 3.18 | 0.12% |
 
-> **[2026-04-14]** Pin #6 derivation upgrade: zeta(3) now structurally derived from 4D Mercedes 3-loop integral (three independent proofs: Laurent expansion, Broadhurst dilog, _4F_3 hypergeometric). Agent G, 2026-04-14. log(gamma_1) from Mellin duality H_BC = log T_BC (paper12/research/102 S3.1). Status upgraded: FIT -> **THEOREM-pending-audit** (remaining items: O2 exact 10^-5 normalization, O3 18x precision gain).
+> **[2026-04-14]** Pin #6 derivation upgrade: zeta(3) now structurally derived from 4D Mercedes 3-loop integral (three independent proofs: Laurent expansion, Broadhurst dilog, _4F_3 hypergeometric). Agent G, 2026-04-14. log(gamma_1) from Mellin duality H_BC = log T_BC (integers/paper12-cbb-system/research/102 S3.1). Status upgraded: FIT -> **THEOREM-pending-audit** (remaining items: O2 exact 10^-5 normalization, O3 18x precision gain).
 
 | 34 | V_us / V_cb --- CKM ratio | log(gamma_5) * pi/2 | 5.48921 | 5.46 | 0.53% |
 | -- | sin theta_13 | **open** --- best: pi/(gamma_1 gamma_14) = 0.003654 | -- | 0.00369 | 0.98% |
@@ -295,4 +295,4 @@ This is what zero free parameters means in practice: a single table, 36 rows, ev
 
 ---
 
-**Sources.** `paper12/research/23-framework-predictions-master-table.md` (primary), `paper11/29-the-standard-model-riemann-correspondence.md` (the original 23 fits), `paper12/research/15-find-gamma-7-12-13-14.md` (4 new zero placements), `paper12/research/16-fix-14-missing-parameters.md` (11 new fits). Experimental references: PDG 2023, Planck 2018 VI (A&A 641, A6), NuFit 5.2, Aver-Olive-Skillman 2015.
+**Sources.** `integers/paper12-cbb-system/research/23-framework-predictions-master-table.md` (primary), `integers/paper11b-sm-gauge-entanglement/29-the-standard-model-riemann-correspondence.md` (the original 23 fits), `integers/paper12-cbb-system/research/15-find-gamma-7-12-13-14.md` (4 new zero placements), `integers/paper12-cbb-system/research/16-fix-14-missing-parameters.md` (11 new fits). Experimental references: PDG 2023, Planck 2018 VI (A&A 641, A6), NuFit 5.2, Aver-Olive-Skillman 2015.

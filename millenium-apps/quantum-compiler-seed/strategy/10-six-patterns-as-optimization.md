@@ -362,7 +362,7 @@ The strong CP problem asks why the QCD vacuum angle theta is zero
 (or extremely small). In 4D, this is a fine-tuning puzzle -- theta
 could be anything.
 
-Pattern 4: pi_4(SU(3)) = 0 in 5D. The homotopy group that would
+Pattern 4: pi_4(SU(3)) = 0 in ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" -->. The homotopy group that would
 allow a nonzero theta is trivial when you include the extra
 dimension. Theta is dead code. It was never a free parameter --
 it was a 4D artifact of failing to eliminate a topologically
@@ -487,12 +487,12 @@ it can.
 physics appears paradoxical in 4D, it's because 4D is a partial
 trace over the full geometry." The 4D description is a compiled
 binary -- it is the output of a lossy projection from the full
-5D+ geometry. The projection loses the e-coordinate, the
+~~5D+ geometry~~ M⁵ (and CP²×S²×S¹ extensions)<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D+ geometry" → "M⁵ (and CP²×S²×S¹ extensions)" -->. The projection loses the e-coordinate, the
 topological data, the holonomy information.
 
 Pattern 6 is the decompiler. It reverses the projection:
 
-| 4D "binary" (pathology) | 5D "source" (reality) |
+| 4D "binary" (pathology) | ~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> "source" (reality) |
 |:---|:---|
 | Quantum randomness | Ignorance of e-coordinate |
 | Information loss (black holes) | Projection discards e-structure |
@@ -509,7 +509,7 @@ The parallel is precise:
 |:---|:---|
 | Input: compiled binary | Input: 4D physics |
 | Lost info: variable names, types | Lost info: e-coordinate, topology |
-| Output: recovered source | Output: 5D+ geometric description |
+| Output: recovered source | Output: ~~5D+~~ M⁵+<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D+" → "M⁵+" --> geometric description |
 | Lossy: decompiled code != original source | Lossy: 4D was always a projection |
 | Recovery tool: disassembler + pattern matching | Recovery tool: P1 (geometric reinterpretation) |
 
@@ -536,7 +536,7 @@ cancellation at all. It is a single eigenvalue of R-hat:
 
 The "two enormous numbers that cancel" were never there. They
 are ghosts in the disassembly -- artifacts of trying to read
-5D operator algebra through the 4D instruction set.
+~~5D~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: bare "5D" → "M⁵" --> operator algebra through the 4D instruction set.
 
 The decompiler (Pattern 6) looked at the paradox, recognized
 the projection, and handed off to Pattern 1 (constant folding)
@@ -763,7 +763,7 @@ wherever the framework reduces dimensionality:
 | Problem | Unrolled cascade | Final object |
 |:---|:---|:---|
 | Yang-Mills mass gap | 4D -> CP^{N-1} -> 2D sigma -> matrix | Transfer matrix eigenvalue |
-| Cosmological constant | 4D QFT vacuum -> 5D geometry -> BC algebra | exp(gamma_1 * pi^2/2) |
+| Cosmological constant | 4D QFT vacuum -> ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> -> BC algebra | exp(gamma_1 * pi^2/2) |
 | Proton mass | 4D QCD -> CP^2 holonomy -> Casimir energy | sigma = 3g^2/(8*pi^2*r_3^2) |
 | Higgs mass | 4D SM -> S^2 Wilson line -> BC eigenvalue | gamma_2 * gamma_6 / (2*pi) |
 

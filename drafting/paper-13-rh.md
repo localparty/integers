@@ -125,7 +125,7 @@ minimal.
 ### Run 4: Rewrite
 
 **Run 4 MUST generate `preprint/PROOF-CHAIN.md`** in the same
-format as Paper 28's (`paper28-pvnp/preprint/PROOF-CHAIN.md`):
+format as Paper 28's (`solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md`):
 step-by-step table with status labels, classification of arguments,
 conditional dependencies, verdict, and scope section. This file is
 the backbone — every section references it, the diagram on page 1
@@ -206,7 +206,7 @@ Focus areas for RH:
 
 ### Run 7: Point-by-point claim tester
 
-**Prompt:** `paper13-rh/referee/` (paper-specific point-by-point
+**Prompt:** `solutions-with-prize/paper13-rh/referee/` (paper-specific point-by-point
 prompt to be created, or adapt from `drafting/01-point-by-point-claim-tester.md`).
 
 Every citation to CCM (arXiv:2511.22755), Bögli (arXiv:1604.07732),
@@ -226,12 +226,12 @@ paper is DONE when every citation is VERIFIED.
 ## 4. Configuration
 
 **ORA bundle:** `online-researcher-adversarial/ora-bundle-v8/` (same ORA for all)
-**Toolkit:** `paper13-rh/toolkit/framework-tools-rh.md` (to be
+**Toolkit:** `solutions-with-prize/paper13-rh/toolkit/framework-tools-rh.md` (to be
 created from: 00-proof-skeleton.md + strategy/14-one-proof-away.md
 + the §J voice canon above + key theorem catalogue entries from
-paper12/29-theorem-catalogue.md §§ RH-relevant)
+integers/paper12-cbb-system/29-theorem-catalogue.md §§ RH-relevant)
 **Template:** Paper 28's preprint directory
-**Output:** `paper13-rh/preprint/` (move old to `paper13-rh/draft/`)
+**Output:** `solutions-with-prize/paper13-rh/preprint/` (move old to `solutions-with-prize/paper13-rh/draft/`)
 
 ---
 

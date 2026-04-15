@@ -1,0 +1,119 @@
+{
+  "camb_version": "1.6.6",
+  "scenario": "5D_framework_derived (Sector A raw, round 1)",
+  "gamma_zeros_used": {
+    "1": 14.134725141734693,
+    "5": 32.93506158773919,
+    "6": 37.586178158825675,
+    "9": 48.00515088116716,
+    "10": 49.7738324776723,
+    "11": 52.97032147771446,
+    "14": 59.34704400260235,
+    "15": 60.83177852460981
+  },
+  "framework_predictions": {
+    "N_eff_pin3": 3.3497268109836504,
+    "n_s_pin4": 0.9644656336781271,
+    "H0_pin5": 67.44390800276037,
+    "xi": 0.4291695372750315,
+    "mnu_eV": 0.06423434409526299,
+    "eta10": 6.013112744017574
+  },
+  "camb_inputs": {
+    "H0": 67.44390800276037,
+    "ombh2": 0.021989807072655236,
+    "omch2": 0.11948881547026435,
+    "mnu": 0.06423434409526299,
+    "tau": 0.054,
+    "nnu": 3.3497268109836504,
+    "ns": 0.9644656336781271,
+    "As": 2.1e-09,
+    "w": -1.0,
+    "wa": 0.0
+  },
+  "camb_outputs": {
+    "H0": 67.44390800276037,
+    "Neff": 3.3497268109836504,
+    "ns": 0.9644656336781271,
+    "sigma8": 0.7923023130401526,
+    "S8": 0.8087048017322337,
+    "Omega_m": 0.3125499621507922,
+    "Omega_Lambda": 0.6873668397259123,
+    "age_Gyr": 13.812163587127978,
+    "z_star": 1090.68361309917,
+    "z_drag": 1059.2706146925184,
+    "rs_star_Mpc": 143.35336746328713,
+    "r_drag_Mpc": 146.14244898223248,
+    "theta_star": 0.010313255699579199,
+    "theta_star_100": 1.0313255699579198
+  },
+  "planck_measured": {
+    "H0": 67.36,
+    "Neff": 3.044,
+    "Neff_framework_target": 3.35,
+    "ns": 0.9649,
+    "sigma8": 0.8111,
+    "S8": 0.832,
+    "Omega_m": 0.3153,
+    "age_Gyr": 13.797,
+    "theta_star_100": 1.0411
+  },
+  "pin_comparisons": [
+    {
+      "pin": "#3 N_eff",
+      "formula": "gamma_6^(1/3)",
+      "framework_pred": 3.3497268109836504,
+      "camb_output": 3.3497268109836504,
+      "measured": 3.35,
+      "pct_vs_meas": 0.008154896010437339
+    },
+    {
+      "pin": "#4 n_s",
+      "formula": "gamma_9/gamma_10",
+      "framework_pred": 0.9644656336781271,
+      "camb_output": 0.9644656336781271,
+      "measured": 0.9655,
+      "pct_vs_meas": 0.10713271070667281
+    },
+    {
+      "pin": "#5 H_0",
+      "formula": "gamma_11 * 4/pi",
+      "framework_pred": 67.44390800276037,
+      "camb_output": 67.44390800276037,
+      "measured": 67.4,
+      "pct_vs_meas": 0.06514540468896274
+    }
+  ],
+  "notes": [
+    "Pins #3/#4/#5 are input-side framework derivations; CAMB accepts them as inputs and",
+    "computes downstream observables (sigma8, S8, theta_*, r_drag, age). The pin check is",
+    "whether the pipeline is self-consistent with these inputs AND whether the framework's",
+    "predictions match Planck measurements at the stated sub-percent precision.",
+    "W1/W2 closure (Paper 10 + Paper 11 Thm K.4) makes the KK spectral-gap foundation",
+    "unconditional; cosmology pins do not depend on scheme choices, as expected."
+  ],
+  "cmb_TT_preview": {
+    "note": "D_l = l(l+1)C_l/(2*pi) in muK^2 at l=2..20",
+    "values": {
+      "2": 1028.263198223269,
+      "3": 973.0984965130356,
+      "4": 920.3644974771344,
+      "5": 881.0828987660084,
+      "6": 854.3012567021559,
+      "7": 837.2579728134187,
+      "8": 826.9744187604575,
+      "9": 822.1073723654251,
+      "10": 821.2241674941791,
+      "11": 822.9239695729849,
+      "12": 827.8505568645681,
+      "13": 834.1687513682008,
+      "14": 841.6825924623856,
+      "15": 849.3418743228366,
+      "16": 858.9338222871088,
+      "17": 870.2915690874175,
+      "18": 882.2556784685526,
+      "19": 895.5940937233023,
+      "20": 908.7075061935143
+    }
+  }
+}

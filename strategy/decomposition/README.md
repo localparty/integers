@@ -96,31 +96,31 @@ strategy/decomposition/
 On first invocation, the PAC's bootstrap phase COPIES the 25 live PROOF-CHAIN.md files into `proof-chain/<name>/`. Specifically:
 
 ```
-paper1/PROOF-CHAIN.md                       → proof-chain/qg5d/PROOF-CHAIN.md
-paper13-rh/PROOF-CHAIN.md                   → proof-chain/rh/PROOF-CHAIN.md
-paper45-lindelof/PROOF-CHAIN.md             → proof-chain/lindelof/PROOF-CHAIN.md
-paper13b-grh/PROOF-CHAIN.md                 → proof-chain/grh/PROOF-CHAIN.md
-paper26-bsd/PROOF-CHAIN.md                  → proof-chain/bsd/PROOF-CHAIN.md
-paper25-hilbert-12/PROOF-CHAIN.md           → proof-chain/h12/PROOF-CHAIN.md
-paper08-yang-mills/PROOF-CHAIN.md           → proof-chain/ym/PROOF-CHAIN.md
-paper30-navier-stokes/PROOF-CHAIN.md        → proof-chain/ns/PROOF-CHAIN.md
-paper38-turbulence/PROOF-CHAIN.md           → proof-chain/turbulence/PROOF-CHAIN.md
-paper29-hodge/PROOF-CHAIN.md                → proof-chain/hodge/PROOF-CHAIN.md
-paper31-baum-connes/PROOF-CHAIN.md          → proof-chain/baum-connes/PROOF-CHAIN.md
-paper28-pvnp/PROOF-CHAIN.md                 → proof-chain/pvnp/PROOF-CHAIN.md
-paper39-vp-vs-vnp/PROOF-CHAIN.md            → proof-chain/vp-vs-vnp/PROOF-CHAIN.md
-paper32-bgs-spectral-statistics/PROOF-CHAIN.md → proof-chain/bgs/PROOF-CHAIN.md
-paper46-katz-sarnak/PROOF-CHAIN.md          → proof-chain/katz-sarnak/PROOF-CHAIN.md
-paper34-twin-primes/PROOF-CHAIN.md          → proof-chain/twin-primes/PROOF-CHAIN.md
-paper43-cramer/PROOF-CHAIN.md               → proof-chain/cramer/PROOF-CHAIN.md
-paper33-goldbach/PROOF-CHAIN.md             → proof-chain/goldbach/PROOF-CHAIN.md
-paper37-abc/PROOF-CHAIN.md                  → proof-chain/abc/PROOF-CHAIN.md
-paper40-odd-perfect/PROOF-CHAIN.md          → proof-chain/opn/PROOF-CHAIN.md
-paper41-collatz/PROOF-CHAIN.md              → proof-chain/collatz/PROOF-CHAIN.md
-paper42-lehmer/PROOF-CHAIN.md               → proof-chain/lehmer/PROOF-CHAIN.md
-paper44-sato-tate/PROOF-CHAIN.md            → proof-chain/sato-tate/PROOF-CHAIN.md
-paper35-schanuel/PROOF-CHAIN.md             → proof-chain/schanuel/PROOF-CHAIN.md
-paper36-hilbert-6/PROOF-CHAIN.md            → proof-chain/hilbert-6/PROOF-CHAIN.md
+integers/paper01-qg5d/PROOF-CHAIN.md                       → proof-chain/qg5d/PROOF-CHAIN.md
+solutions-with-prize/paper13-rh/PROOF-CHAIN.md                   → proof-chain/rh/PROOF-CHAIN.md
+solutions/paper45-lindelof/PROOF-CHAIN.md             → proof-chain/lindelof/PROOF-CHAIN.md
+solutions/paper13b-grh/PROOF-CHAIN.md                 → proof-chain/grh/PROOF-CHAIN.md
+solutions-with-prize/paper26-bsd/PROOF-CHAIN.md                  → proof-chain/bsd/PROOF-CHAIN.md
+solutions/paper25-hilbert-12/PROOF-CHAIN.md           → proof-chain/h12/PROOF-CHAIN.md
+solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md           → proof-chain/ym/PROOF-CHAIN.md
+solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md        → proof-chain/ns/PROOF-CHAIN.md
+solutions/paper38-turbulence/PROOF-CHAIN.md           → proof-chain/turbulence/PROOF-CHAIN.md
+solutions-with-prize/paper29-hodge/PROOF-CHAIN.md                → proof-chain/hodge/PROOF-CHAIN.md
+solutions/paper31-baum-connes/PROOF-CHAIN.md          → proof-chain/baum-connes/PROOF-CHAIN.md
+solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md                 → proof-chain/pvnp/PROOF-CHAIN.md
+solutions/paper39-vp-vs-vnp/PROOF-CHAIN.md            → proof-chain/vp-vs-vnp/PROOF-CHAIN.md
+solutions/paper32-bgs-spectral-statistics/PROOF-CHAIN.md → proof-chain/bgs/PROOF-CHAIN.md
+solutions/paper46-katz-sarnak/PROOF-CHAIN.md          → proof-chain/katz-sarnak/PROOF-CHAIN.md
+solutions/paper34-twin-primes/PROOF-CHAIN.md          → proof-chain/twin-primes/PROOF-CHAIN.md
+solutions/paper43-cramer/PROOF-CHAIN.md               → proof-chain/cramer/PROOF-CHAIN.md
+solutions-with-prize/paper33-goldbach/PROOF-CHAIN.md             → proof-chain/goldbach/PROOF-CHAIN.md
+solutions/paper37-abc/PROOF-CHAIN.md                  → proof-chain/abc/PROOF-CHAIN.md
+solutions/paper40-odd-perfect/PROOF-CHAIN.md          → proof-chain/opn/PROOF-CHAIN.md
+solutions-with-prize/paper41-collatz/PROOF-CHAIN.md              → proof-chain/collatz/PROOF-CHAIN.md
+solutions/paper42-lehmer/PROOF-CHAIN.md               → proof-chain/lehmer/PROOF-CHAIN.md
+solutions/paper44-sato-tate/PROOF-CHAIN.md            → proof-chain/sato-tate/PROOF-CHAIN.md
+solutions/paper35-schanuel/PROOF-CHAIN.md             → proof-chain/schanuel/PROOF-CHAIN.md
+solutions/paper36-hilbert-6/PROOF-CHAIN.md            → proof-chain/hilbert-6/PROOF-CHAIN.md
 ```
 
 The PAC logs each copy to `pac-output/bootstrap/copy-log.md` with a timestamp and source file's last-modification date. This is the snapshot that decomposition operates on.

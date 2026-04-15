@@ -24,7 +24,7 @@ Upgrading vertices (confidence 3-4/10): **NS (4/10 post-W1/W2 + arXiv:2601.08854
 Frontier vertices (confidence 1-2/10): H12 (2/10), Baum-Connes (3/10, upgraded 2026-04-14: L5 closed via Higson-Kasparov 2001 amenable; MOVED to Upgrading tier), Goldbach (1/10), Twin Primes (1/10), Schanuel (1/10) (5 total; effective 4 after BC upgrade).
 
 **Cascade deltas applied at baseline (2026-04-14)**:
-- QG5D 9/10 → 10/10 (W1 scheme independence closed via Paper 10; W2 Route-C 3-loop closed via Paper 11 + paper1/code/K-5-2-route-c-3loop.py at 50-digit precision)
+- QG5D 9/10 → 10/10 (W1 scheme independence closed via Paper 10; W2 Route-C 3-loop closed via Paper 11 + integers/paper01-qg5d/code/K-5-2-route-c-3loop.py at 50-digit precision)
 - YM 9/10 → 9.5/10 marginal (Balaban UV-finiteness setup now unconditional all-loop)
 - NS 2/10 → 4/10 (Link 4 unconditional all-loop; Link 5 gains Route B via arXiv:2601.08854 cosphere-bundle microlocal; 3/8 links proved, up from 2/8)
 - NS MOVED from "Frontier" tier to "Upgrading" tier
@@ -165,9 +165,9 @@ RIGIDITY = (47/276) × (75/105) × (36/36) × 100
 
 **T2 structural findings**:
 
-1. **GRH Link 2 PROVED** (highest-value T2 deliverable): KMS_{1,chi} uniqueness via Bratteli-Robinson + trivial fixed-point algebra. Proof written to `paper13b-grh/research/01-kms1-chi-uniqueness.md`. PROOF-CHAIN.md updated in situ. Confidence 6/10 → 7/10. **Type C → B** (single conditional = CCM 2025, same gate as RH).
+1. **GRH Link 2 PROVED** (highest-value T2 deliverable): KMS_{1,chi} uniqueness via Bratteli-Robinson + trivial fixed-point algebra. Proof written to `solutions/paper13b-grh/research/01-kms1-chi-uniqueness.md`. PROOF-CHAIN.md updated in situ. Confidence 6/10 → 7/10. **Type C → B** (single conditional = CCM 2025, same gate as RH).
 
-2. **BGS Link 2 PROVED** (second-highest T2 deliverable): Modular flow ergodicity via Path B — factoriality (KMS₁ uniqueness) + Tomita-Takesaki + trivial center, bypassing the non-separable predual obstruction. Proof written to `paper32-bgs-spectral-statistics/research/01-modular-flow-ergodicity.md`. PROOF-CHAIN.md updated. Confidence 4/10 → 5/10.
+2. **BGS Link 2 PROVED** (second-highest T2 deliverable): Modular flow ergodicity via Path B — factoriality (KMS₁ uniqueness) + Tomita-Takesaki + trivial center, bypassing the non-separable predual obstruction. Proof written to `solutions/paper32-bgs-spectral-statistics/research/01-modular-flow-ergodicity.md`. PROOF-CHAIN.md updated. Confidence 4/10 → 5/10.
 
 3. **BGS Link 3 GENUINE gap** (AC spectrum): Continuous spectrum ≠ absolutely continuous. Singular continuous possible in principle but exotic for hyperfinite type III₁. Closure route: show modular Hamiltonian has analytic vectors or apply Haagerup standard-form smoothness.
 
@@ -236,7 +236,7 @@ Note: conservative — NS gap upgrade and BGS L3 bypass route not yet quantified
 
 **T3 structural findings (the deep pass)**:
 
-1. **BGS L4 PROVED** — the T3 headline. The arithmetic obstruction ω₁(μ_p*μ_p) = 1 ≠ 1/p = ω₁(μ_pμ_p*) blocks all antiunitary symmetries. The KMS state "knows" time's direction because creation and annihilation have different weights at each prime. GUE by Dyson. Written to `paper32-bgs-spectral-statistics/research/02-gue-class-dyson.md`.
+1. **BGS L4 PROVED** — the T3 headline. The arithmetic obstruction ω₁(μ_p*μ_p) = 1 ≠ 1/p = ω₁(μ_pμ_p*) blocks all antiunitary symmetries. The KMS state "knows" time's direction because creation and annihilation have different weights at each prime. GUE by Dyson. Written to `solutions/paper32-bgs-spectral-statistics/research/02-gue-class-dyson.md`.
 
 2. **BGS L3 GENUINE gap — precisely characterized**. The ITPFI convolution characteristic function μ̂(t) = Π_p[(p+p^{-it})/(p+1)] decays like 1/|ζ(1+it)| ~ 1/log|t|. NOT L¹ — Fourier inversion can't prove AC. The gap connects to the zero-free region of zeta on Re(s) = 1 (even under RH, the decay is insufficient). **Key insight**: the gap may be BYPASSABLE if the PCC machinery works with continuous (not necessarily AC) spectral measures. This is the T4 recommendation.
 
@@ -245,7 +245,7 @@ Note: conservative — NS gap upgrade and BGS L3 bypass route not yet quantified
    - KK spectral gap Δ₀ = 1 (coincidence!)
    - 0-dimensional cone fiber S⁰ → diffracted WF set loses no derivatives
    - Schulze cone algebra + Melrose-Wunsch propagation handle the cone tips
-   - Written to `paper30-navier-stokes/research/01-cone-adapted-route-b-sketch.md`
+   - Written to `solutions-with-prize/paper30-navier-stokes/research/01-cone-adapted-route-b-sketch.md`
 
 4. **PvNP Route D NEEDS NEW MATHEMATICS**. Popa cocycle superrigidity has no clone-action extension. Three missing layers: (a) cocycle theory for clone actions, (b) w-rigidity notion for non-groups, (c) factor non-fullness → higher-arity idempotent mechanism. This is NOT closable by existing techniques.
 
@@ -668,7 +668,7 @@ Verdict: **PINS-PRESERVED**. Circularity benign (derivation holds pins fixed as 
 
 ### CASCADE note (paper43 v3 arithmetic flip)
 
-paper43-cramer/PROOF-CHAIN.md L282-295 conflates $\sqrt{\log N}/N$ with $\sqrt{\log N/N}$. Needs revision. Not applied in cycle 2 — logged for user/next runner to tighten in a chain-revision pass.
+solutions/paper43-cramer/PROOF-CHAIN.md L282-295 conflates $\sqrt{\log N}/N$ with $\sqrt{\log N/N}$. Needs revision. Not applied in cycle 2 — logged for user/next runner to tighten in a chain-revision pass.
 
 ### T7 S-duality phase exit
 

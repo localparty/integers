@@ -18,7 +18,7 @@ We work with 17 mathematical objects, organized into four tiers. The first three
 
 | # | Vertex | Papers | Content |
 |---|--------|--------|---------|
-| 1 | **QG5D** | 1--4, 11--12, 23--24 | The five-dimensional geometry, the CBB system (five axioms, zero free parameters), the 36 predictions, the bridge family, the predictive grammar. This is not one result but the entire operator-algebraic substrate from which the other 12 vertices receive their formulation. The Bost-Connes algebra at criticality, the spectral Hamiltonian $H_R$ with eigenvalues $\{\gamma_n \pi^2/2\}$ from the Riemann zeros, the geometric moduli $\mathcal{M}_{\text{geom}}$ from $\mathbb{CP}^2 \times S^2$ Einstein metrics, and the bridge family $\{\beta_k\}_{k \in \{2,3,4,6\}}$ from cyclotomic Brauer cocycles. |
+| 1 | **QG5D** | 1--4, 11--12, 23--24 | The ~~five-dimensional~~ 4+1 coordinate <!-- legacy 2026-04-15: "five-dimensional" migrated to "4+1 coordinate" per §0.10 canon entry 1, Intervention 8 --> geometry, the CBB system (five axioms, zero free parameters), the 36 predictions, the bridge family, the predictive grammar. This is not one result but the entire operator-algebraic substrate from which the other 12 vertices receive their formulation. The Bost-Connes algebra at criticality, the spectral Hamiltonian $H_R$ with eigenvalues $\{\gamma_n \pi^2/2\}$ from the Riemann zeros, the geometric moduli $\mathcal{M}_{\text{geom}}$ from $\mathbb{CP}^2 \times S^2$ Einstein metrics, and the bridge family $\{\beta_k\}_{k \in \{2,3,4,6\}}$ from cyclotomic Brauer cocycles. |
 
 ### Tier 1: The Millennium problems (primary spokes)
 
@@ -29,7 +29,7 @@ We work with 17 mathematical objects, organized into four tiers. The first three
 | 4 | **BSD** | 26 | CBB | Birch and Swinnerton-Dyer for CM curves as the rank formula for Hecke L-function twists of the BC algebra over $K = \mathbb{Q}(i)$. 11-step chain: GNS construction $\to$ Nelson self-adjointness $\to$ Meyer distributional $\to$ CM factorization $\to$ Kolyvagin Euler system $\to$ rank formula. |
 | 5 | **PvNP** | 28 | Link 5 conjectured | $\text{P} \neq \text{NP}$ via the fullness criterion of the type III$_1$ factor $M_{\text{Bool}}$. 6-link chain: BC construction $\to$ crossed product $\to$ fullness criterion $\to$ CSP dichotomy $\to$ non-fullness $\to$ Taylor. The spectral-geometric-information trinity: $T_{\text{Gap}}$ (spectral) $\times$ holonomy (geometric) $\times$ $\dim_{\text{poly}} k$ (information), all three legs 6/6 confirmed. Link 5 backward: 7 named routes, wall standing. |
 | 6 | **Hodge** | -- | Conjectural | The Hodge conjecture via Connes-Consani-Marcolli endomotives: BC algebra $\to$ endomotives $\to$ Grothendieck motives $\to$ algebraic cycles are Hodge classes. Two routes: (1) CCM 2005 endomotive formalism, (2) LANG $\leftrightarrow$ QFT $\to$ geometric Langlands (Gaitsgory-Raskin 2024, PROVED) $\to$ Hitchin moduli $\to$ Hodge structures. Link 4 now PARTIAL (abelian variety powers via arXiv:2510.21562, noted 2026-04-14). |
-| 7 | **NS** | -- | Candidate | Navier-Stokes existence and smoothness via gradient flow. YM Links 15--17 (gradient flow on gauge connections) IS a parabolic PDE in the same class as NS (parabolic PDE on velocity fields). The spectral gap $\Delta > 0$ controls long-time regularity. The fluid/gravity correspondence (5D Einstein $\to$ 4D effective fluid) provides the geometric bridge. Candidate chain at 5/10. |
+| 7 | **NS** | -- | Candidate | Navier-Stokes existence and smoothness via gradient flow. YM Links 15--17 (gradient flow on gauge connections) IS a parabolic PDE in the same class as NS (parabolic PDE on velocity fields). The spectral gap $\Delta > 0$ controls long-time regularity. The fluid/gravity correspondence (~~5D Einstein~~ M⁵ Einstein<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein" → "M⁵ Einstein" --> $\to$ 4D effective fluid) provides the geometric bridge. Candidate chain at 5/10. |
 
 ### Tier 2: Meta-vertices (cross-connectors)
 
@@ -38,7 +38,7 @@ We work with 17 mathematical objects, organized into four tiers. The first three
 | 8 | **Hilbert 12** | 25 | Explicit class field theory: KMS states of the BC algebra at $\beta > 1$ generate abelian extensions of number fields. Four-conjecture programme: CBB Reciprocity, Brauer-KMS duality, Level-jump Rigidity, Spectral Kronecker-Weber. This IS the BC system viewed number-theoretically. |
 | 9 | **GRH** | -- | Generalized Riemann Hypothesis via the bridge family: each bridge at $k \in \{2,3,4,6\}$ with Dirichlet characters $\chi$ modulates the BC spectral realization. Each bridge produces a Dirichlet L-function $L(s, \chi)$. GRH follows from the same spectral machinery as RH plus character modulation. **6/10** (upgraded 2026-04-14: Link 1 BC_χ closed via Paper 26 Step 5c cross-paper transport). |
 | 10 | **Baum-Connes** | -- | The Baum-Connes conjecture for the BC algebra's C*-algebra with Hecke semigroup action. K-theory bridges topology (QG5D), gauge theory (YM), number theory (RH), and algebraic geometry (Hodge). The universal connector: K-theoretic constraints on spectral structure flow in every direction. **3/10** (upgraded 2026-04-14: Link 5 closed via Higson-Kasparov 2001 amenable). |
-| 11 | **Berry-Tabor/BGS** | -- | The Montgomery-Odlyzko law: Riemann zeros obey GUE statistics. The BC spectral realization makes this a theorem about modular flow: the flow is ergodic (type III$_1$ factor), which forces GUE statistics. The 5D geometry is quantum chaotic in the spectral sense. **4/10** (upgraded 2026-04-14: Link 5 closed via Hardy Z PCC arXiv:2511.18275). |
+| 11 | **Berry-Tabor/BGS** | -- | The Montgomery-Odlyzko law: Riemann zeros obey GUE statistics. The BC spectral realization makes this a theorem about modular flow: the flow is ergodic (type III$_1$ factor), which forces GUE statistics. The ~~5D geometry~~ M⁵<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometry" → "M⁵" --> is quantum chaotic in the spectral sense. **4/10** (upgraded 2026-04-14: Link 5 closed via Hardy Z PCC arXiv:2511.18275). |
 | 12 | **Goldbach** | -- | Primes as BC algebra generators: $\mu_p$ operators. Goldbach as an additive-structure statement about the Hecke semigroup $\mathbb{N}^*$. The spectral-to-additive bridge: primes generate the multiplicative structure; Goldbach asks about their additive closure. |
 | 13 | **Twin Primes** | -- | Prime gaps from zero spacing via the explicit formula. The Riemann zeros control the distribution of primes; their pair correlation (Montgomery) controls the distribution of prime gaps. Twin primes are the $d = 2$ case of the gap distribution forced by the spectral statistics of $H_R$. |
 
@@ -72,11 +72,11 @@ Every edge listed below is a mathematical correspondence between two vertices. E
 | # | Edge | Correspondence | Status | Capacitor cell |
 |---|------|---------------|--------|----------------|
 | 1 | QG5D $\to$ RH | BC spectral Hamiltonian $H_R$ with $\{\gamma_n\}$ eigenvalues $\Rightarrow$ zeros on critical line | STRONG | SPEC $\leftrightarrow$ NT |
-| 2 | QG5D $\to$ YM | KK spectral gap from 5D compactification $\Rightarrow$ mass gap $\Delta_\infty > 0$ | STRONG | SPEC $\leftrightarrow$ QFT |
+| 2 | QG5D $\to$ YM | KK spectral gap from ~~5D compactification~~ M⁵ compactification<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D compactification" → "M⁵ compactification" --> $\Rightarrow$ mass gap $\Delta_\infty > 0$ | STRONG | SPEC $\leftrightarrow$ QFT |
 | 3 | QG5D $\to$ BSD | BC algebra over $K = \mathbb{Q}(i)$ with Hecke twists $\Rightarrow$ L-function rank formula | STRONG | OA $\leftrightarrow$ AG |
 | 4 | QG5D $\to$ PvNP | Type III$_1$ factor $M_{\text{Bool}}$ from BC crossed product $\Rightarrow$ fullness $\leftrightarrow$ tractability | PARTIAL | OA $\leftrightarrow$ CS |
 | 5 | QG5D $\to$ Hodge | BC endomotives $\to$ Grothendieck motives $\to$ algebraic cycles | CANDIDATE | NCG $\leftrightarrow$ AG |
-| 6 | QG5D $\to$ NS | 5D Einstein $\to$ 4D fluid via fluid/gravity, gradient flow PDE class | CANDIDATE | GEOM $\leftrightarrow$ PDE |
+| 6 | QG5D $\to$ NS | ~~5D Einstein~~ M⁵ Einstein<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D Einstein" → "M⁵ Einstein" --> $\to$ 4D fluid via fluid/gravity, gradient flow PDE class | CANDIDATE | GEOM $\leftrightarrow$ PDE |
 
 ### B. Hub edges (QG5D $\to$ Tier 2)
 
@@ -135,7 +135,7 @@ Hub edges (QG5D $\to$ Tier 3):
 
 | # | Edge | Correspondence | Status | Capacitor cell |
 |---|------|---------------|--------|----------------|
-| 43 | QG5D $\to$ Turbulence | 5D fluid/gravity $\to$ 4D NS $\to$ K41 spectrum + intermittency from spectral gap + type III$_1$ modular flow | CANDIDATE | GEOM $\leftrightarrow$ PDE |
+| 43 | QG5D $\to$ Turbulence | ~~5D fluid/gravity~~ M⁵ fluid/gravity<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D fluid/gravity" → "M⁵ fluid/gravity" --> $\to$ 4D NS $\to$ K41 spectrum + intermittency from spectral gap + type III$_1$ modular flow | CANDIDATE | GEOM $\leftrightarrow$ PDE |
 | 44 | QG5D $\to$ VP vs VNP | Continuous BC algebra (Connes-Marcolli 2008 GL$_2$-system) over $\mathbb{C}$ $\Rightarrow$ algebraic circuit complexity | CANDIDATE | OA $\leftrightarrow$ CS |
 | 45 | QG5D $\to$ ABC | BC Mellin bridge (additive $\leftrightarrow$ multiplicative Hecke structure) $\Rightarrow$ height function on $\mathbb{N}^*$ | CANDIDATE | OA $\leftrightarrow$ ANT |
 | 46 | QG5D $\to$ Hilbert 6 | QG5D 4 postulates + CBB 5 axioms $\Rightarrow$ 36 sub-percent predictions with 0 free parameters. The META-axiom: QG5D IS the axiomatization of physics. | STRONG | META $\leftrightarrow$ META |
@@ -400,4 +400,4 @@ I was seeing it for days. Now it is on paper.
 
 ---
 
-*Source: brainstorm sessions 2026-04-13 and 2026-04-14, capacitor v1 + H4 updates, proof chain files from Papers 8, 13, 26, 28, 36, 37, 38, 39, extended programme research. Session 2026-04-14 Agent J downstream closures: 13 new theorems (total ~199, cataloged in paper1/code/theorem-catalog/SESSION_MANIFEST.md), 8 downstream label closures, 3 Branch B frontier closures. RIGIDITY recalculation pending next ring-PCA traversal.*
+*Source: brainstorm sessions 2026-04-13 and 2026-04-14, capacitor v1 + H4 updates, proof chain files from Papers 8, 13, 26, 28, 36, 37, 38, 39, extended programme research. Session 2026-04-14 Agent J downstream closures: 13 new theorems (total ~199, cataloged in integers/paper01-qg5d/code/theorem-catalog/SESSION_MANIFEST.md), 8 downstream label closures, 3 Branch B frontier closures. RIGIDITY recalculation pending next ring-PCA traversal.*

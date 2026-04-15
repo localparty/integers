@@ -100,31 +100,31 @@ strategy/x-ray/
 On first invocation, the PAC does NOT copy files (unlike decomposition). It READS each live PROOF-CHAIN.md in place and PRODUCES a new X-RAY.md per vertex. The vertex mapping:
 
 ```
-paper1/PROOF-CHAIN.md                       → proof-chain/qg5d/X-RAY.md
-paper13-rh/PROOF-CHAIN.md                   → proof-chain/rh/X-RAY.md
-paper45-lindelof/PROOF-CHAIN.md             → proof-chain/lindelof/X-RAY.md
-paper13b-grh/PROOF-CHAIN.md                 → proof-chain/grh/X-RAY.md
-paper26-bsd/PROOF-CHAIN.md                  → proof-chain/bsd/X-RAY.md
-paper25-hilbert-12/PROOF-CHAIN.md           → proof-chain/h12/X-RAY.md
-paper08-yang-mills/PROOF-CHAIN.md           → proof-chain/ym/X-RAY.md
-paper30-navier-stokes/PROOF-CHAIN.md        → proof-chain/ns/X-RAY.md
-paper38-turbulence/PROOF-CHAIN.md           → proof-chain/turbulence/X-RAY.md
-paper29-hodge/PROOF-CHAIN.md                → proof-chain/hodge/X-RAY.md
-paper31-baum-connes/PROOF-CHAIN.md          → proof-chain/baum-connes/X-RAY.md
-paper28-pvnp/PROOF-CHAIN.md                 → proof-chain/pvnp/X-RAY.md
-paper39-vp-vs-vnp/PROOF-CHAIN.md            → proof-chain/vp-vs-vnp/X-RAY.md
-paper32-bgs-spectral-statistics/PROOF-CHAIN.md → proof-chain/bgs/X-RAY.md
-paper46-katz-sarnak/PROOF-CHAIN.md          → proof-chain/katz-sarnak/X-RAY.md
-paper34-twin-primes/PROOF-CHAIN.md          → proof-chain/twin-primes/X-RAY.md
-paper43-cramer/PROOF-CHAIN.md               → proof-chain/cramer/X-RAY.md
-paper33-goldbach/PROOF-CHAIN.md             → proof-chain/goldbach/X-RAY.md
-paper37-abc/PROOF-CHAIN.md                  → proof-chain/abc/X-RAY.md
-paper40-odd-perfect/PROOF-CHAIN.md          → proof-chain/opn/X-RAY.md
-paper41-collatz/PROOF-CHAIN.md              → proof-chain/collatz/X-RAY.md
-paper42-lehmer/PROOF-CHAIN.md               → proof-chain/lehmer/X-RAY.md
-paper44-sato-tate/PROOF-CHAIN.md            → proof-chain/sato-tate/X-RAY.md
-paper35-schanuel/PROOF-CHAIN.md             → proof-chain/schanuel/X-RAY.md
-paper36-hilbert-6/PROOF-CHAIN.md            → proof-chain/hilbert-6/X-RAY.md
+integers/paper01-qg5d/PROOF-CHAIN.md                       → proof-chain/qg5d/X-RAY.md
+solutions-with-prize/paper13-rh/PROOF-CHAIN.md                   → proof-chain/rh/X-RAY.md
+solutions/paper45-lindelof/PROOF-CHAIN.md             → proof-chain/lindelof/X-RAY.md
+solutions/paper13b-grh/PROOF-CHAIN.md                 → proof-chain/grh/X-RAY.md
+solutions-with-prize/paper26-bsd/PROOF-CHAIN.md                  → proof-chain/bsd/X-RAY.md
+solutions/paper25-hilbert-12/PROOF-CHAIN.md           → proof-chain/h12/X-RAY.md
+solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md           → proof-chain/ym/X-RAY.md
+solutions-with-prize/paper30-navier-stokes/PROOF-CHAIN.md        → proof-chain/ns/X-RAY.md
+solutions/paper38-turbulence/PROOF-CHAIN.md           → proof-chain/turbulence/X-RAY.md
+solutions-with-prize/paper29-hodge/PROOF-CHAIN.md                → proof-chain/hodge/X-RAY.md
+solutions/paper31-baum-connes/PROOF-CHAIN.md          → proof-chain/baum-connes/X-RAY.md
+solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md                 → proof-chain/pvnp/X-RAY.md
+solutions/paper39-vp-vs-vnp/PROOF-CHAIN.md            → proof-chain/vp-vs-vnp/X-RAY.md
+solutions/paper32-bgs-spectral-statistics/PROOF-CHAIN.md → proof-chain/bgs/X-RAY.md
+solutions/paper46-katz-sarnak/PROOF-CHAIN.md          → proof-chain/katz-sarnak/X-RAY.md
+solutions/paper34-twin-primes/PROOF-CHAIN.md          → proof-chain/twin-primes/X-RAY.md
+solutions/paper43-cramer/PROOF-CHAIN.md               → proof-chain/cramer/X-RAY.md
+solutions-with-prize/paper33-goldbach/PROOF-CHAIN.md             → proof-chain/goldbach/X-RAY.md
+solutions/paper37-abc/PROOF-CHAIN.md                  → proof-chain/abc/X-RAY.md
+solutions/paper40-odd-perfect/PROOF-CHAIN.md          → proof-chain/opn/X-RAY.md
+solutions-with-prize/paper41-collatz/PROOF-CHAIN.md              → proof-chain/collatz/X-RAY.md
+solutions/paper42-lehmer/PROOF-CHAIN.md               → proof-chain/lehmer/X-RAY.md
+solutions/paper44-sato-tate/PROOF-CHAIN.md            → proof-chain/sato-tate/X-RAY.md
+solutions/paper35-schanuel/PROOF-CHAIN.md             → proof-chain/schanuel/X-RAY.md
+solutions/paper36-hilbert-6/PROOF-CHAIN.md            → proof-chain/hilbert-6/X-RAY.md
 ```
 
 ## Priority order for X-Ray runs
@@ -184,7 +184,7 @@ Zenodo package
 ```
 
 A critic opening the ZENODO package for (say) YM sees:
-- `paper08-yang-mills/` — the claim
+- `solutions-with-prize/paper08-yang-mills/` — the claim
 - `strategy/decomposition/proof-chain/ym/PROOF-CHAIN.md` — the sub-proofs
 - `strategy/ccm-verification/ledger.md#ym` — the CCM dependency status
 - `strategy/x-ray/proof-chain/ym/X-RAY.md` — the geometric interpretation

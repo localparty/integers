@@ -1,6 +1,6 @@
 # paper41-collatz — Collatz Conjecture
 
-**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/paper41-collatz/`
+**Directory:** `/Users/gsix/quantum-geometry-in-5d-latex/solutions-with-prize/paper41-collatz/`
 **PROOF-CHAIN.md:** present
 
 ## Claim

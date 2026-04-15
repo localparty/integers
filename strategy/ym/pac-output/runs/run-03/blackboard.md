@@ -21,8 +21,8 @@
 
 - Compliance map LOCKED at run-02 → ground truth for §3 Requirements Map verdicts.
 - paper08-yang-mills preprint sections → ground truth for theorem statements (K, I4, L, §05).
-- paper08-yang-mills/research/51-infinite-volume.md → ground truth for ℝ⁴ limit (ADR-2).
-- paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md → ground truth for H4 named-wall fields.
+- solutions-with-prize/paper08-yang-mills/research/51-infinite-volume.md → ground truth for ℝ⁴ limit (ADR-2).
+- solutions-with-prize/paper08-yang-mills/h4-capacitor-bypass/closure/closure-digest.md → ground truth for H4 named-wall fields.
 - X-RAY.md run-01 → ground truth for face/projection/pattern histograms (§14).
 
 ## Citation conventions (adopt from run-02)

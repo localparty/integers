@@ -235,5 +235,5 @@ III$_1$*, J. Funct. Anal. 28 (absolute continuity on III$_1$ factors).
 Hiai-Tsukada 1984, *Absolute continuity of the spectrum of the modular
 operator for ITPFI factors*, PRIMS 20.
 Bost-Connes 1995 (ITPFI presentation with prime weights).
-QG5D programme: §08 of this paper (type III$_1$ identification); Paper
+~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme: §08 of this paper (type III$_1$ identification); Paper
 13 L2 ITPFI factorization research file.

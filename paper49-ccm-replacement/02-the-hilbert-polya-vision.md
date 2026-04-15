@@ -117,7 +117,7 @@ preprint passing peer review.
 
 ## 2026: Paper 49
 
-The QG5D programme arrives at the Hilbert-Pólya operator from a
+The ~~QG5D~~ Integers<!-- legacy 2026-04-15 Intervention 8b §0.10 §0.1: "QG5D" (programme shorthand) → "Integers" --> programme arrives at the Hilbert-Pólya operator from a
 different direction. Our starting point is not "approximate the
 Mellin operator by a prolate-band truncation." Our starting point
 is this:
