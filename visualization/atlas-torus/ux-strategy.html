@@ -119,13 +119,19 @@
   #bottom-panel .slides-hint{color:var(--dim);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0;font-size:10px;margin-left:6px}
   #bottom-panel .panel-body{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px 14px 12px}
 
-  /* Controls half */
+  /* Controls half — 2 columns of sliders + button row below */
   .controls-half{display:flex;flex-direction:column;gap:6px}
-  .control-row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--dim)}
-  .control-row label{display:flex;align-items:center;gap:8px;flex:1}
-  .ctl-label{display:inline-block;min-width:54px;color:var(--dim);font-weight:500}
-  .control-row input[type="range"]{flex:1;accent-color:var(--cyan);background:transparent;min-width:80px;height:14px}
-  .control-row .readout{font-family:ui-monospace,Menlo,monospace;color:var(--cyan);font-size:10px;min-width:42px;text-align:right}
+  .slider-cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
+  .slider-col{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .control-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dim);min-width:0}
+  .control-row label{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
+  .ctl-label{display:inline-block;min-width:44px;color:var(--dim);font-weight:500;font-size:10.5px}
+  .control-row input[type="range"]{flex:1;accent-color:var(--cyan);background:transparent;min-width:50px;height:14px}
+  .control-row .readout{font-family:ui-monospace,Menlo,monospace;color:var(--cyan);font-size:9.5px;min-width:38px;text-align:right}
+  /* Auto-animate checkbox sits left of each slider's label */
+  .auto-check{flex-shrink:0;width:12px;height:12px;accent-color:var(--amber);cursor:pointer;margin:0}
+  .control-row.auto-on .ctl-label{color:var(--amber)}
+  .control-row.auto-on .readout{color:var(--amber)}
   .control-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
   .control-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);padding:4px 9px;border-radius:4px;font-size:10.5px;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:all 0.15s}
   .control-btn:hover{color:var(--cyan);border-color:var(--cyan)}
@@ -227,30 +233,64 @@
     </summary>
     <div class="panel-body">
       <div class="controls-half">
-        <div class="control-row">
-          <label><span class="ctl-label">rotate X</span><input type="range" id="rot-x" min="-180" max="180" step="1" value="25"></label>
-          <span class="readout" id="rot-x-readout">25°</span>
-        </div>
-        <div class="control-row">
-          <label><span class="ctl-label">rotate Y</span><input type="range" id="rot-y" min="-180" max="180" step="1" value="-30"></label>
-          <span class="readout" id="rot-y-readout">-30°</span>
-        </div>
-        <div class="control-row">
-          <label><span class="ctl-label">zoom</span><input type="range" id="zoom-ctl" min="40" max="220" step="1" value="100"></label>
-          <span class="readout" id="zoom-readout">1.00</span>
-        </div>
-        <div class="control-row">
-          <label><span class="ctl-label">tilt</span><input type="range" id="tilt-ctl" min="-180" max="180" step="1" value="0"></label>
-          <span class="readout" id="tilt-readout">0°</span>
-        </div>
-        <div class="control-row">
-          <label><span class="ctl-label">tube</span><input type="range" id="tube-slider" min="0" max="6.2832" step="0.005" value="0"></label>
-          <span class="readout" id="tube-readout">0°</span>
+        <div class="slider-cols">
+          <div class="slider-col">
+            <div class="control-row" data-slider="rot-x">
+              <input type="checkbox" class="auto-check" data-auto="rot-x" title="Auto-animate pitch">
+              <label><span class="ctl-label">pitch</span><input type="range" id="rot-x" min="-89" max="89" step="0.01" value="24"></label>
+              <span class="readout" id="rot-x-readout">24°</span>
+            </div>
+            <div class="control-row" data-slider="rot-y">
+              <input type="checkbox" class="auto-check" data-auto="rot-y" title="Auto-animate yaw">
+              <label><span class="ctl-label">yaw</span><input type="range" id="rot-y" min="-180" max="180" step="0.01" value="-134"></label>
+              <span class="readout" id="rot-y-readout">-134°</span>
+            </div>
+            <div class="control-row" data-slider="tilt-ctl">
+              <input type="checkbox" class="auto-check" data-auto="tilt-ctl" title="Auto-animate roll">
+              <label><span class="ctl-label">roll</span><input type="range" id="tilt-ctl" min="-180" max="180" step="0.01" value="-21"></label>
+              <span class="readout" id="tilt-readout">-21°</span>
+            </div>
+            <div class="control-row" data-slider="rotate-scene">
+              <input type="checkbox" class="auto-check" data-auto="rotate-scene" title="Auto-animate scene rotate X">
+              <label><span class="ctl-label">rotate X</span><input type="range" id="rotate-scene" min="0" max="6.2832" step="0.001" value="0"></label>
+              <span class="readout" id="rotate-scene-readout">0°</span>
+            </div>
+            <div class="control-row" data-slider="rotate-scene-y">
+              <input type="checkbox" class="auto-check" data-auto="rotate-scene-y" title="Auto-animate scene rotate Y">
+              <label><span class="ctl-label">rotate Y</span><input type="range" id="rotate-scene-y" min="0" max="6.2832" step="0.001" value="0"></label>
+              <span class="readout" id="rotate-scene-y-readout">0°</span>
+            </div>
+          </div>
+          <div class="slider-col">
+            <div class="control-row" data-slider="zoom-ctl">
+              <input type="checkbox" class="auto-check" data-auto="zoom-ctl" title="Auto-animate zoom">
+              <label><span class="ctl-label">zoom</span><input type="range" id="zoom-ctl" min="40" max="220" step="0.1" value="124"></label>
+              <span class="readout" id="zoom-readout">1.24</span>
+            </div>
+            <div class="control-row" data-slider="pos-x">
+              <input type="checkbox" class="auto-check" data-auto="pos-x" title="Auto-animate pos X">
+              <label><span class="ctl-label">pos X</span><input type="range" id="pos-x" min="-3" max="3" step="0.001" value="-0.26"></label>
+              <span class="readout" id="pos-x-readout">-0.26</span>
+            </div>
+            <div class="control-row" data-slider="pos-y">
+              <input type="checkbox" class="auto-check" data-auto="pos-y" title="Auto-animate pos Y">
+              <label><span class="ctl-label">pos Y</span><input type="range" id="pos-y" min="-3" max="3" step="0.001" value="-0.98"></label>
+              <span class="readout" id="pos-y-readout">-0.98</span>
+            </div>
+            <div class="control-row" data-slider="pos-z">
+              <input type="checkbox" class="auto-check" data-auto="pos-z" title="Auto-animate pos Z">
+              <label><span class="ctl-label">pos Z</span><input type="range" id="pos-z" min="-3" max="3" step="0.001" value="-0.32"></label>
+              <span class="readout" id="pos-z-readout">-0.32</span>
+            </div>
+            <div class="control-row" data-slider="tube-slider">
+              <input type="checkbox" class="auto-check" data-auto="tube-slider" title="Auto-animate tube">
+              <label><span class="ctl-label">tube</span><input type="range" id="tube-slider" min="0" max="6.2832" step="0.001" value="0"></label>
+              <span class="readout" id="tube-readout">0°</span>
+            </div>
+          </div>
         </div>
         <div class="control-btns">
-          <button class="control-btn" id="btn-rotate">auto-rotate</button>
-          <button class="control-btn" id="btn-poloidal">auto-tube</button>
-          <button class="control-btn" id="btn-reset">reset view</button>
+          <button class="control-btn" id="btn-reset">reset</button>
         </div>
       </div>
       <div class="slides-half">
@@ -551,10 +591,11 @@ function labelColor(vertexId) {
   return 0x7dd3fc;                                           // cyan (community)
 }
 
-// Populate VERTEX_V_HOME now that TORUS_VERTICES is available. Each vertex
-// gets a unique, stable v-offset derived from its index × golden angle.
+// Populate VERTEX_V_HOME — restrict to outer-half of the tube [-π/2, π/2]
+// so every vertex's line is visible from the default camera angle (no
+// vertex lands on the inner equator, which sits inside the torus hole).
 TORUS_VERTICES.forEach((v, idx) => {
-  VERTEX_V_HOME[v.id] = ((idx * GOLDEN_ANGLE) % (2 * Math.PI)) - Math.PI;
+  VERTEX_V_HOME[v.id] = ((idx * GOLDEN_ANGLE) % Math.PI) - Math.PI / 2;
 });
 
 const labelSprites = [];
@@ -588,8 +629,6 @@ let activeModes = new Set(['comply', 'independent', 'contribute', 'geodesic']); 
 let connectPath = [];
 let geodesicPathSet = new Set(); // nodes on current geodesic shortest path
 let tubeOffset = 0; // v-axis offset added to every node — slider rotates nodes around the tube
-let autoPoloidal = false; // when true, animate the tubeOffset continuously
-const POLOIDAL_SPEED = -0.0068; // radians per frame (negative = flipped direction; ~0.4 deg/frame — user-calibrated -15% from 0.008)
 // Orange reserved for "this is the currently selected solution" — distinct
 // from gold (integers-original), cyan (literature), pink (external), etc.
 const SELECTED_SOLUTION_COLOR = 0xff8c42;
@@ -1106,7 +1145,10 @@ function updateTorusHighlight() {
 
   // ── COLOR / OPACITY LOGIC ──
 
-  // Reset all nodes to default
+  // Reset all nodes to default. Base scale 0.55 matches the "dimmed/context"
+  // size — less busy at a glance. Selecting a solution ONLY enlarges the
+  // selected chain (no shrinking-everything-else effect); non-selected nodes
+  // already live at 0.55 whether a solution is selected or not.
   nodeMeshes.forEach(mesh => {
     const n = mesh.userData;
     const cfg = COLORS[n.classification] || COLORS['literature'];
@@ -1115,7 +1157,7 @@ function updateTorusHighlight() {
     mesh.material.emissiveIntensity = cfg.emissiveIntensity;
     mesh.material.opacity = cfg.opacity;
     mesh.material.transparent = cfg.opacity < 1.0;
-    mesh.scale.setScalar(1);
+    mesh.scale.setScalar(0.55);
     // Bypass-route nodes hidden by default; only INDEPENDENT mode reveals them.
     if (n.classification === 'bypass-route') {
       mesh.material.opacity = 0;
@@ -1160,15 +1202,10 @@ function updateTorusHighlight() {
       }
     });
 
-    // modeColors map used only for .scale sizing now — all selected nodes
-    // get the SELECTED_SOLUTION_COLOR regardless of classification.
+    // Selected-solution nodes: grow only +20% from the 0.55 baseline (→ 0.66).
+    // Color + white-line connectivity carry the signal; size is a subtle nudge.
     const modeColors = {
-      'comply': (cls) => {
-        if (cls === 'external')    return {scale:1.6};
-        if (cls === 'open')        return {scale:1.4};
-        if (cls === 'integers-original') return {scale:1.8};
-        return {scale:1.6};
-      },
+      'comply': () => ({scale: 0.66}),
     };
     const getStyle = modeColors['comply'];
 
@@ -1202,7 +1239,7 @@ function updateTorusHighlight() {
           mesh.material.emissiveIntensity = 1.0;
           mesh.material.opacity = 1.0;
           mesh.material.transparent = false;
-          mesh.scale.setScalar(2.2);
+          mesh.scale.setScalar(0.66);  // +20% from baseline
         } else {
           mesh.material.opacity = 0;
           mesh.material.transparent = true;
@@ -1257,11 +1294,11 @@ function updateTorusHighlight() {
     });
     const isExternal = (cls) => cls === 'external' || cls === 'open';
 
-    // ─── LAYER 1: COMPLY arcs — orange chain ───
+    // ─── LAYER 1: COMPLY arcs — WHITE chain line (nodes stay orange) ───
     {
       const layerOp = op('comply');
       for (let i = 1; i < activeNodes.length; i++) {
-        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], SELECTED_SOLUTION_COLOR, layerOp);
+        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], 0xffffff, layerOp);
       }
     }
 
@@ -1308,15 +1345,13 @@ function updateTorusHighlight() {
       }
     }
 
-    // ─── LAYER 4: GEODESIC arcs — gold, sequential layer path ───
-    // BFS over intra-chain adjacency only (no cross-cut shortcuts, which
-    // would create arcs leaping across the tube). With poloidal spread, the
-    // geodesic = L1→L2→…→L_last is a clean arc along the tube circle.
+    // ─── LAYER 4: GEODESIC arcs — white sequential chain (same as COMPLY
+    // geometry; GEODESIC mode just brightens the already-drawn line) ───
     if (activeNodes.length >= 2) {
       activeNodes.forEach(m => geodesicPathSet.add(m.userData.id));
       const layerOp = op('geodesic');
       for (let i = 1; i < activeNodes.length; i++) {
-        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], 0xf5c26b, layerOp);
+        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], 0xffffff, layerOp);
       }
     }
     } // end for (activeVertex of activeVertices)
@@ -1339,7 +1374,7 @@ function updateTorusHighlight() {
       mesh.material.emissiveIntensity = 1.0;
       mesh.material.opacity = 1.0;
       mesh.material.transparent = false;
-      mesh.scale.setScalar(1.6);
+      mesh.scale.setScalar(0.66);  // +20% from baseline
     });
 
     // Reuse surface-arc drawer — chainMeshes have currentU/currentV from earlier position setup
@@ -1367,13 +1402,11 @@ function updateTorusHighlight() {
     const OFF_OP = 0.05;
     const op = (mode) => activeModes.has(mode) ? ON_OP : OFF_OP;
     const isExternal = (cls) => cls === 'external' || cls === 'open';
-    // LAYER 1: COMPLY arcs — ALL orange to match the selected-chain grammar
-    // (same color as nodes; custom connect chains look identical in grammar
-    // to solution chains).
+    // LAYER 1: COMPLY arcs — WHITE chain line (matches solution chain grammar)
     {
       const lo = op('comply');
       for (let i = 1; i < chainMeshes.length; i++) {
-        drawChainArc(chainMeshes[i - 1], chainMeshes[i], SELECTED_SOLUTION_COLOR, lo);
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xffffff, lo);
       }
     }
 
@@ -1403,11 +1436,11 @@ function updateTorusHighlight() {
       }
     }
 
-    // LAYER 4: GEODESIC — chain is already the BFS path; emphasize with orange.
+    // LAYER 4: GEODESIC — same white chain line (GEODESIC just brightens it)
     {
       const lo = op('geodesic');
       for (let i = 1; i < chainMeshes.length; i++) {
-        drawChainArc(chainMeshes[i - 1], chainMeshes[i], SELECTED_SOLUTION_COLOR, lo);
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xffffff, lo);
       }
     }
   } else if (connectPath.length > 1 && activeVertices.size > 0) {
@@ -1421,7 +1454,7 @@ function updateTorusHighlight() {
         mesh.material.emissiveIntensity = 0.6;
         mesh.material.opacity = 1.0;
         mesh.material.transparent = false;
-        mesh.scale.setScalar(1.5);
+        mesh.scale.setScalar(0.66);  // +20% from baseline
       }
     });
     for (let i = 0; i < connectPath.length - 1; i++) {
@@ -1445,7 +1478,7 @@ function updateTorusHighlight() {
       mesh.material.emissiveIntensity = 1.0;
       mesh.material.opacity = 1.0;
       mesh.material.transparent = false;
-      mesh.scale.setScalar(1.6);
+      mesh.scale.setScalar(0.66);  // +20% from baseline
     }
   });
 
@@ -1473,17 +1506,41 @@ function pulseNode(mesh) {
 // every frame and multiplies the logical scale by (cameraDist / BASE_DIST),
 // keeping on-screen size ≈ constant as the user zooms.
 const BASE_DIST_FOR_SIZE = Math.hypot(5, 4, 7);
+// Save both logical scale AND opacity at each updateTorusHighlight pass — the
+// per-frame applyZoomCompensation then multiplies scale by zoom-ratio and
+// multiplies opacity by view-space depth factor (for 3D depth perception
+// matching the wireframe's depth-cued shader).
 function captureBaseScales() {
   nodeMeshes.forEach(m => {
     m.userData._baseScale = m.scale.x;
+    m.userData._baseOpacity = m.material.opacity;
+    m.userData._baseTransparent = m.material.transparent;
   });
 }
+const _tmpViewPos = new THREE.Vector3();
+const TORUS_RADIUS_SPAN = R_MAJOR + R_MINOR;  // from camera-facing to camera-opposite
 function applyZoomCompensation() {
   const comp = camera.position.length() / BASE_DIST_FOR_SIZE;
+  // Depth-cue range — same math as the wireframe shader
+  const cameraDist = camera.position.length();
+  const minViewZ = cameraDist - TORUS_RADIUS_SPAN;
+  const rangeZ = 2 * TORUS_RADIUS_SPAN;
+  const DEPTH_MIN_FACTOR = 0.15;  // back-face dim multiplier (matches wire shader's minOpacity/maxOpacity ratio)
+
   nodeMeshes.forEach(m => {
-    if (m === pulsingMesh) return;  // pulse animation owns scale during its run
+    if (m === pulsingMesh) return;
     const base = m.userData._baseScale ?? 1;
     m.scale.setScalar(base * comp);
+
+    // View-space depth (positive = further from camera)
+    _tmpViewPos.copy(m.position).applyMatrix4(camera.matrixWorldInverse);
+    const viewZ = -_tmpViewPos.z;
+    const t = Math.max(0, Math.min(1, (viewZ - minViewZ) / rangeZ));
+    const depthFactor = 1 - t * (1 - DEPTH_MIN_FACTOR);  // 1 at front → 0.15 at back
+    const baseOp = m.userData._baseOpacity ?? 1;
+    const newOp = baseOp * depthFactor;
+    m.material.opacity = newOp;
+    m.material.transparent = newOp < 1.0 || m.userData._baseTransparent;
   });
   labelSprites.forEach(s => {
     const base = s.userData._baseScale ?? 0.55;
@@ -1599,16 +1656,10 @@ function animate() {
     }
   }
 
-  // Auto-poloidal: continuously rotate every node around the tube circle
-  if (autoPoloidal) {
-    // Add 2π before modulo to keep positive even with negative speed (flipped direction)
-    tubeOffset = (tubeOffset + POLOIDAL_SPEED + Math.PI * 2) % (Math.PI * 2);
-    if (tubeSlider) tubeSlider.value = tubeOffset;
-    if (tubeReadout) {
-      const degrees = Math.round((tubeOffset * 180 / Math.PI) % 360);
-      tubeReadout.textContent = degrees + '°';
-    }
-    updateTorusHighlight();
+  // Auto-animate any slider that's checked — each advances its own value,
+  // dispatches input, triggering the regular camera/tube handler.
+  if (autoAnimate.size > 0) {
+    for (const id of autoAnimate) autoStep(id);
   }
 
   controls.update();
@@ -1628,14 +1679,24 @@ function animate() {
   // Sync sliders if camera was dragged (not driven by slider)
   syncSlidersFromCamera();
 
-  // HUD — match reference viz format (pitch · yaw · zoom · tube)
-  const pos = camera.position;
-  const r = pos.length();
-  const pitch = Math.asin(Math.max(-1, Math.min(1, pos.y / r))) * 180 / Math.PI;
-  const yaw = Math.atan2(pos.x, pos.z) * 180 / Math.PI;
-  const zoomRatio = BASE_DISTANCE / r;
+  // HUD — pitch/yaw/zoom computed relative to the pan target (so they match
+  // the slider values even when target is offset from origin).
+  const tgt = controls.target;
+  const dx = camera.position.x - tgt.x;
+  const dy = camera.position.y - tgt.y;
+  const dz = camera.position.z - tgt.z;
+  const r = Math.hypot(dx, dy, dz);
+  const pitch = r > 0.01 ? Math.asin(Math.max(-1, Math.min(1, dy / r))) * 180 / Math.PI : 0;
+  const yaw = r > 0.01 ? Math.atan2(dx, dz) * 180 / Math.PI : 0;
+  const zoomRatio = r > 0.01 ? BASE_DISTANCE / r : 1;
   const tubeDeg = Math.round((tubeOffset * 180 / Math.PI) % 360);
-  hud.textContent = `pitch ${pitch.toFixed(0)}° · yaw ${yaw.toFixed(0)}° · zoom ${zoomRatio.toFixed(2)} · tube ${tubeDeg}°`;
+  const tiltDeg = tiltSlider ? Math.round(parseFloat(tiltSlider.value)) : 0;
+  const rotXDeg = Math.round((scene.rotation.y * 180 / Math.PI) % 360);
+  const rotYDeg = Math.round((scene.rotation.x * 180 / Math.PI) % 360);
+  hud.textContent =
+    `pitch ${pitch.toFixed(0)}° · yaw ${yaw.toFixed(0)}° · roll ${tiltDeg}°` +
+    ` · rotate X ${rotXDeg}° · rotate Y ${rotYDeg}° · tube ${tubeDeg}°` +
+    ` · zoom ${zoomRatio.toFixed(2)} · pos ${tgt.x.toFixed(2)} / ${tgt.y.toFixed(2)} / ${tgt.z.toFixed(2)}`;
 }
 // animate() is kicked off at the very end of the script (after all let/const
 // module-scope bindings — sliderDriving, SLIDES etc. — are initialized).
@@ -1654,28 +1715,34 @@ function esc(s) {
 // ============================================================
 const tubeSlider = document.getElementById('tube-slider');
 const tubeReadout = document.getElementById('tube-readout');
-let tubeRafId = null;
 tubeSlider.addEventListener('input', (e) => {
   tubeOffset = parseFloat(e.target.value);
   const degrees = Math.round((tubeOffset * 180 / Math.PI) % 360);
   tubeReadout.textContent = degrees + '°';
-  // Throttle the redraw via requestAnimationFrame for smooth slider response
-  if (tubeRafId) cancelAnimationFrame(tubeRafId);
-  tubeRafId = requestAnimationFrame(() => {
-    updateTorusHighlight();
-    tubeRafId = null;
-  });
+  // Direct call — auto-animate fires input every frame, so any RAF throttle
+  // would cancel before firing and the tube would appear frozen. Direct is
+  // safe because updateTorusHighlight on tube-only change is cheap.
+  updateTorusHighlight();
 });
 
 // ============================================================
 // AUTO-ROTATE TOGGLE (toroidal — camera around major axis)
 // ============================================================
-const btnRotate = document.getElementById('btn-rotate');
-btnRotate.addEventListener('click', () => {
-  controls.autoRotate = !controls.autoRotate;
-  controls.autoRotateSpeed = 1.5; // gentle
-  btnRotate.classList.toggle('active', controls.autoRotate);
-  btnRotate.textContent = controls.autoRotate ? 'stop rotation' : 'auto-rotate';
+// Scene rotate X (spin around world Y axis — horizontal scene spin)
+const rotateSceneSlider = document.getElementById('rotate-scene');
+const rotateSceneReadout = document.getElementById('rotate-scene-readout');
+rotateSceneSlider.addEventListener('input', (e) => {
+  const rad = parseFloat(e.target.value);
+  scene.rotation.y = rad;
+  rotateSceneReadout.textContent = Math.round((rad * 180 / Math.PI) % 360) + '°';
+});
+// Scene rotate Y (spin around world X axis — forward tumble, orthogonal to rotate X)
+const rotateSceneYSlider = document.getElementById('rotate-scene-y');
+const rotateSceneYReadout = document.getElementById('rotate-scene-y-readout');
+rotateSceneYSlider.addEventListener('input', (e) => {
+  const rad = parseFloat(e.target.value);
+  scene.rotation.x = rad;
+  rotateSceneYReadout.textContent = Math.round((rad * 180 / Math.PI) % 360) + '°';
 });
 
 // ============================================================
@@ -1715,8 +1782,8 @@ renderer.domElement.addEventListener('mousemove', (e) => {
     lastProximityNodeId = null;
     return;
   }
-  // Only proximity-select when ANY rotation is running
-  if (!controls.autoRotate && !autoPoloidal) {
+  // Only proximity-select when something is auto-animating
+  if (autoAnimate.size === 0) {
     lastProximityNodeId = null;
     return;
   }
@@ -1749,30 +1816,34 @@ renderer.domElement.addEventListener('mousemove', (e) => {
 // Both rotations can run simultaneously — when they do, the trajectory of any
 // node is a Clifford flow on the torus (Killing-vector double rotation).
 // If the rate ratio is irrational the orbit is dense in T² (Kronecker-Weyl).
-const btnPoloidal = document.getElementById('btn-poloidal');
-btnPoloidal.addEventListener('click', () => {
-  autoPoloidal = !autoPoloidal;
-  btnPoloidal.classList.toggle('active', autoPoloidal);
-  btnPoloidal.textContent = autoPoloidal ? 'stop tube' : 'auto-tube';
-});
 
 // ============================================================
 // CAMERA SLIDERS (rotate X / rotate Y / zoom) + RESET VIEW
 // ============================================================
 // Bidirectional binding: slider moves camera; camera drags update sliders.
-const DEFAULT_PITCH = 25;   // degrees (positive = looking down at torus)
-const DEFAULT_YAW = -30;    // degrees (azimuth)
-const DEFAULT_ZOOM = 100;   // slider units (100 = default distance ≈ 9.5)
-const DEFAULT_TILT = 0;     // camera roll — rotates viewport around forward axis
+const DEFAULT_PITCH = 24;    // degrees (user-calibrated)
+const DEFAULT_YAW = -134;    // degrees (user-calibrated)
+const DEFAULT_ZOOM = 124;    // slider units → zoom ratio 1.24 (user-calibrated)
+const DEFAULT_TILT = -21;    // degrees — camera roll (user-calibrated)
+// Default pan target (controls.target) — user-calibrated
+const DEFAULT_POS_X = -0.26;
+const DEFAULT_POS_Y = -0.98;
+const DEFAULT_POS_Z = -0.32;
 const BASE_DISTANCE = Math.hypot(5, 4, 7); // ≈ 9.487 — matches initial camera.position.set(5,4,7)
 const rotXSlider = document.getElementById('rot-x');
 const rotYSlider = document.getElementById('rot-y');
 const zoomSlider = document.getElementById('zoom-ctl');
 const tiltSlider = document.getElementById('tilt-ctl');
+const posXSlider = document.getElementById('pos-x');
+const posYSlider = document.getElementById('pos-y');
+const posZSlider = document.getElementById('pos-z');
 const rotXReadout = document.getElementById('rot-x-readout');
 const rotYReadout = document.getElementById('rot-y-readout');
 const zoomReadout = document.getElementById('zoom-readout');
 const tiltReadout = document.getElementById('tilt-readout');
+const posXReadout = document.getElementById('pos-x-readout');
+const posYReadout = document.getElementById('pos-y-readout');
+const posZReadout = document.getElementById('pos-z-readout');
 
 // Guard to avoid infinite feedback when slider input triggers camera change
 // → animate loop reads camera → syncSlidersFromCamera → would re-fire input
@@ -1784,74 +1855,169 @@ function applyCameraFromSliders() {
   const yawDeg = parseFloat(rotYSlider.value);
   const zoomV = parseFloat(zoomSlider.value);
   const tiltDeg = parseFloat(tiltSlider.value);
+  const posX = parseFloat(posXSlider.value);
+  const posY = parseFloat(posYSlider.value);
+  const posZ = parseFloat(posZSlider.value);
+  // Pan target BEFORE computing camera position — camera orbits around target.
+  controls.target.set(posX, posY, posZ);
   const distance = BASE_DISTANCE * (100 / Math.max(zoomV, 1));
   const clampedDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, distance));
   const pitchRad = pitchDeg * Math.PI / 180;
   const yawRad = yawDeg * Math.PI / 180;
   camera.position.set(
-    clampedDist * Math.cos(pitchRad) * Math.sin(yawRad),
-    clampedDist * Math.sin(pitchRad),
-    clampedDist * Math.cos(pitchRad) * Math.cos(yawRad)
+    controls.target.x + clampedDist * Math.cos(pitchRad) * Math.sin(yawRad),
+    controls.target.y + clampedDist * Math.sin(pitchRad),
+    controls.target.z + clampedDist * Math.cos(pitchRad) * Math.cos(yawRad)
   );
-  // Tilt: roll around the camera-forward axis by rotating the up-vector.
-  // This delivers the third rotational DoF — camera orbit gives pitch/yaw,
-  // this slider rolls the viewport (the torus visually tilts in-plane).
+  // Tilt: roll around camera-forward axis via up-vector.
   const tiltRad = tiltDeg * Math.PI / 180;
   camera.up.set(Math.sin(tiltRad), Math.cos(tiltRad), 0);
   camera.lookAt(controls.target);
   controls.update();
   rotXReadout.textContent = Math.round(pitchDeg) + '°';
   rotYReadout.textContent = Math.round(yawDeg) + '°';
-  zoomReadout.textContent = (100 / Math.max(zoomV, 1)).toFixed(2);
+  zoomReadout.textContent = (Math.max(zoomV, 1) / 100).toFixed(2);
   tiltReadout.textContent = Math.round(tiltDeg) + '°';
+  posXReadout.textContent = posX.toFixed(2);
+  posYReadout.textContent = posY.toFixed(2);
+  posZReadout.textContent = posZ.toFixed(2);
   sliderDriving = false;
 }
 
 function syncSlidersFromCamera() {
   if (sliderDriving) return;
-  const p = camera.position;
-  const r = p.length();
+  // Camera position relative to target (so pan is already factored out)
+  const dx = camera.position.x - controls.target.x;
+  const dy = camera.position.y - controls.target.y;
+  const dz = camera.position.z - controls.target.z;
+  const r = Math.hypot(dx, dy, dz);
   if (r < 0.01) return;
-  const pitchDeg = Math.asin(Math.max(-1, Math.min(1, p.y / r))) * 180 / Math.PI;
-  const yawDeg = Math.atan2(p.x, p.z) * 180 / Math.PI;
-  // zoomV = 100 * BASE_DISTANCE / r  (inverse of applyCameraFromSliders)
+  const pitchDeg = Math.asin(Math.max(-1, Math.min(1, dy / r))) * 180 / Math.PI;
+  const yawDeg = Math.atan2(dx, dz) * 180 / Math.PI;
   const zoomV = Math.max(40, Math.min(220, 100 * BASE_DISTANCE / r));
-  rotXSlider.value = Math.round(pitchDeg);
+  // Clamp pitch to slider range [-89, 89] to prevent flip past pole.
+  rotXSlider.value = Math.round(Math.max(-89, Math.min(89, pitchDeg)));
   rotYSlider.value = Math.round(yawDeg);
   zoomSlider.value = Math.round(zoomV);
+  // Pan target — sync back if user right-click-panned
+  const tgt = controls.target;
+  posXSlider.value = tgt.x.toFixed(2);
+  posYSlider.value = tgt.y.toFixed(2);
+  posZSlider.value = tgt.z.toFixed(2);
   rotXReadout.textContent = Math.round(pitchDeg) + '°';
   rotYReadout.textContent = Math.round(yawDeg) + '°';
   zoomReadout.textContent = (BASE_DISTANCE / r).toFixed(2);
+  posXReadout.textContent = tgt.x.toFixed(2);
+  posYReadout.textContent = tgt.y.toFixed(2);
+  posZReadout.textContent = tgt.z.toFixed(2);
 }
 
 rotXSlider.addEventListener('input', applyCameraFromSliders);
 rotYSlider.addEventListener('input', applyCameraFromSliders);
 zoomSlider.addEventListener('input', applyCameraFromSliders);
 tiltSlider.addEventListener('input', applyCameraFromSliders);
+posXSlider.addEventListener('input', applyCameraFromSliders);
+posYSlider.addEventListener('input', applyCameraFromSliders);
+posZSlider.addEventListener('input', applyCameraFromSliders);
 
-// Reset view: restore camera, tube, and slide deck to initial
+// ============================================================
+// AUTO-ANIMATE (per-slider checkboxes)
+// ============================================================
+// Each slider has its own checkbox; checked → that slider's value advances
+// each frame. User mixes any combination. Angle sliders wrap; pos/zoom
+// sliders bounce at the limits. The old auto-rotate/auto-tube buttons become
+// presets that toggle the relevant checkbox.
+const autoAnimate = new Set();
+const AUTO_SPEEDS = {
+  'rot-x': 0.3, 'rot-y': 0.3, 'tilt-ctl': 0.3,
+  'rotate-scene': 0.00448,  // radians/frame — scene X spin (user-calibrated -44%)
+  'rotate-scene-y': 0.00448,  // radians/frame — scene Y spin (matches rotate X pace)
+  'zoom-ctl': 0.5,
+  'tube-slider': 0.0068,
+  'pos-x': 0.012, 'pos-y': 0.012, 'pos-z': 0.012,
+};
+// Pitch bounces at ±89° (past that the camera flips past the pole — ugly).
+// Yaw, roll, rotate (scene), tube all wrap because they're full-circle rotations.
+const AUTO_WRAP = new Set(['rot-y', 'tilt-ctl', 'rotate-scene', 'rotate-scene-y', 'tube-slider']);
+const autoDir = {};    // per-slider direction (for bounce)
+const autoAccum = {};  // per-slider accumulated float value (preserves sub-step precision)
+
+function autoStep(sliderId) {
+  const slider = document.getElementById(sliderId);
+  if (!slider) return;
+  const min = parseFloat(slider.min), max = parseFloat(slider.max);
+  // Seed accum from slider on first tick OR when slider moved outside of auto
+  // (detect: current slider value differs from last auto-set value by > 1 step)
+  if (autoAccum[sliderId] === undefined) {
+    autoAccum[sliderId] = parseFloat(slider.value);
+  }
+  const speed = AUTO_SPEEDS[sliderId] ?? 0.1;
+  const dir = autoDir[sliderId] ?? 1;
+  autoAccum[sliderId] += speed * dir;
+  // Wrap (angles, tube) or bounce (pos, zoom)
+  if (AUTO_WRAP.has(sliderId)) {
+    if (autoAccum[sliderId] > max) autoAccum[sliderId] = min + (autoAccum[sliderId] - max);
+    else if (autoAccum[sliderId] < min) autoAccum[sliderId] = max - (min - autoAccum[sliderId]);
+  } else {
+    if (autoAccum[sliderId] >= max) { autoAccum[sliderId] = max; autoDir[sliderId] = -1; }
+    else if (autoAccum[sliderId] <= min) { autoAccum[sliderId] = min; autoDir[sliderId] = 1; }
+  }
+  // Write to slider — for int-step sliders, the rendered value rounds, but
+  // autoAccum keeps the float so successive frames advance correctly.
+  slider.value = autoAccum[sliderId];
+  slider.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+function setAuto(sliderId, on) {
+  const check = document.querySelector(`.auto-check[data-auto="${sliderId}"]`);
+  if (!check) return;
+  check.checked = on;
+  if (on) {
+    autoAnimate.add(sliderId);
+    // Seed accumulator from the current slider value — so auto picks up where
+    // the user left off after a manual drag.
+    const slider = document.getElementById(sliderId);
+    if (slider) autoAccum[sliderId] = parseFloat(slider.value);
+  } else {
+    autoAnimate.delete(sliderId);
+    delete autoAccum[sliderId];
+  }
+  const row = check.closest('.control-row');
+  if (row) row.classList.toggle('auto-on', on);
+}
+
+document.querySelectorAll('.auto-check').forEach(check => {
+  check.addEventListener('change', () => {
+    setAuto(check.dataset.auto, check.checked);
+  });
+});
+
+// Reset view: restore camera, pan target, tube, and animation toggles to initial
 const btnReset = document.getElementById('btn-reset');
 btnReset.addEventListener('click', () => {
   rotXSlider.value = DEFAULT_PITCH;
   rotYSlider.value = DEFAULT_YAW;
   zoomSlider.value = DEFAULT_ZOOM;
   tiltSlider.value = DEFAULT_TILT;
+  posXSlider.value = DEFAULT_POS_X;
+  posYSlider.value = DEFAULT_POS_Y;
+  posZSlider.value = DEFAULT_POS_Z;
   applyCameraFromSliders();
-  // Also reset tube offset
+  // Reset tube offset
   tubeOffset = 0;
   if (tubeSlider) tubeSlider.value = 0;
   if (tubeReadout) tubeReadout.textContent = '0°';
-  // Kill auto-rotate / auto-tube
-  if (controls.autoRotate) {
-    controls.autoRotate = false;
-    btnRotate.classList.remove('active');
-    btnRotate.textContent = 'auto-rotate';
-  }
-  if (autoPoloidal) {
-    autoPoloidal = false;
-    btnPoloidal.classList.remove('active');
-    btnPoloidal.textContent = 'auto-tube';
-  }
+  // Reset scene rotations (both axes)
+  scene.rotation.y = 0;
+  scene.rotation.x = 0;
+  if (rotateSceneSlider) rotateSceneSlider.value = 0;
+  if (rotateSceneReadout) rotateSceneReadout.textContent = '0°';
+  if (rotateSceneYSlider) rotateSceneYSlider.value = 0;
+  if (rotateSceneYReadout) rotateSceneYReadout.textContent = '0°';
+  // Turn OFF every auto-animate checkbox
+  document.querySelectorAll('.auto-check').forEach(c => {
+    if (c.checked) setAuto(c.dataset.auto, false);
+  });
   updateTorusHighlight();
 });
 
@@ -1948,6 +2114,8 @@ updateSelectedInfo();
 updateModeButtons();
 updateTorusHighlight();
 renderSlide(0);
+// Apply user-calibrated default pan target before first camera positioning.
+controls.target.set(DEFAULT_POS_X, DEFAULT_POS_Y, DEFAULT_POS_Z);
 applyCameraFromSliders();
 animate();
 
