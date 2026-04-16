@@ -278,6 +278,33 @@ L5 splits:
 
 Include a one-paragraph note on why all routes give the same physics content (or if they differ, what that tells us).
 
+#### §4.1 Bypass Routes (MANDATORY for every wall in §8)
+
+Every named wall (W1, W2, ...) in §8 that has a documented bypass MUST have a **structured bypass-route entry** here — not just prose. Each bypass route is a first-class node that the atlas torus visualization renders as a GREEN replacement for the bypassed EXTERNAL/CONDITIONAL node in INDEPENDENT mode.
+
+**Format per bypass route:**
+
+```
+#### BYPASS: <wall-id> → <bypass-route-id>
+
+- **replaces**: <main-chain-node-id> (e.g., L18)
+- **id**: <vertex>-<layer>-bypass-<route-letter> (e.g., ym-L18-bypass-A)
+- **name**: <one-line description of the bypass route>
+- **status**: PROVED | CANDIDATE | PARTIAL | CONJECTURED
+- **classification**: bypass-route
+- **face**: <face> (from fixed vocabulary)
+- **projection**: <P_i>
+- **pattern**: <P_N>
+- **invariant**: <from fixed list>
+- **source**: <paper§ citation>
+- **confidence**: <0.0-1.0>
+- **PAC primitive used**: BYPASS | DECOMPOSE | EXCISE | TRANSPOSE-via-capacitor
+```
+
+**Why this is load-bearing**: the atlas torus visualization (`visualization/atlas-torus/`) renders each solution's proof chain on the torus surface. In INDEPENDENT mode, bypassed nodes are pushed below the surface as ghosts; bypass-route nodes sit ON the surface as green replacements. Without structured bypass-route entries, INDEPENDENT mode can only say "BYPASSED" — it cannot show WHAT replaced the bypassed step. This was identified as a data-architecture gap on 2026-04-15 and fixed by promoting bypass routes from prose annotations to first-class nodes.
+
+If a wall has NO documented bypass (genuinely irreducible external dependency), record: `#### NO BYPASS: <wall-id> — <one-sentence reason>`. This appears in the viz as "no documented bypass — retained external." Honest disclosure.
+
 ### §5 Face Histogram (with ASCII bars)
 
 Auto-computable from §3. Render as BOTH a count table AND an ASCII bar chart so it reads at a glance.
@@ -347,10 +374,10 @@ This section feeds directly into the atlas's programme-wide cross-cut graph (`pa
 
 ### §8 Current Walls
 
-Pull the NAMED WALLS from the live PROOF-CHAIN.md for this vertex. One bullet per wall. Link to `strategy/x-ray/pac-output/atlas/named-walls.md` row.
+Pull the NAMED WALLS from the live PROOF-CHAIN.md for this vertex. One bullet per wall. Link to `strategy/x-ray/pac-output/atlas/named-walls.md` row. **Every wall with a documented bypass MUST have a corresponding structured bypass-route entry in §4.1.** Every wall WITHOUT a bypass gets a `NO BYPASS` entry in §4.1.
 
 ```
-- **W1** <name>: <one sentence> → status: OPEN | DECOMPOSED-IN <decomp run> | BYPASSED-IN <capacitor cell>
+- **W1** <name>: <one sentence> → status: OPEN | DECOMPOSED-IN <decomp run> | BYPASSED-IN <capacitor cell> → bypass-route: §4.1 <bypass-route-id> | NO BYPASS
 ```
 
 ### §9 Cascading Refinements

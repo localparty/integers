@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas Torus Proof-Chain Composer — Integers Programme</title>
+<style>
+  :root{
+    --bg:#0a0a14;
+    --panel:#12121f;
+    --panel2:#1a1a2e;
+    --border:#242438;
+    --text:#e8e8f0;
+    --dim:#8a8aa0;
+    --accent:#f5c26b;
+    --warm:#ff6b5a;
+    --cool:#5ab0ff;
+    --cyan:#7dd3fc;
+    --green:#a5f3a2;
+    --gold:#f5c26b;
+    --silver:#c8c8d8;
+    --red:#ff6b5a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;overflow:hidden}
+  #app{display:grid;grid-template-columns:30% 70%;grid-template-rows:1fr 100px;height:100vh;width:100vw}
+
+  /* LEFT PANEL */
+  #left-panel{grid-column:1;grid-row:1;background:var(--panel);border-right:1px solid var(--border);display:grid;grid-template-rows:auto auto 1fr auto auto;overflow:hidden}
+  #left-panel .panel-header{padding:14px 16px 8px;border-bottom:1px solid var(--border)}
+  #left-panel .panel-header h1{font-size:11px;font-weight:600;letter-spacing:0.16em;color:var(--dim);text-transform:uppercase;margin-bottom:4px}
+  #left-panel .panel-header h2{font-size:16px;font-weight:700;color:var(--text);line-height:1.2}
+  #left-panel .panel-header .subtitle{font-size:11px;color:var(--dim);margin-top:2px}
+
+  /* Column 1 — Solutions */
+  #col-solutions{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
+  #col-solutions .section-label{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
+  .vtx-grid{display:flex;flex-wrap:wrap;gap:4px}
+  .vtx-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);font-size:10.5px;font-weight:600;padding:3px 7px;border-radius:4px;cursor:pointer;transition:all 0.15s;letter-spacing:0.02em}
+  .vtx-btn:hover{color:var(--text);border-color:var(--dim)}
+  .vtx-btn.active{color:var(--accent);border-color:var(--accent);background:#1f1a10}
+
+  /* Column 2 — Layers */
+  #col-layers{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
+  #col-layers .section-label{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
+  .layer-item{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:4px;cursor:pointer;font-size:11.5px;line-height:1.3;transition:background 0.12s}
+  .layer-item:hover{background:var(--panel2)}
+  .layer-item.active{background:#1a1f2e;border-left:2px solid var(--cyan)}
+  .layer-id{font-weight:700;font-size:10.5px;min-width:30px;color:var(--cyan);font-family:ui-monospace,Menlo,monospace}
+  .layer-name{flex:1;color:#c8c8d8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .status-badge{font-size:9px;font-weight:700;letter-spacing:0.04em;padding:1px 5px;border-radius:3px;white-space:nowrap}
+  .status-PROVED{background:#1a2e1a;color:#8fde70}
+  .status-LITERATURE,.status-KNOWN,.status-ESTABLISHED,.status-CLASSICAL{background:#1a1a2e;color:#a0a0cc}
+  .status-EXTERNAL,.status-CONDITIONAL{background:#2e1a1a;color:#ff9080}
+  .status-OPEN,.status-CONJECTURED{background:#2e2a1a;color:var(--accent)}
+  .status-QED{background:#1a2e1a;color:#8fde70}
+
+  /* Column 3 — Node Detail */
+  #col-detail{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
+  #col-detail .section-label{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
+  .detail-row{font-size:11.5px;margin-bottom:4px;line-height:1.35}
+  .detail-label{color:var(--dim);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
+  .detail-value{color:#c8c8d8}
+  .gold-badge{display:inline-block;background:#2e2510;color:var(--gold);font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;border:1px solid #4a3a1a;margin-left:4px}
+
+  /* Column 4 — Mode */
+  #col-mode{padding:8px 10px}
+  #col-mode .section-label{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
+  .mode-btn{display:block;width:100%;background:var(--panel2);border:1px solid var(--border);color:var(--dim);font-size:11px;font-weight:600;padding:5px 8px;border-radius:4px;cursor:pointer;transition:all 0.15s;margin-bottom:4px;text-align:left}
+  .mode-btn:hover:not(:disabled){color:var(--text);border-color:var(--dim)}
+  .mode-btn.active{color:var(--accent);border-color:var(--accent);background:#1f1a10}
+  .mode-btn:disabled{opacity:0.3;cursor:not-allowed}
+  .mode-btn:disabled:hover{color:var(--dim);border-color:var(--border);background:var(--panel2)}
+  #col-mode .section-label.disabled-hint{color:var(--dim);font-style:italic;text-transform:none;letter-spacing:0;font-weight:400;font-size:10px;margin-top:6px}
+
+  /* RIGHT CANVAS */
+  #canvas-wrap{grid-column:2;grid-row:1;position:relative;background:radial-gradient(ellipse at center,#12122a 0%,#0a0a14 70%)}
+  #canvas-wrap canvas{display:block;width:100%;height:100%}
+  #tooltip{position:absolute;pointer-events:none;background:rgba(20,20,35,0.95);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:11.5px;display:none;z-index:10;white-space:nowrap;max-width:400px}
+  #hud{position:absolute;top:10px;right:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace}
+
+  /* TUBE SLIDER (vertical, right edge of canvas) */
+  #tube-slider-wrap{position:absolute;top:50%;right:14px;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(20,20,35,0.5);border:1px solid var(--border);border-radius:6px;padding:10px 6px;backdrop-filter:blur(4px)}
+  #tube-slider-wrap .tube-label{font-size:10px;font-weight:600;letter-spacing:0.1em;color:var(--dim);text-transform:uppercase}
+  #tube-slider{appearance:slider-vertical;-webkit-appearance:slider-vertical;width:8px;height:240px;background:var(--panel2);outline:none;cursor:pointer}
+  #tube-slider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid var(--panel)}
+  #tube-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid var(--panel)}
+  #tube-slider-wrap .tube-readout{font-size:10px;color:var(--accent);font-family:ui-monospace,Menlo,monospace;font-weight:700;min-width:36px;text-align:center}
+
+  /* BOTTOM BAR */
+  #bottom{grid-column:1/span 2;grid-row:2;background:var(--panel);border-top:1px solid var(--border);display:flex;align-items:center;padding:0 18px;gap:16px}
+  #bottom .selected-info{flex:1;font-size:12px;color:var(--dim)}
+  #bottom .selected-info .sel-node{color:var(--cyan);font-weight:600}
+  .bottom-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);font-size:11px;font-weight:600;padding:6px 14px;border-radius:5px;cursor:pointer;transition:all 0.15s;letter-spacing:0.04em}
+  .bottom-btn:hover{color:var(--text);border-color:var(--dim)}
+  .bottom-btn.active{color:var(--accent);border-color:var(--accent)}
+  .bottom-btn:disabled{opacity:0.35;cursor:default}
+  #bottom .stats{font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;text-align:right;white-space:nowrap}
+  #bottom .stats .gold-count{color:var(--gold)}
+  #bottom .mode-indicator{font-size:10px;font-weight:600;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;min-width:80px;text-align:center}
+
+  @media(max-width:900px){
+    #app{grid-template-columns:1fr;grid-template-rows:40vh 1fr 80px}
+    #canvas-wrap{grid-column:1;grid-row:1}
+    #left-panel{grid-column:1;grid-row:2;border-right:none;border-top:1px solid var(--border)}
+    #bottom{grid-column:1;grid-row:3}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="left-panel">
+    <div class="panel-header">
+      <h1>Atlas Torus</h1>
+      <h2>Proof-Chain Composer</h2>
+      <div class="subtitle">Integers Programme — 25 ring vertices on T<sup>2</sup></div>
+    </div>
+    <div id="col-solutions">
+      <div class="section-label">Solution (click to activate)</div>
+      <div class="vtx-grid" id="vtx-grid"></div>
+    </div>
+    <div id="col-layers">
+      <div class="section-label">Layers</div>
+      <div id="layer-list"></div>
+    </div>
+    <div id="col-detail">
+      <div class="section-label">Node Detail</div>
+      <div id="detail-content"><span style="font-size:11px;color:var(--dim)">Select a layer to view detail.</span></div>
+    </div>
+    <div id="col-mode">
+      <div class="section-label">Mode</div>
+      <button class="mode-btn active" data-mode="comply">Comply</button>
+      <button class="mode-btn active" data-mode="independent">Independent</button>
+      <button class="mode-btn active" data-mode="contribute">Contribute</button>
+      <button class="mode-btn active" data-mode="geodesic">Geodesic</button>
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <div id="tooltip"></div>
+    <div id="hud"></div>
+    <div id="tube-slider-wrap">
+      <div class="tube-label">tube ↻</div>
+      <input type="range" id="tube-slider" min="0" max="6.2832" step="0.005" value="0" orient="vertical" />
+      <div class="tube-readout" id="tube-readout">0°</div>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div class="selected-info" id="selected-info">Click nodes on the torus to select endpoints.</div>
+    <button class="bottom-btn" id="btn-rotate" title="Toroidal rotation — camera flies around the major axis">Auto-rotate</button>
+    <button class="bottom-btn" id="btn-poloidal" title="Poloidal rotation — nodes flow around the tube">Auto-tube</button>
+    <button class="bottom-btn" id="btn-connect" disabled>Connect</button>
+    <button class="bottom-btn" id="btn-clear">Clear</button>
+    <div class="mode-indicator" id="mode-indicator">COMPLY</div>
+    <div class="stats" id="stats-bar">loading...</div>
+  </div>
+</div>
+
+<script src="atlas-torus-data.js"></script>
+
+<script type="importmap">
+{
+  "imports":{
+    "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+// ============================================================
+// CONSTANTS
+// ============================================================
+const R_MAJOR = 3.0, R_MINOR = 0.97;
+const COLORS = {
+  'integers-original': {color: 0xf5c26b, emissive: 0xf5c26b, emissiveIntensity: 0.35, opacity: 1.0},
+  'literature':        {color: 0xc8c8d8, emissive: 0x444466, emissiveIntensity: 0.05, opacity: 0.85},
+  'external':          {color: 0xff6b5a, emissive: 0xff6b5a, emissiveIntensity: 0.15, opacity: 0.5},
+  'classical':         {color: 0x888888, emissive: 0x333333, emissiveIntensity: 0.05, opacity: 0.7},
+  'open':              {color: 0xcc8844, emissive: 0xcc8844, emissiveIntensity: 0.15, opacity: 0.5},
+  'bypass-route':      {color: 0xa5f3a2, emissive: 0xa5f3a2, emissiveIntensity: 0.5, opacity: 1.0},
+};
+
+// ============================================================
+// SCENE SETUP
+// ============================================================
+const wrap = document.getElementById('canvas-wrap');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0a14);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 100);
+camera.position.set(5, 4, 7);
+
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha: false});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+wrap.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 2;
+controls.maxDistance = 20;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+const dl = new THREE.DirectionalLight(0xffffff, 0.8);
+dl.position.set(5, 6, 4);
+scene.add(dl);
+const dl2 = new THREE.DirectionalLight(0x6688cc, 0.3);
+dl2.position.set(-4, -3, -5);
+scene.add(dl2);
+
+// ============================================================
+// TORUS WIREFRAME
+// ============================================================
+const torusGeo = new THREE.TorusGeometry(R_MAJOR, R_MINOR, 64, 128);
+const torusWire = new THREE.Mesh(torusGeo, new THREE.MeshBasicMaterial({
+  color: 0x242438, wireframe: true, transparent: true, opacity: 0.08
+}));
+torusWire.rotation.x = Math.PI / 2; // align with nodes in XZ plane
+scene.add(torusWire);
+
+// ============================================================
+// NODE SPHERES
+// ============================================================
+const nodeMeshes = [];
+const nodeMap = {};
+
+TORUS_NODES.forEach((n, i) => {
+  const cfg = COLORS[n.classification] || COLORS['literature'];
+  const mat = new THREE.MeshStandardMaterial({
+    color: cfg.color,
+    emissive: cfg.emissive,
+    emissiveIntensity: cfg.emissiveIntensity,
+    transparent: cfg.opacity < 1.0,
+    opacity: cfg.opacity,
+    roughness: 0.35,
+    metalness: 0.15,
+  });
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(0.06, 16, 12), mat);
+  mesh.position.set(n.x, n.z, n.y); // swap y/z for Three.js convention
+  mesh.userData = {nodeIdx: i, nodeId: n.id, vertex: n.vertex, ...n};
+  // Store original position + torus coords for spread/restore
+  mesh.userData.origPos = mesh.position.clone();
+  mesh.userData.origU = n.u;
+  mesh.userData.origV = n.v;
+  scene.add(mesh);
+  nodeMeshes.push(mesh);
+  nodeMap[n.id] = {mesh, data: n, idx: i};
+});
+
+// ============================================================
+// EDGE LINES
+// ============================================================
+const edgeLines = [];
+const edgeGroup = new THREE.Group();
+scene.add(edgeGroup);
+
+function torusPoint(u, v) {
+  const x = (R_MAJOR + R_MINOR * Math.cos(v)) * Math.cos(u);
+  const y = (R_MAJOR + R_MINOR * Math.cos(v)) * Math.sin(u);
+  const z = R_MINOR * Math.sin(v);
+  return new THREE.Vector3(x, z, y); // swap y/z
+}
+
+function makeEdgeCurve(fromNode, toNode) {
+  // Create a curved line that stays near the torus surface
+  const pts = [];
+  const steps = 16;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    // Lerp in (u, v) parameter space, taking shortest path
+    let du = toNode.u - fromNode.u;
+    let dv = toNode.v - fromNode.v;
+    // Wrap angles for shortest path
+    if (du > Math.PI) du -= 2 * Math.PI;
+    if (du < -Math.PI) du += 2 * Math.PI;
+    if (dv > Math.PI) dv -= 2 * Math.PI;
+    if (dv < -Math.PI) dv += 2 * Math.PI;
+    const u = fromNode.u + du * t;
+    const v = fromNode.v + dv * t;
+    pts.push(torusPoint(u, v));
+  }
+  return pts;
+}
+
+TORUS_EDGES.forEach((e, i) => {
+  const fromEntry = nodeMap[e.from];
+  const toEntry = nodeMap[e.to];
+  if (!fromEntry || !toEntry) return;
+
+  const pts = makeEdgeCurve(fromEntry.data, toEntry.data);
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  const mat = new THREE.LineBasicMaterial({
+    color: 0x6a6a8a,
+    transparent: true,
+    opacity: 0.6,
+  });
+  const line = new THREE.Line(geo, mat);
+  line.userData = {edgeIdx: i, ...e};
+  edgeGroup.add(line);
+  edgeLines.push(line);
+});
+
+// ============================================================
+// VERTEX LABELS (billboard sprites)
+// ============================================================
+function makeLabel(text, position, color = 0xe8e8f0, scale = 0.75) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = 256;
+  canvas.height = 64;
+  ctx.fillStyle = 'transparent';
+  ctx.fillRect(0, 0, 256, 64);
+  ctx.font = 'bold 28px Inter,system-ui,sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#' + color.toString(16).padStart(6, '0');
+  ctx.fillText(text, 128, 32);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.minFilter = THREE.LinearFilter;
+  const mat = new THREE.SpriteMaterial({map: texture, transparent: true, depthTest: false});
+  const sprite = new THREE.Sprite(mat);
+  sprite.position.copy(position);
+  sprite.scale.set(scale * 2, scale * 0.38 * 2, 1);
+  return sprite;
+}
+
+const labelSprites = [];
+TORUS_VERTICES.forEach(v => {
+  const u = v.u;
+  // Place label slightly outside the torus
+  const labelR = R_MAJOR + R_MINOR + 0.35;
+  const x = labelR * Math.cos(u);
+  const y = labelR * Math.sin(u);
+  const pos = new THREE.Vector3(x, 0.15, y);
+  const sprite = makeLabel(v.label, pos, 0xe8e8f0, 0.6);
+  sprite.userData = {vertexId: v.id};
+  scene.add(sprite);
+  labelSprites.push(sprite);
+});
+
+// ============================================================
+// STATE
+// ============================================================
+let activeVertex = null;
+let activeLayer = null;
+let selectedNodes = [];
+let activeModes = new Set(['comply', 'independent', 'contribute', 'geodesic']); // all 4 modes on by default — judges see all chains simultaneously; toggle to focus
+let connectPath = [];
+let geodesicPathSet = new Set(); // nodes on current geodesic shortest path
+let tubeOffset = 0; // v-axis offset added to every node — slider rotates nodes around the tube
+let autoPoloidal = false; // when true, animate the tubeOffset continuously
+const POLOIDAL_SPEED = -0.008; // radians per frame (negative = flipped direction, ~0.5 deg/frame at 60fps)
+
+// ============================================================
+// LEFT PANEL — COLUMN 1: SOLUTIONS
+// ============================================================
+const vtxGrid = document.getElementById('vtx-grid');
+TORUS_VERTICES.forEach(v => {
+  const btn = document.createElement('button');
+  btn.className = 'vtx-btn';
+  btn.textContent = v.label;
+  btn.dataset.vertex = v.id;
+  btn.addEventListener('click', () => selectVertex(v.id));
+  vtxGrid.appendChild(btn);
+});
+
+function selectVertex(vertexId) {
+  activeVertex = vertexId === activeVertex ? null : vertexId;
+  activeLayer = null;
+  updateVertexButtons();
+  updateModeButtons();    // disable mode buttons in free-form, enable when solution selected
+  updateTorusHighlight(); // computes geodesicPathSet FIRST
+  updateLayerList();      // then refreshes list (needs geodesicPathSet for GEODESIC mode)
+  updateDetailPanel();
+}
+
+function updateVertexButtons() {
+  document.querySelectorAll('.vtx-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.vertex === activeVertex);
+  });
+}
+
+function updateModeButtons() {
+  // Mode buttons are enabled when EITHER a solution is selected OR a CONNECT
+  // chain exists (custom proof composition). They operate on whichever chain
+  // is currently rendered. Only fully free-form with no chain disables them.
+  const hasChain = !!activeVertex || connectPath.length > 1;
+  const disabled = !hasChain;
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.disabled = disabled;
+  });
+  const sectionLabel = document.querySelector('#col-mode .section-label');
+  if (sectionLabel) {
+    if (disabled) {
+      sectionLabel.innerHTML = 'Mode <span class="disabled-hint">— select a solution or CONNECT a chain</span>';
+    } else {
+      sectionLabel.textContent = 'Mode';
+    }
+  }
+  const modeIndicator = document.getElementById('mode-indicator');
+  if (modeIndicator) {
+    modeIndicator.style.opacity = disabled ? '0.35' : '1';
+    if (disabled) modeIndicator.textContent = 'FREE-FORM';
+    else if (activeModes.size === 0) modeIndicator.textContent = '(no modes)';
+    else modeIndicator.textContent = [...activeModes].map(m => m.toUpperCase()).join(' · ');
+  }
+  // Sync .active class with Set membership (for vertex selection)
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    b.classList.toggle('active', activeModes.has(b.dataset.mode));
+  });
+}
+
+// ============================================================
+// LEFT PANEL — COLUMN 2: LAYERS
+// ============================================================
+const layerList = document.getElementById('layer-list');
+
+function updateLayerList() {
+  layerList.innerHTML = '';
+
+  // If a CONNECT chain exists, render it here — these are the judge's own
+  // composed proof chain nodes, possibly spanning multiple vertices.
+  if (connectPath.length > 1) {
+    const header = document.createElement('div');
+    header.style.cssText = 'font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;padding:4px 0;border-bottom:1px solid #4a3a1a';
+    header.innerHTML = `Proof chain &middot; ${connectPath.length} nodes, ${connectPath.length - 1} hops`;
+    layerList.appendChild(header);
+    connectPath.forEach((nodeId, idx) => {
+      const n = nodeMap[nodeId]?.data;
+      if (!n) return;
+      const div = document.createElement('div');
+      div.className = 'layer-item';
+      div.dataset.nodeId = n.id;
+      const isOriginal = n.classification === 'integers-original';
+      const vertexLabel = TORUS_VERTICES.find(v => v.id === n.vertex)?.label || n.vertex;
+      div.setAttribute('style', 'border-left:3px solid #f5c26b;background:rgba(245,194,107,0.04)');
+      div.innerHTML = `
+        <span class="layer-id" style="color:var(--gold)">${idx + 1}.</span>
+        <span class="layer-name" title="${esc(n.name)}">
+          <span style="color:var(--dim);font-size:10px">${vertexLabel}&middot;${n.layer}</span>
+          ${esc(n.name)}
+        </span>
+        <span class="status-badge status-${n.status}">${n.status}</span>
+        ${isOriginal ? '<span style="font-size:8px;color:var(--gold);margin-left:4px">&#9733;</span>' : ''}
+      `;
+      div.addEventListener('click', () => selectLayer(n.id));
+      layerList.appendChild(div);
+    });
+    return;
+  }
+
+  if (!activeVertex) {
+    layerList.innerHTML = '<span style="font-size:11px;color:var(--dim)">Select a solution to see layers, or click nodes on the torus to compose your own chain.</span>';
+    return;
+  }
+  // Active vertex's nodes (excluding bypass-route nodes — those render inline below their replacements)
+  const nodes = TORUS_NODES.filter(n => n.vertex === activeVertex && n.classification !== 'bypass-route');
+  // Build a map: replaced-node-id → array of bypass-route nodes
+  const bypassByReplacedId = {};
+  TORUS_NODES.filter(n => n.classification === 'bypass-route' && n.vertex === activeVertex).forEach(b => {
+    if (!bypassByReplacedId[b.replaces]) bypassByReplacedId[b.replaces] = [];
+    bypassByReplacedId[b.replaces].push(b);
+  });
+
+  nodes.forEach(n => {
+    const div = document.createElement('div');
+    div.className = 'layer-item';
+    div.dataset.nodeId = n.id;
+
+    // Multi-toggle mode: classification-based base styling (always shown) +
+    // additive tags per active mode (INDEPENDENT / CONTRIBUTE / GEODESIC).
+    let layerStyle = '';
+    const tags = [];
+    const cls = n.classification;
+
+    // BASE styling — classification-based, always present (COMPLY-style by default)
+    if (cls === 'external') {
+      layerStyle = 'border-left:3px solid #ff6b5a';
+      tags.push('<span style="font-size:8px;color:#ff6b5a;margin-left:4px">WALL</span>');
+    } else if (cls === 'open') {
+      layerStyle = 'border-left:3px solid #cc8844';
+      tags.push('<span style="font-size:8px;color:#cc8844;margin-left:4px">OPEN</span>');
+    } else if (cls === 'integers-original') {
+      tags.push('<span style="font-size:8px;color:#f5c26b;margin-left:4px">&#9733;</span>');
+    }
+
+    // ADDITIVE mode tags
+    if (activeModes.has('independent')) {
+      if (cls === 'external' || cls === 'open') {
+        layerStyle = 'border-left:3px solid #ff6b5a;opacity:0.5;text-decoration:line-through';
+        tags.push('<span style="font-size:8px;color:#a5f3a2;margin-left:4px">BYPASSED</span>');
+      } else if (cls === 'integers-original') {
+        layerStyle = 'border-left:3px solid #a5f3a2';
+        tags.push('<span style="font-size:8px;color:#a5f3a2;margin-left:4px">DEP-FREE</span>');
+      }
+    }
+    if (activeModes.has('contribute')) {
+      if (cls === 'external') {
+        layerStyle = 'border-left:3px solid #ff6b5a;background:rgba(255,107,90,0.08)';
+        tags.push('<span style="font-size:8px;color:#ff6b5a;margin-left:4px">STRENGTHENED</span>');
+      } else if (cls === 'open') {
+        tags.push('<span style="font-size:8px;color:#cc8844;margin-left:4px">HARDENED</span>');
+      }
+    }
+    if (activeModes.has('geodesic') && geodesicPathSet.has(n.id)) {
+      layerStyle = (layerStyle ? layerStyle + ';' : '') + 'background:rgba(245,194,107,0.08)';
+      tags.push('<span style="font-size:8px;color:#f5c26b;font-weight:700;margin-left:4px">SHORTEST</span>');
+    }
+
+    const modeTag = tags.join('');
+
+    div.setAttribute('style', layerStyle);
+    div.innerHTML = `
+      <span class="layer-id">${n.layer}</span>
+      <span class="layer-name" title="${esc(n.name)}">${esc(n.name)}</span>
+      <span class="status-badge status-${n.status}">${n.status}</span>
+      ${modeTag}
+    `;
+    div.addEventListener('click', () => selectLayer(n.id));
+    layerList.appendChild(div);
+
+    // INDEPENDENT mode: insert bypass rows below bypassed nodes.
+    if (activeModes.has('independent') && (cls === 'external' || cls === 'open')) {
+      const bypasses = bypassByReplacedId[n.id] || [];
+      if (bypasses.length > 0) {
+        bypasses.forEach(b => {
+          const brow = document.createElement('div');
+          brow.className = 'layer-item';
+          brow.dataset.nodeId = b.id;
+          brow.setAttribute('style',
+            'border-left:3px solid #a5f3a2;background:rgba(165,243,162,0.08);' +
+            'color:#a5f3a2;padding-left:14px;font-size:11px');
+          brow.innerHTML = `
+            <span class="layer-id" style="color:#a5f3a2">&#8627; ${b.layer}</span>
+            <span class="layer-name" title="${esc(b.name)}" style="color:#a5f3a2">BYPASS: ${esc(b.name)}</span>
+            <span class="status-badge status-PROVED" style="background:#1a2e1a;color:#a5f3a2">${b.status}</span>
+          `;
+          brow.addEventListener('click', () => selectLayer(b.id));
+          layerList.appendChild(brow);
+        });
+      } else {
+        // No documented bypass — show a dim note
+        const note = document.createElement('div');
+        note.className = 'layer-item';
+        note.setAttribute('style',
+          'opacity:0.4;color:var(--dim);padding-left:14px;font-size:10px;font-style:italic');
+        note.innerHTML = `&#8627; <span>no documented bypass</span>`;
+        layerList.appendChild(note);
+      }
+    }
+  });
+}
+
+function selectLayer(nodeId) {
+  activeLayer = nodeId === activeLayer ? null : nodeId;
+  document.querySelectorAll('.layer-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.nodeId === activeLayer);
+  });
+  updateDetailPanel();
+  if (activeLayer && nodeMap[activeLayer]) {
+    pulseNode(nodeMap[activeLayer].mesh);
+  }
+}
+
+// ============================================================
+// LEFT PANEL — COLUMN 3: NODE DETAIL
+// ============================================================
+function updateDetailPanelForNode(nodeId) {
+  const container = document.getElementById('detail-content');
+  if (!nodeId || !nodeMap[nodeId]) {
+    container.innerHTML = '<span style="font-size:11px;color:var(--dim)">Select a layer to view detail.</span>';
+    return;
+  }
+  const n = nodeMap[nodeId].data;
+  const isOriginal = n.classification === 'integers-original';
+  const crossCuts = TORUS_EDGES.filter(e => (e.from === n.id || e.to === n.id) && e.type === 'cross-cut');
+
+  container.innerHTML = `
+    <div class="detail-row"><span class="detail-label">Claim</span><br>
+      <span class="detail-value">${esc(n.name)}</span>
+      ${isOriginal ? '<span class="gold-badge">Integers-original</span>' : ''}
+    </div>
+    <div class="detail-row"><span class="detail-label">Status</span>
+      <span class="status-badge status-${n.status}" style="margin-left:6px">${n.status}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Source</span><br>
+      <span class="detail-value" style="font-size:10.5px">${esc(n.source || '(none)')}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Face</span>
+      <span class="detail-value" style="margin-left:6px">${n.face || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Projection</span>
+      <span class="detail-value" style="margin-left:6px">${n.projection || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Pattern</span>
+      <span class="detail-value" style="margin-left:6px">${n.pattern || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Invariant</span>
+      <span class="detail-value" style="margin-left:6px">${esc(n.invariant || '(none)')}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Classification</span>
+      <span class="detail-value" style="margin-left:6px">${n.classification}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Cross-cuts</span>
+      <span class="detail-value" style="margin-left:6px">${crossCuts.length}</span>
+    </div>
+    ${activeVertex ? '' : '<div class="detail-row" style="margin-top:8px;font-size:10px;color:var(--dim);font-style:italic">Free-form mode — pick another node and CONNECT.</div>'}
+  `;
+}
+
+// Wrapper that uses activeLayer (called from layer-list clicks + mode toggles)
+function updateDetailPanel() {
+  updateDetailPanelForNode(activeLayer);
+}
+
+// ============================================================
+// LEFT PANEL — COLUMN 4: MODE
+// ============================================================
+document.querySelectorAll('.mode-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const mode = btn.dataset.mode;
+    // Toggle: add if not present, remove if present
+    if (activeModes.has(mode)) activeModes.delete(mode);
+    else activeModes.add(mode);
+    // Sync .active class with Set membership
+    document.querySelectorAll('.mode-btn').forEach(b => {
+      b.classList.toggle('active', activeModes.has(b.dataset.mode));
+    });
+    // Update bottom-bar indicator
+    const ind = document.getElementById('mode-indicator');
+    if (activeModes.size === 0) ind.textContent = '(no modes)';
+    else ind.textContent = [...activeModes].map(m => m.toUpperCase()).join(' · ');
+    updateTorusHighlight();
+    updateLayerList();
+    updateDetailPanel();
+  });
+});
+
+// ============================================================
+// BOTTOM BAR
+// ============================================================
+const selectedInfo = document.getElementById('selected-info');
+const btnConnect = document.getElementById('btn-connect');
+const btnClear = document.getElementById('btn-clear');
+
+btnClear.addEventListener('click', () => {
+  selectedNodes = [];
+  connectPath = [];
+  updateSelectedInfo();
+  updateTorusHighlight();
+  updateLayerList();   // clear chain view in Column 2
+  updateModeButtons(); // disable modes if no chain now
+});
+
+btnConnect.addEventListener('click', () => {
+  if (selectedNodes.length >= 2) {
+    // Multi-hop: BFS each consecutive pair, concatenate into one path
+    connectPath = [];
+    for (let i = 0; i < selectedNodes.length - 1; i++) {
+      const segment = bfsPath(selectedNodes[i], selectedNodes[i + 1]);
+      if (segment.length === 0) {
+        connectPath = [];
+        selectedInfo.innerHTML = `<span style="color:var(--red)">No path found between ${selectedNodes[i]} and ${selectedNodes[i+1]}.</span>`;
+        return;
+      }
+      if (i === 0) connectPath.push(...segment);
+      else connectPath.push(...segment.slice(1));
+    }
+    updateTorusHighlight();
+    updateSelectedInfo();
+    updateLayerList();    // render chain in Column 2
+    updateModeButtons();  // enable mode toggles now that a chain exists
+  }
+});
+
+function updateSelectedInfo() {
+  btnConnect.disabled = selectedNodes.length < 2;
+  if (selectedNodes.length === 0) {
+    selectedInfo.innerHTML = 'Click nodes on the torus to select waypoints. Add as many as you want — CONNECT will route through all of them in order.';
+  } else if (selectedNodes.length === 1) {
+    selectedInfo.innerHTML = `Selected: <span class="sel-node">${selectedNodes[0]}</span> &mdash; click more nodes to build the chain`;
+  } else {
+    // Render full sequence
+    const seq = selectedNodes.map(n => `<span class="sel-node">${n}</span>`).join(' &rarr; ');
+    let extra = '';
+    if (connectPath.length > 0) {
+      extra = ` <span style="color:var(--gold)">&mdash; chain: ${connectPath.length} nodes, ${connectPath.length - 1} hops, ${selectedNodes.length} waypoints</span>`;
+    }
+    selectedInfo.innerHTML = `Waypoints: ${seq}${extra}`;
+  }
+}
+
+// Stats bar
+const statsBar = document.getElementById('stats-bar');
+if (typeof TORUS_META !== 'undefined') {
+  const bypassFrag = (TORUS_META.bypassRouteCount !== undefined)
+    ? ` &middot; <span style="color:#a5f3a2">${TORUS_META.bypassRouteCount} bypass-routes</span>`
+    : '';
+  statsBar.innerHTML = `${TORUS_META.nodeCount} nodes &middot; ${TORUS_META.edgeCount} edges &middot; <span class="gold-count">${TORUS_META.integersOriginalCount} Integers-original</span>${bypassFrag}`;
+}
+
+// ============================================================
+// BFS PATH FINDING
+// ============================================================
+function buildAdjacency() {
+  const adj = {};
+  TORUS_EDGES.forEach(e => {
+    if (!adj[e.from]) adj[e.from] = [];
+    if (!adj[e.to]) adj[e.to] = [];
+    adj[e.from].push(e.to);
+    adj[e.to].push(e.from);
+  });
+  return adj;
+}
+
+const adjacency = buildAdjacency();
+
+function bfsPath(startId, endId) {
+  if (startId === endId) return [startId];
+  const visited = new Set();
+  const queue = [[startId]];
+  visited.add(startId);
+  while (queue.length > 0) {
+    const path = queue.shift();
+    const current = path[path.length - 1];
+    const neighbors = adjacency[current] || [];
+    for (const next of neighbors) {
+      if (visited.has(next)) continue;
+      const newPath = [...path, next];
+      if (next === endId) return newPath;
+      visited.add(next);
+      queue.push(newPath);
+    }
+  }
+  return []; // no path found
+}
+
+// ============================================================
+// TORUS HIGHLIGHT
+// ============================================================
+function updateTorusHighlight() {
+  // ── POSITION LOGIC: spread active vertex's layers across the torus ──
+  // When a vertex is selected, its layers fan out across the full u-range [0, 2π]
+  // so the proof chain "walks horizontally" across the torus surface.
+  // When deselected, all nodes snap back to their clustered home positions.
+
+  if (activeVertex) {
+    // Collect and sort active vertex's MAIN-CHAIN nodes (excluding bypass-route nodes)
+    const mainNodes = nodeMeshes.filter(m =>
+      m.userData.vertex === activeVertex && m.userData.classification !== 'bypass-route');
+    mainNodes.sort((a, b) => {
+      const aL = a.userData.layer || '';
+      const bL = b.userData.layer || '';
+      return aL.localeCompare(bL, undefined, {numeric: true});
+    });
+
+    // Map main-chain node id → its spread u position (so bypass-route nodes can co-locate)
+    const spreadUByNodeId = {};
+
+    // Spread: each layer gets an evenly-spaced u-position across [0, 2π]
+    // Apply tubeOffset to v so the slider rotates nodes around the tube circle.
+    mainNodes.forEach((mesh, i) => {
+      const spreadU = (i / mainNodes.length) * Math.PI * 2;
+      const v = mesh.userData.origV + tubeOffset;
+      let newPos = torusPoint(spreadU, v);
+      mesh.userData.currentU = spreadU;
+      mesh.userData.currentV = v;
+
+      // INDEPENDENT mode: if this node is bypassed AND has a bypass-route replacement,
+      // push it BELOW the torus surface (inward along the surface normal) — visible as a ghost.
+      if (activeModes.has('independent') &&
+          (mesh.userData.classification === 'external' || mesh.userData.classification === 'open')) {
+        const hasBypass = TORUS_NODES.some(n =>
+          n.classification === 'bypass-route' && n.replaces === mesh.userData.id);
+        if (hasBypass) {
+          // Surface normal at (u, v) on torus points outward radially
+          const cu = Math.cos(spreadU), su = Math.sin(spreadU);
+          const cv = Math.cos(v), sv = Math.sin(v);
+          // Inward normal direction
+          const nx = -cv * cu, ny = -cv * su, nz = -sv;
+          // Push inward by 0.15 (Three.js convention: y/z swapped)
+          newPos = new THREE.Vector3(newPos.x + nx * 0.15, newPos.y + nz * 0.15, newPos.z + ny * 0.15);
+        }
+      }
+      mesh.position.copy(newPos);
+      spreadUByNodeId[mesh.userData.id] = {u: spreadU, v: v};
+    });
+
+    // Bypass-route nodes: co-locate at their replaced node's spread position.
+    nodeMeshes.filter(m =>
+      m.userData.vertex === activeVertex && m.userData.classification === 'bypass-route'
+    ).forEach((mesh, i) => {
+      const repl = spreadUByNodeId[mesh.userData.replaces];
+      if (repl) {
+        // Multiple bypasses for same replaced-node: nudge along v slightly.
+        const allBypassesForSameTarget = TORUS_NODES.filter(n =>
+          n.classification === 'bypass-route' && n.replaces === mesh.userData.replaces && n.vertex === activeVertex);
+        const idx = allBypassesForSameTarget.findIndex(n => n.id === mesh.userData.id);
+        const total = allBypassesForSameTarget.length;
+        // Spread bypasses around the v of replaced node by small offset
+        const vOffset = total > 1 ? (idx - (total - 1) / 2) * 0.18 : 0;
+        const bv = repl.v + vOffset;
+        const newPos = torusPoint(repl.u, bv);
+        mesh.position.copy(newPos);
+        mesh.userData.currentU = repl.u;
+        mesh.userData.currentV = bv;
+      } else {
+        // Replaced node not in active vertex — fallback to original position
+        mesh.position.copy(mesh.userData.origPos);
+        mesh.userData.currentU = mesh.userData.origU;
+        mesh.userData.currentV = mesh.userData.origV;
+      }
+    });
+
+    // Non-active nodes: original u, but apply tubeOffset to v
+    nodeMeshes.forEach(mesh => {
+      if (mesh.userData.vertex !== activeVertex) {
+        const u = mesh.userData.origU;
+        const v = mesh.userData.origV + tubeOffset;
+        mesh.position.copy(torusPoint(u, v));
+        mesh.userData.currentU = u;
+        mesh.userData.currentV = v;
+      }
+    });
+  } else {
+    // No active vertex: ALL nodes at original u, with tubeOffset applied to v
+    nodeMeshes.forEach(mesh => {
+      const u = mesh.userData.origU;
+      const v = mesh.userData.origV + tubeOffset;
+      mesh.position.copy(torusPoint(u, v));
+      mesh.userData.currentU = u;
+      mesh.userData.currentV = v;
+    });
+  }
+
+  // ── COMPUTE GEODESIC PATH SET (needed by layer list + torus render) ──
+  // (Re-computed inside LAYER 4 below too; this earlier pass ensures the
+  // layer list has access when it renders.)
+  geodesicPathSet = new Set();
+  if (activeVertex) {
+    const vtxNodes = nodeMeshes.filter(m => m.userData.vertex === activeVertex);
+    vtxNodes.sort((a, b) => (a.userData.layer||'').localeCompare(b.userData.layer||'', undefined, {numeric:true}));
+    if (vtxNodes.length >= 2) {
+      const first = vtxNodes[0].userData.id;
+      const last = vtxNodes[vtxNodes.length - 1].userData.id;
+      const activeIds = new Set(vtxNodes.map(m => m.userData.id));
+      const adj = {};
+      activeIds.forEach(id => { adj[id] = []; });
+      TORUS_EDGES.forEach(e => {
+        if (activeIds.has(e.from) && activeIds.has(e.to)) {
+          adj[e.from].push(e.to); adj[e.to].push(e.from);
+        }
+      });
+      for (let i = 0; i < vtxNodes.length - 1; i++) {
+        const a = vtxNodes[i].userData.id, b = vtxNodes[i + 1].userData.id;
+        if (!adj[a].includes(b)) adj[a].push(b);
+        if (!adj[b].includes(a)) adj[b].push(a);
+      }
+      const visited = new Set([first]);
+      const queue = [[first]];
+      while (queue.length > 0) {
+        const path = queue.shift();
+        const curr = path[path.length - 1];
+        if (curr === last) { path.forEach(id => geodesicPathSet.add(id)); break; }
+        for (const nb of (adj[curr] || [])) {
+          if (!visited.has(nb)) { visited.add(nb); queue.push([...path, nb]); }
+        }
+      }
+    }
+  }
+
+  // ── COLOR / OPACITY LOGIC ──
+
+  // Reset all nodes to default
+  nodeMeshes.forEach(mesh => {
+    const n = mesh.userData;
+    const cfg = COLORS[n.classification] || COLORS['literature'];
+    mesh.material.color.setHex(cfg.color);
+    mesh.material.emissive.setHex(cfg.emissive);
+    mesh.material.emissiveIntensity = cfg.emissiveIntensity;
+    mesh.material.opacity = cfg.opacity;
+    mesh.material.transparent = cfg.opacity < 1.0;
+    mesh.scale.setScalar(1);
+    // Bypass-route nodes hidden by default; only INDEPENDENT mode reveals them.
+    if (n.classification === 'bypass-route') {
+      mesh.material.opacity = 0;
+      mesh.material.transparent = true;
+      mesh.scale.setScalar(0);
+    }
+  });
+
+  // Reset all edges to dim (or hide when spread)
+  edgeLines.forEach(line => {
+    if (activeVertex) {
+      // When spread, hide edges (they'd point to old positions)
+      line.material.opacity = 0.04;
+      line.material.transparent = true;
+    } else {
+      line.material.color.setHex(0x6a6a8a);
+      line.material.opacity = 0.6;
+    }
+  });
+
+  // ── MODE-AWARE RENDERING ──
+  // Clean up any previous spread-lines
+  scene.children
+    .filter(c => c.userData && c.userData.spreadLine)
+    .forEach(c => scene.remove(c));
+
+  if (activeVertex) {
+    // Collect sorted active main-chain nodes (excluding bypass-route)
+    const activeNodes = nodeMeshes.filter(m =>
+      m.userData.vertex === activeVertex && m.userData.classification !== 'bypass-route');
+    activeNodes.sort((a, b) => (a.userData.layer||'').localeCompare(b.userData.layer||'', undefined, {numeric:true}));
+
+    // Active bypass-route nodes (only visible in INDEPENDENT mode)
+    const activeBypassNodes = nodeMeshes.filter(m =>
+      m.userData.vertex === activeVertex && m.userData.classification === 'bypass-route');
+
+    // ── Per-mode node visibility rules ──
+    // COMPLY:       show ALL nodes; OPEN/CONJECTURED dimmed with wall-markers; rest bright
+    // INDEPENDENT:  hide/shrink EXTERNAL/CONDITIONAL nodes; only programme-internal chain visible
+    // CONTRIBUTE:   EXTERNAL nodes highlighted RED-BRIGHT; programme nodes dim; shows what we strengthen
+    // GEODESIC:     only shortest path highlighted (BFS first↔last); rest dimmed
+
+    const modeColors = {
+      'comply': (cls) => {
+        // Everything visible; externals shown as disclosed walls
+        if (cls === 'external')    return {color:0xff6b5a, emissive:0xff6b5a, ei:0.3, op:0.8, scale:1.6, arcColor:0xff6b5a};
+        if (cls === 'open')        return {color:0xcc8844, emissive:0xcc8844, ei:0.2, op:0.6, scale:1.4, arcColor:0xcc8844};
+        if (cls === 'integers-original') return {color:0xf5c26b, emissive:0xf5c26b, ei:0.5, op:1.0, scale:1.8, arcColor:0xf5c26b};
+        return {color:0xc8c8d8, emissive:0xc8c8d8, ei:0.3, op:1.0, scale:1.6, arcColor:0x7dd3fc};
+      },
+      'independent': (cls) => {
+        // External/conditional nodes shrink + dim (bypassed); programme-internal bright
+        if (cls === 'external')    return {color:0xff6b5a, emissive:0x000000, ei:0, op:0.12, scale:0.5, arcColor:0x333340};
+        if (cls === 'open')        return {color:0xcc8844, emissive:0x000000, ei:0, op:0.15, scale:0.6, arcColor:0x333340};
+        if (cls === 'integers-original') return {color:0xa5f3a2, emissive:0xa5f3a2, ei:0.55, op:1.0, scale:2.0, arcColor:0xa5f3a2};
+        return {color:0x88ddaa, emissive:0x88ddaa, ei:0.3, op:1.0, scale:1.6, arcColor:0x88ddaa};
+      },
+      'contribute': (cls) => {
+        // Externals highlighted RED-BRIGHT (what we strengthen); programme nodes dimmer
+        if (cls === 'external')    return {color:0xff6b5a, emissive:0xff6b5a, ei:0.6, op:1.0, scale:2.2, arcColor:0xff6b5a};
+        if (cls === 'open')        return {color:0xcc8844, emissive:0xcc8844, ei:0.4, op:0.9, scale:1.8, arcColor:0xcc8844};
+        if (cls === 'integers-original') return {color:0xf5c26b, emissive:0xf5c26b, ei:0.15, op:0.5, scale:1.2, arcColor:0x444450};
+        return {color:0x888898, emissive:0x888898, ei:0.1, op:0.5, scale:1.2, arcColor:0x444450};
+      },
+      'geodesic': (cls) => {
+        // All nodes dim; geodesic path will be highlighted separately
+        return {color:0x555568, emissive:0x000000, ei:0, op:0.3, scale:1.0, arcColor:0x333340};
+      },
+    };
+
+    // Node coloring: classification-based (COMPLY-style) ALWAYS, independent of mode toggles.
+    // The four mode toggles control ARC overlay intensity, not node colors.
+    const getStyle = modeColors['comply'];
+
+    // Dim all non-vertex nodes
+    nodeMeshes.forEach(mesh => {
+      if (mesh.userData.vertex !== activeVertex) {
+        mesh.material.opacity = 0.1;
+        mesh.material.transparent = true;
+        mesh.scale.setScalar(0.6);
+      }
+    });
+
+    // Apply COMPLY-style classification colors to active vertex MAIN-CHAIN nodes
+    activeNodes.forEach(mesh => {
+      const s = getStyle(mesh.userData.classification);
+      mesh.material.color.setHex(s.color);
+      mesh.material.emissive.setHex(s.emissive);
+      mesh.material.emissiveIntensity = s.ei;
+      mesh.material.opacity = s.op;
+      mesh.material.transparent = s.op < 1.0;
+      mesh.scale.setScalar(s.scale);
+    });
+
+    // Bypass-route nodes: visible whenever INDEPENDENT toggle is on (bright green).
+    // Otherwise hidden so they don't clutter the COMPLY/CONTRIBUTE/GEODESIC views.
+    activeBypassNodes.forEach(mesh => {
+      if (activeModes.has('independent')) {
+        mesh.material.color.setHex(0xa5f3a2);
+        mesh.material.emissive.setHex(0xa5f3a2);
+        mesh.material.emissiveIntensity = 0.6;
+        mesh.material.opacity = 1.0;
+        mesh.material.transparent = false;
+        mesh.scale.setScalar(2.2);
+      } else {
+        mesh.material.opacity = 0;
+        mesh.material.transparent = true;
+        mesh.scale.setScalar(0);
+      }
+    });
+
+    // Draw chain arcs ON THE TORUS SURFACE between consecutive spread nodes
+    // Instead of bezier curves through empty space, interpolate (u, v) on the
+    // torus parametric surface so lines hug the geometry.
+    function drawSurfaceArc(mesh1, mesh2, color, opacity) {
+      const u1 = mesh1.userData.currentU;
+      const v1 = (mesh1.userData.currentV !== undefined) ? mesh1.userData.currentV : mesh1.userData.origV;
+      const u2 = mesh2.userData.currentU;
+      const v2 = (mesh2.userData.currentV !== undefined) ? mesh2.userData.currentV : mesh2.userData.origV;
+      // Shortest arc for u (wrap around if needed)
+      let du = u2 - u1;
+      if (du > Math.PI) du -= 2 * Math.PI;
+      if (du < -Math.PI) du += 2 * Math.PI;
+      const steps = 48;
+      const pts = [];
+      for (let t = 0; t <= steps; t++) {
+        const frac = t / steps;
+        const u = u1 + du * frac;
+        const v = v1 + (v2 - v1) * frac;
+        pts.push(torusPoint(u, v));
+      }
+      const geom = new THREE.BufferGeometry().setFromPoints(pts);
+      const mat = new THREE.LineBasicMaterial({color, opacity, transparent: opacity < 1.0});
+      const line = new THREE.Line(geom, mat);
+      line.userData = {spreadLine: true};
+      scene.add(line);
+    }
+
+    // ── MULTI-LAYER ARC RENDERING ──
+    // All four mode-arc-sets are drawn ALWAYS. Active modes are bold-bright;
+    // inactive modes are very dim (visible as ghost-lines) so the judge can
+    // toggle the comparison without losing context.
+    const ON_OPACITY = 0.9;
+    const OFF_OPACITY = 0.05;
+    const op = (mode) => activeModes.has(mode) ? ON_OPACITY : OFF_OPACITY;
+
+    // Pre-build bypass map (used by INDEPENDENT layer)
+    const bypassMeshByReplacedId = {};
+    activeBypassNodes.forEach(bm => {
+      if (!bypassMeshByReplacedId[bm.userData.replaces]) {
+        bypassMeshByReplacedId[bm.userData.replaces] = bm;
+      }
+    });
+    const isExternal = (cls) => cls === 'external' || cls === 'open';
+
+    // ─── LAYER 1: COMPLY arcs ───
+    // Connect ALL consecutive main-chain nodes with classification-colored arcs.
+    // (silver for literature / red for external / orange for open / cyan for proved)
+    {
+      const layerOp = op('comply');
+      for (let i = 0; i < activeNodes.length; i++) {
+        if (i === 0) continue;
+        const n1 = activeNodes[i - 1], n2 = activeNodes[i];
+        const s1 = getStyle(n1.userData.classification);
+        const s2 = getStyle(n2.userData.classification);
+        const arcColor = s1.op >= s2.op ? s1.arcColor : s2.arcColor;
+        drawSurfaceArc(n1, n2, arcColor, layerOp);
+      }
+    }
+
+    // ─── LAYER 2: INDEPENDENT arcs ───
+    // Green shortcut arcs that route through bypass-route nodes (or skip bypassed nodes).
+    {
+      const layerOp = op('independent');
+      let lastGoodNode = null;
+      for (let i = 0; i < activeNodes.length; i++) {
+        const node = activeNodes[i];
+        const cls = node.userData.classification;
+        if (isExternal(cls)) {
+          const bypassMesh = bypassMeshByReplacedId[node.userData.id];
+          if (bypassMesh) {
+            if (lastGoodNode) drawSurfaceArc(lastGoodNode, bypassMesh, 0xa5f3a2, layerOp);
+            lastGoodNode = bypassMesh;
+          } else if (lastGoodNode) {
+            // No bypass — draw skip-arc to next non-external
+            for (let j = i + 1; j < activeNodes.length; j++) {
+              if (!isExternal(activeNodes[j].userData.classification)) {
+                drawSurfaceArc(lastGoodNode, activeNodes[j], 0xa5f3a2, layerOp);
+                break;
+              }
+            }
+          }
+          continue;
+        }
+        if (lastGoodNode) {
+          drawSurfaceArc(lastGoodNode, node, 0xa5f3a2, layerOp);
+        }
+        lastGoodNode = node;
+      }
+    }
+
+    // ─── LAYER 3: CONTRIBUTE arcs ───
+    // Red arcs around external nodes (showing what we strengthen via Pillar C).
+    {
+      const layerOp = op('contribute');
+      for (let i = 0; i < activeNodes.length; i++) {
+        if (i === 0) continue;
+        const n1 = activeNodes[i - 1], n2 = activeNodes[i];
+        const c1 = n1.userData.classification, c2 = n2.userData.classification;
+        // Highlight only if at least one endpoint is external/open (the contribution edges)
+        if (isExternal(c1) || isExternal(c2)) {
+          drawSurfaceArc(n1, n2, 0xff6b5a, layerOp);
+        } else {
+          // Programme-internal pair — draw very dim red so contribute-only view shows the chain skeleton
+          drawSurfaceArc(n1, n2, 0xff6b5a, layerOp * 0.3);
+        }
+      }
+    }
+
+    // ─── LAYER 4: GEODESIC arcs ───
+    // BFS shortest path from first to last node, drawn in gold.
+    geodesicPathSet = new Set();
+    if (activeNodes.length >= 2) {
+      const first = activeNodes[0].userData.id;
+      const last = activeNodes[activeNodes.length - 1].userData.id;
+      const activeIds = new Set(activeNodes.map(m => m.userData.id));
+      const adj = {};
+      activeIds.forEach(id => { adj[id] = []; });
+      TORUS_EDGES.forEach(e => {
+        if (activeIds.has(e.from) && activeIds.has(e.to)) {
+          adj[e.from].push(e.to); adj[e.to].push(e.from);
+        }
+      });
+      for (let i = 0; i < activeNodes.length - 1; i++) {
+        const a = activeNodes[i].userData.id, b = activeNodes[i + 1].userData.id;
+        if (!adj[a].includes(b)) adj[a].push(b);
+        if (!adj[b].includes(a)) adj[b].push(a);
+      }
+      const visited = new Set([first]);
+      const queue = [[first]];
+      let geodesicPath = null;
+      while (queue.length > 0) {
+        const path = queue.shift();
+        const curr = path[path.length - 1];
+        if (curr === last) { geodesicPath = path; break; }
+        for (const nb of (adj[curr] || [])) {
+          if (!visited.has(nb)) { visited.add(nb); queue.push([...path, nb]); }
+        }
+      }
+      if (geodesicPath) {
+        geodesicPath.forEach(id => geodesicPathSet.add(id));
+        const layerOp = op('geodesic');
+        for (let i = 0; i < geodesicPath.length - 1; i++) {
+          const m1 = nodeMap[geodesicPath[i]]?.mesh;
+          const m2 = nodeMap[geodesicPath[i + 1]]?.mesh;
+          if (!m1 || !m2) continue;
+          drawSurfaceArc(m1, m2, 0xf5c26b, layerOp);
+        }
+      }
+    }
+  }
+
+  // ── MODE-LAYER RENDERING for CUSTOM CONNECT CHAINS ──
+  // When a connect chain exists (and no activeVertex is dictating the chain),
+  // apply the same 4-mode arc overlays to the custom chain. Modes are
+  // fully applicable to judge-composed chains too.
+  if (connectPath.length > 1 && !activeVertex) {
+    const chainMeshes = connectPath
+      .map(id => nodeMap[id]?.mesh)
+      .filter(Boolean);
+    const pathSet = new Set(connectPath);
+
+    // Amplify chain nodes (classification-colored, scaled)
+    chainMeshes.forEach(mesh => {
+      const cfg = COLORS[mesh.userData.classification] || COLORS['literature'];
+      mesh.material.color.setHex(cfg.color);
+      mesh.material.emissive.setHex(cfg.emissive);
+      mesh.material.emissiveIntensity = Math.max(cfg.emissiveIntensity, 0.45);
+      mesh.material.opacity = 1.0;
+      mesh.material.transparent = false;
+      mesh.scale.setScalar(1.6);
+    });
+
+    // Reuse surface-arc drawer — chainMeshes have currentU/currentV from earlier position setup
+    function drawChainArc(m1, m2, color, opacity) {
+      const u1 = m1.userData.currentU ?? m1.userData.origU;
+      const v1 = m1.userData.currentV ?? m1.userData.origV;
+      const u2 = m2.userData.currentU ?? m2.userData.origU;
+      const v2 = m2.userData.currentV ?? m2.userData.origV;
+      let du = u2 - u1;
+      if (du > Math.PI) du -= 2 * Math.PI;
+      if (du < -Math.PI) du += 2 * Math.PI;
+      const pts = [];
+      for (let t = 0; t <= 48; t++) {
+        const f = t / 48;
+        pts.push(torusPoint(u1 + du * f, v1 + (v2 - v1) * f));
+      }
+      const geom = new THREE.BufferGeometry().setFromPoints(pts);
+      const mat = new THREE.LineBasicMaterial({color, opacity, transparent: opacity < 1.0});
+      const line = new THREE.Line(geom, mat);
+      line.userData = {spreadLine: true};
+      scene.add(line);
+    }
+
+    const ON_OP = 0.9;
+    const OFF_OP = 0.05;
+    const op = (mode) => activeModes.has(mode) ? ON_OP : OFF_OP;
+    const isExternal = (cls) => cls === 'external' || cls === 'open';
+    const COLORS_COMPLY = {
+      'external': 0xff6b5a, 'open': 0xcc8844, 'integers-original': 0xf5c26b,
+      'literature': 0x7dd3fc, 'classical': 0xc8c8d8, 'bypass-route': 0xa5f3a2,
+    };
+
+    // LAYER 1: COMPLY arcs along the full connect chain
+    {
+      const lo = op('comply');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        const c1 = chainMeshes[i - 1].userData.classification;
+        const c2 = chainMeshes[i].userData.classification;
+        const col = COLORS_COMPLY[c1] || COLORS_COMPLY[c2] || 0x7dd3fc;
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], col, lo);
+      }
+    }
+
+    // LAYER 2: INDEPENDENT — green shortcut arcs skipping externals
+    {
+      const lo = op('independent');
+      let lastGood = null;
+      chainMeshes.forEach(m => {
+        const cls = m.userData.classification;
+        if (isExternal(cls)) {
+          // skip-arc from lastGood to next non-external (we walk forward only)
+          return;
+        }
+        if (lastGood) drawChainArc(lastGood, m, 0xa5f3a2, lo);
+        lastGood = m;
+      });
+    }
+
+    // LAYER 3: CONTRIBUTE — red arcs on external-adjacent edges
+    {
+      const lo = op('contribute');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        const c1 = chainMeshes[i - 1].userData.classification;
+        const c2 = chainMeshes[i].userData.classification;
+        const edgeOp = (isExternal(c1) || isExternal(c2)) ? lo : lo * 0.3;
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xff6b5a, edgeOp);
+      }
+    }
+
+    // LAYER 4: GEODESIC — the chain IS a BFS path already, so it's the geodesic by construction.
+    // Draw gold arcs along the full chain to emphasize this.
+    {
+      const lo = op('geodesic');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xf5c26b, lo);
+      }
+    }
+  } else if (connectPath.length > 1 && activeVertex) {
+    // If both a solution AND a connect chain are active, preserve the old
+    // gold-highlight for connect path on top of the solution's mode rendering.
+    const pathSet = new Set(connectPath);
+    nodeMeshes.forEach(mesh => {
+      if (pathSet.has(mesh.userData.id)) {
+        mesh.material.color.setHex(0xf5c26b);
+        mesh.material.emissive.setHex(0xf5c26b);
+        mesh.material.emissiveIntensity = 0.6;
+        mesh.material.opacity = 1.0;
+        mesh.material.transparent = false;
+        mesh.scale.setScalar(1.5);
+      }
+    });
+    for (let i = 0; i < connectPath.length - 1; i++) {
+      const a = connectPath[i], b = connectPath[i + 1];
+      edgeLines.forEach(line => {
+        const e = line.userData;
+        if ((e.from === a && e.to === b) || (e.from === b && e.to === a)) {
+          line.material.color.setHex(0xf5c26b);
+          line.material.opacity = 1.0;
+        }
+      });
+    }
+  }
+
+  // Selected nodes: highlight with green ring
+  selectedNodes.forEach(nodeId => {
+    if (nodeMap[nodeId]) {
+      const mesh = nodeMap[nodeId].mesh;
+      mesh.material.color.setHex(0xa5f3a2);
+      mesh.material.emissive.setHex(0xa5f3a2);
+      mesh.material.emissiveIntensity = 0.5;
+      mesh.material.opacity = 1.0;
+      mesh.material.transparent = false;
+      mesh.scale.setScalar(1.6);
+    }
+  });
+}
+
+// ============================================================
+// NODE PULSE ANIMATION
+// ============================================================
+let pulsingMesh = null;
+let pulseStartTime = 0;
+
+function pulseNode(mesh) {
+  pulsingMesh = mesh;
+  pulseStartTime = performance.now();
+}
+
+// ============================================================
+// RAYCASTING + TOOLTIP + CLICK
+// ============================================================
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+const tooltip = document.getElementById('tooltip');
+
+renderer.domElement.addEventListener('mousemove', (e) => {
+  const rect = renderer.domElement.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(nodeMeshes, false);
+  if (hits.length > 0) {
+    const h = hits[0].object;
+    const n = h.userData;
+    const classLabel = n.classification === 'integers-original' ? ' [GOLD]' : '';
+    tooltip.textContent = `${n.id}: ${n.name} | ${n.status} | ${n.face}${classLabel}`;
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX - rect.left + 14) + 'px';
+    tooltip.style.top = (e.clientY - rect.top + 14) + 'px';
+    renderer.domElement.style.cursor = 'pointer';
+  } else {
+    tooltip.style.display = 'none';
+    renderer.domElement.style.cursor = 'grab';
+  }
+});
+
+renderer.domElement.addEventListener('click', (e) => {
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(nodeMeshes, false);
+  if (hits.length > 0) {
+    const nodeId = hits[0].object.userData.id;
+    const vertexId = hits[0].object.userData.vertex;
+
+    // Multi-waypoint selection: click toggles a node in/out of the sequence
+    // No max cap — referees can add as many waypoints as they want and CONNECT
+    // will route through all of them in selection order.
+    if (selectedNodes.includes(nodeId)) {
+      selectedNodes = selectedNodes.filter(n => n !== nodeId);
+    } else {
+      selectedNodes.push(nodeId);
+    }
+    connectPath = [];
+
+    // FREE-FORM SELECTION MODE
+    // If no solution is active, clicking a node only adds it to selectedNodes
+    // for the CONNECT workflow — referees compose their own chains.
+    // If a solution IS active, also sync the layer list highlighting to the clicked node.
+    if (activeVertex && vertexId === activeVertex) {
+      activeLayer = nodeId;
+      document.querySelectorAll('.layer-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.nodeId === activeLayer);
+      });
+      updateDetailPanel();
+    } else {
+      // Free-form mode: do NOT auto-activate any vertex; just show the clicked node's detail
+      activeLayer = null;
+      updateDetailPanelForNode(nodeId);
+    }
+    updateSelectedInfo();
+    updateTorusHighlight();
+  }
+});
+
+// ============================================================
+// HUD
+// ============================================================
+const hud = document.getElementById('hud');
+
+// ============================================================
+// RESIZE
+// ============================================================
+function onResize() {
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', onResize);
+onResize();
+
+// ============================================================
+// ANIMATE
+// ============================================================
+function animate() {
+  requestAnimationFrame(animate);
+
+  // Pulse animation
+  if (pulsingMesh) {
+    const elapsed = (performance.now() - pulseStartTime) / 1000;
+    if (elapsed < 1.0) {
+      const s = 1 + 0.5 * Math.sin(elapsed * Math.PI * 4) * Math.exp(-elapsed * 3);
+      pulsingMesh.scale.setScalar(s * (activeVertex ? 1.3 : 1));
+    } else {
+      pulsingMesh = null;
+    }
+  }
+
+  // Auto-poloidal: continuously rotate every node around the tube circle
+  if (autoPoloidal) {
+    // Add 2π before modulo to keep positive even with negative speed (flipped direction)
+    tubeOffset = (tubeOffset + POLOIDAL_SPEED + Math.PI * 2) % (Math.PI * 2);
+    if (tubeSlider) tubeSlider.value = tubeOffset;
+    if (tubeReadout) {
+      const degrees = Math.round((tubeOffset * 180 / Math.PI) % 360);
+      tubeReadout.textContent = degrees + '°';
+    }
+    updateTorusHighlight();
+  }
+
+  controls.update();
+  renderer.render(scene, camera);
+
+  // HUD
+  const pos = camera.position;
+  hud.textContent = `cam ${pos.x.toFixed(1)} ${pos.y.toFixed(1)} ${pos.z.toFixed(1)}`;
+}
+animate();
+
+// ============================================================
+// HELPERS
+// ============================================================
+function esc(s) {
+  const div = document.createElement('div');
+  div.textContent = s;
+  return div.innerHTML;
+}
+
+// ============================================================
+// TUBE SLIDER — rotates every node around the tube circle (v-axis)
+// ============================================================
+const tubeSlider = document.getElementById('tube-slider');
+const tubeReadout = document.getElementById('tube-readout');
+let tubeRafId = null;
+tubeSlider.addEventListener('input', (e) => {
+  tubeOffset = parseFloat(e.target.value);
+  const degrees = Math.round((tubeOffset * 180 / Math.PI) % 360);
+  tubeReadout.textContent = degrees + '°';
+  // Throttle the redraw via requestAnimationFrame for smooth slider response
+  if (tubeRafId) cancelAnimationFrame(tubeRafId);
+  tubeRafId = requestAnimationFrame(() => {
+    updateTorusHighlight();
+    tubeRafId = null;
+  });
+});
+
+// ============================================================
+// AUTO-ROTATE TOGGLE (toroidal — camera around major axis)
+// ============================================================
+const btnRotate = document.getElementById('btn-rotate');
+btnRotate.addEventListener('click', () => {
+  controls.autoRotate = !controls.autoRotate;
+  controls.autoRotateSpeed = 1.5; // gentle
+  btnRotate.classList.toggle('active', controls.autoRotate);
+  btnRotate.textContent = controls.autoRotate ? 'Stop rotation' : 'Auto-rotate';
+});
+
+// ============================================================
+// PROXIMITY-SELECT WHILE SPINNING
+// ============================================================
+// When auto-rotate or auto-tube is running, clicking a moving target is
+// frustrating. Instead, the node CLOSEST TO THE MOUSE is auto-selected —
+// the judge "draws" their proof chain by sweeping the cursor across the
+// rotating surface. As different nodes become closest, they get added to
+// the waypoint list automatically. When neither rotation is on, normal
+// click-to-select behavior applies (precision mode for stationary picks).
+let lastProximityNodeId = null;
+const PROXIMITY_THRESHOLD_PX = 80; // max screen-space distance to count as "near"
+
+function findClosestNodeToMouse(mx, my) {
+  let closest = null;
+  let minDist = PROXIMITY_THRESHOLD_PX;
+  const w = renderer.domElement.clientWidth;
+  const h = renderer.domElement.clientHeight;
+  nodeMeshes.forEach(mesh => {
+    if (mesh.material.opacity < 0.3) return; // skip dim/hidden nodes
+    const p = mesh.position.clone().project(camera);
+    const sx = (p.x + 1) * 0.5 * w;
+    const sy = (-p.y + 1) * 0.5 * h;
+    const d = Math.hypot(sx - mx, sy - my);
+    if (d < minDist) { minDist = d; closest = mesh; }
+  });
+  return closest;
+}
+
+renderer.domElement.addEventListener('mousemove', (e) => {
+  // Only proximity-select when ANY rotation is running
+  if (!controls.autoRotate && !autoPoloidal) {
+    lastProximityNodeId = null;
+    return;
+  }
+  const rect = renderer.domElement.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const closest = findClosestNodeToMouse(mx, my);
+  if (closest) {
+    const id = closest.userData.id;
+    // Only add when the closest node CHANGES — avoids spam-adding the same node every frame
+    if (id !== lastProximityNodeId) {
+      lastProximityNodeId = id;
+      // Toggle: if already in selection, skip; if not, add as new waypoint
+      if (!selectedNodes.includes(id)) {
+        selectedNodes.push(id);
+        connectPath = [];
+        updateSelectedInfo();
+        // Pulse the auto-selected node so judge sees what got picked
+        if (closest) pulseNode(closest);
+      }
+    }
+  } else {
+    lastProximityNodeId = null;
+  }
+});
+
+// ============================================================
+// AUTO-POLOIDAL TOGGLE (nodes flow around the tube)
+// ============================================================
+// Both rotations can run simultaneously — when they do, the trajectory of any
+// node is a Clifford flow on the torus (Killing-vector double rotation).
+// If the rate ratio is irrational the orbit is dense in T² (Kronecker-Weyl).
+const btnPoloidal = document.getElementById('btn-poloidal');
+btnPoloidal.addEventListener('click', () => {
+  autoPoloidal = !autoPoloidal;
+  btnPoloidal.classList.toggle('active', autoPoloidal);
+  btnPoloidal.textContent = autoPoloidal ? 'Stop tube' : 'Auto-tube';
+});
+
+// ============================================================
+// INIT
+// ============================================================
+updateSelectedInfo();
+updateModeButtons();
+updateTorusHighlight();
+
+</script>
+</body>
+</html>
