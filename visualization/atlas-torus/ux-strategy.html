@@ -50,10 +50,15 @@
 
   /* Layers */
   #col-layers{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
-  .layer-item{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:4px;cursor:pointer;font-size:11.5px;line-height:1.3;transition:background 0.12s}
+  /* 2-row layer item: top row = id · short-name · status · tags;
+     bottom row = full description (wraps). 0.5px gap between rows. */
+  .layer-item{display:flex;flex-direction:column;gap:2px;padding:5px 6px;border-radius:4px;cursor:pointer;font-size:11.5px;line-height:1.3;transition:background 0.12s;margin-bottom:0.5px}
   .layer-item:hover{background:var(--panel2)}
   .layer-item.active{background:#1a1f2e;border-left:2px solid var(--cyan)}
+  .layer-row-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .layer-row-desc{font-size:10.5px;color:var(--dim);line-height:1.35;padding-left:36px}
   .layer-id{font-weight:700;font-size:10.5px;min-width:30px;color:var(--cyan);font-family:ui-monospace,Menlo,monospace}
+  .layer-short{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--cyan-dim);letter-spacing:0.02em}
   .layer-name{flex:1;color:#c8c8d8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .status-badge{font-size:9px;font-weight:700;letter-spacing:0.04em;padding:1px 5px;border-radius:3px;white-space:nowrap}
   .status-PROVED{background:#1a2e1a;color:#8fde70}
@@ -104,8 +109,27 @@
   /* CANVAS */
   #canvas-wrap{grid-column:2;grid-row:2;position:relative;background:radial-gradient(ellipse at center,#12122a 0%,#0a0a14 70%);overflow:hidden}
   #canvas-wrap canvas{display:block;width:100%;height:100%}
-  #tooltip{position:absolute;pointer-events:none;background:rgba(20,20,35,0.95);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:11.5px;display:none;z-index:10;white-space:nowrap;max-width:400px}
-  #hud{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;background:rgba(10,10,15,0.7);border:1px solid var(--border);padding:3px 7px;border-radius:3px}
+  #tooltip{position:absolute;pointer-events:none;background:rgba(20,20,35,0.95);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:11.5px;display:none;z-index:10;max-width:400px}
+  #tooltip .tip-row-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px;white-space:nowrap}
+  #tooltip .tip-id{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--cyan-dim);letter-spacing:0.02em}
+  #tooltip .tip-face{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.05em}
+  #tooltip .tip-desc{font-size:10.5px;color:#c8c8d8;line-height:1.35;white-space:normal}
+  #hud{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;background:rgba(10,10,15,0.7);border:1px solid var(--border);padding:3px 7px;border-radius:3px;display:none}
+  #hud.shown{display:block}
+  /* Color legend — horizontal strip, ALWAYS visible. HUD stacks below when
+     panel is open; legend drops to HUD's spot when panel is collapsed. Font
+     matches HUD for typographic consistency. */
+  #color-legend{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;background:rgba(10,10,15,0.7);border:1px solid var(--border);padding:3px 7px;border-radius:3px;white-space:nowrap;transition:bottom 0.2s ease}
+  #color-legend.hud-stacked{bottom:38px}
+  #color-legend .leg{display:inline-block;margin-right:10px;color:var(--dim)}
+  #color-legend .leg .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle;box-shadow:0 0 3px currentColor}
+  #color-legend .leg-stats{color:var(--dim);margin-left:6px;padding-left:10px;border-left:1px dashed var(--border)}
+  #color-legend .leg-stats .gold-count{color:var(--gold)}
+  #color-legend .leg-stats .green-count{color:#14b8a6}
+
+  /* Node-id labels (top 5 closest to camera, fade in/out by depth) */
+  #node-labels{position:absolute;inset:0;pointer-events:none;z-index:4}
+  .node-label{position:absolute;left:0;top:0;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--cyan);padding:2px 6px;background:rgba(10,10,15,0.85);border:1px solid var(--border);border-radius:3px;white-space:nowrap;transition:opacity 0.3s ease;letter-spacing:0.02em;text-shadow:0 0 3px #000;will-change:transform}
 
   /* BOTTOM PANEL (<details>) — controls + slides, collapsible */
   #bottom-panel{grid-column:2;grid-row:3;background:var(--panel);border-top:1px solid var(--border)}
@@ -133,6 +157,12 @@
   .control-row.auto-on .ctl-label{color:var(--amber)}
   .control-row.auto-on .readout{color:var(--amber)}
   .control-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+  /* Master speed — global fine-tune over all auto-animate speeds */
+  .master-speed{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border)}
+  .master-speed .ctl-label{color:var(--amber)}
+  .master-speed input[type="range"]{accent-color:var(--amber)}
+  .master-speed .readout{color:var(--amber)}
+  .master-speed .speed-spacer{flex-shrink:0;width:12px}
   .control-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);padding:4px 9px;border-radius:4px;font-size:10.5px;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:all 0.15s}
   .control-btn:hover{color:var(--cyan);border-color:var(--cyan)}
   .control-btn.active{color:var(--accent);border-color:var(--accent)}
@@ -165,66 +195,66 @@
 <body>
 <div id="app">
   <header id="app-header">
-    <h1>Atlas Torus</h1>
+    <h1>Solution Atlas</h1>
     <span class="tagline">Proof-Chain Composer · Integers Programme — 25 ring vertices on T²</span>
   </header>
 
   <div id="left-panel">
     <div id="col-solutions">
-      <div class="section-label">Solution (click to activate)</div>
+      <div class="section-label" id="col-solutions-label">Solution — click to activate</div>
       <div class="vtx-grid" id="vtx-grid"></div>
     </div>
     <div id="col-layers">
-      <div class="section-label">Layers</div>
-      <div id="layer-list"><span style="font-size:11px;color:var(--dim)">Select a solution to see layers, or click nodes on the torus to compose your own chain.</span></div>
+      <div class="section-label" id="col-layers-label">Proof chain steps — select a solution or activate nodes to compose your own</div>
+      <div id="layer-list"></div>
     </div>
     <div id="col-detail">
-      <div class="section-label">Node Detail</div>
-      <div id="detail-content"><span style="font-size:11px;color:var(--dim)">Select a layer to view detail.</span></div>
+      <div class="section-label" id="col-detail-label">Node detail — select a layer to view detail</div>
+      <div id="detail-content"></div>
     </div>
     <div id="col-mode">
+      <div class="section-label" id="mode-section-label">Mode</div>
       <div class="mode-grid">
         <div class="mode-col">
-          <div class="section-label" id="mode-section-label">Mode</div>
-          <label class="mode-check active" data-mode="comply"><input type="checkbox" checked>Comply</label>
-          <label class="mode-check active" data-mode="independent"><input type="checkbox" checked>Independent</label>
-          <label class="mode-check active" data-mode="contribute"><input type="checkbox" checked>Contribute</label>
-          <label class="mode-check active" data-mode="geodesic"><input type="checkbox" checked>Geodesic</label>
+          <label class="mode-check active" data-mode="comply"><input type="checkbox" checked>Compliance</label>
+          <label class="mode-check active" data-mode="independent"><input type="checkbox" checked>Independence</label>
         </div>
         <div class="mode-col">
-          <div class="section-label">Legend</div>
-          <div class="legend-grid" id="legend-grid">
-            <div class="legend-item"><span class="legend-dot" style="background:#f5c26b;color:#f5c26b"></span><span class="legend-name">Integers</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#ff8c42;color:#ff8c42"></span><span class="legend-name">Selected</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#0ea5e9;color:#0ea5e9"></span><span class="legend-name">Literature</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#e11d48;color:#e11d48"></span><span class="legend-name">External</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#8b5cf6;color:#8b5cf6"></span><span class="legend-name">Classical</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#14b8a6;color:#14b8a6"></span><span class="legend-name">Bypass</span></div>
-            <div class="legend-item"><span class="legend-dot" style="background:#22c55e;color:#22c55e"></span><span class="legend-name">Open</span></div>
-            <div class="legend-stats" id="legend-stats">loading…</div>
-          </div>
+          <label class="mode-check active" data-mode="contribute"><input type="checkbox" checked>Contribution</label>
+          <label class="mode-check active" data-mode="geodesic"><input type="checkbox" checked>Geodesic</label>
         </div>
       </div>
     </div>
     <div id="col-workflow">
-      <div class="section-label">Workflow</div>
-      <div id="selected-info">Click nodes on the torus to compose a chain.</div>
+      <div class="section-label" id="col-workflow-label">Workflow — select nodes to compose a chain</div>
+      <div id="selected-info"></div>
+      <label class="mode-check workflow-toggle" id="proximity-toggle-label">
+        <input type="checkbox" id="proximity-toggle">Select while spinning
+      </label>
       <div class="workflow-btns">
         <button class="workflow-btn" id="btn-connect" disabled>Connect</button>
         <button class="workflow-btn" id="btn-clear">Clear</button>
       </div>
-      <label class="mode-check workflow-toggle" id="proximity-toggle-label">
-        <input type="checkbox" id="proximity-toggle">Select while spinning
-      </label>
     </div>
   </div>
 
   <div id="canvas-wrap">
     <div id="tooltip"></div>
     <div id="hud"></div>
+    <div id="color-legend">
+      <span class="leg"><span class="dot" style="background:#f5c26b;color:#f5c26b"></span>Integers</span>
+      <span class="leg"><span class="dot" style="background:#ff8c42;color:#ff8c42"></span>Selected</span>
+      <span class="leg"><span class="dot" style="background:#0ea5e9;color:#0ea5e9"></span>Literature</span>
+      <span class="leg"><span class="dot" style="background:#e11d48;color:#e11d48"></span>External</span>
+      <span class="leg"><span class="dot" style="background:#8b5cf6;color:#8b5cf6"></span>Classical</span>
+      <span class="leg"><span class="dot" style="background:#22c55e;color:#22c55e"></span>Open</span>
+      <span class="leg"><span class="dot" style="background:#14b8a6;color:#14b8a6"></span>Bypass</span>
+      <span class="leg-stats" id="leg-stats">loading…</span>
+    </div>
+    <div id="node-labels"></div>
   </div>
 
-  <details id="bottom-panel" open>
+  <details id="bottom-panel">
     <summary>
       <span class="chevron">▾</span>
       <span class="summary-label left">Controls</span>
@@ -237,23 +267,23 @@
           <div class="slider-col">
             <div class="control-row" data-slider="rot-x">
               <input type="checkbox" class="auto-check" data-auto="rot-x" title="Auto-animate pitch">
-              <label><span class="ctl-label">pitch</span><input type="range" id="rot-x" min="-89" max="89" step="0.01" value="24"></label>
-              <span class="readout" id="rot-x-readout">24°</span>
+              <label><span class="ctl-label">pitch</span><input type="range" id="rot-x" min="-89" max="89" step="0.01" value="7"></label>
+              <span class="readout" id="rot-x-readout">7°</span>
             </div>
             <div class="control-row" data-slider="rot-y">
               <input type="checkbox" class="auto-check" data-auto="rot-y" title="Auto-animate yaw">
-              <label><span class="ctl-label">yaw</span><input type="range" id="rot-y" min="-180" max="180" step="0.01" value="-134"></label>
-              <span class="readout" id="rot-y-readout">-134°</span>
+              <label><span class="ctl-label">yaw</span><input type="range" id="rot-y" min="-180" max="180" step="0.01" value="-90"></label>
+              <span class="readout" id="rot-y-readout">-90°</span>
             </div>
             <div class="control-row" data-slider="tilt-ctl">
               <input type="checkbox" class="auto-check" data-auto="tilt-ctl" title="Auto-animate roll">
-              <label><span class="ctl-label">roll</span><input type="range" id="tilt-ctl" min="-180" max="180" step="0.01" value="-21"></label>
-              <span class="readout" id="tilt-readout">-21°</span>
+              <label><span class="ctl-label">roll</span><input type="range" id="tilt-ctl" min="-180" max="180" step="0.01" value="-8"></label>
+              <span class="readout" id="tilt-readout">-8°</span>
             </div>
             <div class="control-row" data-slider="rotate-scene">
               <input type="checkbox" class="auto-check" data-auto="rotate-scene" title="Auto-animate scene rotate X">
-              <label><span class="ctl-label">rotate X</span><input type="range" id="rotate-scene" min="0" max="6.2832" step="0.001" value="0"></label>
-              <span class="readout" id="rotate-scene-readout">0°</span>
+              <label><span class="ctl-label">rotate X</span><input type="range" id="rotate-scene" min="0" max="6.2832" step="0.001" value="1.79769"></label>
+              <span class="readout" id="rotate-scene-readout">103°</span>
             </div>
             <div class="control-row" data-slider="rotate-scene-y">
               <input type="checkbox" class="auto-check" data-auto="rotate-scene-y" title="Auto-animate scene rotate Y">
@@ -264,23 +294,23 @@
           <div class="slider-col">
             <div class="control-row" data-slider="zoom-ctl">
               <input type="checkbox" class="auto-check" data-auto="zoom-ctl" title="Auto-animate zoom">
-              <label><span class="ctl-label">zoom</span><input type="range" id="zoom-ctl" min="40" max="220" step="0.1" value="124"></label>
-              <span class="readout" id="zoom-readout">1.24</span>
+              <label><span class="ctl-label">zoom</span><input type="range" id="zoom-ctl" min="40" max="220" step="0.1" value="184"></label>
+              <span class="readout" id="zoom-readout">1.84</span>
             </div>
             <div class="control-row" data-slider="pos-x">
               <input type="checkbox" class="auto-check" data-auto="pos-x" title="Auto-animate pos X">
-              <label><span class="ctl-label">pos X</span><input type="range" id="pos-x" min="-3" max="3" step="0.001" value="-0.26"></label>
-              <span class="readout" id="pos-x-readout">-0.26</span>
+              <label><span class="ctl-label">pos X</span><input type="range" id="pos-x" min="-3" max="3" step="0.001" value="-1.41"></label>
+              <span class="readout" id="pos-x-readout">-1.41</span>
             </div>
             <div class="control-row" data-slider="pos-y">
               <input type="checkbox" class="auto-check" data-auto="pos-y" title="Auto-animate pos Y">
-              <label><span class="ctl-label">pos Y</span><input type="range" id="pos-y" min="-3" max="3" step="0.001" value="-0.98"></label>
-              <span class="readout" id="pos-y-readout">-0.98</span>
+              <label><span class="ctl-label">pos Y</span><input type="range" id="pos-y" min="-3" max="3" step="0.001" value="-0.27"></label>
+              <span class="readout" id="pos-y-readout">-0.27</span>
             </div>
             <div class="control-row" data-slider="pos-z">
               <input type="checkbox" class="auto-check" data-auto="pos-z" title="Auto-animate pos Z">
-              <label><span class="ctl-label">pos Z</span><input type="range" id="pos-z" min="-3" max="3" step="0.001" value="-0.32"></label>
-              <span class="readout" id="pos-z-readout">-0.32</span>
+              <label><span class="ctl-label">pos Z</span><input type="range" id="pos-z" min="-3" max="3" step="0.001" value="-1.39"></label>
+              <span class="readout" id="pos-z-readout">-1.39</span>
             </div>
             <div class="control-row" data-slider="tube-slider">
               <input type="checkbox" class="auto-check" data-auto="tube-slider" title="Auto-animate tube">
@@ -289,14 +319,20 @@
             </div>
           </div>
         </div>
+        <div class="control-row master-speed" title="Fine-tune all auto-animation speeds">
+          <span class="speed-spacer"></span>
+          <label><span class="ctl-label">speed</span><input type="range" id="speed-ctl" min="-100" max="100" step="1" value="-89"></label>
+          <span class="readout" id="speed-readout">-89%</span>
+        </div>
         <div class="control-btns">
           <button class="control-btn" id="btn-reset">reset</button>
+          <button class="control-btn" id="btn-animate" title="Toggle all auto-animations">animate</button>
         </div>
       </div>
       <div class="slides-half">
         <div class="slide-nav-row">
           <button class="slide-nav" id="slide-prev" aria-label="previous slide">◄</button>
-          <span id="slide-counter">1 / 8</span>
+          <span id="slide-counter">1 / 12</span>
           <button class="slide-nav" id="slide-next" aria-label="next slide">►</button>
         </div>
         <div id="slide-title">loading…</div>
@@ -421,7 +457,7 @@ const wireGeo = buildTorusGridGeometry(R_MAJOR, R_MINOR, 40, 24);
 const wireShader = new THREE.ShaderMaterial({
   uniforms: {
     baseColor: { value: new THREE.Color(0x7dd3fc) },
-    maxOpacity: { value: 0.75 },
+    maxOpacity: { value: 0.90 },  // +20% brighter front (user-calibrated)
     minOpacity: { value: 0.08 },
     cameraDist: { value: 9.5 },   // updated per frame
     torusRadius: { value: R_MAJOR + R_MINOR },
@@ -598,6 +634,8 @@ TORUS_VERTICES.forEach((v, idx) => {
   VERTEX_V_HOME[v.id] = ((idx * GOLDEN_ANGLE) % Math.PI) - Math.PI / 2;
 });
 
+// Peripheral vertex labels — one per ring vertex, floating outside the torus
+// at its u-position. Complements the dynamic top-10 node-id labels overlay.
 const labelSprites = [];
 TORUS_VERTICES.forEach(v => {
   const u = v.u;
@@ -606,12 +644,9 @@ TORUS_VERTICES.forEach(v => {
   const y = labelR * Math.sin(u);
   const pos = new THREE.Vector3(x, 0.15, y);
   const color = labelColor(v.id);
-  // Initial +10% — user-calibrated sizes
   const scale = (v.id === 'integers') ? 0.77 : 0.55;
   const sprite = makeLabel(v.label, pos, color, scale);
-  sprite.userData = sprite.userData || {};
-  sprite.userData._baseScale = scale;
-  sprite.userData = {vertexId: v.id};
+  sprite.userData = {vertexId: v.id, _baseScale: scale};
   scene.add(sprite);
   labelSprites.push(sprite);
 });
@@ -647,7 +682,6 @@ TORUS_VERTICES.forEach(v => {
 });
 
 function selectVertex(vertexId) {
-  // Toggle: clicking adds if absent, removes if already present.
   if (activeVertices.has(vertexId)) activeVertices.delete(vertexId);
   else activeVertices.add(vertexId);
   activeLayer = null;
@@ -656,6 +690,26 @@ function selectVertex(vertexId) {
   updateTorusHighlight();
   updateLayerList();
   updateDetailPanel();
+  updateSectionLabels();
+}
+
+// Section labels collapse to just the title once their action has happened
+// (solution active → "Solution"; layer selected → "Node detail"; nodes
+// in workflow → "Workflow"). Empty state shows the instruction tail.
+function updateSectionLabels() {
+  const sol = document.getElementById('col-solutions-label');
+  if (sol) sol.textContent = activeVertices.size > 0
+    ? 'Solution' : 'Solution — click to activate';
+  const lay = document.getElementById('col-layers-label');
+  if (lay) lay.textContent = (activeVertices.size > 0 || connectPath.length > 1)
+    ? 'Proof chain steps'
+    : 'Proof chain steps — select a solution or activate nodes to compose your own';
+  const det = document.getElementById('col-detail-label');
+  if (det) det.textContent = activeLayer
+    ? 'Node detail' : 'Node detail — select a layer to view detail';
+  const wf = document.getElementById('col-workflow-label');
+  if (wf) wf.textContent = (typeof selectedNodes !== 'undefined' && selectedNodes.length > 0)
+    ? 'Workflow' : 'Workflow — select nodes to compose a chain';
 }
 
 function updateVertexButtons() {
@@ -716,13 +770,13 @@ function updateLayerList() {
       const vertexLabel = TORUS_VERTICES.find(v => v.id === n.vertex)?.label || n.vertex;
       div.setAttribute('style', 'border-left:3px solid #f5c26b;background:rgba(245,194,107,0.04)');
       div.innerHTML = `
-        <span class="layer-id" style="color:var(--gold)">${idx + 1}.</span>
-        <span class="layer-name" title="${esc(n.name)}">
-          <span style="color:var(--dim);font-size:10px">${vertexLabel}&middot;${n.layer}</span>
-          ${esc(n.name)}
-        </span>
-        <span class="status-badge status-${n.status}">${n.status}</span>
-        ${isOriginal ? '<span style="font-size:8px;color:var(--gold);margin-left:4px">&#9733;</span>' : ''}
+        <div class="layer-row-top">
+          <span class="layer-id" style="color:var(--gold)">${idx + 1}.</span>
+          <span class="layer-short">${esc(n.id)}</span>
+          <span class="status-badge status-${n.status}">${n.status}</span>
+          ${isOriginal ? '<span style="font-size:8px;color:var(--gold);margin-left:4px">&#9733;</span>' : ''}
+        </div>
+        <div class="layer-row-desc" title="${esc(n.name)}">${esc(n.name)}</div>
       `;
       div.addEventListener('click', () => selectLayer(n.id));
       layerList.appendChild(div);
@@ -731,7 +785,7 @@ function updateLayerList() {
   }
 
   if (activeVertices.size === 0) {
-    layerList.innerHTML = '<span style="font-size:11px;color:var(--dim)">Select a solution to see layers, or click nodes on the torus to compose your own chain.</span>';
+    layerList.innerHTML = '';  // header carries the instruction
     return;
   }
 
@@ -806,10 +860,13 @@ function updateLayerList() {
 
     div.setAttribute('style', layerStyle);
     div.innerHTML = `
-      <span class="layer-id">${n.layer}</span>
-      <span class="layer-name" title="${esc(n.name)}">${esc(n.name)}</span>
-      <span class="status-badge status-${n.status}">${n.status}</span>
-      ${modeTag}
+      <div class="layer-row-top">
+        <span class="layer-id">${n.layer}</span>
+        <span class="layer-short">${esc(n.id)}</span>
+        <span class="status-badge status-${n.status}">${n.status}</span>
+        ${modeTag}
+      </div>
+      <div class="layer-row-desc" title="${esc(n.name)}">${esc(n.name)}</div>
     `;
     div.addEventListener('click', () => selectLayer(n.id));
     layerList.appendChild(div);
@@ -823,12 +880,15 @@ function updateLayerList() {
           brow.className = 'layer-item';
           brow.dataset.nodeId = b.id;
           brow.setAttribute('style',
-            'border-left:3px solid #a5f3a2;background:rgba(165,243,162,0.08);' +
-            'color:#a5f3a2;padding-left:14px;font-size:11px');
+            'border-left:3px solid #a5f3a2;background:rgba(165,243,162,0.08);padding-left:14px');
           brow.innerHTML = `
-            <span class="layer-id" style="color:#a5f3a2">&#8627; ${b.layer}</span>
-            <span class="layer-name" title="${esc(b.name)}" style="color:#a5f3a2">BYPASS: ${esc(b.name)}</span>
-            <span class="status-badge status-PROVED" style="background:#1a2e1a;color:#a5f3a2">${b.status}</span>
+            <div class="layer-row-top">
+              <span class="layer-id" style="color:#a5f3a2">&#8627; ${b.layer}</span>
+              <span class="layer-short" style="color:#a5f3a2">${esc(b.id)}</span>
+              <span class="status-badge status-PROVED" style="background:#1a2e1a;color:#a5f3a2">${b.status}</span>
+              <span style="font-size:8px;color:#a5f3a2;margin-left:4px">BYPASS</span>
+            </div>
+            <div class="layer-row-desc" title="${esc(b.name)}" style="color:#a5f3a2;opacity:0.8">${esc(b.name)}</div>
           `;
           brow.addEventListener('click', () => selectLayer(b.id));
           layerList.appendChild(brow);
@@ -853,6 +913,7 @@ function selectLayer(nodeId) {
     el.classList.toggle('active', el.dataset.nodeId === activeLayer);
   });
   updateDetailPanel();
+  updateSectionLabels();
   if (activeLayer && nodeMap[activeLayer]) {
     pulseNode(nodeMap[activeLayer].mesh);
   }
@@ -864,7 +925,7 @@ function selectLayer(nodeId) {
 function updateDetailPanelForNode(nodeId) {
   const container = document.getElementById('detail-content');
   if (!nodeId || !nodeMap[nodeId]) {
-    container.innerHTML = '<span style="font-size:11px;color:var(--dim)">Select a layer to view detail.</span>';
+    container.innerHTML = '';  // header already says "select a layer to view detail"
     return;
   }
   const n = nodeMap[nodeId].data;
@@ -970,8 +1031,9 @@ btnConnect.addEventListener('click', () => {
 
 function updateSelectedInfo() {
   btnConnect.disabled = selectedNodes.length < 2;
+  if (typeof updateSectionLabels === 'function') updateSectionLabels();
   if (selectedNodes.length === 0) {
-    selectedInfo.innerHTML = 'Click nodes on the torus to select waypoints. Add as many as you want — CONNECT will route through all of them in order.';
+    selectedInfo.innerHTML = '';  // header carries the instruction
   } else if (selectedNodes.length === 1) {
     selectedInfo.innerHTML = `Selected: <span class="sel-node">${selectedNodes[0]}</span> &mdash; click more nodes to build the chain`;
   } else {
@@ -985,16 +1047,14 @@ function updateSelectedInfo() {
   }
 }
 
-// Stats — rendered inside the legend (bottom row, spans 2 columns).
-// Merges nodes/edges/integers-original/bypass-routes counts with the palette
-// legend so users see the color code + the key counts in one glance.
-const statsBar = document.getElementById('legend-stats');
+// Stats — rendered inside the canvas-legend strip (under the torus).
+const statsBar = document.getElementById('leg-stats');
 if (statsBar && typeof TORUS_META !== 'undefined') {
   const bypassFrag = (TORUS_META.bypassRouteCount !== undefined)
     ? ` &middot; <span class="green-count">${TORUS_META.bypassRouteCount} bypass</span>`
     : '';
   statsBar.innerHTML =
-    `${TORUS_META.nodeCount} nodes &middot; ${TORUS_META.edgeCount} edges<br>` +
+    `${TORUS_META.nodeCount} nodes &middot; ${TORUS_META.edgeCount} edges &middot; ` +
     `<span class="gold-count">${TORUS_META.integersOriginalCount} Integers&#9733;</span>${bypassFrag}`;
 }
 
@@ -1038,22 +1098,16 @@ function bfsPath(startId, endId) {
 // TORUS HIGHLIGHT
 // ============================================================
 function updateTorusHighlight() {
-  // ── POSITION LOGIC: spread active vertex's layers across the torus ──
-  // When a vertex is selected, its layers fan out across the full u-range [0, 2π]
-  // so the proof chain "walks horizontally" across the torus surface.
-  // When deselected, all nodes snap back to their clustered home positions.
-
+  // ── POSITION LOGIC ──
+  // When a vertex is selected, its layers fan out horizontally across the
+  // torus (along u) at a STABLE v-home (golden-angle assignment from vertex
+  // ring index — stable regardless of other selections). Small gap so it
+  // reads as an open arc, not a closed ring. Non-selected nodes stay at
+  // their natural data positions with tubeOffset applied to v.
   if (activeVertices.size > 0) {
-    // Each selected vertex spreads its layers HORIZONTALLY (along u) at its
-    // FIXED v-home. v-home is deterministic from vertex ring-index via
-    // golden-angle — never changes based on other selections. Two solutions
-    // selected = two horizontal lines at different tube-latitudes, each
-    // stable: YM's line doesn't move when RH joins.
     const spreadPosByNodeId = {};
 
     for (const vertexId of activeVertices) {
-      const vHome = (VERTEX_V_HOME[vertexId] ?? 0) + tubeOffset;
-
       const mainNodes = nodeMeshes.filter(m =>
         m.userData.vertex === vertexId && m.userData.classification !== 'bypass-route');
       mainNodes.sort((a, b) => {
@@ -1062,16 +1116,16 @@ function updateTorusHighlight() {
         return aL.localeCompare(bL, undefined, {numeric: true});
       });
 
-      // Spread along u with a small gap so it reads as a LINE (open arc)
-      // not a closed RING — visible start/end.
-      const U_COVERAGE = 0.88;  // fraction of 2π covered by the chain
-      const U_GAP = (1 - U_COVERAGE) * Math.PI;  // centered gap at u=0
+      // Spread u across full 2π. v KEEPS each node's natural origV — as u
+      // sweeps around, v also advances layer-by-layer (because the data has
+      // v=0, π/10, 2π/10, … for consecutive layers), creating the helical
+      // curve that reveals where each layer lives on the torus.
       mainNodes.forEach((mesh, i) => {
-        const frac = mainNodes.length > 1 ? i / (mainNodes.length - 1) : 0.5;
-        const spreadU = U_GAP + frac * U_COVERAGE * Math.PI * 2;
-        let newPos = torusPoint(spreadU, vHome);
+        const spreadU = (i / mainNodes.length) * Math.PI * 2;
+        const v = mesh.userData.origV + tubeOffset;
+        let newPos = torusPoint(spreadU, v);
         mesh.userData.currentU = spreadU;
-        mesh.userData.currentV = vHome;
+        mesh.userData.currentV = v;
 
         // INDEPENDENT mode: bypassed externals sink inward
         if (activeModes.has('independent') &&
@@ -1080,16 +1134,16 @@ function updateTorusHighlight() {
             n.classification === 'bypass-route' && n.replaces === mesh.userData.id);
           if (hasBypass) {
             const cu = Math.cos(spreadU), su = Math.sin(spreadU);
-            const cv = Math.cos(vHome), sv = Math.sin(vHome);
+            const cv = Math.cos(v), sv = Math.sin(v);
             const nx = -cv * cu, ny = -cv * su, nz = -sv;
             newPos = new THREE.Vector3(newPos.x + nx * 0.15, newPos.y + nz * 0.15, newPos.z + ny * 0.15);
           }
         }
         mesh.position.copy(newPos);
-        spreadPosByNodeId[mesh.userData.id] = {u: spreadU, v: vHome};
+        spreadPosByNodeId[mesh.userData.id] = {u: spreadU, v: v};
       });
 
-      // Bypass-route co-location: at the replaced node's u, nudge in v
+      // Bypass-route nodes co-locate at the replaced node's u, v nudged
       nodeMeshes.filter(m =>
         m.userData.vertex === vertexId && m.userData.classification === 'bypass-route'
       ).forEach((mesh) => {
@@ -1113,7 +1167,7 @@ function updateTorusHighlight() {
       });
     }
 
-    // Non-active nodes: home positions + tubeOffset
+    // Non-active nodes: home positions with tubeOffset
     nodeMeshes.forEach(mesh => {
       if (!activeVertices.has(mesh.userData.vertex)) {
         const u = mesh.userData.origU;
@@ -1124,7 +1178,7 @@ function updateTorusHighlight() {
       }
     });
   } else {
-    // No active vertex: ALL nodes at original u, with tubeOffset applied to v
+    // No selection: all nodes at home positions
     nodeMeshes.forEach(mesh => {
       const u = mesh.userData.origU;
       const v = mesh.userData.origV + tubeOffset;
@@ -1172,19 +1226,11 @@ function updateTorusHighlight() {
   //     the torus wireframe as "black lines"; the spread-arcs replace them).
   //   connect chain (no activeVertex) → dim backdrop so users see context.
   //   nothing selected → hidden entirely.
-  const hasConnectChain = connectPath.length > 1;
-  edgeLines.forEach(line => {
-    if (activeVertices.size > 0) {
-      line.visible = false;
-    } else if (hasConnectChain) {
-      line.visible = true;
-      line.material.color.setHex(0x6a6a8a);
-      line.material.opacity = 0.12;
-      line.material.transparent = true;
-    } else {
-      line.visible = false;
-    }
-  });
+  // Default edges (861 of them) — always hidden. Keeping them visible at low
+  // opacity z-fought against the cyan wireframe as "black phantom lines" that
+  // cut across the torus whenever connect chain was active. The connect-chain
+  // overlay arcs (drawn as spreadLine) carry the visual connectivity.
+  edgeLines.forEach(line => { line.visible = false; });
 
   // ── MODE-AWARE RENDERING ──
   // Clean up any previous spread-lines
@@ -1255,26 +1301,27 @@ function updateTorusHighlight() {
       const v1 = (mesh1.userData.currentV !== undefined) ? mesh1.userData.currentV : mesh1.userData.origV;
       const u2 = mesh2.userData.currentU;
       const v2 = (mesh2.userData.currentV !== undefined) ? mesh2.userData.currentV : mesh2.userData.origV;
-      // Shortest arcs for both u AND v (torus wraps in both directions)
       let du = u2 - u1;
       if (du > Math.PI) du -= 2 * Math.PI;
       if (du < -Math.PI) du += 2 * Math.PI;
       let dv = v2 - v1;
       if (dv > Math.PI) dv -= 2 * Math.PI;
       if (dv < -Math.PI) dv += 2 * Math.PI;
-      const steps = 48;
+      const steps = 32;
       const pts = [];
       for (let t = 0; t <= steps; t++) {
         const frac = t / steps;
-        const u = u1 + du * frac;
-        const v = v1 + dv * frac;
-        pts.push(torusPoint(u, v));
+        pts.push(torusPoint(u1 + du * frac, v1 + dv * frac));
       }
-      const geom = new THREE.BufferGeometry().setFromPoints(pts);
-      const mat = new THREE.LineBasicMaterial({color, opacity, transparent: opacity < 1.0});
-      const line = new THREE.Line(geom, mat);
-      line.userData = {spreadLine: true};
-      scene.add(line);
+      // Hose (tube) instead of a flat line — radius = half the node sphere
+      // radius (0.066 / 2 ≈ 0.033) so the hose visually reads as a thicker
+      // connector between the dots.
+      const curve = new THREE.CatmullRomCurve3(pts);
+      const tubeGeo = new THREE.TubeGeometry(curve, steps, 0.0083, 6, false);  // ⅛ node radius
+      const mat = new THREE.MeshBasicMaterial({color, opacity, transparent: opacity < 1.0, depthWrite: false});
+      const tube = new THREE.Mesh(tubeGeo, mat);
+      tube.userData = {spreadLine: true};
+      scene.add(tube);
     }
 
     // ── MULTI-LAYER ARC RENDERING ──
@@ -1386,16 +1433,21 @@ function updateTorusHighlight() {
       let du = u2 - u1;
       if (du > Math.PI) du -= 2 * Math.PI;
       if (du < -Math.PI) du += 2 * Math.PI;
+      let dv = v2 - v1;
+      if (dv > Math.PI) dv -= 2 * Math.PI;
+      if (dv < -Math.PI) dv += 2 * Math.PI;
+      const steps = 32;
       const pts = [];
-      for (let t = 0; t <= 48; t++) {
-        const f = t / 48;
-        pts.push(torusPoint(u1 + du * f, v1 + (v2 - v1) * f));
+      for (let t = 0; t <= steps; t++) {
+        const f = t / steps;
+        pts.push(torusPoint(u1 + du * f, v1 + dv * f));
       }
-      const geom = new THREE.BufferGeometry().setFromPoints(pts);
-      const mat = new THREE.LineBasicMaterial({color, opacity, transparent: opacity < 1.0});
-      const line = new THREE.Line(geom, mat);
-      line.userData = {spreadLine: true};
-      scene.add(line);
+      const curve = new THREE.CatmullRomCurve3(pts);
+      const tubeGeo = new THREE.TubeGeometry(curve, steps, 0.0083, 6, false);  // ⅛ node radius
+      const mat = new THREE.MeshBasicMaterial({color, opacity, transparent: opacity < 1.0, depthWrite: false});
+      const tube = new THREE.Mesh(tubeGeo, mat);
+      tube.userData = {spreadLine: true};
+      scene.add(tube);
     }
 
     const ON_OP = 0.9;
@@ -1515,25 +1567,87 @@ function captureBaseScales() {
     m.userData._baseScale = m.scale.x;
     m.userData._baseOpacity = m.material.opacity;
     m.userData._baseTransparent = m.material.transparent;
+    m.userData._baseEmissiveIntensity = m.material.emissiveIntensity;
   });
 }
 const _tmpViewPos = new THREE.Vector3();
-const TORUS_RADIUS_SPAN = R_MAJOR + R_MINOR;  // from camera-facing to camera-opposite
+const _tmpWorldPos = new THREE.Vector3();
+const _tmpProjPos = new THREE.Vector3();
+const TORUS_RADIUS_SPAN = R_MAJOR + R_MINOR;
+
+// Closest-N closest-to-camera node-id labels (DOM overlay). One div per node,
+// persistent — so CSS opacity transitions handle fading smoothly. Reusing a
+// fixed set of slots caused abrupt text swaps that couldn't fade between IDs.
+const nodeLabelsLayer = document.getElementById('node-labels');
+const MAX_CLOSEST_LABELS = 10;
+const nodeLabelDivs = new Map();  // nodeId → div (persistent, one per node)
+nodeMeshes.forEach(m => {
+  const div = document.createElement('div');
+  div.className = 'node-label';
+  div.textContent = m.userData.id;
+  div.style.opacity = '0';
+  nodeLabelsLayer.appendChild(div);
+  nodeLabelDivs.set(m.userData.id, div);
+});
+const _depthEntries = [];  // re-used scratch array
+function updateClosestLabels() {
+  _depthEntries.length = 0;
+  const w = nodeLabelsLayer.clientWidth;
+  const h = nodeLabelsLayer.clientHeight;
+  nodeMeshes.forEach(m => {
+    if (m.material.opacity < 0.25) return;
+    m.getWorldPosition(_tmpWorldPos);
+    _tmpViewPos.copy(_tmpWorldPos).applyMatrix4(camera.matrixWorldInverse);
+    _depthEntries.push({ mesh: m, depth: -_tmpViewPos.z });
+  });
+  _depthEntries.sort((a, b) => a.depth - b.depth);
+
+  // Track which nodes are in the top-N this frame
+  const topRanks = new Map();
+  const N = Math.min(MAX_CLOSEST_LABELS, _depthEntries.length);
+  for (let i = 0; i < N; i++) {
+    topRanks.set(_depthEntries[i].mesh.userData.id, i);
+  }
+
+  // Update every node's label div. Position only the visible ones. CSS
+  // `transition: opacity 0.3s ease` does the smooth fade-in/fade-out.
+  nodeLabelDivs.forEach((div, id) => {
+    const rank = topRanks.get(id);
+    if (rank === undefined) {
+      if (div.style.opacity !== '0') div.style.opacity = '0';
+      return;
+    }
+    const mesh = nodeMap[id]?.mesh;
+    if (!mesh) { div.style.opacity = '0'; return; }
+    mesh.getWorldPosition(_tmpProjPos);
+    _tmpProjPos.project(camera);
+    const x = (_tmpProjPos.x + 1) * 0.5 * w;
+    const y = (-_tmpProjPos.y + 1) * 0.5 * h;
+    // Full-float precision in the transform — at very slow speeds the delta
+    // between frames is fractional pixels, and .toFixed(2) rounding caused
+    // labels to jump at 0.01px boundaries. Native float stringification gives
+    // ~15 digits which is plenty, and the compositor handles sub-pixel fine.
+    div.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -140%)`;
+    div.style.opacity = String(Math.max(0.25, 1 - rank * 0.085));
+  });
+}
 function applyZoomCompensation() {
   const comp = camera.position.length() / BASE_DIST_FOR_SIZE;
-  // Depth-cue range — same math as the wireframe shader
   const cameraDist = camera.position.length();
   const minViewZ = cameraDist - TORUS_RADIUS_SPAN;
   const rangeZ = 2 * TORUS_RADIUS_SPAN;
-  const DEPTH_MIN_FACTOR = 0.15;  // back-face dim multiplier (matches wire shader's minOpacity/maxOpacity ratio)
+  const DEPTH_MIN_FACTOR = 0.15;
 
   nodeMeshes.forEach(m => {
     if (m === pulsingMesh) return;
     const base = m.userData._baseScale ?? 1;
     m.scale.setScalar(base * comp);
 
-    // View-space depth (positive = further from camera)
-    _tmpViewPos.copy(m.position).applyMatrix4(camera.matrixWorldInverse);
+    // Use WORLD position so depth factor tracks scene rotation — otherwise
+    // dimming stays "hardwired" to nodes and doesn't update when rotate X/Y
+    // spins the scene (back nodes stay dim after rotating to the front).
+    m.getWorldPosition(_tmpWorldPos);
+    _tmpViewPos.copy(_tmpWorldPos).applyMatrix4(camera.matrixWorldInverse);
     const viewZ = -_tmpViewPos.z;
     const t = Math.max(0, Math.min(1, (viewZ - minViewZ) / rangeZ));
     const depthFactor = 1 - t * (1 - DEPTH_MIN_FACTOR);  // 1 at front → 0.15 at back
@@ -1541,6 +1655,9 @@ function applyZoomCompensation() {
     const newOp = baseOp * depthFactor;
     m.material.opacity = newOp;
     m.material.transparent = newOp < 1.0 || m.userData._baseTransparent;
+    // Front-nodes brightness boost +20% (emissive). Back nodes unchanged.
+    const baseEmissive = m.userData._baseEmissiveIntensity ?? 1;
+    m.material.emissiveIntensity = baseEmissive * (1 + (1 - t) * 0.2);
   });
   labelSprites.forEach(s => {
     const base = s.userData._baseScale ?? 0.55;
@@ -1564,8 +1681,12 @@ renderer.domElement.addEventListener('mousemove', (e) => {
   if (hits.length > 0) {
     const h = hits[0].object;
     const n = h.userData;
-    const classLabel = n.classification === 'integers-original' ? ' [GOLD]' : '';
-    tooltip.textContent = `${n.id}: ${n.name} | ${n.status} | ${n.face}${classLabel}`;
+    const classLabel = n.classification === 'integers-original' ? ' <span style="color:var(--gold)">★</span>' : '';
+    tooltip.innerHTML =
+      `<div class="tip-row-top"><span class="tip-id">${esc(n.id)}</span>` +
+      `<span class="status-badge status-${n.status}">${n.status}</span>` +
+      `<span class="tip-face">${n.face || ''}</span>${classLabel}</div>` +
+      `<div class="tip-desc">${esc(n.name)}</div>`;
     tooltip.style.display = 'block';
     tooltip.style.left = (e.clientX - rect.left + 14) + 'px';
     tooltip.style.top = (e.clientY - rect.top + 14) + 'px';
@@ -1630,13 +1751,25 @@ function onResize() {
 window.addEventListener('resize', onResize);
 // Collapsing/expanding the bottom <details> panel changes available height —
 // re-fit the renderer so the canvas reclaims the freed vertical space.
+// Also tie the HUD readout (pitch · yaw · roll · rotate · zoom · pos · tube)
+// to the panel's open state — it's a controls-detail legend, not useful when
+// the panel is collapsed.
 const bottomPanelEl = document.getElementById('bottom-panel');
+const colorLegendEl = document.getElementById('color-legend');
+function syncHudVisibility() {
+  const show = !!(bottomPanelEl && bottomPanelEl.open);
+  hud.classList.toggle('shown', show);
+  // Color legend stays visible always; just slide up to make room for HUD
+  // when the panel is expanded (stacking under the HUD).
+  if (colorLegendEl) colorLegendEl.classList.toggle('hud-stacked', show);
+}
 if (bottomPanelEl) {
   bottomPanelEl.addEventListener('toggle', () => {
-    // Defer until layout settles
     requestAnimationFrame(onResize);
+    syncHudVisibility();
   });
 }
+syncHudVisibility();
 onResize();
 
 // ============================================================
@@ -1657,8 +1790,10 @@ function animate() {
   }
 
   // Auto-animate any slider that's checked — each advances its own value,
-  // dispatches input, triggering the regular camera/tube handler.
-  if (autoAnimate.size > 0) {
+  // dispatches input, triggering the regular camera/tube handler. The
+  // "animate" button gates this with globalPaused (without disturbing the
+  // checkbox selections).
+  if (!globalPaused && autoAnimate.size > 0) {
     for (const id of autoAnimate) autoStep(id);
   }
 
@@ -1673,6 +1808,9 @@ function animate() {
   // ratio, so their on-screen pixel size doesn't shrink when zoomed out or
   // balloon when zoomed in. _baseScale is saved in updateTorusHighlight.
   applyZoomCompensation();
+
+  // Top-5 closest-to-camera node labels (fades by rank)
+  updateClosestLabels();
 
   renderer.render(scene, camera);
 
@@ -1693,10 +1831,13 @@ function animate() {
   const tiltDeg = tiltSlider ? Math.round(parseFloat(tiltSlider.value)) : 0;
   const rotXDeg = Math.round((scene.rotation.y * 180 / Math.PI) % 360);
   const rotYDeg = Math.round((scene.rotation.x * 180 / Math.PI) % 360);
+  // HUD labels match slider labels literally (pos X, pos Y, pos Z explicitly).
   hud.textContent =
     `pitch ${pitch.toFixed(0)}° · yaw ${yaw.toFixed(0)}° · roll ${tiltDeg}°` +
-    ` · rotate X ${rotXDeg}° · rotate Y ${rotYDeg}° · tube ${tubeDeg}°` +
-    ` · zoom ${zoomRatio.toFixed(2)} · pos ${tgt.x.toFixed(2)} / ${tgt.y.toFixed(2)} / ${tgt.z.toFixed(2)}`;
+    ` · rotate X ${rotXDeg}° · rotate Y ${rotYDeg}°` +
+    ` · zoom ${zoomRatio.toFixed(2)}` +
+    ` · pos X ${tgt.x.toFixed(2)} · pos Y ${tgt.y.toFixed(2)} · pos Z ${tgt.z.toFixed(2)}` +
+    ` · tube ${tubeDeg}°`;
 }
 // animate() is kicked off at the very end of the script (after all let/const
 // module-scope bindings — sliderDriving, SLIDES etc. — are initialized).
@@ -1728,6 +1869,17 @@ tubeSlider.addEventListener('input', (e) => {
 // ============================================================
 // AUTO-ROTATE TOGGLE (toroidal — camera around major axis)
 // ============================================================
+// "animate" toggle = global PAUSE/RESUME. Doesn't touch the auto-checkboxes
+// (those describe WHICH sliders animate); this just gates whether they all
+// run. Click to pause without losing your slider selections.
+let globalPaused = false;
+const btnAnimate = document.getElementById('btn-animate');
+btnAnimate.addEventListener('click', () => {
+  globalPaused = !globalPaused;
+  btnAnimate.classList.toggle('active', !globalPaused);
+  btnAnimate.textContent = globalPaused ? 'animate' : 'stop';
+});
+
 // Scene rotate X (spin around world Y axis — horizontal scene spin)
 const rotateSceneSlider = document.getElementById('rotate-scene');
 const rotateSceneReadout = document.getElementById('rotate-scene-readout');
@@ -1821,14 +1973,19 @@ renderer.domElement.addEventListener('mousemove', (e) => {
 // CAMERA SLIDERS (rotate X / rotate Y / zoom) + RESET VIEW
 // ============================================================
 // Bidirectional binding: slider moves camera; camera drags update sliders.
-const DEFAULT_PITCH = 24;    // degrees (user-calibrated)
-const DEFAULT_YAW = -134;    // degrees (user-calibrated)
-const DEFAULT_ZOOM = 124;    // slider units → zoom ratio 1.24 (user-calibrated)
-const DEFAULT_TILT = -21;    // degrees — camera roll (user-calibrated)
+const DEFAULT_PITCH = 7;     // degrees (user-calibrated)
+const DEFAULT_YAW = -90;     // degrees (user-calibrated)
+const DEFAULT_ZOOM = 184;    // slider units → zoom ratio 1.84 (user-calibrated)
+const DEFAULT_TILT = -8;     // degrees — camera roll (user-calibrated)
 // Default pan target (controls.target) — user-calibrated
-const DEFAULT_POS_X = -0.26;
-const DEFAULT_POS_Y = -0.98;
-const DEFAULT_POS_Z = -0.32;
+const DEFAULT_POS_X = -1.41;
+const DEFAULT_POS_Y = -0.27;
+const DEFAULT_POS_Z = -1.39;
+// Default scene rotations (radians) — user-calibrated
+const DEFAULT_SCENE_ROT_X = 103 * Math.PI / 180; // rotate X: 103°
+const DEFAULT_SCENE_ROT_Y = 0;                   // rotate Y: 0°
+// Default tube offset — 0
+const DEFAULT_TUBE = 0;
 const BASE_DISTANCE = Math.hypot(5, 4, 7); // ≈ 9.487 — matches initial camera.position.set(5,4,7)
 const rotXSlider = document.getElementById('rot-x');
 const rotYSlider = document.getElementById('rot-y');
@@ -1928,13 +2085,34 @@ posZSlider.addEventListener('input', applyCameraFromSliders);
 // sliders bounce at the limits. The old auto-rotate/auto-tube buttons become
 // presets that toggle the relevant checkbox.
 const autoAnimate = new Set();
+// Master speed: slider -100..+100. Asymmetric scaling — positive side is
+// subtle (+10% at +100%, keeps tempo sane) while negative side goes deep
+// (-40% at -100%, so viewers can slow motion way down to read labels as
+// they pass). Prevents runaway-fast animations but allows meaningful slow-mo.
+const speedSlider = document.getElementById('speed-ctl');
+const speedReadout = document.getElementById('speed-readout');
+function speedMultiplier() {
+  const v = speedSlider ? parseFloat(speedSlider.value) : 0;
+  if (v >= 0) return 1 + v / 1000;   // +100 → 1.10 (+10%)
+  return 1 + v * 0.009;              // -100 → 0.10 (-90%), very deep slow-mo
+}
+if (speedSlider) {
+  speedSlider.addEventListener('input', (e) => {
+    const v = Math.round(parseFloat(e.target.value));
+    speedReadout.textContent = (v >= 0 ? '+' : '') + v + '%';
+  });
+}
 const AUTO_SPEEDS = {
-  'rot-x': 0.3, 'rot-y': 0.3, 'tilt-ctl': 0.3,
-  'rotate-scene': 0.00448,  // radians/frame — scene X spin (user-calibrated -44%)
-  'rotate-scene-y': 0.00448,  // radians/frame — scene Y spin (matches rotate X pace)
-  'zoom-ctl': 0.5,
-  'tube-slider': 0.0068,
-  'pos-x': 0.012, 'pos-y': 0.012, 'pos-z': 0.012,
+  'rot-x': 0.24,              // pitch -20%
+  'rot-y': 0.21,              // yaw -30%
+  'tilt-ctl': 0.21,           // roll -30%
+  'rotate-scene': 0.002913,   // rotate X -10%
+  'rotate-scene-y': 0.002590, // rotate Y -20%
+  'zoom-ctl': 0.3,            // zoom -40%
+  'tube-slider': -0.005508,   // tube (reverse)
+  'pos-x': 0.0072,            // pos X -40%
+  'pos-y': 0.0072,            // pos Y -40%
+  'pos-z': 0.0072,            // pos Z -40%
 };
 // Pitch bounces at ±89° (past that the camera flips past the pole — ugly).
 // Yaw, roll, rotate (scene), tube all wrap because they're full-circle rotations.
@@ -1951,7 +2129,7 @@ function autoStep(sliderId) {
   if (autoAccum[sliderId] === undefined) {
     autoAccum[sliderId] = parseFloat(slider.value);
   }
-  const speed = AUTO_SPEEDS[sliderId] ?? 0.1;
+  const speed = (AUTO_SPEEDS[sliderId] ?? 0.1) * speedMultiplier();
   const dir = autoDir[sliderId] ?? 1;
   autoAccum[sliderId] += speed * dir;
   // Wrap (angles, tube) or bounce (pos, zoom)
@@ -2003,21 +2181,37 @@ btnReset.addEventListener('click', () => {
   posYSlider.value = DEFAULT_POS_Y;
   posZSlider.value = DEFAULT_POS_Z;
   applyCameraFromSliders();
-  // Reset tube offset
-  tubeOffset = 0;
-  if (tubeSlider) tubeSlider.value = 0;
-  if (tubeReadout) tubeReadout.textContent = '0°';
-  // Reset scene rotations (both axes)
-  scene.rotation.y = 0;
-  scene.rotation.x = 0;
-  if (rotateSceneSlider) rotateSceneSlider.value = 0;
-  if (rotateSceneReadout) rotateSceneReadout.textContent = '0°';
-  if (rotateSceneYSlider) rotateSceneYSlider.value = 0;
-  if (rotateSceneYReadout) rotateSceneYReadout.textContent = '0°';
-  // Turn OFF every auto-animate checkbox
+  // Reset tube offset to user-calibrated default
+  tubeOffset = DEFAULT_TUBE;
+  if (tubeSlider) tubeSlider.value = DEFAULT_TUBE;
+  if (tubeReadout) tubeReadout.textContent = Math.round(DEFAULT_TUBE * 180 / Math.PI) + '°';
+  // Reset scene rotations (both axes) to user-calibrated defaults
+  scene.rotation.y = DEFAULT_SCENE_ROT_X;
+  scene.rotation.x = DEFAULT_SCENE_ROT_Y;
+  if (rotateSceneSlider) {
+    rotateSceneSlider.value = DEFAULT_SCENE_ROT_X;
+    rotateSceneReadout.textContent = Math.round(DEFAULT_SCENE_ROT_X * 180 / Math.PI) + '°';
+  }
+  if (rotateSceneYSlider) {
+    rotateSceneYSlider.value = DEFAULT_SCENE_ROT_Y;
+    rotateSceneYReadout.textContent = Math.round(DEFAULT_SCENE_ROT_Y * 180 / Math.PI) + '°';
+  }
+  // Reset master speed to user-calibrated default
+  if (speedSlider) {
+    speedSlider.value = -89;
+    speedReadout.textContent = '-89%';
+  }
+  // Turn OFF every auto-animate checkbox first
   document.querySelectorAll('.auto-check').forEach(c => {
     if (c.checked) setAuto(c.dataset.auto, false);
   });
+  // Re-enable the page-load defaults: rotate X + tube
+  setAuto('rotate-scene', true);
+  setAuto('tube-slider', true);
+  // Resume animation (clear any pause from the animate button)
+  globalPaused = false;
+  btnAnimate.classList.remove('active');
+  btnAnimate.textContent = 'animate';
   updateTorusHighlight();
 });
 
@@ -2026,52 +2220,76 @@ btnReset.addEventListener('click', () => {
 // ============================================================
 const SLIDES = [
   {
+    title: 'Integers',
+    tagline: 'A derivation programme from ℤ.',
+    body: 'Integers is not a theory and not a hypothesis. It is the <strong>derivation</strong> of universe-describing mathematics from the spectral and geometric properties of the integers — rung-7 necessity, not rung-3 conjecture. Sixty-two papers; <strong>zero postulates beyond ℤ + ZFC</strong>. The atlas you are operating IS the programme\'s first-release delivery artifact; every claim is auditable end-to-end through live PROOF-CHAIN files.',
+    cite: '► strategy/north-star.md §0'
+  },
+  {
     title: 'The Torus',
     tagline: 'Ten faces. Two circles. One torus.',
-    body: 'The programme\'s central object: a torus <code>T² = S¹ × S¹</code> where one circle is geometric (the e-dimension of Paper 1) and the other is spectral (the Tomita-Takesaki modular flow of Bost-Connes at <code>β=1</code>). Ten faces live on it; 25 ring vertices organize its Clay-and-community-standard conjectures. The atlas viz IS the delivery artifact — operate it, don\'t read it.',
-    cite: 'Paper 60 §17–§22, §28'
-  },
-  {
-    title: 'The e-Circle',
-    tagline: 'The geometric substrate.',
-    body: '<code>S¹ = U(1) = ℝ/2πℤ</code>, radius <code>R ≈ 12 μm</code> fixed by the cosmological constant. <strong>Zero free parameters.</strong> Five of the ten faces — TOPOLOGY (Lehmer), HARMONICS (Collatz), CURVATURE (Yang-Mills), MEASURE (Sato-Tate), SPREAD (QUE) — are questions about <em>this shape</em>. Roots of unity are periodic orbits on it; Fourier modes vibrate on it; connections curve along it.',
-    cite: 'Paper 60 §17 · integers/paper60-geometry-of-circle/'
-  },
-  {
-    title: 'The Modular Flow',
-    tagline: 'The spectral circle.',
-    body: 'The Bost-Connes algebra at <code>β=1</code> is a type <code>III₁</code> factor; its canonical modular flow <code>σ_t</code> (Tomita-Takesaki) closes with imaginary period <code>iβ = i</code>. Five faces — DYNAMICS (Crámer), AMPLITUDE (Lindelöf), SYMMETRY (Katz-Sarnak), ARITHMETIC (Goldbach/Twin), RESONANCE (GRH) — live on the flow. Return times control prime gaps; signal amplitude controls zeta growth.',
-    cite: 'Paper 60 §17'
+    body: 'The programme\'s central geometric object: <code>T² = S¹ × S¹</code>. One circle is geometric (the e-dimension of Paper 1, radius <code>R ≈ 12 μm</code> fixed by <code>ρ_Λ</code>); the other is spectral (the Tomita-Takesaki modular flow of <strong>Bost-Connes</strong> at <code>β=1</code>). Ten faces live on the surface; 25 ring vertices organize its Clay-and-community-standard conjectures. <em>Operate this surface, don\'t read about it.</em>',
+    cite: '► integers/paper60-geometry-of-circle/ §17–§22'
   },
   {
     title: 'The Physics',
     tagline: 'M⁵ = M⁴ × S¹, derived not postulated.',
-    body: 'Paper 1 derives the 4+1 coordinate structure from six phenomena: spin-statistics, Aharonov-Bohm, Born rule, Bell inequality, gravitational finiteness, cosmology. <code>R ≈ 12 μm</code> from <code>ρ_Λ</code>. The Universal Epstein Vanishing theorem (<code>E_L(−j;Q) = 0</code> for all <code>j ≥ 1</code>) gives perturbative UV finiteness at all loop orders. Wave function = literal helical shape in M⁵.',
+    body: 'Paper 1 derives the 4+1 coordinate structure from six phenomena: spin-statistics, Aharonov-Bohm, Born rule, Bell inequality, gravitational finiteness, cosmology. The <strong>Universal Epstein Vanishing theorem</strong> (<code>E_L(−j;Q) = 0</code> for all <code>j ≥ 1</code>) gives perturbative UV finiteness at all loop orders. The wave function is the literal helical shape of a particle in M⁵. Quantum mechanics and general relativity emerge as projections of one geometric object.',
     cite: '► integers/paper01-qg5d/'
   },
   {
     title: 'The Six Projections',
     tagline: 'Every conjecture is a shadow of M⁵.',
-    body: 'Paper 61: the programme\'s six rings (outer 25-vertex + five inner Paper-1 branches) are <strong>six projection directions</strong> of one 5D object — exactly analogous to a tesseract\'s Schlegel diagram showing "cube within cube" as one 4D object. QG5D at the hub is the unprojected center; the 25 vertices are specializations. Mathematics is not separate subjects; it is one geometry seen from different angles.',
+    body: 'Paper 61: the programme\'s six rings (outer 25-vertex + five inner Paper-1 branches) are <strong>six projection directions</strong> of one 5D object — analogous to a tesseract\'s Schlegel diagram showing "cube within cube" as one 4D object. QG5D at the hub is the unprojected center; the 25 vertices are specializations under projection operators <code>P_A..P_E..P_O</code>. Mathematics is not separate subjects; it is one geometry seen from different angles.',
     cite: '► integers/paper61-projections-5d/'
   },
   {
     title: 'The 25 Solutions',
-    tagline: '8 prize + 16 community-standard.',
-    body: 'Prize-carrying: <strong>YM · RH · BSD · PvNP · Hodge · NS</strong> (Clay Millennium) + <strong>Goldbach</strong> (Faber-Bloomsbury) + <strong>Collatz</strong> (Bakuage). Community-standard: GRH, H12, Twin Primes, Katz-Sarnak, BGS, Baum-Connes, Turbulence, VP-vs-VNP, Sato-Tate, Lindelöf, Crámer, Lehmer, OPN, ABC, Schanuel, Hilbert-6. Each vertex = proof chain on the ring.',
+    tagline: '6 Clay Millennium + 2 additional prize + 17 community-standard.',
+    body: 'Prize-carrying: <strong>YM · RH · BSD · PvNP · Hodge · NS</strong> (Clay Millennium) + <strong>Goldbach · Collatz</strong> (additional prize foundations). Community-standard: GRH, H12, Twin Primes, Katz-Sarnak, BGS, Baum-Connes, Turbulence, VP-vs-VNP, Sato-Tate, Lindelöf, Cramér, Lehmer, OPN, ABC, Schanuel, Hilbert-6. Every vertex carries a proof chain on the torus surface — fully auditable, walls explicitly disclosed.',
     cite: '► solutions-with-prize/ · solutions/'
   },
   {
-    title: 'The Atlas',
-    tagline: 'The viz IS the delivery artifact.',
-    body: '849 cross-cut chords, <strong class="gold-count">102 Integers-original</strong> theorems (the gold dots), 7 bypass-routes. Shipped as Zenodo DOI + GitHub repo — priority-locked, byte-identical on arXiv. A reviewer doesn\'t <em>read</em> the claim; they <em>operate</em> the tool. Four modes — <strong>COMPLY · INDEPENDENT · CONTRIBUTE · GEODESIC</strong> — same data, four presentations, zero epistemic friction.',
+    title: 'How to Operate',
+    tagline: 'Click, watch, toggle, compose.',
+    body: '<strong>(1)</strong> Click any vertex button → its proof chain spreads horizontally across the torus. <strong>(2)</strong> Watch nodes light up by classification (gold / silver / red / orange / green). <strong>(3)</strong> Toggle the four modes to switch between framings of the same chain. <strong>(4)</strong> Click nodes directly on the surface to compose your own custom chain, then CONNECT to draw the shortest path. Auto-rotate orbits the camera; auto-tube winds nodes around the tube — both together = Clifford flow on T².',
     cite: '► strategy/atlas-torus-run.md'
   },
   {
+    title: 'The Four Modes',
+    tagline: 'Same data. Four presentations. Zero epistemic friction.',
+    body: '<strong>COMPLY</strong> shows the chain that meets prize requirements; named walls disclosed honestly per Clay §5d. <strong>INDEPENDENT</strong> shows the dep-free chain — externals shrink below the surface, green replacement bypass-route nodes appear above. <strong>CONTRIBUTE</strong> highlights what the programme strengthens (Pillar C). <strong>GEODESIC</strong> traces the BFS shortest path. All four can be ON simultaneously: active modes bold, inactive modes ghost as comparison overlays. Each judge sees the framing they prefer.',
+    cite: '► strategy/north-star.md §2'
+  },
+  {
+    title: 'The Golden Dots',
+    tagline: '102 Integers-original theorems.',
+    body: '<strong class="gold-count">Gold</strong> = theorems originated by the programme (T1–T4 reclassified-from-postulates, K.1, K.3, V.1, U.2, the YM 18-link proof, the PvNP Clone-Growth ↔ Fullness bridge). <strong>Silver</strong> = literature (cited but not rederived). <strong>Red</strong> = retained externals (CCM 2025, Standard Conjecture D). <strong>Orange</strong> = open frontiers (transparently disclosed walls). <strong>Green</strong> = bypass-routes (programme-internal alternatives to external dependencies). The instant visual signal of contribution.',
+    cite: '► strategy/x-ray/proof-chain/'
+  },
+  {
+    title: 'The Three Pillars',
+    tagline: 'COMPLY · INDEPENDENT · CONTRIBUTE per vertex.',
+    body: 'Per vertex, three compliance-class deliverables. <strong>COMPLY</strong> satisfies the prize\'s stated requirements (walls disclosed = §5d compliant). <strong>INDEPENDENT</strong> removes external conditionality via PAC primitives — VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor. <strong>CONTRIBUTE</strong> applies the PAC treatment to externals\' chains and offers them strengthened. Other contenders ship A; we ship A + B + C.',
+    cite: '► strategy/north-star.md §2'
+  },
+  {
     title: 'Pillar D — Derive-and-Offer',
-    tagline: 'Every external rederived from ℤ+ZFC.',
-    body: 'Pillar C <em>hardens</em> an external\'s proof of X; Pillar D <em>supplies</em> the programme\'s own proof of X from ℤ+ZFC, offered to the field as a new entry in its catalog. First pilot: <strong>Tomita-Takesaki from Buchholz-Connes</strong> (Lemma 1 in Lean). Reciprocity intensified: every Pillar D paper credits the original author and positions the derivation as an independent alternative.',
+    tagline: 'Every external rederived from ℤ + ZFC.',
+    body: 'Pillar C <em>hardens</em> an external\'s proof of X; <strong>Pillar D supplies the programme\'s own proof of X from ℤ + ZFC</strong>, offered to the field as a new entry in its catalog. First pilot: <strong>Tomita-Takesaki derived from Bost-Connes at KMS₁</strong> (Lemma 1 formalized in Lean 4). Each Pillar D paper credits the original author and positions the derivation as an independent alternative — the field becomes stronger, not displaced. Grothendieck dynamic: programme ships the tools; community walks the lines.',
     cite: '► strategy/pillar-d/ · derivations/tomita-takesaki-from-bc/'
+  },
+  {
+    title: 'Reciprocity',
+    tagline: 'Contribute back more than we take.',
+    body: 'Fair-attribution ethic: <strong>HONOR · RECOGNIZE · SHOWCASE · POSITION · SOURCE</strong>. Every cited researcher named with their contribution. No approach dismissed; every approach positioned relative to ours. Pillar D is the deepest reciprocity move — we depend on external work AND we rederive it independently, returning the result to the field as a new proof. The mathematical community is collaborator, not competitor.',
+    cite: '► strategy/north-star.md §5'
+  },
+  {
+    title: 'How to Engage',
+    tagline: 'Audit. Criticize. Cite. Collaborate.',
+    body: '<strong>AUDIT</strong>: open any chain on the torus and trace its links to the live PROOF-CHAIN files. <strong>CRITICIZE</strong>: walls are explicitly disclosed; report a new wall via GitHub issue. <strong>CITE</strong>: <code>Integers (2026), Zenodo DOI: __________ , GitHub: __________</code>. <strong>COLLABORATE</strong>: contributions to bypass routes, INDEPENDENT lifts, or Pillar D derivations welcomed. Reach out via the herald or directly. The door is open.',
+    cite: '► strategy/independent-rewrite-roadmap.md'
   },
 ];
 
@@ -2114,9 +2332,16 @@ updateSelectedInfo();
 updateModeButtons();
 updateTorusHighlight();
 renderSlide(0);
-// Apply user-calibrated default pan target before first camera positioning.
+// Apply user-calibrated defaults BEFORE first camera positioning
 controls.target.set(DEFAULT_POS_X, DEFAULT_POS_Y, DEFAULT_POS_Z);
+scene.rotation.y = DEFAULT_SCENE_ROT_X;
+scene.rotation.x = DEFAULT_SCENE_ROT_Y;
+tubeOffset = DEFAULT_TUBE;
 applyCameraFromSliders();
+updateTorusHighlight();  // apply tubeOffset to node positions
+// Default motion: rotate X (scene spin) + tube on page load
+setAuto('rotate-scene', true);
+setAuto('tube-slider', true);
 animate();
 
 </script>
