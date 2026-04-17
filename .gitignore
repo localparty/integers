@@ -31,5 +31,5 @@ paper28-pvnp/code
 
 # Claude Code + Playwright MCP runtime state
 .claude/
-.playwright-mcp/
+.playwright-mcp*/
 *.pyc
