@@ -2432,13 +2432,13 @@ const SLIDES = [
     title: 'The Torus',
     tagline: 'Ten faces. Two circles. One torus.',
     body: 'The programme\'s central geometric object: <code>T² = S¹ × S¹</code>. One circle is geometric (the e-dimension of Paper 1, radius <code>R ≈ 12 μm</code> fixed by <code>ρ_Λ</code>); the other is spectral (the Tomita-Takesaki modular flow of <strong>Bost-Connes</strong> at <code>β=1</code>). Ten faces live on the surface; 25 ring vertices organize its Clay-and-community-standard conjectures. <em>Operate this surface, don\'t read about it.</em>',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/integers/paper60-geometry-of-circle/">integers/paper60-geometry-of-circle/</a> §17–§22'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/integers/paper60-geometry-of-circle">integers/paper60-geometry-of-circle/</a> §17–§22'
   },
   {
     title: 'The Physics',
     tagline: 'M⁵ = M⁴ × S¹, derived not postulated.',
     body: 'Paper 1 derives the 4+1 coordinate structure from six phenomena: spin-statistics, Aharonov-Bohm, Born rule, Bell inequality, gravitational finiteness, cosmology. The <strong>Universal Epstein Vanishing theorem</strong> (<code>E_L(−j;Q) = 0</code> for all <code>j ≥ 1</code>) gives perturbative UV finiteness at all loop orders. The wave function is the literal helical shape of a particle in M⁵. Quantum mechanics and general relativity emerge as projections of one geometric object.',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/integers/paper01-qg5d/">integers/paper01-qg5d/</a>'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/integers/paper01-qg5d">integers/paper01-qg5d/</a>'
   },
   {
     title: 'The Six Projections',
@@ -2453,13 +2453,13 @@ const SLIDES = [
         '<li><code>P_O</code> — outer-ring</li>' +
       '</ul>' +
       '<strong>Every node carries its primary projection operator</strong> — click a layer to see <code>P_X</code> in the detail panel. The 25 vertices cluster by branch: P_B-dominant (YM, NS, Turbulence); P_D-dominant (RH, BSD, Baum-Connes, BGS, GRH, Twin Primes…); P_O at Hilbert-6 (the META-closure). One geometry, six routes — every conjecture on this surface IS a shadow of M⁵ along one of them.',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/integers/paper61-projections-5d/">integers/paper61-projections-5d/</a>'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/integers/paper61-projections-5d">integers/paper61-projections-5d/</a>'
   },
   {
     title: 'The 25 Solutions',
     tagline: '6 Clay Millennium + 2 additional prize + 17 community-standard.',
     body: 'Prize-carrying: <strong>YM · RH · BSD · PvNP · Hodge · NS</strong> (Clay Millennium) + <strong>Goldbach · Collatz</strong> (additional prize foundations). Community-standard: GRH, H12, Twin Primes, Katz-Sarnak, BGS, Baum-Connes, Turbulence, VP-vs-VNP, Sato-Tate, Lindelöf, Cramér, Lehmer, OPN, ABC, Schanuel, Hilbert-6. Every vertex carries a proof chain on the torus surface — fully auditable, walls explicitly disclosed.',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/strategy/">strategy/</a> (comply-bare deliverables)'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/strategy">strategy/</a> (comply-bare deliverables)'
   },
   {
     title: 'How to Operate',
@@ -2497,7 +2497,7 @@ const SLIDES = [
       '<li style="--bullet-color:#14b8a6"><strong style="color:#14b8a6">Teal</strong> — bypass-routes (programme-internal alternatives to external dependencies).</li>' +
       '</ul>' +
       'The instant visual signal of contribution.',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/strategy/x-ray/proof-chain/">strategy/x-ray/proof-chain/</a>'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/strategy/x-ray/proof-chain">strategy/x-ray/proof-chain/</a>'
   },
   {
     title: 'The Hub is Different',
@@ -2527,7 +2527,7 @@ const SLIDES = [
     title: 'Pillar D — Derive-and-Offer',
     tagline: 'Every external rederived from ℤ + ZFC.',
     body: 'Pillar C <em>hardens</em> an external\'s proof of X; <strong>Pillar D supplies the programme\'s own proof of X from ℤ + ZFC</strong>, offered to the field as a new entry in its catalog. First pilot: <strong>Tomita-Takesaki derived from Bost-Connes at KMS₁</strong> (Lemma 1 formalized in Lean 4). Each Pillar D paper credits the original author and positions the derivation as an independent alternative — the field becomes stronger, not displaced. Grothendieck dynamic: programme ships the tools; community walks the lines.',
-    cite: '► <a href="https://github.com/localparty/integers/blob/main/strategy/pillar-d/">strategy/pillar-d/</a>'
+    cite: '► <a href="https://github.com/localparty/integers/tree/main/strategy/pillar-d">strategy/pillar-d/</a>'
   },
   {
     title: 'Reciprocity',
@@ -2558,7 +2558,7 @@ function renderSlide(idx) {
   slideTitle.textContent = s.title;
   slideTagline.textContent = s.tagline;
   slideBody.innerHTML = s.body;
-  slideCite.textContent = s.cite;
+  slideCite.innerHTML = s.cite;
   slideCounter.textContent = (currentSlide + 1) + ' / ' + SLIDES.length;
 }
 slidePrev.addEventListener('click', () => renderSlide(currentSlide - 1));
