@@ -2,7 +2,7 @@
 
 *Community-standard; ACTIVE prize Bakuage 120M JPY ≈ US$1.085M (2021). Every positive integer iterated under T(n)={n/2 even; 3n+1 odd} eventually reaches 1.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -53,4 +53,4 @@ Strategy: harmonics/ergodic; density of trajectory → 1.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

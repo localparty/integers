@@ -2,7 +2,7 @@
 
 *A parallel ring where every non-PROVED/LITERATURE link gets systematically decomposed into sub-chains of PROVED leaves, rooted at QG5D, grounded in the 36 experimental pins. The output of this bundle IS the Zenodo-priority publication artifact.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -228,4 +228,4 @@ See `decomposition-run.md` for the full invocation file.
 
 *The parallel ring. Every wall decomposes. The graph grows. QG5D at the root. 36 pins on the ground. The atlas accumulates. Zenodo waits.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

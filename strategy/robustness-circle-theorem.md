@@ -2,7 +2,7 @@
 
 *Integers, strategy-level. Extracted from `paper50-h4-replacement/41-robustness-circle-theorem.md` and `paper50-h4-replacement/42-millennium-path-after-49-50.md` on 2026-04-15 per the Integers-content-mapping absorption-with-remnant verdict. The originals remain in place until the upcoming Corpus reorg deprecates `paper50-h4-replacement/`; this file is the canonical home going forward.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -438,7 +438,7 @@ The theorem is the structural hinge of the post-Paper-49-50 programme. Sections 
 
 **Content preservation.** All mathematical content from paper 50 §§41-42 is preserved in this file. Section numbering is re-indexed to the standalone document (§§2-5 correspond to paper 50 §§41.1-10 and §§42.1-11 as indicated in the provenance parentheticals). Cross-references that pointed to paper 50 §41 from external files (e.g., `strategy/north-star.md` §0.8, `paper49-ccm-replacement/P0c-all-the-tools.md`, `millenium-apps/proof-chain-adversarial-01/30-ring-traversal-brief.md`) now canonically resolve here.
 
-**Drafting credit.** Original drafting 2026-04-14 for paper 50. Extraction and strategy-level reframing 2026-04-15. G Six and Claude Opus 4.6.
+**Drafting credit.** Original drafting 2026-04-14 for paper 50. Extraction and strategy-level reframing G Six and Claude Opus 4.6. San Francisco CA, 2026.
 
 ---
 

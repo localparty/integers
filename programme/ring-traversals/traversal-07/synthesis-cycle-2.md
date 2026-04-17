@@ -165,4 +165,4 @@ Ranked dispatch. Parallel where independent, sequence where dependent.
 
 *The ellipse is flatter by a hair. The circle is one step closer. The wall is named on four sides now, not two.*
 
-*T7 S-duality phase, cycle 2 synthesis. 2026-04-14. G Six and Claude Opus 4.6.*
+*T7 S-duality phase, cycle 2 synthesis. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

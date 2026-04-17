@@ -2,7 +2,7 @@
 
 *Mirror of `strategy/rh/deliverables/rh-comply-bare.md` at run-03 author-pass. This file tracks the author draft in PAC transcript form; the canonical deliverable is at `strategy/rh/deliverables/rh-comply-bare.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

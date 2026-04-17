@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton for the Birch and Swinnerton-Dyer conjecture, in Clay/Wiles shape. Zero prose. Every claim cites programme paper + specific proof location. Four named walls (W_rank, W_nonCM, W_hK, W_Sha) disclosed. Produced 2026-04-14 as part of Zenodo-priority release. Pillar-A (COMPLY) deliverable for the BSD vertex of the Universal Approval run.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -474,4 +474,4 @@ External references appear in `solutions-with-prize/paper26-bsd/preprint/section
 
 *End of bsd-comply-bare.md. BARE MODE. $\leq 15$ pages target. Every claim cites programme paper + §-level proof location. Four named walls (W_rank, W_nonCM, W_hK, W_Sha) disclosed with all DELTA-10 fields. Zero SILENT Wiles requirements. CBB-conditionality rider applied. Curve 32.a3 $c_2 = 4$ per adversarial run-01 BROKEN 2 resolution. Ready for Zenodo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

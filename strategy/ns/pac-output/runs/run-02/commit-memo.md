@@ -2,7 +2,7 @@
 
 *PAC compliance audit for Navier-Stokes vertex — Output A only.*
 *Phase 4 per `strategy/universal-approval-run.md`.*
-*Date: 2026-04-14. Author: G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -102,4 +102,4 @@ Ready for run-03 (B_bare) + run-04 (C_bare) dispatch per Phase 5 of `strategy/un
 
 *End of commit-memo.md. LOCKED 2026-04-14.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

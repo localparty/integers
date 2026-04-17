@@ -2,7 +2,7 @@
 
 *PAC pilot run on the X-Ray bundle. Vertex: ym (Yang-Mills, paper08, 18 nodes). Annotation mode. Fixed vocabulary. Pipeline-validation run.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

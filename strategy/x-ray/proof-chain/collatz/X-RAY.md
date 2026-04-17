@@ -2,7 +2,7 @@
 
 *X-Ray of the collatz proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -716,4 +716,4 @@ Absent ARITHMETIC face (despite surface appearance of Collatz as "number theory"
 
 *End of Collatz X-Ray. Snapshot 2026-04-14 (post-T7 three-face pass). 7 layers + 3 L5-sub-routes = 10 annotated entries. 29 cross-cuts identified. HARMONICS-canonical, extreme $P_D$-dominant (90%), P4-rich proof chain. Three walls (W_BC, W_L5, W_cyc), all gated on L4. Three sub-routes into L5.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

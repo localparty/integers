@@ -2,7 +2,7 @@
 
 *X-Ray of the katz-sarnak proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls. Bridge-family $k \in \{2,3,4,6\}$ selector for symmetry types $\{Sp, U, O, \text{Mixed}\}$ flagged as primary structural hook.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

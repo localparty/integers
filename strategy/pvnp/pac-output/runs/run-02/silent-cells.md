@@ -2,7 +2,7 @@
 
 *107 SILENT cells of the 168-cell compliance matrix. Every cell has a BYPASS-TO-ADR-N action pointing to a programme-level addressing. No new named walls required.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *Run summary: Phase 5D BEYOND synthesis (programme-bonuses pillar) for the RH vertex. Produces `strategy/rh/deliverables/rh-beyond-bare.md`. BARE MODE ONLY. C_full DEFERRED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -189,4 +189,4 @@ Pillar BEYOND of the three-pillar Universal Approval architecture is complete fo
 
 *End commit-memo. PAC run-04 COMPLETE.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

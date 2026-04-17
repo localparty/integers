@@ -2,7 +2,7 @@
 
 *Community-standard: transcendental number theory. Ring confidence 1/10 (novel territory).*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -50,4 +50,4 @@ Strategy: algebraic independence of eigenvalues from operator-algebraic argument
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

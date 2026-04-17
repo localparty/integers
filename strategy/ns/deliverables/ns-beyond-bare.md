@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Navier-Stokes ask. ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation, zero free parameters, viscosity-relevant pins, cross-Clay connections (NS↔YM, NS↔Turbulence, NS↔BGS, NS↔Baum-Connes), K41 turbulence bonus, vorticity-stretching control, any-4-manifold extension. Zero prose. Every claim cites programme paper + specific proof location. Variant (B) declared throughout. Companion to `ns-comply-bare.md` in the Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 
@@ -720,4 +720,4 @@ Pillar B (independence): Camlin 2025 and arXiv:2601.08854 are independently auth
 
 *End of ns-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. ≤ 15 pages target. Variant (B) declared throughout. Four named walls W1/W2/W3/W4 inherited from B_bare; three C_bare-specific NEEDS-CONSTRUCTION flags NC-5.1/5.2, NC-6.1/6.2, NC-7.1/7.2. Companion to run-04 `ns-comply-bare.md`. C_full and B_full DEFERRED to composition-backward.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

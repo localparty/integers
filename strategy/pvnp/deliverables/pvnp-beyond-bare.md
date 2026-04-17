@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's 5D framework offers BEYOND Clay's P vs NP ask. Trinity dictionary, Boolean BC system zero-params, Lemma 3.8.2-3.8.4 non-degeneracy + SAT/TAUT discrimination, cross-Clay connections (RH/YM/BSD/Hodge/QG5D), GCT comparison, order-counting PNT route, Hilbert-Pólya conjecture for Boolean BC. Zero prose. Every claim cites programme paper + specific proof location. Companion to `pvnp-comply-bare.md` in the Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. PAC Phase 5D BEYOND-synthesis, PvNP vertex.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. PAC Phase 5D BEYOND-synthesis, PvNP vertex.*
 
 ---
 
@@ -684,4 +684,4 @@ These harden-bonuses give back to the cited programmes by auditing + strengtheni
 
 *End of pvnp-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. $\leq 15$ pages target (~580 lines markdown). W1/W2/W3 disclosed via comply-bare §16; beyond-specific walls enumerated in §9.5. Three barriers (Cook §3) inherited from comply-bare §13. §5b either-direction noted (§5.2): P $\neq$ NP and P $\neq$ coNP as single $\mathbb{Z}/2$-fact; NP vs coNP explicitly out of scope. §11 Related Work & Acknowledgments honors Cook, Levin, Karp, Razborov-Rudich, Aaronson-Wigderson, BGS authors, Bulatov-Zhuk, Popa, Jones, Marcolli/Consani/Connes per UA brief. Companion to `pvnp-comply-bare.md` in the Zenodo-priority release. C_full DEFERRED to composition-backward.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

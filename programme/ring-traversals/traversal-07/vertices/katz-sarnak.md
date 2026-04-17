@@ -33,4 +33,4 @@
 
 **Flag for repair:** L4's k=6 "mixed type" should be resolved -- either identify a specific KS type or excise from the symmetry-type selector table.
 
-*2026-04-14. Deep construction pass. G Six and Claude Opus 4.6 (1M context).*
+*2026-04-14. Deep construction pass. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

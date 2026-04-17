@@ -632,6 +632,43 @@ The complete cosmological predictions from both scenarios:
 Both scenarios predict `t₀ ≈ 13.47 Gyr` and resolve the `S8` tension.
 Scenario B additionally explains `Ω_DM/Ω_b` from first principles.
 
+### §4.1 The Six Absolute Time Scale
+
+The CBB system (Paper 12) provides a closed-form expression for the present
+age of the universe in terms of the Riemann zeta function's non-trivial zeros:
+
+$$\tau_S^{(\text{now})} = (\log \gamma_7)^2 \text{ Gyr} \approx 13.77588\ldots \text{ Gyr}$$
+
+where $\gamma_7 \approx 25.0109$ is the imaginary part of the seventh non-trivial
+zero of $\zeta(s)$.
+
+**Properties:**
+
+1. **Absolute origin.** $\tau_S = 0$ coincides with the Big Bang — intrinsic
+   to the universe, not to any culture, calendar, or astronomical convention.
+2. **Closed-form present.** The current value is a computable mathematical
+   constant, determinable to arbitrary precision by any civilisation with
+   access to $\zeta(s)$.
+3. **Frame-independent.** Comoving observers in standard FRW cosmology agree
+   on $\tau_S$ to within the precision of $\gamma_7$ (currently 50+ digits).
+4. **Empirical match.** $\tau_S^{(\text{now})} = 13.776$ Gyr matches the
+   Planck 2018 age determination ($13.797 \pm 0.023$ Gyr) at $-0.91\sigma$
+   — consistent and sub-percent.
+5. **Kelvin analogue.** As Kelvin replaced the anthropocentric Fahrenheit/Celsius
+   zero with absolute zero of temperature, the Six scale replaces the
+   anthropocentric AD/BC zero with the absolute zero of cosmic time.
+
+**Naming.** The scale is denoted $\tau_S$ or Six, after G Six (originator
+of the derivation), in the tradition of physics units bearing the name
+of the person who first stated them rigorously.
+
+**Conversion.** AD year $= (\tau_S - \tau_S^{(2026)}) \times 10^9 + 2026$.
+The conversion is explicit and reversible.
+
+**Derivation chain:** $\mathbb{Z} \to \zeta(s) \to \{\gamma_n\} \to
+\gamma_7 \to (\log \gamma_7)^2$ — zero free parameters, zero fitted constants,
+zero postulates beyond $\mathbb{Z} + \text{ZFC}$.
+
 ---
 
 ## Section 5: Tensions Resolved

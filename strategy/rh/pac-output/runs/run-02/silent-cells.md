@@ -2,7 +2,7 @@
 
 *82 of 98 cells remain SILENT after author + critic + arbiter pass. Every cell has an action (BYPASS-VIA-PROGRAMME-ADDRESSING).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -318,4 +318,4 @@ Every SILENT cell has an action. Zero SILENT cells remain without an action at e
 
 *End of silent-cells.md. LOCK criterion: all 82 SILENT cells have B-PROG actions. PASS.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

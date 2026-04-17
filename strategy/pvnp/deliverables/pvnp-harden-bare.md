@@ -2,7 +2,7 @@
 
 *The double-kill. Every external dependency the Pillar-B chain RETAINS is x-rayed, compliance-audited, and hardened via PAC primitives (VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE) applied to its own chain. Pillar B's single residual wall — $W_1^{\mathrm{B}}$ = CP-1-Critic-audit-continuation (internal to solutions-with-prize/paper28-pvnp/preprint) — is also self-hardened. Zero prose paragraphs. Companion to `pvnp-comply-bare.md` (Pillar A) and `pvnp-independence-bare.md` (Pillar B). Clay Rules §5b either-direction provision retained — programme direction = $\mathbf{P}\neq\mathbf{NP}$.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -355,4 +355,4 @@ Sources for citation in this bundle (AMS-format via parent papers):
 
 *End of pvnp-harden-bare.md. PUBLISH-READY per §6.2 gate check. Run transcript at `strategy/pvnp/pac-output/runs/run-06/`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

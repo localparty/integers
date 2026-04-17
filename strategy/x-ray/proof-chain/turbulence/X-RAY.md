@@ -2,7 +2,7 @@
 
 *X-Ray of the turbulence proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -679,4 +679,4 @@ Notable arbiter wins:
 
 *End of Turbulence X-Ray. Snapshot 2026-04-15. 7 layers annotated. 35+ cross-cuts identified (the densest outer-ring synthesis vertex). DYNAMICS-canonical face with CURVATURE-inheritance, $P_B \cap P_D$-compound projection, P3-dominant pattern. Two walls (W_T1, W_T2); L6 (K41 from $\Delta$) is THE HARDEST STEP.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

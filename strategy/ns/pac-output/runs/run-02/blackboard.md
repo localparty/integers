@@ -1,7 +1,7 @@
 # NS run-02 blackboard
 
 *PAC compliance-audit operator state log. Read before compliance-map.md.*
-*Date: 2026-04-14. Author: G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

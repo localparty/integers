@@ -2,7 +2,7 @@
 
 *Run type: Phase 5C HARDEN-synthesis (Pillar C).*
 *Date: 2026-04-14.*
-*Operator: PAC Phase 5C HARDEN-synthesis (G Six + Claude Opus 4.6).*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

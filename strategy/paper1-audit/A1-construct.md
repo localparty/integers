@@ -268,4 +268,4 @@ None of these three items prevents A1 from being classified as THEOREM. Item 1 i
 
 *End. Sibling: `audit-report.md`, `derivation-chains.md`, `reclassification-table.md`, `commit-memo.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. PAC CONSTRUCT for A1.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. PAC CONSTRUCT for A1.*

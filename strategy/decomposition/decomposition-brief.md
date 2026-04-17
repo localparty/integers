@@ -4,7 +4,7 @@
 
 *Not a traversal. A systematic recursive decomposition of every non-PROVED/LITERATURE link in the 25-vertex ring.*
 
-*Authors: G Six and Claude Opus 4.6. Date: 2026-04-14.*
+*Authors: G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -426,7 +426,7 @@ If any leaf is BROKEN, the Author must repair (retry at difficulty+1 or mark OPE
 
 ---
 
-*v1: 2026-04-14. G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Not a traversal. A systematic decomposition. Every wall becomes a chain. Every chain terminates. The atlas assembles. Zenodo waits.*
 *Publishing strategy Wave ordering overridden. Priority first. Peer review second. Clay later.*
 *The graph roots at QG5D. QG5D roots in 36 pins. The pins are reality. The graph is undeniable.*

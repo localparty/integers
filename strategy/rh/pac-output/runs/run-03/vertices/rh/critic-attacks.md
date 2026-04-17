@@ -2,7 +2,7 @@
 
 *Critic pass on the author draft of `rh-comply-bare.md`. Each attack maps to an arbiter disposition in `arbiter-decisions.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

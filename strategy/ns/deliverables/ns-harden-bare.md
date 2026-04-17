@@ -2,7 +2,7 @@
 
 *The double-kill deliverable for Navier-Stokes existence and smoothness, Clay/Fefferman **variant (B)**. Every retained external dependency of the Pillar-B dep-free chain (`strategy/ns/deliverables/ns-independence-bare.md`) is x-rayed, compliance-audited, and hardened by PAC primitives applied to ITS chain. Primary Pillar-C targets: **Camlin 2025** (Sundman $\Phi$ bypass for BKM, Route A) and **arXiv:2601.08854** (cosphere-bundle microlocal bypass for BKM, Route B) — two recent preprints promoted to Pillar-B leaf-root tier and requiring independent rigor. Classical literature deps (Leray 1934, Hopf 1951, CKN 1982, BKM 1984, Ladyzhenskaya, Temam, Hörmander, Melrose) audited at the citation-precision tier. Zero prose paragraphs. Companion to `ns-comply-bare.md` (Pillar A) and `ns-independence-bare.md` (Pillar B). **Variant (B)** declared throughout per Rules §5b.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -376,4 +376,4 @@ Per `strategy/universal-approval-run.md §5C.2`, each external's hardening bundl
 
 *End of `ns-harden-bare.md`. Pillar C target list locked. Primary targets: Camlin 2025 (E1) + arXiv:2601.08854 (E2). Double-kill invariant preserved: we depend on both preprints AND we publish them stronger. The BKM bypass becomes programme-verified at stage 6 of §7.2. Classical-tier (E3–E8) passes citation audit at stage 1. Self-harden (I1, I2) is non-blocking narrative. Variant (B) declared throughout; (A/C/D) EXCISED under Rules §5b. Companion to `ns-comply-bare.md` + `ns-independence-bare.md`; together the three pillars discharge Universal Approval for NS.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *Projection-audit strategy for community-standard conjecture "Lindelöf Hypothesis." Applies the generic projection-audit protocol (extracted from the 6 Millennium instances). Every projection of the 5D geometry earns the same discipline.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -96,4 +96,4 @@ Operational instructions: `strategy/lindelof/lindelof-audit-brief.md`.
 
 *Sibling bundles: `strategy/decomposition/lindelof/` (future), `strategy/ccm-verification/ledger.md#lindelof`, `strategy/x-ray/proof-chain/lindelof/` (future). Lindelöf is a projection of 5D into analytic NT; this audit renders its proof-chain §5d-compliant (community-standard).*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

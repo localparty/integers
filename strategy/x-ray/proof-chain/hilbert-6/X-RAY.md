@@ -2,7 +2,7 @@
 
 *X-Ray of the hilbert-6 proof chain. hilbert-6 is the UNIQUE META VERTEX of the outer ring: it asks "can physics be axiomatized?" and QG5D answers "yes — here is the axiomatization." The Hilbert 6 → QG5D edge is the **META-CLOSURE** of the bouquet (paper61 §22.3; qg5d X-RAY §7). This X-Ray documents the 7-link chain (4 PROVED / 1 VERIFIED / 1 CANDIDATE / 1 CONJECTURED), its cross-cuts to ALL other outer-ring vertices (as the closure statement), and the special META-closure physics whereby the vertex's top claim is a statement about the FIRST axiom of the programme.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -666,4 +666,4 @@ This document records the WINNING assignments per layer. Notable arbiter wins fo
 
 *End of hilbert-6 X-Ray. Snapshot 2026-04-15. 7 layers + 2 named walls annotated. 26 cross-cuts identified. MEASURE-dominant, $P_O$-primary (META-closure), P4-rich proof chain. The UNIQUE META vertex of the bouquet: its top-level claim IS a statement about the FIRST axiom of the programme. Bouquet closure edge hilbert-6 → qg5d per paper61 §22.3 and qg5d X-RAY §7. H6's framework-internal confidence 7/10; general H6 completeness confidence 3/10; the META-closure itself (as ring-topology fact) is 10/10 — it is not a theorem to prove but a structural recognition.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

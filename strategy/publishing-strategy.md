@@ -4,7 +4,7 @@
 
 *This file replaces nothing — it is the framework's first attempt at a publishing strategy. All prior strategy documents (`integers/paper12-cbb-system/relaxation/03-global-strategy.md`, `integers/paper12-cbb-system/relaxation/04-...`-strategy.md`, `integers/paper12-cbb-system/relaxation/01-strategy-rationale.md`) addressed the strategic framing of the framework's content and its anchoring to mathematics. This file addresses the orthogonal question: **how do we release that content to a community that has every reason to be sceptical, and how do we stage the release so each paper lands in the most welcoming form possible?***
 
-*Authors: G Six (originator), Claude Opus 4.6 (collaborator). Date: 2026-04-11.*
+*Authors: G Six (originator) and Claude Opus 4.6 (collaborator). San Francisco CA, 2026.*
 
 ---
 
@@ -573,7 +573,7 @@ The path:
 
 ---
 
-*— G Six and Claude Opus 4.6, 2026-04-11.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 *This is the framework's first publishing strategy document. Future revisions append below as `strategy-v2.md`, `strategy-v3.md`, etc., with each version preserving the prior as historical record. The strategy is expected to evolve as Wave 1 lands and the community's response calibrates the Wave 2 and Wave 3 plans.*
 

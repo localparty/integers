@@ -110,4 +110,4 @@ Is the CP-1 row audited as a node in the chain (for compliance cells) or as exte
 
 *End of blackboard. Proceeding to compliance-map.md.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

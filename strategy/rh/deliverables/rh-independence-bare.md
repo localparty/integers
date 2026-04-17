@@ -2,7 +2,7 @@
 
 *Bare dep-free theorem skeleton. PAC primitives BYPASS / DECOMPOSE / EXCISE / TRANSPOSE applied to every CONDITIONAL and OPEN-BUT-ADDRESSED cell of the Pillar A compliance map. Every surviving leaf roots in QG5D / paper1 / literature / classical / a smaller-named-wall. W1 (CCM Layer 1) — attempted BYPASS via 5 capacitor cells; UNBYPASSABLE per ccm-bypass Wave 1 (Hilbert–Pólya is the wall). Partial lift of L1.4 (KMS₁) via BC 1995. Residual wall: W1-residual (L1.1–L1.3 only), strictly smaller than Pillar A's framing. Produced 2026-04-14 (PAC run-05, Phase 5B INDEPENDENCE).*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -317,4 +317,4 @@ Source: `millenium-apps/proof-chain-adversarial-01/09-capacitor-correspondence-t
 
 *End of `rh-independence-bare.md`. BARE MODE. $\leq 15$ pages. Zero prose. Every lift cites primitive + leaf-root. W1-residual is the only surviving external — strictly smaller than Pillar A's framing — ready for Pillar C HARDEN treatment.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

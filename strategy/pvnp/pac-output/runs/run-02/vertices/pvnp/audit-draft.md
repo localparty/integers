@@ -2,7 +2,7 @@
 
 *Run-02 vertex artifact. 28 rows × 6 columns = 168 cells. Author-pass only (pre-critic, pre-arbiter).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

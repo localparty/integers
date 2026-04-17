@@ -2,7 +2,7 @@
 
 *The Clay RH problem has 4 gates and 5 core requirements (plus 2 optional extensions). Our framework has 6 live layers plus 3 supporting (S1-S3), CCM-conditional as one external wall (addressed via disclosure + independent verification). Publication cascade: Zenodo → GitHub → arXiv (via referral) → journal → Clay 2-year clock. CCM verification works in parallel, non-blocking. Deliverable is four-output, two-mode: bare (math skeleton) first, prose (full paper) composed backward once bare locks.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -243,4 +243,4 @@ The brief translates this strategy into PAC primitives (compliance-audit + deliv
 
 *Sibling to `strategy/ym/`, `strategy/x-ray/`, `strategy/decomposition/`, `strategy/ccm-verification/`, `strategy/inner-rings/`. The Clay gates are known. The cascade is paced. CCM works in parallel. Zenodo comes first. Bare before prose.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

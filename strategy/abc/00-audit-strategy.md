@@ -2,7 +2,7 @@
 
 *Community-standard: c ≤ K_ε rad(abc)^{1+ε}. Our strategy: BC Mellin bridge for rad(abc). We make no claim on IUT.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -49,4 +49,4 @@ Strategy: BC Mellin bridge for rad(abc); no IUT claim.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

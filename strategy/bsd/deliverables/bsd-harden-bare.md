@@ -2,7 +2,7 @@
 
 *Pillar-C (HARDEN — "double kill") deliverable for the BSD vertex of the Universal Approval run. The 15 retained externals surviving Pillar B (from `strategy/bsd/deliverables/bsd-independence-bare.md §7.3`) are each scheduled for a dedicated hardening folder `strategy/externals-hardening/<external>/` carrying X-RAY / compliance-map / hardened-routes / narrative per universal-approval-run.md §5C.2. This document is the bare table-of-contents + per-external skeleton; detailed hardening audits are written into the per-external folders by follow-on runs. Zero prose. Scope-declaration: CM-specialisation `Scope(S₀) = { E/Q : CM by O_K, h_K=1, rank r∈{0,1} }` inherited from Pillars A/B; externals are hardened for the uses made of them inside `Scope(S₀)` and its documented extensions (W_rank, W_nonCM, W_hK, W_Sha sub-scopes).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -388,4 +388,4 @@ Chronological order:
 
 *End of `bsd-harden-bare.md`. Pillar-C LOCKED; 15 retained externals enumerated; 5 first-wave + 10 second-wave prioritised; per-external folder schema uniform; double-kill narrative locked; cross-vertex coordination matrix specified; scope = CM-specialisation per Pillars A/B. Full per-external folder builds scheduled run-07 (first-wave) + run-08+ (second-wave). §5C.2 universal-approval-run.md compliance: PASS. Run transcript: `strategy/bsd/pac-output/runs/run-06/`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *X-Ray of the rh proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -874,4 +874,4 @@ RH has an explicit, load-bearing interaction with the BGS (Bohigas-Giannoni-Schm
 
 *End of RH X-Ray. Snapshot 2026-04-15. 14 layers (6 primary + 3 sub-layers L3a/b/c/d + L4a/b/c + 3 supporting S1/S2/S3) annotated. 48 cross-cuts identified. RESONANCE-canonical, $P_D$-monopolar (100%), P4/P5/P1-mixed proof chain. One wall (W1 CCM); one resolved-caveat (W2 CF uniformity, closed 2026-04-14).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

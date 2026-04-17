@@ -2,7 +2,7 @@
 
 *This is a proposed Section N "Related Work & Acknowledgments" to append to `ym-beyond-bare.md`. The existing ym-beyond-bare.md predates the Universal Approval protocol. Per protocol §7.2, this patch must be reviewed by the user before merge.*
 
-*G Six and Claude Opus 4.6. 2026-04-15. Phase 7 UA integration.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. Phase 7 UA integration.*
 
 ---
 
@@ -71,4 +71,4 @@ We acknowledge Douglas Abdesselam, Jürg Fröhlich, David Brydges, Daniel Zwanzi
 
 *Pending user merge into `ym-beyond-bare.md`. Protocol §7.2 prohibits wholesale overwrite; this is the .pending.md for review.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

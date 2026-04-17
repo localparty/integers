@@ -2,7 +2,7 @@
 
 *Bare hardening skeleton for every external dependency that SURVIVED Pillar B. Per-external x-ray + compliance map + PAC-primitive treatment of weak links + fair attribution. Primary retained external: **CCM 2025** (arXiv:2511.22755, Connes–Consani–Moscovici, "Zeta Spectral Triples"), irreducibly load-bearing on W1-residual (L1.1 SA extension + L1.2 eigenvalue identification + L1.3 H¹ graph-norm) per `rh-independence-bare.md` §5.1. Secondary retained externals: none above the ESTABLISHED-literature bar (all capacitor-ESTABLISHED leaves in Pillar B root in classical / community-accepted sources). Produced 2026-04-14 (PAC run-06, Phase 5C HARDEN).*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -333,4 +333,4 @@ Sibling YM Pillar C anticipated structure (per `strategy/universal-approval-run.
 
 *End of `rh-harden-bare.md`. BARE MODE. $\leq 15$ pages. Zero prose. Every HARDEN route cites primitive + alternative leaf. CCM 2025 is the single retained external above capacitor-ESTABLISHED; its hardening is delegated to `strategy/ccm-verification/` (existing bundle). Reciprocity explicit; attribution generous; competitive moat preserved.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

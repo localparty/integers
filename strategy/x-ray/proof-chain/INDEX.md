@@ -2,7 +2,7 @@
 
 *Append a row when a vertex's X-RAY.md is written. Atlas assembly aggregates this table.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -31,3 +31,6 @@
 | abc | ARITHMETIC | $P_D$ (with $P_O$ at L6 closure) | P4 (L1/L3) / P5 (L2/L5/L6) / P1 (L4) | 6 (L1-L6; L3 has 3 sub-requirements L3.a/b/c, L5 has 3 sub-requirements L5.a/b/c) | 32 |
 | schanuel | TOPOLOGY | $P_D$ (80%; compound $P_D \cap P_E$ at L5) | P4 (L2/L3) / P1 (L1/L4) / P3 (L5) | 5 (L1-L5; linear no-branch chain) | 22 |
 | opn | ARITHMETIC | $P_D$ | P4 (L1/L5/L6/L7) / P1 (L4) / P5 (L2/L3) | 7 (L1-L7; L6 has 3 sub-routes 6a KILLED, 6b BLOCKED-DECOMPOSED, 6c ACTIVE, plus 6c-alt ABC auxiliary) | 32 |
+
+| baum-connes | RESONANCE | $P_D$ | P4 | 6 | 26 |
+| lehmer | TOPOLOGY | $P_D$ | P4/P1/P3 | 6 (+ L5a/L5b/L5c = 9 entries) | 38 |

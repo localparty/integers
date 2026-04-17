@@ -2,7 +2,7 @@
 
 *X-Ray of the cramer proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -809,4 +809,4 @@ Notable arbiter decisions:
 
 *End of Cramér X-Ray. Snapshot 2026-04-15. 9 sub-layer entries (L1, L2, L3, L4, L4a, L4b, L4c, L5 with L4 as branch header) annotated. 42 cross-cuts identified. DYNAMICS-canonical (paper60 §08), $P_D$-dominant (paper61 §10), P4/P5-balanced proof chain. Three walls (W1/W2/W3) plus the shared CCM gate (G4). T7 S-duality CONSTRUCT-DERIVE pass delivered $2e^{-\gamma}$ DERIVED from ITPFI Mertens at conformal midpoint $y = \sqrt{x}$, ratio 0.99996 at $x = 10^{12}$. Sibling to Lehmer (TOPOLOGY ↔ DYNAMICS dual face, paper60 §08); S-DUAL-CONSTRUCT-BRIDGED pattern ready for T8 handoff. The flow doesn't leave voids.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

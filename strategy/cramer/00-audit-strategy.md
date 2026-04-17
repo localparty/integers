@@ -2,7 +2,7 @@
 
 *Community-standard: prime gap p_{n+1} - p_n = O((log p_n)²). Granville refinement suggests strong form lim sup ≥ 2e^{-γ} > 1 (i.e., Cramér strong false but big-O correct).*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -50,4 +50,4 @@ Strategy: prime gaps via spectral density of Beurling-like primes.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

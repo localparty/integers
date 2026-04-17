@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Birch-Swinnerton-Dyer ask. ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation of L-values at $s=1$ via motivic BC, zero free parameters, pins relevant to BSD, cross-Clay connections (RH / YM / PvNP / Hodge), congruent numbers (Tunnell), effective generators (Wiles Remark 4), Euler quartic / Elkies (Wiles §3). Zero prose. Every claim cites programme paper + specific proof location. Companion to `bsd-comply-bare.md` in the Zenodo-priority release. Pillar-C (BEYOND-synthesis) deliverable for the BSD vertex of the Universal Approval run.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 
@@ -613,4 +613,4 @@ UA Pillar-C harden commitments (next cycle): audit and strengthen load-bearing c
 
 *End of bsd-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cites programme paper + §-level location. $\leq 15$ pages target. Written in run-04 as Pillar-C (BEYOND-synthesis) deliverable for the BSD vertex of the Universal Approval run. §11 Related Work & Acknowledgments populated from `strategy/_research/birch-swinnerton-dyer/landscape.md`. Companion to `bsd-comply-bare.md` (Pillar-A COMPLY; 19-section Clay-shaped skeleton). Cross-Clay edges catalogued in §4 (7 non-speculative + 5 speculative). Four named walls (W_rank, W_nonCM, W_hK, W_Sha) inherited from B_bare; no new C_bare-level walls. CBB-conditionality rider applied throughout; no "unconditional" overclaim attaches to any $\omega_1^K$-derived content. C_full and B_full DEFERRED to composition-backward (next run).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

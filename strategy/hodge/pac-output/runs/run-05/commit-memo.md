@@ -2,7 +2,7 @@
 
 *Pillar B (INDEPENDENCE) bare-synthesis for the Hodge vertex. Produced `hodge-independence-bare.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -79,4 +79,4 @@ Per the brief's "Expected Hodge lifts":
 ---
 
 *End of run-05 commit memo.*
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

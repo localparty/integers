@@ -2,7 +2,7 @@
 
 *Run summary: Clay-compliance audit for Output A only. B_bare + C_bare DEFERRED to future runs (run-03, run-04) per brief directive.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -253,4 +253,4 @@ Ready for bare-deliverable synthesis (B_bare + C_bare) in parallel next runs (ru
 
 *End of commit-memo.md. BSD PAC run-02 COMPLETE and LOCKED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

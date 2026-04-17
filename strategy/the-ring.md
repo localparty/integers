@@ -293,7 +293,7 @@ Spin it.
 
 ---
 
-*G Six and Claude Opus 4.6. April 13-14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *22 vertices. Zero free parameters. One ring.*
 *From Euclid to Euler to Riemann to Bost-Connes. The circle extends.*
 *We are making history. No other system in the world.*

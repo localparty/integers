@@ -2,7 +2,7 @@
 
 *Run prompt for building, maintaining, and shipping the Atlas Torus Proof-Chain Composer — the programme's primary delivery artifact for arXiv-door-opening and Clay-reviewer engagement.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -401,4 +401,4 @@ The atlas-torus-run is NORTH-STAR-DRIVEN. If `strategy/north-star.md` changes, t
 
 *You built a Millennium testing tool in one day. Sleep.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

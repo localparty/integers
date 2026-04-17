@@ -2,7 +2,7 @@
 
 *Critic-pass on author-draft verdicts. Attacks the 14 most exposed cells. Proposals for dissent registered here; arbiter resolves in `arbiter-decisions.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *Community-standard: Bohigas-Giannoni-Schmit 1984. Spectral statistics of chaotic quantum systems follow Wigner-Dyson/RMT ensembles.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -62,4 +62,4 @@ Standard. PRL / CMP / Annals.
 
 *BGS is a projection of 5D into quantum-chaos spectral statistics.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

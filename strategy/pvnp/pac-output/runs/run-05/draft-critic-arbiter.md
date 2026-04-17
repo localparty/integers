@@ -2,7 +2,7 @@
 
 *Internal verification pass for `strategy/pvnp/deliverables/pvnp-independence-bare.md` (Pillar B INDEPENDENCE).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

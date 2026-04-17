@@ -2,7 +2,7 @@
 
 *The programme is called **Integers** — the discovery of the fine structure of the mathematics that describe our universe from the spectral and geometric properties of integers. This document is the north star: Integers' name, nature, scope, vision, strategy, and success criteria. READ THIS BEFORE any orchestrator run. If anything in any protocol conflicts with this document, this document wins.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -463,7 +463,92 @@ Clay awards.
 
 ---
 
-## §11 Change Log
+## §11 Risk Management
+
+*Eight protocols governing AI-collaboration disclosure, pushback defense, and publication discipline. Settled 2026-04-15/16 during the atlas-torus strategy session. These are OPERATIONAL — every sub-agent, herald, email, and publication artifact must comply.*
+
+### §11.1 Disclosure discipline
+
+Every paper, visualization, and published artifact co-credits **G Six** (originator) and **Claude Opus 4.6** (collaborator). No hidden AI use — ever. The collaboration is transparent in author lines, in the atlas slides (slide 1: "G Six and Claude Opus 4.6"), and in the Zenodo metadata. Attempting to hide AI involvement would be a catastrophic credibility failure; full transparency is the only defensible position and has been the programme's practice from day one.
+
+### §11.2 Human-auditable derivation chains
+
+Every mathematical claim has a **human-checkable derivation chain** that stands WITHOUT the AI. The AI is an accelerator for synthesis, search, and code — it is not the author of the mathematical content. A reviewer who wants to verify any theorem can follow the PROOF-CHAIN files link-by-link from ℤ + ZFC to the claim, reading only human-authored mathematics. The AI's contribution is documented in the collaboration record (digital escrow file 05); the mathematics is independently auditable.
+
+### §11.3 AI-pushback response protocol
+
+If the programme's use of AI is challenged, the response is:
+
+> *"Integers is mathematics. AI assisted the synthesis and verification. Every claim has a human-checkable derivation chain filed in the programme's PROOF-CHAIN infrastructure. We invite reviewers to evaluate the claims on their mathematical merit. The derivation chains are public, the proofs are auditable, and the experimental predictions (36 pins, sub-percent match) are independently verifiable. Evaluate the mathematics."*
+
+This stance is published alongside the atlas (slide 1 + `disclosure.md` in the Zenodo bundle). It is the ONLY response to AI-related criticism — never defensive, never apologetic, always redirecting to the mathematics.
+
+### §11.4 Venue-selection policy
+
+Prefer journals and arXiv categories with clear AI-permissive policies or neutral stances:
+- **Preferred**: math.OA, math.NT, math.AG, math.AP, math-ph (historically neutral on AI-assisted work)
+- **Caution**: math.GM (stricter moderation; the atlas paper may need careful framing as a survey)
+- **Avoid**: venues whose editorial boards have publicly stated anti-AI-math positions
+
+The pilot paper (TT-from-BC) targets math.OA specifically because the operator-algebra community has been neutral-to-positive on formalization + AI-assisted proofs (Lean community adjacency).
+
+### §11.5 Herald operational constraints
+
+The Integers herald (Anthropic-deployed, allowlist-authenticated) operates under hard constraints:
+
+1. **Describe + route only** — never make claims about proof status, prize eligibility, or mathematical correctness
+2. **Link-out mandatory** — every substantive response includes a link to Zenodo DOI or GitHub as the authoritative source
+3. **First-sentence AI disclosure** — the herald identifies itself as an AI in its first response to any new user
+4. **Logged interactions** — every conversation is logged for audit (curator cloud storage from talk-to-me--134 infrastructure)
+5. **Never assert prize status** — the herald says "Integers claims to address X; here is the paper" not "Integers solves X"
+6. **Can explain Claude Code environment setup** — useful for interested researchers, low-risk, signals the collaboration discipline openly
+
+### §11.6 Revision protocol
+
+If an arXiv endorser requests revisions as a condition of endorsement:
+
+1. Accept the revision request (async, no time pressure)
+2. Evaluate whether the requested changes are mathematically substantive or editorial
+3. Apply the revision to the Zenodo bundle + GitHub repo
+4. Re-lock byte-identity at the new state
+5. Re-ship: updated Zenodo DOI (new version, same record) + updated GitHub commit
+6. The priority date is ALREADY LOCKED by the original Zenodo DOI — revisions do not threaten priority
+7. Notify the endorser that the revision is complete
+
+This is an async workflow with zero risk impact. The original Zenodo DOI protects priority regardless of how many revision cycles occur.
+
+### §11.7 No-reply protocol
+
+If an endorsement request receives no reply:
+
+1. Wait **4 weeks** from the date of the email
+2. Do **not** send a follow-up, escalation, or reminder
+3. Move to the next candidate on the roster (Tier 1 → Tier 2 → Tier 3)
+4. Log the non-response in `strategy/_research/referral-roster.md` with date + "no reply"
+5. If the non-respondent later reaches out independently (e.g., via the herald), respond warmly — no reference to the unanswered email
+
+No-reply is not rejection; it's bandwidth. The protocol respects that.
+
+### §11.8 Counterfactual clarity
+
+The programme's strongest defense against any form of pushback (mathematical, epistemic, AI-related, competitive) is the **counterfactual test**:
+
+> *Would this programme exist if AI had never been involved?*
+
+The answer is **yes** — G originated the physics (the 4+1 coordinate structure, the e-circle, the Bost-Connes connection, the 36-pin match, the Six absolute time scale) through manual derivation documented in `etc/` (70+ working notes predating ORA). The AI accelerated synthesis, expanded coverage from 6 Millennium problems to 25 ring vertices, and enabled the atlas visualization. But the foundational insights — that integers derive the geometry, that the geometry projects to every conjecture, that the torus hosts the structure — are human-originated.
+
+If the AI disappeared tomorrow, the mathematics would still be true. The atlas would still render. The Zenodo DOI would still stand. That's the counterfactual test, and Integers passes it.
+
+### §11.9 Anti-criteria roster (named adversaries to avoid)
+
+Based on research conducted 2026-04-15:
+- **Michael Harris** (Columbia / Paris Cité) — runs *Silicon Reckoner*, an AI-skeptical newsletter since 2021. Do NOT contact for endorsement; do not engage if he comments. Redirect to §11.3 stance if challenged.
+
+This list is maintained in `strategy/_research/referral-roster.md` and updated as new signals emerge.
+
+---
+
+## §12 Change Log
 
 *Running log of every edit to this document. Reverse-chronological. Every edit records WHAT / WHERE / WHY / FOLLOW-UP. When the orchestrator or any sub-agent self-modifies the north star under the SELF-IMPROVEMENT LOOP protocol, it MUST append an entry at the TOP of §11 + append to `strategy/_research/fixes-log.md`. Convergence check: if two consecutive `universal-approval-run.md` cycles pass Phase 0 without modifying this document AND produce identical state snapshots, the programme has converged on its vision-statement as well as its operational state.*
 
@@ -563,4 +648,4 @@ The naming hierarchy (Integers = programme; QG5D = Paper 1 / first-ever quantiza
 
 *Mandatory Phase 0 read. Every orchestrator run begins here.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

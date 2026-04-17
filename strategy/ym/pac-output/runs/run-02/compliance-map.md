@@ -2,7 +2,7 @@
 
 *Snapshot: solutions-with-prize/paper08-yang-mills/PROOF-CHAIN.md + strategy/x-ray/proof-chain/ym/X-RAY.md*
 *Date: 2026-04-14 (run-02, PILOT Output A only)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -255,4 +255,4 @@ Next-run recommendation:
 
 *End of compliance-map.md. LOCKED at arbiter-pass.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

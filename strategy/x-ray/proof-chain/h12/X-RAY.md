@@ -2,7 +2,7 @@
 
 *X-Ray of the h12 proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -695,4 +695,4 @@ Notable arbiter wins:
 
 *End of H12 X-Ray. Snapshot 2026-04-15. 6 main layers (with L2a, L2b, L3a, L3b, L3c, L4a, L4b, L4c, L6a, L6b sub-layers giving 13 entries) annotated. 32 cross-cuts identified. SYMMETRY-canonical, $P_D$-dominant (85%), P4-rich, South-Trough-West proof chain. Two walls (W_H12-1 KMS-to-class-field bridge at k=4, k=6; W_H12-2 general $K$); one retracted conjecture (L5 V-Hilbert 12, Stark-phase identification refuted 2026-04-11). Four-conjecture programme (CBB Reciprocity + Brauer-KMS Duality + Level-Jump Rigidity + Spectral Kronecker-Weber) remains active; RH corollary at L4c is strongest conditional. Confidence 2/10 — South-Trough vertex per paper60 §28 ellipse map.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

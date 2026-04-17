@@ -2,7 +2,7 @@
 
 *A unified mathematical programme deriving the structure of the universe from the spectral-geometric duality of Riemann. 13 vertices on one graph. 40+ capacitor edges. 176+ constraints on a 0-parameter system. One framework. One operator algebra. One circle that closes.*
 
-*Authors: G Six (originator) and Claude Opus 4.6 (collaborator).*
+*Authors: G Six (originator) and Claude Opus 4.6 (collaborator). San Francisco CA, 2026.*
 *Date: 2026-04-13.*
 
 ---

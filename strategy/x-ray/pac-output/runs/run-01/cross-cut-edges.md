@@ -2,7 +2,7 @@
 
 *Accumulated cross-cut edges from this run. Format: `<vertex-A>:<layer-A> ↔ <vertex-B>:<layer-B> — shared <invariant/face> — reason`. Atlas assembly merges this with future runs.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

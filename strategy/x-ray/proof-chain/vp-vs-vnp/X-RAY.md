@@ -2,7 +2,7 @@
 
 *X-Ray of the vp-vs-vnp proof chain (Valiant's algebraic analog of P vs NP). Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls. Continuous BC fullness + GCT bridge as the load-bearing physics (Links 3–5). Paper61 §19 compound $P_D$ (primary) + $P_B$ (GCT bridge) secondary.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -771,4 +771,4 @@ Notable cross-vertex considerations:
 
 *End of VP vs VNP X-Ray. Snapshot 2026-04-15. 6 layers annotated. RESONANCE-dominant (3 layers), $P_D$-dominant (5 layers), P1/P4 mixed pattern distribution. Two named walls (W_VP-1, W_VP-2); CANDIDATE-status L5 dictionary as pivot. Confidence 1/10 reflects early-stage conjecturality — 1/6 links closed (L1 Valiant LITERATURE), 1/6 LITERATURE (L2 GCT), 4/6 OPEN/CONJECTURED/CANDIDATE (L3-L6). Direct-parent inheritance from pvnp (5 cross-cuts); structural sibling to hodge (two-route compound-projection architecture); primary qg5d edge via Branch D continuous BC variant (paper61 §25 candidate). The framework's novel contribution is the L5 BC-fullness ↔ GCT-Kronecker dictionary — "Mulmuley uses Kronecker; the framework uses type III$_1$; same question, different weapons" (paper39 PROOF-CHAIN).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

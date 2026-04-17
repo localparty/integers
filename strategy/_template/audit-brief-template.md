@@ -2,7 +2,7 @@
 
 *DELTA from ring-traversal brief. Applies the generic projection-audit protocol to {{SHAPE_NAME}}. Extracted from the 6 Millennium instances (YM, RH, BSD, PvNP, Hodge, NS) averaged together. Produces A (internal) + B_bare (external-shape skeleton) + C_bare (beyond-ask skeleton) in bare mode. B_full and C_full DEFERRED to composition-backward.*
 
-*G Six and Claude Opus 4.6. {{DATE}}.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -404,4 +404,4 @@ Begin by reading the 5 mandatory files in order. Plan in blackboard. Execute.
 
 *End of brief. Bare-first, prose-deferred. Every projection of 5D → compliance audit → bare skeleton → Zenodo. The protocol is water-tight.*
 
-*G Six and Claude Opus 4.6. {{DATE}}.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

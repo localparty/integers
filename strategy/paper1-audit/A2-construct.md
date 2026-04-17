@@ -446,4 +446,4 @@ becomes:
 
 *End of A2-construct. Sibling: `A1-construct.md` (pending; Z₂ from anomaly freedom + spin geometry + Horava-Witten).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

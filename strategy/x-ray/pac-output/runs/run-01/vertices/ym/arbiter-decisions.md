@@ -2,7 +2,7 @@
 
 *For each layer's 5 fields, the arbiter picks the stronger fit and records the rejected alternative as a one-line "considered but rejected" footnote. The X-RAY.md will show the WINNING assignments; rejected alternatives become footnotes there.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

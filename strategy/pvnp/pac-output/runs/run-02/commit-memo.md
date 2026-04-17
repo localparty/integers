@@ -2,7 +2,7 @@
 
 *Run summary: Clay-compliance audit for PvNP vertex. Output A only. B_bare / C_bare / independence-bare / harden-bare DEFERRED to Phase 5 (next runs).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -231,4 +231,4 @@ The chain is structurally complete. No new named walls or layers required in the
 
 *End of commit-memo.md. PAC run-02 COMPLETE. LOCKED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

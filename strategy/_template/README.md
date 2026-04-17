@@ -2,7 +2,7 @@
 
 *Every projection of the 5D geometry into 4D is a proof chain. Every proof chain gets the same audit discipline — extracted from the 6 Millennium instances (YM, RH, BSD, PvNP, Hodge, NS) averaged together. This template is how you spin up the protocol on any new target: a ring vertex, the QG5D core, an inner ring (branch), a shape (e-circle, bouquet, chord graph, etc.), or a projection operator (P_A ... P_O).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -88,4 +88,4 @@ Projection-audit adds a fourth view: **external-standard compliance**. Every ver
 
 *Every projection → proof chain → audit → deliverable. Every shape rendered. Water-tight.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

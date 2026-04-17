@@ -2,7 +2,7 @@
 
 *Community-standard: every even integer > 2 is a sum of two primes. Strong form. (Weak Goldbach proven Helfgott 2013.) Prize: expired Faber $1M 2000-2002.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -49,4 +49,4 @@ Strategy: operator-algebraic interference → Goldbach representations.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

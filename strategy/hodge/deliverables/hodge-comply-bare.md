@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton for the Hodge conjecture, in Clay/Deligne shape. Zero prose. Every claim cites programme paper + specific proof location. Three named walls W1, W2, W3 disclosed with full DELTA-10 fields. Scope: projective non-singular algebraic over C (NOT Kähler). Conclusion: rational (NOT integral). Produced 2026-04-14 as part of Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -409,4 +409,4 @@ External references (Deligne "The Hodge Conjecture" Clay Mathematics Institute; 
 
 *End of hodge-comply-bare.md. Bare mode. $\leq 15$ pages. Every claim cites programme paper + Link-level/§-level location. W1, W2, W3 disclosed with all DELTA-10 fields. Scope = projective non-singular /$\mathbb{C}$ (NOT Kähler, Zucker counterexample cited Theorem 5.2). Conclusion = rational (NOT integral, Atiyah-Hirzebruch obstruction cited Theorem 7.1). Zero SILENT Deligne requirements. Ready for Zenodo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

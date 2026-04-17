@@ -2,7 +2,7 @@
 
 *A parallel ring where every vertex's proof chain gets an X-RAY: face assignment, projection assignment, pattern assignment, invariant preservation, geometric interpretation — pattern-matched against a fixed vocabulary drawn from paper60, paper61, and ORA v8. Sibling to decomposition/ and ccm-verification/.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -244,4 +244,4 @@ See `x-ray-run.md` for the full invocation file.
 
 *The geometric view. Every link has a face. Every vertex has a projection. Every invariant has cross-cuts. The bouquet made operational. The atlas accumulates. Zenodo waits.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

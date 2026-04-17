@@ -2,7 +2,7 @@
 
 *Run-06 of the NS Millennium PAC bundle. Produced `strategy/ns/deliverables/ns-harden-bare.md` — the Pillar-C HARDEN bare theorem skeleton. Primary targets: Camlin 2025 (E1) + arXiv:2601.08854 (E2). Companion to run-02 (Pillar A compliance LOCKED) and run-05 (Pillar B independence bare).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -114,4 +114,4 @@ Pillar-C bare skeleton itself does not execute hardening — it sets the target 
 
 *End of commit-memo. Run-06 LOCKED. Pillar-C HARDEN bare synthesis PUBLISH-READY. Three pillars (A/B/C) + Beyond-bonuses = four bare deliverables complete for NS vertex.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

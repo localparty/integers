@@ -2,7 +2,7 @@
 
 *X-Ray of the baum-connes proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -602,4 +602,4 @@ Notable arbiter wins (anticipated):
 
 *End of Baum-Connes X-Ray. Snapshot 2026-04-15. 6 layers annotated. 26 cross-cuts identified (avg 4.3/layer — highest density so far). RESONANCE-primary, $P_D$-saturated (83%), P4/P5-rich chain. Four walls (W_BC-1..4); L5 closed via Higson-Kasparov amenability (2026-04-14); L6 payoff feeds rh, ym, hodge, bgs, qg5d — the universal-connector role of the K-theoretic face.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

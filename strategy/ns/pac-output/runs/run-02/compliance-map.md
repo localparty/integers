@@ -2,7 +2,7 @@
 
 *Snapshot: paper30-navier-stokes/PROOF-CHAIN.md v2.1 + strategy/ns/00-millenium-strategy.md + ns-millenium-brief.md*
 *Date: 2026-04-14 (run-02, PAC compliance audit — Output A only, NO bare deliverables this run)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Target variant: (B) existence + smoothness on R³/Z³ ≡ T³*
 
 ---
@@ -331,4 +331,4 @@ This is the **furthest-from-closure Millennium vertex** in the programme (strate
 *70/70 cells audited. Zero bare SILENTs. Four named walls disclosed. §5d compliance: PASS.*
 *Variant (B) declared target; (A/C/D) EXCISED per Rules §5b.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

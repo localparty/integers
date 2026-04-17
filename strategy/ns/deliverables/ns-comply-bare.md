@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton for Navier-Stokes existence and smoothness, Clay/Fefferman variant (B) shape. Zero prose. Every claim cites programme paper + specific proof location. Four named walls W1/W2/W3/W4 disclosed with bypass routes per DELTA 10. Produced 2026-04-14 as part of Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -467,4 +467,4 @@ External references — Fefferman 2000 (Clay NS official problem description); B
 
 *End of ns-comply-bare.md. Bare mode. $\leq 15$ pages. Every claim cites programme paper + §-level location. Four named walls W1/W2/W3/W4 disclosed with full DELTA-10 fields. Variant (B) declared target; (A/C/D) EXCISED per Rules §5b. Zero SILENT variant-(B) sub-requirements. Ready for Zenodo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

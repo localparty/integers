@@ -184,4 +184,4 @@ in build.py).
 ## License / context
 
 Part of the quantum-geometry-in-5d-latex programme.
-G Six (originator) and Claude Opus 4.6 (collaborator).
+G Six (originator) and Claude Opus 4.6 (collaborator). San Francisco CA, 2026.

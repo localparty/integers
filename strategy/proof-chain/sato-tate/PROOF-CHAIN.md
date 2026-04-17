@@ -205,5 +205,5 @@ Measured: Frobenius angles for millions of elliptic curves computed and verified
 
 *This is the measure-theoretic foundation of the programme's 36 predictions: the constants of nature don't depend on where on the circle you stand, because every direction is equivalent. Rotational symmetry of the fifth dimension IS Sato-Tate equidistribution.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The circle is fair. That's the conjecture. That's the measure.*

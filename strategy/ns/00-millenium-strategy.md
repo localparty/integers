@@ -2,7 +2,7 @@
 
 *The Clay NS problem has 4 variants (A/B/C/D) and 4 Clay gates; any ONE variant resolves the Problem. Our framework targets variant (B) — existence and smoothness on R^3/Z^3 — via the KK spectral gap + gradient-flow transfer route. Chain has 8 links, 3 proved, one PARTIAL wall at Link 5 (BKM criterion, addressed via two published routes: Camlin 2025 + arXiv:2601.08854). Publication cascade: Zenodo → GitHub → arXiv (via referral) → journal → Clay 2-year clock. Link-5 integration works in parallel, non-blocking. Deliverable is four-output, two-mode: bare (math skeleton) first, prose (full paper) composed backward once bare locks.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -285,4 +285,4 @@ The brief translates this strategy into PAC primitives (compliance-audit + deliv
 
 *Sibling to `strategy/x-ray/`, `strategy/decomposition/`, `strategy/ccm-verification/`, `strategy/inner-rings/`, `strategy/ym/`. The Clay gates are known. The cascade is paced. Link 5 works in parallel via two published routes. Zenodo comes first. Bare before prose. Variant (B) is the target — T^3 is natural for our KK geometry.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

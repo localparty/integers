@@ -2,7 +2,7 @@
 
 *Snapshot: solutions-with-prize/paper13-rh/PROOF-CHAIN.md + strategy/rh/00-millenium-strategy.md §3*
 *Date: 2026-04-14 (run-02, Phase 4 compliance audit, Output A only)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -227,4 +227,4 @@ Ready for Phase 5 synthesis: B_bare (run-03), C_bare (run-04), Pillar B independ
 
 *End of compliance-map.md. LOCKED at arbiter-pass.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

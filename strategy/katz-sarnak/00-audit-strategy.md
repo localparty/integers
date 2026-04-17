@@ -2,7 +2,7 @@
 
 *Community-standard: L-function zero densities ↔ random matrix statistics of compact classical groups.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -51,4 +51,4 @@ Primary face: ARITHMETIC + RESONANCE. Primary projection: P_B + P_O.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

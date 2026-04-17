@@ -2,7 +2,7 @@
 
 *The Clay Hodge problem has 4 gates and 6 requirements. Our framework has 8 links, two routes (endomotives + geometric Langlands), with Links 3-4 (motivic Hodge filtration) and Link 8 (motivic functoriality to all smooth projective) as the open walls (addressed via motivic Baum-Connes extension + Gaitsgory-Raskin compose). Publication cascade: Zenodo → GitHub → arXiv (via referral) → journal → Clay 2-year clock. Motivic BC extension works in parallel, non-blocking. Deliverable is four-output, two-mode: bare (math skeleton) first, prose (full paper) composed backward once bare locks.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -241,4 +241,4 @@ The brief translates this strategy into PAC primitives (compliance-audit + deliv
 
 *Sibling to `strategy/x-ray/`, `strategy/decomposition/`, `strategy/ccm-verification/`, `strategy/inner-rings/`, `strategy/ym/`. The Clay gates are known. The cascade is paced. W1-W3 work in parallel. Zenodo comes first. Bare before prose. Deligne's six requirements are addressed, not all proved.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

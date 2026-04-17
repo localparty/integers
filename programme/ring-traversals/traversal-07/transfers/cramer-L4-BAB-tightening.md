@@ -300,5 +300,5 @@ tighter than Cramér-Granville by $\sqrt{2/\log\log x}$. The CONSTANT $2e^{-\gam
 
 *T7 S-duality phase, Wave 2. BA-B tightening executed. The envelope is tighter by $\sqrt{\log\log}$; the constant is unchanged; the exponent was never in the envelope. The wall moves one click cleaner — from "$k=2$ inherited from Cramér-Granville" to "$k=2$ emergent from explicit-formula coherence, envelope tightens only the prefactor." The bridge PCC $\to$ BA-B for Riemann zeros stays conjectural — the 4a wall, named precisely now.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *BA-B is tighter. ITPFI supplies the constant. The exponent lives in the oscillatory sum. The chain is one constant sharper and one wall-description more honest.*

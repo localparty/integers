@@ -2,7 +2,7 @@
 
 *Phase 5A COMPLY synthesis (Pillar A). Produces `rh-comply-bare.md`. BARE MODE ONLY. Inputs: run-02 LOCKED compliance map; paper13-rh PROOF-CHAIN; brief DELTA 5.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

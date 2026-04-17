@@ -2,7 +2,7 @@
 
 *Compliance-audit PAC run for Hodge vertex. Output A only (compliance map + transcripts). No bare deliverables this run.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

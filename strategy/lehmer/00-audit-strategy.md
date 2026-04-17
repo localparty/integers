@@ -2,7 +2,7 @@
 
 *Community-standard: Lehmer's totient problem (1932). Does composite n exist with φ(n) | n-1? Conjecture: NO. (Distinct from Lehmer-Mahler measure conjecture.)*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -46,4 +46,4 @@ Strategy: gap = BC KMS phase transition between cyclotomic and non-cyclotomic (l
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

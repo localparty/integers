@@ -1,2 +1,0 @@
-- the initial proof chains step files, the root ones, are int he project directories maybe they should be in this directory?
-- 

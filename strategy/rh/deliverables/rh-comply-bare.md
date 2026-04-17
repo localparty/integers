@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton for the Riemann Hypothesis in Clay/Bombieri shape. Zero prose. Every claim cites programme paper + specific proof location. W1 (CCM Layer 1) disclosed as NAMED WALL with bypass route; W2 (CF uniformity caveat) listed as RESOLVED. Produced 2026-04-14 (PAC run-03, Phase 5A COMPLY synthesis).*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -359,4 +359,4 @@ Classical references inherited through paper13-rh, Bombieri, and Edwards/Titchma
 
 *End of rh-comply-bare.md. BARE MODE. $\leq 15$ pages. Every claim cites programme paper + §-level location. W1 (CCM) disclosed with all 12 DELTA-10 fields. W2 (CF uniformity caveat) RESOLVED, retained for transparency. Zero SILENT Core Bombieri requirements. Pillar A deliverable ready for Zenodo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

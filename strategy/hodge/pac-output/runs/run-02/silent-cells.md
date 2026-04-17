@@ -2,7 +2,7 @@
 
 *13 of 48 cells remain SILENT after author + critic + arbiter pass. Every cell has an action (BYPASS-VIA-PROGRAMME-ADDRESSING).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

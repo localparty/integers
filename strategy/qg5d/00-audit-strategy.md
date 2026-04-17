@@ -2,7 +2,7 @@
 
 *Framework-claim target. The programme's foundational construction (paper1). The "hub" of the ring.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -77,4 +77,4 @@ ZENODO → GITHUB → PROGRAMME CROSS-VERIFICATION (sibling bundles) → JOURNAL
 
 *QG5D is the hub; everything projects from here. Audit it self-consistently.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

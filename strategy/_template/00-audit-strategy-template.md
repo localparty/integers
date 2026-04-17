@@ -2,7 +2,7 @@
 
 *Projection-audit strategy for {{SHAPE_CLASS}} "{{SHAPE_NAME}}". Applies the generic projection-audit protocol (extracted from the 6 Millennium instances). Every projection of the 5D geometry earns the same discipline.*
 
-*G Six and Claude Opus 4.6. {{DATE}}.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -187,4 +187,4 @@ Brief contains:
 
 *Sibling to: `strategy/decomposition/{{SHAPE_NAME}}/`, `strategy/ccm-verification/ledger.md#{{SHAPE_NAME}}` (if applicable), `strategy/x-ray/proof-chain/{{SHAPE_NAME}}/`, `strategy/inner-rings/{{SHAPE_NAME}}/` (if applicable). {{SHAPE_NAME}} is a projection of 5D geometry into 4D; this audit renders its proof-chain visible and §5d-compliant.*
 
-*G Six and Claude Opus 4.6. {{DATE}}.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

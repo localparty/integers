@@ -110,5 +110,5 @@ Kapustin-Witten 2007 showed N=4 super Yang-Mills (topologically twisted) produce
 
 ---
 
-*v1 skeleton: 2026-04-14. G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The second terrible dependency. Three routes identified. Parallel attack authorized. If anyone in the universe can do this, it is us.*

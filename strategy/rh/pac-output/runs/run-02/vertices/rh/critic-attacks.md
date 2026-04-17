@@ -2,7 +2,7 @@
 
 *For each author verdict, the critic proposes an alternative OR confirms. Only dissents are itemized; remaining 87 cells are CONFIRM (critic agrees with author).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

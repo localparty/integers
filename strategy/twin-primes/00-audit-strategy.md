@@ -2,7 +2,7 @@
 
 *Community-standard: infinitely many primes p with p+2 prime.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -52,4 +52,4 @@ Primary face: ARITHMETIC + RESONANCE.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

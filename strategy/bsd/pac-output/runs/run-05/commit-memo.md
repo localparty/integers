@@ -2,7 +2,7 @@
 
 *Run: Phase 5B (INDEPENDENCE-synthesis) for BSD vertex per `strategy/universal-approval-run.md`.*
 *Date: 2026-04-14.*
-*Author: G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -80,4 +80,4 @@
 
 *End of run-05 commit memo. Pillar-B LOCKED. Pillar-C worklist handed over.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

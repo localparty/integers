@@ -2,7 +2,7 @@
 
 *Framework-claim: e-circle = the S¹ fibre of M⁵; bouquet = the topological structure of primes attached at infinity. Papers 60, 61.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -54,4 +54,4 @@ Primary face: CURVATURE (S¹ geometry) + SYMMETRY (bouquet).
 
 *e-circle is the S¹ of 5D projected to itself. Bouquet is the arithmetic site's topology.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

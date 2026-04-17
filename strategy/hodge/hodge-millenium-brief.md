@@ -2,7 +2,7 @@
 
 *DELTA from ring-traversal brief. Instructs the PAC to audit the Hodge chain against the 6 Deligne Clay requirements, then synthesize B_bare + C_bare + internal artifacts. B_full and C_full DEFERRED until bare locks and parallel-agent composition-backward runs.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -565,4 +565,4 @@ Begin by reading the 5 mandatory files in order. Then plan in blackboard. Then e
 
 *End of brief. Bare-first, prose-deferred. B_full and C_full composed backward by parallel agents after bare locks. The cascade begins with Zenodo. The Clay 2-year clock starts at journal publication. W1-W3 (motivic Hodge filtration / motivic functoriality / route composition) work in parallel, non-blocking. Scope is projective not Kähler. Conclusion is rational not integral.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -35,4 +35,4 @@
 
 REPAIRED. Category error resolved by classical self-duality criterion.
 
-*2026-04-14. T8 repair pass. G Six and Claude Opus 4.6 (1M context).*
+*2026-04-14. T8 repair pass. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *First-pass author verdicts for 8 × 6 = 48 cells. Citations attached. Critic pass follows.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

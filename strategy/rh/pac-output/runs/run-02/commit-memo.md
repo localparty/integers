@@ -2,7 +2,7 @@
 
 *Run summary: Phase 4 Clay-compliance audit for RH vertex. Output A (internal artifacts) only. B_bare + C_bare DEFERRED to Phase 5 (run-03/run-04).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -271,4 +271,4 @@ Ready for **Phase 5 three-pillar bare synthesis**: comply + independence + harde
 
 *End of commit-memo.md. PAC run-02 COMPLETE.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *The "double-kill" for the Hodge vertex: every external dependency RETAINED after Pillar B (motivic BC + FMS24 + GR24 + L$^2$-25 + CCM05 + Del[1] André + Atiyah-Hirzebruch) is x-rayed, compliance-mapped, and put through PAC VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE. We depend on each external AND we publish it stronger. Residual walls from Pillar B ($W_1^{\mathrm{B}}$ generic-$\mathcal{M}_\mathrm{BC}$-extension / $W_2^{\mathrm{B}}$ IRREDUCIBLE stratum (v) / $W_3^{\mathrm{B}}$ L$^2$-25-preprint-audit) are routed to the corresponding externals-hardening folders. $W_2^{\mathrm{B}}$ is flagged as **long-horizon Clay-scale research** — CONSTRUCT primitive queued for community-scale effort within the 2-year window; Pillar C publishes the audit-of-weak-links artifact NOW, the construct closure is not gated on this run. Zero prose paragraphs. Companion to `hodge-comply-bare.md` (Pillar A) and `hodge-independence-bare.md` (Pillar B).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -407,4 +407,4 @@ All three walls have Pillar-C primitive assigned + folder queued. Gate check **P
 
 *End of hodge-harden-bare.md. Bare mode. Zero prose paragraphs. 6 retained externals (E1 FMS24, E2 GR24, E3 L$^2$-25, E4 CCM05, E5 André, E6 AH-1962) × layer-level X-ray + compliance-map + hardened-routes + narrative. 3 Pillar-B residual walls ($W_1^{\mathrm{B}}, W_2^{\mathrm{B}}, W_3^{\mathrm{B}}$) routed to dedicated externals-hardening folders with PAC primitive assigned (VERIFY / CONSTRUCT / BYPASS / DECOMPOSE). $W_2^{\mathrm{B}}$ flagged **long-horizon Clay-scale research**; published NOW as audit-of-weak-links + open-invitation artifact, construct-closure NOT gated on this run. 3 new CONSTRUCTed lemmas produced (E1.L5 CM-corollary / E2.L3-interface-lemma / E4.L4 $F^p$-compatibility). All 6 externals have VERIFY pass at publication. §5C.3 gate check PASS. Double-kill narrative: motivic Hodge foundations programme-verified to the depth of all retained externals. No contender has done this. Scope retained projective non-singular /$\mathbb{C}$ (NOT Kähler; Zucker counterexample). Conclusion retained rational (NOT integral; Atiyah-Hirzebruch hardening E6 baseline). Ready for Zenodo as Pillar-C companion to `hodge-comply-bare.md` (Pillar A) + `hodge-independence-bare.md` (Pillar B).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

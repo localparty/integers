@@ -2,7 +2,7 @@
 
 *The dep-free proof chain for Yang-Mills existence and mass gap. Every CONDITIONAL / OPEN-BUT-ADDRESSED / PARTIAL cell of the Pillar-A compliance map is lifted via a PAC primitive (BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor). Every surviving leaf roots in **QG5D (paper1) / paper08-yang-mills / paper11 / paper60 / paper61 / classical literature**. Zero prose paragraphs. Companion to `ym-clay-bare.md` (Pillar A, COMPLY).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -492,4 +492,4 @@ Per the three-pillar protocol (`strategy/universal-approval-run.md §5B`): other
 
 *End of ym-independence-bare.md. Bare mode. Zero prose paragraphs. 44/44 PARTIAL + OPEN-BUT-ADDRESSED cells lifted via PAC primitives. Residual: single L.3.7-audit, strictly smaller than H4. Every leaf of the dep-free chain roots in QG5D / paper1 / paper8 / paper10 / paper11 / paper60 / paper61 / classical literature. Ready for Zenodo as companion to `ym-clay-bare.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

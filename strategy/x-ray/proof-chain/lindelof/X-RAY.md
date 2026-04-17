@@ -2,7 +2,7 @@
 
 *X-Ray of the lindelof proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -659,4 +659,4 @@ Lindelöf has an explicit, load-bearing structural role as the AMPLITUDE-face SH
 
 *End of Lindelöf X-Ray. Snapshot 2026-04-15. 5 layers (L1 Phragmén-Lindelöf, L2 moments, L3 BC amplitude interpretation, L4 Fourier-Laguerre criterion, L5 Lindelöf itself) annotated. 26 cross-cuts identified (5.2 per layer — highest density of any vertex so far). AMPLITUDE-canonical, $P_D$-monopolar (100% at layer level; $P_B$ secondary at L5 closure), P3/P5/P1-mixed proof chain. Three walls (W_L1 RH-conditional; W_L2 BC amplitude rigorization; W_L3 Fourier-Laguerre decay). Three-route closure architecture (A RH-inherit / B Guth-Maynard partial / C Fourier-Laguerre independent) — over-determined. The signal stays quiet.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

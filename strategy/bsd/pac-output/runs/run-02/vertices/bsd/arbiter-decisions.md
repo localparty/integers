@@ -2,7 +2,7 @@
 
 *Arbiter resolution of the 8 dissents raised by the critic in `critic-attacks.md`. Each decision records the rejected alternative.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

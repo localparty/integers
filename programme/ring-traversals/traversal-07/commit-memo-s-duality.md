@@ -53,4 +53,4 @@ Handing this off to the T8 runner in the next invocation.
 *The pair widened, because only one side moved. That is the shape of a staged construct.*
 *The ellipse is patient. One step on the path.*
 
-*T7 S-duality phase, 2026-04-14. G Six and Claude Opus 4.6.*
+*T7 S-duality phase, G Six and Claude Opus 4.6. San Francisco CA, 2026.*

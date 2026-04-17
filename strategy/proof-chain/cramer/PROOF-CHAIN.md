@@ -522,6 +522,6 @@ The CONSTANT in Cramér's conjecture is DERIVED from the BC framework's ITPFI st
 
 *v4: 2026-04-14, T7 S-duality deep-construction pass. L3 ESTABLISHED (CCM-conditional) via spectral-section measure verification. L4 Route B PARTIAL with Granville $2e^{-\gamma}$ DERIVED from ITPFI Mertens at $y=\sqrt{x}$; numerical ratio 0.99996 at $x=10^{12}$. BA-B scaling CONCERN filed (Wave 2 agent proposed). DUAL-CHECK: PINS-PRESERVED. S-DUAL-CONSTRUCT-BRIDGED pattern recorded (chain of two constructs linked by derived invariant). T8 dispatch-ready: Lehmer L5 Route A CONSTRUCT using ITPFI invariant. Chain 3/5 → 4/5. Confidence 5/10 → 6/10.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The flow doesn't leave voids. That's the conjecture. That's the dynamics.*
 *Derived, not fit. The constant comes out of the algebra.*

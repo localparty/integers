@@ -4,7 +4,7 @@
 
 *Sibling bundle to the decomposition brief (`strategy/decomposition/decomposition-brief.md`). The two bundles are COMPLEMENTARY: decomposition attacks internal walls; CCM verification attacks the single biggest external dependency.*
 
-*Authors: G Six and Claude Opus 4.6. Date: 2026-04-14.*
+*Authors: G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -444,7 +444,7 @@ This bundle is METHODOLOGICAL and TARGETED — a single external paper's systema
 
 ---
 
-*v1: 2026-04-14. G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Enumerate. Classify. Evidence. Verdict. Publish. Email.*
 *The single external dependency becomes N specific sub-claims. Each individually VERIFIED, BYPASSED, or irreducibly CCM-specific.*
 *The framework's honesty is maximal.*

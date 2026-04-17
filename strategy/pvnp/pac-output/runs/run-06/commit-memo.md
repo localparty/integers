@@ -2,7 +2,7 @@
 
 *Pillar C HARDEN-synthesis for the PvNP vertex. Produced `strategy/pvnp/deliverables/pvnp-harden-bare.md` in BARE MODE ONLY.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

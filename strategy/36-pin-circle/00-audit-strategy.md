@@ -2,7 +2,7 @@
 
 *Framework-claim: the 36 experimental pins of paper 12 arranged around the e-circle. Each pin is an EXPERIMENTAL-PIN sub-audit; this aggregate covers the ensemble claim.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -52,4 +52,4 @@ Special provisions: Per-pin audits are EXPERIMENTAL-PIN type; aggregate is FRAME
 
 *36 pins around the e-circle = the programme's experimental face. Aggregate audit + per-pin sub-audits.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

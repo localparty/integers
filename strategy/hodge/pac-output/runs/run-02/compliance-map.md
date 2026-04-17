@@ -2,7 +2,7 @@
 
 *Snapshot: solutions-with-prize/paper29-hodge/PROOF-CHAIN.md + strategy/hodge/00-millenium-strategy.md + strategy/hodge/hodge-millenium-brief.md*
 *Date: 2026-04-14 (run-02, PILOT Output A only)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -217,4 +217,4 @@ Next-run recommendation:
 
 *End of compliance-map.md. LOCKED at arbiter-pass.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

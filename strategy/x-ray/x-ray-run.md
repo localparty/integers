@@ -2,7 +2,7 @@
 
 *Invoke the PAC on the X-Ray bundle. Produces 25 X-RAY.md files + atlas. Annotation mode. Fixed vocabulary. Citations mandatory.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -252,4 +252,4 @@ Remaining 12 vertices get analogous hint rows (goldbach, twin-primes, abc, opn, 
 
 *End of run file. Two invocation styles documented: Style A for manual PAC sessions, Style B for sub-agent spawning. The geometry awaits.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

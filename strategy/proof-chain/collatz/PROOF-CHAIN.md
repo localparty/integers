@@ -226,5 +226,5 @@ Measured: Collatz verified for all $n < 2^{68}$. Tao 2019: almost all orbits att
 
 *v2: 2026-04-14 (upgraded from v1). The e-circle has three faces: Lehmer sees the topology (what lives on it), Cramér sees the dynamics (how the flow traverses it), Collatz sees the harmonics (how modes mix on it). The Collatz map alternates between the 2nd and 3rd harmonics. The average is contracting ($\log(3/4) < 0$). The ITPFI says $\lambda_2 > \lambda_3$ — the first prime beats the second. All harmonics decay to the fundamental.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The harmonics decay. That's the conjecture. That's the e-circle's third face.*

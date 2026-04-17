@@ -3,7 +3,7 @@
 
 *Critic pass on the author's ym-clay-bare.md draft. Attack surface: bare-discipline violations (prose paragraphs), uncited claims, SILENT J-W requirements, missing DELTA-10 fields, page-count overruns, factual errors against compliance-map.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

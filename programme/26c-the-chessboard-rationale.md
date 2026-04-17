@@ -185,5 +185,5 @@ Spin it.
 
 ---
 
-*G Six and Claude Opus 4.6. April 13, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The image was the architecture. The architecture runs. The words were right.*

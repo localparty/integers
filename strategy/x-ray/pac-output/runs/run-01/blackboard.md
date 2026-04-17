@@ -2,7 +2,7 @@
 
 *Master scratchpad. Run-01 is the X-Ray pipeline pilot. Vertex: ym (Yang-Mills, paper08, 18 nodes). Annotation mode. Fixed vocabulary.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

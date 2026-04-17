@@ -2,7 +2,7 @@
 
 *Eight faces. Six patterns. One circle. Everything.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -28,55 +28,55 @@ And we have spent a year discovering that this circle has eight faces.
 ## The eight faces
 
 ```
-                         TOPOLOGY                    
-                         (Lehmer)                    
-                    What can LIVE on it?              
-                   Periodic vs aperiodic              
-                    Min leakage c₀ > 0               
-                          4/10                        
-                       /         \                    
-                      /           \                   
-              AMPLITUDE            DYNAMICS           
-             (Lindelöf)            (Cramér)           
-           How LOUD can           How does the flow   
-           it oscillate?           TRAVERSE it?       
-               7/10                  5/10             
-                |                      |              
-                |                      |              
-          ARITHMETIC ——————————— SYMMETRY             
-         (Goldbach / TP)       (Katz-Sarnak)          
-        How do integers        Which GROUP acts        
-         LATTICE on it?          on it?               
-            1/10                  7/10                
-                \                    /                
-                 \                  /                 
-                  \                /                  
-                ╔═══════════════════════╗             
-                ║                       ║             
-                ║    THE   e - CIRCLE   ║             
-                ║                       ║             
-                ║    U(1) = S¹ = R/2πZ  ║             
-                ║                       ║             
-                ║    R ≈ 10.10 μm       ║             
-                ║                       ║             
-                ║    Zero free params   ║             
-                ║                       ║             
-                ╚═══════════════════════╝             
-                  /                \                  
-                 /                  \                 
-                /                    \                
-            MEASURE              CURVATURE            
-          (Sato-Tate)           (Yang-Mills)          
-        How do angles          How do connections     
-         DISTRIBUTE?             CURVE on it?         
-             6/10                  9.5/10             
-                |                      |              
-                |                      |              
-          HARMONICS ——————————————— (ARITHMETIC       
-           (Collatz)                 completes         
-        How do modes MIX?           the octagon)      
-       All modes → fundamental                        
-              4/10                                    
+                         TOPOLOGY
+                         (Lehmer)
+                    What can LIVE on it?
+                   Periodic vs aperiodic
+                    Min leakage c₀ > 0
+                          4/10
+                       /         \
+                      /           \
+              AMPLITUDE            DYNAMICS
+             (Lindelöf)            (Cramér)
+           How LOUD can           How does the flow
+           it oscillate?           TRAVERSE it?
+               7/10                  5/10
+                |                      |
+                |                      |
+          ARITHMETIC ——————————— SYMMETRY
+         (Goldbach / TP)       (Katz-Sarnak)
+        How do integers        Which GROUP acts
+         LATTICE on it?          on it?
+            1/10                  7/10
+                \                    /
+                 \                  /
+                  \                /
+                ╔═══════════════════════╗
+                ║                       ║
+                ║    THE   e - CIRCLE   ║
+                ║                       ║
+                ║    U(1) = S¹ = R/2πZ  ║
+                ║                       ║
+                ║    R ≈ 10.10 μm       ║
+                ║                       ║
+                ║    Zero free params   ║
+                ║                       ║
+                ╚═══════════════════════╝
+                  /                \
+                 /                  \
+                /                    \
+            MEASURE              CURVATURE
+          (Sato-Tate)           (Yang-Mills)
+        How do angles          How do connections
+         DISTRIBUTE?             CURVE on it?
+             6/10                  9.5/10
+                |                      |
+                |                      |
+          HARMONICS ——————————————— (ARITHMETIC
+           (Collatz)                 completes
+        How do modes MIX?           the octagon)
+       All modes → fundamental
+              4/10
 ```
 
 ---
@@ -487,7 +487,7 @@ The eight faces distribute across both circles:
 ```
                 S¹ geometric (the e-circle)
                 ─────────────────────────►
-                
+
            │    TOPOLOGY    HARMONICS    CURVATURE    MEASURE
            │    (Lehmer)    (Collatz)    (YM)         (Sato-Tate)
    S¹      │       ●            ●           ●             ●
@@ -523,7 +523,7 @@ On the torus, the zeros are the points where the two circles CROSS. The geometri
             │         ●γ₆          │ ← same zeros on the spectral circle
             │                       │
             ╰───────────────────────╯
-            
+
          The zeros live at the CROSSINGS
          of the two circles on the torus
 ```
@@ -550,7 +550,7 @@ We just didn't know that until today.
 
 ```
                     THE TORUS
-                    
+
            ╭────────────────────────╮
           ╱  TOPOLOGY    MEASURE    ╲
          ╱   HARMONICS   CURVATURE   ╲
@@ -561,7 +561,7 @@ We just didn't know that until today.
          ╲   DYNAMICS    ARITHMETIC  ╱
           ╲  AMPLITUDE   SYMMETRY   ╱
            ╰────────────────────────╯
-           
+
         Eight faces on the surface
         Zeros at the intersections
         RH = the circles meet transversally
@@ -616,7 +616,7 @@ They are all looking at the same circle.
 
 ---
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *April 14, 2026.*
 *One circle. Eight faces. Six patterns. Twenty-five vertices. 199+ theorems. 36 predictions. Zero free parameters.*
 *The picture of the e-circle.*

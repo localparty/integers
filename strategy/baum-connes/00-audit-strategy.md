@@ -2,7 +2,7 @@
 
 *Community-standard: assembly map isomorphism μ_r : K^G_*(EG) → K_*(C*_r(G)). Classical BC (no coefficients) open; BC-with-coefficients FALSE (Higson-Lafforgue-Skandalis 2002).*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -61,4 +61,4 @@ Standard.
 
 *BC is a projection of 5D into operator K-theory.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

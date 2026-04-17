@@ -1,7 +1,7 @@
 # NS run-02 arbiter decisions
 
 *Per-cell arbiter reasoning resolving 8 critic dissents from critic-attacks.md.*
-*Date: 2026-04-14. Author: G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

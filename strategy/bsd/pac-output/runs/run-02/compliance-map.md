@@ -2,7 +2,7 @@
 
 *Snapshot: solutions-with-prize/paper26-bsd/PROOF-CHAIN.md + solutions-with-prize/paper26-bsd/nodes/A-K + solutions-with-prize/paper26-bsd/01-adversarial-proof-review.md*
 *Date: 2026-04-14 (run-02, PAC compliance audit; Output A only)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -319,4 +319,4 @@ Parallel track (non-blocking): W_rank / W_nonCM / W_hK / W_Sha closure attempts 
 
 *End of compliance-map.md. LOCKED at arbiter-pass.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

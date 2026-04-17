@@ -1,7 +1,7 @@
 # NS run-02 critic attacks
 
 *Per-cell critic attack record. Paired with arbiter-decisions.md and kills.md.*
-*Date: 2026-04-14. Author: G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

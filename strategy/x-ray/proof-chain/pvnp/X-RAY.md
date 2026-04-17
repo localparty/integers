@@ -2,7 +2,7 @@
 
 *X-Ray of the pvnp proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls. Clone Growth $\leftrightarrow$ Fullness bridge theorem as the load-bearing physics (§3 per-layer).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -1065,4 +1065,4 @@ Author wins: 25 / 26 layer-fields. Critic wins: 1 (L10 projection — author's f
 
 *End of PvNP X-Ray. Snapshot 2026-04-15. 23 main layers + §12 TM-model translation layer = 24 entries annotated (Part (i) L1-L10 with L9a/b/c/*/ sub-cases nested; Part (ii) L11-L15 + CP-1; Corollary L16-L23; §12 load-bearing translation). 40+ cross-cuts identified. RESONANCE-canonical, $P_D$-dominant, P4-rich proof chain with the Clone Growth $\leftrightarrow$ Fullness Bridge theorem as the load-bearing physics. One load-bearing Clay-grade wall (W1 — Link 5 backward, Route C via CP-1 with seven enumerated bypass routes); one insulated wall (W2 — KMS$_1$ uniqueness); one non-load-bearing conjecture (W3 — spectral identification, possibly equivalent to RH for Boolean BC).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

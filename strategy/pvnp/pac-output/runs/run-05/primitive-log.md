@@ -2,7 +2,7 @@
 
 *Record of every PAC primitive applied to CONDITIONAL / OPEN-BUT-ADDRESSED / PARTIAL cell of run-02 compliance-map (168 cells). Source: `strategy/pvnp/deliverables/pvnp-independence-bare.md §3`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

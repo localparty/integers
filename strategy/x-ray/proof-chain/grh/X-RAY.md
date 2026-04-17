@@ -2,7 +2,7 @@
 
 *X-Ray of the grh proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -747,4 +747,4 @@ Approximate count: 45 / 48 author wins out of 48 total field decisions (5 fields
 
 *End of GRH X-Ray. Snapshot 2026-04-15. 8 main layers (with L4a-L4c and L5a-L5d sub-layers giving 12 entries) annotated. 38 cross-cuts identified. SYMMETRY-canonical, $P_D$-dominant, P1-rich proof chain. Three walls (W_G1, W_G2, W_G3); bridge family at $k \in \{2, 3, 4, 6\}$ is the load-bearing physical anchor (Branch D Axiom 4, paper61 §10); strict one-directional dependency on Paper 13 (RH).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

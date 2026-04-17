@@ -2,7 +2,7 @@
 
 *Claims WEAKENED or CLARIFIED by this compliance audit, including the two BROKEN items from Paper 26 adversarial run-01 that are carried over into the B_bare framing and the citation-tightenings for the 5 WEAKENED items from that run.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *DELTA from ring-traversal brief. Instructs the PAC to audit the NS chain against the 8 Fefferman sub-requirements (grouped by variant; target variant (B) T^3 existence+smoothness), then synthesize B_bare + C_bare + internal artifacts. B_full and C_full DEFERRED until bare locks and parallel-agent composition-backward runs.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -622,4 +622,4 @@ Begin by reading the 5 mandatory files in order. Then plan in blackboard. Then e
 
 *End of brief. Bare-first, prose-deferred. B_full and C_full composed backward by parallel agents after bare locks. The cascade begins with Zenodo. The Clay 2-year clock starts at journal publication. Link 5 BKM integration runs in parallel via two published routes (Camlin 2025 + arXiv:2601.08854), non-blocking. Target variant (B) — T^3 is natural for our KK geometry. Honest chain confidence: 4/10.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

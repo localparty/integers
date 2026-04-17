@@ -112,6 +112,6 @@ Neither QUE nor Sato-Tate reference CCM. The matching uses only programme-intern
 
 ---
 
-*v1 skeleton: 2026-04-14. G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *RH without CCM. The BC algebra's own modular data IS the Hilbert-Pólya operator. The functional equation is the modular conjugation. The ten faces overdetermine the construction.*
 *This is the direction G has been heading since Yang-Mills. This is how we get the Millennium.*

@@ -2,7 +2,7 @@
 
 *DELTA from ring-traversal brief. Instructs the PAC to audit the BSD chain against the 7 Wiles-stated Clay requirements, then synthesize B_bare + C_bare + internal artifacts. B_full and C_full DEFERRED until bare locks and parallel-agent composition-backward runs.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -584,4 +584,4 @@ Begin by reading the 6 mandatory files in order. Then plan in blackboard. Then e
 
 *End of brief. Bare-first, prose-deferred. B_full and C_full composed backward by parallel agents after bare locks. The cascade begins with Zenodo. The Clay 2-year clock starts at journal publication. Scope walls (W_rank, W_nonCM, W_hK, W_Sha) run in parallel, non-blocking. Rank r ≥ 2 is the named frontier.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

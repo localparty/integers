@@ -208,4 +208,4 @@ Recommend landing R1-R4 in a single "audit-compliance" commit to Paper 1 + PROOF
 
 *End of commit memo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

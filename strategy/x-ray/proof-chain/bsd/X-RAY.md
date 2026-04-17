@@ -2,7 +2,7 @@
 
 *X-Ray of the bsd proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -838,4 +838,4 @@ Arbiter wins estimate: approximately 60/65 author-wins out of 65 total field dec
 
 *End of BSD X-Ray. Snapshot 2026-04-15. 11 layers (with L5b, L5c sub-layers giving 13 entries) annotated. 40 cross-cuts identified. ARITHMETIC-canonical, $P_D$-dominant, P4-rich proof chain with strong $P_O$ outer-ring secondary at L8–L11. No mathematical gap in scope; four disclosed scope walls (W_rank, W_nonCM, W_hK, W_Sha) under Clay Rules §5d OPEN-BUT-ADDRESSED protocol.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

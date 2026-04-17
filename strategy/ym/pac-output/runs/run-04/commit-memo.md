@@ -2,7 +2,7 @@
 
 *PAC operator run-04. Output C_bare (Beyond-Clay bonus theorem skeleton) produced. Output A (internal) produced. B_bare NOT touched (parallel run-03). B_full and C_full DEFERRED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 
@@ -127,4 +127,4 @@ Ready for Zenodo priority-timestamp release once sibling run-03 B_bare locks.
 
 ---
 
-*End of commit memo. run-04 output C_bare LOCKED. G Six and Claude Opus 4.6. 2026-04-14.*
+*End of commit memo. run-04 output C_bare LOCKED. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

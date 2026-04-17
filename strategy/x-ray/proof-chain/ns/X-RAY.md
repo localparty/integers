@@ -2,7 +2,7 @@
 
 *X-Ray of the ns proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -758,4 +758,4 @@ All other assignments were straightforward first-pass wins. Critic attacks did n
 
 *End of NS X-Ray. Snapshot 2026-04-15. 8 main layers + 2 sub-layers (L5a, L5b) = 10 entries; 11 physics-block instances counting the top-level L5 wall itself as its own entry with the two sub-layers. 37 cross-cuts identified (6 on the YM axis — densest pair in the programme). CURVATURE-and-DYNAMICS bi-canonical face, $P_B$-dominant with $P_D$-secondary, P4-and-P3 rich proof chain. One primary wall (W1 = L5 BKM integration) + four audit items + one disclosure discipline = six named walls. Confidence 4/10. Structural identity: NS is the gradient-flow shadow of YM in the fluid sector (paper61 §19.6).*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

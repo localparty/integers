@@ -2,7 +2,7 @@
 
 *PAC Phase 5B INDEPENDENCE-synthesis for the PvNP vertex. Companion to run-02 (compliance audit LOCKED) and run-03 (Pillar A COMPLY). This run produces Pillar B INDEPENDENCE.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -103,4 +103,4 @@ Per-requirement non-silent coverage (P+Pd+Pb as PROVED for Pillar-B purposes):
 
 *End of run-05 commit memo. PUBLISH-READY. LOCKED. Pillar B INDEPENDENCE bare-skeleton shipped.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

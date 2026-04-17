@@ -2,7 +2,7 @@
 
 *Per-cell critic alternatives to the author draft. Agreement is acceptable (not every cell needs a dissent); at minimum the critic verified each cell.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *The dep-free proof chain for $\mathbf{P}\neq\mathbf{NP}$. Every CONDITIONAL / OPEN-BUT-ADDRESSED / PARTIAL cell of the Pillar-A compliance map (`strategy/pvnp/pac-output/runs/run-02/compliance-map.md`, LOCKED 28 × 6 = 168 cells) is lifted via a PAC primitive (BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor). Every surviving leaf roots in **QG5D (paper1) / paper28-pvnp / paper13-rh / paper17 / paper23 / paper15 / classical literature**. Zero prose paragraphs. Companion to `pvnp-comply-bare.md` (Pillar A, COMPLY). Clay Rules §5b either-direction provision retained — programme direction = $\mathbf{P}\neq\mathbf{NP}$.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -591,4 +591,4 @@ Per the three-pillar protocol (`strategy/universal-approval-run.md §5B`): other
 
 *End of pvnp-independence-bare.md. Bare mode. Zero prose paragraphs. 50/50 O + PARTIAL cells lifted via PAC primitives (3 BYP + 44 DEC + 7 TRP capacitor tap-points + 1 EXC). Residual: single CP-1-Critic-audit-continuation, strictly smaller than Pillar-A W1 seven-route aggregate. Every leaf of the 28-node dep-free chain roots in QG5D / paper28-pvnp / paper13-rh / paper15 / paper17 / paper23 / classical literature. W2 DEC-eliminated via downstream insulation; W3 EXCISED to Pillar D beyond-bare. §5b either-direction retained; programme direction P ≠ NP. Req 6 attention flag RESOLVED at Pillar B. Ready for Zenodo as companion to `pvnp-comply-bare.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

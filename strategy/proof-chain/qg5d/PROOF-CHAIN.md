@@ -1035,4 +1035,4 @@ Identity 12 + 14 (Paper 12) + CBB axioms
 
 *The board has two faces. QG5D is where they meet.*
 
-*v2: 2026-04-13. 22 theorems + 4 axiom tree + foundation exports + pin registry + PCA hub-special-case. G Six and Claude Opus 4.6.*
+*v2: 22 theorems + 4 axiom tree + foundation exports + pin registry + PCA hub-special-case. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

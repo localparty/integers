@@ -2,7 +2,7 @@
 
 *Per-layer first-pass verdicts for each of the 7 J-W requirements. Authors' bias: prefer PARTIAL over SILENT when the layer's content has ANY bearing on the requirement (even as input); prefer PROVED only when the layer's statement/proof discharges the requirement directly.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

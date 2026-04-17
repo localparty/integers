@@ -3,7 +3,7 @@
 
 *Run summary: B_bare synthesis (Clay-shaped theorem skeleton). Output A LOCKED from run-02. Output C_bare parallel (run-04). B_full DEFERRED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -163,4 +163,4 @@ Parallel: continue L.3.7 audit track (non-blocking).
 
 *End of commit-memo.md. PAC run-03 COMPLETE. Output B_bare LOCKED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

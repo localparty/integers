@@ -2,7 +2,7 @@
 
 *Critic pass: for each of the 140 cells, propose at least one alternative verdict with reason. Agreement-with-confirming-evidence is acceptable. Disagreements go to arbiter.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

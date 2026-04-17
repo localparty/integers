@@ -2,7 +2,7 @@
 
 *Arbiter disposition on critic attacks against the author draft of `rh-comply-bare.md`. Emits final verdict.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

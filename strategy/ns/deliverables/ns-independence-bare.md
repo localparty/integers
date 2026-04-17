@@ -2,7 +2,7 @@
 
 *The dep-free proof chain for Navier-Stokes existence and smoothness, Clay/Fefferman **variant (B)**. Every CONDITIONAL / OPEN-BUT-ADDRESSED / PARTIAL / SILENT-with-bypass cell of the Pillar-A LOCKED 10×7 compliance map (`strategy/ns/pac-output/runs/run-02/compliance-map.md`) is lifted via a PAC primitive (BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor). Every surviving leaf roots in **QG5D (paper1) / paper08-yang-mills / paper10 / paper11 / paper30-navier-stokes / paper60 / paper61 / classical literature / TWO published external bypass-route preprints (Camlin 2025 + arXiv:2601.08854)**. Zero prose paragraphs. Companion to `ns-comply-bare.md` (Pillar A, COMPLY). **Variant (B)** declared throughout per Rules §5b; (A/C/D) EXCISED under §5b (alternative-variant provision), **NOT §5d-silence**.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -551,4 +551,4 @@ The residuals $W_1^B, W_2^B, W_3^B$ are strictly programme-internal integration 
 
 *End of ns-independence-bare.md. Bare mode. Zero prose paragraphs. 70/70 PARTIAL + OPEN-BUT-ADDRESSED + SILENT cells of Pillar-A LOCKED 10×7 matrix lifted via PAC primitives (9 Pb + 55 Pd + 6 Px). Residuals: three narrow audits (W1^B = BKM-integration-audit; W2^B = GF-transfer-audit; W3^B = Leray-Hopf-descent-audit), each strictly smaller than its Pillar-A counterpart. W4 (BHMR rigor) EXCISED. Every leaf of the dep-free chain roots in QG5D / paper08 / paper10 / paper11 / paper30 / paper60 / paper61 / classical literature / capacitor Tier-1 cells / two published external preprints (Camlin 2025 + arXiv:2601.08854, queued for Pillar-C hardening). Zero cells conditional on external-unproved claims. Variant (B) declared throughout per §5b; (A/C/D) EXCISED under §5b (alternative-variants provision), NOT §5d-silence. Ready for Zenodo as companion to ns-comply-bare.md.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *Projection-audit strategy for community-standard problem "Hilbert's 12th Problem / Kronecker Jugendtraum." Explicit class field theory for arbitrary K.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -91,4 +91,4 @@ Standard 0-6 month; novelty may extend acceptance phase.
 
 *H12 is a projection of 5D into algebraic number theory; explicit class fields from KMS thermodynamics.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

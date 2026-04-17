@@ -2,7 +2,7 @@
 
 *The fourth pillar. Every retained external dependency (CCM, Balaban, Tomita-Takesaki, Kolyvagin, Connes trace formula, Bulatov-Zhuk, Bögli, …) gets derived from ℤ + ZFC via programme machinery and offered to the community as a standalone contribution — in the register of the target community.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -257,4 +257,4 @@ Per `strategy/north-star.md`'s success-criteria framework:
 
 *Pillar D turns the programme's reciprocity ethic into its field-level output. Every retained dependency becomes an offering.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

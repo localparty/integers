@@ -2,7 +2,7 @@
 
 *X-Ray of the ym proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -866,4 +866,4 @@ Notable arbiter wins:
 
 *End of YM X-Ray. Snapshot 2026-04-14. 18 layers (with L1b, L10b sub-layers giving 20 entries) annotated. 38 cross-cuts identified. CURVATURE-canonical, $P_B$-dominant, P4-rich proof chain. One wall (H4); one candidate bypass (Step 18').*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

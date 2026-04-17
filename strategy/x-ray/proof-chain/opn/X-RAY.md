@@ -2,7 +2,7 @@
 
 *X-Ray of the opn proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -817,4 +817,4 @@ Route-6a kill and Route-6b blocked-decomposed were decided via direct mathematic
 
 *End of OPN X-Ray. Snapshot 2026-04-15. 7 main layers annotated (L1–L7, with L6 branching into three sub-routes 6a KILLED, 6b BLOCKED-DECOMPOSED, 6c ACTIVE, plus auxiliary 6c-alt via ABC). 32 cross-cut edges identified. ARITHMETIC-canonical (5/7 = 71%), $P_D$-dominant (5/7 = 71%), the FOUNDING arithmetic-face vertex per paper60 §25 "the OPN trigger." Primary structural parent: BSD template (paper26, via paper60 §25 spoof ↔ Sha mapping). Primary cross-chain sibling wall: ARITHMETIC face trinity OPN ↔ Goldbach ↔ Twin Primes (paper60 §14 additive-multiplicative wall). Two walls: W_OPN-1 (L6 odd local-global impossibility — Route 6c ACTIVE, Routes 6a/6b dead) and W_OPN-2 (audit-phrased Hecke-orbit-to-σ-constraint bridge, subsumed under W_OPN-1). The 2,300-year-old problem — the oldest open question in mathematics — attacked via the youngest algebra. Euler gave the form; Robin tied σ to the zeros; the BC algebra computes σ at criticality. The odd Hecke subsemigroup is the battleground. Confidence 4/10.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

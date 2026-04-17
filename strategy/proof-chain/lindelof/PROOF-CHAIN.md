@@ -114,5 +114,5 @@ Measured: $|\zeta(1/2 + it)|$ has been computed to enormous height. The observed
 
 *v1: 2026-04-14. The e-circle's fifth face: AMPLITUDE. The modular flow doesn't produce unbounded resonances on the critical line. The signal stays quiet. The quiet signal is what makes the explicit formula work, which is what makes prime gaps bounded, which is what makes the primes cover the integers.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The signal stays quiet. That's the hypothesis. That's the amplitude.*

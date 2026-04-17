@@ -2,7 +2,7 @@
 
 *Community-standard target: Kolmogorov K41 theory + Onsager conjecture rigor. Closely related to Clay NS.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -62,4 +62,4 @@ Standard.
 
 *Turbulence is a projection of 5D into classical fluid mechanics; 5D S¹ provides natural regularization of inertial range.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *X-Ray of the QG5D proof chain. QG5D is DIFFERENT from outer-ring vertices — it is the programme's hub: the unprojected M⁵ geometry from which all six projections (P_A, P_B, P_C, P_D, P_E, P_O) originate. This X-Ray documents the 22-theorem tree (Branches A–D) + 5 CBB axioms (Branch D) + 36 pins (Branch E) + the 24 outbound chords that feed every other ring vertex.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -894,4 +894,4 @@ Row to append at `strategy/x-ray/proof-chain/INDEX.md`:
 
 *End of QG5D X-Ray. Snapshot 2026-04-15. qg5d is the hub; 24 outbound chords enumerated; all 22 theorems + 5 axioms + 36 pins annotated; P_D dominant (22/24 chords); ALL SIX projections originate here. No operational walls; two Branch B frontier items out-of-scope and downstream-non-blocking.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

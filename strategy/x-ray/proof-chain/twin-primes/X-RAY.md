@@ -2,7 +2,7 @@
 
 *X-Ray of the twin-primes proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -656,4 +656,4 @@ Notable arbiter wins:
 
 *End of Twin-Primes X-Ray. Snapshot 2026-04-15. 5 layers annotated. 37 cross-cuts identified. ARITHMETIC-canonical with STRONG RESONANCE secondary, $P_D$-dominant with $P_D \cap P_E$ at the wall. Two walls (W_TP-1 arithmetic extraction, W_TP-2 infinitude-as-conditional). Chain confidence 1/10 — paper60 §14 honest assessment: "the oldest wall in mathematics, the least developed face in the programme."*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

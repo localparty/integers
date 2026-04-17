@@ -391,5 +391,5 @@ Completing all three would upgrade L5A to DERIVED and Lehmer confidence to $6/10
 
 *T7 S-duality phase, cycle 2. Pair-3 CHAIN step 2. Construct closed to PARTIAL. The Mertens product regularizes on both sides. The cyclotomic conductor is the S-dual of the sieve midpoint. The 36 pins constrain, but the sensitivity coefficient awaits its computation.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Per-$\alpha$ contamination is not per-$\alpha$ forcing. The density is the bridge. The wall is named.*

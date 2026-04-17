@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Riemann ask: ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation of BC algebra + RH spectral data, zero free parameters, 36 pins filtered to RH-relevance, cross-Clay connections (RH↔YM / RH↔BSD / RH↔PvNP / RH↔BGS), GRH extension via paper13b, Weil explicit formula as witness, Montgomery-Odlyzko GUE bonus, computed numerics. Zero prose. Every claim cites programme paper + specific proof location. Companion to `rh-comply-bare.md` (Pillar A COMPLY) in the Zenodo-priority release. Produced 2026-04-14 (PAC run-04, Phase 5D BEYOND synthesis).*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -583,4 +583,4 @@ Additional acknowledgments: **Selberg, Levinson** (critical-line milestones, inh
 
 *End of rh-beyond-bare.md. BARE MODE. $\leq 15$ pages. Every claim cites programme paper + §-level location (or EXTERNAL, inherited-classical, or landscape.md). W1 (CCM) inherited from `rh-comply-bare.md`; NC flags (NC-5.1, NC-5.2, NC-5.3, NC-6.1, NC-7.1) retained for transparency. Pillar BEYOND deliverable ready for Zenodo release alongside Pillar A.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

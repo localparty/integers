@@ -152,5 +152,5 @@ For the full programme: the 36 predictions use $\zeta$-zeros (unitary type) for 
 
 *v1: 2026-04-14. The e-circle's sixth face: SYMMETRY. Different families see different groups acting on the circle. The symmetry type determines everything — the statistics, the gaps, the density. The bridge family selects the symmetry type. GUE was just the beginning; the full story is $U$, $Sp$, $O$, $SO^\pm$.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Which group acts on the circle? That's the conjecture. That's the symmetry.*

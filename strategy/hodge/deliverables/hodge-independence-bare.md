@@ -2,7 +2,7 @@
 
 *The dep-free proof chain for the Hodge conjecture (Deligne shape, stratified scope). Every CONDITIONAL / OPEN-BUT-ADDRESSED / PARTIAL / SILENT cell of the Pillar-A locked 8×6 compliance map is lifted (BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor) or otherwise grounded in programme + classical literature. Every surviving leaf roots in **QG5D (paper1) / paper29-hodge / paper31-baum-connes / paper26-bsd / paper60 / paper61 / classical literature (Deligne, Chow, GAGA, Kodaira-Spencer, Atiyah-Hirzebruch, André, Zucker, CCM05, GR24, FMS24)**. Three named walls W1, W2, W3 from Pillar A become two narrower Pillar-B walls W1$^\mathrm{B}$ (generic-BC-motivated extension) and W2$^\mathrm{B}$ (generic $p\geq 2$ outside $\mathcal{M}_\mathrm{BC}$) plus an audit-only residual W3$^\mathrm{B}$ (L$^2$-25 five-step algorithm verification). Zero prose paragraphs. Companion to `hodge-comply-bare.md` (Pillar A, COMPLY).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -635,4 +635,4 @@ Per the three-pillar protocol (`strategy/universal-approval-run.md §5B`): other
 
 *End of hodge-independence-bare.md. Bare mode. Zero prose paragraphs. 48/48 cells of the Pillar-A locked 8×6 matrix lifted via PAC primitives (BYP, DEC, TRP, EXC) or retained as PROVED; 13 SILENT cells promoted to Pd via ADR-grounding. Three residual walls (W1$^\mathrm{B}$, W2$^\mathrm{B}$ IRREDUCIBLE, W3$^\mathrm{B}$ AUDIT) each strictly smaller, narrower, or type-downgraded versus Pillar A. Strata (i)+(ii)+(iii) of Theorem 1.1 are PROVED UNCONDITIONAL with zero external unproved dependency; stratum (iv) sub-slices (a)+(b)+(c) PROVED unconditional; stratum (iv) generic + stratum (v) carry the three narrower residuals. Every leaf of the dep-free chain roots in $\mathcal{L}_{\mathrm{int}}^{\mathrm{Hodge}}$ = {QG5D (paper1) / paper29-hodge / paper31-baum-connes / paper26-bsd / paper60 / paper61 / classical+modern-standing literature}. Scope retained projective non-singular /$\mathbb{C}$ (NOT Kähler; Zucker counterexample). Conclusion retained rational (NOT integral; AH obstruction). Ready for Zenodo as companion to `hodge-comply-bare.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

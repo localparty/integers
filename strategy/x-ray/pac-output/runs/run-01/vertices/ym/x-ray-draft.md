@@ -2,7 +2,7 @@
 
 *First-pass annotations for ym (paper08, 18 nodes). For each layer, the 5-field Physics block. Citations attached. Critic and arbiter operate from this draft.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

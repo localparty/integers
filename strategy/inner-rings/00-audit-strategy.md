@@ -2,7 +2,7 @@
 
 *Framework-claim: 5 branches of paper1 (A Quantum / B Gravity / C Cosmology / D CBB / E Pins). Each branch is itself a projection preserving one physics branch.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -50,4 +50,4 @@ Note: `strategy/inner-rings/` already has 5 branch subdirectories with per-branc
 
 *Inner rings are 5 projections of 5D that preserve single physics branches. Each audit renders its PROOF-CHAIN visible and framework-consistent.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

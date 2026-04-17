@@ -2,7 +2,7 @@
 
 *X-Ray of the hodge proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls. Standard Conjecture D motivic extension + CP² × S² moduli (Branch D Axiom 3) flagged.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -645,4 +645,4 @@ Notable cross-vertex considerations:
 
 *End of Hodge X-Ray. Snapshot 2026-04-15. 8 layers (with L4a/L4b sub-layers giving 9 entries) annotated. SYMMETRY-canonical (6 layers), $P_D$-dominant (6 layers), P4-rich (4 layers). Three named walls (W1, W2, W3) transparently disclosed per Clay §5d; PARTIAL closure on ab-var-powers slice (2024) inherits to BSD-CM. Branch D Axiom 3 (CP² × S² 9-d moduli) framework-role for L5 flagged in §7.2. Compound projection $P_D \cap P_A$ per paper61 §19.6 retained as $P_D$-construction + $P_A$-observational-shadow.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

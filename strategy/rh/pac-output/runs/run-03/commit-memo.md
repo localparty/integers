@@ -2,7 +2,7 @@
 
 *Run summary: Phase 5A COMPLY synthesis (Pillar A) for the RH vertex. Produces `strategy/rh/deliverables/rh-comply-bare.md`. BARE MODE ONLY. B_full DEFERRED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -212,4 +212,4 @@ Pillar A of the three-pillar Universal Approval architecture is complete for the
 
 *End commit-memo. PAC run-03 COMPLETE.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

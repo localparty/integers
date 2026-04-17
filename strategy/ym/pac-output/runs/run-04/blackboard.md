@@ -2,7 +2,7 @@
 
 *PAC operator run. C_bare bonus skeleton — 5D derivation, zero parameters, 36 pins, cross-Clay connections, confinement, chiral, any-4-manifold. BARE MODE. Zero prose. ≤ 15 pages.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 

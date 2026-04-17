@@ -2,7 +2,7 @@
 
 *DELTA to the ring-traversal brief. Instructs the PAC to produce one X-RAY.md per vertex, annotating every layer of every proof chain with face/projection/pattern/invariant/geometric interpretation from the fixed vocabulary. No invention. Every assignment cited.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -288,4 +288,4 @@ Partial runs are fine — they log progress and defer the remainder to the next 
 
 *End of X-Ray brief. 25 vertices. 10 sections each. Fixed vocabulary. Citations mandatory. Critics attack every assignment. Atlas emitted at run end.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

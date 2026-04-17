@@ -141,10 +141,12 @@
   #bottom-panel[open] .chevron{transform:rotate(180deg)}
   #bottom-panel .summary-sep{color:var(--dim);opacity:0.6}
   #bottom-panel .slides-hint{color:var(--dim);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0;font-size:10px;margin-left:6px}
-  #bottom-panel .panel-body{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px 14px 12px}
+  /* Fixed panel-body height — slide content scrolls inside its half so the
+     panel doesn't grow/shrink between slides (which made nav buttons jump). */
+  #bottom-panel .panel-body{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px 14px 12px;height:230px;box-sizing:border-box}
 
   /* Controls half — 2 columns of sliders + button row below */
-  .controls-half{display:flex;flex-direction:column;gap:6px}
+  .controls-half{display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--border);padding-left:16px;min-height:0}
   .slider-cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
   .slider-col{display:flex;flex-direction:column;gap:4px;min-width:0}
   .control-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dim);min-width:0}
@@ -168,7 +170,7 @@
   .control-btn.active{color:var(--accent);border-color:var(--accent)}
 
   /* Slides half */
-  .slides-half{display:flex;flex-direction:column;gap:5px;border-left:1px solid var(--border);padding-left:16px;min-height:140px}
+  .slides-half{display:flex;flex-direction:column;gap:5px;min-height:0;overflow:hidden}
   .slide-nav-row{display:flex;align-items:center;gap:10px;margin-bottom:2px}
   .slide-nav{background:var(--panel2);border:1px solid var(--border);color:var(--dim);padding:2px 9px;border-radius:3px;cursor:pointer;font-size:13px;font-weight:600;line-height:1;font-family:ui-monospace,Menlo,monospace}
   .slide-nav:hover{color:var(--cyan);border-color:var(--cyan)}
@@ -176,7 +178,26 @@
   #slide-counter{color:var(--dim);font-size:10.5px;font-family:ui-monospace,Menlo,monospace;min-width:44px;text-align:center}
   #slide-title{font-size:12.5px;color:var(--cyan);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;line-height:1.2}
   #slide-tagline{font-size:11px;color:var(--amber);font-style:italic;line-height:1.3}
-  #slide-body{font-size:11.5px;color:var(--text);line-height:1.5;flex:1}
+  /* Scrollable body — overflow stays inside the slides half so the panel
+     stays a fixed height and the prev/next buttons don't shift around.
+     Scrollbar styled to match the left-panel scroll areas (#col-solutions,
+     #col-layers, #col-detail) — same dark thin look. */
+  #slide-body{font-size:11.5px;color:var(--text);line-height:1.5;flex:1;overflow-y:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+  #slide-body::-webkit-scrollbar{width:6px}
+  #slide-body::-webkit-scrollbar-track{background:transparent}
+  #slide-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  #slide-body::-webkit-scrollbar-thumb:hover{background:var(--dim)}
+  /* Match the same look on the left-panel scroll areas */
+  #col-solutions,#col-layers,#col-detail{scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+  #col-solutions::-webkit-scrollbar,#col-layers::-webkit-scrollbar,#col-detail::-webkit-scrollbar{width:6px}
+  #col-solutions::-webkit-scrollbar-track,#col-layers::-webkit-scrollbar-track,#col-detail::-webkit-scrollbar-track{background:transparent}
+  #col-solutions::-webkit-scrollbar-thumb,#col-layers::-webkit-scrollbar-thumb,#col-detail::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  #col-solutions::-webkit-scrollbar-thumb:hover,#col-layers::-webkit-scrollbar-thumb:hover,#col-detail::-webkit-scrollbar-thumb:hover{background:var(--dim)}
+  #slide-body ul,#slide-body ol{margin:4px 0 4px 18px;padding:0}
+  #slide-body li{margin-bottom:3px;line-height:1.45}
+  #slide-body ul.legend-bullets{list-style:none;margin-left:0}
+  #slide-body ul.legend-bullets li{display:flex;align-items:baseline;gap:8px}
+  #slide-body ul.legend-bullets li::before{content:"●";flex-shrink:0;color:var(--bullet-color,var(--cyan));text-shadow:0 0 4px currentColor}
   #slide-body a,#slide-body code{color:var(--cyan);text-decoration:none;font-family:ui-monospace,Menlo,monospace;font-size:10.5px}
   #slide-body a:hover{color:var(--amber)}
   #slide-cite{font-size:10px;color:var(--dim);font-style:italic;margin-top:2px}
@@ -188,7 +209,7 @@
     #left-panel{grid-column:1;grid-row:3;border-right:none;border-top:1px solid var(--border)}
     #bottom-panel{grid-column:1;grid-row:4}
     #bottom-panel .panel-body{grid-template-columns:1fr}
-    .slides-half{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:10px}
+    .controls-half{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:10px}
   }
 </style>
 </head>
@@ -216,12 +237,12 @@
       <div class="section-label" id="mode-section-label">Mode</div>
       <div class="mode-grid">
         <div class="mode-col">
-          <label class="mode-check active" data-mode="comply"><input type="checkbox" checked>Compliance</label>
-          <label class="mode-check active" data-mode="independent"><input type="checkbox" checked>Independence</label>
+          <label class="mode-check active" data-mode="geodesic"><input type="checkbox" checked>Geodesic</label>
+          <label class="mode-check active" data-mode="contribute"><input type="checkbox" checked>Contribution</label>
         </div>
         <div class="mode-col">
-          <label class="mode-check active" data-mode="contribute"><input type="checkbox" checked>Contribution</label>
-          <label class="mode-check active" data-mode="geodesic"><input type="checkbox" checked>Geodesic</label>
+          <label class="mode-check active" data-mode="independent"><input type="checkbox" checked>Independence</label>
+          <label class="mode-check active" data-mode="comply"><input type="checkbox" checked>Compliance</label>
         </div>
       </div>
     </div>
@@ -257,11 +278,22 @@
   <details id="bottom-panel">
     <summary>
       <span class="chevron">▾</span>
-      <span class="summary-label left">Controls</span>
+      <span class="summary-label left">Slides<span class="slides-hint">— what the atlas is</span></span>
       <span class="summary-sep">│</span>
-      <span class="summary-label right">Slides<span class="slides-hint">— what the atlas is</span></span>
+      <span class="summary-label right">Controls</span>
     </summary>
     <div class="panel-body">
+      <div class="slides-half">
+        <div class="slide-nav-row">
+          <button class="slide-nav" id="slide-prev" aria-label="previous slide">◄</button>
+          <span id="slide-counter">1 / 14</span>
+          <button class="slide-nav" id="slide-next" aria-label="next slide">►</button>
+        </div>
+        <div id="slide-title">loading…</div>
+        <div id="slide-tagline"></div>
+        <div id="slide-body">loading…</div>
+        <div id="slide-cite"></div>
+      </div>
       <div class="controls-half">
         <div class="slider-cols">
           <div class="slider-col">
@@ -328,17 +360,6 @@
           <button class="control-btn" id="btn-reset">reset</button>
           <button class="control-btn" id="btn-animate" title="Toggle all auto-animations">animate</button>
         </div>
-      </div>
-      <div class="slides-half">
-        <div class="slide-nav-row">
-          <button class="slide-nav" id="slide-prev" aria-label="previous slide">◄</button>
-          <span id="slide-counter">1 / 12</span>
-          <button class="slide-nav" id="slide-next" aria-label="next slide">►</button>
-        </div>
-        <div id="slide-title">loading…</div>
-        <div id="slide-tagline"></div>
-        <div id="slide-body">loading…</div>
-        <div id="slide-cite"></div>
       </div>
     </div>
   </details>
@@ -1123,22 +1144,15 @@ function updateTorusHighlight() {
       mainNodes.forEach((mesh, i) => {
         const spreadU = (i / mainNodes.length) * Math.PI * 2;
         const v = mesh.userData.origV + tubeOffset;
-        let newPos = torusPoint(spreadU, v);
+        // Keep ALL nodes on the torus surface so chain-hose endpoints (which
+        // come from currentU/V) reach the visible node center. Earlier we
+        // sank bypassed externals inward — but that left the white tube
+        // floating in mid-air past the node. The bypass-route node sitting
+        // nearby in INDEPENDENT mode is signal enough that the external is
+        // replaced; no need to physically displace the node.
+        const newPos = torusPoint(spreadU, v);
         mesh.userData.currentU = spreadU;
         mesh.userData.currentV = v;
-
-        // INDEPENDENT mode: bypassed externals sink inward
-        if (activeModes.has('independent') &&
-            (mesh.userData.classification === 'external' || mesh.userData.classification === 'open')) {
-          const hasBypass = TORUS_NODES.some(n =>
-            n.classification === 'bypass-route' && n.replaces === mesh.userData.id);
-          if (hasBypass) {
-            const cu = Math.cos(spreadU), su = Math.sin(spreadU);
-            const cv = Math.cos(v), sv = Math.sin(v);
-            const nx = -cv * cu, ny = -cv * su, nz = -sv;
-            newPos = new THREE.Vector3(newPos.x + nx * 0.15, newPos.y + nz * 0.15, newPos.z + ny * 0.15);
-          }
-        }
         mesh.position.copy(newPos);
         spreadPosByNodeId[mesh.userData.id] = {u: spreadU, v: v};
       });
@@ -2239,8 +2253,17 @@ const SLIDES = [
   },
   {
     title: 'The Six Projections',
-    tagline: 'Every conjecture is a shadow of M⁵.',
-    body: 'Paper 61: the programme\'s six rings (outer 25-vertex + five inner Paper-1 branches) are <strong>six projection directions</strong> of one 5D object — analogous to a tesseract\'s Schlegel diagram showing "cube within cube" as one 4D object. QG5D at the hub is the unprojected center; the 25 vertices are specializations under projection operators <code>P_A..P_E..P_O</code>. Mathematics is not separate subjects; it is one geometry seen from different angles.',
+    tagline: 'Every node carries its projection operator.',
+    body: 'Paper 61 defines six projection operators from M⁵ to target spaces:' +
+      '<ul>' +
+        '<li><code>P_A</code> — quantum</li>' +
+        '<li><code>P_B</code> — gravity / KK</li>' +
+        '<li><code>P_C</code> — cosmology</li>' +
+        '<li><code>P_D</code> — Bost-Connes / CBB</li>' +
+        '<li><code>P_E</code> — pins</li>' +
+        '<li><code>P_O</code> — outer-ring</li>' +
+      '</ul>' +
+      '<strong>Every node carries its primary projection operator</strong> — click a layer to see <code>P_X</code> in the detail panel. The 25 vertices cluster by branch: P_B-dominant (YM, NS, Turbulence); P_D-dominant (RH, BSD, Baum-Connes, BGS, GRH, Twin Primes…); P_O at Hilbert-6 (the META-closure). One geometry, six routes — every conjecture on this surface IS a shadow of M⁵ along one of them.',
     cite: '► integers/paper61-projections-5d/'
   },
   {
@@ -2252,25 +2275,63 @@ const SLIDES = [
   {
     title: 'How to Operate',
     tagline: 'Click, watch, toggle, compose.',
-    body: '<strong>(1)</strong> Click any vertex button → its proof chain spreads horizontally across the torus. <strong>(2)</strong> Watch nodes light up by classification (gold / silver / red / orange / green). <strong>(3)</strong> Toggle the four modes to switch between framings of the same chain. <strong>(4)</strong> Click nodes directly on the surface to compose your own custom chain, then CONNECT to draw the shortest path. Auto-rotate orbits the camera; auto-tube winds nodes around the tube — both together = Clifford flow on T².',
+    body: '<ol>' +
+      '<li>Click any vertex button → its proof chain spreads horizontally across the torus.</li>' +
+      '<li>Watch nodes light up by classification (gold / cyan / rose / violet / green).</li>' +
+      '<li>Toggle the four modes to switch between framings of the same chain.</li>' +
+      '<li>Click nodes directly on the surface to compose your own custom chain, then CONNECT to draw the shortest path.</li>' +
+      '</ol>' +
+      'Auto-rotate orbits the camera; auto-tube winds nodes around the tube — both together = Clifford flow on T².',
     cite: '► strategy/atlas-torus-run.md'
   },
   {
     title: 'The Four Modes',
     tagline: 'Same data. Four presentations. Zero epistemic friction.',
-    body: '<strong>COMPLY</strong> shows the chain that meets prize requirements; named walls disclosed honestly per Clay §5d. <strong>INDEPENDENT</strong> shows the dep-free chain — externals shrink below the surface, green replacement bypass-route nodes appear above. <strong>CONTRIBUTE</strong> highlights what the programme strengthens (Pillar C). <strong>GEODESIC</strong> traces the BFS shortest path. All four can be ON simultaneously: active modes bold, inactive modes ghost as comparison overlays. Each judge sees the framing they prefer.',
+    body: '<ol>' +
+      '<li><strong>Geodesic</strong> — traces the BFS shortest path through the chain.</li>' +
+      '<li><strong>Contribution</strong> — highlights what the programme strengthens (Pillar C).</li>' +
+      '<li><strong>Independence</strong> — shows the dep-free chain; externals replaced by bypass-route nodes.</li>' +
+      '<li><strong>Compliance</strong> — meets prize requirements; named walls disclosed honestly per Clay §5d.</li>' +
+      '</ol>' +
+      'All four can be ON simultaneously: active modes bold, inactive modes ghost as comparison overlays. Each judge sees the framing they prefer.',
     cite: '► strategy/north-star.md §2'
   },
   {
     title: 'The Golden Dots',
     tagline: '102 Integers-original theorems.',
-    body: '<strong class="gold-count">Gold</strong> = theorems originated by the programme (T1–T4 reclassified-from-postulates, K.1, K.3, V.1, U.2, the YM 18-link proof, the PvNP Clone-Growth ↔ Fullness bridge). <strong>Silver</strong> = literature (cited but not rederived). <strong>Red</strong> = retained externals (CCM 2025, Standard Conjecture D). <strong>Orange</strong> = open frontiers (transparently disclosed walls). <strong>Green</strong> = bypass-routes (programme-internal alternatives to external dependencies). The instant visual signal of contribution.',
+    body: '<ul class="legend-bullets">' +
+      '<li style="--bullet-color:#f5c26b"><strong style="color:#f5c26b">Gold</strong> — theorems originated by the programme (T1–T4 reclassified-from-postulates, K.1, K.3, V.1, U.2, the YM 18-link proof, the PvNP Clone-Growth ↔ Fullness bridge).</li>' +
+      '<li style="--bullet-color:#0ea5e9"><strong style="color:#0ea5e9">Sky-blue</strong> — literature (cited but not rederived).</li>' +
+      '<li style="--bullet-color:#e11d48"><strong style="color:#e11d48">Rose</strong> — retained externals (CCM 2025, Standard Conjecture D).</li>' +
+      '<li style="--bullet-color:#8b5cf6"><strong style="color:#8b5cf6">Violet</strong> — classical (pre-1950 results).</li>' +
+      '<li style="--bullet-color:#22c55e"><strong style="color:#22c55e">Green</strong> — open frontiers (transparently disclosed walls).</li>' +
+      '<li style="--bullet-color:#14b8a6"><strong style="color:#14b8a6">Teal</strong> — bypass-routes (programme-internal alternatives to external dependencies).</li>' +
+      '</ul>' +
+      'The instant visual signal of contribution.',
     cite: '► strategy/x-ray/proof-chain/'
   },
   {
+    title: 'The Hub is Different',
+    tagline: 'qg5d\'s zigzag spread is structural, not noise.',
+    body: 'Activate <strong>Integers</strong> (the qg5d hub) and the spread chain produces a smooth-then-jagged shape. The 25 outer-ring vertices each have a linear proof chain (L1 → L2 → L3 → ...) that flows organically across the surface. qg5d is structurally a <strong>tree</strong>: Theorems T1–T4 (reclassified postulates), Branch A (quantum, A.1–A.9), Branch B (gravity, B.10–B.12, B.KK-gap, B.grad), Branch D (CBB axioms, D.B1–D.B5). When forced into a linear sequence for visualization, the zigzag is where branches change. <em>Hub ≠ vertex; the surface tells you so directly.</em>',
+    cite: '► strategy/proof-chain/qg5d/PROOF-CHAIN.md'
+  },
+  {
+    title: 'Two Classes Become Visible',
+    tagline: 'Activate all 8 prize vertices and a structural law surfaces.',
+    body: 'Click <strong>YM, RH, BSD, PvNP</strong> together → one shape: dense gold, ≤1 wall, prize-grade closure (76–85% Integers-original). Click <strong>Hodge, NS, Goldbach, Collatz</strong> → another: many open frontiers, sparse gold (≤13%), 3–8 walls. The 8 Clay-grade prize papers split into two classes the atlas reveals instantly: <strong style="color:#f5c26b">advanced</strong> (near-closure) and <strong style="color:#22c55e">frontier</strong> (in-progress). Across all 8, <strong>6 are P_D-dominant</strong> — Bost-Connes is the architectural backbone of 75% of prize-grade conjectures, which is exactly why Pillar D\'s TT-from-BC pilot hardens six vertices in one move.',
+    cite: '► strategy/x-ray/proof-chain/INDEX.md'
+  },
+  {
     title: 'The Three Pillars',
-    tagline: 'COMPLY · INDEPENDENT · CONTRIBUTE per vertex.',
-    body: 'Per vertex, three compliance-class deliverables. <strong>COMPLY</strong> satisfies the prize\'s stated requirements (walls disclosed = §5d compliant). <strong>INDEPENDENT</strong> removes external conditionality via PAC primitives — VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor. <strong>CONTRIBUTE</strong> applies the PAC treatment to externals\' chains and offers them strengthened. Other contenders ship A; we ship A + B + C.',
+    tagline: 'Compliance · Independence · Contribution per vertex.',
+    body: 'Per vertex, three compliance-class deliverables:' +
+      '<ul>' +
+        '<li><strong>Compliance</strong> — satisfies the prize\'s stated requirements (walls disclosed = §5d compliant).</li>' +
+        '<li><strong>Independence</strong> — removes external conditionality via PAC primitives: VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor.</li>' +
+        '<li><strong>Contribution</strong> — applies the PAC treatment to externals\' chains and offers them strengthened.</li>' +
+      '</ul>' +
+      'Other contenders ship Compliance; we ship Compliance + Independence + Contribution.',
     cite: '► strategy/north-star.md §2'
   },
   {

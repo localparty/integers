@@ -2,7 +2,7 @@
 
 *The critic's job is attacking ASSIGNMENTS, not claims. For each of 18 main layers, generate at least one competing assignment per field (face, projection, pattern, invariant, interpretation) with a reason. Arbiter resolves.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

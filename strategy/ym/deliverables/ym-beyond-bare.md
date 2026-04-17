@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Yang-Mills ask. ~~5D geometric~~ M⁵ geometric<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D geometric" → "M⁵ geometric" --> derivation, zero free parameters, 36 pins, cross-Clay connections, confinement, chiral symmetry breaking, any-4-manifold extension. Zero prose. Every claim cites programme paper + specific proof location. Companion to `ym-clay-bare.md` in the Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 
@@ -520,4 +520,4 @@ Additional acknowledgments: Douglas Abdesselam, Jürg Fröhlich, David Brydges, 
 
 *End of ym-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. ≤ 15 pages target. Written in run-04; §11 merged from UA patch on 2026-04-15. Companion to run-03 B_bare. C_full and B_full DEFERRED to composition-backward.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

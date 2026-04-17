@@ -207,4 +207,4 @@ RIGIDITY = (69/276) × (100/156) × 1.0 × 100
 
 *T7 quick pass complete. 19 vertices surveyed. 3 new hub chord cells written. Route 6d confirmed. BGS→Twin→Cramér arc diagnosed. 3 compositional triangles flagged. Projected RIGIDITY after full T7: 16.0.*
 
-*2026-04-14. G Six and Claude Opus 4.6 (1M context).*
+*2026-04-14. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

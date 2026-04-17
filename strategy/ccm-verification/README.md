@@ -2,7 +2,7 @@
 
 *A parallel bundle for systematically verifying every claim in CCM 2025 (arXiv:2511.22755, Connes-Consani-Moscovici, "Zeta Spectral Triples") that the programme relies on. Output: an enumerated ledger of CCM sub-claims, each verified (LITERATURE-confirmed or framework-reproduced) or bypassed (framework-native alternative) or flagged (IRREDUCIBLY-CCM-DEPENDENT for Clay-specific claims).*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -178,4 +178,4 @@ Run them in any order. Both write to independent `pac-output/` directories and d
 
 *The external dependency decomposed. The ledger enumerates. The walls become sub-walls. Critics see the surface.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *The first Pillar D derivation. Pilot that validates the Pillar D pipeline end-to-end at minimum cost. Lowest-difficulty × highest-multi-vertex-leverage entry in the Pillar D roster. G's framing: "the math that will enable science advance in every field."*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -222,4 +222,4 @@ If < 3/5 → pipeline needs restructuring. Root-cause diagnosis + Pillar D archi
 
 *TT-via-BC is the math that enables operator algebraists — and every field downstream of them — to see the Riemann zeros through the modular flow. That's the contribution.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

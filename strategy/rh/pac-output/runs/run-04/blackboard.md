@@ -2,7 +2,7 @@
 
 *Phase 5D synthesis for RH vertex. Produces `strategy/rh/deliverables/rh-beyond-bare.md`. Pillar: BEYOND (programme-bonuses + §N Related Work & Acknowledgments from landscape.md). BARE MODE ONLY. C_full DEFERRED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

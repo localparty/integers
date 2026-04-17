@@ -2,7 +2,7 @@
 
 *Convert every CONDITIONAL link in the programme into a chain of PROVED sub-links rooted at QG5D. The result: one connected graph of theorems grounded in 36 experimental predictions. Undeniable.*
 
-*G Six and Claude Opus 4.6. Date: 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -458,5 +458,5 @@ That's the decomposition path. This file records it. Implementation starts with 
 
 *Sibling to `the-ring.md`, `the-picture-of-the-ecircle.md`, `the-weakest-links.md`. Living document — update as decompositions complete and walls narrow.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The walls decompose. The chain grows. The graph connects. The pins hold.*

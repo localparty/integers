@@ -1,2 +1,0 @@
-# NE5: Meyer distributional eigenstates become genuine eigenstates
-**FAIL.** This is the critical question and the paper does NOT prove it. The distributional eigenstates in S' do not automatically become elements of H_1 under the self-adjoint closure. The paper claims "approximate spectrum preservation" but does not demonstrate that distributional eigenstates yield Weyl sequences in H_1. This gap is bridged by Axiom 1, not by proof.

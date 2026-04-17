@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas Torus Proof-Chain Composer — Integers Programme</title>
+<style>
+  :root{
+    --bg:#0a0a14;
+    --panel:#12121f;
+    --panel2:#1a1a2e;
+    --border:#242438;
+    --text:#e8e8f0;
+    --dim:#8a8aa0;
+    --accent:#f5c26b;
+    --warm:#ff6b5a;
+    --cool:#5ab0ff;
+    --cyan:#7dd3fc;
+    --cyan-dim:#3b82a6;
+    --amber:#fbbf24;
+    --green:#a5f3a2;
+    --gold:#f5c26b;
+    --silver:#c8c8d8;
+    --red:#ff6b5a;
+    --violet:#c4b5fd;
+    --pink:#f472b6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;overflow:hidden}
+
+  /* APP GRID: header (40px) + canvas/left-panel (1fr) + bottom-panel (auto) */
+  #app{display:grid;grid-template-columns:30% 70%;grid-template-rows:40px 1fr auto;height:100vh;width:100vw}
+
+  /* HEADER (spans full width) */
+  #app-header{grid-column:1/span 2;grid-row:1;display:flex;align-items:center;padding:0 18px;background:var(--panel);border-bottom:1px solid var(--border);gap:14px}
+  #app-header h1{font-size:13px;font-weight:700;letter-spacing:0.12em;color:var(--cyan);text-transform:uppercase;margin:0}
+  #app-header .tagline{font-size:11px;color:var(--dim);letter-spacing:0.04em}
+
+  /* LEFT PANEL: full height below header, spans canvas+bottom-panel rows */
+  #left-panel{grid-column:1;grid-row:2/span 2;background:var(--panel);border-right:1px solid var(--border);display:grid;grid-template-rows:auto 1fr auto auto auto;overflow:hidden}
+
+  .section-label{font-size:10px;font-weight:600;letter-spacing:0.14em;color:var(--dim);text-transform:uppercase;margin-bottom:6px}
+
+  /* Solutions */
+  #col-solutions{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
+  .vtx-grid{display:flex;flex-wrap:wrap;gap:4px}
+  .vtx-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);font-size:10.5px;font-weight:600;padding:3px 7px;border-radius:4px;cursor:pointer;transition:all 0.15s;letter-spacing:0.02em}
+  .vtx-btn:hover{color:var(--text);border-color:var(--dim)}
+  .vtx-btn.active{color:var(--accent);border-color:var(--accent);background:#1f1a10}
+
+  /* Layers */
+  #col-layers{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border)}
+  /* 2-row layer item: top row = id · short-name · status · tags;
+     bottom row = full description (wraps). 0.5px gap between rows. */
+  .layer-item{display:flex;flex-direction:column;gap:2px;padding:5px 6px;border-radius:4px;cursor:pointer;font-size:11.5px;line-height:1.3;transition:background 0.12s;margin-bottom:0.5px}
+  .layer-item:hover{background:var(--panel2)}
+  .layer-item.active{background:#1a1f2e;border-left:2px solid var(--cyan)}
+  .layer-row-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .layer-row-desc{font-size:10.5px;color:var(--dim);line-height:1.35;padding-left:36px}
+  .layer-id{font-weight:700;font-size:10.5px;min-width:30px;color:var(--cyan);font-family:ui-monospace,Menlo,monospace}
+  .layer-short{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--cyan-dim);letter-spacing:0.02em}
+  .layer-name{flex:1;color:#c8c8d8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .status-badge{font-size:9px;font-weight:700;letter-spacing:0.04em;padding:1px 5px;border-radius:3px;white-space:nowrap}
+  .status-PROVED{background:#1a2e1a;color:#8fde70}
+  .status-LITERATURE,.status-KNOWN,.status-ESTABLISHED,.status-CLASSICAL{background:#1a1a2e;color:#a0a0cc}
+  .status-EXTERNAL,.status-CONDITIONAL{background:#2e1a1a;color:#ff9080}
+  .status-OPEN,.status-CONJECTURED{background:#2e2a1a;color:var(--accent)}
+  .status-QED{background:#1a2e1a;color:#8fde70}
+
+  /* Node Detail */
+  #col-detail{overflow-y:auto;padding:8px 10px;border-bottom:1px solid var(--border);max-height:220px}
+  .detail-row{font-size:11.5px;margin-bottom:4px;line-height:1.35}
+  .detail-label{color:var(--dim);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
+  .detail-value{color:#c8c8d8}
+  .gold-badge{display:inline-block;background:#2e2510;color:var(--gold);font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;border:1px solid #4a3a1a;margin-left:4px}
+
+  /* Mode panel: horizontal split — left half = mode checkboxes, right half = legend */
+  #col-mode{padding:8px 10px;border-bottom:1px solid var(--border)}
+  #col-mode .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  #col-mode .mode-col{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .mode-check{display:flex;align-items:center;gap:6px;padding:3px 4px;border-radius:3px;cursor:pointer;font-size:11px;font-weight:600;color:var(--dim);transition:color 0.12s;user-select:none}
+  .mode-check:hover:not(.disabled){color:var(--text)}
+  .mode-check.active{color:var(--accent)}
+  .mode-check.disabled{opacity:0.35;cursor:not-allowed}
+  .mode-check input{accent-color:var(--accent);cursor:pointer;flex-shrink:0}
+  #col-mode .disabled-hint{color:var(--dim);font-style:italic;text-transform:none;letter-spacing:0;font-weight:400;font-size:10px}
+
+  /* Legend (right half of mode panel) — 2 columns */
+  .legend-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 10px}
+  .legend-item{display:flex;align-items:center;gap:5px;font-size:10px;line-height:1.25;padding:1px 0;color:#c8c8d8}
+  .legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;box-shadow:0 0 3px currentColor}
+  .legend-name{color:var(--text);font-weight:600}
+  .legend-count{color:var(--dim);font-family:ui-monospace,Menlo,monospace;font-size:10px;margin-left:3px}
+  .legend-stats{grid-column:1/span 2;margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);font-size:10px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;line-height:1.5}
+  .legend-stats .gold-count{color:var(--gold)}
+  .legend-stats .green-count{color:#14b8a6}
+
+  /* Workflow (waypoints + connect/clear + stats) */
+  #col-workflow{padding:8px 10px}
+  #selected-info{font-size:11px;color:var(--dim);margin-bottom:8px;min-height:16px;line-height:1.4}
+  #selected-info .sel-node{color:var(--cyan);font-weight:600}
+  .workflow-btns{display:flex;gap:6px;margin-bottom:6px}
+  .workflow-btn{flex:1;background:var(--panel2);border:1px solid var(--border);color:var(--dim);font-size:11px;font-weight:600;padding:4px 10px;border-radius:4px;cursor:pointer;transition:all 0.15s;letter-spacing:0.04em}
+  .workflow-btn:hover:not(:disabled){color:var(--text);border-color:var(--dim)}
+  .workflow-btn:disabled{opacity:0.35;cursor:default}
+  #stats-bar{font-size:10.5px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;line-height:1.5}
+  #stats-bar .gold-count{color:var(--gold)}
+
+  /* CANVAS */
+  #canvas-wrap{grid-column:2;grid-row:2;position:relative;background:radial-gradient(ellipse at center,#12122a 0%,#0a0a14 70%);overflow:hidden}
+  #canvas-wrap canvas{display:block;width:100%;height:100%}
+  #tooltip{position:absolute;pointer-events:none;background:rgba(20,20,35,0.95);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:11.5px;display:none;z-index:10;max-width:400px}
+  #tooltip .tip-row-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px;white-space:nowrap}
+  #tooltip .tip-id{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--cyan-dim);letter-spacing:0.02em}
+  #tooltip .tip-face{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.05em}
+  #tooltip .tip-desc{font-size:10.5px;color:#c8c8d8;line-height:1.35;white-space:normal}
+  #hud{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;background:rgba(10,10,15,0.7);border:1px solid var(--border);padding:3px 7px;border-radius:3px;display:none}
+  #hud.shown{display:block}
+  /* Color legend — horizontal strip, ALWAYS visible. HUD stacks below when
+     panel is open; legend drops to HUD's spot when panel is collapsed. Font
+     matches HUD for typographic consistency. */
+  #color-legend{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--dim);font-family:ui-monospace,Menlo,monospace;background:rgba(10,10,15,0.7);border:1px solid var(--border);padding:3px 7px;border-radius:3px;white-space:nowrap;transition:bottom 0.2s ease}
+  #color-legend.hud-stacked{bottom:38px}
+  #color-legend .leg{display:inline-block;margin-right:10px;color:var(--dim)}
+  #color-legend .leg .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle;box-shadow:0 0 3px currentColor}
+  #color-legend .leg-stats{color:var(--dim);margin-left:6px;padding-left:10px;border-left:1px dashed var(--border)}
+  #color-legend .leg-stats .gold-count{color:var(--gold)}
+  #color-legend .leg-stats .green-count{color:#14b8a6}
+
+  /* Node-id labels (top 5 closest to camera, fade in/out by depth) */
+  #node-labels{position:absolute;inset:0;pointer-events:none;z-index:4}
+  .node-label{position:absolute;left:0;top:0;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--cyan);padding:2px 6px;background:rgba(10,10,15,0.85);border:1px solid var(--border);border-radius:3px;white-space:nowrap;transition:opacity 0.3s ease;letter-spacing:0.02em;text-shadow:0 0 3px #000;will-change:transform}
+
+  /* BOTTOM PANEL (<details>) — controls + slides, collapsible */
+  #bottom-panel{grid-column:2;grid-row:3;background:var(--panel);border-top:1px solid var(--border)}
+  #bottom-panel summary{list-style:none;cursor:pointer;padding:7px 14px;display:flex;align-items:center;gap:12px;user-select:none;font-size:11px;letter-spacing:0.08em;color:var(--amber);text-transform:uppercase;font-weight:600;border-bottom:1px solid transparent;transition:all 0.15s}
+  #bottom-panel summary::-webkit-details-marker{display:none}
+  #bottom-panel summary:hover{color:var(--cyan)}
+  #bottom-panel[open] summary{border-bottom-color:var(--border)}
+  #bottom-panel .chevron{display:inline-block;width:10px;color:var(--cyan);transition:transform 0.15s;font-size:10px}
+  #bottom-panel[open] .chevron{transform:rotate(180deg)}
+  #bottom-panel .summary-sep{color:var(--dim);opacity:0.6}
+  #bottom-panel .slides-hint{color:var(--dim);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0;font-size:10px;margin-left:6px}
+  /* Fixed panel-body height — slide content scrolls inside its half so the
+     panel doesn't grow/shrink between slides (which made nav buttons jump). */
+  #bottom-panel .panel-body{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px 14px 12px;height:230px;box-sizing:border-box}
+
+  /* Controls half — 2 columns of sliders + button row below */
+  .controls-half{display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--border);padding-left:16px;min-height:0}
+  .slider-cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
+  .slider-col{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .control-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dim);min-width:0}
+  .control-row label{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
+  .ctl-label{display:inline-block;min-width:44px;color:var(--dim);font-weight:500;font-size:10.5px}
+  .control-row input[type="range"]{flex:1;accent-color:var(--cyan);background:transparent;min-width:50px;height:14px}
+  .control-row .readout{font-family:ui-monospace,Menlo,monospace;color:var(--cyan);font-size:9.5px;min-width:38px;text-align:right}
+  /* Auto-animate checkbox sits left of each slider's label */
+  .auto-check{flex-shrink:0;width:12px;height:12px;accent-color:var(--amber);cursor:pointer;margin:0}
+  .control-row.auto-on .ctl-label{color:var(--amber)}
+  .control-row.auto-on .readout{color:var(--amber)}
+  .control-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+  /* Master speed — global fine-tune over all auto-animate speeds */
+  .master-speed{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border)}
+  .master-speed .ctl-label{color:var(--amber)}
+  .master-speed input[type="range"]{accent-color:var(--amber)}
+  .master-speed .readout{color:var(--amber)}
+  .master-speed .speed-spacer{flex-shrink:0;width:12px}
+  .control-btn{background:var(--panel2);border:1px solid var(--border);color:var(--dim);padding:4px 9px;border-radius:4px;font-size:10.5px;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:all 0.15s}
+  .control-btn:hover{color:var(--cyan);border-color:var(--cyan)}
+  .control-btn.active{color:var(--accent);border-color:var(--accent)}
+
+  /* Slides half */
+  .slides-half{display:flex;flex-direction:column;gap:5px;min-height:0;overflow:hidden}
+  .slide-nav-row{display:flex;align-items:center;gap:10px;margin-bottom:2px}
+  .slide-nav{background:var(--panel2);border:1px solid var(--border);color:var(--dim);padding:2px 9px;border-radius:3px;cursor:pointer;font-size:13px;font-weight:600;line-height:1;font-family:ui-monospace,Menlo,monospace}
+  .slide-nav:hover{color:var(--cyan);border-color:var(--cyan)}
+  .slide-nav:disabled{opacity:0.3;cursor:not-allowed}
+  #slide-counter{color:var(--dim);font-size:10.5px;font-family:ui-monospace,Menlo,monospace;min-width:44px;text-align:center}
+  #slide-title{font-size:12.5px;color:var(--cyan);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;line-height:1.2}
+  #slide-tagline{font-size:11px;color:var(--amber);font-style:italic;line-height:1.3}
+  /* Scrollable body — overflow stays inside the slides half so the panel
+     stays a fixed height and the prev/next buttons don't shift around.
+     Scrollbar styled to match the left-panel scroll areas (#col-solutions,
+     #col-layers, #col-detail) — same dark thin look. */
+  #slide-body{font-size:11.5px;color:var(--text);line-height:1.5;flex:1;overflow-y:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+  #slide-body::-webkit-scrollbar{width:6px}
+  #slide-body::-webkit-scrollbar-track{background:transparent}
+  #slide-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  #slide-body::-webkit-scrollbar-thumb:hover{background:var(--dim)}
+  /* Match the same look on the left-panel scroll areas */
+  #col-solutions,#col-layers,#col-detail{scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+  #col-solutions::-webkit-scrollbar,#col-layers::-webkit-scrollbar,#col-detail::-webkit-scrollbar{width:6px}
+  #col-solutions::-webkit-scrollbar-track,#col-layers::-webkit-scrollbar-track,#col-detail::-webkit-scrollbar-track{background:transparent}
+  #col-solutions::-webkit-scrollbar-thumb,#col-layers::-webkit-scrollbar-thumb,#col-detail::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  #col-solutions::-webkit-scrollbar-thumb:hover,#col-layers::-webkit-scrollbar-thumb:hover,#col-detail::-webkit-scrollbar-thumb:hover{background:var(--dim)}
+  #slide-body ul,#slide-body ol{margin:4px 0 4px 18px;padding:0}
+  #slide-body li{margin-bottom:3px;line-height:1.45}
+  #slide-body ul.legend-bullets{list-style:none;margin-left:0}
+  #slide-body ul.legend-bullets li{display:flex;align-items:baseline;gap:8px}
+  #slide-body ul.legend-bullets li::before{content:"●";flex-shrink:0;color:var(--bullet-color,var(--cyan));text-shadow:0 0 4px currentColor}
+  #slide-body a,#slide-body code{color:var(--cyan);text-decoration:none;font-family:ui-monospace,Menlo,monospace;font-size:10.5px}
+  #slide-body a:hover{color:var(--amber)}
+  #slide-cite{font-size:10px;color:var(--dim);font-style:italic;margin-top:2px}
+
+  @media(max-width:900px){
+    #app{grid-template-columns:1fr;grid-template-rows:40px 40vh 1fr auto}
+    #app-header{grid-column:1}
+    #canvas-wrap{grid-column:1;grid-row:2}
+    #left-panel{grid-column:1;grid-row:3;border-right:none;border-top:1px solid var(--border)}
+    #bottom-panel{grid-column:1;grid-row:4}
+    #bottom-panel .panel-body{grid-template-columns:1fr}
+    .controls-half{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:10px}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="app-header">
+    <h1>Solution Atlas</h1>
+    <span class="tagline">Proof-Chain Composer · Integers Programme — 25 ring vertices on T²</span>
+  </header>
+
+  <div id="left-panel">
+    <div id="col-solutions">
+      <div class="section-label" id="col-solutions-label">Solution — click to activate</div>
+      <div class="vtx-grid" id="vtx-grid"></div>
+    </div>
+    <div id="col-layers">
+      <div class="section-label" id="col-layers-label">Proof chain steps — select a solution or activate nodes to compose your own</div>
+      <div id="layer-list"></div>
+    </div>
+    <div id="col-detail">
+      <div class="section-label" id="col-detail-label">Node detail — select a layer to view detail</div>
+      <div id="detail-content"></div>
+    </div>
+    <div id="col-mode">
+      <div class="section-label" id="mode-section-label">Mode</div>
+      <div class="mode-grid">
+        <div class="mode-col">
+          <label class="mode-check active" data-mode="geodesic"><input type="checkbox" checked>Geodesic</label>
+          <label class="mode-check active" data-mode="contribute"><input type="checkbox" checked>Contribution</label>
+        </div>
+        <div class="mode-col">
+          <label class="mode-check active" data-mode="independent"><input type="checkbox" checked>Independence</label>
+          <label class="mode-check active" data-mode="comply"><input type="checkbox" checked>Compliance</label>
+        </div>
+      </div>
+    </div>
+    <div id="col-workflow">
+      <div class="section-label" id="col-workflow-label">Workflow — select nodes to compose a chain</div>
+      <div id="selected-info"></div>
+      <label class="mode-check workflow-toggle" id="proximity-toggle-label">
+        <input type="checkbox" id="proximity-toggle">Select while spinning
+      </label>
+      <div class="workflow-btns">
+        <button class="workflow-btn" id="btn-connect" disabled>Connect</button>
+        <button class="workflow-btn" id="btn-clear">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <div id="tooltip"></div>
+    <div id="hud"></div>
+    <div id="color-legend">
+      <span class="leg"><span class="dot" style="background:#f5c26b;color:#f5c26b"></span>Integers</span>
+      <span class="leg"><span class="dot" style="background:#ff8c42;color:#ff8c42"></span>Selected</span>
+      <span class="leg"><span class="dot" style="background:#0ea5e9;color:#0ea5e9"></span>Literature</span>
+      <span class="leg"><span class="dot" style="background:#e11d48;color:#e11d48"></span>External</span>
+      <span class="leg"><span class="dot" style="background:#8b5cf6;color:#8b5cf6"></span>Classical</span>
+      <span class="leg"><span class="dot" style="background:#22c55e;color:#22c55e"></span>Open</span>
+      <span class="leg"><span class="dot" style="background:#14b8a6;color:#14b8a6"></span>Bypass</span>
+      <span class="leg-stats" id="leg-stats">loading…</span>
+    </div>
+    <div id="node-labels"></div>
+  </div>
+
+  <details id="bottom-panel">
+    <summary>
+      <span class="chevron">▾</span>
+      <span class="summary-label left">Slides<span class="slides-hint">— what the atlas is</span></span>
+      <span class="summary-sep">│</span>
+      <span class="summary-label right">Controls</span>
+    </summary>
+    <div class="panel-body">
+      <div class="slides-half">
+        <div class="slide-nav-row">
+          <button class="slide-nav" id="slide-prev" aria-label="previous slide">◄</button>
+          <span id="slide-counter">1 / 14</span>
+          <button class="slide-nav" id="slide-next" aria-label="next slide">►</button>
+        </div>
+        <div id="slide-title">loading…</div>
+        <div id="slide-tagline"></div>
+        <div id="slide-body">loading…</div>
+        <div id="slide-cite"></div>
+      </div>
+      <div class="controls-half">
+        <div class="slider-cols">
+          <div class="slider-col">
+            <div class="control-row" data-slider="rot-x">
+              <input type="checkbox" class="auto-check" data-auto="rot-x" title="Auto-animate pitch">
+              <label><span class="ctl-label">pitch</span><input type="range" id="rot-x" min="-89" max="89" step="0.01" value="7"></label>
+              <span class="readout" id="rot-x-readout">7°</span>
+            </div>
+            <div class="control-row" data-slider="rot-y">
+              <input type="checkbox" class="auto-check" data-auto="rot-y" title="Auto-animate yaw">
+              <label><span class="ctl-label">yaw</span><input type="range" id="rot-y" min="-180" max="180" step="0.01" value="-90"></label>
+              <span class="readout" id="rot-y-readout">-90°</span>
+            </div>
+            <div class="control-row" data-slider="tilt-ctl">
+              <input type="checkbox" class="auto-check" data-auto="tilt-ctl" title="Auto-animate roll">
+              <label><span class="ctl-label">roll</span><input type="range" id="tilt-ctl" min="-180" max="180" step="0.01" value="-8"></label>
+              <span class="readout" id="tilt-readout">-8°</span>
+            </div>
+            <div class="control-row" data-slider="rotate-scene">
+              <input type="checkbox" class="auto-check" data-auto="rotate-scene" title="Auto-animate scene rotate X">
+              <label><span class="ctl-label">rotate X</span><input type="range" id="rotate-scene" min="0" max="6.2832" step="0.001" value="1.79769"></label>
+              <span class="readout" id="rotate-scene-readout">103°</span>
+            </div>
+            <div class="control-row" data-slider="rotate-scene-y">
+              <input type="checkbox" class="auto-check" data-auto="rotate-scene-y" title="Auto-animate scene rotate Y">
+              <label><span class="ctl-label">rotate Y</span><input type="range" id="rotate-scene-y" min="0" max="6.2832" step="0.001" value="0"></label>
+              <span class="readout" id="rotate-scene-y-readout">0°</span>
+            </div>
+          </div>
+          <div class="slider-col">
+            <div class="control-row" data-slider="zoom-ctl">
+              <input type="checkbox" class="auto-check" data-auto="zoom-ctl" title="Auto-animate zoom">
+              <label><span class="ctl-label">zoom</span><input type="range" id="zoom-ctl" min="40" max="220" step="0.1" value="184"></label>
+              <span class="readout" id="zoom-readout">1.84</span>
+            </div>
+            <div class="control-row" data-slider="pos-x">
+              <input type="checkbox" class="auto-check" data-auto="pos-x" title="Auto-animate pos X">
+              <label><span class="ctl-label">pos X</span><input type="range" id="pos-x" min="-3" max="3" step="0.001" value="-1.41"></label>
+              <span class="readout" id="pos-x-readout">-1.41</span>
+            </div>
+            <div class="control-row" data-slider="pos-y">
+              <input type="checkbox" class="auto-check" data-auto="pos-y" title="Auto-animate pos Y">
+              <label><span class="ctl-label">pos Y</span><input type="range" id="pos-y" min="-3" max="3" step="0.001" value="-0.27"></label>
+              <span class="readout" id="pos-y-readout">-0.27</span>
+            </div>
+            <div class="control-row" data-slider="pos-z">
+              <input type="checkbox" class="auto-check" data-auto="pos-z" title="Auto-animate pos Z">
+              <label><span class="ctl-label">pos Z</span><input type="range" id="pos-z" min="-3" max="3" step="0.001" value="-1.39"></label>
+              <span class="readout" id="pos-z-readout">-1.39</span>
+            </div>
+            <div class="control-row" data-slider="tube-slider">
+              <input type="checkbox" class="auto-check" data-auto="tube-slider" title="Auto-animate tube">
+              <label><span class="ctl-label">tube</span><input type="range" id="tube-slider" min="0" max="6.2832" step="0.001" value="0"></label>
+              <span class="readout" id="tube-readout">0°</span>
+            </div>
+          </div>
+        </div>
+        <div class="control-row master-speed" title="Fine-tune all auto-animation speeds">
+          <span class="speed-spacer"></span>
+          <label><span class="ctl-label">speed</span><input type="range" id="speed-ctl" min="-100" max="100" step="1" value="-89"></label>
+          <span class="readout" id="speed-readout">-89%</span>
+        </div>
+        <div class="control-btns">
+          <button class="control-btn" id="btn-reset">reset</button>
+          <button class="control-btn" id="btn-animate" title="Toggle all auto-animations">animate</button>
+        </div>
+      </div>
+    </div>
+  </details>
+</div>
+
+<script src="atlas-torus-data.js"></script>
+
+<script type="importmap">
+{
+  "imports":{
+    "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+// ============================================================
+// CONSTANTS
+// ============================================================
+const R_MAJOR = 3.0, R_MINOR = 0.97;
+// Each vertex gets a FIXED v-offset (tube-latitude), deterministic from its
+// position in the 25-vertex ring. Golden-angle distribution maximizes
+// separation for any subset — so YM+RH land at very different v's even
+// though they're neighbors in the ring. Selecting a vertex doesn't change
+// where other vertices live: v is a stable property of the vertex itself.
+const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));  // ≈ 2.399
+const VERTEX_V_HOME = {};
+// Color palette — another +20% saturation with hues spread across the wheel
+// for maximum differentiation. Integers-original stays gold (user rule).
+// Approximate hue positions (HSL): gold 35°, orange 22°, rose 350°, violet 262°,
+// sky 199°, teal 173°, green 142°. Wide coverage of the wheel.
+// High emissiveIntensity flattens the sphere (no lighting gradient = no rim).
+const COLORS = {
+  'integers-original': {color: 0xf5c26b, emissive: 0xf5c26b, emissiveIntensity: 1.0, opacity: 1.0}, // GOLD (unchanged by rule)
+  'literature':        {color: 0x0ea5e9, emissive: 0x0ea5e9, emissiveIntensity: 1.0, opacity: 1.0},  // sky-500 — pure cyan
+  'external':          {color: 0xe11d48, emissive: 0xe11d48, emissiveIntensity: 1.0, opacity: 1.0},  // rose-600 — red-pink
+  'classical':         {color: 0x8b5cf6, emissive: 0x8b5cf6, emissiveIntensity: 0.95, opacity: 1.0}, // violet-500 — deeper purple
+  'open':              {color: 0x22c55e, emissive: 0x22c55e, emissiveIntensity: 1.0, opacity: 1.0},  // green-500 — pure green
+  'bypass-route':      {color: 0x14b8a6, emissive: 0x14b8a6, emissiveIntensity: 1.0, opacity: 1.0},  // teal-500 — distinct hue from open
+};
+
+// ============================================================
+// SCENE SETUP
+// ============================================================
+const wrap = document.getElementById('canvas-wrap');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0a14);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 100);
+camera.position.set(5, 4, 7);
+
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha: false});
+// Variant C: cap DPR at 1.5 to cut fragment-shader pixel load on retina Macs
+// (Safari WebGL pipeline struggles after extended interaction at DPR=2+).
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+wrap.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 2;
+controls.maxDistance = 20;
+
+// Flat lighting — full ambient, no directionals.
+// Combined with high emissiveIntensity in COLORS, nodes appear as uniformly
+// colored dots with no rim shading or specular highlight.
+scene.add(new THREE.AmbientLight(0xffffff, 1.0));
+
+// ============================================================
+// TORUS POINT CLOUD (Variant C — depth-cued via custom shader)
+// ============================================================
+// Variant C replaces the LineSegments wireframe with a THREE.Points cloud
+// (parametric sampling of the torus surface). This is the most aggressive
+// Safari-friendliness change: ~3200 point sprites instead of ~3072 line
+// segments, each rendered as a tiny circular dot with the same front-bright /
+// back-dim depth gradient the wireframe had. The variable names `wireShader`
+// and `torusWire` are preserved so the per-frame cameraDist uniform update in
+// the animate loop still finds them.
+//
+// Parametric grid: N_u × N_v = 80 × 40 = 3200 points.
+const POINT_GRID_U = 80;
+const POINT_GRID_V = 40;
+function buildTorusPointGeometry(R, r, U_SEG, V_SEG) {
+  const positions = new Float32Array(U_SEG * V_SEG * 3);
+  let k = 0;
+  for (let i = 0; i < U_SEG; i++) {
+    const u = (i / U_SEG) * Math.PI * 2;
+    const cu = Math.cos(u), su = Math.sin(u);
+    for (let j = 0; j < V_SEG; j++) {
+      const v = (j / V_SEG) * Math.PI * 2;
+      const ring = R + r * Math.cos(v);
+      positions[k++] = ring * cu;
+      positions[k++] = ring * su;
+      positions[k++] = r * Math.sin(v);
+    }
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  return geo;
+}
+const wireGeo = buildTorusPointGeometry(R_MAJOR, R_MINOR, POINT_GRID_U, POINT_GRID_V);
+
+// ShaderMaterial: each vertex is emitted as a point sprite sized in the vertex
+// shader; the fragment shader discards pixels outside a disk of radius 0.5 in
+// gl_PointCoord space and applies the same view-space-depth-based brightness
+// fade the wireframe used. Uniforms preserved verbatim (baseColor / maxOpacity
+// / minOpacity / cameraDist / torusRadius) so per-frame updates match.
+const wireShader = new THREE.ShaderMaterial({
+  uniforms: {
+    baseColor: { value: new THREE.Color(0x7dd3fc) },
+    maxOpacity: { value: 0.90 },  // +20% brighter front (user-calibrated)
+    minOpacity: { value: 0.08 },
+    cameraDist: { value: 9.5 },   // updated per frame
+    torusRadius: { value: R_MAJOR + R_MINOR },
+    // 2.0 baseline; scaled by DPR so retina dots don't dissolve. Also
+    // modulated slightly by depth in the vertex shader for extra atmosphere.
+    basePointSize: { value: 2.0 * Math.min(window.devicePixelRatio || 1, 1.5) },
+  },
+  vertexShader: `
+    uniform float cameraDist;
+    uniform float torusRadius;
+    uniform float basePointSize;
+    varying float vDepthFade;
+    void main() {
+      vec4 mvPos = modelViewMatrix * vec4(position, 1.0);
+      float viewZ = -mvPos.z;  // positive = distance from camera
+      // Normalize depth around the torus: 0 = front edge, 1 = back edge.
+      float t = clamp((viewZ - (cameraDist - torusRadius)) / (2.0 * torusRadius), 0.0, 1.0);
+      vDepthFade = 1.0 - t;  // 1 at front, 0 at back
+      // Slight depth modulation: back points a touch smaller for atmosphere
+      gl_PointSize = basePointSize * mix(1.1, 0.75, t);
+      gl_Position = projectionMatrix * mvPos;
+    }
+  `,
+  fragmentShader: `
+    uniform vec3 baseColor;
+    uniform float maxOpacity;
+    uniform float minOpacity;
+    varying float vDepthFade;
+    void main() {
+      // Circular sprite: discard pixels outside disk of radius 0.5
+      vec2 p = gl_PointCoord - 0.5;
+      float r2 = dot(p, p);
+      if (r2 > 0.25) discard;
+      // Soft edge: smooth alpha falloff from disk center to rim
+      float edge = smoothstep(0.25, 0.0, r2);
+      float alpha = mix(minOpacity, maxOpacity, vDepthFade) * edge;
+      // Variant D: -40% saturation, -20% brightness vs. variant C.
+      // Desaturate toward Rec.601 luma (perceptual), then dim.
+      float luma = dot(baseColor, vec3(0.299, 0.587, 0.114));
+      vec3 tinted = mix(baseColor, vec3(luma), 0.40) * 0.80;
+      gl_FragColor = vec4(tinted, alpha);
+    }
+  `,
+  transparent: true,
+  depthTest: true,
+  depthWrite: false,
+});
+const torusWire = new THREE.Points(wireGeo, wireShader);
+torusWire.rotation.x = Math.PI / 2;
+torusWire.renderOrder = 1;
+scene.add(torusWire);
+
+// ============================================================
+// NODE SPHERES
+// ============================================================
+const nodeMeshes = [];
+const nodeMap = {};
+
+TORUS_NODES.forEach((n, i) => {
+  const cfg = COLORS[n.classification] || COLORS['literature'];
+  const mat = new THREE.MeshStandardMaterial({
+    color: cfg.color,
+    emissive: cfg.emissive,
+    emissiveIntensity: cfg.emissiveIntensity,
+    transparent: cfg.opacity < 1.0,
+    opacity: cfg.opacity,
+    roughness: 0.35,
+    metalness: 0.15,
+  });
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(0.066, 16, 12), mat);
+  mesh.position.set(n.x, n.z, n.y); // swap y/z for Three.js convention
+  mesh.userData = {nodeIdx: i, nodeId: n.id, vertex: n.vertex, ...n};
+  // Store original position + torus coords for spread/restore
+  mesh.userData.origPos = mesh.position.clone();
+  mesh.userData.origU = n.u;
+  mesh.userData.origV = n.v;
+  scene.add(mesh);
+  nodeMeshes.push(mesh);
+  nodeMap[n.id] = {mesh, data: n, idx: i};
+});
+
+// ============================================================
+// EDGE LINES
+// ============================================================
+const edgeLines = [];
+const edgeGroup = new THREE.Group();
+scene.add(edgeGroup);
+
+function torusPoint(u, v) {
+  const x = (R_MAJOR + R_MINOR * Math.cos(v)) * Math.cos(u);
+  const y = (R_MAJOR + R_MINOR * Math.cos(v)) * Math.sin(u);
+  const z = R_MINOR * Math.sin(v);
+  return new THREE.Vector3(x, z, y); // swap y/z
+}
+
+function makeEdgeCurve(fromNode, toNode) {
+  // Create a curved line that stays near the torus surface
+  const pts = [];
+  const steps = 16;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    // Lerp in (u, v) parameter space, taking shortest path
+    let du = toNode.u - fromNode.u;
+    let dv = toNode.v - fromNode.v;
+    // Wrap angles for shortest path
+    if (du > Math.PI) du -= 2 * Math.PI;
+    if (du < -Math.PI) du += 2 * Math.PI;
+    if (dv > Math.PI) dv -= 2 * Math.PI;
+    if (dv < -Math.PI) dv += 2 * Math.PI;
+    const u = fromNode.u + du * t;
+    const v = fromNode.v + dv * t;
+    pts.push(torusPoint(u, v));
+  }
+  return pts;
+}
+
+TORUS_EDGES.forEach((e, i) => {
+  const fromEntry = nodeMap[e.from];
+  const toEntry = nodeMap[e.to];
+  if (!fromEntry || !toEntry) return;
+
+  const pts = makeEdgeCurve(fromEntry.data, toEntry.data);
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  const mat = new THREE.LineBasicMaterial({
+    color: 0x6a6a8a,
+    transparent: true,
+    opacity: 0.6,
+  });
+  const line = new THREE.Line(geo, mat);
+  line.userData = {edgeIdx: i, ...e};
+  edgeGroup.add(line);
+  edgeLines.push(line);
+});
+
+// ============================================================
+// VERTEX LABELS (billboard sprites) — mono font, tighter sizing
+// ============================================================
+// Labels use IBM Plex Mono per reference viz (torus/index.html).
+// Font stack matches reference style.css exactly. Paint-order: stroke first
+// (dark outline), then fill (colored text) — so labels stay legible against
+// the cyan mesh.
+const LABEL_FONT = '600 20px "IBM Plex Mono","JetBrains Mono","SF Mono",Menlo,Consolas,monospace';
+function makeLabel(text, position, color = 0xe0e0e0, scale = 0.55) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = 256;
+  canvas.height = 56;
+  ctx.clearRect(0, 0, 256, 56);
+  ctx.font = LABEL_FONT;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  // stroke first (the reference's paint-order:stroke)
+  ctx.lineWidth = 3;
+  ctx.lineJoin = 'round';
+  ctx.strokeStyle = '#0a0a0f';
+  ctx.strokeText(text, 128, 28);
+  ctx.fillStyle = '#' + color.toString(16).padStart(6, '0');
+  ctx.fillText(text, 128, 28);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.minFilter = THREE.LinearFilter;
+  const mat = new THREE.SpriteMaterial({map: texture, transparent: true, depthTest: false});
+  const sprite = new THREE.Sprite(mat);
+  sprite.position.copy(position);
+  // Aspect 256:56 ≈ 4.57; keep proportions
+  sprite.scale.set(scale * 2.2, scale * 0.48, 1);
+  return sprite;
+}
+
+// Per-vertex label colors. Reference viz uses 4 zone colors (NORTH=green,
+// EAST=cyan, WEST=violet, SOUTH=pink) — we echo that grammar by using:
+//   Integers (hub)      → gold     (the unprojected center)
+//   Clay prize vertices → amber    (YM, RH, BSD, PvNP, Hodge, NS)
+//   Other prize         → green    (Goldbach, Collatz — non-Clay prizes)
+//   Community-standard  → cyan     (the 16 remaining, matching reference EAST)
+const CLAY_PRIZE_VERTICES = new Set(['ym','rh','bsd','pvnp','hodge','ns']);
+const OTHER_PRIZE_VERTICES = new Set(['goldbach','collatz']);
+function labelColor(vertexId) {
+  if (vertexId === 'integers') return 0xf5c26b;              // gold
+  if (CLAY_PRIZE_VERTICES.has(vertexId)) return 0xfbbf24;    // amber (Clay)
+  if (OTHER_PRIZE_VERTICES.has(vertexId)) return 0x86efac;   // green (other prize)
+  return 0x7dd3fc;                                           // cyan (community)
+}
+
+// Populate VERTEX_V_HOME — restrict to outer-half of the tube [-π/2, π/2]
+// so every vertex's line is visible from the default camera angle (no
+// vertex lands on the inner equator, which sits inside the torus hole).
+TORUS_VERTICES.forEach((v, idx) => {
+  VERTEX_V_HOME[v.id] = ((idx * GOLDEN_ANGLE) % Math.PI) - Math.PI / 2;
+});
+
+// Peripheral vertex labels — one per ring vertex, floating outside the torus
+// at its u-position. Complements the dynamic top-10 node-id labels overlay.
+const labelSprites = [];
+TORUS_VERTICES.forEach(v => {
+  const u = v.u;
+  const labelR = R_MAJOR + R_MINOR + 0.45;
+  const x = labelR * Math.cos(u);
+  const y = labelR * Math.sin(u);
+  const pos = new THREE.Vector3(x, 0.15, y);
+  const color = labelColor(v.id);
+  const scale = (v.id === 'integers') ? 0.77 : 0.55;
+  const sprite = makeLabel(v.label, pos, color, scale);
+  sprite.userData = {vertexId: v.id, _baseScale: scale};
+  scene.add(sprite);
+  labelSprites.push(sprite);
+});
+
+// ============================================================
+// STATE
+// ============================================================
+// MULTI-SELECT: activeVertices is a Set of vertex IDs. Empty = free-form.
+// User can toggle multiple solutions — their layers stack in the list, and
+// each takes an equal slice of the torus's 2π u-range when rendering.
+let activeVertices = new Set();
+let activeLayer = null;
+let selectedNodes = [];
+let activeModes = new Set(['comply', 'independent', 'contribute', 'geodesic']); // all 4 modes on by default — judges see all chains simultaneously; toggle to focus
+let connectPath = [];
+let geodesicPathSet = new Set(); // nodes on current geodesic shortest path
+let tubeOffset = 0; // v-axis offset added to every node — slider rotates nodes around the tube
+// Orange reserved for "this is the currently selected solution" — distinct
+// from gold (integers-original), cyan (literature), pink (external), etc.
+const SELECTED_SOLUTION_COLOR = 0xff8c42;
+
+// ============================================================
+// LEFT PANEL — COLUMN 1: SOLUTIONS
+// ============================================================
+const vtxGrid = document.getElementById('vtx-grid');
+TORUS_VERTICES.forEach(v => {
+  const btn = document.createElement('button');
+  btn.className = 'vtx-btn';
+  btn.textContent = v.label;
+  btn.dataset.vertex = v.id;
+  btn.addEventListener('click', () => selectVertex(v.id));
+  vtxGrid.appendChild(btn);
+});
+
+function selectVertex(vertexId) {
+  if (activeVertices.has(vertexId)) activeVertices.delete(vertexId);
+  else activeVertices.add(vertexId);
+  activeLayer = null;
+  updateVertexButtons();
+  updateModeButtons();
+  updateTorusHighlight();
+  updateLayerList();
+  updateDetailPanel();
+  updateSectionLabels();
+}
+
+// Section labels collapse to just the title once their action has happened
+// (solution active → "Solution"; layer selected → "Node detail"; nodes
+// in workflow → "Workflow"). Empty state shows the instruction tail.
+function updateSectionLabels() {
+  const sol = document.getElementById('col-solutions-label');
+  if (sol) sol.textContent = activeVertices.size > 0
+    ? 'Solution' : 'Solution — click to activate';
+  const lay = document.getElementById('col-layers-label');
+  if (lay) lay.textContent = (activeVertices.size > 0 || connectPath.length > 1)
+    ? 'Proof chain steps'
+    : 'Proof chain steps — select a solution or activate nodes to compose your own';
+  const det = document.getElementById('col-detail-label');
+  if (det) det.textContent = activeLayer
+    ? 'Node detail' : 'Node detail — select a layer to view detail';
+  const wf = document.getElementById('col-workflow-label');
+  if (wf) wf.textContent = (typeof selectedNodes !== 'undefined' && selectedNodes.length > 0)
+    ? 'Workflow' : 'Workflow — select nodes to compose a chain';
+}
+
+function updateVertexButtons() {
+  document.querySelectorAll('.vtx-btn').forEach(btn => {
+    btn.classList.toggle('active', activeVertices.has(btn.dataset.vertex));
+  });
+}
+
+function updateModeButtons() {
+  // Mode checkboxes are enabled when EITHER a solution is selected OR a CONNECT
+  // chain exists. In free-form with no chain, they're visually disabled.
+  const hasChain = activeVertices.size > 0 || connectPath.length > 1;
+  const disabled = !hasChain;
+  document.querySelectorAll('.mode-check').forEach(el => {
+    el.classList.toggle('disabled', disabled);
+    const input = el.querySelector('input');
+    if (input) input.disabled = disabled;
+  });
+  const sectionLabel = document.getElementById('mode-section-label');
+  if (sectionLabel) {
+    if (disabled) {
+      sectionLabel.innerHTML = 'Mode <span class="disabled-hint">— select a solution or CONNECT a chain</span>';
+    } else {
+      sectionLabel.textContent = 'Mode';
+    }
+  }
+  // Sync .active class with Set membership
+  document.querySelectorAll('.mode-check').forEach(el => {
+    const isActive = activeModes.has(el.dataset.mode);
+    el.classList.toggle('active', isActive && !disabled);
+    const input = el.querySelector('input');
+    if (input) input.checked = isActive;
+  });
+}
+
+// ============================================================
+// LEFT PANEL — COLUMN 2: LAYERS
+// ============================================================
+const layerList = document.getElementById('layer-list');
+
+function updateLayerList() {
+  layerList.innerHTML = '';
+
+  // If a CONNECT chain exists, render it here — these are the judge's own
+  // composed proof chain nodes, possibly spanning multiple vertices.
+  if (connectPath.length > 1) {
+    const header = document.createElement('div');
+    header.style.cssText = 'font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;padding:4px 0;border-bottom:1px solid #4a3a1a';
+    header.innerHTML = `Proof chain &middot; ${connectPath.length} nodes, ${connectPath.length - 1} hops`;
+    layerList.appendChild(header);
+    connectPath.forEach((nodeId, idx) => {
+      const n = nodeMap[nodeId]?.data;
+      if (!n) return;
+      const div = document.createElement('div');
+      div.className = 'layer-item';
+      div.dataset.nodeId = n.id;
+      const isOriginal = n.classification === 'integers-original';
+      const vertexLabel = TORUS_VERTICES.find(v => v.id === n.vertex)?.label || n.vertex;
+      div.setAttribute('style', 'border-left:3px solid #f5c26b;background:rgba(245,194,107,0.04)');
+      div.innerHTML = `
+        <div class="layer-row-top">
+          <span class="layer-id" style="color:var(--gold)">${idx + 1}.</span>
+          <span class="layer-short">${esc(n.id)}</span>
+          <span class="status-badge status-${n.status}">${n.status}</span>
+          ${isOriginal ? '<span style="font-size:8px;color:var(--gold);margin-left:4px">&#9733;</span>' : ''}
+        </div>
+        <div class="layer-row-desc" title="${esc(n.name)}">${esc(n.name)}</div>
+      `;
+      div.addEventListener('click', () => selectLayer(n.id));
+      layerList.appendChild(div);
+    });
+    return;
+  }
+
+  if (activeVertices.size === 0) {
+    layerList.innerHTML = '';  // header carries the instruction
+    return;
+  }
+
+  // Multi-select: iterate every active vertex, stack their layers with
+  // section headers so the judge sees both chains one-after-the-other.
+  for (const vertexId of activeVertices) {
+    // Section header (collapsible-looking accent — vertex label in orange)
+    if (activeVertices.size > 1) {
+      const hdr = document.createElement('div');
+      hdr.style.cssText =
+        'font-size:10px;font-weight:700;letter-spacing:0.12em;color:#ff8c42;' +
+        'text-transform:uppercase;margin:8px 0 4px;padding:3px 6px;' +
+        'border-left:2px solid #ff8c42;background:rgba(255,140,66,0.06)';
+      const vLabel = (TORUS_VERTICES.find(v => v.id === vertexId)?.label) || vertexId;
+      hdr.textContent = `── ${vLabel} ──`;
+      layerList.appendChild(hdr);
+    }
+
+  const nodes = TORUS_NODES.filter(n => n.vertex === vertexId && n.classification !== 'bypass-route');
+  const bypassByReplacedId = {};
+  TORUS_NODES.filter(n => n.classification === 'bypass-route' && n.vertex === vertexId).forEach(b => {
+    if (!bypassByReplacedId[b.replaces]) bypassByReplacedId[b.replaces] = [];
+    bypassByReplacedId[b.replaces].push(b);
+  });
+
+  nodes.forEach(n => {
+    const div = document.createElement('div');
+    div.className = 'layer-item';
+    div.dataset.nodeId = n.id;
+
+    // Multi-toggle mode: classification-based base styling (always shown) +
+    // additive tags per active mode (INDEPENDENT / CONTRIBUTE / GEODESIC).
+    let layerStyle = '';
+    const tags = [];
+    const cls = n.classification;
+
+    // BASE styling — classification-based, always present (COMPLY-style by default)
+    if (cls === 'external') {
+      layerStyle = 'border-left:3px solid #ff6b5a';
+      tags.push('<span style="font-size:8px;color:#ff6b5a;margin-left:4px">WALL</span>');
+    } else if (cls === 'open') {
+      layerStyle = 'border-left:3px solid #cc8844';
+      tags.push('<span style="font-size:8px;color:#cc8844;margin-left:4px">OPEN</span>');
+    } else if (cls === 'integers-original') {
+      tags.push('<span style="font-size:8px;color:#f5c26b;margin-left:4px">&#9733;</span>');
+    }
+
+    // ADDITIVE mode tags
+    if (activeModes.has('independent')) {
+      if (cls === 'external' || cls === 'open') {
+        layerStyle = 'border-left:3px solid #ff6b5a;opacity:0.5;text-decoration:line-through';
+        tags.push('<span style="font-size:8px;color:#a5f3a2;margin-left:4px">BYPASSED</span>');
+      } else if (cls === 'integers-original') {
+        layerStyle = 'border-left:3px solid #a5f3a2';
+        tags.push('<span style="font-size:8px;color:#a5f3a2;margin-left:4px">DEP-FREE</span>');
+      }
+    }
+    if (activeModes.has('contribute')) {
+      if (cls === 'external') {
+        layerStyle = 'border-left:3px solid #ff6b5a;background:rgba(255,107,90,0.08)';
+        tags.push('<span style="font-size:8px;color:#ff6b5a;margin-left:4px">STRENGTHENED</span>');
+      } else if (cls === 'open') {
+        tags.push('<span style="font-size:8px;color:#cc8844;margin-left:4px">HARDENED</span>');
+      }
+    }
+    if (activeModes.has('geodesic') && geodesicPathSet.has(n.id)) {
+      layerStyle = (layerStyle ? layerStyle + ';' : '') + 'background:rgba(245,194,107,0.08)';
+      tags.push('<span style="font-size:8px;color:#f5c26b;font-weight:700;margin-left:4px">SHORTEST</span>');
+    }
+
+    const modeTag = tags.join('');
+
+    div.setAttribute('style', layerStyle);
+    div.innerHTML = `
+      <div class="layer-row-top">
+        <span class="layer-id">${n.layer}</span>
+        <span class="layer-short">${esc(n.id)}</span>
+        <span class="status-badge status-${n.status}">${n.status}</span>
+        ${modeTag}
+      </div>
+      <div class="layer-row-desc" title="${esc(n.name)}">${esc(n.name)}</div>
+    `;
+    div.addEventListener('click', () => selectLayer(n.id));
+    layerList.appendChild(div);
+
+    // INDEPENDENT mode: insert bypass rows below bypassed nodes.
+    if (activeModes.has('independent') && (cls === 'external' || cls === 'open')) {
+      const bypasses = bypassByReplacedId[n.id] || [];
+      if (bypasses.length > 0) {
+        bypasses.forEach(b => {
+          const brow = document.createElement('div');
+          brow.className = 'layer-item';
+          brow.dataset.nodeId = b.id;
+          brow.setAttribute('style',
+            'border-left:3px solid #a5f3a2;background:rgba(165,243,162,0.08);padding-left:14px');
+          brow.innerHTML = `
+            <div class="layer-row-top">
+              <span class="layer-id" style="color:#a5f3a2">&#8627; ${b.layer}</span>
+              <span class="layer-short" style="color:#a5f3a2">${esc(b.id)}</span>
+              <span class="status-badge status-PROVED" style="background:#1a2e1a;color:#a5f3a2">${b.status}</span>
+              <span style="font-size:8px;color:#a5f3a2;margin-left:4px">BYPASS</span>
+            </div>
+            <div class="layer-row-desc" title="${esc(b.name)}" style="color:#a5f3a2;opacity:0.8">${esc(b.name)}</div>
+          `;
+          brow.addEventListener('click', () => selectLayer(b.id));
+          layerList.appendChild(brow);
+        });
+      } else {
+        // No documented bypass — show a dim note
+        const note = document.createElement('div');
+        note.className = 'layer-item';
+        note.setAttribute('style',
+          'opacity:0.4;color:var(--dim);padding-left:14px;font-size:10px;font-style:italic');
+        note.innerHTML = `&#8627; <span>no documented bypass</span>`;
+        layerList.appendChild(note);
+      }
+    }
+  });
+  } // end for (vertexId of activeVertices)
+}
+
+function selectLayer(nodeId) {
+  activeLayer = nodeId === activeLayer ? null : nodeId;
+  document.querySelectorAll('.layer-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.nodeId === activeLayer);
+  });
+  updateDetailPanel();
+  updateSectionLabels();
+  if (activeLayer && nodeMap[activeLayer]) {
+    pulseNode(nodeMap[activeLayer].mesh);
+  }
+}
+
+// ============================================================
+// LEFT PANEL — COLUMN 3: NODE DETAIL
+// ============================================================
+function updateDetailPanelForNode(nodeId) {
+  const container = document.getElementById('detail-content');
+  if (!nodeId || !nodeMap[nodeId]) {
+    container.innerHTML = '';  // header already says "select a layer to view detail"
+    return;
+  }
+  const n = nodeMap[nodeId].data;
+  const isOriginal = n.classification === 'integers-original';
+  const crossCuts = TORUS_EDGES.filter(e => (e.from === n.id || e.to === n.id) && e.type === 'cross-cut');
+
+  container.innerHTML = `
+    <div class="detail-row"><span class="detail-label">Claim</span><br>
+      <span class="detail-value">${esc(n.name)}</span>
+      ${isOriginal ? '<span class="gold-badge">Integers-original</span>' : ''}
+    </div>
+    <div class="detail-row"><span class="detail-label">Status</span>
+      <span class="status-badge status-${n.status}" style="margin-left:6px">${n.status}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Source</span><br>
+      <span class="detail-value" style="font-size:10.5px">${esc(n.source || '(none)')}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Face</span>
+      <span class="detail-value" style="margin-left:6px">${n.face || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Projection</span>
+      <span class="detail-value" style="margin-left:6px">${n.projection || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Pattern</span>
+      <span class="detail-value" style="margin-left:6px">${n.pattern || '(none)'}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Invariant</span>
+      <span class="detail-value" style="margin-left:6px">${esc(n.invariant || '(none)')}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Classification</span>
+      <span class="detail-value" style="margin-left:6px">${n.classification}</span>
+    </div>
+    <div class="detail-row"><span class="detail-label">Cross-cuts</span>
+      <span class="detail-value" style="margin-left:6px">${crossCuts.length}</span>
+    </div>
+    ${activeVertices.size > 0 ? '' : '<div class="detail-row" style="margin-top:8px;font-size:10px;color:var(--dim);font-style:italic">Free-form mode — pick another node and CONNECT.</div>'}
+  `;
+}
+
+// Wrapper that uses activeLayer (called from layer-list clicks + mode toggles)
+function updateDetailPanel() {
+  updateDetailPanelForNode(activeLayer);
+}
+
+// ============================================================
+// LEFT PANEL — MODE CHECKBOXES (multi-toggle)
+// ============================================================
+document.querySelectorAll('.mode-check').forEach(el => {
+  el.addEventListener('click', (e) => {
+    if (el.classList.contains('disabled')) { e.preventDefault(); return; }
+    const mode = el.dataset.mode;
+    // Toggle membership
+    if (activeModes.has(mode)) activeModes.delete(mode);
+    else activeModes.add(mode);
+    // Sync checkbox + .active class
+    const input = el.querySelector('input');
+    if (input) input.checked = activeModes.has(mode);
+    document.querySelectorAll('.mode-check').forEach(l => {
+      l.classList.toggle('active', activeModes.has(l.dataset.mode));
+    });
+    updateTorusHighlight();
+    updateLayerList();
+    updateDetailPanel();
+  });
+});
+
+// ============================================================
+// BOTTOM BAR
+// ============================================================
+const selectedInfo = document.getElementById('selected-info');
+const btnConnect = document.getElementById('btn-connect');
+const btnClear = document.getElementById('btn-clear');
+
+btnClear.addEventListener('click', () => {
+  selectedNodes = [];
+  connectPath = [];
+  updateSelectedInfo();
+  updateTorusHighlight();
+  updateLayerList();   // clear chain view in Column 2
+  updateModeButtons(); // disable modes if no chain now
+});
+
+btnConnect.addEventListener('click', () => {
+  if (selectedNodes.length >= 2) {
+    // Multi-hop: BFS each consecutive pair, concatenate into one path
+    connectPath = [];
+    for (let i = 0; i < selectedNodes.length - 1; i++) {
+      const segment = bfsPath(selectedNodes[i], selectedNodes[i + 1]);
+      if (segment.length === 0) {
+        connectPath = [];
+        selectedInfo.innerHTML = `<span style="color:var(--red)">No path found between ${selectedNodes[i]} and ${selectedNodes[i+1]}.</span>`;
+        return;
+      }
+      if (i === 0) connectPath.push(...segment);
+      else connectPath.push(...segment.slice(1));
+    }
+    updateTorusHighlight();
+    updateSelectedInfo();
+    updateLayerList();    // render chain in Column 2
+    updateModeButtons();  // enable mode toggles now that a chain exists
+  }
+});
+
+function updateSelectedInfo() {
+  btnConnect.disabled = selectedNodes.length < 2;
+  if (typeof updateSectionLabels === 'function') updateSectionLabels();
+  if (selectedNodes.length === 0) {
+    selectedInfo.innerHTML = '';  // header carries the instruction
+  } else if (selectedNodes.length === 1) {
+    selectedInfo.innerHTML = `Selected: <span class="sel-node">${selectedNodes[0]}</span> &mdash; click more nodes to build the chain`;
+  } else {
+    // Render full sequence
+    const seq = selectedNodes.map(n => `<span class="sel-node">${n}</span>`).join(' &rarr; ');
+    let extra = '';
+    if (connectPath.length > 0) {
+      extra = ` <span style="color:var(--gold)">&mdash; chain: ${connectPath.length} nodes, ${connectPath.length - 1} hops, ${selectedNodes.length} waypoints</span>`;
+    }
+    selectedInfo.innerHTML = `Waypoints: ${seq}${extra}`;
+  }
+}
+
+// Stats — rendered inside the canvas-legend strip (under the torus).
+const statsBar = document.getElementById('leg-stats');
+if (statsBar && typeof TORUS_META !== 'undefined') {
+  const bypassFrag = (TORUS_META.bypassRouteCount !== undefined)
+    ? ` &middot; <span class="green-count">${TORUS_META.bypassRouteCount} bypass</span>`
+    : '';
+  statsBar.innerHTML =
+    `${TORUS_META.nodeCount} nodes &middot; ${TORUS_META.edgeCount} edges &middot; ` +
+    `<span class="gold-count">${TORUS_META.integersOriginalCount} Integers&#9733;</span>${bypassFrag}`;
+}
+
+// ============================================================
+// BFS PATH FINDING
+// ============================================================
+function buildAdjacency() {
+  const adj = {};
+  TORUS_EDGES.forEach(e => {
+    if (!adj[e.from]) adj[e.from] = [];
+    if (!adj[e.to]) adj[e.to] = [];
+    adj[e.from].push(e.to);
+    adj[e.to].push(e.from);
+  });
+  return adj;
+}
+
+const adjacency = buildAdjacency();
+
+function bfsPath(startId, endId) {
+  if (startId === endId) return [startId];
+  const visited = new Set();
+  const queue = [[startId]];
+  visited.add(startId);
+  while (queue.length > 0) {
+    const path = queue.shift();
+    const current = path[path.length - 1];
+    const neighbors = adjacency[current] || [];
+    for (const next of neighbors) {
+      if (visited.has(next)) continue;
+      const newPath = [...path, next];
+      if (next === endId) return newPath;
+      visited.add(next);
+      queue.push(newPath);
+    }
+  }
+  return []; // no path found
+}
+
+// ============================================================
+// TORUS HIGHLIGHT
+// ============================================================
+function updateTorusHighlight() {
+  // ── POSITION LOGIC ──
+  // When a vertex is selected, its layers fan out horizontally across the
+  // torus (along u) at a STABLE v-home (golden-angle assignment from vertex
+  // ring index — stable regardless of other selections). Small gap so it
+  // reads as an open arc, not a closed ring. Non-selected nodes stay at
+  // their natural data positions with tubeOffset applied to v.
+  if (activeVertices.size > 0) {
+    const spreadPosByNodeId = {};
+
+    for (const vertexId of activeVertices) {
+      const mainNodes = nodeMeshes.filter(m =>
+        m.userData.vertex === vertexId && m.userData.classification !== 'bypass-route');
+      mainNodes.sort((a, b) => {
+        const aL = a.userData.layer || '';
+        const bL = b.userData.layer || '';
+        return aL.localeCompare(bL, undefined, {numeric: true});
+      });
+
+      // Spread u across full 2π. v KEEPS each node's natural origV — as u
+      // sweeps around, v also advances layer-by-layer (because the data has
+      // v=0, π/10, 2π/10, … for consecutive layers), creating the helical
+      // curve that reveals where each layer lives on the torus.
+      mainNodes.forEach((mesh, i) => {
+        const spreadU = (i / mainNodes.length) * Math.PI * 2;
+        const v = mesh.userData.origV + tubeOffset;
+        // Keep ALL nodes on the torus surface so chain-hose endpoints (which
+        // come from currentU/V) reach the visible node center. Earlier we
+        // sank bypassed externals inward — but that left the white tube
+        // floating in mid-air past the node. The bypass-route node sitting
+        // nearby in INDEPENDENT mode is signal enough that the external is
+        // replaced; no need to physically displace the node.
+        const newPos = torusPoint(spreadU, v);
+        mesh.userData.currentU = spreadU;
+        mesh.userData.currentV = v;
+        mesh.position.copy(newPos);
+        spreadPosByNodeId[mesh.userData.id] = {u: spreadU, v: v};
+      });
+
+      // Bypass-route nodes co-locate at the replaced node's u, v nudged
+      nodeMeshes.filter(m =>
+        m.userData.vertex === vertexId && m.userData.classification === 'bypass-route'
+      ).forEach((mesh) => {
+        const repl = spreadPosByNodeId[mesh.userData.replaces];
+        if (repl) {
+          const allBypassesForSameTarget = TORUS_NODES.filter(n =>
+            n.classification === 'bypass-route' && n.replaces === mesh.userData.replaces && n.vertex === vertexId);
+          const idx = allBypassesForSameTarget.findIndex(n => n.id === mesh.userData.id);
+          const total = allBypassesForSameTarget.length;
+          const vOffset = total > 1 ? (idx - (total - 1) / 2) * 0.18 : 0.22;
+          const bv = repl.v + vOffset;
+          const newPos = torusPoint(repl.u, bv);
+          mesh.position.copy(newPos);
+          mesh.userData.currentU = repl.u;
+          mesh.userData.currentV = bv;
+        } else {
+          mesh.position.copy(mesh.userData.origPos);
+          mesh.userData.currentU = mesh.userData.origU;
+          mesh.userData.currentV = mesh.userData.origV;
+        }
+      });
+    }
+
+    // Non-active nodes: home positions with tubeOffset
+    nodeMeshes.forEach(mesh => {
+      if (!activeVertices.has(mesh.userData.vertex)) {
+        const u = mesh.userData.origU;
+        const v = mesh.userData.origV + tubeOffset;
+        mesh.position.copy(torusPoint(u, v));
+        mesh.userData.currentU = u;
+        mesh.userData.currentV = v;
+      }
+    });
+  } else {
+    // No selection: all nodes at home positions
+    nodeMeshes.forEach(mesh => {
+      const u = mesh.userData.origU;
+      const v = mesh.userData.origV + tubeOffset;
+      mesh.position.copy(torusPoint(u, v));
+      mesh.userData.currentU = u;
+      mesh.userData.currentV = v;
+    });
+  }
+
+  // ── COMPUTE GEODESIC PATH SET — accumulate full chain of each vertex ──
+  // (The per-vertex chain is inherently the sequential layer list with
+  // poloidal spread; geodesic = that chain. Used by layer list to tag SHORTEST.)
+  geodesicPathSet = new Set();
+  for (const _vertexId of activeVertices) {
+    const vtxNodes = nodeMeshes.filter(m => m.userData.vertex === _vertexId);
+    vtxNodes.forEach(m => geodesicPathSet.add(m.userData.id));
+  }
+
+  // ── COLOR / OPACITY LOGIC ──
+
+  // Reset all nodes to default. Base scale 0.55 matches the "dimmed/context"
+  // size — less busy at a glance. Selecting a solution ONLY enlarges the
+  // selected chain (no shrinking-everything-else effect); non-selected nodes
+  // already live at 0.55 whether a solution is selected or not.
+  nodeMeshes.forEach(mesh => {
+    const n = mesh.userData;
+    const cfg = COLORS[n.classification] || COLORS['literature'];
+    mesh.material.color.setHex(cfg.color);
+    mesh.material.emissive.setHex(cfg.emissive);
+    mesh.material.emissiveIntensity = cfg.emissiveIntensity;
+    mesh.material.opacity = cfg.opacity;
+    mesh.material.transparent = cfg.opacity < 1.0;
+    mesh.scale.setScalar(0.55);
+    // Bypass-route nodes hidden by default; only INDEPENDENT mode reveals them.
+    if (n.classification === 'bypass-route') {
+      mesh.material.opacity = 0;
+      mesh.material.transparent = true;
+      mesh.scale.setScalar(0);
+    }
+  });
+
+  // Reset all edges:
+  //   activeVertex → fully hide (nodes are spread to NEW positions; the 861
+  //     default edges still point to home locations and would z-fight across
+  //     the torus wireframe as "black lines"; the spread-arcs replace them).
+  //   connect chain (no activeVertex) → dim backdrop so users see context.
+  //   nothing selected → hidden entirely.
+  // Default edges (861 of them) — always hidden. Keeping them visible at low
+  // opacity z-fought against the cyan wireframe as "black phantom lines" that
+  // cut across the torus whenever connect chain was active. The connect-chain
+  // overlay arcs (drawn as spreadLine) carry the visual connectivity.
+  edgeLines.forEach(line => { line.visible = false; });
+
+  // ── MODE-AWARE RENDERING ──
+  // Clean up any previous spread-lines. Variant C dispose discipline: we must
+  // dispose the TubeGeometry + MeshBasicMaterial on each removed arc, not just
+  // detach from the scene — otherwise the GPU buffers leak and Safari crashes
+  // after extended interaction. (Arcs rebuild every time the chain changes.)
+  const staleArcs = scene.children.filter(c => c.userData && c.userData.spreadLine);
+  for (const c of staleArcs) {
+    scene.remove(c);
+    if (c.geometry) c.geometry.dispose();
+    if (c.material) {
+      if (Array.isArray(c.material)) c.material.forEach(m => m.dispose());
+      else c.material.dispose();
+    }
+  }
+
+  if (activeVertices.size > 0) {
+    // Dim nodes that belong to NO active vertex — once, before per-vertex work.
+    nodeMeshes.forEach(mesh => {
+      if (!activeVertices.has(mesh.userData.vertex)) {
+        mesh.material.opacity = 0.4;
+        mesh.material.transparent = true;
+        mesh.scale.setScalar(0.55);
+      }
+    });
+
+    // Selected-solution nodes: grow only +20% from the 0.55 baseline (→ 0.66).
+    // Color + white-line connectivity carry the signal; size is a subtle nudge.
+    const modeColors = {
+      'comply': () => ({scale: 0.66}),
+    };
+    const getStyle = modeColors['comply'];
+
+    // Per-active-vertex loop: color nodes orange, draw 4 layers of arcs,
+    // show bypass-route nodes when INDEPENDENT is on.
+    for (const activeVertex of activeVertices) {
+      // Collect sorted main-chain nodes for this vertex
+      const activeNodes = nodeMeshes.filter(m =>
+        m.userData.vertex === activeVertex && m.userData.classification !== 'bypass-route');
+      activeNodes.sort((a, b) => (a.userData.layer||'').localeCompare(b.userData.layer||'', undefined, {numeric:true}));
+
+      const activeBypassNodes = nodeMeshes.filter(m =>
+        m.userData.vertex === activeVertex && m.userData.classification === 'bypass-route');
+
+      // Orange color for all selected-chain nodes
+      activeNodes.forEach(mesh => {
+        const s = getStyle(mesh.userData.classification);
+        mesh.material.color.setHex(SELECTED_SOLUTION_COLOR);
+        mesh.material.emissive.setHex(SELECTED_SOLUTION_COLOR);
+        mesh.material.emissiveIntensity = 1.0;
+        mesh.material.opacity = 1.0;
+        mesh.material.transparent = false;
+        mesh.scale.setScalar(s.scale);
+      });
+
+      // Bypass-route nodes: visible when INDEPENDENT is on
+      activeBypassNodes.forEach(mesh => {
+        if (activeModes.has('independent')) {
+          mesh.material.color.setHex(0x14b8a6);
+          mesh.material.emissive.setHex(0x14b8a6);
+          mesh.material.emissiveIntensity = 1.0;
+          mesh.material.opacity = 1.0;
+          mesh.material.transparent = false;
+          mesh.scale.setScalar(0.66);  // +20% from baseline
+        } else {
+          mesh.material.opacity = 0;
+          mesh.material.transparent = true;
+          mesh.scale.setScalar(0);
+        }
+      });
+
+    // Draw chain arcs ON THE TORUS SURFACE between consecutive spread nodes
+    // Instead of bezier curves through empty space, interpolate (u, v) on the
+    // torus parametric surface so lines hug the geometry.
+    function drawSurfaceArc(mesh1, mesh2, color, opacity) {
+      const u1 = mesh1.userData.currentU;
+      const v1 = (mesh1.userData.currentV !== undefined) ? mesh1.userData.currentV : mesh1.userData.origV;
+      const u2 = mesh2.userData.currentU;
+      const v2 = (mesh2.userData.currentV !== undefined) ? mesh2.userData.currentV : mesh2.userData.origV;
+      let du = u2 - u1;
+      if (du > Math.PI) du -= 2 * Math.PI;
+      if (du < -Math.PI) du += 2 * Math.PI;
+      let dv = v2 - v1;
+      if (dv > Math.PI) dv -= 2 * Math.PI;
+      if (dv < -Math.PI) dv += 2 * Math.PI;
+      const steps = 32;
+      const pts = [];
+      for (let t = 0; t <= steps; t++) {
+        const frac = t / steps;
+        pts.push(torusPoint(u1 + du * frac, v1 + dv * frac));
+      }
+      // Hose (tube) instead of a flat line — radius = half the node sphere
+      // radius (0.066 / 2 ≈ 0.033) so the hose visually reads as a thicker
+      // connector between the dots.
+      const curve = new THREE.CatmullRomCurve3(pts);
+      const tubeGeo = new THREE.TubeGeometry(curve, steps, 0.0083, 6, false);  // ⅛ node radius
+      const mat = new THREE.MeshBasicMaterial({color, opacity, transparent: opacity < 1.0, depthWrite: false});
+      const tube = new THREE.Mesh(tubeGeo, mat);
+      tube.userData = {spreadLine: true};
+      scene.add(tube);
+    }
+
+    // ── MULTI-LAYER ARC RENDERING ──
+    // All four mode-arc-sets are drawn ALWAYS. Active modes are bold-bright;
+    // inactive modes are very dim (visible as ghost-lines) so the judge can
+    // toggle the comparison without losing context.
+    const ON_OPACITY = 0.9;
+    const OFF_OPACITY = 0.05;
+    const op = (mode) => activeModes.has(mode) ? ON_OPACITY : OFF_OPACITY;
+
+    // Pre-build bypass map (used by INDEPENDENT layer)
+    const bypassMeshByReplacedId = {};
+    activeBypassNodes.forEach(bm => {
+      if (!bypassMeshByReplacedId[bm.userData.replaces]) {
+        bypassMeshByReplacedId[bm.userData.replaces] = bm;
+      }
+    });
+    const isExternal = (cls) => cls === 'external' || cls === 'open';
+
+    // ─── LAYER 1: COMPLY arcs — WHITE chain line (nodes stay orange) ───
+    {
+      const layerOp = op('comply');
+      for (let i = 1; i < activeNodes.length; i++) {
+        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], 0xffffff, layerOp);
+      }
+    }
+
+    // ─── LAYER 2: INDEPENDENT arcs — teal shortcut arcs ───
+    {
+      const layerOp = op('independent');
+      let lastGoodNode = null;
+      for (let i = 0; i < activeNodes.length; i++) {
+        const node = activeNodes[i];
+        const cls = node.userData.classification;
+        if (isExternal(cls)) {
+          const bypassMesh = bypassMeshByReplacedId[node.userData.id];
+          if (bypassMesh) {
+            if (lastGoodNode) drawSurfaceArc(lastGoodNode, bypassMesh, 0x14b8a6, layerOp);
+            lastGoodNode = bypassMesh;
+          } else if (lastGoodNode) {
+            for (let j = i + 1; j < activeNodes.length; j++) {
+              if (!isExternal(activeNodes[j].userData.classification)) {
+                drawSurfaceArc(lastGoodNode, activeNodes[j], 0x14b8a6, layerOp);
+                break;
+              }
+            }
+          }
+          continue;
+        }
+        if (lastGoodNode) {
+          drawSurfaceArc(lastGoodNode, node, 0x14b8a6, layerOp);
+        }
+        lastGoodNode = node;
+      }
+    }
+
+    // ─── LAYER 3: CONTRIBUTE arcs — rose around externals ───
+    {
+      const layerOp = op('contribute');
+      for (let i = 1; i < activeNodes.length; i++) {
+        const n1 = activeNodes[i - 1], n2 = activeNodes[i];
+        const c1 = n1.userData.classification, c2 = n2.userData.classification;
+        if (isExternal(c1) || isExternal(c2)) {
+          drawSurfaceArc(n1, n2, 0xe11d48, layerOp);
+        } else {
+          drawSurfaceArc(n1, n2, 0xe11d48, layerOp * 0.3);
+        }
+      }
+    }
+
+    // ─── LAYER 4: GEODESIC arcs — white sequential chain (same as COMPLY
+    // geometry; GEODESIC mode just brightens the already-drawn line) ───
+    if (activeNodes.length >= 2) {
+      activeNodes.forEach(m => geodesicPathSet.add(m.userData.id));
+      const layerOp = op('geodesic');
+      for (let i = 1; i < activeNodes.length; i++) {
+        drawSurfaceArc(activeNodes[i - 1], activeNodes[i], 0xffffff, layerOp);
+      }
+    }
+    } // end for (activeVertex of activeVertices)
+  }
+
+  // ── MODE-LAYER RENDERING for CUSTOM CONNECT CHAINS ──
+  // When a connect chain exists AND no solution is active, apply the 4-mode
+  // arc overlays to the user-composed chain (orange arcs everywhere).
+  if (connectPath.length > 1 && activeVertices.size === 0) {
+    const chainMeshes = connectPath
+      .map(id => nodeMap[id]?.mesh)
+      .filter(Boolean);
+    const pathSet = new Set(connectPath);
+
+    // Amplify chain nodes — same orange as a selected-solution chain for
+    // consistent "this is a user-composed selection" signal.
+    chainMeshes.forEach(mesh => {
+      mesh.material.color.setHex(SELECTED_SOLUTION_COLOR);
+      mesh.material.emissive.setHex(SELECTED_SOLUTION_COLOR);
+      mesh.material.emissiveIntensity = 1.0;
+      mesh.material.opacity = 1.0;
+      mesh.material.transparent = false;
+      mesh.scale.setScalar(0.66);  // +20% from baseline
+    });
+
+    // Reuse surface-arc drawer — chainMeshes have currentU/currentV from earlier position setup
+    function drawChainArc(m1, m2, color, opacity) {
+      const u1 = m1.userData.currentU ?? m1.userData.origU;
+      const v1 = m1.userData.currentV ?? m1.userData.origV;
+      const u2 = m2.userData.currentU ?? m2.userData.origU;
+      const v2 = m2.userData.currentV ?? m2.userData.origV;
+      let du = u2 - u1;
+      if (du > Math.PI) du -= 2 * Math.PI;
+      if (du < -Math.PI) du += 2 * Math.PI;
+      let dv = v2 - v1;
+      if (dv > Math.PI) dv -= 2 * Math.PI;
+      if (dv < -Math.PI) dv += 2 * Math.PI;
+      const steps = 32;
+      const pts = [];
+      for (let t = 0; t <= steps; t++) {
+        const f = t / steps;
+        pts.push(torusPoint(u1 + du * f, v1 + dv * f));
+      }
+      const curve = new THREE.CatmullRomCurve3(pts);
+      const tubeGeo = new THREE.TubeGeometry(curve, steps, 0.0083, 6, false);  // ⅛ node radius
+      const mat = new THREE.MeshBasicMaterial({color, opacity, transparent: opacity < 1.0, depthWrite: false});
+      const tube = new THREE.Mesh(tubeGeo, mat);
+      tube.userData = {spreadLine: true};
+      scene.add(tube);
+    }
+
+    const ON_OP = 0.9;
+    const OFF_OP = 0.05;
+    const op = (mode) => activeModes.has(mode) ? ON_OP : OFF_OP;
+    const isExternal = (cls) => cls === 'external' || cls === 'open';
+    // LAYER 1: COMPLY arcs — WHITE chain line (matches solution chain grammar)
+    {
+      const lo = op('comply');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xffffff, lo);
+      }
+    }
+
+    // LAYER 2: INDEPENDENT — green shortcut arcs skipping externals
+    {
+      const lo = op('independent');
+      let lastGood = null;
+      chainMeshes.forEach(m => {
+        const cls = m.userData.classification;
+        if (isExternal(cls)) {
+          // skip-arc from lastGood to next non-external (we walk forward only)
+          return;
+        }
+        if (lastGood) drawChainArc(lastGood, m, 0xa5f3a2, lo);
+        lastGood = m;
+      });
+    }
+
+    // LAYER 3: CONTRIBUTE — red arcs on external-adjacent edges
+    {
+      const lo = op('contribute');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        const c1 = chainMeshes[i - 1].userData.classification;
+        const c2 = chainMeshes[i].userData.classification;
+        const edgeOp = (isExternal(c1) || isExternal(c2)) ? lo : lo * 0.3;
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xff6b5a, edgeOp);
+      }
+    }
+
+    // LAYER 4: GEODESIC — same white chain line (GEODESIC just brightens it)
+    {
+      const lo = op('geodesic');
+      for (let i = 1; i < chainMeshes.length; i++) {
+        drawChainArc(chainMeshes[i - 1], chainMeshes[i], 0xffffff, lo);
+      }
+    }
+  } else if (connectPath.length > 1 && activeVertices.size > 0) {
+    // If both a solution AND a connect chain are active, preserve the
+    // gold-highlight for connect path on top of the solution's mode rendering.
+    const pathSet = new Set(connectPath);
+    nodeMeshes.forEach(mesh => {
+      if (pathSet.has(mesh.userData.id)) {
+        mesh.material.color.setHex(0xf5c26b);
+        mesh.material.emissive.setHex(0xf5c26b);
+        mesh.material.emissiveIntensity = 0.6;
+        mesh.material.opacity = 1.0;
+        mesh.material.transparent = false;
+        mesh.scale.setScalar(0.66);  // +20% from baseline
+      }
+    });
+    for (let i = 0; i < connectPath.length - 1; i++) {
+      const a = connectPath[i], b = connectPath[i + 1];
+      edgeLines.forEach(line => {
+        const e = line.userData;
+        if ((e.from === a && e.to === b) || (e.from === b && e.to === a)) {
+          line.material.color.setHex(0xf5c26b);
+          line.material.opacity = 1.0;
+        }
+      });
+    }
+  }
+
+  // Selected nodes: highlight with green ring
+  selectedNodes.forEach(nodeId => {
+    if (nodeMap[nodeId]) {
+      const mesh = nodeMap[nodeId].mesh;
+      mesh.material.color.setHex(0xa5f3a2);
+      mesh.material.emissive.setHex(0xa5f3a2);
+      mesh.material.emissiveIntensity = 1.0;
+      mesh.material.opacity = 1.0;
+      mesh.material.transparent = false;
+      mesh.scale.setScalar(0.66);  // +20% from baseline
+    }
+  });
+
+  // Capture logical scales after highlight pass — animate() will multiply
+  // them by zoom compensation every frame to keep screen-size constant.
+  captureBaseScales();
+}
+
+// ============================================================
+// NODE PULSE ANIMATION
+// ============================================================
+let pulsingMesh = null;
+let pulseStartTime = 0;
+
+function pulseNode(mesh) {
+  pulsingMesh = mesh;
+  pulseStartTime = performance.now();
+}
+
+// ============================================================
+// SCREEN-SIZE COMPENSATION
+// ============================================================
+// After updateTorusHighlight assigns "logical" scales (1.0, 1.3, 1.6 etc),
+// captureBaseScales() stores them on userData. applyZoomCompensation() runs
+// every frame and multiplies the logical scale by (cameraDist / BASE_DIST),
+// keeping on-screen size ≈ constant as the user zooms.
+const BASE_DIST_FOR_SIZE = Math.hypot(5, 4, 7);
+// Save both logical scale AND opacity at each updateTorusHighlight pass — the
+// per-frame applyZoomCompensation then multiplies scale by zoom-ratio and
+// multiplies opacity by view-space depth factor (for 3D depth perception
+// matching the wireframe's depth-cued shader).
+function captureBaseScales() {
+  nodeMeshes.forEach(m => {
+    m.userData._baseScale = m.scale.x;
+    m.userData._baseOpacity = m.material.opacity;
+    m.userData._baseTransparent = m.material.transparent;
+    m.userData._baseEmissiveIntensity = m.material.emissiveIntensity;
+  });
+}
+const _tmpViewPos = new THREE.Vector3();
+const _tmpWorldPos = new THREE.Vector3();
+const _tmpProjPos = new THREE.Vector3();
+const TORUS_RADIUS_SPAN = R_MAJOR + R_MINOR;
+
+// Closest-N closest-to-camera node-id labels (DOM overlay). One div per node,
+// persistent — so CSS opacity transitions handle fading smoothly. Reusing a
+// fixed set of slots caused abrupt text swaps that couldn't fade between IDs.
+const nodeLabelsLayer = document.getElementById('node-labels');
+const MAX_CLOSEST_LABELS = 10;
+const nodeLabelDivs = new Map();  // nodeId → div (persistent, one per node)
+nodeMeshes.forEach(m => {
+  const div = document.createElement('div');
+  div.className = 'node-label';
+  div.textContent = m.userData.id;
+  div.style.opacity = '0';
+  nodeLabelsLayer.appendChild(div);
+  nodeLabelDivs.set(m.userData.id, div);
+});
+const _depthEntries = [];  // re-used scratch array
+function updateClosestLabels() {
+  _depthEntries.length = 0;
+  const w = nodeLabelsLayer.clientWidth;
+  const h = nodeLabelsLayer.clientHeight;
+  nodeMeshes.forEach(m => {
+    if (m.material.opacity < 0.25) return;
+    m.getWorldPosition(_tmpWorldPos);
+    _tmpViewPos.copy(_tmpWorldPos).applyMatrix4(camera.matrixWorldInverse);
+    _depthEntries.push({ mesh: m, depth: -_tmpViewPos.z });
+  });
+  _depthEntries.sort((a, b) => a.depth - b.depth);
+
+  // Track which nodes are in the top-N this frame
+  const topRanks = new Map();
+  const N = Math.min(MAX_CLOSEST_LABELS, _depthEntries.length);
+  for (let i = 0; i < N; i++) {
+    topRanks.set(_depthEntries[i].mesh.userData.id, i);
+  }
+
+  // Update every node's label div. Position only the visible ones. CSS
+  // `transition: opacity 0.3s ease` does the smooth fade-in/fade-out.
+  nodeLabelDivs.forEach((div, id) => {
+    const rank = topRanks.get(id);
+    if (rank === undefined) {
+      if (div.style.opacity !== '0') div.style.opacity = '0';
+      return;
+    }
+    const mesh = nodeMap[id]?.mesh;
+    if (!mesh) { div.style.opacity = '0'; return; }
+    mesh.getWorldPosition(_tmpProjPos);
+    _tmpProjPos.project(camera);
+    const x = (_tmpProjPos.x + 1) * 0.5 * w;
+    const y = (-_tmpProjPos.y + 1) * 0.5 * h;
+    // Full-float precision in the transform — at very slow speeds the delta
+    // between frames is fractional pixels, and .toFixed(2) rounding caused
+    // labels to jump at 0.01px boundaries. Native float stringification gives
+    // ~15 digits which is plenty, and the compositor handles sub-pixel fine.
+    div.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -140%)`;
+    div.style.opacity = String(Math.max(0.25, 1 - rank * 0.085));
+  });
+}
+function applyZoomCompensation() {
+  const comp = camera.position.length() / BASE_DIST_FOR_SIZE;
+  const cameraDist = camera.position.length();
+  const minViewZ = cameraDist - TORUS_RADIUS_SPAN;
+  const rangeZ = 2 * TORUS_RADIUS_SPAN;
+  const DEPTH_MIN_FACTOR = 0.15;
+
+  nodeMeshes.forEach(m => {
+    if (m === pulsingMesh) return;
+    const base = m.userData._baseScale ?? 1;
+    m.scale.setScalar(base * comp);
+
+    // Use WORLD position so depth factor tracks scene rotation — otherwise
+    // dimming stays "hardwired" to nodes and doesn't update when rotate X/Y
+    // spins the scene (back nodes stay dim after rotating to the front).
+    m.getWorldPosition(_tmpWorldPos);
+    _tmpViewPos.copy(_tmpWorldPos).applyMatrix4(camera.matrixWorldInverse);
+    const viewZ = -_tmpViewPos.z;
+    const t = Math.max(0, Math.min(1, (viewZ - minViewZ) / rangeZ));
+    const depthFactor = 1 - t * (1 - DEPTH_MIN_FACTOR);  // 1 at front → 0.15 at back
+    const baseOp = m.userData._baseOpacity ?? 1;
+    const newOp = baseOp * depthFactor;
+    m.material.opacity = newOp;
+    m.material.transparent = newOp < 1.0 || m.userData._baseTransparent;
+    // Front-nodes brightness boost +20% (emissive). Back nodes unchanged.
+    const baseEmissive = m.userData._baseEmissiveIntensity ?? 1;
+    m.material.emissiveIntensity = baseEmissive * (1 + (1 - t) * 0.2);
+  });
+  labelSprites.forEach(s => {
+    const base = s.userData._baseScale ?? 0.55;
+    s.scale.set(base * comp * 2.2, base * comp * 0.48, 1);
+  });
+}
+
+// ============================================================
+// RAYCASTING + TOOLTIP + CLICK
+// ============================================================
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+const tooltip = document.getElementById('tooltip');
+
+renderer.domElement.addEventListener('mousemove', (e) => {
+  const rect = renderer.domElement.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(nodeMeshes, false);
+  if (hits.length > 0) {
+    const h = hits[0].object;
+    const n = h.userData;
+    const classLabel = n.classification === 'integers-original' ? ' <span style="color:var(--gold)">★</span>' : '';
+    tooltip.innerHTML =
+      `<div class="tip-row-top"><span class="tip-id">${esc(n.id)}</span>` +
+      `<span class="status-badge status-${n.status}">${n.status}</span>` +
+      `<span class="tip-face">${n.face || ''}</span>${classLabel}</div>` +
+      `<div class="tip-desc">${esc(n.name)}</div>`;
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX - rect.left + 14) + 'px';
+    tooltip.style.top = (e.clientY - rect.top + 14) + 'px';
+    renderer.domElement.style.cursor = 'pointer';
+  } else {
+    tooltip.style.display = 'none';
+    renderer.domElement.style.cursor = 'grab';
+  }
+});
+
+renderer.domElement.addEventListener('click', (e) => {
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(nodeMeshes, false);
+  if (hits.length > 0) {
+    const nodeId = hits[0].object.userData.id;
+    const vertexId = hits[0].object.userData.vertex;
+
+    // Multi-waypoint selection: click toggles a node in/out of the sequence
+    // No max cap — referees can add as many waypoints as they want and CONNECT
+    // will route through all of them in selection order.
+    if (selectedNodes.includes(nodeId)) {
+      selectedNodes = selectedNodes.filter(n => n !== nodeId);
+    } else {
+      selectedNodes.push(nodeId);
+    }
+    connectPath = [];
+
+    // FREE-FORM SELECTION MODE
+    // If no solution is active, clicking a node only adds it to selectedNodes
+    // for the CONNECT workflow — referees compose their own chains.
+    // If a solution IS active, also sync the layer list highlighting to the clicked node.
+    if (activeVertices.has(vertexId)) {
+      activeLayer = nodeId;
+      document.querySelectorAll('.layer-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.nodeId === activeLayer);
+      });
+      updateDetailPanel();
+    } else {
+      // Free-form mode: do NOT auto-activate any vertex; just show the clicked node's detail
+      activeLayer = null;
+      updateDetailPanelForNode(nodeId);
+    }
+    updateSelectedInfo();
+    updateTorusHighlight();
+  }
+});
+
+// ============================================================
+// HUD
+// ============================================================
+const hud = document.getElementById('hud');
+
+// ============================================================
+// RESIZE
+// ============================================================
+function onResize() {
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  // Variant C: re-assert the 1.5 cap on resize (DPR can change when the window
+  // moves between a retina and non-retina display).
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', onResize);
+// Collapsing/expanding the bottom <details> panel changes available height —
+// re-fit the renderer so the canvas reclaims the freed vertical space.
+// Also tie the HUD readout (pitch · yaw · roll · rotate · zoom · pos · tube)
+// to the panel's open state — it's a controls-detail legend, not useful when
+// the panel is collapsed.
+const bottomPanelEl = document.getElementById('bottom-panel');
+const colorLegendEl = document.getElementById('color-legend');
+function syncHudVisibility() {
+  const show = !!(bottomPanelEl && bottomPanelEl.open);
+  hud.classList.toggle('shown', show);
+  // Color legend stays visible always; just slide up to make room for HUD
+  // when the panel is expanded (stacking under the HUD).
+  if (colorLegendEl) colorLegendEl.classList.toggle('hud-stacked', show);
+}
+if (bottomPanelEl) {
+  bottomPanelEl.addEventListener('toggle', () => {
+    requestAnimationFrame(onResize);
+    syncHudVisibility();
+  });
+}
+syncHudVisibility();
+onResize();
+
+// ============================================================
+// ANIMATE
+// ============================================================
+function animate() {
+  requestAnimationFrame(animate);
+
+  // Pulse animation
+  if (pulsingMesh) {
+    const elapsed = (performance.now() - pulseStartTime) / 1000;
+    if (elapsed < 1.0) {
+      const s = 1 + 0.5 * Math.sin(elapsed * Math.PI * 4) * Math.exp(-elapsed * 3);
+      pulsingMesh.scale.setScalar(s * (activeVertices.size > 0 ? 1.3 : 1));
+    } else {
+      pulsingMesh = null;
+    }
+  }
+
+  // Auto-animate any slider that's checked — each advances its own value,
+  // dispatches input, triggering the regular camera/tube handler. The
+  // "animate" button gates this with globalPaused (without disturbing the
+  // checkbox selections).
+  if (!globalPaused && autoAnimate.size > 0) {
+    for (const id of autoAnimate) autoStep(id);
+  }
+
+  controls.update();
+
+  // Depth-cued wireframe: update shader uniform with current camera distance
+  if (wireShader && wireShader.uniforms && wireShader.uniforms.cameraDist) {
+    wireShader.uniforms.cameraDist.value = camera.position.length();
+  }
+
+  // Constant screen-size for nodes + labels: scale each by distance/base
+  // ratio, so their on-screen pixel size doesn't shrink when zoomed out or
+  // balloon when zoomed in. _baseScale is saved in updateTorusHighlight.
+  applyZoomCompensation();
+
+  // Top-5 closest-to-camera node labels (fades by rank)
+  updateClosestLabels();
+
+  renderer.render(scene, camera);
+
+  // Sync sliders if camera was dragged (not driven by slider)
+  syncSlidersFromCamera();
+
+  // HUD — pitch/yaw/zoom computed relative to the pan target (so they match
+  // the slider values even when target is offset from origin).
+  const tgt = controls.target;
+  const dx = camera.position.x - tgt.x;
+  const dy = camera.position.y - tgt.y;
+  const dz = camera.position.z - tgt.z;
+  const r = Math.hypot(dx, dy, dz);
+  const pitch = r > 0.01 ? Math.asin(Math.max(-1, Math.min(1, dy / r))) * 180 / Math.PI : 0;
+  const yaw = r > 0.01 ? Math.atan2(dx, dz) * 180 / Math.PI : 0;
+  const zoomRatio = r > 0.01 ? BASE_DISTANCE / r : 1;
+  const tubeDeg = Math.round((tubeOffset * 180 / Math.PI) % 360);
+  const tiltDeg = tiltSlider ? Math.round(parseFloat(tiltSlider.value)) : 0;
+  const rotXDeg = Math.round((scene.rotation.y * 180 / Math.PI) % 360);
+  const rotYDeg = Math.round((scene.rotation.x * 180 / Math.PI) % 360);
+  // HUD labels match slider labels literally (pos X, pos Y, pos Z explicitly).
+  hud.textContent =
+    `pitch ${pitch.toFixed(0)}° · yaw ${yaw.toFixed(0)}° · roll ${tiltDeg}°` +
+    ` · rotate X ${rotXDeg}° · rotate Y ${rotYDeg}°` +
+    ` · zoom ${zoomRatio.toFixed(2)}` +
+    ` · pos X ${tgt.x.toFixed(2)} · pos Y ${tgt.y.toFixed(2)} · pos Z ${tgt.z.toFixed(2)}` +
+    ` · tube ${tubeDeg}°`;
+}
+// animate() is kicked off at the very end of the script (after all let/const
+// module-scope bindings — sliderDriving, SLIDES etc. — are initialized).
+
+// ============================================================
+// HELPERS
+// ============================================================
+function esc(s) {
+  const div = document.createElement('div');
+  div.textContent = s;
+  return div.innerHTML;
+}
+
+// ============================================================
+// TUBE SLIDER — rotates every node around the tube circle (v-axis)
+// ============================================================
+const tubeSlider = document.getElementById('tube-slider');
+const tubeReadout = document.getElementById('tube-readout');
+tubeSlider.addEventListener('input', (e) => {
+  tubeOffset = parseFloat(e.target.value);
+  const degrees = Math.round((tubeOffset * 180 / Math.PI) % 360);
+  tubeReadout.textContent = degrees + '°';
+  // Direct call — auto-animate fires input every frame, so any RAF throttle
+  // would cancel before firing and the tube would appear frozen. Direct is
+  // safe because updateTorusHighlight on tube-only change is cheap.
+  updateTorusHighlight();
+});
+
+// ============================================================
+// AUTO-ROTATE TOGGLE (toroidal — camera around major axis)
+// ============================================================
+// "animate" toggle = global PAUSE/RESUME. Doesn't touch the auto-checkboxes
+// (those describe WHICH sliders animate); this just gates whether they all
+// run. Click to pause without losing your slider selections.
+let globalPaused = false;
+const btnAnimate = document.getElementById('btn-animate');
+btnAnimate.addEventListener('click', () => {
+  globalPaused = !globalPaused;
+  btnAnimate.classList.toggle('active', !globalPaused);
+  btnAnimate.textContent = globalPaused ? 'animate' : 'stop';
+});
+
+// Scene rotate X (spin around world Y axis — horizontal scene spin)
+const rotateSceneSlider = document.getElementById('rotate-scene');
+const rotateSceneReadout = document.getElementById('rotate-scene-readout');
+rotateSceneSlider.addEventListener('input', (e) => {
+  const rad = parseFloat(e.target.value);
+  scene.rotation.y = rad;
+  rotateSceneReadout.textContent = Math.round((rad * 180 / Math.PI) % 360) + '°';
+});
+// Scene rotate Y (spin around world X axis — forward tumble, orthogonal to rotate X)
+const rotateSceneYSlider = document.getElementById('rotate-scene-y');
+const rotateSceneYReadout = document.getElementById('rotate-scene-y-readout');
+rotateSceneYSlider.addEventListener('input', (e) => {
+  const rad = parseFloat(e.target.value);
+  scene.rotation.x = rad;
+  rotateSceneYReadout.textContent = Math.round((rad * 180 / Math.PI) % 360) + '°';
+});
+
+// ============================================================
+// PROXIMITY-SELECT WHILE SPINNING
+// ============================================================
+// When auto-rotate or auto-tube is running, clicking a moving target is
+// frustrating. Instead, the node CLOSEST TO THE MOUSE is auto-selected —
+// the judge "draws" their proof chain by sweeping the cursor across the
+// rotating surface. As different nodes become closest, they get added to
+// the waypoint list automatically. When neither rotation is on, normal
+// click-to-select behavior applies (precision mode for stationary picks).
+let lastProximityNodeId = null;
+const PROXIMITY_THRESHOLD_PX = 80; // max screen-space distance to count as "near"
+
+function findClosestNodeToMouse(mx, my) {
+  let closest = null;
+  let minDist = PROXIMITY_THRESHOLD_PX;
+  const w = renderer.domElement.clientWidth;
+  const h = renderer.domElement.clientHeight;
+  nodeMeshes.forEach(mesh => {
+    if (mesh.material.opacity < 0.3) return; // skip dim/hidden nodes
+    const p = mesh.position.clone().project(camera);
+    const sx = (p.x + 1) * 0.5 * w;
+    const sy = (-p.y + 1) * 0.5 * h;
+    const d = Math.hypot(sx - mx, sy - my);
+    if (d < minDist) { minDist = d; closest = mesh; }
+  });
+  return closest;
+}
+
+renderer.domElement.addEventListener('mousemove', (e) => {
+  // Gated by the "Select while spinning" checkbox — opt-in only (default off).
+  // Previously was always on whenever auto-rotate/auto-tube was running, which
+  // caused runaway waypoint accumulation.
+  const proxToggle = document.getElementById('proximity-toggle');
+  if (!proxToggle || !proxToggle.checked) {
+    lastProximityNodeId = null;
+    return;
+  }
+  // Only proximity-select when something is auto-animating
+  if (autoAnimate.size === 0) {
+    lastProximityNodeId = null;
+    return;
+  }
+  const rect = renderer.domElement.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const closest = findClosestNodeToMouse(mx, my);
+  if (closest) {
+    const id = closest.userData.id;
+    // Only add when the closest node CHANGES — avoids spam-adding the same node every frame
+    if (id !== lastProximityNodeId) {
+      lastProximityNodeId = id;
+      // Toggle: if already in selection, skip; if not, add as new waypoint
+      if (!selectedNodes.includes(id)) {
+        selectedNodes.push(id);
+        connectPath = [];
+        updateSelectedInfo();
+        // Pulse the auto-selected node so judge sees what got picked
+        if (closest) pulseNode(closest);
+      }
+    }
+  } else {
+    lastProximityNodeId = null;
+  }
+});
+
+// ============================================================
+// AUTO-POLOIDAL TOGGLE (nodes flow around the tube)
+// ============================================================
+// Both rotations can run simultaneously — when they do, the trajectory of any
+// node is a Clifford flow on the torus (Killing-vector double rotation).
+// If the rate ratio is irrational the orbit is dense in T² (Kronecker-Weyl).
+
+// ============================================================
+// CAMERA SLIDERS (rotate X / rotate Y / zoom) + RESET VIEW
+// ============================================================
+// Bidirectional binding: slider moves camera; camera drags update sliders.
+const DEFAULT_PITCH = 7;     // degrees (user-calibrated)
+const DEFAULT_YAW = -90;     // degrees (user-calibrated)
+const DEFAULT_ZOOM = 184;    // slider units → zoom ratio 1.84 (user-calibrated)
+const DEFAULT_TILT = -8;     // degrees — camera roll (user-calibrated)
+// Default pan target (controls.target) — user-calibrated
+const DEFAULT_POS_X = -1.41;
+const DEFAULT_POS_Y = -0.27;
+const DEFAULT_POS_Z = -1.39;
+// Default scene rotations (radians) — user-calibrated
+const DEFAULT_SCENE_ROT_X = 103 * Math.PI / 180; // rotate X: 103°
+const DEFAULT_SCENE_ROT_Y = 0;                   // rotate Y: 0°
+// Default tube offset — 0
+const DEFAULT_TUBE = 0;
+const BASE_DISTANCE = Math.hypot(5, 4, 7); // ≈ 9.487 — matches initial camera.position.set(5,4,7)
+const rotXSlider = document.getElementById('rot-x');
+const rotYSlider = document.getElementById('rot-y');
+const zoomSlider = document.getElementById('zoom-ctl');
+const tiltSlider = document.getElementById('tilt-ctl');
+const posXSlider = document.getElementById('pos-x');
+const posYSlider = document.getElementById('pos-y');
+const posZSlider = document.getElementById('pos-z');
+const rotXReadout = document.getElementById('rot-x-readout');
+const rotYReadout = document.getElementById('rot-y-readout');
+const zoomReadout = document.getElementById('zoom-readout');
+const tiltReadout = document.getElementById('tilt-readout');
+const posXReadout = document.getElementById('pos-x-readout');
+const posYReadout = document.getElementById('pos-y-readout');
+const posZReadout = document.getElementById('pos-z-readout');
+
+// Guard to avoid infinite feedback when slider input triggers camera change
+// → animate loop reads camera → syncSlidersFromCamera → would re-fire input
+let sliderDriving = false;
+
+function applyCameraFromSliders() {
+  sliderDriving = true;
+  const pitchDeg = parseFloat(rotXSlider.value);
+  const yawDeg = parseFloat(rotYSlider.value);
+  const zoomV = parseFloat(zoomSlider.value);
+  const tiltDeg = parseFloat(tiltSlider.value);
+  const posX = parseFloat(posXSlider.value);
+  const posY = parseFloat(posYSlider.value);
+  const posZ = parseFloat(posZSlider.value);
+  // Pan target BEFORE computing camera position — camera orbits around target.
+  controls.target.set(posX, posY, posZ);
+  const distance = BASE_DISTANCE * (100 / Math.max(zoomV, 1));
+  const clampedDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, distance));
+  const pitchRad = pitchDeg * Math.PI / 180;
+  const yawRad = yawDeg * Math.PI / 180;
+  camera.position.set(
+    controls.target.x + clampedDist * Math.cos(pitchRad) * Math.sin(yawRad),
+    controls.target.y + clampedDist * Math.sin(pitchRad),
+    controls.target.z + clampedDist * Math.cos(pitchRad) * Math.cos(yawRad)
+  );
+  // Tilt: roll around camera-forward axis via up-vector.
+  const tiltRad = tiltDeg * Math.PI / 180;
+  camera.up.set(Math.sin(tiltRad), Math.cos(tiltRad), 0);
+  camera.lookAt(controls.target);
+  controls.update();
+  rotXReadout.textContent = Math.round(pitchDeg) + '°';
+  rotYReadout.textContent = Math.round(yawDeg) + '°';
+  zoomReadout.textContent = (Math.max(zoomV, 1) / 100).toFixed(2);
+  tiltReadout.textContent = Math.round(tiltDeg) + '°';
+  posXReadout.textContent = posX.toFixed(2);
+  posYReadout.textContent = posY.toFixed(2);
+  posZReadout.textContent = posZ.toFixed(2);
+  sliderDriving = false;
+}
+
+function syncSlidersFromCamera() {
+  if (sliderDriving) return;
+  // Camera position relative to target (so pan is already factored out)
+  const dx = camera.position.x - controls.target.x;
+  const dy = camera.position.y - controls.target.y;
+  const dz = camera.position.z - controls.target.z;
+  const r = Math.hypot(dx, dy, dz);
+  if (r < 0.01) return;
+  const pitchDeg = Math.asin(Math.max(-1, Math.min(1, dy / r))) * 180 / Math.PI;
+  const yawDeg = Math.atan2(dx, dz) * 180 / Math.PI;
+  const zoomV = Math.max(40, Math.min(220, 100 * BASE_DISTANCE / r));
+  // Clamp pitch to slider range [-89, 89] to prevent flip past pole.
+  rotXSlider.value = Math.round(Math.max(-89, Math.min(89, pitchDeg)));
+  rotYSlider.value = Math.round(yawDeg);
+  zoomSlider.value = Math.round(zoomV);
+  // Pan target — sync back if user right-click-panned
+  const tgt = controls.target;
+  posXSlider.value = tgt.x.toFixed(2);
+  posYSlider.value = tgt.y.toFixed(2);
+  posZSlider.value = tgt.z.toFixed(2);
+  rotXReadout.textContent = Math.round(pitchDeg) + '°';
+  rotYReadout.textContent = Math.round(yawDeg) + '°';
+  zoomReadout.textContent = (BASE_DISTANCE / r).toFixed(2);
+  posXReadout.textContent = tgt.x.toFixed(2);
+  posYReadout.textContent = tgt.y.toFixed(2);
+  posZReadout.textContent = tgt.z.toFixed(2);
+}
+
+rotXSlider.addEventListener('input', applyCameraFromSliders);
+rotYSlider.addEventListener('input', applyCameraFromSliders);
+zoomSlider.addEventListener('input', applyCameraFromSliders);
+tiltSlider.addEventListener('input', applyCameraFromSliders);
+posXSlider.addEventListener('input', applyCameraFromSliders);
+posYSlider.addEventListener('input', applyCameraFromSliders);
+posZSlider.addEventListener('input', applyCameraFromSliders);
+
+// ============================================================
+// AUTO-ANIMATE (per-slider checkboxes)
+// ============================================================
+// Each slider has its own checkbox; checked → that slider's value advances
+// each frame. User mixes any combination. Angle sliders wrap; pos/zoom
+// sliders bounce at the limits. The old auto-rotate/auto-tube buttons become
+// presets that toggle the relevant checkbox.
+const autoAnimate = new Set();
+// Master speed: slider -100..+100. Asymmetric scaling — positive side is
+// subtle (+10% at +100%, keeps tempo sane) while negative side goes deep
+// (-40% at -100%, so viewers can slow motion way down to read labels as
+// they pass). Prevents runaway-fast animations but allows meaningful slow-mo.
+const speedSlider = document.getElementById('speed-ctl');
+const speedReadout = document.getElementById('speed-readout');
+function speedMultiplier() {
+  const v = speedSlider ? parseFloat(speedSlider.value) : 0;
+  if (v >= 0) return 1 + v / 1000;   // +100 → 1.10 (+10%)
+  return 1 + v * 0.009;              // -100 → 0.10 (-90%), very deep slow-mo
+}
+if (speedSlider) {
+  speedSlider.addEventListener('input', (e) => {
+    const v = Math.round(parseFloat(e.target.value));
+    speedReadout.textContent = (v >= 0 ? '+' : '') + v + '%';
+  });
+}
+const AUTO_SPEEDS = {
+  'rot-x': 0.24,              // pitch -20%
+  'rot-y': 0.21,              // yaw -30%
+  'tilt-ctl': 0.21,           // roll -30%
+  'rotate-scene': 0.002913,   // rotate X -10%
+  'rotate-scene-y': 0.002590, // rotate Y -20%
+  'zoom-ctl': 0.3,            // zoom -40%
+  'tube-slider': -0.005508,   // tube (reverse)
+  'pos-x': 0.0072,            // pos X -40%
+  'pos-y': 0.0072,            // pos Y -40%
+  'pos-z': 0.0072,            // pos Z -40%
+};
+// Pitch bounces at ±89° (past that the camera flips past the pole — ugly).
+// Yaw, roll, rotate (scene), tube all wrap because they're full-circle rotations.
+const AUTO_WRAP = new Set(['rot-y', 'tilt-ctl', 'rotate-scene', 'rotate-scene-y', 'tube-slider']);
+const autoDir = {};    // per-slider direction (for bounce)
+const autoAccum = {};  // per-slider accumulated float value (preserves sub-step precision)
+
+function autoStep(sliderId) {
+  const slider = document.getElementById(sliderId);
+  if (!slider) return;
+  const min = parseFloat(slider.min), max = parseFloat(slider.max);
+  // Seed accum from slider on first tick OR when slider moved outside of auto
+  // (detect: current slider value differs from last auto-set value by > 1 step)
+  if (autoAccum[sliderId] === undefined) {
+    autoAccum[sliderId] = parseFloat(slider.value);
+  }
+  const speed = (AUTO_SPEEDS[sliderId] ?? 0.1) * speedMultiplier();
+  const dir = autoDir[sliderId] ?? 1;
+  autoAccum[sliderId] += speed * dir;
+  // Wrap (angles, tube) or bounce (pos, zoom)
+  if (AUTO_WRAP.has(sliderId)) {
+    if (autoAccum[sliderId] > max) autoAccum[sliderId] = min + (autoAccum[sliderId] - max);
+    else if (autoAccum[sliderId] < min) autoAccum[sliderId] = max - (min - autoAccum[sliderId]);
+  } else {
+    if (autoAccum[sliderId] >= max) { autoAccum[sliderId] = max; autoDir[sliderId] = -1; }
+    else if (autoAccum[sliderId] <= min) { autoAccum[sliderId] = min; autoDir[sliderId] = 1; }
+  }
+  // Write to slider — for int-step sliders, the rendered value rounds, but
+  // autoAccum keeps the float so successive frames advance correctly.
+  slider.value = autoAccum[sliderId];
+  slider.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+function setAuto(sliderId, on) {
+  const check = document.querySelector(`.auto-check[data-auto="${sliderId}"]`);
+  if (!check) return;
+  check.checked = on;
+  if (on) {
+    autoAnimate.add(sliderId);
+    // Seed accumulator from the current slider value — so auto picks up where
+    // the user left off after a manual drag.
+    const slider = document.getElementById(sliderId);
+    if (slider) autoAccum[sliderId] = parseFloat(slider.value);
+  } else {
+    autoAnimate.delete(sliderId);
+    delete autoAccum[sliderId];
+  }
+  const row = check.closest('.control-row');
+  if (row) row.classList.toggle('auto-on', on);
+}
+
+document.querySelectorAll('.auto-check').forEach(check => {
+  check.addEventListener('change', () => {
+    setAuto(check.dataset.auto, check.checked);
+  });
+});
+
+// Reset view: restore camera, pan target, tube, and animation toggles to initial
+const btnReset = document.getElementById('btn-reset');
+btnReset.addEventListener('click', () => {
+  rotXSlider.value = DEFAULT_PITCH;
+  rotYSlider.value = DEFAULT_YAW;
+  zoomSlider.value = DEFAULT_ZOOM;
+  tiltSlider.value = DEFAULT_TILT;
+  posXSlider.value = DEFAULT_POS_X;
+  posYSlider.value = DEFAULT_POS_Y;
+  posZSlider.value = DEFAULT_POS_Z;
+  applyCameraFromSliders();
+  // Reset tube offset to user-calibrated default
+  tubeOffset = DEFAULT_TUBE;
+  if (tubeSlider) tubeSlider.value = DEFAULT_TUBE;
+  if (tubeReadout) tubeReadout.textContent = Math.round(DEFAULT_TUBE * 180 / Math.PI) + '°';
+  // Reset scene rotations (both axes) to user-calibrated defaults
+  scene.rotation.y = DEFAULT_SCENE_ROT_X;
+  scene.rotation.x = DEFAULT_SCENE_ROT_Y;
+  if (rotateSceneSlider) {
+    rotateSceneSlider.value = DEFAULT_SCENE_ROT_X;
+    rotateSceneReadout.textContent = Math.round(DEFAULT_SCENE_ROT_X * 180 / Math.PI) + '°';
+  }
+  if (rotateSceneYSlider) {
+    rotateSceneYSlider.value = DEFAULT_SCENE_ROT_Y;
+    rotateSceneYReadout.textContent = Math.round(DEFAULT_SCENE_ROT_Y * 180 / Math.PI) + '°';
+  }
+  // Reset master speed to user-calibrated default
+  if (speedSlider) {
+    speedSlider.value = -89;
+    speedReadout.textContent = '-89%';
+  }
+  // Turn OFF every auto-animate checkbox first
+  document.querySelectorAll('.auto-check').forEach(c => {
+    if (c.checked) setAuto(c.dataset.auto, false);
+  });
+  // Re-enable the page-load defaults: rotate X + tube
+  setAuto('rotate-scene', true);
+  setAuto('tube-slider', true);
+  // Resume animation (clear any pause from the animate button)
+  globalPaused = false;
+  btnAnimate.classList.remove('active');
+  btnAnimate.textContent = 'animate';
+  updateTorusHighlight();
+});
+
+// ============================================================
+// SLIDE DECK — 8 slides, stepper-driven
+// ============================================================
+const SLIDES = [
+  {
+    title: 'Integers',
+    tagline: 'A derivation programme from ℤ.',
+    body: 'Integers is not a theory and not a hypothesis. It is the <strong>derivation</strong> of universe-describing mathematics from the spectral and geometric properties of the integers — rung-7 necessity, not rung-3 conjecture. Sixty-two papers; <strong>zero postulates beyond ℤ + ZFC</strong>. The atlas you are operating IS the programme\'s first-release delivery artifact; every claim is auditable end-to-end through live PROOF-CHAIN files.',
+    cite: '► strategy/north-star.md §0'
+  },
+  {
+    title: 'The Torus',
+    tagline: 'Ten faces. Two circles. One torus.',
+    body: 'The programme\'s central geometric object: <code>T² = S¹ × S¹</code>. One circle is geometric (the e-dimension of Paper 1, radius <code>R ≈ 12 μm</code> fixed by <code>ρ_Λ</code>); the other is spectral (the Tomita-Takesaki modular flow of <strong>Bost-Connes</strong> at <code>β=1</code>). Ten faces live on the surface; 25 ring vertices organize its Clay-and-community-standard conjectures. <em>Operate this surface, don\'t read about it.</em>',
+    cite: '► integers/paper60-geometry-of-circle/ §17–§22'
+  },
+  {
+    title: 'The Physics',
+    tagline: 'M⁵ = M⁴ × S¹, derived not postulated.',
+    body: 'Paper 1 derives the 4+1 coordinate structure from six phenomena: spin-statistics, Aharonov-Bohm, Born rule, Bell inequality, gravitational finiteness, cosmology. The <strong>Universal Epstein Vanishing theorem</strong> (<code>E_L(−j;Q) = 0</code> for all <code>j ≥ 1</code>) gives perturbative UV finiteness at all loop orders. The wave function is the literal helical shape of a particle in M⁵. Quantum mechanics and general relativity emerge as projections of one geometric object.',
+    cite: '► integers/paper01-qg5d/'
+  },
+  {
+    title: 'The Six Projections',
+    tagline: 'Every node carries its projection operator.',
+    body: 'Paper 61 defines six projection operators from M⁵ to target spaces:' +
+      '<ul>' +
+        '<li><code>P_A</code> — quantum</li>' +
+        '<li><code>P_B</code> — gravity / KK</li>' +
+        '<li><code>P_C</code> — cosmology</li>' +
+        '<li><code>P_D</code> — Bost-Connes / CBB</li>' +
+        '<li><code>P_E</code> — pins</li>' +
+        '<li><code>P_O</code> — outer-ring</li>' +
+      '</ul>' +
+      '<strong>Every node carries its primary projection operator</strong> — click a layer to see <code>P_X</code> in the detail panel. The 25 vertices cluster by branch: P_B-dominant (YM, NS, Turbulence); P_D-dominant (RH, BSD, Baum-Connes, BGS, GRH, Twin Primes…); P_O at Hilbert-6 (the META-closure). One geometry, six routes — every conjecture on this surface IS a shadow of M⁵ along one of them.',
+    cite: '► integers/paper61-projections-5d/'
+  },
+  {
+    title: 'The 25 Solutions',
+    tagline: '6 Clay Millennium + 2 additional prize + 17 community-standard.',
+    body: 'Prize-carrying: <strong>YM · RH · BSD · PvNP · Hodge · NS</strong> (Clay Millennium) + <strong>Goldbach · Collatz</strong> (additional prize foundations). Community-standard: GRH, H12, Twin Primes, Katz-Sarnak, BGS, Baum-Connes, Turbulence, VP-vs-VNP, Sato-Tate, Lindelöf, Cramér, Lehmer, OPN, ABC, Schanuel, Hilbert-6. Every vertex carries a proof chain on the torus surface — fully auditable, walls explicitly disclosed.',
+    cite: '► solutions-with-prize/ · solutions/'
+  },
+  {
+    title: 'How to Operate',
+    tagline: 'Click, watch, toggle, compose.',
+    body: '<ol>' +
+      '<li>Click any vertex button → its proof chain spreads horizontally across the torus.</li>' +
+      '<li>Watch nodes light up by classification (gold / cyan / rose / violet / green).</li>' +
+      '<li>Toggle the four modes to switch between framings of the same chain.</li>' +
+      '<li>Click nodes directly on the surface to compose your own custom chain, then CONNECT to draw the shortest path.</li>' +
+      '</ol>' +
+      'Auto-rotate orbits the camera; auto-tube winds nodes around the tube — both together = Clifford flow on T².',
+    cite: '► strategy/atlas-torus-run.md'
+  },
+  {
+    title: 'The Four Modes',
+    tagline: 'Same data. Four presentations. Zero epistemic friction.',
+    body: '<ol>' +
+      '<li><strong>Geodesic</strong> — traces the BFS shortest path through the chain.</li>' +
+      '<li><strong>Contribution</strong> — highlights what the programme strengthens (Pillar C).</li>' +
+      '<li><strong>Independence</strong> — shows the dep-free chain; externals replaced by bypass-route nodes.</li>' +
+      '<li><strong>Compliance</strong> — meets prize requirements; named walls disclosed honestly per Clay §5d.</li>' +
+      '</ol>' +
+      'All four can be ON simultaneously: active modes bold, inactive modes ghost as comparison overlays. Each judge sees the framing they prefer.',
+    cite: '► strategy/north-star.md §2'
+  },
+  {
+    title: 'The Golden Dots',
+    tagline: '102 Integers-original theorems.',
+    body: '<ul class="legend-bullets">' +
+      '<li style="--bullet-color:#f5c26b"><strong style="color:#f5c26b">Gold</strong> — theorems originated by the programme (T1–T4 reclassified-from-postulates, K.1, K.3, V.1, U.2, the YM 18-link proof, the PvNP Clone-Growth ↔ Fullness bridge).</li>' +
+      '<li style="--bullet-color:#0ea5e9"><strong style="color:#0ea5e9">Sky-blue</strong> — literature (cited but not rederived).</li>' +
+      '<li style="--bullet-color:#e11d48"><strong style="color:#e11d48">Rose</strong> — retained externals (CCM 2025, Standard Conjecture D).</li>' +
+      '<li style="--bullet-color:#8b5cf6"><strong style="color:#8b5cf6">Violet</strong> — classical (pre-1950 results).</li>' +
+      '<li style="--bullet-color:#22c55e"><strong style="color:#22c55e">Green</strong> — open frontiers (transparently disclosed walls).</li>' +
+      '<li style="--bullet-color:#14b8a6"><strong style="color:#14b8a6">Teal</strong> — bypass-routes (programme-internal alternatives to external dependencies).</li>' +
+      '</ul>' +
+      'The instant visual signal of contribution.',
+    cite: '► strategy/x-ray/proof-chain/'
+  },
+  {
+    title: 'The Hub is Different',
+    tagline: 'qg5d\'s zigzag spread is structural, not noise.',
+    body: 'Activate <strong>Integers</strong> (the qg5d hub) and the spread chain produces a smooth-then-jagged shape. The 25 outer-ring vertices each have a linear proof chain (L1 → L2 → L3 → ...) that flows organically across the surface. qg5d is structurally a <strong>tree</strong>: Theorems T1–T4 (reclassified postulates), Branch A (quantum, A.1–A.9), Branch B (gravity, B.10–B.12, B.KK-gap, B.grad), Branch D (CBB axioms, D.B1–D.B5). When forced into a linear sequence for visualization, the zigzag is where branches change. <em>Hub ≠ vertex; the surface tells you so directly.</em>',
+    cite: '► strategy/proof-chain/qg5d/PROOF-CHAIN.md'
+  },
+  {
+    title: 'Two Classes Become Visible',
+    tagline: 'Activate all 8 prize vertices and a structural law surfaces.',
+    body: 'Click <strong>YM, RH, BSD, PvNP</strong> together → one shape: dense gold, ≤1 wall, prize-grade closure (76–85% Integers-original). Click <strong>Hodge, NS, Goldbach, Collatz</strong> → another: many open frontiers, sparse gold (≤13%), 3–8 walls. The 8 Clay-grade prize papers split into two classes the atlas reveals instantly: <strong style="color:#f5c26b">advanced</strong> (near-closure) and <strong style="color:#22c55e">frontier</strong> (in-progress). Across all 8, <strong>6 are P_D-dominant</strong> — Bost-Connes is the architectural backbone of 75% of prize-grade conjectures, which is exactly why Pillar D\'s TT-from-BC pilot hardens six vertices in one move.',
+    cite: '► strategy/x-ray/proof-chain/INDEX.md'
+  },
+  {
+    title: 'The Three Pillars',
+    tagline: 'Compliance · Independence · Contribution per vertex.',
+    body: 'Per vertex, three compliance-class deliverables:' +
+      '<ul>' +
+        '<li><strong>Compliance</strong> — satisfies the prize\'s stated requirements (walls disclosed = §5d compliant).</li>' +
+        '<li><strong>Independence</strong> — removes external conditionality via PAC primitives: VERIFY / CONSTRUCT / BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor.</li>' +
+        '<li><strong>Contribution</strong> — applies the PAC treatment to externals\' chains and offers them strengthened.</li>' +
+      '</ul>' +
+      'Other contenders ship Compliance; we ship Compliance + Independence + Contribution.',
+    cite: '► strategy/north-star.md §2'
+  },
+  {
+    title: 'Pillar D — Derive-and-Offer',
+    tagline: 'Every external rederived from ℤ + ZFC.',
+    body: 'Pillar C <em>hardens</em> an external\'s proof of X; <strong>Pillar D supplies the programme\'s own proof of X from ℤ + ZFC</strong>, offered to the field as a new entry in its catalog. First pilot: <strong>Tomita-Takesaki derived from Bost-Connes at KMS₁</strong> (Lemma 1 formalized in Lean 4). Each Pillar D paper credits the original author and positions the derivation as an independent alternative — the field becomes stronger, not displaced. Grothendieck dynamic: programme ships the tools; community walks the lines.',
+    cite: '► strategy/pillar-d/ · derivations/tomita-takesaki-from-bc/'
+  },
+  {
+    title: 'Reciprocity',
+    tagline: 'Contribute back more than we take.',
+    body: 'Fair-attribution ethic: <strong>HONOR · RECOGNIZE · SHOWCASE · POSITION · SOURCE</strong>. Every cited researcher named with their contribution. No approach dismissed; every approach positioned relative to ours. Pillar D is the deepest reciprocity move — we depend on external work AND we rederive it independently, returning the result to the field as a new proof. The mathematical community is collaborator, not competitor.',
+    cite: '► strategy/north-star.md §5'
+  },
+  {
+    title: 'How to Engage',
+    tagline: 'Audit. Criticize. Cite. Collaborate.',
+    body: '<strong>AUDIT</strong>: open any chain on the torus and trace its links to the live PROOF-CHAIN files. <strong>CRITICIZE</strong>: walls are explicitly disclosed; report a new wall via GitHub issue. <strong>CITE</strong>: <code>Integers (2026), Zenodo DOI: __________ , GitHub: __________</code>. <strong>COLLABORATE</strong>: contributions to bypass routes, INDEPENDENT lifts, or Pillar D derivations welcomed. Reach out via the herald or directly. The door is open.',
+    cite: '► strategy/independent-rewrite-roadmap.md'
+  },
+];
+
+let currentSlide = 0;
+const slideTitle = document.getElementById('slide-title');
+const slideTagline = document.getElementById('slide-tagline');
+const slideBody = document.getElementById('slide-body');
+const slideCite = document.getElementById('slide-cite');
+const slideCounter = document.getElementById('slide-counter');
+const slidePrev = document.getElementById('slide-prev');
+const slideNext = document.getElementById('slide-next');
+
+function renderSlide(idx) {
+  currentSlide = ((idx % SLIDES.length) + SLIDES.length) % SLIDES.length;
+  const s = SLIDES[currentSlide];
+  slideTitle.textContent = s.title;
+  slideTagline.textContent = s.tagline;
+  slideBody.innerHTML = s.body;
+  slideCite.textContent = s.cite;
+  slideCounter.textContent = (currentSlide + 1) + ' / ' + SLIDES.length;
+}
+slidePrev.addEventListener('click', () => renderSlide(currentSlide - 1));
+slideNext.addEventListener('click', () => renderSlide(currentSlide + 1));
+// Keyboard arrows when bottom panel has focus? Simple binding on whole doc:
+document.addEventListener('keydown', (e) => {
+  // Only if focus isn't in a form element (so slider keys still work)
+  const tag = document.activeElement?.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if (e.key === 'ArrowLeft' && e.target === document.body) {
+    renderSlide(currentSlide - 1);
+  } else if (e.key === 'ArrowRight' && e.target === document.body) {
+    renderSlide(currentSlide + 1);
+  }
+});
+
+// ============================================================
+// INIT
+// ============================================================
+updateSelectedInfo();
+updateModeButtons();
+updateTorusHighlight();
+renderSlide(0);
+// Apply user-calibrated defaults BEFORE first camera positioning
+controls.target.set(DEFAULT_POS_X, DEFAULT_POS_Y, DEFAULT_POS_Z);
+scene.rotation.y = DEFAULT_SCENE_ROT_X;
+scene.rotation.x = DEFAULT_SCENE_ROT_Y;
+tubeOffset = DEFAULT_TUBE;
+applyCameraFromSliders();
+updateTorusHighlight();  // apply tubeOffset to node positions
+// Default motion: rotate X (scene spin) + tube on page load
+setAuto('rotate-scene', true);
+setAuto('tube-slider', true);
+animate();
+
+</script>
+</body>
+</html>

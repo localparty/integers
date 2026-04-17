@@ -194,4 +194,4 @@ None of the three blocks the UPGRADE. All three are 1-day literature checks.
 *L3 moves CONJECTURED → ESTABLISHED (conditional on CCM). Chain 3/5 → 4/5. Cramér confidence 5/10 → 6/10.*
 *The section is codim-1. The measure is finite. Under CCM, it is absolutely continuous. The flow is mixing. The max return-time bound stands. The wall moves one step down the chain.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

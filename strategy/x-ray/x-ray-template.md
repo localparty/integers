@@ -2,7 +2,7 @@
 
 *Canonical template for per-vertex X-RAY.md files. Every vertex in the ring produces one file following this structure. Fixed vocabulary enforced.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -92,7 +92,7 @@ Every X-RAY.md follows this 10-section structure. No invented sections.
 
 *X-Ray of the <vertex> proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. <date>.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 ```
@@ -402,4 +402,4 @@ Enumerate every leaf that remains OPEN after the x-ray analysis. Each is a NAMED
 
 *End of X-RAY. One file per vertex. 25 vertices → 25 X-RAY.md files. Histograms + cross-cut graph assembled into `pac-output/atlas/`.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

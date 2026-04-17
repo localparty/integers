@@ -271,6 +271,6 @@ Brief 34 DELTA 3's S-DUAL-TRANSFER protocol assumes the S-dual's link is PROVED.
 
 *v3: 2026-04-14 (T7 S-duality handoff note appended). Cramér's ITPFI-derived invariant $\prod_p(1-1/p) \sim 2e^{-\gamma}/\log x$ is now on disk and feeds Lehmer L5 Route A's quantitative sharpening. S-DUAL-CONSTRUCT-BRIDGED pattern: chain of two constructs linked by a derived invariant at the functional-equation fixed point. T8 dispatch: CONSTRUCT L5 Route A using the Cramér-side invariant to produce a quantitative $c_0$ bound from the ITPFI cyclotomic-isolation at the KMS boundary.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The circle doesn't allow infinitesimal departures. That's the conjecture. That's the geometry.*
 *Cramér derived the constant. Lehmer inherits the invariant. The functional equation does the ferrying.*

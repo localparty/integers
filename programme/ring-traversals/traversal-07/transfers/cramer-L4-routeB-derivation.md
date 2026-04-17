@@ -348,5 +348,5 @@ The S-dual of this derivation is Lehmer L5 Route A (PIN-PRESERVATION). The corre
 
 *T7 S-duality phase. Construct-Derive executed. Wall named, not glossed. The flow factorizes; the Mertens product regularizes; the truncation waits for its lemma.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The constant emerges: Mertens regularizes — the ITPFI partition at the conformal midpoint — the sieve has a temperature.*

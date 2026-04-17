@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton for P versus NP in Clay/Cook shape (P != NP direction per Rules §5b). Zero prose. Every claim cites programme paper + specific proof location. W1 (Link 5 backward), W2 (KMS_1 uniqueness), W3 (spectral identification) disclosed as NAMED WALLS per DELTA 10. §12 TM-Model Translation Layer LOAD-BEARING. Compliance source: `strategy/pvnp/pac-output/runs/run-02/compliance-map.md` LOCKED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -512,4 +512,4 @@ External references appear in `solutions-with-prize/paper28-pvnp/preprint/sectio
 
 *End of pvnp-comply-bare.md. Bare mode. Pillar A (COMPLY) of three-pillar Universal Approval. $\leq 15$ pages (18 sections). Every claim cites programme paper + §-level location. W1/W2/W3 disclosed with all DELTA-10 fields. §12 TM-Model Translation Layer load-bearing. Three barriers (Cook §3) cleared. §5b provision noted (either direction; programme resolves P != NP). Zero SILENT Cook requirements. PUBLISH-READY.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

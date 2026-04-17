@@ -2,7 +2,7 @@
 
 *98 cells (14 rows × 7 Bombieri requirements). Author-pass only — critic attacks and arbiter decisions follow in sibling files.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

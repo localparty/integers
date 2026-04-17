@@ -145,5 +145,5 @@ Begin.
 
 ---
 
-*Run file v1: 2026-04-14. G Six and Claude Opus 4.6.*
+*Run file G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *The decomposition bundle. Every wall becomes a chain. The atlas assembles. Zenodo is the target.*

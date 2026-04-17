@@ -2,7 +2,7 @@
 
 *Bare theorem skeleton of what the programme's ~~5D framework~~ 4+1 framework<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D framework" → "4+1 framework" --> offers BEYOND Clay's Hodge ask. Motivic Hodge classes via BC endomotive + ~~5D cohomology~~ M⁵ cohomology<!-- legacy 2026-04-15 Intervention 8b §0.10: "5D cohomology" → "M⁵ cohomology" -->; zero free parameters on the motivic side; cross-Clay edges (BC $\leftrightarrow$ BSD $\leftrightarrow$ PvNP $\leftrightarrow$ RH $\leftrightarrow$ YM $\leftrightarrow$ Schanuel); Tate parallel; André motivated recovery; intermediate Jacobian / Griffiths group; worked Examples 1 (Künneth diagonal) and 2 (hard-Lefschetz inverse); acknowledgments. Zero prose. Every claim cites programme paper + specific proof location. Scope: projective non-singular /$\mathbb{C}$ (NOT Kähler). Conclusion: rational (NOT integral). Companion to `hodge-comply-bare.md` in the Zenodo-priority release.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 
@@ -707,4 +707,4 @@ The programme's bypass routes depend on and strengthen: (a) **FMS24** (ab-var-po
 
 *End of hodge-beyond-bare.md. Bare discipline enforced: zero prose paragraphs, every claim cited to programme + §-level location. ≤ 15 pages target. Written in run-04. Companion to run-03 B_bare (`hodge-comply-bare.md`). C_full and B_full DEFERRED to composition-backward. Scope = projective non-singular /$\mathbb{C}$ (NOT Kähler). Conclusion = rational (NOT integral). Three named walls W1 / W2 / W3 with bypass routes disclosed in B_bare; C_bare bonus theorems PROVED unconditionally on strata (i)-(iii) of hodge-comply-bare Theorem 2.1 per Robustness §9.5.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

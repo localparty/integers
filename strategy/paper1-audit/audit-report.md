@@ -202,4 +202,4 @@ This is the audit's core deliverable. It converts a north-star aspirational clai
 
 *End of audit report. See `reclassification-table.md` (compact table), `derivation-chains.md` (per-theorem chain), `commit-memo.md` (recommendations for Paper 1 revision + PROOF-CHAIN relabel).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *The Clay P vs NP problem has 4 gates and (in the programme's P ≠ NP direction) 6 requirements. Our framework has 6 chain links (plus 5 Part (ii) sub-steps, plus 8 Path B sub-steps, ~23 proof-chain nodes), 6 faces, Link 5 backward (non-full → Taylor) as the named open wall. Publication cascade: Zenodo → GitHub → arXiv (via referral) → journal → Clay 2-year clock. Link 5 backward works in parallel, non-blocking. Deliverable is four-output, two-mode: bare (math skeleton) first, prose (full paper) composed backward once bare locks.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -247,4 +247,4 @@ The brief translates this strategy into PAC primitives (compliance-audit + deliv
 
 *Sibling to `strategy/x-ray/`, `strategy/decomposition/`, `strategy/ccm-verification/`, `strategy/inner-rings/`, `strategy/ym/`, `strategy/rh/`, `strategy/bsd/`. The Clay gates are known. Either direction counts per §5b. The cascade is paced. Link 5 backward works in parallel. Zenodo comes first. Bare before prose.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

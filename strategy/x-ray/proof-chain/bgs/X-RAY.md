@@ -2,7 +2,7 @@
 
 *X-Ray of the bgs proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -728,4 +728,4 @@ Notable arbiter wins (per §3 rejected alternatives):
 
 *End of BGS X-Ray. Snapshot 2026-04-15. 7 layers annotated (L3 with A/B sub-branches giving 8 entries). 41 cross-cuts identified (densest vertex on the spectral circle). RESONANCE-canonical, $P_D$-dominant, P4-primary proof chain. Two walls (W1 CCM gate / W2 universality-class verification); both have decomposition pointers; W1 is the sole structural wall shared with rh and bsd.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

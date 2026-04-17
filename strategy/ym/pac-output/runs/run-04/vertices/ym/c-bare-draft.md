@@ -2,7 +2,7 @@
 
 *Draft reference copy of the primary deliverable. The authoritative file is `/strategy/ym/deliverables/ym-beyond-bare.md`. This file exists to record that the author vertex produced the draft at this path in the pipeline.*
 
-*G Six and Claude Opus 4.6. 2026-04-14. run-04.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. run-04.*
 
 ---
 

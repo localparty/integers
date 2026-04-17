@@ -2,7 +2,7 @@
 
 *X-Ray of the sato-tate proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -811,4 +811,4 @@ Notable arbiter decisions:
 
 *"The circle is fair. That's the conjecture. That's the measure." — paper60 §10.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

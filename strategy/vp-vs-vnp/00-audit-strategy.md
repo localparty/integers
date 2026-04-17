@@ -2,7 +2,7 @@
 
 *Community-standard: Valiant's algebraic analog of P ≠ NP. VP ≠ VNP over ℂ.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -62,4 +62,4 @@ Standard. Venues: JACM / SICOMP / Annals.
 
 *VP vs VNP is a projection of 5D into algebraic complexity.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *X-Ray of the abc proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -780,4 +780,4 @@ Author wins on 28 / 30 field decisions (5 fields × 6 layers = 30). The two CRIT
 
 *End of ABC X-Ray. Snapshot 2026-04-15. 6 layers annotated. 32 cross-cuts identified. ARITHMETIC-canonical, $P_D$-dominant, P4/P5-mixed proof chain. One primary wall (W_A1 at L3); non-IUT route; capacitor-bypass candidate via transposition with bsd:L3. Paper60 §28 south-trough vertex, confidence 1/10.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *Per-cell record of PAC primitive applications. Input: LOCKED 20×7 run-02 compliance-map (140 cells; 23 P / 43 Pa / 1 O / 73 S). Output: dep-free chain with one residual (L.3.7-audit).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

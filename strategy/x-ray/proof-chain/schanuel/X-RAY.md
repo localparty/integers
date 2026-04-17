@@ -2,7 +2,7 @@
 
 *X-Ray of the schanuel proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -747,4 +747,4 @@ Schanuel has an explicit, load-bearing structural role as the TOPOLOGY-face SOUT
 
 *End of Schanuel X-Ray. Snapshot 2026-04-15. 5 layers annotated. 22 cross-cut edges identified. TOPOLOGY-canonical (2/5 layers = 40%; paper61 §29.2 supporting conjecture placement), $P_D$-dominant (4/5 = 80%; compound $P_D \cap P_E$), linear no-branch 5-layer chain. Three OPEN walls: W_S1 ($\mathbb{Q}$-linear independence of zeros), W_S2 (Schanuel proper), W_S3 (pin-level algebraic independence). Cross-chain structural siblings: Lehmer (TOPOLOGY canonical sibling per paper61 §29.2), Hodge (motivic-Schanuel bridge per Bertolin-Huber), RH (spectral input via zero simplicity). The vertex IS the South-trough apex: 1/10 confidence, no bypass routes, the programme's deepest stammer per paper60 §28.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

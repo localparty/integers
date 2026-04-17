@@ -88,4 +88,4 @@ All non-blocking for Zenodo / arXiv / journal submission of RH Pillar A+B+C bare
 
 ---
 
-*End of harden-stubs.md. G Six and Claude Opus 4.6. 2026-04-14.*
+*End of harden-stubs.md. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

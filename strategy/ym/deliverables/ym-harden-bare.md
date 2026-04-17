@@ -2,7 +2,7 @@
 
 *The double-kill artifact for Yang-Mills. Every external dependency that YM RETAINS after Pillar B lift is x-rayed, compliance-audited, and hardened via PAC primitives (VERIFY / EXTEND / CONSTRUCT / BYPASS). We depend on each external AND we strengthen it. Internal residual (L.3.7-audit) receives a self-harden stub. Fair attribution throughout per Universal Approval §5C. Zero prose paragraphs. Companion to `ym-clay-bare.md` (Pillar A) and `ym-independence-bare.md` (Pillar B).*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -426,4 +426,4 @@ Per `strategy/universal-approval-run.md §5C`: no other YM contender has perform
 
 *End of ym-harden-bare.md. Bare mode. Zero prose paragraphs. Twelve externals inventoried (E1–E12) + one internal self-harden (I1). Eight externals receive EXTEND / CONSTRUCT hardening (yielding 13 new theorems into the literature). Two receive VERIFY. One internal residual L.3.7-audit receives a 4-route self-harden. Fair attribution retained throughout. Companion to `ym-clay-bare.md` (Pillar A) and `ym-independence-bare.md` (Pillar B). The field is net-improved by 13 new theorems independent of whether Theorem 2.1 stands at referee time. Ready for Zenodo.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

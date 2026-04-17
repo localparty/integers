@@ -2,7 +2,7 @@
 
 *Projection-audit strategy for community-standard conjecture "Generalized Riemann Hypothesis." Applies the generic projection-audit protocol.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -88,4 +88,4 @@ Standard 0-6 month.
 
 *Sibling bundles applicable. GRH is a projection of 5D into analytic NT (L-function family).*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

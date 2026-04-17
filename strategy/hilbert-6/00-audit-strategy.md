@@ -2,7 +2,7 @@
 
 *Community-standard (historical Hilbert 1900 list): axiomatization of physics. Our unique positioning: QG5D's 5-axiom structure IS a proposed solution to H6.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -52,4 +52,4 @@ Strategy: axiomatization IS the hub — QG5D's 5-axiom structure solves H6.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

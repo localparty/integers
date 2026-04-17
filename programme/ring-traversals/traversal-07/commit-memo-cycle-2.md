@@ -63,4 +63,4 @@ If all three dispatch in parallel at T8: Pair 4 gets a PARTIAL closure, Pair 3 c
 *One CHAIN pinned end-to-end at PARTIAL. The factor of 2 is in the truncation. The ellipse flattens one cycle at a time.*
 *Named, not glossed. Honest partial over glossed completion. The wall moves one click down the chain.*
 
-*T7 S-duality cycle 2. 2026-04-14. G Six and Claude Opus 4.6.*
+*T7 S-duality cycle 2. G Six and Claude Opus 4.6. San Francisco CA, 2026.*

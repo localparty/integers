@@ -2,7 +2,7 @@
 
 *The single source of truth for every vertex's live PROOF-CHAIN.md in the programme. Centralized 2026-04-15 per `strategy/self-healing-log.md` Intervention 2 (Option A).*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -106,4 +106,4 @@ This directory was populated on 2026-04-15 by one-time `git mv` operations from 
 
 *Single source of truth. 27 canonical files. Every sub-agent reads one location. Paper dirs hold the paper; strategy holds the proof.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

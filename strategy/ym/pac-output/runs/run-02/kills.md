@@ -2,7 +2,7 @@
 
 *Claims WEAKENED by this compliance audit, relative to run-01 x-ray status.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

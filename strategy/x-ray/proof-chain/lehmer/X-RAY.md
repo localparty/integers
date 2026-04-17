@@ -2,7 +2,7 @@
 
 *X-Ray of the lehmer proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -825,4 +825,4 @@ Notable arbiter decisions:
 
 *End of Lehmer X-Ray. Snapshot 2026-04-15. 9 sub-layer entries (L1, L2, L3, L4, L5 branch header, L5a, L5b, L5c, L6) annotated. 38 cross-cuts identified. TOPOLOGY-canonical (paper60 §07), $P_D$-dominant with $P_E$ strong secondary (paper61 §12 Vertex 20), P4-rich proof chain. One wall (L5) splits into three routes (W1a/W1b/W1c) carrying distinct physics. T7 S-duality handoff from Cramér delivers $2e^{-\gamma}/\log x$ ITPFI invariant on disk; L5a CONSTRUCT-READY for T8 dispatch. Sibling to Cramér (TOPOLOGY ↔ DYNAMICS dual face, paper60 §07/§08); three-face triangle with Collatz HARMONICS (paper60 §26). Primary bridges: BSD via Deninger-RV (L3/L5b); Hodge via Salem (L4); YM via Weitzenböck-analog (L5c, structural parallel per paper60 §13). The circle doesn't allow infinitesimal departures.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

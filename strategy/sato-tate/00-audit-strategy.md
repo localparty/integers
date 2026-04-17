@@ -2,7 +2,7 @@
 
 *Community-standard: equidistribution of Frobenius angles per Sato-Tate measure. Proved for elliptic curves over totally real, non-CM (Clozel-Harris-Shepherd-Barron-Taylor 2008; Barnet-Lamb-Geraghty-Harris-Taylor 2011). Generalizations (higher-dim abelian varieties, motivic) open.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -51,4 +51,4 @@ Strategy: extension to higher-dim abelian varieties via operator-algebra.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

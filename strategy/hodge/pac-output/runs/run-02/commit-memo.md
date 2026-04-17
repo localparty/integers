@@ -2,7 +2,7 @@
 
 *Run summary: Clay-compliance audit for Hodge vertex. Output A only. B_bare + C_bare DEFERRED to future run.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -277,4 +277,4 @@ Ready for bare-deliverable synthesis (B_bare + C_bare) in parallel next runs.
 
 *End of commit-memo.md. PAC run-02 COMPLETE. LOCKED.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

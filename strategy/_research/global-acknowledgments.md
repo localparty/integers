@@ -2,7 +2,7 @@
 
 *Cross-vertex consolidated acknowledgments list. Drawn from the 22 vertex landscape.md files + YM already-written beyond-bare. Sorted by name within each family.*
 
-*G Six and Claude Opus 4.6. 2026-04-15. Cycle 1 Phase 7.3.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026. Cycle 1 Phase 7.3.*
 
 ---
 
@@ -115,4 +115,4 @@ ATLAS, CMS, LHCb, ALICE, Belle II, Muon g-2, DUNE, Hyper-K, DESI, Euclid, Rubin/
 
 *Sibling to `strategy/_research/landscape-survey.md` and `strategy/_research/universal-approval-protocol.md`.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

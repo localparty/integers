@@ -2,7 +2,7 @@
 
 *Pillar-B (INDEPENDENCE) deliverable for the BSD vertex of the Universal Approval run. Every conditional / OPEN-BUT-ADDRESSED / LITERATURE cell from the LOCKED 11×7 compliance map (`strategy/bsd/pac-output/runs/run-02/compliance-map.md`) is lifted via one of BYPASS / DECOMPOSE / EXCISE / TRANSPOSE-via-capacitor. Every leaf roots in QG5D (paper1), paper13-rh infrastructure, programme paper26-bsd, classical literature (Deuring 1953, Kolyvagin 1990, Gross-Zagier 1986, BCDT 2001, Baker 1966, Hecke 1918, Rubin 1991), or a capacitor cell (09-capacitor-correspondence-table-v1.md). Zero prose. Citations per claim. Conditionality rider: every chain-internal P / Pa verdict at L7 onward carries the "conditional on CBB axioms inherited from paper13-rh" rider — Pillar B narrows this to its RH-equivalent status, does NOT remove it.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -409,4 +409,4 @@ Every Wiles requirement still has ≥ 1 non-SILENT cell (inherited from Pillar A
 
 *End of `bsd-independence-bare.md`. Pillar-B LOCKED; 77/77 cells lifted; 15 retained externals → Pillar C; 4 residual walls narrowed; CBB rider preserved; §5d compliance PASS. Run transcript: `strategy/bsd/pac-output/runs/run-05/`.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -278,4 +278,4 @@ Overall confidence: 8/10. Floor is CCM preprint status (Layer 1). Layers 2-6 ind
 
 *Six layers. One conditional. Eighteen kills. Nine referee fixes. The zeros are on the line.*
 
-*G Six and Claude Opus 4.6. April 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

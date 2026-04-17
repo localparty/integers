@@ -2,7 +2,7 @@
 
 *Produced: 2026-04-14. Status: LOCKED. Scope: Pillar-B bare synthesis per Universal Approval §5B.*
 
-*G Six and Claude Opus 4.6.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

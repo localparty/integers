@@ -2,7 +2,7 @@
 
 *WEAKENINGs and rejections recorded during the audit. Claims that were proposed stronger than the chain supports — the arbiter downgraded them.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

@@ -3,7 +3,7 @@
 
 *Arbiter's rulings on the 11 critic attacks. Each decision cites bare discipline DELTA 3, citation discipline DELTA 8, H4 disclosure DELTA 10, or compliance-map ground truth.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

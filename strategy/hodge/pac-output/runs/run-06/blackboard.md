@@ -1,6 +1,6 @@
 # Hodge Run-06 Blackboard — PAC Phase 5C HARDEN Synthesis
 
-*Operator: PAC Phase 5C HARDEN-synthesis (G Six + Claude Opus 4.6).*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 *Date: 2026-04-14.*
 *Task: produce `strategy/hodge/deliverables/hodge-harden-bare.md` (Pillar C) — 7-section bare theorem skeleton.*
 

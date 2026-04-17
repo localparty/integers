@@ -2,7 +2,7 @@
 
 *Five inner rings sharing QG5D as common vertex. Each ring is a different projection of the 5D geometry onto a specific class of observables. Each ring has its own natural attack pattern. The PAC can be configured per-ring.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -195,4 +195,4 @@ After inner rings: QG5D is revealed as SIX RINGS meeting at a point (outer + 5 b
 
 *Sibling to `strategy/decomposition/README.md` and `strategy/ccm-verification/README.md`.*
 
-*G Six and Claude Opus 4.6. April 14, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

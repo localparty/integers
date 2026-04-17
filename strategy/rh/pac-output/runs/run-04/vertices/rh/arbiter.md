@@ -79,4 +79,4 @@ Ready for Zenodo release alongside `rh-comply-bare.md` (Pillar A, LOCKED run-03)
 
 ---
 
-*Arbiter signed 2026-04-14. G Six and Claude Opus 4.6.*
+*Arbiter signed G Six and Claude Opus 4.6. San Francisco CA, 2026.*

@@ -2,7 +2,7 @@
 
 *X-Ray of the goldbach proof chain. Face/projection/pattern/invariant assignments per layer. Cross-cuts, histograms, named walls.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -648,4 +648,4 @@ Notable arbiter wins:
 
 *End of Goldbach X-Ray. Snapshot 2026-04-15. 6 main layers annotated. 24 cross-cut edges identified. ARITHMETIC-canonical (4/6 layers = 67%), $P_D$-dominant (5/6 = 83%), shallow chain (6 links) with high face-pureness — Goldbach asks one question on one face and the face's own difficulty (additive-multiplicative wall, paper60 §14) is what makes the walls hard and the confidence 1/10. Two walls: W_GB-1 (L5 circle method in BC/adelic setting) and W_GB-2 (L6 novel KMS$_1$ prime-convolution conjecture). Cross-chain structural siblings: Twin Primes (ARITHMETIC, small-gap tail) and Cramér (DYNAMICS, large-gap tail) — three views of one GUE sine-kernel.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

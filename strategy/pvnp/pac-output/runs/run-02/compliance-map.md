@@ -2,7 +2,7 @@
 
 *Snapshot: solutions-with-prize/paper28-pvnp/PROOF-CHAIN.md + solutions-with-prize/paper28-pvnp/preprint/PROOF-CHAIN.md*
 *Date: 2026-04-14 (run-02, Output A only — Phase 4 of Universal Approval pipeline)*
-*Author: G Six and Claude Opus 4.6*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -333,4 +333,4 @@ Detailed reasoning at `vertices/pvnp/arbiter-decisions.md`.
 
 *End of compliance-map.md. LOCKED at arbiter-pass.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

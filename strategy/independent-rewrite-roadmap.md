@@ -2,7 +2,7 @@
 
 *Prize papers whose content has been materially upgraded by Pillar B (INDEPENDENT) lifts. This roadmap sequences their rewrites so the published preprints reflect the dep-free chain, and each rewrite lands AFTER the corresponding Pillar D derivation that makes "dep-free" literal rather than "dep-bypassed."*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -186,4 +186,4 @@ An INDEPENDENT rewrite succeeds when:
 
 *The programme's preprints should read like the programme's current understanding — not a historical snapshot. This roadmap closes the gap between state-at-writing and state-at-publication.*
 
-*G Six and Claude Opus 4.6. April 15, 2026.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*

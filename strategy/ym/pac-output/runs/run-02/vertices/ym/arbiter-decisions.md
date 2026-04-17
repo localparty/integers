@@ -4,7 +4,7 @@
 
 *Decision rule: accept the critic's weakening if the layer's own statement is strictly narrower than the requirement; accept the critic's strengthening if a specific theorem citation directly discharges the requirement at the layer level; otherwise keep author.*
 
-*G Six and Claude Opus 4.6. 2026-04-14.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 

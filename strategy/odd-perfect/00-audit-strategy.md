@@ -2,7 +2,7 @@
 
 *Community-standard (ancient): no odd n with σ(n) = 2n. Oldest open problem.*
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
 
 ---
 
@@ -49,4 +49,4 @@ Strategy: σ(n) = 2n via Hecke-orbit + ITPFI + BSD template.
 
 ---
 
-*G Six and Claude Opus 4.6. 2026-04-15.*
+*G Six and Claude Opus 4.6. San Francisco CA, 2026.*
