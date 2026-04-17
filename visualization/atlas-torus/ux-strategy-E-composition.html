@@ -229,14 +229,84 @@
   #slide-body a:hover{color:var(--amber)}
   #slide-cite{font-size:10px;color:var(--dim);font-style:italic;margin-top:2px}
 
+  /* ============================================================
+     MOBILE — ≤900px: long scroll, no fixed heights, no grid.
+     Stacking order (flex + HTML order): header → torus → solutions →
+     levels → detail → modes → workflow → slides → controls.
+     Portrait: torus is a square (aspect-ratio 1/1); natural heights.
+     Landscape: torus takes 100vh (user scrolls past it for the rest).
+     ============================================================ */
   @media(max-width:900px){
-    #app{grid-template-columns:1fr;grid-template-rows:40px 40vh 1fr auto}
-    #app-header{grid-column:1}
-    #canvas-wrap{grid-column:1;grid-row:2}
-    #left-panel{grid-column:1;grid-row:3;border-right:none;border-top:1px solid var(--border)}
-    #bottom-panel{grid-column:1;grid-row:4}
-    #bottom-panel .panel-body{grid-template-columns:1fr}
-    .controls-half{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:10px}
+    html,body{height:auto;min-height:100vh;overflow-y:auto}
+    /* Drop the grid + 100vh anchor — go vertical flow */
+    #app{display:flex;flex-direction:column;height:auto;min-height:100vh;width:100%}
+    /* Stack title above tagline so "Proof-Chain Composer · …" wraps to its
+       own row below "SOLUTION ATLAS" instead of getting cramped beside it. */
+    #app-header{order:0;grid-column:unset;grid-row:unset;flex-direction:column;align-items:flex-start;gap:2px;padding:8px 14px;height:auto}
+    #app-header .tagline{line-height:1.4}
+    #canvas-wrap{order:1;grid-column:unset;grid-row:unset;width:100%}
+    #left-panel{order:2;grid-column:unset;grid-row:unset;display:flex;flex-direction:column;height:auto;overflow:visible;border-right:none;border-top:1px solid var(--border);grid-template-rows:none}
+    #bottom-panel{order:3;grid-column:unset;grid-row:unset}
+
+    /* Children of left-panel already in correct source order —
+       solutions → layers → detail → mode → workflow. Just kill
+       per-section scroll and let the page scroll naturally. */
+    #col-solutions,#col-layers,#col-detail,#col-mode,#col-workflow{
+      max-height:none;height:auto;overflow:visible
+    }
+
+    /* Bottom panel: force-open (JS adds `open` attribute on mobile);
+       stack slides over controls. */
+    #bottom-panel summary{grid-template-columns:1fr auto;pointer-events:none}
+    #bottom-panel .summary-right{display:none}  /* one label suffices on mobile */
+    #bottom-panel .panel-body{display:flex;flex-direction:column;gap:18px;height:auto;padding:14px}
+    #slide-body{overflow:visible;max-height:none}
+    .slides-half{order:0;min-height:0;overflow:visible}
+    .controls-half{order:1;border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:14px}
+
+    /* Sliders get more comfortable touch targets */
+    .control-row input[type="range"]{height:22px}
+    .control-row input[type="range"]::-webkit-slider-thumb{height:16px;width:16px;margin-top:-6px}
+    .control-row input[type="range"]::-moz-range-thumb{height:16px;width:16px}
+
+    /* Legend + HUD: pulled out of absolute positioning. They stack in-flow
+       below the canvas (color legend first, then HUD). Torus canvas only
+       occupies the upper portion of canvas-wrap — it no longer has to
+       share pixels with the overlays, eliminating the overlap. */
+    #canvas-wrap{display:flex;flex-direction:column}
+    #tooltip{order:0}  /* stays absolute via its own rule */
+    #node-labels{order:0}  /* stays absolute via its own rule */
+    #color-legend{
+      position:static;order:2;
+      white-space:normal;font-size:10px;line-height:1.6;
+      margin:0;border-radius:0;border:none;
+      border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+      background:var(--panel);padding:6px 14px;width:auto
+    }
+    #color-legend .leg{margin-right:8px}
+    #color-legend .leg-stats{
+      display:block;margin-left:0;padding-left:0;border-left:none;
+      margin-top:3px;padding-top:3px;border-top:1px dashed var(--border)
+    }
+    #color-legend.hud-stacked{bottom:auto}  /* no lift needed in flow */
+    #hud{
+      position:static;order:3;
+      margin:0;border-radius:0;border:none;border-bottom:1px solid var(--border);
+      background:var(--panel);padding:6px 14px;width:auto
+    }
+  }
+
+  /* On mobile, canvas-wrap is a flex column holding [canvas, legend, hud].
+     onResize() sizes the canvas explicitly (width×width in portrait,
+     width×100vh in landscape). The wrapper grows to contain all three. */
+  @media(max-width:900px){
+    #canvas-wrap{height:auto;aspect-ratio:auto}
+  }
+
+  /* Landscape: hide the tagline — torus is 100vh so every vertical pixel
+     of header chrome matters. Title alone keeps the brand. */
+  @media(max-width:900px) and (orientation:landscape){
+    #app-header .tagline{display:none}
   }
 </style>
 </head>
@@ -1068,7 +1138,12 @@ function updateLayerList() {
     if (target) {
       // requestAnimationFrame so the layout is committed before scrolling.
       requestAnimationFrame(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Skip the auto-scroll on mobile: the page is a long natural scroll,
+        // and yanking the viewport away from the button the user just tapped
+        // reads as jerky/awkward. The flash alone is enough signal there.
+        if (window.innerWidth > 900) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
         target.classList.remove('proof-chain-flash');
         // Force reflow so re-adding the class restarts the animation.
         void target.offsetWidth;
@@ -1923,15 +1998,50 @@ const hud = document.getElementById('hud');
 // RESIZE
 // ============================================================
 function onResize() {
-  const w = wrap.clientWidth, h = wrap.clientHeight;
   // Variant C: re-assert the 1.5 cap on resize (DPR can change when the window
   // moves between a retina and non-retina display).
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+
+  const isMobile = window.innerWidth <= 900;
+  let w, h;
+  if (isMobile) {
+    // On mobile, canvas-wrap is a flex column (canvas + legend + hud stacked).
+    // We size the canvas explicitly:
+    //   Portrait  → square (width × width)
+    //   Landscape → full viewport height (width × 100vh)
+    // The legend + HUD sit below the canvas in flow; the page scrolls.
+    w = wrap.clientWidth;
+    const portrait = window.matchMedia('(orientation: portrait)').matches;
+    h = portrait ? w : window.innerHeight;
+  } else {
+    w = wrap.clientWidth;
+    h = wrap.clientHeight;
+  }
+
   renderer.setSize(w, h);
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
 }
 window.addEventListener('resize', onResize);
+
+// Mobile: force the bottom <details> panel open (there's no room to cleanly
+// toggle on a scrollable long page), and re-fit the canvas on orientation
+// change (portrait↔landscape changes aspect-ratio + height drastically).
+function applyMobileLayout() {
+  const isMobile = window.innerWidth <= 900;
+  const panel = document.getElementById('bottom-panel');
+  if (isMobile && panel && !panel.hasAttribute('open')) {
+    panel.setAttribute('open', '');
+  }
+  // Schedule a resize after layout settles (orientation change + aspect-ratio
+  // recomputation take a frame or two to commit).
+  requestAnimationFrame(() => {
+    requestAnimationFrame(onResize);
+  });
+}
+window.addEventListener('orientationchange', applyMobileLayout);
+window.addEventListener('resize', applyMobileLayout);
+applyMobileLayout();
 // Collapsing/expanding the bottom <details> panel changes available height —
 // re-fit the renderer so the canvas reclaims the freed vertical space.
 // Also tie the HUD readout (pitch · yaw · roll · rotate · zoom · pos · tube)
@@ -2538,7 +2648,7 @@ const SLIDES = [
   {
     title: 'How to Engage',
     tagline: 'Audit. Criticize. Cite. Collaborate.',
-    body: '<strong>AUDIT</strong>: open any chain on the torus and trace its links to the live PROOF-CHAIN files. <strong>CRITICIZE</strong>: walls are explicitly disclosed; report a new wall via <a href="https://github.com/localparty/integers/issues">GitHub issue</a>. <strong>CITE</strong>: <code>Integers (2026), DOI: <a href="https://doi.org/10.5281/zenodo.19628701">10.5281/zenodo.19628701</a>, GitHub: <a href="https://github.com/localparty/integers">localparty/integers</a></code>. <strong>COLLABORATE</strong>: contributions to bypass routes, Independence lifts, or Pillar D derivations welcomed. The door is open.',
+    body: '<strong>AUDIT</strong>: open any chain on the torus and trace its links to the live PROOF-CHAIN files. <strong>CRITICIZE</strong>: walls are explicitly disclosed; report a new wall via GitHub issue. <strong>CITE</strong>: <code>Integers (2026), DOI: <a href="https://doi.org/10.5281/zenodo.19628701">10.5281/zenodo.19628701</a>, GitHub: <a href="https://github.com/localparty/integers">localparty/integers</a></code>. <strong>COLLABORATE</strong>: contributions to bypass routes, INDEPENDENT lifts, or Pillar D derivations welcomed. Reach out via the herald or directly. The door is open.',
     cite: '► <a href="https://doi.org/10.5281/zenodo.19628701">Zenodo DOI: 10.5281/zenodo.19628701</a> · <a href="https://github.com/localparty/integers">GitHub: localparty/integers</a>'
   },
 ];
