@@ -8,8 +8,8 @@ Operator-algebraic research publications by G Six, San Francisco CA, 2026.
 
 Transparent reduction of the Riemann Hypothesis to a single concrete type-inhabitation problem in Lean 4, built from the Bost-Connes type III_1 factor's modular data plus a Galerkin approximation chain. **Not an unconditional closure of RH** — a conditional scaffold over a named gate that is equivalent to RH.
 
-- Paper: [localparty/hilbert-polya-bost-connes](https://github.com/localparty/hilbert-polya-bost-connes) (DOI [10.5281/zenodo.20920816](https://doi.org/10.5281/zenodo.20920816))
-- Lean formalization: [localparty/hilbert-polya-bost-connes-lean](https://github.com/localparty/hilbert-polya-bost-connes-lean) (DOI [10.5281/zenodo.20920735](https://doi.org/10.5281/zenodo.20920735))
+- Paper: [localparty/hilbert-polya-bost-connes](https://github.com/localparty/hilbert-polya-bost-connes) (DOI [10.5281/zenodo.20925877](https://doi.org/10.5281/zenodo.20925877))
+- Lean formalization: [localparty/hilbert-polya-bost-connes-lean](https://github.com/localparty/hilbert-polya-bost-connes-lean) (DOI [10.5281/zenodo.20925651](https://doi.org/10.5281/zenodo.20925651))
 
 ### Tomita-Takesaki uniqueness in the Bost-Connes system
 
